@@ -5,12 +5,11 @@ public class VvoProvider: AbstractEfaProvider {
     static let API_BASE = "http://efa.vvo-online.de:8080/dvb/"
     static let STOPFINDER_ENDPOINT = "XSLT_STOPFINDER_REQUEST"
     static let COORD_ENDPOINT = "XSLT_COORD_REQUEST"
-    static let TRIPSTOPTIMES_ENDPOINT = "XSLT_TRIPSTOPTIMES_REQUEST"
     static let DESKTOP_TRIP_ENDPOINT = "https://www.vvo-online.de/de/fahrplan/fahrplanauskunft/fahrten"
     static let DESKTOP_DEPARTURES_ENDPOINT = "https://www.vvo-online.de/de/fahrplan/aktuelle-abfahrten-ankuenfte/abfahrten"
     
     public init() {
-        super.init(networkId: .VVO, apiBase: VvoProvider.API_BASE, departureMonitorEndpoint: nil, tripEndpoint: nil, stopFinderEndpoint: VvoProvider.STOPFINDER_ENDPOINT, coordEndpoint: VvoProvider.COORD_ENDPOINT, tripStopTimesEndpoint: VvoProvider.TRIPSTOPTIMES_ENDPOINT, desktopTripEndpoint: VvoProvider.DESKTOP_TRIP_ENDPOINT, desktopDeparturesEndpoint: VvoProvider.DESKTOP_DEPARTURES_ENDPOINT)
+        super.init(networkId: .VVO, apiBase: VvoProvider.API_BASE, departureMonitorEndpoint: nil, tripEndpoint: nil, stopFinderEndpoint: VvoProvider.STOPFINDER_ENDPOINT, coordEndpoint: VvoProvider.COORD_ENDPOINT, tripStopTimesEndpoint: nil, desktopTripEndpoint: VvoProvider.DESKTOP_TRIP_ENDPOINT, desktopDeparturesEndpoint: VvoProvider.DESKTOP_DEPARTURES_ENDPOINT)
     }
     
     override func parseLine(id: String?, network: String?, mot: String?, symbol: String?, name: String?, longName: String?, trainType: String?, trainNum: String?, trainName: String?) -> Line {

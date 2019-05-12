@@ -29,6 +29,4 @@ class VvoProviderTests: TripKitProviderTestCase, TripKitProviderTestsDelegate {
     
     var suggestLocationsAddress: String { return "Dresden, Töpferstraße 10" }
     
-    var supportsJourneyDetails: Bool { return false }
-    
 }
