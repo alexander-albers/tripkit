@@ -1,0 +1,6 @@
+framework module SWXMLHash {
+  umbrella header "SWXMLHash-iOS-umbrella.h"
+
+  export *
+  module * { export * }
+}
