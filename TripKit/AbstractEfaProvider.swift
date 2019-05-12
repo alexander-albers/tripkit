@@ -1724,22 +1724,32 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
             
             let plannedStopArrivalTime = processItdDateTime(xml: point["itdDateTime"][0])
             var predictedStopArrivalTime = processItdDateTime(xml: point["itdDateTimeTarget"][0])
+            var arrivalCancelled = cancelled
             if let delay = Int(point.element?.attribute(by: "arrDelay")?.text ?? ""), delay != -1, predictedStopArrivalTime == nil {
-                predictedStopArrivalTime = plannedStopArrivalTime?.addingTimeInterval(TimeInterval(delay * 60))
+                if delay == -9999 {
+                    arrivalCancelled = true
+                } else {
+                    predictedStopArrivalTime = plannedStopArrivalTime?.addingTimeInterval(TimeInterval(delay * 60))
+                }
             }
-            if let rblArrivalDelay = rblArrivalDelay, predictedStopArrivalTime == nil {
+            if let rblArrivalDelay = rblArrivalDelay, rblArrivalDelay != -9999, predictedStopArrivalTime == nil {
                predictedStopArrivalTime = plannedStopArrivalTime?.addingTimeInterval(TimeInterval(rblArrivalDelay * 60))
             }
             let plannedStopDepartureTime = point["itdDateTime"].all.count > 1 ? processItdDateTime(xml: point["itdDateTime"][1]) : plannedStopArrivalTime
             var predictedStopDepartureTime = point["itdDateTimeTarget"].all.count > 1 ? processItdDateTime(xml: point["itdDateTimeTarget"][1]) : predictedStopArrivalTime
+            var departureCancelled = cancelled
             if let delay = Int(point.element?.attribute(by: "depDelay")?.text ?? ""), delay != -1, predictedStopDepartureTime == nil {
-                predictedStopDepartureTime = plannedStopDepartureTime?.addingTimeInterval(TimeInterval(delay * 60))
+                if delay == -9999 {
+                    departureCancelled = true
+                } else {
+                    predictedStopDepartureTime = plannedStopDepartureTime?.addingTimeInterval(TimeInterval(delay * 60))
+                }
             }
-            if let rblDepartureDelay = rblDepartureDelay, predictedStopDepartureTime == nil {
+            if let rblDepartureDelay = rblDepartureDelay, rblDepartureDelay != -9999, predictedStopDepartureTime == nil {
                 predictedStopDepartureTime = plannedStopDepartureTime?.addingTimeInterval(TimeInterval(rblDepartureDelay * 60))
             }
             
-            let stop = Stop(location: stopLocation, plannedArrivalTime: plannedStopArrivalTime, predictedArrivalTime: predictedStopArrivalTime, plannedArrivalPlatform: stopPosition, predictedArrivalPlatform: nil, arrivalCancelled: cancelled, plannedDepartureTime: plannedStopDepartureTime, predictedDepartureTime: predictedStopDepartureTime, plannedDeparturePlatform: stopPosition, predictedDeparturePlatform: nil, departureCancelled: cancelled)
+            let stop = Stop(location: stopLocation, plannedArrivalTime: plannedStopArrivalTime, predictedArrivalTime: predictedStopArrivalTime, plannedArrivalPlatform: stopPosition, predictedArrivalPlatform: nil, arrivalCancelled: arrivalCancelled, plannedDepartureTime: plannedStopDepartureTime, predictedDepartureTime: predictedStopDepartureTime, plannedDeparturePlatform: stopPosition, predictedDeparturePlatform: nil, departureCancelled: departureCancelled)
             
             stops.append(stop)
         }
