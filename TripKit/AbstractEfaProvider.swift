@@ -21,7 +21,7 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
     static let DEFAULT_TRIP_ENDPOINT = "XSLT_TRIP_REQUEST2"
     static let DEFAULT_STOPFINDER_ENDPOINT = "XML_STOPFINDER_REQUEST"
     static let DEFAULT_COORD_ENDPOINT = "XML_COORD_REQUEST"
-    static let DEFAULT_TRIPSTOPTIMES_ENDPOINT = "XML_TRIPSTOPTIMES_REQUEST"
+    static let DEFAULT_TRIPSTOPTIMES_ENDPOINT = "XML_STOPSEQCOORD_REQUEST"
     
     lazy var dateFormatter: DateFormatter = {
         let dateFormatter = DateFormatter()
@@ -1244,31 +1244,28 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
     }
     
     func handleQueryJourneyDetailResponse(xml: XMLIndexer, line: Line, completion: @escaping (QueryJourneyDetailResult) -> Void) throws {
-        let request = xml["itdRequest"]["itdTripStopTimesRequest"]
+        let request = xml["itdRequest"]["itdStopSeqCoordRequest"]["stopSeq"]
         var stops: [Stop] = []
         for point in request["itdPoint"].all {
             guard let stopLocation = processItdPointAttributes(point: point) else { continue }
             let stopPosition = parsePosition(position: point.element?.attribute(by: "platformName")?.text)
             
             let plannedStopArrivalTime = processItdDateTime(xml: point["itdDateTime"][0])
-            var predictedStopArrivalTime = processItdDateTime(xml: point["itdDateTimeTarget"][0])
-            if let delay = Int(point.element?.attribute(by: "arrDelay")?.text ?? ""), delay != -1, predictedStopArrivalTime == nil {
-                predictedStopArrivalTime = plannedStopArrivalTime?.addingTimeInterval(TimeInterval(delay * 60))
-            }
+            let predictedStopArrivalTime = processItdDateTime(xml: point["itdDateTimeTarget"][0])
             let plannedStopDepartureTime = processItdDateTime(xml: point["itdDateTime"][1])
-            var predictedStopDepartureTime = processItdDateTime(xml: point["itdDateTimeTarget"][1])
-            if let delay = Int(point.element?.attribute(by: "depDelay")?.text ?? ""), delay != -1, predictedStopDepartureTime == nil {
-                predictedStopDepartureTime = plannedStopDepartureTime?.addingTimeInterval(TimeInterval(delay * 60))
-            }
+            let predictedStopDepartureTime = processItdDateTime(xml: point["itdDateTimeTarget"][1])
             
             let stop = Stop(location: stopLocation, plannedArrivalTime: plannedStopArrivalTime, predictedArrivalTime: predictedStopArrivalTime, plannedArrivalPlatform: stopPosition, predictedArrivalPlatform: nil, arrivalCancelled: false, plannedDepartureTime: plannedStopDepartureTime, predictedDepartureTime: predictedStopDepartureTime, plannedDeparturePlatform: stopPosition, predictedDeparturePlatform: nil, departureCancelled: false)
             
             stops.append(stop)
         }
-        guard stops.count >= 2 else { return }
+        guard stops.count >= 2 else {
+            throw ParseError(reason: "could not parse points")
+        }
         let departureStop = stops.removeFirst()
         let arrivalStop = stops.removeLast()
-        let leg = PublicLeg(line: line, destination: arrivalStop.location, departureStop: departureStop, arrivalStop: arrivalStop, intermediateStops: stops, message: nil, journeyContext: nil)
+        let path = processItdPathCoordinates(xml["itdRequest"]["itdStopSeqCoordRequest"]["itdPathCoordinates"]) ?? []
+        let leg = PublicLeg(line: line, destination: arrivalStop.location, departureStop: departureStop, arrivalStop: arrivalStop, intermediateStops: stops, message: nil, path: path, journeyContext: nil)
         let trip = Trip(id: "", from: departureStop.location, to: arrivalStop.location, legs: [leg], fares: [])
         completion(.success(trip: trip, leg: leg))
     }
@@ -1826,7 +1823,7 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
     
     func processCoordinateBaseElems(_ xml: XMLIndexer) -> [LocationPoint] {
         var path: [LocationPoint] = []
-        for elem in xml["itdCoordinateBaseElemList"].all {
+        for elem in xml["itdCoordinateBaseElemList"].children {
             guard let latStr = elem["y"].element?.text, let lonStr = elem["x"].element?.text else { continue }
             guard let latDouble = Double(latStr), let lonDouble = Double(lonStr) else { continue }
             let lat = Int(round(latDouble))
