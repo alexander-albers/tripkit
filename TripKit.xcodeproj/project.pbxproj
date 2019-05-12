@@ -1307,7 +1307,7 @@
 		};
 		FACB83D81E3FD0CE00AC5F1F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0125DB8119D45175C761AF72 /* Pods-TripKit.debug.xcconfig */;
+			baseConfigurationReference = 5C08BB1CBDFF11B3B4E8300A /* Pods-TripKit.debug.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
@@ -1336,7 +1336,7 @@
 		};
 		FACB83D91E3FD0CE00AC5F1F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7657CE9A9F713F2F053B6ADC /* Pods-TripKit.release.xcconfig */;
+			baseConfigurationReference = D0A60C8E76F2C1BB34639846 /* Pods-TripKit.release.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
@@ -1364,7 +1364,7 @@
 		};
 		FACB83DB1E3FD0CE00AC5F1F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F66B42D0C3464D873A78A228 /* Pods-TripKitTests.debug.xcconfig */;
+			baseConfigurationReference = 0FC09921B2BEC3928FD810C7 /* Pods-TripKitTests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
@@ -1382,7 +1382,7 @@
 		};
 		FACB83DC1E3FD0CE00AC5F1F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B739C2E2A5F79F094B5EF7FD /* Pods-TripKitTests.release.xcconfig */;
+			baseConfigurationReference = 2542BC532B62C776D877EF67 /* Pods-TripKitTests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
@@ -1400,7 +1400,7 @@
 		};
 		FAFF18CF1FA50B9500A8ED69 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8193BCBF016B6D196B312791 /* Pods-TripKit watchOS.debug.xcconfig */;
+			baseConfigurationReference = 5DFB43A5BB21C49B677419F3 /* Pods-TripKit watchOS.debug.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
@@ -1430,7 +1430,7 @@
 		};
 		FAFF18D01FA50B9500A8ED69 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5CDF9868D370E6F8CB9FB2F3 /* Pods-TripKit watchOS.release.xcconfig */;
+			baseConfigurationReference = 6B2F88B12C5912A8DDDA8C99 /* Pods-TripKit watchOS.release.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
