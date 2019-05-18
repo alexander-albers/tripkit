@@ -29,8 +29,4 @@ class MvgProviderTests: TripKitProviderTestCase, TripKitProviderTestsDelegate {
     
     var suggestLocationsAddress: String { return "Lüdenscheid, Bahnhofstraße 64" }
     
-    var supportsQueryMoreTrips: Bool { return false }
-    
-    var supportsRefreshTrip: Bool { return false }
-    
 }
