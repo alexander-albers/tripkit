@@ -22,9 +22,6 @@ public class HttpClient {
             urlRequest.setValue(httpRequest.contentType ?? "application/json", forHTTPHeaderField: "Content-Type")
             urlRequest.httpBody = payload.data(using: .utf8) // TODO: don't hardcode encoding
         }
-        if let cookieString = httpRequest.cookieString {
-            urlRequest.setValue(cookieString, forHTTPHeaderField: "Cookie")
-        }
         
         if let payload = httpRequest.postPayload {
             os_log("making http request to %{public}@: %{public}@", log: .requestLogger, type: .default, url.absoluteString, payload)
@@ -104,7 +101,6 @@ public class HttpRequest {
     public let urlBuilder: UrlBuilder
     public var postPayload: String?
     public var contentType: String?
-    public var cookieString: String?
     public var userAgent: String?
     
     public init(urlBuilder: UrlBuilder) {
@@ -118,11 +114,6 @@ public class HttpRequest {
     
     public func setContentType(_ contentType: String?) -> Self {
         self.contentType = contentType
-        return self
-    }
-    
-    public func setCookieString(_ cookieString: String?) -> Self {
-        self.cookieString = cookieString
         return self
     }
     

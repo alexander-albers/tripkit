@@ -14,7 +14,6 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
     let desktopDeparturesEndpoint: String?
     var supportsDesktopTrips: Bool = true
     var supportsDesktopDepartures: Bool = true
-    var sessionCookieName = "HASESSIONID="
     var language = "de"
     
     static let DEFAULT_DEPARTURE_MONITOR_ENDPOINT = "XSLT_DM_REQUEST"
@@ -176,7 +175,7 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
             desktopUrl = nil
         }
         
-        return HttpClient.getXml(httpRequest: HttpRequest(urlBuilder: urlBuilder).setCookieString(sessionCookieName)) { result in
+        return HttpClient.getXml(httpRequest: HttpRequest(urlBuilder: urlBuilder)) { result in
             switch result {
             case .success(let xml):
                 do {
@@ -212,7 +211,7 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
         urlBuilder.addParameter(key: "coordListOutputFormat", value: "STRING")
         urlBuilder.addParameter(key: "command", value: later ? "tripNext" : "tripPrev")
         
-        return HttpClient.getXml(httpRequest: HttpRequest(urlBuilder: urlBuilder).setCookieString(sessionCookieName)) { result in
+        return HttpClient.getXml(httpRequest: HttpRequest(urlBuilder: urlBuilder)) { result in
             switch result {
             case .success(let xml):
                 do {
@@ -255,7 +254,7 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
         urlBuilder.addParameter(key: "requestID", value: context.requestId)
         urlBuilder.addParameter(key: "command", value: "tripCoordSeq:\(context.routeIndex)")
         
-        return HttpClient.getXml(httpRequest: HttpRequest(urlBuilder: urlBuilder).setCookieString(sessionCookieName)) { result in
+        return HttpClient.getXml(httpRequest: HttpRequest(urlBuilder: urlBuilder)) { result in
             switch result {
             case .success(let xml):
                 do {

@@ -9,7 +9,6 @@ public class WienProvider: AbstractEfaProvider {
         super.init(networkId: .WIEN, apiBase: WienProvider.API_BASE, desktopTripEndpoint: WienProvider.DESKTOP_TRIP_ENDPOINT)
         includeRegionId = false
         supportsDesktopDepartures = false
-        sessionCookieName = "NSC_mcwtsw-IUUQ-UDQ-80-phe"
         
         styles = [
             // Wien
