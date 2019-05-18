@@ -29,8 +29,4 @@ class MvvProviderTests: TripKitProviderTestCase, TripKitProviderTestsDelegate {
     
     var suggestLocationsAddress: String { return "München, Maximilianstraße 1" }
     
-    // TODO: support both
-    var supportsRefreshTrip: Bool { return false }
-    var supportsQueryMoreTrips: Bool { return false }
-    
 }
