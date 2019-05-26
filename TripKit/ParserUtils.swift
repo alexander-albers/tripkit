@@ -34,103 +34,15 @@ func parseEuropeanTime(from timeString: String, dateComponents: inout DateCompon
     }
 }
 
-fileprivate let P_HTML_UNORDERED_LIST = try! NSRegularExpression(pattern: "<ul>(.*?)</ul>", options: [.caseInsensitive, .dotMatchesLineSeparators])
-fileprivate let P_HTML_LIST_ITEM = try! NSRegularExpression(pattern: "<li>(.*?)</li>", options: [.caseInsensitive, .dotMatchesLineSeparators])
-fileprivate let P_HTML_BREAKS = try! NSRegularExpression(pattern: "(<br\\s*/>)", options: [.caseInsensitive, .dotMatchesLineSeparators])
-
-func formatHtml(for string: String?) -> String? {
-    guard var string = string else { return nil }
-    var result = ""
-    
-    var pListItem = 0
-    for match in P_HTML_LIST_ITEM.matches(in: string, options: [], range: NSRange(location: 0, length: string.length)) {
-        let group = match.range(at: 1)
-        result += String(string[string.index(string.startIndex, offsetBy: pListItem)..<string.index(string.startIndex, offsetBy: group.location)])
-        result += "• "
-        result += String(string[string.index(string.startIndex, offsetBy: group.location)..<string.index(string.startIndex, offsetBy: group.location + group.length)])
-        result += "\n"
-        pListItem = group.location + group.length
-    }
-    result += String(string[string.index(string.startIndex, offsetBy: pListItem)..<string.endIndex])
-    
-    string = result
-    result = ""
-    var pUnorderedList = 0
-    for match in P_HTML_UNORDERED_LIST.matches(in: string, options: [], range: NSRange(location: 0, length: string.length)) {
-        let group = match.range(at: 1)
-        result += String(string[string.index(string.startIndex, offsetBy: pUnorderedList)..<string.index(string.startIndex, offsetBy: group.location)])
-        result += "\n"
-        result += String(string[string.index(string.startIndex, offsetBy: group.location)..<string.index(string.startIndex, offsetBy: group.location + group.length)])
-        pUnorderedList = group.location + group.length
-    }
-    result += String(string[string.index(string.startIndex, offsetBy: pUnorderedList)..<string.endIndex])
-    
-    string = result
-    result = ""
-    var pBreaks = 0
-    for match in P_HTML_BREAKS.matches(in: string, options: [], range: NSRange(location: 0, length: string.length)) {
-        let startGroup = match.range(at: 1)
-        result += String(string[string.index(string.startIndex, offsetBy: pBreaks)..<string.index(string.startIndex, offsetBy: startGroup.location)])
-        result += " "
-        pBreaks = startGroup.location + startGroup.length
-    }
-    result += String(string[string.index(string.startIndex, offsetBy: pBreaks)..<string.endIndex])
-    
-    return resolveEntities(for: result)
-}
-
-fileprivate let P_ENTITY = try! NSRegularExpression(pattern: "&(?:#(x[\\da-f]+|\\d+)|(amp|quot|apos|szlig|nbsp));")
-
-func resolveEntities(for string: String?) -> String? {
-    guard let string = string else { return nil }
-    var result = ""
-    
-    var pos = 0
-    for match in P_ENTITY.matches(in: string, options: [], range: NSRange(location: 0, length: string.length)) {
-        let c: Character
-        if match.range(at: 1).location != NSNotFound {
-            let group = match.range(at: 1)
-            let code = String(string[string.index(string.startIndex, offsetBy: group.location)..<string.index(string.startIndex, offsetBy: group.location + group.length)])
-            if code[0] == "x" {
-                c = Int(code.substring(from: 1), radix: 16).map{ Character(UnicodeScalar($0)!) }!
-            } else {
-                c = Int(code).map{ Character(UnicodeScalar($0)!) }!
-            }
-        } else {
-            let group = match.range(at: 2)
-            let namedEntity = String(string[string.index(string.startIndex, offsetBy: group.location)..<string.index(string.startIndex, offsetBy: group.location + group.length)])
-            switch namedEntity {
-            case "amp":
-                c = "&"
-                break
-            case "quot":
-                c = "\""
-                break
-            case "szlig":
-                c = "\u{00df}"
-                break
-            case "nbsp":
-                c = " "
-                break
-            default:
-                c = " "
-                break
-            }
-        }
-        result += String(string[string.index(string.startIndex, offsetBy: pos)..<string.index(string.startIndex, offsetBy: match.range(at: 0).location)])
-        result += String(c)
-        pos = match.range(at: 0).location + match.range(at: 0).length
-    }
-    result += String(string[string.index(string.startIndex, offsetBy: pos)..<string.endIndex])
-    
-    return result
-}
-
 extension String {
     
     init?(htmlEncodedString: String?) {
-        guard let data = htmlEncodedString?.data(using: .utf8) else {
+        guard let htmlEncodedString = htmlEncodedString else {
             return nil
+        }
+        guard let data = htmlEncodedString.data(using: .utf8) else {
+            self.init(htmlEncodedString)
+            return
         }
         
         let options: [NSAttributedString.DocumentReadingOptionKey: Any] = [
@@ -139,7 +51,8 @@ extension String {
         ]
         
         guard let attributedString = try? NSAttributedString(data: data, options: options, documentAttributes: nil) else {
-            return nil
+            self.init(htmlEncodedString)
+            return
         }
         
         self.init(attributedString.string)

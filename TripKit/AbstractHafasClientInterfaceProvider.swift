@@ -1224,7 +1224,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
             guard let rem = rem as? [String: Any] else {
                 throw ParseError(reason: "could not parse rem")
             }
-            let txt = formatHtml(for: rem["txtN"] as? String)
+            let txt = String(htmlEncodedString: rem["txtN"] as? String)
             switch (rem["code"] as? String ?? "").lowercased() {
             case "bf":
                 result.append(.wheelChairAccess)
