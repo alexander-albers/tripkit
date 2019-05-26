@@ -2,7 +2,7 @@ import Foundation
 
 public class VmsProvider: AbstractEfaProvider {
     
-    static let API_BASE = "https://www.vms.de/VMSSL3/"
+    static let API_BASE = "https://www.vms.de/vms2/"
     static let DESKTOP_DEPARTURES_ENDPOINT = "http://www.vms-aktuell.de/vmsMobile/XSLT_DM_REQUEST"
     
     public init() {
