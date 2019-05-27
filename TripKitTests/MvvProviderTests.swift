@@ -15,9 +15,9 @@ class MvvProviderTests: TripKitProviderTestCase, TripKitProviderTestsDelegate {
     
     var coordinatesTo: LocationPoint { return LocationPoint(lat: 47987199, lon: 11326532) } //
     
-    var stationIdFrom: String { return "2" } // Marienplatz
+    var stationIdFrom: String { return "91000002" } // Marienplatz
     
-    var stationIdTo: String { return "10" } // Pasing
+    var stationIdTo: String { return "91000010" } // Pasing
     
     var invalidStationId: String { return "999999" }
     
@@ -27,6 +27,6 @@ class MvvProviderTests: TripKitProviderTestCase, TripKitProviderTestsDelegate {
     
     var suggestLocationsUmlaut: String { return "Grüntal" }
     
-    var suggestLocationsAddress: String { return "München, Maximilianstraße 1" }
+    var suggestLocationsAddress: String { return "München, Maximilianstraße" }
     
 }
