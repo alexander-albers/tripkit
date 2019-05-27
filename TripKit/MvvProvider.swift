@@ -1,9 +1,8 @@
 import Foundation
 
-// TODO: migrate to HafasClientInterface but retain station id compatibility
 public class MvvProvider: AbstractEfaProvider {
     
-    static let API_BASE = "https://efa.mvv-muenchen.de/mobile/"
+    static let API_BASE = "https://efa.mvv-muenchen.de/ng/"
     static let DESKTOP_ENDPOINT = "http://efa.mvv-muenchen.de/index.html"
     
     public init() {
@@ -64,7 +63,7 @@ public class MvvProvider: AbstractEfaProvider {
     }
     
     override func queryDeparturesParameters(builder: UrlBuilder, stationId: String, time: Date?, maxDepartures: Int, equivs: Bool, desktop: Bool) {
-        super.queryDeparturesParameters(builder: builder, stationId: fixLocationId(stationId)!, time: time, maxDepartures: maxDepartures, equivs: equivs, desktop: desktop)
+        super.queryDeparturesParameters(builder: builder, stationId: stationId, time: time, maxDepartures: maxDepartures, equivs: equivs, desktop: desktop)
         if desktop {
             builder.setAnchorHash(anchorHash: "departures@enquiry")
         }
@@ -108,22 +107,4 @@ public class MvvProvider: AbstractEfaProvider {
         }
     }
     
-    override func appendLocation(builder: UrlBuilder, location: Location, suffix: String) {
-        super.appendLocation(builder: builder, location: Location(type: location.type, id: fixLocationId(location.id), coord: location.coord, place: location.place, name: location.name, products: location.products)!, suffix: suffix)
-    }
-    
-    private func fixLocationId(_ id: String?) -> String? {
-        return id
-        let locationId: String?
-        if let id = id {
-            if id.count == 7 && !id.hasPrefix("9") {
-                locationId = "9\(id)"
-            } else {
-                locationId = id
-            }
-        } else {
-            locationId = nil
-        }
-        return locationId
-    }
 }
