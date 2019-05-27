@@ -29,6 +29,4 @@ class VgnProviderTests: TripKitProviderTestCase, TripKitProviderTestsDelegate {
     
     var suggestLocationsAddress: String { return "Wodanstraße 25, Nürnberg" }
     
-    var supportsJourneyDetails: Bool { return false }
-    
 }

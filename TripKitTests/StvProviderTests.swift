@@ -29,6 +29,4 @@ class StvProviderTests: TripKitProviderTestCase, TripKitProviderTestsDelegate {
     
     var suggestLocationsAddress: String { return "Wartingergasse 36, Graz" }
     
-    var supportsJourneyDetails: Bool { return false }
-    
 }

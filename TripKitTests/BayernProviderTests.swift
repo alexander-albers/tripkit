@@ -31,6 +31,4 @@ class BayernProviderTests: TripKitProviderTestCase, TripKitProviderTestsDelegate
     
     var supportsQueryMoreTrips: Bool { return false }
     
-    var supportsJourneyDetails: Bool { return false }
-    
 }

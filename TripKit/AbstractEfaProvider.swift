@@ -550,6 +550,41 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
         }
     }
     
+    func queryJourneyDetailMobile(context: QueryJourneyDetailContext, completion: @escaping (QueryJourneyDetailResult) -> Void) -> AsyncRequest {
+        guard let context = context as? EfaJourneyContext, var lineId = context.line.id else {
+            completion(.invalidId)
+            return AsyncRequest(task: nil)
+        }
+        if lineId.hasSuffix(":") {
+            lineId += "j18"
+        }
+        let urlBuilder = UrlBuilder(path: tripStopTimesEndpoint, encoding: requestUrlEncoding)
+        appendCommonRequestParameters(builder: urlBuilder, outputFormat: "XML")
+        urlBuilder.addParameter(key: "stopID", value: context.stopId)
+        urlBuilder.addParameter(key: "tripCode", value: context.tripCode)
+        urlBuilder.addParameter(key: "line", value: context.line.id)
+        appendDate(builder: urlBuilder, date: context.stopDepartureTime, dateParam: "date", timeParam: "time")
+        urlBuilder.addParameter(key: "tStOTType", value: "all")
+        
+        return HttpClient.getXml(httpRequest: HttpRequest(urlBuilder: urlBuilder)) { result in
+            switch result {
+            case .success(let xml):
+                do {
+                    try self.handleQueryJourneyDetailMobileResponse(xml: xml, line: context.line, completion: completion)
+                } catch let err as ParseError {
+                    os_log("journeyDetailMobile parse error: %{public}@", log: .requestLogger, type: .error, err.reason)
+                    completion(.failure(err))
+                } catch let err {
+                    os_log("journeyDetailMobile handle response error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
+                    completion(.failure(err))
+                }
+            case .failure(let err):
+                os_log("journeyDetailMobile network error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
+                completion(.failure(err))
+            }
+        }
+    }
+    
     // MARK: NetworkProvider responses
     
     func handleJsonStopfinderResponse(json: JSON, completion: @escaping (SuggestLocationsResult) -> Void) throws {
@@ -999,11 +1034,44 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
                 stationDepartures = StationDepartures(stopLocation: location, departures: [], lines: [])
                 result.append(stationDepartures!)
             }
-            let journeyContext: EfaJourneyContext? = nil
+            let context: EfaJourneyContext?
+            let tripCode = dp["m"]["dv"]["tk"].element?.text
+            if let departureTime = plannedTime ?? predictedTime, let tripCode = tripCode, lineDestination.line.id != nil {
+                context = EfaJourneyContext(stopId: assignedId, stopDepartureTime: departureTime, line: lineDestination.line, tripCode: tripCode)
+            } else {
+                context = nil
+            }
             
-            stationDepartures?.departures.append(Departure(plannedTime: plannedTime, predictedTime: predictedTime, line: lineDestination.line, position: position, plannedPosition: position, destination: lineDestination.destination, journeyContext: journeyContext))
+            stationDepartures?.departures.append(Departure(plannedTime: plannedTime, predictedTime: predictedTime, line: lineDestination.line, position: position, plannedPosition: position, destination: lineDestination.destination, journeyContext: context))
         }
         completion(.success(departures: result, desktopUrl: desktopUrl))
+    }
+    
+    func handleQueryJourneyDetailResponse(xml: XMLIndexer, line: Line, completion: @escaping (QueryJourneyDetailResult) -> Void) throws {
+        let request = xml["itdRequest"]["itdStopSeqCoordRequest"]["stopSeq"]
+        var stops: [Stop] = []
+        for point in request["itdPoint"].all {
+            guard let stopLocation = processItdPointAttributes(point: point) else { continue }
+            let stopPosition = parsePosition(position: point.element?.attribute(by: "platformName")?.text)
+            
+            let plannedStopArrivalTime = processItdDateTime(xml: point["itdDateTime"][0])
+            let predictedStopArrivalTime = processItdDateTime(xml: point["itdDateTimeTarget"][0])
+            let plannedStopDepartureTime = processItdDateTime(xml: point["itdDateTime"][1])
+            let predictedStopDepartureTime = processItdDateTime(xml: point["itdDateTimeTarget"][1])
+            
+            let stop = Stop(location: stopLocation, plannedArrivalTime: plannedStopArrivalTime, predictedArrivalTime: predictedStopArrivalTime, plannedArrivalPlatform: stopPosition, predictedArrivalPlatform: nil, arrivalCancelled: false, plannedDepartureTime: plannedStopDepartureTime, predictedDepartureTime: predictedStopDepartureTime, plannedDeparturePlatform: stopPosition, predictedDeparturePlatform: nil, departureCancelled: false)
+            
+            stops.append(stop)
+        }
+        guard stops.count >= 2 else {
+            throw ParseError(reason: "could not parse points")
+        }
+        let departureStop = stops.removeFirst()
+        let arrivalStop = stops.removeLast()
+        let path = processItdPathCoordinates(xml["itdRequest"]["itdStopSeqCoordRequest"]["itdPathCoordinates"]) ?? []
+        let leg = PublicLeg(line: line, destination: arrivalStop.location, departureStop: departureStop, arrivalStop: arrivalStop, intermediateStops: stops, message: nil, path: path, journeyContext: nil)
+        let trip = Trip(id: "", from: departureStop.location, to: arrivalStop.location, legs: [leg], fares: [])
+        completion(.success(trip: trip, leg: leg))
     }
     
     // MARK: NetworkProvider mobile responses
@@ -1261,20 +1329,24 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
         }
     }
     
-    func handleQueryJourneyDetailResponse(xml: XMLIndexer, line: Line, completion: @escaping (QueryJourneyDetailResult) -> Void) throws {
-        let request = xml["itdRequest"]["itdStopSeqCoordRequest"]["stopSeq"]
+    func handleQueryJourneyDetailMobileResponse(xml: XMLIndexer, line: Line, completion: @escaping (QueryJourneyDetailResult) -> Void) throws {
+        let request = xml["efa"]["stopSeqCoords"]
         var stops: [Stop] = []
-        for point in request["itdPoint"].all {
-            guard let stopLocation = processItdPointAttributes(point: point) else { continue }
-            let stopPosition = parsePosition(position: point.element?.attribute(by: "platformName")?.text)
+        let format = DateFormatter()
+        format.dateFormat = "yyyyMMdd HH:mm"
+        for p in request["params"]["stopSeq"]["p"].all {
+            guard let timeString = p["r"]["depDateTime"].element?.text ?? p["r"]["arrDateTime"].element?.text else { throw ParseError(reason: "failed to parse time") }
+            let name = p["n"].element?.text
+            let id = p["r"]["id"].element?.text
             
-            let plannedStopArrivalTime = processItdDateTime(xml: point["itdDateTime"][0])
-            let predictedStopArrivalTime = processItdDateTime(xml: point["itdDateTimeTarget"][0])
-            let plannedStopDepartureTime = processItdDateTime(xml: point["itdDateTime"][1])
-            let predictedStopDepartureTime = processItdDateTime(xml: point["itdDateTimeTarget"][1])
+            let plannedTime = format.date(from: timeString)
             
-            let stop = Stop(location: stopLocation, plannedArrivalTime: plannedStopArrivalTime, predictedArrivalTime: predictedStopArrivalTime, plannedArrivalPlatform: stopPosition, predictedArrivalPlatform: nil, arrivalCancelled: false, plannedDepartureTime: plannedStopDepartureTime, predictedDepartureTime: predictedStopDepartureTime, plannedDeparturePlatform: stopPosition, predictedDeparturePlatform: nil, departureCancelled: false)
+            let position = parsePosition(position: p["r"]["pl"].element?.text)
+            let place = normalizeLocationName(name: p["r"]["pc"].element?.text)
+            let coord = parseCoordinates(string: p["r"]["c"].element?.text)
             
+            guard let location = Location(type: .station, id: id, coord: coord, place: place, name: name) else { throw ParseError(reason: "failed to parse stop") }
+            let stop = Stop(location: location, plannedArrivalTime: plannedTime, predictedArrivalTime: nil, plannedArrivalPlatform: nil, predictedArrivalPlatform: nil, arrivalCancelled: false, plannedDepartureTime: plannedTime, predictedDepartureTime: nil, plannedDeparturePlatform: position, predictedDeparturePlatform: nil, departureCancelled: false)
             stops.append(stop)
         }
         guard stops.count >= 2 else {
@@ -1282,7 +1354,12 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
         }
         let departureStop = stops.removeFirst()
         let arrivalStop = stops.removeLast()
-        let path = processItdPathCoordinates(xml["itdRequest"]["itdStopSeqCoordRequest"]["itdPathCoordinates"]) ?? []
+        let path: [LocationPoint]
+        if let coordString = request["c"]["pt"].element?.text {
+            path = processCoordinateStrings(coordString)
+        } else {
+            path = []
+        }
         let leg = PublicLeg(line: line, destination: arrivalStop.location, departureStop: departureStop, arrivalStop: arrivalStop, intermediateStops: stops, message: nil, path: path, journeyContext: nil)
         let trip = Trip(id: "", from: departureStop.location, to: arrivalStop.location, legs: [leg], fares: [])
         completion(.success(trip: trip, leg: leg))
@@ -2033,7 +2110,7 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
                 trainNum = nil
             }
             
-            let network = String(lineId[lineId.range(of: ":")!])
+            let network = xml["m"]["dv"]["ne"].element?.text
             let parsedLine = parseLine(id: lineId, network: network, mot: productType, symbol: symbol, name: symbol, longName: nil, trainType: trainType, trainNum: trainNum, trainName: productName)
             line = Line(id: parsedLine.id, network: parsedLine.network, product: parsedLine.product, label: parsedLine.label, name: parsedLine.name, style: lineStyle(network: parsedLine.network, product: parsedLine.product, label: parsedLine.label), attr: nil, message: nil)
         }
@@ -2042,8 +2119,12 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
     }
     
     func parseMobileDiva(xml: XMLIndexer) throws -> String {
+        if let stateless = xml["dv"]["stateless"].element?.text, stateless.contains(":") {
+            return stateless
+        }
         guard let lineIdLi = xml["dv"]["li"].element?.text, let lineIdSu = xml["dv"]["su"].element?.text, let lineIdPr = xml["dv"]["pr"].element?.text, let lineIdDct = xml["dv"]["dct"].element?.text, let lineIdNe = xml["dv"]["ne"].element?.text else { throw ParseError(reason: "could not parse line diva") }
-        return lineIdLi + ":" + lineIdSu + ":" + lineIdPr + ":" + lineIdDct + ":" + lineIdNe
+        let branch = xml["dv"]["branch"].element?.text ?? ""
+        return lineIdNe + ":" + branch + lineIdLi + ":" + lineIdSu + ":" + lineIdDct + ":" + lineIdPr
     }
     
     // MARK: Line styles

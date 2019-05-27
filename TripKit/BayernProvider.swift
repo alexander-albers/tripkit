@@ -31,6 +31,10 @@ public class BayernProvider: AbstractEfaProvider {
         return queryDeparturesMobile(stationId: stationId, time: time, maxDepartures: maxDepartures, equivs: equivs, completion: completion)
     }
     
+    override public func queryJourneyDetail(context: QueryJourneyDetailContext, completion: @escaping (QueryJourneyDetailResult) -> Void) -> AsyncRequest {
+        return queryJourneyDetailMobile(context: context, completion: completion)
+    }
+    
     override public func suggestLocations(constraint: String, types: [LocationType]?, maxLocations: Int, completion: @escaping (SuggestLocationsResult) -> Void) -> AsyncRequest {
         return mobileStopfinderRequest(constraint: constraint, types: types, maxLocations: maxLocations, completion: completion)
     }
