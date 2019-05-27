@@ -817,7 +817,13 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
                 if meansOfTransportType <= 16 {
                     cancelled |= try processPublicLeg(partialRoute, &legs, departureTime, departureTargetTime, departureLocation, departurePosition, arrivalTime, arrivalTargetTime, arrivalLocation, arrivalPosition)
                 } else if meansOfTransportType == 97 && meansOfTransportProductName == "nicht umsteigen" {
-                    // ignore
+                    if let last = legs.last as? PublicLeg {
+                        var lastMessage = "Nicht umsteigen, Weiterfahrt im selben Fahrzeug möglich."
+                        if let message = last.message?.emptyToNil {
+                            lastMessage += "\n" + message
+                        }
+                        legs[legs.count - 1] = PublicLeg(line: last.line, destination: last.destination, departureStop: last.departureStop, arrivalStop: last.arrivalStop, intermediateStops: last.intermediateStops, message: lastMessage, path: last.path, journeyContext: last.journeyContext)
+                    }
                 } else if meansOfTransportType == 98 && meansOfTransportProductName == "gesicherter Anschluss" {
                     // ignore
                 } else if meansOfTransportType == 99 && meansOfTransportProductName == "Fussweg" {
