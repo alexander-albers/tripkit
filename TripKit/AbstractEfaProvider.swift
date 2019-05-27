@@ -1213,7 +1213,15 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
                         legs.append(IndividualLeg(type: .WALK, departureTime: departure.getMinTime().addingTimeInterval(addTime), departure: departure.location, arrival: arrival.location, arrivalTime: arrival.getMaxTime().addingTimeInterval(addTime), distance: 0, path: path))
                     } else if lineDestination.line === Line.TRANSFER {
                         legs.append(IndividualLeg(type: .TRANSFER, departureTime: departure.getMinTime().addingTimeInterval(addTime), departure: departure.location, arrival: arrival.location, arrivalTime: arrival.getMaxTime().addingTimeInterval(addTime), distance: 0, path: path))
-                    } else if lineDestination.line === Line.SECURE_CONNECTION || lineDestination.line === Line.DO_NOT_CHANGE {
+                    } else if lineDestination.line === Line.DO_NOT_CHANGE {
+                        if let last = legs.last as? PublicLeg {
+                            var lastMessage = "Nicht umsteigen, Weiterfahrt im selben Fahrzeug möglich."
+                            if let message = last.message?.emptyToNil {
+                                lastMessage += "\n" + message
+                            }
+                            legs[legs.count - 1] = PublicLeg(line: last.line, destination: last.destination, departureStop: last.departureStop, arrivalStop: last.arrivalStop, intermediateStops: last.intermediateStops, message: lastMessage, path: last.path, journeyContext: last.journeyContext)
+                        }
+                    } else if lineDestination.line === Line.SECURE_CONNECTION {
                         // ignore
                     } else {
                         let journeyContext: EfaJourneyContext? = nil
@@ -1230,7 +1238,7 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
             //                context = nil
             //            }
             if let firstDepartureLocation = firstDepartureLocation, let lastArrivalLocation = lastArrivalLocation {
-                let trip = Trip(id: tripId ?? "", from: firstDepartureLocation, to: lastArrivalLocation, legs: legs, fares: [], refreshContext: context)
+                let trip = Trip(id: tripId, from: firstDepartureLocation, to: lastArrivalLocation, legs: legs, fares: [], refreshContext: context)
                 trips.append(trip)
             } else {
                 throw ParseError(reason: "failed to parse trip from/to")
