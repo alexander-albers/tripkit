@@ -940,7 +940,12 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
             let plannedPosition = parsePosition(position: departure.element?.attribute(by: "plannedPlatformName")?.text) ?? predictedPosition
             let destinationIdStr = departure["itdServingLine"].element?.attribute(by: "destID")?.text
             let destinationId = "-1" != destinationIdStr ? destinationIdStr : nil
-            let destinationName = stripLineFromDestination(line: line, destinationName: departure["itdServingLine"].element?.attribute(by: "direction")?.text)
+            var destinationName = stripLineFromDestination(line: line, destinationName: departure["itdServingLine"].element?.attribute(by: "direction")?.text)
+            var message: String? = nil
+            if let destination = destinationName, destination.hasSuffix(" EILZUG") {
+                destinationName = String(destination.dropLast(" EILZUG".count))
+                message = "Eilzug: Zug hält nicht überall."
+            }
             let destination: Location?
             if let id = destinationId, id != "" {
                 let nameAndPlace = split(directionName: destinationName)
@@ -962,7 +967,7 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
                 context = nil
             }
             
-            let departure = Departure(plannedTime: plannedTime, predictedTime: predictedTime, line: line, position: predictedPosition, plannedPosition: plannedPosition, destination: destination, capacity: nil, message: nil, journeyContext: context)
+            let departure = Departure(plannedTime: plannedTime, predictedTime: predictedTime, line: line, position: predictedPosition, plannedPosition: plannedPosition, destination: destination, capacity: nil, message: message, journeyContext: context)
             result.first(where: {$0.stopLocation.id == assignedStopId})?.departures.append(departure)
         }
         
@@ -1686,7 +1691,12 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
             line = parseLine(id: lineId, network: divaNetwork, mot: motType, symbol: motSymbol, name: motShortName, longName: motName, trainType: motTrainType, trainNum: motShortName, trainName: motTrainName)
         }
         
-        let destinationName = stripLineFromDestination(line: line, destinationName: normalizeLocationName(name: xml["itdMeansOfTransport"].element?.attribute(by: "destination")?.text))
+        var destinationName = stripLineFromDestination(line: line, destinationName: normalizeLocationName(name: xml["itdMeansOfTransport"].element?.attribute(by: "destination")?.text))
+        var message: String? = nil
+        if let destination = destinationName, destination.hasSuffix(" EILZUG") {
+            destinationName = String(destination.dropLast(" EILZUG".count))
+            message = "Eilzug: Zug hält nicht überall."
+        }
         let destinationId = xml["itdMeansOfTransport"].element?.attribute(by: "destID")?.text
         let destination: Location?
         if let destinationId = destinationId, destinationId != "" {
@@ -1698,19 +1708,24 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
         }
         
         var lowFloorVehicle = false
-        var message: String?
         for infoText in xml["itdInfoTextList"]["infoTextListElem"].all {
             if let text = infoText.element?.text {
                 if text.lowercased().hasPrefix("niederflurwagen") {
                     lowFloorVehicle = true
                 } else if text.lowercased().contains("ruf") || text.lowercased().contains("anmeld") || text.lowercased().contains("ast") {
-                    message = String(htmlEncodedString: text) ?? text
+                    if let text = message {
+                        message = text + "\n" + (String(htmlEncodedString: text) ?? text)
+                    } else {
+                        message = String(htmlEncodedString: text) ?? text
+                    }
                 }
             }
         }
         
         if let infoText = xml["infoLink"]["infoLinkText"].element?.text {
-            if message == nil {
+            if let text = message {
+                message = text + "\n" + (String(htmlEncodedString: infoText) ?? infoText)
+            } else {
                 message = String(htmlEncodedString: infoText) ?? infoText
             }
         }
