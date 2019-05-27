@@ -1098,7 +1098,7 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
         
         var trips: [Trip] = []
         for tp in request["ts"]["tp"].all {
-            let tripId = tp["de"].element?.text
+            let tripId = ""
             
             var firstDepartureLocation: Location? = nil
             var lastArrivalLocation: Location? = nil
