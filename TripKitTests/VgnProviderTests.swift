@@ -15,18 +15,20 @@ class VgnProviderTests: TripKitProviderTestCase, TripKitProviderTestsDelegate {
     
     var coordinatesTo: LocationPoint { return LocationPoint(lat: 49468692, lon: 11125334) } // Nürnberg Grundschule Grimmstr.
     
-    var stationIdFrom: String { return "451" } // Nürnberg Ostring
+    var stationIdFrom: String { return "80002932" } // Nürnberg Ostring
     
-    var stationIdTo: String { return "510" } // Nürnberg Hauptbahnhof
+    var stationIdTo: String { return "80001020" } // Nürnberg Hauptbahnhof
     
     var invalidStationId: String { return "999999" }
     
-    var suggestLocations: String { return "Ostring" }
+    var suggestLocations: String { return "Ostring Nürnberg" }
     
     var suggestLocationsIncomplete: String { return "Kur" } //
     
     var suggestLocationsUmlaut: String { return "Röthenbach" }
     
-    var suggestLocationsAddress: String { return "Nürnberg, Wodanstraße 25" }
+    var suggestLocationsAddress: String { return "Wodanstraße 25, Nürnberg" }
+    
+    var supportsJourneyDetails: Bool { return false }
     
 }
