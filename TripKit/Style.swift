@@ -91,6 +91,7 @@ public enum Shape: Int {
     case rect, rounded, circle
 }
 
+#if canImport(UIKit)
 public extension UIColor {
     
     convenience init(argb: UInt32) {
@@ -98,4 +99,4 @@ public extension UIColor {
     }
     
 }
-
+#endif

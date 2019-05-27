@@ -1,4 +1,9 @@
 import Foundation
+#if canImport(UIKit)
+import UIKit
+#elseif canImport(AppKit)
+import AppKit
+#endif
 
 let P_ISO_DATE = try! NSRegularExpression(pattern: "(\\d{4})-?(\\d{2})-?(\\d{2})")
 let P_ISO_DATE_REVERSE = try! NSRegularExpression(pattern: "(\\d{2})[-\\.](\\d{2})[-\\.](\\d{4})")
