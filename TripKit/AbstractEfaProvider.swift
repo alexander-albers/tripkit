@@ -1107,7 +1107,7 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
             }
             let place = normalizeLocationName(name: r["pc"].element?.text)
             let coord = parseCoordinates(string: r["c"].element?.text)
-            let qal = Int(r["qal"].element?.text ?? "") ?? 0
+            let qal = Int(elem["qal"].element?.text ?? "") ?? 0
             
             let location = Location(type: locationType, id: locationType == .station ? id : stateless, coord: coord, place: place, name: name)
             if let location = location {
@@ -1171,9 +1171,10 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
             var firstDepartureLocation: Location? = nil
             var lastArrivalLocation: Location? = nil
             
+            
             var legs: [Leg] = []
             for l in tp["ls"]["l"].all {
-                
+                let realtime = l["realtime"].element?.text == "1"
                 var departure: Stop? = nil
                 var arrival: Stop? = nil
                 for p in l["ps"]["p"].all {
@@ -1182,7 +1183,7 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
                     let usage = p["u"].element?.text
                     
                     let plannedTime = parseMobilePlannedTime(xml: p["st"])
-                    let predictedTime = parseMobilePlannedTime(xml: p["st"])
+                    let predictedTime = realtime ? parseMobilePredictedTime(xml: p["st"]) : nil
                     
                     let position = parsePosition(position: p["r"]["pl"].element?.text)
                     let place = normalizeLocationName(name: p["r"]["pc"].element?.text)
@@ -1212,8 +1213,6 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
                 }
                 
                 if let arrival = arrival, let departure = departure {
-                    let realtime = l["realtime"].element?.text == "1"
-                    
                     let lineDestination = try parseMobileLineDestination(xml: l, tyOrCo: false)
                     let path: [LocationPoint]
                     if let coordString = l["pt"].element?.text {
@@ -1227,6 +1226,7 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
                     for stop in l["pss"]["s"].all {
                         guard let s = stop.element?.text else { throw ParseError(reason: "failed to parse stop") }
                         let intermediateParts = s.components(separatedBy: ";")
+                        guard intermediateParts.count > 4 else { throw ParseError(reason: "failed to parse intermediate") }
                         let id = intermediateParts[0]
                         if id != departure.location.id && id != arrival.location.id {
                             let name = normalizeLocationName(name: intermediateParts[1])!
@@ -1835,7 +1835,7 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
                 }
             }
             if let rblArrivalDelay = rblArrivalDelay, rblArrivalDelay != -9999, predictedStopArrivalTime == nil {
-               predictedStopArrivalTime = plannedStopArrivalTime?.addingTimeInterval(TimeInterval(rblArrivalDelay * 60))
+                predictedStopArrivalTime = plannedStopArrivalTime?.addingTimeInterval(TimeInterval(rblArrivalDelay * 60))
             }
             let plannedStopDepartureTime = point["itdDateTime"].all.count > 1 ? processItdDateTime(xml: point["itdDateTime"][1]) : plannedStopArrivalTime
             var predictedStopDepartureTime = point["itdDateTimeTarget"].all.count > 1 ? processItdDateTime(xml: point["itdDateTimeTarget"][1]) : predictedStopArrivalTime
@@ -2214,7 +2214,7 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
                     return Line(id: id, network: network, product: .highSpeedTrain, label: "LCM" + trainNum)
                 } else if "Locomore" == longName {
                     return Line(id: id, network: network, product: .highSpeedTrain, label: "LOC" + trainNum)
-                
+                    
                 } else if "IR" == trainType || "Interregio" == trainName || "InterRegio" == trainName {
                     return Line(id: id, network: network, product: .regionalTrain, label: "IR" + trainNum)
                 } else if "IRE" == trainType || "Interregio-Express" == trainName {
@@ -2511,7 +2511,7 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
                     return Line(id: id, network: network, product: .regionalTrain, label: "DNA" + trainNum)
                 } else if "Dieselnetz" == trainType && "Augsburg" == trainNum {
                     return Line(id: id, network: network, product: .regionalTrain, label: "DNA")
-                
+                    
                 } else if ("BSB" == trainType || "Breisgau-S-Bahn Gmbh" == trainName) && trainNum != "" {
                     return Line(id: id, network: network, product: .regionalTrain, label: "BSB" + trainNum)
                 } else if "BSB-Zug" == trainName && trainNum != "" { // Breisgau-S-Bahn
@@ -2528,10 +2528,10 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
                     return Line(id: id, network: network, product: .suburbanTrain, label: "S" + trainNum)
                 } else if "S-Bahn" == trainName {
                     return Line(id: id, network: network, product: .suburbanTrain, label: "S" + trainNum)
-                
+                    
                 } else if "RT" == trainType || "RegioTram" == trainName {
                     return Line(id: id, network: network, product: .tram, label: "RT" + trainNum)
-                
+                    
                 } else if "Bus" == trainType && trainNum != "" {
                     return Line(id: id, network: network, product: .bus, label: trainNum)
                 } else if "Bus" == longName && symbol == "" {
@@ -2546,12 +2546,12 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
                     return Line(id: id, network: network, product: .bus, label: "BR" + trainNum)
                 } else if "EXB" == trainType && trainNum != "" {
                     return Line(id: id, network: network, product: .bus, label: "EXB" + trainNum)
-                
+                    
                 } else if "GB" == trainType { // Gondelbahn
                     return Line(id: id, network: network, product: .cablecar, label: "GB" + trainNum)
                 } else if "SB" == trainType { // Seilbahn
                     return Line(id: id, network: network, product: .suburbanTrain, label: "SB" + trainNum)
-                
+                    
                 } else if "Zug" == trainName && symbol != "" {
                     return Line(id: id, network: network, product: nil, label: symbol)
                 } else if "Zug" == longName && symbol == "" {
@@ -2581,8 +2581,8 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
                     return Line(id: id, network: network, product: .suburbanTrain, label: name)
                 } else if trainName == "S-Bahn" {
                     return Line(id: id, network: network, product: .suburbanTrain, label: "S" + (trainNum ?? ""))
-//                } else if let symbol = symbol, name == symbol, symbol =~ "(S\\d+) \\((?:DB Regio AG)\\)" {
-//                    return Line(id: id, network: network, product: .SUBURBAN_TRAIN, label: "")
+                    //                } else if let symbol = symbol, name == symbol, symbol =~ "(S\\d+) \\((?:DB Regio AG)\\)" {
+                    //                    return Line(id: id, network: network, product: .SUBURBAN_TRAIN, label: "")
                 } else if "REX" == trainType {
                     return Line(id: id, network: network, product: .regionalTrain, label: "REX\(trainNum ?? "")")
                 }
@@ -2705,7 +2705,7 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
         let destination: Location?
         let cancelled: Bool
     }
-
+    
 }
 
 public class EfaJourneyContext: QueryJourneyDetailContext {
