@@ -2,7 +2,7 @@ import Foundation
 
 public class SvvProvider: AbstractHafasClientInterfaceProvider {
     
-    static let API_BASE = "http://app.verkehrsauskunft.at/bin/"
+    static let API_BASE = "https://app.verkehrsauskunft.at/bin/"
     static let PRODUCTS_MAP: [Product?] = [.highSpeedTrain, .suburbanTrain, .subway, nil, .tram, .regionalTrain, .bus, .bus, .tram, .ferry, .onDemand, .bus, .regionalTrain, nil, nil, nil]
     
     public init(apiAuthorization: [String: Any], requestVerification: AbstractHafasClientInterfaceProvider.RequestVerification) {
