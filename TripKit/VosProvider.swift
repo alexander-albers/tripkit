@@ -2,7 +2,7 @@ import Foundation
 
 public class VosProvider: AbstractHafasClientInterfaceProvider {
     
-    static let API_BASE = "http://fahrplan.vos.info/bin/"
+    static let API_BASE = "https://fahrplan.vos.info/bin/"
     static let PRODUCTS_MAP: [Product?] = [.highSpeedTrain, .highSpeedTrain, .highSpeedTrain, .regionalTrain, .suburbanTrain, .bus, .ferry, .subway, .tram, nil, nil, nil, .highSpeedTrain]
     
     public init(apiAuthorization: [String: Any], requestVerification: AbstractHafasClientInterfaceProvider.RequestVerification) {
