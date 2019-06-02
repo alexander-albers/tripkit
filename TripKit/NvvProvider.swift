@@ -2,7 +2,7 @@ import Foundation
 
 public class NvvProvider: AbstractHafasClientInterfaceProvider {
     
-    static let API_BASE = "http://auskunft.nvv.de/auskunft/bin/jp/"
+    static let API_BASE = "https://auskunft.nvv.de/auskunft/bin/jp/"
     static let PRODUCTS_MAP: [Product?] = [.highSpeedTrain, .highSpeedTrain, .regionalTrain, .suburbanTrain, .subway, .tram, .bus, .bus, .ferry, .onDemand, .regionalTrain, .regionalTrain]
     
     public init(apiAuthorization: [String: Any], requestVerification: AbstractHafasClientInterfaceProvider.RequestVerification) {
