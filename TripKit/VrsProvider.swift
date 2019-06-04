@@ -660,7 +660,7 @@ public class VrsProvider: AbstractNetworkProvider {
                 guard let destination = segment["destination"] as? [String: Any] else { throw ParseError(reason: "failed to parse segment destination") }
                 let segmentDestinationLocationWithPosition = try parseLocationAndPosition(from: destination)
                 var segmentDestination = segmentDestinationLocationWithPosition.location
-                let segmentDestinationPosition = segmentOriginLocationWithPosition.position
+                let segmentDestinationPosition = segmentDestinationLocationWithPosition.position
                 if index == segments.count - 1 {
                     if to.type == .address {
                         segmentDestination = to
