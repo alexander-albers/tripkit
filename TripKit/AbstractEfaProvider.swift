@@ -826,6 +826,7 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
                     firstDepartureLocation = departureLocation
                 }
                 let departurePosition = parsePosition(position: point.element?.attribute(by: "platformName")?.text)
+                let plannedDeparturePosition = parsePosition(position: point.element?.attribute(by: "plannedPlatformName")?.text)
                 guard let departureTime = processItdDateTime(xml: point["itdDateTime"]) else {
                     throw ParseError(reason: "departure time")
                 }
@@ -840,6 +841,7 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
                 }
                 lastArrivalLocation = arrivalLocation
                 let arrivalPosition = parsePosition(position: point.element?.attribute(by: "platformName")?.text)
+                let plannedArrivalPosition = parsePosition(position: point.element?.attribute(by: "plannedPlatformName")?.text)
                 guard let arrivalTime = processItdDateTime(xml: point["itdDateTime"]) else {
                     throw ParseError(reason: "arrival time")
                 }
@@ -850,7 +852,7 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
                     throw ParseError(reason: "means of transport type")
                 }
                 if meansOfTransportType <= 16 {
-                    cancelled |= try processPublicLeg(partialRoute, &legs, departureTime, departureTargetTime, departureLocation, departurePosition, arrivalTime, arrivalTargetTime, arrivalLocation, arrivalPosition)
+                    cancelled |= try processPublicLeg(partialRoute, &legs, departureTime, departureTargetTime, departureLocation, departurePosition, plannedDeparturePosition, arrivalTime, arrivalTargetTime, arrivalLocation, arrivalPosition, plannedArrivalPosition)
                 } else if meansOfTransportType == 97 && meansOfTransportProductName == "nicht umsteigen" {
                     if let last = legs.last as? PublicLeg {
                         var lastMessage = "Nicht umsteigen, Weiterfahrt im selben Fahrzeug möglich."
@@ -1753,7 +1755,7 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
         return Location(type: isStop ? .station : .any, id: isStop ? id : nil, coord: coord, place: place, name: name)
     }
     
-    func processPublicLeg(_ xml: XMLIndexer, _ legs: inout [Leg], _ departureTime: Date, _ departureTargetTime: Date?, _ departureLocation: Location, _ departurePosition: String?, _ arrivalTime: Date, _ arrivalTargetTime: Date?, _ arrivalLocation: Location, _ arrivalPosition: String?) throws -> Bool {
+    func processPublicLeg(_ xml: XMLIndexer, _ legs: inout [Leg], _ departureTime: Date, _ departureTargetTime: Date?, _ departureLocation: Location, _ departurePosition: String?, _ plannedDeparturePosition: String?, _ arrivalTime: Date, _ arrivalTargetTime: Date?, _ arrivalLocation: Location, _ arrivalPosition: String?, _ plannedArrivalPosition: String?) throws -> Bool {
         let motSymbol = xml["itdMeansOfTransport"].element?.attribute(by: "symbol")?.text
         let motType = xml["itdMeansOfTransport"].element?.attribute(by: "motType")?.text
         let motShortName = xml["itdMeansOfTransport"].element?.attribute(by: "shortname")?.text
@@ -1862,11 +1864,15 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
             if !stops.last!.location.isEqual(arrivalLocation) {
                 throw ParseError(reason: "last intermediate stop is not arrival location!")
             }
-            arrival = stops.removeLast()
+            let a = stops.removeLast()
+            // workaround for MVV sending wrong position for arrival and departure locations in intermediate stops
+            // still use the time of the intermediate point because arrival and departure time is *always* sent as predicted, even when its not
+            arrival = Stop(location: a.location, plannedArrivalTime: a.plannedArrivalTime, predictedArrivalTime: a.predictedArrivalTime, plannedArrivalPlatform: plannedArrivalPosition ?? a.plannedArrivalPlatform, predictedArrivalPlatform: arrivalPosition ?? a.predictedArrivalPlatform, arrivalCancelled: a.arrivalCancelled, plannedDepartureTime: nil, predictedDepartureTime: nil, plannedDeparturePlatform: nil, predictedDeparturePlatform: nil, departureCancelled: false, message: a.message, wagonSequenceContext: a.wagonSequenceContext)
             if !stops.first!.location.isEqual(departureLocation) {
                 throw ParseError(reason: "first intermediate stop is not departure location!")
             }
-            departure = stops.removeFirst()
+            let d = stops.removeFirst()
+            departure = Stop(location: d.location, plannedArrivalTime: nil, predictedArrivalTime: nil, plannedArrivalPlatform: nil, predictedArrivalPlatform: nil, arrivalCancelled: false, plannedDepartureTime: d.plannedDepartureTime, predictedDepartureTime: d.predictedDepartureTime, plannedDeparturePlatform: plannedDeparturePosition ?? d.plannedDeparturePlatform, predictedDeparturePlatform: departurePosition ?? d.predictedDeparturePlatform, departureCancelled: d.departureCancelled, message: d.message, wagonSequenceContext: d.wagonSequenceContext)
         } else {
             departure = Stop(location: departureLocation, plannedArrivalTime: nil, predictedArrivalTime: nil, plannedArrivalPlatform: nil, predictedArrivalPlatform: nil, arrivalCancelled: false, plannedDepartureTime: departureTargetTime ?? departureTime, predictedDepartureTime: departureTime, plannedDeparturePlatform: departurePosition, predictedDeparturePlatform: nil, departureCancelled: cancelled)
             arrival = Stop(location: arrivalLocation, plannedArrivalTime: arrivalTargetTime ?? arrivalTime, predictedArrivalTime: arrivalTime, plannedArrivalPlatform: arrivalPosition, predictedArrivalPlatform: nil, arrivalCancelled: cancelled, plannedDepartureTime: nil, predictedDepartureTime: nil, plannedDeparturePlatform: nil, predictedDeparturePlatform: nil, departureCancelled: false)
