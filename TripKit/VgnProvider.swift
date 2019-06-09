@@ -59,7 +59,8 @@ public class VgnProvider: AbstractEfaProvider {
             "TT8": LineStyle(shape: .rect, backgroundColor: LineStyle.rgb(78, 173, 230), foregroundColor: LineStyle.white),
             
             "U": LineStyle(shape: .rect, backgroundColor: LineStyle.rgb(24, 90, 154), foregroundColor: LineStyle.white),
-            "T": LineStyle(shape: .rect, backgroundColor: LineStyle.rgb(119, 52, 120), foregroundColor: LineStyle.white)
+            "T": LineStyle(shape: .rect, backgroundColor: LineStyle.rgb(119, 52, 120), foregroundColor: LineStyle.white),
+            "B": LineStyle(shape: .circle, backgroundColor: LineStyle.rgb(210, 68, 57), foregroundColor: LineStyle.white)
         ]
     }
     
