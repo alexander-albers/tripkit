@@ -649,7 +649,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
                             }
                         }
                     }
-                    var cancelled = false
+                    var cancelled = jny["isCncl"] as? Bool ?? false
                     for msg in jny["msgL"] as? [Any] ?? [] {
                         guard let msg = msg as? [String: Any], let type = msg["type"] as? String, type == "REM", let remX = msg["remX"] as? Int, remX >= 0 && remX < rems?.count ?? 0, let rem = rems?[remX] else { continue }
                         switch rem {
@@ -1013,13 +1013,13 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         guard let locationIndex = dict["locX"] as? Int else { throw ParseError(reason: "failed to get stop index") }
         let location = locations[locationIndex]
         
-        let arrivalCancelled = dict["aCncl"] as? Bool ?? false
+        let arrivalCancelled = dict["isCncl"] as? Bool ?? dict["aCncl"] as? Bool ?? false
         let plannedArrivalTime = try parseJsonTime(baseDate: baseDate, dateString: dict["aTimeS"] as? String)
         let predictedArrivalTime = try parseJsonTime(baseDate: baseDate, dateString: dict["aTimeR"] as? String)
         let plannedArrivalPosition = normalize(position: dict["aPlatfS"] as? String)
         let predictedArrivalPosition = normalize(position: dict["aPlatfR"] as? String)
         
-        let departureCancelled = dict["dCncl"] as? Bool ?? false
+        let departureCancelled = dict["isCncl"] as? Bool ?? dict["dCncl"] as? Bool ?? false
         let plannedDepartureTime = try parseJsonTime(baseDate: baseDate, dateString: dict["dTimeS"] as? String)
         let predictedDepartureTime = try parseJsonTime(baseDate: baseDate, dateString: dict["dTimeR"] as? String)
         let plannedDeparturePosition = normalize(position: dict["dPlatfS"] as? String)
