@@ -1301,6 +1301,22 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
                     throw ParseError(reason: "failed to parse stop")
                 }
             }
+            
+            var fares: [Fare] = []
+            for elem in tp["tcs"]["tc"].all {
+                guard let net = elem["net"].element?.text, let type = elem["n"].element?.text, type == "SINGLE_TICKET" else { continue }
+                let unitsName = elem["un"].element?.text
+                if let fareAdult = elem["fa"].element?.text, let fare = Float(fareAdult), fare != 0 {
+                    let unit = elem["ua"].element?.text
+                    fares.append(Fare(network: net.uppercased(), type: .adult, currency: "EUR", fare: fare, unitsName: unitsName, units: unit))
+                }
+                if let fareChild = elem["fc"].element?.text, let fare = Float(fareChild), fare != 0 {
+                    let unit = elem["uc"].element?.text
+                    fares.append(Fare(network: net.uppercased(), type: .child, currency: "EUR", fare: fare, unitsName: unitsName, units: unit))
+                }
+                break
+            }
+            
             let context: EfaRefreshTripContext? = nil
             //            if let sessionId = sessionId, let requestId = requestId {
             //                context = EfaRefreshTripContext(sessionId: sessionId, requestId: requestId, routeIndex: "\(trips.count + 1)")
@@ -1308,7 +1324,7 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
             //                context = nil
             //            }
             if let firstDepartureLocation = firstDepartureLocation, let lastArrivalLocation = lastArrivalLocation {
-                let trip = Trip(id: tripId, from: firstDepartureLocation, to: lastArrivalLocation, legs: legs, fares: [], refreshContext: context)
+                let trip = Trip(id: tripId, from: firstDepartureLocation, to: lastArrivalLocation, legs: legs, fares: fares, refreshContext: context)
                 trips.append(trip)
             } else {
                 throw ParseError(reason: "failed to parse trip from/to")
