@@ -453,7 +453,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
                             message += "\n"
                         }
                         message += reason.trimmingCharacters(in: .whitespacesAndNewlines)
-                        if !message.hasSuffix(".") {
+                        if !message.hasSuffix(".") && !message.hasSuffix("!") {
                             message += "."
                         }
                     }
@@ -644,7 +644,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
                                 message += "\n"
                             }
                             message += text.trimmingCharacters(in: .whitespacesAndNewlines)
-                            if !message.hasSuffix(".") {
+                            if !message.hasSuffix(".") && !message.hasSuffix("!") {
                                 message += "."
                             }
                         }
@@ -659,7 +659,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
                                     message += "\n"
                                 }
                                 message += reason.trimmingCharacters(in: .whitespacesAndNewlines)
-                                if !message.hasSuffix(".") {
+                                if !message.hasSuffix(".") && !message.hasSuffix("!") {
                                     message += "."
                                 }
                             }
@@ -671,7 +671,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
                                     message += "\n"
                                 }
                                 message += reason.trimmingCharacters(in: .whitespacesAndNewlines)
-                                if !message.hasSuffix(".") {
+                                if !message.hasSuffix(".") && !message.hasSuffix("!") {
                                     message += "."
                                 }
                             }
@@ -848,7 +848,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
                         message += "\n"
                     }
                     message += reason.trimmingCharacters(in: .whitespacesAndNewlines)
-                    if !message.hasSuffix(".") {
+                    if !message.hasSuffix(".") && !message.hasSuffix("!") {
                         message += "."
                     }
                 }
@@ -1035,7 +1035,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
                         message += "\n"
                     }
                     message += reason.trimmingCharacters(in: .whitespacesAndNewlines)
-                    if !message.hasSuffix(".") {
+                    if !message.hasSuffix(".") && !message.hasSuffix("!") {
                         message += "."
                     }
                 }
@@ -1046,7 +1046,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
                         message += "\n"
                     }
                     message += reason.trimmingCharacters(in: .whitespacesAndNewlines)
-                    if !message.hasSuffix(".") {
+                    if !message.hasSuffix(".") && !message.hasSuffix("!") {
                         message += "."
                     }
                 }
