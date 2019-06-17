@@ -193,18 +193,6 @@ public class Location: NSObject, NSSecureCoding {
         return distance
     }
     
-    public func getTypeIconName() -> String {
-        let iconName: String
-        if type == .station {
-            iconName = "stop"
-        } else if type == .poi {
-            iconName = "poi"
-        } else {
-            iconName = "location"
-        }
-        return iconName
-    }
-    
     public func isIdentified() -> Bool {
         if type == .station {
             return id != nil && id != ""
