@@ -113,11 +113,11 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
                 "state": "F",
                 normalizedStationId.hasSuffix("@") ? "lid" : "extId": normalizedStationId
             ],
-            "getPasslist": false,
             "maxJny": maxDepartures != 0 ? maxDepartures : 50
         ]
         if let apiVersion = apiVersion, apiVersion.compare("1.19", options: .numeric) == .orderedAscending {
             req["stbFltrEquiv"] = !equivs
+            req["getPasslist"] = false
         }
         let request = wrapJsonApiRequest(meth: "StationBoard", req: req, formatted: false)
         let urlBuilder = UrlBuilder(path: mgateEndpoint, encoding: requestUrlEncoding)
