@@ -32,7 +32,7 @@ public class AbstractNetworkProvider: NetworkProvider {
         fatalError("refresh trip has not been implemented.")
     }
     
-    public func queryDepartures(stationId: String, time: Date?, maxDepartures: Int, equivs: Bool, completion: @escaping (QueryDeparturesResult) -> Void) -> AsyncRequest {
+    public func queryDepartures(stationId: String, departures: Bool, time: Date?, maxDepartures: Int, equivs: Bool, completion: @escaping (QueryDeparturesResult) -> Void) -> AsyncRequest {
         fatalError("query departuers has not been implemented.")
     }
     

@@ -159,9 +159,9 @@ public class AbstractHafasProvider: AbstractNetworkProvider {
         }
     }
     
-    func xmlStationBoardParameters(builder: UrlBuilder, stationId: String, time: Date?, maxDepartures: Int, equivs: Bool, styleSheet: String?) {
+    func xmlStationBoardParameters(builder: UrlBuilder, stationId: String, departures: Bool, time: Date?, maxDepartures: Int, equivs: Bool, styleSheet: String?) {
         builder.addParameter(key: "productsFilter", value: allProductsString())
-        builder.addParameter(key: "boardType", value: "dep")
+        builder.addParameter(key: "boardType", value: departures ? "dep" : "arr")
         builder.addParameter(key: "disableEquivs", value: equivs ? 0 : 1)
         builder.addParameter(key: "maxJourneys", value: maxDepartures > 0 ? maxDepartures : 100)
         builder.addParameter(key: "input", value: normalize(stationId: stationId))

@@ -138,12 +138,12 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider {
         }
     }
 
-    override public func queryDepartures(stationId: String, time: Date?, maxDepartures: Int, equivs: Bool, completion: @escaping (QueryDeparturesResult) -> Void) -> AsyncRequest {
+    override public func queryDepartures(stationId: String, departures: Bool, time: Date?, maxDepartures: Int, equivs: Bool, completion: @escaping (QueryDeparturesResult) -> Void) -> AsyncRequest {
         let urlBuilder = UrlBuilder(path: stationBoardEndpoint, encoding: requestUrlEncoding)
-        xmlStationBoardParameters(builder: urlBuilder, stationId: stationId, time: time, maxDepartures: maxDepartures, equivs: equivs, styleSheet: "vs_java3")
+        xmlStationBoardParameters(builder: urlBuilder, stationId: stationId, departures: departures, time: time, maxDepartures: maxDepartures, equivs: equivs, styleSheet: "vs_java3")
         
         let desktopUrlBuilder = UrlBuilder(path: stationBoardEndpoint, encoding: requestUrlEncoding)
-        xmlStationBoardParameters(builder: desktopUrlBuilder, stationId: stationId, time: time, maxDepartures: maxDepartures, equivs: equivs, styleSheet: nil)
+        xmlStationBoardParameters(builder: desktopUrlBuilder, stationId: stationId, departures: departures, time: time, maxDepartures: maxDepartures, equivs: equivs, styleSheet: nil)
         let desktopUrl = desktopUrlBuilder.build()
         
         return HttpClient.get(httpRequest: HttpRequest(urlBuilder: urlBuilder)) { result in

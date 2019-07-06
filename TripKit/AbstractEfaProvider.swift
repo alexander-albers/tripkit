@@ -284,14 +284,14 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
         }
     }
     
-    override public func queryDepartures(stationId: String, time: Date?, maxDepartures: Int, equivs: Bool, completion: @escaping (QueryDeparturesResult) -> Void) -> AsyncRequest {
+    override public func queryDepartures(stationId: String, departures: Bool, time: Date?, maxDepartures: Int, equivs: Bool, completion: @escaping (QueryDeparturesResult) -> Void) -> AsyncRequest {
         let urlBuilder = UrlBuilder(path: departureMonitorEndpoint, encoding: requestUrlEncoding)
-        queryDeparturesParameters(builder: urlBuilder, stationId: stationId, time: time, maxDepartures: maxDepartures, equivs: equivs, desktop: false)
+        queryDeparturesParameters(builder: urlBuilder, stationId: stationId, departures: departures, time: time, maxDepartures: maxDepartures, equivs: equivs, desktop: false)
         
         let desktopUrl: URL?
         if supportsDesktopDepartures {
             let desktopUrlBuilder = UrlBuilder(path: desktopDeparturesEndpoint ?? departureMonitorEndpoint, encoding: requestUrlEncoding)
-            queryDeparturesParameters(builder: desktopUrlBuilder, stationId: stationId, time: time, maxDepartures: maxDepartures, equivs: equivs, desktop: true)
+            queryDeparturesParameters(builder: desktopUrlBuilder, stationId: stationId, departures: departures, time: time, maxDepartures: maxDepartures, equivs: equivs, desktop: true)
             desktopUrl = desktopUrlBuilder.build()
         } else {
             desktopUrl = nil
@@ -301,7 +301,7 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
             switch result {
             case .success(let xml):
                 do {
-                    try self.handleQueryDeparturesResponse(xml: xml, desktopUrl: desktopUrl, completion: completion)
+                    try self.handleQueryDeparturesResponse(xml: xml, departures: departures, desktopUrl: desktopUrl, completion: completion)
                 } catch let err as ParseError {
                     os_log("queryDepartures parse error: %{public}@", log: .requestLogger, type: .error, err.reason)
                     completion(.failure(err))
@@ -518,14 +518,14 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
         }
     }
     
-    func queryDeparturesMobile(stationId: String, time: Date?, maxDepartures: Int, equivs: Bool, completion: @escaping (QueryDeparturesResult) -> Void) -> AsyncRequest {
+    func queryDeparturesMobile(stationId: String, departures: Bool, time: Date?, maxDepartures: Int, equivs: Bool, completion: @escaping (QueryDeparturesResult) -> Void) -> AsyncRequest {
         let urlBuilder = UrlBuilder(path: departureMonitorEndpoint, encoding: requestUrlEncoding)
-        queryDeparturesParameters(builder: urlBuilder, stationId: stationId, time: time, maxDepartures: maxDepartures, equivs: equivs, desktop: false)
+        queryDeparturesParameters(builder: urlBuilder, stationId: stationId, departures: departures, time: time, maxDepartures: maxDepartures, equivs: equivs, desktop: false)
 
         let desktopUrl: URL?
         if supportsDesktopDepartures {
             let desktopUrlBuilder = UrlBuilder(path: desktopDeparturesEndpoint ?? departureMonitorEndpoint, encoding: requestUrlEncoding)
-            queryDeparturesParameters(builder: desktopUrlBuilder, stationId: stationId, time: time, maxDepartures: maxDepartures, equivs: equivs, desktop: true)
+            queryDeparturesParameters(builder: desktopUrlBuilder, stationId: stationId, departures: departures, time: time, maxDepartures: maxDepartures, equivs: equivs, desktop: true)
             desktopUrl = desktopUrlBuilder.build()
         } else {
             desktopUrl = nil
@@ -535,7 +535,7 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
             switch result {
             case .success(let xml):
                 do {
-                    try self.handleQueryDeparturesMobileResponse(xml: xml, desktopUrl: desktopUrl, completion: completion)
+                    try self.handleQueryDeparturesMobileResponse(xml: xml, departures: departures, desktopUrl: desktopUrl, completion: completion)
                 } catch let err as ParseError {
                     os_log("queryDeparturesMobile parse error: %{public}@", log: .requestLogger, type: .error, err.reason)
                     completion(.failure(err))
@@ -923,7 +923,7 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
         completion(.success(context: context, from: from, via: via, to: to, trips: trips, messages: messages))
     }
     
-    func handleQueryDeparturesResponse(xml: XMLIndexer, desktopUrl: URL?, completion: @escaping (QueryDeparturesResult) -> Void) throws {
+    func handleQueryDeparturesResponse(xml: XMLIndexer, departures: Bool, desktopUrl: URL?, completion: @escaping (QueryDeparturesResult) -> Void) throws {
         let request = xml["itdRequest"]["itdDepartureMonitorRequest"]
         
         var result: [StationDepartures] = []
@@ -965,7 +965,7 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
             result.first(where: {$0.stopLocation.id == assignedStopId})?.lines.append(ServingLine(line: line, destination: destination))
         }
         
-        for departure in request["itdDepartureList"]["itdDeparture"].all {
+        for departure in request[departures ? "itdDepartureList" : "itdArrivalList"][departures ? "itdDeparture" : "itdArrival"].all {
             let assignedStopId = departure.element?.attribute(by: "stopID")?.text
             let plannedTime = self.parseDate(xml: departure["itdDateTime"])
             let predictedTime = self.parseDate(xml: departure["itdRTDateTime"])
@@ -1011,7 +1011,7 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
         completion(.success(departures: result, desktopUrl: desktopUrl))
     }
     
-    func handleQueryDeparturesMobileResponse(xml: XMLIndexer, desktopUrl: URL?, completion: @escaping (QueryDeparturesResult) -> Void) throws {
+    func handleQueryDeparturesMobileResponse(xml: XMLIndexer, departures: Bool, desktopUrl: URL?, completion: @escaping (QueryDeparturesResult) -> Void) throws {
         if let error = xml["efa"]["ers"]["err"].element, let mod = error.attribute(by: "mod")?.text, let co = error.attribute(by: "co")?.text {
             throw ParseError(reason: "Efa error: " + mod + " " + co)
         }
@@ -1562,7 +1562,7 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
         builder.addParameter(key: timeParam, value: timeFormatter.string(from: date))
     }
     
-    func queryDeparturesParameters(builder: UrlBuilder, stationId: String, time: Date?, maxDepartures: Int, equivs: Bool, desktop: Bool) {
+    func queryDeparturesParameters(builder: UrlBuilder, stationId: String, departures: Bool, time: Date?, maxDepartures: Int, equivs: Bool, desktop: Bool) {
         appendCommonRequestParameters(builder: builder, outputFormat: desktop ? nil : "XML")
         builder.addParameter(key: "type_dm", value: "stop")
         builder.addParameter(key: "name_dm", value: stationId)
@@ -1580,6 +1580,7 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
         if maxDepartures > 0 {
             builder.addParameter(key: "limit", value: maxDepartures)
         }
+        builder.addParameter(key: "itdDateTimeDepArr", value: departures ? "dep" : "arr")
     }
     
     private func appendCommonRequestParameters(builder: UrlBuilder, outputFormat: String? = "JSON") {

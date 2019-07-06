@@ -76,6 +76,7 @@ public protocol NetworkProvider {
     Get departures at a given station.
  
     - Parameter stationId: id of the station. TODO: replace with location object
+    - Parameter departures: true for departures, false for arrivals.
     - Parameter time: desired time for departing, or nil for the provider default.
     - Parameter maxDepartures: maximum number of departures to get or 0.
     - Parameter equivs: also query equivalent stations?
@@ -83,7 +84,7 @@ public protocol NetworkProvider {
  
     - Returns: A reference to a cancellable http request.
      */
-    func queryDepartures(stationId: String, time: Date?, maxDepartures: Int, equivs: Bool, completion: @escaping (QueryDeparturesResult) -> Void) -> AsyncRequest
+    func queryDepartures(stationId: String, departures: Bool, time: Date?, maxDepartures: Int, equivs: Bool, completion: @escaping (QueryDeparturesResult) -> Void) -> AsyncRequest
     
     /**
     Get details of a line journey.

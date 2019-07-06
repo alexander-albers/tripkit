@@ -99,13 +99,13 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         }
     }
     
-    override public func queryDepartures(stationId: String, time: Date?, maxDepartures: Int, equivs: Bool, completion: @escaping (QueryDeparturesResult) -> Void) -> AsyncRequest {
+    override public func queryDepartures(stationId: String, departures: Bool, time: Date?, maxDepartures: Int, equivs: Bool, completion: @escaping (QueryDeparturesResult) -> Void) -> AsyncRequest {
         // TODO: extract parameters to method
         let jsonDate = self.jsonDate(from: time ?? Date())
         let jsonTime = self.jsonTime(from: time ?? Date())
         let normalizedStationId = normalize(stationId: stationId) ?? ""
         var req: [String: Any] = [
-            "type": "DEP",
+            "type": departures ? "DEP" : "ARR",
             "date": jsonDate,
             "time": jsonTime,
             "stbLoc": [
@@ -126,7 +126,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         let desktopUrl: URL?
         if let desktopStboardEndpoint = desktopStboardEndpoint {
             let desktopUrlBuilder = UrlBuilder(path: desktopStboardEndpoint, encoding: requestUrlEncoding)
-            xmlStationBoardParameters(builder: desktopUrlBuilder, stationId: stationId, time: time, maxDepartures: maxDepartures, equivs: equivs, styleSheet: nil)
+            xmlStationBoardParameters(builder: desktopUrlBuilder, stationId: stationId, departures: departures, time: time, maxDepartures: maxDepartures, equivs: equivs, styleSheet: nil)
             desktopUrl = desktopUrlBuilder.build()
         } else {
             desktopUrl = nil
@@ -136,7 +136,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
             switch result {
             case .success(_, let data):
                 do {
-                    try self.handleJsonStationBoard(response: try data.toJson(), stationId: stationId, equivs: equivs, desktopUrl: desktopUrl, completion: completion)
+                    try self.handleJsonStationBoard(response: try data.toJson(), stationId: stationId, departures: departures, equivs: equivs, desktopUrl: desktopUrl, completion: completion)
                 } catch let err as ParseError {
                     os_log("queryDepartures parse error: %{public}@", log: .requestLogger, type: .error, err.reason)
                     completion(.failure(err))
@@ -356,7 +356,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         completion(.success(locations: locations))
     }
     
-    func handleJsonStationBoard(response: Any, stationId: String, equivs: Bool, desktopUrl: URL?, completion: @escaping (QueryDeparturesResult) -> Void) throws {
+    func handleJsonStationBoard(response: Any, stationId: String, departures: Bool, equivs: Bool, desktopUrl: URL?, completion: @escaping (QueryDeparturesResult) -> Void) throws {
         guard let json = response as? [String: Any], json["err"] == nil || json["err"] as? String == "OK", let svcResL = json["svcResL"] as? [Any], svcResL.count == 1, let svcRes = svcResL[0] as? [String: Any], let meth = svcRes["meth"] as? String, meth == "StationBoard", let err = svcRes["err"] as? String else {
             throw ParseError(reason: "could not parse json")
         }
@@ -392,7 +392,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         
         var result: [StationDepartures] = []
         for jny in res["jnyL"] as? [Any] ?? [] {
-            guard let jny = jny as? [String: Any], let stbStop = jny["stbStop"] as? [String: Any], let dateString = jny["date"] as? String, let lineIndex = stbStop["dProdX"] as? Int, let jnyDirTxt = jny["dirTxt"] as? String else { throw ParseError(reason: "could not parse jny") }
+            guard let jny = jny as? [String: Any], let stbStop = jny["stbStop"] as? [String: Any], let dateString = jny["date"] as? String, let lineIndex = (departures ? stbStop["dProdX"] : stbStop["aProdX"]) as? Int, let jnyDirTxt = jny["dirTxt"] as? String else { throw ParseError(reason: "could not parse jny") }
             
             if let reachable = jny["isRchbl"] as? Bool, !reachable {
                 continue
@@ -408,8 +408,8 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
             parseIsoDate(from: dateString, dateComponents: &dateComponents)
             guard let baseDate = calendar.date(from: dateComponents) else { throw ParseError(reason: "could not parse base date") }
             
-            let plannedTime = try parseJsonTime(baseDate: baseDate, dateString: stbStop["dTimeS"] as? String)
-            let predictedTime = try parseJsonTime(baseDate: baseDate, dateString: stbStop["dTimeR"] as? String)
+            let plannedTime = try parseJsonTime(baseDate: baseDate, dateString: (departures ? stbStop["dTimeS"] : stbStop["aTimeS"]) as? String)
+            let predictedTime = try parseJsonTime(baseDate: baseDate, dateString: (departures ? stbStop["dTimeR"] : stbStop["aTimeR"]) as? String)
             
             let line = lines[lineIndex]
             
@@ -420,8 +420,8 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
             } else {
                 location = Location(type: .station, id: stationId)!
             }
-            let position = parsePosition(position: stbStop["dPlatfR"] as? String)
-            let plannedPosition = parsePosition(position: stbStop["dPlatfS"] as? String)
+            let position = parsePosition(position: (departures ? stbStop["dPlatfR"] : stbStop["aPlatfR"]) as? String)
+            let plannedPosition = parsePosition(position: (departures ? stbStop["dPlatfS"] : stbStop["aPlatfS"]) as? String)
             
             let destination: Location?
             if let stopL = jny["stopL"] as? [Any] {
