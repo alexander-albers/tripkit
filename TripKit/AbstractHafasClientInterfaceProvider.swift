@@ -319,7 +319,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
     
     // MARK: NetworkProvider responses
     
-    func handleJsonLocMatch(response: Any, completion: @escaping (SuggestLocationsResult) -> Void) throws {
+    func handleJsonLocMatch(response: Any?, completion: @escaping (SuggestLocationsResult) -> Void) throws {
         guard let json = response as? [String: Any], json["err"] == nil || json["err"] as? String == "OK", let svcResL = json["svcResL"] as? [Any], svcResL.count == 1, let svcRes = svcResL[0] as? [String: Any], let meth = svcRes["meth"] as? String, meth == "LocMatch", let error = svcRes["err"] as? String else {
             throw ParseError(reason: "could not parse json")
         }
@@ -335,7 +335,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         completion(.success(locations: suggestedLocations))
     }
     
-    func handleJsonLocGeoPos(response: Any, types: [LocationType]?, completion: @escaping (NearbyLocationsResult) -> Void) throws {
+    func handleJsonLocGeoPos(response: Any?, types: [LocationType]?, completion: @escaping (NearbyLocationsResult) -> Void) throws {
         let types = types ?? [.station]
         guard let json = response as? [String: Any], json["err"] == nil || json["err"] as? String == "OK", let svcResL = json["svcResL"] as? [Any], svcResL.count == 1, let svcRes = svcResL[0] as? [String: Any], let meth = svcRes["meth"] as? String, meth == "LocGeoPos", let error = svcRes["err"] as? String else {
             throw ParseError(reason: "could not parse json")
@@ -356,7 +356,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         completion(.success(locations: locations))
     }
     
-    func handleJsonStationBoard(response: Any, stationId: String, departures: Bool, equivs: Bool, desktopUrl: URL?, completion: @escaping (QueryDeparturesResult) -> Void) throws {
+    func handleJsonStationBoard(response: Any?, stationId: String, departures: Bool, equivs: Bool, desktopUrl: URL?, completion: @escaping (QueryDeparturesResult) -> Void) throws {
         guard let json = response as? [String: Any], json["err"] == nil || json["err"] as? String == "OK", let svcResL = json["svcResL"] as? [Any], svcResL.count == 1, let svcRes = svcResL[0] as? [String: Any], let meth = svcRes["meth"] as? String, meth == "StationBoard", let err = svcRes["err"] as? String else {
             throw ParseError(reason: "could not parse json")
         }
@@ -494,7 +494,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         completion(.success(departures: result, desktopUrl: desktopUrl))
     }
     
-    func handleJsonTripSearch(response: Any, desktopUrl: URL?, from: Location, via: Location?, to: Location, date: Date, departure: Bool, products: [Product], previousContext: Context?, later: Bool, optimize: Optimize?, walkSpeed: WalkSpeed?, accessibility: Accessibility?, options: [Option]?, completion: @escaping (QueryTripsResult) -> Void) throws {
+    func handleJsonTripSearch(response: Any?, desktopUrl: URL?, from: Location, via: Location?, to: Location, date: Date, departure: Bool, products: [Product], previousContext: Context?, later: Bool, optimize: Optimize?, walkSpeed: WalkSpeed?, accessibility: Accessibility?, options: [Option]?, completion: @escaping (QueryTripsResult) -> Void) throws {
         guard let json = response as? [String: Any], json["err"] == nil || json["err"] as? String == "OK", let svcResL = json["svcResL"] as? [Any], svcResL.count == 1, let svcRes = svcResL[0] as? [String: Any], let meth = svcRes["meth"] as? String, meth == "TripSearch" || meth == "Reconstruction", let err = svcRes["err"] as? String else {
             throw ParseError(reason: "could not parse json")
         }

@@ -422,7 +422,7 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider {
         completion(.success(locations: locations))
     }
     
-    func handleJsonNearbyLocations(response: Any, completion: @escaping (NearbyLocationsResult) -> Void) throws {
+    func handleJsonNearbyLocations(response: Any?, completion: @escaping (NearbyLocationsResult) -> Void) throws {
         guard let json = response as? [String: Any], let error = json["error"] as? String else {
             throw ParseError(reason: "could not parse json")
         }
@@ -882,26 +882,7 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider {
             reader.skipBytes(2) // legStatus
             reader.skipBytes(2) // 0x0000
             
-            var connectionId: String? = nil
             if tripAttrsPtr != 0 {
-                reader.reset()
-                reader.skipBytes(tripAttrsPtr + tripIndex * 2)
-                let tripAttrsIndex = reader.readShortReverse()
-                reader.reset()
-                reader.skipBytes(attrsOffset + tripAttrsIndex * 4)
-                while true {
-                    let key = strings.read(reader: reader)
-                    if let key = key {
-                        if key == "ConnectionId" {
-                            connectionId = strings.read(reader: reader)
-                        } else {
-                            reader.skipBytes(2)
-                        }
-                    } else {
-                        break
-                    }
-                }
-                
                 var legs: [Leg] = []
                 for legIndex in 0..<numLegs {
                     reader.reset()
