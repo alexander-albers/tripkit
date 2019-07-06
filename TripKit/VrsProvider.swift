@@ -244,7 +244,7 @@ public class VrsProvider: AbstractNetworkProvider {
         completion(.success(locations: locations))
     }
     
-    override public func queryDepartures(stationId: String, time: Date?, maxDepartures: Int, equivs: Bool, completion: @escaping (QueryDeparturesResult) -> Void) -> AsyncRequest {
+    override public func queryDepartures(stationId: String, departures: Bool, time: Date?, maxDepartures: Int, equivs: Bool, completion: @escaping (QueryDeparturesResult) -> Void) -> AsyncRequest {
         let urlBuilder = UrlBuilder(path: VrsProvider.API_BASE, encoding: .utf8)
 
         urlBuilder.addParameter(key: "eID", value: "tx_vrsinfo_ass2_timetable")
@@ -253,6 +253,7 @@ public class VrsProvider: AbstractNetworkProvider {
         if let time = time {
             urlBuilder.addParameter(key: "t", value: formatDate(from: time))
         }
+        // TODO: support for arrivals (possible?)
         
         return HttpClient.get(httpRequest: HttpRequest(urlBuilder: urlBuilder)) { result in
             switch result {

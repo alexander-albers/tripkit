@@ -116,7 +116,7 @@ public class MockKvvProvider: AbstractEfaProvider {
         return AsyncRequest(task: nil)
     }
     
-    public override func queryDepartures(stationId: String, time: Date?, maxDepartures: Int, equivs: Bool, completion: @escaping (QueryDeparturesResult) -> Void) -> AsyncRequest {
+    public override func queryDepartures(stationId: String, departures: Bool, time: Date?, maxDepartures: Int, equivs: Bool, completion: @escaping (QueryDeparturesResult) -> Void) -> AsyncRequest {
         switch stationId {
         case "7000090":
             let result = [StationDepartures(stopLocation: Location(type: .station, id: "7000090", coord: nil, place: nil, name: "Karlsruhe, Hbf")!, departures: [], lines: [])]

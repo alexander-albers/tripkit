@@ -82,7 +82,7 @@ class TripKitProviderTestCase: XCTestCase {
     }
     
     func testQueryDepartures() {
-        let result = syncQueryDepartures(stationId: delegate.stationIdFrom, time: Date(), maxDepartures: 5, equivs: false)
+        let result = syncQueryDepartures(stationId: delegate.stationIdFrom, departures: true, time: Date(), maxDepartures: 5, equivs: false)
         switch result {
         case .success(let departures, let desktopUrl):
             os_log("success: %@, desktopUrl=%@", log: .testsLogger, type: .default, departures, desktopUrl?.absoluteString ?? "")
@@ -113,8 +113,24 @@ class TripKitProviderTestCase: XCTestCase {
         }
     }
     
+    func testQueryArrivals() {
+        let result = syncQueryDepartures(stationId: delegate.stationIdFrom, departures: false, time: Date(), maxDepartures: 5, equivs: false)
+        switch result {
+        case .success(let departures, let desktopUrl):
+            os_log("success: %@, desktopUrl=%@", log: .testsLogger, type: .default, departures, desktopUrl?.absoluteString ?? "")
+            XCTAssert(!departures.isEmpty, "received empty result")
+            if let first = departures.first {
+                XCTAssert(!first.departures.isEmpty, "received empty result")
+            }
+        case .invalidStation:
+            XCTFail("received invalid id")
+        case .failure(let error):
+            XCTFail("received an error: \(error)")
+        }
+    }
+    
     func testQueryDeparturesEquivs() {
-        let result = syncQueryDepartures(stationId: delegate.stationIdFrom, time: Date(), maxDepartures: 5, equivs: false)
+        let result = syncQueryDepartures(stationId: delegate.stationIdFrom, departures: true, time: Date(), maxDepartures: 5, equivs: false)
         switch result {
         case .success(let departures, let desktopUrl):
             os_log("success: %@, desktopUrl=%@", log: .testsLogger, type: .default, departures, desktopUrl?.absoluteString ?? "")
@@ -130,7 +146,7 @@ class TripKitProviderTestCase: XCTestCase {
     }
     
     func testQueryDeparturesInvalid() {
-        let result = syncQueryDepartures(stationId: delegate.invalidStationId, time: Date(), maxDepartures: 1, equivs: false)
+        let result = syncQueryDepartures(stationId: delegate.invalidStationId, departures: true, time: Date(), maxDepartures: 1, equivs: false)
         switch result {
         case .success(_, _):
             XCTFail("illegal result type success")
@@ -284,11 +300,11 @@ class TripKitProviderTestCase: XCTestCase {
         return result ?? .failure(TimeoutError())
     }
     
-    private func syncQueryDepartures(stationId: String, time: Date?, maxDepartures: Int, equivs: Bool) -> QueryDeparturesResult {
+    private func syncQueryDepartures(stationId: String, departures: Bool, time: Date?, maxDepartures: Int, equivs: Bool) -> QueryDeparturesResult {
         let expectation = self.expectation(description: "Network Task")
         var result: QueryDeparturesResult?
         
-        _ = provider.queryDepartures(stationId: stationId, time: time, maxDepartures: maxDepartures, equivs: equivs) { (completion: QueryDeparturesResult) in
+        _ = provider.queryDepartures(stationId: stationId, departures: departures, time: time, maxDepartures: maxDepartures, equivs: equivs) { (completion: QueryDeparturesResult) in
             result = completion
             expectation.fulfill()
         }

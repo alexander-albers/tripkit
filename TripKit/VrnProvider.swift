@@ -396,11 +396,11 @@ public class VrnProvider: AbstractEfaProvider {
         }
     }
     
-    override func queryDeparturesParameters(builder: UrlBuilder, stationId: String, time: Date?, maxDepartures: Int, equivs: Bool, desktop: Bool) {
+    override func queryDeparturesParameters(builder: UrlBuilder, stationId: String, departures: Bool, time: Date?, maxDepartures: Int, equivs: Bool, desktop: Bool) {
         if desktop {
             builder.addParameter(key: "dm", value: stationId)
         } else {
-            super.queryDeparturesParameters(builder: builder, stationId: stationId, time: time, maxDepartures: maxDepartures, equivs: equivs, desktop: desktop)
+            super.queryDeparturesParameters(builder: builder, stationId: stationId, departures: departures, time: time, maxDepartures: maxDepartures, equivs: equivs, desktop: desktop)
         }
     }
     

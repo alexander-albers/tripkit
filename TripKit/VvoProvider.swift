@@ -63,7 +63,7 @@ public class VvoProvider: AbstractEfaProvider {
         }
     }
     
-    override func queryDeparturesParameters(builder: UrlBuilder, stationId: String, time: Date?, maxDepartures: Int, equivs: Bool, desktop: Bool) {
+    override func queryDeparturesParameters(builder: UrlBuilder, stationId: String, departures: Bool, time: Date?, maxDepartures: Int, equivs: Bool, desktop: Bool) {
         if desktop {
             builder.addParameter(key: "stopid", value: stationId)
             let dateFormatter = DateFormatter()
@@ -77,7 +77,7 @@ public class VvoProvider: AbstractEfaProvider {
             builder.addParameter(key: "date", value: dateFormatter.string(from: time ?? Date()))
             builder.addParameter(key: "time", value: timeFormatter.string(from: time ?? Date()))
         } else {
-            super.queryDeparturesParameters(builder: builder, stationId: stationId, time: time, maxDepartures: maxDepartures, equivs: equivs, desktop: desktop)
+            super.queryDeparturesParameters(builder: builder, stationId: stationId, departures: departures, time: time, maxDepartures: maxDepartures, equivs: equivs, desktop: desktop)
         }
     }
     

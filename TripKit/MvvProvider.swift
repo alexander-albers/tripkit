@@ -62,8 +62,8 @@ public class MvvProvider: AbstractEfaProvider {
         }
     }
     
-    override func queryDeparturesParameters(builder: UrlBuilder, stationId: String, time: Date?, maxDepartures: Int, equivs: Bool, desktop: Bool) {
-        super.queryDeparturesParameters(builder: builder, stationId: stationId, time: time, maxDepartures: maxDepartures, equivs: equivs, desktop: desktop)
+    override func queryDeparturesParameters(builder: UrlBuilder, stationId: String, departures: Bool, time: Date?, maxDepartures: Int, equivs: Bool, desktop: Bool) {
+        super.queryDeparturesParameters(builder: builder, stationId: stationId, departures: departures, time: time, maxDepartures: maxDepartures, equivs: equivs, desktop: desktop)
         if desktop {
             builder.setAnchorHash(anchorHash: "departures@enquiry")
         }
