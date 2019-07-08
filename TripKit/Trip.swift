@@ -11,6 +11,16 @@ public class Trip: NSObject, NSSecureCoding {
     public let fares: [Fare]
     public var refreshContext: RefreshTripContext?
     
+    public var isCancelled: Bool {
+        for leg in legs {
+            guard let leg = leg as? PublicLeg else { continue }
+            if leg.departureStop.departureCancelled || leg.arrivalStop.arrivalCancelled {
+                return true
+            }
+        }
+        return false
+    }
+    
     public init(id: String, from: Location, to: Location, legs: [Leg], fares: [Fare], refreshContext: RefreshTripContext? = nil) {
         self.id = id
         self.from = from
