@@ -1592,39 +1592,28 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
         builder.addParameter(key: "coordOutputFormat", value: "WGS84")
     }
     
-    private func locationTypeValue(location: Location) -> String {
-        switch location.type {
-        case .station:
-            return "station"
-        case .coord:
-            return "coord"
-        case .poi:
-            return "poi"
-        default:
-            return "any"
-        }
-    }
-    
     func appendLocation(builder: UrlBuilder, location: Location, suffix: String) {
-        let name = locationValue(location: location)
-        
-        if location.type == LocationType.address || location.type == LocationType.coord, let coord = location.coord {
+        switch (location.type, normalize(stationId: location.id), location.coord) {
+        case let (.station, id?, _):
+            builder.addParameter(key: "type_\(suffix)", value: "stop")
+            builder.addParameter(key: "name_\(suffix)", value: id)
+        case let (.poi, id?, _):
+            builder.addParameter(key: "type_\(suffix)", value: "poi")
+            builder.addParameter(key: "name_\(suffix)", value: id)
+        case let (.address, id?, _):
+            builder.addParameter(key: "type_\(suffix)", value: "address")
+            builder.addParameter(key: "name_\(suffix)", value: id)
+        case let (type, _, coord?) where type == .coord || type == .address:
             builder.addParameter(key: "type_\(suffix)", value: "coord")
             builder.addParameter(key: "name_\(suffix)", value: String(format: "%.6f:%.6f:WGS84", Double(coord.lon) / 1e6, Double(coord.lat) / 1e6))
-        } else {
-            builder.addParameter(key: "type_\(suffix)", value: locationTypeValue(location: location))
-            builder.addParameter(key: "name_\(suffix)", value: name)
+        default:
+            builder.addParameter(key: "type_\(suffix)", value: "any")
+            builder.addParameter(key: "name_\(suffix)", value: location.getUniqueLongName())
         }
     }
     
     func locationValue(location: Location) -> String {
-        if location.type == LocationType.station, let id = location.id {
-            return id
-        } else if location.type == LocationType.poi, let id = location.id {
-            return id
-        } else {
-            return location.getUniqueLongName()
-        }
+        return location.id ?? location.getUniqueLongName()
     }
     
     // MARK: Response parse methods
