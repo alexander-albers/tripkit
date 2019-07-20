@@ -8,8 +8,10 @@ public class AvvAachenProvider: AbstractHafasClientInterfaceProvider {
     public init(apiAuthorization: [String: Any]) {
         super.init(networkId: .AVV2, apiBase: AvvAachenProvider.API_BASE, productsMap: AvvAachenProvider.PRODUCTS_MAP)
         self.apiAuthorization = apiAuthorization
-        apiVersion = "1.16"
-        apiClient = ["id": "AVV_AACHEN"]
+        apiVersion = "1.18"
+        apiClient = ["id": "AVV_AACHEN","type": "WEB",
+                     "name": "webapp",
+                     "l": "vs_avv"]
     }
     
     override func split(stationName: String?) -> (String?, String?) {
