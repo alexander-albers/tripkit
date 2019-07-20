@@ -574,33 +574,44 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
                 case "JNY":
                     guard let jny = sec["jny"] as? [String: Any], let prodX = jny["prodX"] as? Int, let stopL = jny["stopL"] as? [Any] else { throw ParseError(reason: "failed to parse outcon jny") }
                     let attrs: [Line.Attr]?
+                    var message = ""
                     if let remL = jny["remL"] as? [Any] ?? jny["msgL"] as? [Any] {
                         var result: [Line.Attr] = []
                         for rem in remL {
-                            guard let rem = rem as? [String: Any], let remX = rem["remX"] as? Int else { continue }
-                            if jny["msgL"] != nil && rem["type"] as? String != "REM" { continue }
-                            if let attr = rems?[remX] {
-                                switch attr {
-                                case .bycicleCarriage:
-                                    result.append(.bicycleCarriage)
-                                    break
-                                case .wheelChairAccess:
-                                    result.append(.wheelChairAccess)
-                                    break
-                                case .boardRestaurant:
-                                    result.append(.restaurant)
-                                    break
-                                case .airConditioned:
-                                    result.append(.airConditioned)
-                                    break
-                                case .wifi:
-                                    result.append(.wifiAvailable)
-                                    break
-                                case .powerSockets:
-                                    result.append(.powerSockets)
-                                    break
-                                default:
-                                    break
+                            guard let rem = rem as? [String: Any] else { continue }
+                            if let remX = rem["remX"] as? Int, jny["msgL"] != nil && rem["type"] as? String == "REM" {
+                                if let attr = rems?[remX] {
+                                    switch attr {
+                                    case .bycicleCarriage:
+                                        result.append(.bicycleCarriage)
+                                        break
+                                    case .wheelChairAccess:
+                                        result.append(.wheelChairAccess)
+                                        break
+                                    case .boardRestaurant:
+                                        result.append(.restaurant)
+                                        break
+                                    case .airConditioned:
+                                        result.append(.airConditioned)
+                                        break
+                                    case .wifi:
+                                        result.append(.wifiAvailable)
+                                        break
+                                    case .powerSockets:
+                                        result.append(.powerSockets)
+                                        break
+                                    default:
+                                        break
+                                    }
+                                }
+                            } else if let himX = rem["himX"] as? Int, rem["type"] as? String == "HIM" {
+                                guard let text = messages?[himX] else { continue }
+                                if message != "" {
+                                    message += "\n"
+                                }
+                                message += text.trimmingCharacters(in: .whitespacesAndNewlines)
+                                if !message.hasSuffix(".") && !message.hasSuffix("!") {
+                                    message += "."
                                 }
                             }
                         }
@@ -635,7 +646,6 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
                         path = []
                     }
                     
-                    var message = ""
                     if let himL = jny["himL"] as? [Any] {
                         for him in himL {
                             guard let him = him as? [String: Any], let himX = him["himX"] as? Int else { throw ParseError(reason: "failed to parse him") }
@@ -1286,6 +1296,18 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
             }
             while head.hasPrefix(".") {
                 head = String(head.dropFirst())
+            }
+            head = head.trimmingCharacters(in: .whitespacesAndNewlines)
+            if !head.hasSuffix(".") && !head.hasSuffix("!") {
+                head += "."
+            }
+            
+            if let text = him["text"] as? String, !text.isEmpty {
+                head += "\n"
+                head += text.trimmingCharacters(in: .whitespacesAndNewlines)
+                if !head.hasSuffix(".") && !head.hasSuffix("!") {
+                    head += "."
+                }
             }
             result.append(head)
         }
