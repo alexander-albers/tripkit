@@ -612,7 +612,7 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
             let postcode = json["postcode"].string
             let quality = json["quality"].intValue
             let place = json["ref"]["place"].string?.emptyToNil
-            let coordinates = parseCoordinates(string: json["ref"]["coord"].string)
+            let coordinates = parseCoordinates(string: json["ref"]["coord"].string ?? json["ref"]["coords"].string)
             
             let location: Location?
             switch type {
