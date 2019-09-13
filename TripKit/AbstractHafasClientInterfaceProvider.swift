@@ -1302,7 +1302,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
                 head += "."
             }
             
-            if let text = him["text"] as? String, !text.isEmpty {
+            if let text = him["lead"] as? String, !text.isEmpty {
                 head += "\n"
                 head += text.trimmingCharacters(in: .whitespacesAndNewlines)
                 if !head.hasSuffix(".") && !head.hasSuffix("!") {
