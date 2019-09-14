@@ -1392,7 +1392,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "de.alex-albers.TripKit";
+				PRODUCT_BUNDLE_IDENTIFIER = "de.alex-albers.TripKit.watchos";
 				PRODUCT_NAME = TripKit;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
@@ -1422,7 +1422,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "de.alex-albers.TripKit";
+				PRODUCT_BUNDLE_IDENTIFIER = "de.alex-albers.TripKit.watchos";
 				PRODUCT_NAME = TripKit;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
