@@ -12,6 +12,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
     var desktopStboardEndpoint: String?
     var requestVerification: RequestVerification = .none
     var configJson: [String: Any] = [:]
+    var userAgent: String?
     
     init(networkId: NetworkId, apiBase: String, productsMap: [Product?]) {
         self.mgateEndpoint = apiBase + "mgate.exe"
@@ -34,7 +35,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         let urlBuilder = UrlBuilder(path: mgateEndpoint, encoding: requestUrlEncoding)
         requestVerification.appendParameters(to: urlBuilder, requestString: request)
         
-        return HttpClient.get(httpRequest: HttpRequest(urlBuilder: urlBuilder).setPostPayload(request)) { result in
+        return HttpClient.get(httpRequest: HttpRequest(urlBuilder: urlBuilder).setPostPayload(request).setUserAgent(userAgent)) { result in
             switch result {
             case .success(_, let data):
                 do {
@@ -80,7 +81,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         let urlBuilder = UrlBuilder(path: mgateEndpoint, encoding: requestUrlEncoding)
         requestVerification.appendParameters(to: urlBuilder, requestString: request)
         
-        return HttpClient.get(httpRequest: HttpRequest(urlBuilder: urlBuilder).setPostPayload(request)) { result in
+        return HttpClient.get(httpRequest: HttpRequest(urlBuilder: urlBuilder).setPostPayload(request).setUserAgent(userAgent)) { result in
             switch result {
             case .success(_, let data):
                 do {
@@ -132,7 +133,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
             desktopUrl = nil
         }
         
-        return HttpClient.get(httpRequest: HttpRequest(urlBuilder: urlBuilder).setPostPayload(request)) { result in
+        return HttpClient.get(httpRequest: HttpRequest(urlBuilder: urlBuilder).setPostPayload(request).setUserAgent(userAgent)) { result in
             switch result {
             case .success(_, let data):
                 do {
@@ -237,7 +238,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
             desktopUrl = nil
         }
         
-        return HttpClient.get(httpRequest: HttpRequest(urlBuilder: urlBuilder).setPostPayload(request)) { result in
+        return HttpClient.get(httpRequest: HttpRequest(urlBuilder: urlBuilder).setPostPayload(request).setUserAgent(userAgent)) { result in
             switch result {
             case .success(_, let data):
                 do {
@@ -265,7 +266,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         let urlBuilder = UrlBuilder(path: mgateEndpoint, encoding: requestUrlEncoding)
         requestVerification.appendParameters(to: urlBuilder, requestString: request)
         
-        return HttpClient.get(httpRequest: HttpRequest(urlBuilder: urlBuilder).setPostPayload(request)) { result in
+        return HttpClient.get(httpRequest: HttpRequest(urlBuilder: urlBuilder).setPostPayload(request).setUserAgent(userAgent)) { result in
             switch result {
             case .success(_, let data):
                 do {
@@ -298,7 +299,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         let urlBuilder = UrlBuilder(path: mgateEndpoint, encoding: requestUrlEncoding)
         requestVerification.appendParameters(to: urlBuilder, requestString: request)
         
-        return HttpClient.get(httpRequest: HttpRequest(urlBuilder: urlBuilder).setPostPayload(request)) { result in
+        return HttpClient.get(httpRequest: HttpRequest(urlBuilder: urlBuilder).setPostPayload(request).setUserAgent(userAgent)) { result in
             switch result {
             case .success(_, let data):
                 do {
@@ -1291,7 +1292,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         guard let himList = himList, !himList.isEmpty else { return nil }
         var result: [String] = []
         for him in himList {
-            guard let him = him as? [String: Any], var head = him["head"] as? String else {
+            guard let him = him as? [String: Any], var head = him["head"] as? String ?? him["text"] as? String else {
                 throw ParseError(reason: "could not parse him")
             }
             while head.hasPrefix(".") {
