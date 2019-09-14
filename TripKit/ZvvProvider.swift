@@ -1,15 +1,18 @@
 import Foundation
 
-public class ZvvProvider: AbstractHafasLegacyProvider {
+public class ZvvProvider: AbstractHafasClientInterfaceProvider {
     
     static let API_BASE = "https://online.fahrplan.zvv.ch/bin/"
     static let PRODUCTS_MAP: [Product?] = [.highSpeedTrain, .highSpeedTrain, .regionalTrain, .regionalTrain, .ferry, .suburbanTrain, .bus, .cablecar, .subway, .tram]
     
-    public init() {
-        super.init(networkId: .ZVV, apiBase: ZvvProvider.API_BASE, apiLanguage: "dn", productsMap: ZvvProvider.PRODUCTS_MAP)
-        
-        jsonGetStopsEncoding = .utf8
-        jsonNearbyLocationsEncoding = .utf8
+    public init(apiAuthorization: [String: Any], requestVerification: AbstractHafasClientInterfaceProvider.RequestVerification) {
+        super.init(networkId: .ZVV, apiBase: ZvvProvider.API_BASE, productsMap: ZvvProvider.PRODUCTS_MAP)
+        self.apiAuthorization = apiAuthorization
+        self.requestVerification = requestVerification
+        apiVersion = "1.18"
+        apiClient = ["id": "ZVV", "v": "4000300", "type": "IPH", "name": "zvvPROD-STORE"]
+        extVersion = "ZVV.2"
+        userAgent = "zvvPROD-STORE/4.0.3 (iPhone; ; Scale/3.00)" // required
         
         styles = [
             // S-Bahn
@@ -109,82 +112,6 @@ public class ZvvProvider: AbstractHafasLegacyProvider {
             return (m[0], m[1])
         }
         return super.split(address: address)
-    }
-    
-    let P_NUMBER = try! NSRegularExpression(pattern: "\\d{2,5}")
-    
-    override func parse(lineAndType: String) throws -> Line {
-        guard let lineAndTypeMatch = P_NORMALIZE_LINE_AND_TYPE.firstMatch(in: lineAndType, options: [], range: NSMakeRange(0, lineAndType.count)) else {
-            throw ParseError(reason: "cannot normalize \(lineAndType)")
-        }
-        let number = (lineAndType as NSString).substring(with: lineAndTypeMatch.range(at: 1)).replacingOccurrences(of: " ", with: "")
-        let type = (lineAndType as NSString).substring(with: lineAndTypeMatch.range(at: 2))
-        
-        if type == "Bus" {
-            return newLine(network: nil, product: .bus, normalizedName: stripPrefix(of: number, with: "Bus"), comment: nil, attrs: [])
-        } else if type == "Bus-NF" {
-            return newLine(network: nil, product: .bus, normalizedName: stripPrefix(of: number, with: ["Bus", "Bus-NF"]), comment: nil, attrs: [.wheelChairAccess])
-        } else if type == "Tro" || type == "Trolley" {
-            return newLine(network: nil, product: .bus, normalizedName: stripPrefix(of: number, with: "Tro"), comment: nil, attrs: [])
-        } else if type == "Tro-NF" {
-            return newLine(network: nil, product: .bus, normalizedName: stripPrefix(of: number, with: ["Tro", "Tro-NF"]), comment: nil, attrs: [.wheelChairAccess])
-        } else if type == "Trm" {
-            return newLine(network: nil, product: .tram, normalizedName: stripPrefix(of: number, with: "Trm"), comment: nil, attrs: [])
-        } else if type == "Trm-NF" {
-            return newLine(network: nil, product: .tram, normalizedName: stripPrefix(of: number, with: ["Trm", "Trm-NF"]), comment: nil, attrs: [.wheelChairAccess])
-        } else if number == "S18" {
-            return newLine(network: nil, product: .suburbanTrain, normalizedName: "S18", comment: nil, attrs: [])
-        }
-        
-        if let _ = number.match(pattern: P_NUMBER) {
-            return newLine(network: nil, product: nil, normalizedName: number, comment: nil, attrs: [])
-        }
-        
-        if let product = normalize(type: type) {
-            return newLine(network: nil, product: product, normalizedName: number, comment: nil, attrs: [])
-        }
-        
-        return try super.parse(lineAndType: lineAndType)
-    }
-    
-    private func stripPrefix(of string: String, with prefixes: [String]) -> String {
-        for prefix in prefixes {
-            if string.hasPrefix(prefix) {
-                return string.substring(from: prefix.length)
-            }
-        }
-        return string
-    }
-    
-    private func stripPrefix(of string: String, with prefix: String) -> String {
-        return stripPrefix(of: string, with: [prefix])
-    }
-    
-    override func normalize(type: String) -> Product? {
-        let ucType = type.uppercased()
-        
-        switch ucType {
-        case "N": // Nachtbus
-            return .bus
-        case "TX":
-            return .bus
-        case "KB":
-            return .bus
-        case "TE2": // Basel - Strasbourg
-            return .regionalTrain
-        case "D-SCHIFF":
-            return .ferry
-        case "DAMPFSCH":
-            return .ferry
-        case "BERGBAHN":
-            return .cablecar
-        case "LSB": // Luftseilbahn
-            return .cablecar
-        case "SLB": // Sesselliftbahn
-            return .cablecar
-        default:
-            return super.normalize(type: type)
-        }
     }
     
 }

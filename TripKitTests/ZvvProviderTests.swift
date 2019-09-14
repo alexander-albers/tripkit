@@ -8,7 +8,7 @@ class ZvvProviderTests: TripKitProviderTestCase, TripKitProviderTestsDelegate {
     var networkId: NetworkId { return .ZVV }
     
     func initProvider(from authorizationData: AuthorizationData) -> NetworkProvider {
-        return ZvvProvider()
+        return ZvvProvider(apiAuthorization: authorizationData.hciAuthorization, requestVerification: authorizationData.hciRequestVerification)
     }
     
     var coordinatesFrom: LocationPoint { return LocationPoint(lat: 47378491, lon: 8537945) } // Zürich Hauptbahnhof
