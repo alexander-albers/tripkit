@@ -2,7 +2,7 @@ import Foundation
 
 public class VgnProvider: AbstractEfaProvider {
     
-    static let API_BASE = "https://vgn.defas-fgi.de/vgn_ci/"
+    static let API_BASE = "https://efa.vgn.de/vgnExt/"
     static let DEPARTURE_MONITOR_ENDPOINT = "XML_DM_REQUEST"
     static let TRIP_ENDPOINT = "XML_TRIP_REQUEST2"
     static let DESKTOP_TRIP_ENDPOINT = "http://www.vgn.de/komfortauskunft/auskunft/"
@@ -76,63 +76,6 @@ public class VgnProvider: AbstractEfaProvider {
     override func stopFinderRequestParameters(builder: UrlBuilder, constraint: String, types: [LocationType]?, maxLocations: Int, outputFormat: String) {
         super.stopFinderRequestParameters(builder: builder, constraint: constraint, types: types, maxLocations: maxLocations, outputFormat: outputFormat)
         builder.addParameter(key: "itdLPxx_showTariffLevel", value: 1)
-    }
-    
-    override public func queryNearbyLocations(location: Location, types: [LocationType]?, maxDistance: Int, maxLocations: Int, completion: @escaping (NearbyLocationsResult) -> Void) -> AsyncRequest {
-        if let coord = location.coord {
-            return mobileCoordRequest(types: types, lat: coord.lat, lon: coord.lon, maxDistance: maxDistance, maxLocations: maxLocations, completion: completion)
-        } else {
-            completion(.invalidId)
-            return AsyncRequest(task: nil)
-        }
-    }
-    
-    override public func queryDepartures(stationId: String, departures: Bool, time: Date?, maxDepartures: Int, equivs: Bool, completion: @escaping (QueryDeparturesResult) -> Void) -> AsyncRequest {
-        return queryDeparturesMobile(stationId: stationId, departures: departures, time: time, maxDepartures: maxDepartures, equivs: equivs, completion: completion)
-    }
-    
-    override public func queryJourneyDetail(context: QueryJourneyDetailContext, completion: @escaping (QueryJourneyDetailResult) -> Void) -> AsyncRequest {
-        return queryJourneyDetailMobile(context: context, completion: completion)
-    }
-    
-    override public func suggestLocations(constraint: String, types: [LocationType]?, maxLocations: Int, completion: @escaping (SuggestLocationsResult) -> Void) -> AsyncRequest {
-        return mobileStopfinderRequest(constraint: constraint, types: types, maxLocations: maxLocations, completion: completion)
-    }
-    
-    override public func queryTrips(from: Location, via: Location?, to: Location, date: Date, departure: Bool, products: [Product]?, optimize: Optimize?, walkSpeed: WalkSpeed?, accessibility: Accessibility?, options: [Option]?, completion: @escaping (QueryTripsResult) -> Void) -> AsyncRequest {
-        return queryTripsMobile(from: from, via: via, to: to, date: date, departure: departure, products: products, optimize: optimize, walkSpeed: walkSpeed, accessibility: accessibility, options: options, completion: completion)
-    }
-    
-    override func queryTripsParameters(builder: UrlBuilder, from: Location, via: Location?, to: Location, date: Date, departure: Bool, products: [Product]?, optimize: Optimize?, walkSpeed: WalkSpeed?, accessibility: Accessibility?, options: [Option]?, desktop: Bool) {
-        super.queryTripsParameters(builder: builder, from: from, via: via, to: to, date: date, departure: departure, products: products, optimize: optimize, walkSpeed: walkSpeed, accessibility: accessibility, options: options, desktop: desktop)
-        
-        if let products = products {
-            for product in products {
-                if product == .highSpeedTrain {
-                    builder.addParameter(key: "inclMOT_15", value: "on")
-                    builder.addParameter(key: "inclMOT_16", value: "on")
-                } else if product == .regionalTrain {
-                    builder.addParameter(key: "inclMOT_13", value: "on")
-                }
-            }
-        }
-        
-        builder.addParameter(key: "inclMOT_11", value: "on")
-        builder.addParameter(key: "inclMOT_14", value: "on")
-        
-        builder.addParameter(key: "calcOneDirection", value: 1)
-        
-        if desktop {
-            builder.addParameter(key: "zope_command", value: "verify")
-        }
-    }
-    
-    override public func queryMoreTrips(context: QueryTripsContext, later: Bool, completion: @escaping (QueryTripsResult) -> Void) -> AsyncRequest {
-        return queryMoreTripsMobile(context: context, later: later, completion: completion)
-    }
-    
-    public override func refreshTrip(context: RefreshTripContext, completion: @escaping (QueryTripsResult) -> Void) -> AsyncRequest {
-        return refreshTripMobile(context: context, completion: completion)
     }
     
 }
