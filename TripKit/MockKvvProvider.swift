@@ -118,7 +118,7 @@ public class MockKvvProvider: AbstractEfaProvider {
     
     public override func queryDepartures(stationId: String, departures: Bool, time: Date?, maxDepartures: Int, equivs: Bool, completion: @escaping (QueryDeparturesResult) -> Void) -> AsyncRequest {
         switch stationId {
-        case "7000090":
+        case "7000090", "7000090:$EF":
             let result = [StationDepartures(stopLocation: Location(type: .station, id: "7000090", coord: nil, place: nil, name: "Karlsruhe, Hbf")!, departures: [], lines: [])]
             result[0].departures.append(createDeparture(createTime(9, 41), createLine(.tram, "4"), "Waldstadt"))
             result[0].departures.append(createDeparture(createTime(9, 42), createLine(.suburbanTrain, "S51"), "Europaplatz"))
@@ -155,7 +155,7 @@ public class MockKvvProvider: AbstractEfaProvider {
         case "7000031":
             let result = QueryDeparturesResult.success(departures: [StationDepartures(stopLocation: createStation("Europaplatz"), departures: [createDeparture(createTime(9, 42), createLine(.suburbanTrain, "S5"), "Mühlacker")], lines: [])], desktopUrl: nil)
             completion(result)
-        default: break
+        default: completion(.invalidStation) ; break
         }
         
         return AsyncRequest(task: nil)
@@ -170,9 +170,9 @@ public class MockKvvProvider: AbstractEfaProvider {
     
     func createStation(_ name: String) -> Location {
         if name == "Kronenplatz (Kaiserstraße)" {
-            return Location(lat: 49008952, lon: 8407393)
+            return Location(type: .station, id: "7000002", coord: LocationPoint(lat: 49008952, lon: 8407393), place: "Karlsruhe", name: "Kronenplatz (Kaiserstraße)")!
         } else if name == "Europaplatz (Kaiserstraße)" {
-            return Location(lat: 49010075, lon: 8391898)
+            return Location(type: .station, id: "7000031", coord: LocationPoint(lat: 49010075, lon: 8391898), place: "Karlsruhe", name: "Europaplatz (Kaiserstraße)")!
         } else {
             return Location(anyName: name)
         }
