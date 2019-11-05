@@ -2,14 +2,13 @@ import Foundation
 
 public class VgnProvider: AbstractEfaProvider {
     
-    static let API_BASE = "https://efa.vgn.de/vgnExt/"
     static let DEPARTURE_MONITOR_ENDPOINT = "XML_DM_REQUEST"
     static let TRIP_ENDPOINT = "XML_TRIP_REQUEST2"
     static let DESKTOP_TRIP_ENDPOINT = "http://www.vgn.de/komfortauskunft/auskunft/"
     static let DESKTOP_DEPARTURES_ENDPOINT = "http://www.vgn.de/komfortauskunft/haltestelle/"
     
-    public init() {
-        super.init(networkId: .VGN, apiBase: VgnProvider.API_BASE, departureMonitorEndpoint: VgnProvider.DEPARTURE_MONITOR_ENDPOINT, tripEndpoint: VgnProvider.TRIP_ENDPOINT, stopFinderEndpoint: nil, coordEndpoint: nil, tripStopTimesEndpoint: nil, desktopTripEndpoint: VgnProvider.DESKTOP_TRIP_ENDPOINT, desktopDeparturesEndpoint: VgnProvider.DESKTOP_DEPARTURES_ENDPOINT)
+    public init(apiBase: String) {
+        super.init(networkId: .VGN, apiBase: apiBase, departureMonitorEndpoint: VgnProvider.DEPARTURE_MONITOR_ENDPOINT, tripEndpoint: VgnProvider.TRIP_ENDPOINT, stopFinderEndpoint: nil, coordEndpoint: nil, tripStopTimesEndpoint: nil, desktopTripEndpoint: VgnProvider.DESKTOP_TRIP_ENDPOINT, desktopDeparturesEndpoint: VgnProvider.DESKTOP_DEPARTURES_ENDPOINT)
         styles = [
             "SS1": LineStyle(shape: .rounded, backgroundColor: LineStyle.rgb(119, 53, 53), foregroundColor: LineStyle.white),
             "SS2": LineStyle(shape: .rounded, backgroundColor: LineStyle.rgb(104, 171, 84), foregroundColor: LineStyle.white),
