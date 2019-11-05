@@ -8,7 +8,7 @@ class VgnProviderTests: TripKitProviderTestCase, TripKitProviderTestsDelegate {
     var networkId: NetworkId { return .VGN }
     
     func initProvider(from authorizationData: AuthorizationData) -> NetworkProvider {
-        return VgnProvider()
+        return VgnProvider(apiBase: authorizationData.apiBase)
     }
     
     var coordinatesFrom: LocationPoint { return LocationPoint(lat: 49527298, lon: 10836204) } // Veilchenweg Puschendorf
