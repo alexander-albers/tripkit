@@ -2,7 +2,7 @@ import Foundation
 
 public class OebbProvider: AbstractHafasClientInterfaceProvider {
     
-    static let API_BASE = "http://fahrplan.oebb.at/bin/"
+    static let API_BASE = "https://fahrplan.oebb.at/bin/"
     static let PRODUCTS_MAP: [Product?] = [.highSpeedTrain, .highSpeedTrain, .highSpeedTrain, .regionalTrain, .regionalTrain, .suburbanTrain, .bus, .ferry, .subway, .tram, .highSpeedTrain, .onDemand, .highSpeedTrain]
     
     public init(apiAuthorization: [String: Any]) {
