@@ -5,6 +5,13 @@ import SWXMLHash
 
 public class HttpClient {
     
+    private static var urlSession: URLSession = {
+        let config = URLSessionConfiguration.default
+        if #available(iOSApplicationExtension 11.0, watchOSApplicationExtension 4.0, *) {
+            config.waitsForConnectivity = true
+        }
+        return URLSession(configuration: config)
+    }()
     private static let DefaultUserAgent = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebKit/602.4.8 (KHTML, like Gecko) Version/10.0.3 Safari/602.4.8"
     
     public static func get(httpRequest: HttpRequest, completion: @escaping (Result<(HTTPURLResponse, Data), HttpError>) -> Void) -> AsyncRequest {
@@ -28,7 +35,7 @@ public class HttpClient {
         } else {
             os_log("making http request to %{public}@", log: .requestLogger, type: .default, url.absoluteString)
         }
-        let task = URLSession.shared.dataTask(with: urlRequest) { result in
+        let task = urlSession.dataTask(with: urlRequest) { result in
             completion(result)
         }
         task.resume()
