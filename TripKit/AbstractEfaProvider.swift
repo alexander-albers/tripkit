@@ -1540,6 +1540,10 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
             builder.addParameter(key: "bikeTakeAlong", value: 1)
         }
         
+        if let maxChanges = tripOptions.maxChanges {
+            builder.addParameter(key: "maxChanges", value: maxChanges)
+        }
+        
         builder.addParameter(key: "locationServerActive", value: 1)
         builder.addParameter(key: "useRealtime", value: 1)
         builder.addParameter(key: "nextDepsPerLeg", value: 1)
