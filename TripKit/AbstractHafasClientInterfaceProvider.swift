@@ -992,8 +992,8 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
                 ])
         }
         req["jnyFltrL"] = filterList
-        if tripOptions.optimize == Optimize.leastChanges {
-            req["maxChg"] = 0
+        if let maxChanges = tripOptions.maxChanges {
+            req["maxChg"] = maxChanges
         }
         return req
     }

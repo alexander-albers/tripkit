@@ -139,12 +139,14 @@ public class TripOptions: NSObject, NSSecureCoding {
     public var walkSpeed: WalkSpeed?
     public var accessibility: Accessibility?
     public var options: [Option]?
+    public var maxChanges: Int?
     
-    public init(products: [Product]? = nil, optimize: Optimize? = nil, walkSpeed: WalkSpeed? = nil, accessibility: Accessibility? = nil, options: [Option]? = nil) {
+    public init(products: [Product]? = nil, optimize: Optimize? = nil, walkSpeed: WalkSpeed? = nil, accessibility: Accessibility? = nil, options: [Option]? = nil, maxChanges: Int? = nil) {
         self.products = products
         self.optimize = optimize
         self.accessibility = accessibility
         self.options = options
+        self.maxChanges = maxChanges
     }
     
     public required convenience init?(coder aDecoder: NSCoder) {
@@ -155,7 +157,8 @@ public class TripOptions: NSObject, NSSecureCoding {
         let accessibility = Accessibility(rawValue: aDecoder.decodeObject(of: NSNumber.self, forKey: PropertyKey.accessibility) as? Int ?? -1)
         let optionsInt = aDecoder.decodeObject(of: [NSArray.self], forKey: PropertyKey.options) as? [Int]
         let options = optionsInt?.compactMap { Option(rawValue: $0) }
-        self.init(products: products, optimize: optimize, walkSpeed: walkSpeed, accessibility: accessibility, options: options)
+        let maxChanges = aDecoder.decodeObject(of: NSNumber.self, forKey: PropertyKey.maxChanges) as? Int
+        self.init(products: products, optimize: optimize, walkSpeed: walkSpeed, accessibility: accessibility, options: options, maxChanges: maxChanges)
     }
     
     public func encode(with aCoder: NSCoder) {
@@ -166,6 +169,7 @@ public class TripOptions: NSObject, NSSecureCoding {
         aCoder.encode(walkSpeed?.rawValue, forKey: PropertyKey.walkSpeed)
         aCoder.encode(accessibility?.rawValue, forKey: PropertyKey.accessibility)
         aCoder.encode(options?.map { $0.rawValue }, forKey: PropertyKey.options)
+        aCoder.encode(maxChanges, forKey: PropertyKey.maxChanges)
     }
     
     struct PropertyKey {
@@ -174,5 +178,6 @@ public class TripOptions: NSObject, NSSecureCoding {
         static let walkSpeed = "walkSpeed"
         static let accessibility = "accessibility"
         static let options = "options"
+        static let maxChanges = "maxChanges"
     }
 }
