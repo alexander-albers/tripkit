@@ -995,6 +995,9 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         if let maxChanges = tripOptions.maxChanges {
             req["maxChg"] = maxChanges
         }
+        if let minChangeTime = tripOptions.minChangeTime {
+            req["minChgTime"] = minChangeTime
+        }
         return req
     }
     
