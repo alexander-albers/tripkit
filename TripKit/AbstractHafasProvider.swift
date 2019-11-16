@@ -111,7 +111,7 @@ public class AbstractHafasProvider: AbstractNetworkProvider {
         return position
     }
 
-    func queryTripsBinaryParameters(builder: UrlBuilder, from: Location, via: Location?, to: Location, date: Date, departure: Bool, products: [Product]?, optimize: Optimize?, walkSpeed: WalkSpeed?, accessibility: Accessibility?, options: [Option]?, desktop: Bool) {
+    func queryTripsBinaryParameters(builder: UrlBuilder, from: Location, via: Location?, to: Location, date: Date, departure: Bool, tripOptions: TripOptions, desktop: Bool) {
         builder.addParameter(key: "start", value: "Suchen")
         builder.addParameter(key: "REQ0JourneyStopsS0ID", value: locationId(location: from))
         builder.addParameter(key: "REQ0JourneyStopsZ0ID", value: locationId(location: to))
@@ -134,21 +134,21 @@ public class AbstractHafasProvider: AbstractNetworkProvider {
         dateTimeParameters(builder: builder, date: date, dateParamName: "REQ0JourneyDate", timeParamName: "REQ0JourneyTime")
         
         let productsStr: String
-        if let products = products {
+        if let products = tripOptions.products {
             productsStr = productsString(products: products)
         } else {
             productsStr = allProductsString()
         }
         builder.addParameter(key: "REQ0JourneyProduct_prod_list_1", value: productsStr)
         
-        if let accessibility = accessibility, accessibility != .neutral {
+        if let accessibility = tripOptions.accessibility, accessibility != .neutral {
             if accessibility == .limited {
                 builder.addParameter(key: "REQ0AddParamBaimprofile", value: 1)
             } else if accessibility == .barrierFree {
                 builder.addParameter(key: "REQ0AddParamBaimprofile", value: 0)
             }
             
-        } else if let options = options, options.contains(.bike) {
+        } else if let options = tripOptions.options, options.contains(.bike) {
             builder.addParameter(key: "REQ0JourneyProduct_opt3", value: 1)
         }
         if !desktop {

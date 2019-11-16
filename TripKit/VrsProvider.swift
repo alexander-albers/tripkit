@@ -486,11 +486,11 @@ public class VrsProvider: AbstractNetworkProvider {
         completion(.success(locations: locations))
     }
     
-    override public func queryTrips(from: Location, via: Location?, to: Location, date: Date, departure: Bool, products: [Product]?, optimize: Optimize?, walkSpeed: WalkSpeed?, accessibility: Accessibility?, options: [Option]?, completion: @escaping (QueryTripsResult) -> Void) -> AsyncRequest {
-        return queryTrips(from: from, via: via, to: to, date: date, departure: departure, products: products, optimize: optimize, walkSpeed: walkSpeed, accessibility: accessibility, options: options, ambiguousFrom: nil, ambiguousVia: nil, ambiguousTo: nil, context: nil, completion: completion)
+    override public func queryTrips(from: Location, via: Location?, to: Location, date: Date, departure: Bool, tripOptions: TripOptions, completion: @escaping (QueryTripsResult) -> Void) -> AsyncRequest {
+        return queryTrips(from: from, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions, ambiguousFrom: nil, ambiguousVia: nil, ambiguousTo: nil, context: nil, completion: completion)
     }
     
-    private func queryTrips(from: Location, via: Location?, to: Location, date: Date, departure: Bool, products: [Product]?, optimize: Optimize?, walkSpeed: WalkSpeed?, accessibility: Accessibility?, options: [Option]?, ambiguousFrom: [Location]?, ambiguousVia: [Location]?, ambiguousTo: [Location]?, context: Context?, completion: @escaping (QueryTripsResult) -> Void) -> AsyncRequest {
+    private func queryTrips(from: Location, via: Location?, to: Location, date: Date, departure: Bool, tripOptions: TripOptions, ambiguousFrom: [Location]?, ambiguousVia: [Location]?, ambiguousTo: [Location]?, context: Context?, completion: @escaping (QueryTripsResult) -> Void) -> AsyncRequest {
         let fromString = generateLocation(location: from)
         if fromString == nil, ambiguousFrom == nil {
             return suggestLocations(constraint: from.name ?? "", types: [.station], maxLocations: 1) { (result) in
@@ -498,9 +498,9 @@ public class VrsProvider: AbstractNetworkProvider {
                 case .success(let locations):
                     if let first = locations.first?.location, locations.count == 1 {
                         // TODO: make request cancelable (AsyncTask.setTask())
-                        let _ = self.queryTrips(from: first, via: via, to: to, date: date, departure: departure, products: products, optimize: optimize, walkSpeed: walkSpeed, accessibility: accessibility, options: options, ambiguousFrom: ambiguousFrom, ambiguousVia: ambiguousVia, ambiguousTo: ambiguousTo, context: context, completion: completion)
+                        let _ = self.queryTrips(from: first, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions, ambiguousFrom: ambiguousFrom, ambiguousVia: ambiguousVia, ambiguousTo: ambiguousTo, context: context, completion: completion)
                     } else {
-                        let _ = self.queryTrips(from: from, via: via, to: to, date: date, departure: departure, products: products, optimize: optimize, walkSpeed: walkSpeed, accessibility: accessibility, options: options, ambiguousFrom: locations.map({$0.location}), ambiguousVia: ambiguousVia, ambiguousTo: ambiguousTo, context: context, completion: completion)
+                        let _ = self.queryTrips(from: from, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions, ambiguousFrom: locations.map({$0.location}), ambiguousVia: ambiguousVia, ambiguousTo: ambiguousTo, context: context, completion: completion)
                     }
                 case .failure(_):
                     completion(.unknownFrom)
@@ -513,9 +513,9 @@ public class VrsProvider: AbstractNetworkProvider {
                 switch result {
                 case .success(let locations):
                     if let first = locations.first?.location, locations.count == 1 {
-                        let _ = self.queryTrips(from: from, via: first, to: to, date: date, departure: departure, products: products, optimize: optimize, walkSpeed: walkSpeed, accessibility: accessibility, options: options, ambiguousFrom: ambiguousFrom, ambiguousVia: ambiguousVia, ambiguousTo: ambiguousTo, context: context, completion: completion)
+                        let _ = self.queryTrips(from: from, via: first, to: to, date: date, departure: departure, tripOptions: tripOptions, ambiguousFrom: ambiguousFrom, ambiguousVia: ambiguousVia, ambiguousTo: ambiguousTo, context: context, completion: completion)
                     } else {
-                        let _ = self.queryTrips(from: from, via: via, to: to, date: date, departure: departure, products: products, optimize: optimize, walkSpeed: walkSpeed, accessibility: accessibility, options: options, ambiguousFrom: ambiguousFrom, ambiguousVia: locations.map({$0.location}), ambiguousTo: ambiguousTo, context: context, completion: completion)
+                        let _ = self.queryTrips(from: from, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions, ambiguousFrom: ambiguousFrom, ambiguousVia: locations.map({$0.location}), ambiguousTo: ambiguousTo, context: context, completion: completion)
                     }
                 case .failure(_):
                     completion(.unknownVia)
@@ -528,9 +528,9 @@ public class VrsProvider: AbstractNetworkProvider {
                 switch result {
                 case .success(let locations):
                     if let first = locations.first?.location, locations.count == 1 {
-                        let _ = self.queryTrips(from: from, via: via, to: first, date: date, departure: departure, products: products, optimize: optimize, walkSpeed: walkSpeed, accessibility: accessibility, options: options, ambiguousFrom: ambiguousFrom, ambiguousVia: ambiguousVia, ambiguousTo: ambiguousTo, context: context, completion: completion)
+                        let _ = self.queryTrips(from: from, via: via, to: first, date: date, departure: departure, tripOptions: tripOptions, ambiguousFrom: ambiguousFrom, ambiguousVia: ambiguousVia, ambiguousTo: ambiguousTo, context: context, completion: completion)
                     } else {
-                        let _ = self.queryTrips(from: from, via: via, to: to, date: date, departure: departure, products: products, optimize: optimize, walkSpeed: walkSpeed, accessibility: accessibility, options: options, ambiguousFrom: ambiguousFrom, ambiguousVia: ambiguousVia, ambiguousTo: locations.map({$0.location}), context: context, completion: completion)
+                        let _ = self.queryTrips(from: from, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions, ambiguousFrom: ambiguousFrom, ambiguousVia: ambiguousVia, ambiguousTo: locations.map({$0.location}), context: context, completion: completion)
                     }
                 case .failure(_):
                     completion(.unknownTo)
@@ -557,10 +557,10 @@ public class VrsProvider: AbstractNetworkProvider {
             return AsyncRequest(task: nil)
         }
         
-        return doQueryTrips(from: from, via: via, to: to, fromString: fromString!, viaString: viaString, toString: toString!, date: date, departure: departure, products: products, optimize: optimize, walkSpeed: walkSpeed, accessibility: accessibility, options: options, context: context, completion: completion)
+        return doQueryTrips(from: from, via: via, to: to, fromString: fromString!, viaString: viaString, toString: toString!, date: date, departure: departure, tripOptions: tripOptions, context: context, completion: completion)
     }
     
-    private func doQueryTrips(from: Location, via: Location?, to: Location, fromString: String, viaString: String?, toString: String, date: Date, departure: Bool, products: [Product]?, optimize: Optimize?, walkSpeed: WalkSpeed?, accessibility: Accessibility?, options: [Option]?, context: Context?, completion: @escaping (QueryTripsResult) -> Void) -> AsyncRequest {
+    private func doQueryTrips(from: Location, via: Location?, to: Location, fromString: String, viaString: String?, toString: String, date: Date, departure: Bool, tripOptions: TripOptions, context: Context?, completion: @escaping (QueryTripsResult) -> Void) -> AsyncRequest {
         let urlBuilder = UrlBuilder(path: VrsProvider.API_BASE, encoding: .utf8)
 
         urlBuilder.addParameter(key: "eID", value: "tx_vrsinfo_ass2_router")
@@ -571,7 +571,7 @@ public class VrsProvider: AbstractNetworkProvider {
         }
         urlBuilder.addParameter(key: departure ? "d" : "a", value: formatDate(from: date))
         urlBuilder.addParameter(key: "s", value: "t")
-        if products ?? [] != Product.allCases, let productString = generateProducts(from: products) {
+        if tripOptions.products ?? [] != Product.allCases, let productString = generateProducts(from: tripOptions.products) {
             urlBuilder.addParameter(key: "p", value: productString)
         }
         urlBuilder.addParameter(key: "o", value: "vp")
@@ -580,7 +580,7 @@ public class VrsProvider: AbstractNetworkProvider {
             switch result {
             case .success(_, let data):
                 do {
-                    try self.handleQueryTripsResponse(response: data, from: from, via: via, to: to, products: products, departure: departure, previousContext: context, completion: completion)
+                    try self.handleQueryTripsResponse(response: data, from: from, via: via, to: to, products: tripOptions.products, departure: departure, previousContext: context, completion: completion)
                 } catch is SessionExpiredError {
                     completion(.sessionExpired)
                 } catch let err as ParseError {
@@ -814,7 +814,7 @@ public class VrsProvider: AbstractNetworkProvider {
             completion(.sessionExpired)
             return AsyncRequest(task: nil)
         }
-        return queryTrips(from: context.from, via: context.via, to: context.to, date: (later ? context.lastDeparture : context.firstArrival) ?? Date(), departure: later, products: context.products, optimize: nil, walkSpeed: nil, accessibility: nil, options: nil, ambiguousFrom: nil, ambiguousVia: nil, ambiguousTo: nil, context: context, completion: completion)
+        return queryTrips(from: context.from, via: context.via, to: context.to, date: (later ? context.lastDeparture : context.firstArrival) ?? Date(), departure: later, tripOptions: TripOptions(products: context.products), ambiguousFrom: nil, ambiguousVia: nil, ambiguousTo: nil, context: context, completion: completion)
     }
     
     public override func refreshTrip(context: RefreshTripContext, completion: @escaping (QueryTripsResult) -> Void) -> AsyncRequest {

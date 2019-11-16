@@ -162,14 +162,14 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
         }
     }
     
-    override public func queryTrips(from: Location, via: Location?, to: Location, date: Date, departure: Bool, products:[ Product]?, optimize: Optimize?, walkSpeed: WalkSpeed?, accessibility: Accessibility?, options: [Option]?, completion: @escaping (QueryTripsResult) -> Void) -> AsyncRequest {
+    public override func queryTrips(from: Location, via: Location?, to: Location, date: Date, departure: Bool, tripOptions: TripOptions, completion: @escaping (QueryTripsResult) -> Void) -> AsyncRequest {
         let urlBuilder = UrlBuilder(path: tripEndpoint, encoding: requestUrlEncoding)
-        queryTripsParameters(builder: urlBuilder, from: from, via: via, to: to, date: date, departure: departure, products: products, optimize: optimize, walkSpeed: walkSpeed, accessibility: accessibility, options: options, desktop: false)
+        queryTripsParameters(builder: urlBuilder, from: from, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions, desktop: false)
         
         let desktopUrl: URL?
         if supportsDesktopTrips {
             let desktopUrlBuilder = UrlBuilder(path: desktopTripEndpoint ?? tripEndpoint, encoding: requestUrlEncoding)
-            queryTripsParameters(builder: desktopUrlBuilder, from: from, via: via, to: to, date: date, departure: departure, products: products, optimize: optimize, walkSpeed: walkSpeed, accessibility: accessibility, options: options, desktop: true)
+            queryTripsParameters(builder: desktopUrlBuilder, from: from, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions, desktop: true)
             desktopUrl = desktopUrlBuilder.build()
         } else {
             desktopUrl = nil
@@ -399,14 +399,14 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
         }
     }
     
-    func queryTripsMobile(from: Location, via: Location?, to: Location, date: Date, departure: Bool, products: [Product]?, optimize: Optimize?, walkSpeed: WalkSpeed?, accessibility: Accessibility?, options: [Option]?, completion: @escaping (QueryTripsResult) -> Void) -> AsyncRequest {
+    func queryTripsMobile(from: Location, via: Location?, to: Location, date: Date, departure: Bool, tripOptions: TripOptions, completion: @escaping (QueryTripsResult) -> Void) -> AsyncRequest {
         let urlBuilder = UrlBuilder(path: tripEndpoint, encoding: requestUrlEncoding)
-        queryTripsParameters(builder: urlBuilder, from: from, via: via, to: to, date: date, departure: departure, products: products, optimize: optimize, walkSpeed: walkSpeed, accessibility: accessibility, options: options, desktop: false)
+        queryTripsParameters(builder: urlBuilder, from: from, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions, desktop: false)
         
         let desktopUrl: URL?
         if supportsDesktopTrips {
             let desktopUrlBuilder = UrlBuilder(path: desktopTripEndpoint ?? tripEndpoint, encoding: requestUrlEncoding)
-            queryTripsParameters(builder: desktopUrlBuilder, from: from, via: via, to: to, date: date, departure: departure, products: products, optimize: optimize, walkSpeed: walkSpeed, accessibility: accessibility, options: options, desktop: true)
+            queryTripsParameters(builder: desktopUrlBuilder, from: from, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions, desktop: true)
             desktopUrl = desktopUrlBuilder.build()
         } else {
             desktopUrl = nil
@@ -1437,7 +1437,7 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
         builder.addParameter(key: "calcNumberOfTrips", value: numTripsRequested)
     }
     
-    func queryTripsParameters(builder: UrlBuilder, from: Location, via: Location?, to: Location, date: Date, departure: Bool, products: [Product]?, optimize: Optimize?, walkSpeed: WalkSpeed?, accessibility: Accessibility?, options: [Option]?, desktop: Bool) {
+    func queryTripsParameters(builder: UrlBuilder, from: Location, via: Location?, to: Location, date: Date, departure: Bool, tripOptions: TripOptions, desktop: Bool) {
         appendCommonRequestParameters(builder: builder, outputFormat: desktop ? nil : "XML")
         builder.addParameter(key: "sessionID", value: 0)
         builder.addParameter(key: "requestID", value: 0)
@@ -1453,7 +1453,7 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
         builder.addParameter(key: "ptOptionsActive", value: 1) // enable public transport options
         builder.addParameter(key: "itOptionsActive", value: 1) // enable individual transport options
         
-        if let optimize = optimize {
+        if let optimize = tripOptions.optimize {
             switch optimize {
             case .leastDuration:
                 builder.addParameter(key: "routeType", value: "LEASTTIME")
@@ -1466,7 +1466,7 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
                 break
             }
         }
-        if let walkSpeed = walkSpeed {
+        if let walkSpeed = tripOptions.walkSpeed {
             switch walkSpeed {
             case .slow:
                 builder.addParameter(key: "changeSpeed", value: "slow")
@@ -1479,7 +1479,7 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
                 break
             }
         }
-        if let accessibility = accessibility {
+        if let accessibility = tripOptions.accessibility {
             if accessibility == .barrierFree {
                 builder.addParameter(key: "imparedOptionsActive", value: 1)
                 builder.addParameter(key: "wheelchair", value: "on")
@@ -1492,7 +1492,7 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
             }
         }
         
-        if let products = products {
+        if let products = tripOptions.products {
             builder.addParameter(key: "includedMeans", value: "checkbox")
             
             for product in products {
@@ -1536,7 +1536,7 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
         }
         builder.addParameter(key: "trITMOTvalue100", value: 10) // maximum time to walk to first or from last stop
         
-        if let options = options, options.contains(.bike) {
+        if let options = tripOptions.options, options.contains(.bike) {
             builder.addParameter(key: "bikeTakeAlong", value: 1)
         }
         

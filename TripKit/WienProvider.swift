@@ -30,7 +30,7 @@ public class WienProvider: AbstractEfaProvider {
         ]
     }
     
-    override func queryTripsParameters(builder: UrlBuilder, from: Location, via: Location?, to: Location, date: Date, departure: Bool, products: [Product]?, optimize: Optimize?, walkSpeed: WalkSpeed?, accessibility: Accessibility?, options: [Option]?, desktop: Bool) {
+    override func queryTripsParameters(builder: UrlBuilder, from: Location, via: Location?, to: Location, date: Date, departure: Bool, tripOptions: TripOptions, desktop: Bool) {
         if desktop {
             //routeFrom=16.56373%3A48.11986%3AWGS84%3AFlughafen+Wien&routeTo=60201468%3AWestbahnhof&routeDatetime=2017-09-09T12%3A19%3A00.000Z&immediate=true&deparr=Abfahrt
             
@@ -47,8 +47,8 @@ public class WienProvider: AbstractEfaProvider {
             builder.addParameter(key: "immediate", value: true)
             builder.addParameter(key: "deparr", value: departure ? "Abfahrt" : "Ankunft")
         } else {
-            super.queryTripsParameters(builder: builder, from: from, via: via, to: to, date: date, departure: departure, products: products, optimize: optimize, walkSpeed: walkSpeed, accessibility: accessibility, options: options, desktop: desktop)
-            if let products = products, products.contains(.bus) {
+            super.queryTripsParameters(builder: builder, from: from, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions, desktop: desktop)
+            if let products = tripOptions.products, products.contains(.bus) {
                 builder.addParameter(key: "inclMOT_11", value: "on") // night bus
             }
         }
