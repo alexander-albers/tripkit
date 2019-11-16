@@ -48,7 +48,7 @@ let asyncTask = provider.queryDepartures(stationId: "7000001", time: Date(), max
 
 ### Query trips between Marktplatz (7000001) and Kronenplatz (7000002):
 ```swift
-let asyncTask = provider.queryTrips(from: Location(id: "7000001"), via: nil, to: Location(id: "7000002"), date: Date(), departure: true, products: nil, optimize: nil, walkSpeed: nil, accessibility: nil, options: nil) { (result) in
+let asyncTask = provider.queryTrips(from: Location(id: "7000001"), via: nil, to: Location(id: "7000002"), date: Date(), departure: true, tripOptions: TripOptions()) { (result) in
     switch result {
     case .success(let context, let from, let via, let to, let trips, let messages):
         for trip in trips {
