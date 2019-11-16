@@ -152,13 +152,13 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         }
     }
     
-    override public func queryTrips(from: Location, via: Location?, to: Location, date: Date, departure: Bool, products: [Product]?, optimize: Optimize?, walkSpeed: WalkSpeed?, accessibility: Accessibility?, options: [Option]?, completion: @escaping (QueryTripsResult) -> Void) -> AsyncRequest {
+    public override func queryTrips(from: Location, via: Location?, to: Location, date: Date, departure: Bool, tripOptions: TripOptions, completion: @escaping (QueryTripsResult) -> Void) -> AsyncRequest {
         if from.id == nil && !from.hasLocation() {
             return jsonTripSearchIdentify(location: from) { (locations) in
                 if locations.count > 1 {
                     completion(.ambiguous(ambiguousFrom: locations, ambiguousVia: [], ambiguousTo: []))
                 } else if let location = locations.first {
-                    let _ = self.queryTrips(from: location, via: via, to: to, date: date, departure: departure, products: products, optimize: optimize, walkSpeed: walkSpeed, accessibility: accessibility, options: options, completion: completion)
+                    let _ = self.queryTrips(from: location, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions, completion: completion)
                 } else {
                     completion(.unknownFrom)
                 }
@@ -168,7 +168,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
                 if locations.count > 1 {
                     completion(.ambiguous(ambiguousFrom: [], ambiguousVia: locations, ambiguousTo: []))
                 } else if let location = locations.first {
-                    let _ = self.queryTrips(from: from, via: location, to: to, date: date, departure: departure, products: products, optimize: optimize, walkSpeed: walkSpeed, accessibility: accessibility, options: options, completion: completion)
+                    let _ = self.queryTrips(from: from, via: location, to: to, date: date, departure: departure, tripOptions: tripOptions, completion: completion)
                 } else {
                     completion(.unknownVia)
                 }
@@ -178,13 +178,13 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
                 if locations.count > 1 {
                     completion(.ambiguous(ambiguousFrom: [], ambiguousVia: [], ambiguousTo: locations))
                 } else if let location = locations.first {
-                    let _ = self.queryTrips(from: from, via: via, to: location, date: date, departure: departure, products: products, optimize: optimize, walkSpeed: walkSpeed, accessibility: accessibility, options: options, completion: completion)
+                    let _ = self.queryTrips(from: from, via: via, to: location, date: date, departure: departure, tripOptions: tripOptions, completion: completion)
                 } else {
                     completion(.unknownTo)
                 }
             }
         } else {
-            return doJsonTripSearch(from: from, via: via, to: to, date: date, departure: departure, products: products, optimize: optimize, walkSpeed: walkSpeed, accessibility: accessibility, options: options, previousContext: nil, later: false, completion: completion)
+            return doJsonTripSearch(from: from, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions, previousContext: nil, later: false, completion: completion)
         }
     }
     
@@ -218,12 +218,12 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
             completion(.sessionExpired)
             return AsyncRequest(task: nil)
         }
-        return doJsonTripSearch(from: context.from, via: context.via, to: context.to, date: context.date, departure: context.departure, products: context.products, optimize: context.optimize, walkSpeed: context.walkSpeed, accessibility: context.accessibility, options: context.options, previousContext: context, later: later, completion: completion)
+        return doJsonTripSearch(from: context.from, via: context.via, to: context.to, date: context.date, departure: context.departure, tripOptions: context.tripOptions, previousContext: context, later: later, completion: completion)
     }
     
-    func doJsonTripSearch(from: Location, via: Location?, to: Location, date: Date, departure: Bool, products: [Product]?, optimize: Optimize?, walkSpeed: WalkSpeed?, accessibility: Accessibility?, options: [Option]?, previousContext: Context?, later: Bool, completion: @escaping (QueryTripsResult) -> Void) -> AsyncRequest {
+    func doJsonTripSearch(from: Location, via: Location?, to: Location, date: Date, departure: Bool, tripOptions: TripOptions, previousContext: Context?, later: Bool, completion: @escaping (QueryTripsResult) -> Void) -> AsyncRequest {
         
-        let request = wrapJsonApiRequest(meth: "TripSearch", req: jsonTripSearchRequest(from: from, via: via, to: to, date: date, departure: departure, products: products, optimize: optimize, walkSpeed: walkSpeed, accessibility: accessibility, options: options, previousContext: previousContext, later: later), formatted: true)
+        let request = wrapJsonApiRequest(meth: "TripSearch", req: jsonTripSearchRequest(from: from, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions, previousContext: previousContext, later: later), formatted: true)
         let urlBuilder = UrlBuilder(path: mgateEndpoint, encoding: requestUrlEncoding)
         requestVerification.appendParameters(to: urlBuilder, requestString: request)
         
@@ -232,7 +232,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
             desktopUrl = context.desktopUrl
         } else if let desktopQueryEndpoint = desktopQueryEndpoint {
             let desktopUrlBuilder = UrlBuilder(path: desktopQueryEndpoint, encoding: requestUrlEncoding)
-            queryTripsBinaryParameters(builder: desktopUrlBuilder, from: from, via: via, to: to, date: date, departure: departure, products: products, optimize: optimize, walkSpeed: walkSpeed, accessibility: accessibility, options: options, desktop: true)
+            queryTripsBinaryParameters(builder: desktopUrlBuilder, from: from, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions, desktop: true)
             desktopUrl = desktopUrlBuilder.build()
         } else {
             desktopUrl = nil
@@ -242,7 +242,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
             switch result {
             case .success(_, let data):
                 do {
-                    try self.handleJsonTripSearch(response: try data.toJson(), desktopUrl: desktopUrl, from: from, via: via, to: to, date: date, departure: departure, products: products ?? Product.allCases, previousContext: previousContext, later: later, optimize: optimize, walkSpeed: walkSpeed, accessibility: accessibility, options: options, completion: completion)
+                    try self.handleJsonTripSearch(response: try data.toJson(), desktopUrl: desktopUrl, from: from, via: via, to: to, date: date, departure: departure, previousContext: previousContext, later: later, tripOptions: tripOptions, completion: completion)
                 } catch let err as ParseError {
                     os_log("queryTrips parse error: %{public}@", log: .requestLogger, type: .error, err.reason)
                     completion(.failure(err))
@@ -270,7 +270,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
             switch result {
             case .success(_, let data):
                 do {
-                    try self.handleJsonTripSearch(response: try data.toJson(), desktopUrl: nil, from: context.from, via: nil, to: context.to, date: Date(), departure: true, products: Product.allCases, previousContext: nil, later: false, optimize: nil, walkSpeed: nil, accessibility: nil, options: nil, completion: completion)
+                    try self.handleJsonTripSearch(response: try data.toJson(), desktopUrl: nil, from: context.from, via: nil, to: context.to, date: Date(), departure: true, previousContext: nil, later: false, tripOptions: TripOptions(), completion: completion)
                 } catch let err as ParseError {
                     os_log("refreshTrip parse error: %{public}@", log: .requestLogger, type: .error, err.reason)
                     completion(.failure(err))
@@ -495,7 +495,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         completion(.success(departures: result, desktopUrl: desktopUrl))
     }
     
-    func handleJsonTripSearch(response: Any?, desktopUrl: URL?, from: Location, via: Location?, to: Location, date: Date, departure: Bool, products: [Product], previousContext: Context?, later: Bool, optimize: Optimize?, walkSpeed: WalkSpeed?, accessibility: Accessibility?, options: [Option]?, completion: @escaping (QueryTripsResult) -> Void) throws {
+    func handleJsonTripSearch(response: Any?, desktopUrl: URL?, from: Location, via: Location?, to: Location, date: Date, departure: Bool, previousContext: Context?, later: Bool, tripOptions: TripOptions, completion: @escaping (QueryTripsResult) -> Void) throws {
         guard let json = response as? [String: Any], json["err"] == nil || json["err"] as? String == "OK", let svcResL = json["svcResL"] as? [Any], svcResL.count == 1, let svcRes = svcResL[0] as? [String: Any], let meth = svcRes["meth"] as? String, meth == "TripSearch" || meth == "Reconstruction", let err = svcRes["err"] as? String else {
             throw ParseError(reason: "could not parse json")
         }
@@ -773,9 +773,9 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         }
         let context: Context
         if let previousContext = previousContext {
-            context = Context(from: from, via: via, to: to, date: date, departure: departure, products: products, laterContext: later ? res["outCtxScrF"] as? String : previousContext.laterContext, earlierContext: !later ? res["outCtxScrB"] as? String : previousContext.earlierContext, desktopUrl: desktopUrl, optimize: optimize, walkSpeed: walkSpeed, accessibility: accessibility, options: options)
+            context = Context(from: from, via: via, to: to, date: date, departure: departure, laterContext: later ? res["outCtxScrF"] as? String : previousContext.laterContext, earlierContext: !later ? res["outCtxScrB"] as? String : previousContext.earlierContext, desktopUrl: desktopUrl, tripOptions: tripOptions)
         } else {
-            context = Context(from: from, via: via, to: to, date: date, departure: departure, products: products, laterContext: res["outCtxScrF"] as? String, earlierContext: res["outCtxScrB"] as? String, desktopUrl: desktopUrl, optimize: optimize, walkSpeed: walkSpeed, accessibility: accessibility, options: options)
+            context = Context(from: from, via: via, to: to, date: date, departure: departure, laterContext: res["outCtxScrF"] as? String, earlierContext: res["outCtxScrB"] as? String, desktopUrl: desktopUrl, tripOptions: tripOptions)
         }
         completion(.success(context: context, from: from, via: via, to: to, trips: trips, messages: []))
     }
@@ -908,14 +908,14 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
     
     // MARK: Request parameters
     
-    func jsonTripSearchRequest(from: Location, via: Location?, to: Location, date: Date, departure: Bool, products: [Product]?, optimize: Optimize?, walkSpeed: WalkSpeed?, accessibility: Accessibility?, options: [Option]?, previousContext: Context?, later: Bool) -> [String: Any] {
+    func jsonTripSearchRequest(from: Location, via: Location?, to: Location, date: Date, departure: Bool, tripOptions: TripOptions, previousContext: Context?, later: Bool) -> [String: Any] {
         let outDate = jsonDate(from: date)
         let outTime = jsonTime(from: date)
         let outFrwdKey = apiVersion == "1.10" ? "frwd" : "outFrwd"
         let outFrwd = departure
-        let jnyFltr = productsString(products: products ?? Product.allCases)
+        let jnyFltr = productsString(products: tripOptions.products ?? Product.allCases)
         let meta: String
-        switch walkSpeed ?? .normal {
+        switch tripOptions.walkSpeed ?? .normal {
         case .slow:
             meta = "foot_speed_slow"
         case .fast:
@@ -978,21 +978,21 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
                 ])
         }
         
-        if let accessibility = accessibility, accessibility != .neutral {
+        if let accessibility = tripOptions.accessibility, accessibility != .neutral {
             filterList.append([
                 "type": "META",
                 "mode": "INC",
                 "meta": accessibility == .limited ? "limitedBarrierfree" : "completeBarrierfree"
                 ])
         }
-        if let options = options, options.contains(.bike) {
+        if let options = tripOptions.options, options.contains(.bike) {
             filterList.append([
                 "type": "BC",
                 "mode": "INC"
                 ])
         }
         req["jnyFltrL"] = filterList
-        if optimize == Optimize.leastChanges {
+        if tripOptions.optimize == Optimize.leastChanges {
             req["maxChg"] = 0
         }
         return req
@@ -1394,27 +1394,19 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         public let to: Location
         public let date: Date
         public let departure: Bool
-        public let products: [Product]
         public let laterContext: String?
         public let earlierContext: String?
-        public let optimize: Optimize?
-        public let walkSpeed: WalkSpeed?
-        public let accessibility: Accessibility?
-        public let options: [Option]?
+        public let tripOptions: TripOptions
         
-        init(from: Location, via: Location?, to: Location, date: Date, departure: Bool, products: [Product], laterContext: String?, earlierContext: String?, desktopUrl: URL?, optimize: Optimize?, walkSpeed: WalkSpeed?, accessibility: Accessibility?, options: [Option]?) {
+        init(from: Location, via: Location?, to: Location, date: Date, departure: Bool, laterContext: String?, earlierContext: String?, desktopUrl: URL?, tripOptions: TripOptions) {
             self.from = from
             self.via = via
             self.to = to
             self.date = date
             self.departure = departure
-            self.products = products
             self.laterContext = laterContext
             self.earlierContext = earlierContext
-            self.optimize = optimize
-            self.walkSpeed = walkSpeed
-            self.accessibility = accessibility
-            self.options = options
+            self.tripOptions = tripOptions
             super.init()
             self.desktopUrl = desktopUrl
         }
@@ -1424,22 +1416,17 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
                 let from = aDecoder.decodeObject(of: Location.self, forKey: PropertyKey.from),
                 let to = aDecoder.decodeObject(of: Location.self, forKey: PropertyKey.to),
                 let date = aDecoder.decodeObject(of: NSDate.self, forKey: PropertyKey.date) as Date?,
-                let productsString = aDecoder.decodeObject(of: [NSArray.self, NSString.self], forKey: PropertyKey.products) as? [String]
+                let tripOptions = aDecoder.decodeObject(of: TripOptions.self, forKey: PropertyKey.tripOptions)
                 else {
                     return nil
             }
             let departure = aDecoder.decodeBool(forKey: PropertyKey.departure)
             let via = aDecoder.decodeObject(of: Location.self, forKey: PropertyKey.via)
-            let products = productsString.compactMap { Product(rawValue: $0) }
             let laterContext = aDecoder.decodeObject(of: NSString.self, forKey: PropertyKey.laterContext) as String?
             let earlierContext = aDecoder.decodeObject(of: NSString.self, forKey: PropertyKey.earlierContext) as String?
-            let optimize = Optimize(rawValue: aDecoder.decodeObject(of: NSNumber.self, forKey: PropertyKey.optimize) as? Int ?? -1)
-            let walkSpeed = WalkSpeed(rawValue: aDecoder.decodeObject(of: NSNumber.self, forKey: PropertyKey.walkSpeed) as? Int ?? -1)
-            let accessibility = Accessibility(rawValue: aDecoder.decodeObject(of: NSNumber.self, forKey: PropertyKey.accessibility) as? Int ?? -1)
-            let optionsInt = aDecoder.decodeObject(of: [NSArray.self], forKey: PropertyKey.options) as? [Int]
-            let options = optionsInt?.compactMap { Option(rawValue: $0) }
+            
             let url = URL(string: aDecoder.decodeObject(of: NSString.self, forKey: QueryTripsContext.PropertyKey.desktopUrl) as String? ?? "")
-            self.init(from: from, via: via, to: to, date: date, departure: departure, products: products, laterContext: laterContext, earlierContext: earlierContext, desktopUrl: url, optimize: optimize, walkSpeed: walkSpeed, accessibility: accessibility, options: options)
+            self.init(from: from, via: via, to: to, date: date, departure: departure, laterContext: laterContext, earlierContext: earlierContext, desktopUrl: url, tripOptions: tripOptions)
         }
         
         public override func encode(with aCoder: NSCoder) {
@@ -1448,14 +1435,10 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
             aCoder.encode(to, forKey: PropertyKey.to)
             aCoder.encode(date, forKey: PropertyKey.date)
             aCoder.encode(departure, forKey: PropertyKey.departure)
-            aCoder.encode(products.map { $0.rawValue }, forKey: PropertyKey.products)
-            aCoder.encode(laterContext, forKey: PropertyKey.laterContext)
             aCoder.encode(earlierContext, forKey: PropertyKey.earlierContext)
-            aCoder.encode(optimize?.rawValue, forKey: PropertyKey.optimize)
-            aCoder.encode(walkSpeed?.rawValue, forKey: PropertyKey.walkSpeed)
-            aCoder.encode(accessibility?.rawValue, forKey: PropertyKey.accessibility)
-            aCoder.encode(options?.map { $0.rawValue }, forKey: PropertyKey.options)
+            aCoder.encode(laterContext, forKey: PropertyKey.laterContext)
             aCoder.encode(desktopUrl?.absoluteString, forKey: QueryTripsContext.PropertyKey.desktopUrl)
+            aCoder.encode(tripOptions, forKey: PropertyKey.tripOptions)
         }
         
         struct PropertyKey {
@@ -1464,13 +1447,9 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
             static let to = "to"
             static let date = "date"
             static let departure = "dep"
-            static let products = "products"
             static let laterContext = "laterContext"
             static let earlierContext = "earlierContext"
-            static let optimize = "optimize"
-            static let walkSpeed = "walkSpeed"
-            static let accessibility = "accessibility"
-            static let options = "options"
+            static let tripOptions = "tripOptions"
         }
         
     }

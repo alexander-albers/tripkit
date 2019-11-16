@@ -49,7 +49,23 @@ public protocol NetworkProvider {
  
     - Returns: A reference to a cancellable http request.
      */
+    @available(*, deprecated)
     func queryTrips(from: Location, via: Location?, to: Location, date: Date, departure: Bool, products: [Product]?, optimize: Optimize?, walkSpeed: WalkSpeed?, accessibility: Accessibility?, options: [Option]?, completion: @escaping (QueryTripsResult) -> Void) -> AsyncRequest
+    
+    /**
+       Query trips, asking for any ambiguousnesses
+    
+       - Parameter from: location to route from.
+       - Parameter via: location to route via, may be nil.
+       - Parameter to: location to route to.
+       - Parameter date: desired date for departing.
+       - Parameter departure: date is departure date? true for departure, false for arrival.
+       - Parameter tripOptions: additional options.
+       - Parameter completion: result object that can contain alternatives to clear up ambiguousnesses, or contains possible trips.
+    
+       - Returns: A reference to a cancellable http request.
+    */
+    func queryTrips(from: Location, via: Location?, to: Location, date: Date, departure: Bool, tripOptions: TripOptions, completion: @escaping (QueryTripsResult) -> Void) -> AsyncRequest
     
     /**
     Query more trips (e.g. earlier or later)
@@ -112,4 +128,51 @@ public enum Accessibility: Int {
 
 public enum Option: Int {
     case bike
+}
+
+public class TripOptions: NSObject, NSSecureCoding {
+    
+    public static var supportsSecureCoding: Bool = true
+    
+    public var products: [Product]?
+    public var optimize: Optimize?
+    public var walkSpeed: WalkSpeed?
+    public var accessibility: Accessibility?
+    public var options: [Option]?
+    
+    public init(products: [Product]? = nil, optimize: Optimize? = nil, walkSpeed: WalkSpeed? = nil, accessibility: Accessibility? = nil, options: [Option]? = nil) {
+        self.products = products
+        self.optimize = optimize
+        self.accessibility = accessibility
+        self.options = options
+    }
+    
+    public required convenience init?(coder aDecoder: NSCoder) {
+        let productsString = aDecoder.decodeObject(of: [NSArray.self, NSString.self], forKey: PropertyKey.products) as? [String]
+        let products = productsString?.compactMap { Product(rawValue: $0) }
+        let optimize = Optimize(rawValue: aDecoder.decodeObject(of: NSNumber.self, forKey: PropertyKey.optimize) as? Int ?? -1)
+        let walkSpeed = WalkSpeed(rawValue: aDecoder.decodeObject(of: NSNumber.self, forKey: PropertyKey.walkSpeed) as? Int ?? -1)
+        let accessibility = Accessibility(rawValue: aDecoder.decodeObject(of: NSNumber.self, forKey: PropertyKey.accessibility) as? Int ?? -1)
+        let optionsInt = aDecoder.decodeObject(of: [NSArray.self], forKey: PropertyKey.options) as? [Int]
+        let options = optionsInt?.compactMap { Option(rawValue: $0) }
+        self.init(products: products, optimize: optimize, walkSpeed: walkSpeed, accessibility: accessibility, options: options)
+    }
+    
+    public func encode(with aCoder: NSCoder) {
+        if let products = products {
+            aCoder.encode(products.map { $0.rawValue }, forKey: PropertyKey.products)
+        }
+        aCoder.encode(optimize?.rawValue, forKey: PropertyKey.optimize)
+        aCoder.encode(walkSpeed?.rawValue, forKey: PropertyKey.walkSpeed)
+        aCoder.encode(accessibility?.rawValue, forKey: PropertyKey.accessibility)
+        aCoder.encode(options?.map { $0.rawValue }, forKey: PropertyKey.options)
+    }
+    
+    struct PropertyKey {
+        static let products = "products"
+        static let optimize = "optimize"
+        static let walkSpeed = "walkSpeed"
+        static let accessibility = "accessibility"
+        static let options = "options"
+    }
 }

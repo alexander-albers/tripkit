@@ -39,7 +39,7 @@ public class VvoProvider: AbstractEfaProvider {
         return super.parseLine(id: id, network: network, mot: mot, symbol: symbol, name: name, longName: longName, trainType: trainType, trainNum: trainNum, trainName: trainName)
     }
     
-    override func queryTripsParameters(builder: UrlBuilder, from: Location, via: Location?, to: Location, date: Date, departure: Bool, products: [Product]?, optimize: Optimize?, walkSpeed: WalkSpeed?, accessibility: Accessibility?, options: [Option]?, desktop: Bool) {
+    override func queryTripsParameters(builder: UrlBuilder, from: Location, via: Location?, to: Location, date: Date, departure: Bool, tripOptions: TripOptions, desktop: Bool) {
         if desktop {
             builder.addParameter(key: "originid", value: locationValue(location: from))
             if let via = via {
@@ -59,7 +59,7 @@ public class VvoProvider: AbstractEfaProvider {
             builder.addParameter(key: "time", value: timeFormatter.string(from: date))
             builder.addParameter(key: "arrival", value: !departure)
         } else {
-            super.queryTripsParameters(builder: builder, from: from, via: via, to: to, date: date, departure: departure, products: products, optimize: optimize, walkSpeed: walkSpeed, accessibility: accessibility, options: options, desktop: desktop)
+            super.queryTripsParameters(builder: builder, from: from, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions, desktop: desktop)
         }
     }
     

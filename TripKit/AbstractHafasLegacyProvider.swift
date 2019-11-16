@@ -165,11 +165,11 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider {
         }
     }
     
-    override public func queryTrips(from: Location, via: Location?, to: Location, date: Date, departure: Bool, products: [Product]?, optimize: Optimize?, walkSpeed: WalkSpeed?, accessibility: Accessibility?, options: [Option]?, completion: @escaping (QueryTripsResult) -> Void) -> AsyncRequest {
-        return queryTripsBinary(from: from, via: via, to: to, date: date, departure: departure, products: products, optimize: optimize, walkSpeed: walkSpeed, accessibility: accessibility, options: options, completion: completion)
+    public override func queryTrips(from: Location, via: Location?, to: Location, date: Date, departure: Bool, tripOptions: TripOptions, completion: @escaping (QueryTripsResult) -> Void) -> AsyncRequest {
+        return queryTripsBinary(from: from, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions, completion: completion)
     }
     
-    func queryTripsBinary(from: Location, via: Location?, to: Location, date: Date, departure: Bool, products: [Product]?, optimize: Optimize?, walkSpeed: WalkSpeed?, accessibility: Accessibility?, options: [Option]?, completion: @escaping (QueryTripsResult) -> Void) -> AsyncRequest {
+    func queryTripsBinary(from: Location, via: Location?, to: Location, date: Date, departure: Bool, tripOptions: TripOptions, completion: @escaping (QueryTripsResult) -> Void) -> AsyncRequest {
         
         if !from.isIdentified() {
             return suggestLocations(constraint: [from.place, from.name].compactMap({$0}).joined(separator: " "), types: [.station], maxLocations: 10, completion: { (result: SuggestLocationsResult) in
@@ -178,7 +178,7 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider {
                     if locations.count > 1 {
                         completion(.ambiguous(ambiguousFrom: locations.map({$0.location}), ambiguousVia: [], ambiguousTo: []))
                     } else if let location = locations.first?.location {
-                        let _ = self.queryTripsBinary(from: location, via: via, to: to, date: date, departure: departure, products: products, optimize: optimize, walkSpeed: walkSpeed, accessibility: accessibility, options: options, completion: completion)
+                        let _ = self.queryTripsBinary(from: location, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions, completion: completion)
                     } else {
                         completion(.unknownFrom)
                     }
@@ -193,7 +193,7 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider {
                     if locations.count > 1 {
                         completion(.ambiguous(ambiguousFrom: [], ambiguousVia: locations.map({$0.location}), ambiguousTo: []))
                     } else if let location = locations.first?.location {
-                        let _ = self.queryTripsBinary(from: from, via: location, to: to, date: date, departure: departure, products: products, optimize: optimize, walkSpeed: walkSpeed, accessibility: accessibility, options: options, completion: completion)
+                        let _ = self.queryTripsBinary(from: from, via: location, to: to, date: date, departure: departure, tripOptions: tripOptions, completion: completion)
                     } else {
                         completion(.unknownVia)
                     }
@@ -208,7 +208,7 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider {
                     if locations.count > 1 {
                         completion(.ambiguous(ambiguousFrom: [], ambiguousVia: [], ambiguousTo: locations.map({$0.location})))
                     } else if let location = locations.first?.location {
-                        let _ = self.queryTripsBinary(from: from, via: via, to: location, date: date, departure: departure, products: products, optimize: optimize, walkSpeed: walkSpeed, accessibility: accessibility, options: options, completion: completion)
+                        let _ = self.queryTripsBinary(from: from, via: via, to: location, date: date, departure: departure, tripOptions: tripOptions, completion: completion)
                     } else {
                         completion(.unknownTo)
                     }
@@ -217,16 +217,16 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider {
                 }
             })
         } else {
-            return self.doQueryBinary(from: from, via: via, to: to, date: date, departure: departure, products: products, optimize: optimize, walkSpeed: walkSpeed, accessibility: accessibility, options: options, completion: completion)
+            return self.doQueryBinary(from: from, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions, completion: completion)
         }
     }
     
-    func doQueryBinary(from: Location, via: Location?, to: Location, date: Date, departure: Bool, products: [Product]?, optimize: Optimize?, walkSpeed: WalkSpeed?, accessibility: Accessibility?, options: [Option]?, completion: @escaping (QueryTripsResult) -> Void) -> AsyncRequest {
+    func doQueryBinary(from: Location, via: Location?, to: Location, date: Date, departure: Bool, tripOptions: TripOptions, completion: @escaping (QueryTripsResult) -> Void) -> AsyncRequest {
         let urlBuilder = UrlBuilder(path: queryEndpoint, encoding: requestUrlEncoding)
-        queryTripsBinaryParameters(builder: urlBuilder, from: from, via: via, to: to, date: date, departure: departure, products: products, optimize: optimize, walkSpeed: walkSpeed, accessibility: accessibility, options: options, desktop: false)
+        queryTripsBinaryParameters(builder: urlBuilder, from: from, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions, desktop: false)
         
         let desktopUrlBuilder = UrlBuilder(path: queryEndpoint, encoding: requestUrlEncoding)
-        queryTripsBinaryParameters(builder: desktopUrlBuilder, from: from, via: via, to: to, date: date, departure: departure, products: products, optimize: optimize, walkSpeed: walkSpeed, accessibility: accessibility, options: options, desktop: true)
+        queryTripsBinaryParameters(builder: desktopUrlBuilder, from: from, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions, desktop: true)
         let desktopUrl = desktopUrlBuilder.build()
         
         return HttpClient.get(httpRequest: HttpRequest(urlBuilder: urlBuilder)) { result in

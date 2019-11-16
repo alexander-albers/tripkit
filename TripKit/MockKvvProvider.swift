@@ -95,7 +95,7 @@ public class MockKvvProvider: AbstractEfaProvider {
         return super.parseLine(id: id, network: network, mot: mot, symbol: symbol, name: name, longName: longName, trainType: trainType, trainNum: trainNum, trainName: trainName)
     }
     
-    public override func queryTrips(from: Location, via: Location?, to: Location, date: Date, departure: Bool, products: [Product]?, optimize: Optimize?, walkSpeed: WalkSpeed?, accessibility: Accessibility?, options: [Option]?, completion: @escaping (QueryTripsResult) -> Void) -> AsyncRequest {
+    public override func queryTrips(from: Location, via: Location?, to: Location, date: Date, departure: Bool, tripOptions: TripOptions, completion: @escaping (QueryTripsResult) -> Void) -> AsyncRequest {
         let fare = Fare(network: "KVV", type: .adult, currency: "EUR", fare: 2.4, unitsName: "Waben", units: "2")
         let fare2 = Fare(network: "KVV", type: .child, currency: "EUR", fare: 1.4, unitsName: "Waben", units: "2")
         let fares = [fare, fare2]
