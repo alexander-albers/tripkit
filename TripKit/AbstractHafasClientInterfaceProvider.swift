@@ -3,6 +3,8 @@ import os.log
 
 public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
     
+    override public var supportedQueryTraits: Set<QueryTrait> { return [.maxChanges, .minChangeTime] }
+    
     var mgateEndpoint: String
     var apiVersion: String?
     var apiAuthorization: Any?

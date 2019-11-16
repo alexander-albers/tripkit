@@ -3,6 +3,7 @@ import Foundation
 public protocol NetworkProvider {
     
     var id: NetworkId { get }
+    var supportedQueryTraits: Set<QueryTrait> { get }
     
     var styles: [String: LineStyle] { get set }
     var timeZone: TimeZone { get set }
@@ -185,4 +186,8 @@ public class TripOptions: NSObject, NSSecureCoding {
         static let maxChanges = "maxChanges"
         static let minChangeTime = "minChangeTime"
     }
+}
+
+public enum QueryTrait: Int {
+    case maxChanges, minChangeTime
 }
