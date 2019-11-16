@@ -140,13 +140,15 @@ public class TripOptions: NSObject, NSSecureCoding {
     public var accessibility: Accessibility?
     public var options: [Option]?
     public var maxChanges: Int?
+    public var minChangeTime: Int? // in minutes
     
-    public init(products: [Product]? = nil, optimize: Optimize? = nil, walkSpeed: WalkSpeed? = nil, accessibility: Accessibility? = nil, options: [Option]? = nil, maxChanges: Int? = nil) {
+    public init(products: [Product]? = nil, optimize: Optimize? = nil, walkSpeed: WalkSpeed? = nil, accessibility: Accessibility? = nil, options: [Option]? = nil, maxChanges: Int? = nil, minChangeTime: Int? = nil) {
         self.products = products
         self.optimize = optimize
         self.accessibility = accessibility
         self.options = options
         self.maxChanges = maxChanges
+        self.minChangeTime = minChangeTime
     }
     
     public required convenience init?(coder aDecoder: NSCoder) {
@@ -158,7 +160,8 @@ public class TripOptions: NSObject, NSSecureCoding {
         let optionsInt = aDecoder.decodeObject(of: [NSArray.self], forKey: PropertyKey.options) as? [Int]
         let options = optionsInt?.compactMap { Option(rawValue: $0) }
         let maxChanges = aDecoder.decodeObject(of: NSNumber.self, forKey: PropertyKey.maxChanges) as? Int
-        self.init(products: products, optimize: optimize, walkSpeed: walkSpeed, accessibility: accessibility, options: options, maxChanges: maxChanges)
+        let minChangeTime = aDecoder.decodeObject(of: NSNumber.self, forKey: PropertyKey.minChangeTime) as? Int
+        self.init(products: products, optimize: optimize, walkSpeed: walkSpeed, accessibility: accessibility, options: options, maxChanges: maxChanges, minChangeTime: minChangeTime)
     }
     
     public func encode(with aCoder: NSCoder) {
@@ -170,6 +173,7 @@ public class TripOptions: NSObject, NSSecureCoding {
         aCoder.encode(accessibility?.rawValue, forKey: PropertyKey.accessibility)
         aCoder.encode(options?.map { $0.rawValue }, forKey: PropertyKey.options)
         aCoder.encode(maxChanges, forKey: PropertyKey.maxChanges)
+        aCoder.encode(minChangeTime, forKey: PropertyKey.minChangeTime)
     }
     
     struct PropertyKey {
@@ -179,5 +183,6 @@ public class TripOptions: NSObject, NSSecureCoding {
         static let accessibility = "accessibility"
         static let options = "options"
         static let maxChanges = "maxChanges"
+        static let minChangeTime = "minChangeTime"
     }
 }

@@ -151,6 +151,9 @@ public class AbstractHafasProvider: AbstractNetworkProvider {
         } else if let options = tripOptions.options, options.contains(.bike) {
             builder.addParameter(key: "REQ0JourneyProduct_opt3", value: 1)
         }
+        if let minChangeTime = tripOptions.minChangeTime {
+            builder.addParameter(key: "REQ0HafasChangeTime", value: "\(minChangeTime):\(minChangeTime / 5)")
+        }
         if !desktop {
             builder.addParameter(key: "h2g-direct", value: 11)
         }
