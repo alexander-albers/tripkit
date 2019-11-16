@@ -5,6 +5,8 @@ import SwiftyJSON
 
 public class AbstractEfaProvider: AbstractNetworkProvider {
     
+    override public var supportedQueryTraits: Set<QueryTrait> { return [.maxChanges] }
+    
     let departureMonitorEndpoint: String
     let tripEndpoint: String
     let stopFinderEndpoint: String

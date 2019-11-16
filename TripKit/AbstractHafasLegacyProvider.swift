@@ -5,6 +5,8 @@ import SWXMLHash
 
 public class AbstractHafasLegacyProvider: AbstractHafasProvider {
     
+    override public var supportedQueryTraits: Set<QueryTrait> { return [.minChangeTime] }
+    
     var stationBoardEndpoint: String
     var getStopEndpoint: String
     var queryEndpoint: String

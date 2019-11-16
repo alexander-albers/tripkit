@@ -3,6 +3,7 @@ import Foundation
 public class AbstractNetworkProvider: NetworkProvider {
     
     public let id: NetworkId
+    public var supportedQueryTraits: Set<QueryTrait> { return [] }
     
     public var styles: [String: LineStyle] = [:]
     var numTripsRequested = 6
