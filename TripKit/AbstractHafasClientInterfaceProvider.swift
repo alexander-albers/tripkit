@@ -1341,7 +1341,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
             }
             return Line(id: nil, network: network, product: product, label: label, name: longName, number: number, style: lineStyle(network: network, product: product, label: label), attr: nil, message: nil)
         } else {
-            return Line(id: nil, network: network, product: product, label: (shortName ?? name)?.replacingOccurrences(of: " ", with: ""), name: longName, number: number, style: lineStyle(network: network, product: product, label: name), attr: nil, message: nil)
+            return Line(id: nil, network: network, product: product, label: (name ?? shortName)?.replacingOccurrences(of: " ", with: ""), name: longName, number: number, style: lineStyle(network: network, product: product, label: name), attr: nil, message: nil)
         }
     }
     
