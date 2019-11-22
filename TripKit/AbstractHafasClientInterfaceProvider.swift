@@ -1341,7 +1341,11 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
             }
             return Line(id: nil, network: network, product: product, label: label, name: longName, number: number, style: lineStyle(network: network, product: product, label: label), attr: nil, message: nil)
         } else {
-            return Line(id: nil, network: network, product: product, label: (name ?? shortName)?.replacingOccurrences(of: " ", with: ""), name: longName, number: number, style: lineStyle(network: network, product: product, label: name), attr: nil, message: nil)
+            var label = name ?? shortName ?? number
+            if label?.contains("Zug-Nr.") ?? false, let shortName = shortName, name?.contains(shortName) ?? false {
+                label = shortName
+            }
+            return Line(id: nil, network: network, product: product, label: label?.replacingOccurrences(of: " ", with: ""), name: longName, number: number, style: lineStyle(network: network, product: product, label: name), attr: nil, message: nil)
         }
     }
     
