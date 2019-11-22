@@ -585,7 +585,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
                             if let remX = rem["remX"] as? Int, jny["msgL"] != nil && rem["type"] as? String == "REM" {
                                 if let attr = rems?[remX] {
                                     switch attr {
-                                    case .bycicleCarriage:
+                                    case .bicycleCarriage:
                                         result.append(.bicycleCarriage)
                                         break
                                     case .wheelChairAccess:
@@ -837,7 +837,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         for msg in journey["msgL"] as? [Any] ?? [] {
             guard let msg = msg as? [String: Any], let type = msg["type"] as? String, type == "REM", let remX = msg["remX"] as? Int, remX >= 0 && remX < rems?.count ?? 0, let rem = rems?[remX] else { continue }
             switch rem {
-            case .bycicleCarriage:
+            case .bicycleCarriage:
                 attr.append(.bicycleCarriage)
                 break
             case .wheelChairAccess:
@@ -1253,7 +1253,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
                 result.append(.wheelChairAccess)
                 break
             case "fb":
-                result.append(.bycicleCarriage)
+                result.append(.bicycleCarriage)
                 break
             case "bt":
                 result.append(.boardRestaurant)
@@ -1464,7 +1464,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
     }
     
     enum RemAttrib {
-        case wheelChairAccess, bycicleCarriage, boardRestaurant, wifi, powerSockets, airConditioned
+        case wheelChairAccess, bicycleCarriage, boardRestaurant, wifi, powerSockets, airConditioned
         case cancelled(reason: String?)
         case stopCancelled(reason: String?)
         case unknown(reason: String?)
