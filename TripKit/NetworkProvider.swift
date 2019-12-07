@@ -18,7 +18,7 @@ public protocol NetworkProvider {
 
     - Returns: A reference to a cancellable http request.
      */
-    func suggestLocations(constraint: String, types: [LocationType]?, maxLocations: Int, completion: @escaping (SuggestLocationsResult) -> Void) -> AsyncRequest
+    @discardableResult func suggestLocations(constraint: String, types: [LocationType]?, maxLocations: Int, completion: @escaping (SuggestLocationsResult) -> Void) -> AsyncRequest
     
     /**
     Find locations near to given location. At least one of lat/lon pair or station id must be present in that location.
@@ -31,7 +31,7 @@ public protocol NetworkProvider {
 
     - Returns: A reference to a cancellable http request.
      */
-    func queryNearbyLocations(location: Location, types: [LocationType]?, maxDistance: Int, maxLocations: Int, completion: @escaping (NearbyLocationsResult) -> Void) -> AsyncRequest
+    @discardableResult func queryNearbyLocations(location: Location, types: [LocationType]?, maxDistance: Int, maxLocations: Int, completion: @escaping (NearbyLocationsResult) -> Void) -> AsyncRequest
     
     /**
     Query trips, asking for any ambiguousnesses
@@ -66,7 +66,7 @@ public protocol NetworkProvider {
     
        - Returns: A reference to a cancellable http request.
     */
-    func queryTrips(from: Location, via: Location?, to: Location, date: Date, departure: Bool, tripOptions: TripOptions, completion: @escaping (QueryTripsResult) -> Void) -> AsyncRequest
+    @discardableResult func queryTrips(from: Location, via: Location?, to: Location, date: Date, departure: Bool, tripOptions: TripOptions, completion: @escaping (QueryTripsResult) -> Void) -> AsyncRequest
     
     /**
     Query more trips (e.g. earlier or later)
@@ -77,7 +77,7 @@ public protocol NetworkProvider {
  
     - Returns: A reference to a cancellable http request.
      */
-    func queryMoreTrips(context: QueryTripsContext, later: Bool, completion: @escaping (QueryTripsResult) -> Void) -> AsyncRequest
+    @discardableResult func queryMoreTrips(context: QueryTripsContext, later: Bool, completion: @escaping (QueryTripsResult) -> Void) -> AsyncRequest
     
     /**
     Reloads a trip to update delays etc.
@@ -87,7 +87,7 @@ public protocol NetworkProvider {
  
     - Returns: A reference to a cancellable http request.
      */
-    func refreshTrip(context: RefreshTripContext, completion: @escaping (QueryTripsResult) -> Void) -> AsyncRequest
+    @discardableResult func refreshTrip(context: RefreshTripContext, completion: @escaping (QueryTripsResult) -> Void) -> AsyncRequest
     
     /**
     Get departures at a given station.
@@ -101,7 +101,7 @@ public protocol NetworkProvider {
  
     - Returns: A reference to a cancellable http request.
      */
-    func queryDepartures(stationId: String, departures: Bool, time: Date?, maxDepartures: Int, equivs: Bool, completion: @escaping (QueryDeparturesResult) -> Void) -> AsyncRequest
+    @discardableResult func queryDepartures(stationId: String, departures: Bool, time: Date?, maxDepartures: Int, equivs: Bool, completion: @escaping (QueryDeparturesResult) -> Void) -> AsyncRequest
     
     /**
     Get details of a line journey.
@@ -111,7 +111,7 @@ public protocol NetworkProvider {
  
      - Returns: A reference to a cancellable http request.
      */
-    func queryJourneyDetail(context: QueryJourneyDetailContext, completion: @escaping (QueryJourneyDetailResult) -> Void) -> AsyncRequest
+    @discardableResult func queryJourneyDetail(context: QueryJourneyDetailContext, completion: @escaping (QueryJourneyDetailResult) -> Void) -> AsyncRequest
     
 }
 
