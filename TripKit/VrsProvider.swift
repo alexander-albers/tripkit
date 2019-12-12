@@ -780,7 +780,7 @@ public class VrsProvider: AbstractNetworkProvider {
                     } else {
                         journeyContext = nil
                     }
-                    legs.append(PublicLeg(line: line!, destination: directionLoc, departureStop: departureStop, arrivalStop: arrivalStop, intermediateStops: intermediateStops, message: message, path: points, journeyContext: journeyContext))
+                    legs.append(PublicLeg(line: line!, destination: directionLoc, departureStop: departureStop, arrivalStop: arrivalStop, intermediateStops: intermediateStops, message: message.emptyToNil, path: points, journeyContext: journeyContext))
                 } else {
                     throw ParseError(reason: "illegal segment type \(type)")
                 }
