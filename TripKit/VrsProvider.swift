@@ -686,7 +686,7 @@ public class VrsProvider: AbstractNetworkProvider {
                     } else if let arrival = via["arrival"] as? String {
                         plannedArrival = parseDateTime(from: arrival)
                     }
-                    let stop = Stop(location: viaLocation, plannedArrivalTime: plannedArrival, predictedArrivalTime: predictedArrival, plannedArrivalPlatform: viaPosition, predictedArrivalPlatform: nil, arrivalCancelled: false, plannedDepartureTime: nil, predictedDepartureTime: nil, plannedDeparturePlatform: nil, predictedDeparturePlatform: nil, departureCancelled: false)
+                    let stop = Stop(location: viaLocation, plannedArrivalTime: plannedArrival, predictedArrivalTime: predictedArrival, plannedArrivalPlatform: viaPosition, predictedArrivalPlatform: nil, arrivalCancelled: false, plannedDepartureTime: plannedArrival, predictedDepartureTime: predictedArrival, plannedDeparturePlatform: viaPosition, predictedDeparturePlatform: nil, departureCancelled: false)
                     intermediateStops.append(stop)
                 }
                 var departurePlanned: Date? = nil
