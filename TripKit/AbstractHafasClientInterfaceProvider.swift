@@ -33,7 +33,28 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
     // MARK: NetworkProvider implementations – Requests
     
     override public func suggestLocations(constraint: String, types: [LocationType]?, maxLocations: Int, completion: @escaping (SuggestLocationsResult) -> Void) -> AsyncRequest {
-        let request = wrapJsonApiRequest(meth: "LocMatch", req: ["input": ["field": "S", "loc": ["name": constraint + "?", "meta": false], "maxLoc": maxLocations > 0 ? maxLocations : 50]], formatted: true)
+        var type: String
+        if let types = types, !types.isEmpty {
+            if types.contains(.any) || [.station, .poi, .address].allSatisfy(types.contains) {
+                type = "ALL"
+            } else {
+                type = ""
+                types.forEach { t in
+                    switch t {
+                    case .station:
+                        type += "S"
+                    case .poi:
+                        type += "P"
+                    case .address:
+                        type += "A"
+                    default: break
+                    }
+                }
+            }
+        } else {
+            type = "ALL"
+        }
+        let request = wrapJsonApiRequest(meth: "LocMatch", req: ["input": ["field": "S", "loc": ["name": constraint + "?", "type": type], "maxLoc": maxLocations > 0 ? maxLocations : 50]], formatted: true)
         let urlBuilder = UrlBuilder(path: mgateEndpoint, encoding: requestUrlEncoding)
         requestVerification.appendParameters(to: urlBuilder, requestString: request)
         
