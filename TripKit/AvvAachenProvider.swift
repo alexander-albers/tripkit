@@ -17,7 +17,11 @@ public class AvvAachenProvider: AbstractHafasClientInterfaceProvider {
     override func split(stationName: String?) -> (String?, String?) {
         guard let stationName = stationName else { return super.split(stationName: nil) }
         if let m = stationName.match(pattern: P_SPLIT_NAME_FIRST_COMMA) {
-            return (m[0], m[1])
+            if m[1] == "AC" {
+                return ("Aachen", m[0])
+            } else {
+                return (m[0], m[1])
+            }
         }
         return super.split(stationName: stationName)
     }
