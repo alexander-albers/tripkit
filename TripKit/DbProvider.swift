@@ -3,7 +3,18 @@ import Foundation
 public class DbProvider: AbstractHafasClientInterfaceProvider {
     
     static let API_BASE = "https://reiseauskunft.bahn.de/bin/"
-    static let PRODUCTS_MAP: [Product?] = [.highSpeedTrain, .highSpeedTrain, .regionalTrain, .regionalTrain, .suburbanTrain, .bus, .ferry, .subway, .tram, .onDemand, nil, nil, nil, nil]
+    static let PRODUCTS_MAP: [Product?] = [
+        .highSpeedTrain, // ICE-Züge
+        .highSpeedTrain, // Intercity- und Eurocityzüge
+        .highSpeedTrain, // Interregio- und Schnellzüge
+        .regionalTrain, // Nahverkehr, sonstige Züge
+        .suburbanTrain, // S-Bahn
+        .bus, // Busse
+        .ferry, // Schiffe
+        .subway, // U-Bahnen
+        .tram, // Straßenbahnen
+        .onDemand, // Anruf-Sammeltaxi
+        nil, nil, nil, nil]
     let format = DateFormatter()
     
     public init(apiAuthorization: [String: Any], requestVerification: AbstractHafasClientInterfaceProvider.RequestVerification) {
