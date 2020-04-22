@@ -809,11 +809,10 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
             var cancelled = false
             
             for partialRoute in route["itdPartialRouteList"]["itdPartialRoute"].all {
+                var legMessages: [String] = []
                 for infoLink in partialRoute["infoLink"].all {
-                    guard let infoLinkText = infoLink["infoText"]["subtitle"].element?.text, let infoLinkUrl = infoLink["infoLinkURL"].element?.text else { continue }
-                    if !messages.contains(where: {$0.text == infoLinkText && $0.url == infoLinkUrl}) {
-                        messages.append(InfoText(text: infoLinkText, url: infoLinkUrl))
-                    }
+                    guard let infoLinkText = infoLink["infoText"]["subtitle"].element?.text else { continue }
+                    legMessages.append(infoLinkText)
                 }
                 
                 let points = partialRoute["itdPoint"].all
@@ -854,12 +853,15 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
                     throw ParseError(reason: "means of transport type")
                 }
                 if meansOfTransportType <= 16 {
-                    cancelled |= try processPublicLeg(partialRoute, &legs, departureTime, departureTargetTime, departureLocation, departurePosition, plannedDeparturePosition, arrivalTime, arrivalTargetTime, arrivalLocation, arrivalPosition, plannedArrivalPosition)
+                    cancelled |= try processPublicLeg(partialRoute, &legs, departureTime, departureTargetTime, departureLocation, departurePosition, plannedDeparturePosition, arrivalTime, arrivalTargetTime, arrivalLocation, arrivalPosition, plannedArrivalPosition, legMessages)
                 } else if meansOfTransportType == 97 && meansOfTransportProductName == "nicht umsteigen" {
                     if let last = legs.last as? PublicLeg {
                         var lastMessage = "Nicht umsteigen, Weiterfahrt im selben Fahrzeug möglich."
                         if let message = last.message?.emptyToNil {
                             lastMessage += "\n" + message
+                        }
+                        if let msg = legMessages.joined(separator: "\n").emptyToNil {
+                            lastMessage += "\n" + msg
                         }
                         legs[legs.count - 1] = PublicLeg(line: last.line, destination: last.destination, departureStop: last.departureStop, arrivalStop: last.arrivalStop, intermediateStops: last.intermediateStops, message: lastMessage, path: last.path, journeyContext: last.journeyContext)
                     }
@@ -1767,7 +1769,7 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
         return Location(type: isStop ? .station : .any, id: isStop ? id : nil, coord: coord, place: place, name: name)
     }
     
-    func processPublicLeg(_ xml: XMLIndexer, _ legs: inout [Leg], _ departureTime: Date, _ departureTargetTime: Date?, _ departureLocation: Location, _ departurePosition: String?, _ plannedDeparturePosition: String?, _ arrivalTime: Date, _ arrivalTargetTime: Date?, _ arrivalLocation: Location, _ arrivalPosition: String?, _ plannedArrivalPosition: String?) throws -> Bool {
+    func processPublicLeg(_ xml: XMLIndexer, _ legs: inout [Leg], _ departureTime: Date, _ departureTargetTime: Date?, _ departureLocation: Location, _ departurePosition: String?, _ plannedDeparturePosition: String?, _ arrivalTime: Date, _ arrivalTargetTime: Date?, _ arrivalLocation: Location, _ arrivalPosition: String?, _ plannedArrivalPosition: String?, _ legMessages: [String]) throws -> Bool {
         let motSymbol = xml["itdMeansOfTransport"].element?.attribute(by: "symbol")?.text
         let motType = xml["itdMeansOfTransport"].element?.attribute(by: "motType")?.text
         let motShortName = xml["itdMeansOfTransport"].element?.attribute(by: "shortname")?.text
@@ -1791,10 +1793,10 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
         }
         
         var destinationName = stripLineFromDestination(line: line, destinationName: normalizeLocationName(name: xml["itdMeansOfTransport"].element?.attribute(by: "destination")?.text))
-        var message: String? = nil
+        var messages = Set<String>()
         if let destination = destinationName, destination.hasSuffix(" EILZUG") {
             destinationName = String(destination.dropLast(" EILZUG".count))
-            message = "Eilzug: Zug hält nicht überall."
+            messages.insert("Eilzug: Zug hält nicht überall.")
         }
         let destinationId = xml["itdMeansOfTransport"].element?.attribute(by: "destID")?.text
         let destination: Location?
@@ -1812,22 +1814,15 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
                 if text.lowercased().hasPrefix("niederflurwagen") {
                     lowFloorVehicle = true
                 } else if text.lowercased().contains("ruf") || text.lowercased().contains("anmeld") || text.lowercased().contains("ast") {
-                    if let text = message {
-                        message = text + "\n" + (String(htmlEncodedString: text) ?? text)
-                    } else {
-                        message = String(htmlEncodedString: text) ?? text
-                    }
+                    messages.insert(String(htmlEncodedString: text) ?? text)
                 }
             }
         }
         
         if let infoText = xml["infoLink"]["infoLinkText"].element?.text {
-            if let text = message {
-                message = text + "\n" + (String(htmlEncodedString: infoText) ?? infoText)
-            } else {
-                message = String(htmlEncodedString: infoText) ?? infoText
-            }
+            messages.insert(String(htmlEncodedString: infoText) ?? infoText)
         }
+        messages = messages.union(legMessages)
         
         let rblDepartureDelay = Int(xml["itdRBLControlled"].element?.attribute(by: "delayMinutes")?.text ?? "")
         let rblArrivalDelay = Int(xml["itdRBLControlled"].element?.attribute(by: "delayMinutesArr")?.text ?? "")
@@ -1906,7 +1901,7 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
             journeyContext = nil
         }
         
-        legs.append(PublicLeg(line: styledLine, destination: destination, departureStop: departure, arrivalStop: arrival, intermediateStops: stops, message: message, path: path ?? [LocationPoint](), journeyContext: journeyContext))
+        legs.append(PublicLeg(line: styledLine, destination: destination, departureStop: departure, arrivalStop: arrival, intermediateStops: stops, message: messages.joined(separator: "\n").emptyToNil, path: path ?? [LocationPoint](), journeyContext: journeyContext))
         return cancelled
     }
     
