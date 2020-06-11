@@ -9,7 +9,7 @@ public class LineStyle: NSObject, NSSecureCoding {
     public let foregroundColor: UInt32!
     public let borderColor: UInt32!
     
-    init(shape: Shape, backgroundColor: UInt32, backgroundColor2: UInt32, foregroundColor: UInt32, borderColor: UInt32) {
+    public init(shape: Shape, backgroundColor: UInt32, backgroundColor2: UInt32, foregroundColor: UInt32, borderColor: UInt32) {
         self.shape = shape
         self.backgroundColor = backgroundColor
         self.backgroundColor2 = backgroundColor2
@@ -17,19 +17,19 @@ public class LineStyle: NSObject, NSSecureCoding {
         self.borderColor = borderColor
     }
     
-    convenience init(backgroundColor: UInt32, foregroundColor: UInt32) {
+    public convenience init(backgroundColor: UInt32, foregroundColor: UInt32) {
         self.init(shape: Shape.rounded, backgroundColor: backgroundColor, backgroundColor2: 0, foregroundColor: foregroundColor, borderColor: 0)
     }
     
-    convenience init(backgroundColor: UInt32, foregroundColor: UInt32, borderColor: UInt32) {
+    public convenience init(backgroundColor: UInt32, foregroundColor: UInt32, borderColor: UInt32) {
         self.init(shape: .rounded, backgroundColor: backgroundColor, backgroundColor2: 0, foregroundColor: foregroundColor, borderColor: borderColor)
     }
     
-    convenience init(shape: Shape, backgroundColor: UInt32, foregroundColor: UInt32) {
+    public convenience init(shape: Shape, backgroundColor: UInt32, foregroundColor: UInt32) {
         self.init(shape: shape, backgroundColor: backgroundColor, backgroundColor2: 0, foregroundColor: foregroundColor, borderColor: 0)
     }
     
-    convenience init(shape: Shape, backgroundColor: UInt32, foregroundColor: UInt32, borderColor: UInt32) {
+    public convenience init(shape: Shape, backgroundColor: UInt32, foregroundColor: UInt32, borderColor: UInt32) {
         self.init(shape: shape, backgroundColor: backgroundColor, backgroundColor2: 0, foregroundColor: foregroundColor, borderColor: borderColor)
     }
     
@@ -64,16 +64,17 @@ public class LineStyle: NSObject, NSSecureCoding {
         
     }
     
-    static let black: UInt32 = 0xFF000000
-    static let darkGray: UInt32 = 0xFF444444
-    static let gray: UInt32 = 0xFF888888
-    static let white: UInt32 = 0xFFFFFFFF
-    static let red: UInt32 = 0xFFFF0000
-    static let blue: UInt32 = 0xFF00FF00
-    static let yellow: UInt32 = 0xFFFFFF00
-    static let transparent: UInt32 = 0
+    public static let black: UInt32 = 0xFF000000
+    public static let darkGray: UInt32 = 0xFF444444
+    public static let gray: UInt32 = 0xFF888888
+    public static let white: UInt32 = 0xFFFFFFFF
+    public static let red: UInt32 = 0xFFFF0000
+    public static let green: UInt32 = 0xFF00FF00
+    public static let blue: UInt32 = 0xFF0000FF
+    public static let yellow: UInt32 = 0xFFFFFF00
+    public static let transparent: UInt32 = 0
     
-    static func parseColor(_ colorStr: String) -> UInt32 {
+    public static func parseColor(_ colorStr: String) -> UInt32 {
         guard var color = UInt32(String(colorStr.dropFirst()), radix: 16) else { return 0 }
         if (colorStr.count == 7) {
             color |= 0xff000000 as UInt32
@@ -81,7 +82,7 @@ public class LineStyle: NSObject, NSSecureCoding {
         return color
     }
     
-    static func rgb(_ r: UInt32, _ g: UInt32, _ b: UInt32) -> UInt32 {
+    public static func rgb(_ r: UInt32, _ g: UInt32, _ b: UInt32) -> UInt32 {
         return (0xFF << 24) | (r << 16) | (g << 8) | b
     }
     

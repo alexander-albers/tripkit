@@ -18,7 +18,7 @@ public class Departure: NSObject, NSSecureCoding {
     public let journeyContext: QueryJourneyDetailContext?
     public let wagonSequenceContext: URL?
     
-    init(plannedTime: Date?, predictedTime: Date?, line: Line, position: String?, plannedPosition: String?, destination: Location?, capacity: [Int]?, message: String?, journeyContext: QueryJourneyDetailContext?, wagonSequenceContext: URL? = nil) {
+    public init(plannedTime: Date?, predictedTime: Date?, line: Line, position: String?, plannedPosition: String?, destination: Location?, capacity: [Int]?, message: String?, journeyContext: QueryJourneyDetailContext?, wagonSequenceContext: URL? = nil) {
         self.plannedTime = plannedTime
         self.predictedTime = predictedTime
         self.line = line
