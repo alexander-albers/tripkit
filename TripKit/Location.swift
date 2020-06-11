@@ -174,8 +174,9 @@ public class Location: NSObject, NSSecureCoding {
         return result
     }
     
-    public func getDistanceText(_ location: CLLocation) -> String {
+    public func getDistanceText(_ location: CLLocation, maximumFractionDigits: Int = 2) -> String {
         let distance = getDistance(from: location)
+        distanceFormatter.maximumFractionDigits = maximumFractionDigits
         if distance > 1000 {
             return "\(distanceFormatter.string(from: (distance / 1000) as NSNumber) ?? String(format: "%.2f", distance / 1000))\u{00a0}km"
         } else {
