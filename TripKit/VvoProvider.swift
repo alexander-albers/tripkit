@@ -2,7 +2,7 @@ import Foundation
 
 public class VvoProvider: AbstractEfaProvider {
     
-    static let API_BASE = "http://efa.vvo-online.de:8080/dvb/"
+    static let API_BASE = "http://efa.vvo-online.de:8080/std3/"
     static let STOPFINDER_ENDPOINT = "XSLT_STOPFINDER_REQUEST"
     static let COORD_ENDPOINT = "XSLT_COORD_REQUEST"
     static let DESKTOP_TRIP_ENDPOINT = "https://www.vvo-online.de/de/fahrplan/fahrplanauskunft/fahrten"
