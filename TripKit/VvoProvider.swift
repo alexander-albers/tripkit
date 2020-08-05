@@ -26,7 +26,7 @@ public class VvoProvider: AbstractEfaProvider {
                 return Line(id: id, network: network, product: .regionalTrain, label: "TLX")
             } else if trainName == "Trilex" && trainNum == nil {
                 return Line(id: id, network: network, product: .regionalTrain, label: "TLX")
-            } else if symbol == "U 28" { // Nationalparkbahn
+            } else if symbol == "U28" || symbol == "U 28" { // Nationalparkbahn
                 return Line(id: id, network: network, product: .regionalTrain, label: "U28")
             } else if symbol == "SB 71" { // Städtebahn Sachsen
                 return Line(id: id, network: network, product: .regionalTrain, label: "SB71")
