@@ -37,6 +37,7 @@ public class MvvProvider: AbstractEfaProvider {
             "T25": LineStyle(shape: .rect, backgroundColor: LineStyle.parseColor("#f1919c"), foregroundColor: LineStyle.white),
             "T27": LineStyle(shape: .rect, backgroundColor: LineStyle.parseColor("#f7a600"), foregroundColor: LineStyle.white),
             "T28": LineStyle(shape: .rect, backgroundColor: LineStyle.white, foregroundColor: LineStyle.parseColor("#00a984"), borderColor: LineStyle.parseColor("#00a984")),
+            "T29": LineStyle(shape: .rect, backgroundColor: LineStyle.white, foregroundColor: LineStyle.parseColor("#e30613"), borderColor: LineStyle.parseColor("#e30613")),
             "T38": LineStyle(shape: .rect, backgroundColor: LineStyle.parseColor("#1fa22e"), backgroundColor2: LineStyle.parseColor("#23bae2"), foregroundColor: LineStyle.white, borderColor: 0),
             "TN17": LineStyle(shape: .rect, backgroundColor: LineStyle.parseColor("#999999"), foregroundColor: LineStyle.parseColor("#ffff00")),
             "TN19": LineStyle(shape: .rect, backgroundColor: LineStyle.parseColor("#999999"), foregroundColor: LineStyle.parseColor("#ffff00")),
