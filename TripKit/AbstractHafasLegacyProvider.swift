@@ -40,7 +40,7 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider {
         
         return HttpClient.get(httpRequest: HttpRequest(urlBuilder: urlBuilder)) { result in
             switch result {
-            case .success(_, let data):
+            case .success((_, let data)):
                 do {
                     let string = String(data: data, encoding: self.jsonGetStopsEncoding)!
                     
@@ -100,7 +100,7 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider {
     func jsonNearbyLocations(url: UrlBuilder, completion: @escaping (NearbyLocationsResult) -> Void) -> AsyncRequest {
         return HttpClient.get(httpRequest: HttpRequest(urlBuilder: url)) { result in
             switch result {
-            case .success(_, let data):
+            case .success((_, let data)):
                 do {
                     try self.handleJsonNearbyLocations(response: try data.toJson(encoding: self.jsonNearbyLocationsEncoding), completion: completion)
                 } catch let err as ParseError {
@@ -123,7 +123,7 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider {
         
         return HttpClient.get(httpRequest: HttpRequest(urlBuilder: urlBuilder)) { result in
             switch result {
-            case .success(_, let data):
+            case .success((_, let data)):
                 do {
                     try self.handleXmlNearbyLocations(response: data, completion: completion)
                 } catch let err as ParseError {
@@ -150,7 +150,7 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider {
         
         return HttpClient.get(httpRequest: HttpRequest(urlBuilder: urlBuilder)) { result in
             switch result {
-            case .success(_, let data):
+            case .success((_, let data)):
                 do {
                     try self.handleXmlStationBoard(response: data, desktopUrl: desktopUrl, stationId: stationId, completion: completion)
                 } catch let err as ParseError {
@@ -233,7 +233,7 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider {
         
         return HttpClient.get(httpRequest: HttpRequest(urlBuilder: urlBuilder)) { result in
             switch result {
-            case .success(_, let data):
+            case .success((_, let data)):
                 do {
                     let uncompressedData: Data
                     if data.isGzipped {
@@ -268,7 +268,7 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider {
         
         return HttpClient.get(httpRequest: HttpRequest(urlBuilder: urlBuilder)) { result in
             switch result {
-            case .success(_, let data):
+            case .success((_, let data)):
                 do {
                     let uncompressedData: Data
                     if data.isGzipped {
@@ -301,7 +301,7 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider {
         
         return HttpClient.get(httpRequest: HttpRequest(urlBuilder: urlBuilder)) { result in
             switch result {
-            case .success(_, let data):
+            case .success((_, let data)):
                 do {
                     let uncompressedData: Data
                     if data.isGzipped {

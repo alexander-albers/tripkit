@@ -590,7 +590,7 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
     // MARK: NetworkProvider responses
     
     func handleJsonStopfinderResponse(json: JSON, completion: @escaping (SuggestLocationsResult) -> Void) throws {
-        var head = json["stopFinder"].exists() ? json["stopFinder"] : json
+        let head = json["stopFinder"].exists() ? json["stopFinder"] : json
         
         // check for errors
         for message in head["message"].arrayValue {

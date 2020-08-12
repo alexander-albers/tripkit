@@ -60,7 +60,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         
         return HttpClient.get(httpRequest: HttpRequest(urlBuilder: urlBuilder).setPostPayload(request).setUserAgent(userAgent)) { result in
             switch result {
-            case .success(_, let data):
+            case .success((_, let data)):
                 do {
                     try self.handleJsonLocMatch(response: try data.toJson(), completion: completion)
                 } catch let err as ParseError {
@@ -106,7 +106,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         
         return HttpClient.get(httpRequest: HttpRequest(urlBuilder: urlBuilder).setPostPayload(request).setUserAgent(userAgent)) { result in
             switch result {
-            case .success(_, let data):
+            case .success((_, let data)):
                 do {
                     try self.handleJsonLocGeoPos(response: try data.toJson(), types: types, completion: completion)
                 } catch let err as ParseError {
@@ -158,7 +158,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         
         return HttpClient.get(httpRequest: HttpRequest(urlBuilder: urlBuilder).setPostPayload(request).setUserAgent(userAgent)) { result in
             switch result {
-            case .success(_, let data):
+            case .success((_, let data)):
                 do {
                     try self.handleJsonStationBoard(response: try data.toJson(), stationId: stationId, departures: departures, equivs: equivs, desktopUrl: desktopUrl, completion: completion)
                 } catch let err as ParseError {
@@ -263,7 +263,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         
         return HttpClient.get(httpRequest: HttpRequest(urlBuilder: urlBuilder).setPostPayload(request).setUserAgent(userAgent)) { result in
             switch result {
-            case .success(_, let data):
+            case .success((_, let data)):
                 do {
                     try self.handleJsonTripSearch(response: try data.toJson(), desktopUrl: desktopUrl, from: from, via: via, to: to, date: date, departure: departure, previousContext: previousContext, later: later, tripOptions: tripOptions, completion: completion)
                 } catch let err as ParseError {
@@ -291,7 +291,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         
         return HttpClient.get(httpRequest: HttpRequest(urlBuilder: urlBuilder).setPostPayload(request).setUserAgent(userAgent)) { result in
             switch result {
-            case .success(_, let data):
+            case .success((_, let data)):
                 do {
                     try self.handleJsonTripSearch(response: try data.toJson(), desktopUrl: nil, from: context.from, via: nil, to: context.to, date: Date(), departure: true, previousContext: nil, later: false, tripOptions: TripOptions(), completion: completion)
                 } catch let err as ParseError {
@@ -324,7 +324,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         
         return HttpClient.get(httpRequest: HttpRequest(urlBuilder: urlBuilder).setPostPayload(request).setUserAgent(userAgent)) { result in
             switch result {
-            case .success(_, let data):
+            case .success((_, let data)):
                 do {
                     try self.handleQueryJourneyDetail(response: try data.toJson(), completion: completion)
                 } catch let err as ParseError {

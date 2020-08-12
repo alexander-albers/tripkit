@@ -46,7 +46,7 @@ public class HttpClient {
     public static func getJson(httpRequest: HttpRequest, completion: @escaping (Result<JSON, HttpError>) -> Void) -> AsyncRequest {
         return get(httpRequest: httpRequest) { result in
             switch result {
-            case .success(_, let data):
+            case .success((_, let data)):
                 do {
                     let json = try JSON(data: data)
                     completion(.success(json))
@@ -63,7 +63,7 @@ public class HttpClient {
     public static func getXml(httpRequest: HttpRequest, completion: @escaping (Result<XMLIndexer, HttpError>) -> Void) -> AsyncRequest {
         return get(httpRequest: httpRequest) { result in
             switch result {
-            case .success(_, let data):
+            case .success((_, let data)):
                 let xml = SWXMLHash.parse(data)
                 completion(.success(xml))
             case .failure(let error):

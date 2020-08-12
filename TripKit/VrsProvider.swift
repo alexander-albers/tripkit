@@ -195,7 +195,7 @@ public class VrsProvider: AbstractNetworkProvider {
         
         return HttpClient.get(httpRequest: HttpRequest(urlBuilder: urlBuilder)) { result in
             switch result {
-            case .success(_, let data):
+            case .success((_, let data)):
                 do {
                     try self.handleNearbyLocationsResponse(response: data, types: types, maxDistance: maxDistance, completion: completion)
                 } catch let err as ParseError {
@@ -257,7 +257,7 @@ public class VrsProvider: AbstractNetworkProvider {
         
         return HttpClient.get(httpRequest: HttpRequest(urlBuilder: urlBuilder)) { result in
             switch result {
-            case .success(_, let data):
+            case .success((_, let data)):
                 do {
                     try self.handleDeparturesResponse(response: data, completion: completion)
                 } catch let err as ParseError {
@@ -376,7 +376,7 @@ public class VrsProvider: AbstractNetworkProvider {
         
         let _ = HttpClient.get(httpRequest: HttpRequest(urlBuilder: urlBuilder)) { result in
             switch result {
-            case .success(_, let data):
+            case .success((_, let data)):
                 do {
                     try self.handleQueryLinesResponse(response: data, completion: completion)
                 } catch let err as ParseError {
@@ -431,7 +431,7 @@ public class VrsProvider: AbstractNetworkProvider {
         
         return HttpClient.get(httpRequest: HttpRequest(urlBuilder: urlBuilder)) { result in
             switch result {
-            case .success(_, let data):
+            case .success((_, let data)):
                 do {
                     try self.handleSuggestLocationsResponse(response: data, completion: completion)
                 } catch let err as ParseError {
@@ -578,7 +578,7 @@ public class VrsProvider: AbstractNetworkProvider {
         
         return HttpClient.get(httpRequest: HttpRequest(urlBuilder: urlBuilder)) { result in
             switch result {
-            case .success(_, let data):
+            case .success((_, let data)):
                 do {
                     try self.handleQueryTripsResponse(response: data, from: from, via: via, to: to, products: tripOptions.products, departure: departure, previousContext: context, completion: completion)
                 } catch is SessionExpiredError {
