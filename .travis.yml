@@ -6,6 +6,6 @@ install: swift package update
 script:
 - set -o pipefail 
 - xcodebuild -scheme "TripKit iOS" -destination "platform=iOS Simulator,OS=13.6,name=iPhone 11 Pro" build | xcpretty
-- xcodebuild -scheme "TripKit watchOS" -destination "platform=watchOS Simulator,OS=6.2,name=Apple Watch Series 5 - 44mm" build | xcpretty
+- xcodebuild -scheme "TripKit watchOS" -destination "platform=watchOS Simulator,OS=6.2.1,name=Apple Watch Series 5 - 44mm" build | xcpretty
 - xcodebuild -scheme "TripKit tvOS" -destination "platform=tvOS Simulator,OS=13.3,name=Apple TV 4K" build | xcpretty
 - xcodebuild -scheme "TripKit macOS" -destination "platform=macOS" build | xcpretty
