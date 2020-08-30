@@ -9,6 +9,11 @@ let package = Package(
     products: [
         .library(name: "TripKit", targets: ["TripKit"])
     ],
+    dependencies: [
+        .package(url: "https://github.com/1024jp/GzipSwift", from: 5.1.1),
+        .package(url: "https://github.com/SwiftyJSON/SwiftyJSON", from: 5.0.0),
+        .package(url: "https://github.com/drmohundro/SWXMLHash", from: 5.0.1),
+    ],
     targets: [
         .target(name: "TripKit", dependencies: ["Gzip", "SwiftyJSON", "SWXMLHash"]),
         .testTarget(name: "TripKitTests iOS", dependencies: ["TripKit"])
