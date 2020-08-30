@@ -1,7 +1,7 @@
 language: swift
 osx_image: xcode11.6
 before_install:
-- cp TripKit/secrets.json.template TripKit/secrets.json
+- cp Sources/TripKit/secrets.json.template Sources/TripKit/secrets.json
 install: swift package update
 script:
 - set -o pipefail 
