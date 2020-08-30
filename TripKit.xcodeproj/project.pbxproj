@@ -707,7 +707,6 @@
 		FAF2B36D21BFF80C006439C5 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		FAF9955A200E3E1D008D8582 /* QueryJourneyDetailResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryJourneyDetailResult.swift; sourceTree = "<group>"; };
 		FAFF18D11FA50B9500A8ED69 /* TripKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TripKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FAFF18D21FA50B9500A8ED69 /* TripKit copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "TripKit copy-Info.plist"; path = "/Users/alex/Documents/Dev/ÖPNV Navigator/TripKit/TripKit copy-Info.plist"; sourceTree = "<absolute>"; };
 		FAFF18E41FA50C4C00A8ED69 /* Gzip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Gzip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -957,7 +956,6 @@
 				FA87AB0C24FBDEAE00534505 /* Tests */,
 				FACB83C41E3FD0CE00AC5F1F /* Products */,
 				FAB754471E3FDC7C00C343F2 /* Frameworks */,
-				FAFF18D21FA50B9500A8ED69 /* TripKit copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
