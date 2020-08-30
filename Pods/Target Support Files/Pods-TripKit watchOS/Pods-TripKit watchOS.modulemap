@@ -1,6 +1,0 @@
-framework module Pods_TripKit_watchOS {
-  umbrella header "Pods-TripKit watchOS-umbrella.h"
-
-  export *
-  module * { export * }
-}

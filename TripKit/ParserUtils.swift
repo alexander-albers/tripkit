@@ -34,6 +34,13 @@ func parseEuropeanTime(from timeString: String, dateComponents: inout DateCompon
     }
 }
 
+// Even though Foundation should contain NSAttributedString:init(data:options:documentAttributes:)
+// it actually does not. Thus we need to import UIKit or AppKit, depending on which is available.
+#if canImport(UIKit)
+import UIKit
+#elseif canImport(AppKit)
+import AppKit
+#endif
 extension String {
     
     init?(htmlEncodedString: String?) {
