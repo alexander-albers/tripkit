@@ -15,7 +15,7 @@ let package = Package(
         .package(url: "https://github.com/drmohundro/SWXMLHash", from: "5.0.1"),
     ],
     targets: [
-        .target(name: "TripKit", dependencies: ["GzipSwift", "SwiftyJSON", "SWXMLHash"]),
+        .target(name: "TripKit", dependencies: ["Gzip", "SwiftyJSON", "SWXMLHash"]),
         .testTarget(name: "TripKitTests iOS", dependencies: ["TripKit"])
     ],
     swiftLanguageVersions: [.v5]
