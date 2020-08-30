@@ -1,5 +1,5 @@
 language: swift
-osx_image: xcode10.2
+osx_image: xcode11.6
 before_install:
 - cp TripKit/secrets.json.template TripKit/secrets.json
-script: set -o pipefail && xcodebuild -workspace TripKit.xcworkspace -scheme TripKit -destination platform\=iOS\ Simulator,OS\=12.2,name\=iPhone\ Xs build | xcpretty
+script: set -o pipefail && xcodebuild -workspace TripKit.xcworkspace -scheme TripKit\ iOS -destination platform\=iOS\ Simulator,OS\=13.6,name\=iPhone\ 11\ Pro build | xcpretty
