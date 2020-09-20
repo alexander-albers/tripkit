@@ -896,6 +896,29 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
                     
                     fares.append(Fare(network: net.uppercased(), type: .child, currency: currency, fare: fare, unitsName: level ?? "" != "" ? nil : (unitName ?? "" == "" ? nil : unitName), units: level ?? "" != "" ? level : units))
                 }
+            } else {
+                let tickets = route["itdFare"]["itdUnifiedTicket"].all
+                for ticket in tickets {
+                    guard
+                        let name = ticket.element?.attribute(by: "name")?.text,
+                        name.starts(with: "Einzelfahrschein"),
+                        let net = ticket.element?.attribute(by: "net")?.text,
+                        let currency = ticket.element?.attribute(by: "currency")?.text,
+                        let person = ticket.element?.attribute(by: "person")?.text,
+                        let fareString = ticket.element?.attribute(by: "priceBrutto")?.text,
+                        let fare = Float(fareString)
+                    else {
+                        continue
+                    }
+                    switch person {
+                    case "ADULT":
+                        fares.append(Fare(network: net.uppercased(), type: .adult, currency: currency, fare: fare, unitsName: nil, units: nil))
+                    case "CHILD":
+                        fares.append(Fare(network: net.uppercased(), type: .child, currency: currency, fare: fare, unitsName: nil, units: nil))
+                    default: break
+                    }
+                        
+                }
             }
             
             let context: EfaRefreshTripContext?
