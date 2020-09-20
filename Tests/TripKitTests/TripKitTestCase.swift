@@ -248,10 +248,10 @@ class TripKitProviderTestCase: XCTestCase {
         let expectation = self.expectation(description: "Network Task")
         var result: QueryTripsResult?
         
-        _ = provider.queryTrips(from: from, via: via, to: to, date: date, departure: departure, products: products, optimize: optimize, walkSpeed: walkSpeed, accessibility: accessibility, options: options) { (completion: QueryTripsResult) in
+        _ = provider.queryTrips(from: from, via: via, to: to, date: date, departure: departure, tripOptions: TripOptions(products: products, optimize: optimize, walkSpeed: walkSpeed, accessibility: accessibility, options: options, maxChanges: nil, minChangeTime: nil), completion: { (completion) in
             result = completion
             expectation.fulfill()
-        }
+        })
         
         waitForExpectations(timeout: 30, handler: nil)
         XCTAssert(result != nil, "No result fetched!")
