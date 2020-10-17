@@ -970,25 +970,10 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
         }
         
         for servingLine in request["itdServingLines"]["itdServingLine"].all {
-            guard let line = self.parseLine(xml: servingLine) else {
+            guard let (line, destination, _) = self.parseLine(xml: servingLine) else {
                 throw ParseError(reason: "failed to parse line")
             }
             let assignedStopId = servingLine.element?.attribute(by: "assignedStopID")?.text
-            let destinationIdStr = servingLine.element?.attribute(by: "destID")?.text
-            let destinationId = "-1" != destinationIdStr ? destinationIdStr : nil
-            let destinationName = stripLineFromDestination(line: line, destinationName: servingLine.element?.attribute(by: "direction")?.text)
-            
-            let nameAndPlace = split(directionName: destinationName)
-            let destination: Location?
-            if let id = destinationId, id != "" {
-                destination = Location(type: .station, id: id, coord: nil, place: nameAndPlace.place, name: nameAndPlace.name)
-            } else {
-                if let name = nameAndPlace.name {
-                    destination = Location(type: .any, id: nil, coord: nil, place: nameAndPlace.place, name: name)
-                } else {
-                    destination = nil
-                }
-            }
             result.first(where: {$0.stopLocation.id == assignedStopId})?.lines.append(ServingLine(line: line, destination: destination))
         }
         
@@ -996,32 +981,15 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
             let assignedStopId = departure.element?.attribute(by: "stopID")?.text
             let plannedTime = self.parseDate(xml: departure["itdDateTime"])
             let predictedTime = self.parseDate(xml: departure["itdRTDateTime"])
-            guard let line = self.parseLine(xml: departure["itdServingLine"]) else {
+            guard let (line, destination, cancelled) = self.parseLine(xml: departure["itdServingLine"]) else {
                 print("WRN - queryDepartures: Failed to parse departure line!")
+                continue
+            }
+            if cancelled {
                 continue
             }
             let predictedPosition = parsePosition(position: departure.element?.attribute(by: "platformName")?.text)
             let plannedPosition = parsePosition(position: departure.element?.attribute(by: "plannedPlatformName")?.text) ?? predictedPosition
-            let destinationIdStr = departure["itdServingLine"].element?.attribute(by: "destID")?.text
-            let destinationId = "-1" != destinationIdStr ? destinationIdStr : nil
-            var destinationName = stripLineFromDestination(line: line, destinationName: departure["itdServingLine"].element?.attribute(by: "direction")?.text)
-            var message: String? = nil
-            if let destination = destinationName, destination.hasSuffix(" EILZUG") {
-                destinationName = String(destination.dropLast(" EILZUG".count))
-                message = "Eilzug: Zug hält nicht überall."
-            }
-            let destination: Location?
-            if let id = destinationId, id != "" {
-                let nameAndPlace = split(directionName: destinationName)
-                destination = Location(type: .station, id: id, coord: nil, place: nameAndPlace.place, name: nameAndPlace.name)
-            } else {
-                if let name = destinationName {
-                    let nameAndPlace = split(directionName: name)
-                    destination = Location(type: .any, id: nil, coord: nil, place: nameAndPlace.place, name: nameAndPlace.name)
-                } else {
-                    destination = nil
-                }
-            }
             
             let context: EfaJourneyContext?
             let tripCode = departure["itdServingTrip"].element?.attribute(by: "tripCode")?.text ?? departure["itdServingLine"].element?.attribute(by: "key")?.text
@@ -1031,7 +999,7 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
                 context = nil
             }
             
-            let departure = Departure(plannedTime: plannedTime, predictedTime: predictedTime, line: line, position: predictedPosition, plannedPosition: plannedPosition, destination: destination, capacity: nil, message: message, journeyContext: context)
+            let departure = Departure(plannedTime: plannedTime, predictedTime: predictedTime, line: line, position: predictedPosition, plannedPosition: plannedPosition, destination: destination, capacity: nil, message: line.message, journeyContext: context)
             result.first(where: {$0.stopLocation.id == assignedStopId})?.departures.append(departure)
         }
         
@@ -2656,7 +2624,7 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
         return Line(id: id, network: network, product: nil, label: name)
     }
     
-    private func parseLine(xml: XMLIndexer) -> Line? {
+    private func parseLine(xml: XMLIndexer) -> (line: Line, destination: Location?, cancelled: Bool)? {
         guard let motType = xml.element?.attribute(by: "motType")?.text else {
             print("WNR - queryDepartures: Failed to parse line type!")
             return nil
@@ -2664,31 +2632,76 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
         let symbol = xml.element?.attribute(by: "symbol")?.text
         let number = xml.element?.attribute(by: "number")?.text
         let stateless = xml.element?.attribute(by: "stateless")?.text
-        let trainType = xml.element?.attribute(by: "trainType")?.text
-        let trainName = xml.element?.attribute(by: "trainName")?.text
+        var trainType = xml.element?.attribute(by: "trainType")?.text
+        var trainName = xml.element?.attribute(by: "trainName")?.text
         let trainNum = xml.element?.attribute(by: "trainNum")?.text
         let network = xml["motDivaParams"].element?.attribute(by: "network")?.text
         let dir = xml["motDivaParams"].element?.attribute(by: "direction")?.text
         let direction: Line.Direction?
         if let dir = dir {
             switch dir {
-            case "H":
-                direction = .outward
-                break
-            case "R":
-                direction = .return
-                break
-            default:
-                direction = nil
-                break
+            case "H": direction = .outward
+            case "R": direction = .return
+            default:  direction = nil
             }
         } else {
             direction = nil
         }
         
+        var delay: String? = nil
+        var message: String = ""
+        if let train = xml["itdTrain"].element {
+            if let name = train.attribute(by: "name")?.text {
+                trainName = name
+            }
+            if let type = train.attribute(by: "type")?.text {
+                trainType = type
+            }
+            delay = train.attribute(by: "delay")?.text
+        }
+        if let train = xml["itdNoTrain"].element {
+            if let name = train.attribute(by: "name")?.text {
+                trainName = name
+            }
+            if let type = train.attribute(by: "type")?.text {
+                trainType = type
+            }
+            delay = train.attribute(by: "delay")?.text
+            if let trainName = trainName, trainName.lowercased().contains("ruf") {
+                message = train.text
+            } else if train.text.lowercased().contains("ruf") {
+                message = train.text
+            }
+        }
+        
         let line = self.parseLine(id: stateless, network: network, mot: motType, symbol: symbol, name: number, longName: number, trainType: trainType, trainNum: trainNum, trainName: trainName)
         
-        return Line(id: line.id, network: line.network, product: line.product, label: line.label, name: nil, style: self.lineStyle(network: line.network, product: line.product, label: line.label), attr: nil, message: nil, direction: direction)
+        let destinationIdStr = xml.element?.attribute(by: "destID")?.text
+        let destinationId = "-1" != destinationIdStr ? destinationIdStr : nil
+        var destinationName = stripLineFromDestination(line: line, destinationName: xml.element?.attribute(by: "direction")?.text)
+        if let destination = destinationName, destination.hasSuffix(" EILZUG") {
+            destinationName = String(destination.dropLast(" EILZUG".count))
+            if message.isEmpty {
+                message = "Eilzug: Zug hält nicht überall."
+            } else {
+                message = "Eilzug: Zug hält nicht überall.\n" + message
+            }
+        }
+        let nameAndPlace = split(directionName: destinationName)
+        let destination: Location?
+        if let id = destinationId, id != "" {
+            destination = Location(type: .station, id: id, coord: nil, place: nameAndPlace.place, name: nameAndPlace.name)
+        } else {
+            if let name = nameAndPlace.name {
+                destination = Location(type: .any, id: nil, coord: nil, place: nameAndPlace.place, name: name)
+            } else {
+                destination = nil
+            }
+        }
+        
+        let cancelled = delay == "-9999"
+        
+        return (Line(id: line.id, network: line.network, product: line.product, label: line.label, name: nil, style: self.lineStyle(network: line.network, product: line.product, label: line.label), attr: nil, message: message.emptyToNil, direction: direction), destination, cancelled)
     }
     
     public class Context: QueryTripsContext {
