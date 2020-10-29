@@ -32,7 +32,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
     
     // MARK: NetworkProvider implementations – Requests
     
-    override public func suggestLocations(constraint: String, types: [LocationType]?, maxLocations: Int, completion: @escaping (SuggestLocationsResult) -> Void) -> AsyncRequest {
+    override public func suggestLocations(constraint: String, types: [LocationType]?, maxLocations: Int, completion: @escaping (HttpRequest, SuggestLocationsResult) -> Void) -> AsyncRequest {
         var type: String
         if let types = types, !types.isEmpty {
             if types.contains(.any) || [.station, .poi, .address].allSatisfy(types.contains) {
@@ -58,35 +58,36 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         let urlBuilder = UrlBuilder(path: mgateEndpoint, encoding: requestUrlEncoding)
         requestVerification.appendParameters(to: urlBuilder, requestString: request)
         
-        return HttpClient.get(httpRequest: HttpRequest(urlBuilder: urlBuilder).setPostPayload(request).setUserAgent(userAgent)) { result in
+        let httpRequest = HttpRequest(urlBuilder: urlBuilder).setPostPayload(request).setUserAgent(userAgent)
+        return HttpClient.get(httpRequest: httpRequest) { result in
             switch result {
             case .success((_, let data)):
                 do {
-                    try self.handleJsonLocMatch(response: try data.toJson(), completion: completion)
+                    try self.handleJsonLocMatch(httpRequest: httpRequest, response: try data.toJson(), completion: completion)
                 } catch let err as ParseError {
                     os_log("suggestLocations parse error: %{public}@", log: .requestLogger, type: .error, err.reason)
-                    completion(.failure(err))
+                    completion(httpRequest, .failure(err))
                 } catch let err {
                     os_log("suggestLocations handle response error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
-                    completion(.failure(err))
+                    completion(httpRequest, .failure(err))
                 }
             case .failure(let err):
                 os_log("suggestLocations network error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
-                completion(.failure(err))
+                completion(httpRequest, .failure(err))
             }
         }
     }
     
-    override public func queryNearbyLocations(location: Location, types: [LocationType]?, maxDistance: Int, maxLocations: Int, completion: @escaping (NearbyLocationsResult) -> Void) -> AsyncRequest {
+    override public func queryNearbyLocations(location: Location, types: [LocationType]?, maxDistance: Int, maxLocations: Int, completion: @escaping (HttpRequest, NearbyLocationsResult) -> Void) -> AsyncRequest {
         if let coord = location.coord {
             return jsonLocGeoPos(types: types, lat: coord.lat, lon: coord.lon, maxDistance: maxDistance, maxLocations: maxLocations, completion: completion)
         } else {
-            completion(.invalidId) // TODO: nearby locations of station id
+            completion(HttpRequest(urlBuilder: UrlBuilder()), .invalidId) // TODO: nearby locations of station id
             return AsyncRequest(task: nil)
         }
     }
     
-    func jsonLocGeoPos(types: [LocationType]?, lat: Int, lon: Int, maxDistance: Int, maxLocations: Int, completion: @escaping (NearbyLocationsResult) -> Void) -> AsyncRequest {
+    func jsonLocGeoPos(types: [LocationType]?, lat: Int, lon: Int, maxDistance: Int, maxLocations: Int, completion: @escaping (HttpRequest, NearbyLocationsResult) -> Void) -> AsyncRequest {
         // TODO: extract parameters to method
         var ring: [String: Any] = ["cCrd": ["x": lon, "y": lat]]
         if maxDistance > 0 {
@@ -104,26 +105,27 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         let urlBuilder = UrlBuilder(path: mgateEndpoint, encoding: requestUrlEncoding)
         requestVerification.appendParameters(to: urlBuilder, requestString: request)
         
-        return HttpClient.get(httpRequest: HttpRequest(urlBuilder: urlBuilder).setPostPayload(request).setUserAgent(userAgent)) { result in
+        let httpRequest = HttpRequest(urlBuilder: urlBuilder).setPostPayload(request).setUserAgent(userAgent)
+        return HttpClient.get(httpRequest: httpRequest) { result in
             switch result {
             case .success((_, let data)):
                 do {
-                    try self.handleJsonLocGeoPos(response: try data.toJson(), types: types, completion: completion)
+                    try self.handleJsonLocGeoPos(httpRequest: httpRequest, response: try data.toJson(), types: types, completion: completion)
                 } catch let err as ParseError {
                     os_log("nearbyStations parse error: %{public}@", log: .requestLogger, type: .error, err.reason)
-                    completion(.failure(err))
+                    completion(httpRequest, .failure(err))
                 } catch let err {
                     os_log("nearbyStations handle response error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
-                    completion(.failure(err))
+                    completion(httpRequest, .failure(err))
                 }
             case .failure(let err):
                 os_log("nearbyStations network error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
-                completion(.failure(err))
+                completion(httpRequest, .failure(err))
             }
         }
     }
     
-    override public func queryDepartures(stationId: String, departures: Bool, time: Date?, maxDepartures: Int, equivs: Bool, completion: @escaping (QueryDeparturesResult) -> Void) -> AsyncRequest {
+    override public func queryDepartures(stationId: String, departures: Bool, time: Date?, maxDepartures: Int, equivs: Bool, completion: @escaping (HttpRequest, QueryDeparturesResult) -> Void) -> AsyncRequest {
         // TODO: extract parameters to method
         let jsonDate = self.jsonDate(from: time ?? Date())
         let jsonTime = self.jsonTime(from: time ?? Date())
@@ -156,54 +158,55 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
             desktopUrl = nil
         }
         
-        return HttpClient.get(httpRequest: HttpRequest(urlBuilder: urlBuilder).setPostPayload(request).setUserAgent(userAgent)) { result in
+        let httpRequest = HttpRequest(urlBuilder: urlBuilder).setPostPayload(request).setUserAgent(userAgent)
+        return HttpClient.get(httpRequest: httpRequest) { result in
             switch result {
             case .success((_, let data)):
                 do {
-                    try self.handleJsonStationBoard(response: try data.toJson(), stationId: stationId, departures: departures, equivs: equivs, desktopUrl: desktopUrl, completion: completion)
+                    try self.handleJsonStationBoard(httpRequest: httpRequest, response: try data.toJson(), stationId: stationId, departures: departures, equivs: equivs, desktopUrl: desktopUrl, completion: completion)
                 } catch let err as ParseError {
                     os_log("queryDepartures parse error: %{public}@", log: .requestLogger, type: .error, err.reason)
-                    completion(.failure(err))
+                    completion(httpRequest, .failure(err))
                 } catch let err {
                     os_log("queryDepartures handle response error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
-                    completion(.failure(err))
+                    completion(httpRequest, .failure(err))
                 }
             case .failure(let err):
                 os_log("queryDepartures network error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
-                completion(.failure(err))
+                completion(httpRequest, .failure(err))
             }
         }
     }
     
-    public override func queryTrips(from: Location, via: Location?, to: Location, date: Date, departure: Bool, tripOptions: TripOptions, completion: @escaping (QueryTripsResult) -> Void) -> AsyncRequest {
+    public override func queryTrips(from: Location, via: Location?, to: Location, date: Date, departure: Bool, tripOptions: TripOptions, completion: @escaping (HttpRequest, QueryTripsResult) -> Void) -> AsyncRequest {
         if from.id == nil && !from.hasLocation() {
-            return jsonTripSearchIdentify(location: from) { (locations) in
+            return jsonTripSearchIdentify(location: from) { (request, locations) in
                 if locations.count > 1 {
-                    completion(.ambiguous(ambiguousFrom: locations, ambiguousVia: [], ambiguousTo: []))
+                    completion(request, .ambiguous(ambiguousFrom: locations, ambiguousVia: [], ambiguousTo: []))
                 } else if let location = locations.first {
                     let _ = self.queryTrips(from: location, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions, completion: completion)
                 } else {
-                    completion(.unknownFrom)
+                    completion(request, .unknownFrom)
                 }
             }
         } else if let via = via, via.id == nil && !via.hasLocation() {
-            return jsonTripSearchIdentify(location: via) { (locations) in
+            return jsonTripSearchIdentify(location: via) { (request, locations) in
                 if locations.count > 1 {
-                    completion(.ambiguous(ambiguousFrom: [], ambiguousVia: locations, ambiguousTo: []))
+                    completion(request, .ambiguous(ambiguousFrom: [], ambiguousVia: locations, ambiguousTo: []))
                 } else if let location = locations.first {
                     let _ = self.queryTrips(from: from, via: location, to: to, date: date, departure: departure, tripOptions: tripOptions, completion: completion)
                 } else {
-                    completion(.unknownVia)
+                    completion(request, .unknownVia)
                 }
             }
         } else if to.id == nil && !to.hasLocation() {
-            return jsonTripSearchIdentify(location: to) { (locations) in
+            return jsonTripSearchIdentify(location: to) { (request, locations) in
                 if locations.count > 1 {
-                    completion(.ambiguous(ambiguousFrom: [], ambiguousVia: [], ambiguousTo: locations))
+                    completion(request, .ambiguous(ambiguousFrom: [], ambiguousVia: [], ambiguousTo: locations))
                 } else if let location = locations.first {
                     let _ = self.queryTrips(from: from, via: via, to: location, date: date, departure: departure, tripOptions: tripOptions, completion: completion)
                 } else {
-                    completion(.unknownTo)
+                    completion(request, .unknownTo)
                 }
             }
         } else {
@@ -211,40 +214,40 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         }
     }
     
-    func jsonTripSearchIdentify(location: Location, completion: @escaping ([Location]) -> Void) -> AsyncRequest {
+    func jsonTripSearchIdentify(location: Location, completion: @escaping (HttpRequest, [Location]) -> Void) -> AsyncRequest {
         if let name = location.name {
-            return suggestLocations(constraint: [location.place, name].compactMap({$0}).joined(separator: " "), types: [.station], maxLocations: 10) { (result: SuggestLocationsResult) in
+            return suggestLocations(constraint: [location.place, name].compactMap({$0}).joined(separator: " "), types: [.station], maxLocations: 10) { (request, result) in
                 switch result {
                 case .success(let locations):
-                    completion(locations.map({$0.location}))
+                    completion(request, locations.map({$0.location}))
                 case .failure(_):
-                    completion([])
+                    completion(request, [])
                 }
             }
         } else if let coord = location.coord {
-            return jsonLocGeoPos(types: LocationType.ALL, lat: coord.lat, lon: coord.lon, maxDistance: 0, maxLocations: 0) { (result: NearbyLocationsResult) in
+            return jsonLocGeoPos(types: LocationType.ALL, lat: coord.lat, lon: coord.lon, maxDistance: 0, maxLocations: 0) { (request, result) in
                 switch result {
                 case .success(let locations):
-                    completion(locations)
+                    completion(request, locations)
                 case .invalidId, .failure(_):
-                    completion([])
+                    completion(request, [])
                 }
             }
         } else {
-            completion([])
+            completion(HttpRequest(urlBuilder: UrlBuilder()), [])
             return AsyncRequest(task: nil)
         }
     }
     
-    override public func queryMoreTrips(context: QueryTripsContext, later: Bool, completion: @escaping (QueryTripsResult) -> Void) -> AsyncRequest {
+    override public func queryMoreTrips(context: QueryTripsContext, later: Bool, completion: @escaping (HttpRequest, QueryTripsResult) -> Void) -> AsyncRequest {
         guard let context = context as? Context else {
-            completion(.sessionExpired)
+            completion(HttpRequest(urlBuilder: UrlBuilder()), .sessionExpired)
             return AsyncRequest(task: nil)
         }
         return doJsonTripSearch(from: context.from, via: context.via, to: context.to, date: context.date, departure: context.departure, tripOptions: context.tripOptions, previousContext: context, later: later, completion: completion)
     }
     
-    func doJsonTripSearch(from: Location, via: Location?, to: Location, date: Date, departure: Bool, tripOptions: TripOptions, previousContext: Context?, later: Bool, completion: @escaping (QueryTripsResult) -> Void) -> AsyncRequest {
+    func doJsonTripSearch(from: Location, via: Location?, to: Location, date: Date, departure: Bool, tripOptions: TripOptions, previousContext: Context?, later: Bool, completion: @escaping (HttpRequest, QueryTripsResult) -> Void) -> AsyncRequest {
         
         let request = wrapJsonApiRequest(meth: "TripSearch", req: jsonTripSearchRequest(from: from, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions, previousContext: previousContext, later: later), formatted: true)
         let urlBuilder = UrlBuilder(path: mgateEndpoint, encoding: requestUrlEncoding)
@@ -261,56 +264,58 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
             desktopUrl = nil
         }
         
-        return HttpClient.get(httpRequest: HttpRequest(urlBuilder: urlBuilder).setPostPayload(request).setUserAgent(userAgent)) { result in
+        let httpRequest = HttpRequest(urlBuilder: urlBuilder).setPostPayload(request).setUserAgent(userAgent)
+        return HttpClient.get(httpRequest: httpRequest) { result in
             switch result {
             case .success((_, let data)):
                 do {
-                    try self.handleJsonTripSearch(response: try data.toJson(), desktopUrl: desktopUrl, from: from, via: via, to: to, date: date, departure: departure, previousContext: previousContext, later: later, tripOptions: tripOptions, completion: completion)
+                    try self.handleJsonTripSearch(httpRequest: httpRequest, response: try data.toJson(), desktopUrl: desktopUrl, from: from, via: via, to: to, date: date, departure: departure, previousContext: previousContext, later: later, tripOptions: tripOptions, completion: completion)
                 } catch let err as ParseError {
                     os_log("queryTrips parse error: %{public}@", log: .requestLogger, type: .error, err.reason)
-                    completion(.failure(err))
+                    completion(httpRequest, .failure(err))
                 } catch let err {
                     os_log("queryTrips handle response error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
-                    completion(.failure(err))
+                    completion(httpRequest, .failure(err))
                 }
             case .failure(let err):
                 os_log("queryTrips network error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
-                completion(.failure(err))
+                completion(httpRequest, .failure(err))
             }
         }
     }
     
-    public override func refreshTrip(context: RefreshTripContext, completion: @escaping (QueryTripsResult) -> Void) -> AsyncRequest {
+    public override func refreshTrip(context: RefreshTripContext, completion: @escaping (HttpRequest, QueryTripsResult) -> Void) -> AsyncRequest {
         guard let context = context as? HafasClientInterfaceRefreshTripContext else {
-            completion(.sessionExpired)
+            completion(HttpRequest(urlBuilder: UrlBuilder()), .sessionExpired)
             return AsyncRequest(task: nil)
         }
         let request = wrapJsonApiRequest(meth: "Reconstruction", req: ["ctxRecon": context.contextRecon,"trfReq": [ "jnyCl": 2, "cType": "PK", "tvlrProf": [[ "type": "E"]]],            "getPolyline": true, "getPasslist": true], formatted: true)
         let urlBuilder = UrlBuilder(path: mgateEndpoint, encoding: requestUrlEncoding)
         requestVerification.appendParameters(to: urlBuilder, requestString: request)
         
-        return HttpClient.get(httpRequest: HttpRequest(urlBuilder: urlBuilder).setPostPayload(request).setUserAgent(userAgent)) { result in
+        let httpRequest = HttpRequest(urlBuilder: urlBuilder).setPostPayload(request).setUserAgent(userAgent)
+        return HttpClient.get(httpRequest: httpRequest) { result in
             switch result {
             case .success((_, let data)):
                 do {
-                    try self.handleJsonTripSearch(response: try data.toJson(), desktopUrl: nil, from: context.from, via: nil, to: context.to, date: Date(), departure: true, previousContext: nil, later: false, tripOptions: TripOptions(), completion: completion)
+                    try self.handleJsonTripSearch(httpRequest: httpRequest, response: try data.toJson(), desktopUrl: nil, from: context.from, via: nil, to: context.to, date: Date(), departure: true, previousContext: nil, later: false, tripOptions: TripOptions(), completion: completion)
                 } catch let err as ParseError {
                     os_log("refreshTrip parse error: %{public}@", log: .requestLogger, type: .error, err.reason)
-                    completion(.failure(err))
+                    completion(httpRequest, .failure(err))
                 } catch let err {
                     os_log("refreshTrip handle response error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
-                    completion(.failure(err))
+                    completion(httpRequest, .failure(err))
                 }
             case .failure(let err):
                 os_log("refreshTrip network error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
-                completion(.failure(err))
+                completion(httpRequest, .failure(err))
             }
         }
     }
     
-    public override func queryJourneyDetail(context: QueryJourneyDetailContext, completion: @escaping (QueryJourneyDetailResult) -> Void) -> AsyncRequest {
+    public override func queryJourneyDetail(context: QueryJourneyDetailContext, completion: @escaping (HttpRequest, QueryJourneyDetailResult) -> Void) -> AsyncRequest {
         guard let context = context as? HafasClientInterfaceJourneyContext else {
-            completion(.invalidId)
+            completion(HttpRequest(urlBuilder: UrlBuilder()), .invalidId)
             return AsyncRequest(task: nil)
         }
         let req: [String: Any] = [
@@ -322,28 +327,29 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         let urlBuilder = UrlBuilder(path: mgateEndpoint, encoding: requestUrlEncoding)
         requestVerification.appendParameters(to: urlBuilder, requestString: request)
         
-        return HttpClient.get(httpRequest: HttpRequest(urlBuilder: urlBuilder).setPostPayload(request).setUserAgent(userAgent)) { result in
+        let httpRequest = HttpRequest(urlBuilder: urlBuilder).setPostPayload(request).setUserAgent(userAgent)
+        return HttpClient.get(httpRequest: httpRequest) { result in
             switch result {
             case .success((_, let data)):
                 do {
-                    try self.handleQueryJourneyDetail(response: try data.toJson(), completion: completion)
+                    try self.handleQueryJourneyDetail(httpRequest: httpRequest, response: try data.toJson(), completion: completion)
                 } catch let err as ParseError {
                     os_log("queryJourneyDetail parse error: %{public}@", log: .requestLogger, type: .error, err.reason)
-                    completion(.failure(err))
+                    completion(httpRequest, .failure(err))
                 } catch let err {
                     os_log("queryJourneyDetail handle response error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
-                    completion(.failure(err))
+                    completion(httpRequest, .failure(err))
                 }
             case .failure(let err):
                 os_log("queryJourneyDetail network error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
-                completion(.failure(err))
+                completion(httpRequest, .failure(err))
             }
         }
     }
     
     // MARK: NetworkProvider responses
     
-    func handleJsonLocMatch(response: Any?, completion: @escaping (SuggestLocationsResult) -> Void) throws {
+    func handleJsonLocMatch(httpRequest: HttpRequest, response: Any?, completion: @escaping (HttpRequest, SuggestLocationsResult) -> Void) throws {
         guard let json = response as? [String: Any], json["err"] == nil || json["err"] as? String == "OK", let svcResL = json["svcResL"] as? [Any], svcResL.count == 1, let svcRes = svcResL[0] as? [String: Any], let meth = svcRes["meth"] as? String, meth == "LocMatch", let error = svcRes["err"] as? String else {
             throw ParseError(reason: "could not parse json")
         }
@@ -356,10 +362,10 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         let locations = try parseLocList(locList: locList)
         let suggestedLocations = locations.map({SuggestedLocation(location: $0, priority: 0)})
         
-        completion(.success(locations: suggestedLocations))
+        completion(httpRequest, .success(locations: suggestedLocations))
     }
     
-    func handleJsonLocGeoPos(response: Any?, types: [LocationType]?, completion: @escaping (NearbyLocationsResult) -> Void) throws {
+    func handleJsonLocGeoPos(httpRequest: HttpRequest, response: Any?, types: [LocationType]?, completion: @escaping (HttpRequest, NearbyLocationsResult) -> Void) throws {
         let types = types ?? [.station]
         guard let json = response as? [String: Any], json["err"] == nil || json["err"] as? String == "OK", let svcResL = json["svcResL"] as? [Any], svcResL.count == 1, let svcRes = svcResL[0] as? [String: Any], let meth = svcRes["meth"] as? String, meth == "LocGeoPos", let error = svcRes["err"] as? String else {
             throw ParseError(reason: "could not parse json")
@@ -377,10 +383,10 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
             locations = []
         }
         
-        completion(.success(locations: locations))
+        completion(httpRequest, .success(locations: locations))
     }
     
-    func handleJsonStationBoard(response: Any?, stationId: String, departures: Bool, equivs: Bool, desktopUrl: URL?, completion: @escaping (QueryDeparturesResult) -> Void) throws {
+    func handleJsonStationBoard(httpRequest: HttpRequest, response: Any?, stationId: String, departures: Bool, equivs: Bool, desktopUrl: URL?, completion: @escaping (HttpRequest, QueryDeparturesResult) -> Void) throws {
         guard let json = response as? [String: Any], json["err"] == nil || json["err"] as? String == "OK", let svcResL = json["svcResL"] as? [Any], svcResL.count == 1, let svcRes = svcResL[0] as? [String: Any], let meth = svcRes["meth"] as? String, meth == "StationBoard", let err = svcRes["err"] as? String else {
             throw ParseError(reason: "could not parse json")
         }
@@ -389,7 +395,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
             // TODO: handle more errors
             os_log("Received hafas error %{public}@: %{public}@", log: .requestLogger, type: .error, err, errTxt)
             if err == "LOCATION" {
-                completion(.invalidStation)
+                completion(httpRequest, .invalidStation)
             } else if err == "FAIL" && errTxt == "HCI Service: request failed" {
                 throw ParseError(reason: "request failed")
             } else if err == "PROBLEMS" && errTxt == "HCI Service: problems during service execution" {
@@ -401,7 +407,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
             }
             return
         } else if apiVersion == "1.10", let svcResJson = encodeJson(dict: svcRes), svcResJson.length == 170 {
-            completion(.invalidStation)
+            completion(httpRequest, .invalidStation)
             return
         }
         guard let res = svcRes["res"] as? [String: Any], let common = res["common"] as? [String: Any], let locList = common["locL"] as? [Any], let opList = common["opL"] as? [Any], let prodList = common["prodL"] as? [Any] else {
@@ -515,10 +521,10 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
             stationDeparture.departures.sort(by: {$0.getTime() < $1.getTime()})
         }
         
-        completion(.success(departures: result, desktopUrl: desktopUrl))
+        completion(httpRequest, .success(departures: result, desktopUrl: desktopUrl))
     }
     
-    func handleJsonTripSearch(response: Any?, desktopUrl: URL?, from: Location, via: Location?, to: Location, date: Date, departure: Bool, previousContext: Context?, later: Bool, tripOptions: TripOptions, completion: @escaping (QueryTripsResult) -> Void) throws {
+    func handleJsonTripSearch(httpRequest: HttpRequest, response: Any?, desktopUrl: URL?, from: Location, via: Location?, to: Location, date: Date, departure: Bool, previousContext: Context?, later: Bool, tripOptions: TripOptions, completion: @escaping (HttpRequest, QueryTripsResult) -> Void) throws {
         guard let json = response as? [String: Any], json["err"] == nil || json["err"] as? String == "OK", let svcResL = json["svcResL"] as? [Any], svcResL.count == 1, let svcRes = svcResL[0] as? [String: Any], let meth = svcRes["meth"] as? String, meth == "TripSearch" || meth == "Reconstruction", let err = svcRes["err"] as? String else {
             throw ParseError(reason: "could not parse json")
         }
@@ -526,15 +532,15 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
             let errTxt = svcRes["errTxt"] as? String ?? ""
             os_log("Hafas error %{public}@: %{public}@", log: .requestLogger, type: .error, err, errTxt)
             if err == "H890" { // No connections found.
-                completion(.noTrips)
+                completion(httpRequest, .noTrips)
             } else if err == "H891" { // No route found (try entering an intermediate station).
-                completion(.noTrips)
+                completion(httpRequest, .noTrips)
             } else if err == "H892" { // HAFAS Kernel: Request too complex (try entering less intermediate stations).
-                completion(.noTrips)
+                completion(httpRequest, .noTrips)
             } else if err == "H895" { // Departure/Arrival are too near.
-                completion(.tooClose)
+                completion(httpRequest, .tooClose)
             } else if err == "H9220" { // Nearby to the given address stations could not be found.
-                completion(.noTrips)
+                completion(httpRequest, .noTrips)
             } else if err == "H886" { // HAFAS Kernel: No connections found within the requested time interval.
                 throw ParseError(reason: "No connections found within the requested time interval.")
             } else if err == "H887" { // HAFAS Kernel: Kernel computation time limit reached.
@@ -542,13 +548,13 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
             } else if err == "H9240" { // HAFAS Kernel: Internal error.
                 throw ParseError(reason: "Internal error.")
             } else if err == "H9360" { // Date outside of the timetable period.
-                completion(.invalidDate)
+                completion(httpRequest, .invalidDate)
             } else if err == "H9380" { // Departure/Arrival/Intermediate or equivalent stations def'd more than once
-                completion(.tooClose)
+                completion(httpRequest, .tooClose)
             } else if err == "FAIL" && errTxt == "HCI Service: request failed" {
                 throw ParseError(reason: "request failed")
             } else if err == "LOCATION" && errTxt == "HCI Service: location missing or invalid" {
-                completion(.ambiguous(ambiguousFrom: [], ambiguousVia: [], ambiguousTo: []))
+                completion(httpRequest, .ambiguous(ambiguousFrom: [], ambiguousVia: [], ambiguousTo: []))
             } else if err == "PROBLEMS" && errTxt == "HCI Service: problems during service execution" {
                 throw ParseError(reason: "problems during service execution")
             } else if err == "CGI_READ_FAILED" {
@@ -571,7 +577,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         let messages = try parseMessageList(himList: himList)
         let outConL = res["outConL"] as? [Any] ?? []
         if outConL.isEmpty {
-            completion(.noTrips)
+            completion(httpRequest, .noTrips)
             return
         }
         
@@ -779,10 +785,10 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         } else {
             context = Context(from: from, via: via, to: to, date: date, departure: departure, laterContext: res["outCtxScrF"] as? String, earlierContext: res["outCtxScrB"] as? String, desktopUrl: desktopUrl, tripOptions: tripOptions)
         }
-        completion(.success(context: context, from: from, via: via, to: to, trips: trips, messages: []))
+        completion(httpRequest, .success(context: context, from: from, via: via, to: to, trips: trips, messages: []))
     }
     
-    func handleQueryJourneyDetail(response: Any?, completion: @escaping (QueryJourneyDetailResult) -> Void) throws {
+    func handleQueryJourneyDetail(httpRequest: HttpRequest, response: Any?, completion: @escaping (HttpRequest, QueryJourneyDetailResult) -> Void) throws {
         guard let json = response as? [String: Any], json["err"] == nil || json["err"] as? String == "OK", let svcResL = json["svcResL"] as? [Any], svcResL.count == 1, let svcRes = svcResL[0] as? [String: Any], let meth = svcRes["meth"] as? String, meth == "JourneyDetails", let error = svcRes["err"] as? String else {
             throw ParseError(reason: "could not parse json")
         }
@@ -790,7 +796,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
             let errTxt = svcRes["errTxt"] as? String ?? ""
             print("Hafas error \(error) \(errTxt)")
             if error == "LOCATION" {
-                completion(.invalidId)
+                completion(httpRequest, .invalidId)
             } else if error == "FAIL" || error == "CGI_READ_FAILED" {
                 throw ParseError(reason: "cgi read failed")
             } else {
@@ -798,7 +804,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
             }
             return
         } else if apiVersion == "1.10", let svcResJson = encodeJson(dict: svcRes), svcResJson.length == 170 {
-            completion(.invalidId)
+            completion(httpRequest, .invalidId)
             return
         }
         guard let res = svcRes["res"] as? [String: Any], let common = res["common"] as? [String: Any], let locList = common["locL"] as? [Any], let opList = common["opL"] as? [Any], let prodList = common["prodL"] as? [Any] else {
@@ -905,7 +911,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         
         let leg = PublicLeg(line: line, destination: destination, departureStop: departure, arrivalStop: arrival, intermediateStops: intermediateStops, message: !message.isEmpty ? message : nil, path: path, journeyContext: nil)
         let trip = Trip(id: "", from: departure.location, to: arrival.location, legs: [leg], fares: [])
-        completion(.success(trip: trip, leg: leg))
+        completion(httpRequest, .success(trip: trip, leg: leg))
     }
     
     // MARK: Request parameters
