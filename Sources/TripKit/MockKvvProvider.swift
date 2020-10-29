@@ -95,7 +95,7 @@ public class MockKvvProvider: AbstractEfaProvider {
         return super.parseLine(id: id, network: network, mot: mot, symbol: symbol, name: name, longName: longName, trainType: trainType, trainNum: trainNum, trainName: trainName)
     }
     
-    public override func queryTrips(from: Location, via: Location?, to: Location, date: Date, departure: Bool, tripOptions: TripOptions, completion: @escaping (QueryTripsResult) -> Void) -> AsyncRequest {
+    public override func queryTrips(from: Location, via: Location?, to: Location, date: Date, departure: Bool, tripOptions: TripOptions, completion: @escaping (HttpRequest, QueryTripsResult) -> Void) -> AsyncRequest {
         let fare = Fare(network: "KVV", type: .adult, currency: "EUR", fare: 2.4, unitsName: "Waben", units: "2")
         let fare2 = Fare(network: "KVV", type: .child, currency: "EUR", fare: 1.4, unitsName: "Waben", units: "2")
         let fares = [fare, fare2]
@@ -112,11 +112,11 @@ public class MockKvvProvider: AbstractEfaProvider {
         let trip11 = Trip(id: "", from: from, to: to, legs: [PublicLeg(line: createLine(.suburbanTrain, "S52"), destination: nil, departureStop: createStop("Kronenplatz (Kaiserstraße)", createTime(10, 2)), arrivalStop: createStop("Europaplatz (Kaiserstraße)", createTime(10, 8)), intermediateStops: createIntermediates(createTime(10, 2)), message: nil, journeyContext: nil)], fares: fares)
         let trip12 = Trip(id: "", from: from, to: to, legs: [PublicLeg(line: createLine(.tram, "1"), destination: nil, departureStop: createStop("Kronenplatz (Kaiserstraße)", createTime(10, 4)), arrivalStop: createStop("Europaplatz (Kaiserstraße)", createTime(10, 10)), intermediateStops: createIntermediates(createTime(10, 4)), message: nil, journeyContext: nil)], fares: fares)
         
-        completion(.success(context: nil, from: from, via: nil, to: to, trips: [trip1, trip2, trip3, trip4, trip5, trip6, trip7, trip8, trip9, trip10, trip11, trip12], messages: []))
+        completion(HttpRequest(urlBuilder: UrlBuilder()), .success(context: nil, from: from, via: nil, to: to, trips: [trip1, trip2, trip3, trip4, trip5, trip6, trip7, trip8, trip9, trip10, trip11, trip12], messages: []))
         return AsyncRequest(task: nil)
     }
     
-    public override func queryDepartures(stationId: String, departures: Bool, time: Date?, maxDepartures: Int, equivs: Bool, completion: @escaping (QueryDeparturesResult) -> Void) -> AsyncRequest {
+    public override func queryDepartures(stationId: String, departures: Bool, time: Date?, maxDepartures: Int, equivs: Bool, completion: @escaping (HttpRequest, QueryDeparturesResult) -> Void) -> AsyncRequest {
         switch stationId {
         case "7000090", "7000090:$EF":
             let result = [StationDepartures(stopLocation: Location(type: .station, id: "7000090", coord: nil, place: nil, name: "Karlsruhe, Hbf")!, departures: [], lines: [])]
@@ -145,17 +145,17 @@ public class MockKvvProvider: AbstractEfaProvider {
             result[0].departures.append(createDeparture(createTime(10, 50), createLine(.bus, "47"), "Bus"))
             result[0].departures.append(createDeparture(createTime(10, 50), createLine(.bus, "50"), "Bus"))
             result[0].departures.append(createDeparture(createTime(10, 50), createLine(.bus, "55"), "Bus"))
-            completion(.success(departures: result, desktopUrl: nil))
+            completion(HttpRequest(urlBuilder: UrlBuilder()), .success(departures: result, desktopUrl: nil))
         case "7000001":
             let result = QueryDeparturesResult.success(departures: [StationDepartures(stopLocation: createStation("Marktplatz"), departures: [createDeparture(createTime(9, 42), createLine(.tram, "1"), "Oberreut")], lines: [])], desktopUrl: nil)
-            completion(result)
+            completion(HttpRequest(urlBuilder: UrlBuilder()), result)
         case "7000002":
             let result = QueryDeparturesResult.success(departures: [StationDepartures(stopLocation: createStation("Kronenplatz (Kaiserstraße)"), departures: [createDeparture(createTime(9, 43), createLine(.suburbanTrain, "S2"), "Rheinstrandsiedlung")], lines: [])], desktopUrl: nil)
-            completion(result)
+            completion(HttpRequest(urlBuilder: UrlBuilder()), result)
         case "7000031":
             let result = QueryDeparturesResult.success(departures: [StationDepartures(stopLocation: createStation("Europaplatz"), departures: [createDeparture(createTime(9, 42), createLine(.suburbanTrain, "S5"), "Mühlacker")], lines: [])], desktopUrl: nil)
-            completion(result)
-        default: completion(.invalidStation) ; break
+            completion(HttpRequest(urlBuilder: UrlBuilder()), result)
+        default: completion(HttpRequest(urlBuilder: UrlBuilder()), .invalidStation) ; break
         }
         
         return AsyncRequest(task: nil)
