@@ -12,19 +12,19 @@ public class IvbProvider: AbstractHafasClientInterfaceProvider {
         apiClient = ["id": "VAO", "l": "vs_ivb", "type": "WEB", "name": "webapp"]
         extVersion = "VAO.7"
         styles = [
-            "T1": LineStyle(shape: .rect, backgroundColor: LineStyle.rgb(210, 161, 163), foregroundColor: LineStyle.white),
-            "T2": LineStyle(shape: .rect, backgroundColor: LineStyle.rgb(185, 72, 93), foregroundColor: LineStyle.white),
-            "T2A": LineStyle(shape: .rect, backgroundColor: LineStyle.rgb(185, 72, 93), foregroundColor: LineStyle.white),
-            "T3": LineStyle(shape: .rect, backgroundColor: LineStyle.rgb(192, 111, 119), foregroundColor: LineStyle.white),
-            "T5": LineStyle(shape: .rect, backgroundColor: LineStyle.rgb(136, 79, 94), foregroundColor: LineStyle.white),
-            "T5E": LineStyle(shape: .rect, backgroundColor: LineStyle.rgb(136, 79, 94), foregroundColor: LineStyle.white),
-            "T6": LineStyle(shape: .rect, backgroundColor: LineStyle.rgb(146, 30, 48), foregroundColor: LineStyle.white),
-            "TSTB": LineStyle(shape: .rect, backgroundColor: LineStyle.rgb(96, 15, 23), foregroundColor: LineStyle.white),
-            "TN1": LineStyle(shape: .rect, backgroundColor: LineStyle.rgb(29, 49, 86), foregroundColor: LineStyle.white),
-            "TN2": LineStyle(shape: .rect, backgroundColor: LineStyle.rgb(29, 49, 86), foregroundColor: LineStyle.white),
-            "TN3": LineStyle(shape: .rect, backgroundColor: LineStyle.rgb(29, 49, 86), foregroundColor: LineStyle.white),
-            "TN7": LineStyle(shape: .rect, backgroundColor: LineStyle.rgb(29, 49, 86), foregroundColor: LineStyle.white),
-            "TN8": LineStyle(shape: .rect, backgroundColor: LineStyle.rgb(29, 49, 86), foregroundColor: LineStyle.white),
+            "T1": LineStyle(shape: .rounded, backgroundColor: LineStyle.rgb(210, 161, 163), foregroundColor: LineStyle.white),
+            "T2": LineStyle(shape: .rounded, backgroundColor: LineStyle.rgb(185, 72, 93), foregroundColor: LineStyle.white),
+            "T2A": LineStyle(shape: .rounded, backgroundColor: LineStyle.rgb(185, 72, 93), foregroundColor: LineStyle.white),
+            "T3": LineStyle(shape: .rounded, backgroundColor: LineStyle.rgb(192, 111, 119), foregroundColor: LineStyle.white),
+            "T5": LineStyle(shape: .rounded, backgroundColor: LineStyle.rgb(136, 79, 94), foregroundColor: LineStyle.white),
+            "T5E": LineStyle(shape: .rounded, backgroundColor: LineStyle.rgb(136, 79, 94), foregroundColor: LineStyle.white),
+            "T6": LineStyle(shape: .rounded, backgroundColor: LineStyle.rgb(146, 30, 48), foregroundColor: LineStyle.white),
+            "TSTB": LineStyle(shape: .rounded, backgroundColor: LineStyle.rgb(96, 15, 23), foregroundColor: LineStyle.white),
+            "TN1": LineStyle(shape: .rounded, backgroundColor: LineStyle.rgb(29, 49, 86), foregroundColor: LineStyle.white),
+            "TN2": LineStyle(shape: .rounded, backgroundColor: LineStyle.rgb(29, 49, 86), foregroundColor: LineStyle.white),
+            "TN3": LineStyle(shape: .rounded, backgroundColor: LineStyle.rgb(29, 49, 86), foregroundColor: LineStyle.white),
+            "TN7": LineStyle(shape: .rounded, backgroundColor: LineStyle.rgb(29, 49, 86), foregroundColor: LineStyle.white),
+            "TN8": LineStyle(shape: .rounded, backgroundColor: LineStyle.rgb(29, 49, 86), foregroundColor: LineStyle.white),
             "BA": LineStyle(shape: .rounded, backgroundColor: LineStyle.rgb(46, 106, 159), foregroundColor: LineStyle.white),
             "BB": LineStyle(shape: .rounded, backgroundColor: LineStyle.rgb(175, 168, 53), foregroundColor: LineStyle.white),
             "BC": LineStyle(shape: .rounded, backgroundColor: LineStyle.rgb(133, 200, 239), foregroundColor: LineStyle.white),
@@ -44,7 +44,7 @@ public class IvbProvider: AbstractHafasClientInterfaceProvider {
             "B590": LineStyle(shape: .rounded, backgroundColor: LineStyle.rgb(242, 227, 75), foregroundColor: LineStyle.black),
             "B502N": LineStyle(shape: .rounded, backgroundColor: LineStyle.rgb(242, 227, 75), foregroundColor: LineStyle.black),
             "B590N": LineStyle(shape: .rounded, backgroundColor: LineStyle.rgb(242, 227, 75), foregroundColor: LineStyle.black),
-            "THBB": LineStyle(shape: .rect, backgroundColor: LineStyle.rgb(225, 140, 180), foregroundColor: LineStyle.white),
+            "THBB": LineStyle(shape: .rounded, backgroundColor: LineStyle.rgb(225, 140, 180), foregroundColor: LineStyle.white),
             "BTS": LineStyle(shape: .rounded, backgroundColor: LineStyle.rgb(208, 45, 34), foregroundColor: LineStyle.white)
         ]
     }
@@ -53,6 +53,8 @@ public class IvbProvider: AbstractHafasClientInterfaceProvider {
         guard let stationName = stationName else { return (nil, nil) }
         if stationName.hasPrefix("Innsbruck ") {
             return ("Innsbruck", stationName.substring(from: "Innsbruck ".count))
+        } else if stationName.hasPrefix("Innsbruck, ") {
+            return ("Innsbruck", stationName.substring(from: "Innsbruck, ".count))
         }
         return super.split(stationName: stationName)
     }
