@@ -10,8 +10,10 @@ public class BvgProvider: AbstractHafasClientInterfaceProvider {
     public init(apiAuthorization: [String: Any]) {
         super.init(networkId: .BVG, apiBase: BvgProvider.API_BASE, desktopQueryEndpoint: BvgProvider.DESKTOP_QUERY_ENDPOINT, desktopStboardEndpoint: BvgProvider.DESKTOP_STBOARD_ENDPOINT, productsMap: BvgProvider.PRODUCTS_MAP)
         self.apiAuthorization = apiAuthorization
-        apiVersion = "1.11"
-        apiClient = ["id": "BVG"]
+        apiVersion = "1.18"
+        apiClient = ["id": "BVG", "type": "IPH"]
+        extVersion = "BVG.1"
+        jnyFilterIncludes = [["value": "BERLKOENIG", "mode": "INC", "type": "GROUP"]] // when removed, not routes between Hermsdorf and Bundestag can be found...
         
         styles = [
             "SS1": LineStyle(backgroundColor: LineStyle.rgb(221, 77, 174), foregroundColor: LineStyle.white),
