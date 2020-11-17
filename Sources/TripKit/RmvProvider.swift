@@ -12,6 +12,7 @@ public class RmvProvider: AbstractHafasClientInterfaceProvider {
         apiVersion = "1.20"
         apiClient = ["id": "RMV", "type": "WEB", "name": "webapp", "l": "vs_webapp"]
         extVersion = "RMV.1"
+        jnyFilterIncludes = [["type": "GROUP", "mode": "INC", "value": "GROUP_PT"]] // when removed, we get invalid legs with type Bike and Kiss. When added to other providers, we don't get any results at all...
         
         styles = [
             "UU1": LineStyle(shape: .rect, backgroundColor: LineStyle.rgb(184, 41, 47), foregroundColor: LineStyle.white),

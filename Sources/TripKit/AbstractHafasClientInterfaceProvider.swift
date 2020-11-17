@@ -10,6 +10,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
     var apiAuthorization: Any?
     var apiClient: Any?
     var extVersion: String?
+    var jnyFilterIncludes: [[String: Any]]?
     var desktopQueryEndpoint: String?
     var desktopStboardEndpoint: String?
     var requestVerification: RequestVerification = .none
@@ -971,19 +972,9 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         if let previousContext = previousContext, let moreContext = later ? previousContext.laterContext : previousContext.earlierContext {
             req["ctxScr"] = moreContext
         }
-        var filterList: [Any] = []
-        filterList.append([
-            "value": jnyFltr,
-            "mode": "BIT",
-            "type": "PROD"
-            ])
-        
-        if id == .RMV { // Todo: remove hardcoded to rmv... problem: when removed, we get invalid legs with type Bike and Kiss. When added to other providers, we don't get any results at all...
-            filterList.append([
-                "type": "GROUP",
-                "mode": "INC",
-                "value": "GROUP_PT"
-                ])
+        var filterList: [[String: Any]] = [["value": jnyFltr, "mode": "BIT", "type": "PROD"]]
+        if let jnyFilterIncludes = jnyFilterIncludes {
+            filterList.append(contentsOf: jnyFilterIncludes)
         }
         
         if let accessibility = tripOptions.accessibility, accessibility != .neutral {
