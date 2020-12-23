@@ -1,5 +1,6 @@
-import Foundation
+import XCTest
 @testable import TripKit
+import os.log
 
 class RmvProviderTests: TripKitProviderTestCase, TripKitProviderTestsDelegate {
     
@@ -28,5 +29,24 @@ class RmvProviderTests: TripKitProviderTestCase, TripKitProviderTestsDelegate {
     var suggestLocationsUmlaut: String { return "Grüneburgweg" }
     
     var suggestLocationsAddress: String { return "Kaiserstraße 30, Frankfurt am Main - Innenstadt" }
+    
+    func testQueryTripsChineeseCharacters() {
+        let from = Location(type: .coord, id: nil, coord: LocationPoint(lat: 49867186, lon: 8640047), place: "达姆施塔特", name: "Schöfferstraße 2")!
+        let to = Location(type: .coord, id: nil, coord: LocationPoint(lat: 49856719, lon: 8637645), place: "64295 达姆施塔特, 德国", name: "Wormser Straße 32")!
+        let result = syncQueryTrips(from: from, via: nil, to: to, date: Date(), departure: true, products: nil, optimize: nil, walkSpeed: nil, accessibility: nil, options: nil)
+        switch result {
+        case .success(let context, _, _, _, let trips, let messages):
+            os_log("success: %@, context=%@, messages=%@", log: .testsLogger, type: .default, trips, String(describing: context), messages)
+            XCTAssert(!trips.isEmpty, "received empty result")
+            if delegate.supportsQueryMoreTrips {
+                XCTAssert(context != nil, "context == nil")
+            }
+            
+        case .failure(let error):
+            XCTFail("received an error: \(error)")
+        default:
+            XCTFail("illegal result type \(result)")
+        }
+    }
     
 }

@@ -68,7 +68,7 @@ public class AbstractHafasProvider: AbstractNetworkProvider {
         return products(from: int).first
     }
     
-    var P_SPLIT_NAME_FIRST_COMMA: NSRegularExpression { return try! NSRegularExpression(pattern: "^([^,]*), (.*)$") }
+    var P_SPLIT_NAME_FIRST_COMMA: NSRegularExpression { return try! NSRegularExpression(pattern: "^(?:([^,]*), (?!$))?([^,]*)(?:, )?$") }
     var P_SPLIT_NAME_LAST_COMMA: NSRegularExpression { return try! NSRegularExpression(pattern: "^(.*), ([^,]*)$") }
     var P_SPLIT_NAME_FIRST_SPACE: NSRegularExpression { return try! NSRegularExpression(pattern: "^([^ ]*) (.*)$") }
     var P_SPLIT_NAME_PAREN: NSRegularExpression { return try! NSRegularExpression(pattern: "^(.*) \\((.{3,}?)\\)$") }
