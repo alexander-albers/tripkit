@@ -244,11 +244,11 @@ class TripKitProviderTestCase: XCTestCase {
     
     // MARK: utility methods
     
-    private func syncQueryTrips(from: Location, via: Location?, to: Location, date: Date, departure: Bool, products: [Product]?, optimize: Optimize?, walkSpeed: WalkSpeed?, accessibility: Accessibility?, options: [Option]?) -> QueryTripsResult {
+    func syncQueryTrips(from: Location, via: Location?, to: Location, date: Date, departure: Bool, products: [Product]?, optimize: Optimize?, walkSpeed: WalkSpeed?, accessibility: Accessibility?, options: [Option]?) -> QueryTripsResult {
         let expectation = self.expectation(description: "Network Task")
         var result: QueryTripsResult?
         
-        _ = provider.queryTrips(from: from, via: via, to: to, date: date, departure: departure, tripOptions: TripOptions(products: products, optimize: optimize, walkSpeed: walkSpeed, accessibility: accessibility, options: options, maxChanges: nil, minChangeTime: nil), completion: { (completion) in
+        _ = provider.queryTrips(from: from, via: via, to: to, date: date, departure: departure, tripOptions: TripOptions(products: products, optimize: optimize, walkSpeed: walkSpeed, accessibility: accessibility, options: options, maxChanges: nil, minChangeTime: nil), completion: { (request, completion) in
             result = completion
             expectation.fulfill()
         })
@@ -258,11 +258,11 @@ class TripKitProviderTestCase: XCTestCase {
         return result ?? .failure(TimeoutError())
     }
     
-    private func syncQueryMoreTrips(context: QueryTripsContext, later: Bool) -> QueryTripsResult {
+    func syncQueryMoreTrips(context: QueryTripsContext, later: Bool) -> QueryTripsResult {
         let expectation = self.expectation(description: "Network Task")
         var result: QueryTripsResult?
         
-        _ = provider.queryMoreTrips(context: context, later: later) { (completion: QueryTripsResult) in
+        _ = provider.queryMoreTrips(context: context, later: later) { (request, completion: QueryTripsResult) in
             result = completion
             expectation.fulfill()
         }
@@ -272,11 +272,11 @@ class TripKitProviderTestCase: XCTestCase {
         return result ?? .failure(TimeoutError())
     }
     
-    private func syncRefreshTrip(context: RefreshTripContext) -> QueryTripsResult {
+    func syncRefreshTrip(context: RefreshTripContext) -> QueryTripsResult {
         let expectation = self.expectation(description: "Network Task")
         var result: QueryTripsResult?
         
-        _ = provider.refreshTrip(context: context) { (completion: QueryTripsResult) in
+        _ = provider.refreshTrip(context: context) { (request, completion: QueryTripsResult) in
             result = completion
             expectation.fulfill()
         }
@@ -286,11 +286,11 @@ class TripKitProviderTestCase: XCTestCase {
         return result ?? .failure(TimeoutError())
     }
     
-    private func syncNearbyStations(location: Location, types: [LocationType], maxDistance: Int, maxLocations: Int) -> NearbyLocationsResult {
+    func syncNearbyStations(location: Location, types: [LocationType], maxDistance: Int, maxLocations: Int) -> NearbyLocationsResult {
         let expectation = self.expectation(description: "Network Task")
         var result: NearbyLocationsResult?
         
-        _ = provider.queryNearbyLocations(location: location, types: types, maxDistance: maxDistance, maxLocations: maxLocations) { (completion: NearbyLocationsResult) in
+        _ = provider.queryNearbyLocations(location: location, types: types, maxDistance: maxDistance, maxLocations: maxLocations) { (request, completion: NearbyLocationsResult) in
             result = completion
             expectation.fulfill()
         }
@@ -300,11 +300,11 @@ class TripKitProviderTestCase: XCTestCase {
         return result ?? .failure(TimeoutError())
     }
     
-    private func syncQueryDepartures(stationId: String, departures: Bool, time: Date?, maxDepartures: Int, equivs: Bool) -> QueryDeparturesResult {
+    func syncQueryDepartures(stationId: String, departures: Bool, time: Date?, maxDepartures: Int, equivs: Bool) -> QueryDeparturesResult {
         let expectation = self.expectation(description: "Network Task")
         var result: QueryDeparturesResult?
         
-        _ = provider.queryDepartures(stationId: stationId, departures: departures, time: time, maxDepartures: maxDepartures, equivs: equivs) { (completion: QueryDeparturesResult) in
+        _ = provider.queryDepartures(stationId: stationId, departures: departures, time: time, maxDepartures: maxDepartures, equivs: equivs) { (request, completion: QueryDeparturesResult) in
             result = completion
             expectation.fulfill()
         }
@@ -314,11 +314,11 @@ class TripKitProviderTestCase: XCTestCase {
         return result ?? .failure(TimeoutError())
     }
     
-    private func syncJourneyDetail(context: QueryJourneyDetailContext) -> QueryJourneyDetailResult {
+    func syncJourneyDetail(context: QueryJourneyDetailContext) -> QueryJourneyDetailResult {
         let expectation = self.expectation(description: "Network Task")
         var result: QueryJourneyDetailResult?
         
-        _ = provider.queryJourneyDetail(context: context) { (completion: QueryJourneyDetailResult) in
+        _ = provider.queryJourneyDetail(context: context) { (request, completion: QueryJourneyDetailResult) in
             result = completion
             expectation.fulfill()
         }
@@ -328,11 +328,11 @@ class TripKitProviderTestCase: XCTestCase {
         return result ?? .failure(TimeoutError())
     }
     
-    private func syncSuggestLocations(constraint: String) -> SuggestLocationsResult {
+    func syncSuggestLocations(constraint: String) -> SuggestLocationsResult {
         let expectation = self.expectation(description: "Network Task")
         var result: SuggestLocationsResult?
         
-        _ = provider.suggestLocations(constraint: constraint, types: nil, maxLocations: 5) { (completion: SuggestLocationsResult) in
+        _ = provider.suggestLocations(constraint: constraint, types: nil, maxLocations: 5) { (request, completion: SuggestLocationsResult) in
             result = completion
             expectation.fulfill()
         }
