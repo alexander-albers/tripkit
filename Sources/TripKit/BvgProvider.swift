@@ -192,7 +192,7 @@ public class BvgProvider: AbstractHafasClientInterfaceProvider {
 //        }
 //    }
     
-    override func newLine(network: String?, product: Product?, name: String?, shortName: String?, number: String?) -> Line {
+    override func newLine(network: String?, product: Product?, name: String?, shortName: String?, number: String?, fullNumber: String?) -> Line {
         let label = name ?? ""
         if product == .suburbanTrain && label == "S41" {
             return Line(id: nil, network: network, product: product, label: label, name: nil, style: lineStyle(network: network, product: product, label: label), attr: [.circleClockwise], message: nil)
@@ -209,7 +209,7 @@ public class BvgProvider: AbstractHafasClientInterfaceProvider {
         } else if product == .suburbanTrain && label == "S45" {
             return Line(id: nil, network: network, product: product, label: label, name: nil, style: lineStyle(network: network, product: product, label: label), attr: [.lineAirport], message: nil)
         } else {
-            return super.newLine(network: network, product: product, name: name, shortName: shortName, number: number)
+            return super.newLine(network: network, product: product, name: name, shortName: shortName, number: number, fullNumber: nil)
         }
     }
     
