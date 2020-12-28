@@ -14,13 +14,15 @@ public class Line: NSObject, NSSecureCoding {
     public let attr: [Attr]?
     public let message: String?
     public let direction: Direction?
+    /// Contains the (internal) full line number
+    public let fullNumber: String?
     
     static let FOOTWAY = Line(id: nil, network: nil, product: nil, label: nil)
     static let TRANSFER = Line(id: nil, network: nil, product: nil, label: nil)
     static let SECURE_CONNECTION = Line(id: nil, network: nil, product: nil, label: nil)
     static let DO_NOT_CHANGE = Line(id: nil, network: nil, product: nil, label: nil)
     
-    public init(id: String?, network: String?, product: Product?, label: String?, name: String?, number: String? = nil, style: LineStyle!, attr: [Attr]?, message: String?, direction: Direction? = nil) {
+    public init(id: String?, network: String?, product: Product?, label: String?, name: String?, number: String? = nil, style: LineStyle!, attr: [Attr]?, message: String?, direction: Direction? = nil, fullNumber: String? = nil) {
         self.id = id
         self.network = network
         self.product = product
@@ -31,6 +33,7 @@ public class Line: NSObject, NSSecureCoding {
         self.attr = attr
         self.message = message
         self.direction = direction
+        self.fullNumber = fullNumber
     }
     
     public convenience init(id: String?, network: String?, product: Product?, label: String?) {
@@ -60,8 +63,9 @@ public class Line: NSObject, NSSecureCoding {
         } else {
             direction = nil
         }
+        let fullNumber = aDecoder.decodeObject(of: NSString.self, forKey: PropertyKey.fullNumber) as String?
         
-        self.init(id: id, network: network, product: product, label: label, name: name, number: number, style: style, attr: attr, message: message, direction: direction)
+        self.init(id: id, network: network, product: product, label: label, name: name, number: number, style: style, attr: attr, message: message, direction: direction, fullNumber: fullNumber)
     }
     
     public func encode(with aCoder: NSCoder) {
@@ -99,6 +103,9 @@ public class Line: NSObject, NSSecureCoding {
         if let direction = direction {
             aCoder.encode(direction.rawValue, forKey: PropertyKey.direction)
         }
+        if let fullNumber = fullNumber {
+            aCoder.encode(fullNumber, forKey: PropertyKey.fullNumber)
+        }
     }
     
     public override func isEqual(_ object: Any?) -> Bool {
@@ -111,7 +118,7 @@ public class Line: NSObject, NSSecureCoding {
     }
     
     public override var description: String {
-        return "Line id=\(id ?? ""), network=\(network ?? ""), product=\(product?.rawValue ?? ""), label=\(label ?? ""), name=\(name ?? "")"
+        return "Line id=\(id ?? ""), network=\(network ?? ""), product=\(product?.rawValue ?? ""), label=\(label ?? ""), name=\(name ?? ""), fullNumber=\(fullNumber ?? "")"
     }
     
     public enum Attr: Int {
@@ -134,6 +141,7 @@ public class Line: NSObject, NSSecureCoding {
         static let attr = "attr"
         static let message = "message"
         static let direction = "direction"
+        static let fullNumber = "fullNumber"
         
     }
     
