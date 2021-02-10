@@ -827,7 +827,7 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
                 var legMessages: [String] = []
                 for infoLink in partialRoute["infoLink"].all {
                     guard let infoLinkText = infoLink["infoText"]["subtitle"].element?.text else { continue }
-                    legMessages.append(infoLinkText)
+                    legMessages.append(String(htmlEncodedString: infoLinkText) ?? infoLinkText)
                 }
                 
                 let points = partialRoute["itdPoint"].all
