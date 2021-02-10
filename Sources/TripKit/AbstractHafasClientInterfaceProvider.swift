@@ -605,7 +605,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
                 case "JNY":
                     guard let jny = sec["jny"] as? [String: Any], let prodX = jny["prodX"] as? Int, let stopL = jny["stopL"] as? [Any] else { throw ParseError(reason: "failed to parse outcon jny") }
                     let attrs: [Line.Attr]?
-                    var message = ""
+                    var legMessages = Set<String>()
                     var cancelled = jny["isCncl"] as? Bool ?? false
                     if let remL = jny["remL"] as? [Any] ?? jny["msgL"] as? [Any] {
                         var result: [Line.Attr] = []
@@ -622,37 +622,19 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
                                 case .powerSockets:     result.append(.powerSockets)
                                 case .cancelled(let reason):
                                     if let reason = reason {
-                                        if message != "" {
-                                            message += "\n"
-                                        }
-                                        message += reason.trimmingCharacters(in: .whitespacesAndNewlines)
-                                        if !message.hasSuffix(".") && !message.hasSuffix("!") {
-                                            message += "."
-                                        }
+                                        legMessages.insert(reason.trimmingCharacters(in: .whitespacesAndNewlines))
                                     }
                                     cancelled = true
                                 case .unknown(let reason):
                                     if let reason = reason {
-                                        if message != "" {
-                                            message += "\n"
-                                        }
-                                        message += reason.trimmingCharacters(in: .whitespacesAndNewlines)
-                                        if !message.hasSuffix(".") && !message.hasSuffix("!") {
-                                            message += "."
-                                        }
+                                        legMessages.insert(reason.trimmingCharacters(in: .whitespacesAndNewlines))
                                     }
                                 default:
                                     break
                                 }
                             } else if rem["type"] as? String == "HIM", let himX = rem["himX"] as? Int {
                                 guard himX >= 0 && himX < messages?.count ?? 0, let text = messages?[himX] else { continue }
-                                if message != "" {
-                                    message += "\n"
-                                }
-                                message += text.trimmingCharacters(in: .whitespacesAndNewlines)
-                                if !message.hasSuffix(".") && !message.hasSuffix("!") {
-                                    message += "."
-                                }
+                                legMessages.insert(text.trimmingCharacters(in: .whitespacesAndNewlines))
                             }
                         }
                         attrs = result.isEmpty ? nil : result
@@ -663,13 +645,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
                         for him in himL {
                             guard let him = him as? [String: Any], let himX = him["himX"] as? Int else { throw ParseError(reason: "failed to parse him") }
                             guard let text = messages?[himX] else { continue }
-                            if message != "" {
-                                message += "\n"
-                            }
-                            message += text.trimmingCharacters(in: .whitespacesAndNewlines)
-                            if !message.hasSuffix(".") && !message.hasSuffix("!") {
-                                message += "."
-                            }
+                            legMessages.insert(text.trimmingCharacters(in: .whitespacesAndNewlines))
                         }
                     }
                     
@@ -711,13 +687,10 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
                         journeyContext = nil
                     }
                     if let arrivalMessage = arrivalStop.message {
-                        if message != "" {
-                            message += "\n"
-                        }
-                        message += arrivalMessage
+                        legMessages.insert(arrivalMessage)
                     }
                     
-                    leg = PublicLeg(line: line, destination: destination, departureStop: departureStop, arrivalStop: arrivalStop, intermediateStops: intermediateStops, message: !message.isEmpty ? message : nil, path: path, journeyContext: journeyContext)
+                    leg = PublicLeg(line: line, destination: destination, departureStop: departureStop, arrivalStop: arrivalStop, intermediateStops: intermediateStops, message: legMessages.joined(separator: "\n").emptyToNil, path: path, journeyContext: journeyContext)
                     break
                 case "WALK", "TRSF":
                     guard let departureStop = try parseStop(dict: dep, locations: locations, rems: rems, baseDate: baseDate, line: nil), let arrivalStop = try parseStop(dict: arr, locations: locations, rems: rems, baseDate: baseDate, line: nil) else { throw ParseError(reason: "failed to parse departure/arrival stop") }
