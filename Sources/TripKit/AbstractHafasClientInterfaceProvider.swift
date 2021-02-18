@@ -602,7 +602,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
                 
                 let leg: Leg
                 switch sec["type"] as? String ?? "" {
-                case "JNY":
+                case "JNY", "TETA":
                     guard let jny = sec["jny"] as? [String: Any], let prodX = jny["prodX"] as? Int, let stopL = jny["stopL"] as? [Any] else { throw ParseError(reason: "failed to parse outcon jny") }
                     let attrs: [Line.Attr]?
                     var legMessages = Set<String>()
@@ -692,7 +692,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
                     
                     leg = PublicLeg(line: line, destination: destination, departureStop: departureStop, arrivalStop: arrivalStop, intermediateStops: intermediateStops, message: legMessages.joined(separator: "\n").emptyToNil, path: path, journeyContext: journeyContext)
                     break
-                case "WALK", "TRSF":
+                case "WALK", "TRSF", "DEVI":
                     guard let departureStop = try parseStop(dict: dep, locations: locations, rems: rems, baseDate: baseDate, line: nil), let arrivalStop = try parseStop(dict: arr, locations: locations, rems: rems, baseDate: baseDate, line: nil) else { throw ParseError(reason: "failed to parse departure/arrival stop") }
                     guard let gis = sec["gis"] as? [String: Any] else { throw ParseError(reason: "failed to parse outcon gis") }
                     let distance = gis["distance"] as? Int ?? 0
