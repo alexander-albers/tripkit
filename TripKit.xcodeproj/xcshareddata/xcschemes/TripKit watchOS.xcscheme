@@ -9,14 +9,14 @@
          <BuildActionEntry
             buildForTesting = "YES"
             buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "NO">
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FACB83CB1E3FD0CE00AC5F1F"
-               BuildableName = "TripKitTests iOS.xctest"
-               BlueprintName = "TripKitTests iOS"
+               BlueprintIdentifier = "FAFF187B1FA50B9500A8ED69"
+               BuildableName = "TripKit.framework"
+               BlueprintName = "TripKit watchOS"
                ReferencedContainer = "container:TripKit.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,21 +28,6 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FACB83CB1E3FD0CE00AC5F1F"
-               BuildableName = "TripKitTests iOS.xctest"
-               BlueprintName = "TripKitTests iOS"
-               ReferencedContainer = "container:TripKit.xcodeproj">
-            </BuildableReference>
-            <SkippedTests>
-               <Test
-                  Identifier = "TripKitProviderTestCase">
-               </Test>
-            </SkippedTests>
-         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
@@ -58,9 +43,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FACB83CB1E3FD0CE00AC5F1F"
-            BuildableName = "TripKitTests iOS.xctest"
-            BlueprintName = "TripKitTests iOS"
+            BlueprintIdentifier = "FAFF187B1FA50B9500A8ED69"
+            BuildableName = "TripKit.framework"
+            BlueprintName = "TripKit watchOS"
             ReferencedContainer = "container:TripKit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -74,9 +59,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FACB83CB1E3FD0CE00AC5F1F"
-            BuildableName = "TripKitTests iOS.xctest"
-            BlueprintName = "TripKitTests iOS"
+            BlueprintIdentifier = "FAFF187B1FA50B9500A8ED69"
+            BuildableName = "TripKit.framework"
+            BlueprintName = "TripKit watchOS"
             ReferencedContainer = "container:TripKit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
