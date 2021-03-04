@@ -5,13 +5,19 @@ before_install:
 - openssl aes-256-cbc -K $encrypted_fb088dcee1f3_key -iv $encrypted_fb088dcee1f3_iv -in Sources/TripKit/secrets.json.enc -out Sources/TripKit/secrets.json -d
 install: swift package update
 
+env:
+  - CAN_FAIL=false
+
 stages:
-  - compile
+  - build
   - test
   
 jobs:
+  allow_failures:
+    env:
+      - CAN_FAIL=true
   include:
-    - stage: compile
+    - stage: build
       script:
         - set -o pipefail
         - xcodebuild -scheme "TripKit iOS" -destination "platform=iOS Simulator,OS=14.2,name=iPhone 12 Pro" build-for-testing | xcpretty
@@ -19,4 +25,6 @@ jobs:
         - xcodebuild -scheme "TripKit tvOS" -destination "platform=tvOS Simulator,OS=14.2,name=Apple TV 4K" build | xcpretty
         - xcodebuild -scheme "TripKit macOS" -destination "platform=macOS,OS=11.0" build | xcpretty
     - stage: test
+      env:
+       - CAN_FAIL=true
       script: xcodebuild -scheme "TripKit iOS" -destination "platform=iOS Simulator,OS=14.2,name=iPhone 12 Pro" test-without-building | xcpretty
