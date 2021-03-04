@@ -1276,7 +1276,6 @@
 					FACB83CB1E3FD0CE00AC5F1F = {
 						CreatedOnToolsVersion = 8.2.1;
 						LastSwiftMigration = 0910;
-						ProvisioningStyle = Automatic;
 					};
 					FAFF187B1FA50B9500A8ED69 = {
 						LastSwiftMigration = 1020;
@@ -2323,10 +2322,12 @@
 				PRODUCT_NAME = TripKit;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_INCLUDE_PATHS = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -2355,16 +2356,17 @@
 				PRODUCT_NAME = TripKit;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_INCLUDE_PATHS = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 		FACB83DB1E3FD0CE00AC5F1F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Tests/TripKitTests/Info-iOS.plist";
@@ -2376,7 +2378,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "de.alex-albers.TripKitTests-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -2384,7 +2386,6 @@
 		FACB83DC1E3FD0CE00AC5F1F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Tests/TripKitTests/Info-iOS.plist";
@@ -2396,7 +2397,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "de.alex-albers.TripKitTests-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
