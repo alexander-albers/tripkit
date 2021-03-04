@@ -8,7 +8,6 @@ class AvvAachenProviderTests: TripKitProviderTestCase, TripKitProviderTestsDeleg
     var networkId: NetworkId { return .AVV2 }
     
     func initProvider(from authorizationData: AuthorizationData) -> NetworkProvider {
-        print("HCIKEYS: \(authorizationData.hciAuthorization.keys)")
         return AvvAachenProvider(apiAuthorization: authorizationData.hciAuthorization)
     }
     
