@@ -7,7 +7,7 @@ public class HttpClient {
     
     private static var urlSession: URLSession = {
         let config = URLSessionConfiguration.default
-        if #available(iOSApplicationExtension 11.0, tvOSApplicationExtension 11.0, watchOSApplicationExtension 4.0, OSXApplicationExtension 10.13, *) {
+        if #available(iOS 11.0, tvOS 11.0, watchOS 4.0, macOS 10.13, *) {
             config.waitsForConnectivity = true
         }
         return URLSession(configuration: config)
