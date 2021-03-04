@@ -23,7 +23,7 @@ jobs:
         - xcodebuild -scheme "TripKit iOS" -destination "platform=iOS Simulator,OS=14.2,name=iPhone 12 Pro" build-for-testing | xcpretty
         - xcodebuild -scheme "TripKit watchOS" -destination "platform=watchOS Simulator,OS=7.1,name=Apple Watch Series 6 - 44mm" build | xcpretty
         - xcodebuild -scheme "TripKit tvOS" -destination "platform=tvOS Simulator,OS=14.2,name=Apple TV 4K" build | xcpretty
-        - xcodebuild -scheme "TripKit macOS" -destination "platform=macOS,OS=11.0" build | xcpretty
+        - xcodebuild -scheme "TripKit macOS" -destination "platform=macOS" build | xcpretty
     - stage: test
       env:
        - CAN_FAIL=true
