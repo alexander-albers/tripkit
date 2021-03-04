@@ -16,7 +16,7 @@ let package = Package(
     ],
     targets: [
         .target(name: "TripKit", dependencies: ["Gzip", "SwiftyJSON", "SWXMLHash"]),
-        .testTarget(name: "TripKitTests iOS", dependencies: ["TripKit"])
+        .testTarget(name: "TripKitTests", dependencies: ["TripKit"])
     ],
     swiftLanguageVersions: [.v5]
 )
