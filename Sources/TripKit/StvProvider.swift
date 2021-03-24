@@ -1,47 +1,44 @@
 import Foundation
 
-public class StvProvider: AbstractEfaProvider {
+public class StvProvider: AbstractHafasClientInterfaceProvider {
     
-    static let API_BASE = "http://appefa10.verbundlinie.at/android/"
+    static let API_BASE = "https://verkehrsauskunft.verbundlinie.at/bin/"
+    static let PRODUCTS_MAP: [Product?] = [.regionalTrain, .suburbanTrain, .subway, nil, .tram, .bus, .bus, .bus, .cablecar, .ferry, .onDemand, nil, nil]
     
-    public init() {
-        super.init(networkId: .STV, apiBase: StvProvider.API_BASE)
-        supportsDesktopTrips = false
-        supportsDesktopDepartures = false
-
-        includeRegionId = false
+    public init(apiAuthorization: [String: Any]) {
+        super.init(networkId: .STV, apiBase: StvProvider.API_BASE, productsMap: StvProvider.PRODUCTS_MAP)
+        self.apiAuthorization = apiAuthorization
+        apiVersion = "1.18"
+        apiClient = ["id": "VAO", "type": "WEB", "name": "webapp", "l": "vs_stv"]
+        extVersion = "VAO.13"
     }
     
-    public override func queryNearbyLocations(location: Location, types: [LocationType]?, maxDistance: Int, maxLocations: Int, completion: @escaping (HttpRequest, NearbyLocationsResult) -> Void) -> AsyncRequest {
-        if let coord = location.coord {
-            return mobileCoordRequest(types: types, lat: coord.lat, lon: coord.lon, maxDistance: maxDistance, maxLocations: maxLocations, completion: completion)
-        } else {
-            return super.queryNearbyLocations(location: location, types: types, maxDistance: maxDistance, maxLocations: maxLocations, completion: completion)
+    static let PLACES = ["Wien", "Graz", "Linz/Donau", "Salzburg", "Innsbruck"]
+    
+    override func split(stationName: String?) -> (String?, String?) {
+        guard let stationName = stationName else { return super.split(stationName: nil) }
+        for place in StvProvider.PLACES {
+            if stationName.hasPrefix(place + " ") {
+                return (place, stationName.substring(from: place.length + 1))
+            }
         }
+        return super.split(stationName: stationName)
     }
     
-    public override func queryDepartures(stationId: String, departures: Bool, time: Date?, maxDepartures: Int, equivs: Bool, completion: @escaping (HttpRequest, QueryDeparturesResult) -> Void) -> AsyncRequest {
-        return queryDeparturesMobile(stationId: stationId, departures: departures, time: time, maxDepartures: maxDepartures, equivs: equivs, completion: completion)
+    override func split(poi: String?) -> (String?, String?) {
+        guard let poi = poi else { return super.split(poi: nil) }
+        if let m = poi.match(pattern: P_SPLIT_NAME_FIRST_COMMA) {
+            return (m[0], m[1])
+        }
+        return super.split(poi: poi)
     }
     
-    override public func queryJourneyDetail(context: QueryJourneyDetailContext, completion: @escaping (HttpRequest, QueryJourneyDetailResult) -> Void) -> AsyncRequest {
-        return queryJourneyDetailMobile(context: context, completion: completion)
-    }
-    
-    public override func suggestLocations(constraint: String, types: [LocationType]?, maxLocations: Int, completion: @escaping (HttpRequest, SuggestLocationsResult) -> Void) -> AsyncRequest {
-        return mobileStopfinderRequest(constraint: constraint, types: types, maxLocations: maxLocations, completion: completion)
-    }
-    
-    public override func queryTrips(from: Location, via: Location?, to: Location, date: Date, departure: Bool, tripOptions: TripOptions, completion: @escaping (HttpRequest, QueryTripsResult) -> Void) -> AsyncRequest {
-        return queryTripsMobile(from: from, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions, completion: completion)
-    }
-    
-    public override func queryMoreTrips(context: QueryTripsContext, later: Bool, completion: @escaping (HttpRequest, QueryTripsResult) -> Void) -> AsyncRequest {
-        return queryMoreTripsMobile(context: context, later: later, completion: completion)
-    }
-    
-    public override func refreshTrip(context: RefreshTripContext, completion: @escaping (HttpRequest, QueryTripsResult) -> Void) -> AsyncRequest {
-        return refreshTripMobile(context: context, completion: completion)
+    override func split(address: String?) -> (String?, String?) {
+        guard let address = address else { return super.split(address: nil) }
+        if let m = address.match(pattern: P_SPLIT_NAME_FIRST_COMMA) {
+            return (m[0], m[1])
+        }
+        return super.split(address: address)
     }
     
 }
