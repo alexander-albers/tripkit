@@ -608,18 +608,18 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
                     var legMessages = Set<String>()
                     var cancelled = jny["isCncl"] as? Bool ?? false
                     if let remL = jny["remL"] as? [Any] ?? jny["msgL"] as? [Any] {
-                        var result: [Line.Attr] = []
+                        var result = Set<Line.Attr>()
                         for rem in remL {
                             guard let rem = rem as? [String: Any] else { continue }
                             if rem["type"] as? String == "REM", let remX = rem["remX"] as? Int {
                                 guard remX >= 0 && remX < rems?.count ?? 0, let attr = rems?[remX] else { continue }
                                 switch attr {
-                                case .bicycleCarriage:  result.append(.bicycleCarriage)
-                                case .wheelChairAccess: result.append(.wheelChairAccess)
-                                case .boardRestaurant:  result.append(.restaurant)
-                                case .airConditioned:   result.append(.airConditioned)
-                                case .wifi:             result.append(.wifiAvailable)
-                                case .powerSockets:     result.append(.powerSockets)
+                                case .bicycleCarriage:  result.insert(.bicycleCarriage)
+                                case .wheelChairAccess: result.insert(.wheelChairAccess)
+                                case .boardRestaurant:  result.insert(.restaurant)
+                                case .airConditioned:   result.insert(.airConditioned)
+                                case .wifi:             result.insert(.wifiAvailable)
+                                case .powerSockets:     result.insert(.powerSockets)
                                 case .cancelled(let reason):
                                     if let reason = reason {
                                         legMessages.insert(reason.trimmingCharacters(in: .whitespacesAndNewlines))
@@ -637,7 +637,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
                                 legMessages.insert(text.trimmingCharacters(in: .whitespacesAndNewlines))
                             }
                         }
-                        attrs = result.isEmpty ? nil : result
+                        attrs = result.isEmpty ? nil : Array(result)
                     } else {
                         attrs = nil
                     }
@@ -813,28 +813,22 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         let l = lines[prodX]
         
         var message = ""
-        var attr: [Line.Attr] = []
+        var attr = Set<Line.Attr>()
         for msg in journey["msgL"] as? [Any] ?? [] {
             guard let msg = msg as? [String: Any], let type = msg["type"] as? String, type == "REM", let remX = msg["remX"] as? Int, remX >= 0 && remX < rems?.count ?? 0, let rem = rems?[remX] else { continue }
             switch rem {
             case .bicycleCarriage:
-                attr.append(.bicycleCarriage)
-                break
+                attr.insert(.bicycleCarriage)
             case .wheelChairAccess:
-                attr.append(.wheelChairAccess)
-                break
+                attr.insert(.wheelChairAccess)
             case .boardRestaurant:
-                attr.append(.restaurant)
-                break
+                attr.insert(.restaurant)
             case .airConditioned:
-                attr.append(.airConditioned)
-                break
+                attr.insert(.airConditioned)
             case .wifi:
-                attr.append(.wifiAvailable)
-                break
+                attr.insert(.wifiAvailable)
             case .powerSockets:
-                attr.append(.powerSockets)
-                break
+                attr.insert(.powerSockets)
             case .unknown(let reason):
                 if let reason = reason {
                     if message != "" {
@@ -852,7 +846,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         }
         let line: Line
         if !attr.isEmpty {
-            line = Line(id: l.id, network: l.network, product: l.product, label: l.label, name: l.name, style: l.style, attr: attr, message: l.message)
+            line = Line(id: l.id, network: l.network, product: l.product, label: l.label, name: l.name, style: l.style, attr: Array(attr), message: l.message)
         } else {
             line = l
         }
@@ -1213,36 +1207,18 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
             }
             let txt = String(htmlEncodedString: rem["txtN"] as? String)
             switch (rem["code"] as? String ?? "").lowercased() {
-            case "bf":
+            case "bf", "rg", "eh":
                 result.append(.wheelChairAccess)
-                break
-            case "rg":
-                result.append(.wheelChairAccess)
-                break
-            case "eh":
-                result.append(.wheelChairAccess)
-                break
             case "fb":
                 result.append(.bicycleCarriage)
-                break
-            case "bt":
+            case "bt", "br":
                 result.append(.boardRestaurant)
-                break
-            case "br":
-                result.append(.boardRestaurant)
-                break
-            case "wv":
+            case "wv", "wi":
                 result.append(.wifi)
-                break
-            case "wi":
-                result.append(.wifi)
-                break
             case "kl":
                 result.append(.airConditioned)
-                break
             case "ls":
                 result.append(.powerSockets)
-                break
             default:
                 if let type = rem["type"] as? String {
                     if type == "U" {
@@ -1250,7 +1226,18 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
                     } else if type == "C" || type == "P" {
                         result.append(.cancelled(reason: txt))
                     } else if type == "A" || type == "I" {
-                        result.append(.unknown(reason: txt))
+                        switch (txt ?? "").lowercased() {
+                        case "bordrestaurant":
+                            result.append(.boardRestaurant)
+                        case "fahrradmitnahme begrenzt möglich", "fahrradmitnahme möglich", "fahrradmitnahme reservierungspflichtig":
+                            result.append(.bicycleCarriage)
+                        case "fahrzeuggebundene einstiegshilfe", "zugang für rollstuhlfahrer":
+                            result.append(.wheelChairAccess)
+                        case "wlan verfügbar":
+                            result.append(.wifi)
+                        default:
+                            result.append(.unknown(reason: txt))
+                        }
                     } else {
                         result.append(.unknown(reason: txt))
                     }
