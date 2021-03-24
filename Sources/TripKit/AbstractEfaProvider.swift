@@ -1783,6 +1783,8 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
         let motTrainName = xml["itdMeansOfTransport"].element?.attribute(by: "trainName")?.text
         let motTrainType = xml["itdMeansOfTransport"].element?.attribute(by: "trainType")?.text
         let tripCode = xml["itdMeansOfTransport"].element?.attribute(by: "tC")?.text
+        let number = xml["itdMeansOfTransport"].element?.attribute(by: "number")?.text
+        let trainNum = xml["itdMeansOfTransport"].element?.attribute(by: "trainNum")?.text
         
         guard let divaNetwork = xml["itdMeansOfTransport"]["motDivaParams"].element?.attribute(by: "network")?.text, let divaLine = xml["itdMeansOfTransport"]["motDivaParams"].element?.attribute(by: "line")?.text, let divaDirection = xml["itdMeansOfTransport"]["motDivaParams"].element?.attribute(by: "direction")?.text else {
             throw ParseError(reason: "diva")
@@ -1898,7 +1900,7 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
             lineAttrs.append(Line.Attr.wheelChairAccess)
         }
         
-        let styledLine = Line(id: line.id, network: line.network, product: line.product, label: line.label, name: line.label, style: lineStyle(network: divaNetwork, product: line.product, label: line.label), attr: lineAttrs, message: nil)
+        let styledLine = Line(id: line.id, network: line.network, product: line.product, label: line.label, name: line.label, number: number, trainNumber: trainNum, style: lineStyle(network: divaNetwork, product: line.product, label: line.label), attr: lineAttrs, message: nil)
         
         let journeyContext: EfaJourneyContext?
         if let departureId = departureLocation.id, let tripCode = tripCode, styledLine.id != nil {
@@ -2716,7 +2718,7 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
         
         let cancelled = delay == "-9999"
         
-        return (Line(id: line.id, network: line.network, product: line.product, label: line.label, name: nil, style: self.lineStyle(network: line.network, product: line.product, label: line.label), attr: nil, message: message.emptyToNil, direction: direction), destination, cancelled)
+        return (Line(id: line.id, network: line.network, product: line.product, label: line.label, name: nil, number: number, trainNumber: trainNum, style: self.lineStyle(network: line.network, product: line.product, label: line.label), attr: nil, message: message.emptyToNil, direction: direction), destination, cancelled)
     }
     
     public class Context: QueryTripsContext {
