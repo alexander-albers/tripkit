@@ -234,8 +234,8 @@ public class VbnProvider: AbstractHafasClientInterfaceProvider {
         return super.split(address: address)
     }
     
-    override func newLine(network: String?, product: Product?, name: String?, shortName: String?, number: String?, fullNumber: String?) -> Line {
-        let line = super.newLine(network: network, product: product, name: name, shortName: shortName, number: number, fullNumber: fullNumber)
+    override func newLine(network: String?, product: Product?, name: String?, shortName: String?, number: String?, trainNumber: String?) -> Line {
+        let line = super.newLine(network: network, product: product, name: name, shortName: shortName, number: number, trainNumber: trainNumber)
         
         if line.product == .bus && "57" == line.label {
             return Line(id: nil, network: line.network, product: line.product, label: line.label, name: line.name, style: line.style, attr: [.serviceReplacement, .circleClockwise], message: line.message)
