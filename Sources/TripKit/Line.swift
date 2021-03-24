@@ -10,30 +10,30 @@ public class Line: NSObject, NSSecureCoding {
     public let label: String?
     public let name: String?
     public let number: String?
+    /// Contains the (internal) full line number
+    public let fullNumber: String?
     public let style: LineStyle!
     public let attr: [Attr]?
     public let message: String?
     public let direction: Direction?
-    /// Contains the (internal) full line number
-    public let fullNumber: String?
     
     static let FOOTWAY = Line(id: nil, network: nil, product: nil, label: nil)
     static let TRANSFER = Line(id: nil, network: nil, product: nil, label: nil)
     static let SECURE_CONNECTION = Line(id: nil, network: nil, product: nil, label: nil)
     static let DO_NOT_CHANGE = Line(id: nil, network: nil, product: nil, label: nil)
     
-    public init(id: String?, network: String?, product: Product?, label: String?, name: String?, number: String? = nil, style: LineStyle!, attr: [Attr]?, message: String?, direction: Direction? = nil, fullNumber: String? = nil) {
+    public init(id: String?, network: String?, product: Product?, label: String?, name: String?, number: String? = nil, fullNumber: String? = nil, style: LineStyle!, attr: [Attr]?, message: String?, direction: Direction? = nil) {
         self.id = id
         self.network = network
         self.product = product
         self.label = label
         self.name = name
         self.number = number
+        self.fullNumber = fullNumber
         self.style = style
         self.attr = attr
         self.message = message
         self.direction = direction
-        self.fullNumber = fullNumber
     }
     
     public convenience init(id: String?, network: String?, product: Product?, label: String?) {
@@ -47,6 +47,7 @@ public class Line: NSObject, NSSecureCoding {
         let label = aDecoder.decodeObject(of: NSString.self, forKey: PropertyKey.label) as String?
         let name = aDecoder.decodeObject(of: NSString.self, forKey: PropertyKey.name) as String?
         let number = aDecoder.decodeObject(of: NSString.self, forKey: PropertyKey.number) as String?
+        let fullNumber = aDecoder.decodeObject(of: NSString.self, forKey: PropertyKey.fullNumber) as String?
         let style = aDecoder.decodeObject(of: LineStyle.self, forKey: PropertyKey.style)
         var attr = [Attr]()
         if let arr = aDecoder.decodeObject(of: [NSNumber.self, NSArray.self], forKey: PropertyKey.attr) as? [Int] {
@@ -63,9 +64,8 @@ public class Line: NSObject, NSSecureCoding {
         } else {
             direction = nil
         }
-        let fullNumber = aDecoder.decodeObject(of: NSString.self, forKey: PropertyKey.fullNumber) as String?
         
-        self.init(id: id, network: network, product: product, label: label, name: name, number: number, style: style, attr: attr, message: message, direction: direction, fullNumber: fullNumber)
+        self.init(id: id, network: network, product: product, label: label, name: name, number: number, fullNumber: fullNumber, style: style, attr: attr, message: message, direction: direction)
     }
     
     public func encode(with aCoder: NSCoder) {
@@ -87,6 +87,9 @@ public class Line: NSObject, NSSecureCoding {
         if let number = number {
             aCoder.encode(number, forKey: PropertyKey.number)
         }
+        if let fullNumber = fullNumber {
+            aCoder.encode(fullNumber, forKey: PropertyKey.fullNumber)
+        }
         if let style = style {
             aCoder.encode(style, forKey: PropertyKey.style)
         }
@@ -102,9 +105,6 @@ public class Line: NSObject, NSSecureCoding {
         }
         if let direction = direction {
             aCoder.encode(direction.rawValue, forKey: PropertyKey.direction)
-        }
-        if let fullNumber = fullNumber {
-            aCoder.encode(fullNumber, forKey: PropertyKey.fullNumber)
         }
     }
     
@@ -137,11 +137,11 @@ public class Line: NSObject, NSSecureCoding {
         static let label = "label"
         static let name = "name"
         static let number = "number"
+        static let fullNumber = "fullNumber"
         static let style = "style"
         static let attr = "attr"
         static let message = "message"
         static let direction = "direction"
-        static let fullNumber = "fullNumber"
         
     }
     

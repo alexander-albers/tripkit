@@ -674,7 +674,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
                     }
                     
                     let l = lines[prodX]
-                    let line = Line(id: l.id, network: l.network, product: l.product, label: l.label, name: l.name, number: l.number, style: l.style, attr: attrs, message: l.message, fullNumber: l.fullNumber)
+                    let line = Line(id: l.id, network: l.network, product: l.product, label: l.label, name: l.name, number: l.number, fullNumber: l.fullNumber, style: l.style, attr: attrs, message: l.message)
                     let dirTxt = jny["dirTxt"] as? String
                     let nameAndPlace = split(stationName: stripLineFromDestination(line: line, destinationName: dirTxt))
                     let destination: Location? = dirTxt == nil ? nil : Location(type: .any, id: nil, coord: nil, place: nameAndPlace.0, name: nameAndPlace.1)
@@ -879,7 +879,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         }
         let line: Line
         if !attr.isEmpty {
-            line = Line(id: l.id, network: l.network, product: l.product, label: l.label, name: l.name, style: l.style, attr: attr, message: l.message, fullNumber: l.fullNumber)
+            line = Line(id: l.id, network: l.network, product: l.product, label: l.label, name: l.name, fullNumber: l.fullNumber, style: l.style, attr: attr, message: l.message)
         } else {
             line = l
         }
@@ -1348,7 +1348,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
             if label?.contains("Zug-Nr.") ?? false, let shortName = shortName, name?.contains(shortName) ?? false {
                 label = shortName
             }
-            return Line(id: nil, network: network, product: product, label: label?.replacingOccurrences(of: " ", with: ""), name: longName, number: number, style: lineStyle(network: network, product: product, label: name), attr: nil, message: nil, fullNumber: fullNumber)
+            return Line(id: nil, network: network, product: product, label: label?.replacingOccurrences(of: " ", with: ""), name: longName, number: number, fullNumber: fullNumber, style: lineStyle(network: network, product: product, label: name), attr: nil, message: nil)
         }
     }
     
