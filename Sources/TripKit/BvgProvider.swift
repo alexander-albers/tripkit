@@ -13,7 +13,7 @@ public class BvgProvider: AbstractHafasClientInterfaceProvider {
         apiVersion = "1.18"
         apiClient = ["id": "BVG", "type": "IPH"]
         extVersion = "BVG.1"
-        jnyFilterIncludes = [["value": "BERLKOENIG", "mode": "INC", "type": "GROUP"]] // when removed, not routes between Hermsdorf and Bundestag can be found...
+        //jnyFilterIncludes = [["value": "BERLKOENIG", "mode": "INC", "type": "GROUP"]] // when removed, not routes between Hermsdorf and Bundestag can be found...
         
         styles = [
             "SS1": LineStyle(backgroundColor: LineStyle.rgb(221, 77, 174), foregroundColor: LineStyle.white),

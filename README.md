@@ -1,6 +1,6 @@
 # TripKit
 TripKit is a Swift-port of https://github.com/schildbach/public-transport-enabler with some additional enhancements. This library allows you to get data from public transport providers.
-Look into [NetworkProvider.swift](https://github.com/alexander-albers/tripkit/blob/master/TripKit/NetworkProvider.swift) for an overview of the API.
+Look into [NetworkProvider.swift](https://github.com/alexander-albers/tripkit/blob/master/Sources/TripKit/NetworkProvider.swift) for an overview of the API.
 
 TripKit is built using Swift 5.0 and requires iOS 10.0/watchOS 3.0/tvOS 10.0/macOS 10.12.
 
@@ -97,7 +97,7 @@ More api methods can be found in [NetworkProvider.swift](https://github.com/alex
 
 For some providers a secret like an API key is required to use their API. You need to request the secrets directly from the provider or use the same ones that are used by the official apps. For Navitia based providers, you can [request a secret here](http://www.navitia.io/register).
 
-For unit testing, you need to specify all required secrets in a secrets.json file. A template can be found [here](https://github.com/alexander-albers/tripkit/blob/master/TripKit/secrets.json.template).
+For unit testing, you need to specify all required secrets in a secrets.json file. A template can be found [here](https://github.com/alexander-albers/tripkit/blob/master/Sources/TripKit/secrets.json.template).
 
 ## Contributing and future plans
 

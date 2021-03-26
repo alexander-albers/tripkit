@@ -35,8 +35,8 @@ public class AbstractHafasProvider: AbstractNetworkProvider {
             let v = 1 << i
             if value >= v {
                 let p = productsMap[i]
-                if product == .onDemand && p == .bus {
-                    // just on_demand
+                if product == .onDemand && p == .bus || product == .bus && p == .onDemand {
+                    product = .onDemand
                 } else if let product = product {
                     throw ParseError(reason: "ambiguous product \(product)")
                 } else {

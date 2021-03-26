@@ -15,7 +15,7 @@ public class VgsProvider: AbstractHafasClientInterfaceProvider {
     
     override func split(stationName: String?) -> (String?, String?) {
         guard let stationName = stationName else { return super.split(stationName: nil) }
-        if let m = stationName.match(pattern: P_SPLIT_NAME_FIRST_COMMA) {
+        if let m = stationName.match(pattern: P_SPLIT_NAME_FIRST_COMMA), m[0] != nil {
             return (m[1], m[0])
         }
         return super.split(stationName: stationName)
