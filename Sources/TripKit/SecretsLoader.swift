@@ -6,7 +6,7 @@ public class SecretsLoader {
     
     public static func loadSecrets() -> [NetworkId: AuthorizationData] {
         guard
-            let url = Bundle(for: SecretsLoader.self).url(forResource: "secrets", withExtension: "json"),
+            let url = Bundle.module.url(forResource: "secrets", withExtension: "json"),
             let data = try? Data(contentsOf: url),
             let json = try? JSON(data: data)
         else {
