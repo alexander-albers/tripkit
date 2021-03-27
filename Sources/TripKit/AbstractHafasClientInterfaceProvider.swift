@@ -650,7 +650,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
                     }
                     
                     let l = lines[prodX]
-                    let line = Line(id: l.id, network: l.network, product: l.product, label: l.label, name: l.name, number: l.number, style: l.style, attr: attrs, message: l.message)
+                    let line = Line(id: l.id, network: l.network, product: l.product, label: l.label, name: l.name, number: l.number, vehicleNumber: l.vehicleNumber, style: l.style, attr: attrs, message: l.message)
                     let dirTxt = jny["dirTxt"] as? String
                     let nameAndPlace = split(stationName: stripLineFromDestination(line: line, destinationName: dirTxt))
                     let destination: Location? = dirTxt == nil ? nil : Location(type: .any, id: nil, coord: nil, place: nameAndPlace.0, name: nameAndPlace.1)
@@ -846,7 +846,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         }
         let line: Line
         if !attr.isEmpty {
-            line = Line(id: l.id, network: l.network, product: l.product, label: l.label, name: l.name, style: l.style, attr: Array(attr), message: l.message)
+            line = Line(id: l.id, network: l.network, product: l.product, label: l.label, name: l.name, vehicleNumber: l.vehicleNumber, style: l.style, attr: Array(attr), message: l.message)
         } else {
             line = l
         }
@@ -1192,8 +1192,14 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
             let cls = prod["cls"] as? Int ?? -1
             let product = cls == -1 ? nil : try intToProduct(productInt: cls)
             let number = prod["number"] as? String
-            
-            lines.append(newLine(network: op, product: product, name: name, shortName: nameS, number: number))
+
+            let prodCtx = prod["prodCtx"] as? [String: Any]
+            var vehicleNumber = prodCtx?["num"] as? String
+            if number != nil && vehicleNumber == number {
+                vehicleNumber = nil;
+            }
+
+            lines.append(newLine(network: op, product: product, name: name, shortName: nameS, number: number, vehicleNumber: vehicleNumber))
         }
         return lines
     }
@@ -1277,7 +1283,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         return result
     }
     
-    func newLine(network: String?, product: Product?, name: String?, shortName: String?, number: String?) -> Line {
+    func newLine(network: String?, product: Product?, name: String?, shortName: String?, number: String?, vehicleNumber: String?) -> Line {
         let longName: String?
         if let name = name {
             longName = name + (number != nil && !name.hasSuffix(number!) ? "(\(number!))" : "")
@@ -1302,7 +1308,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
             if label?.contains("Zug-Nr.") ?? false, let shortName = shortName, name?.contains(shortName) ?? false {
                 label = shortName
             }
-            return Line(id: nil, network: network, product: product, label: label?.replacingOccurrences(of: " ", with: ""), name: longName, number: number, style: lineStyle(network: network, product: product, label: name), attr: nil, message: nil)
+            return Line(id: nil, network: network, product: product, label: label?.replacingOccurrences(of: " ", with: ""), name: longName, number: number, vehicleNumber: vehicleNumber, style: lineStyle(network: network, product: product, label: name), attr: nil, message: nil)
         }
     }
     
