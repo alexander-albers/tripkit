@@ -192,24 +192,24 @@ public class BvgProvider: AbstractHafasClientInterfaceProvider {
 //        }
 //    }
     
-    override func newLine(network: String?, product: Product?, name: String?, shortName: String?, number: String?, trainNumber: String?) -> Line {
+    override func newLine(network: String?, product: Product?, name: String?, shortName: String?, number: String?, vehicleNumber: String?) -> Line {
         let label = name ?? ""
         if product == .suburbanTrain && label == "S41" {
-            return Line(id: nil, network: network, product: product, label: label, name: nil, number: number, trainNumber: trainNumber, style: lineStyle(network: network, product: product, label: label), attr: [.circleClockwise], message: nil)
+            return Line(id: nil, network: network, product: product, label: label, name: nil, number: number, vehicleNumber: vehicleNumber, style: lineStyle(network: network, product: product, label: label), attr: [.circleClockwise], message: nil)
         } else if product == .suburbanTrain && label == "S42" {
-            return Line(id: nil, network: network, product: product, label: label, name: nil, number: number, trainNumber: trainNumber, style: lineStyle(network: network, product: product, label: label), attr: [.circleAnticlockwise], message: nil)
+            return Line(id: nil, network: network, product: product, label: label, name: nil, number: number, vehicleNumber: vehicleNumber, style: lineStyle(network: network, product: product, label: label), attr: [.circleAnticlockwise], message: nil)
         } else if product == .bus && label == "S41" {
-            return Line(id: nil, network: network, product: product, label: label, name: nil, number: number, trainNumber: trainNumber, style: lineStyle(network: network, product: product, label: label), attr: [.serviceReplacement, .circleClockwise], message: nil)
+            return Line(id: nil, network: network, product: product, label: label, name: nil, number: number, vehicleNumber: vehicleNumber, style: lineStyle(network: network, product: product, label: label), attr: [.serviceReplacement, .circleClockwise], message: nil)
         } else if product == .bus && label == "S42" {
-            return Line(id: nil, network: network, product: product, label: label, name: nil, number: number, trainNumber: trainNumber, style: lineStyle(network: network, product: product, label: label), attr: [.serviceReplacement, .circleAnticlockwise], message: nil)
+            return Line(id: nil, network: network, product: product, label: label, name: nil, number: number, vehicleNumber: vehicleNumber, style: lineStyle(network: network, product: product, label: label), attr: [.serviceReplacement, .circleAnticlockwise], message: nil)
         } else if product == .bus && label == "TXL" {
-            return Line(id: nil, network: network, product: product, label: label, name: nil, number: number, trainNumber: trainNumber, style: lineStyle(network: network, product: product, label: label), attr: [.lineAirport], message: nil)
+            return Line(id: nil, network: network, product: product, label: label, name: nil, number: number, vehicleNumber: vehicleNumber, style: lineStyle(network: network, product: product, label: label), attr: [.lineAirport], message: nil)
         } else if product == .suburbanTrain && label == "S9" {
-            return Line(id: nil, network: network, product: product, label: label, name: nil, number: number, trainNumber: trainNumber, style: lineStyle(network: network, product: product, label: label), attr: [.lineAirport], message: nil)
+            return Line(id: nil, network: network, product: product, label: label, name: nil, number: number, vehicleNumber: vehicleNumber, style: lineStyle(network: network, product: product, label: label), attr: [.lineAirport], message: nil)
         } else if product == .suburbanTrain && label == "S45" {
-            return Line(id: nil, network: network, product: product, label: label, name: nil, number: number, trainNumber: trainNumber, style: lineStyle(network: network, product: product, label: label), attr: [.lineAirport], message: nil)
+            return Line(id: nil, network: network, product: product, label: label, name: nil, number: number, vehicleNumber: vehicleNumber, style: lineStyle(network: network, product: product, label: label), attr: [.lineAirport], message: nil)
         } else {
-            return super.newLine(network: network, product: product, name: name, shortName: shortName, number: number, trainNumber: trainNumber)
+            return super.newLine(network: network, product: product, name: name, shortName: shortName, number: number, vehicleNumber: vehicleNumber)
         }
     }
     
