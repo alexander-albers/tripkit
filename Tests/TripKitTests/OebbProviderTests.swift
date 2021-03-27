@@ -50,7 +50,7 @@ class OebbProviderTests: TripKitProviderTestCase, TripKitProviderTestsDelegate {
 
             if let trip = trips.first {
                 if let leg = trip.legs.first as? PublicLeg {
-                    XCTAssertNotNil(leg.line.trainNumber, "trainNumber must be not be nil")
+                    XCTAssertNotNil(leg.line.vehicleNumber, "vehicleNumber must be not be nil")
                 }
             }
         case .failure(let error):
