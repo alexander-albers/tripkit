@@ -10,6 +10,8 @@ public class Line: NSObject, NSSecureCoding {
     public let label: String?
     public let name: String?
     public let number: String?
+    /// Contains the (internal) full line number
+    public let vehicleNumber: String?
     public let style: LineStyle!
     public let attr: [Attr]?
     public let message: String?
@@ -20,13 +22,14 @@ public class Line: NSObject, NSSecureCoding {
     static let SECURE_CONNECTION = Line(id: nil, network: nil, product: nil, label: nil)
     static let DO_NOT_CHANGE = Line(id: nil, network: nil, product: nil, label: nil)
     
-    public init(id: String?, network: String?, product: Product?, label: String?, name: String?, number: String? = nil, style: LineStyle!, attr: [Attr]?, message: String?, direction: Direction? = nil) {
+    public init(id: String?, network: String?, product: Product?, label: String?, name: String?, number: String? = nil, vehicleNumber: String? = nil, style: LineStyle!, attr: [Attr]?, message: String?, direction: Direction? = nil) {
         self.id = id
         self.network = network
         self.product = product
         self.label = label
         self.name = name
         self.number = number
+        self.vehicleNumber = vehicleNumber
         self.style = style
         self.attr = attr
         self.message = message
@@ -44,6 +47,7 @@ public class Line: NSObject, NSSecureCoding {
         let label = aDecoder.decodeObject(of: NSString.self, forKey: PropertyKey.label) as String?
         let name = aDecoder.decodeObject(of: NSString.self, forKey: PropertyKey.name) as String?
         let number = aDecoder.decodeObject(of: NSString.self, forKey: PropertyKey.number) as String?
+        let vehicleNumber = aDecoder.decodeObject(of: NSString.self, forKey: PropertyKey.vehicleNumber) as String?
         let style = aDecoder.decodeObject(of: LineStyle.self, forKey: PropertyKey.style)
         var attr = [Attr]()
         if let arr = aDecoder.decodeObject(of: [NSNumber.self, NSArray.self], forKey: PropertyKey.attr) as? [Int] {
@@ -61,7 +65,7 @@ public class Line: NSObject, NSSecureCoding {
             direction = nil
         }
         
-        self.init(id: id, network: network, product: product, label: label, name: name, number: number, style: style, attr: attr, message: message, direction: direction)
+        self.init(id: id, network: network, product: product, label: label, name: name, number: number, vehicleNumber: vehicleNumber, style: style, attr: attr, message: message, direction: direction)
     }
     
     public func encode(with aCoder: NSCoder) {
@@ -82,6 +86,9 @@ public class Line: NSObject, NSSecureCoding {
         }
         if let number = number {
             aCoder.encode(number, forKey: PropertyKey.number)
+        }
+        if let vehicleNumber = vehicleNumber {
+            aCoder.encode(vehicleNumber, forKey: PropertyKey.vehicleNumber)
         }
         if let style = style {
             aCoder.encode(style, forKey: PropertyKey.style)
@@ -111,7 +118,7 @@ public class Line: NSObject, NSSecureCoding {
     }
     
     public override var description: String {
-        return "Line id=\(id ?? ""), network=\(network ?? ""), product=\(product?.rawValue ?? ""), label=\(label ?? ""), name=\(name ?? "")"
+        return "Line id=\(id ?? ""), network=\(network ?? ""), product=\(product?.rawValue ?? ""), label=\(label ?? ""), name=\(name ?? ""), vehicleNumber=\(vehicleNumber ?? "")"
     }
     
     public enum Attr: Int {
@@ -130,6 +137,7 @@ public class Line: NSObject, NSSecureCoding {
         static let label = "label"
         static let name = "name"
         static let number = "number"
+        static let vehicleNumber = "vehicleNumber"
         static let style = "style"
         static let attr = "attr"
         static let message = "message"
