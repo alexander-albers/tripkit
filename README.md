@@ -91,7 +91,7 @@ let asyncTask = provider.queryJourneyDetail(context: journeyContext) { (request,
 }
 ```
 
-More api methods can be found in [NetworkProvider.swift](https://github.com/alexander-albers/tripkit/blob/master/TripKit/NetworkProvider.swift).
+More api methods can be found in [NetworkProvider.swift](https://github.com/alexander-albers/tripkit/blob/master/Sources/TripKit/NetworkProvider.swift).
 
 ## Using providers that require secrets
 
