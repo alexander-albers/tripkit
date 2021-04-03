@@ -795,7 +795,7 @@
 				FA5CD33924FBB61300B4990A /* Info-tvOS.plist */,
 				FA5CD33A24FBB61300B4990A /* Info-watchOS.plist */,
 			);
-			name = "Supporting Files";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		FA5CD33B24FBBA8800B4990A /* Supporting Files */ = {
@@ -833,7 +833,7 @@
 				FAB7541F1E3FD3E500C343F2 /* QueryDeparturesResult.swift */,
 				FAF9955A200E3E1D008D8582 /* QueryJourneyDetailResult.swift */,
 			);
-			name = Result;
+			path = Result;
 			sourceTree = "<group>";
 		};
 		FAB754151E3FD37D00C343F2 /* Provider */ = {
@@ -848,7 +848,7 @@
 				FAC2E8792267023E009F95F5 /* Implementations */,
 				FAA0A296213705030098EFED /* MockKvvProvider.swift */,
 			);
-			name = Provider;
+			path = Provider;
 			sourceTree = "<group>";
 		};
 		FAB754161E3FD3B800C343F2 /* Model */ = {
@@ -871,7 +871,7 @@
 				FAB754261E3FD3E500C343F2 /* Trip.swift */,
 				FAA569431E7415DC006EB901 /* Fare.swift */,
 			);
-			name = Model;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		FAB754471E3FDC7C00C343F2 /* Frameworks */ = {
@@ -949,7 +949,7 @@
 				FAB267DB21839F1D00F8C5F5 /* SvvProvider.swift */,
 				FA4371331F63052700F53B82 /* StvProvider.swift */,
 			);
-			name = Implementations;
+			path = Implementations;
 			sourceTree = "<group>";
 		};
 		FACB83B91E3FD0CE00AC5F1F = {
@@ -1065,7 +1065,7 @@
 				FA70585F227205D30070D2C9 /* SecretsLoader.swift */,
 				FA2C85C225F13BBE003880FB /* Bundle.swift */,
 			);
-			name = Util;
+			path = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
