@@ -142,14 +142,18 @@ public class TripOptions: NSObject, NSSecureCoding {
     public var options: [Option]?
     public var maxChanges: Int?
     public var minChangeTime: Int? // in minutes
+    public var maxFootpathTime: Int? // in minutes
+    public var maxFootpathDist: Int? // in meters
     
-    public init(products: [Product]? = nil, optimize: Optimize? = nil, walkSpeed: WalkSpeed? = nil, accessibility: Accessibility? = nil, options: [Option]? = nil, maxChanges: Int? = nil, minChangeTime: Int? = nil) {
+    public init(products: [Product]? = nil, optimize: Optimize? = nil, walkSpeed: WalkSpeed? = nil, accessibility: Accessibility? = nil, options: [Option]? = nil, maxChanges: Int? = nil, minChangeTime: Int? = nil, maxFootpathTime: Int? = nil, maxFootpathDist: Int? = nil) {
         self.products = products
         self.optimize = optimize
         self.accessibility = accessibility
         self.options = options
         self.maxChanges = maxChanges
         self.minChangeTime = minChangeTime
+        self.maxFootpathTime = maxFootpathTime
+        self.maxFootpathDist = maxFootpathDist
     }
     
     public required convenience init?(coder aDecoder: NSCoder) {
@@ -162,7 +166,9 @@ public class TripOptions: NSObject, NSSecureCoding {
         let options = optionsInt?.compactMap { Option(rawValue: $0) }
         let maxChanges = aDecoder.decodeObject(of: NSNumber.self, forKey: PropertyKey.maxChanges) as? Int
         let minChangeTime = aDecoder.decodeObject(of: NSNumber.self, forKey: PropertyKey.minChangeTime) as? Int
-        self.init(products: products, optimize: optimize, walkSpeed: walkSpeed, accessibility: accessibility, options: options, maxChanges: maxChanges, minChangeTime: minChangeTime)
+        let maxFootpathTime = aDecoder.decodeObject(of: NSNumber.self, forKey: PropertyKey.maxFootpathTime) as? Int
+        let maxFootpathDist = aDecoder.decodeObject(of: NSNumber.self, forKey: PropertyKey.maxFootpathDist) as? Int
+        self.init(products: products, optimize: optimize, walkSpeed: walkSpeed, accessibility: accessibility, options: options, maxChanges: maxChanges, minChangeTime: minChangeTime, maxFootpathTime: maxFootpathTime, maxFootpathDist: maxFootpathDist)
     }
     
     public func encode(with aCoder: NSCoder) {
@@ -175,6 +181,8 @@ public class TripOptions: NSObject, NSSecureCoding {
         aCoder.encode(options?.map { $0.rawValue }, forKey: PropertyKey.options)
         aCoder.encode(maxChanges, forKey: PropertyKey.maxChanges)
         aCoder.encode(minChangeTime, forKey: PropertyKey.minChangeTime)
+        aCoder.encode(maxFootpathTime, forKey: PropertyKey.maxFootpathTime)
+        aCoder.encode(maxFootpathDist, forKey: PropertyKey.maxFootpathDist)
     }
     
     struct PropertyKey {
@@ -185,9 +193,11 @@ public class TripOptions: NSObject, NSSecureCoding {
         static let options = "options"
         static let maxChanges = "maxChanges"
         static let minChangeTime = "minChangeTime"
+        static let maxFootpathTime = "maxFootpathTime"
+        static let maxFootpathDist = "maxFootpathDist"
     }
 }
 
 public enum QueryTrait: Int {
-    case maxChanges, minChangeTime
+    case maxChanges, minChangeTime, maxFootpathTime, maxFootpathDist
 }
