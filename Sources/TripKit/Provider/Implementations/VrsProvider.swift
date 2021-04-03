@@ -623,6 +623,8 @@ public class VrsProvider: AbstractNetworkProvider {
                 completion(httpRequest, .unknownVia)
             } else if error == "Destination invalid." {
                 completion(httpRequest, .unknownTo)
+            } else if error == "Fehlerhafter Start" {
+                completion(httpRequest, .unknownFrom)
             } else if error == "Fehlerhaftes Ziel" {
                 completion(httpRequest, .unknownTo)
             } else if error == "Produkt ungültig." {
