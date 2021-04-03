@@ -5,7 +5,7 @@ import SwiftyJSON
 
 public class AbstractEfaProvider: AbstractNetworkProvider {
     
-    override public var supportedQueryTraits: Set<QueryTrait> { return [.maxChanges] }
+    override public var supportedQueryTraits: Set<QueryTrait> { [.maxChanges, .maxFootpathTime] }
     
     let departureMonitorEndpoint: String
     let tripEndpoint: String
@@ -1544,7 +1544,7 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
         if useProxFootSearch {
             builder.addParameter(key: "useProxFootSearch", value: 1) // walk if it makes journeys quicker
         }
-        builder.addParameter(key: "trITMOTvalue100", value: 10) // maximum time to walk to first or from last stop
+        builder.addParameter(key: "trITMOTvalue100", value: tripOptions.maxFootpathTime ?? 10) // maximum time to walk to first or from last stop
         
         if let options = tripOptions.options, options.contains(.bike) {
             builder.addParameter(key: "bikeTakeAlong", value: 1)

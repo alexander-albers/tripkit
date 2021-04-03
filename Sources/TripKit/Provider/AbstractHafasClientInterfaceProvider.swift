@@ -3,7 +3,7 @@ import os.log
 
 public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
     
-    override public var supportedQueryTraits: Set<QueryTrait> { return [.maxChanges, .minChangeTime] }
+    override public var supportedQueryTraits: Set<QueryTrait> { [.maxChanges, .minChangeTime, .maxFootpathDist] }
     
     var mgateEndpoint: String
     var apiVersion: String?
@@ -916,7 +916,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
                     "profile": [
                         "type": "F",
                         "linDistRouting": false,
-                        "maxdist": 2000
+                        "maxdist": tripOptions.maxFootpathDist ?? 2000
                     ],
                     "type": "M",
                     "meta": meta
