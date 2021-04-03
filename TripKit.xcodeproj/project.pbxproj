@@ -50,14 +50,11 @@
 		FA5CD1C024FBAF4F00B4990A /* Gzip in Frameworks */ = {isa = PBXBuildFile; productRef = FA5CD1BF24FBAF4F00B4990A /* Gzip */; };
 		FA5CD1C324FBAF9000B4990A /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = FA5CD1C224FBAF9000B4990A /* SwiftyJSON */; };
 		FA5CD1C824FBAFCA00B4990A /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = FA5CD1C724FBAFCA00B4990A /* SwiftyJSON */; };
-		FA5CD1CC24FBAFD700B4990A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA5CD1CB24FBAFD700B4990A /* Security.framework */; };
 		FA5CD1E924FBB12800B4990A /* Gzip in Frameworks */ = {isa = PBXBuildFile; productRef = FA5CD1E824FBB12800B4990A /* Gzip */; };
 		FA5CD1EB24FBB12800B4990A /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = FA5CD1EA24FBB12800B4990A /* SwiftyJSON */; };
-		FA5CD1EF24FBB12C00B4990A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA5CD1EE24FBB12C00B4990A /* Security.framework */; };
 		FA5CD20424FBB1D200B4990A /* TripKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA5CD1FB24FBB1D200B4990A /* TripKit.framework */; };
 		FA5CD21324FBB1E100B4990A /* Gzip in Frameworks */ = {isa = PBXBuildFile; productRef = FA5CD21224FBB1E100B4990A /* Gzip */; };
 		FA5CD21524FBB1E100B4990A /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = FA5CD21424FBB1E100B4990A /* SwiftyJSON */; };
-		FA5CD21924FBB1E700B4990A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA5CD21824FBB1E700B4990A /* Security.framework */; };
 		FA5CD22324FBB1FC00B4990A /* TripKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA5CD1D324FBB10C00B4990A /* TripKit.framework */; };
 		FA5CD22924FBB29000B4990A /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB7543A1E3FD3F300C343F2 /* NetworkProvider.swift */; };
 		FA5CD22A24FBB29000B4990A /* AbstractNetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB754381E3FD3F300C343F2 /* AbstractNetworkProvider.swift */; };
@@ -553,8 +550,6 @@
 		FA11F6E420496C7100B66359 /* UrlBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlBuilder.swift; sourceTree = "<group>"; };
 		FA17EBE81E757FF3001ECA09 /* AbstractHafasLegacyProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbstractHafasLegacyProvider.swift; sourceTree = "<group>"; };
 		FA17EBEC1E758087001ECA09 /* DbProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DbProvider.swift; sourceTree = "<group>"; };
-		FA17EBEE1E758D2A001ECA09 /* Gzip.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Gzip.framework; path = "../../../Library/Developer/Xcode/DerivedData/Gzip-equamnblcfvatcgcarvhkosiwvwe/Build/Products/Debug-iphonesimulator/Gzip.framework"; sourceTree = "<group>"; };
-		FA1A78BE1F058FD800CD627E /* UtilKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UtilKit.framework; path = "../UtilKit/build/Debug-iphoneos/UtilKit.framework"; sourceTree = "<group>"; };
 		FA1C85771E437D73002BFE6E /* AsyncRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncRequest.swift; sourceTree = "<group>"; };
 		FA2454C51E86A2A500445AD5 /* BayernProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BayernProvider.swift; sourceTree = "<group>"; };
 		FA2454C91E86B05600445AD5 /* ParserUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParserUtils.swift; sourceTree = "<group>"; };
@@ -577,13 +572,10 @@
 		FA4F58131E8BCA6800EA392F /* VmvProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VmvProvider.swift; sourceTree = "<group>"; };
 		FA4F58171E8BD1D800EA392F /* GvhProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GvhProvider.swift; sourceTree = "<group>"; };
 		FA4F58191E8BD30500EA392F /* ShProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShProvider.swift; sourceTree = "<group>"; };
-		FA5CD1CB24FBAFD700B4990A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS6.2.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
 		FA5CD1CD24FBAFFF00B4990A /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		FA5CD1D324FBB10C00B4990A /* TripKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TripKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FA5CD1EE24FBB12C00B4990A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS13.4.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
 		FA5CD1FB24FBB1D200B4990A /* TripKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TripKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA5CD20324FBB1D200B4990A /* TripKit macOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TripKit macOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FA5CD21824FBB1E700B4990A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
 		FA5CD21E24FBB1FC00B4990A /* TripKit tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TripKit tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA5CD33824FBB61300B4990A /* Info-macOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-macOS.plist"; sourceTree = "<group>"; };
 		FA5CD33924FBB61300B4990A /* Info-tvOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-tvOS.plist"; sourceTree = "<group>"; };
@@ -701,18 +693,15 @@
 		FACB83C71E3FD0CE00AC5F1F /* Info-iOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-iOS.plist"; sourceTree = "<group>"; };
 		FACB83CC1E3FD0CE00AC5F1F /* TripKitTests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TripKitTests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FACB83DD1E3FD0E900AC5F1F /* TripKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripKit.swift; sourceTree = "<group>"; };
-		FACB98E91E75999C00D51711 /* Gzip.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Gzip.framework; path = "../../../Library/Developer/Xcode/DerivedData/Verbindungen-dvwyzzlojrlxjzblsjwbyvjxmxyf/Build/Products/Debug-iphonesimulator/Gzip.framework"; sourceTree = "<group>"; };
 		FACD98811E87AF170019BE80 /* MvvProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MvvProvider.swift; sourceTree = "<group>"; };
 		FACD98851E87E8530019BE80 /* VgnProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VgnProvider.swift; sourceTree = "<group>"; };
 		FACD98891E87F0D40019BE80 /* VvmProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VvmProvider.swift; sourceTree = "<group>"; };
 		FACD988D1E881A190019BE80 /* NvvProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NvvProvider.swift; sourceTree = "<group>"; };
 		FACFBBC71F850EE600679CD4 /* AvvAachenProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvvAachenProvider.swift; sourceTree = "<group>"; };
 		FAD8E0CC2287197A00C0036C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		FAEB1CE31E96A6D80089F77F /* TripKit */ = {isa = PBXFileReference; lastKnownFileType = folder; path = TripKit; sourceTree = "<group>"; };
 		FAF2B36D21BFF80C006439C5 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		FAF9955A200E3E1D008D8582 /* QueryJourneyDetailResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryJourneyDetailResult.swift; sourceTree = "<group>"; };
 		FAFF18D11FA50B9500A8ED69 /* TripKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TripKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FAFF18E41FA50C4C00A8ED69 /* Gzip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Gzip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -722,7 +711,6 @@
 			files = (
 				FA4EB1C5251F8AD400BCAD4B /* SWXMLHash in Frameworks */,
 				FA5CD1EB24FBB12800B4990A /* SwiftyJSON in Frameworks */,
-				FA5CD1EF24FBB12C00B4990A /* Security.framework in Frameworks */,
 				FA5CD1E924FBB12800B4990A /* Gzip in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -733,7 +721,6 @@
 			files = (
 				FA4EB1C7251F8AD900BCAD4B /* SWXMLHash in Frameworks */,
 				FA5CD21524FBB1E100B4990A /* SwiftyJSON in Frameworks */,
-				FA5CD21924FBB1E700B4990A /* Security.framework in Frameworks */,
 				FA5CD21324FBB1E100B4990A /* Gzip in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -779,7 +766,6 @@
 			files = (
 				FA4EB1C3251F8ACF00BCAD4B /* SWXMLHash in Frameworks */,
 				FA5CD1C824FBAFCA00B4990A /* SwiftyJSON in Frameworks */,
-				FA5CD1CC24FBAFD700B4990A /* Security.framework in Frameworks */,
 				FA5CD1C024FBAF4F00B4990A /* Gzip in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -878,15 +864,7 @@
 			isa = PBXGroup;
 			children = (
 				FAF2B36D21BFF80C006439C5 /* Security.framework */,
-				FA5CD1CB24FBAFD700B4990A /* Security.framework */,
-				FA5CD1EE24FBB12C00B4990A /* Security.framework */,
-				FA5CD21824FBB1E700B4990A /* Security.framework */,
-				FAFF18E41FA50C4C00A8ED69 /* Gzip.framework */,
 				FAAFE7671F616E9C00DEDF49 /* UtilKit.framework */,
-				FA1A78BE1F058FD800CD627E /* UtilKit.framework */,
-				FAEB1CE31E96A6D80089F77F /* TripKit */,
-				FACB98E91E75999C00D51711 /* Gzip.framework */,
-				FA17EBEE1E758D2A001ECA09 /* Gzip.framework */,
 				FAB754481E3FDC7D00C343F2 /* TripKit.xcodeproj */,
 			);
 			name = Frameworks;
