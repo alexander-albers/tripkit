@@ -8,8 +8,8 @@ public class VbnProvider: AbstractHafasClientInterfaceProvider {
     public init(apiAuthorization: [String: Any]) {
         super.init(networkId: .VBN, apiBase: VbnProvider.API_BASE, productsMap: VbnProvider.PRODUCTS_MAP)
         self.apiAuthorization = apiAuthorization
-        apiVersion = "1.10"
-        apiClient = ["id": "VBN"]
+        apiVersion = "1.18"
+        apiClient = ["id": "VBN", "type": "WEB"]
         
         styles = [
             // Bremen
