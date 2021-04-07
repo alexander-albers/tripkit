@@ -38,7 +38,7 @@ public class AbstractHafasProvider: AbstractNetworkProvider {
                 if (product == .onDemand && p == .bus) || (product == .bus && p == .onDemand) {
                     product = .onDemand
                 } else if let product = product, product != p {
-                    throw ParseError(reason: "ambiguous product \(product)")
+                    throw ParseError(reason: "ambiguous product \(product)-\(String(describing: p))")
                 } else {
                     product = p
                 }
