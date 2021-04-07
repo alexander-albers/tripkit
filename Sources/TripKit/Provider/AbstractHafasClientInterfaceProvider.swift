@@ -604,50 +604,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
                 switch sec["type"] as? String ?? "" {
                 case "JNY", "TETA":
                     guard let jny = sec["jny"] as? [String: Any], let prodX = jny["prodX"] as? Int, let stopL = jny["stopL"] as? [Any] else { throw ParseError(reason: "failed to parse outcon jny") }
-                    let attrs: [Line.Attr]?
-                    var legMessages = Set<String>()
-                    var cancelled = jny["isCncl"] as? Bool ?? false
-                    if let remL = jny["remL"] as? [Any] ?? jny["msgL"] as? [Any] {
-                        var result = Set<Line.Attr>()
-                        for rem in remL {
-                            guard let rem = rem as? [String: Any] else { continue }
-                            if rem["type"] as? String == "REM", let remX = rem["remX"] as? Int {
-                                guard remX >= 0 && remX < rems?.count ?? 0, let attr = rems?[remX] else { continue }
-                                switch attr {
-                                case .bicycleCarriage:  result.insert(.bicycleCarriage)
-                                case .wheelChairAccess: result.insert(.wheelChairAccess)
-                                case .boardRestaurant:  result.insert(.restaurant)
-                                case .airConditioned:   result.insert(.airConditioned)
-                                case .wifi:             result.insert(.wifiAvailable)
-                                case .powerSockets:     result.insert(.powerSockets)
-                                case .cancelled(let reason):
-                                    if let reason = reason {
-                                        legMessages.insert(reason.trimmingCharacters(in: .whitespacesAndNewlines))
-                                    }
-                                    cancelled = true
-                                case .unknown(let reason):
-                                    if let reason = reason {
-                                        legMessages.insert(reason.trimmingCharacters(in: .whitespacesAndNewlines))
-                                    }
-                                default:
-                                    break
-                                }
-                            } else if rem["type"] as? String == "HIM", let himX = rem["himX"] as? Int {
-                                guard himX >= 0 && himX < messages?.count ?? 0, let text = messages?[himX] else { continue }
-                                legMessages.insert(text.trimmingCharacters(in: .whitespacesAndNewlines))
-                            }
-                        }
-                        attrs = result.isEmpty ? nil : Array(result)
-                    } else {
-                        attrs = nil
-                    }
-                    if let himL = jny["himL"] as? [Any] {
-                        for him in himL {
-                            guard let him = him as? [String: Any], let himX = him["himX"] as? Int else { throw ParseError(reason: "failed to parse him") }
-                            guard let text = messages?[himX] else { continue }
-                            legMessages.insert(text.trimmingCharacters(in: .whitespacesAndNewlines))
-                        }
-                    }
+                    var (legMessages, attrs, cancelled) = try parseMessages(jny: jny, rems: rems, messages: messages)
                     
                     let l = lines[prodX]
                     let line = Line(id: l.id, network: l.network, product: l.product, label: l.label, name: l.name, number: l.number, vehicleNumber: l.vehicleNumber, style: l.style, attr: attrs, message: l.message)
@@ -790,6 +747,8 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         let lines = try parseProdList(prodList: prodList, operators: operators)
         let remList = common["remL"] as? [Any]
         let rems = try parseRemList(remList: remList)
+        let himList = common["himL"] as? [Any]
+        let messages = try parseMessageList(himList: himList)
         
         guard let journey = res["journey"] as? [String: Any], let stopL = journey["stopL"] as? [Any], let baseDateString = journey["date"] as? String else {
             throw ParseError(reason: "could not parse journey stop list")
@@ -812,44 +771,9 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         guard let prodX = journey["prodX"] as? Int, prodX >= 0 && prodX < lines.count else { throw ParseError(reason: "failed to parse line") }
         let l = lines[prodX]
         
-        var message = ""
-        var attr = Set<Line.Attr>()
-        for msg in journey["msgL"] as? [Any] ?? [] {
-            guard let msg = msg as? [String: Any], let type = msg["type"] as? String, type == "REM", let remX = msg["remX"] as? Int, remX >= 0 && remX < rems?.count ?? 0, let rem = rems?[remX] else { continue }
-            switch rem {
-            case .bicycleCarriage:
-                attr.insert(.bicycleCarriage)
-            case .wheelChairAccess:
-                attr.insert(.wheelChairAccess)
-            case .boardRestaurant:
-                attr.insert(.restaurant)
-            case .airConditioned:
-                attr.insert(.airConditioned)
-            case .wifi:
-                attr.insert(.wifiAvailable)
-            case .powerSockets:
-                attr.insert(.powerSockets)
-            case .unknown(let reason):
-                if let reason = reason {
-                    if message != "" {
-                        message += "\n"
-                    }
-                    message += reason.trimmingCharacters(in: .whitespacesAndNewlines)
-                    if !message.hasSuffix(".") && !message.hasSuffix("!") {
-                        message += "."
-                    }
-                }
-                break
-            default:
-                break
-            }
-        }
-        let line: Line
-        if !attr.isEmpty {
-            line = Line(id: l.id, network: l.network, product: l.product, label: l.label, name: l.name, vehicleNumber: l.vehicleNumber, style: l.style, attr: Array(attr), message: l.message)
-        } else {
-            line = l
-        }
+        var (legMessages, attrs, cancelled) = try parseMessages(jny: journey, rems: rems, messages: messages)
+        
+        let line = Line(id: l.id, network: l.network, product: l.product, label: l.label, name: l.name, vehicleNumber: l.vehicleNumber, style: l.style, attr: attrs, message: l.message)
         
         var intermediateStops: [Stop] = []
         for stop in stopL {
@@ -863,10 +787,11 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         let departure = intermediateStops.removeFirst()
         let arrival = intermediateStops.removeLast()
         if let arrivalMessage = arrival.message {
-            if message != "" {
-                message += "\n"
-            }
-            message += arrivalMessage
+            legMessages.insert(arrivalMessage)
+        }
+        
+        if cancelled {
+            intermediateStops.forEach({$0.departureCancelled = true; $0.arrivalCancelled = true})
         }
         
         let destination: Location?
@@ -877,7 +802,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
             destination = arrival.location
         }
         
-        let leg = PublicLeg(line: line, destination: destination, departureStop: departure, arrivalStop: arrival, intermediateStops: intermediateStops, message: !message.isEmpty ? message : nil, path: path, journeyContext: nil)
+        let leg = PublicLeg(line: line, destination: destination, departureStop: departure, arrivalStop: arrival, intermediateStops: intermediateStops, message: legMessages.joined(separator: "\n").emptyToNil, path: path, journeyContext: nil)
         let trip = Trip(id: "", from: departure.location, to: arrival.location, legs: [leg], fares: [])
         completion(httpRequest, .success(trip: trip, leg: leg))
     }
@@ -1281,6 +1206,54 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
             result.append(head)
         }
         return result
+    }
+    
+    func parseMessages(jny: [String: Any], rems: [RemAttrib]?, messages: [String]?) throws -> (legMessages: Set<String>, attrs: [Line.Attr]?, cancelled: Bool) {
+        var legMessages = Set<String>()
+        let attrs: [Line.Attr]?
+        var cancelled = jny["isCncl"] as? Bool ?? false
+        if let remL = jny["remL"] as? [Any] ?? jny["msgL"] as? [Any] {
+            var result = Set<Line.Attr>()
+            for rem in remL {
+                guard let rem = rem as? [String: Any] else { continue }
+                if rem["type"] as? String == "REM", let remX = rem["remX"] as? Int {
+                    guard remX >= 0 && remX < rems?.count ?? 0, let attr = rems?[remX] else { continue }
+                    switch attr {
+                    case .bicycleCarriage:  result.insert(.bicycleCarriage)
+                    case .wheelChairAccess: result.insert(.wheelChairAccess)
+                    case .boardRestaurant:  result.insert(.restaurant)
+                    case .airConditioned:   result.insert(.airConditioned)
+                    case .wifi:             result.insert(.wifiAvailable)
+                    case .powerSockets:     result.insert(.powerSockets)
+                    case .cancelled(let reason):
+                        if let reason = reason {
+                            legMessages.insert(reason.trimmingCharacters(in: .whitespacesAndNewlines))
+                        }
+                        cancelled = true
+                    case .unknown(let reason):
+                        if let reason = reason {
+                            legMessages.insert(reason.trimmingCharacters(in: .whitespacesAndNewlines))
+                        }
+                    default:
+                        break
+                    }
+                } else if rem["type"] as? String == "HIM", let himX = rem["himX"] as? Int {
+                    guard himX >= 0 && himX < messages?.count ?? 0, let text = messages?[himX] else { continue }
+                    legMessages.insert(text.trimmingCharacters(in: .whitespacesAndNewlines))
+                }
+            }
+            attrs = result.isEmpty ? nil : Array(result)
+        } else {
+            attrs = nil
+        }
+        if let himL = jny["himL"] as? [Any] {
+            for him in himL {
+                guard let him = him as? [String: Any], let himX = him["himX"] as? Int else { throw ParseError(reason: "failed to parse him") }
+                guard let text = messages?[himX] else { continue }
+                legMessages.insert(text.trimmingCharacters(in: .whitespacesAndNewlines))
+            }
+        }
+        return (legMessages, attrs, cancelled)
     }
     
     func newLine(network: String?, product: Product?, name: String?, shortName: String?, number: String?, vehicleNumber: String?) -> Line {
