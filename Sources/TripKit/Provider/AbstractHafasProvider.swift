@@ -103,7 +103,8 @@ public class AbstractHafasProvider: AbstractNetworkProvider {
     var P_POSITION_PLATFORM: NSRegularExpression { return try! NSRegularExpression(pattern: "^Gleis\\s*(.*)\\s*$", options: .caseInsensitive) }
     
     func normalize(position: String?) -> String? {
-        guard let position = position else { return nil }
+        guard let position = position, !position.isEmpty else { return nil }
+        if position == "null" { return nil }
         if let match = P_POSITION_PLATFORM.firstMatch(in: position, options: [], range: NSMakeRange(0, position.count)) {
             let substring = (position as NSString).substring(with: match.range(at: 1))
             return substring
