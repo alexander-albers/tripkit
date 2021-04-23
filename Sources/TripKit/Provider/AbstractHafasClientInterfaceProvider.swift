@@ -648,14 +648,23 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
                     }
                     
                     leg = PublicLeg(line: line, destination: destination, departureStop: departureStop, arrivalStop: arrivalStop, intermediateStops: intermediateStops, message: legMessages.joined(separator: "\n").emptyToNil, path: path, journeyContext: journeyContext)
-                    break
                 case "WALK", "TRSF", "DEVI":
                     guard let departureStop = try parseStop(dict: dep, locations: locations, rems: rems, baseDate: baseDate, line: nil), let arrivalStop = try parseStop(dict: arr, locations: locations, rems: rems, baseDate: baseDate, line: nil) else { throw ParseError(reason: "failed to parse departure/arrival stop") }
                     guard let gis = sec["gis"] as? [String: Any] else { throw ParseError(reason: "failed to parse outcon gis") }
                     let distance = gis["distance"] as? Int ?? 0
                     let addTime: TimeInterval = !legs.isEmpty ? max(0, -departureStop.getMinTime().timeIntervalSince(legs.last!.getMaxTime())) : 0
                     leg = IndividualLeg(type: .WALK, departureTime: departureStop.getMinTime().addingTimeInterval(addTime), departure: departureStop.location, arrival: arrivalStop.location, arrivalTime: arrivalStop.getMaxTime().addingTimeInterval(addTime), distance: distance, path: [])
-                    break
+                case "KISS":
+                    guard let departureStop = try parseStop(dict: dep, locations: locations, rems: rems, baseDate: baseDate, line: nil), let arrivalStop = try parseStop(dict: arr, locations: locations, rems: rems, baseDate: baseDate, line: nil) else { throw ParseError(reason: "failed to parse departure/arrival stop") }
+                    guard let gis = sec["gis"] as? [String: Any] else { throw ParseError(reason: "failed to parse outcon gis") }
+                    let distance = gis["distance"] as? Int ?? 0
+                    let addTime: TimeInterval = !legs.isEmpty ? max(0, -departureStop.getMinTime().timeIntervalSince(legs.last!.getMaxTime())) : 0
+                    if let mcp = dep["mcp"] as? [String: Any], let mcpData = mcp["mcpData"] as? [String: Any], let provider = mcpData["provider"] as? String, let providerName = mcpData["providerName"] as? String, provider == "berlkoenig" {
+                        let line = Line(id: nil, network: nil, product: .onDemand, label: providerName, name: providerName, number: nil, vehicleNumber: nil, style: lineStyle(network: nil, product: .onDemand, label: providerName), attr: nil, message: nil, direction: nil)
+                        leg = PublicLeg(line: line, destination: arrivalStop.location, departureStop: departureStop, arrivalStop: arrivalStop, intermediateStops: [], message: nil, path: [], journeyContext: nil)
+                    } else {
+                        leg = IndividualLeg(type: .WALK, departureTime: departureStop.getMinTime().addingTimeInterval(addTime), departure: departureStop.location, arrival: arrivalStop.location, arrivalTime: arrivalStop.getMaxTime().addingTimeInterval(addTime), distance: distance, path: [])
+                    }
                 default:
                     throw ParseError(reason: "could not parse outcon sec type \(sec["type"] as? String ?? "")")
                 }

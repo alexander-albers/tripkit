@@ -10,10 +10,17 @@ public class BvgProvider: AbstractHafasClientInterfaceProvider {
     public init(apiAuthorization: [String: Any]) {
         super.init(networkId: .BVG, apiBase: BvgProvider.API_BASE, desktopQueryEndpoint: BvgProvider.DESKTOP_QUERY_ENDPOINT, desktopStboardEndpoint: BvgProvider.DESKTOP_STBOARD_ENDPOINT, productsMap: BvgProvider.PRODUCTS_MAP)
         self.apiAuthorization = apiAuthorization
-        apiVersion = "1.18"
+        apiVersion = "1.24"
         apiClient = ["id": "BVG", "type": "IPH"]
         extVersion = "BVG.1"
-        //jnyFilterIncludes = [["value": "BERLKOENIG", "mode": "INC", "type": "GROUP"]] // when removed, not routes between Hermsdorf and Bundestag can be found...
+        jnyFilterIncludes = [
+            // See issue #26. When removed, no routes between Hermsdorf and Bundestag can be found, for example.
+            // We enable the berlkönig product but exclude it from the search results, such that we are still able
+            // to query for all trips without any errors, but exclude the berlkönig product from the results.
+            // This is similarly done in the official BVG apps.
+            ["value": "BERLKOENIG", "mode": "INC", "type": "GROUP"],
+            ["value": "berlkoenig", "mode": "EXC", "type": "GISPROD"]
+        ]
         
         styles = [
             "SS1": LineStyle(backgroundColor: LineStyle.rgb(221, 77, 174), foregroundColor: LineStyle.white),
@@ -125,7 +132,9 @@ public class BvgProvider: AbstractHafasClientInterfaceProvider {
             "RPE74": LineStyle(shape: .rect, backgroundColor: LineStyle.parseColor("#0072BC"), foregroundColor: LineStyle.white),
             "T89": LineStyle(shape: .rect, backgroundColor: LineStyle.parseColor("#EE1C23"), foregroundColor: LineStyle.white),
             "RRB91": LineStyle(shape: .rect, backgroundColor: LineStyle.parseColor("#A7653F"), foregroundColor: LineStyle.white),
-            "RRB93": LineStyle(shape: .rect, backgroundColor: LineStyle.parseColor("#A7653F"), foregroundColor: LineStyle.white)
+            "RRB93": LineStyle(shape: .rect, backgroundColor: LineStyle.parseColor("#A7653F"), foregroundColor: LineStyle.white),
+            
+            "PBerlKönig": LineStyle(shape: .rect, backgroundColor: LineStyle.rgb(240, 215, 33), foregroundColor: LineStyle.black)
         ]
     }
     
