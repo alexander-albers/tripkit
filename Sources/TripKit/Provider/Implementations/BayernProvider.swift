@@ -16,6 +16,7 @@ public class BayernProvider: AbstractEfaProvider {
         
         numTripsRequested = 12
         includeRegionId = false
+        useProxFootSearch = false
     }
 
     override public func queryNearbyLocations(location: Location, types: [LocationType]?, maxDistance: Int, maxLocations: Int, completion: @escaping (HttpRequest, NearbyLocationsResult) -> Void) -> AsyncRequest {
