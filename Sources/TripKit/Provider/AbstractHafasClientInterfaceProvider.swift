@@ -603,7 +603,8 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
                 let leg: Leg
                 switch sec["type"] as? String ?? "" {
                 case "JNY", "TETA":
-                    guard let jny = sec["jny"] as? [String: Any], let prodX = jny["prodX"] as? Int, let stopL = jny["stopL"] as? [Any] else { throw ParseError(reason: "failed to parse outcon jny") }
+                    guard let jny = sec["jny"] as? [String: Any], let prodX = jny["prodX"] as? Int else { throw ParseError(reason: "failed to parse outcon jny") }
+                    let stopL = jny["stopL"] as? [Any]
                     var (legMessages, attrs, cancelled) = try parseMessages(jny: jny, rems: rems, messages: messages)
                     
                     let l = lines[prodX]
@@ -615,7 +616,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
                     guard let departureStop = try parseStop(dict: dep, locations: locations, rems: rems, baseDate: baseDate, line: line), let arrivalStop = try parseStop(dict: arr, locations: locations, rems: rems, baseDate: baseDate, line: line) else { throw ParseError(reason: "failed to parse departure/arrival stop") }
                     
                     var intermediateStops: [Stop] = []
-                    for stop in stopL {
+                    for stop in stopL ?? [] {
                         guard let stop = stop as? [String: Any] else { throw ParseError(reason: "failed to parse jny stop") }
                         if let border = stop["border"] as? Bool, border { continue } // hide borders from intermediate stops
                         guard let intermediateStop = try parseStop(dict: stop, locations: locations, rems: rems, baseDate: baseDate, line: line) else { continue }
@@ -759,9 +760,10 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         let himList = common["himL"] as? [Any]
         let messages = try parseMessageList(himList: himList)
         
-        guard let journey = res["journey"] as? [String: Any], let stopL = journey["stopL"] as? [Any], let baseDateString = journey["date"] as? String else {
+        guard let journey = res["journey"] as? [String: Any], let baseDateString = journey["date"] as? String else {
             throw ParseError(reason: "could not parse journey stop list")
         }
+        let stopL = journey["stopL"] as? [Any]
         
         let path: [LocationPoint]
         if let polyline = try? decodePolyline(from: (journey["poly"] as? [String: Any])?["crdEncYX"] as? String) {
@@ -785,7 +787,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         let line = Line(id: l.id, network: l.network, product: l.product, label: l.label, name: l.name, vehicleNumber: l.vehicleNumber, style: l.style, attr: attrs, message: l.message)
         
         var intermediateStops: [Stop] = []
-        for stop in stopL {
+        for stop in stopL ?? [] {
             guard let stop = stop as? [String: Any] else { throw ParseError(reason: "failed to parse stop") }
             if let border = stop["border"] as? Bool, border { continue } // hide borders from intermediate stops
             guard let s = try parseStop(dict: stop, locations: locations, rems: rems, baseDate: baseDate, line: line) else { throw ParseError(reason: "failed to parse stop") }
