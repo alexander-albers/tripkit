@@ -19,6 +19,3 @@ jobs:
         SECRETS_PASSPHRASE: ${{ secrets.SECRETS_PASSPHRASE }}
     - name: Build
       run: swift build
-    - name: Run tests
-      run: swift test
-      continue-on-error: true
