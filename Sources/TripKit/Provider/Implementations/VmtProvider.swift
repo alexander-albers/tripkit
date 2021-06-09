@@ -8,8 +8,8 @@ public class VmtProvider: AbstractHafasClientInterfaceProvider {
     public init(apiAuthorization: [String: Any]) {
         super.init(networkId: .VMT, apiBase: VmtProvider.API_BASE, productsMap: VmtProvider.PRODUCTS_MAP)
         self.apiAuthorization = apiAuthorization
-        apiVersion = "1.10"
-        apiClient = ["name": "VMT"]
+        apiVersion = "1.18"
+        apiClient = ["name": "VMT", "type": "WEB"]
     }
     
     static let PLACES = ["Erfurt", "Jena", "Gera", "Weimar", "Gotha"]
