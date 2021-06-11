@@ -2,7 +2,7 @@ import Foundation
 
 public class VmvProvider: AbstractEfaProvider {
     
-    static let API_BASE = "http://efa.vmv-mbh.de/vmv/"
+    static let API_BASE = "https://fahrplanauskunft-mv.de/vmv3/"
     
     public init() {
         super.init(networkId: .VMV, apiBase: VmvProvider.API_BASE)
