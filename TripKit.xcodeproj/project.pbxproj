@@ -45,6 +45,18 @@
 		FA4F58141E8BCA6800EA392F /* VmvProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4F58131E8BCA6800EA392F /* VmvProvider.swift */; };
 		FA4F58181E8BD1D800EA392F /* GvhProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4F58171E8BD1D800EA392F /* GvhProvider.swift */; };
 		FA4F581A1E8BD30500EA392F /* ShProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4F58191E8BD30500EA392F /* ShProvider.swift */; };
+		FA52895B26876CC700C14626 /* Gzip in Frameworks */ = {isa = PBXBuildFile; productRef = FA5CD1BD24FBAF4100B4990A /* Gzip */; };
+		FA52895C26876CC700C14626 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = FA5CD1C224FBAF9000B4990A /* SwiftyJSON */; };
+		FA52895D26876CC700C14626 /* SWXMLHash in Frameworks */ = {isa = PBXBuildFile; productRef = FA4EB1C0251F8AC700BCAD4B /* SWXMLHash */; };
+		FA52895E26876CC700C14626 /* Gzip in Frameworks */ = {isa = PBXBuildFile; productRef = FA5CD1BF24FBAF4F00B4990A /* Gzip */; };
+		FA52895F26876CC700C14626 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = FA5CD1C724FBAFCA00B4990A /* SwiftyJSON */; };
+		FA52896026876CC700C14626 /* SWXMLHash in Frameworks */ = {isa = PBXBuildFile; productRef = FA4EB1C2251F8ACF00BCAD4B /* SWXMLHash */; };
+		FA52896126876CC700C14626 /* Gzip in Frameworks */ = {isa = PBXBuildFile; productRef = FA5CD1E824FBB12800B4990A /* Gzip */; };
+		FA52896226876CC700C14626 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = FA5CD1EA24FBB12800B4990A /* SwiftyJSON */; };
+		FA52896326876CC700C14626 /* SWXMLHash in Frameworks */ = {isa = PBXBuildFile; productRef = FA4EB1C4251F8AD400BCAD4B /* SWXMLHash */; };
+		FA52896426876CC700C14626 /* Gzip in Frameworks */ = {isa = PBXBuildFile; productRef = FA5CD21224FBB1E100B4990A /* Gzip */; };
+		FA52896526876CC700C14626 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = FA5CD21424FBB1E100B4990A /* SwiftyJSON */; };
+		FA52896626876CC700C14626 /* SWXMLHash in Frameworks */ = {isa = PBXBuildFile; productRef = FA4EB1C6251F8AD900BCAD4B /* SWXMLHash */; };
 		FA5CD20424FBB1D200B4990A /* TripKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA5CD1FB24FBB1D200B4990A /* TripKit.framework */; };
 		FA5CD22324FBB1FC00B4990A /* TripKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA5CD1D324FBB10C00B4990A /* TripKit.framework */; };
 		FA5CD22924FBB29000B4990A /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB7543A1E3FD3F300C343F2 /* NetworkProvider.swift */; };
@@ -701,6 +713,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA52896326876CC700C14626 /* SWXMLHash in Frameworks */,
+				FA52896226876CC700C14626 /* SwiftyJSON in Frameworks */,
+				FA52896126876CC700C14626 /* Gzip in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -708,6 +723,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA52896626876CC700C14626 /* SWXMLHash in Frameworks */,
+				FA52896526876CC700C14626 /* SwiftyJSON in Frameworks */,
+				FA52896426876CC700C14626 /* Gzip in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -731,6 +749,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA52895D26876CC700C14626 /* SWXMLHash in Frameworks */,
+				FA52895C26876CC700C14626 /* SwiftyJSON in Frameworks */,
+				FA52895B26876CC700C14626 /* Gzip in Frameworks */,
 				FAF2B36E21BFF80C006439C5 /* Security.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -747,6 +768,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA52896026876CC700C14626 /* SWXMLHash in Frameworks */,
+				FA52895F26876CC700C14626 /* SwiftyJSON in Frameworks */,
+				FA52895E26876CC700C14626 /* Gzip in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1080,9 +1104,9 @@
 			);
 			name = "TripKit tvOS";
 			packageProductDependencies = (
-				FA5CD1E824FBB12800B4990A,
-				FA5CD1EA24FBB12800B4990A,
-				FA4EB1C4251F8AD400BCAD4B,
+				FA5CD1E824FBB12800B4990A /* Gzip */,
+				FA5CD1EA24FBB12800B4990A /* SwiftyJSON */,
+				FA4EB1C4251F8AD400BCAD4B /* SWXMLHash */,
 			);
 			productName = "TripKit tvOS";
 			productReference = FA5CD1D324FBB10C00B4990A /* TripKit.framework */;
@@ -1103,9 +1127,9 @@
 			);
 			name = "TripKit macOS";
 			packageProductDependencies = (
-				FA5CD21224FBB1E100B4990A,
-				FA5CD21424FBB1E100B4990A,
-				FA4EB1C6251F8AD900BCAD4B,
+				FA5CD21224FBB1E100B4990A /* Gzip */,
+				FA5CD21424FBB1E100B4990A /* SwiftyJSON */,
+				FA4EB1C6251F8AD900BCAD4B /* SWXMLHash */,
 			);
 			productName = "TripKit macOS";
 			productReference = FA5CD1FB24FBB1D200B4990A /* TripKit.framework */;
@@ -1162,9 +1186,9 @@
 			);
 			name = "TripKit iOS";
 			packageProductDependencies = (
-				FA5CD1BD24FBAF4100B4990A,
-				FA5CD1C224FBAF9000B4990A,
-				FA4EB1C0251F8AC700BCAD4B,
+				FA5CD1BD24FBAF4100B4990A /* Gzip */,
+				FA5CD1C224FBAF9000B4990A /* SwiftyJSON */,
+				FA4EB1C0251F8AC700BCAD4B /* SWXMLHash */,
 			);
 			productName = TripKit;
 			productReference = FACB83C31E3FD0CE00AC5F1F /* TripKit.framework */;
@@ -1203,9 +1227,9 @@
 			);
 			name = "TripKit watchOS";
 			packageProductDependencies = (
-				FA5CD1BF24FBAF4F00B4990A,
-				FA5CD1C724FBAFCA00B4990A,
-				FA4EB1C2251F8ACF00BCAD4B,
+				FA5CD1BF24FBAF4F00B4990A /* Gzip */,
+				FA5CD1C724FBAFCA00B4990A /* SwiftyJSON */,
+				FA4EB1C2251F8ACF00BCAD4B /* SWXMLHash */,
 			);
 			productName = TripKit;
 			productReference = FAFF18D11FA50B9500A8ED69 /* TripKit.framework */;
@@ -1218,7 +1242,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1160;
-				LastUpgradeCheck = 1200;
+				LastUpgradeCheck = 1250;
 				ORGANIZATIONNAME = "Alexander Albers";
 				TargetAttributes = {
 					FA5CD1D224FBB10C00B4990A = {
@@ -1258,9 +1282,9 @@
 			);
 			mainGroup = FACB83B91E3FD0CE00AC5F1F;
 			packageReferences = (
-				FA5CD1BC24FBAF4100B4990A,
-				FA5CD1C124FBAF9000B4990A,
-				FA4EB1BF251F8AC700BCAD4B,
+				FA5CD1BC24FBAF4100B4990A /* XCRemoteSwiftPackageReference "GzipSwift" */,
+				FA5CD1C124FBAF9000B4990A /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				FA4EB1BF251F8AC700BCAD4B /* XCRemoteSwiftPackageReference "SWXMLHash" */,
 			);
 			productRefGroup = FACB83C41E3FD0CE00AC5F1F /* Products */;
 			projectDirPath = "";
@@ -2520,7 +2544,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		FA4EB1BF251F8AC700BCAD4B = {
+		FA4EB1BF251F8AC700BCAD4B /* XCRemoteSwiftPackageReference "SWXMLHash" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/drmohundro/SWXMLHash";
 			requirement = {
@@ -2528,7 +2552,7 @@
 				minimumVersion = 5.0.1;
 			};
 		};
-		FA5CD1BC24FBAF4100B4990A = {
+		FA5CD1BC24FBAF4100B4990A /* XCRemoteSwiftPackageReference "GzipSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/1024jp/GzipSwift";
 			requirement = {
@@ -2536,7 +2560,7 @@
 				minimumVersion = 5.1.1;
 			};
 		};
-		FA5CD1C124FBAF9000B4990A = {
+		FA5CD1C124FBAF9000B4990A /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON";
 			requirement = {
@@ -2547,64 +2571,64 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		FA4EB1C0251F8AC700BCAD4B = {
+		FA4EB1C0251F8AC700BCAD4B /* SWXMLHash */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = FA4EB1BF251F8AC700BCAD4B;
+			package = FA4EB1BF251F8AC700BCAD4B /* XCRemoteSwiftPackageReference "SWXMLHash" */;
 			productName = SWXMLHash;
 		};
-		FA4EB1C2251F8ACF00BCAD4B = {
+		FA4EB1C2251F8ACF00BCAD4B /* SWXMLHash */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = FA4EB1BF251F8AC700BCAD4B;
+			package = FA4EB1BF251F8AC700BCAD4B /* XCRemoteSwiftPackageReference "SWXMLHash" */;
 			productName = SWXMLHash;
 		};
-		FA4EB1C4251F8AD400BCAD4B = {
+		FA4EB1C4251F8AD400BCAD4B /* SWXMLHash */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = FA4EB1BF251F8AC700BCAD4B;
+			package = FA4EB1BF251F8AC700BCAD4B /* XCRemoteSwiftPackageReference "SWXMLHash" */;
 			productName = SWXMLHash;
 		};
-		FA4EB1C6251F8AD900BCAD4B = {
+		FA4EB1C6251F8AD900BCAD4B /* SWXMLHash */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = FA4EB1BF251F8AC700BCAD4B;
+			package = FA4EB1BF251F8AC700BCAD4B /* XCRemoteSwiftPackageReference "SWXMLHash" */;
 			productName = SWXMLHash;
 		};
-		FA5CD1BD24FBAF4100B4990A = {
+		FA5CD1BD24FBAF4100B4990A /* Gzip */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = FA5CD1BC24FBAF4100B4990A;
+			package = FA5CD1BC24FBAF4100B4990A /* XCRemoteSwiftPackageReference "GzipSwift" */;
 			productName = Gzip;
 		};
-		FA5CD1BF24FBAF4F00B4990A = {
+		FA5CD1BF24FBAF4F00B4990A /* Gzip */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = FA5CD1BC24FBAF4100B4990A;
+			package = FA5CD1BC24FBAF4100B4990A /* XCRemoteSwiftPackageReference "GzipSwift" */;
 			productName = Gzip;
 		};
-		FA5CD1C224FBAF9000B4990A = {
+		FA5CD1C224FBAF9000B4990A /* SwiftyJSON */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = FA5CD1C124FBAF9000B4990A;
+			package = FA5CD1C124FBAF9000B4990A /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
 			productName = SwiftyJSON;
 		};
-		FA5CD1C724FBAFCA00B4990A = {
+		FA5CD1C724FBAFCA00B4990A /* SwiftyJSON */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = FA5CD1C124FBAF9000B4990A;
+			package = FA5CD1C124FBAF9000B4990A /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
 			productName = SwiftyJSON;
 		};
-		FA5CD1E824FBB12800B4990A = {
+		FA5CD1E824FBB12800B4990A /* Gzip */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = FA5CD1BC24FBAF4100B4990A;
+			package = FA5CD1BC24FBAF4100B4990A /* XCRemoteSwiftPackageReference "GzipSwift" */;
 			productName = Gzip;
 		};
-		FA5CD1EA24FBB12800B4990A = {
+		FA5CD1EA24FBB12800B4990A /* SwiftyJSON */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = FA5CD1C124FBAF9000B4990A;
+			package = FA5CD1C124FBAF9000B4990A /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
 			productName = SwiftyJSON;
 		};
-		FA5CD21224FBB1E100B4990A = {
+		FA5CD21224FBB1E100B4990A /* Gzip */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = FA5CD1BC24FBAF4100B4990A;
+			package = FA5CD1BC24FBAF4100B4990A /* XCRemoteSwiftPackageReference "GzipSwift" */;
 			productName = Gzip;
 		};
-		FA5CD21424FBB1E100B4990A = {
+		FA5CD21424FBB1E100B4990A /* SwiftyJSON */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = FA5CD1C124FBAF9000B4990A;
+			package = FA5CD1C124FBAF9000B4990A /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
 			productName = SwiftyJSON;
 		};
 /* End XCSwiftPackageProductDependency section */
