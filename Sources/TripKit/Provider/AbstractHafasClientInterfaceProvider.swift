@@ -1054,7 +1054,10 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         var locations: [Location] = []
         
         for locElem in locList {
-            guard let locElem = locElem as? [String: Any], let type = locElem["type"] as? String else { throw ParseError(reason: "could not parse loc elem") }
+            guard let locElem = locElem as? [String: Any] else { throw ParseError(reason: "could not parse loc elem") }
+            // currently, DB receives some illegal locations without any associated type
+            // ignore these locations instead of throwing an error
+            guard let type = locElem["type"] as? String else { continue }
             
             let locationType: LocationType
             let id: String?
