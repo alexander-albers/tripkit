@@ -1437,7 +1437,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
                 urlBuilder.addParameter(key: "mic", value: requestHash)
                 urlBuilder.addParameter(key: "mac", value: (requestHash + salt).md5)
             case .rnd:
-                urlBuilder.addParameter(key: "rnd", value: Int(Date().timeIntervalSince1970 * 1000))
+                urlBuilder.addParameter(key: "rnd", value: Date().timeIntervalSince1970)
             case .none:
                 break
             }
