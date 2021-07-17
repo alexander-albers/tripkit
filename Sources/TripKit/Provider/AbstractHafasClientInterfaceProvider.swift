@@ -1148,7 +1148,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         var result: [RemAttrib] = []
         for rem in remList {
             guard let rem = rem as? [String: Any] else {
-                continue
+                throw ParseError(reason: "could not parse rem")
             }
             let txt = String(htmlEncodedString: rem["txtN"] as? String)
             switch (rem["code"] as? String ?? "").lowercased() {
@@ -1200,6 +1200,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         var result: [String] = []
         for him in himList {
             guard let him = him as? [String: Any], var head = him["head"] as? String ?? him["text"] as? String else {
+                result.append("")
                 continue
             }
             while head.hasPrefix(".") {
