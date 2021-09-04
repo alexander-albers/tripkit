@@ -340,6 +340,10 @@
 		FA780E321E900720004E2281 /* VvvProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA780E311E900720004E2281 /* VvvProvider.swift */; };
 		FA780E341E9008E1004E2281 /* RtProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA780E331E9008E1004E2281 /* RtProvider.swift */; };
 		FA7A3D231F0B6A500041BC51 /* RmvProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7A3D221F0B6A500041BC51 /* RmvProvider.swift */; };
+		FA85135426E37CE7004B6DD4 /* RequestParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA85135326E37CE7004B6DD4 /* RequestParameters.swift */; };
+		FA85135526E37CE7004B6DD4 /* RequestParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA85135326E37CE7004B6DD4 /* RequestParameters.swift */; };
+		FA85135626E37CE7004B6DD4 /* RequestParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA85135326E37CE7004B6DD4 /* RequestParameters.swift */; };
+		FA85135726E37CE7004B6DD4 /* RequestParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA85135326E37CE7004B6DD4 /* RequestParameters.swift */; };
 		FA85A9BC1F895D5D005C6691 /* VgsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA85A9BB1F895D5D005C6691 /* VgsProvider.swift */; };
 		FA87BA3B20B5B476004F1199 /* OoevvProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA87BA3A20B5B476004F1199 /* OoevvProvider.swift */; };
 		FA87BA3C20B5B476004F1199 /* OoevvProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA87BA3A20B5B476004F1199 /* OoevvProvider.swift */; };
@@ -594,6 +598,7 @@
 		FA780E331E9008E1004E2281 /* RtProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RtProvider.swift; sourceTree = "<group>"; };
 		FA7A3D221F0B6A500041BC51 /* RmvProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RmvProvider.swift; sourceTree = "<group>"; };
 		FA7D03E8228729A900DB192E /* secrets.json.template */ = {isa = PBXFileReference; lastKnownFileType = text; path = secrets.json.template; sourceTree = "<group>"; };
+		FA85135326E37CE7004B6DD4 /* RequestParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestParameters.swift; sourceTree = "<group>"; };
 		FA85A9BB1F895D5D005C6691 /* VgsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VgsProvider.swift; sourceTree = "<group>"; };
 		FA87BA3A20B5B476004F1199 /* OoevvProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OoevvProvider.swift; sourceTree = "<group>"; };
 		FA895A5A1E90FF30002FBA7A /* VrsProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VrsProvider.swift; sourceTree = "<group>"; };
@@ -789,6 +794,14 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		FA85135226E37CC4004B6DD4 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				FA85135326E37CE7004B6DD4 /* RequestParameters.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
 		FA87AB0B24FBDEA300534505 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
@@ -954,6 +967,7 @@
 			isa = PBXGroup;
 			children = (
 				FAB754151E3FD37D00C343F2 /* Provider */,
+				FA85135226E37CC4004B6DD4 /* Request */,
 				FA8F348F1F46E595002496A6 /* Result */,
 				FAB754161E3FD3B800C343F2 /* Model */,
 				FAD426E71F12B92C003F14D0 /* Util */,
@@ -1410,6 +1424,7 @@
 				FA5CD2BE24FBB2A900B4990A /* UrlBuilder.swift in Sources */,
 				FA5CD23324FBB29000B4990A /* BayernProvider.swift in Sources */,
 				FA5CD2A524FBB29C00B4990A /* Style.swift in Sources */,
+				FA85135626E37CE7004B6DD4 /* RequestParameters.swift in Sources */,
 				FA5CD25524FBB29000B4990A /* ZvvProvider.swift in Sources */,
 				FA5CD23A24FBB29000B4990A /* VvmProvider.swift in Sources */,
 				FA5CD25224FBB29000B4990A /* RtProvider.swift in Sources */,
@@ -1502,6 +1517,7 @@
 				FA5CD2CB24FBB2AA00B4990A /* UrlBuilder.swift in Sources */,
 				FA5CD26824FBB29000B4990A /* BayernProvider.swift in Sources */,
 				FA5CD2B524FBB29D00B4990A /* Style.swift in Sources */,
+				FA85135726E37CE7004B6DD4 /* RequestParameters.swift in Sources */,
 				FA5CD28A24FBB29000B4990A /* ZvvProvider.swift in Sources */,
 				FA5CD26F24FBB29000B4990A /* VvmProvider.swift in Sources */,
 				FA5CD28724FBB29000B4990A /* RtProvider.swift in Sources */,
@@ -1704,6 +1720,7 @@
 				FA4B56F8219735FE003CD7CF /* InvgProvider.swift in Sources */,
 				FABFCC2E1E8FED9000905D5E /* VagfrProvider.swift in Sources */,
 				FABFCC2A1E8FECD200905D5E /* DingProvider.swift in Sources */,
+				FA85135426E37CE7004B6DD4 /* RequestParameters.swift in Sources */,
 				FAB7542C1E3FD3E500C343F2 /* NetworkId.swift in Sources */,
 				FA65AC6B21CBDB5C007FE1E4 /* VsnProvider.swift in Sources */,
 				FA705860227205D30070D2C9 /* SecretsLoader.swift in Sources */,
@@ -1851,6 +1868,7 @@
 				FA4B56F9219735FE003CD7CF /* InvgProvider.swift in Sources */,
 				FAFF18A91FA50B9500A8ED69 /* VagfrProvider.swift in Sources */,
 				FAFF18AA1FA50B9500A8ED69 /* DingProvider.swift in Sources */,
+				FA85135526E37CE7004B6DD4 /* RequestParameters.swift in Sources */,
 				FAFF18AB1FA50B9500A8ED69 /* NetworkId.swift in Sources */,
 				FA65AC6C21CBDB5C007FE1E4 /* VsnProvider.swift in Sources */,
 				FA705861227205D30070D2C9 /* SecretsLoader.swift in Sources */,
