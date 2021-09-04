@@ -1,5 +1,6 @@
 import Foundation
 import CoreLocation
+import os.log
 
 public class Location: NSObject, NSSecureCoding {
     
@@ -80,7 +81,7 @@ public class Location: NSObject, NSSecureCoding {
     
     required convenience public init?(coder aDecoder: NSCoder) {
         guard let type = LocationType(rawValue: aDecoder.decodeInteger(forKey: PropertyKey.locationTypeKey)) else {
-            print("Location type could not be decoded")
+            os_log("failed to decode location", log: .default, type: .error)
             return nil
         }
         

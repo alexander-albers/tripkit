@@ -1,4 +1,5 @@
 import Foundation
+import os.log
 
 public class Stop: NSObject, NSSecureCoding {
     
@@ -37,7 +38,7 @@ public class Stop: NSObject, NSSecureCoding {
     
     required convenience public init?(coder aDecoder: NSCoder) {
         guard let location = aDecoder.decodeObject(of: Location.self, forKey: PropertyKey.location) else {
-            print("Could not decode stop!")
+            os_log("failed to decode stop", log: .default, type: .error)
             return nil
         }
         let plannedArrivalTime = aDecoder.decodeObject(of: NSDate.self, forKey: PropertyKey.plannedArrivalTime) as Date?

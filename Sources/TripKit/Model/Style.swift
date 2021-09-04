@@ -1,4 +1,5 @@
 import Foundation
+import os.log
 
 public class LineStyle: NSObject, NSSecureCoding {
     
@@ -35,7 +36,7 @@ public class LineStyle: NSObject, NSSecureCoding {
     
     required convenience public init?(coder aDecoder: NSCoder) {
         guard let shape = Shape(rawValue: aDecoder.decodeInteger(forKey: PropertyKey.shape)) else {
-            print("Could not decode style!")
+            os_log("failed to decode line style", log: .default, type: .error)
             return nil
         }
         let backgroundColor = aDecoder.decodeObject(forKey: PropertyKey.backgroundColor) as! UInt32
