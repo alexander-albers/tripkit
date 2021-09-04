@@ -997,7 +997,7 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
             let plannedTime = self.parseDate(xml: departure["itdDateTime"])
             let predictedTime = self.parseDate(xml: departure["itdRTDateTime"])
             guard let (line, destination, cancelled) = self.parseLine(xml: departure["itdServingLine"]) else {
-                print("WRN - queryDepartures: Failed to parse departure line!")
+                os_log("%{public}@: failed to parse departure line", log: .requestLogger, type: .error, #function)
                 continue
             }
             if cancelled {
@@ -1109,7 +1109,7 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
             case "street", "singlehouse":
                 locationType = .address
             default:
-                os_log("Unknown location type %{public}@", log: .requestLogger, type: .error, ty)
+                os_log("%{public}@: unknown location type %{public}@", log: .requestLogger, type: .error, #function, ty)
                 locationType = .any
             }
             
@@ -2643,7 +2643,7 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
     
     private func parseLine(xml: XMLIndexer) -> (line: Line, destination: Location?, cancelled: Bool)? {
         guard let motType = xml.element?.attribute(by: "motType")?.text else {
-            print("WNR - queryDepartures: Failed to parse line type!")
+            os_log("%{public}@: failed to parse line type", log: .requestLogger, type: .error, #function)
             return nil
         }
         let symbol = xml.element?.attribute(by: "symbol")?.text

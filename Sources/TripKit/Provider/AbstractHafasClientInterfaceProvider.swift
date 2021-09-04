@@ -735,7 +735,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         }
         if error != "OK" {
             let errTxt = svcRes["errTxt"] as? String ?? ""
-            print("Hafas error \(error) \(errTxt)")
+            os_log("Hafas error %{public}@: %{public}@", log: .requestLogger, type: .error, error, errorTxt)
             if error == "LOCATION" {
                 completion(httpRequest, .invalidId)
             } else if error == "FAIL" || error == "CGI_READ_FAILED" {

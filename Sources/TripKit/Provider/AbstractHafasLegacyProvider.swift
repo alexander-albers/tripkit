@@ -397,7 +397,7 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider {
         for (index, suggestion) in suggestions.enumerated() {
             guard let suggestion = suggestion as? [String: Any] else { continue }
             guard let type = Int(suggestion["type"] as? String ?? ""), let value = suggestion["value"] as? String, let lat = Int(suggestion["ycoord"] as? String ?? ""), let lon = Int(suggestion["xcoord"] as? String ?? ""), let id = suggestion["id"] as? String else {
-                print("failed to parse suggestion")
+                os_log("%{public}@: failed to parse suggestions", log: .requestLogger, type: .error, #function)
                 continue
             }
             let weight = jsonGetStopsUseWeight ? Int(suggestion["weight"] as? String ?? "") ?? -index : -index
@@ -577,7 +577,7 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider {
         let journeys = xml["StationTable"]["Journey"].all
         for journey in journeys {
             guard let element = journey.element, let fpTime = element.attribute(by: "fpTime")?.text, let fpDate = element.attribute(by: "fpDate")?.text, let delay = element.attribute(by: "delay")?.text, let prod = element.attribute(by: "prod")?.text else {
-                print("could not parse journey")
+                os_log("%{public}@: could not parse journey", log: .requestLogger, type: .error, #function)
                 continue
             }
             let eDelay = element.attribute(by: "e_delay")?.text

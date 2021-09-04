@@ -1,4 +1,5 @@
 import Foundation
+import os.log
 
 public protocol Leg {
     
@@ -50,7 +51,7 @@ public class PublicLeg: NSObject, Leg, NSSecureCoding {
     
     required convenience public init?(coder aDecoder: NSCoder) {
         guard let line = aDecoder.decodeObject(of: Line.self, forKey: PropertyKey.line), let departureStop = aDecoder.decodeObject(of: Stop.self, forKey: PropertyKey.departureStop), let arrivalStop = aDecoder.decodeObject(of: Stop.self, forKey: PropertyKey.arrivalStop), let intermediateStops = aDecoder.decodeObject(of: [NSArray.self, Stop.self], forKey: PropertyKey.intermediateStops) as? [Stop] else {
-            print("Could not decode Public leg!")
+            os_log("failed to decode public leg", log: .default, type: .error)
             return nil
         }
         let destination = aDecoder.decodeObject(of: Location.self, forKey: PropertyKey.destination)
@@ -149,7 +150,7 @@ public class IndividualLeg: NSObject, Leg, NSSecureCoding {
     
     required convenience public init?(coder aDecoder: NSCoder) {
         guard let type = Type(rawValue: aDecoder.decodeInteger(forKey: PropertyKey.type)), let departure = aDecoder.decodeObject(of: Location.self, forKey: PropertyKey.departure), let arrival = aDecoder.decodeObject(of: Location.self, forKey: PropertyKey.arrival), let departureTime = aDecoder.decodeObject(of: NSDate.self, forKey: PropertyKey.departureTime) as Date?, let arrivalTime = aDecoder.decodeObject(of: NSDate.self, forKey: PropertyKey.arrivalTime) as Date? else {
-            print("Could not decode Individual leg!")
+            os_log("failed to decode individual leg", log: .default, type: .error)
             return nil
         }
         let encodedPath = aDecoder.decodeObject(of: [NSArray.self], forKey: PropertyKey.path) as? [Int] ?? []
