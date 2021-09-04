@@ -3,10 +3,9 @@ import Foundation
 public class MvvProvider: AbstractEfaProvider {
     
     static let API_BASE = "https://efa.mvv-muenchen.de/ng/"
-    static let DESKTOP_ENDPOINT = "http://efa.mvv-muenchen.de/index.html"
     
     public init() {
-        super.init(networkId: .MVV, apiBase: MvvProvider.API_BASE, desktopTripEndpoint: MvvProvider.DESKTOP_ENDPOINT, desktopDeparturesEndpoint: MvvProvider.DESKTOP_ENDPOINT)
+        super.init(networkId: .MVV, apiBase: MvvProvider.API_BASE)
         
         includeRegionId = false
         styles = [
@@ -54,20 +53,6 @@ public class MvvProvider: AbstractEfaProvider {
             "UU7": LineStyle(shape: .rect, backgroundColor: LineStyle.parseColor("#52822f"), backgroundColor2: LineStyle.parseColor("#c20831"), foregroundColor: LineStyle.white, borderColor: 0),
             "UU8": LineStyle(shape: .rect, backgroundColor: LineStyle.parseColor("#c20831"), backgroundColor2: LineStyle.parseColor("#ec6726"), foregroundColor: LineStyle.white, borderColor: 0)
         ]
-    }
-    
-    override func queryTripsParameters(builder: UrlBuilder, from: Location, via: Location?, to: Location, date: Date, departure: Bool, tripOptions: TripOptions, desktop: Bool) {
-        super.queryTripsParameters(builder: builder, from: from, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions, desktop: desktop)
-        if desktop {
-            builder.setAnchorHash(anchorHash: "trip@enquiry")
-        }
-    }
-    
-    override func queryDeparturesParameters(builder: UrlBuilder, stationId: String, departures: Bool, time: Date?, maxDepartures: Int, equivs: Bool, desktop: Bool) {
-        super.queryDeparturesParameters(builder: builder, stationId: stationId, departures: departures, time: time, maxDepartures: maxDepartures, equivs: equivs, desktop: desktop)
-        if desktop {
-            builder.setAnchorHash(anchorHash: "departures@enquiry")
-        }
     }
     
     override func parseLine(id: String?, network: String?, mot: String?, symbol: String?, name: String?, longName: String?, trainType: String?, trainNum: String?, trainName: String?) -> Line {

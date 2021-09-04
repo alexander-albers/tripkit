@@ -3,11 +3,9 @@ import Foundation
 public class VrnProvider: AbstractEfaProvider {
     
     static let API_BASE = "https://www.vrn.de/mngvrn/"
-    static let DESKTOP_TRIP_ENDPOINT = "https://www.vrn.de/mng/#/XSLT_TRIP_REQUEST2@init"
-    static let DESKTOP_DEPARTURES_ENDPOINT = "https://www.vrn.de/mng/#/XSLT_DM_REQUEST"
     
     public init() {
-        super.init(networkId: .VRN, apiBase: VrnProvider.API_BASE, desktopTripEndpoint: VrnProvider.DESKTOP_TRIP_ENDPOINT, desktopDeparturesEndpoint: VrnProvider.DESKTOP_DEPARTURES_ENDPOINT)
+        super.init(networkId: .VRN, apiBase: VrnProvider.API_BASE)
         includeRegionId = false
         
         styles = [
@@ -371,36 +369,6 @@ public class VrnProvider: AbstractEfaProvider {
             return super.parseLine(id: id, network: network, mot: mot, symbol: symbol, name: name.substring(from: 4), longName: longName, trainType: trainType, trainNum: trainNum, trainName: trainName)
         } else {
             return super.parseLine(id: id, network: network, mot: mot, symbol: symbol, name: name, longName: longName, trainType: trainType, trainNum: trainNum, trainName: trainName)
-        }
-    }
-    
-    override func queryTripsParameters(builder: UrlBuilder, from: Location, via: Location?, to: Location, date: Date, departure: Bool, tripOptions: TripOptions, desktop: Bool) {
-        if desktop {
-            builder.addParameter(key: "restriction", value: 0)
-            builder.addParameter(key: "orig", value: locationValue(location: from))
-            if let via = via {
-                builder.addParameter(key: "via", value: locationValue(location: via))
-            }
-            builder.addParameter(key: "dest", value: locationValue(location: to))
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "dd.MM.yyyy"
-            dateFormatter.timeZone = timeZone
-            let timeFormatter = DateFormatter()
-            timeFormatter.dateFormat = "HH:mm"
-            timeFormatter.timeZone = timeZone
-            builder.addParameter(key: "date", value: dateFormatter.string(from: date))
-            builder.addParameter(key: "time", value: timeFormatter.string(from: date))
-            builder.addParameter(key: "departure", value: departure)
-        } else {
-            super.queryTripsParameters(builder: builder, from: from, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions, desktop: desktop)
-        }
-    }
-    
-    override func queryDeparturesParameters(builder: UrlBuilder, stationId: String, departures: Bool, time: Date?, maxDepartures: Int, equivs: Bool, desktop: Bool) {
-        if desktop {
-            builder.addParameter(key: "dm", value: stationId)
-        } else {
-            super.queryDeparturesParameters(builder: builder, stationId: stationId, departures: departures, time: time, maxDepartures: maxDepartures, equivs: equivs, desktop: desktop)
         }
     }
     

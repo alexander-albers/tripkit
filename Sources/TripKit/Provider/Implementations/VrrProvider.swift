@@ -3,10 +3,9 @@ import Foundation
 public class VrrProvider: AbstractEfaProvider {
     
     static let API_BASE = "https://efa.vrr.de/standard/"
-    static let DESKTOP_TRIP_ENDPOINT = "http://efa.vrr.de/vrrstd/XSLT_TRIP_REQUEST2"
     
     public init() {
-        super.init(networkId: .VRR, apiBase: VrrProvider.API_BASE, desktopTripEndpoint: VrrProvider.DESKTOP_TRIP_ENDPOINT)
+        super.init(networkId: .VRR, apiBase: VrrProvider.API_BASE)
         includeRegionId = false
         needsSpEncId = true
         useProxFootSearch = false
@@ -350,8 +349,8 @@ public class VrrProvider: AbstractEfaProvider {
         ]
     }
     
-    override func queryTripsParameters(builder: UrlBuilder, from: Location, via: Location?, to: Location, date: Date, departure: Bool, tripOptions: TripOptions, desktop: Bool) {
-        super.queryTripsParameters(builder: builder, from: from, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions, desktop: desktop)
+    override func queryTripsParameters(builder: UrlBuilder, from: Location, via: Location?, to: Location, date: Date, departure: Bool, tripOptions: TripOptions) {
+        super.queryTripsParameters(builder: builder, from: from, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions)
         if let products = tripOptions.products, products.contains(.cablecar) {
             builder.addParameter(key: "inclMOT_11", value: "on")
         }

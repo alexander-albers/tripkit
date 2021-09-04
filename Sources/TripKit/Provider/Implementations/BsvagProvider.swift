@@ -3,12 +3,10 @@ import Foundation
 public class BsvagProvider: AbstractEfaProvider {
     
     static let API_BASE = "https://bsvg.efa.de/bsvagstd/"
-    static let DESKTOP_TRIP_ENDPOINT = "http://www.verkehr-bs.de/fahrplan/fahrplanauskunft.html"
     
     public init() {
-        super.init(networkId: .BSVAG, apiBase: BsvagProvider.API_BASE, desktopTripEndpoint: BsvagProvider.DESKTOP_TRIP_ENDPOINT)
+        super.init(networkId: .BSVAG, apiBase: BsvagProvider.API_BASE)
         useRouteIndexAsTripId = false
-        supportsDesktopDepartures = false
         includeRegionId = false
         
         styles = [
@@ -79,8 +77,8 @@ public class BsvagProvider: AbstractEfaProvider {
         ]
     }
     
-    override func queryTripsParameters(builder: UrlBuilder, from: Location, via: Location?, to: Location, date: Date, departure: Bool, tripOptions: TripOptions, desktop: Bool) {
-        super.queryTripsParameters(builder: builder, from: from, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions, desktop: desktop)
+    override func queryTripsParameters(builder: UrlBuilder, from: Location, via: Location?, to: Location, date: Date, departure: Bool, tripOptions: TripOptions) {
+        super.queryTripsParameters(builder: builder, from: from, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions)
         builder.addParameter(key: "inclMOT_11", value: "on")
     }
     

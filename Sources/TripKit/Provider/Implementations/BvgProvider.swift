@@ -3,12 +3,10 @@ import Foundation
 public class BvgProvider: AbstractHafasClientInterfaceProvider {
     
     static let API_BASE = "https://bvg-apps.hafas.de/bin/"
-    static let DESKTOP_QUERY_ENDPOINT = "https://fahrinfo.bvg.de/Fahrinfo/bin/query.bin/dn"
-    static let DESKTOP_STBOARD_ENDPOINT = "https://fahrinfo.bvg.de/Fahrinfo/bin/stboard.bin/dn"
     static let PRODUCTS_MAP: [Product?] = [.suburbanTrain, .subway, .tram, .bus, .ferry, .highSpeedTrain, .regionalTrain, .onDemand, nil, nil]
     
     public init(apiAuthorization: [String: Any]) {
-        super.init(networkId: .BVG, apiBase: BvgProvider.API_BASE, desktopQueryEndpoint: BvgProvider.DESKTOP_QUERY_ENDPOINT, desktopStboardEndpoint: BvgProvider.DESKTOP_STBOARD_ENDPOINT, productsMap: BvgProvider.PRODUCTS_MAP)
+        super.init(networkId: .BVG, apiBase: BvgProvider.API_BASE, productsMap: BvgProvider.PRODUCTS_MAP)
         self.apiAuthorization = apiAuthorization
         apiVersion = "1.24"
         apiClient = ["id": "BVG", "type": "IPH"]
