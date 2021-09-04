@@ -3,12 +3,10 @@ import Foundation
 public class VagfrProvider: AbstractEfaProvider {
     
     static let API_BASE = "https://efa-bw.de/vagfr/"
-    static let DESKTOP_TRIP_ENDPOINT = "https://www.vag-freiburg.de/fahrplan-linien/fahrplanauskunft.html"
     
     public init() {
-        super.init(networkId: .VAGFR, apiBase: VagfrProvider.API_BASE, desktopTripEndpoint: VagfrProvider.DESKTOP_TRIP_ENDPOINT)
+        super.init(networkId: .VAGFR, apiBase: VagfrProvider.API_BASE)
         useRouteIndexAsTripId = false
-        supportsDesktopDepartures = false
         
         styles = [
             // Tram

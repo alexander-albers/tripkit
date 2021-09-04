@@ -159,8 +159,6 @@ public class QueryTripsContext: NSObject, NSSecureCoding {
     
     public var canQueryLater: Bool { return false }
     
-    public var desktopUrl: URL?
-    
     public override init() {
     }
     
@@ -168,10 +166,6 @@ public class QueryTripsContext: NSObject, NSSecureCoding {
     }
     
     public func encode(with aCoder: NSCoder) {
-    }
-    
-    struct PropertyKey {
-        static let desktopUrl = "desktopUrl"
     }
     
 }

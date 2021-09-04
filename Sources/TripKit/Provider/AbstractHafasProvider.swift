@@ -112,7 +112,7 @@ public class AbstractHafasProvider: AbstractNetworkProvider {
         return position
     }
 
-    func queryTripsBinaryParameters(builder: UrlBuilder, from: Location, via: Location?, to: Location, date: Date, departure: Bool, tripOptions: TripOptions, desktop: Bool) {
+    func queryTripsBinaryParameters(builder: UrlBuilder, from: Location, via: Location?, to: Location, date: Date, departure: Bool, tripOptions: TripOptions) {
         builder.addParameter(key: "start", value: "Suchen")
         builder.addParameter(key: "REQ0JourneyStopsS0ID", value: locationId(location: from))
         builder.addParameter(key: "REQ0JourneyStopsZ0ID", value: locationId(location: to))
@@ -155,9 +155,7 @@ public class AbstractHafasProvider: AbstractNetworkProvider {
         if let minChangeTime = tripOptions.minChangeTime {
             builder.addParameter(key: "REQ0HafasChangeTime", value: "\(minChangeTime):\(minChangeTime / 5)")
         }
-        if !desktop {
-            builder.addParameter(key: "h2g-direct", value: 11)
-        }
+        builder.addParameter(key: "h2g-direct", value: 11)
         if let clientType = clientType {
             builder.addParameter(key: "clientType", value: clientType)
         }

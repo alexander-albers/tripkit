@@ -7,7 +7,6 @@ public class VmvProvider: AbstractEfaProvider {
     public init() {
         super.init(networkId: .VMV, apiBase: VmvProvider.API_BASE)
         useRouteIndexAsTripId = false
-        supportsDesktopDepartures = false
         includeRegionId = false
         styles = [
             "SS1": LineStyle(shape: .rounded, backgroundColor: LineStyle.rgb(9, 154, 135), foregroundColor: LineStyle.white),
@@ -37,8 +36,8 @@ public class VmvProvider: AbstractEfaProvider {
         ]
     }
     
-    override func queryTripsParameters(builder: UrlBuilder, from: Location, via: Location?, to: Location, date: Date, departure: Bool, tripOptions: TripOptions, desktop: Bool) {
-        super.queryTripsParameters(builder: builder, from: from, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions, desktop: desktop)
+    override func queryTripsParameters(builder: UrlBuilder, from: Location, via: Location?, to: Location, date: Date, departure: Bool, tripOptions: TripOptions) {
+        super.queryTripsParameters(builder: builder, from: from, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions)
         builder.addParameter(key: "inclMOT_11", value: "on")
     }
     

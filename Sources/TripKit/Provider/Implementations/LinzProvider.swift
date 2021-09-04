@@ -7,7 +7,6 @@ public class LinzProvider: AbstractEfaProvider {
     public init() {
         super.init(networkId: .LINZ, apiBase: LinzProvider.API_BASE)
         useRouteIndexAsTripId = false
-        supportsDesktopDepartures = false
         requestUrlEncoding = .isoLatin1
         
         styles = [

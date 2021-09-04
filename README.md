@@ -31,7 +31,7 @@ let asyncTask = provider.suggestLocations(constraint: "Marktplatz", types: [.sta
 ```swift
 let asyncTask = provider.queryDepartures(stationId: "7000001", time: Date(), maxDepartures: 10, equivs: false) { (request, result) in
     switch result {
-    case .success(let departures, _):
+    case .success(let departures):
         for departure in departures.flatMap { $0.departures } {
             let label = departure.line.label ?? "?"
             let destination = departure.destination?.getUniqueShortName() ?? "?"

@@ -294,7 +294,7 @@ public class VrsProvider: AbstractNetworkProvider {
         }
         guard let timeTable = json["timetable"] as? [Any] else { throw ParseError(reason: "failed to parse timetable") }
         if timeTable.count == 0 {
-            completion(httpRequest, .success(departures: [], desktopUrl: nil))
+            completion(httpRequest, .success(departures: []))
             return
         }
         var result: [StationDepartures] = []
@@ -345,7 +345,7 @@ public class VrsProvider: AbstractNetworkProvider {
             
             result.append(StationDepartures(stopLocation: location, departures: departures, lines: lines))
         }
-        completion(httpRequest, .success(departures: result, desktopUrl: nil))
+        completion(httpRequest, .success(departures: result))
         //resolveLines(result: result, remainingIds: result.departures, completion: completion)
     }
     

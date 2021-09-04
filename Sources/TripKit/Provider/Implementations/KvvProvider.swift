@@ -7,11 +7,9 @@ public class KvvProvider: AbstractEfaProvider {
     static let TRIP_ENDPOINT = "XSLT_TRIP_REQUEST2"
     static let STOPFINDER_ENDPOINT = "XML_STOPFINDER_REQUEST"
     static let COORD_ENDPOINT = "XML_COORD_REQUEST"
-    static let DESKTOP_TRIP_ENDPOINT = "https://www.kvv.de/fahrt-planen/fahrplanauskunft.html?"
-    static let DESKTOP_DEPARTURES_ENDPOINT = "https://www.kvv.de/fahrt-planen/abfahrtsmonitor.html?"
     
     public init() {
-        super.init(networkId: .KVV, apiBase: KvvProvider.API_BASE, departureMonitorEndpoint: KvvProvider.DEPARTURE_MONITOR_ENDPOINT, tripEndpoint: KvvProvider.TRIP_ENDPOINT, stopFinderEndpoint: KvvProvider.STOPFINDER_ENDPOINT, coordEndpoint: KvvProvider.COORD_ENDPOINT, tripStopTimesEndpoint: nil, desktopTripEndpoint: KvvProvider.DESKTOP_TRIP_ENDPOINT, desktopDeparturesEndpoint: KvvProvider.DESKTOP_DEPARTURES_ENDPOINT)
+        super.init(networkId: .KVV, apiBase: KvvProvider.API_BASE, departureMonitorEndpoint: KvvProvider.DEPARTURE_MONITOR_ENDPOINT, tripEndpoint: KvvProvider.TRIP_ENDPOINT, stopFinderEndpoint: KvvProvider.STOPFINDER_ENDPOINT, coordEndpoint: KvvProvider.COORD_ENDPOINT, tripStopTimesEndpoint: nil)
         
         styles = [
             // S-Bahn

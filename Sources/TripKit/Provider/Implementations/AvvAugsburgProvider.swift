@@ -3,11 +3,9 @@ import Foundation
 public class AvvAugsburgProvider: AbstractEfaProvider {
     
     static let API_BASE = "https://efa.avv-augsburg.de/avv2/"
-    static let DESKTOP_TRIP_ENDPOINT = "http://mobil.avv-augsburg.de/mobil/XSLT_TRIP_REQUEST2"
-    static let DESKTOP_DEPARTURES_ENDPOINT = "http://mobil.avv-augsburg.de/mobil/XSLT_DM_REQUEST"
     
     public init() {
-        super.init(networkId: .AVV, apiBase: AvvAugsburgProvider.API_BASE, desktopTripEndpoint: AvvAugsburgProvider.DESKTOP_TRIP_ENDPOINT, desktopDeparturesEndpoint: AvvAugsburgProvider.DESKTOP_DEPARTURES_ENDPOINT)
+        super.init(networkId: .AVV, apiBase: AvvAugsburgProvider.API_BASE)
         
         useRouteIndexAsTripId = false
         styles = [
@@ -60,8 +58,8 @@ public class AvvAugsburgProvider: AbstractEfaProvider {
         ]
     }
     
-    override func queryTripsParameters(builder: UrlBuilder, from: Location, via: Location?, to: Location, date: Date, departure: Bool, tripOptions: TripOptions, desktop: Bool) {
-        super.queryTripsParameters(builder: builder, from: from, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions, desktop: desktop)
+    override func queryTripsParameters(builder: UrlBuilder, from: Location, via: Location?, to: Location, date: Date, departure: Bool, tripOptions: TripOptions) {
+        super.queryTripsParameters(builder: builder, from: from, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions)
         
         builder.addParameter(key: "inclMOT_11", value: "on") // night bus
         builder.addParameter(key: "inclMOT_13", value: "on")

@@ -6,7 +6,6 @@ public class VvvProvider: AbstractEfaProvider {
     
     public init() {
         super.init(networkId: .VVV, apiBase: VvvProvider.API_BASE)
-        supportsDesktopDepartures = false
     }
     
 }

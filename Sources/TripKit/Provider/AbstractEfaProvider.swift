@@ -12,10 +12,6 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
     let stopFinderEndpoint: String
     let coordEndpoint: String
     let tripStopTimesEndpoint: String
-    let desktopTripEndpoint: String?
-    let desktopDeparturesEndpoint: String?
-    var supportsDesktopTrips: Bool = true
-    var supportsDesktopDepartures: Bool = true
     var language = "de"
     
     static let DEFAULT_DEPARTURE_MONITOR_ENDPOINT = "XSLT_DM_REQUEST"
@@ -46,38 +42,32 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
     var useLineRestriction: Bool = true
     var useProxFootSearch: Bool = true
     
-    init(networkId: NetworkId, departureMonitorEndpoint: String, tripEndpoint: String, stopFinderEndpoint: String, coordEndpoint: String, tripStopTimesEndpoint: String, desktopTripEndpoint: String? = nil, desktopDeparturesEndpoint: String? = nil) {
+    init(networkId: NetworkId, departureMonitorEndpoint: String, tripEndpoint: String, stopFinderEndpoint: String, coordEndpoint: String, tripStopTimesEndpoint: String) {
         self.departureMonitorEndpoint = departureMonitorEndpoint
         self.tripEndpoint = tripEndpoint
         self.stopFinderEndpoint = stopFinderEndpoint
         self.coordEndpoint = coordEndpoint
         self.tripStopTimesEndpoint = tripStopTimesEndpoint
-        self.desktopTripEndpoint = desktopTripEndpoint
-        self.desktopDeparturesEndpoint = desktopDeparturesEndpoint
         
         super.init(networkId: networkId)
     }
     
-    init(networkId: NetworkId, apiBase: String, departureMonitorEndpoint: String?, tripEndpoint: String?, stopFinderEndpoint: String?, coordEndpoint: String?, tripStopTimesEndpoint: String?, desktopTripEndpoint: String? = nil, desktopDeparturesEndpoint: String? = nil) {
+    init(networkId: NetworkId, apiBase: String, departureMonitorEndpoint: String?, tripEndpoint: String?, stopFinderEndpoint: String?, coordEndpoint: String?, tripStopTimesEndpoint: String?) {
         self.departureMonitorEndpoint = apiBase + (departureMonitorEndpoint ?? AbstractEfaProvider.DEFAULT_DEPARTURE_MONITOR_ENDPOINT)
         self.tripEndpoint = apiBase + (tripEndpoint ?? AbstractEfaProvider.DEFAULT_TRIP_ENDPOINT)
         self.stopFinderEndpoint = apiBase + (stopFinderEndpoint ?? AbstractEfaProvider.DEFAULT_STOPFINDER_ENDPOINT)
         self.coordEndpoint = apiBase + (coordEndpoint ?? AbstractEfaProvider.DEFAULT_COORD_ENDPOINT)
         self.tripStopTimesEndpoint = apiBase + (tripStopTimesEndpoint ?? AbstractEfaProvider.DEFAULT_TRIPSTOPTIMES_ENDPOINT)
-        self.desktopTripEndpoint = desktopTripEndpoint
-        self.desktopDeparturesEndpoint = desktopDeparturesEndpoint
         
         super.init(networkId: networkId)
     }
     
-    init(networkId: NetworkId, apiBase: String, desktopTripEndpoint: String? = nil, desktopDeparturesEndpoint: String? = nil) {
+    init(networkId: NetworkId, apiBase: String) {
         self.departureMonitorEndpoint = apiBase + AbstractEfaProvider.DEFAULT_DEPARTURE_MONITOR_ENDPOINT
         self.tripEndpoint = apiBase + AbstractEfaProvider.DEFAULT_TRIP_ENDPOINT
         self.stopFinderEndpoint = apiBase + AbstractEfaProvider.DEFAULT_STOPFINDER_ENDPOINT
         self.coordEndpoint = apiBase + AbstractEfaProvider.DEFAULT_COORD_ENDPOINT
         self.tripStopTimesEndpoint = apiBase + AbstractEfaProvider.DEFAULT_TRIPSTOPTIMES_ENDPOINT
-        self.desktopTripEndpoint = desktopTripEndpoint
-        self.desktopDeparturesEndpoint = desktopDeparturesEndpoint
         
         super.init(networkId: networkId)
     }
@@ -169,23 +159,14 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
     
     public override func queryTrips(from: Location, via: Location?, to: Location, date: Date, departure: Bool, tripOptions: TripOptions, completion: @escaping (HttpRequest, QueryTripsResult) -> Void) -> AsyncRequest {
         let urlBuilder = UrlBuilder(path: tripEndpoint, encoding: requestUrlEncoding)
-        queryTripsParameters(builder: urlBuilder, from: from, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions, desktop: false)
-        
-        let desktopUrl: URL?
-        if supportsDesktopTrips {
-            let desktopUrlBuilder = UrlBuilder(path: desktopTripEndpoint ?? tripEndpoint, encoding: requestUrlEncoding)
-            queryTripsParameters(builder: desktopUrlBuilder, from: from, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions, desktop: true)
-            desktopUrl = desktopUrlBuilder.build()
-        } else {
-            desktopUrl = nil
-        }
+        queryTripsParameters(builder: urlBuilder, from: from, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions)
         
         let httpRequest = HttpRequest(urlBuilder: urlBuilder)
         return HttpClient.getXml(httpRequest: httpRequest) { result in
             switch result {
             case .success(let xml):
                 do {
-                    try self.handleTripRequestResponse(httpRequest: httpRequest, xml: xml, desktopUrl: desktopUrl, previousContext: nil, later: false, completion: completion)
+                    try self.handleTripRequestResponse(httpRequest: httpRequest, xml: xml, previousContext: nil, later: false, completion: completion)
                 } catch is SessionExpiredError {
                     completion(httpRequest, .sessionExpired)
                 } catch let err as ParseError {
@@ -222,7 +203,7 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
             switch result {
             case .success(let xml):
                 do {
-                    try self.handleTripRequestResponse(httpRequest: httpRequest, xml: xml, desktopUrl: context.desktopUrl, previousContext: context, later: later, completion: completion)
+                    try self.handleTripRequestResponse(httpRequest: httpRequest, xml: xml, previousContext: context, later: later, completion: completion)
                 } catch is SessionExpiredError {
                     completion(httpRequest, .sessionExpired)
                 } catch let err as ParseError {
@@ -266,7 +247,7 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
             switch result {
             case .success(let xml):
                 do {
-                    try self.handleTripRequestResponse(httpRequest: httpRequest, xml: xml, desktopUrl: nil, previousContext: nil, later: false, completion: completion)
+                    try self.handleTripRequestResponse(httpRequest: httpRequest, xml: xml, previousContext: nil, later: false, completion: completion)
                 } catch is SessionExpiredError {
                     completion(httpRequest, .sessionExpired)
                 } catch let err as ParseError {
@@ -294,23 +275,14 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
     
     override public func queryDepartures(stationId: String, departures: Bool, time: Date?, maxDepartures: Int, equivs: Bool, completion: @escaping (HttpRequest, QueryDeparturesResult) -> Void) -> AsyncRequest {
         let urlBuilder = UrlBuilder(path: departureMonitorEndpoint, encoding: requestUrlEncoding)
-        queryDeparturesParameters(builder: urlBuilder, stationId: stationId, departures: departures, time: time, maxDepartures: maxDepartures, equivs: equivs, desktop: false)
-        
-        let desktopUrl: URL?
-        if supportsDesktopDepartures {
-            let desktopUrlBuilder = UrlBuilder(path: desktopDeparturesEndpoint ?? departureMonitorEndpoint, encoding: requestUrlEncoding)
-            queryDeparturesParameters(builder: desktopUrlBuilder, stationId: stationId, departures: departures, time: time, maxDepartures: maxDepartures, equivs: equivs, desktop: true)
-            desktopUrl = desktopUrlBuilder.build()
-        } else {
-            desktopUrl = nil
-        }
+        queryDeparturesParameters(builder: urlBuilder, stationId: stationId, departures: departures, time: time, maxDepartures: maxDepartures, equivs: equivs)
         
         let httpRequest = HttpRequest(urlBuilder: urlBuilder)
         return HttpClient.getXml(httpRequest: httpRequest) { result in
             switch result {
             case .success(let xml):
                 do {
-                    try self.handleQueryDeparturesResponse(httpRequest: httpRequest, xml: xml, departures: departures, desktopUrl: desktopUrl, completion: completion)
+                    try self.handleQueryDeparturesResponse(httpRequest: httpRequest, xml: xml, departures: departures, completion: completion)
                 } catch let err as ParseError {
                     os_log("queryDepartures parse error: %{public}@", log: .requestLogger, type: .error, err.reason)
                     completion(httpRequest, .failure(err))
@@ -413,23 +385,14 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
     
     func queryTripsMobile(from: Location, via: Location?, to: Location, date: Date, departure: Bool, tripOptions: TripOptions, completion: @escaping (HttpRequest, QueryTripsResult) -> Void) -> AsyncRequest {
         let urlBuilder = UrlBuilder(path: tripEndpoint, encoding: requestUrlEncoding)
-        queryTripsParameters(builder: urlBuilder, from: from, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions, desktop: false)
-        
-        let desktopUrl: URL?
-        if supportsDesktopTrips {
-            let desktopUrlBuilder = UrlBuilder(path: desktopTripEndpoint ?? tripEndpoint, encoding: requestUrlEncoding)
-            queryTripsParameters(builder: desktopUrlBuilder, from: from, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions, desktop: true)
-            desktopUrl = desktopUrlBuilder.build()
-        } else {
-            desktopUrl = nil
-        }
+        queryTripsParameters(builder: urlBuilder, from: from, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions)
         
         let httpRequest = HttpRequest(urlBuilder: urlBuilder)
         return HttpClient.getXml(httpRequest: httpRequest) { result in
             switch result {
             case .success(let xml):
                 do {
-                    try self.handleMobileTripRequestResponse(httpRequest: httpRequest, xml: xml, desktopUrl: desktopUrl, from: from, via: via, to: to, previousContext: nil, later: false, completion: completion)
+                    try self.handleMobileTripRequestResponse(httpRequest: httpRequest, xml: xml, from: from, via: via, to: to, previousContext: nil, later: false, completion: completion)
                 } catch let err as ParseError {
                     os_log("mobileTripRequest parse error: %{public}@", log: .requestLogger, type: .error, err.reason)
                     completion(httpRequest, .failure(err))
@@ -463,7 +426,7 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
             switch result {
             case .success(let xml):
                 do {
-                    try self.handleMobileTripRequestResponse(httpRequest: httpRequest, xml: xml, desktopUrl: context.desktopUrl, from: nil, via: nil, to: nil, previousContext: context, later: later, completion: completion)
+                    try self.handleMobileTripRequestResponse(httpRequest: httpRequest, xml: xml, from: nil, via: nil, to: nil, previousContext: context, later: later, completion: completion)
                 } catch is SessionExpiredError {
                     completion(httpRequest, .sessionExpired)
                 } catch let err as ParseError {
@@ -507,7 +470,7 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
             switch result {
             case .success(let xml):
                 do {
-                    try self.handleMobileTripRequestResponse(httpRequest: httpRequest, xml: xml, desktopUrl: nil, from: nil, via: nil, to: nil, previousContext: nil, later: false, completion: completion)
+                    try self.handleMobileTripRequestResponse(httpRequest: httpRequest, xml: xml, from: nil, via: nil, to: nil, previousContext: nil, later: false, completion: completion)
                 } catch is SessionExpiredError {
                     completion(httpRequest, .sessionExpired)
                 } catch let err as ParseError {
@@ -535,23 +498,14 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
     
     func queryDeparturesMobile(stationId: String, departures: Bool, time: Date?, maxDepartures: Int, equivs: Bool, completion: @escaping (HttpRequest, QueryDeparturesResult) -> Void) -> AsyncRequest {
         let urlBuilder = UrlBuilder(path: departureMonitorEndpoint, encoding: requestUrlEncoding)
-        queryDeparturesParameters(builder: urlBuilder, stationId: stationId, departures: departures, time: time, maxDepartures: maxDepartures, equivs: equivs, desktop: false)
-
-        let desktopUrl: URL?
-        if supportsDesktopDepartures {
-            let desktopUrlBuilder = UrlBuilder(path: desktopDeparturesEndpoint ?? departureMonitorEndpoint, encoding: requestUrlEncoding)
-            queryDeparturesParameters(builder: desktopUrlBuilder, stationId: stationId, departures: departures, time: time, maxDepartures: maxDepartures, equivs: equivs, desktop: true)
-            desktopUrl = desktopUrlBuilder.build()
-        } else {
-            desktopUrl = nil
-        }
+        queryDeparturesParameters(builder: urlBuilder, stationId: stationId, departures: departures, time: time, maxDepartures: maxDepartures, equivs: equivs)
         
         let httpRequest = HttpRequest(urlBuilder: urlBuilder)
         return HttpClient.getXml(httpRequest: httpRequest) { result in
             switch result {
             case .success(let xml):
                 do {
-                    try self.handleQueryDeparturesMobileResponse(httpRequest: httpRequest, xml: xml, departures: departures, desktopUrl: desktopUrl, completion: completion)
+                    try self.handleQueryDeparturesMobileResponse(httpRequest: httpRequest, xml: xml, departures: departures, completion: completion)
                 } catch let err as ParseError {
                     os_log("queryDeparturesMobile parse error: %{public}@", log: .requestLogger, type: .error, err.reason)
                     completion(httpRequest, .failure(err))
@@ -730,7 +684,7 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
         }
     }
     
-    func handleTripRequestResponse(httpRequest: HttpRequest, xml: XMLIndexer, desktopUrl: URL?, previousContext: Context?, later: Bool, completion: @escaping (HttpRequest, QueryTripsResult) -> Void) throws {
+    func handleTripRequestResponse(httpRequest: HttpRequest, xml: XMLIndexer, previousContext: Context?, later: Bool, completion: @escaping (HttpRequest, QueryTripsResult) -> Void) throws {
         var request = xml["itdRequest"]["itdTripRequest"]
         if request.all.isEmpty {
             request = xml["itdRequest"]
@@ -954,9 +908,9 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
         let context: Context?
         if let sessionId = sessionId, let requestId = requestId {
             if let previousContext = previousContext {
-                context = Context(queryEarlierContext: later ? previousContext.queryEarlierContext : (sessionId: sessionId, requestId: requestId), queryLaterContext: !later ? previousContext.queryLaterContext : (sessionId: sessionId, requestId: requestId), desktopUrl: desktopUrl)
+                context = Context(queryEarlierContext: later ? previousContext.queryEarlierContext : (sessionId: sessionId, requestId: requestId), queryLaterContext: !later ? previousContext.queryLaterContext : (sessionId: sessionId, requestId: requestId))
             } else {
-                context = Context(queryEarlierContext: (sessionId: sessionId, requestId: requestId), queryLaterContext: (sessionId: sessionId, requestId: requestId), desktopUrl: desktopUrl)
+                context = Context(queryEarlierContext: (sessionId: sessionId, requestId: requestId), queryLaterContext: (sessionId: sessionId, requestId: requestId))
             }
         } else {
             context = previousContext
@@ -965,7 +919,7 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
         completion(httpRequest, .success(context: context, from: from, via: via, to: to, trips: trips, messages: messages))
     }
     
-    func handleQueryDeparturesResponse(httpRequest: HttpRequest, xml: XMLIndexer, departures: Bool, desktopUrl: URL?, completion: @escaping (HttpRequest, QueryDeparturesResult) -> Void) throws {
+    func handleQueryDeparturesResponse(httpRequest: HttpRequest, xml: XMLIndexer, departures: Bool, completion: @escaping (HttpRequest, QueryDeparturesResult) -> Void) throws {
         let request = xml["itdRequest"]["itdDepartureMonitorRequest"]
         
         var result: [StationDepartures] = []
@@ -1018,10 +972,10 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
             result.first(where: {$0.stopLocation.id == assignedStopId})?.departures.append(departure)
         }
         
-        completion(httpRequest, .success(departures: result, desktopUrl: desktopUrl))
+        completion(httpRequest, .success(departures: result))
     }
     
-    func handleQueryDeparturesMobileResponse(httpRequest: HttpRequest, xml: XMLIndexer, departures: Bool, desktopUrl: URL?, completion: @escaping (HttpRequest, QueryDeparturesResult) -> Void) throws {
+    func handleQueryDeparturesMobileResponse(httpRequest: HttpRequest, xml: XMLIndexer, departures: Bool, completion: @escaping (HttpRequest, QueryDeparturesResult) -> Void) throws {
         if let error = xml["efa"]["ers"]["err"].element, let mod = error.attribute(by: "mod")?.text, let co = error.attribute(by: "co")?.text {
             throw ParseError(reason: "Efa error: " + mod + " " + co)
         }
@@ -1056,7 +1010,7 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
             
             stationDepartures?.departures.append(Departure(plannedTime: plannedTime, predictedTime: predictedTime, line: lineDestination.line, position: position, plannedPosition: position, destination: lineDestination.destination, journeyContext: context))
         }
-        completion(httpRequest, .success(departures: result, desktopUrl: desktopUrl))
+        completion(httpRequest, .success(departures: result))
     }
     
     func handleQueryJourneyDetailResponse(httpRequest: HttpRequest, xml: XMLIndexer, line: Line, completion: @escaping (HttpRequest, QueryJourneyDetailResult) -> Void) throws {
@@ -1171,7 +1125,7 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
         completion(httpRequest, .success(locations: locations))
     }
     
-    func handleMobileTripRequestResponse(httpRequest: HttpRequest, xml: XMLIndexer, desktopUrl: URL?, from: Location?, via: Location?, to: Location?, previousContext: Context?, later: Bool, completion: @escaping (HttpRequest, QueryTripsResult) -> Void) throws {
+    func handleMobileTripRequestResponse(httpRequest: HttpRequest, xml: XMLIndexer, from: Location?, via: Location?, to: Location?, previousContext: Context?, later: Bool, completion: @escaping (HttpRequest, QueryTripsResult) -> Void) throws {
         let request = xml["efa"]
         let requestId = request["pas"]["pa"].all.first(where: {$0["n"].element?.text == "requestID"})?["v"].element?.text
         let sessionId = request["pas"]["pa"].all.first(where: {$0["n"].element?.text == "sessionID"})?["v"].element?.text
@@ -1344,9 +1298,9 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
             let context: Context?
             if let sessionId = sessionId, let requestId = requestId {
                 if let previousContext = previousContext {
-                    context = Context(queryEarlierContext: later ? previousContext.queryEarlierContext : (sessionId: sessionId, requestId: requestId), queryLaterContext: !later ? previousContext.queryLaterContext : (sessionId: sessionId, requestId: requestId), desktopUrl: desktopUrl)
+                    context = Context(queryEarlierContext: later ? previousContext.queryEarlierContext : (sessionId: sessionId, requestId: requestId), queryLaterContext: !later ? previousContext.queryLaterContext : (sessionId: sessionId, requestId: requestId))
                 } else {
-                    context = Context(queryEarlierContext: (sessionId: sessionId, requestId: requestId), queryLaterContext: (sessionId: sessionId, requestId: requestId), desktopUrl: desktopUrl)
+                    context = Context(queryEarlierContext: (sessionId: sessionId, requestId: requestId), queryLaterContext: (sessionId: sessionId, requestId: requestId))
                 }
             } else {
                 context = nil
@@ -1447,8 +1401,8 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
         builder.addParameter(key: "calcNumberOfTrips", value: numTripsRequested)
     }
     
-    func queryTripsParameters(builder: UrlBuilder, from: Location, via: Location?, to: Location, date: Date, departure: Bool, tripOptions: TripOptions, desktop: Bool) {
-        appendCommonRequestParameters(builder: builder, outputFormat: desktop ? nil : "XML")
+    func queryTripsParameters(builder: UrlBuilder, from: Location, via: Location?, to: Location, date: Date, departure: Bool, tripOptions: TripOptions) {
+        appendCommonRequestParameters(builder: builder, outputFormat: "XML")
         builder.addParameter(key: "sessionID", value: 0)
         builder.addParameter(key: "requestID", value: 0)
         builder.addParameter(key: "coordListOutputFormat", value: "STRING")
@@ -1576,8 +1530,8 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
         builder.addParameter(key: timeParam, value: timeFormatter.string(from: date))
     }
     
-    func queryDeparturesParameters(builder: UrlBuilder, stationId: String, departures: Bool, time: Date?, maxDepartures: Int, equivs: Bool, desktop: Bool) {
-        appendCommonRequestParameters(builder: builder, outputFormat: desktop ? nil : "XML")
+    func queryDeparturesParameters(builder: UrlBuilder, stationId: String, departures: Bool, time: Date?, maxDepartures: Int, equivs: Bool) {
+        appendCommonRequestParameters(builder: builder, outputFormat: "XML")
         builder.addParameter(key: "type_dm", value: "stop")
         builder.addParameter(key: "name_dm", value: stationId)
         if let time = time {
@@ -2729,11 +2683,10 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
         public let queryEarlierContext: (sessionId: String, requestId: String)
         public let queryLaterContext: (sessionId: String, requestId: String)
         
-        init(queryEarlierContext: (sessionId: String, requestId: String), queryLaterContext: (sessionId: String, requestId: String), desktopUrl: URL?) {
+        init(queryEarlierContext: (sessionId: String, requestId: String), queryLaterContext: (sessionId: String, requestId: String)) {
             self.queryEarlierContext = queryEarlierContext
             self.queryLaterContext = queryLaterContext
             super.init()
-            self.desktopUrl = desktopUrl
         }
         
         public required convenience init?(coder aDecoder: NSCoder) {
@@ -2745,8 +2698,7 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
                 else {
                     return nil
             }
-            let url = URL(string: aDecoder.decodeObject(of: NSString.self, forKey: QueryTripsContext.PropertyKey.desktopUrl) as String? ?? "")
-            self.init(queryEarlierContext: (sessionId: earlierSession, requestId: earlierRequest), queryLaterContext: (sessionId: laterSession, requestId: laterRequest), desktopUrl: url)
+            self.init(queryEarlierContext: (sessionId: earlierSession, requestId: earlierRequest), queryLaterContext: (sessionId: laterSession, requestId: laterRequest))
         }
         
         public override func encode(with aCoder: NSCoder) {
@@ -2754,7 +2706,6 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
             aCoder.encode(queryEarlierContext.requestId, forKey: PropertyKey.queryEarlierContextRequest)
             aCoder.encode(queryLaterContext.sessionId, forKey: PropertyKey.queryLaterContextSession)
             aCoder.encode(queryLaterContext.requestId, forKey: PropertyKey.queryLaterContextRequest)
-            aCoder.encode(desktopUrl?.absoluteString, forKey: QueryTripsContext.PropertyKey.desktopUrl)
         }
         
         struct PropertyKey {

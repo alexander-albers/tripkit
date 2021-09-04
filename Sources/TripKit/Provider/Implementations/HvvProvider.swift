@@ -6,7 +6,7 @@ public class HvvProvider: AbstractHafasClientInterfaceProvider {
     static let PRODUCTS_MAP: [Product?] = [.subway, .suburbanTrain, .suburbanTrain, .regionalTrain, .regionalTrain, .ferry, .highSpeedTrain, .bus, .bus, .highSpeedTrain, .onDemand]
     
     public init(apiAuthorization: [String: Any], requestVerification: AbstractHafasClientInterfaceProvider.RequestVerification) {
-        super.init(networkId: .HVV, apiBase: HvvProvider.API_BASE, desktopQueryEndpoint: nil, desktopStboardEndpoint: nil, productsMap: HvvProvider.PRODUCTS_MAP)
+        super.init(networkId: .HVV, apiBase: HvvProvider.API_BASE, productsMap: HvvProvider.PRODUCTS_MAP)
         self.apiAuthorization = apiAuthorization
         self.requestVerification = requestVerification
         apiVersion = "1.16"

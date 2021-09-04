@@ -84,8 +84,8 @@ class TripKitProviderTestCase: XCTestCase {
     func testQueryDepartures() {
         let result = syncQueryDepartures(stationId: delegate.stationIdFrom, departures: true, time: Date(), maxDepartures: 5, equivs: false)
         switch result {
-        case .success(let departures, let desktopUrl):
-            os_log("success: %@, desktopUrl=%@", log: .testsLogger, type: .default, departures, desktopUrl?.absoluteString ?? "")
+        case .success(let departures):
+            os_log("success: %@", log: .testsLogger, type: .default, departures)
             XCTAssert(!departures.isEmpty, "received empty result")
             if let first = departures.first {
                 XCTAssert(!first.departures.isEmpty, "received empty result")
@@ -116,8 +116,8 @@ class TripKitProviderTestCase: XCTestCase {
     func testQueryArrivals() {
         let result = syncQueryDepartures(stationId: delegate.stationIdFrom, departures: false, time: Date(), maxDepartures: 5, equivs: false)
         switch result {
-        case .success(let departures, let desktopUrl):
-            os_log("success: %@, desktopUrl=%@", log: .testsLogger, type: .default, departures, desktopUrl?.absoluteString ?? "")
+        case .success(let departures):
+            os_log("success: %@", log: .testsLogger, type: .default, departures)
             XCTAssert(!departures.isEmpty, "received empty result")
             if let first = departures.first {
                 XCTAssert(!first.departures.isEmpty, "received empty result")
@@ -132,8 +132,8 @@ class TripKitProviderTestCase: XCTestCase {
     func testQueryDeparturesEquivs() {
         let result = syncQueryDepartures(stationId: delegate.stationIdFrom, departures: true, time: Date(), maxDepartures: 5, equivs: false)
         switch result {
-        case .success(let departures, let desktopUrl):
-            os_log("success: %@, desktopUrl=%@", log: .testsLogger, type: .default, departures, desktopUrl?.absoluteString ?? "")
+        case .success(let departures):
+            os_log("success: %@", log: .testsLogger, type: .default, departures)
             XCTAssert(!departures.isEmpty, "received empty result")
             if let first = departures.first {
                 XCTAssert(!first.departures.isEmpty, "received empty result")

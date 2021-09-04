@@ -3,12 +3,10 @@ import Foundation
 public class WienProvider: AbstractEfaProvider {
     
     static let API_BASE = "https://www.wienerlinien.at/ogd_routing/"
-    static let DESKTOP_TRIP_ENDPOINT = "https://www.wienerlinien.at/eportal3/ep/channelView.do/channelId/-46649"
     
     public init() {
-        super.init(networkId: .WIEN, apiBase: WienProvider.API_BASE, desktopTripEndpoint: WienProvider.DESKTOP_TRIP_ENDPOINT)
+        super.init(networkId: .WIEN, apiBase: WienProvider.API_BASE)
         includeRegionId = false
-        supportsDesktopDepartures = false
         
         styles = [
             // Wien
@@ -30,37 +28,10 @@ public class WienProvider: AbstractEfaProvider {
         ]
     }
     
-    override func queryTripsParameters(builder: UrlBuilder, from: Location, via: Location?, to: Location, date: Date, departure: Bool, tripOptions: TripOptions, desktop: Bool) {
-        if desktop {
-            //routeFrom=16.56373%3A48.11986%3AWGS84%3AFlughafen+Wien&routeTo=60201468%3AWestbahnhof&routeDatetime=2017-09-09T12%3A19%3A00.000Z&immediate=true&deparr=Abfahrt
-            
-            builder.setEncoding(encoding: .isoLatin1)
-            builder.addParameter(key: "routeFrom", value: encodeLocationForDesktop(location: from))
-            if let via = via {
-                builder.addParameter(key: "routeVia", value: encodeLocationForDesktop(location: via))
-            }
-            builder.addParameter(key: "routeTo", value: encodeLocationForDesktop(location: to))
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:00.000'Z'"
-            dateFormatter.timeZone = timeZone
-            builder.addParameter(key: "routeDatetime", value: dateFormatter.string(from: date))
-            builder.addParameter(key: "immediate", value: true)
-            builder.addParameter(key: "deparr", value: departure ? "Abfahrt" : "Ankunft")
-        } else {
-            super.queryTripsParameters(builder: builder, from: from, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions, desktop: desktop)
-            if let products = tripOptions.products, products.contains(.bus) {
-                builder.addParameter(key: "inclMOT_11", value: "on") // night bus
-            }
-        }
-    }
-    
-    func encodeLocationForDesktop(location: Location) -> String {
-        if let id = location.id {
-            return "\(id):\(location.getUniqueShortName())"
-        } else if let coord = location.coord {
-            return (String(format: "%2.6f:%2.6f:WGS84", Double(coord.lon) / 1e6, Double(coord.lat) / 1e6) + ":" + location.getUniqueShortName())
-        } else {
-            return location.getUniqueShortName()
+    override func queryTripsParameters(builder: UrlBuilder, from: Location, via: Location?, to: Location, date: Date, departure: Bool, tripOptions: TripOptions) {
+        super.queryTripsParameters(builder: builder, from: from, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions)
+        if let products = tripOptions.products, products.contains(.bus) {
+            builder.addParameter(key: "inclMOT_11", value: "on") // night bus
         }
     }
     

@@ -8,11 +8,9 @@ public class BayernProvider: AbstractEfaProvider {
     static let DEPARTURE_MONITOR_ENDPOINT = "XML_DM_REQUEST"
     static let TRIP_ENDPOINT = "XML_TRIP_REQUEST2"
     static let STOP_FINDER_ENDPOINT = "XML_STOPFINDER_REQUEST"
-    static let DESKTOP_TRIP_ENDPOINT = "https://www.bayern-fahrplan.de/de/auskunft"
-    static let DESKTOP_DEPARTURES_ENDPOINT = "https://www.bayern-fahrplan.de/de/abfahrt-ankunft"
     
     public init() {
-        super.init(networkId: .BAYERN, apiBase: BayernProvider.API_BASE, departureMonitorEndpoint: BayernProvider.DEPARTURE_MONITOR_ENDPOINT, tripEndpoint: BayernProvider.TRIP_ENDPOINT, stopFinderEndpoint: BayernProvider.STOP_FINDER_ENDPOINT, coordEndpoint: nil, tripStopTimesEndpoint: nil, desktopTripEndpoint: BayernProvider.DESKTOP_TRIP_ENDPOINT, desktopDeparturesEndpoint: BayernProvider.DESKTOP_DEPARTURES_ENDPOINT)
+        super.init(networkId: .BAYERN, apiBase: BayernProvider.API_BASE, departureMonitorEndpoint: BayernProvider.DEPARTURE_MONITOR_ENDPOINT, tripEndpoint: BayernProvider.TRIP_ENDPOINT, stopFinderEndpoint: BayernProvider.STOP_FINDER_ENDPOINT, coordEndpoint: nil, tripStopTimesEndpoint: nil)
         
         numTripsRequested = 12
         includeRegionId = false
@@ -44,8 +42,8 @@ public class BayernProvider: AbstractEfaProvider {
         return queryTripsMobile(from: from, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions, completion: completion)
     }
     
-    override func queryTripsParameters(builder: UrlBuilder, from: Location, via: Location?, to: Location, date: Date, departure: Bool, tripOptions: TripOptions, desktop: Bool) {
-        super.queryTripsParameters(builder: builder, from: from, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions, desktop: desktop)
+    override func queryTripsParameters(builder: UrlBuilder, from: Location, via: Location?, to: Location, date: Date, departure: Bool, tripOptions: TripOptions) {
+        super.queryTripsParameters(builder: builder, from: from, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions)
         
         if let products = tripOptions.products {
             for product in products {
@@ -62,10 +60,6 @@ public class BayernProvider: AbstractEfaProvider {
         builder.addParameter(key: "inclMOT_14", value: "on")
         
         builder.addParameter(key: "calcOneDirection", value: 1)
-        
-        if desktop {
-            builder.addParameter(key: "zope_command", value: "verify")
-        }
     }
     
     override public func queryMoreTrips(context: QueryTripsContext, later: Bool, completion: @escaping (HttpRequest, QueryTripsResult) -> Void) -> AsyncRequest {

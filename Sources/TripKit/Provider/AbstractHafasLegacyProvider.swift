@@ -147,16 +147,12 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider {
         let urlBuilder = UrlBuilder(path: stationBoardEndpoint, encoding: requestUrlEncoding)
         xmlStationBoardParameters(builder: urlBuilder, stationId: stationId, departures: departures, time: time, maxDepartures: maxDepartures, equivs: equivs, styleSheet: "vs_java3")
         
-        let desktopUrlBuilder = UrlBuilder(path: stationBoardEndpoint, encoding: requestUrlEncoding)
-        xmlStationBoardParameters(builder: desktopUrlBuilder, stationId: stationId, departures: departures, time: time, maxDepartures: maxDepartures, equivs: equivs, styleSheet: nil)
-        let desktopUrl = desktopUrlBuilder.build()
-        
         let httpRequest = HttpRequest(urlBuilder: urlBuilder)
         return HttpClient.get(httpRequest: httpRequest) { result in
             switch result {
             case .success((_, let data)):
                 do {
-                    try self.handleXmlStationBoard(httpRequest: httpRequest, response: data, desktopUrl: desktopUrl, stationId: stationId, completion: completion)
+                    try self.handleXmlStationBoard(httpRequest: httpRequest, response: data, stationId: stationId, completion: completion)
                 } catch let err as ParseError {
                     os_log("queryDepartures parse error: %{public}@", log: .requestLogger, type: .error, err.reason)
                     completion(httpRequest, .failure(err))
@@ -229,11 +225,7 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider {
     
     func doQueryBinary(from: Location, via: Location?, to: Location, date: Date, departure: Bool, tripOptions: TripOptions, completion: @escaping (HttpRequest, QueryTripsResult) -> Void) -> AsyncRequest {
         let urlBuilder = UrlBuilder(path: queryEndpoint, encoding: requestUrlEncoding)
-        queryTripsBinaryParameters(builder: urlBuilder, from: from, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions, desktop: false)
-        
-        let desktopUrlBuilder = UrlBuilder(path: queryEndpoint, encoding: requestUrlEncoding)
-        queryTripsBinaryParameters(builder: desktopUrlBuilder, from: from, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions, desktop: true)
-        let desktopUrl = desktopUrlBuilder.build()
+        queryTripsBinaryParameters(builder: urlBuilder, from: from, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions)
         
         let httpRequest = HttpRequest(urlBuilder: urlBuilder)
         return HttpClient.get(httpRequest: httpRequest) { result in
@@ -246,7 +238,7 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider {
                     } else {
                         uncompressedData = data
                     }
-                    try self.handleTripsBinaryResponse(httpRequest: httpRequest, data: uncompressedData, desktopUrl: desktopUrl, from: from, via: via, to: to, completion: completion)
+                    try self.handleTripsBinaryResponse(httpRequest: httpRequest, data: uncompressedData, from: from, via: via, to: to, completion: completion)
                 } catch is SessionExpiredError {
                     completion(httpRequest, .sessionExpired)
                 } catch let err as ParseError {
@@ -282,7 +274,7 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider {
                     } else {
                         uncompressedData = data
                     }
-                    try self.handleTripsBinaryResponse(httpRequest: httpRequest, data: uncompressedData, desktopUrl: context.desktopUrl, from: nil, via: nil, to: nil, completion: completion)
+                    try self.handleTripsBinaryResponse(httpRequest: httpRequest, data: uncompressedData, from: nil, via: nil, to: nil, completion: completion)
                 } catch let err as ParseError {
                     os_log("queryMoreTrips parse error: %{public}@", log: .requestLogger, type: .error, err.reason)
                     completion(httpRequest, .failure(err))
@@ -316,7 +308,7 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider {
                     } else {
                         uncompressedData = data
                     }
-                    try self.handleTripsBinaryResponse(httpRequest: httpRequest, data: uncompressedData, desktopUrl: nil, from: nil, via: nil, to: nil, completion: completion)
+                    try self.handleTripsBinaryResponse(httpRequest: httpRequest, data: uncompressedData, from: nil, via: nil, to: nil, completion: completion)
                 } catch let err as ParseError {
                     os_log("refreshTrip parse error: %{public}@", log: .requestLogger, type: .error, err.reason)
                     completion(httpRequest, .failure(err))
@@ -523,7 +515,7 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider {
     
     let P_XML_STATION_BOARD_DELAY = try! NSRegularExpression(pattern: "(?:-|k\\.A\\.?|cancel|([+-]?\\s*\\d+))", options: .caseInsensitive)
     
-    func handleXmlStationBoard(httpRequest: HttpRequest, response: Data?, desktopUrl: URL?, stationId: String, completion: @escaping (HttpRequest, QueryDeparturesResult) -> Void) throws {
+    func handleXmlStationBoard(httpRequest: HttpRequest, response: Data?, stationId: String, completion: @escaping (HttpRequest, QueryDeparturesResult) -> Void) throws {
         let normalizedStationId = normalize(stationId: stationId)
         
         guard let data = response else {
@@ -554,7 +546,7 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider {
                 completion(httpRequest, .invalidStation)
                 return
             } else if errorCode == "H890" {
-                completion(httpRequest, .success(departures: [], desktopUrl: nil))
+                completion(httpRequest, .success(departures: []))
                 return
             } else {
                 throw ParseError(reason: "unknown hafas error \(errorCode) \(errorText)")
@@ -678,10 +670,10 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider {
             }
             departures.departures.append(departure)
         }
-        completion(httpRequest, .success(departures: stationDepartures, desktopUrl: desktopUrl))
+        completion(httpRequest, .success(departures: stationDepartures))
     }
     
-    private func handleTripsBinaryResponse(httpRequest: HttpRequest, data: Data, desktopUrl: URL?, from: Location?, via: Location?, to: Location?, completion: @escaping (HttpRequest, QueryTripsResult) -> Void) throws {
+    private func handleTripsBinaryResponse(httpRequest: HttpRequest, data: Data, from: Location?, via: Location?, to: Location?, completion: @escaping (HttpRequest, QueryTripsResult) -> Void) throws {
         let reader = Reader(data: data)
         let version = reader.readShortReverse()
         if version != 6 && version != 5 {
@@ -1150,7 +1142,7 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider {
         let context: QueryTripsBinaryContext?
         if let requestId = requestId {
             let canQueryMore = trips.count != 1 || trips[0].legs.count != 1 || !(trips[0].legs[0] is IndividualLeg)
-            context = QueryTripsBinaryContext(ident: requestId, seqNr: "\(seqNr)", ld: ld, canQueryMore: canQueryMore, desktopUrl: desktopUrl)
+            context = QueryTripsBinaryContext(ident: requestId, seqNr: "\(seqNr)", ld: ld, canQueryMore: canQueryMore)
         } else {
             context = nil
         }
@@ -1952,14 +1944,13 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider {
         public var seqNr: String
         public var ld: String?
         
-        init(ident: String, seqNr: String, ld: String?, canQueryMore: Bool, desktopUrl: URL?) {
+        init(ident: String, seqNr: String, ld: String?, canQueryMore: Bool) {
             self.ident = ident
             self.seqNr = seqNr
             self.ld = ld
             self.canQueryMore = canQueryMore
             
             super.init()
-            self.desktopUrl = desktopUrl
         }
         
         public required convenience init?(coder aDecoder: NSCoder) {
@@ -1971,8 +1962,7 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider {
             }
             let ld = aDecoder.decodeObject(of: NSString.self, forKey: PropertyKey.ld) as String?
             let canQueryMore = aDecoder.decodeBool(forKey: PropertyKey.canQueryMore)
-            let url = URL(string: aDecoder.decodeObject(of: NSString.self, forKey: QueryTripsContext.PropertyKey.desktopUrl) as String? ?? "")
-            self.init(ident: ident, seqNr: seqNr, ld: ld, canQueryMore: canQueryMore, desktopUrl: url)
+            self.init(ident: ident, seqNr: seqNr, ld: ld, canQueryMore: canQueryMore)
         }
         
         public override func encode(with aCoder: NSCoder) {
@@ -1980,7 +1970,6 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider {
             aCoder.encode(seqNr, forKey: PropertyKey.seqNr)
             aCoder.encode(ld, forKey: PropertyKey.ld)
             aCoder.encode(canQueryMore, forKey: PropertyKey.canQueryMore)
-            aCoder.encode(desktopUrl?.absoluteString, forKey: QueryTripsContext.PropertyKey.desktopUrl)
         }
         
         struct PropertyKey {

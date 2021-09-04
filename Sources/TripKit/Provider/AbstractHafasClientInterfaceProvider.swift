@@ -11,23 +11,12 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
     var apiClient: Any?
     var extVersion: String?
     var jnyFilterIncludes: [[String: Any]]?
-    var desktopQueryEndpoint: String?
-    var desktopStboardEndpoint: String?
     var requestVerification: RequestVerification = .none
     var configJson: [String: Any] = [:]
     var userAgent: String?
     
     init(networkId: NetworkId, apiBase: String, productsMap: [Product?]) {
         self.mgateEndpoint = apiBase + "mgate.exe"
-        self.desktopQueryEndpoint = apiBase + "query.exe/dn"
-        self.desktopStboardEndpoint = apiBase + "stboard.exe/dn"
-        super.init(networkId: networkId, productsMap: productsMap)
-    }
-    
-    init(networkId: NetworkId, apiBase: String, desktopQueryEndpoint: String?, desktopStboardEndpoint: String?, productsMap: [Product?]) {
-        self.mgateEndpoint = apiBase + "mgate.exe"
-        self.desktopQueryEndpoint = desktopQueryEndpoint
-        self.desktopStboardEndpoint = desktopStboardEndpoint
         super.init(networkId: networkId, productsMap: productsMap)
     }
     
@@ -150,21 +139,12 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         let urlBuilder = UrlBuilder(path: mgateEndpoint, encoding: requestUrlEncoding)
         requestVerification.appendParameters(to: urlBuilder, requestString: request)
         
-        let desktopUrl: URL?
-        if let desktopStboardEndpoint = desktopStboardEndpoint {
-            let desktopUrlBuilder = UrlBuilder(path: desktopStboardEndpoint, encoding: requestUrlEncoding)
-            xmlStationBoardParameters(builder: desktopUrlBuilder, stationId: stationId, departures: departures, time: time, maxDepartures: maxDepartures, equivs: equivs, styleSheet: nil)
-            desktopUrl = desktopUrlBuilder.build()
-        } else {
-            desktopUrl = nil
-        }
-        
         let httpRequest = HttpRequest(urlBuilder: urlBuilder).setPostPayload(request).setUserAgent(userAgent)
         return HttpClient.get(httpRequest: httpRequest) { result in
             switch result {
             case .success((_, let data)):
                 do {
-                    try self.handleJsonStationBoard(httpRequest: httpRequest, response: try data.toJson(), stationId: stationId, departures: departures, equivs: equivs, desktopUrl: desktopUrl, completion: completion)
+                    try self.handleJsonStationBoard(httpRequest: httpRequest, response: try data.toJson(), stationId: stationId, departures: departures, equivs: equivs, completion: completion)
                 } catch let err as ParseError {
                     os_log("queryDepartures parse error: %{public}@", log: .requestLogger, type: .error, err.reason)
                     completion(httpRequest, .failure(err))
@@ -254,23 +234,12 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         let urlBuilder = UrlBuilder(path: mgateEndpoint, encoding: requestUrlEncoding)
         requestVerification.appendParameters(to: urlBuilder, requestString: request)
         
-        let desktopUrl: URL?
-        if let context = previousContext {
-            desktopUrl = context.desktopUrl
-        } else if let desktopQueryEndpoint = desktopQueryEndpoint {
-            let desktopUrlBuilder = UrlBuilder(path: desktopQueryEndpoint, encoding: requestUrlEncoding)
-            queryTripsBinaryParameters(builder: desktopUrlBuilder, from: from, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions, desktop: true)
-            desktopUrl = desktopUrlBuilder.build()
-        } else {
-            desktopUrl = nil
-        }
-        
         let httpRequest = HttpRequest(urlBuilder: urlBuilder).setPostPayload(request).setUserAgent(userAgent)
         return HttpClient.get(httpRequest: httpRequest) { result in
             switch result {
             case .success((_, let data)):
                 do {
-                    try self.handleJsonTripSearch(httpRequest: httpRequest, response: try data.toJson(), desktopUrl: desktopUrl, from: from, via: via, to: to, date: date, departure: departure, previousContext: previousContext, later: later, tripOptions: tripOptions, completion: completion)
+                    try self.handleJsonTripSearch(httpRequest: httpRequest, response: try data.toJson(), from: from, via: via, to: to, date: date, departure: departure, previousContext: previousContext, later: later, tripOptions: tripOptions, completion: completion)
                 } catch let err as ParseError {
                     os_log("queryTrips parse error: %{public}@", log: .requestLogger, type: .error, err.reason)
                     completion(httpRequest, .failure(err))
@@ -299,7 +268,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
             switch result {
             case .success((_, let data)):
                 do {
-                    try self.handleJsonTripSearch(httpRequest: httpRequest, response: try data.toJson(), desktopUrl: nil, from: context.from, via: nil, to: context.to, date: Date(), departure: true, previousContext: nil, later: false, tripOptions: TripOptions(), completion: completion)
+                    try self.handleJsonTripSearch(httpRequest: httpRequest, response: try data.toJson(), from: context.from, via: nil, to: context.to, date: Date(), departure: true, previousContext: nil, later: false, tripOptions: TripOptions(), completion: completion)
                 } catch let err as ParseError {
                     os_log("refreshTrip parse error: %{public}@", log: .requestLogger, type: .error, err.reason)
                     completion(httpRequest, .failure(err))
@@ -387,7 +356,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         completion(httpRequest, .success(locations: locations))
     }
     
-    func handleJsonStationBoard(httpRequest: HttpRequest, response: Any?, stationId: String, departures: Bool, equivs: Bool, desktopUrl: URL?, completion: @escaping (HttpRequest, QueryDeparturesResult) -> Void) throws {
+    func handleJsonStationBoard(httpRequest: HttpRequest, response: Any?, stationId: String, departures: Bool, equivs: Bool, completion: @escaping (HttpRequest, QueryDeparturesResult) -> Void) throws {
         guard let json = response as? [String: Any], json["err"] == nil || json["err"] as? String == "OK", let svcResL = json["svcResL"] as? [Any], svcResL.count == 1, let svcRes = svcResL[0] as? [String: Any], let meth = svcRes["meth"] as? String, meth == "StationBoard", let err = svcRes["err"] as? String else {
             throw ParseError(reason: "could not parse json")
         }
@@ -522,10 +491,10 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
             stationDeparture.departures.sort(by: {$0.getTime() < $1.getTime()})
         }
         
-        completion(httpRequest, .success(departures: result, desktopUrl: desktopUrl))
+        completion(httpRequest, .success(departures: result))
     }
     
-    func handleJsonTripSearch(httpRequest: HttpRequest, response: Any?, desktopUrl: URL?, from: Location, via: Location?, to: Location, date: Date, departure: Bool, previousContext: Context?, later: Bool, tripOptions: TripOptions, completion: @escaping (HttpRequest, QueryTripsResult) -> Void) throws {
+    func handleJsonTripSearch(httpRequest: HttpRequest, response: Any?, from: Location, via: Location?, to: Location, date: Date, departure: Bool, previousContext: Context?, later: Bool, tripOptions: TripOptions, completion: @escaping (HttpRequest, QueryTripsResult) -> Void) throws {
         guard let json = response as? [String: Any], json["err"] == nil || json["err"] as? String == "OK", let svcResL = json["svcResL"] as? [Any], svcResL.count == 1, let svcRes = svcResL[0] as? [String: Any], let meth = svcRes["meth"] as? String, meth == "TripSearch" || meth == "Reconstruction", let err = svcRes["err"] as? String else {
             throw ParseError(reason: "could not parse json")
         }
@@ -722,9 +691,9 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         }
         let context: Context
         if let previousContext = previousContext {
-            context = Context(from: from, via: via, to: to, date: date, departure: departure, laterContext: later ? res["outCtxScrF"] as? String : previousContext.laterContext, earlierContext: !later ? res["outCtxScrB"] as? String : previousContext.earlierContext, desktopUrl: desktopUrl, tripOptions: tripOptions)
+            context = Context(from: from, via: via, to: to, date: date, departure: departure, laterContext: later ? res["outCtxScrF"] as? String : previousContext.laterContext, earlierContext: !later ? res["outCtxScrB"] as? String : previousContext.earlierContext, tripOptions: tripOptions)
         } else {
-            context = Context(from: from, via: via, to: to, date: date, departure: departure, laterContext: res["outCtxScrF"] as? String, earlierContext: res["outCtxScrB"] as? String, desktopUrl: desktopUrl, tripOptions: tripOptions)
+            context = Context(from: from, via: via, to: to, date: date, departure: departure, laterContext: res["outCtxScrF"] as? String, earlierContext: res["outCtxScrB"] as? String, tripOptions: tripOptions)
         }
         completion(httpRequest, .success(context: context, from: from, via: via, to: to, trips: trips, messages: []))
     }
@@ -1358,7 +1327,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         public let earlierContext: String?
         public let tripOptions: TripOptions
         
-        init(from: Location, via: Location?, to: Location, date: Date, departure: Bool, laterContext: String?, earlierContext: String?, desktopUrl: URL?, tripOptions: TripOptions) {
+        init(from: Location, via: Location?, to: Location, date: Date, departure: Bool, laterContext: String?, earlierContext: String?, tripOptions: TripOptions) {
             self.from = from
             self.via = via
             self.to = to
@@ -1368,7 +1337,6 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
             self.earlierContext = earlierContext
             self.tripOptions = tripOptions
             super.init()
-            self.desktopUrl = desktopUrl
         }
         
         public required convenience init?(coder aDecoder: NSCoder) {
@@ -1385,8 +1353,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
             let laterContext = aDecoder.decodeObject(of: NSString.self, forKey: PropertyKey.laterContext) as String?
             let earlierContext = aDecoder.decodeObject(of: NSString.self, forKey: PropertyKey.earlierContext) as String?
             
-            let url = URL(string: aDecoder.decodeObject(of: NSString.self, forKey: QueryTripsContext.PropertyKey.desktopUrl) as String? ?? "")
-            self.init(from: from, via: via, to: to, date: date, departure: departure, laterContext: laterContext, earlierContext: earlierContext, desktopUrl: url, tripOptions: tripOptions)
+            self.init(from: from, via: via, to: to, date: date, departure: departure, laterContext: laterContext, earlierContext: earlierContext, tripOptions: tripOptions)
         }
         
         public override func encode(with aCoder: NSCoder) {
@@ -1397,7 +1364,6 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
             aCoder.encode(departure, forKey: PropertyKey.departure)
             aCoder.encode(earlierContext, forKey: PropertyKey.earlierContext)
             aCoder.encode(laterContext, forKey: PropertyKey.laterContext)
-            aCoder.encode(desktopUrl?.absoluteString, forKey: QueryTripsContext.PropertyKey.desktopUrl)
             aCoder.encode(tripOptions, forKey: PropertyKey.tripOptions)
         }
         
