@@ -13,12 +13,18 @@ public class AbstractNetworkProvider: NetworkProvider {
         self.id = networkId
     }
     
+    // MARK: API methods
+    
     public func suggestLocations(constraint: String, types: [LocationType]?, maxLocations: Int, completion: @escaping (HttpRequest, SuggestLocationsResult) -> Void) -> AsyncRequest {
-        fatalError("suggest locations has not been implemented.")
+        fatalError("\(#function) not implemented")
     }
     
     public func queryNearbyLocations(location: Location, types: [LocationType]?, maxDistance: Int, maxLocations: Int, completion: @escaping (HttpRequest, NearbyLocationsResult) -> Void) -> AsyncRequest {
-        fatalError("query nearby locations has not been implemented.")
+        fatalError("\(#function) not implemented")
+    }
+    
+    public func queryDepartures(stationId: String, departures: Bool, time: Date?, maxDepartures: Int, equivs: Bool, completion: @escaping (HttpRequest, QueryDeparturesResult) -> Void) -> AsyncRequest {
+        fatalError("\(#function) not implemented")
     }
     
     public final func queryTrips(from: Location, via: Location?, to: Location, date: Date, departure: Bool, products: [Product]?, optimize: Optimize?, walkSpeed: WalkSpeed?, accessibility: Accessibility?, options: [Option]?, completion: @escaping (HttpRequest, QueryTripsResult) -> Void) -> AsyncRequest {
@@ -26,24 +32,48 @@ public class AbstractNetworkProvider: NetworkProvider {
     }
     
     public func queryTrips(from: Location, via: Location?, to: Location, date: Date, departure: Bool, tripOptions: TripOptions, completion: @escaping (HttpRequest, QueryTripsResult) -> Void) -> AsyncRequest {
-        fatalError("query trips has not been implemented.")
+        fatalError("\(#function) not implemented")
     }
     
     public func queryMoreTrips(context: QueryTripsContext, later: Bool, completion: @escaping (HttpRequest, QueryTripsResult) -> Void) -> AsyncRequest {
-        fatalError("query more trips has not been implemented.")
+        fatalError("\(#function) not implemented")
     }
     
     public func refreshTrip(context: RefreshTripContext, completion: @escaping (HttpRequest, QueryTripsResult) -> Void) -> AsyncRequest {
-        fatalError("refresh trip has not been implemented.")
-    }
-    
-    public func queryDepartures(stationId: String, departures: Bool, time: Date?, maxDepartures: Int, equivs: Bool, completion: @escaping (HttpRequest, QueryDeparturesResult) -> Void) -> AsyncRequest {
-        fatalError("query departuers has not been implemented.")
+        fatalError("\(#function) not implemented")
     }
     
     public func queryJourneyDetail(context: QueryJourneyDetailContext, completion: @escaping (HttpRequest, QueryJourneyDetailResult) -> Void) -> AsyncRequest {
-        fatalError("query journey detail has not been implemented.")
+        fatalError("\(#function) not implemented")
     }
+    
+    // MARK: Parsing methods
+    
+    func suggestLocationsParsing(request: HttpRequest, constraint: String, types: [LocationType]?, maxLocations: Int, completion: @escaping (HttpRequest, SuggestLocationsResult) -> Void) throws {
+        fatalError("\(#function) not implemented")
+    }
+    
+    func queryNearbyLocationsByCoordinateParsing(request: HttpRequest, location: Location, types: [LocationType]?, maxDistance: Int, maxLocations: Int, completion: @escaping (HttpRequest, NearbyLocationsResult) -> Void) throws {
+        fatalError("\(#function) not implemented")
+    }
+    
+    func queryDeparturesParsing(request: HttpRequest, stationId: String, departures: Bool, time: Date?, maxDepartures: Int, equivs: Bool, completion: @escaping (HttpRequest, QueryDeparturesResult) -> Void) throws {
+        fatalError("\(#function) not implemented")
+    }
+    
+    func queryTripsParsing(request: HttpRequest, from: Location, via: Location?, to: Location, date: Date, departure: Bool, tripOptions: TripOptions, previousContext: QueryTripsContext?, later: Bool, completion: @escaping (HttpRequest, QueryTripsResult) -> Void) throws {
+        fatalError("\(#function) not implemented")
+    }
+    
+    func refreshTripParsing(request: HttpRequest, context: RefreshTripContext, completion: @escaping (HttpRequest, QueryTripsResult) -> Void) throws {
+        fatalError("\(#function) not implemented")
+    }
+    
+    func queryJourneyDetailParsing(request: HttpRequest, context: QueryJourneyDetailContext, completion: @escaping (HttpRequest, QueryJourneyDetailResult) -> Void) throws {
+        fatalError("\(#function) not implemented")
+    }
+    
+    // MARK: Utility methods
     
     func lineStyle(network: String?, product: Product?, label: String?) -> LineStyle {
         var style: LineStyle?
