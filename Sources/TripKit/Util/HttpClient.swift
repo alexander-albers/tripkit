@@ -109,6 +109,8 @@ public class HttpRequest {
     public var postPayload: String?
     public var contentType: String?
     public var userAgent: String?
+    /// the response to this request
+    public var responseData: Data?
     
     public init(urlBuilder: UrlBuilder) {
         self.urlBuilder = urlBuilder

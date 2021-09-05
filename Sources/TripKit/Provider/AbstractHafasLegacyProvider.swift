@@ -49,9 +49,8 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider {
                         let substring = (string as NSString).substring(with: match.range(at: 1))
                         
                         let encodedData = substring.data(using: .utf8, allowLossyConversion: true)
-                        let json = try JSONSerialization.jsonObject(with: encodedData!, options: .allowFragments)
-                        
-                        try self.handleSuggestLocationResponse(httpRequest: httpRequest, json: json, completion: completion)
+                        httpRequest.responseData = encodedData
+                        try self.suggestLocationsParsing(request: httpRequest, constraint: constraint, types: types, maxLocations: maxLocations, completion: completion)
                     } else {
                         throw ParseError(reason: "illegal match")
                     }
@@ -103,8 +102,9 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider {
         return HttpClient.get(httpRequest: httpRequest) { result in
             switch result {
             case .success((_, let data)):
+                httpRequest.responseData = data
                 do {
-                    try self.handleJsonNearbyLocations(httpRequest: httpRequest, response: try data.toJson(encoding: self.jsonNearbyLocationsEncoding), completion: completion)
+                    try self.queryNearbyLocationsByCoordinateParsing(request: httpRequest, completion: completion)
                 } catch let err as ParseError {
                     os_log("nearbyLocations parse error: %{public}@", log: .requestLogger, type: .error, err.reason)
                     completion(httpRequest, .failure(err))
@@ -151,8 +151,9 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider {
         return HttpClient.get(httpRequest: httpRequest) { result in
             switch result {
             case .success((_, let data)):
+                httpRequest.responseData = data
                 do {
-                    try self.handleXmlStationBoard(httpRequest: httpRequest, response: data, stationId: stationId, completion: completion)
+                    try self.queryDeparturesParsing(request: httpRequest, stationId: stationId, departures: departures, time: time, maxDepartures: maxDepartures, equivs: equivs, completion: completion)
                 } catch let err as ParseError {
                     os_log("queryDepartures parse error: %{public}@", log: .requestLogger, type: .error, err.reason)
                     completion(httpRequest, .failure(err))
@@ -238,7 +239,8 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider {
                     } else {
                         uncompressedData = data
                     }
-                    try self.handleTripsBinaryResponse(httpRequest: httpRequest, data: uncompressedData, from: from, via: via, to: to, completion: completion)
+                    httpRequest.responseData = uncompressedData
+                    try self.queryTripsParsing(request: httpRequest, from: from, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions, previousContext: nil, later: false, completion: completion)
                 } catch is SessionExpiredError {
                     completion(httpRequest, .sessionExpired)
                 } catch let err as ParseError {
@@ -274,7 +276,8 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider {
                     } else {
                         uncompressedData = data
                     }
-                    try self.handleTripsBinaryResponse(httpRequest: httpRequest, data: uncompressedData, from: nil, via: nil, to: nil, completion: completion)
+                    httpRequest.responseData = uncompressedData
+                    try self._queryTripsParsing(request: httpRequest, from: nil, via: nil, to: nil, previousContext: context, later: later, completion: completion)
                 } catch let err as ParseError {
                     os_log("queryMoreTrips parse error: %{public}@", log: .requestLogger, type: .error, err.reason)
                     completion(httpRequest, .failure(err))
@@ -308,7 +311,8 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider {
                     } else {
                         uncompressedData = data
                     }
-                    try self.handleTripsBinaryResponse(httpRequest: httpRequest, data: uncompressedData, from: nil, via: nil, to: nil, completion: completion)
+                    httpRequest.responseData = uncompressedData
+                    try self.refreshTripParsing(request: httpRequest, context: context, completion: completion)
                 } catch let err as ParseError {
                     os_log("refreshTrip parse error: %{public}@", log: .requestLogger, type: .error, err.reason)
                     completion(httpRequest, .failure(err))
@@ -381,7 +385,9 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider {
     
     // MARK: NetworkProvider responses
     
-    func handleSuggestLocationResponse(httpRequest: HttpRequest, json: Any, completion: @escaping (HttpRequest, SuggestLocationsResult) -> Void) throws {
+    override func suggestLocationsParsing(request: HttpRequest, constraint: String, types: [LocationType]?, maxLocations: Int, completion: @escaping (HttpRequest, SuggestLocationsResult) -> Void) throws {
+        guard let data = request.responseData else { throw ParseError(reason: "no response") }
+        let json = try JSONSerialization.jsonObject(with: data, options: .allowFragments)
         var locations: [SuggestedLocation] = []
         guard let json = json as? [String: Any], let suggestions = json["suggestions"] as? [Any] else {
             throw ParseError(reason: "suggestions not found")
@@ -420,11 +426,11 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider {
                 locations.append(SuggestedLocation(location: location, priority: weight))
             }
         }
-        completion(httpRequest, .success(locations: locations))
+        completion(request, .success(locations: locations))
     }
     
-    func handleJsonNearbyLocations(httpRequest: HttpRequest, response: Any?, completion: @escaping (HttpRequest, NearbyLocationsResult) -> Void) throws {
-        guard let json = response as? [String: Any], let error = json["error"] as? String else {
+    func queryNearbyLocationsByCoordinateParsing(request: HttpRequest, completion: @escaping (HttpRequest, NearbyLocationsResult) -> Void) throws {
+        guard let json = try request.responseData?.toJson(encoding: self.jsonNearbyLocationsEncoding) as? [String: Any], let error = json["error"] as? String else {
             throw ParseError(reason: "could not parse json")
         }
         if error != "0" {
@@ -464,7 +470,7 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider {
             }
         }
         
-        completion(httpRequest, .success(locations: locations))
+        completion(request, .success(locations: locations))
     }
     
     func handleXmlNearbyLocations(httpRequest: HttpRequest, response: Data?, completion: @escaping (HttpRequest, NearbyLocationsResult) -> Void) throws {
@@ -515,11 +521,11 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider {
     
     let P_XML_STATION_BOARD_DELAY = try! NSRegularExpression(pattern: "(?:-|k\\.A\\.?|cancel|([+-]?\\s*\\d+))", options: .caseInsensitive)
     
-    func handleXmlStationBoard(httpRequest: HttpRequest, response: Data?, stationId: String, completion: @escaping (HttpRequest, QueryDeparturesResult) -> Void) throws {
+    override func queryDeparturesParsing(request: HttpRequest, stationId: String, departures: Bool, time: Date?, maxDepartures: Int, equivs: Bool, completion: @escaping (HttpRequest, QueryDeparturesResult) -> Void) throws {
         let normalizedStationId = normalize(stationId: stationId)
         
-        guard let data = response else {
-            throw ParseError(reason: "failed to get data")
+        guard let data = request.responseData else {
+            throw ParseError(reason: "no response")
         }
         var body = String(data: data, encoding: .isoLatin1)! // TODO: encoding
         if body.hasPrefix("<?xml "), let index = body.firstIndex(of: "\n") {
@@ -543,10 +549,10 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider {
         let xml = SWXMLHash.parse(newData!)
         if let errorCode = xml["StationTable"]["Err"].element?.attribute(by: "code")?.text, let errorText = xml["StationTable"]["Err"].element?.attribute(by: "text")?.text {
             if errorCode == "H730" {
-                completion(httpRequest, .invalidStation)
+                completion(request, .invalidStation)
                 return
             } else if errorCode == "H890" {
-                completion(httpRequest, .success(departures: []))
+                completion(request, .success(departures: []))
                 return
             } else {
                 throw ParseError(reason: "unknown hafas error \(errorCode) \(errorText)")
@@ -670,10 +676,19 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider {
             }
             departures.departures.append(departure)
         }
-        completion(httpRequest, .success(departures: stationDepartures))
+        completion(request, .success(departures: stationDepartures))
     }
     
-    private func handleTripsBinaryResponse(httpRequest: HttpRequest, data: Data, from: Location?, via: Location?, to: Location?, completion: @escaping (HttpRequest, QueryTripsResult) -> Void) throws {
+    override func queryTripsParsing(request: HttpRequest, from: Location, via: Location?, to: Location, date: Date, departure: Bool, tripOptions: TripOptions, previousContext: QueryTripsContext?, later: Bool, completion: @escaping (HttpRequest, QueryTripsResult) -> Void) throws {
+        try _queryTripsParsing(request: request, from: from, via: via, to: to, previousContext: nil, later: false, completion: completion)
+    }
+    
+    override func refreshTripParsing(request: HttpRequest, context: RefreshTripContext, completion: @escaping (HttpRequest, QueryTripsResult) -> Void) throws {
+        try _queryTripsParsing(request: request, from: nil, via: nil, to: nil, previousContext: nil, later: false, completion: completion)
+    }
+    
+    func _queryTripsParsing(request: HttpRequest, from: Location?, via: Location?, to: Location?, previousContext: QueryTripsContext?, later: Bool, completion: @escaping (HttpRequest, QueryTripsResult) -> Void) throws {
+        guard let data = request.responseData else { throw ParseError(reason: "no response") }
         let reader = Reader(data: data)
         let version = reader.readShortReverse()
         if version != 6 && version != 5 {
@@ -700,12 +715,12 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider {
             os_log("Hafas error while querying trips: %d", log: .requestLogger, type: .error, errorCode)
             switch errorCode {
             case 1:
-                completion(httpRequest, .sessionExpired)
+                completion(request, .sessionExpired)
             case 2:
                 os_log("Your search results could not be stored internally.", log: .requestLogger, type: .error)
-                completion(httpRequest, .sessionExpired)
+                completion(request, .sessionExpired)
             case 8:
-                completion(httpRequest, .ambiguous(ambiguousFrom: [], ambiguousVia: [], ambiguousTo: []))
+                completion(request, .ambiguous(ambiguousFrom: [], ambiguousVia: [], ambiguousTo: []))
             case 13:
                 throw ParseError(reason: "IN13: Our booking system is currently being used by too many users at the same time.")
             case 19:
@@ -714,49 +729,49 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider {
                 throw ParseError(reason: "H207: Unfortunately your connection request can currently not be processed.")
             case 887:
                 os_log("H887: Your inquiry was too complex. Please try entering less intermediate stations.", log: .requestLogger, type: .error)
-                completion(httpRequest, .noTrips)
+                completion(request, .noTrips)
             case 890:
                 os_log("H890: No connections have been found that correspond to your request. It is possible that the requested service does not operate from or to the places you stated on the requested date of travel.", log: .requestLogger, type: .error)
-                completion(httpRequest, .noTrips)
+                completion(request, .noTrips)
             case 891:
                 os_log("H891: Unfortunately there was no route found. Missing timetable data could be the reason.", log: .requestLogger, type: .error)
-                completion(httpRequest, .noTrips)
+                completion(request, .noTrips)
             case 892:
                 os_log("H892: Your inquiry was too complex. Please try entering less intermediate stations.", log: .requestLogger, type: .error)
-                completion(httpRequest, .noTrips)
+                completion(request, .noTrips)
             case 899:
                 os_log("H899: there was an unsuccessful or incomplete search due to a timetable change.", log: .requestLogger, type: .error)
-                completion(httpRequest, .noTrips)
+                completion(request, .noTrips)
             case 900:
                 os_log("Unsuccessful or incomplete search (timetable change)", log: .requestLogger, type: .error)
-                completion(httpRequest, .noTrips)
+                completion(request, .noTrips)
             case 9220:
                 os_log("H9220: Nearby to the given address stations could not be found.", log: .requestLogger, type: .error)
-                completion(httpRequest, .noTrips)
+                completion(request, .noTrips)
             case 9240:
                 os_log("H9240: Unfortunately there was no route found. Perhaps your start or destination is not served at all or with the selected means of transport on the required date/time.", log: .requestLogger, type: .error)
-                completion(httpRequest, .noTrips)
+                completion(request, .noTrips)
             case 9260:
                 os_log("H9260: Unknown departure station", log: .requestLogger, type: .error)
-                completion(httpRequest, .unknownFrom)
+                completion(request, .unknownFrom)
             case 9280:
                 os_log("H9280: Unknown intermediate station", log: .requestLogger, type: .error)
-                completion(httpRequest, .unknownVia)
+                completion(request, .unknownVia)
             case 9300:
                 os_log("H9300: Unknown arrival station", log: .requestLogger, type: .error)
-                completion(httpRequest, .unknownTo)
+                completion(request, .unknownTo)
             case 9320:
                 os_log("The input is incorrect or incomplete", log: .requestLogger, type: .error)
-                completion(httpRequest, .invalidDate)
+                completion(request, .invalidDate)
             case 9360:
                 os_log("H9360: Unfortunately your connection request can currently not be processed.", log: .requestLogger, type: .error)
-                completion(httpRequest, .invalidDate)
+                completion(request, .invalidDate)
             case 9380:
                 os_log("H9380: Dep./Arr./Intermed. or equivalent station defined more than once", log: .requestLogger, type: .error)
-                completion(httpRequest, .tooClose)
+                completion(request, .tooClose)
             case 895:
                 os_log("H895: Departure/Arrival are too near", log: .requestLogger, type: .error)
-                completion(httpRequest, .tooClose)
+                completion(request, .tooClose)
             case 65535:
                 throw ParseError(reason: "H65535: unknown error")
             default:
@@ -778,7 +793,7 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider {
         reader.skipBytes(30)
         let numTrips = reader.readShortReverse()
         if numTrips == 0 {
-            completion(httpRequest, .noTrips)
+            completion(request, .noTrips)
             return
         }
         reader.reset()
@@ -1147,7 +1162,11 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider {
             context = nil
         }
         
-        completion(httpRequest, .success(context: context, from: from, via: via, to: to, trips: trips, messages: []))
+        completion(request, .success(context: context, from: from, via: via, to: to, trips: trips, messages: []))
+    }
+    
+    override func queryJourneyDetailParsing(request: HttpRequest, context: QueryJourneyDetailContext, completion: @escaping (HttpRequest, QueryJourneyDetailResult) -> Void) throws {
+        // does not apply
     }
     
     // MARK: Request parameters

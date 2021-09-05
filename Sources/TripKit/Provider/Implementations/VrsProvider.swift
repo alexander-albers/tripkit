@@ -197,8 +197,9 @@ public class VrsProvider: AbstractNetworkProvider {
         return HttpClient.get(httpRequest: httpRequest) { result in
             switch result {
             case .success((_, let data)):
+                httpRequest.responseData = data
                 do {
-                    try self.handleNearbyLocationsResponse(httpRequest: httpRequest, response: data, types: types, maxDistance: maxDistance, completion: completion)
+                    try self.queryNearbyLocationsByCoordinateParsing(request: httpRequest, location: location, types: types, maxDistance: maxDistance, maxLocations: maxLocations, completion: completion)
                 } catch let err as ParseError {
                     os_log("nearbyLocations parse error: %{public}@", log: .requestLogger, type: .error, err.reason)
                     completion(httpRequest, .failure(err))
@@ -213,14 +214,14 @@ public class VrsProvider: AbstractNetworkProvider {
         }
     }
     
-    func handleNearbyLocationsResponse(httpRequest: HttpRequest, response: Data?, types: [LocationType]?, maxDistance: Int, completion: @escaping (HttpRequest, NearbyLocationsResult) -> Void) throws {
+    override func queryNearbyLocationsByCoordinateParsing(request: HttpRequest, location: Location, types: [LocationType]?, maxDistance: Int, maxLocations: Int, completion: @escaping (HttpRequest, NearbyLocationsResult) -> Void) throws {
         let types = types ?? [.station]
-        guard let json = try response?.toJson() as? [String: Any] else {
+        guard let json = try request.responseData?.toJson() as? [String: Any] else {
             throw ParseError(reason: "failed to get data")
         }
         if let error = (json["error"] as? String)?.trimmingCharacters(in: .whitespaces) {
             if error == "Leere Koordinate." || error == "Leere ASS-ID und leere Koordinate" {
-                completion(httpRequest, .invalidId)
+                completion(request, .invalidId)
             } else if error == "ASS2-Server lieferte leere Antwort." {
                 throw ParseError(reason: "empty response")
             } else {
@@ -242,7 +243,7 @@ public class VrsProvider: AbstractNetworkProvider {
             }
         }
         
-        completion(httpRequest, .success(locations: locations))
+        completion(request, .success(locations: locations))
     }
     
     override public func queryDepartures(stationId: String, departures: Bool, time: Date?, maxDepartures: Int, equivs: Bool, completion: @escaping (HttpRequest, QueryDeparturesResult) -> Void) -> AsyncRequest {
@@ -260,8 +261,9 @@ public class VrsProvider: AbstractNetworkProvider {
         return HttpClient.get(httpRequest: httpRequest) { result in
             switch result {
             case .success((_, let data)):
+                httpRequest.responseData = data
                 do {
-                    try self.handleDeparturesResponse(httpRequest: httpRequest, response: data, completion: completion)
+                    try self.queryDeparturesParsing(request: httpRequest, stationId: stationId, departures: departures, time: time, maxDepartures: maxDepartures, equivs: equivs, completion: completion)
                 } catch let err as ParseError {
                     os_log("queryDepartures parse error: %{public}@", log: .requestLogger, type: .error, err.reason)
                     completion(httpRequest, .failure(err))
@@ -276,17 +278,17 @@ public class VrsProvider: AbstractNetworkProvider {
         }
     }
     
-    func handleDeparturesResponse(httpRequest: HttpRequest, response: Data?, completion: @escaping (HttpRequest, QueryDeparturesResult) -> Void) throws {
-        guard let json = try response?.toJson() as? [String: Any] else {
+    override func queryDeparturesParsing(request: HttpRequest, stationId: String, departures: Bool, time: Date?, maxDepartures: Int, equivs: Bool, completion: @escaping (HttpRequest, QueryDeparturesResult) -> Void) throws {
+        guard let json = try request.responseData?.toJson() as? [String: Any] else {
             throw ParseError(reason: "failed to get data")
         }
         if let error = (json["error"] as? String)?.trimmingCharacters(in: .whitespaces) {
             if error == "ASS2-Server lieferte leere Antwort." {
                 throw ParseError(reason: "empty response")
             } else if error == "Leere ASS-ID und leere Koordinate" {
-                completion(httpRequest, .invalidStation)
+                completion(request, .invalidStation)
             } else if error == "Keine Abfahrten gefunden." {
-                completion(httpRequest, .invalidStation)
+                completion(request, .invalidStation)
             } else {
                 throw ParseError(reason: "unknown error \(error)")
             }
@@ -294,7 +296,7 @@ public class VrsProvider: AbstractNetworkProvider {
         }
         guard let timeTable = json["timetable"] as? [Any] else { throw ParseError(reason: "failed to parse timetable") }
         if timeTable.count == 0 {
-            completion(httpRequest, .success(departures: []))
+            completion(request, .success(departures: []))
             return
         }
         var result: [StationDepartures] = []
@@ -345,7 +347,7 @@ public class VrsProvider: AbstractNetworkProvider {
             
             result.append(StationDepartures(stopLocation: location, departures: departures, lines: lines))
         }
-        completion(httpRequest, .success(departures: result))
+        completion(request, .success(departures: result))
         //resolveLines(result: result, remainingIds: result.departures, completion: completion)
     }
     
@@ -436,8 +438,9 @@ public class VrsProvider: AbstractNetworkProvider {
         return HttpClient.get(httpRequest: httpRequest) { result in
             switch result {
             case .success((_, let data)):
+                httpRequest.responseData = data
                 do {
-                    try self.handleSuggestLocationsResponse(httpRequest: httpRequest, response: data, completion: completion)
+                    try self.suggestLocationsParsing(request: httpRequest, constraint: constraint, types: types, maxLocations: maxLocations, completion: completion)
                 } catch let err as ParseError {
                     os_log("suggestLocations parse error: %{public}@", log: .requestLogger, type: .error, err.reason)
                     completion(httpRequest, .failure(err))
@@ -452,15 +455,15 @@ public class VrsProvider: AbstractNetworkProvider {
         }
     }
     
-    func handleSuggestLocationsResponse(httpRequest: HttpRequest, response: Data?, completion: @escaping (HttpRequest, SuggestLocationsResult) -> Void) throws {
-        guard let json = try response?.toJson() as? [String: Any] else {
+    override func suggestLocationsParsing(request: HttpRequest, constraint: String, types: [LocationType]?, maxLocations: Int, completion: @escaping (HttpRequest, SuggestLocationsResult) -> Void) throws {
+        guard let json = try request.responseData?.toJson() as? [String: Any] else {
             throw ParseError(reason: "failed to get data")
         }
         if let error = (json["error"] as? String)?.trimmingCharacters(in: .whitespaces) {
             if error == "ASS2-Server lieferte leere Antwort." {
                 throw ParseError(reason: "empty response")
             } else if error == "Leere Suche" {
-                completion(httpRequest, .success(locations: []))
+                completion(request, .success(locations: []))
             } else {
                 throw ParseError(reason: "unknown error \(error)")
             }
@@ -487,7 +490,7 @@ public class VrsProvider: AbstractNetworkProvider {
             locations.append(SuggestedLocation(location: location, priority: 5 - index))
         }
         
-        completion(httpRequest, .success(locations: locations))
+        completion(request, .success(locations: locations))
     }
     
     override public func queryTrips(from: Location, via: Location?, to: Location, date: Date, departure: Bool, tripOptions: TripOptions, completion: @escaping (HttpRequest, QueryTripsResult) -> Void) -> AsyncRequest {
@@ -584,8 +587,9 @@ public class VrsProvider: AbstractNetworkProvider {
         return HttpClient.get(httpRequest: httpRequest) { result in
             switch result {
             case .success((_, let data)):
+                httpRequest.responseData = data
                 do {
-                    try self.handleQueryTripsResponse(httpRequest: httpRequest, response: data, from: from, via: via, to: to, products: tripOptions.products, departure: departure, previousContext: context, completion: completion)
+                    try self.queryTripsParsing(request: httpRequest, from: from, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions, previousContext: nil, later: false, completion: completion)
                 } catch is SessionExpiredError {
                     completion(httpRequest, .sessionExpired)
                 } catch let err as ParseError {
@@ -602,8 +606,8 @@ public class VrsProvider: AbstractNetworkProvider {
         }
     }
     
-    func handleQueryTripsResponse(httpRequest: HttpRequest, response: Data, from: Location, via: Location?, to: Location, products: [Product]?, departure: Bool, previousContext: Context?, completion: @escaping (HttpRequest, QueryTripsResult) -> Void) throws {
-        guard let json = try response.toJson() as? [String: Any] else {
+    override func queryTripsParsing(request: HttpRequest, from: Location, via: Location?, to: Location, date: Date, departure: Bool, tripOptions: TripOptions, previousContext: QueryTripsContext?, later: Bool, completion: @escaping (HttpRequest, QueryTripsResult) -> Void) throws {
+        guard let json = try request.responseData?.toJson() as? [String: Any] else {
             throw ParseError(reason: "failed to get data")
         }
         if let error = (json["error"] as? String)?.trimmingCharacters(in: .whitespaces) {
@@ -614,23 +618,23 @@ public class VrsProvider: AbstractNetworkProvider {
             } else if error == "Server Error" {
                 throw ParseError(reason: "server error")
             } else if error == "Keine Verbindungen gefunden." {
-                completion(httpRequest, .noTrips)
+                completion(request, .noTrips)
             } else if error.hasPrefix("Keine Verbindung gefunden.") || error.hasPrefix("Keine Verbindungen gefunden.") {
-                completion(httpRequest, .noTrips)
+                completion(request, .noTrips)
             } else if error == "Origin invalid." {
-                completion(httpRequest, .unknownFrom)
+                completion(request, .unknownFrom)
             } else if error == "Via invalid." {
-                completion(httpRequest, .unknownVia)
+                completion(request, .unknownVia)
             } else if error == "Destination invalid." {
-                completion(httpRequest, .unknownTo)
+                completion(request, .unknownTo)
             } else if error == "Fehlerhafter Start" {
-                completion(httpRequest, .unknownFrom)
+                completion(request, .unknownFrom)
             } else if error == "Fehlerhaftes Ziel" {
-                completion(httpRequest, .unknownTo)
+                completion(request, .unknownTo)
             } else if error == "Produkt ungültig." {
-                completion(httpRequest, .noTrips)
+                completion(request, .noTrips)
             } else if error == "Keine Route." {
-                completion(httpRequest, .noTrips)
+                completion(request, .noTrips)
             } else {
                 throw ParseError(reason: "unknown error \(error)")
             }
@@ -638,13 +642,13 @@ public class VrsProvider: AbstractNetworkProvider {
         }
         
         guard let routes = json["routes"] as? [Any] else {
-            completion(httpRequest, .noTrips)
+            completion(request, .noTrips)
             return
         }
         
         let context = Context()
-        context.arrival(date: previousContext?.firstArrival)
-        context.departure(date: previousContext?.lastDeparture)
+        context.arrival(date: (previousContext as? Context)?.firstArrival)
+        context.departure(date: (previousContext as? Context)?.lastDeparture)
         var trips: [Trip] = []
         for route in routes {
             guard let route = route as? [String: Any], let segments = route["segments"] as? [Any] else { throw ParseError(reason: "failed to parse route") }
@@ -804,7 +808,7 @@ public class VrsProvider: AbstractNetworkProvider {
         context.from = from
         context.via = via
         context.to = to
-        context.products = products
+        context.products = tripOptions.products
         if trips.count == 1 {
             if departure {
                 context.queryLater = false
@@ -813,7 +817,7 @@ public class VrsProvider: AbstractNetworkProvider {
             }
         }
         
-        completion(httpRequest, .success(context: context, from: from, via: via, to: to, trips: trips, messages: []))
+        completion(request, .success(context: context, from: from, via: via, to: to, trips: trips, messages: []))
     }
     
     override public func queryMoreTrips(context: QueryTripsContext, later: Bool, completion: @escaping (HttpRequest, QueryTripsResult) -> Void) -> AsyncRequest {
@@ -827,6 +831,10 @@ public class VrsProvider: AbstractNetworkProvider {
     public override func refreshTrip(context: RefreshTripContext, completion: @escaping (HttpRequest, QueryTripsResult) -> Void) -> AsyncRequest {
         completion(HttpRequest(urlBuilder: UrlBuilder()), .sessionExpired)
         return AsyncRequest(task: nil)
+    }
+    
+    override func refreshTripParsing(request: HttpRequest, context: RefreshTripContext, completion: @escaping (HttpRequest, QueryTripsResult) -> Void) throws {
+        // does not apply
     }
     
     public override func queryJourneyDetail(context: QueryJourneyDetailContext, completion: @escaping (HttpRequest, QueryJourneyDetailResult) -> Void) -> AsyncRequest {
@@ -881,6 +889,10 @@ public class VrsProvider: AbstractNetworkProvider {
                 completion(request, .invalidId)
             }
         })
+    }
+    
+    override func queryJourneyDetailParsing(request: HttpRequest, context: QueryJourneyDetailContext, completion: @escaping (HttpRequest, QueryJourneyDetailResult) -> Void) throws {
+        // does not apply
     }
     
     override func lineStyle(network: String?, product: Product?, label: String?) -> LineStyle {
