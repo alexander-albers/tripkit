@@ -29,4 +29,6 @@ class VvmProviderTests: TripKitProviderTestCase, TripKitProviderTestsDelegate {
     
     var suggestLocationsAddress: String { return "Heidenheim, Bahnhofplatz 5" }
     
+    var supportsQueryMoreTrips: Bool { return false }
+    
 }
