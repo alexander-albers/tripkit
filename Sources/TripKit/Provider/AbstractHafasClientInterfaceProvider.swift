@@ -263,7 +263,13 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
             completion(HttpRequest(urlBuilder: UrlBuilder()), .sessionExpired)
             return AsyncRequest(task: nil)
         }
-        let request = wrapJsonApiRequest(meth: "Reconstruction", req: ["ctxRecon": context.contextRecon,"trfReq": [ "jnyCl": 2, "cType": "PK", "tvlrProf": [[ "type": "E"]]],            "getPolyline": true, "getPasslist": true], formatted: true)
+        var req: [String: Any] = ["trfReq": ["jnyCl": 2, "cType": "PK", "tvlrProf": [["type": "E"]]], "getPolyline": true, "getPasslist": true]
+        if let apiVersion = apiVersion, apiVersion.compare("1.24", options: .numeric) == .orderedAscending {
+            req["ctxRecon"] = context.contextRecon
+        } else {
+            req["outReconL"] = [["ctx": context.contextRecon]]
+        }
+        let request = wrapJsonApiRequest(meth: "Reconstruction", req: req, formatted: true)
         let urlBuilder = UrlBuilder(path: mgateEndpoint, encoding: requestUrlEncoding)
         requestVerification.appendParameters(to: urlBuilder, requestString: request)
         
