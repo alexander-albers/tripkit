@@ -2,7 +2,7 @@ import Foundation
 
 public class BvgProvider: AbstractHafasClientInterfaceProvider {
     
-    static let API_BASE = "https://bvg-apps.hafas.de/bin/"
+    static let API_BASE = "https://bvg.hafas.cloud/bin/"
     static let PRODUCTS_MAP: [Product?] = [.suburbanTrain, .subway, .tram, .bus, .ferry, .highSpeedTrain, .regionalTrain, .onDemand, nil, nil]
     
     public init(apiAuthorization: [String: Any]) {
