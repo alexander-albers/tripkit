@@ -1,0 +1,96 @@
+{
+    "suggestLocations": [
+        {
+            "constraint": "Auwiesen",
+            "result": {
+                "id": "60501810"
+            }
+        },
+        {
+            "constraint": "auwie",
+            "result": {
+                "id": "60501810"
+            }
+        },
+        {
+            "constraint": "Fürstenstraße",
+            "result": {
+                "id": "streetID:1500000050::44010021:-1:Fürstenstraße :Traun:Fürstenstraße ::Fürstenstraße : 4050:ANY:DIVA_STREET:5444492:816473:NAV5:LNZ"
+            }
+        },
+        {
+            "constraint": "Linz/Donau, Figulystraße 12",
+            "result": {
+                "id": "streetID:1500001309:12:44001001:4:Figulystraße :Linz/Donau:Figulystraße ::Figulystraße :4020:ANY:DIVA_SINGLEHOUSE:5447297:809130:NAV5:LNZ:0"
+            }
+        }
+    ],
+    "queryNearbyLocationsByCoordinate": [
+        {
+            "__comment": "Linz Hauptbahnhof",
+            "lat": 48290966,
+            "lon": 14291716,
+            "result": {
+                "id": "60501720"
+            }
+        },
+        {
+            "__comment": "Linz Auwiesen",
+            "lat": 48248826,
+            "lon": 14308240,
+            "result": {
+                "id": "60501810"
+            }
+        }
+    ],
+    "queryDepartures": [
+        {
+            "__comment": "Linz Hauptbahnhof",
+            "id": "60501720"
+        },
+        {
+            "__comment": "Linz Auwiesen",
+            "id": "60501810"
+        }
+    ],
+    "queryDeparturesInvalidId": "999999",
+    "queryTrips": [
+        {
+            "__comment": "Linz Hauptbahnhof to Linz Auwiesen",
+            "from": {
+                "type": "station",
+                "id": "60501720"
+            },
+            "to": {
+                "type": "station",
+                "id": "60501810"
+            }
+        },
+        {
+            "__comment": "Linz Hauptbahnhof to Linz Auwiesen",
+            "from": {
+                "type": "coord",
+                "lat": 48290966,
+                "lon": 14291716
+            },
+            "to": {
+                "type": "coord",
+                "lat": 48248826,
+                "lon": 14308240
+            }
+        }
+    ],
+    "queryTripsTooClose": [
+        {
+            "__comment": "Linz Hauptbahnhof",
+            "from": {
+                "type": "station",
+                "id": "60501720"
+            },
+            "to": {
+                "type": "station",
+                "id": "60501720"
+            }
+        }
+    ]
+}

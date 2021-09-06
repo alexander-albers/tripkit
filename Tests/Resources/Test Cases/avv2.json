@@ -1,0 +1,96 @@
+{
+    "suggestLocations": [
+        {
+            "constraint": "Hbf, Aachen",
+            "result": {
+                "id": "A=1@O=Aachen, Hbf@X=6092044@Y=50767722@U=80@L=1008@B=1@p=1630627037@"
+            }
+        },
+        {
+            "constraint": "scha",
+            "result": {
+                "id": "A=1@O=Schanz Bf@X=6073750@Y=50769861@U=80@L=1016@B=1@p=1630627037@"
+            }
+        },
+        {
+            "constraint": "Gaßmühle",
+            "result": {
+                "id": "A=1@O=Gaßmühle@X=6008174@Y=50781646@U=80@L=1576@B=1@p=1630627037@"
+            }
+        },
+        {
+            "constraint": "Theaterstraße 49, Aachen",
+            "result": {
+                "id": "A=2@O=Aachen, Theaterstraße 49@X=6091972@Y=50770805@U=103@L=990001334@B=1@p=1614693982@"
+            }
+        }
+    ],
+    "queryNearbyLocationsByCoordinate": [
+        {
+            "__comment": "Aachen Hbf",
+            "lat": 50767803,
+            "lon": 6091504,
+            "result": {
+                "id": "A=1@O=Aachen, Hbf@X=6092044@Y=50767722@U=80@L=1008@"
+            }
+        },
+        {
+            "__comment": "Aachen Schanz",
+            "lat": 50769870,
+            "lon": 6073840,
+            "result": {
+                "id": "A=1@O=Aachen, Schanz Bf@X=6073750@Y=50769861@u=1@U=80@L=1016@"
+            }
+        }
+    ],
+    "queryDepartures": [
+        {
+            "__comment": "Aachen Hbf",
+            "id": "1008"
+        },
+        {
+            "__comment": "Aachen Schanz",
+            "id": "1016"
+        }
+    ],
+    "queryDeparturesInvalidId": "999999",
+    "queryTrips": [
+        {
+            "__comment": "Aachen Hbf to Aachen Schanz",
+            "from": {
+                "type": "station",
+                "id": "1008"
+            },
+            "to": {
+                "type": "station",
+                "id": "1016"
+            }
+        },
+        {
+            "__comment": "Aachen Hbf to Aachen Schanz",
+            "from": {
+                "type": "coord",
+                "lat": 50767803,
+                "lon": 6091504
+            },
+            "to": {
+                "type": "coord",
+                "lat": 50769870,
+                "lon": 6073840
+            }
+        }
+    ],
+    "queryTripsTooClose": [
+        {
+            "__comment": "Aachen Hbf",
+            "from": {
+                "type": "station",
+                "id": "1008"
+            },
+            "to": {
+                "type": "station",
+                "id": "1008"
+            }
+        }
+    ]
+}

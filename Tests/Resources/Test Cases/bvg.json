@@ -1,0 +1,96 @@
+{
+    "suggestLocations": [
+        {
+            "constraint": "S+U Berlin Hauptbahnhof",
+            "result": {
+                "id": "A=1@O=S+U Berlin Hauptbahnhof@X=13369072@Y=52525607@U=86@L=900003201@B=1@p=1630578354@"
+            }
+        },
+        {
+            "constraint": "Nollendorfplatz",
+            "result": {
+                "id": "A=1@O=U Nollendorfplatz (Berlin)@X=13353826@Y=52499646@U=86@L=900056102@B=1@p=1630578354@"
+            }
+        },
+        {
+            "constraint": "U Güntzelstr.",
+            "result": {
+                "id": "A=1@O=U Güntzelstr. (Berlin)@X=13331084@Y=52491970@U=86@L=900043201@B=1@p=1630578354@"
+            }
+        },
+        {
+            "constraint": "Sophienstr. 24, 10178 Berlin-Mitte",
+            "result": {
+                "id": "A=2@O=10178 Berlin-Mitte, Sophienstr. 24@X=13399878@Y=52526039@U=103@L=770009020@B=1@p=1592347662@"
+            }
+        }
+    ],
+    "queryNearbyLocationsByCoordinate": [
+        {
+            "__comment": "Berlin, Christburger Straße 1",
+            "lat": 52536099,
+            "lon": 13426309,
+            "result": {
+                "id": "A=1@O=Winsstr. (Berlin)@X=13428805@Y=52537617@u=239@U=86@L=900110512@"
+            }
+        },
+        {
+            "__comment": "Berlin, Eisenacher Straße 70",
+            "lat": 52486400,
+            "lon": 13350744,
+            "result": {
+                "id": "A=1@O=U Eisenacher Str. (Berlin)@X=13350285@Y=52489480@u=344@U=86@L=900054103@"
+            }
+        }
+    ],
+    "queryDepartures": [
+        {
+            "__comment": "Prinzenstraße",
+            "id": "900013103"
+        },
+        {
+            "__comment": "Nollendorfplatz",
+            "id": "900056102"
+        }
+    ],
+    "queryDeparturesInvalidId": "999999",
+    "queryTrips": [
+        {
+            "__comment": "Prinzenstraße to Nollendorfplatz",
+            "from": {
+                "type": "station",
+                "id": "900013103"
+            },
+            "to": {
+                "type": "station",
+                "id": "900056102"
+            }
+        },
+        {
+            "__comment": "Berlin, Christburger Straße 1 to Berlin, Eisenacher Straße 70",
+            "from": {
+                "type": "coord",
+                "lat": 52536099,
+                "lon": 13426309
+            },
+            "to": {
+                "type": "coord",
+                "lat": 52486400,
+                "lon": 13350744
+            }
+        }
+    ],
+    "queryTripsTooClose": [
+        {
+            "__comment": "Prinzenstraße",
+            "from": {
+                "type": "station",
+                "id": "900013103"
+            },
+            "to": {
+                "type": "station",
+                "id": "900013103"
+            }
+        }
+    ]
+}

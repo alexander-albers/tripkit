@@ -1,0 +1,85 @@
+{
+    "suggestLocations": [
+        {
+            "constraint": "Johanneskirche",
+            "result": {
+                "id": "A=1@O=Johanneskirche, Saarbrücken@X=6996484@Y=49235816@U=80@L=000010619@B=1@V=11.9,@p=1630674307@"
+            }
+        },
+        {
+            "constraint": "johannesk",
+            "result": {
+                "id": "A=1@O=Johanneskirche, Saarbrücken@X=6996484@Y=49235816@U=80@L=000010619@B=1@V=11.9,@p=0@"
+            }
+        },
+        {
+            "constraint": "Alte Brücke",
+            "result": {
+                "id": "A=4@O=Saarbrücken, Alte Brücke@X=6994381@Y=49231798@U=99@L=009000615@B=1@V=11.9,@p=1600251644@"
+            }
+        },
+        {
+            "constraint": "Reichsstraße 5, Saarbrücken - Sankt Johann",
+            "result": {
+                "id": "A=2@O=Saarbrücken - Sankt Johann, Reichsstraße 5@X=6990776@Y=49238818@U=98@L=991085982@B=1@V=11.9,@p=1473941494@"
+            }
+        }
+    ],
+    "queryNearbyLocationsByCoordinate": [
+        {
+            "__comment": "Saarbrücken Hauptbahnhof",
+            "lat": 49240927,
+            "lon": 6988747,
+            "result": {
+                "id": "A=1@O=Hauptbahnhof, Saarbrücken@X=6990327@Y=49240122@u=0@U=80@L=10600@"
+            }
+        },
+        {
+            "__comment": "Saarbrücken Ostbahnhof",
+            "lat": 49230593,
+            "lon": 7020485,
+            "result": {
+                "id": "A=1@O=Ostbahnhof, Saarbrücken@X=7020485@Y=49230593@u=0@U=80@L=10700@"
+            }
+        }
+    ],
+    "queryDepartures": [
+        {
+            "__comment": "Saarbrücken Hauptbahnhof",
+            "id": "10640"
+        },
+        {
+            "__comment": "Saarbrücken Ostbahnhof",
+            "id": "10700"
+        }
+    ],
+    "queryDeparturesInvalidId": "999999",
+    "queryTrips": [
+        {
+            "__comment": "Saarbrücken Hauptbahnhof to Saarbrücken Ostbahnhof",
+            "from": {
+                "type": "station",
+                "id": "10640"
+            },
+            "to": {
+                "type": "station",
+                "id": "10700"
+            }
+        },
+        {
+            "__comment": "Saarbrücken Hauptbahnhof to Saarbrücken Ostbahnhof",
+            "from": {
+                "type": "coord",
+                "lat": 49240927,
+                "lon": 6988747
+            },
+            "to": {
+                "type": "coord",
+                "lat": 49230593,
+                "lon": 7020485
+            }
+        }
+    ],
+    "queryTripsTooClose": [
+    ]
+}

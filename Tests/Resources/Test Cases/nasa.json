@@ -1,0 +1,96 @@
+{
+    "suggestLocations": [
+        {
+            "constraint": "Johannisplatz",
+            "result": {
+                "id": "A=1@O=Leipzig, Johannisplatz@X=12386290@Y=51337890@U=80@L=11063@B=1@p=1630666846@i=A\u00d7de:14713:11063@"
+            }
+        },
+        {
+            "constraint": "johannis",
+            "result": {
+                "id": "A=1@O=Leipzig, Johannisplatz@X=12386290@Y=51337890@U=80@L=11063@B=1@p=1630666846@i=A\u00d7de:14713:11063@"
+            }
+        },
+        {
+            "constraint": "S-Bahnhof Möckern",
+            "result": {
+                "id": "A=1@O=Leipzig, Bahnhof Möckern@X=12352248@Y=51364426@U=80@L=90242@B=1@p=1630666846@"
+            }
+        },
+        {
+            "constraint": "Georg-Schumann-Straße 1, Leipzig - Zentrum",
+            "result": {
+                "id": "A=2@O=Leipzig - Zentrum, Georg-Schumann-Straße 1@X=12376636@Y=51357216@U=103@L=980753568@B=1@p=1520432662@"
+            }
+        }
+    ],
+    "queryNearbyLocationsByCoordinate": [
+        {
+            "__comment": "Leipzig Hbf",
+            "lat": 51346546,
+            "lon": 12383333,
+            "result": {
+                "id": "A=1@O=Leipzig Hbf@X=12382066@Y=51345467@u=148@U=80@L=8010205@i=A\u00d7de:14713:8010205@"
+            }
+        },
+        {
+            "__comment": "Leipzig/Halle Flughafen",
+            "lat": 51423340,
+            "lon": 12223423,
+            "result": {
+                "id": "A=1@O=Flughafen Leipzig/Halle, Zentralgebäude@X=12223631@Y=51423305@u=14@U=80@L=19928@i=A\u00d7de:14730:19928@"
+            }
+        }
+    ],
+    "queryDepartures": [
+        {
+            "__comment": "Leipzig Johannisplatz",
+            "id": "11063"
+        },
+        {
+            "__comment": "Leipzig Hbf",
+            "id": "8010205"
+        }
+    ],
+    "queryDeparturesInvalidId": "999999",
+    "queryTrips": [
+        {
+            "__comment": "Leipzig Johannisplatz to Leipzig Hbf",
+            "from": {
+                "type": "station",
+                "id": "11063"
+            },
+            "to": {
+                "type": "station",
+                "id": "8010205"
+            }
+        },
+        {
+            "__comment": "Leipzig Hbf to Leipzig/Halle Flughafen",
+            "from": {
+                "type": "coord",
+                "lat": 51346546,
+                "lon": 12383333
+            },
+            "to": {
+                "type": "coord",
+                "lat": 51423340,
+                "lon": 12223423
+            }
+        }
+    ],
+    "queryTripsTooClose": [
+        {
+            "__comment": "Leipzig Johannisplatz",
+            "from": {
+                "type": "station",
+                "id": "11063"
+            },
+            "to": {
+                "type": "station",
+                "id": "11063"
+            }
+        }
+    ]
+}

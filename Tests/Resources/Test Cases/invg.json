@@ -1,0 +1,92 @@
+{
+    "suggestLocations": [
+        {
+            "constraint": "Rathausplatz",
+            "result": {
+                "id": "A=1@O=Rathausplatz@X=11425263@Y=48762435@U=80@L=000060706@B=1@p=1630927009@"
+            }
+        },
+        {
+            "constraint": "rathau",
+            "result": {
+                "id": "A=1@O=Rathausplatz@X=11425263@Y=48762435@U=80@L=000060706@B=1@p=1630927009@"
+            }
+        },
+        {
+            "constraint": "Am Kreuzäcker",
+            "result": {
+                "id": "A=1@O=Am Kreuzäcker@X=11445201@Y=48795354@U=80@L=000190102@B=1@p=1630927009@"
+            }
+        },
+        {
+            "constraint": "Kellerstraße 1, Ingolstadt",
+            "result": {
+                "id": "A=2@O=Ingolstadt, Kellerstraße 1@X=11426557@Y=48767613@U=103@L=990003694@B=1@p=1607068022@"
+            }
+        }
+    ],
+    "queryNearbyLocationsByCoordinate": [
+        {
+            "__comment": "Ingolstadt Hbf",
+            "lat": 48744414,
+            "lon": 11434603,
+            "result": {
+                "id": "A=1@O=Ingolstadt Hbf@X=11437335@Y=48744538@u=0@U=80@L=8000183@"
+            }
+        },
+        {
+            "__comment": "Ingolstadt Nordbahnhof",
+            "lat": 48772731,
+            "lon": 11431823,
+            "result": {
+                "id": "A=1@O=Ingolstadt Nord@X=11432247@Y=48773690@u=0@U=80@L=8003076@"
+            }
+        }
+    ],
+    "queryDepartures": [
+        {
+            "__comment": "Rechbergstraße",
+            "id": "A=1@O=Rechbergstraße@X=11429542@Y=48769968@U=80@L=000061202@B=1@p=1630927009@"
+        }
+    ],
+    "queryDeparturesInvalidId": "999999",
+    "queryTrips": [
+        {
+            "__comment": "Rechbergstraße to ZOB",
+            "from": {
+                "type": "station",
+                "id": "61202"
+            },
+            "to": {
+                "type": "station",
+                "id": "978801"
+            }
+        },
+        {
+            "__comment": "Ingolstadt Hbf to Ingolstadt Nordbahnhof",
+            "from": {
+                "type": "coord",
+                "lat": 48744414,
+                "lon": 11434603
+            },
+            "to": {
+                "type": "coord",
+                "lat": 48751558,
+                "lon": 11426546
+            }
+        }
+    ],
+    "queryTripsTooClose": [
+        {
+            "__comment": "Rechbergstraße",
+            "from": {
+                "type": "station",
+                "id": "61202"
+            },
+            "to": {
+                "type": "station",
+                "id": "61202"
+            }
+        }
+    ]
+}

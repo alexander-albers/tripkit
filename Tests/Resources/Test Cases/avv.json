@@ -1,0 +1,96 @@
+{
+    "suggestLocations": [
+        {
+            "constraint": "Augsburg, Hbf",
+            "result": {
+                "id": "2000100"
+            }
+        },
+        {
+            "constraint": "Königspl",
+            "result": {
+                "id": "2000101"
+            }
+        },
+        {
+            "constraint": "Gärtnerstraße",
+            "result": {
+                "id": "2000557"
+            }
+        },
+        {
+            "constraint": "Augsburg, Bahnhofstraße 11",
+            "result": {
+                "id": "streetID:209050:11:9761000:9761000:Bahnhofstraße:Augsburg:Bahnhofstraße::Bahnhofstraße:86150:ANY:DIVA_ADDRESS:4417977:800702:NAV4:AVV:0"
+            }
+        }
+    ],
+    "queryNearbyLocationsByCoordinate": [
+        {
+            "__comment": "Augsburg Königsplatz",
+            "lat": 48366450,
+            "lon": 10892661,
+            "result": {
+                "id": "2000101"
+            }
+        },
+        {
+            "__comment": "Augsburg Hauptbahnhof",
+            "lat": 48365854,
+            "lon": 10884123,
+            "result": {
+                "id": "2000100"
+            }
+        }
+    ],
+    "queryDepartures": [
+        {
+            "__comment": "Augsburg Königsplatz",
+            "id": "101"
+        },
+        {
+            "__comment": "Augsburg Hauptbahnhof",
+            "id": "100"
+        }
+    ],
+    "queryDeparturesInvalidId": "999999",
+    "queryTrips": [
+        {
+            "__comment": "Augsburg Königsplatz to Augsburg Hauptbahnhof",
+            "from": {
+                "type": "station",
+                "id": "101"
+            },
+            "to": {
+                "type": "station",
+                "id": "100"
+            }
+        },
+        {
+            "__comment": "Augsburg Königsplatz to Augsburg Hauptbahnhof",
+            "from": {
+                "type": "coord",
+                "lat": 48366450,
+                "lon": 10892661
+            },
+            "to": {
+                "type": "coord",
+                "lat": 48365854,
+                "lon": 10884123
+            }
+        }
+    ],
+    "queryTripsTooClose": [
+        {
+            "__comment": "Augsburg Königsplatz",
+            "from": {
+                "type": "station",
+                "id": "101"
+            },
+            "to": {
+                "type": "station",
+                "id": "101"
+            }
+        }
+    ]
+}

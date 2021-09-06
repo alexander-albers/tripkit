@@ -1,0 +1,85 @@
+{
+    "suggestLocations": [
+        {
+            "constraint": "Breslauer Platz",
+            "result": {
+                "id": "9"
+            }
+        },
+        {
+            "constraint": "bresl",
+            "result": {
+                "id": "9"
+            }
+        },
+        {
+            "constraint": "Dom / Hbf, Köln-Innenstadt",
+            "result": {
+                "id": "8"
+            }
+        },
+        {
+            "constraint": "Erftstraße 43, Kerpen-Sindorf",
+            "result": {
+                "name": "Erftstraße 43, Kerpen-Sindorf"
+            }
+        }
+    ],
+    "queryNearbyLocationsByCoordinate": [
+        {
+            "__comment": "",
+            "lat": 50740530,
+            "lon": 7129200,
+            "result": {
+                "id": ""
+            }
+        },
+        {
+            "__comment": "",
+            "lat": 50933930,
+            "lon": 6932440,
+            "result": {
+                "id": ""
+            }
+        }
+    ],
+    "queryDepartures": [
+        {
+            "__comment": "Köln Hbf",
+            "id": "8"
+        },
+        {
+            "__comment": "Köln Breslauer",
+            "id": "9"
+        }
+    ],
+    "queryDeparturesInvalidId": "999999",
+    "queryTrips": [
+        {
+            "__comment": "Köln Hbf to Köln Breslauer",
+            "from": {
+                "type": "station",
+                "id": "8"
+            },
+            "to": {
+                "type": "station",
+                "id": "9"
+            }
+        },
+        {
+            "__comment": "",
+            "from": {
+                "type": "coord",
+                "lat": 50740530,
+                "lon": 7129200
+            },
+            "to": {
+                "type": "coord",
+                "lat": 50933930,
+                "lon": 6932440
+            }
+        }
+    ],
+    "queryTripsTooClose": [
+    ]
+}

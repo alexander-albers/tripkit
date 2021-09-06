@@ -1,0 +1,98 @@
+{
+    "suggestLocations": [
+        {
+            "constraint": "Bremerhaven Hbf",
+            "result": {
+                "id": "A=1@O=Bremerhaven Hbf@X=8599558@Y=53534916@U=80@L=9014418@B=1@p=1630786923@"
+            }
+        },
+        {
+            "constraint": "bremer",
+            "result": {
+                "id": "A=1@O=Bremerhaven Hbf@X=8599558@Y=53534916@U=80@L=9014418@B=1@p=1630786923@"
+            }
+        },
+        {
+            "constraint": "Göttingen Bahnhof/ZOB",
+            "result": {
+                "id": "A=1@O=Göttingen Bahnhof/ZOB@X=9926374@Y=51535436@U=80@L=9033853@B=1@p=1630786923@"
+            }
+        },
+        {
+            "constraint": "Lange Straße 1, Rostock - Stadtmitte",
+            "result": {
+                "id": "A=2@O=Rostock - Stadtmitte, Lange Straße 1@H=1@X=12131168@Y=54090054@U=100@L=990004138@B=1@p=1424956371@"
+            }
+        }
+    ],
+    "queryNearbyLocationsByCoordinate": [
+        {
+            "__comment": "Oldenburg",
+            "lat": 53143550,
+            "lon": 8221983,
+            "result": {
+                "id": "A=1@O=Oldenburg(Oldb)@X=8222712@Y=53144326@u=98@U=80@L=8000291@"
+            }
+        },
+        {
+            "__comment": "Bremerhaven",
+            "lat": 53534913,
+            "lon": 8596703,
+            "result": {
+                "id": "A=1@O=Bremerhaven Hauptbahnhof@X=8597616@Y=53534952@u=60@U=80@L=600052@"
+            }
+        }
+    ],
+    "queryDepartures": [
+        {
+            "__comment": "Rostock lange straße",
+            "id": "708425"
+        },
+        {
+            "__comment": "Bremerhaven",
+            "id": "625398"
+        }
+    ],
+    "queryDeparturesInvalidId": "999999",
+    "queryTrips": [
+        {
+            "__comment": "Rostock lange straße to Bremerhaven",
+            "from": {
+                "type": "station",
+                "id": "708425"
+            },
+            "to": {
+                "type": "station",
+                "id": "625398"
+            }
+        },
+        {
+            "__comment": "Oldenburg to Bremerhaven",
+            "from": {
+                "type": "coord",
+                "lat": 53086421,
+                "lon": 8806388
+            },
+            "to": {
+                "type": "coord",
+                "lat": 53534913,
+                "lon": 8596703
+            }
+        }
+    ],
+    "queryTripsTooClose": [
+        {
+            "__comment": "Oldenburg",
+            "from": {
+                "type": "coord",
+                "lat": 53086421,
+                "lon": 8806388
+            },
+            "to": {
+                "type": "coord",
+                "lat": 53086321,
+                "lon": 8806488
+            }
+        }
+    ]
+}

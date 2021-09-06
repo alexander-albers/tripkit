@@ -1,0 +1,96 @@
+{
+    "suggestLocations": [
+        {
+            "constraint": "Packhof",
+            "result": {
+                "id": "26000322"
+            }
+        },
+        {
+            "constraint": "Kurf",
+            "result": {
+                "id": "24032679"
+            }
+        },
+        {
+            "constraint": "Münzstraße",
+            "result": {
+                "id": "26000300"
+            }
+        },
+        {
+            "constraint": "Braunschweig, Willy-Brandt-Platz",
+            "result": {
+                "id": "streetID:1500001373::3101000:-1:Willy-Brandt-Platz:Braunschweig:Willy-Brandt-Platz::Willy-Brandt-Platz: 38102:ANY:DIVA_STREET:1173392:5153645:MRCV:NDS"
+            }
+        }
+    ],
+    "queryNearbyLocationsByCoordinate": [
+        {
+            "__comment": "Hauptbahnhof",
+            "lat": 52252642,
+            "lon": 10539546,
+            "result": {
+                "id": "26000178"
+            }
+        },
+        {
+            "__comment": "Packhof",
+            "lat": 52265399,
+            "lon": 10521948,
+            "result": {
+                "id": "26000322"
+            }
+        }
+    ],
+    "queryDepartures": [
+        {
+            "__comment": "Hauptbahnhof",
+            "id": "26000178"
+        },
+        {
+            "__comment": "Packhof",
+            "id": "26000322"
+        }
+    ],
+    "queryDeparturesInvalidId": "999999",
+    "queryTrips": [
+        {
+            "__comment": "Hauptbahnhof to Packhof",
+            "from": {
+                "type": "station",
+                "id": "26000178"
+            },
+            "to": {
+                "type": "station",
+                "id": "26000322"
+            }
+        },
+        {
+            "__comment": "Hauptbahnhof to Packhof",
+            "from": {
+                "type": "coord",
+                "lat": 52252642,
+                "lon": 10539546
+            },
+            "to": {
+                "type": "coord",
+                "lat": 52265399,
+                "lon": 10521948
+            }
+        }
+    ],
+    "queryTripsTooClose": [
+        {
+            "__comment": "Hauptbahnhof",
+            "from": {
+                "type": "station",
+                "id": "26000178"
+            },
+            "to": {
+                "type": "station",
+                "id": "26000178"
+            }
+        }
+    ]
+}

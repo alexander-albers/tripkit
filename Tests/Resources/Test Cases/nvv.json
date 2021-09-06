@@ -1,0 +1,96 @@
+{
+    "suggestLocations": [
+        {
+            "constraint": "Hauptbahnhof, Frankfurt (Main)",
+            "result": {
+                "id": "A=1@O=Frankfurt (Main) Hauptbahnhof@X=8662653@Y=50106808@U=80@L=3000010@B=1@p=1630651633@"
+            }
+        },
+        {
+            "constraint": "könig",
+            "result": {
+                "id": "A=1@O=Königswald, Cornberg-Königswald@X=9820113@Y=51068060@U=80@L=2202183@B=1@p=1630651633@"
+            }
+        },
+        {
+            "constraint": "Wilhelmshöhe Bahnhof",
+            "result": {
+                "id": "A=1@O=Wilhelmshöhe Bahnhof@X=9447043@Y=51313124@U=80@L=2200007@B=1@p=1630651633@"
+            }
+        },
+        {
+            "constraint": "Kaiserstraße 30, Frankfurt am Main - Innenstadt",
+            "result": {
+                "id": "A=2@O=Frankfurt am Main - Innenstadt, Kaiserstraße 30@X=8673350@Y=50109963@U=103@L=990057569@B=1@p=1530862110@"
+            }
+        }
+    ],
+    "queryNearbyLocationsByCoordinate": [
+        {
+            "__comment": "Mainz An den Dünen",
+            "lat": 50017679,
+            "lon": 8229480,
+            "result": {
+                "id": "A=1@O=Mainz An den Dünen@X=8229849@Y=50017419@u=39@U=80@L=3029079@"
+            }
+        },
+        {
+            "__comment": "Hanau Beethovenplatz",
+            "lat": 50142890,
+            "lon": 8895203,
+            "result": {
+                "id": "A=1@O=Hanau Beethovenplatz@X=8895204@Y=50142891@u=0@U=80@L=3013508@"
+            }
+        }
+    ],
+    "queryDepartures": [
+        {
+            "__comment": "Hauptwache",
+            "id": "3000001"
+        },
+        {
+            "__comment": "Südbahnhof",
+            "id": "3000912"
+        }
+    ],
+    "queryDeparturesInvalidId": "999999",
+    "queryTrips": [
+        {
+            "__comment": "Hauptwache to Südbahnhof",
+            "from": {
+                "type": "station",
+                "id": "3000001"
+            },
+            "to": {
+                "type": "station",
+                "id": "3000912"
+            }
+        },
+        {
+            "__comment": "Mainz An den Dünen to Hanau Beethovenplatz",
+            "from": {
+                "type": "coord",
+                "lat": 50017679,
+                "lon": 8229480
+            },
+            "to": {
+                "type": "coord",
+                "lat": 50142890,
+                "lon": 8895203
+            }
+        }
+    ],
+    "queryTripsTooClose": [
+        {
+            "__comment": "Hauptwache",
+            "from": {
+                "type": "station",
+                "id": "3000001"
+            },
+            "to": {
+                "type": "station",
+                "id": "3000001"
+            }
+        }
+    ]
+}
