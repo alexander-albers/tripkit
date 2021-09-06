@@ -101,9 +101,17 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider {
         let httpRequest = HttpRequest(urlBuilder: url)
         return HttpClient.get(httpRequest: httpRequest) { result in
             switch result {
-            case .success((_, let data)):
-                httpRequest.responseData = data
+            case .success((_, let _data)):
                 do {
+                    let string = String(data: _data, encoding: self.jsonNearbyLocationsEncoding)
+                    guard
+                        let data = string?
+                            .replacingOccurrences(of: "\\'", with: "'")
+                            .data(using: self.jsonNearbyLocationsEncoding)
+                    else {
+                        throw ParseError(reason: "failed to parse response")
+                    }
+                    httpRequest.responseData = data
                     try self.queryNearbyLocationsByCoordinateParsing(request: httpRequest, completion: completion)
                 } catch let err as ParseError {
                     os_log("nearbyLocations parse error: %{public}@", log: .requestLogger, type: .error, err.reason)
