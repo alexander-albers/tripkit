@@ -1,0 +1,92 @@
+{
+    "suggestLocations": [
+        {
+            "constraint": "Stresemannplatz",
+            "result": {
+                "id": "A=1@O=Osnabrück Stresemannplatz@X=8054685@Y=52273424@U=80@L=9071765@B=1@p=1630786923@"
+            }
+        },
+        {
+            "constraint": "Stresem",
+            "result": {
+                "id": "A=1@O=Osnabrück Stresemannplatz@X=8054685@Y=52273424@U=80@L=9071765@B=1@p=1630786923@"
+            }
+        },
+        {
+            "constraint": "Osnabrück, Eisenbahnstraße 1",
+            "result": {
+                "id": "A=2@O=Osnabrück - Innenstadt, Eisenbahnstraße 1@H=1@X=8055458@Y=52275204@U=99@L=958029382@B=1@p=1617880347@"
+            }
+        }
+    ],
+    "queryNearbyLocationsByCoordinate": [
+        {
+            "__comment": "Osnabrück Hauptbahnhof/ZOB",
+            "lat": 52272633,
+            "lon": 8059746,
+            "result": {
+                "id": "A=1@O=Osnabrück Hauptbahnhof/ZOB@X=8059638@Y=52272669@u=8@U=80@L=100071@"
+            }
+        },
+        {
+            "__comment": "Osnabrück Neumarkt",
+            "lat": 52272588,
+            "lon": 8047656,
+            "result": {
+                "id": "A=1@O=Osnabrück Neumarkt@X=8047656@Y=52272588@U=80@L=100082@"
+            }
+        }
+    ],
+    "queryDepartures": [
+        {
+            "__comment": "Osnabrück Hauptbahnhof/ZOB",
+            "id": "A=1@O=Osnabrück Hauptbahnhof/ZOB@X=8059746@Y=52272633@U=80@L=100071@"
+        },
+        {
+            "__comment": "Osnabrück Neumarkt",
+            "id": "A=1@O=Osnabrück Neumarkt@X=8047656@Y=52272588@U=80@L=100082@"
+        }
+    ],
+    "queryDeparturesInvalidId": "999999",
+    "queryTrips": [
+        {
+            "__comment": "Osnabrück Hauptbahnhof/ZOB to Osnabrück Neumarkt",
+            "from": {
+                "type": "station",
+                "id": "A=1@O=Osnabrück Hauptbahnhof/ZOB@X=8059746@Y=52272633@U=80@L=100071@"
+            },
+            "to": {
+                "type": "station",
+                "id": "A=1@O=Osnabrück Neumarkt@X=8047656@Y=52272588@U=80@L=100082@"
+            }
+        },
+        {
+            "__comment": "Osnabrück Hauptbahnhof/ZOB to Osnabrück Neumarkt",
+            "from": {
+                "type": "coord",
+                "lat": 52272633,
+                "lon": 8059746
+            },
+            "to": {
+                "type": "coord",
+                "lat": 52272588,
+                "lon": 8047656
+            }
+        }
+    ],
+    "queryTripsTooClose": [
+        {
+            "__comment": "Osnabrück Hauptbahnhof/ZOB",
+            "from": {
+                "type": "coord",
+                "lat": 52272633,
+                "lon": 8059746
+            },
+            "to": {
+                "type": "coord",
+                "lat": 52272733,
+                "lon": 8059646
+            }
+        }
+    ]
+}

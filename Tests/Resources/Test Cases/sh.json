@@ -1,0 +1,96 @@
+{
+    "suggestLocations": [
+        {
+            "constraint": "Bf. Dammtor, Hamburg",
+            "result": {
+                "id": "A=1@O=Hamburg Bf. Dammtor@X=9989739@Y=53562801@U=100@L=4390066@B=1@p=1630782510@"
+            }
+        },
+        {
+            "constraint": "uhland",
+            "result": {
+                "id": "A=1@O=Hamburg Uhlandstraße@X=10024402@Y=53564931@U=100@L=704413@B=1@p=1630782510@"
+            }
+        },
+        {
+            "constraint": "Überseequartier",
+            "result": {
+                "id": "A=1@O=U  Überseequartier@X=9995663@Y=53541541@U=100@L=4390026@B=1@p=1630782510@"
+            }
+        },
+        {
+            "constraint": "Edmund-Siemers-Allee 1, 20146 Hansestadt Hamburg",
+            "result": {
+                "id": "A=2@O=20146 Hansestadt Hamburg, Edmund-Siemers-Allee 1@X=9987923@Y=53562432@U=101@L=980520501@B=1@p=1566898558@"
+            }
+        }
+    ],
+    "queryNearbyLocationsByCoordinate": [
+        {
+            "__comment": "Hamburg Flughafen",
+            "lat": 53632350,
+            "lon": 10006648,
+            "result": {
+                "id": "A=1@O=Hamburg Airport@X=10006648@Y=53632350@u=0@U=100@L=8002547@"
+            }
+        },
+        {
+            "__comment": "Lübeck Flughafen",
+            "lat": 53804125,
+            "lon": 10697487,
+            "result": {
+                "id": "A=1@O=Lübeck Flughafen(Bahn)@X=10697487@Y=53804125@u=0@U=100@L=8003781@"
+            }
+        }
+    ],
+    "queryDepartures": [
+        {
+            "__comment": "Hamburg Flughafen",
+            "id": "8002547"
+        },
+        {
+            "__comment": "Lübeck Flughafen",
+            "id": "8003781"
+        }
+    ],
+    "queryDeparturesInvalidId": "999999",
+    "queryTrips": [
+        {
+            "__comment": "Hamburg Flughafen to Lübeck Flughafen",
+            "from": {
+                "type": "station",
+                "id": "8002547"
+            },
+            "to": {
+                "type": "station",
+                "id": "8003781"
+            }
+        },
+        {
+            "__comment": "Hamburg Flughafen to Lübeck Flughafen",
+            "from": {
+                "type": "coord",
+                "lat": 53632350,
+                "lon": 10006648
+            },
+            "to": {
+                "type": "coord",
+                "lat": 53804125,
+                "lon": 10697487
+            }
+        }
+    ],
+    "queryTripsTooClose": [
+        {
+            "__comment": "Hamburg Flughafen",
+            "from": {
+                "type": "station",
+                "id": "8002547"
+            },
+            "to": {
+                "type": "station",
+                "id": "8002547"
+            }
+        }
+    ]
+}

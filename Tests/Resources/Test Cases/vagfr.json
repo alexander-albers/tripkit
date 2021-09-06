@@ -1,0 +1,96 @@
+{
+    "suggestLocations": [
+        {
+            "constraint": "Bertoldsbrunnen",
+            "result": {
+                "id": "6930100"
+            }
+        },
+        {
+            "constraint": "bertholdsbr",
+            "result": {
+                "id": "6930100"
+            }
+        },
+        {
+            "constraint": "Elsässer Straße",
+            "result": {
+                "id": "6930807"
+            }
+        },
+        {
+            "constraint": "Freiburg im Breisgau, Eisenbahnstraße 68",
+            "result": {
+                "id": "streetID:1500000859:68:8311000:-1:Eisenbahnstraße:Freiburg im Breisgau:Eisenbahnstraße::Eisenbahnstraße:79098:ANY:DIVA_SINGLEHOUSE:873100:5893593:MRCV:B_W"
+            }
+        }
+    ],
+    "queryNearbyLocationsByCoordinate": [
+        {
+            "__comment": "Freiburg Bertoldsbrunnen",
+            "lat": 47994831,
+            "lon": 7849802,
+            "result": {
+                "id": "6930100"
+            }
+        },
+        {
+            "__comment": "Freiburg Europaplatz",
+            "lat": 47997939,
+            "lon": 7852398,
+            "result": {
+                "id": "6930101"
+            }
+        }
+    ],
+    "queryDepartures": [
+        {
+            "__comment": "Freiburg Bertoldsbrunnen",
+            "id": "6930100"
+        },
+        {
+            "__comment": "Freiburg Europaplatz",
+            "id": "6930101"
+        }
+    ],
+    "queryDeparturesInvalidId": "999999",
+    "queryTrips": [
+        {
+            "__comment": "Freiburg Bertoldsbrunnen to Freiburg Europaplatz",
+            "from": {
+                "type": "station",
+                "id": "6930100"
+            },
+            "to": {
+                "type": "station",
+                "id": "6930101"
+            }
+        },
+        {
+            "__comment": "Freiburg Bertoldsbrunnen to Freiburg Europaplatz",
+            "from": {
+                "type": "coord",
+                "lat": 47994831,
+                "lon": 7849802
+            },
+            "to": {
+                "type": "coord",
+                "lat": 47997939,
+                "lon": 7852398
+            }
+        }
+    ],
+    "queryTripsTooClose": [
+        {
+            "__comment": "Freiburg Bertoldsbrunnen",
+            "from": {
+                "type": "station",
+                "id": "6930100"
+            },
+            "to": {
+                "type": "station",
+                "id": "6930100"
+            }
+        }
+    ]
+}

@@ -1,0 +1,96 @@
+{
+    "suggestLocations": [
+        {
+            "constraint": "",
+            "result": {
+                "id": ""
+            }
+        },
+        {
+            "constraint": "",
+            "result": {
+                "id": ""
+            }
+        },
+        {
+            "constraint": "",
+            "result": {
+                "id": ""
+            }
+        },
+        {
+            "constraint": "",
+            "result": {
+                "id": ""
+            }
+        }
+    ],
+    "queryNearbyLocationsByCoordinate": [
+        {
+            "__comment": "",
+            "lat": ,
+            "lon": ,
+            "result": {
+                "id": ""
+            }
+        },
+        {
+            "__comment": "",
+            "lat": ,
+            "lon": ,
+            "result": {
+                "id": ""
+            }
+        }
+    ],
+    "queryDepartures": [
+        {
+            "__comment": "",
+            "id": ""
+        },
+        {
+            "__comment": "",
+            "id": ""
+        }
+    ],
+    "queryDeparturesInvalidId": "999999",
+    "queryTrips": [
+        {
+            "__comment": "",
+            "from": {
+                "type": "station",
+                "id": ""
+            },
+            "to": {
+                "type": "station",
+                "id": ""
+            }
+        },
+        {
+            "__comment": "",
+            "from": {
+                "type": "coord",
+                "lat": ,
+                "lon": 
+            },
+            "to": {
+                "type": "coord",
+                "lat": ,
+                "lon": 
+            }
+        }
+    ],
+    "queryTripsTooClose": [
+        {
+            "__comment": "",
+            "from": {
+                "type": "station",
+                "id": ""
+            },
+            "to": {
+                "type": "station",
+                "id": ""
+            }
+        }
+    ]
+}

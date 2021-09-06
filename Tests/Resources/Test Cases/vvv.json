@@ -1,0 +1,96 @@
+{
+    "suggestLocations": [
+        {
+            "constraint": "Bickelstraße",
+            "result": {
+                "id": "30202006"
+            }
+        },
+        {
+            "constraint": "grün",
+            "result": {
+                "id": "80002897"
+            }
+        },
+        {
+            "constraint": "Südinsel",
+            "result": {
+                "id": "30200193"
+            }
+        },
+        {
+            "constraint": "Plauen (Vogtl), Haselbrunner Straße 64",
+            "result": {
+                "id": "streetID:291:64:14523320:1:Haselbrunner Straße:Plauen (Vogtl):Haselbrunner Straße::Haselbrunner Straße:08525:ANY:DIVA_SINGLEHOUSE:4509554:562639:NAV4:ZVV:0"
+            }
+        }
+    ],
+    "queryNearbyLocationsByCoordinate": [
+        {
+            "__comment": "Plauen (Vogtl) Bickelstraße",
+            "lat": 50484564,
+            "lon": 12140028,
+            "result": {
+                "id": "30202006"
+            }
+        },
+        {
+            "__comment": "Plauen (Vogtl) Hofer Straße",
+            "lat": 50487332,
+            "lon": 12139050,
+            "result": {
+                "id": "30202012"
+            }
+        }
+    ],
+    "queryDepartures": [
+        {
+            "__comment": "Plauen (Vogtl) Bickelstraße",
+            "id": "30202006"
+        },
+        {
+            "__comment": "Plauen (Vogtl) Hofer Straße",
+            "id": "30202012"
+        }
+    ],
+    "queryDeparturesInvalidId": "999999",
+    "queryTrips": [
+        {
+            "__comment": "Plauen (Vogtl) Bickelstraße to Plauen (Vogtl) Hofer Straße",
+            "from": {
+                "type": "station",
+                "id": "30202006"
+            },
+            "to": {
+                "type": "station",
+                "id": "30202012"
+            }
+        },
+        {
+            "__comment": "Plauen (Vogtl) Bickelstraße to Plauen (Vogtl) Hofer Straße",
+            "from": {
+                "type": "coord",
+                "lat": 50484564,
+                "lon": 12140028
+            },
+            "to": {
+                "type": "coord",
+                "lat": 50487332,
+                "lon": 12139050
+            }
+        }
+    ],
+    "queryTripsTooClose": [
+        {
+            "__comment": "Plauen (Vogtl) Bickelstraße",
+            "from": {
+                "type": "station",
+                "id": "30202006"
+            },
+            "to": {
+                "type": "station",
+                "id": "30202006"
+            }
+        }
+    ]
+}

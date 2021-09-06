@@ -1,0 +1,96 @@
+{
+    "suggestLocations": [
+        {
+            "constraint": "Karlsplatz",
+            "result": {
+                "id": "60200657"
+            }
+        },
+        {
+            "constraint": "Karlspl",
+            "result": {
+                "id": "60200657:$22"
+            }
+        },
+        {
+            "constraint": "Längenfeldgasse U",
+            "result": {
+                "id": "60200820:$23"
+            }
+        },
+        {
+            "constraint": "Wien, Grünangergasse 1",
+            "result": {
+                "id": "streetID:1602:1/1:49000001:-1:Grünangergasse:Wien:Grünangergasse::Grünangergasse:1010:ANY:DIVA_SINGLEHOUSE:1822948:5858508:MRCV:aut"
+            }
+        }
+    ],
+    "queryNearbyLocationsByCoordinate": [
+        {
+            "__comment": "Niederhofstraße, Wien",
+            "lat": 48180281,
+            "lon": 16333551,
+            "result": {
+                "id": "60200937"
+            }
+        },
+        {
+            "__comment": "Kagraner Anger, Wien",
+            "lat": 48240452,
+            "lon": 16444788,
+            "result": {
+                "id": "60200630"
+            }
+        }
+    ],
+    "queryDepartures": [
+        {
+            "__comment": "Wien Karlsplatz",
+            "id": "60200657"
+        },
+        {
+            "__comment": "Wien Resselgasse",
+            "id": "60201094"
+        }
+    ],
+    "queryDeparturesInvalidId": "999999",
+    "queryTrips": [
+        {
+            "__comment": "Wien Karlsplatz to Wien Resselgasse",
+            "from": {
+                "type": "station",
+                "id": "60200657"
+            },
+            "to": {
+                "type": "station",
+                "id": "60201094"
+            }
+        },
+        {
+            "__comment": "Niederhofstraße, Wien to Kagraner Anger, Wien",
+            "from": {
+                "type": "coord",
+                "lat": 48180281,
+                "lon": 16333551
+            },
+            "to": {
+                "type": "coord",
+                "lat": 48240452,
+                "lon": 16444788
+            }
+        }
+    ],
+    "queryTripsTooClose": [
+        {
+            "__comment": "Wien Karlsplatz",
+            "from": {
+                "type": "station",
+                "id": "60200657"
+            },
+            "to": {
+                "type": "station",
+                "id": "60200657"
+            }
+        }
+    ]
+}

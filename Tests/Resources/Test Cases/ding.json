@@ -1,0 +1,96 @@
+{
+    "suggestLocations": [
+        {
+            "constraint": "Theater",
+            "result": {
+                "id": "9001010"
+            }
+        },
+        {
+            "constraint": "justizgeb",
+            "result": {
+                "id": "9001011"
+            }
+        },
+        {
+            "constraint": "Justizgebäude",
+            "result": {
+                "id": "9001011"
+            }
+        },
+        {
+            "constraint": "Ulm, Sedelhofgasse",
+            "result": {
+                "id": "streetID:1000000862::8421000:20:Sedelhofgasse:Ulm:Sedelhofgasse::Sedelhofgasse: 89073:ANY:DIVA_STREET:3573016:797110:NBWT:din:0"
+            }
+        }
+    ],
+    "queryNearbyLocationsByCoordinate": [
+        {
+            "__comment": "Ulm Justizgebäude",
+            "lat": 48402033,
+            "lon": 9992871,
+            "result": {
+                "id": "9001011"
+            }
+        },
+        {
+            "__comment": "Ulm Theater",
+            "lat": 48401035,
+            "lon": 9987638,
+            "result": {
+                "id": "9001010"
+            }
+        }
+    ],
+    "queryDepartures": [
+        {
+            "__comment": "Ulm Justizgebäude",
+            "id": "9001011"
+        },
+        {
+            "__comment": "Ulm Theater",
+            "id": "9001010"
+        }
+    ],
+    "queryDeparturesInvalidId": "999999",
+    "queryTrips": [
+        {
+            "__comment": "Ulm Justizgebäude to Ulm Theater",
+            "from": {
+                "type": "station",
+                "id": "9001011"
+            },
+            "to": {
+                "type": "station",
+                "id": "9001010"
+            }
+        },
+        {
+            "__comment": "Ulm Justizgebäude to Ulm Theater",
+            "from": {
+                "type": "coord",
+                "lat": 48402033,
+                "lon": 9992871
+            },
+            "to": {
+                "type": "coord",
+                "lat": 48401035,
+                "lon": 9987638
+            }
+        }
+    ],
+    "queryTripsTooClose": [
+        {
+            "__comment": "Ulm Justizgebäude",
+            "from": {
+                "type": "station",
+                "id": "9001011"
+            },
+            "to": {
+                "type": "station",
+                "id": "9001011"
+            }
+        }
+    ]
+}

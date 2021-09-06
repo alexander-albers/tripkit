@@ -1,0 +1,90 @@
+{
+    "suggestLocations": [
+        {
+            "constraint": "DUBLIN",
+            "result": {
+                "id": "6096001"
+            }
+        },
+        {
+            "constraint": "haupt",
+            "result": {
+                "id": "518342"
+            }
+        },
+        {
+            "constraint": "Köln Hbf",
+            "result": {
+                "id": "8000207"
+            }
+        }
+    ],
+    "queryNearbyLocationsByCoordinate": [
+        {
+            "__comment": "26 Coopers Close, Poplar, Greater London E1 4, Vereinigtes Königreich",
+            "lat": 51521886,
+            "lon": -51447,
+            "result": {
+                "id": "7004564"
+            }
+        },
+        {
+            "__comment": "Köln",
+            "lat": 50941312,
+            "lon": 6967206,
+            "result": {
+                "id": "8075938"
+            }
+        }
+    ],
+    "queryDepartures": [
+        {
+            "__comment": "Köln Hbf",
+            "id": "8000207"
+        },
+        {
+            "__comment": "Dublin",
+            "id": "6096001"
+        }
+    ],
+    "queryDeparturesInvalidId": "999999",
+    "queryTrips": [
+        {
+            "__comment": "Köln Hbf to Dublin",
+            "from": {
+                "type": "station",
+                "id": "8000207"
+            },
+            "to": {
+                "type": "station",
+                "id": "6096001"
+            }
+        },
+        {
+            "__comment": "26 Coopers Close, Poplar, Greater London E1 4, Vereinigtes Königreich to Köln",
+            "from": {
+                "type": "coord",
+                "lat": 51521886,
+                "lon": -51447
+            },
+            "to": {
+                "type": "coord",
+                "lat": 50941312,
+                "lon": 6967206
+            }
+        }
+    ],
+    "queryTripsTooClose": [
+        {
+            "__comment": "Köln Hbf",
+            "from": {
+                "type": "station",
+                "id": "8000207"
+            },
+            "to": {
+                "type": "station",
+                "id": "8000207"
+            }
+        }
+    ]
+}

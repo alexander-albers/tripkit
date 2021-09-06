@@ -1,0 +1,96 @@
+{
+    "suggestLocations": [
+        {
+            "constraint": "Postplatz",
+            "result": {
+                "id": "33000037"
+            }
+        },
+        {
+            "constraint": "Postpl",
+            "result": {
+                "id": "33000037"
+            }
+        },
+        {
+            "constraint": "Hülßestraße",
+            "result": {
+                "id": "33000123"
+            }
+        },
+        {
+            "constraint": "Dresden, Töpferstraße 10",
+            "result": {
+                "id": "streetID:1500002857:10:14612000:-1:Töpferstraße:Dresden:Töpferstraße::Töpferstraße:01067:ANY:DIVA_SINGLEHOUSE:1529638:5369458:MRCV:vvo"
+            }
+        }
+    ],
+    "queryNearbyLocationsByCoordinate": [
+        {
+            "__comment": "Dresden, Töpferstraße 10",
+            "lat": 51052260,
+            "lon": 13740998,
+            "result": {
+                "id": "33000004"
+            }
+        },
+        {
+            "__comment": "Dresden, Tharandter Straße 88",
+            "lat": 51029752,
+            "lon": 13700666,
+            "result": {
+                "id": "33000166"
+            }
+        }
+    ],
+    "queryDepartures": [
+        {
+            "__comment": "Dresden Albertplatz",
+            "id": "33000013"
+        },
+        {
+            "__comment": "Dresden Bischofsweg",
+            "id": "33000262"
+        }
+    ],
+    "queryDeparturesInvalidId": "999999",
+    "queryTrips": [
+        {
+            "__comment": "Dresden Albertplatz to Dresden Bischofsweg",
+            "from": {
+                "type": "station",
+                "id": "33000013"
+            },
+            "to": {
+                "type": "station",
+                "id": "33000262"
+            }
+        },
+        {
+            "__comment": "Dresden, Töpferstraße 10 to Dresden, Tharandter Straße 88",
+            "from": {
+                "type": "coord",
+                "lat": 51052260,
+                "lon": 13740998
+            },
+            "to": {
+                "type": "coord",
+                "lat": 51029752,
+                "lon": 13700666
+            }
+        }
+    ],
+    "queryTripsTooClose": [
+        {
+            "__comment": "Dresden Albertplatz",
+            "from": {
+                "type": "station",
+                "id": "33000013"
+            },
+            "to": {
+                "type": "station",
+                "id": "33000013"
+            }
+        }
+    ]
+}

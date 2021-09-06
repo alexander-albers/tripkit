@@ -1,0 +1,96 @@
+{
+    "suggestLocations": [
+        {
+            "constraint": "Hirschgarten",
+            "result": {
+                "id": "91000031"
+            }
+        },
+        {
+            "constraint": "Marienpl",
+            "result": {
+                "id": "streetID:1500005515::9162000:-1:Marienplatz:München:Marienplatz::Marienplatz: 80331:ANY:DIVA_STREET:1288682:5870369:MRCV:bay"
+            }
+        },
+        {
+            "constraint": "Grüntal",
+            "result": {
+                "id": "91000619"
+            }
+        },
+        {
+            "constraint": "München, Maximilianstraße",
+            "result": {
+                "id": "streetID:1500000561::9162000:-1:Maximilianstraße:München:Maximilianstraße::Maximilianstraße: 80539 80538:ANY:DIVA_STREET:1289507:5870064:MRCV:bay"
+            }
+        }
+    ],
+    "queryNearbyLocationsByCoordinate": [
+        {
+            "__comment": "Bonner Platz",
+            "lat": 48165238,
+            "lon": 11577473,
+            "result": {
+                "id": "91000410"
+            }
+        },
+        {
+            "__comment": "Ina-Seidl-Weg, Starnberg",
+            "lat": 47987199,
+            "lon": 11326532,
+            "result": {
+                "id": "1005573"
+            }
+        }
+    ],
+    "queryDepartures": [
+        {
+            "__comment": "Marienplatz",
+            "id": "91000002"
+        },
+        {
+            "__comment": "Pasing",
+            "id": "91000010"
+        }
+    ],
+    "queryDeparturesInvalidId": "999999",
+    "queryTrips": [
+        {
+            "__comment": "Marienplatz to Pasing",
+            "from": {
+                "type": "station",
+                "id": "91000002"
+            },
+            "to": {
+                "type": "station",
+                "id": "91000010"
+            }
+        },
+        {
+            "__comment": "Bonner Platz to Ina-Seidl-Weg, Starnberg",
+            "from": {
+                "type": "coord",
+                "lat": 48165238,
+                "lon": 11577473
+            },
+            "to": {
+                "type": "coord",
+                "lat": 47987199,
+                "lon": 11326532
+            }
+        }
+    ],
+    "queryTripsTooClose": [
+        {
+            "__comment": "Marienplatz",
+            "from": {
+                "type": "station",
+                "id": "91000002"
+            },
+            "to": {
+                "type": "station",
+                "id": "91000002"
+            }
+        }
+    ]
+}

@@ -1,0 +1,96 @@
+{
+    "suggestLocations": [
+        {
+            "constraint": "Bahnhof Ochenbruck",
+            "result": {
+                "id": "80001049"
+            }
+        },
+        {
+            "constraint": "Kur",
+            "result": {
+                "id": "streetID:1500000068::9187128:-1:Kurf:Bad Endorf:Kurf::Kurf: 83093:ANY:DIVA_STREET:1368315:5909818:MRCV:bay"
+            }
+        },
+        {
+            "constraint": "Röthenbach",
+            "result": {
+                "id": "3001970:$17"
+            }
+        },
+        {
+            "constraint": "Nürnberg, Wodanstraße 25",
+            "result": {
+                "id": "streetID:1500001045:25:9564000:1:Wodanstraße:Nürnberg:Wodanstraße::Wodanstraße:90461:ANY:DIVA_SINGLEHOUSE:1235036:5650594:MRCV:bay:0"
+            }
+        }
+    ],
+    "queryNearbyLocationsByCoordinate": [
+        {
+            "__comment": "Veilchenweg Puschendorf",
+            "lat": 49527298,
+            "lon": 10836204,
+            "result": {
+                "id": "3005275"
+            }
+        },
+        {
+            "__comment": "Nürnberg Grundschule Grimmstr.",
+            "lat": 49468692,
+            "lon": 11125334,
+            "result": {
+                "id": "3001340"
+            }
+        }
+    ],
+    "queryDepartures": [
+        {
+            "__comment": "Nürnberg Ostring",
+            "id": "80002932"
+        },
+        {
+            "__comment": "Nürnberg Hauptbahnhof",
+            "id": "80001020"
+        }
+    ],
+    "queryDeparturesInvalidId": "999999",
+    "queryTrips": [
+        {
+            "__comment": "Nürnberg Ostring to Nürnberg Hauptbahnhof",
+            "from": {
+                "type": "station",
+                "id": "80002932"
+            },
+            "to": {
+                "type": "station",
+                "id": "80001020"
+            }
+        },
+        {
+            "__comment": "Veilchenweg Puschendorf to Nürnberg Grundschule Grimmstr.",
+            "from": {
+                "type": "coord",
+                "lat": 49527298,
+                "lon": 10836204
+            },
+            "to": {
+                "type": "coord",
+                "lat": 49468692,
+                "lon": 11125334
+            }
+        }
+    ],
+    "queryTripsTooClose": [
+        {
+            "__comment": "Nürnberg Ostring",
+            "from": {
+                "type": "station",
+                "id": "80002932"
+            },
+            "to": {
+                "type": "station",
+                "id": "80002932"
+            }
+        }
+    ]
+}

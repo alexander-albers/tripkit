@@ -1,0 +1,96 @@
+{
+    "suggestLocations": [
+        {
+            "constraint": "Regensburg Hbf",
+            "result": {
+                "id": "80001083"
+            }
+        },
+        {
+            "constraint": "Marien",
+            "result": {
+                "id": "15013313"
+            }
+        },
+        {
+            "constraint": "Mühldorfstraße",
+            "result": {
+                "id": "91000921"
+            }
+        },
+        {
+            "constraint": "Friedenstraße 2, München",
+            "result": {
+                "id": "streetID:1500002758:2:9162000:-1:Friedenstraße:München:Friedenstraße::Friedenstraße:81671:ANY:DIVA_SINGLEHOUSE:1291659:5872432:MRCV:bay"
+            }
+        }
+    ],
+    "queryNearbyLocationsByCoordinate": [
+        {
+            "__comment": "München Ostbahnhof",
+            "lat": 48128054,
+            "lon": 11603646,
+            "result": {
+                "id": "91000892"
+            }
+        },
+        {
+            "__comment": "München Pasing",
+            "lat": 48148897,
+            "lon": 11460427,
+            "result": {
+                "id": "91000010"
+            }
+        }
+    ],
+    "queryDepartures": [
+        {
+            "__comment": "München Ostbahnhof",
+            "id": "91000892"
+        },
+        {
+            "__comment": "München Pasing",
+            "id": "91000010"
+        }
+    ],
+    "queryDeparturesInvalidId": "999999",
+    "queryTrips": [
+        {
+            "__comment": "München Ostbahnhof to München Pasing",
+            "from": {
+                "type": "station",
+                "id": "91000892"
+            },
+            "to": {
+                "type": "station",
+                "id": "91000010"
+            }
+        },
+        {
+            "__comment": "München Ostbahnhof to München Pasing",
+            "from": {
+                "type": "coord",
+                "lat": 48127882,
+                "lon": 11604273
+            },
+            "to": {
+                "type": "coord",
+                "lat": 48140492,
+                "lon": 11452831
+            }
+        }
+    ],
+    "queryTripsTooClose": [
+        {
+            "__comment": "München Ostbahnhof",
+            "from": {
+                "type": "station",
+                "id": "91000892"
+            },
+            "to": {
+                "type": "station",
+                "id": "91000892"
+            }
+        }
+    ]
+}

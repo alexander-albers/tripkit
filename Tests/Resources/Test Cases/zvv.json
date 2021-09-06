@@ -1,0 +1,96 @@
+{
+    "suggestLocations": [
+        {
+            "constraint": "Hegibachplatz",
+            "result": {
+                "id": "A=1@O=Zürich, Hegibachplatz@X=8560715@Y=47361772@U=85@L=8530812@B=1@p=1630399423@"
+            }
+        },
+        {
+            "constraint": "hardbr",
+            "result": {
+                "id": "A=1@O=Hardbrücke@X=8516902@Y=47385440@U=85@L=8503020@B=1@p=1630399423@"
+            }
+        },
+        {
+            "constraint": "Hardbrücke",
+            "result": {
+                "id": "A=1@O=Hardbrücke@X=8516902@Y=47385440@U=85@L=8503020@B=1@p=1630399423@"
+            }
+        },
+        {
+            "constraint": "Ausstellungsstrasse 88, Zürich",
+            "result": {
+                "id": "A=2@O=Zürich, Ausstellungsstrasse 88@X=8534323@Y=47383876@U=103@L=990111655@B=1@p=1603104823@"
+            }
+        }
+    ],
+    "queryNearbyLocationsByCoordinate": [
+        {
+            "__comment": "Zürich Hauptbahnhof",
+            "lat": 47378491,
+            "lon": 8537945,
+            "result": {
+                "id": "A=1@O=Zürich HB@X=8537945@Y=47378492@u=0@U=85@L=8503000@"
+            }
+        },
+        {
+            "__comment": "Zürich Hegibachplatz",
+            "lat": 47361762,
+            "lon": 8560715,
+            "result": {
+                "id": "A=1@O=Zürich, Hegibachplatz@X=8560715@Y=47361772@u=1@U=85@L=299487@"
+            }
+        }
+    ],
+    "queryDepartures": [
+        {
+            "__comment": "Zürich Hauptbahnhof",
+            "id": "8503000"
+        },
+        {
+            "__comment": "Zürich Hegibachplatz",
+            "id": "8530812"
+        }
+    ],
+    "queryDeparturesInvalidId": "999999",
+    "queryTrips": [
+        {
+            "__comment": "Zürich Hauptbahnhof to Zürich Hegibachplatz",
+            "from": {
+                "type": "station",
+                "id": "8503000"
+            },
+            "to": {
+                "type": "station",
+                "id": "8530812"
+            }
+        },
+        {
+            "__comment": "Zürich Hauptbahnhof to Zürich Hegibachplatz",
+            "from": {
+                "type": "coord",
+                "lat": 47378491,
+                "lon": 8537945
+            },
+            "to": {
+                "type": "coord",
+                "lat": 47361762,
+                "lon": 8560715
+            }
+        }
+    ],
+    "queryTripsTooClose": [
+        {
+            "__comment": "Zürich Hauptbahnhof",
+            "from": {
+                "type": "station",
+                "id": "8503000"
+            },
+            "to": {
+                "type": "station",
+                "id": "8503000"
+            }
+        }
+    ]
+}

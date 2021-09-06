@@ -1,0 +1,96 @@
+{
+    "suggestLocations": [
+        {
+            "constraint": "Schottenring",
+            "result": {
+                "id": "A=1@O=Wien Schottenring (U)@X=16371280@Y=48217104@U=81@L=001390163@B=1@p=1630923242@"
+            }
+        },
+        {
+            "constraint": "Roßauer",
+            "result": {
+                "id": "A=1@O=Wien Roßauer Lände (U)@X=16367712@Y=48221617@U=81@L=001390966@B=1@p=1630923242@"
+            }
+        },
+        {
+            "constraint": "Börse",
+            "result": {
+                "id": "A=1@O=Wien Börse@X=16365437@Y=48215298@U=81@L=001390185@B=1@p=1630923242@"
+            }
+        },
+        {
+            "constraint": "Grünangergasse 1, Wiener Neustadt",
+            "result": {
+                "id": "A=2@O=Wiener Neustadt, Grünangergasse 1@X=16244335@Y=47815754@U=103@L=980199376@B=1@p=1520424776@"
+            }
+        }
+    ],
+    "queryNearbyLocationsByCoordinate": [
+        {
+            "__comment": "Wien Hauptbahnhof",
+            "lat": 48185010,
+            "lon": 16377855,
+            "result": {
+                "id": "A=1@O=Wien Hbf@X=16377114@Y=48185103@u=0@U=81@L=8103000@"
+            }
+        },
+        {
+            "__comment": "Wien Schottenring",
+            "lat": 48217428,
+            "lon": 16372377,
+            "result": {
+                "id": "A=1@O=Wien Schottenring (U2)@X=16372377@Y=48217428@u=0@U=81@L=901080@"
+            }
+        }
+    ],
+    "queryDepartures": [
+        {
+            "__comment": "Wien Schottenring",
+            "id": "1390163"
+        },
+        {
+            "__comment": "Linz",
+            "id": "1140101"
+        }
+    ],
+    "queryDeparturesInvalidId": "999999",
+    "queryTrips": [
+        {
+            "__comment": "Wien Schottenring to Linz",
+            "from": {
+                "type": "station",
+                "id": "1390163"
+            },
+            "to": {
+                "type": "station",
+                "id": "1140101"
+            }
+        },
+        {
+            "__comment": "Wien Hauptbahnhof to Wien Schottenring",
+            "from": {
+                "type": "coord",
+                "lat": 48185010,
+                "lon": 16377855
+            },
+            "to": {
+                "type": "coord",
+                "lat": 48217428,
+                "lon": 16372377
+            }
+        }
+    ],
+    "queryTripsTooClose": [
+        {
+            "__comment": "Wien Schottenring",
+            "from": {
+                "type": "station",
+                "id": "1390163"
+            },
+            "to": {
+                "type": "station",
+                "id": "1390163"
+            }
+        }
+    ]
+}

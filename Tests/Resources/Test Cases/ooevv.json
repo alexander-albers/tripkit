@@ -1,0 +1,96 @@
+{
+    "suggestLocations": [
+        {
+            "constraint": "Salzburg Merianstraße",
+            "result": {
+                "id": "A=1@O=Salzburg Merianstraße@X=13050279@Y=47811556@U=81@L=455084400@B=1@p=1630889505@i=at:45:50844@"
+            }
+        },
+        {
+            "constraint": "Merianstr",
+            "result": {
+                "id": "A=1@O=Salzburg Merianstraße@X=13050279@Y=47811556@U=81@L=455084400@B=1@p=1630889505@i=at:45:50844@"
+            }
+        },
+        {
+            "constraint": "Wien Schönbrunn",
+            "result": {
+                "id": "A=1@O=Wien Schönbrunn@X=16319476@Y=48185903@U=81@L=490121100@B=1@p=1630889505@i=at:49:1211@"
+            }
+        },
+        {
+            "constraint": "6800 Feldkirch, Mutterstraße 4",
+            "result": {
+                "id": "A=2@O=Mutterstraße, 6800 Feldkirch@X=9602071@Y=47243447@U=103@b=980081897@B=1@p=1629871314@"
+            }
+        }
+    ],
+    "queryNearbyLocationsByCoordinate": [
+        {
+            "__comment": "Wien Stephansplatz",
+            "lat": 48207998,
+            "lon": 16371496,
+            "result": {
+                "id": "A=1@O=Wien Stephansplatz@l=Wien Stephansplatz (1)@X=16371496@Y=48207998@U=81@L=490132005@i=at:49:1320:0:5@"
+            }
+        },
+        {
+            "__comment": "Wien Stubentor",
+            "lat": 48206875,
+            "lon": 16379254,
+            "result": {
+                "id": "A=1@O=Wien Stubentor@l=Wien Stubentor (1)@X=16379254@Y=48206875@U=81@L=490024510@i=at:49:245:0:10@"
+            }
+        }
+    ],
+    "queryDepartures": [
+        {
+            "__comment": "Wien Stephansplatz",
+            "id": "490132000"
+        },
+        {
+            "__comment": "Wien Stubentor",
+            "id": "490024500"
+        }
+    ],
+    "queryDeparturesInvalidId": "999999",
+    "queryTrips": [
+        {
+            "__comment": "Wien Stephansplatz to Wien Stubentor",
+            "from": {
+                "type": "station",
+                "id": "490132000"
+            },
+            "to": {
+                "type": "station",
+                "id": "490024500"
+            }
+        },
+        {
+            "__comment": "Wien Stephansplatz to Wien Stubentor",
+            "from": {
+                "type": "coord",
+                "lat": 48207998,
+                "lon": 16371496
+            },
+            "to": {
+                "type": "coord",
+                "lat": 48206875,
+                "lon": 16379254
+            }
+        }
+    ],
+    "queryTripsTooClose": [
+        {
+            "__comment": "Wien Stephansplatz",
+            "from": {
+                "type": "station",
+                "id": "490132000"
+            },
+            "to": {
+                "type": "station",
+                "id": "490132000"
+            }
+        }
+    ]
+}

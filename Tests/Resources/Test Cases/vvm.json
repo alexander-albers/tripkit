@@ -1,0 +1,90 @@
+{
+    "suggestLocations": [
+        {
+            "constraint": "Paradiesstraße",
+            "result": {
+                "id": "80029085"
+            }
+        },
+        {
+            "constraint": "paradie",
+            "result": {
+                "id": "80029085"
+            }
+        },
+        {
+            "constraint": "Klosterlechfeld, Südstraße",
+            "result": {
+                "id": "streetID:1500000020::9772162:1:Südstraße:Klosterlechfeld:Südstraße::Südstraße: 86836:ANY:DIVA_STREET:1205599:5868247:MRCV:bay:0"
+            }
+        }
+    ],
+    "queryNearbyLocationsByCoordinate": [
+        {
+            "__comment": "Würzburg Hauptbahnhof",
+            "lat": 49801518,
+            "lon": 9933517,
+            "result": {
+                "id": "80001152"
+            }
+        },
+        {
+            "__comment": "Stift Haug",
+            "lat": 49797772,
+            "lon": 9934986,
+            "result": {
+                "id": "3700403"
+            }
+        }
+    ],
+    "queryDepartures": [
+        {
+            "__comment": "Würzburg Hauptbahnhof",
+            "id": "80001152"
+        },
+        {
+            "__comment": "Würzburg Paradiesstraße",
+            "id": "80029085"
+        }
+    ],
+    "queryDeparturesInvalidId": "999999",
+    "queryTrips": [
+        {
+            "__comment": "Würzburg Hauptbahnhof to Würzburg Paradiesstraße",
+            "from": {
+                "type": "station",
+                "id": "80001152"
+            },
+            "to": {
+                "type": "station",
+                "id": "80029085"
+            }
+        },
+        {
+            "__comment": "Würzburg Hauptbahnhof to Stift Haug",
+            "from": {
+                "type": "coord",
+                "lat": 49801518,
+                "lon": 9933517
+            },
+            "to": {
+                "type": "coord",
+                "lat": 49797772,
+                "lon": 9934986
+            }
+        }
+    ],
+    "queryTripsTooClose": [
+        {
+            "__comment": "Würzburg Hauptbahnhof",
+            "from": {
+                "type": "station",
+                "id": "80001152"
+            },
+            "to": {
+                "type": "station",
+                "id": "80001152"
+            }
+        }
+    ]
+}

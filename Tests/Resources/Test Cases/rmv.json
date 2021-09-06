@@ -1,0 +1,113 @@
+{
+    "suggestLocations": [
+        {
+            "constraint": "Willy-Brandt-Platz",
+            "result": {
+                "id": "A=1@O=Frankfurt (Main) Willy-Brandt-Platz@X=8673898@Y=50108992@U=80@L=3000004@B=1@p=1630651633@"
+            }
+        },
+        {
+            "constraint": "willy",
+            "result": {
+                "id": "A=1@O=Frankfurt (Main) Willy-Brandt-Platz@X=8673898@Y=50108992@U=80@L=3000004@B=1@p=1630651633@"
+            }
+        },
+        {
+            "constraint": "Grüneburgweg",
+            "result": {
+                "id": "A=1@O=Frankfurt (Main) Grüneburgweg@X=8675588@Y=50121649@U=80@L=3000402@B=1@p=1630651633@"
+            }
+        },
+        {
+            "constraint": "Kaiserstraße 30, Frankfurt am Main - Innenstadt",
+            "result": {
+                "id": "A=2@O=Frankfurt am Main - Innenstadt, Kaiserstraße 30@H=30@X=8673350@Y=50109963@U=103@L=990057850@B=1@p=1582579331@"
+            }
+        }
+    ],
+    "queryNearbyLocationsByCoordinate": [
+        {
+            "__comment": "Wiesbaden Hauptbahnhof",
+            "lat": 50069485,
+            "lon": 8244636,
+            "result": {
+                "id": "A=1@O=Wiesbaden Hauptbahnhof@X=8244627@Y=50069476@u=1@U=80@L=3006907@"
+            }
+        },
+        {
+            "__comment": "Frankfurt (Main) Hauptbahnhof tief",
+            "lat": 50107167,
+            "lon": 8662509,
+            "result": {
+                "id": "A=1@O=Frankfurt (Main) Hauptbahnhof@X=8662653@Y=50106808@u=41@U=80@L=3000010@"
+            }
+        }
+    ],
+    "queryDepartures": [
+        {
+            "__comment": "Wiesbaden Hauptbahnhof",
+            "id": "3006907"
+        },
+        {
+            "__comment": "Frankfurt (Main) Hauptbahnhof tief",
+            "id": "3007010"
+        }
+    ],
+    "queryDeparturesInvalidId": "999999",
+    "queryTrips": [
+        {
+            "__comment": "Wiesbaden Hauptbahnhof to Frankfurt (Main) Hauptbahnhof tief",
+            "from": {
+                "type": "station",
+                "id": "3006907"
+            },
+            "to": {
+                "type": "station",
+                "id": "3007010"
+            }
+        },
+        {
+            "__comment": "Wiesbaden Hauptbahnhof to Frankfurt (Main) Hauptbahnhof tief",
+            "from": {
+                "type": "coord",
+                "lat": 50069485,
+                "lon": 8244636
+            },
+            "to": {
+                "type": "coord",
+                "lat": 50107167,
+                "lon": 8662509
+            }
+        },
+        {
+            "__comment": "Non-isolatin1 symbols",
+            "from": {
+                "type": "coord",
+                "lat": 49867186,
+                "lon": 8640047,
+                "place": "达姆施塔特",
+                "name": "Schöfferstraße 2"
+            },
+            "to": {
+                "type": "coord",
+                "lat": 49856719,
+                "lon": 8637645,
+                "place": "64295 达姆施塔特, 德国",
+                "name": "Wormser Straße 32"
+            }
+        }
+    ],
+    "queryTripsTooClose": [
+        {
+            "__comment": "Wiesbaden Hauptbahnhof",
+            "from": {
+                "type": "station",
+                "id": "3006907"
+            },
+            "to": {
+                "type": "station",
+                "id": "3006907"
+            }
+        }
+    ]
+}

@@ -1,0 +1,96 @@
+{
+    "suggestLocations": [
+        {
+            "constraint": "S+U Berlin Hauptbahnhof",
+            "result": {
+                "id": "A=1@O=S+U Berlin Hauptbahnhof@X=13369072@Y=52525607@U=86@L=900003201@B=1@p=1630578354@"
+            }
+        },
+        {
+            "constraint": "nol",
+            "result": {
+                "id": "A=1@O=U Nollendorfplatz (Berlin)@X=13353826@Y=52499646@U=86@L=900056102@B=1@p=1630578354@"
+            }
+        },
+        {
+            "constraint": "U Güntzelstr.",
+            "result": {
+                "id": "A=1@O=U Güntzelstr. (Berlin)@X=13331084@Y=52491970@U=86@L=900043201@B=1@p=1630578354@"
+            }
+        },
+        {
+            "constraint": "Sophienstr. 24, 10178 Berlin-Mitte",
+            "result": {
+                "id": "A=2@O=10178 Berlin-Mitte, Sophienstr. 24@X=13399878@Y=52526039@U=103@L=770009020@B=1@p=1592347662@"
+            }
+        }
+    ],
+    "queryNearbyLocationsByCoordinate": [
+        {
+            "__comment": "U Kurfürsterstr.",
+            "lat": 52479663,
+            "lon": 13324278,
+            "result": {
+                "id": "A=1@O=Detmolder Str./Blissestr. (Berlin)@X=13320324@Y=52479115@u=274@U=86@L=900044104@"
+            }
+        },
+        {
+            "__comment": "S+U Wuhletal",
+            "lat": 52541536,
+            "lon": 13421290,
+            "result": {
+                "id": "A=1@O=Husemannstr. (Berlin)@X=13418711@Y=52540035@u=241@U=86@L=900110511@"
+            }
+        }
+    ],
+    "queryDepartures": [
+        {
+            "__comment": "Nollendorfplatz",
+            "id": "900056102"
+        },
+        {
+            "__comment": "Prinzenstraße",
+            "id": "900013103"
+        }
+    ],
+    "queryDeparturesInvalidId": "999999",
+    "queryTrips": [
+        {
+            "__comment": "Nollendorfplatz to Prinzenstraße",
+            "from": {
+                "type": "station",
+                "id": "900056102"
+            },
+            "to": {
+                "type": "station",
+                "id": "900013103"
+            }
+        },
+        {
+            "__comment": "U Kurfürsterstr. to S+U Wuhletal",
+            "from": {
+                "type": "coord",
+                "lat": 52479663,
+                "lon": 13324278
+            },
+            "to": {
+                "type": "coord",
+                "lat": 52541536,
+                "lon": 13421290
+            }
+        }
+    ],
+    "queryTripsTooClose": [
+        {
+            "__comment": "v",
+            "from": {
+                "type": "station",
+                "id": "900056102"
+            },
+            "to": {
+                "type": "station",
+                "id": "900056102"
+            }
+        }
+    ]
+}

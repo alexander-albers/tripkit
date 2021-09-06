@@ -1,0 +1,96 @@
+{
+    "suggestLocations": [
+        {
+            "constraint": "Sportplatzstr",
+            "result": {
+                "id": "22000656"
+            }
+        },
+        {
+            "constraint": "kur",
+            "result": {
+                "id": "20000298"
+            }
+        },
+        {
+            "constraint": "Bf Mülheim, Köln",
+            "result": {
+                "id": "22000572"
+            }
+        },
+        {
+            "constraint": "Hagen, Siegstraße 30",
+            "result": {
+                "id": "streetID:1500001086:30:5914000:-1:Siegstraße:Hagen:Siegstraße::Siegstraße:58097:ANY:DIVA_SINGLEHOUSE:831146:5313192:MRCV:nrw"
+            }
+        }
+    ],
+    "queryNearbyLocationsByCoordinate": [
+        {
+            "__comment": "Köln Siegstraße 30",
+            "lat": 50884675,
+            "lon": 6994941,
+            "result": {
+                "id": "22000107"
+            }
+        },
+        {
+            "__comment": "Bonn Berliner Platz 1",
+            "lat": 50736200,
+            "lon": 7092096,
+            "result": {
+                "id": "22001153"
+            }
+        }
+    ],
+    "queryDepartures": [
+        {
+            "__comment": "Essen Hauptbahnhof",
+            "id": "20009289"
+        },
+        {
+            "__comment": "Essen Bismarckplatz",
+            "id": "20009161"
+        }
+    ],
+    "queryDeparturesInvalidId": "999999",
+    "queryTrips": [
+        {
+            "__comment": "Essen Hauptbahnhof to Essen Bismarckplatz",
+            "from": {
+                "type": "station",
+                "id": "20009289"
+            },
+            "to": {
+                "type": "station",
+                "id": "20009161"
+            }
+        },
+        {
+            "__comment": "Köln Siegstraße 30 to Bonn Berliner Platz 1",
+            "from": {
+                "type": "coord",
+                "lat": 50884675,
+                "lon": 6994941
+            },
+            "to": {
+                "type": "coord",
+                "lat": 50736200,
+                "lon": 7092096
+            }
+        }
+    ],
+    "queryTripsTooClose": [
+        {
+            "__comment": "Essen Hauptbahnhof",
+            "from": {
+                "type": "station",
+                "id": "20009289"
+            },
+            "to": {
+                "type": "station",
+                "id": "20009289"
+            }
+        }
+    ]
+}

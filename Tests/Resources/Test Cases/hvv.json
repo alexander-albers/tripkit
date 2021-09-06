@@ -1,0 +1,96 @@
+{
+    "suggestLocations": [
+        {
+            "constraint": "Hauptbahnhof",
+            "result": {
+                "id": "A=1@O=Hamburg Hbf@X=10007942@Y=53552751@U=80@L=000000090@B=1@p=1630603642@"
+            }
+        },
+        {
+            "constraint": "hbf",
+            "result": {
+                "id": "A=1@O=Hamburg Hbf@X=10007942@Y=53552751@U=80@L=000000090@B=1@p=1630603642@"
+            }
+        },
+        {
+            "constraint": "Gänsemarkt (Oper)",
+            "result": {
+                "id": "A=1@O=Gänsemarkt (Oper)@X=9986036@Y=53555600@U=80@L=000000158@B=1@p=1630603642@"
+            }
+        },
+        {
+            "constraint": "Bogenstraße 29, Hamburg",
+            "result": {
+                "id": "A=2@O=Hamburg, Bogenstraße 29@X=9975096@Y=53573102@U=99@L=970027899@B=1@p=1629446462@"
+            }
+        }
+    ],
+    "queryNearbyLocationsByCoordinate": [
+        {
+            "__comment": "Hamburg Hauptbahnhof",
+            "lat": 53552924,
+            "lon": 10004416,
+            "result": {
+                "id": "A=1@O=Hamburg Hbf@X=10007942@Y=53552751@u=0@U=80@L=90@"
+            }
+        },
+        {
+            "__comment": "Hamburg Schlump",
+            "lat": 53567591,
+            "lon": 9967937,
+            "result": {
+                "id": "A=1@O=Schlump@X=9970125@Y=53567583@u=0@U=80@L=6618@"
+            }
+        }
+    ],
+    "queryDepartures": [
+        {
+            "__comment": "Hamburg Hauptbahnhof",
+            "id": "84"
+        },
+        {
+            "__comment": "Hamburg Schlump",
+            "id": "6618"
+        }
+    ],
+    "queryDeparturesInvalidId": "999999",
+    "queryTrips": [
+        {
+            "__comment": "Hamburg Hauptbahnhof to Hamburg Schlump",
+            "from": {
+                "type": "station",
+                "id": "84"
+            },
+            "to": {
+                "type": "station",
+                "id": "6618"
+            }
+        },
+        {
+            "__comment": "Hamburg Hauptbahnhof to Hamburg Schlump",
+            "from": {
+                "type": "coord",
+                "lat": 53552924,
+                "lon": 10004416
+            },
+            "to": {
+                "type": "coord",
+                "lat": 53567591,
+                "lon": 9967937
+            }
+        }
+    ],
+    "queryTripsTooClose": [
+        {
+            "__comment": "Hamburg Hauptbahnhof",
+            "from": {
+                "type": "station",
+                "id": "84"
+            },
+            "to": {
+                "type": "station",
+                "id": "84"
+            }
+        }
+    ]
+}

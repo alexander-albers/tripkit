@@ -1,0 +1,96 @@
+{
+    "suggestLocations": [
+        {
+            "constraint": "Kieler Str.",
+            "result": {
+                "id": "27103755"
+            }
+        },
+        {
+            "constraint": "marienpl",
+            "result": {
+                "id": "3006266"
+            }
+        },
+        {
+            "constraint": "Büdnerstraße",
+            "result": {
+                "id": "44402014"
+            }
+        },
+        {
+            "constraint": "Schwerin, Lübecker Straße 142",
+            "result": {
+                "id": "streetID:1500000253:142:13004000:20:Lübecker Str.:Schwerin:Lübecker Str.::Lübecker Str.:19059:ANY:DIVA_SINGLEHOUSE:1268940:4898531:MRCV:B_W:0"
+            }
+        }
+    ],
+    "queryNearbyLocationsByCoordinate": [
+        {
+            "__comment": "Schwerin Hauptbahnhof",
+            "lat": 53634388,
+            "lon": 11405774,
+            "result": {
+                "id": "44409005"
+            }
+        },
+        {
+            "__comment": "Schwerin-Lankow",
+            "lat": 53656658,
+            "lon": 11367353,
+            "result": {
+                "id": "44408282"
+            }
+        }
+    ],
+    "queryDepartures": [
+        {
+            "__comment": "Schwerin Hauptbahnhof",
+            "id": "44409005"
+        },
+        {
+            "__comment": "Schwerin Kieler Str.",
+            "id": "44402013"
+        }
+    ],
+    "queryDeparturesInvalidId": "999999",
+    "queryTrips": [
+        {
+            "__comment": "Schwerin Hauptbahnhof to Schwerin Kieler Str.",
+            "from": {
+                "type": "station",
+                "id": "44409005"
+            },
+            "to": {
+                "type": "station",
+                "id": "44402013"
+            }
+        },
+        {
+            "__comment": "Schwerin Hauptbahnhof to Schwerin-Lankow",
+            "from": {
+                "type": "coord",
+                "lat": 53634388,
+                "lon": 11405774
+            },
+            "to": {
+                "type": "coord",
+                "lat": 53656658,
+                "lon": 11367353
+            }
+        }
+    ],
+    "queryTripsTooClose": [
+        {
+            "__comment": "Schwerin Hauptbahnhof",
+            "from": {
+                "type": "station",
+                "id": "44409005"
+            },
+            "to": {
+                "type": "station",
+                "id": "44409005"
+            }
+        }
+    ]
+}

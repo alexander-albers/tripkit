@@ -11,22 +11,4 @@ class MvvProviderTests: TripKitProviderTestCase, TripKitProviderTestsDelegate {
         return MvvProvider()
     }
     
-    var coordinatesFrom: LocationPoint { return LocationPoint(lat: 48165238, lon: 11577473) } //
-    
-    var coordinatesTo: LocationPoint { return LocationPoint(lat: 47987199, lon: 11326532) } //
-    
-    var stationIdFrom: String { return "91000002" } // Marienplatz
-    
-    var stationIdTo: String { return "91000010" } // Pasing
-    
-    var invalidStationId: String { return "999999" }
-    
-    var suggestLocations: String { return "Hirschgarten" }
-    
-    var suggestLocationsIncomplete: String { return "Marien" } // Marienplatz
-    
-    var suggestLocationsUmlaut: String { return "Grüntal" }
-    
-    var suggestLocationsAddress: String { return "München, Maximilianstraße" }
-    
 }

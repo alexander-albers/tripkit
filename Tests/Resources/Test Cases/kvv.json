@@ -1,0 +1,96 @@
+{
+    "suggestLocations": [
+        {
+            "constraint": "Marktplatz Karlsruhe",
+            "result": {
+                "id": "7000001"
+            }
+        },
+        {
+            "constraint": "hbf",
+            "result": {
+                "id": "7000090"
+            }
+        },
+        {
+            "constraint": "Händelstraße",
+            "result": {
+                "id": "poiID:1000173344:8212000:-1:Händelstraße:Karlsruhe:Händelstraße:ANY:POI:931608:5723073:MRCV:B_W"
+            }
+        },
+        {
+            "constraint": "Karlsruhe, Bahnhofplatz 2",
+            "result": {
+                "id": "streetID:1500000173:2:8212000:-1:Bahnhofplatz:Karlsruhe:Bahnhofplatz::Bahnhofplatz:76137:ANY:DIVA_SINGLEHOUSE:935315:5725973:MRCV:B_W"
+            }
+        }
+    ],
+    "queryNearbyLocationsByCoordinate": [
+        {
+            "__comment": "Karlsruhe Marktplatz",
+            "lat": 49009526,
+            "lon": 8404914,
+            "result": {
+                "id": "7000001"
+            }
+        },
+        {
+            "__comment": "Karlsruhe Kronenplatz (Kaiserstr.)",
+            "lat": 49009393,
+            "lon": 8408866,
+            "result": {
+                "id": "7000002"
+            }
+        }
+    ],
+    "queryDepartures": [
+        {
+            "__comment": "Karlsruhe Marktplatz",
+            "id": "7000001"
+        },
+        {
+            "__comment": "Karlsruhe Kronenplatz (Kaiserstr.)",
+            "id": "7000002"
+        }
+    ],
+    "queryDeparturesInvalidId": "999999",
+    "queryTrips": [
+        {
+            "__comment": "Karlsruhe Marktplatz to Karlsruhe Kronenplatz (Kaiserstr.)",
+            "from": {
+                "type": "station",
+                "id": "7000001"
+            },
+            "to": {
+                "type": "station",
+                "id": "7000002"
+            }
+        },
+        {
+            "__comment": "Karlsruhe Marktplatz to Karlsruhe Kronenplatz (Kaiserstr.)",
+            "from": {
+                "type": "coord",
+                "lat": 49009526,
+                "lon": 8404914
+            },
+            "to": {
+                "type": "coord",
+                "lat": 49009393,
+                "lon": 8408866
+            }
+        }
+    ],
+    "queryTripsTooClose": [
+        {
+            "__comment": "Karlsruhe Marktplatz",
+            "from": {
+                "type": "station",
+                "id": "7000001"
+            },
+            "to": {
+                "type": "station",
+                "id": "7000001"
+            }
+        }
+    ]
+}

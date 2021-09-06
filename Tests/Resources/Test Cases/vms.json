@@ -1,0 +1,96 @@
+{
+    "suggestLocations": [
+        {
+            "constraint": "Zentralhaltestelle",
+            "result": {
+                "id": "36030131"
+            }
+        },
+        {
+            "constraint": "zentralhalt",
+            "result": {
+                "id": "36030131"
+            }
+        },
+        {
+            "constraint": "Küchwald",
+            "result": {
+                "id": "36030381"
+            }
+        },
+        {
+            "constraint": "Chemnitz, Christian-Wehner-Straße",
+            "result": {
+                "id": "streetID:301::14511000:-1:Christian-Wehner-Straße:Chemnitz:Christian-Wehner-Straße::Christian-Wehner-Straße: 09113:ANY:DIVA_STREET:1439541:5404774:MRCV:VMS"
+            }
+        }
+    ],
+    "queryNearbyLocationsByCoordinate": [
+        {
+            "__comment": "Chemnitz Zentralhaltestelle",
+            "lat": 50831380,
+            "lon": 12922278,
+            "result": {
+                "id": "36030131"
+            }
+        },
+        {
+            "__comment": "Chemnitz Stadthalle",
+            "lat": 50836056,
+            "lon": 12922042,
+            "result": {
+                "id": "36030522"
+            }
+        }
+    ],
+    "queryDepartures": [
+        {
+            "__comment": "Chemnitz Zentralhaltestelle",
+            "id": "36030131"
+        },
+        {
+            "__comment": "Chemnitz Stadthalle",
+            "id": "36030522"
+        }
+    ],
+    "queryDeparturesInvalidId": "999999",
+    "queryTrips": [
+        {
+            "__comment": "Chemnitz Zentralhaltestelle to Chemnitz Stadthalle",
+            "from": {
+                "type": "station",
+                "id": "36030131"
+            },
+            "to": {
+                "type": "station",
+                "id": "36030522"
+            }
+        },
+        {
+            "__comment": "Chemnitz Zentralhaltestelle to Chemnitz Stadthalle",
+            "from": {
+                "type": "coord",
+                "lat": 50831380,
+                "lon": 12922278
+            },
+            "to": {
+                "type": "coord",
+                "lat": 50836056,
+                "lon": 12922042
+            }
+        }
+    ],
+    "queryTripsTooClose": [
+        {
+            "__comment": "Chemnitz Zentralhaltestelle",
+            "from": {
+                "type": "station",
+                "id": "36030131"
+            },
+            "to": {
+                "type": "station",
+                "id": "36030131"
+            }
+        }
+    ]
+}

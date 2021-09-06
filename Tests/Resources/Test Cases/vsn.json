@@ -1,0 +1,98 @@
+{
+    "suggestLocations": [
+        {
+            "constraint": "Dahlmannstraße",
+            "result": {
+                "id": "A=1@O=Göttingen Dahlmannstraße@X=9950250@Y=51536281@U=80@L=9033876@B=1@p=1630786923@"
+            }
+        },
+        {
+            "constraint": "Siekw",
+            "result": {
+                "id": "A=1@O=Göttingen Siekweg@X=9890741@Y=51526267@U=80@L=9034044@B=1@p=1630786923@"
+            }
+        },
+        {
+            "constraint": "Lönsweg",
+            "result": {
+                "id": "A=1@O=Göttingen Lönsweg@X=9953540@Y=51527193@U=80@L=9033996@B=1@p=1630786923@"
+            }
+        },
+        {
+            "constraint": "Göttingen(Niedersachs) Humboldtallee 14",
+            "result": {
+                "id": "A=2@O=Göttingen - Göttingen, Humboldtallee 14@H=14@X=9941566@Y=51541864@U=99@L=958121235@B=1@p=1617880347@"
+            }
+        }
+    ],
+    "queryNearbyLocationsByCoordinate": [
+        {
+            "__comment": "Göttingen Bahnhof/ZOB",
+            "lat": 51535086,
+            "lon": 9927102,
+            "result": {
+                "id": "A=1@O=Göttingen Bahnhof/ZOB@X=9927102@Y=51535086@U=80@L=1101000@"
+            }
+        },
+        {
+            "__comment": "Göttingen Markt",
+            "lat": 51533117,
+            "lon": 9934006,
+            "result": {
+                "id": "A=1@O=Göttingen Markt@X=9934294@Y=51533153@u=20@U=80@L=702592@"
+            }
+        }
+    ],
+    "queryDepartures": [
+        {
+            "__comment": "Göttingen Bahnhof/ZOB",
+            "id": "1101000"
+        },
+        {
+            "__comment": "Göttingen Markt",
+            "id": "9034001"
+        }
+    ],
+    "queryDeparturesInvalidId": "999999",
+    "queryTrips": [
+        {
+            "__comment": "Göttingen Bahnhof/ZOB to Göttingen Markt",
+            "from": {
+                "type": "station",
+                "id": "1101000"
+            },
+            "to": {
+                "type": "station",
+                "id": "9034001"
+            }
+        },
+        {
+            "__comment": "Göttingen Bahnhof/ZOB to Göttingen Markt",
+            "from": {
+                "type": "coord",
+                "lat": 51535086,
+                "lon": 9927102
+            },
+            "to": {
+                "type": "coord",
+                "lat": 51533117,
+                "lon": 9934006
+            }
+        }
+    ],
+    "queryTripsTooClose": [
+        {
+            "__comment": "Göttingen Bahnhof/ZOB",
+            "from": {
+                "type": "coord",
+                "lat": 51535086,
+                "lon": 9927102
+            },
+            "to": {
+                "type": "coord",
+                "lat": 51535186,
+                "lon": 9927002
+            }
+        }
+    ]
+}
