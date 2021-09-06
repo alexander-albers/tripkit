@@ -387,9 +387,8 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider {
     
     override func suggestLocationsParsing(request: HttpRequest, constraint: String, types: [LocationType]?, maxLocations: Int, completion: @escaping (HttpRequest, SuggestLocationsResult) -> Void) throws {
         guard let data = request.responseData else { throw ParseError(reason: "no response") }
-        let json = try JSONSerialization.jsonObject(with: data, options: .allowFragments)
         var locations: [SuggestedLocation] = []
-        guard let json = json as? [String: Any], let suggestions = json["suggestions"] as? [Any] else {
+        guard let json = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [String: Any], let suggestions = json["suggestions"] as? [Any] else {
             throw ParseError(reason: "suggestions not found")
         }
         for (index, suggestion) in suggestions.enumerated() {
