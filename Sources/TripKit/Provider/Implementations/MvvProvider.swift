@@ -53,6 +53,7 @@ public class MvvProvider: AbstractEfaProvider {
             "UU7": LineStyle(shape: .rect, backgroundColor: LineStyle.parseColor("#52822f"), backgroundColor2: LineStyle.parseColor("#c20831"), foregroundColor: LineStyle.white, borderColor: 0),
             "UU8": LineStyle(shape: .rect, backgroundColor: LineStyle.parseColor("#c20831"), backgroundColor2: LineStyle.parseColor("#ec6726"), foregroundColor: LineStyle.white, borderColor: 0)
         ]
+        numTripsRequested = 12
     }
     
     override func parseLine(id: String?, network: String?, mot: String?, symbol: String?, name: String?, longName: String?, trainType: String?, trainNum: String?, trainName: String?) -> Line {
