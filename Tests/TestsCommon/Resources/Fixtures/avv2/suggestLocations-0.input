@@ -1,0 +1,1424 @@
+{
+  "ver":"1.18",
+  "lang":"deu",
+  "id":"dwkewkss4qqcpg4k",
+  "err":"OK",
+  "svcResL":
+  [
+    {
+      "meth":"LocMatch",
+      "err":"OK",
+      "res":
+      {
+        "common":
+        {
+          "locL":
+          [
+
+          ],
+          "prodL":
+          [
+            {
+              "name":"L",
+              "nameS":"L",
+              "icoX":0,
+              "cls":1,
+              "prodCtx":
+              {
+                "lineId":"SNC033_L"
+              }
+            },
+            {
+              "name":"R",
+              "nameS":"RE 29",
+              "icoX":0,
+              "cls":1,
+              "prodCtx":
+              {
+                "lineId":"DBA096_RE 29"
+              }
+            },
+            {
+              "name":"RB 20",
+              "nameS":"RB 20",
+              "icoX":0,
+              "cls":1,
+              "prodCtx":
+              {
+                "lineId":"DBA057_RB 20"
+              }
+            },
+            {
+              "name":"RB 33",
+              "nameS":"RB 33",
+              "icoX":0,
+              "cls":1,
+              "prodCtx":
+              {
+                "lineId":"DBA069_RB 33"
+              }
+            },
+            {
+              "name":"RE 1",
+              "nameS":"RE 1",
+              "icoX":0,
+              "cls":1,
+              "prodCtx":
+              {
+                "lineId":"ARRE___RE 1"
+              }
+            },
+            {
+              "name":"RE 4",
+              "nameS":"RE 4",
+              "icoX":0,
+              "cls":1,
+              "prodCtx":
+              {
+                "lineId":"NX_016_RE 4"
+              }
+            },
+            {
+              "name":"RE 9",
+              "nameS":"RE 9",
+              "icoX":0,
+              "cls":1,
+              "prodCtx":
+              {
+                "lineId":"DBA071_RE 9"
+              }
+            },
+            {
+              "name":"RE 18",
+              "nameS":"RE 18",
+              "icoX":0,
+              "cls":1,
+              "prodCtx":
+              {
+                "lineId":"DBA068_RE 18"
+              }
+            },
+            {
+              "name":"RE29",
+              "nameS":"RE29",
+              "icoX":0,
+              "cls":1,
+              "prodCtx":
+              {
+                "lineId":"DBA066_RE29"
+              }
+            },
+            {
+              "name":"Bus 3A",
+              "nameS":"3A",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"de:aac:05334|3A:aseag"
+              }
+            },
+            {
+              "name":"Bus 3B",
+              "nameS":"3B",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"de:aac:05334|3B:aseag"
+              }
+            },
+            {
+              "name":"Bus 11",
+              "nameS":"11",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"de:aac:05334|11:aseag"
+              }
+            },
+            {
+              "name":"Bus 13A",
+              "nameS":"13A",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"de:aac:05334|13A:aseag"
+              }
+            },
+            {
+              "name":"Bus 13B",
+              "nameS":"13B",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"de:aac:05334|13B:aseag"
+              }
+            },
+            {
+              "name":"Bus 14",
+              "nameS":"14",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"de:aac:05334|14:aseag"
+              }
+            },
+            {
+              "name":"Bus 21",
+              "nameS":"21",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"de:aac:05334|21:aseag"
+              }
+            },
+            {
+              "name":"Bus 21E",
+              "nameS":"21E",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"de:aac:05334|21E:aseag"
+              }
+            },
+            {
+              "name":"Bus 31",
+              "nameS":"31",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"de:aac:05334|31:aseag"
+              }
+            },
+            {
+              "name":"Bus 44",
+              "nameS":"44",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"de:aac:05334|44:aseag"
+              }
+            },
+            {
+              "name":"Bus 51",
+              "nameS":"51",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"de:aac:05334|51:aseag"
+              }
+            },
+            {
+              "name":"Bus 51E",
+              "nameS":"51E",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"de:aac:05334|51E:aseag"
+              }
+            },
+            {
+              "name":"Bus 103",
+              "nameS":"103",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"de:aac:05334|103:aseag"
+              }
+            },
+            {
+              "name":"Bus N5",
+              "nameS":"N5",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"de:aac:05334|N5:aseag"
+              }
+            },
+            {
+              "name":"Bus N60",
+              "nameS":"N60",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"de:aac:05334|N60:aseag"
+              }
+            },
+            {
+              "name":"Bus SB63",
+              "nameS":"SB63",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"de:aac:05334|SB63:bvr"
+              }
+            },
+            {
+              "name":"LT 74ALT",
+              "nameS":"74ALT",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"de:aac:05334|74ALT:aseag"
+              }
+            },
+            {
+              "name":"QL 350",
+              "nameS":"350",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"ARR002_350"
+              }
+            },
+            {
+              "name":"SEV",
+              "nameS":"RE 1",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"AR_____RE 1"
+              }
+            },
+            {
+              "name":"SEV",
+              "nameS":"RE 4",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"NX_____RE 4"
+              }
+            },
+            {
+              "name":"SEV",
+              "nameS":"SEV",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"NX_____SEV"
+              }
+            },
+            {
+              "name":"SEV",
+              "nameS":"SEV",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"DBA004_SEV"
+              }
+            },
+            {
+              "name":"SEV",
+              "nameS":"SEV B",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"DBA004_SEV B"
+              }
+            },
+            {
+              "name":"SEV",
+              "nameS":"SEV A",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"DBA004_SEV A"
+              }
+            },
+            {
+              "name":"SEV",
+              "nameS":"SEV C",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"DBA004_SEV C"
+              }
+            },
+            {
+              "name":"SEV",
+              "nameS":"SEV D",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"DBA004_SEV D"
+              }
+            },
+            {
+              "name":"SEV",
+              "nameS":"SEV E",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"DBA004_SEV E"
+              }
+            },
+            {
+              "name":"SEV",
+              "nameS":"SEV F",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"DBA004_SEV F"
+              }
+            },
+            {
+              "name":"SEV",
+              "nameS":"BUS",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"SNC033_BUS"
+              }
+            },
+            {
+              "name":"S 12",
+              "nameS":"S 12",
+              "icoX":2,
+              "cls":16,
+              "prodCtx":
+              {
+                "lineId":"DBA061_S 12"
+              }
+            },
+            {
+              "name":"S 19",
+              "nameS":"S 19",
+              "icoX":2,
+              "cls":16,
+              "prodCtx":
+              {
+                "lineId":"DBA061_S 19"
+              }
+            },
+            {
+              "name":"FLX",
+              "nameS":"FLX",
+              "icoX":3,
+              "cls":2,
+              "prodCtx":
+              {
+                "lineId":"FLX40__FLX"
+              }
+            },
+            {
+              "name":"NJ",
+              "nameS":"NJ",
+              "icoX":3,
+              "cls":2,
+              "prodCtx":
+              {
+                "lineId":"DBA090_NJ"
+              }
+            },
+            {
+              "name":"NJ",
+              "nameS":"EN",
+              "icoX":3,
+              "cls":2,
+              "prodCtx":
+              {
+                "lineId":"DBA090_EN"
+              }
+            },
+            {
+              "name":"ICE",
+              "nameS":"ICE",
+              "icoX":4,
+              "cls":4,
+              "prodCtx":
+              {
+                "lineId":"DBA052_ICE"
+              }
+            },
+            {
+              "name":"Thalys",
+              "nameS":"THA",
+              "icoX":4,
+              "cls":4,
+              "prodCtx":
+              {
+                "lineId":"THA049_THA"
+              }
+            },
+            {
+              "name":"Bus 11E",
+              "nameS":"11E",
+              "icoX":1,
+              "cls":256,
+              "prodCtx":
+              {
+                "lineId":"de:aac:05334|11E:aseag"
+              }
+            },
+            {
+              "name":"Bus 11V",
+              "nameS":"11V",
+              "icoX":1,
+              "cls":256,
+              "prodCtx":
+              {
+                "lineId":"de:aac:05334|11V:aseag"
+              }
+            },
+            {
+              "name":"Bus 14E",
+              "nameS":"14E",
+              "icoX":1,
+              "cls":256,
+              "prodCtx":
+              {
+                "lineId":"de:aac:05334|14E:aseag"
+              }
+            },
+            {
+              "name":"Bus 31V",
+              "nameS":"31V",
+              "icoX":1,
+              "cls":256,
+              "prodCtx":
+              {
+                "lineId":"de:aac:05334|31V:aseag"
+              }
+            },
+            {
+              "name":"Bus E",
+              "nameS":"E",
+              "icoX":1,
+              "cls":256,
+              "prodCtx":
+              {
+                "lineId":"de:aac:05334|E:aseag"
+              }
+            },
+            {
+              "name":"Bus E",
+              "nameS":"E",
+              "icoX":1,
+              "cls":256,
+              "prodCtx":
+              {
+                "lineId":"de:aac:05334|E_NV:aseag"
+              }
+            },
+            {
+              "name":"Bus V",
+              "nameS":"V",
+              "icoX":1,
+              "cls":256,
+              "prodCtx":
+              {
+                "lineId":"de:aac:05334|V-ACGS:aseag"
+              }
+            },
+            {
+              "name":"Bus V",
+              "nameS":"V",
+              "icoX":1,
+              "cls":256,
+              "prodCtx":
+              {
+                "lineId":"de:aac:05334|V-ACLB:aseag"
+              }
+            },
+            {
+              "name":"Bus V",
+              "nameS":"V",
+              "icoX":1,
+              "cls":256,
+              "prodCtx":
+              {
+                "lineId":"de:aac:05334|V-ACRO:aseag"
+              }
+            },
+            {
+              "name":"Bus V",
+              "nameS":"V",
+              "icoX":1,
+              "cls":256,
+              "prodCtx":
+              {
+                "lineId":"de:aac:05334|V-DIV:aseag"
+              }
+            },
+            {
+              "name":"RB 27",
+              "nameS":"RB 27",
+              "icoX":0,
+              "cls":1,
+              "prodCtx":
+              {
+                "lineId":"DBA060_RB 27"
+              }
+            },
+            {
+              "name":"RB 34",
+              "nameS":"RB 34",
+              "icoX":0,
+              "cls":1,
+              "prodCtx":
+              {
+                "lineId":"VIA032_RB 34"
+              }
+            },
+            {
+              "name":"RB 35",
+              "nameS":"RB 35",
+              "icoX":0,
+              "cls":1,
+              "prodCtx":
+              {
+                "lineId":"ARRB___RB 35"
+              }
+            },
+            {
+              "name":"RE 8",
+              "nameS":"RE 8",
+              "icoX":0,
+              "cls":1,
+              "prodCtx":
+              {
+                "lineId":"DBA059_RE 8"
+              }
+            },
+            {
+              "name":"RE 13",
+              "nameS":"RE 13",
+              "icoX":0,
+              "cls":1,
+              "prodCtx":
+              {
+                "lineId":"ERB030_RE 13"
+              }
+            },
+            {
+              "name":"RE 42",
+              "nameS":"RE 42",
+              "icoX":0,
+              "cls":1,
+              "prodCtx":
+              {
+                "lineId":"DBA073_RE 42"
+              }
+            },
+            {
+              "name":"Bus 002",
+              "nameS":"002",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"NEW____002"
+              }
+            },
+            {
+              "name":"Bus 003",
+              "nameS":"003",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"NEW____003"
+              }
+            },
+            {
+              "name":"Bus 005",
+              "nameS":"005",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"NEW____005"
+              }
+            },
+            {
+              "name":"Bus 006",
+              "nameS":"006",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"NEW____006"
+              }
+            },
+            {
+              "name":"Bus 007",
+              "nameS":"007",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"NEW____007"
+              }
+            },
+            {
+              "name":"Bus 008",
+              "nameS":"008",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"NEW____008"
+              }
+            },
+            {
+              "name":"Bus 009",
+              "nameS":"009",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"NEW____009"
+              }
+            },
+            {
+              "name":"Bus 010",
+              "nameS":"010",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"NEW____010"
+              }
+            },
+            {
+              "name":"Bus 013",
+              "nameS":"013",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"NEW____013"
+              }
+            },
+            {
+              "name":"Bus 015",
+              "nameS":"015",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"NEW____015"
+              }
+            },
+            {
+              "name":"Bus 017",
+              "nameS":"017",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"NEW____017"
+              }
+            },
+            {
+              "name":"Bus 019",
+              "nameS":"019",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"NEW____019"
+              }
+            },
+            {
+              "name":"Bus 023",
+              "nameS":"023",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"NEW____023"
+              }
+            },
+            {
+              "name":"Bus 025",
+              "nameS":"025",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"NEW____025"
+              }
+            },
+            {
+              "name":"Bus 029",
+              "nameS":"029",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"NEW____029"
+              }
+            },
+            {
+              "name":"Bus 031",
+              "nameS":"031",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"NEW____031"
+              }
+            },
+            {
+              "name":"Bus 033",
+              "nameS":"033",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"NEW____033"
+              }
+            },
+            {
+              "name":"Bus 036",
+              "nameS":"036",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"NEW____036"
+              }
+            },
+            {
+              "name":"Bus 089",
+              "nameS":"089",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"VVG____089"
+              }
+            },
+            {
+              "name":"Bus 097",
+              "nameS":"097",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"NEW____097"
+              }
+            },
+            {
+              "name":"Bus NE1",
+              "nameS":"NE1",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"NEW____NE1"
+              }
+            },
+            {
+              "name":"Bus NE2",
+              "nameS":"NE2",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"NEW____NE2"
+              }
+            },
+            {
+              "name":"Bus NE3",
+              "nameS":"NE3",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"NEW____NE3"
+              }
+            },
+            {
+              "name":"Bus NE4",
+              "nameS":"NE4",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"NEW____NE4"
+              }
+            },
+            {
+              "name":"Bus SB1",
+              "nameS":"SB1",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"NEW____SB1"
+              }
+            },
+            {
+              "name":"Bus SB4",
+              "nameS":"SB4",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"NEW____SB4"
+              }
+            },
+            {
+              "name":"Bus SB81",
+              "nameS":"SB81",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"WEST___SB81"
+              }
+            },
+            {
+              "name":"Bus SB83",
+              "nameS":"SB83",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"NEW____SB83"
+              }
+            },
+            {
+              "name":"SEV",
+              "nameS":"RB 35",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"AR_____RB 35"
+              }
+            },
+            {
+              "name":"SEV",
+              "nameS":"RE 13",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"ERB028_RE 13"
+              }
+            },
+            {
+              "name":"SEV",
+              "nameS":"SEV42",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"DBA004_SEV42"
+              }
+            },
+            {
+              "name":"SEV",
+              "nameS":"SEV33",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"DBA004_SEV33"
+              }
+            },
+            {
+              "name":"SEV",
+              "nameS":"RB 34",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"VIA032_RB 34"
+              }
+            },
+            {
+              "name":"SEV",
+              "nameS":"SEV",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"VIA032_SEV"
+              }
+            },
+            {
+              "name":"S 8",
+              "nameS":"S 8",
+              "icoX":2,
+              "cls":16,
+              "prodCtx":
+              {
+                "lineId":"DBA076_S 8"
+              }
+            },
+            {
+              "name":"Bus 001",
+              "nameS":"001",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"NEW____001"
+              }
+            },
+            {
+              "name":"Bus 014",
+              "nameS":"014",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"NEW____014"
+              }
+            },
+            {
+              "name":"Bus 016",
+              "nameS":"016",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"NEW____016"
+              }
+            },
+            {
+              "name":"Bus 020",
+              "nameS":"020",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"NEW____020"
+              }
+            },
+            {
+              "name":"Bus 022",
+              "nameS":"022",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"NEW____022"
+              }
+            },
+            {
+              "name":"Bus 024",
+              "nameS":"024",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"NEW____024"
+              }
+            },
+            {
+              "name":"Bus NE6",
+              "nameS":"NE6",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"NEW____NE6"
+              }
+            },
+            {
+              "name":"Bus 16",
+              "nameS":"16",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"de:aac:05334|16:aseag"
+              }
+            },
+            {
+              "name":"Bus V",
+              "nameS":"V",
+              "icoX":1,
+              "cls":256,
+              "prodCtx":
+              {
+                "lineId":"de:aac:05334|V-ACBR:aseag"
+              }
+            }
+          ],
+          "polyL":
+          [
+
+          ],
+          "layerL":
+          [
+            {
+              "id":"standard",
+              "name":"standard",
+              "index":0,
+              "annoCnt":0
+            }
+          ],
+          "crdSysL":
+          [
+            {
+              "id":"standard",
+              "index":0,
+              "type":"WGS84"
+            }
+          ],
+          "opL":
+          [
+
+          ],
+          "remL":
+          [
+
+          ],
+          "icoL":
+          [
+            {
+              "res":"RB",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255
+              },
+              "bg":
+              {
+                "r":139,
+                "g":186,
+                "b":2
+              }
+            },
+            {
+              "res":"BUS",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255
+              },
+              "bg":
+              {
+                "r":190,
+                "g":65,
+                "b":135
+              }
+            },
+            {
+              "res":"S",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255
+              },
+              "bg":
+              {
+                "r":66,
+                "g":165,
+                "b":66
+              }
+            },
+            {
+              "res":"IC",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255
+              },
+              "bg":
+              {
+                "r":205,
+                "g":38,
+                "b":48
+              }
+            },
+            {
+              "res":"ICE",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255
+              },
+              "bg":
+              {
+                "r":205,
+                "g":38,
+                "b":48
+              }
+            }
+          ]
+        },
+        "match":
+        {
+          "field":"S",
+          "state":"L",
+          "locL":
+          [
+            {
+              "lid":"A=1@O=Aachen, Hbf@X=6092044@Y=50767722@U=80@L=1008@B=1@p=1630627037@",
+              "type":"S",
+              "name":"Aachen, Hbf",
+              "icoX":0,
+              "extId":"1008",
+              "state":"F",
+              "crd":
+              {
+                "x":6091495,
+                "y":50767803,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":407,
+              "pRefL":
+              [
+0,
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19,
+20,
+21,
+22,
+23,
+24,
+25,
+26,
+27,
+28,
+29,
+30,
+31,
+32,
+33,
+34,
+35,
+36,
+37,
+38,
+39,
+40,
+41,
+42,
+43,
+44,
+45,
+46,
+47,
+48,
+49,
+50,
+51,
+52,
+53,
+54
+              ],
+              "wt":28427
+            },
+            {
+              "lid":"A=1@O=Mönchengladbach, Hbf@X=6445167@Y=51196984@U=80@L=4786@B=1@p=1630627037@",
+              "type":"S",
+              "name":"Mönchengladbach, Hbf",
+              "icoX":0,
+              "extId":"4786",
+              "state":"F",
+              "crd":
+              {
+                "x":6445167,
+                "y":51196984,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":149,
+              "pRefL":
+              [
+55,
+3,
+56,
+57,
+5,
+58,
+59,
+60,
+61,
+62,
+63,
+64,
+65,
+66,
+67,
+68,
+69,
+70,
+71,
+72,
+73,
+74,
+75,
+76,
+77,
+78,
+79,
+80,
+81,
+82,
+83,
+84,
+85,
+86,
+87,
+88,
+89,
+90,
+91,
+92,
+30,
+31,
+32,
+93,
+94,
+95,
+43
+              ],
+              "wt":27586
+            },
+            {
+              "lid":"A=1@O=Mönchengladbach, Rheydt Hbf@X=6440205@Y=51162771@U=80@L=4775@B=1@p=1630627037@",
+              "type":"S",
+              "name":"Mönchengladbach, Rheydt Hbf",
+              "icoX":0,
+              "extId":"4775",
+              "state":"F",
+              "crd":
+              {
+                "x":6440205,
+                "y":51162771,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":133,
+              "pRefL":
+              [
+55,
+3,
+56,
+5,
+58,
+96,
+61,
+64,
+66,
+97,
+98,
+99,
+100,
+101,
+102,
+85,
+28,
+92,
+30,
+32,
+33,
+35,
+93,
+43
+              ],
+              "wt":26182
+            },
+            {
+              "lid":"A=1@O=Aachen, Eilendorf Bf@X=6154366@Y=50785565@U=80@L=1260@B=1@p=1630627037@",
+              "type":"S",
+              "name":"Aachen, Eilendorf Bf",
+              "icoX":0,
+              "extId":"1260",
+              "state":"F",
+              "crd":
+              {
+                "x":6154366,
+                "y":50785565,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":129,
+              "pRefL":
+              [
+2,
+4,
+27,
+30
+              ],
+              "wt":25826
+            },
+            {
+              "lid":"A=1@O=Aachen, Eich@X=6140630@Y=50730470@U=80@L=1209@B=1@p=1630627037@",
+              "type":"S",
+              "name":"Aachen, Eich",
+              "icoX":1,
+              "extId":"1209",
+              "state":"F",
+              "crd":
+              {
+                "x":6140630,
+                "y":50730470,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":384,
+              "pRefL":
+              [
+103,
+104,
+53
+              ],
+              "wt":165
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -16,7 +16,11 @@ let package = Package(
     ],
     targets: [
         .target(name: "TripKit", dependencies: ["Gzip", "SwiftyJSON", "SWXMLHash"], resources: [.copy("secrets.json")]),
-        .testTarget(name: "TripKitTests", dependencies: ["TripKit"], resources: [.copy("secrets.json")]),
+        
+        // Tests
+        .target(name: "TestsCommon", dependencies: ["TripKit"], path: "Tests/TestsCommon", resources: [.copy("Resources/Test Cases"), .copy("Resources/Fixtures")]),
+        .testTarget(name: "StaticTripKitTests", dependencies: ["TripKit", "TestsCommon"]),
+        .testTarget(name: "TripKitTests", dependencies: ["TripKit", "TestsCommon"]),
     ],
     swiftLanguageVersions: [.v5]
 )

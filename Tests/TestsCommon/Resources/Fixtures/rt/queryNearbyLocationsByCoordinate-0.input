@@ -1,0 +1,71 @@
+{ "prods":"1023",
+"stops":
+[
+{
+"x" : "2359120",
+"y" : "48876976"
+,"name" : "Paris Est"
+,"urlname" : "Paris%20Est"
+,"prodclass" : "45"
+,"extId":"8700011"
+,"puic":"80"
+,"dist" : "0"
+,"planId":"1607030611"
+,"stopweight":"20243"
+}
+,
+{
+"x" : "2358707",
+"y" : "48876176"
+,"name" : "Paris Gare de l'Est Noctilien"
+,"urlname" : "Paris%20Gare%20de%20l'Est%20Noctilien"
+,"prodclass" : "45"
+,"extId":"8706704"
+,"puic":"80"
+,"dist" : "94"
+,"planId":"1607030611"
+,"stopweight":"20243"
+}
+,
+{
+"x" : "2358104",
+"y" : "48879978"
+,"name" : "Paris Magenta"
+,"urlname" : "Paris%20Magenta"
+,"prodclass" : "8"
+,"extId":"8700545"
+,"puic":"80"
+,"dist" : "342"
+,"planId":"1607030611"
+,"stopweight":"4919"
+}
+,
+{
+"x" : "2355767",
+"y" : "48879277"
+,"name" : "Paris Gare du Nord Noctilien"
+,"urlname" : "Paris%20Gare%20du%20Nord%20Noctilien"
+,"prodclass" : "41"
+,"extId":"8706722"
+,"puic":"80"
+,"dist" : "354"
+,"planId":"1607030611"
+,"stopweight":"19178"
+}
+,
+{
+"x" : "2355641",
+"y" : "48880805"
+,"name" : "Paris Nord Banlieue"
+,"urlname" : "Paris%20Nord%20Banlieue"
+,"prodclass" : "41"
+,"extId":"8704186"
+,"puic":"80"
+,"dist" : "496"
+,"planId":"1607030611"
+,"stopweight":"19178"
+}
+]
+,"error" : "0"
+,"numberofstops": "5"
+}

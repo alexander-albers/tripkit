@@ -1,0 +1,223 @@
+{
+  "ver":"1.16",
+  "lang":"deu",
+  "id":"2bgsygec66xgyi4s",
+  "svcResL":
+  [
+    {
+      "meth":"LocMatch",
+      "err":"OK",
+      "res":
+      {
+        "common":
+        {
+          "locL":
+          [
+
+          ],
+          "prodL":
+          [
+            {
+              "name":"Bus 41",
+              "nameS":"41",
+              "icoX":1,
+              "cls":32,
+              "prodCtx":
+              {
+                "lineId":"de:VBN-VSN:41:"
+              }
+            },
+            {
+              "name":"Bus 170",
+              "nameS":"170",
+              "icoX":1,
+              "cls":32,
+              "prodCtx":
+              {
+                "lineId":"de:VBN-VSN:170:"
+              }
+            },
+            {
+              "name":"Bus E41",
+              "nameS":"E41",
+              "icoX":1,
+              "cls":32,
+              "prodCtx":
+              {
+                "lineId":"de:VBN-VSN:E41:"
+              }
+            }
+          ],
+          "polyL":
+          [
+
+          ],
+          "layerL":
+          [
+            {
+              "id":"standard",
+              "name":"standard",
+              "index":0,
+              "annoCnt":0
+            }
+          ],
+          "crdSysL":
+          [
+            {
+              "id":"standard",
+              "index":0,
+              "type":"WGS84",
+              "dim":2
+            },
+            {
+              "id":"G?tt_136",
+              "index":1,
+              "type":"WGS84",
+              "dim":2
+            }
+          ],
+          "opL":
+          [
+
+          ],
+          "remL":
+          [
+
+          ],
+          "icoL":
+          [
+            {
+              "res":"ADR"
+            },
+            {
+              "res":"prod_bus",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255,
+                "a":255
+              },
+              "bg":
+              {
+                "r":0,
+                "g":92,
+                "b":169,
+                "a":255
+              }
+            }
+          ]
+        },
+        "match":
+        {
+          "field":"S",
+          "state":"L",
+          "locL":
+          [
+            {
+              "lid":"A=2@O=Göttingen - Göttingen, Humboldtallee 14@H=14@X=9941566@Y=51541864@U=99@L=958121235@B=1@p=1617880347@",
+              "type":"A",
+              "name":"Göttingen - Göttingen, Humboldtallee 14",
+              "icoX":0,
+              "extId":"958121235",
+              "state":"F",
+              "crd":
+              {
+                "x":9941566,
+                "y":51541864,
+                "layerX":0,
+                "crdSysX":0
+              }
+            },
+            {
+              "lid":"A=1@O=Göttingen Humboldtallee@X=9941656@Y=51540929@U=80@L=9033952@B=1@p=1630786923@",
+              "type":"S",
+              "name":"Göttingen Humboldtallee",
+              "icoX":1,
+              "extId":"9033952",
+              "state":"F",
+              "crd":
+              {
+                "x":9941656,
+                "y":51540929,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "crdAltL":
+              [
+                {
+                  "x":99999999,
+                  "y":99999999,
+                  "layerX":0,
+                  "crdSysX":0
+                },
+                {
+                  "x":99999999,
+                  "y":99999999,
+                  "layerX":0,
+                  "crdSysX":1
+                }
+              ],
+              "meta":true,
+              "pCls":32,
+              "pRefL":
+              [
+0,
+1,
+2
+              ],
+              "wt":1292,
+              "isMainMast":true
+            },
+            {
+              "lid":"A=2@O=Göttingen - Göttingen, Brüder-Grimm-Allee 14@H=14@X=9950960@Y=51538682@U=99@L=958054843@B=1@p=1617880347@",
+              "type":"A",
+              "name":"Göttingen - Göttingen, Brüder-Grimm-Allee 14",
+              "icoX":0,
+              "extId":"958054843",
+              "state":"F",
+              "crd":
+              {
+                "x":9950960,
+                "y":51538682,
+                "layerX":0,
+                "crdSysX":0
+              }
+            },
+            {
+              "lid":"A=2@O=Göttingen - Elliehausen, Diedershäuser Straße 14@H=14@X=9868709@Y=51550520@U=99@L=958037789@B=1@p=1617880347@",
+              "type":"A",
+              "name":"Göttingen - Elliehausen, Diedershäuser Straße 14",
+              "icoX":0,
+              "extId":"958037789",
+              "state":"F",
+              "crd":
+              {
+                "x":9868709,
+                "y":51550520,
+                "layerX":0,
+                "crdSysX":0
+              }
+            },
+            {
+              "lid":"A=2@O=Göttingen - Groß Ellershausen, Am Elstal 14@H=14@X=9865266@Y=51523364@U=99@L=958116156@B=1@p=1617880347@",
+              "type":"A",
+              "name":"Göttingen - Groß Ellershausen, Am Elstal 14",
+              "icoX":0,
+              "extId":"958116156",
+              "state":"F",
+              "crd":
+              {
+                "x":9865266,
+                "y":51523364,
+                "layerX":0,
+                "crdSysX":0
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

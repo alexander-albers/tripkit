@@ -1,0 +1,96 @@
+{
+    "suggestLocations": [
+        {
+            "constraint": "Berlin Hbf",
+            "result": {
+                "id": "A=1@O=Berlin Hbf@X=13369549@Y=52525589@U=80@L=8011160@B=1@p=1630529292@"
+            }
+        },
+        {
+            "constraint": "Dammt",
+            "result": {
+                "id": "A=1@O=Hamburg Dammtor@X=9989569@Y=53560751@U=80@L=8002548@B=1@p=1630529292@"
+            }
+        },
+        {
+            "constraint": "Güntzelstr. (U)",
+            "result": {
+                "id": "A=1@O=Güntzelstr. (U), Berlin@X=13330868@Y=52492033@U=80@L=731371@B=1@p=1630529292@"
+            }
+        },
+        {
+            "constraint": "Friedenstraße 2, München - Berg am Laim",
+            "result": {
+                "id": "A=2@O=München - Berg am Laim, Friedenstraße 2@X=11602251@Y=48123949@U=103@L=980880289@B=1@p=1548669839@"
+            }
+        }
+    ],
+    "queryNearbyLocationsByCoordinate": [
+        {
+            "__comment": "Berlin - Mitte, Unter den Linden 24",
+            "lat": 52517139,
+            "lon": 13388749,
+            "result": {
+                "id": "A=1@O=Unter den Linden (U), Berlin@X=13388830@Y=52517041@u=12@U=80@L=732590@"
+            }
+        },
+        {
+            "__comment": "Starnberg, Possenhofener Straße 13",
+            "lat": 47994243,
+            "lon": 11338543,
+            "result": {
+                "id": "A=1@O=Museum Starnberger See, Starnberg@X=11338697@Y=47994720@u=54@U=80@L=365699@"
+            }
+        }
+    ],
+    "queryDepartures": [
+        {
+            "__comment": "Berin Hbf",
+            "id": "8011160"
+        },
+        {
+            "__comment": "Leipzig Hbf",
+            "id": "8010205"
+        }
+    ],
+    "queryDeparturesInvalidId": "999999",
+    "queryTrips": [
+        {
+            "__comment": "Berlin Hfb to Leipzig Hbf",
+            "from": {
+                "type": "station",
+                "id": "8011160"
+            },
+            "to": {
+                "type": "station",
+                "id": "8010205"
+            }
+        },
+        {
+            "__comment": "Berlin - Mitte, Unter den Linden 2 to Starnberg, Possenhofener Straße 13",
+            "from": {
+                "type": "coord",
+                "lat": 52517139,
+                "lon": 13388749
+            },
+            "to": {
+                "type": "coord",
+                "lat": 47994243,
+                "lon": 11338543
+            }
+        }
+    ],
+    "queryTripsTooClose": [
+        {
+            "__comment": "Berlin Hfb to Berlin Hbf",
+            "from": {
+                "type": "station",
+                "id": "8011160"
+            },
+            "to": {
+                "type": "station",
+                "id": "8011160"
+            }
+        }
+    ]
+}

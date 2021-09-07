@@ -1,0 +1,113 @@
+{
+  "ver":"1.10",
+  "lang":"deu",
+  "id":"fjkuikacmuwth28x",
+  "svcResL":
+  [
+    {
+      "meth":"LocMatch",
+      "err":"OK",
+      "res":
+      {
+        "common":
+        {
+          "locL":
+          [
+
+          ],
+          "prodL":
+          [
+
+          ],
+          "opL":
+          [
+
+          ],
+          "remL":
+          [
+
+          ],
+          "icoL":
+          [
+            {
+              "res":"ADR"
+            }
+          ]
+        },
+        "match":
+        {
+          "field":"S",
+          "state":"L",
+          "locL":
+          [
+            {
+              "lid":"A=2@O=20146 Hansestadt Hamburg, Edmund-Siemers-Allee 1@X=9987923@Y=53562432@U=101@L=980520501@B=1@p=1566898558@",
+              "type":"A",
+              "name":"20146 Hansestadt Hamburg, Edmund-Siemers-Allee 1",
+              "icoX":0,
+              "extId":"980520501",
+              "state":"F",
+              "crd":
+              {
+                "x":9987923,
+                "y":53562432
+              }
+            },
+            {
+              "lid":"A=2@O=20146 Hansestadt Hamburg, Allende-Platz 1@X=9982611@Y=53567583@U=101@L=980520478@B=1@p=1566898558@",
+              "type":"A",
+              "name":"20146 Hansestadt Hamburg, Allende-Platz 1",
+              "icoX":0,
+              "extId":"980520478",
+              "state":"F",
+              "crd":
+              {
+                "x":9982611,
+                "y":53567583
+              }
+            },
+            {
+              "lid":"A=2@O=20146 Hansestadt Hamburg, Grindelallee 1@X=9984274@Y=53564203@U=101@L=980520508@B=1@p=1566898558@",
+              "type":"A",
+              "name":"20146 Hansestadt Hamburg, Grindelallee 1",
+              "icoX":0,
+              "extId":"980520508",
+              "state":"F",
+              "crd":
+              {
+                "x":9984274,
+                "y":53564203
+              }
+            },
+            {
+              "lid":"A=2@O=20146 Hansestadt Hamburg, Hallerstraße 2@X=9979357@Y=53572455@U=101@L=980520512@B=1@p=1566898558@",
+              "type":"A",
+              "name":"20146 Hansestadt Hamburg, Hallerstraße 2",
+              "icoX":0,
+              "extId":"980520512",
+              "state":"F",
+              "crd":
+              {
+                "x":9979357,
+                "y":53572455
+              }
+            },
+            {
+              "lid":"A=2@O=20146 Hansestadt Hamburg, Brahmsallee 2@X=9981874@Y=53572806@U=101@L=980517193@B=1@p=1566898558@",
+              "type":"A",
+              "name":"20146 Hansestadt Hamburg, Brahmsallee 2",
+              "icoX":0,
+              "extId":"980517193",
+              "state":"F",
+              "crd":
+              {
+                "x":9981874,
+                "y":53572806
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

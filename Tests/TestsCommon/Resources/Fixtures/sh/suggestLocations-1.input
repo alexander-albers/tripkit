@@ -1,0 +1,239 @@
+{
+  "ver":"1.10",
+  "lang":"deu",
+  "id":"9mmq8keumuwsh28x",
+  "svcResL":
+  [
+    {
+      "meth":"LocMatch",
+      "err":"OK",
+      "res":
+      {
+        "common":
+        {
+          "locL":
+          [
+
+          ],
+          "prodL":
+          [
+            {
+              "name":"Bus 172",
+              "icoX":0,
+              "cls":32,
+              "prodCtx":
+              {
+
+              }
+            },
+            {
+              "name":"Bus 173",
+              "icoX":0,
+              "cls":32,
+              "prodCtx":
+              {
+
+              }
+            },
+            {
+              "name":"U3",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+
+              }
+            },
+            {
+              "name":"AST 27",
+              "icoX":2,
+              "cls":512,
+              "prodCtx":
+              {
+
+              }
+            },
+            {
+              "name":"Bus 647",
+              "icoX":0,
+              "cls":32,
+              "prodCtx":
+              {
+
+              }
+            },
+            {
+              "name":"Bus 4148",
+              "icoX":0,
+              "cls":32,
+              "prodCtx":
+              {
+
+              }
+            }
+          ],
+          "opL":
+          [
+
+          ],
+          "remL":
+          [
+
+          ],
+          "icoL":
+          [
+            {
+              "res":"PROD_BUS",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255,
+                "a":255
+              },
+              "bg":
+              {
+                "r":255,
+                "g":120,
+                "b":0,
+                "a":255
+              }
+            },
+            {
+              "res":"PROD_SUB",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255,
+                "a":255
+              },
+              "bg":
+              {
+                "r":8,
+                "g":59,
+                "b":207,
+                "a":255
+              }
+            },
+            {
+              "res":"PROD_TAXI",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255,
+                "a":255
+              },
+              "bg":
+              {
+                "r":71,
+                "g":71,
+                "b":70,
+                "a":255
+              }
+            },
+            {
+              "res":"POI"
+            }
+          ]
+        },
+        "match":
+        {
+          "field":"S",
+          "state":"L",
+          "locL":
+          [
+            {
+              "lid":"A=1@O=Hamburg Uhlandstraße@X=10024402@Y=53564931@U=100@L=704413@B=1@p=1630782510@",
+              "type":"S",
+              "name":"Hamburg Uhlandstraße",
+              "icoX":0,
+              "extId":"704413",
+              "state":"F",
+              "crd":
+              {
+                "x":10024402,
+                "y":53564931
+              },
+              "pCls":160,
+              "pRefL":
+              [
+0,
+1,
+2
+              ],
+              "wt":3409
+            },
+            {
+              "lid":"A=1@O=Düring Uhlandstraße@X=8664837@Y=53457762@U=100@L=9022354@B=1@p=1630782510@",
+              "type":"S",
+              "name":"Düring Uhlandstraße",
+              "icoX":2,
+              "extId":"9022354",
+              "state":"F",
+              "crd":
+              {
+                "x":8664837,
+                "y":53457762
+              },
+              "meta":true,
+              "pCls":512,
+              "pRefL":
+              [
+3
+              ],
+              "wt":78
+            },
+            {
+              "lid":"A=1@O=Hittfeld Uhlandstraße@X=9995331@Y=53384464@U=100@L=2834803@B=1@p=1630782510@",
+              "type":"S",
+              "name":"Hittfeld Uhlandstraße",
+              "icoX":0,
+              "extId":"2834803",
+              "state":"F",
+              "crd":
+              {
+                "x":9995331,
+                "y":53384464
+              },
+              "pCls":32,
+              "pRefL":
+              [
+4,
+5
+              ],
+              "wt":1480
+            },
+            {
+              "lid":"A=4@O=Hansestadt Hamburg, Uhland-Lodge (Hotel)@X=10029571@Y=53565039@U=104@L=970032190@B=1@p=1566899482@",
+              "type":"P",
+              "name":"Hansestadt Hamburg, Uhland-Lodge (Hotel)",
+              "icoX":3,
+              "extId":"970032190",
+              "state":"F",
+              "crd":
+              {
+                "x":10029571,
+                "y":53565039
+              }
+            },
+            {
+              "lid":"A=4@O=Hansestadt Lübeck, Uhland Apotheke@X=10688534@Y=53854608@U=104@L=970004782@B=1@p=1566899482@",
+              "type":"P",
+              "name":"Hansestadt Lübeck, Uhland Apotheke",
+              "icoX":3,
+              "extId":"970004782",
+              "state":"F",
+              "crd":
+              {
+                "x":10688534,
+                "y":53854608
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

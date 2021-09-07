@@ -1,0 +1,148 @@
+{
+  "ver":"1.15",
+  "lang":"deu",
+  "id":"wai4piuck22dgwwg",
+  "cInfo":
+  {
+    "code":"OK",
+    "url":"",
+    "msg":""
+  },
+  "svcResL":
+  [
+    {
+      "meth":"LocMatch",
+      "err":"OK",
+      "res":
+      {
+        "common":
+        {
+          "locL":
+          [
+
+          ],
+          "prodL":
+          [
+
+          ],
+          "polyL":
+          [
+
+          ],
+          "layerL":
+          [
+            {
+              "id":"standard",
+              "name":"standard",
+              "index":0,
+              "annoCnt":0
+            }
+          ],
+          "crdSysL":
+          [
+            {
+              "id":"standard",
+              "index":0,
+              "type":"WGS84",
+              "dim":2
+            }
+          ],
+          "opL":
+          [
+
+          ],
+          "remL":
+          [
+
+          ],
+          "icoL":
+          [
+            {
+              "res":"ADR"
+            }
+          ]
+        },
+        "match":
+        {
+          "field":"S",
+          "state":"L",
+          "locL":
+          [
+            {
+              "lid":"A=2@O=Mutterstraße, 6800 Feldkirch@X=9602071@Y=47243447@U=103@b=980081897@B=1@p=1629871314@",
+              "type":"A",
+              "name":"Mutterstraße, 6800 Feldkirch",
+              "icoX":0,
+              "state":"F",
+              "crd":
+              {
+                "x":9602071,
+                "y":47243447,
+                "layerX":0,
+                "crdSysX":0
+              }
+            },
+            {
+              "lid":"A=2@O=Untersteinstraße, 6800 Feldkirch@X=9582249@Y=47243087@U=103@b=980123387@B=1@p=1629871314@",
+              "type":"A",
+              "name":"Untersteinstraße, 6800 Feldkirch",
+              "icoX":0,
+              "state":"F",
+              "crd":
+              {
+                "x":9582249,
+                "y":47243087,
+                "layerX":0,
+                "crdSysX":0
+              }
+            },
+            {
+              "lid":"A=2@O=Klosterstraße, 6800 Feldkirch@X=9618970@Y=47261290@U=103@b=980066461@B=1@p=1629871314@",
+              "type":"A",
+              "name":"Klosterstraße, 6800 Feldkirch",
+              "icoX":0,
+              "state":"F",
+              "crd":
+              {
+                "x":9618970,
+                "y":47261290,
+                "layerX":0,
+                "crdSysX":0
+              }
+            },
+            {
+              "lid":"A=2@O=Bissingerstraße 1, 6800 Feldkirch@X=9620094@Y=47261317@U=103@L=980016409@B=1@p=1629871314@",
+              "type":"A",
+              "name":"Bissingerstraße 1, 6800 Feldkirch",
+              "icoX":0,
+              "extId":"980016409",
+              "state":"F",
+              "crd":
+              {
+                "x":9620094,
+                "y":47261317,
+                "layerX":0,
+                "crdSysX":0
+              }
+            },
+            {
+              "lid":"A=2@O=Bissingerstraße 1a, 6800 Feldkirch@X=9620058@Y=47261344@U=103@L=980016409@B=1@p=1629871314@",
+              "type":"A",
+              "name":"Bissingerstraße 1a, 6800 Feldkirch",
+              "icoX":0,
+              "extId":"980016409",
+              "state":"F",
+              "crd":
+              {
+                "x":9620058,
+                "y":47261344,
+                "layerX":0,
+                "crdSysX":0
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

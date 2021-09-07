@@ -1,0 +1,242 @@
+{
+  "ver":"1.16",
+  "lang":"deu",
+  "id":"xjk68mam4igt924k",
+  "svcResL":
+  [
+    {
+      "meth":"LocMatch",
+      "err":"OK",
+      "res":
+      {
+        "common":
+        {
+          "locL":
+          [
+            {
+              "lid":"A=1@O=Gänsemarkt (Oper)@X=9986036@Y=53555600@U=80@L=158@",
+              "type":"S",
+              "name":"Gänsemarkt (Oper)",
+              "icoX":2,
+              "extId":"158",
+              "state":"F",
+              "crd":
+              {
+                "x":9986036,
+                "y":53555600,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":129,
+              "pRefL":
+              [
+0,
+1
+              ]
+            }
+          ],
+          "prodL":
+          [
+            {
+              "name":"",
+              "icoX":0,
+              "cls":1
+            },
+            {
+              "name":"",
+              "icoX":1,
+              "cls":128
+            }
+          ],
+          "polyL":
+          [
+
+          ],
+          "layerL":
+          [
+            {
+              "id":"standard",
+              "name":"standard",
+              "index":0,
+              "annoCnt":0
+            }
+          ],
+          "crdSysL":
+          [
+            {
+              "id":"standard",
+              "index":0,
+              "type":"WGS84",
+              "dim":2
+            }
+          ],
+          "opL":
+          [
+
+          ],
+          "remL":
+          [
+
+          ],
+          "icoL":
+          [
+            {
+              "res":"prod_sub_t",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255,
+                "a":255
+              },
+              "bg":
+              {
+                "r":0,
+                "g":100,
+                "b":164,
+                "a":255
+              }
+            },
+            {
+              "res":"prod_bus",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255,
+                "a":255
+              },
+              "bg":
+              {
+                "r":211,
+                "g":22,
+                "b":29,
+                "a":255
+              }
+            },
+            {
+              "res":"master"
+            },
+            {
+              "res":"P2"
+            },
+            {
+              "res":"ADR"
+            }
+          ]
+        },
+        "match":
+        {
+          "field":"S",
+          "state":"L",
+          "locL":
+          [
+            {
+              "lid":"A=1@O=Gänsemarkt (Oper)@X=9986036@Y=53555600@U=80@L=000000158@B=1@p=1630603642@",
+              "type":"S",
+              "name":"Gänsemarkt (Oper)",
+              "icoX":2,
+              "extId":"000000158",
+              "state":"F",
+              "crd":
+              {
+                "x":9986036,
+                "y":53555600,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":129,
+              "pRefL":
+              [
+0,
+1
+              ],
+              "wt":5636
+            },
+            {
+              "lid":"A=1@O=U Gänsemarkt@X=9988490@Y=53555376@U=80@L=000000106@B=1@p=1630603642@",
+              "type":"S",
+              "name":"U Gänsemarkt",
+              "icoX":2,
+              "extId":"000000106",
+              "state":"F",
+              "crd":
+              {
+                "x":9988490,
+                "y":53555376,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":129,
+              "pRefL":
+              [
+0,
+1
+              ],
+              "wt":5636,
+              "mMastLocX":0
+            },
+            {
+              "lid":"A=1@O=U Gänsemarkt (Valentinskamp)@X=9987096@Y=53555627@U=80@L=000101371@B=1@p=1630603642@",
+              "type":"S",
+              "name":"U Gänsemarkt (Valentinskamp)",
+              "icoX":2,
+              "extId":"000101371",
+              "state":"F",
+              "crd":
+              {
+                "x":9987096,
+                "y":53555627,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":129,
+              "pRefL":
+              [
+0,
+1
+              ],
+              "wt":5636,
+              "mMastLocX":0
+            },
+            {
+              "lid":"A=4@O=Gänsemarkt-Passage@X=9989398@Y=53555304@U=103@L=980001745@B=1@p=1629446719@",
+              "type":"P",
+              "name":"Gänsemarkt-Passage",
+              "icoX":3,
+              "extId":"980001745",
+              "state":"F",
+              "crd":
+              {
+                "x":9989398,
+                "y":53555304,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              }
+            },
+            {
+              "lid":"A=2@O=Hamburg, Gänsemarkt@X=9988553@Y=53554800@U=99@b=970020848@B=1@p=1629446462@",
+              "type":"A",
+              "name":"Hamburg, Gänsemarkt",
+              "icoX":4,
+              "state":"M",
+              "crd":
+              {
+                "x":9988553,
+                "y":53554800,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,161 @@
+{
+  "ver":"1.15",
+  "lang":"deu",
+  "id":"3vgagmq6mi8dwics",
+  "svcResL":
+  [
+    {
+      "meth":"LocMatch",
+      "err":"OK",
+      "res":
+      {
+        "common":
+        {
+          "locL":
+          [
+
+          ],
+          "prodL":
+          [
+
+          ],
+          "polyL":
+          [
+
+          ],
+          "layerL":
+          [
+            {
+              "id":"standard",
+              "name":"standard",
+              "index":0,
+              "annoCnt":0
+            }
+          ],
+          "crdSysL":
+          [
+            {
+              "id":"standard",
+              "index":0,
+              "type":"WGS84",
+              "dim":2
+            }
+          ],
+          "opL":
+          [
+
+          ],
+          "remL":
+          [
+
+          ],
+          "icoL":
+          [
+            {
+              "res":"STA"
+            },
+            {
+              "res":"POI_SCHOOL"
+            }
+          ]
+        },
+        "match":
+        {
+          "field":"S",
+          "state":"L",
+          "locL":
+          [
+            {
+              "lid":"A=1@O=Königswald, Cornberg-Königswald@X=9820113@Y=51068060@U=80@L=2202183@B=1@p=1630651633@",
+              "type":"S",
+              "name":"Königswald, Cornberg-Königswald",
+              "icoX":0,
+              "extId":"2202183",
+              "state":"F",
+              "crd":
+              {
+                "x":9820113,
+                "y":51068051,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":128,
+              "wt":8
+            },
+            {
+              "lid":"A=4@O=König-Heinrich-Schule, Fritzlar@X=9286918@Y=51136441@U=104@L=1502119@B=1@p=1622663225@",
+              "type":"P",
+              "name":"König-Heinrich-Schule, Fritzlar",
+              "icoX":1,
+              "extId":"1502119",
+              "state":"F",
+              "crd":
+              {
+                "x":9286918,
+                "y":51136441,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              }
+            },
+            {
+              "lid":"A=1@O=Fulda König-Konrad-Straße, Abzweig@X=9665714@Y=50569788@U=80@L=3022111@B=1@p=1630651633@",
+              "type":"S",
+              "name":"Fulda König-Konrad-Straße, Abzweig",
+              "icoX":0,
+              "extId":"3022111",
+              "state":"F",
+              "crd":
+              {
+                "x":9665714,
+                "y":50569788,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":576,
+              "wt":91
+            },
+            {
+              "lid":"A=1@O=Fulda König-Konrad-Straße, Schl.@X=9669202@Y=50576359@U=80@L=3022113@B=1@p=1630651633@",
+              "type":"S",
+              "name":"Fulda König-Konrad-Straße, Schl.",
+              "icoX":0,
+              "extId":"3022113",
+              "state":"F",
+              "crd":
+              {
+                "x":9669202,
+                "y":50576359,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":576,
+              "wt":72
+            },
+            {
+              "lid":"A=1@O=Kassel Königsplatz@X=9497921@Y=51315794@U=80@L=2200002@B=1@p=1630651633@",
+              "type":"S",
+              "name":"Kassel Königsplatz",
+              "icoX":0,
+              "extId":"2200002",
+              "state":"F",
+              "crd":
+              {
+                "x":9497921,
+                "y":51315794,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":1760,
+              "wt":4744
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

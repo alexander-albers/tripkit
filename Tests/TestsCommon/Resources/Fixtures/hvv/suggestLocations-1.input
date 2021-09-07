@@ -1,0 +1,301 @@
+{
+  "ver":"1.16",
+  "lang":"deu",
+  "id":"wz42amqm6igtpwcs",
+  "svcResL":
+  [
+    {
+      "meth":"LocMatch",
+      "err":"OK",
+      "res":
+      {
+        "common":
+        {
+          "locL":
+          [
+
+          ],
+          "prodL":
+          [
+            {
+              "name":"",
+              "icoX":0,
+              "cls":1
+            },
+            {
+              "name":"",
+              "icoX":1,
+              "cls":2
+            },
+            {
+              "name":"",
+              "icoX":2,
+              "cls":8
+            },
+            {
+              "name":"",
+              "icoX":3,
+              "cls":128
+            },
+            {
+              "name":"",
+              "icoX":4,
+              "cls":64
+            }
+          ],
+          "polyL":
+          [
+
+          ],
+          "layerL":
+          [
+            {
+              "id":"standard",
+              "name":"standard",
+              "index":0,
+              "annoCnt":0
+            }
+          ],
+          "crdSysL":
+          [
+            {
+              "id":"standard",
+              "index":0,
+              "type":"WGS84",
+              "dim":2
+            }
+          ],
+          "opL":
+          [
+
+          ],
+          "remL":
+          [
+
+          ],
+          "icoL":
+          [
+            {
+              "res":"prod_sub_t",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255,
+                "a":255
+              },
+              "bg":
+              {
+                "r":0,
+                "g":100,
+                "b":164,
+                "a":255
+              }
+            },
+            {
+              "res":"prod_comm_t",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255,
+                "a":255
+              },
+              "bg":
+              {
+                "r":38,
+                "g":169,
+                "b":72,
+                "a":255
+              }
+            },
+            {
+              "res":"prod_reg",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255,
+                "a":255
+              },
+              "bg":
+              {
+                "r":0,
+                "g":0,
+                "b":0,
+                "a":255
+              }
+            },
+            {
+              "res":"prod_bus",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255,
+                "a":255
+              },
+              "bg":
+              {
+                "r":211,
+                "g":22,
+                "b":29,
+                "a":255
+              }
+            },
+            {
+              "res":"prod_gen",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255,
+                "a":255
+              },
+              "bg":
+              {
+                "r":0,
+                "g":130,
+                "b":193,
+                "a":255
+              }
+            },
+            {
+              "res":"master"
+            }
+          ]
+        },
+        "match":
+        {
+          "field":"S",
+          "state":"L",
+          "locL":
+          [
+            {
+              "lid":"A=1@O=Hauptbahnhof@X=10007763@Y=53552499@U=80@L=000107803@B=1@p=1630603642@",
+              "type":"S",
+              "name":"Hauptbahnhof",
+              "icoX":5,
+              "extId":"000107803",
+              "state":"F",
+              "crd":
+              {
+                "x":10007763,
+                "y":53552499,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "meta":true,
+              "pCls":203,
+              "pRefL":
+              [
+0,
+1,
+2,
+3,
+4
+              ],
+              "wt":32767
+            },
+            {
+              "lid":"A=1@O=Hamburg Hbf@X=10007942@Y=53552751@U=80@L=000000090@B=1@p=1630603642@",
+              "type":"S",
+              "name":"Hamburg Hbf",
+              "icoX":5,
+              "extId":"000000090",
+              "state":"F",
+              "crd":
+              {
+                "x":10007942,
+                "y":53552751,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":202,
+              "pRefL":
+              [
+1,
+2,
+3,
+4
+              ],
+              "wt":23494
+            },
+            {
+              "lid":"A=1@O=Kiel Hbf@X=10131589@Y=54314658@U=80@L=000008023@B=1@p=1630603642@",
+              "type":"S",
+              "name":"Kiel Hbf",
+              "icoX":5,
+              "extId":"000008023",
+              "state":"F",
+              "crd":
+              {
+                "x":10131589,
+                "y":54314658,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":200,
+              "pRefL":
+              [
+2,
+3,
+4
+              ],
+              "wt":4695
+            },
+            {
+              "lid":"A=1@O=Lübeck Hbf@X=10671274@Y=53868137@U=80@L=000008024@B=1@p=1630603642@",
+              "type":"S",
+              "name":"Lübeck Hbf",
+              "icoX":5,
+              "extId":"000008024",
+              "state":"F",
+              "crd":
+              {
+                "x":10671274,
+                "y":53868137,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":200,
+              "pRefL":
+              [
+2,
+3,
+4
+              ],
+              "wt":4979
+            },
+            {
+              "lid":"A=1@O=Hauptbahnhof Nord@X=10005947@Y=53554090@U=80@L=000000084@B=1@p=1630603642@",
+              "type":"S",
+              "name":"Hauptbahnhof Nord",
+              "icoX":5,
+              "extId":"000000084",
+              "state":"F",
+              "crd":
+              {
+                "x":10005947,
+                "y":53554090,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":1,
+              "pRefL":
+              [
+0
+              ],
+              "wt":8575
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

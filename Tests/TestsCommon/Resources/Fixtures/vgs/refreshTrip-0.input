@@ -1,0 +1,2687 @@
+{
+  "ver":"1.21",
+  "lang":"deu",
+  "id":"334cyge44aaghi8x",
+  "err":"OK",
+  "svcResL":
+  [
+    {
+      "meth":"Reconstruction",
+      "err":"OK",
+      "res":
+      {
+        "common":
+        {
+          "locL":
+          [
+            {
+              "lid":"A=1@O=HBF SaarLB, Saarbrücken@X=6992942@Y=49239313@U=80@L=10640@",
+              "type":"S",
+              "name":"HBF SaarLB, Saarbrücken",
+              "icoX":0,
+              "extId":"10640",
+              "state":"F",
+              "crd":
+              {
+                "x":6992942,
+                "y":49239313,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":132
+            },
+            {
+              "lid":"A=1@O=Ostbahnhof, Saarbrücken@X=7020485@Y=49230593@U=80@L=10700@",
+              "type":"S",
+              "name":"Ostbahnhof, Saarbrücken",
+              "icoX":1,
+              "extId":"10700",
+              "state":"F",
+              "crd":
+              {
+                "x":7020485,
+                "y":49230593,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":1224
+            },
+            {
+              "lid":"A=1@O=Haus der Zukunft, Saarbrücken@X=6997635@Y=49238153@U=80@L=10612@",
+              "type":"S",
+              "name":"Haus der Zukunft, Saarbrücken",
+              "icoX":1,
+              "extId":"10612",
+              "state":"F",
+              "crd":
+              {
+                "x":6997635,
+                "y":49238153,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":1664
+            },
+            {
+              "lid":"A=1@O=Stadtbad (ehem.), Saarbrücken@X=6995406@Y=49239340@U=80@L=10641@",
+              "type":"S",
+              "name":"Stadtbad (ehem.), Saarbrücken",
+              "icoX":1,
+              "extId":"10641",
+              "state":"F",
+              "crd":
+              {
+                "x":6995406,
+                "y":49239340,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":128
+            },
+            {
+              "lid":"A=1@O=Johanneskirche, Saarbrücken@X=6996484@Y=49235816@U=80@L=10619@",
+              "type":"S",
+              "name":"Johanneskirche, Saarbrücken",
+              "icoX":5,
+              "extId":"10619",
+              "state":"F",
+              "crd":
+              {
+                "x":6996484,
+                "y":49235816,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":1728
+            },
+            {
+              "lid":"A=1@O=Kieselhumes, Saarbrücken@X=7017393@Y=49228139@U=80@L=10605@",
+              "type":"S",
+              "name":"Kieselhumes, Saarbrücken",
+              "icoX":5,
+              "extId":"10605",
+              "state":"F",
+              "crd":
+              {
+                "x":7017393,
+                "y":49228139,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":1228
+            },
+            {
+              "lid":"A=1@O=Landwehrplatz, Saarbrücken@X=7001159@Y=49233155@U=80@L=10606@",
+              "type":"S",
+              "name":"Landwehrplatz, Saarbrücken",
+              "icoX":5,
+              "extId":"10606",
+              "state":"F",
+              "crd":
+              {
+                "x":7001159,
+                "y":49233155,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":1728
+            },
+            {
+              "lid":"A=1@O=Uhlandstr., Saarbrücken@X=7006849@Y=49231223@U=80@L=10609@",
+              "type":"S",
+              "name":"Uhlandstr., Saarbrücken",
+              "icoX":5,
+              "extId":"10609",
+              "state":"F",
+              "crd":
+              {
+                "x":7006849,
+                "y":49231223,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":192
+            },
+            {
+              "lid":"A=1@O=Hellwigstr., Saarbrücken@X=7011694@Y=49229155@U=80@L=10627@",
+              "type":"S",
+              "name":"Hellwigstr., Saarbrücken",
+              "icoX":5,
+              "extId":"10627",
+              "state":"F",
+              "crd":
+              {
+                "x":7011694,
+                "y":49229155,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":192
+            }
+          ],
+          "prodL":
+          [
+            {
+              "pid":"L::7::Bus::B0664245212::Bus_0664245212_124::*",
+              "name":"Bus 124",
+              "nameS":"124",
+              "number":"124",
+              "icoX":1,
+              "cls":128,
+              "oprX":0,
+              "prodCtx":
+              {
+                "name":"Bus  124",
+                "num":"5806",
+                "line":"124",
+                "matchId":"21024",
+                "catOut":"Bus     ",
+                "catOutS":"Bus",
+                "catOutL":"Bus",
+                "catIn":"Bus",
+                "catCode":"7",
+                "admin":"SBBus_"
+              },
+              "himIdL":
+              [
+"HIM_FREETEXT_116",
+"HIM_FREETEXT_78"
+              ]
+            },
+            {
+              "name":"Fußweg",
+              "icoX":6,
+              "prodCtx":
+              {
+                "name":"Fußweg"
+              }
+            },
+            {
+              "pid":"L::6::S::B0664245212::S_0664245212_1::*",
+              "name":"S 1",
+              "nameS":"1",
+              "number":"1",
+              "icoX":5,
+              "cls":64,
+              "oprX":0,
+              "prodCtx":
+              {
+                "name":"S      1",
+                "num":"721",
+                "line":"1",
+                "matchId":"15114",
+                "catOut":"S       ",
+                "catOutS":"Sbs",
+                "catOutL":"Saarbahn",
+                "catIn":"Sbs",
+                "catCode":"6",
+                "admin":"SBSTR_"
+              }
+            }
+          ],
+          "polyL":
+          [
+            {
+              "delta":true,
+              "dim":2,
+              "crdEncYX":"w`pkH{xti@CmNjF}L",
+              "crdEncS":"NNN",
+              "crdEncF":"???",
+              "ppLocRefL":
+              [
+                {
+                  "ppIdx":0,
+                  "locX":0
+                },
+                {
+                  "ppIdx":1,
+                  "locX":3
+                },
+                {
+                  "ppIdx":2,
+                  "locX":2
+                }
+              ]
+            },
+            {
+              "delta":true,
+              "dim":2,
+              "crdEncYX":"oyokHgvui@rMfF",
+              "crdEncS":"NN",
+              "crdEncF":"??",
+              "ppLocRefL":
+              [
+                {
+                  "ppIdx":0,
+                  "locX":2
+                },
+                {
+                  "ppIdx":1,
+                  "locX":4
+                }
+              ]
+            },
+            {
+              "delta":true,
+              "dim":2,
+              "crdEncYX":"{jokH_oui@rOg\\`Kqb@|Kg]jEsb@",
+              "crdEncS":"NNNNN",
+              "crdEncF":"?????",
+              "ppLocRefL":
+              [
+                {
+                  "ppIdx":0,
+                  "locX":4
+                },
+                {
+                  "ppIdx":1,
+                  "locX":6
+                },
+                {
+                  "ppIdx":2,
+                  "locX":7
+                },
+                {
+                  "ppIdx":3,
+                  "locX":8
+                },
+                {
+                  "ppIdx":4,
+                  "locX":5
+                }
+              ]
+            },
+            {
+              "delta":true,
+              "dim":2,
+              "crdEncYX":"{zmkHuqyi@kNkR",
+              "crdEncS":"NN",
+              "crdEncF":"??",
+              "ppLocRefL":
+              [
+                {
+                  "ppIdx":0,
+                  "locX":5
+                },
+                {
+                  "ppIdx":1,
+                  "locX":1
+                }
+              ]
+            }
+          ],
+          "layerL":
+          [
+            {
+              "id":"standard",
+              "name":"standard",
+              "index":0,
+              "annoCnt":0
+            }
+          ],
+          "crdSysL":
+          [
+            {
+              "id":"standard",
+              "index":0,
+              "type":"WGS84"
+            }
+          ],
+          "opL":
+          [
+            {
+              "name":"Saarbahn GmbH",
+              "icoX":2
+            }
+          ],
+          "remL":
+          [
+            {
+              "type":"A",
+              "code":"OPERATOR",
+              "icoX":3,
+              "txtN":"Betreiber: Saarbahn GmbH"
+            }
+          ],
+          "himL":
+          [
+            {
+              "hid":"78",
+              "act":true,
+              "head":"Verlegung der Haltestelle Haus der Zukunft B in Richtung Innenstadt",
+              "text":"Wegen eines Gerüsts wird die Haltestelle Haus der Zukunft B in Richtung Innenstadt um etwa 20 Meter bis voraussichtlich Ende Oktober 2021 zurückverlegt. (Haus der Zukunft, Saarbrücken)",
+              "icoX":4,
+              "prio":100,
+              "prod":65535,
+              "lModDate":"20210830",
+              "lModTime":"095110",
+              "sDate":"20210503",
+              "sTime":"020000",
+              "eDate":"20211031",
+              "eTime":"235900",
+              "sDaily":"000000",
+              "eDaily":"235900",
+              "comp":"Stadtwerke Saarbrücken",
+              "catRefL":
+              [
+0
+              ],
+              "pubChL":
+              [
+                {
+                  "name":"TIMETABLE",
+                  "fDate":"20210428",
+                  "fTime":"105600",
+                  "tDate":"20211031",
+                  "tTime":"235900"
+                }
+              ]
+            },
+            {
+              "hid":"116",
+              "act":true,
+              "head":"Linien 102,106,107,109,111,122, verschiedene Schulbusse - Verlegung Haltestelle Haus der Zukunft D",
+              "text":"Wegen Dacharbeiten musste die Haltestelle Haus der Zukunft B in der Richard-Wagner-Straße in Fahrtrichtung Innenstadt in Höhe der Hausnummer 64 verlegt werden. (Haus der Zukunft, Saarbrücken)",
+              "icoX":4,
+              "prio":100,
+              "prod":65535,
+              "lModDate":"20210723",
+              "lModTime":"104748",
+              "sDate":"20210610",
+              "sTime":"010000",
+              "eDate":"20211014",
+              "eTime":"235900",
+              "sDaily":"000000",
+              "eDaily":"235900",
+              "comp":"Stadtwerke Saarbrücken",
+              "catRefL":
+              [
+0
+              ],
+              "pubChL":
+              [
+                {
+                  "name":"TIMETABLE",
+                  "fDate":"20210610",
+                  "fTime":"152000",
+                  "tDate":"20211014",
+                  "tTime":"235900"
+                }
+              ]
+            }
+          ],
+          "icoL":
+          [
+            {
+              "res":"prod_ic_bus",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255
+              },
+              "bg":
+              {
+                "r":232,
+                "g":66,
+                "b":97
+              }
+            },
+            {
+              "res":"prod_bus",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255
+              },
+              "bg":
+              {
+                "r":170,
+                "g":85,
+                "b":153
+              }
+            },
+            {
+              "res":"S+B",
+              "txt":"Saarbahn GmbH"
+            },
+            {
+              "res":"INFO"
+            },
+            {
+              "res":"HIM0"
+            },
+            {
+              "res":"prod_tram",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255
+              },
+              "bg":
+              {
+                "r":237,
+                "g":135,
+                "b":34
+              }
+            },
+            {
+              "res":"prod_walk",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255
+              },
+              "bg":
+              {
+                "r":255,
+                "g":203,
+                "b":20
+              }
+            }
+          ],
+          "himMsgCatL":
+          [
+            {
+              "id":0
+            }
+          ],
+          "dirL":
+          [
+            {
+              "txt":"Universität Busterminal",
+              "flg":"B"
+            },
+            {
+              "txt":"Kleinblittersdorf",
+              "flg":"B"
+            }
+          ]
+        },
+        "outConL":
+        [
+          {
+            "cid":"DirectConReq",
+            "date":"20210906",
+            "dur":"002300",
+            "chg":1,
+            "sDays":
+            {
+              "sDaysR":"Mo - Fr",
+              "sDaysI":"nicht 1. Nov",
+              "sDaysB":"7CE1C3E7CF9F3E7CF9F3E7CF9F3C3CF9F3E7CE9F1E74F9F3E7CF9F3E7CF9F3E7CF9F3E7CF9F3E7CF8F3E7CF9F3E0"
+            },
+            "dep":
+            {
+              "locX":0,
+              "idx":6,
+              "dProdX":0,
+              "dInR":true,
+              "dTimeS":"154700",
+              "dTimeR":"154700",
+              "dProgType":"PROGNOSED",
+              "type":"N"
+            },
+            "arr":
+            {
+              "locX":1,
+              "aOutR":true,
+              "aTimeS":"161000",
+              "type":"N"
+            },
+            "secL":
+            [
+              {
+                "type":"JNY",
+                "icoX":1,
+                "dep":
+                {
+                  "locX":0,
+                  "idx":6,
+                  "dProdX":0,
+                  "dInR":true,
+                  "dTimeS":"154700",
+                  "dTimeR":"154700",
+                  "dProgType":"PROGNOSED",
+                  "type":"N"
+                },
+                "arr":
+                {
+                  "locX":2,
+                  "idx":8,
+                  "aPlatfS":"A",
+                  "aPlatfR":"A",
+                  "aOutR":true,
+                  "aTimeS":"155000",
+                  "aTimeR":"155000",
+                  "aProgType":"PROGNOSED",
+                  "type":"N"
+                },
+                "jny":
+                {
+                  "jid":"1|34628|2|80|6092021",
+                  "prodX":0,
+                  "dirTxt":"Universität Busterminal",
+                  "dirFlg":"B",
+                  "status":"P",
+                  "isRchbl":true,
+                  "stopL":
+                  [
+                    {
+                      "locX":0,
+                      "idx":6,
+                      "dProdX":0,
+                      "dInR":true,
+                      "dTimeS":"154700",
+                      "dTimeR":"154700",
+                      "dProgType":"PROGNOSED",
+                      "dDirTxt":"Universität Busterminal",
+                      "dDirFlg":"B",
+                      "type":"N"
+                    },
+                    {
+                      "locX":3,
+                      "idx":7,
+                      "aProdX":0,
+                      "aOutR":true,
+                      "aTimeS":"154800",
+                      "aTimeR":"154800",
+                      "aProgType":"PROGNOSED",
+                      "dProdX":0,
+                      "dInR":true,
+                      "dTimeS":"154800",
+                      "dTimeR":"154800",
+                      "dProgType":"PROGNOSED",
+                      "type":"N"
+                    },
+                    {
+                      "locX":2,
+                      "idx":8,
+                      "aProdX":0,
+                      "aOutR":true,
+                      "aTimeS":"155000",
+                      "aTimeR":"155000",
+                      "aProgType":"PROGNOSED",
+                      "type":"N"
+                    }
+                  ],
+                  "polyG":
+                  {
+                    "polyXL":
+                    [
+                      0
+                    ],
+                    "layerX":0,
+                    "crdSysX":0
+                  },
+                  "freq":
+                  {
+                    "minC":15,
+                    "maxC":15,
+                    "numC":9
+                  },
+                  "ctxRecon":"T$A=1@O=HBF SaarLB, Saarbrücken@L=10640@a=128@$A=1@O=Haus der Zukunft, Saarbrücken@L=10612@a=128@$202109061547$202109061550$Bus  124$$1$$$$",
+                  "msgL":
+                  [
+                    {
+                      "type":"REM",
+                      "remX":0,
+                      "tagL":
+                      [
+                        "RES_JNY_DTL_H3"
+                      ],
+                      "sort":684195840
+                    },
+                    {
+                      "type":"HIM",
+                      "himX":0,
+                      "fLocX":2,
+                      "tLocX":2,
+                      "tagL":
+                      [
+                        "RES_CON_HDR","RES_SEC_HDR_H3","SUM_CON_HDR"
+                      ],
+                      "sort":373440785
+                    },
+                    {
+                      "type":"HIM",
+                      "himX":1,
+                      "fLocX":2,
+                      "tLocX":2,
+                      "tagL":
+                      [
+                        "RES_CON_HDR","RES_SEC_HDR_H3","SUM_CON_HDR"
+                      ],
+                      "sort":373495449
+                    }
+                  ],
+                  "subscr":"F",
+                  "prodL":
+                  [
+                    {
+                      "prodX":0,
+                      "fLocX":0,
+                      "tLocX":2,
+                      "fIdx":6,
+                      "tIdx":8
+                    }
+                  ],
+                  "dirL":
+                  [
+                    {
+                      "dirX":0,
+                      "fLocX":0,
+                      "tLocX":2,
+                      "fIdx":6,
+                      "tIdx":8
+                    }
+                  ]
+                },
+                "minChg":"000500"
+              },
+              {
+                "type":"WALK",
+                "icoX":6,
+                "dep":
+                {
+                  "locX":2,
+                  "dInR":true,
+                  "dTimeS":"155000",
+                  "type":"N"
+                },
+                "arr":
+                {
+                  "locX":4,
+                  "aOutR":true,
+                  "aTimeS":"155500",
+                  "type":"N"
+                },
+                "gis":
+                {
+                  "dist":273,
+                  "durS":"000500",
+                  "dirGeo":22,
+                  "ctx":"H|1|W$A=1@O=Haus der Zukunft, Saarbrücken@L=10612@a=128@$A=1@O=Johanneskirche, Saarbrücken@L=10619@a=128@$202109061550$202109061555$$$1$$$$",
+                  "polyG":
+                  {
+                    "polyXL":
+                    [
+                      1
+                    ],
+                    "layerX":0,
+                    "crdSysX":0
+                  },
+                  "gisPrvr":"H",
+                  "getDescr":true,
+                  "getPoly":true
+                }
+              },
+              {
+                "type":"JNY",
+                "icoX":5,
+                "dep":
+                {
+                  "locX":4,
+                  "idx":8,
+                  "dProdX":2,
+                  "dInR":true,
+                  "dTimeS":"155800",
+                  "dTimeR":"155800",
+                  "dProgType":"PROGNOSED",
+                  "type":"N"
+                },
+                "arr":
+                {
+                  "locX":5,
+                  "idx":12,
+                  "aProdX":2,
+                  "aOutR":true,
+                  "aTimeS":"160400",
+                  "aTimeR":"160400",
+                  "aProgType":"PROGNOSED",
+                  "type":"N"
+                },
+                "jny":
+                {
+                  "jid":"1|33722|1|80|6092021",
+                  "prodX":2,
+                  "dirTxt":"Kleinblittersdorf",
+                  "dirFlg":"B",
+                  "status":"P",
+                  "isRchbl":true,
+                  "stopL":
+                  [
+                    {
+                      "locX":4,
+                      "idx":8,
+                      "dProdX":2,
+                      "dInR":true,
+                      "dTimeS":"155800",
+                      "dTimeR":"155800",
+                      "dProgType":"PROGNOSED",
+                      "dDirTxt":"Kleinblittersdorf",
+                      "dDirFlg":"B",
+                      "type":"N"
+                    },
+                    {
+                      "locX":6,
+                      "idx":9,
+                      "aProdX":2,
+                      "aOutR":true,
+                      "aTimeS":"155900",
+                      "aTimeR":"155900",
+                      "aProgType":"PROGNOSED",
+                      "dProdX":2,
+                      "dInR":true,
+                      "dTimeS":"155900",
+                      "dTimeR":"155900",
+                      "dProgType":"PROGNOSED",
+                      "type":"N"
+                    },
+                    {
+                      "locX":7,
+                      "idx":10,
+                      "aProdX":2,
+                      "aOutR":true,
+                      "aTimeS":"160100",
+                      "aTimeR":"160100",
+                      "aProgType":"PROGNOSED",
+                      "dProdX":2,
+                      "dInR":true,
+                      "dTimeS":"160100",
+                      "dTimeR":"160100",
+                      "dProgType":"PROGNOSED",
+                      "type":"N"
+                    },
+                    {
+                      "locX":8,
+                      "idx":11,
+                      "aProdX":2,
+                      "aOutR":true,
+                      "aTimeS":"160200",
+                      "aTimeR":"160200",
+                      "aProgType":"PROGNOSED",
+                      "dProdX":2,
+                      "dInR":true,
+                      "dTimeS":"160200",
+                      "dTimeR":"160200",
+                      "dProgType":"PROGNOSED",
+                      "type":"N"
+                    },
+                    {
+                      "locX":5,
+                      "idx":12,
+                      "aProdX":2,
+                      "aOutR":true,
+                      "aTimeS":"160400",
+                      "aTimeR":"160400",
+                      "aProgType":"PROGNOSED",
+                      "type":"N"
+                    }
+                  ],
+                  "polyG":
+                  {
+                    "polyXL":
+                    [
+                      2
+                    ],
+                    "layerX":0,
+                    "crdSysX":0
+                  },
+                  "freq":
+                  {
+                    "minC":7,
+                    "maxC":8,
+                    "numC":17
+                  },
+                  "ctxRecon":"T$A=1@O=Johanneskirche, Saarbrücken@L=10619@a=128@$A=1@O=Kieselhumes, Saarbrücken@L=10605@a=128@$202109061558$202109061604$S      1$$1$$$$",
+                  "msgL":
+                  [
+                    {
+                      "type":"REM",
+                      "remX":0,
+                      "tagL":
+                      [
+                        "RES_JNY_DTL_H3"
+                      ],
+                      "sort":684195840
+                    }
+                  ],
+                  "subscr":"F",
+                  "prodL":
+                  [
+                    {
+                      "prodX":2,
+                      "fLocX":4,
+                      "tLocX":5,
+                      "fIdx":8,
+                      "tIdx":12
+                    }
+                  ],
+                  "dirL":
+                  [
+                    {
+                      "dirX":1,
+                      "fLocX":4,
+                      "tLocX":5,
+                      "fIdx":8,
+                      "tIdx":12
+                    }
+                  ]
+                },
+                "minChg":"000600"
+              },
+              {
+                "type":"WALK",
+                "icoX":6,
+                "dep":
+                {
+                  "locX":5,
+                  "dInR":true,
+                  "dTimeS":"160400",
+                  "type":"N"
+                },
+                "arr":
+                {
+                  "locX":1,
+                  "aOutR":true,
+                  "aTimeS":"161000",
+                  "type":"N"
+                },
+                "gis":
+                {
+                  "dist":354,
+                  "durS":"000600",
+                  "dirGeo":4,
+                  "ctx":"H|1|W$A=1@O=Kieselhumes, Saarbrücken@L=10605@a=128@$A=1@O=Ostbahnhof, Saarbrücken@L=10700@a=128@$202109061604$202109061610$$$1$$$$",
+                  "polyG":
+                  {
+                    "polyXL":
+                    [
+                      3
+                    ],
+                    "layerX":0,
+                    "crdSysX":0
+                  },
+                  "gisPrvr":"H",
+                  "getDescr":true,
+                  "getPoly":true
+                }
+              }
+            ],
+            "ctxRecon":"¶HKI¶T$A=1@O=HBF SaarLB, Saarbrücken@L=10640@a=128@$A=1@O=Haus der Zukunft, Saarbrücken@L=10612@a=128@$202109061547$202109061550$Bus  124$$1$$$$§W$A=1@O=Haus der Zukunft, Saarbrücken@L=10612@a=128@$A=1@O=Johanneskirche, Saarbrücken@L=10619@a=128@$202109061550$202109061555$$$1$$$$§T$A=1@O=Johanneskirche, Saarbrücken@L=10619@a=128@$A=1@O=Kieselhumes, Saarbrücken@L=10605@a=128@$202109061558$202109061604$S      1$$1$$$$§W$A=1@O=Kieselhumes, Saarbrücken@L=10605@a=128@$A=1@O=Ostbahnhof, Saarbrücken@L=10700@a=128@$202109061604$202109061610$$$1$$$$",
+            "freq":
+            {
+              "minC":15
+            },
+            "trfRes":
+            {
+              "statusCode":"OK",
+              "fareSetL":
+              [
+                {
+                  "fareL":
+                  [
+                    {
+                      "name":"Einzelfahrkarte Erwachsene(saarVV Preisstufe 0)",
+                      "prc":260,
+                      "cur":"EUR",
+                      "shpCtx":"~0-.25001-1",
+                      "buttonText":"Ticket kaufen",
+                      "extCont":
+                      {
+                        "content":
+                        {
+                          "type":"LIB_TARIFF",
+                          "content":"fjAtLjI1MDAxLTE="
+                        }
+                      }
+                    },
+                    {
+                      "name":"Einzelfahrkarte BahnCard(saarVV Preisstufe 0)",
+                      "prc":220,
+                      "cur":"EUR",
+                      "shpCtx":"~0-.25166-1",
+                      "buttonText":"Ticket kaufen",
+                      "extCont":
+                      {
+                        "content":
+                        {
+                          "type":"LIB_TARIFF",
+                          "content":"fjAtLjI1MTY2LTE="
+                        }
+                      }
+                    },
+                    {
+                      "name":"Einzelfahrkarte Kind (6-14 J.)(saarVV Preisstufe 0)",
+                      "prc":200,
+                      "cur":"EUR",
+                      "shpCtx":"~0-.25002-1",
+                      "buttonText":"Ticket kaufen",
+                      "extCont":
+                      {
+                        "content":
+                        {
+                          "type":"LIB_TARIFF",
+                          "content":"fjAtLjI1MDAyLTE="
+                        }
+                      }
+                    },
+                    {
+                      "name":"4er-Karte(saarVV Preisstufe 0)",
+                      "prc":936,
+                      "cur":"EUR",
+                      "shpCtx":"~0-.25259-1",
+                      "buttonText":"Ticket kaufen",
+                      "extCont":
+                      {
+                        "content":
+                        {
+                          "type":"LIB_TARIFF",
+                          "content":"fjAtLjI1MjU5LTE="
+                        }
+                      }
+                    },
+                    {
+                      "name":"Einzelfahrkarte Rad(saarVV Preisstufe 0)",
+                      "prc":200,
+                      "cur":"EUR",
+                      "shpCtx":"~0-.25248-1",
+                      "buttonText":"Ticket kaufen",
+                      "extCont":
+                      {
+                        "content":
+                        {
+                          "type":"LIB_TARIFF",
+                          "content":"fjAtLjI1MjQ4LTE="
+                        }
+                      }
+                    },
+                    {
+                      "name":"Tageskarte 1 Person(saarVV Preisstufe 0)",
+                      "prc":490,
+                      "cur":"EUR",
+                      "shpCtx":"~0-.25111-1",
+                      "buttonText":"Ticket kaufen",
+                      "extCont":
+                      {
+                        "content":
+                        {
+                          "type":"LIB_TARIFF",
+                          "content":"fjAtLjI1MTExLTE="
+                        }
+                      }
+                    },
+                    {
+                      "name":"Tageskarte 2 Personen(saarVV Preisstufe 0)",
+                      "prc":690,
+                      "cur":"EUR",
+                      "shpCtx":"~0-.25249-1",
+                      "buttonText":"Ticket kaufen",
+                      "extCont":
+                      {
+                        "content":
+                        {
+                          "type":"LIB_TARIFF",
+                          "content":"fjAtLjI1MjQ5LTE="
+                        }
+                      }
+                    },
+                    {
+                      "name":"Tageskarte 5 Personen(saarVV Preisstufe 0)",
+                      "prc":990,
+                      "cur":"EUR",
+                      "shpCtx":"~0-.25155-1",
+                      "buttonText":"Ticket kaufen",
+                      "extCont":
+                      {
+                        "content":
+                        {
+                          "type":"LIB_TARIFF",
+                          "content":"fjAtLjI1MTU1LTE="
+                        }
+                      }
+                    },
+                    {
+                      "name":"1. Klasse Zuschlag DB&vlexx  Einzelfahrkarte(saarVV Preisstufe 0)",
+                      "prc":160,
+                      "cur":"EUR",
+                      "shpCtx":"~0-.25199-1",
+                      "buttonText":"Ticket kaufen",
+                      "extCont":
+                      {
+                        "content":
+                        {
+                          "type":"LIB_TARIFF",
+                          "content":"fjAtLjI1MTk5LTE="
+                        }
+                      }
+                    },
+                    {
+                      "name":"Gruppenkarte (ab 10 Pers.) pro Erw. bzw. 2 Kinder (6-14 J.)(saarVV Preisstufe 0)",
+                      "prc":240,
+                      "cur":"EUR",
+                      "shpCtx":"~0-.25156-1",
+                      "buttonText":"Ticket kaufen",
+                      "extCont":
+                      {
+                        "content":
+                        {
+                          "type":"LIB_TARIFF",
+                          "content":"fjAtLjI1MTU2LTE="
+                        }
+                      }
+                    },
+                    {
+                      "name":"Wochenkarte(saarVV Preisstufe 0)",
+                      "prc":2330,
+                      "cur":"EUR",
+                      "shpCtx":"~0-.25153-1",
+                      "buttonText":"Ticket kaufen",
+                      "extCont":
+                      {
+                        "content":
+                        {
+                          "type":"LIB_TARIFF",
+                          "content":"fjAtLjI1MTUzLTE="
+                        }
+                      }
+                    },
+                    {
+                      "name":"Monatskarte(saarVV Preisstufe 0)",
+                      "prc":6510,
+                      "cur":"EUR",
+                      "shpCtx":"~0-.25152-1",
+                      "buttonText":"Ticket kaufen",
+                      "extCont":
+                      {
+                        "content":
+                        {
+                          "type":"LIB_TARIFF",
+                          "content":"fjAtLjI1MTUyLTE="
+                        }
+                      }
+                    },
+                    {
+                      "name":"Wochenkarte Schüler & Azubis(saarVV Preisstufe 0)",
+                      "prc":1740,
+                      "cur":"EUR",
+                      "shpCtx":"~0-.25147-1",
+                      "buttonText":"Ticket kaufen",
+                      "extCont":
+                      {
+                        "content":
+                        {
+                          "type":"LIB_TARIFF",
+                          "content":"fjAtLjI1MTQ3LTE="
+                        }
+                      }
+                    },
+                    {
+                      "name":"Monatskarte Schüler & Azubis(saarVV Preisstufe 0)",
+                      "prc":4900,
+                      "cur":"EUR",
+                      "shpCtx":"~0-.25146-1",
+                      "buttonText":"Ticket kaufen",
+                      "extCont":
+                      {
+                        "content":
+                        {
+                          "type":"LIB_TARIFF",
+                          "content":"fjAtLjI1MTQ2LTE="
+                        }
+                      }
+                    },
+                    {
+                      "name":"Jahreskarte (Abo pro Monat)(saarVV Preisstufe 0)",
+                      "prc":5425,
+                      "cur":"EUR",
+                      "shpCtx":"~0-.25114-1",
+                      "buttonText":"Ticket kaufen",
+                      "extCont":
+                      {
+                        "content":
+                        {
+                          "type":"LIB_TARIFF",
+                          "content":"fjAtLjI1MTE0LTE="
+                        }
+                      }
+                    },
+                    {
+                      "name":"Kreis-Abo Saarbrücken(saarVV Preisstufe 0)",
+                      "prc":8950,
+                      "cur":"EUR",
+                      "shpCtx":"~0-.25277-1",
+                      "buttonText":"Ticket kaufen",
+                      "extCont":
+                      {
+                        "content":
+                        {
+                          "type":"LIB_TARIFF",
+                          "content":"fjAtLjI1Mjc3LTE="
+                        }
+                      }
+                    },
+                    {
+                      "name":"Saarland-Abo(saarVV Preisstufe 0)",
+                      "prc":9900,
+                      "cur":"EUR",
+                      "shpCtx":"~0-.25279-1",
+                      "buttonText":"Ticket kaufen",
+                      "extCont":
+                      {
+                        "content":
+                        {
+                          "type":"LIB_TARIFF",
+                          "content":"fjAtLjI1Mjc5LTE="
+                        }
+                      }
+                    },
+                    {
+                      "name":"9 Uhr-Abo(saarVV Preisstufe 0)",
+                      "prc":3900,
+                      "cur":"EUR",
+                      "shpCtx":"~0-.25250-1",
+                      "buttonText":"Ticket kaufen",
+                      "extCont":
+                      {
+                        "content":
+                        {
+                          "type":"LIB_TARIFF",
+                          "content":"fjAtLjI1MjUwLTE="
+                        }
+                      }
+                    },
+                    {
+                      "name":"Schüler-Abo(saarVV Preisstufe 0)",
+                      "prc":4050,
+                      "cur":"EUR",
+                      "shpCtx":"~0-.25253-1",
+                      "buttonText":"Ticket kaufen",
+                      "extCont":
+                      {
+                        "content":
+                        {
+                          "type":"LIB_TARIFF",
+                          "content":"fjAtLjI1MjUzLTE="
+                        }
+                      }
+                    },
+                    {
+                      "name":"Azubi-Abo(saarVV Preisstufe 0)",
+                      "prc":4050,
+                      "cur":"EUR",
+                      "shpCtx":"~0-.25301-1",
+                      "buttonText":"Ticket kaufen",
+                      "extCont":
+                      {
+                        "content":
+                        {
+                          "type":"LIB_TARIFF",
+                          "content":"fjAtLjI1MzAxLTE="
+                        }
+                      }
+                    },
+                    {
+                      "name":"Ü65-Abo(saarVV Preisstufe 0)",
+                      "prc":5900,
+                      "cur":"EUR",
+                      "shpCtx":"~0-.25303-1",
+                      "buttonText":"Ticket kaufen",
+                      "extCont":
+                      {
+                        "content":
+                        {
+                          "type":"LIB_TARIFF",
+                          "content":"fjAtLjI1MzAzLTE="
+                        }
+                      }
+                    },
+                    {
+                      "name":"1. Klasse Zuschlag DB&vlexx Wochenkarte(saarVV Preisstufe 0)",
+                      "prc":810,
+                      "cur":"EUR",
+                      "shpCtx":"~0-.25195-1",
+                      "buttonText":"Ticket kaufen",
+                      "extCont":
+                      {
+                        "content":
+                        {
+                          "type":"LIB_TARIFF",
+                          "content":"fjAtLjI1MTk1LTE="
+                        }
+                      }
+                    },
+                    {
+                      "name":"1. Klasse Zuschlag DB&vlexx Monatskarte(saarVV Preisstufe 0)",
+                      "prc":2600,
+                      "cur":"EUR",
+                      "shpCtx":"~0-.25196-1",
+                      "buttonText":"Ticket kaufen",
+                      "extCont":
+                      {
+                        "content":
+                        {
+                          "type":"LIB_TARIFF",
+                          "content":"fjAtLjI1MTk2LTE="
+                        }
+                      }
+                    },
+                    {
+                      "name":"1. Klasse Zuschlag DB&vlexx Jahreskarte (Abo pro Monat)(saarVV Preisstufe 0)",
+                      "prc":2170,
+                      "cur":"EUR",
+                      "shpCtx":"~0-.25197-1",
+                      "buttonText":"Ticket kaufen",
+                      "extCont":
+                      {
+                        "content":
+                        {
+                          "type":"LIB_TARIFF",
+                          "content":"fjAtLjI1MTk3LTE="
+                        }
+                      }
+                    },
+                    {
+                      "name":"Monatskarte Fair-Ticket(saarVV Preisstufe 0)",
+                      "prc":2900,
+                      "cur":"EUR",
+                      "shpCtx":"~0-.25252-1",
+                      "buttonText":"Ticket kaufen",
+                      "extCont":
+                      {
+                        "content":
+                        {
+                          "type":"LIB_TARIFF",
+                          "content":"fjAtLjI1MjUyLTE="
+                        }
+                      }
+                    },
+                    {
+                      "name":"Monatskarte Fair-Ticket Plus(saarVV Preisstufe 0)",
+                      "prc":3900,
+                      "cur":"EUR",
+                      "shpCtx":"~0-.25264-1",
+                      "buttonText":"Ticket kaufen",
+                      "extCont":
+                      {
+                        "content":
+                        {
+                          "type":"LIB_TARIFF",
+                          "content":"fjAtLjI1MjY0LTE="
+                        }
+                      }
+                    }
+                  ]
+                }
+              ],
+              "bkgData":
+              {
+                "common":
+                {
+                  "FEL":
+                  [
+                    {
+                      "ID":
+                      [
+"111"
+                      ]
+                    },
+                    {
+                      "ID":
+                      [
+"111"
+                      ]
+                    },
+                    {
+                      "ID":
+                      [
+"8110964"
+                      ]
+                    },
+                    {
+                      "ID":
+                      [
+"kürzester Weg"
+                      ]
+                    },
+                    {
+                      "ID":
+                      [
+"0"
+                      ],
+                      "ON":
+                      [
+"0"
+                      ],
+                      "PN":
+                      [
+"Binnentarif Großwabe Saarbrücken und Völklingen"
+                      ]
+                    },
+                    {
+                      "ID":
+                      [
+"10640"
+                      ],
+                      "ON":
+                      [
+"HBF SaarLB, Saarbrücken"
+                      ]
+                    },
+                    {
+                      "ID":
+                      [
+"10605"
+                      ],
+                      "ON":
+                      [
+"Kieselhumes, Saarbrücken"
+                      ]
+                    },
+                    {
+                      "ID":
+                      [
+"2573c5c51835dc0decf239315a71dfab"
+                      ]
+                    },
+                    {
+                      "ID":
+                      [
+"0"
+                      ]
+                    },
+                    {
+                      "ID":
+                      [
+"25001"
+                      ],
+                      "ON":
+                      [
+"Einzelfahrkarte Erwachsene",
+""
+                      ],
+                      "XV":
+                      [
+"0"
+                      ]
+                    },
+                    {
+                      "ID":
+                      [
+"0"
+                      ]
+                    },
+                    {
+                      "ID":
+                      [
+"25166"
+                      ],
+                      "ON":
+                      [
+"Einzelfahrkarte BahnCard",
+""
+                      ],
+                      "XV":
+                      [
+"0"
+                      ]
+                    },
+                    {
+                      "ID":
+                      [
+"0"
+                      ]
+                    },
+                    {
+                      "ID":
+                      [
+"25002"
+                      ],
+                      "ON":
+                      [
+"Einzelfahrkarte Kind (6-14 J.)",
+""
+                      ],
+                      "XV":
+                      [
+"0"
+                      ]
+                    },
+                    {
+                      "ID":
+                      [
+"0"
+                      ]
+                    },
+                    {
+                      "ID":
+                      [
+"25259"
+                      ],
+                      "ON":
+                      [
+"4er-Karte",
+""
+                      ],
+                      "XV":
+                      [
+"0"
+                      ]
+                    },
+                    {
+                      "ID":
+                      [
+"0"
+                      ]
+                    },
+                    {
+                      "ID":
+                      [
+"25248"
+                      ],
+                      "ON":
+                      [
+"Einzelfahrkarte Rad",
+"Fahrradmitnahme vor 9:00 Uhr"
+                      ],
+                      "XV":
+                      [
+"0"
+                      ]
+                    },
+                    {
+                      "ID":
+                      [
+"0"
+                      ]
+                    },
+                    {
+                      "ID":
+                      [
+"25111"
+                      ],
+                      "ON":
+                      [
+"Tageskarte 1 Person",
+""
+                      ],
+                      "XV":
+                      [
+"0"
+                      ]
+                    },
+                    {
+                      "ID":
+                      [
+"0"
+                      ]
+                    },
+                    {
+                      "ID":
+                      [
+"25249"
+                      ],
+                      "ON":
+                      [
+"Tageskarte 2 Personen",
+""
+                      ],
+                      "XV":
+                      [
+"0"
+                      ]
+                    },
+                    {
+                      "ID":
+                      [
+"0"
+                      ]
+                    },
+                    {
+                      "ID":
+                      [
+"25155"
+                      ],
+                      "ON":
+                      [
+"Tageskarte 5 Personen",
+"gilt montags bis freitags ab 8:00 Uhr bis Betriebsschluss und samstags, sonn- und feiertags ganztägig"
+                      ],
+                      "XV":
+                      [
+"0"
+                      ]
+                    },
+                    {
+                      "ID":
+                      [
+"0"
+                      ]
+                    },
+                    {
+                      "ID":
+                      [
+"25199"
+                      ],
+                      "ON":
+                      [
+"1. Klasse Zuschlag DB&vlexx  Einzelfahrkarte",
+""
+                      ],
+                      "XV":
+                      [
+"0"
+                      ]
+                    },
+                    {
+                      "ID":
+                      [
+"0"
+                      ]
+                    },
+                    {
+                      "ID":
+                      [
+"25156"
+                      ],
+                      "ON":
+                      [
+"Gruppenkarte (ab 10 Pers.) pro Erw. bzw. 2 Kinder (6-14 J.)",
+""
+                      ],
+                      "XV":
+                      [
+"0"
+                      ]
+                    },
+                    {
+                      "ID":
+                      [
+"0"
+                      ]
+                    },
+                    {
+                      "ID":
+                      [
+"25153"
+                      ],
+                      "ON":
+                      [
+"Wochenkarte",
+""
+                      ],
+                      "XV":
+                      [
+"0"
+                      ]
+                    },
+                    {
+                      "ID":
+                      [
+"0"
+                      ]
+                    },
+                    {
+                      "ID":
+                      [
+"25152"
+                      ],
+                      "ON":
+                      [
+"Monatskarte",
+""
+                      ],
+                      "XV":
+                      [
+"0"
+                      ]
+                    },
+                    {
+                      "ID":
+                      [
+"0"
+                      ]
+                    },
+                    {
+                      "ID":
+                      [
+"25147"
+                      ],
+                      "ON":
+                      [
+"Wochenkarte Schüler & Azubis",
+""
+                      ],
+                      "XV":
+                      [
+"0"
+                      ]
+                    },
+                    {
+                      "ID":
+                      [
+"0"
+                      ]
+                    },
+                    {
+                      "ID":
+                      [
+"25146"
+                      ],
+                      "ON":
+                      [
+"Monatskarte Schüler & Azubis",
+""
+                      ],
+                      "XV":
+                      [
+"0"
+                      ]
+                    },
+                    {
+                      "ID":
+                      [
+"0"
+                      ]
+                    },
+                    {
+                      "ID":
+                      [
+"25114"
+                      ],
+                      "ON":
+                      [
+"Jahreskarte (Abo pro Monat)",
+""
+                      ],
+                      "XV":
+                      [
+"0"
+                      ]
+                    },
+                    {
+                      "ID":
+                      [
+"0"
+                      ]
+                    },
+                    {
+                      "ID":
+                      [
+"25277"
+                      ],
+                      "ON":
+                      [
+"Kreis-Abo Saarbrücken",
+""
+                      ],
+                      "XV":
+                      [
+"0"
+                      ]
+                    },
+                    {
+                      "ID":
+                      [
+"0"
+                      ]
+                    },
+                    {
+                      "ID":
+                      [
+"25279"
+                      ],
+                      "ON":
+                      [
+"Saarland-Abo",
+""
+                      ],
+                      "XV":
+                      [
+"0"
+                      ]
+                    },
+                    {
+                      "ID":
+                      [
+"0"
+                      ]
+                    },
+                    {
+                      "ID":
+                      [
+"25250"
+                      ],
+                      "ON":
+                      [
+"9 Uhr-Abo",
+""
+                      ],
+                      "XV":
+                      [
+"0"
+                      ]
+                    },
+                    {
+                      "ID":
+                      [
+"0"
+                      ]
+                    },
+                    {
+                      "ID":
+                      [
+"25253"
+                      ],
+                      "ON":
+                      [
+"Schüler-Abo",
+""
+                      ],
+                      "XV":
+                      [
+"0"
+                      ]
+                    },
+                    {
+                      "ID":
+                      [
+"0"
+                      ]
+                    },
+                    {
+                      "ID":
+                      [
+"25301"
+                      ],
+                      "ON":
+                      [
+"Azubi-Abo",
+""
+                      ],
+                      "XV":
+                      [
+"0"
+                      ]
+                    },
+                    {
+                      "ID":
+                      [
+"0"
+                      ]
+                    },
+                    {
+                      "ID":
+                      [
+"25303"
+                      ],
+                      "ON":
+                      [
+"Ü65-Abo",
+""
+                      ],
+                      "XV":
+                      [
+"0"
+                      ]
+                    },
+                    {
+                      "ID":
+                      [
+"0"
+                      ]
+                    },
+                    {
+                      "ID":
+                      [
+"25195"
+                      ],
+                      "ON":
+                      [
+"1. Klasse Zuschlag DB&vlexx Wochenkarte",
+""
+                      ],
+                      "XV":
+                      [
+"0"
+                      ]
+                    },
+                    {
+                      "ID":
+                      [
+"0"
+                      ]
+                    },
+                    {
+                      "ID":
+                      [
+"25196"
+                      ],
+                      "ON":
+                      [
+"1. Klasse Zuschlag DB&vlexx Monatskarte",
+""
+                      ],
+                      "XV":
+                      [
+"0"
+                      ]
+                    },
+                    {
+                      "ID":
+                      [
+"0"
+                      ]
+                    },
+                    {
+                      "ID":
+                      [
+"25197"
+                      ],
+                      "ON":
+                      [
+"1. Klasse Zuschlag DB&vlexx Jahreskarte (Abo pro Monat)",
+""
+                      ],
+                      "XV":
+                      [
+"0"
+                      ]
+                    },
+                    {
+                      "ID":
+                      [
+"0"
+                      ]
+                    },
+                    {
+                      "ID":
+                      [
+"25252"
+                      ],
+                      "ON":
+                      [
+"Monatskarte Fair-Ticket",
+"Gültig ab 9 Uhr"
+                      ],
+                      "XV":
+                      [
+"0"
+                      ]
+                    },
+                    {
+                      "ID":
+                      [
+"0"
+                      ]
+                    },
+                    {
+                      "ID":
+                      [
+"25264"
+                      ],
+                      "ON":
+                      [
+"Monatskarte Fair-Ticket Plus",
+""
+                      ],
+                      "XV":
+                      [
+"0"
+                      ]
+                    }
+                  ]
+                },
+                "BOG":
+                {
+                  "BOGL":
+                  [
+                    {
+                      "P":"~0-",
+                      "BOL":
+                      [
+                        {
+                          "P":"~0-.25001-1",
+                          "VT":"saarVV-1",
+                          "FS":"VGS",
+                          "DV":8,
+                          "PRC":
+                          {
+                            "CUR":"EUR",
+                            "AMT":260
+                          },
+                          "PRD":9,
+                          "LVL":4,
+                          "SV":
+                          {
+                            "OL":0,
+                            "OS":5,
+                            "DL":1,
+                            "DS":6,
+                            "VL":
+                            [
+2,
+3,
+7
+                            ]
+                          },
+                          "FF":true
+                        },
+                        {
+                          "P":"~0-.25166-1",
+                          "VT":"saarVV-1",
+                          "FS":"VGS",
+                          "DV":10,
+                          "PRC":
+                          {
+                            "CUR":"EUR",
+                            "AMT":220
+                          },
+                          "PRD":11,
+                          "LVL":4,
+                          "SV":
+                          {
+                            "OL":0,
+                            "OS":5,
+                            "DL":1,
+                            "DS":6,
+                            "VL":
+                            [
+2,
+3,
+7
+                            ]
+                          },
+                          "FF":true
+                        },
+                        {
+                          "P":"~0-.25002-1",
+                          "VT":"saarVV-1",
+                          "FS":"VGS",
+                          "DV":12,
+                          "PRC":
+                          {
+                            "CUR":"EUR",
+                            "AMT":200
+                          },
+                          "PRD":13,
+                          "LVL":4,
+                          "SV":
+                          {
+                            "OL":0,
+                            "OS":5,
+                            "DL":1,
+                            "DS":6,
+                            "VL":
+                            [
+2,
+3,
+7
+                            ]
+                          },
+                          "FF":true
+                        },
+                        {
+                          "P":"~0-.25259-1",
+                          "VT":"saarVV-1",
+                          "FS":"VGS",
+                          "DV":14,
+                          "PRC":
+                          {
+                            "CUR":"EUR",
+                            "AMT":936
+                          },
+                          "PRD":15,
+                          "LVL":4,
+                          "SV":
+                          {
+                            "OL":0,
+                            "OS":5,
+                            "DL":1,
+                            "DS":6,
+                            "VL":
+                            [
+2,
+3,
+7
+                            ]
+                          },
+                          "FF":true
+                        },
+                        {
+                          "P":"~0-.25248-1",
+                          "VT":"saarVV-1",
+                          "FS":"VGS",
+                          "DV":16,
+                          "PRC":
+                          {
+                            "CUR":"EUR",
+                            "AMT":200
+                          },
+                          "PRD":17,
+                          "LVL":4,
+                          "SV":
+                          {
+                            "OL":0,
+                            "OS":5,
+                            "DL":1,
+                            "DS":6,
+                            "VL":
+                            [
+2,
+3,
+7
+                            ]
+                          },
+                          "FF":true
+                        },
+                        {
+                          "P":"~0-.25111-1",
+                          "VT":"saarVV-1",
+                          "FS":"VGS",
+                          "DV":18,
+                          "PRC":
+                          {
+                            "CUR":"EUR",
+                            "AMT":490
+                          },
+                          "PRD":19,
+                          "LVL":4,
+                          "SV":
+                          {
+                            "OL":0,
+                            "OS":5,
+                            "DL":1,
+                            "DS":6,
+                            "VL":
+                            [
+2,
+3,
+7
+                            ]
+                          },
+                          "FF":true
+                        },
+                        {
+                          "P":"~0-.25249-1",
+                          "VT":"saarVV-1",
+                          "FS":"VGS",
+                          "DV":20,
+                          "PRC":
+                          {
+                            "CUR":"EUR",
+                            "AMT":690
+                          },
+                          "PRD":21,
+                          "LVL":4,
+                          "SV":
+                          {
+                            "OL":0,
+                            "OS":5,
+                            "DL":1,
+                            "DS":6,
+                            "VL":
+                            [
+2,
+3,
+7
+                            ]
+                          },
+                          "FF":true
+                        },
+                        {
+                          "P":"~0-.25155-1",
+                          "VT":"saarVV-1",
+                          "FS":"VGS",
+                          "DV":22,
+                          "PRC":
+                          {
+                            "CUR":"EUR",
+                            "AMT":990
+                          },
+                          "PRD":23,
+                          "LVL":4,
+                          "SV":
+                          {
+                            "OL":0,
+                            "OS":5,
+                            "DL":1,
+                            "DS":6,
+                            "VL":
+                            [
+2,
+3,
+7
+                            ]
+                          },
+                          "FF":true
+                        },
+                        {
+                          "P":"~0-.25199-1",
+                          "VT":"saarVV-1",
+                          "FS":"VGS",
+                          "DV":24,
+                          "PRC":
+                          {
+                            "CUR":"EUR",
+                            "AMT":160
+                          },
+                          "PRD":25,
+                          "LVL":4,
+                          "SV":
+                          {
+                            "OL":0,
+                            "OS":5,
+                            "DL":1,
+                            "DS":6,
+                            "VL":
+                            [
+2,
+3,
+7
+                            ]
+                          },
+                          "FF":true
+                        },
+                        {
+                          "P":"~0-.25156-1",
+                          "VT":"saarVV-1",
+                          "FS":"VGS",
+                          "DV":26,
+                          "PRC":
+                          {
+                            "CUR":"EUR",
+                            "AMT":240
+                          },
+                          "PRD":27,
+                          "LVL":4,
+                          "SV":
+                          {
+                            "OL":0,
+                            "OS":5,
+                            "DL":1,
+                            "DS":6,
+                            "VL":
+                            [
+2,
+3,
+7
+                            ]
+                          },
+                          "FF":true
+                        },
+                        {
+                          "P":"~0-.25153-1",
+                          "VT":"saarVV-1",
+                          "FS":"VGS",
+                          "DV":28,
+                          "PRC":
+                          {
+                            "CUR":"EUR",
+                            "AMT":2330
+                          },
+                          "PRD":29,
+                          "LVL":4,
+                          "SV":
+                          {
+                            "OL":0,
+                            "OS":5,
+                            "DL":1,
+                            "DS":6,
+                            "VL":
+                            [
+2,
+3,
+7
+                            ]
+                          },
+                          "FF":true
+                        },
+                        {
+                          "P":"~0-.25152-1",
+                          "VT":"saarVV-1",
+                          "FS":"VGS",
+                          "DV":30,
+                          "PRC":
+                          {
+                            "CUR":"EUR",
+                            "AMT":6510
+                          },
+                          "PRD":31,
+                          "LVL":4,
+                          "SV":
+                          {
+                            "OL":0,
+                            "OS":5,
+                            "DL":1,
+                            "DS":6,
+                            "VL":
+                            [
+2,
+3,
+7
+                            ]
+                          },
+                          "FF":true
+                        },
+                        {
+                          "P":"~0-.25147-1",
+                          "VT":"saarVV-1",
+                          "FS":"VGS",
+                          "DV":32,
+                          "PRC":
+                          {
+                            "CUR":"EUR",
+                            "AMT":1740
+                          },
+                          "PRD":33,
+                          "LVL":4,
+                          "SV":
+                          {
+                            "OL":0,
+                            "OS":5,
+                            "DL":1,
+                            "DS":6,
+                            "VL":
+                            [
+2,
+3,
+7
+                            ]
+                          },
+                          "FF":true
+                        },
+                        {
+                          "P":"~0-.25146-1",
+                          "VT":"saarVV-1",
+                          "FS":"VGS",
+                          "DV":34,
+                          "PRC":
+                          {
+                            "CUR":"EUR",
+                            "AMT":4900
+                          },
+                          "PRD":35,
+                          "LVL":4,
+                          "SV":
+                          {
+                            "OL":0,
+                            "OS":5,
+                            "DL":1,
+                            "DS":6,
+                            "VL":
+                            [
+2,
+3,
+7
+                            ]
+                          },
+                          "FF":true
+                        },
+                        {
+                          "P":"~0-.25114-1",
+                          "VT":"saarVV-1",
+                          "FS":"VGS",
+                          "DV":36,
+                          "PRC":
+                          {
+                            "CUR":"EUR",
+                            "AMT":5425
+                          },
+                          "PRD":37,
+                          "LVL":4,
+                          "SV":
+                          {
+                            "OL":0,
+                            "OS":5,
+                            "DL":1,
+                            "DS":6,
+                            "VL":
+                            [
+2,
+3,
+7
+                            ]
+                          },
+                          "FF":true
+                        },
+                        {
+                          "P":"~0-.25277-1",
+                          "VT":"saarVV-1",
+                          "FS":"VGS",
+                          "DV":38,
+                          "PRC":
+                          {
+                            "CUR":"EUR",
+                            "AMT":8950
+                          },
+                          "PRD":39,
+                          "LVL":4,
+                          "SV":
+                          {
+                            "OL":0,
+                            "OS":5,
+                            "DL":1,
+                            "DS":6,
+                            "VL":
+                            [
+2,
+3,
+7
+                            ]
+                          },
+                          "FF":true
+                        },
+                        {
+                          "P":"~0-.25279-1",
+                          "VT":"saarVV-1",
+                          "FS":"VGS",
+                          "DV":40,
+                          "PRC":
+                          {
+                            "CUR":"EUR",
+                            "AMT":9900
+                          },
+                          "PRD":41,
+                          "LVL":4,
+                          "SV":
+                          {
+                            "OL":0,
+                            "OS":5,
+                            "DL":1,
+                            "DS":6,
+                            "VL":
+                            [
+2,
+3,
+7
+                            ]
+                          },
+                          "FF":true
+                        },
+                        {
+                          "P":"~0-.25250-1",
+                          "VT":"saarVV-1",
+                          "FS":"VGS",
+                          "DV":42,
+                          "PRC":
+                          {
+                            "CUR":"EUR",
+                            "AMT":3900
+                          },
+                          "PRD":43,
+                          "LVL":4,
+                          "SV":
+                          {
+                            "OL":0,
+                            "OS":5,
+                            "DL":1,
+                            "DS":6,
+                            "VL":
+                            [
+2,
+3,
+7
+                            ]
+                          },
+                          "FF":true
+                        },
+                        {
+                          "P":"~0-.25253-1",
+                          "VT":"saarVV-1",
+                          "FS":"VGS",
+                          "DV":44,
+                          "PRC":
+                          {
+                            "CUR":"EUR",
+                            "AMT":4050
+                          },
+                          "PRD":45,
+                          "LVL":4,
+                          "SV":
+                          {
+                            "OL":0,
+                            "OS":5,
+                            "DL":1,
+                            "DS":6,
+                            "VL":
+                            [
+2,
+3,
+7
+                            ]
+                          },
+                          "FF":true
+                        },
+                        {
+                          "P":"~0-.25301-1",
+                          "VT":"saarVV-1",
+                          "FS":"VGS",
+                          "DV":46,
+                          "PRC":
+                          {
+                            "CUR":"EUR",
+                            "AMT":4050
+                          },
+                          "PRD":47,
+                          "LVL":4,
+                          "SV":
+                          {
+                            "OL":0,
+                            "OS":5,
+                            "DL":1,
+                            "DS":6,
+                            "VL":
+                            [
+2,
+3,
+7
+                            ]
+                          },
+                          "FF":true
+                        },
+                        {
+                          "P":"~0-.25303-1",
+                          "VT":"saarVV-1",
+                          "FS":"VGS",
+                          "DV":48,
+                          "PRC":
+                          {
+                            "CUR":"EUR",
+                            "AMT":5900
+                          },
+                          "PRD":49,
+                          "LVL":4,
+                          "SV":
+                          {
+                            "OL":0,
+                            "OS":5,
+                            "DL":1,
+                            "DS":6,
+                            "VL":
+                            [
+2,
+3,
+7
+                            ]
+                          },
+                          "FF":true
+                        },
+                        {
+                          "P":"~0-.25195-1",
+                          "VT":"saarVV-1",
+                          "FS":"VGS",
+                          "DV":50,
+                          "PRC":
+                          {
+                            "CUR":"EUR",
+                            "AMT":810
+                          },
+                          "PRD":51,
+                          "LVL":4,
+                          "SV":
+                          {
+                            "OL":0,
+                            "OS":5,
+                            "DL":1,
+                            "DS":6,
+                            "VL":
+                            [
+2,
+3,
+7
+                            ]
+                          },
+                          "FF":true
+                        },
+                        {
+                          "P":"~0-.25196-1",
+                          "VT":"saarVV-1",
+                          "FS":"VGS",
+                          "DV":52,
+                          "PRC":
+                          {
+                            "CUR":"EUR",
+                            "AMT":2600
+                          },
+                          "PRD":53,
+                          "LVL":4,
+                          "SV":
+                          {
+                            "OL":0,
+                            "OS":5,
+                            "DL":1,
+                            "DS":6,
+                            "VL":
+                            [
+2,
+3,
+7
+                            ]
+                          },
+                          "FF":true
+                        },
+                        {
+                          "P":"~0-.25197-1",
+                          "VT":"saarVV-1",
+                          "FS":"VGS",
+                          "DV":54,
+                          "PRC":
+                          {
+                            "CUR":"EUR",
+                            "AMT":2170
+                          },
+                          "PRD":55,
+                          "LVL":4,
+                          "SV":
+                          {
+                            "OL":0,
+                            "OS":5,
+                            "DL":1,
+                            "DS":6,
+                            "VL":
+                            [
+2,
+3,
+7
+                            ]
+                          },
+                          "FF":true
+                        },
+                        {
+                          "P":"~0-.25252-1",
+                          "VT":"saarVV-1",
+                          "FS":"VGS",
+                          "DV":56,
+                          "PRC":
+                          {
+                            "CUR":"EUR",
+                            "AMT":2900
+                          },
+                          "PRD":57,
+                          "LVL":4,
+                          "SV":
+                          {
+                            "OL":0,
+                            "OS":5,
+                            "DL":1,
+                            "DS":6,
+                            "VL":
+                            [
+2,
+3,
+7
+                            ]
+                          },
+                          "FF":true
+                        },
+                        {
+                          "P":"~0-.25264-1",
+                          "VT":"saarVV-1",
+                          "FS":"VGS",
+                          "DV":58,
+                          "PRC":
+                          {
+                            "CUR":"EUR",
+                            "AMT":3900
+                          },
+                          "PRD":59,
+                          "LVL":4,
+                          "SV":
+                          {
+                            "OL":0,
+                            "OS":5,
+                            "DL":1,
+                            "DS":6,
+                            "VL":
+                            [
+2,
+3,
+7
+                            ]
+                          },
+                          "FF":true
+                        }
+                      ],
+                      "DESCR":
+                      [
+"0",
+"Matrix gültig ab 01.07.2021"
+                      ],
+                      "OPT":false,
+                      "ALT":true,
+                      "SEQ":false
+                    }
+                  ],
+                  "OPT":false,
+                  "ALT":true,
+                  "SEQ":false
+                },
+                "errCode":0
+              }
+            },
+            "ovwTrfRefL":
+            [
+              {
+                "type":"F",
+                "fareSetX":0,
+                "fareX":0
+              }
+            ],
+            "conSubscr":"F",
+            "recState":"C",
+            "cksum":"3d38fe9e_3",
+            "cksumDti":"74b13132_3"
+          }
+        ],
+        "fpB":"20201213",
+        "fpE":"20211211",
+        "planrtTS":"1630935463"
+      }
+    }
+  ]
+}

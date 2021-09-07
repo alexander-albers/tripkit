@@ -1,0 +1,145 @@
+{
+  "ver":"1.15",
+  "lang":"deu",
+  "id":"e7kc3g8k42xz8ics",
+  "svcResL":
+  [
+    {
+      "meth":"LocMatch",
+      "err":"OK",
+      "res":
+      {
+        "common":
+        {
+          "locL":
+          [
+
+          ],
+          "prodL":
+          [
+
+          ],
+          "polyL":
+          [
+
+          ],
+          "layerL":
+          [
+            {
+              "id":"standard",
+              "name":"standard",
+              "index":0,
+              "annoCnt":0
+            }
+          ],
+          "crdSysL":
+          [
+            {
+              "id":"standard",
+              "index":0,
+              "type":"WGS84",
+              "dim":2
+            }
+          ],
+          "opL":
+          [
+
+          ],
+          "remL":
+          [
+
+          ],
+          "icoL":
+          [
+            {
+              "res":"ADR"
+            }
+          ]
+        },
+        "match":
+        {
+          "field":"S",
+          "state":"L",
+          "locL":
+          [
+            {
+              "lid":"A=2@O=Leipzig - Zentrum, Georg-Schumann-Straße 1@X=12376636@Y=51357216@U=103@L=980753568@B=1@p=1520432662@",
+              "type":"A",
+              "name":"Leipzig - Zentrum, Georg-Schumann-Straße 1",
+              "icoX":0,
+              "extId":"980753568",
+              "state":"F",
+              "crd":
+              {
+                "x":12376636,
+                "y":51357216,
+                "layerX":0,
+                "crdSysX":0
+              }
+            },
+            {
+              "lid":"A=2@O=Leipzig - Zentrum, Robert-Schumann-Straße 1@X=12368375@Y=51328954@U=103@L=980753745@B=1@p=1520432662@",
+              "type":"A",
+              "name":"Leipzig - Zentrum, Robert-Schumann-Straße 1",
+              "icoX":0,
+              "extId":"980753745",
+              "state":"F",
+              "crd":
+              {
+                "x":12368375,
+                "y":51328954,
+                "layerX":0,
+                "crdSysX":0
+              }
+            },
+            {
+              "lid":"A=2@O=Leipzig - Gohlis-Süd, Georg-Schumann-Straße 9@X=12375243@Y=51359536@U=103@L=980751288@B=1@p=1520432662@",
+              "type":"A",
+              "name":"Leipzig - Gohlis-Süd, Georg-Schumann-Straße 9",
+              "icoX":0,
+              "extId":"980751288",
+              "state":"F",
+              "crd":
+              {
+                "x":12375243,
+                "y":51359536,
+                "layerX":0,
+                "crdSysX":0
+              }
+            },
+            {
+              "lid":"A=2@O=Leipzig - Stahmeln, Georg-Schumann-Straße 418@X=12307869@Y=51377703@U=103@L=980753095@B=1@p=1520432662@",
+              "type":"A",
+              "name":"Leipzig - Stahmeln, Georg-Schumann-Straße 418",
+              "icoX":0,
+              "extId":"980753095",
+              "state":"F",
+              "crd":
+              {
+                "x":12307869,
+                "y":51377703,
+                "layerX":0,
+                "crdSysX":0
+              }
+            },
+            {
+              "lid":"A=2@O=Leipzig - Möckern, Georg-Schumann-Straße 144@X=12354523@Y=51366053@U=103@L=980752314@B=1@p=1520432662@",
+              "type":"A",
+              "name":"Leipzig - Möckern, Georg-Schumann-Straße 144",
+              "icoX":0,
+              "extId":"980752314",
+              "state":"F",
+              "crd":
+              {
+                "x":12354523,
+                "y":51366053,
+                "layerX":0,
+                "crdSysX":0
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

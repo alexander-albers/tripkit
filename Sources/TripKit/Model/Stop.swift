@@ -110,6 +110,21 @@ public class Stop: NSObject, NSSecureCoding {
         }
     }
     
+    open override func isEqual(_ other: Any?) -> Bool {
+        guard let other = other as? Stop else { return false }
+        if self === other { return true }
+        if self.location != other.location {
+            return false
+        }
+        if !(self.plannedArrivalTime == other.plannedArrivalTime && self.predictedArrivalTime == other.predictedArrivalTime && self.plannedArrivalPlatform == other.plannedArrivalPlatform && self.predictedArrivalPlatform == other.predictedArrivalPlatform && self.arrivalCancelled == other.arrivalCancelled) {
+            return false
+        }
+        if !(self.plannedDepartureTime == other.plannedDepartureTime && self.predictedDepartureTime == other.predictedDepartureTime && self.plannedDeparturePlatform == other.plannedDeparturePlatform && self.predictedDeparturePlatform == other.predictedDeparturePlatform && self.departureCancelled == other.departureCancelled) {
+            return false
+        }
+        return true
+    }
+    
     struct PropertyKey {
         
         static let location = "location"

@@ -1,6 +1,8 @@
 import Foundation
 
-public class ServingLine: NSObject, NSCoding {
+public class ServingLine: NSObject, NSSecureCoding {
+    
+    public static var supportsSecureCoding: Bool = true
     
     public let line: Line
     public let destination: Location?

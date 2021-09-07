@@ -1,0 +1,578 @@
+{
+  "ver":"1.16",
+  "lang":"deu",
+  "id":"8v4gjgeuka89pwwg",
+  "svcResL":
+  [
+    {
+      "meth":"LocMatch",
+      "err":"OK",
+      "res":
+      {
+        "common":
+        {
+          "locL":
+          [
+
+          ],
+          "prodL":
+          [
+            {
+              "name":"Bus 10",
+              "nameS":"10",
+              "icoX":0,
+              "cls":1,
+              "prodCtx":
+              {
+                "lineId":"10"
+              }
+            },
+            {
+              "name":"Bus 11",
+              "nameS":"11",
+              "icoX":0,
+              "cls":1,
+              "prodCtx":
+              {
+                "lineId":"11"
+              }
+            },
+            {
+              "name":"Bus 15",
+              "nameS":"15",
+              "icoX":0,
+              "cls":1,
+              "prodCtx":
+              {
+                "lineId":"15"
+              }
+            },
+            {
+              "name":"Bus 16",
+              "nameS":"16",
+              "icoX":0,
+              "cls":1,
+              "prodCtx":
+              {
+                "lineId":"16"
+              }
+            },
+            {
+              "name":"Bus 18",
+              "nameS":"18",
+              "icoX":0,
+              "cls":1,
+              "prodCtx":
+              {
+                "lineId":"18"
+              }
+            },
+            {
+              "name":"Bus 20",
+              "nameS":"20",
+              "icoX":0,
+              "cls":1,
+              "prodCtx":
+              {
+                "lineId":"20"
+              }
+            },
+            {
+              "name":"Bus 21",
+              "nameS":"21",
+              "icoX":0,
+              "cls":1,
+              "prodCtx":
+              {
+                "lineId":"21"
+              }
+            },
+            {
+              "name":"Bus 22",
+              "nameS":"22",
+              "icoX":0,
+              "cls":1,
+              "prodCtx":
+              {
+                "lineId":"22"
+              }
+            },
+            {
+              "name":"Bus 25",
+              "nameS":"25",
+              "icoX":0,
+              "cls":1,
+              "prodCtx":
+              {
+                "lineId":"25"
+              }
+            },
+            {
+              "name":"Bus 26",
+              "nameS":"26",
+              "icoX":0,
+              "cls":1,
+              "prodCtx":
+              {
+                "lineId":"26"
+              }
+            },
+            {
+              "name":"Bus 30",
+              "nameS":"30",
+              "icoX":0,
+              "cls":1,
+              "prodCtx":
+              {
+                "lineId":"30"
+              }
+            },
+            {
+              "name":"Bus 31",
+              "nameS":"31",
+              "icoX":0,
+              "cls":1,
+              "prodCtx":
+              {
+                "lineId":"31"
+              }
+            },
+            {
+              "name":"Bus 41",
+              "nameS":"41",
+              "icoX":0,
+              "cls":1,
+              "prodCtx":
+              {
+                "lineId":"41"
+              }
+            },
+            {
+              "name":"Bus 44",
+              "nameS":"44",
+              "icoX":0,
+              "cls":1,
+              "prodCtx":
+              {
+                "lineId":"44"
+              }
+            },
+            {
+              "name":"Bus 45",
+              "nameS":"45",
+              "icoX":0,
+              "cls":1,
+              "prodCtx":
+              {
+                "lineId":"45"
+              }
+            },
+            {
+              "name":"Bus 52",
+              "nameS":"52",
+              "icoX":0,
+              "cls":1,
+              "prodCtx":
+              {
+                "lineId":"52"
+              }
+            },
+            {
+              "name":"Bus 60",
+              "nameS":"60",
+              "icoX":0,
+              "cls":1,
+              "prodCtx":
+              {
+                "lineId":"60"
+              }
+            },
+            {
+              "name":"Bus 65",
+              "nameS":"65",
+              "icoX":0,
+              "cls":1,
+              "prodCtx":
+              {
+                "lineId":"65"
+              }
+            },
+            {
+              "name":"Bus 9221",
+              "nameS":"9221",
+              "icoX":0,
+              "cls":1,
+              "prodCtx":
+              {
+                "lineId":"9221"
+              }
+            },
+            {
+              "name":"Bus 9223",
+              "nameS":"9223",
+              "icoX":0,
+              "cls":1,
+              "prodCtx":
+              {
+                "lineId":"9223"
+              }
+            },
+            {
+              "name":"Bus 9226",
+              "nameS":"9226",
+              "icoX":0,
+              "cls":1,
+              "prodCtx":
+              {
+                "lineId":"9226"
+              }
+            },
+            {
+              "name":"Bus N8",
+              "nameS":"N8",
+              "icoX":0,
+              "cls":1,
+              "prodCtx":
+              {
+                "lineId":"N8"
+              }
+            },
+            {
+              "name":"Bus N9",
+              "nameS":"N9",
+              "icoX":0,
+              "cls":1,
+              "prodCtx":
+              {
+                "lineId":"N9"
+              }
+            },
+            {
+              "name":"Bus N10",
+              "nameS":"N10",
+              "icoX":0,
+              "cls":1,
+              "prodCtx":
+              {
+                "lineId":"N10"
+              }
+            },
+            {
+              "name":"Bus N11",
+              "nameS":"N11",
+              "icoX":0,
+              "cls":1,
+              "prodCtx":
+              {
+                "lineId":"N11"
+              }
+            },
+            {
+              "name":"Bus N12",
+              "nameS":"N12",
+              "icoX":0,
+              "cls":1,
+              "prodCtx":
+              {
+                "lineId":"N12"
+              }
+            },
+            {
+              "name":"Bus N14",
+              "nameS":"N14",
+              "icoX":0,
+              "cls":1,
+              "prodCtx":
+              {
+                "lineId":"N14"
+              }
+            },
+            {
+              "name":"Bus N15",
+              "nameS":"N15",
+              "icoX":0,
+              "cls":1,
+              "prodCtx":
+              {
+                "lineId":"N15"
+              }
+            },
+            {
+              "name":"Bus N16",
+              "nameS":"N16",
+              "icoX":0,
+              "cls":1,
+              "prodCtx":
+              {
+                "lineId":"N16"
+              }
+            },
+            {
+              "name":"Bus N18",
+              "nameS":"N18",
+              "icoX":0,
+              "cls":1,
+              "prodCtx":
+              {
+                "lineId":"N18"
+              }
+            },
+            {
+              "name":"Bus N19",
+              "nameS":"N19",
+              "icoX":0,
+              "cls":1,
+              "prodCtx":
+              {
+                "lineId":"N19"
+              }
+            },
+            {
+              "name":"Bus S2",
+              "nameS":"S2",
+              "icoX":0,
+              "cls":1,
+              "prodCtx":
+              {
+                "lineId":"S2"
+              }
+            },
+            {
+              "name":"Bus S6",
+              "nameS":"S6",
+              "icoX":0,
+              "cls":1,
+              "prodCtx":
+              {
+                "lineId":"S6"
+              }
+            },
+            {
+              "name":"Bus X10",
+              "nameS":"X10",
+              "icoX":0,
+              "cls":1,
+              "prodCtx":
+              {
+                "lineId":"X10"
+              }
+            }
+          ],
+          "polyL":
+          [
+
+          ],
+          "layerL":
+          [
+            {
+              "id":"standard",
+              "name":"standard",
+              "index":0,
+              "annoCnt":0
+            }
+          ],
+          "crdSysL":
+          [
+            {
+              "id":"standard",
+              "index":0,
+              "type":"WGS84",
+              "dim":2
+            }
+          ],
+          "opL":
+          [
+
+          ],
+          "remL":
+          [
+
+          ],
+          "icoL":
+          [
+            {
+              "res":"prod_bus_t",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255,
+                "a":255
+              },
+              "bg":
+              {
+                "r":169,
+                "g":85,
+                "b":153,
+                "a":255
+              }
+            },
+            {
+              "res":"ADR"
+            }
+          ]
+        },
+        "match":
+        {
+          "field":"S",
+          "state":"L",
+          "locL":
+          [
+            {
+              "lid":"A=1@O=Rathausplatz@X=11425263@Y=48762435@U=80@L=000060706@B=1@p=1630927009@",
+              "type":"S",
+              "name":"Rathausplatz",
+              "icoX":0,
+              "extId":"000060706",
+              "state":"F",
+              "crd":
+              {
+                "x":11425263,
+                "y":48762435,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":1,
+              "pRefL":
+              [
+0,
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19,
+20,
+21,
+22,
+23,
+24,
+25,
+26,
+27,
+28,
+29,
+30,
+31,
+32,
+33
+              ],
+              "wt":32767
+            },
+            {
+              "lid":"A=1@O=Ingolstadt, Rathausplatz/Schutterstraße@X=11426557@Y=48762642@U=80@L=000060720@B=1@p=1630927009@",
+              "type":"S",
+              "name":"Ingolstadt, Rathausplatz/Schutterstraße",
+              "icoX":0,
+              "extId":"000060720",
+              "state":"F",
+              "crd":
+              {
+                "x":11426557,
+                "y":48762642,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":1,
+              "pRefL":
+              [
+0,
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19,
+20,
+21,
+22,
+23,
+24,
+25,
+26,
+27,
+28,
+29,
+30,
+31,
+32,
+33
+              ],
+              "wt":32767
+            },
+            {
+              "lid":"A=2@O=Lenting, Rathausplatz@X=11456473@Y=48809997@U=103@b=990005254@B=1@p=1607068022@",
+              "type":"A",
+              "name":"Lenting, Rathausplatz",
+              "icoX":1,
+              "state":"M",
+              "crd":
+              {
+                "x":11456473,
+                "y":48809997,
+                "layerX":0,
+                "crdSysX":0
+              }
+            },
+            {
+              "lid":"A=2@O=Titting, Rathausplatz@X=11207679@Y=48997710@U=103@b=990008549@B=1@p=1607068022@",
+              "type":"A",
+              "name":"Titting, Rathausplatz",
+              "icoX":1,
+              "state":"M",
+              "crd":
+              {
+                "x":11207679,
+                "y":48997710,
+                "layerX":0,
+                "crdSysX":0
+              }
+            },
+            {
+              "lid":"A=2@O=Ingolstadt, Rathausplatz@X=11425191@Y=48762633@U=103@b=990004030@B=1@p=1607068022@",
+              "type":"A",
+              "name":"Ingolstadt, Rathausplatz",
+              "icoX":1,
+              "state":"M",
+              "crd":
+              {
+                "x":11425191,
+                "y":48762633,
+                "layerX":0,
+                "crdSysX":0
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

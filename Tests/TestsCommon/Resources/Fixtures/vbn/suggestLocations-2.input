@@ -1,0 +1,1092 @@
+{
+  "ver":"1.18",
+  "lang":"deu",
+  "id":"ciwuxma6kuwgw28g",
+  "err":"OK",
+  "svcResL":
+  [
+    {
+      "meth":"LocMatch",
+      "err":"OK",
+      "res":
+      {
+        "common":
+        {
+          "locL":
+          [
+
+          ],
+          "prodL":
+          [
+            {
+              "name":"ICE",
+              "nameS":"ICE",
+              "icoX":0,
+              "cls":1
+            },
+            {
+              "name":"IC",
+              "nameS":"IC",
+              "icoX":1,
+              "cls":2
+            },
+            {
+              "name":"NJ",
+              "nameS":"NJ",
+              "icoX":1,
+              "cls":2
+            },
+            {
+              "name":"DPF",
+              "nameS":"DPF",
+              "icoX":2,
+              "cls":4,
+              "prodCtx":
+              {
+                "lineId":"ASNX___DPF"
+              }
+            },
+            {
+              "name":"UEX",
+              "nameS":"DPF",
+              "icoX":2,
+              "cls":4,
+              "prodCtx":
+              {
+                "lineId":"NYUEX__UEX"
+              }
+            },
+            {
+              "name":"RB80",
+              "nameS":"RB80",
+              "icoX":3,
+              "cls":8,
+              "prodCtx":
+              {
+                "lineId":"8002A3_RB80"
+              }
+            },
+            {
+              "name":"RB82",
+              "nameS":"RB82",
+              "icoX":3,
+              "cls":8,
+              "prodCtx":
+              {
+                "lineId":"de:VBN:RB82:"
+              }
+            },
+            {
+              "name":"RB83",
+              "nameS":"RB83",
+              "icoX":3,
+              "cls":8,
+              "prodCtx":
+              {
+                "lineId":"N4_____RB83"
+              }
+            },
+            {
+              "name":"RB85",
+              "nameS":"RB85",
+              "icoX":3,
+              "cls":8,
+              "prodCtx":
+              {
+                "lineId":"N2_____RB85"
+              }
+            },
+            {
+              "name":"RB86",
+              "nameS":"RB86",
+              "icoX":3,
+              "cls":8,
+              "prodCtx":
+              {
+                "lineId":"8002A3_RB86"
+              }
+            },
+            {
+              "name":"Bus 11",
+              "nameS":"11",
+              "icoX":4,
+              "cls":32,
+              "prodCtx":
+              {
+                "lineId":"de:VBN-VSN:11:"
+              }
+            },
+            {
+              "name":"Bus 12",
+              "nameS":"12",
+              "icoX":4,
+              "cls":32,
+              "prodCtx":
+              {
+                "lineId":"de:VBN-VSN:12:"
+              }
+            },
+            {
+              "name":"Bus 21",
+              "nameS":"21",
+              "icoX":4,
+              "cls":32,
+              "prodCtx":
+              {
+                "lineId":"de:VBN-VSN:21:"
+              }
+            },
+            {
+              "name":"Bus 22",
+              "nameS":"22",
+              "icoX":4,
+              "cls":32,
+              "prodCtx":
+              {
+                "lineId":"de:VBN-VSN:22:"
+              }
+            },
+            {
+              "name":"Bus 23",
+              "nameS":"23",
+              "icoX":4,
+              "cls":32,
+              "prodCtx":
+              {
+                "lineId":"de:VBN-VSN:23:"
+              }
+            },
+            {
+              "name":"Bus 31",
+              "nameS":"31",
+              "icoX":4,
+              "cls":32,
+              "prodCtx":
+              {
+                "lineId":"de:VBN-VSN:31:"
+              }
+            },
+            {
+              "name":"Bus 32",
+              "nameS":"32",
+              "icoX":4,
+              "cls":32,
+              "prodCtx":
+              {
+                "lineId":"de:VBN-VSN:32:"
+              }
+            },
+            {
+              "name":"Bus 34",
+              "nameS":"34",
+              "icoX":4,
+              "cls":32,
+              "prodCtx":
+              {
+                "lineId":"de:VBN-VSN:34:"
+              }
+            },
+            {
+              "name":"Bus 41",
+              "nameS":"41",
+              "icoX":4,
+              "cls":32,
+              "prodCtx":
+              {
+                "lineId":"de:VBN-VSN:41:"
+              }
+            },
+            {
+              "name":"Bus 42",
+              "nameS":"42",
+              "icoX":4,
+              "cls":32,
+              "prodCtx":
+              {
+                "lineId":"de:VBN-VSN:42:"
+              }
+            },
+            {
+              "name":"Bus 50",
+              "nameS":"50",
+              "icoX":4,
+              "cls":32,
+              "prodCtx":
+              {
+                "lineId":"de:VBN-VSN:50:"
+              }
+            },
+            {
+              "name":"Bus 61",
+              "nameS":"61",
+              "icoX":4,
+              "cls":32,
+              "prodCtx":
+              {
+                "lineId":"de:VBN-VSN:61:"
+              }
+            },
+            {
+              "name":"Bus 62",
+              "nameS":"62",
+              "icoX":4,
+              "cls":32,
+              "prodCtx":
+              {
+                "lineId":"de:VBN-VSN:62:"
+              }
+            },
+            {
+              "name":"Bus 71",
+              "nameS":"71",
+              "icoX":4,
+              "cls":32,
+              "prodCtx":
+              {
+                "lineId":"de:VBN-VSN:71:"
+              }
+            },
+            {
+              "name":"Bus 72",
+              "nameS":"72",
+              "icoX":4,
+              "cls":32,
+              "prodCtx":
+              {
+                "lineId":"de:VBN-VSN:72:"
+              }
+            },
+            {
+              "name":"Bus 73",
+              "nameS":"73",
+              "icoX":4,
+              "cls":32,
+              "prodCtx":
+              {
+                "lineId":"de:VBN-VSN:73:"
+              }
+            },
+            {
+              "name":"Bus 80",
+              "nameS":"80",
+              "icoX":4,
+              "cls":32,
+              "prodCtx":
+              {
+                "lineId":"de:VBN-VSN:80:"
+              }
+            },
+            {
+              "name":"Bus 91",
+              "nameS":"91",
+              "icoX":4,
+              "cls":32,
+              "prodCtx":
+              {
+                "lineId":"de:VBN-VSN:91:"
+              }
+            },
+            {
+              "name":"Bus 110",
+              "nameS":"110",
+              "icoX":4,
+              "cls":32,
+              "prodCtx":
+              {
+                "lineId":"de:VBN-VSN:110:"
+              }
+            },
+            {
+              "name":"Bus 120",
+              "nameS":"120",
+              "icoX":4,
+              "cls":32,
+              "prodCtx":
+              {
+                "lineId":"de:VBN-VSN:120:"
+              }
+            },
+            {
+              "name":"Bus 130",
+              "nameS":"130",
+              "icoX":4,
+              "cls":32,
+              "prodCtx":
+              {
+                "lineId":"de:VBN-VSN:130:"
+              }
+            },
+            {
+              "name":"Bus 131",
+              "nameS":"131",
+              "icoX":4,
+              "cls":32,
+              "prodCtx":
+              {
+                "lineId":"de:VBN-VSN:131:"
+              }
+            },
+            {
+              "name":"Bus 140",
+              "nameS":"140",
+              "icoX":4,
+              "cls":32,
+              "prodCtx":
+              {
+                "lineId":"de:VBN-VSN:140:"
+              }
+            },
+            {
+              "name":"Bus 150",
+              "nameS":"150",
+              "icoX":4,
+              "cls":32,
+              "prodCtx":
+              {
+                "lineId":"de:VBN-VSN:150:"
+              }
+            },
+            {
+              "name":"Bus 154",
+              "nameS":"154",
+              "icoX":4,
+              "cls":32,
+              "prodCtx":
+              {
+                "lineId":"de:VBN-VSN:154:"
+              }
+            },
+            {
+              "name":"Bus 155",
+              "nameS":"155",
+              "icoX":4,
+              "cls":32,
+              "prodCtx":
+              {
+                "lineId":"de:VBN-VSN:155:"
+              }
+            },
+            {
+              "name":"Bus 160",
+              "nameS":"160",
+              "icoX":4,
+              "cls":32,
+              "prodCtx":
+              {
+                "lineId":"de:VBN-VSN:160:"
+              }
+            },
+            {
+              "name":"Bus 170",
+              "nameS":"170",
+              "icoX":4,
+              "cls":32,
+              "prodCtx":
+              {
+                "lineId":"de:VBN-VSN:170:"
+              }
+            },
+            {
+              "name":"Bus 180",
+              "nameS":"180",
+              "icoX":4,
+              "cls":32,
+              "prodCtx":
+              {
+                "lineId":"de:VBN-VSN:180:"
+              }
+            },
+            {
+              "name":"Bus 185",
+              "nameS":"185",
+              "icoX":4,
+              "cls":32,
+              "prodCtx":
+              {
+                "lineId":"de:VBN-VSN:185:"
+              }
+            },
+            {
+              "name":"Bus 210",
+              "nameS":"210",
+              "icoX":4,
+              "cls":32,
+              "prodCtx":
+              {
+                "lineId":"de:VBN-VSN:210:"
+              }
+            },
+            {
+              "name":"Bus 220",
+              "nameS":"220",
+              "icoX":4,
+              "cls":32,
+              "prodCtx":
+              {
+                "lineId":"de:VBN-VSN:220:"
+              }
+            },
+            {
+              "name":"Bus E11",
+              "nameS":"E11",
+              "icoX":4,
+              "cls":32,
+              "prodCtx":
+              {
+                "lineId":"de:VBN-VSN:E11:"
+              }
+            },
+            {
+              "name":"Bus E31",
+              "nameS":"E31",
+              "icoX":4,
+              "cls":32,
+              "prodCtx":
+              {
+                "lineId":"de:VBN-VSN:E31:"
+              }
+            },
+            {
+              "name":"Bus E32",
+              "nameS":"E32",
+              "icoX":4,
+              "cls":32,
+              "prodCtx":
+              {
+                "lineId":"de:VBN-VSN:E32:"
+              }
+            },
+            {
+              "name":"Bus E34",
+              "nameS":"E34",
+              "icoX":4,
+              "cls":32,
+              "prodCtx":
+              {
+                "lineId":"de:VBN-VSN:E34:"
+              }
+            },
+            {
+              "name":"Bus E41",
+              "nameS":"E41",
+              "icoX":4,
+              "cls":32,
+              "prodCtx":
+              {
+                "lineId":"de:VBN-VSN:E41:"
+              }
+            },
+            {
+              "name":"Bus E61",
+              "nameS":"E61",
+              "icoX":4,
+              "cls":32,
+              "prodCtx":
+              {
+                "lineId":"de:VBN-VSN:E61:"
+              }
+            },
+            {
+              "name":"Bus E62",
+              "nameS":"E62",
+              "icoX":4,
+              "cls":32,
+              "prodCtx":
+              {
+                "lineId":"de:VBN-VSN:E62:"
+              }
+            },
+            {
+              "name":"Bus E71",
+              "nameS":"E71",
+              "icoX":4,
+              "cls":32,
+              "prodCtx":
+              {
+                "lineId":"de:VBN-VSN:E71:"
+              }
+            },
+            {
+              "name":"Bus E80",
+              "nameS":"E80",
+              "icoX":4,
+              "cls":32,
+              "prodCtx":
+              {
+                "lineId":"de:VBN-VSN:E80:"
+              }
+            },
+            {
+              "name":"Bus E91",
+              "nameS":"E91",
+              "icoX":4,
+              "cls":32,
+              "prodCtx":
+              {
+                "lineId":"de:VBN-VSN:E91:"
+              }
+            },
+            {
+              "name":"Bus E92",
+              "nameS":"E92",
+              "icoX":4,
+              "cls":32,
+              "prodCtx":
+              {
+                "lineId":"de:VBN-VSN:E92:"
+              }
+            },
+            {
+              "name":"Bus E",
+              "nameS":"E",
+              "icoX":4,
+              "cls":32,
+              "prodCtx":
+              {
+                "lineId":"de:VBN-VSN:E:"
+              }
+            },
+            {
+              "name":"Bus N1",
+              "nameS":"N1",
+              "icoX":4,
+              "cls":32,
+              "prodCtx":
+              {
+                "lineId":"de:VBN-VSN:N1:"
+              }
+            },
+            {
+              "name":"AST 9115",
+              "nameS":"AST",
+              "icoX":5,
+              "cls":512,
+              "prodCtx":
+              {
+                "lineId":"de:VBN-VSN:9115:"
+              }
+            },
+            {
+              "name":"AST 9120",
+              "nameS":"AST",
+              "icoX":5,
+              "cls":512,
+              "prodCtx":
+              {
+                "lineId":"de:VBN-VSN:9120:"
+              }
+            },
+            {
+              "name":"AST 9130",
+              "nameS":"AST",
+              "icoX":5,
+              "cls":512,
+              "prodCtx":
+              {
+                "lineId":"de:VBN-VSN:9130:"
+              }
+            },
+            {
+              "name":"AST 9140",
+              "nameS":"AST",
+              "icoX":5,
+              "cls":512,
+              "prodCtx":
+              {
+                "lineId":"de:VBN-VSN:9140:"
+              }
+            },
+            {
+              "name":"AST 9154",
+              "nameS":"AST",
+              "icoX":5,
+              "cls":512,
+              "prodCtx":
+              {
+                "lineId":"de:VBN-VSN:9154:"
+              }
+            },
+            {
+              "name":"Bus E12",
+              "nameS":"E12",
+              "icoX":4,
+              "cls":32,
+              "prodCtx":
+              {
+                "lineId":"de:VBN-VSN:E12:"
+              }
+            },
+            {
+              "name":"RB87",
+              "nameS":"RB87",
+              "icoX":3,
+              "cls":8,
+              "prodCtx":
+              {
+                "lineId":"N4_____RB87"
+              }
+            },
+            {
+              "name":"RE1",
+              "nameS":"RE1",
+              "icoX":3,
+              "cls":8,
+              "prodCtx":
+              {
+                "lineId":"8004NT_RE1"
+              }
+            },
+            {
+              "name":"Bus 134",
+              "nameS":"134",
+              "icoX":4,
+              "cls":32,
+              "prodCtx":
+              {
+                "lineId":"de:VBN-VSN:134:"
+              }
+            },
+            {
+              "name":"Bus 141",
+              "nameS":"141",
+              "icoX":4,
+              "cls":32,
+              "prodCtx":
+              {
+                "lineId":"de:VBN-VSN:141:"
+              }
+            }
+          ],
+          "polyL":
+          [
+
+          ],
+          "layerL":
+          [
+            {
+              "id":"standard",
+              "name":"standard",
+              "index":0,
+              "annoCnt":0
+            }
+          ],
+          "crdSysL":
+          [
+            {
+              "id":"standard",
+              "index":0,
+              "type":"WGS84"
+            },
+            {
+              "id":"G?tti_39",
+              "index":1,
+              "type":"WGS84"
+            },
+            {
+              "id":"G?tt_164",
+              "index":1,
+              "type":"WGS84"
+            },
+            {
+              "id":"G?tti_40",
+              "index":1,
+              "type":"WGS84"
+            },
+            {
+              "id":"Friedl_0",
+              "index":1,
+              "type":"WGS84"
+            },
+            {
+              "id":"Friedl_1",
+              "index":1,
+              "type":"WGS84"
+            }
+          ],
+          "opL":
+          [
+
+          ],
+          "remL":
+          [
+
+          ],
+          "icoL":
+          [
+            {
+              "res":"prod_ice",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255
+              },
+              "bg":
+              {
+                "r":150,
+                "g":25,
+                "b":29
+              }
+            },
+            {
+              "res":"prod_ic",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255
+              },
+              "bg":
+              {
+                "r":239,
+                "g":119,
+                "b":28
+              }
+            },
+            {
+              "res":"prod_ir",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255
+              },
+              "bg":
+              {
+                "r":62,
+                "g":134,
+                "b":144
+              }
+            },
+            {
+              "res":"prod_reg",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255
+              },
+              "bg":
+              {
+                "r":82,
+                "g":38,
+                "b":125
+              }
+            },
+            {
+              "res":"prod_bus",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255
+              },
+              "bg":
+              {
+                "r":0,
+                "g":92,
+                "b":169
+              }
+            },
+            {
+              "res":"prod_taxi",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255
+              },
+              "bg":
+              {
+                "r":255,
+                "g":204,
+                "b":20
+              }
+            },
+            {
+              "res":"STA"
+            }
+          ]
+        },
+        "match":
+        {
+          "field":"S",
+          "state":"L",
+          "locL":
+          [
+            {
+              "lid":"A=1@O=Göttingen Bahnhof/ZOB@X=9926374@Y=51535436@U=80@L=9033853@B=1@p=1630786923@",
+              "type":"S",
+              "name":"Göttingen Bahnhof/ZOB",
+              "icoX":0,
+              "extId":"9033853",
+              "state":"F",
+              "crd":
+              {
+                "x":9926374,
+                "y":51535436,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "crdAltL":
+              [
+                {
+                  "x":99999999,
+                  "y":99999999,
+                  "layerX":0,
+                  "crdSysX":0
+                },
+                {
+                  "x":99999999,
+                  "y":99999999,
+                  "layerX":0,
+                  "crdSysX":1
+                }
+              ],
+              "meta":true,
+              "pCls":559,
+              "pRefL":
+              [
+0,
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19,
+20,
+21,
+22,
+23,
+24,
+25,
+26,
+27,
+28,
+29,
+30,
+31,
+32,
+33,
+34,
+35,
+36,
+37,
+38,
+39,
+40,
+41,
+42,
+43,
+44,
+45,
+46,
+47,
+48,
+49,
+50,
+51,
+52,
+53,
+54,
+55,
+56,
+57,
+58,
+59
+              ],
+              "wt":26181,
+              "isMainMast":true
+            },
+            {
+              "lid":"A=1@O=Göttingen Landgericht/Bahnhof@X=9929386@Y=51537989@U=80@L=9033982@B=1@p=1630786923@",
+              "type":"S",
+              "name":"Göttingen Landgericht/Bahnhof",
+              "icoX":4,
+              "extId":"9033982",
+              "state":"F",
+              "crd":
+              {
+                "x":9929386,
+                "y":51537989,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "crdAltL":
+              [
+                {
+                  "x":99999999,
+                  "y":99999999,
+                  "layerX":0,
+                  "crdSysX":0
+                },
+                {
+                  "x":99999999,
+                  "y":99999999,
+                  "layerX":0,
+                  "crdSysX":2
+                }
+              ],
+              "meta":true,
+              "pCls":32,
+              "pRefL":
+              [
+10,
+11,
+18,
+19,
+23,
+24,
+25,
+28,
+29,
+38,
+40,
+41,
+42,
+60,
+46,
+49,
+53,
+54
+              ],
+              "wt":1292,
+              "isMainMast":true
+            },
+            {
+              "lid":"A=1@O=Göttingen Bahnhofsallee@X=9924541@Y=51537055@U=80@L=9033854@B=1@p=1630786923@",
+              "type":"S",
+              "name":"Göttingen Bahnhofsallee",
+              "icoX":6,
+              "extId":"9033854",
+              "state":"F",
+              "crd":
+              {
+                "x":9924541,
+                "y":51537055,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "crdAltL":
+              [
+                {
+                  "x":99999999,
+                  "y":99999999,
+                  "layerX":0,
+                  "crdSysX":0
+                },
+                {
+                  "x":99999999,
+                  "y":99999999,
+                  "layerX":0,
+                  "crdSysX":3
+                }
+              ],
+              "meta":true,
+              "pCls":0,
+              "isMainMast":true
+            },
+            {
+              "lid":"A=1@O=Friedland(Kr Göttingen) Bahnhof/Ostseite@X=9915452@Y=51421399@U=80@L=9028563@B=1@p=1630786923@",
+              "type":"S",
+              "name":"Friedland(Kr Göttingen) Bahnhof/Ostseite",
+              "icoX":3,
+              "extId":"9028563",
+              "state":"F",
+              "crd":
+              {
+                "x":9915452,
+                "y":51421399,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "crdAltL":
+              [
+                {
+                  "x":99999999,
+                  "y":99999999,
+                  "layerX":0,
+                  "crdSysX":0
+                },
+                {
+                  "x":99999999,
+                  "y":99999999,
+                  "layerX":0,
+                  "crdSysX":4
+                }
+              ],
+              "meta":true,
+              "pCls":40,
+              "pRefL":
+              [
+7,
+61,
+62,
+63,
+64
+              ],
+              "wt":5356,
+              "isMainMast":true
+            },
+            {
+              "lid":"A=1@O=Friedland(Kr Göttingen) Bahnhof/Westseite@X=9914715@Y=51421139@U=80@L=9028564@B=1@p=1630786923@",
+              "type":"S",
+              "name":"Friedland(Kr Göttingen) Bahnhof/Westseite",
+              "icoX":3,
+              "extId":"9028564",
+              "state":"F",
+              "crd":
+              {
+                "x":9914715,
+                "y":51421139,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "crdAltL":
+              [
+                {
+                  "x":99999999,
+                  "y":99999999,
+                  "layerX":0,
+                  "crdSysX":0
+                },
+                {
+                  "x":99999999,
+                  "y":99999999,
+                  "layerX":0,
+                  "crdSysX":5
+                }
+              ],
+              "meta":true,
+              "pCls":40,
+              "pRefL":
+              [
+7,
+61,
+62,
+30,
+63,
+64
+              ],
+              "wt":5589,
+              "isMainMast":true
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

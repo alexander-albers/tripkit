@@ -1,0 +1,145 @@
+{
+  "ver":"1.16",
+  "lang":"deu",
+  "id":"zhiixmx44igzygcs",
+  "svcResL":
+  [
+    {
+      "meth":"LocMatch",
+      "err":"OK",
+      "res":
+      {
+        "common":
+        {
+          "locL":
+          [
+
+          ],
+          "prodL":
+          [
+
+          ],
+          "polyL":
+          [
+
+          ],
+          "layerL":
+          [
+            {
+              "id":"standard",
+              "name":"standard",
+              "index":0,
+              "annoCnt":0
+            }
+          ],
+          "crdSysL":
+          [
+            {
+              "id":"standard",
+              "index":0,
+              "type":"WGS84",
+              "dim":2
+            }
+          ],
+          "opL":
+          [
+
+          ],
+          "remL":
+          [
+
+          ],
+          "icoL":
+          [
+            {
+              "res":"ADR"
+            }
+          ]
+        },
+        "match":
+        {
+          "field":"S",
+          "state":"L",
+          "locL":
+          [
+            {
+              "lid":"A=2@O=10178 Berlin-Mitte, Sophienstr. 24@X=13399878@Y=52526039@U=103@L=770009020@B=1@p=1592347662@",
+              "type":"A",
+              "name":"10178 Berlin-Mitte, Sophienstr. 24",
+              "icoX":0,
+              "extId":"770009020",
+              "state":"F",
+              "crd":
+              {
+                "x":13399878,
+                "y":52526039,
+                "layerX":0,
+                "crdSysX":0
+              }
+            },
+            {
+              "lid":"A=2@O=10178 Berlin-Mitte, Linienstr. 23@X=13412220@Y=52527504@U=103@L=770008382@B=1@p=1592347662@",
+              "type":"A",
+              "name":"10178 Berlin-Mitte, Linienstr. 23",
+              "icoX":0,
+              "extId":"770008382",
+              "state":"F",
+              "crd":
+              {
+                "x":13412220,
+                "y":52527504,
+                "layerX":0,
+                "crdSysX":0
+              }
+            },
+            {
+              "lid":"A=2@O=10178 Berlin-Mitte, Dircksenstr. 37@X=13408103@Y=52523207@U=103@L=770002212@B=1@p=1592347662@",
+              "type":"A",
+              "name":"10178 Berlin-Mitte, Dircksenstr. 37",
+              "icoX":0,
+              "extId":"770002212",
+              "state":"F",
+              "crd":
+              {
+                "x":13408103,
+                "y":52523207,
+                "layerX":0,
+                "crdSysX":0
+              }
+            },
+            {
+              "lid":"A=2@O=10178 Berlin-Mitte, Gertraudenstr. 20@X=13405523@Y=52513804@U=103@L=770000468@B=1@p=1592347662@",
+              "type":"A",
+              "name":"10178 Berlin-Mitte, Gertraudenstr. 20",
+              "icoX":0,
+              "extId":"770000468",
+              "state":"F",
+              "crd":
+              {
+                "x":13405523,
+                "y":52513804,
+                "layerX":0,
+                "crdSysX":0
+              }
+            },
+            {
+              "lid":"A=2@O=10178 Berlin-Mitte, Grosse Präsidentenstr. 10@X=13401667@Y=52523639@U=103@L=770006998@B=1@p=1592347662@",
+              "type":"A",
+              "name":"10178 Berlin-Mitte, Grosse Präsidentenstr. 10",
+              "icoX":0,
+              "extId":"770006998",
+              "state":"F",
+              "crd":
+              {
+                "x":13401667,
+                "y":52523639,
+                "layerX":0,
+                "crdSysX":0
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

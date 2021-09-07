@@ -1,0 +1,145 @@
+{
+  "ver":"1.16",
+  "lang":"deu",
+  "id":"aewg9iuu46qdyi8g",
+  "svcResL":
+  [
+    {
+      "meth":"LocMatch",
+      "err":"OK",
+      "res":
+      {
+        "common":
+        {
+          "locL":
+          [
+
+          ],
+          "prodL":
+          [
+
+          ],
+          "polyL":
+          [
+
+          ],
+          "layerL":
+          [
+            {
+              "id":"standard",
+              "name":"standard",
+              "index":0,
+              "annoCnt":0
+            }
+          ],
+          "crdSysL":
+          [
+            {
+              "id":"standard",
+              "index":0,
+              "type":"WGS84",
+              "dim":3
+            }
+          ],
+          "opL":
+          [
+
+          ],
+          "remL":
+          [
+
+          ],
+          "icoL":
+          [
+            {
+              "res":"ADR"
+            }
+          ]
+        },
+        "match":
+        {
+          "field":"S",
+          "state":"L",
+          "locL":
+          [
+            {
+              "lid":"A=2@O=Osnabrück - Innenstadt, Eisenbahnstraße 1@H=1@X=8055458@Y=52275204@U=99@L=958029382@B=1@p=1617880347@",
+              "type":"A",
+              "name":"Osnabrück - Innenstadt, Eisenbahnstraße 1",
+              "icoX":0,
+              "extId":"958029382",
+              "state":"F",
+              "crd":
+              {
+                "x":8055458,
+                "y":52275204,
+                "layerX":0,
+                "crdSysX":0
+              }
+            },
+            {
+              "lid":"A=2@O=Osnabrück - Eversburg, Bahnstraße 1@H=1@X=7999492@Y=52306154@U=99@L=958037589@B=1@p=1617880347@",
+              "type":"A",
+              "name":"Osnabrück - Eversburg, Bahnstraße 1",
+              "icoX":0,
+              "extId":"958037589",
+              "state":"F",
+              "crd":
+              {
+                "x":7999492,
+                "y":52306154,
+                "layerX":0,
+                "crdSysX":0
+              }
+            },
+            {
+              "lid":"A=2@O=Osnabrück - Wüste, Jahnstraße 1@H=1@X=8036977@Y=52271150@U=99@L=958105124@B=1@p=1617880347@",
+              "type":"A",
+              "name":"Osnabrück - Wüste, Jahnstraße 1",
+              "icoX":0,
+              "extId":"958105124",
+              "state":"F",
+              "crd":
+              {
+                "x":8036977,
+                "y":52271150,
+                "layerX":0,
+                "crdSysX":0
+              }
+            },
+            {
+              "lid":"A=2@O=Osnabrück - Gartlage, Luisenstraße 6@H=6@X=8055189@Y=52277559@U=99@L=958139391@B=1@p=1617880347@",
+              "type":"A",
+              "name":"Osnabrück - Gartlage, Luisenstraße 6",
+              "icoX":0,
+              "extId":"958139391",
+              "state":"F",
+              "crd":
+              {
+                "x":8055189,
+                "y":52277559,
+                "layerX":0,
+                "crdSysX":0
+              }
+            },
+            {
+              "lid":"A=2@O=Osnabrück - Innenstadt, Krahnstraße 1@H=1@X=8041157@Y=52277091@U=99@L=958126599@B=1@p=1617880347@",
+              "type":"A",
+              "name":"Osnabrück - Innenstadt, Krahnstraße 1",
+              "icoX":0,
+              "extId":"958126599",
+              "state":"F",
+              "crd":
+              {
+                "x":8041157,
+                "y":52277091,
+                "layerX":0,
+                "crdSysX":0
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

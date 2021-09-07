@@ -1,0 +1,233 @@
+{
+  "ver":"1.10",
+  "lang":"deu",
+  "id":"9mmq8kukmq2kww8x",
+  "svcResL":
+  [
+    {
+      "meth":"LocMatch",
+      "err":"OK",
+      "res":
+      {
+        "common":
+        {
+          "locL":
+          [
+
+          ],
+          "prodL":
+          [
+            {
+              "name":"Bus 111",
+              "icoX":0,
+              "cls":32,
+              "prodCtx":
+              {
+
+              }
+            },
+            {
+              "name":"Bus 602",
+              "icoX":0,
+              "cls":32,
+              "prodCtx":
+              {
+
+              }
+            },
+            {
+              "name":"U4",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+
+              }
+            },
+            {
+              "name":"IC",
+              "icoX":2,
+              "cls":2
+            },
+            {
+              "name":"Bus 256",
+              "icoX":0,
+              "cls":32,
+              "prodCtx":
+              {
+
+              }
+            }
+          ],
+          "opL":
+          [
+
+          ],
+          "remL":
+          [
+
+          ],
+          "icoL":
+          [
+            {
+              "res":"PROD_BUS",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255,
+                "a":255
+              },
+              "bg":
+              {
+                "r":255,
+                "g":120,
+                "b":0,
+                "a":255
+              }
+            },
+            {
+              "res":"PROD_SUB",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255,
+                "a":255
+              },
+              "bg":
+              {
+                "r":8,
+                "g":59,
+                "b":207,
+                "a":255
+              }
+            },
+            {
+              "res":"PROD_IC",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255,
+                "a":255
+              },
+              "bg":
+              {
+                "r":29,
+                "g":105,
+                "b":159,
+                "a":255
+              }
+            }
+          ]
+        },
+        "match":
+        {
+          "field":"S",
+          "state":"L",
+          "locL":
+          [
+            {
+              "lid":"A=1@O=U  Überseequartier@X=9995663@Y=53541541@U=100@L=4390026@B=1@p=1630782510@",
+              "type":"S",
+              "name":"U  Überseequartier",
+              "icoX":0,
+              "extId":"4390026",
+              "state":"F",
+              "crd":
+              {
+                "x":9995663,
+                "y":53541541
+              },
+              "pCls":160,
+              "pRefL":
+              [
+0,
+1,
+2
+              ]
+            },
+            {
+              "lid":"A=1@O=Hamburg Überseequartier@X=9998477@Y=53540417@U=100@L=702193@B=1@p=1630782510@",
+              "type":"S",
+              "name":"Hamburg Überseequartier",
+              "icoX":0,
+              "extId":"702193",
+              "state":"F",
+              "crd":
+              {
+                "x":9998477,
+                "y":53540417
+              },
+              "pCls":160,
+              "pRefL":
+              [
+0,
+1,
+2
+              ],
+              "wt":2480
+            },
+            {
+              "lid":"A=1@O=Übersee Bahnhof@X=12486790@Y=47821867@U=100@L=4141234@B=1@p=1630782510@",
+              "type":"S",
+              "name":"Übersee Bahnhof",
+              "icoX":2,
+              "extId":"4141234",
+              "state":"F",
+              "crd":
+              {
+                "x":12486790,
+                "y":47821867
+              },
+              "pCls":2,
+              "pRefL":
+              [
+3
+              ]
+            },
+            {
+              "lid":"A=1@O=Übersee@X=12487338@Y=47822047@U=100@L=8005940@B=1@p=1630782510@",
+              "type":"S",
+              "name":"Übersee",
+              "icoX":2,
+              "extId":"8005940",
+              "state":"F",
+              "crd":
+              {
+                "x":12487338,
+                "y":47822047
+              },
+              "pCls":2,
+              "pRefL":
+              [
+3
+              ],
+              "wt":1175
+            },
+            {
+              "lid":"A=1@O=Hamburg Überseezentrum@X=10019467@Y=53530511@U=100@L=701471@B=1@p=1630782510@",
+              "type":"S",
+              "name":"Hamburg Überseezentrum",
+              "icoX":0,
+              "extId":"701471",
+              "state":"F",
+              "crd":
+              {
+                "x":10019467,
+                "y":53530511
+              },
+              "pCls":32,
+              "pRefL":
+              [
+4
+              ],
+              "wt":1480
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

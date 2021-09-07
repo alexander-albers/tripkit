@@ -1,0 +1,968 @@
+{
+  "ver":"1.16",
+  "ext":"BVG.1",
+  "lang":"deu",
+  "id":"z4mk3gxmkegzwick",
+  "svcResL":
+  [
+    {
+      "meth":"LocMatch",
+      "err":"OK",
+      "res":
+      {
+        "common":
+        {
+          "locL":
+          [
+
+          ],
+          "prodL":
+          [
+            {
+              "name":"S3",
+              "nameS":"S3",
+              "icoX":0,
+              "cls":1,
+              "prodCtx":
+              {
+                "lineId":"S3"
+              }
+            },
+            {
+              "name":"S5",
+              "nameS":"S5",
+              "icoX":0,
+              "cls":1,
+              "prodCtx":
+              {
+                "lineId":"S5"
+              }
+            },
+            {
+              "name":"S7",
+              "nameS":"S7",
+              "icoX":0,
+              "cls":1,
+              "prodCtx":
+              {
+                "lineId":"S7"
+              }
+            },
+            {
+              "name":"S9",
+              "nameS":"S9",
+              "icoX":0,
+              "cls":1,
+              "prodCtx":
+              {
+                "lineId":"S9"
+              }
+            },
+            {
+              "name":"U5",
+              "nameS":"U5",
+              "icoX":1,
+              "cls":2,
+              "prodCtx":
+              {
+                "lineId":"U5"
+              }
+            },
+            {
+              "name":"M5",
+              "nameS":"M5",
+              "icoX":2,
+              "cls":4,
+              "prodCtx":
+              {
+                "lineId":"M5"
+              }
+            },
+            {
+              "name":"M6",
+              "nameS":"M6",
+              "icoX":2,
+              "cls":4,
+              "prodCtx":
+              {
+                "lineId":"M6"
+              }
+            },
+            {
+              "name":"M8",
+              "nameS":"M8",
+              "icoX":2,
+              "cls":4,
+              "prodCtx":
+              {
+                "lineId":"M8"
+              }
+            },
+            {
+              "name":"M10",
+              "nameS":"M10",
+              "icoX":2,
+              "cls":4,
+              "prodCtx":
+              {
+                "lineId":"M10"
+              }
+            },
+            {
+              "name":"120",
+              "nameS":"120",
+              "icoX":3,
+              "cls":8,
+              "prodCtx":
+              {
+                "lineId":"120"
+              }
+            },
+            {
+              "name":"123",
+              "nameS":"123",
+              "icoX":3,
+              "cls":8,
+              "prodCtx":
+              {
+                "lineId":"123"
+              }
+            },
+            {
+              "name":"142",
+              "nameS":"142",
+              "icoX":3,
+              "cls":8,
+              "prodCtx":
+              {
+                "lineId":"142"
+              }
+            },
+            {
+              "name":"147",
+              "nameS":"147",
+              "icoX":3,
+              "cls":8,
+              "prodCtx":
+              {
+                "lineId":"147"
+              }
+            },
+            {
+              "name":"245",
+              "nameS":"245",
+              "icoX":3,
+              "cls":8,
+              "prodCtx":
+              {
+                "lineId":"245"
+              }
+            },
+            {
+              "name":"M41",
+              "nameS":"M41",
+              "icoX":3,
+              "cls":8,
+              "prodCtx":
+              {
+                "lineId":"M41"
+              }
+            },
+            {
+              "name":"M85",
+              "nameS":"M85",
+              "icoX":3,
+              "cls":8,
+              "prodCtx":
+              {
+                "lineId":"M85"
+              }
+            },
+            {
+              "name":"N5",
+              "nameS":"N5",
+              "icoX":3,
+              "cls":8,
+              "prodCtx":
+              {
+                "lineId":"N5"
+              }
+            },
+            {
+              "name":"N20",
+              "nameS":"N20",
+              "icoX":3,
+              "cls":8,
+              "prodCtx":
+              {
+                "lineId":"N20"
+              }
+            },
+            {
+              "name":"N40",
+              "nameS":"N40",
+              "icoX":3,
+              "cls":8,
+              "prodCtx":
+              {
+                "lineId":"N40"
+              }
+            },
+            {
+              "name":"RE1",
+              "nameS":"RE1",
+              "icoX":3,
+              "cls":8,
+              "prodCtx":
+              {
+                "lineId":"RE1"
+              }
+            },
+            {
+              "name":"",
+              "icoX":4,
+              "cls":32
+            },
+            {
+              "name":"FEX",
+              "nameS":"FEX",
+              "icoX":5,
+              "cls":64,
+              "prodCtx":
+              {
+                "lineId":"FEX"
+              }
+            },
+            {
+              "name":"HBX",
+              "nameS":"HBX",
+              "icoX":5,
+              "cls":64,
+              "prodCtx":
+              {
+                "lineId":"HBX"
+              }
+            },
+            {
+              "name":"RB10",
+              "nameS":"RB10",
+              "icoX":5,
+              "cls":64,
+              "prodCtx":
+              {
+                "lineId":"RB10"
+              }
+            },
+            {
+              "name":"RB14",
+              "nameS":"RB14",
+              "icoX":5,
+              "cls":64,
+              "prodCtx":
+              {
+                "lineId":"RB14"
+              }
+            },
+            {
+              "name":"RB21",
+              "nameS":"RB21",
+              "icoX":5,
+              "cls":64,
+              "prodCtx":
+              {
+                "lineId":"RB21"
+              }
+            },
+            {
+              "name":"RB22",
+              "nameS":"RB22",
+              "icoX":5,
+              "cls":64,
+              "prodCtx":
+              {
+                "lineId":"RB22"
+              }
+            },
+            {
+              "name":"RE1",
+              "nameS":"RE1",
+              "icoX":5,
+              "cls":64,
+              "prodCtx":
+              {
+                "lineId":"RE1"
+              }
+            },
+            {
+              "name":"RE2",
+              "nameS":"RE2",
+              "icoX":5,
+              "cls":64,
+              "prodCtx":
+              {
+                "lineId":"RE2"
+              }
+            },
+            {
+              "name":"RE3",
+              "nameS":"RE3",
+              "icoX":5,
+              "cls":64,
+              "prodCtx":
+              {
+                "lineId":"RE3"
+              }
+            },
+            {
+              "name":"RE4",
+              "nameS":"RE4",
+              "icoX":5,
+              "cls":64,
+              "prodCtx":
+              {
+                "lineId":"RE4"
+              }
+            },
+            {
+              "name":"RE5",
+              "nameS":"RE5",
+              "icoX":5,
+              "cls":64,
+              "prodCtx":
+              {
+                "lineId":"RE5"
+              }
+            },
+            {
+              "name":"RE7",
+              "nameS":"RE7",
+              "icoX":5,
+              "cls":64,
+              "prodCtx":
+              {
+                "lineId":"RE7"
+              }
+            },
+            {
+              "name":"S1",
+              "nameS":"S1",
+              "icoX":0,
+              "cls":1,
+              "prodCtx":
+              {
+                "lineId":"S1"
+              }
+            },
+            {
+              "name":"U9",
+              "nameS":"U9",
+              "icoX":1,
+              "cls":2,
+              "prodCtx":
+              {
+                "lineId":"U9"
+              }
+            },
+            {
+              "name":"170",
+              "nameS":"170",
+              "icoX":3,
+              "cls":8,
+              "prodCtx":
+              {
+                "lineId":"170"
+              }
+            },
+            {
+              "name":"186",
+              "nameS":"186",
+              "icoX":3,
+              "cls":8,
+              "prodCtx":
+              {
+                "lineId":"186"
+              }
+            },
+            {
+              "name":"188",
+              "nameS":"188",
+              "icoX":3,
+              "cls":8,
+              "prodCtx":
+              {
+                "lineId":"188"
+              }
+            },
+            {
+              "name":"282",
+              "nameS":"282",
+              "icoX":3,
+              "cls":8,
+              "prodCtx":
+              {
+                "lineId":"282"
+              }
+            },
+            {
+              "name":"283",
+              "nameS":"283",
+              "icoX":3,
+              "cls":8,
+              "prodCtx":
+              {
+                "lineId":"283"
+              }
+            },
+            {
+              "name":"284",
+              "nameS":"284",
+              "icoX":3,
+              "cls":8,
+              "prodCtx":
+              {
+                "lineId":"284"
+              }
+            },
+            {
+              "name":"285",
+              "nameS":"285",
+              "icoX":3,
+              "cls":8,
+              "prodCtx":
+              {
+                "lineId":"285"
+              }
+            },
+            {
+              "name":"380",
+              "nameS":"380",
+              "icoX":3,
+              "cls":8,
+              "prodCtx":
+              {
+                "lineId":"380"
+              }
+            },
+            {
+              "name":"BER1",
+              "nameS":"BER1",
+              "icoX":3,
+              "cls":8,
+              "prodCtx":
+              {
+                "lineId":"BER1"
+              }
+            },
+            {
+              "name":"M48",
+              "nameS":"M48",
+              "icoX":3,
+              "cls":8,
+              "prodCtx":
+              {
+                "lineId":"M48"
+              }
+            },
+            {
+              "name":"M82",
+              "nameS":"M82",
+              "icoX":3,
+              "cls":8,
+              "prodCtx":
+              {
+                "lineId":"M82"
+              }
+            },
+            {
+              "name":"N9",
+              "nameS":"N9",
+              "icoX":3,
+              "cls":8,
+              "prodCtx":
+              {
+                "lineId":"N9"
+              }
+            },
+            {
+              "name":"N88",
+              "nameS":"N88",
+              "icoX":3,
+              "cls":8,
+              "prodCtx":
+              {
+                "lineId":"N88"
+              }
+            },
+            {
+              "name":"S1",
+              "nameS":"S1",
+              "icoX":3,
+              "cls":8,
+              "prodCtx":
+              {
+                "lineId":"S1"
+              }
+            },
+            {
+              "name":"X83",
+              "nameS":"X83",
+              "icoX":3,
+              "cls":8,
+              "prodCtx":
+              {
+                "lineId":"X83"
+              }
+            },
+            {
+              "name":"S75",
+              "nameS":"S75",
+              "icoX":0,
+              "cls":1,
+              "prodCtx":
+              {
+                "lineId":"S75"
+              }
+            },
+            {
+              "name":"U1",
+              "nameS":"U1",
+              "icoX":1,
+              "cls":2,
+              "prodCtx":
+              {
+                "lineId":"U1"
+              }
+            },
+            {
+              "name":"U3",
+              "nameS":"U3",
+              "icoX":1,
+              "cls":2,
+              "prodCtx":
+              {
+                "lineId":"U3"
+              }
+            },
+            {
+              "name":"M13",
+              "nameS":"M13",
+              "icoX":2,
+              "cls":4,
+              "prodCtx":
+              {
+                "lineId":"M13"
+              }
+            },
+            {
+              "name":"300",
+              "nameS":"300",
+              "icoX":3,
+              "cls":8,
+              "prodCtx":
+              {
+                "lineId":"300"
+              }
+            },
+            {
+              "name":"347",
+              "nameS":"347",
+              "icoX":3,
+              "cls":8,
+              "prodCtx":
+              {
+                "lineId":"347"
+              }
+            },
+            {
+              "name":"N1",
+              "nameS":"N1",
+              "icoX":3,
+              "cls":8,
+              "prodCtx":
+              {
+                "lineId":"N1"
+              }
+            }
+          ],
+          "polyL":
+          [
+
+          ],
+          "layerL":
+          [
+            {
+              "id":"standard",
+              "name":"standard",
+              "index":0,
+              "annoCnt":0
+            }
+          ],
+          "crdSysL":
+          [
+            {
+              "id":"standard",
+              "index":0,
+              "type":"WGS84",
+              "dim":2
+            }
+          ],
+          "opL":
+          [
+
+          ],
+          "remL":
+          [
+
+          ],
+          "icoL":
+          [
+            {
+              "res":"prod_comm_t",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255,
+                "a":255
+              },
+              "bg":
+              {
+                "r":55,
+                "g":135,
+                "b":74,
+                "a":255
+              }
+            },
+            {
+              "res":"prod_sub_t",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255,
+                "a":255
+              },
+              "bg":
+              {
+                "r":0,
+                "g":51,
+                "b":153,
+                "a":255
+              }
+            },
+            {
+              "res":"prod_tram_t",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255,
+                "a":255
+              },
+              "bg":
+              {
+                "r":204,
+                "g":0,
+                "b":0,
+                "a":255
+              }
+            },
+            {
+              "res":"prod_bus_t",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255,
+                "a":255
+              },
+              "bg":
+              {
+                "r":153,
+                "g":51,
+                "b":153,
+                "a":255
+              }
+            },
+            {
+              "res":"prod_ic",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255,
+                "a":255
+              },
+              "bg":
+              {
+                "r":125,
+                "g":129,
+                "b":133,
+                "a":255
+              }
+            },
+            {
+              "res":"prod_reg",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255,
+                "a":255
+              },
+              "bg":
+              {
+                "r":226,
+                "g":0,
+                "b":25,
+                "a":255
+              }
+            }
+          ]
+        },
+        "match":
+        {
+          "field":"S",
+          "state":"L",
+          "locL":
+          [
+            {
+              "lid":"A=1@O=S+U Berlin Hauptbahnhof@X=13369072@Y=52525607@U=86@L=900003201@B=1@p=1630578354@",
+              "type":"S",
+              "name":"S+U Berlin Hauptbahnhof",
+              "icoX":0,
+              "extId":"900003201",
+              "state":"F",
+              "crd":
+              {
+                "x":13369072,
+                "y":52525607,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":111,
+              "pRefL":
+              [
+0,
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19,
+20,
+21,
+22,
+23,
+24,
+25,
+26,
+27,
+28,
+29,
+30,
+31,
+32
+              ],
+              "wt":32767
+            },
+            {
+              "lid":"A=1@O=S+U Berlin Hauptbahnhof (tief)@X=13369387@Y=52525041@U=86@L=900003200@B=1@p=1630578354@",
+              "type":"S",
+              "name":"S+U Berlin Hauptbahnhof (tief)",
+              "icoX":0,
+              "extId":"900003200",
+              "state":"F",
+              "crd":
+              {
+                "x":13369387,
+                "y":52525041,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":111,
+              "pRefL":
+              [
+0,
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19,
+20,
+21,
+22,
+23,
+24,
+25,
+26,
+27,
+28,
+29,
+30,
+31,
+32
+              ],
+              "wt":5349
+            },
+            {
+              "lid":"A=1@O=Washingtonplatz/Hauptbahnhof (Berlin)@X=13370708@Y=52523962@U=86@L=900003205@B=1@p=1630578354@",
+              "type":"S",
+              "name":"Washingtonplatz/Hauptbahnhof (Berlin)",
+              "icoX":0,
+              "extId":"900003205",
+              "state":"F",
+              "crd":
+              {
+                "x":13370708,
+                "y":52523962,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":111,
+              "pRefL":
+              [
+0,
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19,
+20,
+21,
+22,
+23,
+24,
+25,
+26,
+27,
+28,
+29,
+30,
+31,
+32
+              ],
+              "wt":41
+            },
+            {
+              "lid":"A=1@O=S+U Rathaus Steglitz (Berlin) [Busbahnhof]@X=13320854@Y=52455887@U=86@L=900062282@B=1@p=1630578354@",
+              "type":"S",
+              "name":"S+U Rathaus Steglitz (Berlin) [Busbahnhof]",
+              "icoX":0,
+              "extId":"900062282",
+              "state":"F",
+              "crd":
+              {
+                "x":13320854,
+                "y":52455887,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":11,
+              "pRefL":
+              [
+33,
+34,
+35,
+36,
+37,
+38,
+39,
+40,
+41,
+42,
+43,
+44,
+45,
+15,
+46,
+47,
+48,
+49
+              ],
+              "wt":753
+            },
+            {
+              "lid":"A=1@O=S+U Warschauer Str. (Berlin)@X=13449157@Y=52505768@U=86@L=900120004@B=1@p=1630578354@",
+              "type":"S",
+              "name":"S+U Warschauer Str. (Berlin)",
+              "icoX":0,
+              "extId":"900120004",
+              "state":"F",
+              "crd":
+              {
+                "x":13449157,
+                "y":52505768,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":15,
+              "pRefL":
+              [
+0,
+1,
+2,
+3,
+50,
+51,
+52,
+8,
+53,
+54,
+55,
+56
+              ],
+              "wt":27417
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

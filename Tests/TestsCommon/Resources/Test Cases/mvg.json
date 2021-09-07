@@ -1,0 +1,96 @@
+{
+    "suggestLocations": [
+        {
+            "constraint": "Rathaus, Iserlohn",
+            "result": {
+                "id": "24200764"
+            }
+        },
+        {
+            "constraint": "kur",
+            "result": {
+                "id": "24011915"
+            }
+        },
+        {
+            "constraint": "Schützenhalle",
+            "result": {
+                "id": "24011522"
+            }
+        },
+        {
+            "constraint": "Lüdenscheid, Bahnhofstraße 64",
+            "result": {
+                "id": "streetID:1500000078:64:5962032:26:Bahnhofstraße:Lüdenscheid:Bahnhofstraße::Bahnhofstraße:58507:ANY:DIVA_SINGLEHOUSE:848799:5339500:MRCV:NWL:0"
+            }
+        }
+    ],
+    "queryNearbyLocationsByCoordinate": [
+        {
+            "__comment": "Lüd. Bahnhof",
+            "lat": 51219781,
+            "lon": 7628682,
+            "result": {
+                "id": "24200006"
+            }
+        },
+        {
+            "__comment": "Lüd., Friedrichstr.",
+            "lat": 51220889,
+            "lon": 7625699,
+            "result": {
+                "id": "24200032"
+            }
+        }
+    ],
+    "queryDepartures": [
+        {
+            "__comment": "Lüd. Bahnhof",
+            "id": "24200006"
+        },
+        {
+            "__comment": "Lüd., Friedrichstr.",
+            "id": "24200032"
+        }
+    ],
+    "queryDeparturesInvalidId": "999999",
+    "queryTrips": [
+        {
+            "__comment": "Lüd. Bahnhof to Lüd., Friedrichstr.",
+            "from": {
+                "type": "station",
+                "id": "24200006"
+            },
+            "to": {
+                "type": "station",
+                "id": "24200032"
+            }
+        },
+        {
+            "__comment": "Lüd. Bahnhof to Lüd., Friedrichstr.",
+            "from": {
+                "type": "coord",
+                "lat": 51219781,
+                "lon": 7628682
+            },
+            "to": {
+                "type": "coord",
+                "lat": 51220889,
+                "lon": 7625699
+            }
+        }
+    ],
+    "queryTripsTooClose": [
+        {
+            "__comment": "Lüd. Bahnhof",
+            "from": {
+                "type": "station",
+                "id": "24200006"
+            },
+            "to": {
+                "type": "station",
+                "id": "24200006"
+            }
+        }
+    ]
+}

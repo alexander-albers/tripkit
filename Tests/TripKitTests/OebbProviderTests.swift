@@ -1,4 +1,5 @@
 import Foundation
+import TestsCommon
 @testable import TripKit
 import os.log
 import XCTest

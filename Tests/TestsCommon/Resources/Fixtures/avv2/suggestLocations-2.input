@@ -1,0 +1,264 @@
+{
+  "ver":"1.18",
+  "lang":"deu",
+  "id":"pw6q2ks46qq4p24k",
+  "err":"OK",
+  "svcResL":
+  [
+    {
+      "meth":"LocMatch",
+      "err":"OK",
+      "res":
+      {
+        "common":
+        {
+          "locL":
+          [
+
+          ],
+          "prodL":
+          [
+            {
+              "name":"Bus V",
+              "nameS":"V",
+              "icoX":0,
+              "cls":256,
+              "prodCtx":
+              {
+                "lineId":"de:aac:05334|V-ACLB:aseag"
+              }
+            },
+            {
+              "name":"Bus V",
+              "nameS":"V",
+              "icoX":0,
+              "cls":256,
+              "prodCtx":
+              {
+                "lineId":"de:aac:05334|V-ACGS:aseag"
+              }
+            },
+            {
+              "name":"Bus 733",
+              "nameS":"733",
+              "icoX":0,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"SVE____733"
+              }
+            },
+            {
+              "name":"Bus 808",
+              "nameS":"808",
+              "icoX":0,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"RVK____808"
+              }
+            },
+            {
+              "name":"Bus 810",
+              "nameS":"810",
+              "icoX":0,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"RVK____810"
+              }
+            },
+            {
+              "name":"Bus 878",
+              "nameS":"878",
+              "icoX":0,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"SVE____878"
+              }
+            },
+            {
+              "name":"Tra 7",
+              "nameS":"7",
+              "icoX":2,
+              "cls":64,
+              "prodCtx":
+              {
+                "lineId":"KVB____7"
+              }
+            }
+          ],
+          "polyL":
+          [
+
+          ],
+          "layerL":
+          [
+            {
+              "id":"standard",
+              "name":"standard",
+              "index":0,
+              "annoCnt":0
+            }
+          ],
+          "crdSysL":
+          [
+            {
+              "id":"standard",
+              "index":0,
+              "type":"WGS84"
+            }
+          ],
+          "opL":
+          [
+
+          ],
+          "remL":
+          [
+
+          ],
+          "icoL":
+          [
+            {
+              "res":"BUS",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255
+              },
+              "bg":
+              {
+                "r":190,
+                "g":65,
+                "b":135
+              }
+            },
+            {
+              "res":"ADR"
+            },
+            {
+              "res":"STR",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255
+              },
+              "bg":
+              {
+                "r":230,
+                "g":161,
+                "b":42
+              }
+            }
+          ]
+        },
+        "match":
+        {
+          "field":"S",
+          "state":"L",
+          "locL":
+          [
+            {
+              "lid":"A=1@O=Gaßmühle@X=6008174@Y=50781646@U=80@L=1576@B=1@p=1630627037@",
+              "type":"S",
+              "name":"Gaßmühle",
+              "icoX":0,
+              "extId":"1576",
+              "state":"F",
+              "crd":
+              {
+                "x":6008174,
+                "y":50781646,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":256,
+              "pRefL":
+              [
+0,
+1
+              ],
+              "wt":5
+            },
+            {
+              "lid":"A=2@O=Euskirchen - Euenheim, Schloßmühlenstraße@X=6743708@Y=50652013@U=103@b=990058960@B=1@p=1614693982@",
+              "type":"A",
+              "name":"Euskirchen - Euenheim, Schloßmühlenstraße",
+              "icoX":1,
+              "state":"M",
+              "crd":
+              {
+                "x":6743708,
+                "y":50652013,
+                "layerX":0,
+                "crdSysX":0
+              }
+            },
+            {
+              "lid":"A=2@O=Wesela Rhein - Wesel, Alte Roßmühlenstraße@X=6622030@Y=51659272@U=103@b=990186064@B=1@p=1614693982@",
+              "type":"A",
+              "name":"Wesela Rhein - Wesel, Alte Roßmühlenstraße",
+              "icoX":1,
+              "state":"M",
+              "crd":
+              {
+                "x":6622030,
+                "y":51659272,
+                "layerX":0,
+                "crdSysX":0
+              }
+            },
+            {
+              "lid":"A=1@O=Euskirchen, Euenheim Schlossmühlenstraße@X=6742845@Y=50653037@U=80@L=272344@B=1@p=1630627037@",
+              "type":"S",
+              "name":"Euskirchen, Euenheim Schlossmühlenstraße",
+              "icoX":0,
+              "extId":"272344",
+              "state":"F",
+              "crd":
+              {
+                "x":6742845,
+                "y":50653037,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":128,
+              "pRefL":
+              [
+2,
+3,
+4,
+5
+              ],
+              "wt":42
+            },
+            {
+              "lid":"A=1@O=Frechen, Mühlengasse@X=6801886@Y=50908196@U=80@L=282410@B=1@p=1630627037@",
+              "type":"S",
+              "name":"Frechen, Mühlengasse",
+              "icoX":2,
+              "extId":"282410",
+              "state":"F",
+              "crd":
+              {
+                "x":6801886,
+                "y":50908196,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":64,
+              "pRefL":
+              [
+6
+              ],
+              "wt":250
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
