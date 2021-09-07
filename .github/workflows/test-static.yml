@@ -20,4 +20,4 @@ jobs:
     - name: Build
       run: swift build
     - name: Test
-      run: swift test --filter StaticTripKitTests --skip StaticTripKitTests.TripKitProviderTestCase
+      run: swift test --filter StaticTripKitTests
