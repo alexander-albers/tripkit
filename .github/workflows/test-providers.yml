@@ -3,7 +3,9 @@ name: Provider tests
 on:
   schedule:
     - cron: '0 0 * * 0'
-  create
+  push:
+    tags:
+      - '*'
 
 jobs:
   build:
@@ -19,4 +21,4 @@ jobs:
     - name: Build
       run: swift build
     - name: Test
-      run: swift test --filter TripKitTests --skip TripKitTests.TripKitProviderTestCase
+      run: swift test --filter TripKitTests
