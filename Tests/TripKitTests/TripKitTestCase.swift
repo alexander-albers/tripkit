@@ -256,10 +256,10 @@ class TripKitProviderTestCase: XCTestCase {
         waitForExpectations(timeout: 30, handler: nil)
         XCTAssert(request != nil, "No result fetched!")
         XCTAssert(result != nil, "No result fetched!")
-        guard let request = request, let result = result else {
+        guard let request_ = request, let result_ = result else {
             return (HttpRequest(urlBuilder: UrlBuilder()), .failure(TimeoutError()))
         }
-        return (request, result)
+        return (request_, result_)
     }
     
     func syncQueryMoreTrips(context: QueryTripsContext, later: Bool) -> QueryTripsResult {
@@ -291,10 +291,10 @@ class TripKitProviderTestCase: XCTestCase {
         XCTAssert(result != nil, "No result fetched!")
         XCTAssert(request != nil, "No result fetched!")
         XCTAssert(result != nil, "No result fetched!")
-        guard let request = request, let result = result else {
+        guard let request_ = request, let result_ = result else {
             return (HttpRequest(urlBuilder: UrlBuilder()), .failure(TimeoutError()))
         }
-        return (request, result)
+        return (request_, result_)
     }
     
     func syncNearbyStations(location: Location, types: [LocationType], maxDistance: Int, maxLocations: Int) -> (HttpRequest, NearbyLocationsResult) {
@@ -311,10 +311,10 @@ class TripKitProviderTestCase: XCTestCase {
         waitForExpectations(timeout: 30, handler: nil)
         XCTAssert(request != nil, "No result fetched!")
         XCTAssert(result != nil, "No result fetched!")
-        guard let request = request, let result = result else {
+        guard let request_ = request, let result_ = result else {
             return (HttpRequest(urlBuilder: UrlBuilder()), .failure(TimeoutError()))
         }
-        return (request, result)
+        return (request_, result_)
     }
     
     func syncQueryDepartures(stationId: String, departures: Bool, time: Date?, maxDepartures: Int, equivs: Bool) -> (HttpRequest, QueryDeparturesResult) {
@@ -331,10 +331,10 @@ class TripKitProviderTestCase: XCTestCase {
         waitForExpectations(timeout: 30, handler: nil)
         XCTAssert(request != nil, "No result fetched!")
         XCTAssert(result != nil, "No result fetched!")
-        guard let request = request, let result = result else {
+        guard let request_ = request, let result_ = result else {
             return (HttpRequest(urlBuilder: UrlBuilder()), .failure(TimeoutError()))
         }
-        return (request, result)
+        return (request_, result_)
     }
     
     func syncJourneyDetail(context: QueryJourneyDetailContext) -> (HttpRequest, QueryJourneyDetailResult) {
@@ -351,7 +351,10 @@ class TripKitProviderTestCase: XCTestCase {
         waitForExpectations(timeout: 30, handler: nil)
         XCTAssert(request != nil, "No result fetched!")
         XCTAssert(result != nil, "No result fetched!")
-        return (request!, result!)
+        guard let request_ = request, let result_ = result else {
+            return (HttpRequest(urlBuilder: UrlBuilder()), .failure(TimeoutError()))
+        }
+        return (request_, result_)
     }
     
     func syncSuggestLocations(constraint: String) -> (HttpRequest, SuggestLocationsResult) {
@@ -368,10 +371,10 @@ class TripKitProviderTestCase: XCTestCase {
         waitForExpectations(timeout: 30, handler: nil)
         XCTAssert(request != nil, "No result fetched!")
         XCTAssert(result != nil, "No result fetched!")
-        guard let request = request, let result = result else {
+        guard let request_ = request, let result_ = result else {
             return (HttpRequest(urlBuilder: UrlBuilder()), .failure(TimeoutError()))
         }
-        return (request, result)
+        return (request_, result_)
     }
     
     func saveFixture(name: String, input: Data?, output: Any?) {
