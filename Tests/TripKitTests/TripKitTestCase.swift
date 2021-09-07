@@ -12,20 +12,17 @@ class TripKitProviderTestCase: XCTestCase {
     
     var delegate: TripKitProviderTestsDelegate! { return nil }
     
-    override func setUp() {
+    override func setUpWithError() throws {
         super.setUp()
         continueAfterFailure = true
         
         secrets = SecretsLoader.loadSecrets()
+        try XCTSkipIf(delegate == nil)
         provider = delegate.initProvider(from: secrets[delegate.networkId] ?? AuthorizationData()) as? AbstractNetworkProvider
         guard let settingsUrl = TestUtils.bundle.url(forResource: provider.id.rawValue.lowercased(), withExtension: "json", subdirectory: "Test Cases") else {
-            XCTFail("could not find settings file for provider \(provider.id.rawValue.lowercased())")
-            return
+            fatalError("could not find settings file for provider \(provider.id.rawValue.lowercased())")
         }
-        settings = try? JSON(data: Data(contentsOf: settingsUrl))
-        if settings == nil {
-            XCTFail("could not load settings file for provider \(provider.id.rawValue.lowercased())")
-        }
+        settings = try JSON(data: Data(contentsOf: settingsUrl))
     }
 
     // MARK: tests
