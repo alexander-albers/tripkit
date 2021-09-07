@@ -26,10 +26,10 @@ public class ServingLine: NSObject, NSSecureCoding {
     }
     
     override public func isEqual(_ object: Any?) -> Bool {
-        guard let object = object as? LineDestination else { return false }
-        if object.line != line { return false }
+        guard let object = object as? ServingLine else { return false }
+        if object.line != self.line { return false }
         
-        return destination?.getUniqueShortName() == object.destination?.getUniqueShortName()
+        return self.destination == object.destination
     }
     
     override public var hash: Int {

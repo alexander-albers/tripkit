@@ -22,6 +22,16 @@
                ReferencedContainer = "container:TripKit.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "FA5CD20224FBB1D200B4990A"
+               BuildableName = "TripKit macOSTests.xctest"
+               BlueprintName = "TripKit macOSTests"
+               ReferencedContainer = "container:TripKit.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
