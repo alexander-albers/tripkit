@@ -1,0 +1,146 @@
+{
+  "ver":"1.18",
+  "lang":"deu",
+  "id":"jmgcpixs428yy2cs",
+  "err":"OK",
+  "svcResL":
+  [
+    {
+      "meth":"LocMatch",
+      "err":"OK",
+      "res":
+      {
+        "common":
+        {
+          "locL":
+          [
+
+          ],
+          "prodL":
+          [
+
+          ],
+          "polyL":
+          [
+
+          ],
+          "layerL":
+          [
+            {
+              "id":"standard",
+              "name":"standard",
+              "index":0,
+              "annoCnt":0
+            }
+          ],
+          "crdSysL":
+          [
+            {
+              "id":"standard",
+              "index":0,
+              "type":"WGS84"
+            }
+          ],
+          "opL":
+          [
+
+          ],
+          "remL":
+          [
+
+          ],
+          "icoL":
+          [
+            {
+              "res":"STA"
+            },
+            {
+              "res":"ADR"
+            }
+          ]
+        },
+        "match":
+        {
+          "field":"S",
+          "state":"L",
+          "locL":
+          [
+            {
+              "lid":"A=1@O=Schweina, Altensteiner Höhle@X=10345937@Y=50828174@U=80@L=210098@B=1@p=1630919382@",
+              "type":"S",
+              "name":"Schweina, Altensteiner Höhle",
+              "icoX":0,
+              "extId":"210098",
+              "state":"F",
+              "crd":
+              {
+                "x":10345937,
+                "y":50828174,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":256,
+              "wt":15
+            },
+            {
+              "lid":"A=2@O=Suhl, Alte Höhle@X=10625043@Y=50604963@U=99@b=981221747@B=1@p=1462862076@",
+              "type":"A",
+              "name":"Suhl, Alte Höhle",
+              "icoX":1,
+              "state":"M",
+              "crd":
+              {
+                "x":10625043,
+                "y":50604963,
+                "layerX":0,
+                "crdSysX":0
+              }
+            },
+            {
+              "lid":"A=2@O=Berka/Werra, Höhle@X=10070858@Y=50938364@U=99@b=980123784@B=1@p=1462862076@",
+              "type":"A",
+              "name":"Berka/Werra, Höhle",
+              "icoX":1,
+              "state":"M",
+              "crd":
+              {
+                "x":10070858,
+                "y":50938364,
+                "layerX":0,
+                "crdSysX":0
+              }
+            },
+            {
+              "lid":"A=2@O=Mittelsömmern, Höhle@X=10808594@Y=51205460@U=99@b=980839872@B=1@p=1462862076@",
+              "type":"A",
+              "name":"Mittelsömmern, Höhle",
+              "icoX":1,
+              "state":"M",
+              "crd":
+              {
+                "x":10808594,
+                "y":51205460,
+                "layerX":0,
+                "crdSysX":0
+              }
+            },
+            {
+              "lid":"A=2@O=Mackenrode, Alte Höhle@X=10069231@Y=51304189@U=99@b=980790355@B=1@p=1462862076@",
+              "type":"A",
+              "name":"Mackenrode, Alte Höhle",
+              "icoX":1,
+              "state":"M",
+              "crd":
+              {
+                "x":10069231,
+                "y":51304189,
+                "layerX":0,
+                "crdSysX":0
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

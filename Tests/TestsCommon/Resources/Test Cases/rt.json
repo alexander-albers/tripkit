@@ -1,0 +1,84 @@
+{
+    "suggestLocations": [
+        {
+            "constraint": "Paris Est",
+            "result": {
+                "id": "8700011"
+            }
+        },
+        {
+            "constraint": "München Hbf",
+            "result": {
+                "id": "8000261"
+            }
+        }
+    ],
+    "queryNearbyLocationsByCoordinate": [
+        {
+            "__comment": "Paris Est",
+            "lat": 48876976,
+            "lon": 2359120,
+            "result": {
+                "id": "8700011"
+            }
+        },
+        {
+            "__comment": "München Hbf",
+            "lat": 48140229,
+            "lon": 11558339,
+            "result": {
+                "id": "8000261"
+            }
+        }
+    ],
+    "queryDepartures": [
+        {
+            "__comment": "Paris Est",
+            "id": "8700011"
+        },
+        {
+            "__comment": "München Hbf",
+            "id": "8000261"
+        }
+    ],
+    "queryDeparturesInvalidId": "999999",
+    "queryTrips": [
+        {
+            "__comment": "Paris Est to München Hbf",
+            "from": {
+                "type": "station",
+                "id": "8700011"
+            },
+            "to": {
+                "type": "station",
+                "id": "8000261"
+            }
+        },
+        {
+            "__comment": "Paris Est to München Hbf",
+            "from": {
+                "type": "coord",
+                "lat": 48876976,
+                "lon": 2359120
+            },
+            "to": {
+                "type": "coord",
+                "lat": 48140229,
+                "lon": 11558339
+            }
+        }
+    ],
+    "queryTripsTooClose": [
+        {
+            "__comment": "Paris Est",
+            "from": {
+                "type": "station",
+                "id": "8700011"
+            },
+            "to": {
+                "type": "station",
+                "id": "8700011"
+            }
+        }
+    ]
+}

@@ -1,0 +1,145 @@
+{
+  "ver":"1.18",
+  "lang":"deu",
+  "id":"a9meqkss4qqcxg4k",
+  "err":"OK",
+  "svcResL":
+  [
+    {
+      "meth":"LocMatch",
+      "err":"OK",
+      "res":
+      {
+        "common":
+        {
+          "locL":
+          [
+
+          ],
+          "prodL":
+          [
+
+          ],
+          "polyL":
+          [
+
+          ],
+          "layerL":
+          [
+            {
+              "id":"standard",
+              "name":"standard",
+              "index":0,
+              "annoCnt":0
+            }
+          ],
+          "crdSysL":
+          [
+            {
+              "id":"standard",
+              "index":0,
+              "type":"WGS84"
+            }
+          ],
+          "opL":
+          [
+
+          ],
+          "remL":
+          [
+
+          ],
+          "icoL":
+          [
+            {
+              "res":"ADR"
+            }
+          ]
+        },
+        "match":
+        {
+          "field":"S",
+          "state":"L",
+          "locL":
+          [
+            {
+              "lid":"A=2@O=Aachen, Theaterstraße 49@X=6091972@Y=50770805@U=103@L=990001334@B=1@p=1614693982@",
+              "type":"A",
+              "name":"Aachen, Theaterstraße 49",
+              "icoX":0,
+              "extId":"990001334",
+              "state":"F",
+              "crd":
+              {
+                "x":6091972,
+                "y":50770805,
+                "layerX":0,
+                "crdSysX":0
+              }
+            },
+            {
+              "lid":"A=2@O=Aachen, Galaterstraße 48@X=6040742@Y=50767066@U=103@L=990000848@B=1@p=1614693982@",
+              "type":"A",
+              "name":"Aachen, Galaterstraße 48",
+              "icoX":0,
+              "extId":"990000848",
+              "state":"F",
+              "crd":
+              {
+                "x":6040742,
+                "y":50767066,
+                "layerX":0,
+                "crdSysX":0
+              }
+            },
+            {
+              "lid":"A=2@O=Aachen, Galaterstraße 50@X=6040742@Y=50767012@U=103@L=990000848@B=1@p=1614693982@",
+              "type":"A",
+              "name":"Aachen, Galaterstraße 50",
+              "icoX":0,
+              "extId":"990000848",
+              "state":"F",
+              "crd":
+              {
+                "x":6040742,
+                "y":50767012,
+                "layerX":0,
+                "crdSysX":0
+              }
+            },
+            {
+              "lid":"A=2@O=Aachen, Atherstraße 29@X=6040760@Y=50718488@U=103@L=990000690@B=1@p=1614693982@",
+              "type":"A",
+              "name":"Aachen, Atherstraße 29",
+              "icoX":0,
+              "extId":"990000690",
+              "state":"F",
+              "crd":
+              {
+                "x":6040760,
+                "y":50718488,
+                "layerX":0,
+                "crdSysX":0
+              }
+            },
+            {
+              "lid":"A=2@O=Aachen, Johanniterstraße 36@X=6076447@Y=50774158@U=103@L=990000968@B=1@p=1614693982@",
+              "type":"A",
+              "name":"Aachen, Johanniterstraße 36",
+              "icoX":0,
+              "extId":"990000968",
+              "state":"F",
+              "crd":
+              {
+                "x":6076447,
+                "y":50774158,
+                "layerX":0,
+                "crdSysX":0
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

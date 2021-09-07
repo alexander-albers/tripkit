@@ -1,4 +1,5 @@
 import XCTest
+import TestsCommon
 @testable import TripKit
 import os.log
 import SwiftyJSON
@@ -17,7 +18,13 @@ class TripKitProviderTestCase: XCTestCase {
         
         secrets = SecretsLoader.loadSecrets()
         provider = delegate.initProvider(from: secrets[delegate.networkId] ?? AuthorizationData()) as? AbstractNetworkProvider
-        settings = try! JSON(data: Data(contentsOf: Bundle(for: type(of: self)).url(forResource: provider.id.rawValue.lowercased(), withExtension: "json")!))
+        guard let settingsUrl = TestUtils.bundle.url(forResource: provider.id.rawValue.lowercased(), withExtension: "json", subdirectory: "Test Cases") else {
+            fatalError("could not find settings file for provider \(provider.id.rawValue.lowercased())")
+        }
+        settings = try? JSON(data: Data(contentsOf: settingsUrl))
+        if settings == nil {
+            fatalError("could not load settings file for provider \(provider.id.rawValue.lowercased())")
+        }
     }
 
     // MARK: tests
@@ -116,7 +123,7 @@ class TripKitProviderTestCase: XCTestCase {
     
     func testQueryDeparturesEquivs() {
         for (index, testCase):(String, JSON) in settings["queryDepartures"] {
-            let (request, result) = syncQueryDepartures(stationId: testCase["id"].stringValue, departures: true, time: Date(), maxDepartures: 5, equivs: false)
+            let (request, result) = syncQueryDepartures(stationId: testCase["id"].stringValue, departures: true, time: Date(), maxDepartures: 5, equivs: true)
             switch result {
             case .success(let departures):
                 os_log("success: %@", log: .testsLogger, type: .default, departures)
@@ -368,12 +375,13 @@ class TripKitProviderTestCase: XCTestCase {
     }
     
     func saveFixture(name: String, input: Data?, output: Any?) {
+        #if XCODE_BUILD
         guard let input = input else {
             XCTAssert(false, "No result fetched!")
             return
         }
         let file = URL(fileURLWithPath: #file)
-        let fixturesUrl = file.deletingLastPathComponent().deletingLastPathComponent().appendingPathComponent("Resources/Fixtures/\(provider.id.rawValue.lowercased())")
+        let fixturesUrl = file.deletingLastPathComponent().deletingLastPathComponent().appendingPathComponent("TestsCommon/Resources/Fixtures/\(provider.id.rawValue.lowercased())")
         do {
             if !FileManager.default.fileExists(atPath: fixturesUrl.path) {
                 try FileManager.default.createDirectory(atPath: fixturesUrl.path, withIntermediateDirectories: false, attributes: nil)
@@ -386,6 +394,7 @@ class TripKitProviderTestCase: XCTestCase {
         } catch let error as NSError {
             os_log("Failed to save fixture %@: %@", log: .testsLogger, type: .error, name, error.description)
         }
+        #endif
     }
     
     func parseTestCaseLocation(_ json: JSON) -> Location {
@@ -404,26 +413,3 @@ class TripKitProviderTestCase: XCTestCase {
         return location
     }
 }
-
-protocol TripKitProviderTestsDelegate {
-    
-    var networkId: NetworkId { get }
-    func initProvider(from authorizationData: AuthorizationData) -> NetworkProvider
-    
-    var supportsQueryMoreTrips: Bool { get }
-    var supportsRefreshTrip: Bool { get }
-    var supportsJourneyDetails: Bool { get }
-}
-
-extension TripKitProviderTestsDelegate {
-    // the goal should be that all providers support the following features
-    var supportsQueryMoreTrips: Bool { return true }
-    var supportsRefreshTrip: Bool { return true }
-    var supportsJourneyDetails: Bool { return true }
-}
-
-extension OSLog {
-    static let testsLogger = OSLog(subsystem: Bundle.main.bundleIdentifier!, category: "Tests")
-}
-
-struct TimeoutError: Error {}

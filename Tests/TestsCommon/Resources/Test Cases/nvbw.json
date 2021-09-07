@@ -1,0 +1,92 @@
+{
+    "suggestLocations": [
+        {
+            "constraint": "Hauptbahnhof, Freiburg im Breisgau",
+            "result": {
+                "id": "6906508:$Z0"
+            }
+        },
+        {
+            "constraint": "bismarck",
+            "result": {
+                "id": "10013512"
+            }
+        },
+        {
+            "constraint": "Grünwinkel",
+            "result": {
+                "id": "8601679"
+            }
+        },
+        {
+            "constraint": "Stuttgart, Kronenstraße 3",
+            "result": {
+                "id": "streetID:1500000602:3:8111000:51:Kronenstraße:Stuttgart:Kronenstraße::Kronenstraße:70173:ANY:DIVA_SINGLEHOUSE:1021956:5762095:MRCV:B_W:0"
+            }
+        }
+    ],
+    "queryNearbyLocationsByCoordinate": [
+        {
+            "__comment": "Reutlingen ZOB",
+            "lat": 48492484,
+            "lon": 9207456,
+            "result": {
+                "id": "8029333"
+            }
+        },
+        {
+            "__comment": "Reutlingen Bismarckstr.",
+            "lat": 48496968,
+            "lon": 9213320,
+            "result": {
+                "id": "8029109"
+            }
+        }
+    ],
+    "queryDepartures": [
+        {
+            "__comment": "Reutlingen ZOB",
+            "id": "8029333"
+        }
+    ],
+    "queryDeparturesInvalidId": "999999",
+    "queryTrips": [
+        {
+            "__comment": "Reutlingen ZOB to Reutlingen Bismarckstr.",
+            "from": {
+                "type": "station",
+                "id": "8029333"
+            },
+            "to": {
+                "type": "station",
+                "id": "8029109"
+            }
+        },
+        {
+            "__comment": "Reutlingen ZOB to Reutlingen Bismarckstr.",
+            "from": {
+                "type": "coord",
+                "lat": 48492484,
+                "lon": 9207456
+            },
+            "to": {
+                "type": "coord",
+                "lat": 48496968,
+                "lon": 9213320
+            }
+        }
+    ],
+    "queryTripsTooClose": [
+        {
+            "__comment": "Reutlingen ZOB",
+            "from": {
+                "type": "station",
+                "id": "8029333"
+            },
+            "to": {
+                "type": "station",
+                "id": "8029333"
+            }
+        }
+    ]
+}

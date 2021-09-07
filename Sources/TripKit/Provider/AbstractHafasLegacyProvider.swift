@@ -85,19 +85,19 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider {
             let urlBuilder = UrlBuilder(path: queryEndpoint + "y", encoding: requestUrlEncoding)
             jsonNearbyStationParameters(builder: urlBuilder, lat: lat, lon: lon, maxDistance: maxDistance, maxLocations: maxLocations)
             
-            return jsonNearbyLocations(url: urlBuilder, completion: completion)
+            return jsonNearbyLocations(url: urlBuilder, location: Location(lat: lat, lon: lon), types: types, maxDistance: maxDistance, maxLocations: maxLocations, completion: completion)
         } else if types.contains(.poi) {
             let urlBuilder = UrlBuilder(path: queryEndpoint + "y", encoding: requestUrlEncoding)
             jsonNearbyPOIsParameters(builder: urlBuilder, lat: lat, lon: lon, maxDistance: maxDistance, maxLocations: maxLocations)
             
-            return jsonNearbyLocations(url: urlBuilder, completion: completion)
+            return jsonNearbyLocations(url: urlBuilder, location: Location(lat: lat, lon: lon), types: types, maxDistance: maxDistance, maxLocations: maxLocations, completion: completion)
         } else {
             completion(HttpRequest(urlBuilder: UrlBuilder()), .invalidId)
             return AsyncRequest(task: nil)
         }
     }
     
-    func jsonNearbyLocations(url: UrlBuilder, completion: @escaping (HttpRequest, NearbyLocationsResult) -> Void) -> AsyncRequest {
+    func jsonNearbyLocations(url: UrlBuilder, location: Location, types: [LocationType]?, maxDistance: Int, maxLocations: Int, completion: @escaping (HttpRequest, NearbyLocationsResult) -> Void) -> AsyncRequest {
         let httpRequest = HttpRequest(urlBuilder: url)
         return HttpClient.get(httpRequest: httpRequest) { result in
             switch result {
@@ -112,7 +112,7 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider {
                         throw ParseError(reason: "failed to parse response")
                     }
                     httpRequest.responseData = data
-                    try self.queryNearbyLocationsByCoordinateParsing(request: httpRequest, completion: completion)
+                    try self.queryNearbyLocationsByCoordinateParsing(request: httpRequest, location: location, types: types, maxDistance: maxDistance, maxLocations: maxLocations, completion: completion)
                 } catch let err as ParseError {
                     os_log("nearbyLocations parse error: %{public}@", log: .requestLogger, type: .error, err.reason)
                     completion(httpRequest, .failure(err))
@@ -436,7 +436,7 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider {
         completion(request, .success(locations: locations))
     }
     
-    func queryNearbyLocationsByCoordinateParsing(request: HttpRequest, completion: @escaping (HttpRequest, NearbyLocationsResult) -> Void) throws {
+    override func queryNearbyLocationsByCoordinateParsing(request: HttpRequest, location: Location, types: [LocationType]?, maxDistance: Int, maxLocations: Int, completion: @escaping (HttpRequest, NearbyLocationsResult) -> Void) throws {
         guard let json = try request.responseData?.toJson(encoding: self.jsonNearbyLocationsEncoding) as? [String: Any], let error = json["error"] as? String else {
             throw ParseError(reason: "could not parse json")
         }

@@ -1,0 +1,54 @@
+{
+  "ver":"1.16",
+  "lang":"deu",
+  "id":"eg2aqmem4igypwck",
+  "svcResL":
+  [
+    {
+      "meth":"TripSearch",
+      "err":"H9220",
+      "errTxt":"HAFAS Kernel: Nearby to the given address stations could not be found.",
+      "res":
+      {
+        "common":
+        {
+          "locL":
+          [
+
+          ],
+          "prodL":
+          [
+
+          ],
+          "polyL":
+          [
+
+          ],
+          "layerL":
+          [
+
+          ],
+          "crdSysL":
+          [
+
+          ],
+          "opL":
+          [
+
+          ],
+          "remL":
+          [
+
+          ],
+          "icoL":
+          [
+
+          ]
+        },
+        "fpB":"20210902",
+        "fpE":"20220901",
+        "planrtTS":"1630914409"
+      }
+    }
+  ]
+}

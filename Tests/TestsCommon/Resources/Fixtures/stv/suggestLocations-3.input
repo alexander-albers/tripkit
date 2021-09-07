@@ -1,0 +1,152 @@
+{
+  "ver":"1.18",
+  "ext":"VAO.13",
+  "lang":"deu",
+  "id":"3pksbgskm2ahhg8g",
+  "err":"OK",
+  "cInfo":
+  {
+    "code":"OK",
+    "url":"",
+    "msg":""
+  },
+  "svcResL":
+  [
+    {
+      "meth":"LocMatch",
+      "err":"OK",
+      "res":
+      {
+        "common":
+        {
+          "locL":
+          [
+
+          ],
+          "prodL":
+          [
+
+          ],
+          "polyL":
+          [
+
+          ],
+          "layerL":
+          [
+            {
+              "id":"standard",
+              "name":"standard",
+              "index":0,
+              "annoCnt":384392
+            }
+          ],
+          "crdSysL":
+          [
+            {
+              "id":"standard",
+              "index":0,
+              "type":"WGS84"
+            }
+          ],
+          "opL":
+          [
+
+          ],
+          "remL":
+          [
+
+          ],
+          "icoL":
+          [
+            {
+              "res":"ADR"
+            }
+          ]
+        },
+        "match":
+        {
+          "field":"S",
+          "state":"L",
+          "locL":
+          [
+            {
+              "lid":"A=2@O=Wartingergasse 36, 8010 Graz@X=15434667@Y=47079043@U=103@L=980126982@B=1@p=1629871314@",
+              "type":"A",
+              "name":"Wartingergasse 36, 8010 Graz",
+              "icoX":0,
+              "extId":"980126982",
+              "state":"F",
+              "crd":
+              {
+                "x":15434667,
+                "y":47079043,
+                "layerX":0,
+                "crdSysX":0
+              }
+            },
+            {
+              "lid":"A=2@O=Angergasse 1, 8010 Graz@X=15439054@Y=47051806@U=103@L=980007704@B=1@p=1629871314@",
+              "type":"A",
+              "name":"Angergasse 1, 8010 Graz",
+              "icoX":0,
+              "extId":"980007704",
+              "state":"F",
+              "crd":
+              {
+                "x":15439054,
+                "y":47051806,
+                "layerX":0,
+                "crdSysX":0
+              }
+            },
+            {
+              "lid":"A=2@O=Monsbergergasse 2, 8010 Graz@X=15451324@Y=47057127@U=103@L=980080880@B=1@p=1629871314@",
+              "type":"A",
+              "name":"Monsbergergasse 2, 8010 Graz",
+              "icoX":0,
+              "extId":"980080880",
+              "state":"F",
+              "crd":
+              {
+                "x":15451324,
+                "y":47057127,
+                "layerX":0,
+                "crdSysX":0
+              }
+            },
+            {
+              "lid":"A=2@O=Nürnbergergasse 2, 8010 Graz@X=15436303@Y=47071007@U=103@L=980085897@B=1@p=1629871314@",
+              "type":"A",
+              "name":"Nürnbergergasse 2, 8010 Graz",
+              "icoX":0,
+              "extId":"980085897",
+              "state":"F",
+              "crd":
+              {
+                "x":15436303,
+                "y":47071007,
+                "layerX":0,
+                "crdSysX":0
+              }
+            },
+            {
+              "lid":"A=2@O=Scheidtenbergergasse 1, 8010 Graz@X=15431764@Y=47084005@U=103@L=980103307@B=1@p=1629871314@",
+              "type":"A",
+              "name":"Scheidtenbergergasse 1, 8010 Graz",
+              "icoX":0,
+              "extId":"980103307",
+              "state":"F",
+              "crd":
+              {
+                "x":15431764,
+                "y":47084005,
+                "layerX":0,
+                "crdSysX":0
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,168 @@
+{
+  "ver":"1.18",
+  "lang":"deu",
+  "id":"mki8pics428wgick",
+  "err":"OK",
+  "svcResL":
+  [
+    {
+      "meth":"LocMatch",
+      "err":"OK",
+      "res":
+      {
+        "common":
+        {
+          "locL":
+          [
+
+          ],
+          "prodL":
+          [
+
+          ],
+          "polyL":
+          [
+
+          ],
+          "layerL":
+          [
+            {
+              "id":"standard",
+              "name":"standard",
+              "index":0,
+              "annoCnt":0
+            }
+          ],
+          "crdSysL":
+          [
+            {
+              "id":"standard",
+              "index":0,
+              "type":"WGS84"
+            },
+            {
+              "id":"Jena,_Sp",
+              "index":1,
+              "type":"WGS84"
+            }
+          ],
+          "opL":
+          [
+
+          ],
+          "remL":
+          [
+
+          ],
+          "icoL":
+          [
+            {
+              "res":"STA"
+            },
+            {
+              "res":"ADR"
+            }
+          ]
+        },
+        "match":
+        {
+          "field":"S",
+          "state":"L",
+          "locL":
+          [
+            {
+              "lid":"A=1@O=Jena, Spittelplatz@X=11590988@Y=50933348@U=80@L=153014@B=1@p=1630919382@",
+              "type":"S",
+              "name":"Jena, Spittelplatz",
+              "icoX":0,
+              "extId":"153014",
+              "state":"F",
+              "crd":
+              {
+                "x":11590988,
+                "y":50933348,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "crdAltL":
+              [
+                {
+                  "x":99999999,
+                  "y":99999999,
+                  "layerX":0,
+                  "crdSysX":0
+                },
+                {
+                  "x":99999999,
+                  "y":99999999,
+                  "layerX":0,
+                  "crdSysX":1
+                }
+              ],
+              "meta":true,
+              "pCls":288,
+              "wt":4486,
+              "isMainMast":true
+            },
+            {
+              "lid":"A=2@O=Sondershausen - Kleinberndten, Spittel@X=10661854@Y=51373891@U=99@b=981183548@B=1@p=1462862076@",
+              "type":"A",
+              "name":"Sondershausen - Kleinberndten, Spittel",
+              "icoX":1,
+              "state":"M",
+              "crd":
+              {
+                "x":10661854,
+                "y":51373891,
+                "layerX":0,
+                "crdSysX":0
+              }
+            },
+            {
+              "lid":"A=2@O=Treffurt, Unterm Spittel@X=10242363@Y=51136019@U=99@b=981252426@B=1@p=1462862076@",
+              "type":"A",
+              "name":"Treffurt, Unterm Spittel",
+              "icoX":1,
+              "state":"M",
+              "crd":
+              {
+                "x":10242363,
+                "y":51136019,
+                "layerX":0,
+                "crdSysX":0
+              }
+            },
+            {
+              "lid":"A=2@O=Werther - Günzerode, Spittel@X=10660982@Y=51521243@U=99@b=981349675@B=1@p=1462862076@",
+              "type":"A",
+              "name":"Werther - Günzerode, Spittel",
+              "icoX":1,
+              "state":"M",
+              "crd":
+              {
+                "x":10660982,
+                "y":51521243,
+                "layerX":0,
+                "crdSysX":0
+              }
+            },
+            {
+              "lid":"A=2@O=Jena, Spittelplatz@X=11590727@Y=50933941@U=99@b=980626484@B=1@p=1462862076@",
+              "type":"A",
+              "name":"Jena, Spittelplatz",
+              "icoX":1,
+              "state":"M",
+              "crd":
+              {
+                "x":11590727,
+                "y":50933941,
+                "layerX":0,
+                "crdSysX":0
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -109,6 +109,13 @@ public class PublicLeg: NSObject, Leg, NSSecureCoding {
         return "Public departure=\(departure), arrival=\(arrival))"
     }
     
+    public override func isEqual(_ other: Any?) -> Bool {
+        guard let other = other as? PublicLeg else { return false }
+        if other === self { return true }
+        
+        return self.departure == other.departure && self.arrival == other.arrival && self.line == other.line && self.destination == other.destination && self.departureStop == other.departureStop && self.arrivalStop == other.arrivalStop && self.intermediateStops == other.intermediateStops
+    }
+    
     struct PropertyKey {
         
         static let line = "line"

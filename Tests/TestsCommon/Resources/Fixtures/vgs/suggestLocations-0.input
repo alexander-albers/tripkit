@@ -1,0 +1,585 @@
+{
+  "ver":"1.21",
+  "lang":"deu",
+  "id":"tkixpgae4aqyhi4k",
+  "err":"OK",
+  "svcResL":
+  [
+    {
+      "meth":"LocMatch",
+      "err":"OK",
+      "res":
+      {
+        "common":
+        {
+          "locL":
+          [
+
+          ],
+          "prodL":
+          [
+            {
+              "name":"S 1",
+              "nameS":"1",
+              "icoX":0,
+              "cls":64,
+              "prodCtx":
+              {
+                "lineId":"1"
+              }
+            },
+            {
+              "name":"Bus 101",
+              "nameS":"101",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"101"
+              }
+            },
+            {
+              "name":"Bus 102",
+              "nameS":"102",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"102"
+              }
+            },
+            {
+              "name":"Bus 103",
+              "nameS":"103",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"103"
+              }
+            },
+            {
+              "name":"Bus 104",
+              "nameS":"104",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"104"
+              }
+            },
+            {
+              "name":"Bus 106",
+              "nameS":"106",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"106"
+              }
+            },
+            {
+              "name":"Bus 107",
+              "nameS":"107",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"107"
+              }
+            },
+            {
+              "name":"Bus 109",
+              "nameS":"109",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"109"
+              }
+            },
+            {
+              "name":"Bus 110",
+              "nameS":"110",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"110"
+              }
+            },
+            {
+              "name":"Bus 111",
+              "nameS":"111",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"111"
+              }
+            },
+            {
+              "name":"Bus 112",
+              "nameS":"112",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"112"
+              }
+            },
+            {
+              "name":"Bus 121",
+              "nameS":"121",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"121"
+              }
+            },
+            {
+              "name":"Bus 122",
+              "nameS":"122",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"122"
+              }
+            },
+            {
+              "name":"Bus 124",
+              "nameS":"124",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"124"
+              }
+            },
+            {
+              "name":"Bus 125",
+              "nameS":"125",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"125"
+              }
+            },
+            {
+              "name":"Bus 129",
+              "nameS":"129",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"129"
+              }
+            },
+            {
+              "name":"Bus 150",
+              "nameS":"150",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"150"
+              }
+            },
+            {
+              "name":"Bus 153",
+              "nameS":"153",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"153"
+              }
+            },
+            {
+              "name":"Bus 172",
+              "nameS":"172",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"172"
+              }
+            },
+            {
+              "name":"Bus 175",
+              "nameS":"175",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"175"
+              }
+            },
+            {
+              "name":"AST 102",
+              "nameS":"102",
+              "icoX":2,
+              "cls":512,
+              "prodCtx":
+              {
+                "lineId":"102"
+              }
+            },
+            {
+              "name":"Bus 805",
+              "nameS":"805",
+              "icoX":3,
+              "cls":1024,
+              "prodCtx":
+              {
+                "lineId":"805"
+              }
+            },
+            {
+              "name":"Bus 808",
+              "nameS":"808",
+              "icoX":3,
+              "cls":1024,
+              "prodCtx":
+              {
+                "lineId":"808"
+              }
+            },
+            {
+              "name":"Bus 816",
+              "nameS":"816",
+              "icoX":3,
+              "cls":1024,
+              "prodCtx":
+              {
+                "lineId":"816"
+              }
+            },
+            {
+              "name":"Bus 817",
+              "nameS":"817",
+              "icoX":3,
+              "cls":1024,
+              "prodCtx":
+              {
+                "lineId":"817"
+              }
+            },
+            {
+              "name":"Bus 819",
+              "nameS":"819",
+              "icoX":3,
+              "cls":1024,
+              "prodCtx":
+              {
+                "lineId":"819"
+              }
+            },
+            {
+              "name":"Bus 826",
+              "nameS":"826",
+              "icoX":3,
+              "cls":1024,
+              "prodCtx":
+              {
+                "lineId":"826"
+              }
+            },
+            {
+              "name":"Bus 829",
+              "nameS":"829",
+              "icoX":3,
+              "cls":1024,
+              "prodCtx":
+              {
+                "lineId":"829"
+              }
+            },
+            {
+              "name":"Bus 834",
+              "nameS":"834",
+              "icoX":3,
+              "cls":1024,
+              "prodCtx":
+              {
+                "lineId":"834"
+              }
+            },
+            {
+              "name":"Bus 838",
+              "nameS":"838",
+              "icoX":3,
+              "cls":1024,
+              "prodCtx":
+              {
+                "lineId":"838"
+              }
+            },
+            {
+              "name":"ASTAst_1",
+              "nameS":"Ast_1",
+              "icoX":2,
+              "cls":512,
+              "prodCtx":
+              {
+                "lineId":"Ast_1"
+              }
+            },
+            {
+              "name":"Bus 134",
+              "nameS":"134",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"134"
+              }
+            },
+            {
+              "name":"Bus 828",
+              "nameS":"828",
+              "icoX":3,
+              "cls":1024,
+              "prodCtx":
+              {
+                "lineId":"828"
+              }
+            }
+          ],
+          "polyL":
+          [
+
+          ],
+          "layerL":
+          [
+            {
+              "id":"standard",
+              "name":"standard",
+              "index":0,
+              "annoCnt":0
+            }
+          ],
+          "crdSysL":
+          [
+            {
+              "id":"standard",
+              "index":0,
+              "type":"WGS84"
+            }
+          ],
+          "opL":
+          [
+
+          ],
+          "remL":
+          [
+
+          ],
+          "icoL":
+          [
+            {
+              "res":"prod_tram",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255
+              },
+              "bg":
+              {
+                "r":237,
+                "g":135,
+                "b":34
+              }
+            },
+            {
+              "res":"prod_bus",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255
+              },
+              "bg":
+              {
+                "r":170,
+                "g":85,
+                "b":153
+              }
+            },
+            {
+              "res":"prod_ast",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255
+              },
+              "bg":
+              {
+                "r":255,
+                "g":203,
+                "b":20
+              }
+            },
+            {
+              "res":"prod_school_bus",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255
+              },
+              "bg":
+              {
+                "r":0,
+                "g":103,
+                "b":121
+              }
+            },
+            {
+              "res":"ADR"
+            },
+            {
+              "res":"POI"
+            }
+          ]
+        },
+        "match":
+        {
+          "field":"S",
+          "state":"L",
+          "locL":
+          [
+            {
+              "lid":"A=1@O=Johanneskirche, Saarbrücken@X=6996484@Y=49235816@U=80@L=000010619@B=1@V=11.9,@p=1630674307@",
+              "type":"S",
+              "name":"Johanneskirche, Saarbrücken",
+              "icoX":0,
+              "extId":"000010619",
+              "state":"F",
+              "crd":
+              {
+                "x":6996484,
+                "y":49235816,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":1728,
+              "pRefL":
+              [
+0,
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+17,
+18,
+19,
+20,
+21,
+22,
+23,
+24,
+25,
+26,
+27,
+28,
+29
+              ],
+              "wt":1906
+            },
+            {
+              "lid":"A=1@O=Johannes-Kirchweng-Str., Wadgassen@X=6782361@Y=49266110@U=80@L=000047910@B=1@V=11.9,@p=1630674307@",
+              "type":"S",
+              "name":"Johannes-Kirchweng-Str., Wadgassen",
+              "icoX":2,
+              "extId":"000047910",
+              "state":"F",
+              "crd":
+              {
+                "x":6782361,
+                "y":49266110,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":512,
+              "pRefL":
+              [
+30
+              ],
+              "wt":90
+            },
+            {
+              "lid":"A=2@O=Neunkirchen, Johannesstraße@X=7181437@Y=49344379@U=98@b=990894228@B=1@V=11.9,@p=1473941494@",
+              "type":"A",
+              "name":"Neunkirchen, Johannesstraße",
+              "icoX":4,
+              "state":"M",
+              "crd":
+              {
+                "x":7181437,
+                "y":49344379,
+                "layerX":0,
+                "crdSysX":0
+              }
+            },
+            {
+              "lid":"A=1@O=Johanna-Kirchner-Haus, Saarbrücken Malstatt@X=6969049@Y=49250145@U=80@L=000010507@B=1@V=11.9,@p=1630674307@",
+              "type":"S",
+              "name":"Johanna-Kirchner-Haus, Saarbrücken Malstatt",
+              "icoX":1,
+              "extId":"000010507",
+              "state":"F",
+              "crd":
+              {
+                "x":6969049,
+                "y":49250145,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":1152,
+              "pRefL":
+              [
+15,
+31,
+32
+              ],
+              "wt":348
+            },
+            {
+              "lid":"A=4@O=Weiskirchen, Schinderhannes (Restaurant)@X=6822129@Y=49555392@U=99@L=009001090@B=1@V=11.9,@p=1600251644@",
+              "type":"P",
+              "name":"Weiskirchen, Schinderhannes (Restaurant)",
+              "icoX":5,
+              "extId":"009001090",
+              "state":"F",
+              "crd":
+              {
+                "x":6822129,
+                "y":49555392,
+                "layerX":0,
+                "crdSysX":0
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,258 @@
+{
+  "ver":"1.16",
+  "lang":"deu",
+  "id":"mm6k3gecka89x2wg",
+  "svcResL":
+  [
+    {
+      "meth":"LocMatch",
+      "err":"OK",
+      "res":
+      {
+        "common":
+        {
+          "locL":
+          [
+
+          ],
+          "prodL":
+          [
+            {
+              "name":"Bus 30",
+              "nameS":"30",
+              "icoX":0,
+              "cls":1,
+              "prodCtx":
+              {
+                "lineId":"30"
+              }
+            },
+            {
+              "name":"Bus 31",
+              "nameS":"31",
+              "icoX":0,
+              "cls":1,
+              "prodCtx":
+              {
+                "lineId":"31"
+              }
+            },
+            {
+              "name":"Bus 9221",
+              "nameS":"9221",
+              "icoX":0,
+              "cls":1,
+              "prodCtx":
+              {
+                "lineId":"9221"
+              }
+            },
+            {
+              "name":"Bus 9226",
+              "nameS":"9226",
+              "icoX":0,
+              "cls":1,
+              "prodCtx":
+              {
+                "lineId":"9226"
+              }
+            },
+            {
+              "name":"Bus N5",
+              "nameS":"N5",
+              "icoX":0,
+              "cls":1,
+              "prodCtx":
+              {
+                "lineId":"N5"
+              }
+            },
+            {
+              "name":"Bus S8",
+              "nameS":"S8",
+              "icoX":0,
+              "cls":1,
+              "prodCtx":
+              {
+                "lineId":"S8"
+              }
+            },
+            {
+              "name":"Bus 26",
+              "nameS":"26",
+              "icoX":0,
+              "cls":1,
+              "prodCtx":
+              {
+                "lineId":"26"
+              }
+            },
+            {
+              "name":"Bus N26",
+              "nameS":"N26",
+              "icoX":0,
+              "cls":1,
+              "prodCtx":
+              {
+                "lineId":"N26"
+              }
+            }
+          ],
+          "polyL":
+          [
+
+          ],
+          "layerL":
+          [
+            {
+              "id":"standard",
+              "name":"standard",
+              "index":0,
+              "annoCnt":0
+            }
+          ],
+          "crdSysL":
+          [
+            {
+              "id":"standard",
+              "index":0,
+              "type":"WGS84",
+              "dim":2
+            }
+          ],
+          "opL":
+          [
+
+          ],
+          "remL":
+          [
+
+          ],
+          "icoL":
+          [
+            {
+              "res":"prod_bus_t",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255,
+                "a":255
+              },
+              "bg":
+              {
+                "r":169,
+                "g":85,
+                "b":153,
+                "a":255
+              }
+            },
+            {
+              "res":"ADR"
+            }
+          ]
+        },
+        "match":
+        {
+          "field":"S",
+          "state":"L",
+          "locL":
+          [
+            {
+              "lid":"A=1@O=Am Kreuzäcker@X=11445201@Y=48795354@U=80@L=000190102@B=1@p=1630927009@",
+              "type":"S",
+              "name":"Am Kreuzäcker",
+              "icoX":0,
+              "extId":"000190102",
+              "state":"F",
+              "crd":
+              {
+                "x":11445201,
+                "y":48795354,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":1,
+              "pRefL":
+              [
+0,
+1,
+2,
+3,
+4,
+5
+              ],
+              "wt":32767
+            },
+            {
+              "lid":"A=2@O=Schernfeld, Kreuzäcker@X=11112519@Y=48907179@U=103@b=990007690@B=1@p=1607068022@",
+              "type":"A",
+              "name":"Schernfeld, Kreuzäcker",
+              "icoX":1,
+              "state":"M",
+              "crd":
+              {
+                "x":11112519,
+                "y":48907179,
+                "layerX":0,
+                "crdSysX":0
+              }
+            },
+            {
+              "lid":"A=2@O=Adelschlag, Am Kreuzacker@X=11231302@Y=48821189@U=103@b=990000010@B=1@p=1607068022@",
+              "type":"A",
+              "name":"Adelschlag, Am Kreuzacker",
+              "icoX":1,
+              "state":"M",
+              "crd":
+              {
+                "x":11231302,
+                "y":48821189,
+                "layerX":0,
+                "crdSysX":0
+              }
+            },
+            {
+              "lid":"A=2@O=Ingolstadt, Kreuzackerweg@X=11277687@Y=48769941@U=103@b=990003731@B=1@p=1607068022@",
+              "type":"A",
+              "name":"Ingolstadt, Kreuzackerweg",
+              "icoX":1,
+              "state":"M",
+              "crd":
+              {
+                "x":11277687,
+                "y":48769941,
+                "layerX":0,
+                "crdSysX":0
+              }
+            },
+            {
+              "lid":"A=1@O=Pförring-Wackerstein, Kreuz@X=11671208@Y=48790248@U=80@L=000074002@B=1@p=1630927009@",
+              "type":"S",
+              "name":"Pförring-Wackerstein, Kreuz",
+              "icoX":0,
+              "extId":"000074002",
+              "state":"F",
+              "crd":
+              {
+                "x":11671208,
+                "y":48790248,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":1,
+              "pRefL":
+              [
+6,
+7
+              ],
+              "wt":1929
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "ver":"1.21",
+  "lang":"deu",
+  "id":"7aix9gau4aqywi4s",
+  "err":"OK",
+  "svcResL":
+  [
+    {
+      "meth":"LocMatch",
+      "err":"OK",
+      "res":
+      {
+        "common":
+        {
+          "locL":
+          [
+
+          ],
+          "prodL":
+          [
+
+          ],
+          "polyL":
+          [
+
+          ],
+          "layerL":
+          [
+            {
+              "id":"standard",
+              "name":"standard",
+              "index":0,
+              "annoCnt":0
+            }
+          ],
+          "crdSysL":
+          [
+            {
+              "id":"standard",
+              "index":0,
+              "type":"WGS84"
+            }
+          ],
+          "opL":
+          [
+
+          ],
+          "remL":
+          [
+
+          ],
+          "icoL":
+          [
+            {
+              "res":"ADR"
+            }
+          ]
+        },
+        "match":
+        {
+          "field":"S",
+          "state":"L",
+          "locL":
+          [
+            {
+              "lid":"A=2@O=Saarbrücken - Sankt Johann, Reichsstraße 5@X=6990776@Y=49238818@U=98@L=991085982@B=1@V=11.9,@p=1473941494@",
+              "type":"A",
+              "name":"Saarbrücken - Sankt Johann, Reichsstraße 5",
+              "icoX":0,
+              "extId":"991085982",
+              "state":"F",
+              "crd":
+              {
+                "x":6990776,
+                "y":49238818,
+                "layerX":0,
+                "crdSysX":0
+              }
+            },
+            {
+              "lid":"A=2@O=Saarbrücken - Sankt Johann, Bleichstraße 4@X=6998192@Y=49231339@U=98@L=991085902@B=1@V=11.9,@p=1473941494@",
+              "type":"A",
+              "name":"Saarbrücken - Sankt Johann, Bleichstraße 4",
+              "icoX":0,
+              "extId":"991085902",
+              "state":"F",
+              "crd":
+              {
+                "x":6998192,
+                "y":49231339,
+                "layerX":0,
+                "crdSysX":0
+              }
+            },
+            {
+              "lid":"A=2@O=Saarbrücken - Sankt Johann, Egon-Reinert-Straße 5@X=7004422@Y=49232328@U=98@L=991085915@B=1@V=11.9,@p=1473941494@",
+              "type":"A",
+              "name":"Saarbrücken - Sankt Johann, Egon-Reinert-Straße 5",
+              "icoX":0,
+              "extId":"991085915",
+              "state":"F",
+              "crd":
+              {
+                "x":7004422,
+                "y":49232328,
+                "layerX":0,
+                "crdSysX":0
+              }
+            },
+            {
+              "lid":"A=2@O=Saarbrücken - Sankt Johann, Faktoreistraße 4@X=6989536@Y=49238063@U=98@L=991085917@B=1@V=11.9,@p=1473941494@",
+              "type":"A",
+              "name":"Saarbrücken - Sankt Johann, Faktoreistraße 4",
+              "icoX":0,
+              "extId":"991085917",
+              "state":"F",
+              "crd":
+              {
+                "x":6989536,
+                "y":49238063,
+                "layerX":0,
+                "crdSysX":0
+              }
+            },
+            {
+              "lid":"A=2@O=Saarbrücken - Sankt Johann, Johannisstraße 5@X=6997239@Y=49235780@U=98@L=991085942@B=1@V=11.9,@p=1473941494@",
+              "type":"A",
+              "name":"Saarbrücken - Sankt Johann, Johannisstraße 5",
+              "icoX":0,
+              "extId":"991085942",
+              "state":"F",
+              "crd":
+              {
+                "x":6997239,
+                "y":49235780,
+                "layerX":0,
+                "crdSysX":0
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

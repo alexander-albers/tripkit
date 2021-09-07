@@ -1,0 +1,347 @@
+{
+  "ver":"1.16",
+  "lang":"deu",
+  "id":"2bwshguc66xxgi4k",
+  "svcResL":
+  [
+    {
+      "meth":"LocMatch",
+      "err":"OK",
+      "res":
+      {
+        "common":
+        {
+          "locL":
+          [
+
+          ],
+          "prodL":
+          [
+            {
+              "name":"Bus 50",
+              "nameS":"50",
+              "icoX":0,
+              "cls":32,
+              "prodCtx":
+              {
+                "lineId":"de:VBN-VSN:50:"
+              }
+            },
+            {
+              "name":"Bus 1",
+              "nameS":"1",
+              "icoX":0,
+              "cls":32,
+              "prodCtx":
+              {
+                "lineId":"NAHBUS_1"
+              }
+            },
+            {
+              "name":"Bus 2",
+              "nameS":"2",
+              "icoX":0,
+              "cls":32,
+              "prodCtx":
+              {
+                "lineId":"NAHBUS_2"
+              }
+            },
+            {
+              "name":"Bus 3",
+              "nameS":"3",
+              "icoX":0,
+              "cls":32,
+              "prodCtx":
+              {
+                "lineId":"NAHBUS_3"
+              }
+            },
+            {
+              "name":"Bus 4",
+              "nameS":"4",
+              "icoX":0,
+              "cls":32,
+              "prodCtx":
+              {
+                "lineId":"NAHBUS_4"
+              }
+            },
+            {
+              "name":"Bus 5",
+              "nameS":"5",
+              "icoX":0,
+              "cls":32,
+              "prodCtx":
+              {
+                "lineId":"NAHBUS_5"
+              }
+            },
+            {
+              "name":"Bus 6",
+              "nameS":"6",
+              "icoX":0,
+              "cls":32,
+              "prodCtx":
+              {
+                "lineId":"NAHBUS_6"
+              }
+            },
+            {
+              "name":"Bus 130",
+              "nameS":"130",
+              "icoX":0,
+              "cls":32,
+              "prodCtx":
+              {
+                "lineId":"NAHBUS_130"
+              }
+            },
+            {
+              "name":"Bus 241",
+              "nameS":"241",
+              "icoX":0,
+              "cls":32,
+              "prodCtx":
+              {
+                "lineId":"NAHBUS_241"
+              }
+            },
+            {
+              "name":"Bus 250",
+              "nameS":"250",
+              "icoX":0,
+              "cls":32,
+              "prodCtx":
+              {
+                "lineId":"NAHBUS_250"
+              }
+            },
+            {
+              "name":"Bus 330",
+              "nameS":"330",
+              "icoX":0,
+              "cls":32,
+              "prodCtx":
+              {
+                "lineId":"NAHBUS_330"
+              }
+            },
+            {
+              "name":"Bus 400",
+              "nameS":"400",
+              "icoX":0,
+              "cls":32,
+              "prodCtx":
+              {
+                "lineId":"NAHBUS_400"
+              }
+            },
+            {
+              "name":"Bus 401",
+              "nameS":"401",
+              "icoX":0,
+              "cls":32,
+              "prodCtx":
+              {
+                "lineId":"NAHBUS_401"
+              }
+            },
+            {
+              "name":"Bus 402",
+              "nameS":"402",
+              "icoX":0,
+              "cls":32,
+              "prodCtx":
+              {
+                "lineId":"NAHBUS_402"
+              }
+            }
+          ],
+          "polyL":
+          [
+
+          ],
+          "layerL":
+          [
+            {
+              "id":"standard",
+              "name":"standard",
+              "index":0,
+              "annoCnt":0
+            }
+          ],
+          "crdSysL":
+          [
+            {
+              "id":"standard",
+              "index":0,
+              "type":"WGS84",
+              "dim":2
+            },
+            {
+              "id":"G?tti_61",
+              "index":1,
+              "type":"WGS84",
+              "dim":2
+            }
+          ],
+          "opL":
+          [
+
+          ],
+          "remL":
+          [
+
+          ],
+          "icoL":
+          [
+            {
+              "res":"prod_bus",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255,
+                "a":255
+              },
+              "bg":
+              {
+                "r":0,
+                "g":92,
+                "b":169,
+                "a":255
+              }
+            },
+            {
+              "res":"ADR"
+            }
+          ]
+        },
+        "match":
+        {
+          "field":"S",
+          "state":"L",
+          "locL":
+          [
+            {
+              "lid":"A=1@O=Göttingen Dahlmannstraße@X=9950250@Y=51536281@U=80@L=9033876@B=1@p=1630786923@",
+              "type":"S",
+              "name":"Göttingen Dahlmannstraße",
+              "icoX":0,
+              "extId":"9033876",
+              "state":"F",
+              "crd":
+              {
+                "x":9950250,
+                "y":51536281,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "crdAltL":
+              [
+                {
+                  "x":99999999,
+                  "y":99999999,
+                  "layerX":0,
+                  "crdSysX":0
+                },
+                {
+                  "x":99999999,
+                  "y":99999999,
+                  "layerX":0,
+                  "crdSysX":1
+                }
+              ],
+              "meta":true,
+              "pCls":32,
+              "pRefL":
+              [
+0
+              ],
+              "wt":1292,
+              "isMainMast":true
+            },
+            {
+              "lid":"A=2@O=Göttingen - Göttingen, Dahlmannstraße@X=9949180@Y=51537657@U=99@b=958068153@B=1@p=1617880347@",
+              "type":"A",
+              "name":"Göttingen - Göttingen, Dahlmannstraße",
+              "icoX":1,
+              "state":"M",
+              "crd":
+              {
+                "x":9949180,
+                "y":51537657,
+                "layerX":0,
+                "crdSysX":0
+              }
+            },
+            {
+              "lid":"A=2@O=Friedland - Lichtenhagen, Mahlmannstraße@X=10005587@Y=51428986@U=99@b=958104836@B=1@p=1617880347@",
+              "type":"A",
+              "name":"Friedland - Lichtenhagen, Mahlmannstraße",
+              "icoX":1,
+              "state":"M",
+              "crd":
+              {
+                "x":10005587,
+                "y":51428986,
+                "layerX":0,
+                "crdSysX":0
+              }
+            },
+            {
+              "lid":"A=2@O=Einbeck - Einbeck, Oehlmannstraße@X=9869967@Y=51829833@U=99@b=958083830@B=1@p=1617880347@",
+              "type":"A",
+              "name":"Einbeck - Einbeck, Oehlmannstraße",
+              "icoX":1,
+              "state":"M",
+              "crd":
+              {
+                "x":9869967,
+                "y":51829833,
+                "layerX":0,
+                "crdSysX":0
+              }
+            },
+            {
+              "lid":"A=1@O=Wismar Dahlmannstraße@X=11457813@Y=53890233@U=80@L=4900029@B=1@p=1630786923@",
+              "type":"S",
+              "name":"Wismar Dahlmannstraße",
+              "icoX":0,
+              "extId":"4900029",
+              "state":"F",
+              "crd":
+              {
+                "x":11457813,
+                "y":53890233,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":32,
+              "pRefL":
+              [
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9,
+10,
+11,
+12,
+13
+              ],
+              "wt":1292
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

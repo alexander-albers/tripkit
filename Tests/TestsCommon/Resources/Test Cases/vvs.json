@@ -1,0 +1,92 @@
+{
+    "suggestLocations": [
+        {
+            "constraint": "Staatsgalerie",
+            "result": {
+                "id": "5006024"
+            }
+        },
+        {
+            "constraint": "staatsgal",
+            "result": {
+                "id": "5006024"
+            }
+        },
+        {
+            "constraint": "Nürtingen",
+            "result": {
+                "id": "5002931"
+            }
+        },
+        {
+            "constraint": "Stuttgart, Urbanstraße 20",
+            "result": {
+                "id": "streetID:3112:20:8111000:51:Urbanstraße:Stuttgart:Urbanstraße::Urbanstraße:70182:ANY:DIVA_SINGLEHOUSE:3513750:755567:NBWT:VVS:0"
+            }
+        }
+    ],
+    "queryNearbyLocationsByCoordinate": [
+        {
+            "__comment": "Stuttgart Hauptbahnhof",
+            "lat": 48782984,
+            "lon": 9179846,
+            "result": {
+                "id": "5006118"
+            }
+        },
+        {
+            "__comment": "Stuttgart Staatsgalerie",
+            "lat": 48782584,
+            "lon": 9187098,
+            "result": {
+                "id": "5006024"
+            }
+        }
+    ],
+    "queryDepartures": [
+        {
+            "__comment": "Stuttgart Staatsgalerie",
+            "id": "5006024"
+        }
+    ],
+    "queryDeparturesInvalidId": "999999",
+    "queryTrips": [
+        {
+            "__comment": "Stuttgart Hauptbahnhof to Stuttgart Staatsgalerie",
+            "from": {
+                "type": "station",
+                "id": "5006118"
+            },
+            "to": {
+                "type": "station",
+                "id": "5006024"
+            }
+        },
+        {
+            "__comment": "Stuttgart Hauptbahnhof to Stuttgart Staatsgalerie",
+            "from": {
+                "type": "coord",
+                "lat": 48782984,
+                "lon": 9179846
+            },
+            "to": {
+                "type": "coord",
+                "lat": 48782584,
+                "lon": 9187098
+            }
+        }
+    ],
+    "queryTripsTooClose": [
+        {
+            "__comment": "Stuttgart Hauptbahnhof",
+            "from": {
+                "type": "station",
+                "id": "5006118"
+            },
+            "to": {
+                "type": "station",
+                "id": "5006118"
+            }
+        }
+    ]
+}

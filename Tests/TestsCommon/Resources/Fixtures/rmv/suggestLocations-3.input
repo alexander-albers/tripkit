@@ -1,0 +1,146 @@
+{
+  "ver":"1.20",
+  "ext":"RMV.1",
+  "lang":"deu",
+  "id":"h2m2qkue6u8s8g8g",
+  "err":"OK",
+  "svcResL":
+  [
+    {
+      "meth":"LocMatch",
+      "err":"OK",
+      "res":
+      {
+        "common":
+        {
+          "locL":
+          [
+
+          ],
+          "prodL":
+          [
+
+          ],
+          "polyL":
+          [
+
+          ],
+          "layerL":
+          [
+            {
+              "id":"standard",
+              "name":"standard",
+              "index":0,
+              "annoCnt":0
+            }
+          ],
+          "crdSysL":
+          [
+            {
+              "id":"standard",
+              "index":0,
+              "type":"WGS84"
+            }
+          ],
+          "opL":
+          [
+
+          ],
+          "remL":
+          [
+
+          ],
+          "icoL":
+          [
+            {
+              "res":"ADR"
+            }
+          ]
+        },
+        "match":
+        {
+          "field":"S",
+          "state":"L",
+          "locL":
+          [
+            {
+              "lid":"A=2@O=Frankfurt am Main - Innenstadt, Kaiserstraße 30@H=30@X=8673350@Y=50109963@U=103@L=990057850@B=1@p=1582579331@",
+              "type":"A",
+              "name":"Frankfurt am Main - Innenstadt, Kaiserstraße 30",
+              "icoX":0,
+              "extId":"990057850",
+              "state":"F",
+              "crd":
+              {
+                "x":8673350,
+                "y":50109963,
+                "layerX":0,
+                "crdSysX":0
+              }
+            },
+            {
+              "lid":"A=2@O=Frankfurt am Main - Innenstadt, Schillerstraße 30@H=30@X=8678977@Y=50116103@U=103@L=990057879@B=1@p=1582579331@",
+              "type":"A",
+              "name":"Frankfurt am Main - Innenstadt, Schillerstraße 30",
+              "icoX":0,
+              "extId":"990057879",
+              "state":"F",
+              "crd":
+              {
+                "x":8678977,
+                "y":50116103,
+                "layerX":0,
+                "crdSysX":0
+              }
+            },
+            {
+              "lid":"A=2@O=Frankfurt am Main - Innenstadt, Brönnerstraße 30@H=30@X=8682897@Y=50117307@U=103@L=990057822@B=1@p=1582579331@",
+              "type":"A",
+              "name":"Frankfurt am Main - Innenstadt, Brönnerstraße 30",
+              "icoX":0,
+              "extId":"990057822",
+              "state":"F",
+              "crd":
+              {
+                "x":8682897,
+                "y":50117307,
+                "layerX":0,
+                "crdSysX":0
+              }
+            },
+            {
+              "lid":"A=2@O=Frankfurt am Main - Innenstadt, Kaiserhofstraße 20@H=20@X=8675453@Y=50115680@U=103@L=990057849@B=1@p=1582579331@",
+              "type":"A",
+              "name":"Frankfurt am Main - Innenstadt, Kaiserhofstraße 20",
+              "icoX":0,
+              "extId":"990057849",
+              "state":"F",
+              "crd":
+              {
+                "x":8675453,
+                "y":50115680,
+                "layerX":0,
+                "crdSysX":0
+              }
+            },
+            {
+              "lid":"A=2@O=Frankfurt am Main - Innenstadt, Kirchnerstraße 12@H=12@X=8674914@Y=50111653@U=103@L=990057854@B=1@p=1582579331@",
+              "type":"A",
+              "name":"Frankfurt am Main - Innenstadt, Kirchnerstraße 12",
+              "icoX":0,
+              "extId":"990057854",
+              "state":"F",
+              "crd":
+              {
+                "x":8674914,
+                "y":50111653,
+                "layerX":0,
+                "crdSysX":0
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

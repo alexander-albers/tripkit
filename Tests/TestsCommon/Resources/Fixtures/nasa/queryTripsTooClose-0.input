@@ -1,0 +1,64 @@
+{
+  "ver":"1.15",
+  "lang":"deu",
+  "id":"zt4cjgx642xzpgck",
+  "svcResL":
+  [
+    {
+      "meth":"TripSearch",
+      "err":"H9380",
+      "errTxt":"HAFAS Kernel: Departure/Arrival/Intermediate or equivalent stations defined more than once.",
+      "res":
+      {
+        "common":
+        {
+          "locL":
+          [
+
+          ],
+          "prodL":
+          [
+
+          ],
+          "polyL":
+          [
+
+          ],
+          "layerL":
+          [
+            {
+              "id":"standard",
+              "name":"standard",
+              "index":0,
+              "annoCnt":0
+            }
+          ],
+          "crdSysL":
+          [
+            {
+              "id":"standard",
+              "index":0,
+              "type":"WGS84",
+              "dim":2
+            }
+          ],
+          "opL":
+          [
+
+          ],
+          "remL":
+          [
+
+          ],
+          "icoL":
+          [
+
+          ]
+        },
+        "fpB":"20210902",
+        "fpE":"20211211",
+        "planrtTS":"1630931701"
+      }
+    }
+  ]
+}

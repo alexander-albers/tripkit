@@ -1,0 +1,21 @@
+{
+  "ver":"1.18",
+  "ext":"VAO.13",
+  "lang":"deu",
+  "id":"tkmx3gs6k2ahh2wx",
+  "err":"OK",
+  "cInfo":
+  {
+    "code":"OK",
+    "url":"",
+    "msg":""
+  },
+  "svcResL":
+  [
+    {
+      "meth":"TripSearch",
+      "err":"H9220",
+      "errTxt":"HAFAS Kernel: Nearby to the given address stations could not be found."
+    }
+  ]
+}

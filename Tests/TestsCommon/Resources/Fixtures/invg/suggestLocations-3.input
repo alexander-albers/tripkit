@@ -1,0 +1,145 @@
+{
+  "ver":"1.16",
+  "lang":"deu",
+  "id":"mm6kjgqeka8cpwwx",
+  "svcResL":
+  [
+    {
+      "meth":"LocMatch",
+      "err":"OK",
+      "res":
+      {
+        "common":
+        {
+          "locL":
+          [
+
+          ],
+          "prodL":
+          [
+
+          ],
+          "polyL":
+          [
+
+          ],
+          "layerL":
+          [
+            {
+              "id":"standard",
+              "name":"standard",
+              "index":0,
+              "annoCnt":0
+            }
+          ],
+          "crdSysL":
+          [
+            {
+              "id":"standard",
+              "index":0,
+              "type":"WGS84",
+              "dim":2
+            }
+          ],
+          "opL":
+          [
+
+          ],
+          "remL":
+          [
+
+          ],
+          "icoL":
+          [
+            {
+              "res":"ADR"
+            }
+          ]
+        },
+        "match":
+        {
+          "field":"S",
+          "state":"L",
+          "locL":
+          [
+            {
+              "lid":"A=2@O=Ingolstadt, Kellerstraße 1@X=11426557@Y=48767613@U=103@L=990003694@B=1@p=1607068022@",
+              "type":"A",
+              "name":"Ingolstadt, Kellerstraße 1",
+              "icoX":0,
+              "extId":"990003694",
+              "state":"F",
+              "crd":
+              {
+                "x":11426557,
+                "y":48767613,
+                "layerX":0,
+                "crdSysX":0
+              }
+            },
+            {
+              "lid":"A=2@O=Ingolstadt, Schmellerstraße 1@X=11417523@Y=48759388@U=103@L=990004153@B=1@p=1607068022@",
+              "type":"A",
+              "name":"Ingolstadt, Schmellerstraße 1",
+              "icoX":0,
+              "extId":"990004153",
+              "state":"F",
+              "crd":
+              {
+                "x":11417523,
+                "y":48759388,
+                "layerX":0,
+                "crdSysX":0
+              }
+            },
+            {
+              "lid":"A=2@O=Ingolstadt, Bergmüllerstraße 1@X=11450046@Y=48742236@U=103@L=990003205@B=1@p=1607068022@",
+              "type":"A",
+              "name":"Ingolstadt, Bergmüllerstraße 1",
+              "icoX":0,
+              "extId":"990003205",
+              "state":"F",
+              "crd":
+              {
+                "x":11450046,
+                "y":48742236,
+                "layerX":0,
+                "crdSysX":0
+              }
+            },
+            {
+              "lid":"A=2@O=Ingolstadt, Müllersbergerstraße 1@X=11452167@Y=48742803@U=103@L=990003912@B=1@p=1607068022@",
+              "type":"A",
+              "name":"Ingolstadt, Müllersbergerstraße 1",
+              "icoX":0,
+              "extId":"990003912",
+              "state":"F",
+              "crd":
+              {
+                "x":11452167,
+                "y":48742803,
+                "layerX":0,
+                "crdSysX":0
+              }
+            },
+            {
+              "lid":"A=2@O=Ingolstadt, Kellerhalsstraße 12@X=11373898@Y=48781591@U=103@L=990003693@B=1@p=1607068022@",
+              "type":"A",
+              "name":"Ingolstadt, Kellerhalsstraße 12",
+              "icoX":0,
+              "extId":"990003693",
+              "state":"F",
+              "crd":
+              {
+                "x":11373898,
+                "y":48781591,
+                "layerX":0,
+                "crdSysX":0
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

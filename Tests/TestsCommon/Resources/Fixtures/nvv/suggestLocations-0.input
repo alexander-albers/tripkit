@@ -1,0 +1,161 @@
+{
+  "ver":"1.15",
+  "lang":"deu",
+  "id":"3vgawmq6mi85gw4s",
+  "svcResL":
+  [
+    {
+      "meth":"LocMatch",
+      "err":"OK",
+      "res":
+      {
+        "common":
+        {
+          "locL":
+          [
+
+          ],
+          "prodL":
+          [
+
+          ],
+          "polyL":
+          [
+
+          ],
+          "layerL":
+          [
+            {
+              "id":"standard",
+              "name":"standard",
+              "index":0,
+              "annoCnt":0
+            }
+          ],
+          "crdSysL":
+          [
+            {
+              "id":"standard",
+              "index":0,
+              "type":"WGS84",
+              "dim":2
+            }
+          ],
+          "opL":
+          [
+
+          ],
+          "remL":
+          [
+
+          ],
+          "icoL":
+          [
+            {
+              "res":"STA"
+            },
+            {
+              "res":"POI_TOURIST"
+            }
+          ]
+        },
+        "match":
+        {
+          "field":"S",
+          "state":"L",
+          "locL":
+          [
+            {
+              "lid":"A=1@O=Frankfurt (Main) Hauptbahnhof@X=8662653@Y=50106808@U=80@L=3000010@B=1@p=1630651633@",
+              "type":"S",
+              "name":"Frankfurt (Main) Hauptbahnhof",
+              "icoX":0,
+              "extId":"3000010",
+              "state":"F",
+              "crd":
+              {
+                "x":8662653,
+                "y":50106808,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":255,
+              "wt":27521
+            },
+            {
+              "lid":"A=1@O=Frankfurt (Main) Hauptbahnhof Südseite@X=8664046@Y=50105720@U=80@L=3007011@B=1@p=1630651633@",
+              "type":"S",
+              "name":"Frankfurt (Main) Hauptbahnhof Südseite",
+              "icoX":0,
+              "extId":"3007011",
+              "state":"F",
+              "crd":
+              {
+                "x":8664046,
+                "y":50105720,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":255,
+              "wt":524
+            },
+            {
+              "lid":"A=1@O=Frankfurt (Main) Hauptbahnhof/Karlstraße@X=8663651@Y=50108696@U=80@L=3060767@B=1@p=1630651633@",
+              "type":"S",
+              "name":"Frankfurt (Main) Hauptbahnhof/Karlstraße",
+              "icoX":0,
+              "extId":"3060767",
+              "state":"F",
+              "crd":
+              {
+                "x":8663651,
+                "y":50108696,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":64,
+              "wt":212
+            },
+            {
+              "lid":"A=1@O=Frankfurt (Main) Hauptbahnhof/Münchener Straße@X=8666222@Y=50106925@U=80@L=3000008@B=1@p=1630651633@",
+              "type":"S",
+              "name":"Frankfurt (Main) Hauptbahnhof/Münchener Straße",
+              "icoX":0,
+              "extId":"3000008",
+              "state":"F",
+              "crd":
+              {
+                "x":8666222,
+                "y":50106925,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":255,
+              "wt":4440
+            },
+            {
+              "lid":"A=4@O=Frankfurt (Main) Touristeninformation Hbf@X=8664487@Y=50107500@U=104@L=9000339@B=1@p=1622663225@",
+              "type":"P",
+              "name":"Frankfurt (Main) Touristeninformation Hbf",
+              "icoX":1,
+              "extId":"9000339",
+              "state":"F",
+              "crd":
+              {
+                "x":8664487,
+                "y":50107500,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

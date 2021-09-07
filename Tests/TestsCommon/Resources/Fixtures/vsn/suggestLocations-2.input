@@ -1,0 +1,252 @@
+{
+  "ver":"1.16",
+  "lang":"deu",
+  "id":"mdwspguc66xxgg4k",
+  "svcResL":
+  [
+    {
+      "meth":"LocMatch",
+      "err":"OK",
+      "res":
+      {
+        "common":
+        {
+          "locL":
+          [
+
+          ],
+          "prodL":
+          [
+            {
+              "name":"Bus 71",
+              "nameS":"71",
+              "icoX":0,
+              "cls":32,
+              "prodCtx":
+              {
+                "lineId":"de:VBN-VSN:71:"
+              }
+            },
+            {
+              "name":"Bus 72",
+              "nameS":"72",
+              "icoX":0,
+              "cls":32,
+              "prodCtx":
+              {
+                "lineId":"de:VBN-VSN:72:"
+              }
+            },
+            {
+              "name":"Bus 73",
+              "nameS":"73",
+              "icoX":0,
+              "cls":32,
+              "prodCtx":
+              {
+                "lineId":"de:VBN-VSN:73:"
+              }
+            },
+            {
+              "name":"Bus 91",
+              "nameS":"91",
+              "icoX":0,
+              "cls":32,
+              "prodCtx":
+              {
+                "lineId":"de:VBN-VSN:91:"
+              }
+            },
+            {
+              "name":"Bus 92",
+              "nameS":"92",
+              "icoX":0,
+              "cls":32,
+              "prodCtx":
+              {
+                "lineId":"de:VBN-VSN:92:"
+              }
+            },
+            {
+              "name":"Bus N5",
+              "nameS":"N5",
+              "icoX":0,
+              "cls":32,
+              "prodCtx":
+              {
+                "lineId":"de:VBN-VSN:N5:"
+              }
+            }
+          ],
+          "polyL":
+          [
+
+          ],
+          "layerL":
+          [
+            {
+              "id":"standard",
+              "name":"standard",
+              "index":0,
+              "annoCnt":0
+            }
+          ],
+          "crdSysL":
+          [
+            {
+              "id":"standard",
+              "index":0,
+              "type":"WGS84",
+              "dim":3
+            },
+            {
+              "id":"G?tt_178",
+              "index":1,
+              "type":"WGS84",
+              "dim":2
+            }
+          ],
+          "opL":
+          [
+
+          ],
+          "remL":
+          [
+
+          ],
+          "icoL":
+          [
+            {
+              "res":"prod_bus",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255,
+                "a":255
+              },
+              "bg":
+              {
+                "r":0,
+                "g":92,
+                "b":169,
+                "a":255
+              }
+            },
+            {
+              "res":"ADR"
+            }
+          ]
+        },
+        "match":
+        {
+          "field":"S",
+          "state":"L",
+          "locL":
+          [
+            {
+              "lid":"A=1@O=Göttingen Lönsweg@X=9953540@Y=51527193@U=80@L=9033996@B=1@p=1630786923@",
+              "type":"S",
+              "name":"Göttingen Lönsweg",
+              "icoX":0,
+              "extId":"9033996",
+              "state":"F",
+              "crd":
+              {
+                "x":9953540,
+                "y":51527193,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "crdAltL":
+              [
+                {
+                  "x":99999999,
+                  "y":99999999,
+                  "layerX":0,
+                  "crdSysX":0
+                },
+                {
+                  "x":99999999,
+                  "y":99999999,
+                  "layerX":0,
+                  "crdSysX":1
+                }
+              ],
+              "meta":true,
+              "pCls":32,
+              "pRefL":
+              [
+0,
+1,
+2,
+3,
+4,
+5
+              ],
+              "wt":1292,
+              "isMainMast":true
+            },
+            {
+              "lid":"A=2@O=Dassel - Dassel, Lönsweg@X=9689994@Y=51799719@U=99@b=958128560@B=1@p=1617880347@",
+              "type":"A",
+              "name":"Dassel - Dassel, Lönsweg",
+              "icoX":1,
+              "state":"M",
+              "crd":
+              {
+                "x":9689994,
+                "y":51799719,
+                "layerX":0,
+                "crdSysX":0
+              }
+            },
+            {
+              "lid":"A=2@O=Bockenem - Nette, Lönsweg@X=10086203@Y=52038635@U=99@b=958096314@B=1@p=1617880347@",
+              "type":"A",
+              "name":"Bockenem - Nette, Lönsweg",
+              "icoX":1,
+              "state":"M",
+              "crd":
+              {
+                "x":10086203,
+                "y":52038635,
+                "layerX":0,
+                "crdSysX":0
+              }
+            },
+            {
+              "lid":"A=2@O=Deensen - Deensen, Lönsweg@X=9589854@Y=51864819@U=99@b=958060836@B=1@p=1617880347@",
+              "type":"A",
+              "name":"Deensen - Deensen, Lönsweg",
+              "icoX":1,
+              "state":"M",
+              "crd":
+              {
+                "x":9589854,
+                "y":51864819,
+                "layerX":0,
+                "crdSysX":0
+              }
+            },
+            {
+              "lid":"A=2@O=Duingen - Duingen, Lönsweg@X=9686371@Y=52003703@U=99@b=958134751@B=1@p=1617880347@",
+              "type":"A",
+              "name":"Duingen - Duingen, Lönsweg",
+              "icoX":1,
+              "state":"M",
+              "crd":
+              {
+                "x":9686371,
+                "y":52003703,
+                "layerX":0,
+                "crdSysX":0
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

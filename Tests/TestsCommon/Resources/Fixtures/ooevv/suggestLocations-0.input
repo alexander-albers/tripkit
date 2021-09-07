@@ -1,0 +1,182 @@
+{
+  "ver":"1.15",
+  "lang":"deu",
+  "id":"wai4yiqck22dgwwx",
+  "cInfo":
+  {
+    "code":"OK",
+    "url":"",
+    "msg":""
+  },
+  "svcResL":
+  [
+    {
+      "meth":"LocMatch",
+      "err":"OK",
+      "res":
+      {
+        "common":
+        {
+          "locL":
+          [
+
+          ],
+          "prodL":
+          [
+
+          ],
+          "polyL":
+          [
+
+          ],
+          "layerL":
+          [
+            {
+              "id":"standard",
+              "name":"standard",
+              "index":0,
+              "annoCnt":384392
+            }
+          ],
+          "crdSysL":
+          [
+            {
+              "id":"standard",
+              "index":0,
+              "type":"WGS84",
+              "dim":2
+            }
+          ],
+          "opL":
+          [
+
+          ],
+          "remL":
+          [
+
+          ],
+          "icoL":
+          [
+            {
+              "res":"prod_bus",
+              "txtS":"21",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255,
+                "a":255
+              },
+              "bg":
+              {
+                "r":0,
+                "g":121,
+                "b":58,
+                "a":255
+              }
+            },
+            {
+              "res":"ADR"
+            }
+          ]
+        },
+        "match":
+        {
+          "field":"S",
+          "state":"L",
+          "locL":
+          [
+            {
+              "lid":"A=1@O=Salzburg Merianstraße@X=13050279@Y=47811556@U=81@L=455084400@B=1@p=1630889505@i=at:45:50844@",
+              "type":"S",
+              "name":"Salzburg Merianstraße",
+              "icoX":0,
+              "extId":"455084400",
+              "state":"F",
+              "crd":
+              {
+                "x":13050279,
+                "y":47811556,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "meta":true,
+              "pCls":128,
+              "wt":63,
+              "isMainMast":true
+            },
+            {
+              "lid":"A=2@O=Merianstraße, 5020 Salzburg@X=13054306@Y=47811322@U=103@b=980079285@B=1@p=1629871314@",
+              "type":"A",
+              "name":"Merianstraße, 5020 Salzburg",
+              "icoX":1,
+              "state":"F",
+              "crd":
+              {
+                "x":13054306,
+                "y":47811322,
+                "layerX":0,
+                "crdSysX":0
+              }
+            },
+            {
+              "lid":"A=1@O=Salzburg Gorianstraße@X=13029496@Y=47794189@U=81@L=455085200@B=1@p=1630889505@i=at:45:50852@",
+              "type":"S",
+              "name":"Salzburg Gorianstraße",
+              "icoX":0,
+              "extId":"455085200",
+              "state":"F",
+              "crd":
+              {
+                "x":13029496,
+                "y":47794189,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "meta":true,
+              "pCls":1152,
+              "wt":197,
+              "isMainMast":true
+            },
+            {
+              "lid":"A=1@O=Salzburg Firmianstraße@X=13025963@Y=47784687@U=81@L=455069600@B=1@p=1630889505@i=at:45:50696@",
+              "type":"S",
+              "name":"Salzburg Firmianstraße",
+              "icoX":0,
+              "extId":"455069600",
+              "state":"F",
+              "crd":
+              {
+                "x":13025963,
+                "y":47784687,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "meta":true,
+              "pCls":1152,
+              "wt":197,
+              "isMainMast":true
+            },
+            {
+              "lid":"A=2@O=Gorianstraße, 5020 Salzburg@X=13029217@Y=47794036@U=103@b=980041665@B=1@p=1629871314@",
+              "type":"A",
+              "name":"Gorianstraße, 5020 Salzburg",
+              "icoX":1,
+              "state":"F",
+              "crd":
+              {
+                "x":13029217,
+                "y":47794036,
+                "layerX":0,
+                "crdSysX":0
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

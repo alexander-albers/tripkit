@@ -1,0 +1,41 @@
+{
+  "ver":"1.10",
+  "lang":"deu",
+  "id":"9mmqgkqmmq2zhw8x",
+  "svcResL":
+  [
+    {
+      "meth":"TripSearch",
+      "err":"H9380",
+      "errTxt":"HAFAS Kernel: Departure/Arrival/Intermediate or equivalent stations defined more than once.",
+      "res":
+      {
+        "common":
+        {
+          "locL":
+          [
+
+          ],
+          "prodL":
+          [
+
+          ],
+          "opL":
+          [
+
+          ],
+          "remL":
+          [
+
+          ],
+          "icoL":
+          [
+
+          ]
+        },
+        "fpB":"20201213",
+        "fpE":"20211211"
+      }
+    }
+  ]
+}

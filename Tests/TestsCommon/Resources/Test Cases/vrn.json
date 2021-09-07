@@ -1,0 +1,96 @@
+{
+    "suggestLocations": [
+        {
+            "constraint": "Hauptbahnhof, Mannheim",
+            "result": {
+                "id": "6002417"
+            }
+        },
+        {
+            "constraint": "kur",
+            "result": {
+                "id": "1166661"
+            }
+        },
+        {
+            "constraint": "Käfertaler Wald",
+            "result": {
+                "id": "6002375"
+            }
+        },
+        {
+            "constraint": "Mannheim, Kolpingstraße 1",
+            "result": {
+                "id": "streetID:1500001015:1:8222000:-1:Kolpingstraße:Mannheim:Kolpingstraße::Kolpingstraße:68165:ANY:DIVA_SINGLEHOUSE:943953:5641970:MRCV:b_w"
+            }
+        }
+    ],
+    "queryNearbyLocationsByCoordinate": [
+        {
+            "__comment": "Mannheim Hauptbahnhof",
+            "lat": 49479748,
+            "lon": 8469938,
+            "result": {
+                "id": "6002417"
+            }
+        },
+        {
+            "__comment": "Mannheim Kunsthalle",
+            "lat": 49482892,
+            "lon": 8473050,
+            "result": {
+                "id": "6005542"
+            }
+        }
+    ],
+    "queryDepartures": [
+        {
+            "__comment": "Mannheim Hauptbahnhof",
+            "id": "6002417"
+        },
+        {
+            "__comment": "Mannheim Kunsthalle",
+            "id": "6005542"
+        }
+    ],
+    "queryDeparturesInvalidId": "999999",
+    "queryTrips": [
+        {
+            "__comment": "Mannheim Hauptbahnhof to Mannheim Kunsthalle",
+            "from": {
+                "type": "station",
+                "id": "6002417"
+            },
+            "to": {
+                "type": "station",
+                "id": "6005542"
+            }
+        },
+        {
+            "__comment": "Mannheim Hauptbahnhof to Mannheim Kunsthalle",
+            "from": {
+                "type": "coord",
+                "lat": 49479748,
+                "lon": 8469938
+            },
+            "to": {
+                "type": "coord",
+                "lat": 49482892,
+                "lon": 8473050
+            }
+        }
+    ],
+    "queryTripsTooClose": [
+        {
+            "__comment": "Mannheim Hauptbahnhof",
+            "from": {
+                "type": "station",
+                "id": "6002417"
+            },
+            "to": {
+                "type": "station",
+                "id": "6002417"
+            }
+        }
+    ]
+}

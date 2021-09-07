@@ -1,0 +1,145 @@
+{
+  "ver":"1.18",
+  "lang":"deu",
+  "id":"pgiu8ma6muwgwgwg",
+  "err":"OK",
+  "svcResL":
+  [
+    {
+      "meth":"LocMatch",
+      "err":"OK",
+      "res":
+      {
+        "common":
+        {
+          "locL":
+          [
+
+          ],
+          "prodL":
+          [
+
+          ],
+          "polyL":
+          [
+
+          ],
+          "layerL":
+          [
+            {
+              "id":"standard",
+              "name":"standard",
+              "index":0,
+              "annoCnt":0
+            }
+          ],
+          "crdSysL":
+          [
+            {
+              "id":"standard",
+              "index":0,
+              "type":"WGS84"
+            }
+          ],
+          "opL":
+          [
+
+          ],
+          "remL":
+          [
+
+          ],
+          "icoL":
+          [
+            {
+              "res":"ADR"
+            }
+          ]
+        },
+        "match":
+        {
+          "field":"S",
+          "state":"L",
+          "locL":
+          [
+            {
+              "lid":"A=2@O=Rostock - Stadtmitte, Lange Straße 1@H=1@X=12131168@Y=54090054@U=100@L=990004138@B=1@p=1424956371@",
+              "type":"A",
+              "name":"Rostock - Stadtmitte, Lange Straße 1",
+              "icoX":0,
+              "extId":"990004138",
+              "state":"F",
+              "crd":
+              {
+                "x":12131168,
+                "y":54090054,
+                "layerX":0,
+                "crdSysX":0
+              }
+            },
+            {
+              "lid":"A=2@O=Rostock - Stadtmitte, Wielandstraße 1@H=1@X=12129954@Y=54080840@U=100@L=990004192@B=1@p=1424956371@",
+              "type":"A",
+              "name":"Rostock - Stadtmitte, Wielandstraße 1",
+              "icoX":0,
+              "extId":"990004192",
+              "state":"F",
+              "crd":
+              {
+                "x":12129954,
+                "y":54080840,
+                "layerX":0,
+                "crdSysX":0
+              }
+            },
+            {
+              "lid":"A=2@O=Rostock - Stadtmitte, Schwaaner Landstraße 1@H=1@X=12140175@Y=54075411@U=100@L=990004171@B=1@p=1424956371@",
+              "type":"A",
+              "name":"Rostock - Stadtmitte, Schwaaner Landstraße 1",
+              "icoX":0,
+              "extId":"990004171",
+              "state":"F",
+              "crd":
+              {
+                "x":12140175,
+                "y":54075411,
+                "layerX":0,
+                "crdSysX":0
+              }
+            },
+            {
+              "lid":"A=2@O=Rostock - Stadtmitte, 1.St.-Jürgen-Straße 7@H=7@X=12141667@Y=54081559@U=100@L=990004029@B=1@p=1424956371@",
+              "type":"A",
+              "name":"Rostock - Stadtmitte, 1.St.-Jürgen-Straße 7",
+              "icoX":0,
+              "extId":"990004029",
+              "state":"F",
+              "crd":
+              {
+                "x":12141667,
+                "y":54081559,
+                "layerX":0,
+                "crdSysX":0
+              }
+            },
+            {
+              "lid":"A=2@O=Rostock - Stadtmitte, Breite Straße 3@H=3@X=12134548@Y=54088822@U=100@L=990004074@B=1@p=1424956371@",
+              "type":"A",
+              "name":"Rostock - Stadtmitte, Breite Straße 3",
+              "icoX":0,
+              "extId":"990004074",
+              "state":"F",
+              "crd":
+              {
+                "x":12134548,
+                "y":54088822,
+                "layerX":0,
+                "crdSysX":0
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

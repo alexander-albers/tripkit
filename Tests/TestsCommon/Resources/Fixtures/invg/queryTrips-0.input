@@ -1,0 +1,2468 @@
+{
+  "ver":"1.16",
+  "lang":"deu",
+  "id":"zsguqm8c4qx5928x",
+  "svcResL":
+  [
+    {
+      "meth":"TripSearch",
+      "err":"OK",
+      "res":
+      {
+        "common":
+        {
+          "locL":
+          [
+            {
+              "lid":"A=1@O=Rechbergstraße@X=11429542@Y=48769968@U=80@L=61202@",
+              "type":"S",
+              "name":"Rechbergstraße",
+              "icoX":0,
+              "extId":"61202",
+              "state":"F",
+              "crd":
+              {
+                "x":11429542,
+                "y":48769968,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":1
+            },
+            {
+              "lid":"A=1@O=Ingolstadt, Z O B  Bussteig 03@X=11422395@Y=48768287@U=80@L=78803@",
+              "type":"S",
+              "name":"Ingolstadt, Z O B  Bussteig 03",
+              "icoX":0,
+              "extId":"78803",
+              "state":"F",
+              "crd":
+              {
+                "x":11422395,
+                "y":48768287,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":1
+            },
+            {
+              "lid":"A=1@O=Ingolstadt, Z O B  Bussteig 07@X=11423033@Y=48768242@U=80@L=78807@",
+              "type":"S",
+              "name":"Ingolstadt, Z O B  Bussteig 07",
+              "icoX":0,
+              "extId":"78807",
+              "state":"F",
+              "crd":
+              {
+                "x":11423033,
+                "y":48768242,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":1
+            },
+            {
+              "lid":"A=1@O=Ingolstadt, Z O B  Bussteig 01@X=11422422@Y=48768341@U=80@L=78801@",
+              "type":"S",
+              "name":"Ingolstadt, Z O B  Bussteig 01",
+              "icoX":0,
+              "extId":"78801",
+              "state":"F",
+              "crd":
+              {
+                "x":11422422,
+                "y":48768341,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":1
+            },
+            {
+              "lid":"A=1@O=Ingolstadt, Z O B  Bussteig 11@X=11423402@Y=48768332@U=80@L=78811@",
+              "type":"S",
+              "name":"Ingolstadt, Z O B  Bussteig 11",
+              "icoX":0,
+              "extId":"78811",
+              "state":"F",
+              "crd":
+              {
+                "x":11423402,
+                "y":48768332,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":1
+            }
+          ],
+          "prodL":
+          [
+            {
+              "pid":"L::0::Bus::B1146449194::Bus_1146449194_15::*",
+              "name":"Bus 15",
+              "nameS":"15",
+              "number":"15",
+              "icoX":0,
+              "cls":1,
+              "oprX":0,
+              "prodCtx":
+              {
+                "name":"Bus   15",
+                "num":"35",
+                "line":"15",
+                "matchId":"15",
+                "catOut":"Bus     ",
+                "catOutS":"1",
+                "catOutL":"B u s",
+                "catIn":"1",
+                "catCode":"0",
+                "admin":"Bus___"
+              },
+              "himIdL":
+              [
+"HIM_FREETEXT_157",
+"HIM_FREETEXT_147"
+              ]
+            },
+            {
+              "pid":"L::0::Bus::B1146449194::Bus_1146449194_30::*",
+              "name":"Bus 30",
+              "nameS":"30",
+              "number":"30",
+              "icoX":0,
+              "cls":1,
+              "oprX":0,
+              "prodCtx":
+              {
+                "name":"Bus   30",
+                "num":"14",
+                "line":"30",
+                "matchId":"30",
+                "catOut":"Bus     ",
+                "catOutS":"1",
+                "catOutL":"B u s",
+                "catIn":"1",
+                "catCode":"0",
+                "admin":"Bus___"
+              },
+              "himIdL":
+              [
+"HIM_FREETEXT_157"
+              ]
+            },
+            {
+              "pid":"L::0::Bus::B1146449194::Bus_1146449194_60::*",
+              "name":"Bus 60",
+              "nameS":"60",
+              "number":"60",
+              "icoX":0,
+              "cls":1,
+              "oprX":0,
+              "prodCtx":
+              {
+                "name":"Bus   60",
+                "num":"522",
+                "line":"60",
+                "matchId":"60",
+                "catOut":"Bus     ",
+                "catOutS":"1",
+                "catOutL":"B u s",
+                "catIn":"1",
+                "catCode":"0",
+                "admin":"Bus___"
+              },
+              "himIdL":
+              [
+"HIM_FREETEXT_157"
+              ]
+            },
+            {
+              "pid":"L::0::Bus::B1146449194::Bus_1146449194_60::*",
+              "name":"Bus 60",
+              "nameS":"60",
+              "number":"60",
+              "icoX":0,
+              "cls":1,
+              "oprX":0,
+              "prodCtx":
+              {
+                "name":"Bus   60",
+                "num":"523",
+                "line":"60",
+                "matchId":"60",
+                "catOut":"Bus     ",
+                "catOutS":"1",
+                "catOutL":"B u s",
+                "catIn":"1",
+                "catCode":"0",
+                "admin":"Bus___"
+              },
+              "himIdL":
+              [
+"HIM_FREETEXT_157"
+              ]
+            },
+            {
+              "pid":"L::0::Bus::B1146449194::Bus_1146449194_60::*",
+              "name":"Bus 60",
+              "nameS":"60",
+              "number":"60",
+              "icoX":0,
+              "cls":1,
+              "oprX":0,
+              "prodCtx":
+              {
+                "name":"Bus   60",
+                "num":"524",
+                "line":"60",
+                "matchId":"60",
+                "catOut":"Bus     ",
+                "catOutS":"1",
+                "catOutL":"B u s",
+                "catIn":"1",
+                "catCode":"0",
+                "admin":"Bus___"
+              },
+              "himIdL":
+              [
+"HIM_FREETEXT_157"
+              ]
+            },
+            {
+              "pid":"L::0::Bus::B1146449194::Bus_1146449194_60::*",
+              "name":"Bus 60",
+              "nameS":"60",
+              "number":"60",
+              "icoX":0,
+              "cls":1,
+              "oprX":0,
+              "prodCtx":
+              {
+                "name":"Bus   60",
+                "num":"568",
+                "line":"60",
+                "matchId":"60",
+                "catOut":"Bus     ",
+                "catOutS":"1",
+                "catOutL":"B u s",
+                "catIn":"1",
+                "catCode":"0",
+                "admin":"Bus___"
+              },
+              "himIdL":
+              [
+"HIM_FREETEXT_157"
+              ]
+            },
+            {
+              "pid":"L::0::Bus::B1146449194::Bus_1146449194_60::*",
+              "name":"Bus 60",
+              "nameS":"60",
+              "number":"60",
+              "icoX":0,
+              "cls":1,
+              "oprX":0,
+              "prodCtx":
+              {
+                "name":"Bus   60",
+                "num":"526",
+                "line":"60",
+                "matchId":"60",
+                "catOut":"Bus     ",
+                "catOutS":"1",
+                "catOutL":"B u s",
+                "catIn":"1",
+                "catCode":"0",
+                "admin":"Bus___"
+              },
+              "himIdL":
+              [
+"HIM_FREETEXT_157"
+              ]
+            },
+            {
+              "pid":"L::0::Bus::B1146449194::Bus_1146449194_60::*",
+              "name":"Bus 60",
+              "nameS":"60",
+              "number":"60",
+              "icoX":0,
+              "cls":1,
+              "oprX":0,
+              "prodCtx":
+              {
+                "name":"Bus   60",
+                "num":"588",
+                "line":"60",
+                "matchId":"60",
+                "catOut":"Bus     ",
+                "catOutS":"1",
+                "catOutL":"B u s",
+                "catIn":"1",
+                "catCode":"0",
+                "admin":"Bus___"
+              },
+              "himIdL":
+              [
+"HIM_FREETEXT_157"
+              ]
+            },
+            {
+              "pid":"L::0::Bus::B1146449194::Bus_1146449194_44::*",
+              "name":"Bus 44",
+              "nameS":"44",
+              "number":"44",
+              "icoX":0,
+              "cls":1,
+              "oprX":0,
+              "prodCtx":
+              {
+                "name":"Bus   44",
+                "num":"10",
+                "line":"44",
+                "matchId":"44",
+                "catOut":"Bus     ",
+                "catOutS":"1",
+                "catOutL":"B u s",
+                "catIn":"1",
+                "catCode":"0",
+                "admin":"Bus___"
+              },
+              "himIdL":
+              [
+"HIM_FREETEXT_157",
+"HIM_FREETEXT_163"
+              ]
+            },
+            {
+              "pid":"L::0::Bus::B1146449194::Bus_1146449194_60::*",
+              "name":"Bus 60",
+              "nameS":"60",
+              "number":"60",
+              "icoX":0,
+              "cls":1,
+              "oprX":0,
+              "prodCtx":
+              {
+                "name":"Bus   60",
+                "num":"528",
+                "line":"60",
+                "matchId":"60",
+                "catOut":"Bus     ",
+                "catOutS":"1",
+                "catOutL":"B u s",
+                "catIn":"1",
+                "catCode":"0",
+                "admin":"Bus___"
+              },
+              "himIdL":
+              [
+"HIM_FREETEXT_157"
+              ]
+            }
+          ],
+          "polyL":
+          [
+            {
+              "delta":true,
+              "dim":2,
+              "type":"WGS84",
+              "crdEncYX":"ikthHsiwdAnIrk@",
+              "crdEncS":"NN",
+              "crdEncF":"??",
+              "ppLocRefL":
+              [
+                {
+                  "ppIdx":0,
+                  "locX":0
+                },
+                {
+                  "ppIdx":1,
+                  "locX":1
+                }
+              ]
+            },
+            {
+              "delta":true,
+              "dim":2,
+              "type":"WGS84",
+              "crdEncYX":"ikthHsiwdAxItg@",
+              "crdEncS":"NN",
+              "crdEncF":"??",
+              "ppLocRefL":
+              [
+                {
+                  "ppIdx":0,
+                  "locX":0
+                },
+                {
+                  "ppIdx":1,
+                  "locX":2
+                }
+              ]
+            },
+            {
+              "delta":true,
+              "dim":2,
+              "type":"WGS84",
+              "crdEncYX":"ikthHsiwdAdInk@",
+              "crdEncS":"NN",
+              "crdEncF":"??",
+              "ppLocRefL":
+              [
+                {
+                  "ppIdx":0,
+                  "locX":0
+                },
+                {
+                  "ppIdx":1,
+                  "locX":3
+                }
+              ]
+            },
+            {
+              "delta":true,
+              "dim":2,
+              "type":"WGS84",
+              "crdEncYX":"ikthHsiwdAfIje@",
+              "crdEncS":"NN",
+              "crdEncF":"??",
+              "ppLocRefL":
+              [
+                {
+                  "ppIdx":0,
+                  "locX":0
+                },
+                {
+                  "ppIdx":1,
+                  "locX":4
+                }
+              ]
+            },
+            {
+              "delta":true,
+              "dim":2,
+              "type":"WGS84",
+              "crdEncYX":"ikthHsiwdAdInk@",
+              "crdEncS":"NN",
+              "crdEncF":"??",
+              "ppLocRefL":
+              [
+                {
+                  "ppIdx":0,
+                  "locX":0
+                },
+                {
+                  "ppIdx":1,
+                  "locX":3
+                }
+              ]
+            }
+          ],
+          "layerL":
+          [
+            {
+              "id":"standard",
+              "name":"standard",
+              "index":0,
+              "annoCnt":0
+            }
+          ],
+          "crdSysL":
+          [
+            {
+              "id":"standard",
+              "index":0,
+              "type":"WGS84",
+              "dim":2
+            }
+          ],
+          "opL":
+          [
+            {
+              "name":"Nahreisezug",
+              "icoX":1
+            }
+          ],
+          "remL":
+          [
+            {
+              "type":"R",
+              "code":"text.realtime.connection.alternative.summary",
+              "icoX":3,
+              "txtN":"Fahrtmöglichkeit gemäß aktueller Verkehrslage."
+            },
+            {
+              "type":"R",
+              "code":"text.realtime.connection.alternative.detail",
+              "icoX":3,
+              "txtN":"Fahrtmöglichkeit gemäß aktueller Verkehrslage. Bitte beachten Sie die aktuellen Echtzeitinformationen."
+            }
+          ],
+          "himL":
+          [
+            {
+              "hid":"151",
+              "act":true,
+              "pub":"",
+              "head":"Sperrung der Schloßlände",
+              "lead":"",
+              "text":"Von Montag 30.08.2021 bis einschließlich 13.09.2021 wird der Bereich zwischen Roßmühlstraße und Stadttheater wegen einer Veranstaltung für den Verkehr gesperrt. Die betroffenen INVG-Buslinien (10, 11), 16, 18, 20, 21, 22, 41, N8, N9, N10, N16, N18 und N19 müssen in diesem Zeitraum großräumig umgeleitet werden. Bitte informieren Sie sich vor Ihrer Fahrt!<br><a href=\"http://www.invg.de/presse_donaulust\" target=\"_blank\" rel=\"noopener\">> Umleitungsinformationen</a>",
+              "tckr":"",
+              "icoX":2,
+              "prio":100,
+              "prod":65535,
+              "lModDate":"20210827",
+              "lModTime":"140401",
+              "sDate":"20210826",
+              "sTime":"143100",
+              "eDate":"20210913",
+              "eTime":"235900",
+              "comp":"INVG",
+              "cat":0,
+              "pubChL":
+              [
+                {
+                  "name":"TIMETABLE",
+                  "fDate":"20210826",
+                  "fTime":"143100",
+                  "tDate":"20210913",
+                  "tTime":"235900"
+                }
+              ]
+            },
+            {
+              "hid":"161",
+              "act":true,
+              "pub":"",
+              "head":"Maskenpflicht im ÖPNV",
+              "lead":"",
+              "text":"Bitte beachten Sie die Pflicht zum Tragen einer Mund-Nasen-Bedeckung nach gesetzlichen Vorgaben (derzeit: Medizinische Masken z.B. OP-Maske, FFP, KN95) in Bus und Bahn.<br><a href=\"https://www.invg.de/startseite_weiterlesen_2021_coronastrategie\" target=\"_blank\" rel=\"noopener\">Weitere Informationen zur Maskenpflicht</a>",
+              "tckr":"",
+              "icoX":2,
+              "prio":100,
+              "prod":65535,
+              "lModDate":"20210901",
+              "lModTime":"091801",
+              "sDate":"20210902",
+              "sTime":"000000",
+              "eDate":"20211231",
+              "eTime":"235900",
+              "comp":"INVG",
+              "cat":0,
+              "pubChL":
+              [
+                {
+                  "name":"TIMETABLE",
+                  "fDate":"20210902",
+                  "fTime":"000000",
+                  "tDate":"20211231",
+                  "tTime":"235900"
+                }
+              ]
+            },
+            {
+              "hid":"83",
+              "act":true,
+              "pub":"",
+              "head":"Eingeschränkter Nachtbus-Fahrplan wegen Corona",
+              "lead":"",
+              "text":"Aufgrund der Beschränkungen durch die Corona-Pandemie verkehren unsere Nachtbusse an allen Tagen nach dem Fahrplan Sonntag bis Donnerstag. Letzte Abfahrt am ZOB: 00:15 Uhr",
+              "tckr":"",
+              "icoX":2,
+              "prio":100,
+              "prod":65535,
+              "lModDate":"20210903",
+              "lModTime":"114420",
+              "sDate":"20200615",
+              "sTime":"121300",
+              "eDate":"20210930",
+              "eTime":"235900",
+              "comp":"INVG",
+              "cat":0,
+              "pubChL":
+              [
+                {
+                  "name":"TIMETABLE",
+                  "fDate":"20200615",
+                  "fTime":"121300",
+                  "tDate":"20210930",
+                  "tTime":"235900"
+                }
+              ]
+            }
+          ],
+          "icoL":
+          [
+            {
+              "res":"prod_bus_t",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255,
+                "a":255
+              },
+              "bg":
+              {
+                "r":169,
+                "g":85,
+                "b":153,
+                "a":255
+              }
+            },
+            {
+              "res":"DPN",
+              "txt":"Nahreisezug"
+            },
+            {
+              "res":"HIM0"
+            },
+            {
+              "res":"rt_other"
+            }
+          ]
+        },
+        "outConL":
+        [
+          {
+            "cid":"C-0",
+            "date":"20210906",
+            "dur":"000300",
+            "chg":0,
+            "sDays":
+            {
+              "sDaysR":"täglich",
+              "sDaysB":"000000000000000000000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF0"
+            },
+            "dep":
+            {
+              "locX":0,
+              "idx":16,
+              "dProdX":0,
+              "dInR":true,
+              "dTimeS":"112200",
+              "dTimeR":"112300",
+              "dProgType":"CALCULATED",
+              "type":"N"
+            },
+            "arr":
+            {
+              "locX":1,
+              "idx":17,
+              "aOutR":true,
+              "aTimeS":"112500",
+              "aTimeR":"112700",
+              "aProgType":"PROGNOSED",
+              "type":"N"
+            },
+            "secL":
+            [
+              {
+                "type":"JNY",
+                "icoX":0,
+                "dep":
+                {
+                  "locX":0,
+                  "idx":16,
+                  "dProdX":0,
+                  "dInR":true,
+                  "dTimeS":"112200",
+                  "dTimeR":"112300",
+                  "dProgType":"CALCULATED",
+                  "type":"N"
+                },
+                "arr":
+                {
+                  "locX":1,
+                  "idx":17,
+                  "aOutR":true,
+                  "aTimeS":"112500",
+                  "aTimeR":"112700",
+                  "aProgType":"PROGNOSED",
+                  "type":"N"
+                },
+                "jny":
+                {
+                  "jid":"1|131|0|80|6092021",
+                  "prodX":0,
+                  "dirTxt":"Z O B",
+                  "dirFlg":"H",
+                  "status":"P",
+                  "isRedir":true,
+                  "isRchbl":true,
+                  "stopL":
+                  [
+                    {
+                      "locX":0,
+                      "idx":16,
+                      "dProdX":0,
+                      "dInR":true,
+                      "dTimeS":"112200",
+                      "dTimeR":"112300",
+                      "dProgType":"CALCULATED",
+                      "dDirTxt":"Z O B",
+                      "dDirFlg":"H",
+                      "type":"N"
+                    },
+                    {
+                      "locX":1,
+                      "idx":17,
+                      "aProdX":0,
+                      "aOutR":true,
+                      "aTimeS":"112500",
+                      "aTimeR":"112700",
+                      "aProgType":"PROGNOSED",
+                      "type":"N"
+                    }
+                  ],
+                  "polyG":
+                  {
+                    "polyXL":
+                    [
+                      0
+                    ],
+                    "layerX":0,
+                    "crdSysX":0
+                  },
+                  "freq":
+                  {
+                    "minC":27,
+                    "maxC":33,
+                    "numC":5
+                  },
+                  "ctxRecon":"T$A=1@O=Rechbergstraße@L=61202@a=128@$A=1@O=Ingolstadt, Z O B  Bussteig 03@L=78803@a=128@$202109061122$202109061125$Bus   15$$3$$$$",
+                  "msgL":
+                  [
+                    {
+                      "type":"HIM",
+                      "himX":0,
+                      "fLocX":0,
+                      "tagL":
+                      [
+                        "RES_GLB_HDR_H3","SUM_GLB_HDR_H3"
+                      ]
+                    },
+                    {
+                      "type":"HIM",
+                      "himX":1,
+                      "fLocX":0,
+                      "tagL":
+                      [
+                        "RES_GLB_HDR_H3","SUM_GLB_HDR_H3"
+                      ]
+                    },
+                    {
+                      "type":"HIM",
+                      "himX":2,
+                      "fLocX":0,
+                      "tagL":
+                      [
+                        "RES_GLB_HDR_H3","SUM_GLB_HDR_H3"
+                      ]
+                    }
+                  ],
+                  "subscr":"F"
+                }
+              }
+            ],
+            "ctxRecon":"¶HKI¶T$A=1@O=Rechbergstraße@L=61202@a=128@$A=1@O=Ingolstadt, Z O B  Bussteig 03@L=78803@a=128@$202109061122$202109061125$Bus   15$$3$$$$",
+            "freq":
+            {
+              "minC":27
+            },
+            "trfRes":
+            {
+              "fareSetL":
+              [
+                {
+                  "name":"Preisstufe 1",
+                  "desc":"e-Tickets nur innerhalb Zone 100\n\nVon Zone 100 zu Zone 100",
+                  "fareL":
+                  [
+                    {
+                      "name":"Kurzstrecke Erwachsene (Fahrerverkauf)",
+                      "prc":190,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Einzelfahrkarte Erwachsene (Fahrerverkauf)",
+                      "prc":280,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Einzelfahrkarte Erwachsene (Vorverkauf)",
+                      "prc":250,
+                      "cur":"EUR",
+                      "shpCtx":"~0-.11-2",
+                      "buttonText":"Zum Angebot"
+                    },
+                    {
+                      "name":"Einzelfahrkarte Kind (Vorverkauf)",
+                      "prc":120,
+                      "cur":"EUR",
+                      "shpCtx":"~0-.21-2",
+                      "buttonText":"Zum Angebot"
+                    },
+                    {
+                      "name":"Tageskarte (Vorverkauf)",
+                      "prc":480,
+                      "cur":"EUR",
+                      "shpCtx":"~0-.31-2",
+                      "buttonText":"Zum Angebot"
+                    },
+                    {
+                      "name":"Partnertageskarte (Vorverkauf)",
+                      "prc":850,
+                      "cur":"EUR",
+                      "shpCtx":"~0-.41-2",
+                      "buttonText":"Zum Angebot"
+                    },
+                    {
+                      "name":"Nachtkarte (Online- & Fahrerverkauf)",
+                      "prc":380,
+                      "cur":"EUR",
+                      "shpCtx":"~0-.15-2",
+                      "buttonText":"Zum Angebot"
+                    },
+                    {
+                      "name":"Kurzstrecke Kinder (Fahrerverkauf)",
+                      "prc":80,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Einzelfahrkarte Kind (Fahrerverkauf)",
+                      "prc":150,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Tageskarte (Fahrerverkauf)",
+                      "prc":560,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Partnertageskarte (Fahrerverkauf)",
+                      "prc":950,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Jahreskarte",
+                      "prc":58500,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Wochenkarte Erwachsene (übertragbar)",
+                      "prc":2250,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Wochenkarte Schüler (personalisiert)",
+                      "prc":2000,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Monatskarte Erwachsene (übertragbar)",
+                      "prc":5900,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Monatskarte Schüler (personalisiert)",
+                      "prc":4800,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Monatskarte Senioren (übertragbar)",
+                      "prc":4950,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Monatskarte 09:00 Uhr (übertragbar)",
+                      "prc":4550,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Jahreskarte DonauCard Senior 9:00 Uhr",
+                      "prc":45400,
+                      "cur":"EUR"
+                    }
+                  ]
+                }
+              ],
+              "shpCtx":"{\"common\":{\"FEL\":[{\"XV\":[\"20210801\",\"0\"]},{\"ID\":[\"100\"]},{\"ID\":[\"100\"]},{\"ID\":[\"2\"],\"ON\":[\"1\"],\"PN\":[\"1 Zone\"]},{\"ID\":[\"61202\"],\"ON\":[\"Rechbergstraße\"]},{\"ID\":[\"78803\"],\"ON\":[\"Ingolstadt, Z O B  Bussteig 03\"]},{\"ID\":[\"0\"]},{\"ID\":[\"11\"],\"ON\":[\"Einzelfahrkarte Erwachsene (Vorverkauf)\",\"\",\"1 Erwachsener, 1 Fahrt, Gültig ab sofort!\",\"Einzelfahrkarte Erwachsene\\n- 1 Person\\n- 1 Fahrt (in eine Richtung, keine Rückfahrt oder Rundfahrt; Fahrtunterbrechung möglich)\\n- nicht übertragbar\\n- gültig in BUS+BAHN in der jeweiligen Tarifzone\\n- Print- bzw. HandyTickets sind nur in Verbindung mit einem amtlichen Lichtbildausweis gültig.\\nBitte beachten:\\n- ab Kauf sofort 2 Stunden gültig\\n\\nWeitere Informationen erhalten Sie unter www.invg.de sowie in den INVG-Tarifbestimmungen\"],\"PN\":[\"Einzelfahrkarte Erwachsene\",\"gültig 2 Std. ab Kauf; für die einfache Fahrt\"],\"XV\":[\"3\"]},{\"ID\":[\"0\"]},{\"ID\":[\"21\"],\"ON\":[\"Einzelfahrkarte Kind (Vorverkauf)\",\"\",\"1 Kind, 1 Fahrt, Gültig ab sofort!\",\"Einzelfahrkarte Kind\\n- 1 Kind ab 6 Jahre bis zum vollendeten 14. Lebensjahr\\n- 1 Fahrt (in eine Richtung, keine Rückfahrt oder Rundfahrt; Fahrtunterbrechung möglich)\\n- nicht übertragbar\\n- gültig in BUS+BAHN in der jweiligen Tarifzone\\n- Print- bzw. HandyTickets sind nur in Verbindung mit einem amtlichen Lichtbildausweis gültig.\\nBitte beachten:\\n- ab Kauf sofort 2 Stunden gültig\\n\\nWeitere Informationen erhalten Sie unter www.invg.de sowie in den INVG-Tarifbestimmungen\"],\"PN\":[\"Einzelfahrkarte Kind\",\"gültig 2 Std. ab Kauf; für die einfache Fahrt\"],\"XV\":[\"4\"]},{\"ID\":[\"0\"]},{\"ID\":[\"31\"],\"ON\":[\"Tageskarte (Vorverkauf)\",\"\",\"1 Person, 1 Tag\",\"Tageskarte\\n- 1 Person\\n- 1 Tag \\n- nicht übertragbar\\n- gültig in BUS+BAHN in der jeweiligen Tarifzone\\n- keine Mitnahmemöglichkeit\\n- Print- bzw. HandyTickets sind nur in Verbindung mit einem amtlichen Lichtbildausweis gültig.\\n\\nWeitere Informationen erhalten Sie unter www.invg.de sowie in den INVG-Tarifbestimmungen\"],\"PN\":[\"Tageskarte\",\"gültig am .. bis Betriebsende\"],\"XV\":[\"5\"]},{\"ID\":[\"0\"]},{\"ID\":[\"41\"],\"ON\":[\"Partnertageskarte (Vorverkauf)\",\"\",\"5 Personen (Kinder 6-14 J. zählen als 1/2 Person), 1 Tag\",\"Partnertageskarte\\n- bis zu 5 Personen (1 Kind zwischen 6 Jahre und vollendenten 14. Lebensjahr zählt als halbe Person)\\n- nicht übertragbar (Personalisierung auf die erste Person ist erforderlich)\\n- bei Schulausflügen gelten Schüler bis einschließlich der 9. Klasse als Kinder\\n- 1 Tag \\n- gültig in BUS+BAHN in der jeweiligen Tarifzone\\n\\nWeitere Informationen erhalten Sie unter www.invg.de sowie in den INVG-Tarifbestimmungen\"],\"PN\":[\"Partnertageskarte\",\"gültig am .. bis Betriebsende\"],\"XV\":[\"6\"]},{\"ID\":[\"0\"]},{\"ID\":[\"15\"],\"ON\":[\"Nachtkarte (Online- & Fahrerverkauf)\",\"\",\"1 Person, Gültig ab 18:00 Uhr\",\"Nachtkarte\\n- gültig ab 18:00 Uhr für beliebig viele Fahrten in der jeweiligen Tarifstufe\\n- 1 Person\\n- nicht übertragbar\\n- gültig nur in den Bussen im INVG-Verbundgebiet\\n- keine Mitnahmemöglichkeit\\n- Print- bzw. HandyTickets sind nur in Verbindung mit einem amtlichen Lichtbildausweis gültig.\\n\\nWeitere Informationen erhalten Sie unter www.invg.de sowie in den INVG-Tarifbestimmungen\"],\"PN\":[\"Nachtkarte\",\"gültig am .. ab 18:00 Uhr\"],\"XV\":[\"7\"]}]},\"BOG\":{\"BOGL\":[{\"P\":\"~0-\",\"BOL\":[{\"P\":\"~0-.11-2\",\"VT\":\"INVG-1\",\"FS\":\"INVG\",\"DV\":6,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":250},\"PRD\":7,\"FP\":{\"PS\":0,\"NV\":[{\"N\":\"PSE\",\"V\":\"0\"},{\"N\":\"PSEM\",\"V\":\"0\"}]},\"LVL\":3,\"SV\":{\"OL\":1,\"OS\":4,\"DL\":2,\"DS\":5},\"TV\":{\"BD\":\"20210906\",\"ED\":\"20210906\",\"VD\":120,\"VC\":\"m\"}},{\"P\":\"~0-.21-2\",\"VT\":\"INVG-1\",\"FS\":\"INVG\",\"DV\":8,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":120},\"PRD\":9,\"FP\":{\"PS\":0,\"NV\":[{\"N\":\"PSE\",\"V\":\"0\"},{\"N\":\"PSEM\",\"V\":\"0\"}]},\"LVL\":3,\"SV\":{\"OL\":1,\"OS\":4,\"DL\":2,\"DS\":5},\"TV\":{\"BD\":\"20210906\",\"ED\":\"20210906\",\"VD\":120,\"VC\":\"m\"}},{\"P\":\"~0-.31-2\",\"VT\":\"INVG-1\",\"FS\":\"INVG\",\"DV\":10,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":480},\"PRD\":11,\"FP\":{\"PS\":30,\"NV\":[{\"N\":\"PSE\",\"V\":\"0\"},{\"N\":\"PSEM\",\"V\":\"0\"}]},\"LVL\":3,\"SV\":{\"OL\":1,\"OS\":4,\"DL\":2,\"DS\":5},\"TV\":{\"BD\":\"20210906\",\"BT\":\"000000\",\"ED\":\"20210906\",\"ET\":\"01033000\",\"VD\":1,\"VC\":\"T\"}},{\"P\":\"~0-.41-2\",\"VT\":\"INVG-1\",\"FS\":\"INVG\",\"DV\":12,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":850},\"PRD\":13,\"FP\":{\"PS\":30,\"NV\":[{\"N\":\"PSE\",\"V\":\"0\"},{\"N\":\"PSEM\",\"V\":\"0\"}]},\"LVL\":3,\"SV\":{\"OL\":1,\"OS\":4,\"DL\":2,\"DS\":5},\"TV\":{\"BD\":\"20210906\",\"BT\":\"000000\",\"ED\":\"20210906\",\"ET\":\"01040000\",\"VD\":1,\"VC\":\"T\"}},{\"P\":\"~0-.15-2\",\"VT\":\"INVG-1\",\"FS\":\"INVG\",\"DV\":14,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":380},\"PRD\":15,\"FP\":{\"PS\":30,\"NV\":[{\"N\":\"PSE\",\"V\":\"0\"},{\"N\":\"PSEM\",\"V\":\"0\"}]},\"LVL\":3,\"SV\":{\"OL\":1,\"OS\":4,\"DL\":2,\"DS\":5},\"TV\":{\"BD\":\"20210906\",\"BT\":\"180000\",\"ED\":\"20210906\",\"ET\":\"01040000\",\"VD\":10,\"VC\":\"h\"}}],\"DESCR\":[\"1\",\"\"],\"OPT\":false,\"ALT\":true,\"SEQ\":false}],\"OPT\":false,\"ALT\":true,\"SEQ\":false},\"errCode\":0}"
+            },
+            "ovwTrfRefL":
+            [
+              {
+                "type":"F",
+                "fareSetX":0,
+                "fareX":0
+              },
+              {
+                "type":"F",
+                "fareSetX":0,
+                "fareX":2
+              },
+              {
+                "type":"F",
+                "fareSetX":0,
+                "fareX":3
+              },
+              {
+                "type":"F",
+                "fareSetX":0,
+                "fareX":4
+              },
+              {
+                "type":"F",
+                "fareSetX":0,
+                "fareX":5
+              },
+              {
+                "type":"F",
+                "fareSetX":0,
+                "fareX":6
+              }
+            ],
+            "conSubscr":"F",
+            "cksum":"48a69fb1_3"
+          },
+          {
+            "cid":"C-1",
+            "date":"20210906",
+            "dur":"000200",
+            "chg":0,
+            "sDays":
+            {
+              "sDaysR":"täglich",
+              "sDaysB":"000000000000000000000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF0"
+            },
+            "dep":
+            {
+              "locX":0,
+              "idx":14,
+              "dProdX":1,
+              "dInR":true,
+              "dTimeS":"112500",
+              "dTimeR":"112700",
+              "dProgType":"CALCULATED",
+              "type":"N"
+            },
+            "arr":
+            {
+              "locX":2,
+              "idx":15,
+              "aProdX":1,
+              "aOutR":true,
+              "aTimeS":"112700",
+              "aTimeR":"112900",
+              "aProgType":"PROGNOSED",
+              "type":"N"
+            },
+            "secL":
+            [
+              {
+                "type":"JNY",
+                "icoX":0,
+                "dep":
+                {
+                  "locX":0,
+                  "idx":14,
+                  "dProdX":1,
+                  "dInR":true,
+                  "dTimeS":"112500",
+                  "dTimeR":"112700",
+                  "dProgType":"CALCULATED",
+                  "type":"N"
+                },
+                "arr":
+                {
+                  "locX":2,
+                  "idx":15,
+                  "aProdX":1,
+                  "aOutR":true,
+                  "aTimeS":"112700",
+                  "aTimeR":"112900",
+                  "aProgType":"PROGNOSED",
+                  "type":"N"
+                },
+                "jny":
+                {
+                  "jid":"1|436|1|80|6092021",
+                  "prodX":1,
+                  "dirTxt":"Niederfeld",
+                  "dirFlg":"H",
+                  "status":"P",
+                  "isRchbl":true,
+                  "stopL":
+                  [
+                    {
+                      "locX":0,
+                      "idx":14,
+                      "dProdX":1,
+                      "dInR":true,
+                      "dTimeS":"112500",
+                      "dTimeR":"112700",
+                      "dProgType":"CALCULATED",
+                      "dDirTxt":"Niederfeld",
+                      "dDirFlg":"H",
+                      "type":"N"
+                    },
+                    {
+                      "locX":2,
+                      "idx":15,
+                      "aProdX":1,
+                      "aOutR":true,
+                      "aTimeS":"112700",
+                      "aTimeR":"112900",
+                      "aProgType":"PROGNOSED",
+                      "type":"N"
+                    }
+                  ],
+                  "polyG":
+                  {
+                    "polyXL":
+                    [
+                      1
+                    ],
+                    "layerX":0,
+                    "crdSysX":0
+                  },
+                  "freq":
+                  {
+                    "minC":29,
+                    "maxC":30,
+                    "numC":5
+                  },
+                  "ctxRecon":"T$A=1@O=Rechbergstraße@L=61202@a=128@$A=1@O=Ingolstadt, Z O B  Bussteig 07@L=78807@a=128@$202109061125$202109061127$Bus   30$$1$$$$",
+                  "msgL":
+                  [
+                    {
+                      "type":"HIM",
+                      "himX":0,
+                      "fLocX":0,
+                      "tagL":
+                      [
+                        "RES_GLB_HDR_H3","SUM_GLB_HDR_H3"
+                      ]
+                    },
+                    {
+                      "type":"HIM",
+                      "himX":1,
+                      "fLocX":0,
+                      "tagL":
+                      [
+                        "RES_GLB_HDR_H3","SUM_GLB_HDR_H3"
+                      ]
+                    },
+                    {
+                      "type":"HIM",
+                      "himX":2,
+                      "fLocX":0,
+                      "tagL":
+                      [
+                        "RES_GLB_HDR_H3","SUM_GLB_HDR_H3"
+                      ]
+                    }
+                  ],
+                  "subscr":"F"
+                }
+              }
+            ],
+            "ctxRecon":"¶HKI¶T$A=1@O=Rechbergstraße@L=61202@a=128@$A=1@O=Ingolstadt, Z O B  Bussteig 07@L=78807@a=128@$202109061125$202109061127$Bus   30$$1$$$$",
+            "freq":
+            {
+              "minC":29
+            },
+            "trfRes":
+            {
+              "fareSetL":
+              [
+                {
+                  "name":"Preisstufe 1",
+                  "desc":"e-Tickets nur innerhalb Zone 100\n\nVon Zone 100 zu Zone 100",
+                  "fareL":
+                  [
+                    {
+                      "name":"Kurzstrecke Erwachsene (Fahrerverkauf)",
+                      "prc":190,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Einzelfahrkarte Erwachsene (Fahrerverkauf)",
+                      "prc":280,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Einzelfahrkarte Erwachsene (Vorverkauf)",
+                      "prc":250,
+                      "cur":"EUR",
+                      "shpCtx":"~0-.11-2",
+                      "buttonText":"Zum Angebot"
+                    },
+                    {
+                      "name":"Einzelfahrkarte Kind (Vorverkauf)",
+                      "prc":120,
+                      "cur":"EUR",
+                      "shpCtx":"~0-.21-2",
+                      "buttonText":"Zum Angebot"
+                    },
+                    {
+                      "name":"Tageskarte (Vorverkauf)",
+                      "prc":480,
+                      "cur":"EUR",
+                      "shpCtx":"~0-.31-2",
+                      "buttonText":"Zum Angebot"
+                    },
+                    {
+                      "name":"Partnertageskarte (Vorverkauf)",
+                      "prc":850,
+                      "cur":"EUR",
+                      "shpCtx":"~0-.41-2",
+                      "buttonText":"Zum Angebot"
+                    },
+                    {
+                      "name":"Nachtkarte (Online- & Fahrerverkauf)",
+                      "prc":380,
+                      "cur":"EUR",
+                      "shpCtx":"~0-.15-2",
+                      "buttonText":"Zum Angebot"
+                    },
+                    {
+                      "name":"Kurzstrecke Kinder (Fahrerverkauf)",
+                      "prc":80,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Einzelfahrkarte Kind (Fahrerverkauf)",
+                      "prc":150,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Tageskarte (Fahrerverkauf)",
+                      "prc":560,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Partnertageskarte (Fahrerverkauf)",
+                      "prc":950,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Jahreskarte",
+                      "prc":58500,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Wochenkarte Erwachsene (übertragbar)",
+                      "prc":2250,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Wochenkarte Schüler (personalisiert)",
+                      "prc":2000,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Monatskarte Erwachsene (übertragbar)",
+                      "prc":5900,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Monatskarte Schüler (personalisiert)",
+                      "prc":4800,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Monatskarte Senioren (übertragbar)",
+                      "prc":4950,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Monatskarte 09:00 Uhr (übertragbar)",
+                      "prc":4550,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Jahreskarte DonauCard Senior 9:00 Uhr",
+                      "prc":45400,
+                      "cur":"EUR"
+                    }
+                  ]
+                }
+              ],
+              "shpCtx":"{\"common\":{\"FEL\":[{\"XV\":[\"20210801\",\"0\"]},{\"ID\":[\"100\"]},{\"ID\":[\"100\"]},{\"ID\":[\"2\"],\"ON\":[\"1\"],\"PN\":[\"1 Zone\"]},{\"ID\":[\"61202\"],\"ON\":[\"Rechbergstraße\"]},{\"ID\":[\"78807\"],\"ON\":[\"Ingolstadt, Z O B  Bussteig 07\"]},{\"ID\":[\"0\"]},{\"ID\":[\"11\"],\"ON\":[\"Einzelfahrkarte Erwachsene (Vorverkauf)\",\"\",\"1 Erwachsener, 1 Fahrt, Gültig ab sofort!\",\"Einzelfahrkarte Erwachsene\\n- 1 Person\\n- 1 Fahrt (in eine Richtung, keine Rückfahrt oder Rundfahrt; Fahrtunterbrechung möglich)\\n- nicht übertragbar\\n- gültig in BUS+BAHN in der jeweiligen Tarifzone\\n- Print- bzw. HandyTickets sind nur in Verbindung mit einem amtlichen Lichtbildausweis gültig.\\nBitte beachten:\\n- ab Kauf sofort 2 Stunden gültig\\n\\nWeitere Informationen erhalten Sie unter www.invg.de sowie in den INVG-Tarifbestimmungen\"],\"PN\":[\"Einzelfahrkarte Erwachsene\",\"gültig 2 Std. ab Kauf; für die einfache Fahrt\"],\"XV\":[\"3\"]},{\"ID\":[\"0\"]},{\"ID\":[\"21\"],\"ON\":[\"Einzelfahrkarte Kind (Vorverkauf)\",\"\",\"1 Kind, 1 Fahrt, Gültig ab sofort!\",\"Einzelfahrkarte Kind\\n- 1 Kind ab 6 Jahre bis zum vollendeten 14. Lebensjahr\\n- 1 Fahrt (in eine Richtung, keine Rückfahrt oder Rundfahrt; Fahrtunterbrechung möglich)\\n- nicht übertragbar\\n- gültig in BUS+BAHN in der jweiligen Tarifzone\\n- Print- bzw. HandyTickets sind nur in Verbindung mit einem amtlichen Lichtbildausweis gültig.\\nBitte beachten:\\n- ab Kauf sofort 2 Stunden gültig\\n\\nWeitere Informationen erhalten Sie unter www.invg.de sowie in den INVG-Tarifbestimmungen\"],\"PN\":[\"Einzelfahrkarte Kind\",\"gültig 2 Std. ab Kauf; für die einfache Fahrt\"],\"XV\":[\"4\"]},{\"ID\":[\"0\"]},{\"ID\":[\"31\"],\"ON\":[\"Tageskarte (Vorverkauf)\",\"\",\"1 Person, 1 Tag\",\"Tageskarte\\n- 1 Person\\n- 1 Tag \\n- nicht übertragbar\\n- gültig in BUS+BAHN in der jeweiligen Tarifzone\\n- keine Mitnahmemöglichkeit\\n- Print- bzw. HandyTickets sind nur in Verbindung mit einem amtlichen Lichtbildausweis gültig.\\n\\nWeitere Informationen erhalten Sie unter www.invg.de sowie in den INVG-Tarifbestimmungen\"],\"PN\":[\"Tageskarte\",\"gültig am .. bis Betriebsende\"],\"XV\":[\"5\"]},{\"ID\":[\"0\"]},{\"ID\":[\"41\"],\"ON\":[\"Partnertageskarte (Vorverkauf)\",\"\",\"5 Personen (Kinder 6-14 J. zählen als 1/2 Person), 1 Tag\",\"Partnertageskarte\\n- bis zu 5 Personen (1 Kind zwischen 6 Jahre und vollendenten 14. Lebensjahr zählt als halbe Person)\\n- nicht übertragbar (Personalisierung auf die erste Person ist erforderlich)\\n- bei Schulausflügen gelten Schüler bis einschließlich der 9. Klasse als Kinder\\n- 1 Tag \\n- gültig in BUS+BAHN in der jeweiligen Tarifzone\\n\\nWeitere Informationen erhalten Sie unter www.invg.de sowie in den INVG-Tarifbestimmungen\"],\"PN\":[\"Partnertageskarte\",\"gültig am .. bis Betriebsende\"],\"XV\":[\"6\"]},{\"ID\":[\"0\"]},{\"ID\":[\"15\"],\"ON\":[\"Nachtkarte (Online- & Fahrerverkauf)\",\"\",\"1 Person, Gültig ab 18:00 Uhr\",\"Nachtkarte\\n- gültig ab 18:00 Uhr für beliebig viele Fahrten in der jeweiligen Tarifstufe\\n- 1 Person\\n- nicht übertragbar\\n- gültig nur in den Bussen im INVG-Verbundgebiet\\n- keine Mitnahmemöglichkeit\\n- Print- bzw. HandyTickets sind nur in Verbindung mit einem amtlichen Lichtbildausweis gültig.\\n\\nWeitere Informationen erhalten Sie unter www.invg.de sowie in den INVG-Tarifbestimmungen\"],\"PN\":[\"Nachtkarte\",\"gültig am .. ab 18:00 Uhr\"],\"XV\":[\"7\"]}]},\"BOG\":{\"BOGL\":[{\"P\":\"~0-\",\"BOL\":[{\"P\":\"~0-.11-2\",\"VT\":\"INVG-1\",\"FS\":\"INVG\",\"DV\":6,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":250},\"PRD\":7,\"FP\":{\"PS\":0,\"NV\":[{\"N\":\"PSE\",\"V\":\"0\"},{\"N\":\"PSEM\",\"V\":\"0\"}]},\"LVL\":3,\"SV\":{\"OL\":1,\"OS\":4,\"DL\":2,\"DS\":5},\"TV\":{\"BD\":\"20210906\",\"ED\":\"20210906\",\"VD\":120,\"VC\":\"m\"}},{\"P\":\"~0-.21-2\",\"VT\":\"INVG-1\",\"FS\":\"INVG\",\"DV\":8,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":120},\"PRD\":9,\"FP\":{\"PS\":0,\"NV\":[{\"N\":\"PSE\",\"V\":\"0\"},{\"N\":\"PSEM\",\"V\":\"0\"}]},\"LVL\":3,\"SV\":{\"OL\":1,\"OS\":4,\"DL\":2,\"DS\":5},\"TV\":{\"BD\":\"20210906\",\"ED\":\"20210906\",\"VD\":120,\"VC\":\"m\"}},{\"P\":\"~0-.31-2\",\"VT\":\"INVG-1\",\"FS\":\"INVG\",\"DV\":10,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":480},\"PRD\":11,\"FP\":{\"PS\":30,\"NV\":[{\"N\":\"PSE\",\"V\":\"0\"},{\"N\":\"PSEM\",\"V\":\"0\"}]},\"LVL\":3,\"SV\":{\"OL\":1,\"OS\":4,\"DL\":2,\"DS\":5},\"TV\":{\"BD\":\"20210906\",\"BT\":\"000000\",\"ED\":\"20210906\",\"ET\":\"01033000\",\"VD\":1,\"VC\":\"T\"}},{\"P\":\"~0-.41-2\",\"VT\":\"INVG-1\",\"FS\":\"INVG\",\"DV\":12,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":850},\"PRD\":13,\"FP\":{\"PS\":30,\"NV\":[{\"N\":\"PSE\",\"V\":\"0\"},{\"N\":\"PSEM\",\"V\":\"0\"}]},\"LVL\":3,\"SV\":{\"OL\":1,\"OS\":4,\"DL\":2,\"DS\":5},\"TV\":{\"BD\":\"20210906\",\"BT\":\"000000\",\"ED\":\"20210906\",\"ET\":\"01040000\",\"VD\":1,\"VC\":\"T\"}},{\"P\":\"~0-.15-2\",\"VT\":\"INVG-1\",\"FS\":\"INVG\",\"DV\":14,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":380},\"PRD\":15,\"FP\":{\"PS\":30,\"NV\":[{\"N\":\"PSE\",\"V\":\"0\"},{\"N\":\"PSEM\",\"V\":\"0\"}]},\"LVL\":3,\"SV\":{\"OL\":1,\"OS\":4,\"DL\":2,\"DS\":5},\"TV\":{\"BD\":\"20210906\",\"BT\":\"180000\",\"ED\":\"20210906\",\"ET\":\"01040000\",\"VD\":10,\"VC\":\"h\"}}],\"DESCR\":[\"1\",\"\"],\"OPT\":false,\"ALT\":true,\"SEQ\":false}],\"OPT\":false,\"ALT\":true,\"SEQ\":false},\"errCode\":0}"
+            },
+            "ovwTrfRefL":
+            [
+              {
+                "type":"F",
+                "fareSetX":0,
+                "fareX":0
+              },
+              {
+                "type":"F",
+                "fareSetX":0,
+                "fareX":2
+              },
+              {
+                "type":"F",
+                "fareSetX":0,
+                "fareX":3
+              },
+              {
+                "type":"F",
+                "fareSetX":0,
+                "fareX":4
+              },
+              {
+                "type":"F",
+                "fareSetX":0,
+                "fareX":5
+              },
+              {
+                "type":"F",
+                "fareSetX":0,
+                "fareX":6
+              }
+            ],
+            "conSubscr":"F",
+            "cksum":"3046abae_3"
+          },
+          {
+            "cid":"C-2",
+            "date":"20210906",
+            "dur":"000200",
+            "chg":0,
+            "sDays":
+            {
+              "sDaysR":"Mo - Fr",
+              "sDaysI":"nicht 1. Nov",
+              "sDaysB":"000000000000000000000000000000F9F3E7CE9F1E74F9F3E7CF9F3E7CF9F3E7CF9F3E7CF9F3E7CF8F3E7CF9F3E0"
+            },
+            "isAlt":true,
+            "dep":
+            {
+              "locX":0,
+              "idx":1,
+              "dProdX":2,
+              "dInR":true,
+              "dTimeS":"112500",
+              "dTimeR":"112500",
+              "dProgType":"CALCULATED",
+              "type":"N"
+            },
+            "arr":
+            {
+              "locX":3,
+              "idx":2,
+              "aProdX":2,
+              "aOutR":true,
+              "aTimeS":"112700",
+              "aTimeR":"112700",
+              "aProgType":"CALCULATED",
+              "type":"N"
+            },
+            "secL":
+            [
+              {
+                "type":"JNY",
+                "icoX":0,
+                "dep":
+                {
+                  "locX":0,
+                  "idx":1,
+                  "dProdX":2,
+                  "dInR":true,
+                  "dTimeS":"112500",
+                  "dTimeR":"112500",
+                  "dProgType":"CALCULATED",
+                  "type":"N"
+                },
+                "arr":
+                {
+                  "locX":3,
+                  "idx":2,
+                  "aProdX":2,
+                  "aOutR":true,
+                  "aTimeS":"112700",
+                  "aTimeR":"112700",
+                  "aProgType":"CALCULATED",
+                  "type":"N"
+                },
+                "jny":
+                {
+                  "jid":"1|936|10|80|6092021",
+                  "prodX":2,
+                  "dirTxt":"Gerolfing",
+                  "dirFlg":"R",
+                  "status":"P",
+                  "isRchbl":true,
+                  "stopL":
+                  [
+                    {
+                      "locX":0,
+                      "idx":1,
+                      "dProdX":2,
+                      "dInR":true,
+                      "dTimeS":"112500",
+                      "dTimeR":"112500",
+                      "dProgType":"CALCULATED",
+                      "dDirTxt":"Gerolfing",
+                      "dDirFlg":"R",
+                      "type":"N"
+                    },
+                    {
+                      "locX":3,
+                      "idx":2,
+                      "aProdX":2,
+                      "aOutR":true,
+                      "aTimeS":"112700",
+                      "aTimeR":"112700",
+                      "aProgType":"CALCULATED",
+                      "type":"N"
+                    }
+                  ],
+                  "polyG":
+                  {
+                    "polyXL":
+                    [
+                      2
+                    ],
+                    "layerX":0,
+                    "crdSysX":0
+                  },
+                  "freq":
+                  {
+                    "minC":6,
+                    "maxC":15,
+                    "numC":10,
+                    "jnyL":
+                    [
+                      {
+                        "jid":"1|935|2|80|6092021",
+                        "prodX":3,
+                        "dirTxt":"Irgertsheim",
+                        "dirFlg":"R",
+                        "stopL":
+                        [
+                          {
+                            "locX":0,
+                            "idx":1,
+                            "dProdX":3,
+                            "dTimeS":"114000",
+                            "dDirTxt":"Irgertsheim",
+                            "dDirFlg":"R",
+                            "type":"N"
+                          },
+                          {
+                            "locX":3,
+                            "idx":2,
+                            "aProdX":3,
+                            "aTimeS":"114200",
+                            "type":"N"
+                          }
+                        ],
+                        "ctxRecon":"T$A=1@O=Rechbergstraße@L=61202@a=128@$A=1@O=Ingolstadt, Z O B  Bussteig 01@L=78801@a=128@$202109061140$202109061142$Bus   60$$1$$$$",
+                        "subscr":"F"
+                      },
+                      {
+                        "jid":"1|936|11|80|6092021",
+                        "prodX":4,
+                        "dirTxt":"Gerolfing",
+                        "dirFlg":"R",
+                        "stopL":
+                        [
+                          {
+                            "locX":0,
+                            "idx":1,
+                            "dProdX":4,
+                            "dTimeS":"115500",
+                            "dDirTxt":"Gerolfing",
+                            "dDirFlg":"R",
+                            "type":"N"
+                          },
+                          {
+                            "locX":3,
+                            "idx":2,
+                            "aProdX":4,
+                            "aTimeS":"115700",
+                            "type":"N"
+                          }
+                        ],
+                        "ctxRecon":"T$A=1@O=Rechbergstraße@L=61202@a=128@$A=1@O=Ingolstadt, Z O B  Bussteig 01@L=78801@a=128@$202109061155$202109061157$Bus   60$$1$$$$",
+                        "subscr":"F"
+                      },
+                      {
+                        "jid":"1|934|5|80|6092021",
+                        "prodX":5,
+                        "dirTxt":"Irgertsheim",
+                        "dirFlg":"R",
+                        "stopL":
+                        [
+                          {
+                            "locX":0,
+                            "idx":1,
+                            "dProdX":5,
+                            "dTimeS":"121000",
+                            "dDirTxt":"Irgertsheim",
+                            "dDirFlg":"R",
+                            "type":"N"
+                          },
+                          {
+                            "locX":3,
+                            "idx":2,
+                            "aProdX":5,
+                            "aTimeS":"121200",
+                            "type":"N"
+                          }
+                        ],
+                        "ctxRecon":"T$A=1@O=Rechbergstraße@L=61202@a=128@$A=1@O=Ingolstadt, Z O B  Bussteig 01@L=78801@a=128@$202109061210$202109061212$Bus   60$$1$$$$",
+                        "subscr":"F"
+                      },
+                      {
+                        "jid":"1|936|12|80|6092021",
+                        "prodX":6,
+                        "dirTxt":"Gerolfing",
+                        "dirFlg":"R",
+                        "stopL":
+                        [
+                          {
+                            "locX":0,
+                            "idx":1,
+                            "dProdX":6,
+                            "dTimeS":"122500",
+                            "dDirTxt":"Gerolfing",
+                            "dDirFlg":"R",
+                            "type":"N"
+                          },
+                          {
+                            "locX":3,
+                            "idx":2,
+                            "aProdX":6,
+                            "aTimeS":"122700",
+                            "type":"N"
+                          }
+                        ],
+                        "ctxRecon":"T$A=1@O=Rechbergstraße@L=61202@a=128@$A=1@O=Ingolstadt, Z O B  Bussteig 01@L=78801@a=128@$202109061225$202109061227$Bus   60$$1$$$$",
+                        "subscr":"F"
+                      },
+                      {
+                        "jid":"1|935|3|80|6092021",
+                        "prodX":7,
+                        "dirTxt":"Irgertsheim",
+                        "dirFlg":"R",
+                        "stopL":
+                        [
+                          {
+                            "locX":0,
+                            "idx":1,
+                            "dProdX":7,
+                            "dTimeS":"124000",
+                            "dDirTxt":"Irgertsheim",
+                            "dDirFlg":"R",
+                            "type":"N"
+                          },
+                          {
+                            "locX":3,
+                            "idx":2,
+                            "aProdX":7,
+                            "aTimeS":"124200",
+                            "type":"N"
+                          }
+                        ],
+                        "ctxRecon":"T$A=1@O=Rechbergstraße@L=61202@a=128@$A=1@O=Ingolstadt, Z O B  Bussteig 01@L=78801@a=128@$202109061240$202109061242$Bus   60$$1$$$$",
+                        "subscr":"F"
+                      }
+                    ]
+                  },
+                  "ctxRecon":"T$A=1@O=Rechbergstraße@L=61202@a=128@$A=1@O=Ingolstadt, Z O B  Bussteig 01@L=78801@a=128@$202109061125$202109061127$Bus   60$$1$$$$",
+                  "msgL":
+                  [
+                    {
+                      "type":"HIM",
+                      "himX":0,
+                      "fLocX":0,
+                      "tagL":
+                      [
+                        "RES_GLB_HDR_H3","SUM_GLB_HDR_H3"
+                      ]
+                    },
+                    {
+                      "type":"HIM",
+                      "himX":1,
+                      "fLocX":0,
+                      "tagL":
+                      [
+                        "RES_GLB_HDR_H3","SUM_GLB_HDR_H3"
+                      ]
+                    },
+                    {
+                      "type":"HIM",
+                      "himX":2,
+                      "fLocX":0,
+                      "tagL":
+                      [
+                        "RES_GLB_HDR_H3","SUM_GLB_HDR_H3"
+                      ]
+                    }
+                  ],
+                  "subscr":"F"
+                }
+              }
+            ],
+            "ctxRecon":"¶HKI¶T$A=1@O=Rechbergstraße@L=61202@a=128@$A=1@O=Ingolstadt, Z O B  Bussteig 01@L=78801@a=128@$202109061125$202109061127$Bus   60$$1$$$$",
+            "freq":
+            {
+              "minC":6
+            },
+            "trfRes":
+            {
+              "fareSetL":
+              [
+                {
+                  "name":"Preisstufe 1",
+                  "desc":"e-Tickets nur innerhalb Zone 100\n\nVon Zone 100 zu Zone 100",
+                  "fareL":
+                  [
+                    {
+                      "name":"Kurzstrecke Erwachsene (Fahrerverkauf)",
+                      "prc":190,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Einzelfahrkarte Erwachsene (Fahrerverkauf)",
+                      "prc":280,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Einzelfahrkarte Erwachsene (Vorverkauf)",
+                      "prc":250,
+                      "cur":"EUR",
+                      "shpCtx":"~0-.11-2",
+                      "buttonText":"Zum Angebot"
+                    },
+                    {
+                      "name":"Einzelfahrkarte Kind (Vorverkauf)",
+                      "prc":120,
+                      "cur":"EUR",
+                      "shpCtx":"~0-.21-2",
+                      "buttonText":"Zum Angebot"
+                    },
+                    {
+                      "name":"Tageskarte (Vorverkauf)",
+                      "prc":480,
+                      "cur":"EUR",
+                      "shpCtx":"~0-.31-2",
+                      "buttonText":"Zum Angebot"
+                    },
+                    {
+                      "name":"Partnertageskarte (Vorverkauf)",
+                      "prc":850,
+                      "cur":"EUR",
+                      "shpCtx":"~0-.41-2",
+                      "buttonText":"Zum Angebot"
+                    },
+                    {
+                      "name":"Nachtkarte (Online- & Fahrerverkauf)",
+                      "prc":380,
+                      "cur":"EUR",
+                      "shpCtx":"~0-.15-2",
+                      "buttonText":"Zum Angebot"
+                    },
+                    {
+                      "name":"Kurzstrecke Kinder (Fahrerverkauf)",
+                      "prc":80,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Einzelfahrkarte Kind (Fahrerverkauf)",
+                      "prc":150,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Tageskarte (Fahrerverkauf)",
+                      "prc":560,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Partnertageskarte (Fahrerverkauf)",
+                      "prc":950,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Jahreskarte",
+                      "prc":58500,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Wochenkarte Erwachsene (übertragbar)",
+                      "prc":2250,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Wochenkarte Schüler (personalisiert)",
+                      "prc":2000,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Monatskarte Erwachsene (übertragbar)",
+                      "prc":5900,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Monatskarte Schüler (personalisiert)",
+                      "prc":4800,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Monatskarte Senioren (übertragbar)",
+                      "prc":4950,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Monatskarte 09:00 Uhr (übertragbar)",
+                      "prc":4550,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Jahreskarte DonauCard Senior 9:00 Uhr",
+                      "prc":45400,
+                      "cur":"EUR"
+                    }
+                  ]
+                }
+              ],
+              "shpCtx":"{\"common\":{\"FEL\":[{\"XV\":[\"20210801\",\"0\"]},{\"ID\":[\"100\"]},{\"ID\":[\"100\"]},{\"ID\":[\"2\"],\"ON\":[\"1\"],\"PN\":[\"1 Zone\"]},{\"ID\":[\"61202\"],\"ON\":[\"Rechbergstraße\"]},{\"ID\":[\"78801\"],\"ON\":[\"Ingolstadt, Z O B  Bussteig 01\"]},{\"ID\":[\"0\"]},{\"ID\":[\"11\"],\"ON\":[\"Einzelfahrkarte Erwachsene (Vorverkauf)\",\"\",\"1 Erwachsener, 1 Fahrt, Gültig ab sofort!\",\"Einzelfahrkarte Erwachsene\\n- 1 Person\\n- 1 Fahrt (in eine Richtung, keine Rückfahrt oder Rundfahrt; Fahrtunterbrechung möglich)\\n- nicht übertragbar\\n- gültig in BUS+BAHN in der jeweiligen Tarifzone\\n- Print- bzw. HandyTickets sind nur in Verbindung mit einem amtlichen Lichtbildausweis gültig.\\nBitte beachten:\\n- ab Kauf sofort 2 Stunden gültig\\n\\nWeitere Informationen erhalten Sie unter www.invg.de sowie in den INVG-Tarifbestimmungen\"],\"PN\":[\"Einzelfahrkarte Erwachsene\",\"gültig 2 Std. ab Kauf; für die einfache Fahrt\"],\"XV\":[\"3\"]},{\"ID\":[\"0\"]},{\"ID\":[\"21\"],\"ON\":[\"Einzelfahrkarte Kind (Vorverkauf)\",\"\",\"1 Kind, 1 Fahrt, Gültig ab sofort!\",\"Einzelfahrkarte Kind\\n- 1 Kind ab 6 Jahre bis zum vollendeten 14. Lebensjahr\\n- 1 Fahrt (in eine Richtung, keine Rückfahrt oder Rundfahrt; Fahrtunterbrechung möglich)\\n- nicht übertragbar\\n- gültig in BUS+BAHN in der jweiligen Tarifzone\\n- Print- bzw. HandyTickets sind nur in Verbindung mit einem amtlichen Lichtbildausweis gültig.\\nBitte beachten:\\n- ab Kauf sofort 2 Stunden gültig\\n\\nWeitere Informationen erhalten Sie unter www.invg.de sowie in den INVG-Tarifbestimmungen\"],\"PN\":[\"Einzelfahrkarte Kind\",\"gültig 2 Std. ab Kauf; für die einfache Fahrt\"],\"XV\":[\"4\"]},{\"ID\":[\"0\"]},{\"ID\":[\"31\"],\"ON\":[\"Tageskarte (Vorverkauf)\",\"\",\"1 Person, 1 Tag\",\"Tageskarte\\n- 1 Person\\n- 1 Tag \\n- nicht übertragbar\\n- gültig in BUS+BAHN in der jeweiligen Tarifzone\\n- keine Mitnahmemöglichkeit\\n- Print- bzw. HandyTickets sind nur in Verbindung mit einem amtlichen Lichtbildausweis gültig.\\n\\nWeitere Informationen erhalten Sie unter www.invg.de sowie in den INVG-Tarifbestimmungen\"],\"PN\":[\"Tageskarte\",\"gültig am .. bis Betriebsende\"],\"XV\":[\"5\"]},{\"ID\":[\"0\"]},{\"ID\":[\"41\"],\"ON\":[\"Partnertageskarte (Vorverkauf)\",\"\",\"5 Personen (Kinder 6-14 J. zählen als 1/2 Person), 1 Tag\",\"Partnertageskarte\\n- bis zu 5 Personen (1 Kind zwischen 6 Jahre und vollendenten 14. Lebensjahr zählt als halbe Person)\\n- nicht übertragbar (Personalisierung auf die erste Person ist erforderlich)\\n- bei Schulausflügen gelten Schüler bis einschließlich der 9. Klasse als Kinder\\n- 1 Tag \\n- gültig in BUS+BAHN in der jeweiligen Tarifzone\\n\\nWeitere Informationen erhalten Sie unter www.invg.de sowie in den INVG-Tarifbestimmungen\"],\"PN\":[\"Partnertageskarte\",\"gültig am .. bis Betriebsende\"],\"XV\":[\"6\"]},{\"ID\":[\"0\"]},{\"ID\":[\"15\"],\"ON\":[\"Nachtkarte (Online- & Fahrerverkauf)\",\"\",\"1 Person, Gültig ab 18:00 Uhr\",\"Nachtkarte\\n- gültig ab 18:00 Uhr für beliebig viele Fahrten in der jeweiligen Tarifstufe\\n- 1 Person\\n- nicht übertragbar\\n- gültig nur in den Bussen im INVG-Verbundgebiet\\n- keine Mitnahmemöglichkeit\\n- Print- bzw. HandyTickets sind nur in Verbindung mit einem amtlichen Lichtbildausweis gültig.\\n\\nWeitere Informationen erhalten Sie unter www.invg.de sowie in den INVG-Tarifbestimmungen\"],\"PN\":[\"Nachtkarte\",\"gültig am .. ab 18:00 Uhr\"],\"XV\":[\"7\"]}]},\"BOG\":{\"BOGL\":[{\"P\":\"~0-\",\"BOL\":[{\"P\":\"~0-.11-2\",\"VT\":\"INVG-1\",\"FS\":\"INVG\",\"DV\":6,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":250},\"PRD\":7,\"FP\":{\"PS\":0,\"NV\":[{\"N\":\"PSE\",\"V\":\"0\"},{\"N\":\"PSEM\",\"V\":\"0\"}]},\"LVL\":3,\"SV\":{\"OL\":1,\"OS\":4,\"DL\":2,\"DS\":5},\"TV\":{\"BD\":\"20210906\",\"ED\":\"20210906\",\"VD\":120,\"VC\":\"m\"}},{\"P\":\"~0-.21-2\",\"VT\":\"INVG-1\",\"FS\":\"INVG\",\"DV\":8,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":120},\"PRD\":9,\"FP\":{\"PS\":0,\"NV\":[{\"N\":\"PSE\",\"V\":\"0\"},{\"N\":\"PSEM\",\"V\":\"0\"}]},\"LVL\":3,\"SV\":{\"OL\":1,\"OS\":4,\"DL\":2,\"DS\":5},\"TV\":{\"BD\":\"20210906\",\"ED\":\"20210906\",\"VD\":120,\"VC\":\"m\"}},{\"P\":\"~0-.31-2\",\"VT\":\"INVG-1\",\"FS\":\"INVG\",\"DV\":10,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":480},\"PRD\":11,\"FP\":{\"PS\":30,\"NV\":[{\"N\":\"PSE\",\"V\":\"0\"},{\"N\":\"PSEM\",\"V\":\"0\"}]},\"LVL\":3,\"SV\":{\"OL\":1,\"OS\":4,\"DL\":2,\"DS\":5},\"TV\":{\"BD\":\"20210906\",\"BT\":\"000000\",\"ED\":\"20210906\",\"ET\":\"01033000\",\"VD\":1,\"VC\":\"T\"}},{\"P\":\"~0-.41-2\",\"VT\":\"INVG-1\",\"FS\":\"INVG\",\"DV\":12,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":850},\"PRD\":13,\"FP\":{\"PS\":30,\"NV\":[{\"N\":\"PSE\",\"V\":\"0\"},{\"N\":\"PSEM\",\"V\":\"0\"}]},\"LVL\":3,\"SV\":{\"OL\":1,\"OS\":4,\"DL\":2,\"DS\":5},\"TV\":{\"BD\":\"20210906\",\"BT\":\"000000\",\"ED\":\"20210906\",\"ET\":\"01040000\",\"VD\":1,\"VC\":\"T\"}},{\"P\":\"~0-.15-2\",\"VT\":\"INVG-1\",\"FS\":\"INVG\",\"DV\":14,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":380},\"PRD\":15,\"FP\":{\"PS\":30,\"NV\":[{\"N\":\"PSE\",\"V\":\"0\"},{\"N\":\"PSEM\",\"V\":\"0\"}]},\"LVL\":3,\"SV\":{\"OL\":1,\"OS\":4,\"DL\":2,\"DS\":5},\"TV\":{\"BD\":\"20210906\",\"BT\":\"180000\",\"ED\":\"20210906\",\"ET\":\"01040000\",\"VD\":10,\"VC\":\"h\"}}],\"DESCR\":[\"1\",\"\"],\"OPT\":false,\"ALT\":true,\"SEQ\":false}],\"OPT\":false,\"ALT\":true,\"SEQ\":false},\"errCode\":0}"
+            },
+            "ovwTrfRefL":
+            [
+              {
+                "type":"F",
+                "fareSetX":0,
+                "fareX":0
+              },
+              {
+                "type":"F",
+                "fareSetX":0,
+                "fareX":2
+              },
+              {
+                "type":"F",
+                "fareSetX":0,
+                "fareX":3
+              },
+              {
+                "type":"F",
+                "fareSetX":0,
+                "fareX":4
+              },
+              {
+                "type":"F",
+                "fareSetX":0,
+                "fareX":5
+              },
+              {
+                "type":"F",
+                "fareSetX":0,
+                "fareX":6
+              }
+            ],
+            "msgL":
+            [
+              {
+                "type":"REM",
+                "remX":0,
+                "tagL":
+                [
+                  "SUM_CON_HDR_H3"
+                ]
+              },
+              {
+                "type":"REM",
+                "remX":1,
+                "tagL":
+                [
+                  "RES_CON_HDR_H3"
+                ]
+              }
+            ],
+            "conSubscr":"F",
+            "cksum":"8c426d0a_3"
+          },
+          {
+            "cid":"C-3",
+            "date":"20210906",
+            "dur":"000300",
+            "chg":0,
+            "sDays":
+            {
+              "sDaysR":"Mo - Fr",
+              "sDaysI":"nicht 1. Nov",
+              "sDaysB":"000000000000000000000000000000F9F3E7CE9F1E74F9F3E7CF9F3E7CF9F3E7CF9F3E7CF9F3E7CF8F3E7CF9F3E0"
+            },
+            "isAlt":true,
+            "dep":
+            {
+              "locX":0,
+              "idx":16,
+              "dProdX":8,
+              "dInR":true,
+              "dTimeS":"112500",
+              "dTimeR":"113100",
+              "dProgType":"CALCULATED",
+              "type":"N"
+            },
+            "arr":
+            {
+              "locX":4,
+              "idx":17,
+              "aProdX":8,
+              "aOutR":true,
+              "aTimeS":"112800",
+              "aTimeR":"113400",
+              "aProgType":"PROGNOSED",
+              "type":"N"
+            },
+            "secL":
+            [
+              {
+                "type":"JNY",
+                "icoX":0,
+                "dep":
+                {
+                  "locX":0,
+                  "idx":16,
+                  "dProdX":8,
+                  "dInR":true,
+                  "dTimeS":"112500",
+                  "dTimeR":"113100",
+                  "dProgType":"CALCULATED",
+                  "type":"N"
+                },
+                "arr":
+                {
+                  "locX":4,
+                  "idx":17,
+                  "aProdX":8,
+                  "aOutR":true,
+                  "aTimeS":"112800",
+                  "aTimeR":"113400",
+                  "aProgType":"PROGNOSED",
+                  "type":"N"
+                },
+                "jny":
+                {
+                  "jid":"1|3228|0|80|6092021",
+                  "prodX":8,
+                  "dirTxt":"Karlshuld",
+                  "dirFlg":"H",
+                  "status":"P",
+                  "isRedir":true,
+                  "isRchbl":true,
+                  "stopL":
+                  [
+                    {
+                      "locX":0,
+                      "idx":16,
+                      "dProdX":8,
+                      "dInR":true,
+                      "dTimeS":"112500",
+                      "dTimeR":"113100",
+                      "dProgType":"CALCULATED",
+                      "dDirTxt":"Karlshuld",
+                      "dDirFlg":"H",
+                      "type":"N"
+                    },
+                    {
+                      "locX":4,
+                      "idx":17,
+                      "aProdX":8,
+                      "aOutR":true,
+                      "aTimeS":"112800",
+                      "aTimeR":"113400",
+                      "aProgType":"PROGNOSED",
+                      "type":"N"
+                    }
+                  ],
+                  "polyG":
+                  {
+                    "polyXL":
+                    [
+                      3
+                    ],
+                    "layerX":0,
+                    "crdSysX":0
+                  },
+                  "freq":
+                  {
+                    "minC":29,
+                    "maxC":30,
+                    "numC":5
+                  },
+                  "ctxRecon":"T$A=1@O=Rechbergstraße@L=61202@a=128@$A=1@O=Ingolstadt, Z O B  Bussteig 11@L=78811@a=128@$202109061125$202109061128$Bus   44$$3$$$$",
+                  "msgL":
+                  [
+                    {
+                      "type":"HIM",
+                      "himX":0,
+                      "fLocX":0,
+                      "tagL":
+                      [
+                        "RES_GLB_HDR_H3","SUM_GLB_HDR_H3"
+                      ]
+                    },
+                    {
+                      "type":"HIM",
+                      "himX":1,
+                      "fLocX":0,
+                      "tagL":
+                      [
+                        "RES_GLB_HDR_H3","SUM_GLB_HDR_H3"
+                      ]
+                    },
+                    {
+                      "type":"HIM",
+                      "himX":2,
+                      "fLocX":0,
+                      "tagL":
+                      [
+                        "RES_GLB_HDR_H3","SUM_GLB_HDR_H3"
+                      ]
+                    }
+                  ],
+                  "subscr":"F"
+                }
+              }
+            ],
+            "ctxRecon":"¶HKI¶T$A=1@O=Rechbergstraße@L=61202@a=128@$A=1@O=Ingolstadt, Z O B  Bussteig 11@L=78811@a=128@$202109061125$202109061128$Bus   44$$3$$$$",
+            "freq":
+            {
+              "minC":29
+            },
+            "trfRes":
+            {
+              "fareSetL":
+              [
+                {
+                  "name":"Preisstufe 1",
+                  "desc":"e-Tickets nur innerhalb Zone 100\n\nVon Zone 100 zu Zone 100",
+                  "fareL":
+                  [
+                    {
+                      "name":"Kurzstrecke Erwachsene (Fahrerverkauf)",
+                      "prc":190,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Einzelfahrkarte Erwachsene (Fahrerverkauf)",
+                      "prc":280,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Einzelfahrkarte Erwachsene (Vorverkauf)",
+                      "prc":250,
+                      "cur":"EUR",
+                      "shpCtx":"~0-.11-2",
+                      "buttonText":"Zum Angebot"
+                    },
+                    {
+                      "name":"Einzelfahrkarte Kind (Vorverkauf)",
+                      "prc":120,
+                      "cur":"EUR",
+                      "shpCtx":"~0-.21-2",
+                      "buttonText":"Zum Angebot"
+                    },
+                    {
+                      "name":"Tageskarte (Vorverkauf)",
+                      "prc":480,
+                      "cur":"EUR",
+                      "shpCtx":"~0-.31-2",
+                      "buttonText":"Zum Angebot"
+                    },
+                    {
+                      "name":"Partnertageskarte (Vorverkauf)",
+                      "prc":850,
+                      "cur":"EUR",
+                      "shpCtx":"~0-.41-2",
+                      "buttonText":"Zum Angebot"
+                    },
+                    {
+                      "name":"Nachtkarte (Online- & Fahrerverkauf)",
+                      "prc":380,
+                      "cur":"EUR",
+                      "shpCtx":"~0-.15-2",
+                      "buttonText":"Zum Angebot"
+                    },
+                    {
+                      "name":"Kurzstrecke Kinder (Fahrerverkauf)",
+                      "prc":80,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Einzelfahrkarte Kind (Fahrerverkauf)",
+                      "prc":150,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Tageskarte (Fahrerverkauf)",
+                      "prc":560,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Partnertageskarte (Fahrerverkauf)",
+                      "prc":950,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Jahreskarte",
+                      "prc":58500,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Wochenkarte Erwachsene (übertragbar)",
+                      "prc":2250,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Wochenkarte Schüler (personalisiert)",
+                      "prc":2000,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Monatskarte Erwachsene (übertragbar)",
+                      "prc":5900,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Monatskarte Schüler (personalisiert)",
+                      "prc":4800,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Monatskarte Senioren (übertragbar)",
+                      "prc":4950,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Monatskarte 09:00 Uhr (übertragbar)",
+                      "prc":4550,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Jahreskarte DonauCard Senior 9:00 Uhr",
+                      "prc":45400,
+                      "cur":"EUR"
+                    }
+                  ]
+                }
+              ],
+              "shpCtx":"{\"common\":{\"FEL\":[{\"XV\":[\"20210801\",\"0\"]},{\"ID\":[\"100\"]},{\"ID\":[\"100\"]},{\"ID\":[\"2\"],\"ON\":[\"1\"],\"PN\":[\"1 Zone\"]},{\"ID\":[\"61202\"],\"ON\":[\"Rechbergstraße\"]},{\"ID\":[\"78811\"],\"ON\":[\"Ingolstadt, Z O B  Bussteig 11\"]},{\"ID\":[\"0\"]},{\"ID\":[\"11\"],\"ON\":[\"Einzelfahrkarte Erwachsene (Vorverkauf)\",\"\",\"1 Erwachsener, 1 Fahrt, Gültig ab sofort!\",\"Einzelfahrkarte Erwachsene\\n- 1 Person\\n- 1 Fahrt (in eine Richtung, keine Rückfahrt oder Rundfahrt; Fahrtunterbrechung möglich)\\n- nicht übertragbar\\n- gültig in BUS+BAHN in der jeweiligen Tarifzone\\n- Print- bzw. HandyTickets sind nur in Verbindung mit einem amtlichen Lichtbildausweis gültig.\\nBitte beachten:\\n- ab Kauf sofort 2 Stunden gültig\\n\\nWeitere Informationen erhalten Sie unter www.invg.de sowie in den INVG-Tarifbestimmungen\"],\"PN\":[\"Einzelfahrkarte Erwachsene\",\"gültig 2 Std. ab Kauf; für die einfache Fahrt\"],\"XV\":[\"3\"]},{\"ID\":[\"0\"]},{\"ID\":[\"21\"],\"ON\":[\"Einzelfahrkarte Kind (Vorverkauf)\",\"\",\"1 Kind, 1 Fahrt, Gültig ab sofort!\",\"Einzelfahrkarte Kind\\n- 1 Kind ab 6 Jahre bis zum vollendeten 14. Lebensjahr\\n- 1 Fahrt (in eine Richtung, keine Rückfahrt oder Rundfahrt; Fahrtunterbrechung möglich)\\n- nicht übertragbar\\n- gültig in BUS+BAHN in der jweiligen Tarifzone\\n- Print- bzw. HandyTickets sind nur in Verbindung mit einem amtlichen Lichtbildausweis gültig.\\nBitte beachten:\\n- ab Kauf sofort 2 Stunden gültig\\n\\nWeitere Informationen erhalten Sie unter www.invg.de sowie in den INVG-Tarifbestimmungen\"],\"PN\":[\"Einzelfahrkarte Kind\",\"gültig 2 Std. ab Kauf; für die einfache Fahrt\"],\"XV\":[\"4\"]},{\"ID\":[\"0\"]},{\"ID\":[\"31\"],\"ON\":[\"Tageskarte (Vorverkauf)\",\"\",\"1 Person, 1 Tag\",\"Tageskarte\\n- 1 Person\\n- 1 Tag \\n- nicht übertragbar\\n- gültig in BUS+BAHN in der jeweiligen Tarifzone\\n- keine Mitnahmemöglichkeit\\n- Print- bzw. HandyTickets sind nur in Verbindung mit einem amtlichen Lichtbildausweis gültig.\\n\\nWeitere Informationen erhalten Sie unter www.invg.de sowie in den INVG-Tarifbestimmungen\"],\"PN\":[\"Tageskarte\",\"gültig am .. bis Betriebsende\"],\"XV\":[\"5\"]},{\"ID\":[\"0\"]},{\"ID\":[\"41\"],\"ON\":[\"Partnertageskarte (Vorverkauf)\",\"\",\"5 Personen (Kinder 6-14 J. zählen als 1/2 Person), 1 Tag\",\"Partnertageskarte\\n- bis zu 5 Personen (1 Kind zwischen 6 Jahre und vollendenten 14. Lebensjahr zählt als halbe Person)\\n- nicht übertragbar (Personalisierung auf die erste Person ist erforderlich)\\n- bei Schulausflügen gelten Schüler bis einschließlich der 9. Klasse als Kinder\\n- 1 Tag \\n- gültig in BUS+BAHN in der jeweiligen Tarifzone\\n\\nWeitere Informationen erhalten Sie unter www.invg.de sowie in den INVG-Tarifbestimmungen\"],\"PN\":[\"Partnertageskarte\",\"gültig am .. bis Betriebsende\"],\"XV\":[\"6\"]},{\"ID\":[\"0\"]},{\"ID\":[\"15\"],\"ON\":[\"Nachtkarte (Online- & Fahrerverkauf)\",\"\",\"1 Person, Gültig ab 18:00 Uhr\",\"Nachtkarte\\n- gültig ab 18:00 Uhr für beliebig viele Fahrten in der jeweiligen Tarifstufe\\n- 1 Person\\n- nicht übertragbar\\n- gültig nur in den Bussen im INVG-Verbundgebiet\\n- keine Mitnahmemöglichkeit\\n- Print- bzw. HandyTickets sind nur in Verbindung mit einem amtlichen Lichtbildausweis gültig.\\n\\nWeitere Informationen erhalten Sie unter www.invg.de sowie in den INVG-Tarifbestimmungen\"],\"PN\":[\"Nachtkarte\",\"gültig am .. ab 18:00 Uhr\"],\"XV\":[\"7\"]}]},\"BOG\":{\"BOGL\":[{\"P\":\"~0-\",\"BOL\":[{\"P\":\"~0-.11-2\",\"VT\":\"INVG-1\",\"FS\":\"INVG\",\"DV\":6,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":250},\"PRD\":7,\"FP\":{\"PS\":0,\"NV\":[{\"N\":\"PSE\",\"V\":\"0\"},{\"N\":\"PSEM\",\"V\":\"0\"}]},\"LVL\":3,\"SV\":{\"OL\":1,\"OS\":4,\"DL\":2,\"DS\":5},\"TV\":{\"BD\":\"20210906\",\"ED\":\"20210906\",\"VD\":120,\"VC\":\"m\"}},{\"P\":\"~0-.21-2\",\"VT\":\"INVG-1\",\"FS\":\"INVG\",\"DV\":8,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":120},\"PRD\":9,\"FP\":{\"PS\":0,\"NV\":[{\"N\":\"PSE\",\"V\":\"0\"},{\"N\":\"PSEM\",\"V\":\"0\"}]},\"LVL\":3,\"SV\":{\"OL\":1,\"OS\":4,\"DL\":2,\"DS\":5},\"TV\":{\"BD\":\"20210906\",\"ED\":\"20210906\",\"VD\":120,\"VC\":\"m\"}},{\"P\":\"~0-.31-2\",\"VT\":\"INVG-1\",\"FS\":\"INVG\",\"DV\":10,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":480},\"PRD\":11,\"FP\":{\"PS\":30,\"NV\":[{\"N\":\"PSE\",\"V\":\"0\"},{\"N\":\"PSEM\",\"V\":\"0\"}]},\"LVL\":3,\"SV\":{\"OL\":1,\"OS\":4,\"DL\":2,\"DS\":5},\"TV\":{\"BD\":\"20210906\",\"BT\":\"000000\",\"ED\":\"20210906\",\"ET\":\"01033000\",\"VD\":1,\"VC\":\"T\"}},{\"P\":\"~0-.41-2\",\"VT\":\"INVG-1\",\"FS\":\"INVG\",\"DV\":12,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":850},\"PRD\":13,\"FP\":{\"PS\":30,\"NV\":[{\"N\":\"PSE\",\"V\":\"0\"},{\"N\":\"PSEM\",\"V\":\"0\"}]},\"LVL\":3,\"SV\":{\"OL\":1,\"OS\":4,\"DL\":2,\"DS\":5},\"TV\":{\"BD\":\"20210906\",\"BT\":\"000000\",\"ED\":\"20210906\",\"ET\":\"01040000\",\"VD\":1,\"VC\":\"T\"}},{\"P\":\"~0-.15-2\",\"VT\":\"INVG-1\",\"FS\":\"INVG\",\"DV\":14,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":380},\"PRD\":15,\"FP\":{\"PS\":30,\"NV\":[{\"N\":\"PSE\",\"V\":\"0\"},{\"N\":\"PSEM\",\"V\":\"0\"}]},\"LVL\":3,\"SV\":{\"OL\":1,\"OS\":4,\"DL\":2,\"DS\":5},\"TV\":{\"BD\":\"20210906\",\"BT\":\"180000\",\"ED\":\"20210906\",\"ET\":\"01040000\",\"VD\":10,\"VC\":\"h\"}}],\"DESCR\":[\"1\",\"\"],\"OPT\":false,\"ALT\":true,\"SEQ\":false}],\"OPT\":false,\"ALT\":true,\"SEQ\":false},\"errCode\":0}"
+            },
+            "ovwTrfRefL":
+            [
+              {
+                "type":"F",
+                "fareSetX":0,
+                "fareX":0
+              },
+              {
+                "type":"F",
+                "fareSetX":0,
+                "fareX":2
+              },
+              {
+                "type":"F",
+                "fareSetX":0,
+                "fareX":3
+              },
+              {
+                "type":"F",
+                "fareSetX":0,
+                "fareX":4
+              },
+              {
+                "type":"F",
+                "fareSetX":0,
+                "fareX":5
+              },
+              {
+                "type":"F",
+                "fareSetX":0,
+                "fareX":6
+              }
+            ],
+            "msgL":
+            [
+              {
+                "type":"REM",
+                "remX":0,
+                "tagL":
+                [
+                  "SUM_CON_HDR_H3"
+                ]
+              },
+              {
+                "type":"REM",
+                "remX":1,
+                "tagL":
+                [
+                  "RES_CON_HDR_H3"
+                ]
+              }
+            ],
+            "conSubscr":"F",
+            "cksum":"94f1454f_3"
+          },
+          {
+            "cid":"C-4",
+            "date":"20210906",
+            "dur":"000200",
+            "chg":0,
+            "sDays":
+            {
+              "sDaysR":"täglich",
+              "sDaysB":"000000000000000000000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF0"
+            },
+            "dep":
+            {
+              "locX":0,
+              "idx":1,
+              "dProdX":3,
+              "dInR":true,
+              "dTimeS":"114000",
+              "dTimeR":"114000",
+              "dProgType":"CALCULATED",
+              "type":"N"
+            },
+            "arr":
+            {
+              "locX":3,
+              "idx":2,
+              "aProdX":3,
+              "aOutR":true,
+              "aTimeS":"114200",
+              "aTimeR":"114200",
+              "aProgType":"CALCULATED",
+              "type":"N"
+            },
+            "secL":
+            [
+              {
+                "type":"JNY",
+                "icoX":0,
+                "dep":
+                {
+                  "locX":0,
+                  "idx":1,
+                  "dProdX":3,
+                  "dInR":true,
+                  "dTimeS":"114000",
+                  "dTimeR":"114000",
+                  "dProgType":"CALCULATED",
+                  "type":"N"
+                },
+                "arr":
+                {
+                  "locX":3,
+                  "idx":2,
+                  "aProdX":3,
+                  "aOutR":true,
+                  "aTimeS":"114200",
+                  "aTimeR":"114200",
+                  "aProgType":"CALCULATED",
+                  "type":"N"
+                },
+                "jny":
+                {
+                  "jid":"1|935|2|80|6092021",
+                  "prodX":3,
+                  "dirTxt":"Irgertsheim",
+                  "dirFlg":"R",
+                  "status":"P",
+                  "isRchbl":true,
+                  "stopL":
+                  [
+                    {
+                      "locX":0,
+                      "idx":1,
+                      "dProdX":3,
+                      "dInR":true,
+                      "dTimeS":"114000",
+                      "dTimeR":"114000",
+                      "dProgType":"CALCULATED",
+                      "dDirTxt":"Irgertsheim",
+                      "dDirFlg":"R",
+                      "type":"N"
+                    },
+                    {
+                      "locX":3,
+                      "idx":2,
+                      "aProdX":3,
+                      "aOutR":true,
+                      "aTimeS":"114200",
+                      "aTimeR":"114200",
+                      "aProgType":"CALCULATED",
+                      "type":"N"
+                    }
+                  ],
+                  "polyG":
+                  {
+                    "polyXL":
+                    [
+                      4
+                    ],
+                    "layerX":0,
+                    "crdSysX":0
+                  },
+                  "freq":
+                  {
+                    "minC":6,
+                    "maxC":15,
+                    "numC":10,
+                    "jnyL":
+                    [
+                      {
+                        "jid":"1|936|11|80|6092021",
+                        "prodX":4,
+                        "dirTxt":"Gerolfing",
+                        "dirFlg":"R",
+                        "stopL":
+                        [
+                          {
+                            "locX":0,
+                            "idx":1,
+                            "dProdX":4,
+                            "dTimeS":"115500",
+                            "dDirTxt":"Gerolfing",
+                            "dDirFlg":"R",
+                            "type":"N"
+                          },
+                          {
+                            "locX":3,
+                            "idx":2,
+                            "aProdX":4,
+                            "aTimeS":"115700",
+                            "type":"N"
+                          }
+                        ],
+                        "ctxRecon":"T$A=1@O=Rechbergstraße@L=61202@a=128@$A=1@O=Ingolstadt, Z O B  Bussteig 01@L=78801@a=128@$202109061155$202109061157$Bus   60$$1$$$$",
+                        "subscr":"F"
+                      },
+                      {
+                        "jid":"1|934|5|80|6092021",
+                        "prodX":5,
+                        "dirTxt":"Irgertsheim",
+                        "dirFlg":"R",
+                        "stopL":
+                        [
+                          {
+                            "locX":0,
+                            "idx":1,
+                            "dProdX":5,
+                            "dTimeS":"121000",
+                            "dDirTxt":"Irgertsheim",
+                            "dDirFlg":"R",
+                            "type":"N"
+                          },
+                          {
+                            "locX":3,
+                            "idx":2,
+                            "aProdX":5,
+                            "aTimeS":"121200",
+                            "type":"N"
+                          }
+                        ],
+                        "ctxRecon":"T$A=1@O=Rechbergstraße@L=61202@a=128@$A=1@O=Ingolstadt, Z O B  Bussteig 01@L=78801@a=128@$202109061210$202109061212$Bus   60$$1$$$$",
+                        "subscr":"F"
+                      },
+                      {
+                        "jid":"1|936|12|80|6092021",
+                        "prodX":6,
+                        "dirTxt":"Gerolfing",
+                        "dirFlg":"R",
+                        "stopL":
+                        [
+                          {
+                            "locX":0,
+                            "idx":1,
+                            "dProdX":6,
+                            "dTimeS":"122500",
+                            "dDirTxt":"Gerolfing",
+                            "dDirFlg":"R",
+                            "type":"N"
+                          },
+                          {
+                            "locX":3,
+                            "idx":2,
+                            "aProdX":6,
+                            "aTimeS":"122700",
+                            "type":"N"
+                          }
+                        ],
+                        "ctxRecon":"T$A=1@O=Rechbergstraße@L=61202@a=128@$A=1@O=Ingolstadt, Z O B  Bussteig 01@L=78801@a=128@$202109061225$202109061227$Bus   60$$1$$$$",
+                        "subscr":"F"
+                      },
+                      {
+                        "jid":"1|935|3|80|6092021",
+                        "prodX":7,
+                        "dirTxt":"Irgertsheim",
+                        "dirFlg":"R",
+                        "stopL":
+                        [
+                          {
+                            "locX":0,
+                            "idx":1,
+                            "dProdX":7,
+                            "dTimeS":"124000",
+                            "dDirTxt":"Irgertsheim",
+                            "dDirFlg":"R",
+                            "type":"N"
+                          },
+                          {
+                            "locX":3,
+                            "idx":2,
+                            "aProdX":7,
+                            "aTimeS":"124200",
+                            "type":"N"
+                          }
+                        ],
+                        "ctxRecon":"T$A=1@O=Rechbergstraße@L=61202@a=128@$A=1@O=Ingolstadt, Z O B  Bussteig 01@L=78801@a=128@$202109061240$202109061242$Bus   60$$1$$$$",
+                        "subscr":"F"
+                      },
+                      {
+                        "jid":"1|936|13|80|6092021",
+                        "prodX":9,
+                        "dirTxt":"Gerolfing",
+                        "dirFlg":"R",
+                        "stopL":
+                        [
+                          {
+                            "locX":0,
+                            "idx":1,
+                            "dProdX":9,
+                            "dTimeS":"125500",
+                            "dDirTxt":"Gerolfing",
+                            "dDirFlg":"R",
+                            "type":"N"
+                          },
+                          {
+                            "locX":3,
+                            "idx":2,
+                            "aProdX":9,
+                            "aTimeS":"125700",
+                            "type":"N"
+                          }
+                        ],
+                        "ctxRecon":"T$A=1@O=Rechbergstraße@L=61202@a=128@$A=1@O=Ingolstadt, Z O B  Bussteig 01@L=78801@a=128@$202109061255$202109061257$Bus   60$$1$$$$",
+                        "subscr":"F"
+                      }
+                    ]
+                  },
+                  "ctxRecon":"T$A=1@O=Rechbergstraße@L=61202@a=128@$A=1@O=Ingolstadt, Z O B  Bussteig 01@L=78801@a=128@$202109061140$202109061142$Bus   60$$1$$$$",
+                  "msgL":
+                  [
+                    {
+                      "type":"HIM",
+                      "himX":0,
+                      "fLocX":0,
+                      "tagL":
+                      [
+                        "RES_GLB_HDR_H3","SUM_GLB_HDR_H3"
+                      ]
+                    },
+                    {
+                      "type":"HIM",
+                      "himX":1,
+                      "fLocX":0,
+                      "tagL":
+                      [
+                        "RES_GLB_HDR_H3","SUM_GLB_HDR_H3"
+                      ]
+                    },
+                    {
+                      "type":"HIM",
+                      "himX":2,
+                      "fLocX":0,
+                      "tagL":
+                      [
+                        "RES_GLB_HDR_H3","SUM_GLB_HDR_H3"
+                      ]
+                    }
+                  ],
+                  "subscr":"F"
+                }
+              }
+            ],
+            "ctxRecon":"¶HKI¶T$A=1@O=Rechbergstraße@L=61202@a=128@$A=1@O=Ingolstadt, Z O B  Bussteig 01@L=78801@a=128@$202109061140$202109061142$Bus   60$$1$$$$",
+            "freq":
+            {
+              "minC":6
+            },
+            "trfRes":
+            {
+              "fareSetL":
+              [
+                {
+                  "name":"Preisstufe 1",
+                  "desc":"e-Tickets nur innerhalb Zone 100\n\nVon Zone 100 zu Zone 100",
+                  "fareL":
+                  [
+                    {
+                      "name":"Kurzstrecke Erwachsene (Fahrerverkauf)",
+                      "prc":190,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Einzelfahrkarte Erwachsene (Fahrerverkauf)",
+                      "prc":280,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Einzelfahrkarte Erwachsene (Vorverkauf)",
+                      "prc":250,
+                      "cur":"EUR",
+                      "shpCtx":"~0-.11-2",
+                      "buttonText":"Zum Angebot"
+                    },
+                    {
+                      "name":"Einzelfahrkarte Kind (Vorverkauf)",
+                      "prc":120,
+                      "cur":"EUR",
+                      "shpCtx":"~0-.21-2",
+                      "buttonText":"Zum Angebot"
+                    },
+                    {
+                      "name":"Tageskarte (Vorverkauf)",
+                      "prc":480,
+                      "cur":"EUR",
+                      "shpCtx":"~0-.31-2",
+                      "buttonText":"Zum Angebot"
+                    },
+                    {
+                      "name":"Partnertageskarte (Vorverkauf)",
+                      "prc":850,
+                      "cur":"EUR",
+                      "shpCtx":"~0-.41-2",
+                      "buttonText":"Zum Angebot"
+                    },
+                    {
+                      "name":"Nachtkarte (Online- & Fahrerverkauf)",
+                      "prc":380,
+                      "cur":"EUR",
+                      "shpCtx":"~0-.15-2",
+                      "buttonText":"Zum Angebot"
+                    },
+                    {
+                      "name":"Kurzstrecke Kinder (Fahrerverkauf)",
+                      "prc":80,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Einzelfahrkarte Kind (Fahrerverkauf)",
+                      "prc":150,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Tageskarte (Fahrerverkauf)",
+                      "prc":560,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Partnertageskarte (Fahrerverkauf)",
+                      "prc":950,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Jahreskarte",
+                      "prc":58500,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Wochenkarte Erwachsene (übertragbar)",
+                      "prc":2250,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Wochenkarte Schüler (personalisiert)",
+                      "prc":2000,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Monatskarte Erwachsene (übertragbar)",
+                      "prc":5900,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Monatskarte Schüler (personalisiert)",
+                      "prc":4800,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Monatskarte Senioren (übertragbar)",
+                      "prc":4950,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Monatskarte 09:00 Uhr (übertragbar)",
+                      "prc":4550,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Jahreskarte DonauCard Senior 9:00 Uhr",
+                      "prc":45400,
+                      "cur":"EUR"
+                    }
+                  ]
+                }
+              ],
+              "shpCtx":"{\"common\":{\"FEL\":[{\"XV\":[\"20210801\",\"0\"]},{\"ID\":[\"100\"]},{\"ID\":[\"100\"]},{\"ID\":[\"2\"],\"ON\":[\"1\"],\"PN\":[\"1 Zone\"]},{\"ID\":[\"61202\"],\"ON\":[\"Rechbergstraße\"]},{\"ID\":[\"78801\"],\"ON\":[\"Ingolstadt, Z O B  Bussteig 01\"]},{\"ID\":[\"0\"]},{\"ID\":[\"11\"],\"ON\":[\"Einzelfahrkarte Erwachsene (Vorverkauf)\",\"\",\"1 Erwachsener, 1 Fahrt, Gültig ab sofort!\",\"Einzelfahrkarte Erwachsene\\n- 1 Person\\n- 1 Fahrt (in eine Richtung, keine Rückfahrt oder Rundfahrt; Fahrtunterbrechung möglich)\\n- nicht übertragbar\\n- gültig in BUS+BAHN in der jeweiligen Tarifzone\\n- Print- bzw. HandyTickets sind nur in Verbindung mit einem amtlichen Lichtbildausweis gültig.\\nBitte beachten:\\n- ab Kauf sofort 2 Stunden gültig\\n\\nWeitere Informationen erhalten Sie unter www.invg.de sowie in den INVG-Tarifbestimmungen\"],\"PN\":[\"Einzelfahrkarte Erwachsene\",\"gültig 2 Std. ab Kauf; für die einfache Fahrt\"],\"XV\":[\"3\"]},{\"ID\":[\"0\"]},{\"ID\":[\"21\"],\"ON\":[\"Einzelfahrkarte Kind (Vorverkauf)\",\"\",\"1 Kind, 1 Fahrt, Gültig ab sofort!\",\"Einzelfahrkarte Kind\\n- 1 Kind ab 6 Jahre bis zum vollendeten 14. Lebensjahr\\n- 1 Fahrt (in eine Richtung, keine Rückfahrt oder Rundfahrt; Fahrtunterbrechung möglich)\\n- nicht übertragbar\\n- gültig in BUS+BAHN in der jweiligen Tarifzone\\n- Print- bzw. HandyTickets sind nur in Verbindung mit einem amtlichen Lichtbildausweis gültig.\\nBitte beachten:\\n- ab Kauf sofort 2 Stunden gültig\\n\\nWeitere Informationen erhalten Sie unter www.invg.de sowie in den INVG-Tarifbestimmungen\"],\"PN\":[\"Einzelfahrkarte Kind\",\"gültig 2 Std. ab Kauf; für die einfache Fahrt\"],\"XV\":[\"4\"]},{\"ID\":[\"0\"]},{\"ID\":[\"31\"],\"ON\":[\"Tageskarte (Vorverkauf)\",\"\",\"1 Person, 1 Tag\",\"Tageskarte\\n- 1 Person\\n- 1 Tag \\n- nicht übertragbar\\n- gültig in BUS+BAHN in der jeweiligen Tarifzone\\n- keine Mitnahmemöglichkeit\\n- Print- bzw. HandyTickets sind nur in Verbindung mit einem amtlichen Lichtbildausweis gültig.\\n\\nWeitere Informationen erhalten Sie unter www.invg.de sowie in den INVG-Tarifbestimmungen\"],\"PN\":[\"Tageskarte\",\"gültig am .. bis Betriebsende\"],\"XV\":[\"5\"]},{\"ID\":[\"0\"]},{\"ID\":[\"41\"],\"ON\":[\"Partnertageskarte (Vorverkauf)\",\"\",\"5 Personen (Kinder 6-14 J. zählen als 1/2 Person), 1 Tag\",\"Partnertageskarte\\n- bis zu 5 Personen (1 Kind zwischen 6 Jahre und vollendenten 14. Lebensjahr zählt als halbe Person)\\n- nicht übertragbar (Personalisierung auf die erste Person ist erforderlich)\\n- bei Schulausflügen gelten Schüler bis einschließlich der 9. Klasse als Kinder\\n- 1 Tag \\n- gültig in BUS+BAHN in der jeweiligen Tarifzone\\n\\nWeitere Informationen erhalten Sie unter www.invg.de sowie in den INVG-Tarifbestimmungen\"],\"PN\":[\"Partnertageskarte\",\"gültig am .. bis Betriebsende\"],\"XV\":[\"6\"]},{\"ID\":[\"0\"]},{\"ID\":[\"15\"],\"ON\":[\"Nachtkarte (Online- & Fahrerverkauf)\",\"\",\"1 Person, Gültig ab 18:00 Uhr\",\"Nachtkarte\\n- gültig ab 18:00 Uhr für beliebig viele Fahrten in der jeweiligen Tarifstufe\\n- 1 Person\\n- nicht übertragbar\\n- gültig nur in den Bussen im INVG-Verbundgebiet\\n- keine Mitnahmemöglichkeit\\n- Print- bzw. HandyTickets sind nur in Verbindung mit einem amtlichen Lichtbildausweis gültig.\\n\\nWeitere Informationen erhalten Sie unter www.invg.de sowie in den INVG-Tarifbestimmungen\"],\"PN\":[\"Nachtkarte\",\"gültig am .. ab 18:00 Uhr\"],\"XV\":[\"7\"]}]},\"BOG\":{\"BOGL\":[{\"P\":\"~0-\",\"BOL\":[{\"P\":\"~0-.11-2\",\"VT\":\"INVG-1\",\"FS\":\"INVG\",\"DV\":6,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":250},\"PRD\":7,\"FP\":{\"PS\":0,\"NV\":[{\"N\":\"PSE\",\"V\":\"0\"},{\"N\":\"PSEM\",\"V\":\"0\"}]},\"LVL\":3,\"SV\":{\"OL\":1,\"OS\":4,\"DL\":2,\"DS\":5},\"TV\":{\"BD\":\"20210906\",\"ED\":\"20210906\",\"VD\":120,\"VC\":\"m\"}},{\"P\":\"~0-.21-2\",\"VT\":\"INVG-1\",\"FS\":\"INVG\",\"DV\":8,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":120},\"PRD\":9,\"FP\":{\"PS\":0,\"NV\":[{\"N\":\"PSE\",\"V\":\"0\"},{\"N\":\"PSEM\",\"V\":\"0\"}]},\"LVL\":3,\"SV\":{\"OL\":1,\"OS\":4,\"DL\":2,\"DS\":5},\"TV\":{\"BD\":\"20210906\",\"ED\":\"20210906\",\"VD\":120,\"VC\":\"m\"}},{\"P\":\"~0-.31-2\",\"VT\":\"INVG-1\",\"FS\":\"INVG\",\"DV\":10,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":480},\"PRD\":11,\"FP\":{\"PS\":30,\"NV\":[{\"N\":\"PSE\",\"V\":\"0\"},{\"N\":\"PSEM\",\"V\":\"0\"}]},\"LVL\":3,\"SV\":{\"OL\":1,\"OS\":4,\"DL\":2,\"DS\":5},\"TV\":{\"BD\":\"20210906\",\"BT\":\"000000\",\"ED\":\"20210906\",\"ET\":\"01033000\",\"VD\":1,\"VC\":\"T\"}},{\"P\":\"~0-.41-2\",\"VT\":\"INVG-1\",\"FS\":\"INVG\",\"DV\":12,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":850},\"PRD\":13,\"FP\":{\"PS\":30,\"NV\":[{\"N\":\"PSE\",\"V\":\"0\"},{\"N\":\"PSEM\",\"V\":\"0\"}]},\"LVL\":3,\"SV\":{\"OL\":1,\"OS\":4,\"DL\":2,\"DS\":5},\"TV\":{\"BD\":\"20210906\",\"BT\":\"000000\",\"ED\":\"20210906\",\"ET\":\"01040000\",\"VD\":1,\"VC\":\"T\"}},{\"P\":\"~0-.15-2\",\"VT\":\"INVG-1\",\"FS\":\"INVG\",\"DV\":14,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":380},\"PRD\":15,\"FP\":{\"PS\":30,\"NV\":[{\"N\":\"PSE\",\"V\":\"0\"},{\"N\":\"PSEM\",\"V\":\"0\"}]},\"LVL\":3,\"SV\":{\"OL\":1,\"OS\":4,\"DL\":2,\"DS\":5},\"TV\":{\"BD\":\"20210906\",\"BT\":\"180000\",\"ED\":\"20210906\",\"ET\":\"01040000\",\"VD\":10,\"VC\":\"h\"}}],\"DESCR\":[\"1\",\"\"],\"OPT\":false,\"ALT\":true,\"SEQ\":false}],\"OPT\":false,\"ALT\":true,\"SEQ\":false},\"errCode\":0}"
+            },
+            "ovwTrfRefL":
+            [
+              {
+                "type":"F",
+                "fareSetX":0,
+                "fareX":0
+              },
+              {
+                "type":"F",
+                "fareSetX":0,
+                "fareX":2
+              },
+              {
+                "type":"F",
+                "fareSetX":0,
+                "fareX":3
+              },
+              {
+                "type":"F",
+                "fareSetX":0,
+                "fareX":4
+              },
+              {
+                "type":"F",
+                "fareSetX":0,
+                "fareX":5
+              },
+              {
+                "type":"F",
+                "fareSetX":0,
+                "fareX":6
+              }
+            ],
+            "conSubscr":"F",
+            "cksum":"18fd8a96_3"
+          }
+        ],
+        "outCtxScrB":"2|OB|MT#11#388042#388042#388045#388045#0#0#5#388036#1#-2147483646#0#1#2|PDH#806e685193e57c98d72f1091470ecf16|RD#6092021|RT#111600|US#1",
+        "outCtxScrF":"2|OF|MT#11#388060#388060#388062#388062#0#0#5#388046#3#-2147483646#0#1#2|PDH#806e685193e57c98d72f1091470ecf16|RD#6092021|RT#111600|US#1",
+        "fpB":"20201213",
+        "fpE":"20211211",
+        "planrtTS":"1630919685"
+      }
+    }
+  ]
+}

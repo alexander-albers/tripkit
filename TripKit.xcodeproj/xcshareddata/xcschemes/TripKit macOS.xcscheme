@@ -28,6 +28,26 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "FA5CD20224FBB1D200B4990A"
+               BuildableName = "TripKit macOSTests.xctest"
+               BlueprintName = "TripKit macOSTests"
+               ReferencedContainer = "container:TripKit.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "FAE6E6E926E6AC87007E975A"
+               BuildableName = "StaticTripKitTests macOS.xctest"
+               BlueprintName = "StaticTripKitTests macOS"
+               ReferencedContainer = "container:TripKit.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

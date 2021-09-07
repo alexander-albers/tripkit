@@ -1,0 +1,64 @@
+{
+  "ver":"1.16",
+  "lang":"deu",
+  "id":"63k8jgue46xh8wcs",
+  "svcResL":
+  [
+    {
+      "meth":"TripSearch",
+      "err":"H9220",
+      "errTxt":"HAFAS Kernel: Nearby to the given address stations could not be found.",
+      "res":
+      {
+        "common":
+        {
+          "locL":
+          [
+
+          ],
+          "prodL":
+          [
+
+          ],
+          "polyL":
+          [
+
+          ],
+          "layerL":
+          [
+            {
+              "id":"standard",
+              "name":"standard",
+              "index":0,
+              "annoCnt":0
+            }
+          ],
+          "crdSysL":
+          [
+            {
+              "id":"standard",
+              "index":0,
+              "type":"WGS84",
+              "dim":3
+            }
+          ],
+          "opL":
+          [
+
+          ],
+          "remL":
+          [
+
+          ],
+          "icoL":
+          [
+
+          ]
+        },
+        "fpB":"20210701",
+        "fpE":"20211211",
+        "planrtTS":"1630931912"
+      }
+    }
+  ]
+}

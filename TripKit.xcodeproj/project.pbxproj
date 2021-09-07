@@ -7,144 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2DBA12A950327EFF0D7F2158 /* UrlEncodingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA1839F0E561F0397EB1F1 /* UrlEncodingTests.swift */; };
-		2DBA18BF2BED70736D42DB40 /* UrlEncodingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA1839F0E561F0397EB1F1 /* UrlEncodingTests.swift */; };
-		2DBA1A7C53A1A718477ED374 /* UrlEncodingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA1839F0E561F0397EB1F1 /* UrlEncodingTests.swift */; };
 		FA04C6C61E872F9E004535BA /* AvvAugsburgProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA04C6C51E872F9E004535BA /* AvvAugsburgProvider.swift */; };
 		FA11F6E520496C7100B66359 /* UrlBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA11F6E420496C7100B66359 /* UrlBuilder.swift */; };
 		FA11F6E620496C7200B66359 /* UrlBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA11F6E420496C7100B66359 /* UrlBuilder.swift */; };
-		FA14C95F26E4CC0D0007F37E /* StaticTripKitTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA14C95E26E4CC0D0007F37E /* StaticTripKitTestCase.swift */; };
-		FA14C96026E4CC0D0007F37E /* StaticTripKitTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA14C95E26E4CC0D0007F37E /* StaticTripKitTestCase.swift */; };
-		FA14C96126E4CC0D0007F37E /* StaticTripKitTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA14C95E26E4CC0D0007F37E /* StaticTripKitTestCase.swift */; };
-		FA14C96526E4CCA50007F37E /* db.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C96426E4CCA50007F37E /* db.json */; };
-		FA14C96626E4CCA50007F37E /* db.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C96426E4CCA50007F37E /* db.json */; };
-		FA14C96726E4CCA50007F37E /* db.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C96426E4CCA50007F37E /* db.json */; };
-		FA14C96E26E5FBF80007F37E /* bvg.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C96D26E5FBF70007F37E /* bvg.json */; };
-		FA14C96F26E5FBF80007F37E /* bvg.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C96D26E5FBF70007F37E /* bvg.json */; };
-		FA14C97026E5FBF80007F37E /* bvg.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C96D26E5FBF70007F37E /* bvg.json */; };
-		FA14C97226E5FBFE0007F37E /* template.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C97126E5FBFE0007F37E /* template.json */; };
-		FA14C97326E5FBFE0007F37E /* template.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C97126E5FBFE0007F37E /* template.json */; };
-		FA14C97426E5FBFE0007F37E /* template.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C97126E5FBFE0007F37E /* template.json */; };
-		FA14C97626E5FDAD0007F37E /* vbb.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C97526E5FDAD0007F37E /* vbb.json */; };
-		FA14C97726E5FDAD0007F37E /* vbb.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C97526E5FDAD0007F37E /* vbb.json */; };
-		FA14C97826E5FDAD0007F37E /* vbb.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C97526E5FDAD0007F37E /* vbb.json */; };
-		FA14C97A26E5FECD0007F37E /* hvv.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C97926E5FECD0007F37E /* hvv.json */; };
-		FA14C97B26E5FECD0007F37E /* hvv.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C97926E5FECD0007F37E /* hvv.json */; };
-		FA14C97C26E5FECD0007F37E /* hvv.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C97926E5FECD0007F37E /* hvv.json */; };
-		FA14C97E26E600270007F37E /* bayern.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C97D26E600270007F37E /* bayern.json */; };
-		FA14C97F26E600270007F37E /* bayern.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C97D26E600270007F37E /* bayern.json */; };
-		FA14C98026E600270007F37E /* bayern.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C97D26E600270007F37E /* bayern.json */; };
-		FA14C98226E604310007F37E /* avv.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C98126E604310007F37E /* avv.json */; };
-		FA14C98326E604310007F37E /* avv.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C98126E604310007F37E /* avv.json */; };
-		FA14C98426E604310007F37E /* avv.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C98126E604310007F37E /* avv.json */; };
-		FA14C98626E606080007F37E /* mvv.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C98526E606080007F37E /* mvv.json */; };
-		FA14C98726E606080007F37E /* mvv.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C98526E606080007F37E /* mvv.json */; };
-		FA14C98826E606080007F37E /* mvv.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C98526E606080007F37E /* mvv.json */; };
-		FA14C98A26E610900007F37E /* rmv.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C98926E610900007F37E /* rmv.json */; };
-		FA14C98B26E610900007F37E /* rmv.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C98926E610900007F37E /* rmv.json */; };
-		FA14C98C26E610900007F37E /* rmv.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C98926E610900007F37E /* rmv.json */; };
-		FA14C98E26E611900007F37E /* avv2.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C98D26E611900007F37E /* avv2.json */; };
-		FA14C98F26E611900007F37E /* avv2.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C98D26E611900007F37E /* avv2.json */; };
-		FA14C99026E611900007F37E /* avv2.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C98D26E611900007F37E /* avv2.json */; };
-		FA14C99226E612650007F37E /* vgn.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C99126E612650007F37E /* vgn.json */; };
-		FA14C99326E612650007F37E /* vgn.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C99126E612650007F37E /* vgn.json */; };
-		FA14C99426E612650007F37E /* vgn.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C99126E612650007F37E /* vgn.json */; };
-		FA14C99626E6133B0007F37E /* invg.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C99526E6133B0007F37E /* invg.json */; };
-		FA14C99726E6133B0007F37E /* invg.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C99526E6133B0007F37E /* invg.json */; };
-		FA14C99826E6133B0007F37E /* invg.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C99526E6133B0007F37E /* invg.json */; };
-		FA14C99A26E61E000007F37E /* vvm.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C99926E61E000007F37E /* vvm.json */; };
-		FA14C99B26E61E000007F37E /* vvm.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C99926E61E000007F37E /* vvm.json */; };
-		FA14C99C26E61E000007F37E /* vvm.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C99926E61E000007F37E /* vvm.json */; };
-		FA14C99E26E626080007F37E /* nvv.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C99D26E626080007F37E /* nvv.json */; };
-		FA14C99F26E626080007F37E /* nvv.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C99D26E626080007F37E /* nvv.json */; };
-		FA14C9A026E626080007F37E /* nvv.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C99D26E626080007F37E /* nvv.json */; };
-		FA14C9A226E6277E0007F37E /* vmv.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C9A126E6277E0007F37E /* vmv.json */; };
-		FA14C9A326E6277E0007F37E /* vmv.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C9A126E6277E0007F37E /* vmv.json */; };
-		FA14C9A426E6277E0007F37E /* vmv.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C9A126E6277E0007F37E /* vmv.json */; };
-		FA14C9A626E628D80007F37E /* sh.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C9A526E628D80007F37E /* sh.json */; };
-		FA14C9A726E628D80007F37E /* sh.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C9A526E628D80007F37E /* sh.json */; };
-		FA14C9A826E628D80007F37E /* sh.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C9A526E628D80007F37E /* sh.json */; };
-		FA14C9AA26E629BA0007F37E /* gvh.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C9A926E629BA0007F37E /* gvh.json */; };
-		FA14C9AB26E629BA0007F37E /* gvh.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C9A926E629BA0007F37E /* gvh.json */; };
-		FA14C9AC26E629BA0007F37E /* gvh.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C9A926E629BA0007F37E /* gvh.json */; };
-		FA14C9AE26E62A870007F37E /* bsvag.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C9AD26E62A870007F37E /* bsvag.json */; };
-		FA14C9AF26E62A870007F37E /* bsvag.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C9AD26E62A870007F37E /* bsvag.json */; };
-		FA14C9B026E62A870007F37E /* bsvag.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C9AD26E62A870007F37E /* bsvag.json */; };
-		FA14C9B226E62B850007F37E /* vbn.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C9B126E62B850007F37E /* vbn.json */; };
-		FA14C9B326E62B850007F37E /* vbn.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C9B126E62B850007F37E /* vbn.json */; };
-		FA14C9B426E62B850007F37E /* vbn.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C9B126E62B850007F37E /* vbn.json */; };
-		FA14C9B626E62E390007F37E /* vvo.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C9B526E62E390007F37E /* vvo.json */; };
-		FA14C9B726E62E390007F37E /* vvo.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C9B526E62E390007F37E /* vvo.json */; };
-		FA14C9B826E62E390007F37E /* vvo.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C9B526E62E390007F37E /* vvo.json */; };
-		FA14C9BA26E640EC0007F37E /* vms.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C9B926E640EC0007F37E /* vms.json */; };
-		FA14C9BB26E640EC0007F37E /* vms.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C9B926E640EC0007F37E /* vms.json */; };
-		FA14C9BC26E640EC0007F37E /* vms.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C9B926E640EC0007F37E /* vms.json */; };
-		FA14C9BE26E641BA0007F37E /* nasa.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C9BD26E641B90007F37E /* nasa.json */; };
-		FA14C9BF26E641BA0007F37E /* nasa.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C9BD26E641B90007F37E /* nasa.json */; };
-		FA14C9C026E641BA0007F37E /* nasa.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C9BD26E641B90007F37E /* nasa.json */; };
-		FA14C9C226E642DA0007F37E /* vsn.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C9C126E642DA0007F37E /* vsn.json */; };
-		FA14C9C326E642DA0007F37E /* vsn.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C9C126E642DA0007F37E /* vsn.json */; };
-		FA14C9C426E642DA0007F37E /* vsn.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C9C126E642DA0007F37E /* vsn.json */; };
-		FA14C9C626E643F00007F37E /* vos.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C9C526E643EF0007F37E /* vos.json */; };
-		FA14C9C726E643F00007F37E /* vos.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C9C526E643EF0007F37E /* vos.json */; };
-		FA14C9C826E643F00007F37E /* vos.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C9C526E643EF0007F37E /* vos.json */; };
-		FA14C9CA26E644D80007F37E /* vmt.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C9C926E644D80007F37E /* vmt.json */; };
-		FA14C9CB26E644D80007F37E /* vmt.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C9C926E644D80007F37E /* vmt.json */; };
-		FA14C9CC26E644D80007F37E /* vmt.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C9C926E644D80007F37E /* vmt.json */; };
-		FA14C9CE26E646300007F37E /* vrr.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C9CD26E646300007F37E /* vrr.json */; };
-		FA14C9CF26E646300007F37E /* vrr.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C9CD26E646300007F37E /* vrr.json */; };
-		FA14C9D026E646300007F37E /* vrr.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C9CD26E646300007F37E /* vrr.json */; };
-		FA14C9D226E647A80007F37E /* vrs.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C9D126E647A80007F37E /* vrs.json */; };
-		FA14C9D326E647A80007F37E /* vrs.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C9D126E647A80007F37E /* vrs.json */; };
-		FA14C9D426E647A80007F37E /* vrs.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C9D126E647A80007F37E /* vrs.json */; };
-		FA14C9D626E64B0E0007F37E /* ding.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C9D526E64B0E0007F37E /* ding.json */; };
-		FA14C9D726E64B0E0007F37E /* ding.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C9D526E64B0E0007F37E /* ding.json */; };
-		FA14C9D826E64B0E0007F37E /* ding.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C9D526E64B0E0007F37E /* ding.json */; };
-		FA14C9DA26E64BC90007F37E /* kvv.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C9D926E64BC80007F37E /* kvv.json */; };
-		FA14C9DB26E64BC90007F37E /* kvv.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C9D926E64BC80007F37E /* kvv.json */; };
-		FA14C9DC26E64BC90007F37E /* kvv.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C9D926E64BC80007F37E /* kvv.json */; };
-		FA14C9DE26E64D900007F37E /* vagfr.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C9DD26E64D900007F37E /* vagfr.json */; };
-		FA14C9DF26E64D900007F37E /* vagfr.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C9DD26E64D900007F37E /* vagfr.json */; };
-		FA14C9E026E64D900007F37E /* vagfr.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C9DD26E64D900007F37E /* vagfr.json */; };
-		FA14C9E226E64EF90007F37E /* nvbw.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C9E126E64EF90007F37E /* nvbw.json */; };
-		FA14C9E326E64EF90007F37E /* nvbw.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C9E126E64EF90007F37E /* nvbw.json */; };
-		FA14C9E426E64EF90007F37E /* nvbw.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C9E126E64EF90007F37E /* nvbw.json */; };
-		FA14C9E626E6500C0007F37E /* vvv.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C9E526E6500C0007F37E /* vvv.json */; };
-		FA14C9E726E6500C0007F37E /* vvv.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C9E526E6500C0007F37E /* vvv.json */; };
-		FA14C9E826E6500C0007F37E /* vvv.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C9E526E6500C0007F37E /* vvv.json */; };
-		FA14C9EA26E650C70007F37E /* vgs.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C9E926E650C70007F37E /* vgs.json */; };
-		FA14C9EB26E650C70007F37E /* vgs.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C9E926E650C70007F37E /* vgs.json */; };
-		FA14C9EC26E650C70007F37E /* vgs.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C9E926E650C70007F37E /* vgs.json */; };
-		FA14C9EE26E653B90007F37E /* rt.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C9ED26E653B90007F37E /* rt.json */; };
-		FA14C9EF26E653B90007F37E /* rt.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C9ED26E653B90007F37E /* rt.json */; };
-		FA14C9F026E653B90007F37E /* rt.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C9ED26E653B90007F37E /* rt.json */; };
-		FA14C9F226E656920007F37E /* vbl.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C9F126E656920007F37E /* vbl.json */; };
-		FA14C9F326E656920007F37E /* vbl.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C9F126E656920007F37E /* vbl.json */; };
-		FA14C9F426E656920007F37E /* vbl.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C9F126E656920007F37E /* vbl.json */; };
-		FA14C9F626E657790007F37E /* zvv.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C9F526E657790007F37E /* zvv.json */; };
-		FA14C9F726E657790007F37E /* zvv.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C9F526E657790007F37E /* zvv.json */; };
-		FA14C9F826E657790007F37E /* zvv.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C9F526E657790007F37E /* zvv.json */; };
-		FA14C9FA26E6585F0007F37E /* oebb.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C9F926E6585F0007F37E /* oebb.json */; };
-		FA14C9FB26E6585F0007F37E /* oebb.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C9F926E6585F0007F37E /* oebb.json */; };
-		FA14C9FC26E6585F0007F37E /* oebb.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C9F926E6585F0007F37E /* oebb.json */; };
-		FA14C9FE26E65AF20007F37E /* wien.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C9FD26E65AF20007F37E /* wien.json */; };
-		FA14C9FF26E65AF20007F37E /* wien.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C9FD26E65AF20007F37E /* wien.json */; };
-		FA14CA0026E65AF20007F37E /* wien.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14C9FD26E65AF20007F37E /* wien.json */; };
-		FA14CA0226E65C1E0007F37E /* ooevv.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14CA0126E65C1E0007F37E /* ooevv.json */; };
-		FA14CA0326E65C1E0007F37E /* ooevv.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14CA0126E65C1E0007F37E /* ooevv.json */; };
-		FA14CA0426E65C1E0007F37E /* ooevv.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14CA0126E65C1E0007F37E /* ooevv.json */; };
-		FA14CA0626E65D170007F37E /* linz.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14CA0526E65D170007F37E /* linz.json */; };
-		FA14CA0726E65D170007F37E /* linz.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14CA0526E65D170007F37E /* linz.json */; };
-		FA14CA0826E65D170007F37E /* linz.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14CA0526E65D170007F37E /* linz.json */; };
-		FA14CA0A26E65DF60007F37E /* ivb.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14CA0926E65DF50007F37E /* ivb.json */; };
-		FA14CA0B26E65DF60007F37E /* ivb.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14CA0926E65DF50007F37E /* ivb.json */; };
-		FA14CA0C26E65DF60007F37E /* ivb.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14CA0926E65DF50007F37E /* ivb.json */; };
-		FA14CA0E26E65EE40007F37E /* svv.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14CA0D26E65EE40007F37E /* svv.json */; };
-		FA14CA0F26E65EE40007F37E /* svv.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14CA0D26E65EE40007F37E /* svv.json */; };
-		FA14CA1026E65EE40007F37E /* svv.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14CA0D26E65EE40007F37E /* svv.json */; };
-		FA14CA1226E65FF60007F37E /* stv.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14CA1126E65FF50007F37E /* stv.json */; };
-		FA14CA1326E65FF60007F37E /* stv.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14CA1126E65FF50007F37E /* stv.json */; };
-		FA14CA1426E65FF60007F37E /* stv.json in Resources */ = {isa = PBXBuildFile; fileRef = FA14CA1126E65FF50007F37E /* stv.json */; };
 		FA17EBE91E757FF3001ECA09 /* AbstractHafasLegacyProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA17EBE81E757FF3001ECA09 /* AbstractHafasLegacyProvider.swift */; };
 		FA17EBED1E758087001ECA09 /* DbProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA17EBEC1E758087001ECA09 /* DbProvider.swift */; };
 		FA1C85781E437D73002BFE6E /* AsyncRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1C85771E437D73002BFE6E /* AsyncRequest.swift */; };
@@ -362,7 +227,6 @@
 		FA5CD2D424FBB2AA00B4990A /* ParseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7572B01E673498009B41EF /* ParseError.swift */; };
 		FA5CD2D524FBB2AA00B4990A /* SessionExpiredError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABF2FB41EA1E0FE0002DE55 /* SessionExpiredError.swift */; };
 		FA5CD2D624FBB2AA00B4990A /* secrets.json in Resources */ = {isa = PBXBuildFile; fileRef = FA7058572271B3D80070D2C9 /* secrets.json */; };
-		FA5CD2D724FBB2BB00B4990A /* LineStyleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8F313C1E85A41C00E6CE9B /* LineStyleTests.swift */; };
 		FA5CD2D824FBB2BB00B4990A /* TripKitTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAE9E161E813EC500BD45DC /* TripKitTestCase.swift */; };
 		FA5CD2D924FBB2BB00B4990A /* DbProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA70585D2271DFF30070D2C9 /* DbProviderTests.swift */; };
 		FA5CD2DA24FBB2BB00B4990A /* BvgProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8FE5F2227213FF003CE4B4 /* BvgProviderTests.swift */; };
@@ -409,7 +273,6 @@
 		FA5CD30424FBB2BB00B4990A /* IvbProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8FE6462272F823003CE4B4 /* IvbProviderTests.swift */; };
 		FA5CD30524FBB2BB00B4990A /* SvvProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8FE6482272F82B003CE4B4 /* SvvProviderTests.swift */; };
 		FA5CD30624FBB2BB00B4990A /* StvProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8FE64A2272F837003CE4B4 /* StvProviderTests.swift */; };
-		FA5CD30724FBB2BC00B4990A /* LineStyleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8F313C1E85A41C00E6CE9B /* LineStyleTests.swift */; };
 		FA5CD30824FBB2BC00B4990A /* TripKitTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAE9E161E813EC500BD45DC /* TripKitTestCase.swift */; };
 		FA5CD30924FBB2BC00B4990A /* DbProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA70585D2271DFF30070D2C9 /* DbProviderTests.swift */; };
 		FA5CD30A24FBB2BC00B4990A /* BvgProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8FE5F2227213FF003CE4B4 /* BvgProviderTests.swift */; };
@@ -480,7 +343,6 @@
 		FA87BA3B20B5B476004F1199 /* OoevvProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA87BA3A20B5B476004F1199 /* OoevvProvider.swift */; };
 		FA87BA3C20B5B476004F1199 /* OoevvProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA87BA3A20B5B476004F1199 /* OoevvProvider.swift */; };
 		FA895A5B1E90FF30002FBA7A /* VrsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA895A5A1E90FF30002FBA7A /* VrsProvider.swift */; };
-		FA8F313D1E85A41C00E6CE9B /* LineStyleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8F313C1E85A41C00E6CE9B /* LineStyleTests.swift */; };
 		FA8FE5F3227213FF003CE4B4 /* BvgProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8FE5F2227213FF003CE4B4 /* BvgProviderTests.swift */; };
 		FA8FE5F522721409003CE4B4 /* VbbProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8FE5F422721409003CE4B4 /* VbbProviderTests.swift */; };
 		FA8FE5F722721425003CE4B4 /* HvvProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8FE5F622721425003CE4B4 /* HvvProviderTests.swift */; };
@@ -533,6 +395,14 @@
 		FAA0A297213705030098EFED /* MockKvvProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA0A296213705030098EFED /* MockKvvProvider.swift */; };
 		FAA5693E1E740A70006EB901 /* InfoText.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA5693D1E740A70006EB901 /* InfoText.swift */; };
 		FAA569441E7415DC006EB901 /* Fare.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA569431E7415DC006EB901 /* Fare.swift */; };
+		FAA9319B26E6B49000D4CF61 /* TestsCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAE6E71D26E6B40E007E975A /* TestsCommon.framework */; };
+		FAA931A026E6B4A000D4CF61 /* TestsCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAE6E74126E6B43B007E975A /* TestsCommon.framework */; };
+		FAA931A326E6B4A800D4CF61 /* TestsCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAE6E74126E6B43B007E975A /* TestsCommon.framework */; };
+		FAA931A626E6B4AD00D4CF61 /* TestsCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAE6E72926E6B41C007E975A /* TestsCommon.framework */; };
+		FAA931A926E6B4B300D4CF61 /* TestsCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAE6E72926E6B41C007E975A /* TestsCommon.framework */; };
+		FAA931AA26E6B4C600D4CF61 /* TestUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA14CA1A26E6890C0007F37E /* TestUtils.swift */; };
+		FAA931AB26E6B4C700D4CF61 /* TestUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA14CA1A26E6890C0007F37E /* TestUtils.swift */; };
+		FAA931AC26E6B4C700D4CF61 /* TestUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA14CA1A26E6890C0007F37E /* TestUtils.swift */; };
 		FAAE9E171E813EC500BD45DC /* TripKitTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAE9E161E813EC500BD45DC /* TripKitTestCase.swift */; };
 		FAAE9E191E81579500BD45DC /* BvgProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAE9E181E81579500BD45DC /* BvgProvider.swift */; };
 		FAB267DC21839F1D00F8C5F5 /* SvvProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB267DB21839F1D00F8C5F5 /* SvvProvider.swift */; };
@@ -568,6 +438,156 @@
 		FABFCC281E8FEBB900905D5E /* VvsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABFCC271E8FEBB900905D5E /* VvsProvider.swift */; };
 		FABFCC2A1E8FECD200905D5E /* DingProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABFCC291E8FECD200905D5E /* DingProvider.swift */; };
 		FABFCC2E1E8FED9000905D5E /* VagfrProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABFCC2D1E8FED9000905D5E /* VagfrProvider.swift */; };
+		FAC58F3E26E74D9C00E8EAF3 /* Fixtures in Resources */ = {isa = PBXBuildFile; fileRef = FAC58F3D26E74D9C00E8EAF3 /* Fixtures */; };
+		FAC58F3F26E74D9C00E8EAF3 /* Fixtures in Resources */ = {isa = PBXBuildFile; fileRef = FAC58F3D26E74D9C00E8EAF3 /* Fixtures */; };
+		FAC58F4026E74D9C00E8EAF3 /* Fixtures in Resources */ = {isa = PBXBuildFile; fileRef = FAC58F3D26E74D9C00E8EAF3 /* Fixtures */; };
+		FAC58F7226E74EA000E8EAF3 /* Test Cases in Resources */ = {isa = PBXBuildFile; fileRef = FAC58F7126E74EA000E8EAF3 /* Test Cases */; };
+		FAC58F7326E74EA000E8EAF3 /* Test Cases in Resources */ = {isa = PBXBuildFile; fileRef = FAC58F7126E74EA000E8EAF3 /* Test Cases */; };
+		FAC58F7426E74EA000E8EAF3 /* Test Cases in Resources */ = {isa = PBXBuildFile; fileRef = FAC58F7126E74EA000E8EAF3 /* Test Cases */; };
+		FAC58F8726E74FAC00E8EAF3 /* Info-iOS.plist in Resources */ = {isa = PBXBuildFile; fileRef = FAC58F8426E74FAB00E8EAF3 /* Info-iOS.plist */; };
+		FAC58F8826E74FAC00E8EAF3 /* Info-iOS.plist in Resources */ = {isa = PBXBuildFile; fileRef = FAC58F8426E74FAB00E8EAF3 /* Info-iOS.plist */; };
+		FAC58F8926E74FAC00E8EAF3 /* Info-iOS.plist in Resources */ = {isa = PBXBuildFile; fileRef = FAC58F8426E74FAB00E8EAF3 /* Info-iOS.plist */; };
+		FAC58F8A26E74FAC00E8EAF3 /* Info-tvOS.plist in Resources */ = {isa = PBXBuildFile; fileRef = FAC58F8526E74FAB00E8EAF3 /* Info-tvOS.plist */; };
+		FAC58F8B26E74FAC00E8EAF3 /* Info-tvOS.plist in Resources */ = {isa = PBXBuildFile; fileRef = FAC58F8526E74FAB00E8EAF3 /* Info-tvOS.plist */; };
+		FAC58F8C26E74FAC00E8EAF3 /* Info-tvOS.plist in Resources */ = {isa = PBXBuildFile; fileRef = FAC58F8526E74FAB00E8EAF3 /* Info-tvOS.plist */; };
+		FAC58F8D26E74FAC00E8EAF3 /* Info-macOS.plist in Resources */ = {isa = PBXBuildFile; fileRef = FAC58F8626E74FAC00E8EAF3 /* Info-macOS.plist */; };
+		FAC58F8E26E74FAC00E8EAF3 /* Info-macOS.plist in Resources */ = {isa = PBXBuildFile; fileRef = FAC58F8626E74FAC00E8EAF3 /* Info-macOS.plist */; };
+		FAC58F8F26E74FAC00E8EAF3 /* Info-macOS.plist in Resources */ = {isa = PBXBuildFile; fileRef = FAC58F8626E74FAC00E8EAF3 /* Info-macOS.plist */; };
+		FAC5900426E7507D00E8EAF3 /* HvvProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC58FF826E7507B00E8EAF3 /* HvvProviderTests.swift */; };
+		FAC5900526E7507D00E8EAF3 /* HvvProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC58FF826E7507B00E8EAF3 /* HvvProviderTests.swift */; };
+		FAC5900626E7507D00E8EAF3 /* HvvProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC58FF826E7507B00E8EAF3 /* HvvProviderTests.swift */; };
+		FAC5900726E7507D00E8EAF3 /* InvgProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC58FF926E7507B00E8EAF3 /* InvgProviderTests.swift */; };
+		FAC5900826E7507D00E8EAF3 /* InvgProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC58FF926E7507B00E8EAF3 /* InvgProviderTests.swift */; };
+		FAC5900926E7507D00E8EAF3 /* InvgProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC58FF926E7507B00E8EAF3 /* InvgProviderTests.swift */; };
+		FAC5900A26E7507E00E8EAF3 /* IvbProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC58FFA26E7507B00E8EAF3 /* IvbProviderTests.swift */; };
+		FAC5900B26E7507E00E8EAF3 /* IvbProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC58FFA26E7507B00E8EAF3 /* IvbProviderTests.swift */; };
+		FAC5900C26E7507E00E8EAF3 /* IvbProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC58FFA26E7507B00E8EAF3 /* IvbProviderTests.swift */; };
+		FAC5900D26E7507E00E8EAF3 /* KvvProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC58FFB26E7507C00E8EAF3 /* KvvProviderTests.swift */; };
+		FAC5900E26E7507E00E8EAF3 /* KvvProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC58FFB26E7507C00E8EAF3 /* KvvProviderTests.swift */; };
+		FAC5900F26E7507E00E8EAF3 /* KvvProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC58FFB26E7507C00E8EAF3 /* KvvProviderTests.swift */; };
+		FAC5901026E7507E00E8EAF3 /* AvvAachenProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC58FFC26E7507C00E8EAF3 /* AvvAachenProviderTests.swift */; };
+		FAC5901126E7507E00E8EAF3 /* AvvAachenProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC58FFC26E7507C00E8EAF3 /* AvvAachenProviderTests.swift */; };
+		FAC5901226E7507E00E8EAF3 /* AvvAachenProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC58FFC26E7507C00E8EAF3 /* AvvAachenProviderTests.swift */; };
+		FAC5901326E7507E00E8EAF3 /* AvvAugsburgProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC58FFD26E7507C00E8EAF3 /* AvvAugsburgProviderTests.swift */; };
+		FAC5901426E7507E00E8EAF3 /* AvvAugsburgProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC58FFD26E7507C00E8EAF3 /* AvvAugsburgProviderTests.swift */; };
+		FAC5901526E7507E00E8EAF3 /* AvvAugsburgProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC58FFD26E7507C00E8EAF3 /* AvvAugsburgProviderTests.swift */; };
+		FAC5901626E7507E00E8EAF3 /* DbProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC58FFE26E7507C00E8EAF3 /* DbProviderTests.swift */; };
+		FAC5901726E7507E00E8EAF3 /* DbProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC58FFE26E7507C00E8EAF3 /* DbProviderTests.swift */; };
+		FAC5901826E7507E00E8EAF3 /* DbProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC58FFE26E7507C00E8EAF3 /* DbProviderTests.swift */; };
+		FAC5901926E7507E00E8EAF3 /* BvgProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC58FFF26E7507C00E8EAF3 /* BvgProviderTests.swift */; };
+		FAC5901A26E7507E00E8EAF3 /* BvgProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC58FFF26E7507C00E8EAF3 /* BvgProviderTests.swift */; };
+		FAC5901B26E7507E00E8EAF3 /* BvgProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC58FFF26E7507C00E8EAF3 /* BvgProviderTests.swift */; };
+		FAC5901C26E7507E00E8EAF3 /* BayernProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5900026E7507C00E8EAF3 /* BayernProviderTests.swift */; };
+		FAC5901D26E7507E00E8EAF3 /* BayernProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5900026E7507C00E8EAF3 /* BayernProviderTests.swift */; };
+		FAC5901E26E7507E00E8EAF3 /* BayernProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5900026E7507C00E8EAF3 /* BayernProviderTests.swift */; };
+		FAC5901F26E7507E00E8EAF3 /* DingProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5900126E7507D00E8EAF3 /* DingProviderTests.swift */; };
+		FAC5902026E7507E00E8EAF3 /* DingProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5900126E7507D00E8EAF3 /* DingProviderTests.swift */; };
+		FAC5902126E7507E00E8EAF3 /* DingProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5900126E7507D00E8EAF3 /* DingProviderTests.swift */; };
+		FAC5902226E7507E00E8EAF3 /* BsvagProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5900226E7507D00E8EAF3 /* BsvagProviderTests.swift */; };
+		FAC5902326E7507E00E8EAF3 /* BsvagProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5900226E7507D00E8EAF3 /* BsvagProviderTests.swift */; };
+		FAC5902426E7507E00E8EAF3 /* BsvagProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5900226E7507D00E8EAF3 /* BsvagProviderTests.swift */; };
+		FAC5902526E7507E00E8EAF3 /* GvhProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5900326E7507D00E8EAF3 /* GvhProviderTests.swift */; };
+		FAC5902626E7507E00E8EAF3 /* GvhProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5900326E7507D00E8EAF3 /* GvhProviderTests.swift */; };
+		FAC5902726E7507E00E8EAF3 /* GvhProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5900326E7507D00E8EAF3 /* GvhProviderTests.swift */; };
+		FAC5903526E7508900E8EAF3 /* MvvProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5902826E7508500E8EAF3 /* MvvProviderTests.swift */; };
+		FAC5903626E7508900E8EAF3 /* MvvProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5902826E7508500E8EAF3 /* MvvProviderTests.swift */; };
+		FAC5903726E7508900E8EAF3 /* MvvProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5902826E7508500E8EAF3 /* MvvProviderTests.swift */; };
+		FAC5903826E7508900E8EAF3 /* SvvProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5902926E7508500E8EAF3 /* SvvProviderTests.swift */; };
+		FAC5903926E7508900E8EAF3 /* SvvProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5902926E7508500E8EAF3 /* SvvProviderTests.swift */; };
+		FAC5903A26E7508900E8EAF3 /* SvvProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5902926E7508500E8EAF3 /* SvvProviderTests.swift */; };
+		FAC5903B26E7508900E8EAF3 /* RmvProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5902A26E7508600E8EAF3 /* RmvProviderTests.swift */; };
+		FAC5903C26E7508900E8EAF3 /* RmvProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5902A26E7508600E8EAF3 /* RmvProviderTests.swift */; };
+		FAC5903D26E7508900E8EAF3 /* RmvProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5902A26E7508600E8EAF3 /* RmvProviderTests.swift */; };
+		FAC5903E26E7508900E8EAF3 /* RtProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5902B26E7508600E8EAF3 /* RtProviderTests.swift */; };
+		FAC5903F26E7508900E8EAF3 /* RtProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5902B26E7508600E8EAF3 /* RtProviderTests.swift */; };
+		FAC5904026E7508900E8EAF3 /* RtProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5902B26E7508600E8EAF3 /* RtProviderTests.swift */; };
+		FAC5904126E7508900E8EAF3 /* NasaProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5902C26E7508600E8EAF3 /* NasaProviderTests.swift */; };
+		FAC5904226E7508900E8EAF3 /* NasaProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5902C26E7508600E8EAF3 /* NasaProviderTests.swift */; };
+		FAC5904326E7508900E8EAF3 /* NasaProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5902C26E7508600E8EAF3 /* NasaProviderTests.swift */; };
+		FAC5904426E7508900E8EAF3 /* ShProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5902D26E7508600E8EAF3 /* ShProviderTests.swift */; };
+		FAC5904526E7508900E8EAF3 /* ShProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5902D26E7508600E8EAF3 /* ShProviderTests.swift */; };
+		FAC5904626E7508900E8EAF3 /* ShProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5902D26E7508600E8EAF3 /* ShProviderTests.swift */; };
+		FAC5904726E7508900E8EAF3 /* LinzProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5902E26E7508700E8EAF3 /* LinzProviderTests.swift */; };
+		FAC5904826E7508900E8EAF3 /* LinzProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5902E26E7508700E8EAF3 /* LinzProviderTests.swift */; };
+		FAC5904926E7508900E8EAF3 /* LinzProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5902E26E7508700E8EAF3 /* LinzProviderTests.swift */; };
+		FAC5904A26E7508900E8EAF3 /* OoevvProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5902F26E7508700E8EAF3 /* OoevvProviderTests.swift */; };
+		FAC5904B26E7508900E8EAF3 /* OoevvProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5902F26E7508700E8EAF3 /* OoevvProviderTests.swift */; };
+		FAC5904C26E7508900E8EAF3 /* OoevvProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5902F26E7508700E8EAF3 /* OoevvProviderTests.swift */; };
+		FAC5904D26E7508900E8EAF3 /* NvvProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5903026E7508700E8EAF3 /* NvvProviderTests.swift */; };
+		FAC5904E26E7508900E8EAF3 /* NvvProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5903026E7508700E8EAF3 /* NvvProviderTests.swift */; };
+		FAC5904F26E7508900E8EAF3 /* NvvProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5903026E7508700E8EAF3 /* NvvProviderTests.swift */; };
+		FAC5905026E7508900E8EAF3 /* MvgProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5903126E7508800E8EAF3 /* MvgProviderTests.swift */; };
+		FAC5905126E7508900E8EAF3 /* MvgProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5903126E7508800E8EAF3 /* MvgProviderTests.swift */; };
+		FAC5905226E7508900E8EAF3 /* MvgProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5903126E7508800E8EAF3 /* MvgProviderTests.swift */; };
+		FAC5905326E7508900E8EAF3 /* NvbwProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5903226E7508800E8EAF3 /* NvbwProviderTests.swift */; };
+		FAC5905426E7508900E8EAF3 /* NvbwProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5903226E7508800E8EAF3 /* NvbwProviderTests.swift */; };
+		FAC5905526E7508900E8EAF3 /* NvbwProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5903226E7508800E8EAF3 /* NvbwProviderTests.swift */; };
+		FAC5905626E7508900E8EAF3 /* StvProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5903326E7508800E8EAF3 /* StvProviderTests.swift */; };
+		FAC5905726E7508900E8EAF3 /* StvProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5903326E7508800E8EAF3 /* StvProviderTests.swift */; };
+		FAC5905826E7508900E8EAF3 /* StvProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5903326E7508800E8EAF3 /* StvProviderTests.swift */; };
+		FAC5905926E7508900E8EAF3 /* OebbProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5903426E7508900E8EAF3 /* OebbProviderTests.swift */; };
+		FAC5905A26E7508900E8EAF3 /* OebbProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5903426E7508900E8EAF3 /* OebbProviderTests.swift */; };
+		FAC5905B26E7508900E8EAF3 /* OebbProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5903426E7508900E8EAF3 /* OebbProviderTests.swift */; };
+		FAC5907026E7509700E8EAF3 /* VrsProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5905C26E7509100E8EAF3 /* VrsProviderTests.swift */; };
+		FAC5907126E7509700E8EAF3 /* VrsProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5905C26E7509100E8EAF3 /* VrsProviderTests.swift */; };
+		FAC5907226E7509700E8EAF3 /* VrsProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5905C26E7509100E8EAF3 /* VrsProviderTests.swift */; };
+		FAC5907326E7509700E8EAF3 /* VgsProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5905D26E7509200E8EAF3 /* VgsProviderTests.swift */; };
+		FAC5907426E7509700E8EAF3 /* VgsProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5905D26E7509200E8EAF3 /* VgsProviderTests.swift */; };
+		FAC5907526E7509700E8EAF3 /* VgsProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5905D26E7509200E8EAF3 /* VgsProviderTests.swift */; };
+		FAC5907626E7509700E8EAF3 /* VmtProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5905E26E7509200E8EAF3 /* VmtProviderTests.swift */; };
+		FAC5907726E7509700E8EAF3 /* VmtProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5905E26E7509200E8EAF3 /* VmtProviderTests.swift */; };
+		FAC5907826E7509700E8EAF3 /* VmtProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5905E26E7509200E8EAF3 /* VmtProviderTests.swift */; };
+		FAC5907926E7509700E8EAF3 /* VmsProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5905F26E7509200E8EAF3 /* VmsProviderTests.swift */; };
+		FAC5907A26E7509700E8EAF3 /* VmsProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5905F26E7509200E8EAF3 /* VmsProviderTests.swift */; };
+		FAC5907B26E7509700E8EAF3 /* VmsProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5905F26E7509200E8EAF3 /* VmsProviderTests.swift */; };
+		FAC5907C26E7509700E8EAF3 /* VosProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5906026E7509200E8EAF3 /* VosProviderTests.swift */; };
+		FAC5907D26E7509700E8EAF3 /* VosProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5906026E7509200E8EAF3 /* VosProviderTests.swift */; };
+		FAC5907E26E7509700E8EAF3 /* VosProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5906026E7509200E8EAF3 /* VosProviderTests.swift */; };
+		FAC5907F26E7509700E8EAF3 /* WienProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5906126E7509300E8EAF3 /* WienProviderTests.swift */; };
+		FAC5908026E7509700E8EAF3 /* WienProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5906126E7509300E8EAF3 /* WienProviderTests.swift */; };
+		FAC5908126E7509700E8EAF3 /* WienProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5906126E7509300E8EAF3 /* WienProviderTests.swift */; };
+		FAC5908226E7509700E8EAF3 /* VsnProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5906226E7509300E8EAF3 /* VsnProviderTests.swift */; };
+		FAC5908326E7509700E8EAF3 /* VsnProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5906226E7509300E8EAF3 /* VsnProviderTests.swift */; };
+		FAC5908426E7509700E8EAF3 /* VsnProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5906226E7509300E8EAF3 /* VsnProviderTests.swift */; };
+		FAC5908526E7509700E8EAF3 /* ZvvProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5906326E7509300E8EAF3 /* ZvvProviderTests.swift */; };
+		FAC5908626E7509700E8EAF3 /* ZvvProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5906326E7509300E8EAF3 /* ZvvProviderTests.swift */; };
+		FAC5908726E7509700E8EAF3 /* ZvvProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5906326E7509300E8EAF3 /* ZvvProviderTests.swift */; };
+		FAC5908826E7509700E8EAF3 /* VvsProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5906426E7509400E8EAF3 /* VvsProviderTests.swift */; };
+		FAC5908926E7509700E8EAF3 /* VvsProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5906426E7509400E8EAF3 /* VvsProviderTests.swift */; };
+		FAC5908A26E7509800E8EAF3 /* VvsProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5906426E7509400E8EAF3 /* VvsProviderTests.swift */; };
+		FAC5908B26E7509800E8EAF3 /* VvvProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5906526E7509400E8EAF3 /* VvvProviderTests.swift */; };
+		FAC5908C26E7509800E8EAF3 /* VvvProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5906526E7509400E8EAF3 /* VvvProviderTests.swift */; };
+		FAC5908D26E7509800E8EAF3 /* VvvProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5906526E7509400E8EAF3 /* VvvProviderTests.swift */; };
+		FAC5908E26E7509800E8EAF3 /* VrnProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5906626E7509400E8EAF3 /* VrnProviderTests.swift */; };
+		FAC5908F26E7509800E8EAF3 /* VrnProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5906626E7509400E8EAF3 /* VrnProviderTests.swift */; };
+		FAC5909026E7509800E8EAF3 /* VrnProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5906626E7509400E8EAF3 /* VrnProviderTests.swift */; };
+		FAC5909126E7509800E8EAF3 /* VrrProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5906726E7509400E8EAF3 /* VrrProviderTests.swift */; };
+		FAC5909226E7509800E8EAF3 /* VrrProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5906726E7509400E8EAF3 /* VrrProviderTests.swift */; };
+		FAC5909326E7509800E8EAF3 /* VrrProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5906726E7509400E8EAF3 /* VrrProviderTests.swift */; };
+		FAC5909426E7509800E8EAF3 /* VbnProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5906826E7509500E8EAF3 /* VbnProviderTests.swift */; };
+		FAC5909526E7509800E8EAF3 /* VbnProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5906826E7509500E8EAF3 /* VbnProviderTests.swift */; };
+		FAC5909626E7509800E8EAF3 /* VbnProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5906826E7509500E8EAF3 /* VbnProviderTests.swift */; };
+		FAC5909726E7509800E8EAF3 /* VgnProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5906926E7509500E8EAF3 /* VgnProviderTests.swift */; };
+		FAC5909826E7509800E8EAF3 /* VgnProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5906926E7509500E8EAF3 /* VgnProviderTests.swift */; };
+		FAC5909926E7509800E8EAF3 /* VgnProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5906926E7509500E8EAF3 /* VgnProviderTests.swift */; };
+		FAC5909A26E7509800E8EAF3 /* VagfrProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5906A26E7509500E8EAF3 /* VagfrProviderTests.swift */; };
+		FAC5909B26E7509800E8EAF3 /* VagfrProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5906A26E7509500E8EAF3 /* VagfrProviderTests.swift */; };
+		FAC5909C26E7509800E8EAF3 /* VagfrProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5906A26E7509500E8EAF3 /* VagfrProviderTests.swift */; };
+		FAC5909D26E7509800E8EAF3 /* VbbProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5906B26E7509500E8EAF3 /* VbbProviderTests.swift */; };
+		FAC5909E26E7509800E8EAF3 /* VbbProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5906B26E7509500E8EAF3 /* VbbProviderTests.swift */; };
+		FAC5909F26E7509800E8EAF3 /* VbbProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5906B26E7509500E8EAF3 /* VbbProviderTests.swift */; };
+		FAC590A026E7509800E8EAF3 /* VmvProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5906C26E7509600E8EAF3 /* VmvProviderTests.swift */; };
+		FAC590A126E7509800E8EAF3 /* VmvProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5906C26E7509600E8EAF3 /* VmvProviderTests.swift */; };
+		FAC590A226E7509800E8EAF3 /* VmvProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5906C26E7509600E8EAF3 /* VmvProviderTests.swift */; };
+		FAC590A326E7509800E8EAF3 /* VvmProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5906D26E7509600E8EAF3 /* VvmProviderTests.swift */; };
+		FAC590A426E7509800E8EAF3 /* VvmProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5906D26E7509600E8EAF3 /* VvmProviderTests.swift */; };
+		FAC590A526E7509800E8EAF3 /* VvmProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5906D26E7509600E8EAF3 /* VvmProviderTests.swift */; };
+		FAC590A626E7509800E8EAF3 /* VvoProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5906E26E7509600E8EAF3 /* VvoProviderTests.swift */; };
+		FAC590A726E7509800E8EAF3 /* VvoProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5906E26E7509600E8EAF3 /* VvoProviderTests.swift */; };
+		FAC590A826E7509800E8EAF3 /* VvoProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5906E26E7509600E8EAF3 /* VvoProviderTests.swift */; };
+		FAC590A926E7509800E8EAF3 /* VblProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5906F26E7509600E8EAF3 /* VblProviderTests.swift */; };
+		FAC590AA26E7509800E8EAF3 /* VblProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5906F26E7509600E8EAF3 /* VblProviderTests.swift */; };
+		FAC590AB26E7509800E8EAF3 /* VblProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5906F26E7509600E8EAF3 /* VblProviderTests.swift */; };
 		FACB83CD1E3FD0CE00AC5F1F /* TripKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FACB83C31E3FD0CE00AC5F1F /* TripKit.framework */; };
 		FACB83D41E3FD0CE00AC5F1F /* TripKit.h in Headers */ = {isa = PBXBuildFile; fileRef = FACB83C61E3FD0CE00AC5F1F /* TripKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FACB83DE1E3FD0E900AC5F1F /* TripKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACB83DD1E3FD0E900AC5F1F /* TripKit.swift */; };
@@ -576,6 +596,25 @@
 		FACD988A1E87F0D40019BE80 /* VvmProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACD98891E87F0D40019BE80 /* VvmProvider.swift */; };
 		FACD988E1E881A190019BE80 /* NvvProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACD988D1E881A190019BE80 /* NvvProvider.swift */; };
 		FACFBBC81F850EE600679CD4 /* AvvAachenProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACFBBC71F850EE600679CD4 /* AvvAachenProvider.swift */; };
+		FAD0168826E6B63100331098 /* TripKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FACB83C31E3FD0CE00AC5F1F /* TripKit.framework */; };
+		FAD0168926E6B63100331098 /* TripKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FACB83C31E3FD0CE00AC5F1F /* TripKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FAD0168D26E6B63D00331098 /* TripKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA5CD1D324FBB10C00B4990A /* TripKit.framework */; };
+		FAD0168E26E6B63D00331098 /* TripKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FA5CD1D324FBB10C00B4990A /* TripKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FAD0169226E6B64300331098 /* TripKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA5CD1FB24FBB1D200B4990A /* TripKit.framework */; };
+		FAD0169326E6B64300331098 /* TripKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FA5CD1FB24FBB1D200B4990A /* TripKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FAE6E6C426E6AB6A007E975A /* TripKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FACB83C31E3FD0CE00AC5F1F /* TripKit.framework */; };
+		FAE6E6EE26E6AC87007E975A /* TripKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA5CD1FB24FBB1D200B4990A /* TripKit.framework */; };
+		FAE6E6FC26E6AC95007E975A /* TripKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA5CD1D324FBB10C00B4990A /* TripKit.framework */; };
+		FAE6E70626E6ACBF007E975A /* TripKitTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA14C95E26E4CC0D0007F37E /* TripKitTestCase.swift */; };
+		FAE6E70726E6ACBF007E975A /* LineStyleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8F313C1E85A41C00E6CE9B /* LineStyleTests.swift */; };
+		FAE6E70926E6ACBF007E975A /* UrlEncodingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA1839F0E561F0397EB1F1 /* UrlEncodingTests.swift */; };
+		FAE6E70A26E6ACC1007E975A /* TripKitTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA14C95E26E4CC0D0007F37E /* TripKitTestCase.swift */; };
+		FAE6E70B26E6ACC1007E975A /* LineStyleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8F313C1E85A41C00E6CE9B /* LineStyleTests.swift */; };
+		FAE6E70D26E6ACC1007E975A /* UrlEncodingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA1839F0E561F0397EB1F1 /* UrlEncodingTests.swift */; };
+		FAE6E70E26E6ACC2007E975A /* TripKitTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA14C95E26E4CC0D0007F37E /* TripKitTestCase.swift */; };
+		FAE6E70F26E6ACC2007E975A /* LineStyleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8F313C1E85A41C00E6CE9B /* LineStyleTests.swift */; };
+		FAE6E71126E6ACC2007E975A /* UrlEncodingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA1839F0E561F0397EB1F1 /* UrlEncodingTests.swift */; };
+		FAE6E74A26E6B467007E975A /* TestsCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAE6E71D26E6B40E007E975A /* TestsCommon.framework */; };
 		FAF2B36E21BFF80C006439C5 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF2B36D21BFF80C006439C5 /* Security.framework */; };
 		FAF9955B200E3E1D008D8582 /* QueryJourneyDetailResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF9955A200E3E1D008D8582 /* QueryJourneyDetailResult.swift */; };
 		FAF99563200E4532008D8582 /* QueryJourneyDetailResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF9955A200E3E1D008D8582 /* QueryJourneyDetailResult.swift */; };
@@ -668,6 +707,41 @@
 			remoteGlobalIDString = FA5CD1D224FBB10C00B4990A;
 			remoteInfo = "TripKit tvOS";
 		};
+		FAA9319C26E6B49300D4CF61 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FACB83BA1E3FD0CE00AC5F1F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FAE6E71C26E6B40E007E975A;
+			remoteInfo = "TestsCommon iOS";
+		};
+		FAA9319E26E6B49800D4CF61 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FACB83BA1E3FD0CE00AC5F1F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FAE6E74026E6B43B007E975A;
+			remoteInfo = "TestsCommon tvOS";
+		};
+		FAA931A126E6B4A400D4CF61 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FACB83BA1E3FD0CE00AC5F1F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FAE6E74026E6B43B007E975A;
+			remoteInfo = "TestsCommon tvOS";
+		};
+		FAA931A426E6B4AA00D4CF61 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FACB83BA1E3FD0CE00AC5F1F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FAE6E72826E6B41C007E975A;
+			remoteInfo = "TestsCommon macOS";
+		};
+		FAA931A726E6B4AF00D4CF61 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FACB83BA1E3FD0CE00AC5F1F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FAE6E72826E6B41C007E975A;
+			remoteInfo = "TestsCommon macOS";
+		};
 		FACB83CE1E3FD0CE00AC5F1F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FACB83BA1E3FD0CE00AC5F1F /* Project object */;
@@ -675,56 +749,99 @@
 			remoteGlobalIDString = FACB83C21E3FD0CE00AC5F1F;
 			remoteInfo = TripKit;
 		};
+		FAD0168A26E6B63100331098 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FACB83BA1E3FD0CE00AC5F1F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FACB83C21E3FD0CE00AC5F1F;
+			remoteInfo = "TripKit iOS";
+		};
+		FAD0168F26E6B63D00331098 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FACB83BA1E3FD0CE00AC5F1F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FA5CD1D224FBB10C00B4990A;
+			remoteInfo = "TripKit tvOS";
+		};
+		FAD0169426E6B64300331098 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FACB83BA1E3FD0CE00AC5F1F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FA5CD1FA24FBB1D200B4990A;
+			remoteInfo = "TripKit macOS";
+		};
+		FAE6E6C526E6AB6A007E975A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FACB83BA1E3FD0CE00AC5F1F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FACB83C21E3FD0CE00AC5F1F;
+			remoteInfo = "TripKit iOS";
+		};
+		FAE6E6EF26E6AC87007E975A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FACB83BA1E3FD0CE00AC5F1F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FA5CD1FA24FBB1D200B4990A;
+			remoteInfo = "TripKit macOS";
+		};
+		FAE6E6FD26E6AC95007E975A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FACB83BA1E3FD0CE00AC5F1F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FA5CD1D224FBB10C00B4990A;
+			remoteInfo = "TripKit tvOS";
+		};
+		FAE6E74826E6B45D007E975A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FACB83BA1E3FD0CE00AC5F1F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FAE6E71C26E6B40E007E975A;
+			remoteInfo = "TestsCommon iOS";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FAD0168C26E6B63100331098 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				FAD0168926E6B63100331098 /* TripKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAD0169126E6B63E00331098 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				FAD0168E26E6B63D00331098 /* TripKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAD0169626E6B64300331098 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				FAD0169326E6B64300331098 /* TripKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2DBA1839F0E561F0397EB1F1 /* UrlEncodingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrlEncodingTests.swift; sourceTree = "<group>"; };
 		FA04C6C51E872F9E004535BA /* AvvAugsburgProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvvAugsburgProvider.swift; sourceTree = "<group>"; };
 		FA11F6E420496C7100B66359 /* UrlBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlBuilder.swift; sourceTree = "<group>"; };
-		FA14C95E26E4CC0D0007F37E /* StaticTripKitTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticTripKitTestCase.swift; sourceTree = "<group>"; };
-		FA14C96426E4CCA50007F37E /* db.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = db.json; sourceTree = "<group>"; };
-		FA14C96D26E5FBF70007F37E /* bvg.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = bvg.json; sourceTree = "<group>"; };
-		FA14C97126E5FBFE0007F37E /* template.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = template.json; sourceTree = "<group>"; };
-		FA14C97526E5FDAD0007F37E /* vbb.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = vbb.json; sourceTree = "<group>"; };
-		FA14C97926E5FECD0007F37E /* hvv.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hvv.json; sourceTree = "<group>"; };
-		FA14C97D26E600270007F37E /* bayern.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = bayern.json; sourceTree = "<group>"; };
-		FA14C98126E604310007F37E /* avv.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = avv.json; sourceTree = "<group>"; };
-		FA14C98526E606080007F37E /* mvv.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mvv.json; sourceTree = "<group>"; };
-		FA14C98926E610900007F37E /* rmv.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = rmv.json; sourceTree = "<group>"; };
-		FA14C98D26E611900007F37E /* avv2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = avv2.json; sourceTree = "<group>"; };
-		FA14C99126E612650007F37E /* vgn.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = vgn.json; sourceTree = "<group>"; };
-		FA14C99526E6133B0007F37E /* invg.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = invg.json; sourceTree = "<group>"; };
-		FA14C99926E61E000007F37E /* vvm.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = vvm.json; sourceTree = "<group>"; };
-		FA14C99D26E626080007F37E /* nvv.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = nvv.json; sourceTree = "<group>"; };
-		FA14C9A126E6277E0007F37E /* vmv.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = vmv.json; sourceTree = "<group>"; };
-		FA14C9A526E628D80007F37E /* sh.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sh.json; sourceTree = "<group>"; };
-		FA14C9A926E629BA0007F37E /* gvh.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = gvh.json; sourceTree = "<group>"; };
-		FA14C9AD26E62A870007F37E /* bsvag.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = bsvag.json; sourceTree = "<group>"; };
-		FA14C9B126E62B850007F37E /* vbn.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = vbn.json; sourceTree = "<group>"; };
-		FA14C9B526E62E390007F37E /* vvo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = vvo.json; sourceTree = "<group>"; };
-		FA14C9B926E640EC0007F37E /* vms.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = vms.json; sourceTree = "<group>"; };
-		FA14C9BD26E641B90007F37E /* nasa.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = nasa.json; sourceTree = "<group>"; };
-		FA14C9C126E642DA0007F37E /* vsn.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = vsn.json; sourceTree = "<group>"; };
-		FA14C9C526E643EF0007F37E /* vos.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = vos.json; sourceTree = "<group>"; };
-		FA14C9C926E644D80007F37E /* vmt.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = vmt.json; sourceTree = "<group>"; };
-		FA14C9CD26E646300007F37E /* vrr.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = vrr.json; sourceTree = "<group>"; };
-		FA14C9D126E647A80007F37E /* vrs.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = vrs.json; sourceTree = "<group>"; };
-		FA14C9D526E64B0E0007F37E /* ding.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ding.json; sourceTree = "<group>"; };
-		FA14C9D926E64BC80007F37E /* kvv.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = kvv.json; sourceTree = "<group>"; };
-		FA14C9DD26E64D900007F37E /* vagfr.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = vagfr.json; sourceTree = "<group>"; };
-		FA14C9E126E64EF90007F37E /* nvbw.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = nvbw.json; sourceTree = "<group>"; };
-		FA14C9E526E6500C0007F37E /* vvv.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = vvv.json; sourceTree = "<group>"; };
-		FA14C9E926E650C70007F37E /* vgs.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = vgs.json; sourceTree = "<group>"; };
-		FA14C9ED26E653B90007F37E /* rt.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = rt.json; sourceTree = "<group>"; };
-		FA14C9F126E656920007F37E /* vbl.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = vbl.json; sourceTree = "<group>"; };
-		FA14C9F526E657790007F37E /* zvv.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = zvv.json; sourceTree = "<group>"; };
-		FA14C9F926E6585F0007F37E /* oebb.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = oebb.json; sourceTree = "<group>"; };
-		FA14C9FD26E65AF20007F37E /* wien.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = wien.json; sourceTree = "<group>"; };
-		FA14CA0126E65C1E0007F37E /* ooevv.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ooevv.json; sourceTree = "<group>"; };
-		FA14CA0526E65D170007F37E /* linz.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = linz.json; sourceTree = "<group>"; };
-		FA14CA0926E65DF50007F37E /* ivb.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ivb.json; sourceTree = "<group>"; };
-		FA14CA0D26E65EE40007F37E /* svv.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = svv.json; sourceTree = "<group>"; };
-		FA14CA1126E65FF50007F37E /* stv.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stv.json; sourceTree = "<group>"; };
+		FA14C95E26E4CC0D0007F37E /* TripKitTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripKitTestCase.swift; sourceTree = "<group>"; };
+		FA14CA1A26E6890C0007F37E /* TestUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUtils.swift; sourceTree = "<group>"; };
 		FA17EBE81E757FF3001ECA09 /* AbstractHafasLegacyProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbstractHafasLegacyProvider.swift; sourceTree = "<group>"; };
 		FA17EBEC1E758087001ECA09 /* DbProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DbProvider.swift; sourceTree = "<group>"; };
 		FA1C85771E437D73002BFE6E /* AsyncRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncRequest.swift; sourceTree = "<group>"; };
@@ -756,9 +873,6 @@
 		FA5CD33824FBB61300B4990A /* Info-macOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-macOS.plist"; sourceTree = "<group>"; };
 		FA5CD33924FBB61300B4990A /* Info-tvOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-tvOS.plist"; sourceTree = "<group>"; };
 		FA5CD33A24FBB61300B4990A /* Info-watchOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-watchOS.plist"; sourceTree = "<group>"; };
-		FA5CD33C24FBBA9700B4990A /* Info-macOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = "Info-macOS.plist"; path = "TripKitTests/Info-macOS.plist"; sourceTree = SOURCE_ROOT; };
-		FA5CD33D24FBBA9700B4990A /* Info-tvOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = "Info-tvOS.plist"; path = "TripKitTests/Info-tvOS.plist"; sourceTree = SOURCE_ROOT; };
-		FA5CD33E24FBBA9700B4990A /* Info-iOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = "Info-iOS.plist"; path = "TripKitTests/Info-iOS.plist"; sourceTree = SOURCE_ROOT; };
 		FA6015D31E8C1C1C0069B224 /* BsvagProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BsvagProvider.swift; sourceTree = "<group>"; };
 		FA6015D51E8C1D270069B224 /* VbnProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VbnProvider.swift; sourceTree = "<group>"; };
 		FA6015D71E8C214D0069B224 /* VvoProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VvoProvider.swift; sourceTree = "<group>"; };
@@ -864,6 +978,56 @@
 		FABFCC271E8FEBB900905D5E /* VvsProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VvsProvider.swift; sourceTree = "<group>"; };
 		FABFCC291E8FECD200905D5E /* DingProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DingProvider.swift; sourceTree = "<group>"; };
 		FABFCC2D1E8FED9000905D5E /* VagfrProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VagfrProvider.swift; sourceTree = "<group>"; };
+		FAC58F3D26E74D9C00E8EAF3 /* Fixtures */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fixtures; sourceTree = "<group>"; };
+		FAC58F7126E74EA000E8EAF3 /* Test Cases */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Test Cases"; sourceTree = "<group>"; };
+		FAC58F8426E74FAB00E8EAF3 /* Info-iOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-iOS.plist"; sourceTree = "<group>"; };
+		FAC58F8526E74FAB00E8EAF3 /* Info-tvOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-tvOS.plist"; sourceTree = "<group>"; };
+		FAC58F8626E74FAC00E8EAF3 /* Info-macOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-macOS.plist"; sourceTree = "<group>"; };
+		FAC58FF826E7507B00E8EAF3 /* HvvProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HvvProviderTests.swift; sourceTree = "<group>"; };
+		FAC58FF926E7507B00E8EAF3 /* InvgProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvgProviderTests.swift; sourceTree = "<group>"; };
+		FAC58FFA26E7507B00E8EAF3 /* IvbProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IvbProviderTests.swift; sourceTree = "<group>"; };
+		FAC58FFB26E7507C00E8EAF3 /* KvvProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KvvProviderTests.swift; sourceTree = "<group>"; };
+		FAC58FFC26E7507C00E8EAF3 /* AvvAachenProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvvAachenProviderTests.swift; sourceTree = "<group>"; };
+		FAC58FFD26E7507C00E8EAF3 /* AvvAugsburgProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvvAugsburgProviderTests.swift; sourceTree = "<group>"; };
+		FAC58FFE26E7507C00E8EAF3 /* DbProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DbProviderTests.swift; sourceTree = "<group>"; };
+		FAC58FFF26E7507C00E8EAF3 /* BvgProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BvgProviderTests.swift; sourceTree = "<group>"; };
+		FAC5900026E7507C00E8EAF3 /* BayernProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BayernProviderTests.swift; sourceTree = "<group>"; };
+		FAC5900126E7507D00E8EAF3 /* DingProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DingProviderTests.swift; sourceTree = "<group>"; };
+		FAC5900226E7507D00E8EAF3 /* BsvagProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BsvagProviderTests.swift; sourceTree = "<group>"; };
+		FAC5900326E7507D00E8EAF3 /* GvhProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GvhProviderTests.swift; sourceTree = "<group>"; };
+		FAC5902826E7508500E8EAF3 /* MvvProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MvvProviderTests.swift; sourceTree = "<group>"; };
+		FAC5902926E7508500E8EAF3 /* SvvProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SvvProviderTests.swift; sourceTree = "<group>"; };
+		FAC5902A26E7508600E8EAF3 /* RmvProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RmvProviderTests.swift; sourceTree = "<group>"; };
+		FAC5902B26E7508600E8EAF3 /* RtProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RtProviderTests.swift; sourceTree = "<group>"; };
+		FAC5902C26E7508600E8EAF3 /* NasaProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NasaProviderTests.swift; sourceTree = "<group>"; };
+		FAC5902D26E7508600E8EAF3 /* ShProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShProviderTests.swift; sourceTree = "<group>"; };
+		FAC5902E26E7508700E8EAF3 /* LinzProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinzProviderTests.swift; sourceTree = "<group>"; };
+		FAC5902F26E7508700E8EAF3 /* OoevvProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OoevvProviderTests.swift; sourceTree = "<group>"; };
+		FAC5903026E7508700E8EAF3 /* NvvProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NvvProviderTests.swift; sourceTree = "<group>"; };
+		FAC5903126E7508800E8EAF3 /* MvgProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MvgProviderTests.swift; sourceTree = "<group>"; };
+		FAC5903226E7508800E8EAF3 /* NvbwProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NvbwProviderTests.swift; sourceTree = "<group>"; };
+		FAC5903326E7508800E8EAF3 /* StvProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StvProviderTests.swift; sourceTree = "<group>"; };
+		FAC5903426E7508900E8EAF3 /* OebbProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OebbProviderTests.swift; sourceTree = "<group>"; };
+		FAC5905C26E7509100E8EAF3 /* VrsProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VrsProviderTests.swift; sourceTree = "<group>"; };
+		FAC5905D26E7509200E8EAF3 /* VgsProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VgsProviderTests.swift; sourceTree = "<group>"; };
+		FAC5905E26E7509200E8EAF3 /* VmtProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VmtProviderTests.swift; sourceTree = "<group>"; };
+		FAC5905F26E7509200E8EAF3 /* VmsProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VmsProviderTests.swift; sourceTree = "<group>"; };
+		FAC5906026E7509200E8EAF3 /* VosProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VosProviderTests.swift; sourceTree = "<group>"; };
+		FAC5906126E7509300E8EAF3 /* WienProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WienProviderTests.swift; sourceTree = "<group>"; };
+		FAC5906226E7509300E8EAF3 /* VsnProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VsnProviderTests.swift; sourceTree = "<group>"; };
+		FAC5906326E7509300E8EAF3 /* ZvvProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZvvProviderTests.swift; sourceTree = "<group>"; };
+		FAC5906426E7509400E8EAF3 /* VvsProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VvsProviderTests.swift; sourceTree = "<group>"; };
+		FAC5906526E7509400E8EAF3 /* VvvProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VvvProviderTests.swift; sourceTree = "<group>"; };
+		FAC5906626E7509400E8EAF3 /* VrnProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VrnProviderTests.swift; sourceTree = "<group>"; };
+		FAC5906726E7509400E8EAF3 /* VrrProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VrrProviderTests.swift; sourceTree = "<group>"; };
+		FAC5906826E7509500E8EAF3 /* VbnProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VbnProviderTests.swift; sourceTree = "<group>"; };
+		FAC5906926E7509500E8EAF3 /* VgnProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VgnProviderTests.swift; sourceTree = "<group>"; };
+		FAC5906A26E7509500E8EAF3 /* VagfrProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VagfrProviderTests.swift; sourceTree = "<group>"; };
+		FAC5906B26E7509500E8EAF3 /* VbbProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VbbProviderTests.swift; sourceTree = "<group>"; };
+		FAC5906C26E7509600E8EAF3 /* VmvProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VmvProviderTests.swift; sourceTree = "<group>"; };
+		FAC5906D26E7509600E8EAF3 /* VvmProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VvmProviderTests.swift; sourceTree = "<group>"; };
+		FAC5906E26E7509600E8EAF3 /* VvoProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VvoProviderTests.swift; sourceTree = "<group>"; };
+		FAC5906F26E7509600E8EAF3 /* VblProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VblProviderTests.swift; sourceTree = "<group>"; };
 		FACB83C31E3FD0CE00AC5F1F /* TripKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TripKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FACB83C61E3FD0CE00AC5F1F /* TripKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TripKit.h; sourceTree = "<group>"; };
 		FACB83C71E3FD0CE00AC5F1F /* Info-iOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-iOS.plist"; sourceTree = "<group>"; };
@@ -875,6 +1039,12 @@
 		FACD988D1E881A190019BE80 /* NvvProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NvvProvider.swift; sourceTree = "<group>"; };
 		FACFBBC71F850EE600679CD4 /* AvvAachenProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvvAachenProvider.swift; sourceTree = "<group>"; };
 		FAD8E0CC2287197A00C0036C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		FAE6E6C026E6AB6A007E975A /* StaticTripKitTests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "StaticTripKitTests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAE6E6EA26E6AC87007E975A /* StaticTripKitTests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "StaticTripKitTests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAE6E6F826E6AC95007E975A /* StaticTripKitTests tvOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "StaticTripKitTests tvOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAE6E71D26E6B40E007E975A /* TestsCommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TestsCommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAE6E72926E6B41C007E975A /* TestsCommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TestsCommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAE6E74126E6B43B007E975A /* TestsCommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TestsCommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAF2B36D21BFF80C006439C5 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		FAF9955A200E3E1D008D8582 /* QueryJourneyDetailResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryJourneyDetailResult.swift; sourceTree = "<group>"; };
 		FAFF18D11FA50B9500A8ED69 /* TripKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TripKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -905,6 +1075,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAA931A626E6B4AD00D4CF61 /* TestsCommon.framework in Frameworks */,
 				FA5CD20424FBB1D200B4990A /* TripKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -913,6 +1084,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAA931A026E6B4A000D4CF61 /* TestsCommon.framework in Frameworks */,
 				FA5CD22324FBB1FC00B4990A /* TripKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -932,7 +1104,59 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAE6E74A26E6B467007E975A /* TestsCommon.framework in Frameworks */,
 				FACB83CD1E3FD0CE00AC5F1F /* TripKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAE6E6BD26E6AB6A007E975A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAA9319B26E6B49000D4CF61 /* TestsCommon.framework in Frameworks */,
+				FAE6E6C426E6AB6A007E975A /* TripKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAE6E6E726E6AC87007E975A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAA931A926E6B4B300D4CF61 /* TestsCommon.framework in Frameworks */,
+				FAE6E6EE26E6AC87007E975A /* TripKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAE6E6F526E6AC95007E975A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAA931A326E6B4A800D4CF61 /* TestsCommon.framework in Frameworks */,
+				FAE6E6FC26E6AC95007E975A /* TripKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAE6E71A26E6B40E007E975A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAD0168826E6B63100331098 /* TripKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAE6E72626E6B41C007E975A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAD0169226E6B64300331098 /* TripKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAE6E73E26E6B43B007E975A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAD0168D26E6B63D00331098 /* TripKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -953,8 +1177,53 @@
 			isa = PBXGroup;
 			children = (
 				FA8F313C1E85A41C00E6CE9B /* LineStyleTests.swift */,
-				FA14C95E26E4CC0D0007F37E /* StaticTripKitTestCase.swift */,
 				2DBA1839F0E561F0397EB1F1 /* UrlEncodingTests.swift */,
+				FA14C95E26E4CC0D0007F37E /* TripKitTestCase.swift */,
+				FAC58FFC26E7507C00E8EAF3 /* AvvAachenProviderTests.swift */,
+				FAC58FFD26E7507C00E8EAF3 /* AvvAugsburgProviderTests.swift */,
+				FAC5900026E7507C00E8EAF3 /* BayernProviderTests.swift */,
+				FAC5900226E7507D00E8EAF3 /* BsvagProviderTests.swift */,
+				FAC58FFF26E7507C00E8EAF3 /* BvgProviderTests.swift */,
+				FAC58FFE26E7507C00E8EAF3 /* DbProviderTests.swift */,
+				FAC5900126E7507D00E8EAF3 /* DingProviderTests.swift */,
+				FAC5900326E7507D00E8EAF3 /* GvhProviderTests.swift */,
+				FAC58FF826E7507B00E8EAF3 /* HvvProviderTests.swift */,
+				FAC58FF926E7507B00E8EAF3 /* InvgProviderTests.swift */,
+				FAC58FFA26E7507B00E8EAF3 /* IvbProviderTests.swift */,
+				FAC58FFB26E7507C00E8EAF3 /* KvvProviderTests.swift */,
+				FAC5902E26E7508700E8EAF3 /* LinzProviderTests.swift */,
+				FAC5903126E7508800E8EAF3 /* MvgProviderTests.swift */,
+				FAC5902826E7508500E8EAF3 /* MvvProviderTests.swift */,
+				FAC5902C26E7508600E8EAF3 /* NasaProviderTests.swift */,
+				FAC5903226E7508800E8EAF3 /* NvbwProviderTests.swift */,
+				FAC5903026E7508700E8EAF3 /* NvvProviderTests.swift */,
+				FAC5903426E7508900E8EAF3 /* OebbProviderTests.swift */,
+				FAC5902F26E7508700E8EAF3 /* OoevvProviderTests.swift */,
+				FAC5902A26E7508600E8EAF3 /* RmvProviderTests.swift */,
+				FAC5902B26E7508600E8EAF3 /* RtProviderTests.swift */,
+				FAC5902D26E7508600E8EAF3 /* ShProviderTests.swift */,
+				FAC5903326E7508800E8EAF3 /* StvProviderTests.swift */,
+				FAC5902926E7508500E8EAF3 /* SvvProviderTests.swift */,
+				FAC5906A26E7509500E8EAF3 /* VagfrProviderTests.swift */,
+				FAC5906B26E7509500E8EAF3 /* VbbProviderTests.swift */,
+				FAC5906F26E7509600E8EAF3 /* VblProviderTests.swift */,
+				FAC5906826E7509500E8EAF3 /* VbnProviderTests.swift */,
+				FAC5906926E7509500E8EAF3 /* VgnProviderTests.swift */,
+				FAC5905D26E7509200E8EAF3 /* VgsProviderTests.swift */,
+				FAC5905F26E7509200E8EAF3 /* VmsProviderTests.swift */,
+				FAC5905E26E7509200E8EAF3 /* VmtProviderTests.swift */,
+				FAC5906C26E7509600E8EAF3 /* VmvProviderTests.swift */,
+				FAC5906026E7509200E8EAF3 /* VosProviderTests.swift */,
+				FAC5906626E7509400E8EAF3 /* VrnProviderTests.swift */,
+				FAC5906726E7509400E8EAF3 /* VrrProviderTests.swift */,
+				FAC5905C26E7509100E8EAF3 /* VrsProviderTests.swift */,
+				FAC5906226E7509300E8EAF3 /* VsnProviderTests.swift */,
+				FAC5906D26E7509600E8EAF3 /* VvmProviderTests.swift */,
+				FAC5906E26E7509600E8EAF3 /* VvoProviderTests.swift */,
+				FAC5906426E7509400E8EAF3 /* VvsProviderTests.swift */,
+				FAC5906526E7509400E8EAF3 /* VvvProviderTests.swift */,
+				FAC5906126E7509300E8EAF3 /* WienProviderTests.swift */,
+				FAC5906326E7509300E8EAF3 /* ZvvProviderTests.swift */,
 			);
 			path = StaticTripKitTests;
 			sourceTree = "<group>";
@@ -962,67 +1231,19 @@
 		FA14C96226E4CC710007F37E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				FA14C96C26E4E1190007F37E /* Fixtures */,
-				FA14C96326E4CC7C0007F37E /* Test Cases */,
+				FAC58F7126E74EA000E8EAF3 /* Test Cases */,
+				FAC58F3D26E74D9C00E8EAF3 /* Fixtures */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		FA14C96326E4CC7C0007F37E /* Test Cases */ = {
+		FA14CA1926E688F60007F37E /* TestsCommon */ = {
 			isa = PBXGroup;
 			children = (
-				FA14C97126E5FBFE0007F37E /* template.json */,
-				FA14C96426E4CCA50007F37E /* db.json */,
-				FA14C96D26E5FBF70007F37E /* bvg.json */,
-				FA14C97526E5FDAD0007F37E /* vbb.json */,
-				FA14C97926E5FECD0007F37E /* hvv.json */,
-				FA14C97D26E600270007F37E /* bayern.json */,
-				FA14C98126E604310007F37E /* avv.json */,
-				FA14C98526E606080007F37E /* mvv.json */,
-				FA14C98926E610900007F37E /* rmv.json */,
-				FA14C98D26E611900007F37E /* avv2.json */,
-				FA14C99126E612650007F37E /* vgn.json */,
-				FA14C99526E6133B0007F37E /* invg.json */,
-				FA14C99926E61E000007F37E /* vvm.json */,
-				FA14C99D26E626080007F37E /* nvv.json */,
-				FA14C9A126E6277E0007F37E /* vmv.json */,
-				FA14C9A526E628D80007F37E /* sh.json */,
-				FA14C9A926E629BA0007F37E /* gvh.json */,
-				FA14C9AD26E62A870007F37E /* bsvag.json */,
-				FA14C9B126E62B850007F37E /* vbn.json */,
-				FA14C9B526E62E390007F37E /* vvo.json */,
-				FA14C9B926E640EC0007F37E /* vms.json */,
-				FA14C9BD26E641B90007F37E /* nasa.json */,
-				FA14C9C126E642DA0007F37E /* vsn.json */,
-				FA14C9C526E643EF0007F37E /* vos.json */,
-				FA14C9C926E644D80007F37E /* vmt.json */,
-				FA14C9CD26E646300007F37E /* vrr.json */,
-				FA14C9D126E647A80007F37E /* vrs.json */,
-				FA14C9D526E64B0E0007F37E /* ding.json */,
-				FA14C9D926E64BC80007F37E /* kvv.json */,
-				FA14C9DD26E64D900007F37E /* vagfr.json */,
-				FA14C9E126E64EF90007F37E /* nvbw.json */,
-				FA14C9E526E6500C0007F37E /* vvv.json */,
-				FA14C9E926E650C70007F37E /* vgs.json */,
-				FA14C9ED26E653B90007F37E /* rt.json */,
-				FA14C9F126E656920007F37E /* vbl.json */,
-				FA14C9F526E657790007F37E /* zvv.json */,
-				FA14C9F926E6585F0007F37E /* oebb.json */,
-				FA14C9FD26E65AF20007F37E /* wien.json */,
-				FA14CA0126E65C1E0007F37E /* ooevv.json */,
-				FA14CA0526E65D170007F37E /* linz.json */,
-				FA14CA0926E65DF50007F37E /* ivb.json */,
-				FA14CA0D26E65EE40007F37E /* svv.json */,
-				FA14CA1126E65FF50007F37E /* stv.json */,
+				FA14CA1A26E6890C0007F37E /* TestUtils.swift */,
+				FA14C96226E4CC710007F37E /* Resources */,
 			);
-			path = "Test Cases";
-			sourceTree = "<group>";
-		};
-		FA14C96C26E4E1190007F37E /* Fixtures */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Fixtures;
+			path = TestsCommon;
 			sourceTree = "<group>";
 		};
 		FA5CD33724FBB5A300B4990A /* Supporting Files */ = {
@@ -1039,9 +1260,9 @@
 		FA5CD33B24FBBA8800B4990A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				FA5CD33E24FBBA9700B4990A /* Info-iOS.plist */,
-				FA5CD33C24FBBA9700B4990A /* Info-macOS.plist */,
-				FA5CD33D24FBBA9700B4990A /* Info-tvOS.plist */,
+				FAC58F8426E74FAB00E8EAF3 /* Info-iOS.plist */,
+				FAC58F8626E74FAC00E8EAF3 /* Info-macOS.plist */,
+				FAC58F8526E74FAB00E8EAF3 /* Info-tvOS.plist */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -1065,7 +1286,7 @@
 		FA87AB0C24FBDEAE00534505 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				FA14C96226E4CC710007F37E /* Resources */,
+				FA14CA1926E688F60007F37E /* TestsCommon */,
 				FA14C95D26E4CB860007F37E /* StaticTripKitTests */,
 				FACB83D01E3FD0CE00AC5F1F /* TripKitTests */,
 			);
@@ -1213,6 +1434,12 @@
 				FA5CD1FB24FBB1D200B4990A /* TripKit.framework */,
 				FA5CD20324FBB1D200B4990A /* TripKit macOSTests.xctest */,
 				FA5CD21E24FBB1FC00B4990A /* TripKit tvOSTests.xctest */,
+				FAE6E6C026E6AB6A007E975A /* StaticTripKitTests iOS.xctest */,
+				FAE6E6EA26E6AC87007E975A /* StaticTripKitTests macOS.xctest */,
+				FAE6E6F826E6AC95007E975A /* StaticTripKitTests tvOS.xctest */,
+				FAE6E71D26E6B40E007E975A /* TestsCommon.framework */,
+				FAE6E72926E6B41C007E975A /* TestsCommon.framework */,
+				FAE6E74126E6B43B007E975A /* TestsCommon.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1333,6 +1560,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FAE6E71826E6B40E007E975A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAE6E72426E6B41C007E975A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAE6E73C26E6B43B007E975A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FAFF18CB1FA50B9500A8ED69 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -1402,6 +1650,7 @@
 			);
 			dependencies = (
 				FA5CD20624FBB1D200B4990A /* PBXTargetDependency */,
+				FAA931A526E6B4AA00D4CF61 /* PBXTargetDependency */,
 			);
 			name = "TripKit macOSTests";
 			productName = "TripKit macOSTests";
@@ -1420,6 +1669,7 @@
 			);
 			dependencies = (
 				FA5CD22524FBB1FC00B4990A /* PBXTargetDependency */,
+				FAA9319F26E6B49800D4CF61 /* PBXTargetDependency */,
 			);
 			name = "TripKit tvOSTests";
 			productName = "TripKitTests tvOS";
@@ -1461,11 +1711,129 @@
 			);
 			dependencies = (
 				FACB83CF1E3FD0CE00AC5F1F /* PBXTargetDependency */,
+				FAE6E74926E6B45D007E975A /* PBXTargetDependency */,
 			);
 			name = "TripKitTests iOS";
 			productName = TripKitTests;
 			productReference = FACB83CC1E3FD0CE00AC5F1F /* TripKitTests iOS.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FAE6E6BF26E6AB6A007E975A /* StaticTripKitTests iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAE6E6C726E6AB6A007E975A /* Build configuration list for PBXNativeTarget "StaticTripKitTests iOS" */;
+			buildPhases = (
+				FAE6E6BC26E6AB6A007E975A /* Sources */,
+				FAE6E6BD26E6AB6A007E975A /* Frameworks */,
+				FAE6E6BE26E6AB6A007E975A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FAE6E6C626E6AB6A007E975A /* PBXTargetDependency */,
+				FAA9319D26E6B49300D4CF61 /* PBXTargetDependency */,
+			);
+			name = "StaticTripKitTests iOS";
+			productName = "StaticTripKitTests iOS";
+			productReference = FAE6E6C026E6AB6A007E975A /* StaticTripKitTests iOS.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FAE6E6E926E6AC87007E975A /* StaticTripKitTests macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAE6E6F126E6AC87007E975A /* Build configuration list for PBXNativeTarget "StaticTripKitTests macOS" */;
+			buildPhases = (
+				FAE6E6E626E6AC87007E975A /* Sources */,
+				FAE6E6E726E6AC87007E975A /* Frameworks */,
+				FAE6E6E826E6AC87007E975A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FAE6E6F026E6AC87007E975A /* PBXTargetDependency */,
+				FAA931A826E6B4AF00D4CF61 /* PBXTargetDependency */,
+			);
+			name = "StaticTripKitTests macOS";
+			productName = "StaticTripKitTests macOS";
+			productReference = FAE6E6EA26E6AC87007E975A /* StaticTripKitTests macOS.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FAE6E6F726E6AC95007E975A /* StaticTripKitTests tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAE6E6FF26E6AC95007E975A /* Build configuration list for PBXNativeTarget "StaticTripKitTests tvOS" */;
+			buildPhases = (
+				FAE6E6F426E6AC95007E975A /* Sources */,
+				FAE6E6F526E6AC95007E975A /* Frameworks */,
+				FAE6E6F626E6AC95007E975A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FAE6E6FE26E6AC95007E975A /* PBXTargetDependency */,
+				FAA931A226E6B4A400D4CF61 /* PBXTargetDependency */,
+			);
+			name = "StaticTripKitTests tvOS";
+			productName = "StaticTripKitTests tvOS";
+			productReference = FAE6E6F826E6AC95007E975A /* StaticTripKitTests tvOS.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FAE6E71C26E6B40E007E975A /* TestsCommon iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAE6E72126E6B40E007E975A /* Build configuration list for PBXNativeTarget "TestsCommon iOS" */;
+			buildPhases = (
+				FAE6E71826E6B40E007E975A /* Headers */,
+				FAE6E71926E6B40E007E975A /* Sources */,
+				FAE6E71A26E6B40E007E975A /* Frameworks */,
+				FAE6E71B26E6B40E007E975A /* Resources */,
+				FAD0168C26E6B63100331098 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FAD0168B26E6B63100331098 /* PBXTargetDependency */,
+			);
+			name = "TestsCommon iOS";
+			productName = "TestsCommon iOS";
+			productReference = FAE6E71D26E6B40E007E975A /* TestsCommon.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		FAE6E72826E6B41C007E975A /* TestsCommon macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAE6E72D26E6B41C007E975A /* Build configuration list for PBXNativeTarget "TestsCommon macOS" */;
+			buildPhases = (
+				FAE6E72426E6B41C007E975A /* Headers */,
+				FAE6E72526E6B41C007E975A /* Sources */,
+				FAE6E72626E6B41C007E975A /* Frameworks */,
+				FAE6E72726E6B41C007E975A /* Resources */,
+				FAD0169626E6B64300331098 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FAD0169526E6B64300331098 /* PBXTargetDependency */,
+			);
+			name = "TestsCommon macOS";
+			productName = "TestsCommon macOS";
+			productReference = FAE6E72926E6B41C007E975A /* TestsCommon.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		FAE6E74026E6B43B007E975A /* TestsCommon tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAE6E74526E6B43B007E975A /* Build configuration list for PBXNativeTarget "TestsCommon tvOS" */;
+			buildPhases = (
+				FAE6E73C26E6B43B007E975A /* Headers */,
+				FAE6E73D26E6B43B007E975A /* Sources */,
+				FAE6E73E26E6B43B007E975A /* Frameworks */,
+				FAE6E73F26E6B43B007E975A /* Resources */,
+				FAD0169126E6B63E00331098 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FAD0169026E6B63D00331098 /* PBXTargetDependency */,
+			);
+			name = "TestsCommon tvOS";
+			productName = "TestsCommon tvOS";
+			productReference = FAE6E74126E6B43B007E975A /* TestsCommon.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 		FAFF187B1FA50B9500A8ED69 /* TripKit watchOS */ = {
 			isa = PBXNativeTarget;
@@ -1496,7 +1864,7 @@
 		FACB83BA1E3FD0CE00AC5F1F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1160;
+				LastSwiftUpdateCheck = 1300;
 				LastUpgradeCheck = 1250;
 				ORGANIZATIONNAME = "Alexander Albers";
 				TargetAttributes = {
@@ -1520,6 +1888,24 @@
 					FACB83CB1E3FD0CE00AC5F1F = {
 						CreatedOnToolsVersion = 8.2.1;
 						LastSwiftMigration = 0910;
+					};
+					FAE6E6BF26E6AB6A007E975A = {
+						CreatedOnToolsVersion = 13.0;
+					};
+					FAE6E6E926E6AC87007E975A = {
+						CreatedOnToolsVersion = 13.0;
+					};
+					FAE6E6F726E6AC95007E975A = {
+						CreatedOnToolsVersion = 13.0;
+					};
+					FAE6E71C26E6B40E007E975A = {
+						CreatedOnToolsVersion = 13.0;
+					};
+					FAE6E72826E6B41C007E975A = {
+						CreatedOnToolsVersion = 13.0;
+					};
+					FAE6E74026E6B43B007E975A = {
+						CreatedOnToolsVersion = 13.0;
 					};
 					FAFF187B1FA50B9500A8ED69 = {
 						LastSwiftMigration = 1020;
@@ -1552,12 +1938,18 @@
 			projectRoot = "";
 			targets = (
 				FACB83C21E3FD0CE00AC5F1F /* TripKit iOS */,
+				FAE6E71C26E6B40E007E975A /* TestsCommon iOS */,
 				FACB83CB1E3FD0CE00AC5F1F /* TripKitTests iOS */,
+				FAE6E6BF26E6AB6A007E975A /* StaticTripKitTests iOS */,
 				FAFF187B1FA50B9500A8ED69 /* TripKit watchOS */,
 				FA5CD1D224FBB10C00B4990A /* TripKit tvOS */,
+				FAE6E74026E6B43B007E975A /* TestsCommon tvOS */,
 				FA5CD21D24FBB1FC00B4990A /* TripKit tvOSTests */,
+				FAE6E6F726E6AC95007E975A /* StaticTripKitTests tvOS */,
 				FA5CD1FA24FBB1D200B4990A /* TripKit macOS */,
+				FAE6E72826E6B41C007E975A /* TestsCommon macOS */,
 				FA5CD20224FBB1D200B4990A /* TripKit macOSTests */,
+				FAE6E6E926E6AC87007E975A /* StaticTripKitTests macOS */,
 			);
 		};
 /* End PBXProject section */
@@ -1583,49 +1975,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA14C96726E4CCA50007F37E /* db.json in Resources */,
-				FA14C9F026E653B90007F37E /* rt.json in Resources */,
-				FA14C9F826E657790007F37E /* zvv.json in Resources */,
-				FA14C98826E606080007F37E /* mvv.json in Resources */,
-				FA14C99C26E61E000007F37E /* vvm.json in Resources */,
-				FA14C9C426E642DA0007F37E /* vsn.json in Resources */,
-				FA14C9E426E64EF90007F37E /* nvbw.json in Resources */,
-				FA14CA0426E65C1E0007F37E /* ooevv.json in Resources */,
-				FA14C9B826E62E390007F37E /* vvo.json in Resources */,
-				FA14CA0C26E65DF60007F37E /* ivb.json in Resources */,
-				FA14C99026E611900007F37E /* avv2.json in Resources */,
-				FA14CA1026E65EE40007F37E /* svv.json in Resources */,
-				FA14CA1426E65FF60007F37E /* stv.json in Resources */,
-				FA14C9BC26E640EC0007F37E /* vms.json in Resources */,
-				FA14C99426E612650007F37E /* vgn.json in Resources */,
-				FA14C9CC26E644D80007F37E /* vmt.json in Resources */,
-				FA14C9C826E643F00007F37E /* vos.json in Resources */,
-				FA14C9EC26E650C70007F37E /* vgs.json in Resources */,
-				FA14C9B026E62A870007F37E /* bsvag.json in Resources */,
-				FA14C98C26E610900007F37E /* rmv.json in Resources */,
-				FA14C99826E6133B0007F37E /* invg.json in Resources */,
-				FA14C9B426E62B850007F37E /* vbn.json in Resources */,
-				FA14C97426E5FBFE0007F37E /* template.json in Resources */,
-				FA14C9F426E656920007F37E /* vbl.json in Resources */,
-				FA14C9A426E6277E0007F37E /* vmv.json in Resources */,
-				FA14C97826E5FDAD0007F37E /* vbb.json in Resources */,
-				FA14C9E826E6500C0007F37E /* vvv.json in Resources */,
-				FA14C9A826E628D80007F37E /* sh.json in Resources */,
-				FA14C9FC26E6585F0007F37E /* oebb.json in Resources */,
-				FA14C97C26E5FECD0007F37E /* hvv.json in Resources */,
-				FA14C9A026E626080007F37E /* nvv.json in Resources */,
-				FA14C9D426E647A80007F37E /* vrs.json in Resources */,
-				FA14C9D026E646300007F37E /* vrr.json in Resources */,
-				FA14C98026E600270007F37E /* bayern.json in Resources */,
-				FA14C9D826E64B0E0007F37E /* ding.json in Resources */,
-				FA14C9E026E64D900007F37E /* vagfr.json in Resources */,
-				FA14C97026E5FBF80007F37E /* bvg.json in Resources */,
-				FA14C9AC26E629BA0007F37E /* gvh.json in Resources */,
-				FA14CA0026E65AF20007F37E /* wien.json in Resources */,
-				FA14C9DC26E64BC90007F37E /* kvv.json in Resources */,
-				FA14C9C026E641BA0007F37E /* nasa.json in Resources */,
-				FA14CA0826E65D170007F37E /* linz.json in Resources */,
-				FA14C98426E604310007F37E /* avv.json in Resources */,
+				FAC58F8F26E74FAC00E8EAF3 /* Info-macOS.plist in Resources */,
+				FAC58F8C26E74FAC00E8EAF3 /* Info-tvOS.plist in Resources */,
+				FAC58F8926E74FAC00E8EAF3 /* Info-iOS.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1633,49 +1985,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA14C96626E4CCA50007F37E /* db.json in Resources */,
-				FA14C9EF26E653B90007F37E /* rt.json in Resources */,
-				FA14C9F726E657790007F37E /* zvv.json in Resources */,
-				FA14C98726E606080007F37E /* mvv.json in Resources */,
-				FA14C99B26E61E000007F37E /* vvm.json in Resources */,
-				FA14C9C326E642DA0007F37E /* vsn.json in Resources */,
-				FA14C9E326E64EF90007F37E /* nvbw.json in Resources */,
-				FA14CA0326E65C1E0007F37E /* ooevv.json in Resources */,
-				FA14C9B726E62E390007F37E /* vvo.json in Resources */,
-				FA14CA0B26E65DF60007F37E /* ivb.json in Resources */,
-				FA14C98F26E611900007F37E /* avv2.json in Resources */,
-				FA14CA0F26E65EE40007F37E /* svv.json in Resources */,
-				FA14CA1326E65FF60007F37E /* stv.json in Resources */,
-				FA14C9BB26E640EC0007F37E /* vms.json in Resources */,
-				FA14C99326E612650007F37E /* vgn.json in Resources */,
-				FA14C9CB26E644D80007F37E /* vmt.json in Resources */,
-				FA14C9C726E643F00007F37E /* vos.json in Resources */,
-				FA14C9EB26E650C70007F37E /* vgs.json in Resources */,
-				FA14C9AF26E62A870007F37E /* bsvag.json in Resources */,
-				FA14C98B26E610900007F37E /* rmv.json in Resources */,
-				FA14C99726E6133B0007F37E /* invg.json in Resources */,
-				FA14C9B326E62B850007F37E /* vbn.json in Resources */,
-				FA14C97326E5FBFE0007F37E /* template.json in Resources */,
-				FA14C9F326E656920007F37E /* vbl.json in Resources */,
-				FA14C9A326E6277E0007F37E /* vmv.json in Resources */,
-				FA14C97726E5FDAD0007F37E /* vbb.json in Resources */,
-				FA14C9E726E6500C0007F37E /* vvv.json in Resources */,
-				FA14C9A726E628D80007F37E /* sh.json in Resources */,
-				FA14C9FB26E6585F0007F37E /* oebb.json in Resources */,
-				FA14C97B26E5FECD0007F37E /* hvv.json in Resources */,
-				FA14C99F26E626080007F37E /* nvv.json in Resources */,
-				FA14C9D326E647A80007F37E /* vrs.json in Resources */,
-				FA14C9CF26E646300007F37E /* vrr.json in Resources */,
-				FA14C97F26E600270007F37E /* bayern.json in Resources */,
-				FA14C9D726E64B0E0007F37E /* ding.json in Resources */,
-				FA14C9DF26E64D900007F37E /* vagfr.json in Resources */,
-				FA14C96F26E5FBF80007F37E /* bvg.json in Resources */,
-				FA14C9AB26E629BA0007F37E /* gvh.json in Resources */,
-				FA14C9FF26E65AF20007F37E /* wien.json in Resources */,
-				FA14C9DB26E64BC90007F37E /* kvv.json in Resources */,
-				FA14C9BF26E641BA0007F37E /* nasa.json in Resources */,
-				FA14CA0726E65D170007F37E /* linz.json in Resources */,
-				FA14C98326E604310007F37E /* avv.json in Resources */,
+				FAC58F8E26E74FAC00E8EAF3 /* Info-macOS.plist in Resources */,
+				FAC58F8B26E74FAC00E8EAF3 /* Info-tvOS.plist in Resources */,
+				FAC58F8826E74FAC00E8EAF3 /* Info-iOS.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1691,49 +2003,57 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA14C96526E4CCA50007F37E /* db.json in Resources */,
-				FA14C9EE26E653B90007F37E /* rt.json in Resources */,
-				FA14C9F626E657790007F37E /* zvv.json in Resources */,
-				FA14C98626E606080007F37E /* mvv.json in Resources */,
-				FA14C99A26E61E000007F37E /* vvm.json in Resources */,
-				FA14C9C226E642DA0007F37E /* vsn.json in Resources */,
-				FA14C9E226E64EF90007F37E /* nvbw.json in Resources */,
-				FA14CA0226E65C1E0007F37E /* ooevv.json in Resources */,
-				FA14C9B626E62E390007F37E /* vvo.json in Resources */,
-				FA14CA0A26E65DF60007F37E /* ivb.json in Resources */,
-				FA14C98E26E611900007F37E /* avv2.json in Resources */,
-				FA14CA0E26E65EE40007F37E /* svv.json in Resources */,
-				FA14CA1226E65FF60007F37E /* stv.json in Resources */,
-				FA14C9BA26E640EC0007F37E /* vms.json in Resources */,
-				FA14C99226E612650007F37E /* vgn.json in Resources */,
-				FA14C9CA26E644D80007F37E /* vmt.json in Resources */,
-				FA14C9C626E643F00007F37E /* vos.json in Resources */,
-				FA14C9EA26E650C70007F37E /* vgs.json in Resources */,
-				FA14C9AE26E62A870007F37E /* bsvag.json in Resources */,
-				FA14C98A26E610900007F37E /* rmv.json in Resources */,
-				FA14C99626E6133B0007F37E /* invg.json in Resources */,
-				FA14C9B226E62B850007F37E /* vbn.json in Resources */,
-				FA14C97226E5FBFE0007F37E /* template.json in Resources */,
-				FA14C9F226E656920007F37E /* vbl.json in Resources */,
-				FA14C9A226E6277E0007F37E /* vmv.json in Resources */,
-				FA14C97626E5FDAD0007F37E /* vbb.json in Resources */,
-				FA14C9E626E6500C0007F37E /* vvv.json in Resources */,
-				FA14C9A626E628D80007F37E /* sh.json in Resources */,
-				FA14C9FA26E6585F0007F37E /* oebb.json in Resources */,
-				FA14C97A26E5FECD0007F37E /* hvv.json in Resources */,
-				FA14C99E26E626080007F37E /* nvv.json in Resources */,
-				FA14C9D226E647A80007F37E /* vrs.json in Resources */,
-				FA14C9CE26E646300007F37E /* vrr.json in Resources */,
-				FA14C97E26E600270007F37E /* bayern.json in Resources */,
-				FA14C9D626E64B0E0007F37E /* ding.json in Resources */,
-				FA14C9DE26E64D900007F37E /* vagfr.json in Resources */,
-				FA14C96E26E5FBF80007F37E /* bvg.json in Resources */,
-				FA14C9AA26E629BA0007F37E /* gvh.json in Resources */,
-				FA14C9FE26E65AF20007F37E /* wien.json in Resources */,
-				FA14C9DA26E64BC90007F37E /* kvv.json in Resources */,
-				FA14C9BE26E641BA0007F37E /* nasa.json in Resources */,
-				FA14CA0626E65D170007F37E /* linz.json in Resources */,
-				FA14C98226E604310007F37E /* avv.json in Resources */,
+				FAC58F8D26E74FAC00E8EAF3 /* Info-macOS.plist in Resources */,
+				FAC58F8A26E74FAC00E8EAF3 /* Info-tvOS.plist in Resources */,
+				FAC58F8726E74FAC00E8EAF3 /* Info-iOS.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAE6E6BE26E6AB6A007E975A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAE6E6E826E6AC87007E975A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAE6E6F626E6AC95007E975A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAE6E71B26E6B40E007E975A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAC58F3E26E74D9C00E8EAF3 /* Fixtures in Resources */,
+				FAC58F7226E74EA000E8EAF3 /* Test Cases in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAE6E72726E6B41C007E975A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAC58F4026E74D9C00E8EAF3 /* Fixtures in Resources */,
+				FAC58F7426E74EA000E8EAF3 /* Test Cases in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAE6E73F26E6B43B007E975A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAC58F3F26E74D9C00E8EAF3 /* Fixtures in Resources */,
+				FAC58F7326E74EA000E8EAF3 /* Test Cases in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1945,7 +2265,6 @@
 				FA5CD32324FBB2BC00B4990A /* MvgProviderTests.swift in Sources */,
 				FA5CD31B24FBB2BC00B4990A /* VvoProviderTests.swift in Sources */,
 				FA5CD31824FBB2BC00B4990A /* GvhProviderTests.swift in Sources */,
-				FA14C96126E4CC0D0007F37E /* StaticTripKitTestCase.swift in Sources */,
 				FA5CD32C24FBB2BC00B4990A /* RtProviderTests.swift in Sources */,
 				FA5CD31624FBB2BC00B4990A /* VmvProviderTests.swift in Sources */,
 				FA5CD30924FBB2BC00B4990A /* DbProviderTests.swift in Sources */,
@@ -1954,7 +2273,6 @@
 				FA5CD32F24FBB2BC00B4990A /* ZvvProviderTests.swift in Sources */,
 				FA5CD31324FBB2BC00B4990A /* InvgProviderTests.swift in Sources */,
 				FA5CD33524FBB2BC00B4990A /* SvvProviderTests.swift in Sources */,
-				FA5CD30724FBB2BC00B4990A /* LineStyleTests.swift in Sources */,
 				FA5CD32A24FBB2BC00B4990A /* VvvProviderTests.swift in Sources */,
 				FA5CD33224FBB2BC00B4990A /* OoevvProviderTests.swift in Sources */,
 				FA5CD33024FBB2BC00B4990A /* OebbProviderTests.swift in Sources */,
@@ -1986,7 +2304,6 @@
 				FA5CD32424FBB2BC00B4990A /* VrnProviderTests.swift in Sources */,
 				FA5CD31C24FBB2BC00B4990A /* VmsProviderTests.swift in Sources */,
 				FA5CD32E24FBB2BC00B4990A /* VblProviderTests.swift in Sources */,
-				2DBA12A950327EFF0D7F2158 /* UrlEncodingTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2001,7 +2318,6 @@
 				FA5CD2F324FBB2BB00B4990A /* MvgProviderTests.swift in Sources */,
 				FA5CD2EB24FBB2BB00B4990A /* VvoProviderTests.swift in Sources */,
 				FA5CD2E824FBB2BB00B4990A /* GvhProviderTests.swift in Sources */,
-				FA14C96026E4CC0D0007F37E /* StaticTripKitTestCase.swift in Sources */,
 				FA5CD2FC24FBB2BB00B4990A /* RtProviderTests.swift in Sources */,
 				FA5CD2E624FBB2BB00B4990A /* VmvProviderTests.swift in Sources */,
 				FA5CD2D924FBB2BB00B4990A /* DbProviderTests.swift in Sources */,
@@ -2010,7 +2326,6 @@
 				FA5CD2FF24FBB2BB00B4990A /* ZvvProviderTests.swift in Sources */,
 				FA5CD2E324FBB2BB00B4990A /* InvgProviderTests.swift in Sources */,
 				FA5CD30524FBB2BB00B4990A /* SvvProviderTests.swift in Sources */,
-				FA5CD2D724FBB2BB00B4990A /* LineStyleTests.swift in Sources */,
 				FA5CD2FA24FBB2BB00B4990A /* VvvProviderTests.swift in Sources */,
 				FA5CD30224FBB2BB00B4990A /* OoevvProviderTests.swift in Sources */,
 				FA5CD30024FBB2BB00B4990A /* OebbProviderTests.swift in Sources */,
@@ -2042,7 +2357,6 @@
 				FA5CD2F424FBB2BB00B4990A /* VrnProviderTests.swift in Sources */,
 				FA5CD2EC24FBB2BB00B4990A /* VmsProviderTests.swift in Sources */,
 				FA5CD2FE24FBB2BB00B4990A /* VblProviderTests.swift in Sources */,
-				2DBA1A7C53A1A718477ED374 /* UrlEncodingTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2150,11 +2464,9 @@
 				FA8FE6472272F823003CE4B4 /* IvbProviderTests.swift in Sources */,
 				FA8FE6172272F6B3003CE4B4 /* VmsProviderTests.swift in Sources */,
 				FA8FE60F227214EE003CE4B4 /* GvhProviderTests.swift in Sources */,
-				FA14C95F26E4CC0D0007F37E /* StaticTripKitTestCase.swift in Sources */,
 				FA8FE60B227214D3003CE4B4 /* VmvProviderTests.swift in Sources */,
 				FA8FE62D2272F769003CE4B4 /* KvvProviderTests.swift in Sources */,
 				FA8FE6232272F706003CE4B4 /* VrsProviderTests.swift in Sources */,
-				FA8F313D1E85A41C00E6CE9B /* LineStyleTests.swift in Sources */,
 				FA8FE64B2272F837003CE4B4 /* StvProviderTests.swift in Sources */,
 				FA8FE6452272F818003CE4B4 /* LinzProviderTests.swift in Sources */,
 				FA8FE6372272F7AB003CE4B4 /* RtProviderTests.swift in Sources */,
@@ -2191,7 +2503,195 @@
 				FA8FE6332272F793003CE4B4 /* VvvProviderTests.swift in Sources */,
 				FA8FE60322721470003CE4B4 /* VgnProviderTests.swift in Sources */,
 				FA8FE60D227214DE003CE4B4 /* ShProviderTests.swift in Sources */,
-				2DBA18BF2BED70736D42DB40 /* UrlEncodingTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAE6E6BC26E6AB6A007E975A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAC5909726E7509800E8EAF3 /* VgnProviderTests.swift in Sources */,
+				FAC5900D26E7507E00E8EAF3 /* KvvProviderTests.swift in Sources */,
+				FAC5909126E7509800E8EAF3 /* VrrProviderTests.swift in Sources */,
+				FAE6E70626E6ACBF007E975A /* TripKitTestCase.swift in Sources */,
+				FAC5908826E7509700E8EAF3 /* VvsProviderTests.swift in Sources */,
+				FAC5903B26E7508900E8EAF3 /* RmvProviderTests.swift in Sources */,
+				FAC5901026E7507E00E8EAF3 /* AvvAachenProviderTests.swift in Sources */,
+				FAC5901C26E7507E00E8EAF3 /* BayernProviderTests.swift in Sources */,
+				FAC5907C26E7509700E8EAF3 /* VosProviderTests.swift in Sources */,
+				FAC5907926E7509700E8EAF3 /* VmsProviderTests.swift in Sources */,
+				FAE6E70726E6ACBF007E975A /* LineStyleTests.swift in Sources */,
+				FAC5901F26E7507E00E8EAF3 /* DingProviderTests.swift in Sources */,
+				FAC5904726E7508900E8EAF3 /* LinzProviderTests.swift in Sources */,
+				FAC5907626E7509700E8EAF3 /* VmtProviderTests.swift in Sources */,
+				FAC5905926E7508900E8EAF3 /* OebbProviderTests.swift in Sources */,
+				FAC590A626E7509800E8EAF3 /* VvoProviderTests.swift in Sources */,
+				FAC5907326E7509700E8EAF3 /* VgsProviderTests.swift in Sources */,
+				FAC5907F26E7509700E8EAF3 /* WienProviderTests.swift in Sources */,
+				FAC5909426E7509800E8EAF3 /* VbnProviderTests.swift in Sources */,
+				FAC590A926E7509800E8EAF3 /* VblProviderTests.swift in Sources */,
+				FAC5908B26E7509800E8EAF3 /* VvvProviderTests.swift in Sources */,
+				FAC5909A26E7509800E8EAF3 /* VagfrProviderTests.swift in Sources */,
+				FAC5905026E7508900E8EAF3 /* MvgProviderTests.swift in Sources */,
+				FAC5905626E7508900E8EAF3 /* StvProviderTests.swift in Sources */,
+				FAC5901326E7507E00E8EAF3 /* AvvAugsburgProviderTests.swift in Sources */,
+				FAC5908E26E7509800E8EAF3 /* VrnProviderTests.swift in Sources */,
+				FAC5907026E7509700E8EAF3 /* VrsProviderTests.swift in Sources */,
+				FAC590A026E7509800E8EAF3 /* VmvProviderTests.swift in Sources */,
+				FAC5900A26E7507E00E8EAF3 /* IvbProviderTests.swift in Sources */,
+				FAC5903526E7508900E8EAF3 /* MvvProviderTests.swift in Sources */,
+				FAC5903E26E7508900E8EAF3 /* RtProviderTests.swift in Sources */,
+				FAC5904426E7508900E8EAF3 /* ShProviderTests.swift in Sources */,
+				FAC5904A26E7508900E8EAF3 /* OoevvProviderTests.swift in Sources */,
+				FAC5905326E7508900E8EAF3 /* NvbwProviderTests.swift in Sources */,
+				FAC5904126E7508900E8EAF3 /* NasaProviderTests.swift in Sources */,
+				FAC5901926E7507E00E8EAF3 /* BvgProviderTests.swift in Sources */,
+				FAC590A326E7509800E8EAF3 /* VvmProviderTests.swift in Sources */,
+				FAC5901626E7507E00E8EAF3 /* DbProviderTests.swift in Sources */,
+				FAC5904D26E7508900E8EAF3 /* NvvProviderTests.swift in Sources */,
+				FAC5902226E7507E00E8EAF3 /* BsvagProviderTests.swift in Sources */,
+				FAC5908526E7509700E8EAF3 /* ZvvProviderTests.swift in Sources */,
+				FAC5909D26E7509800E8EAF3 /* VbbProviderTests.swift in Sources */,
+				FAC5902526E7507E00E8EAF3 /* GvhProviderTests.swift in Sources */,
+				FAE6E70926E6ACBF007E975A /* UrlEncodingTests.swift in Sources */,
+				FAC5908226E7509700E8EAF3 /* VsnProviderTests.swift in Sources */,
+				FAC5900726E7507D00E8EAF3 /* InvgProviderTests.swift in Sources */,
+				FAC5903826E7508900E8EAF3 /* SvvProviderTests.swift in Sources */,
+				FAC5900426E7507D00E8EAF3 /* HvvProviderTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAE6E6E626E6AC87007E975A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAC5909926E7509800E8EAF3 /* VgnProviderTests.swift in Sources */,
+				FAC5900F26E7507E00E8EAF3 /* KvvProviderTests.swift in Sources */,
+				FAC5909326E7509800E8EAF3 /* VrrProviderTests.swift in Sources */,
+				FAE6E70F26E6ACC2007E975A /* LineStyleTests.swift in Sources */,
+				FAC5908A26E7509800E8EAF3 /* VvsProviderTests.swift in Sources */,
+				FAC5903D26E7508900E8EAF3 /* RmvProviderTests.swift in Sources */,
+				FAC5901226E7507E00E8EAF3 /* AvvAachenProviderTests.swift in Sources */,
+				FAC5901E26E7507E00E8EAF3 /* BayernProviderTests.swift in Sources */,
+				FAC5907E26E7509700E8EAF3 /* VosProviderTests.swift in Sources */,
+				FAC5907B26E7509700E8EAF3 /* VmsProviderTests.swift in Sources */,
+				FAE6E71126E6ACC2007E975A /* UrlEncodingTests.swift in Sources */,
+				FAC5902126E7507E00E8EAF3 /* DingProviderTests.swift in Sources */,
+				FAC5904926E7508900E8EAF3 /* LinzProviderTests.swift in Sources */,
+				FAC5907826E7509700E8EAF3 /* VmtProviderTests.swift in Sources */,
+				FAC5905B26E7508900E8EAF3 /* OebbProviderTests.swift in Sources */,
+				FAC590A826E7509800E8EAF3 /* VvoProviderTests.swift in Sources */,
+				FAC5907526E7509700E8EAF3 /* VgsProviderTests.swift in Sources */,
+				FAC5908126E7509700E8EAF3 /* WienProviderTests.swift in Sources */,
+				FAC5909626E7509800E8EAF3 /* VbnProviderTests.swift in Sources */,
+				FAC590AB26E7509800E8EAF3 /* VblProviderTests.swift in Sources */,
+				FAC5908D26E7509800E8EAF3 /* VvvProviderTests.swift in Sources */,
+				FAC5909C26E7509800E8EAF3 /* VagfrProviderTests.swift in Sources */,
+				FAC5905226E7508900E8EAF3 /* MvgProviderTests.swift in Sources */,
+				FAC5905826E7508900E8EAF3 /* StvProviderTests.swift in Sources */,
+				FAC5901526E7507E00E8EAF3 /* AvvAugsburgProviderTests.swift in Sources */,
+				FAC5909026E7509800E8EAF3 /* VrnProviderTests.swift in Sources */,
+				FAC5907226E7509700E8EAF3 /* VrsProviderTests.swift in Sources */,
+				FAC590A226E7509800E8EAF3 /* VmvProviderTests.swift in Sources */,
+				FAC5900C26E7507E00E8EAF3 /* IvbProviderTests.swift in Sources */,
+				FAC5903726E7508900E8EAF3 /* MvvProviderTests.swift in Sources */,
+				FAC5904026E7508900E8EAF3 /* RtProviderTests.swift in Sources */,
+				FAC5904626E7508900E8EAF3 /* ShProviderTests.swift in Sources */,
+				FAC5904C26E7508900E8EAF3 /* OoevvProviderTests.swift in Sources */,
+				FAC5905526E7508900E8EAF3 /* NvbwProviderTests.swift in Sources */,
+				FAC5904326E7508900E8EAF3 /* NasaProviderTests.swift in Sources */,
+				FAC5901B26E7507E00E8EAF3 /* BvgProviderTests.swift in Sources */,
+				FAC590A526E7509800E8EAF3 /* VvmProviderTests.swift in Sources */,
+				FAC5901826E7507E00E8EAF3 /* DbProviderTests.swift in Sources */,
+				FAC5904F26E7508900E8EAF3 /* NvvProviderTests.swift in Sources */,
+				FAC5902426E7507E00E8EAF3 /* BsvagProviderTests.swift in Sources */,
+				FAC5908726E7509700E8EAF3 /* ZvvProviderTests.swift in Sources */,
+				FAC5909F26E7509800E8EAF3 /* VbbProviderTests.swift in Sources */,
+				FAC5902726E7507E00E8EAF3 /* GvhProviderTests.swift in Sources */,
+				FAE6E70E26E6ACC2007E975A /* TripKitTestCase.swift in Sources */,
+				FAC5908426E7509700E8EAF3 /* VsnProviderTests.swift in Sources */,
+				FAC5900926E7507D00E8EAF3 /* InvgProviderTests.swift in Sources */,
+				FAC5903A26E7508900E8EAF3 /* SvvProviderTests.swift in Sources */,
+				FAC5900626E7507D00E8EAF3 /* HvvProviderTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAE6E6F426E6AC95007E975A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAC5909826E7509800E8EAF3 /* VgnProviderTests.swift in Sources */,
+				FAC5900E26E7507E00E8EAF3 /* KvvProviderTests.swift in Sources */,
+				FAC5909226E7509800E8EAF3 /* VrrProviderTests.swift in Sources */,
+				FAE6E70B26E6ACC1007E975A /* LineStyleTests.swift in Sources */,
+				FAC5908926E7509700E8EAF3 /* VvsProviderTests.swift in Sources */,
+				FAC5903C26E7508900E8EAF3 /* RmvProviderTests.swift in Sources */,
+				FAC5901126E7507E00E8EAF3 /* AvvAachenProviderTests.swift in Sources */,
+				FAC5901D26E7507E00E8EAF3 /* BayernProviderTests.swift in Sources */,
+				FAC5907D26E7509700E8EAF3 /* VosProviderTests.swift in Sources */,
+				FAC5907A26E7509700E8EAF3 /* VmsProviderTests.swift in Sources */,
+				FAE6E70D26E6ACC1007E975A /* UrlEncodingTests.swift in Sources */,
+				FAC5902026E7507E00E8EAF3 /* DingProviderTests.swift in Sources */,
+				FAC5904826E7508900E8EAF3 /* LinzProviderTests.swift in Sources */,
+				FAC5907726E7509700E8EAF3 /* VmtProviderTests.swift in Sources */,
+				FAC5905A26E7508900E8EAF3 /* OebbProviderTests.swift in Sources */,
+				FAC590A726E7509800E8EAF3 /* VvoProviderTests.swift in Sources */,
+				FAC5907426E7509700E8EAF3 /* VgsProviderTests.swift in Sources */,
+				FAC5908026E7509700E8EAF3 /* WienProviderTests.swift in Sources */,
+				FAC5909526E7509800E8EAF3 /* VbnProviderTests.swift in Sources */,
+				FAC590AA26E7509800E8EAF3 /* VblProviderTests.swift in Sources */,
+				FAC5908C26E7509800E8EAF3 /* VvvProviderTests.swift in Sources */,
+				FAC5909B26E7509800E8EAF3 /* VagfrProviderTests.swift in Sources */,
+				FAC5905126E7508900E8EAF3 /* MvgProviderTests.swift in Sources */,
+				FAC5905726E7508900E8EAF3 /* StvProviderTests.swift in Sources */,
+				FAC5901426E7507E00E8EAF3 /* AvvAugsburgProviderTests.swift in Sources */,
+				FAC5908F26E7509800E8EAF3 /* VrnProviderTests.swift in Sources */,
+				FAC5907126E7509700E8EAF3 /* VrsProviderTests.swift in Sources */,
+				FAC590A126E7509800E8EAF3 /* VmvProviderTests.swift in Sources */,
+				FAC5900B26E7507E00E8EAF3 /* IvbProviderTests.swift in Sources */,
+				FAC5903626E7508900E8EAF3 /* MvvProviderTests.swift in Sources */,
+				FAC5903F26E7508900E8EAF3 /* RtProviderTests.swift in Sources */,
+				FAC5904526E7508900E8EAF3 /* ShProviderTests.swift in Sources */,
+				FAC5904B26E7508900E8EAF3 /* OoevvProviderTests.swift in Sources */,
+				FAC5905426E7508900E8EAF3 /* NvbwProviderTests.swift in Sources */,
+				FAC5904226E7508900E8EAF3 /* NasaProviderTests.swift in Sources */,
+				FAC5901A26E7507E00E8EAF3 /* BvgProviderTests.swift in Sources */,
+				FAC590A426E7509800E8EAF3 /* VvmProviderTests.swift in Sources */,
+				FAC5901726E7507E00E8EAF3 /* DbProviderTests.swift in Sources */,
+				FAC5904E26E7508900E8EAF3 /* NvvProviderTests.swift in Sources */,
+				FAC5902326E7507E00E8EAF3 /* BsvagProviderTests.swift in Sources */,
+				FAC5908626E7509700E8EAF3 /* ZvvProviderTests.swift in Sources */,
+				FAC5909E26E7509800E8EAF3 /* VbbProviderTests.swift in Sources */,
+				FAC5902626E7507E00E8EAF3 /* GvhProviderTests.swift in Sources */,
+				FAE6E70A26E6ACC1007E975A /* TripKitTestCase.swift in Sources */,
+				FAC5908326E7509700E8EAF3 /* VsnProviderTests.swift in Sources */,
+				FAC5900826E7507D00E8EAF3 /* InvgProviderTests.swift in Sources */,
+				FAC5903926E7508900E8EAF3 /* SvvProviderTests.swift in Sources */,
+				FAC5900526E7507D00E8EAF3 /* HvvProviderTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAE6E71926E6B40E007E975A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAA931AC26E6B4C700D4CF61 /* TestUtils.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAE6E72526E6B41C007E975A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAA931AA26E6B4C600D4CF61 /* TestUtils.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAE6E73D26E6B43B007E975A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAA931AB26E6B4C700D4CF61 /* TestUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2301,10 +2801,70 @@
 			target = FA5CD1D224FBB10C00B4990A /* TripKit tvOS */;
 			targetProxy = FA5CD22424FBB1FC00B4990A /* PBXContainerItemProxy */;
 		};
+		FAA9319D26E6B49300D4CF61 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FAE6E71C26E6B40E007E975A /* TestsCommon iOS */;
+			targetProxy = FAA9319C26E6B49300D4CF61 /* PBXContainerItemProxy */;
+		};
+		FAA9319F26E6B49800D4CF61 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FAE6E74026E6B43B007E975A /* TestsCommon tvOS */;
+			targetProxy = FAA9319E26E6B49800D4CF61 /* PBXContainerItemProxy */;
+		};
+		FAA931A226E6B4A400D4CF61 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FAE6E74026E6B43B007E975A /* TestsCommon tvOS */;
+			targetProxy = FAA931A126E6B4A400D4CF61 /* PBXContainerItemProxy */;
+		};
+		FAA931A526E6B4AA00D4CF61 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FAE6E72826E6B41C007E975A /* TestsCommon macOS */;
+			targetProxy = FAA931A426E6B4AA00D4CF61 /* PBXContainerItemProxy */;
+		};
+		FAA931A826E6B4AF00D4CF61 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FAE6E72826E6B41C007E975A /* TestsCommon macOS */;
+			targetProxy = FAA931A726E6B4AF00D4CF61 /* PBXContainerItemProxy */;
+		};
 		FACB83CF1E3FD0CE00AC5F1F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = FACB83C21E3FD0CE00AC5F1F /* TripKit iOS */;
 			targetProxy = FACB83CE1E3FD0CE00AC5F1F /* PBXContainerItemProxy */;
+		};
+		FAD0168B26E6B63100331098 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FACB83C21E3FD0CE00AC5F1F /* TripKit iOS */;
+			targetProxy = FAD0168A26E6B63100331098 /* PBXContainerItemProxy */;
+		};
+		FAD0169026E6B63D00331098 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FA5CD1D224FBB10C00B4990A /* TripKit tvOS */;
+			targetProxy = FAD0168F26E6B63D00331098 /* PBXContainerItemProxy */;
+		};
+		FAD0169526E6B64300331098 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FA5CD1FA24FBB1D200B4990A /* TripKit macOS */;
+			targetProxy = FAD0169426E6B64300331098 /* PBXContainerItemProxy */;
+		};
+		FAE6E6C626E6AB6A007E975A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FACB83C21E3FD0CE00AC5F1F /* TripKit iOS */;
+			targetProxy = FAE6E6C526E6AB6A007E975A /* PBXContainerItemProxy */;
+		};
+		FAE6E6F026E6AC87007E975A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FA5CD1FA24FBB1D200B4990A /* TripKit macOS */;
+			targetProxy = FAE6E6EF26E6AC87007E975A /* PBXContainerItemProxy */;
+		};
+		FAE6E6FE26E6AC95007E975A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FA5CD1D224FBB10C00B4990A /* TripKit tvOS */;
+			targetProxy = FAE6E6FD26E6AC95007E975A /* PBXContainerItemProxy */;
+		};
+		FAE6E74926E6B45D007E975A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FAE6E71C26E6B40E007E975A /* TestsCommon iOS */;
+			targetProxy = FAE6E74826E6B45D007E975A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -2460,13 +3020,13 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = "Tests/TripKitTests/Info-macOS.plist";
+				INFOPLIST_FILE = "Tests/TripKitTests/Supporting Files/Info-macOS.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "de.alex-albers.TripKit-macOSTests";
@@ -2489,13 +3049,13 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = "Tests/TripKitTests/Info-macOS.plist";
+				INFOPLIST_FILE = "Tests/TripKitTests/Supporting Files/Info-macOS.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "de.alex-albers.TripKit-macOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2516,7 +3076,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = "Tests/TripKitTests/Info-tvOS.plist";
+				INFOPLIST_FILE = "Tests/TripKitTests/Supporting Files/Info-tvOS.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2545,7 +3105,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = "Tests/TripKitTests/Info-tvOS.plist";
+				INFOPLIST_FILE = "Tests/TripKitTests/Supporting Files/Info-tvOS.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2750,9 +3310,10 @@
 		FACB83DB1E3FD0CE00AC5F1F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = "Tests/TripKitTests/Info-iOS.plist";
+				INFOPLIST_FILE = "Tests/TripKitTests/Supporting Files/Info-iOS.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2769,9 +3330,10 @@
 		FACB83DC1E3FD0CE00AC5F1F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = "Tests/TripKitTests/Info-iOS.plist";
+				INFOPLIST_FILE = "Tests/TripKitTests/Supporting Files/Info-iOS.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2782,6 +3344,424 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		FAE6E6C826E6AB6A007E975A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WXV3RC5BLX;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "de.alex-albers.StaticTripKitTests-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FAE6E6C926E6AB6A007E975A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WXV3RC5BLX;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "de.alex-albers.StaticTripKitTests-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FAE6E6F226E6AC87007E975A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WXV3RC5BLX;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.5;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "de.alex-albers.StaticTripKitTests-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		FAE6E6F326E6AC87007E975A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WXV3RC5BLX;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.5;
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "de.alex-albers.StaticTripKitTests-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		FAE6E70026E6AC95007E975A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WXV3RC5BLX;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "de.alex-albers.StaticTripKitTests-tvOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 15.0;
+			};
+			name = Debug;
+		};
+		FAE6E70126E6AC95007E975A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WXV3RC5BLX;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "de.alex-albers.StaticTripKitTests-tvOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 15.0;
+			};
+			name = Release;
+		};
+		FAE6E72226E6B40E007E975A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = WXV3RC5BLX;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2021 Alexander Albers. All rights reserved.";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "de.alex-albers.TestsCommon-iOS";
+				PRODUCT_NAME = TestsCommon;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG XCODE_BUILD";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FAE6E72326E6B40E007E975A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = WXV3RC5BLX;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2021 Alexander Albers. All rights reserved.";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "de.alex-albers.TestsCommon-iOS";
+				PRODUCT_NAME = TestsCommon;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FAE6E72E26E6B41C007E975A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = WXV3RC5BLX;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2021 Alexander Albers. All rights reserved.";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "de.alex-albers.TestsCommon-macOS";
+				PRODUCT_NAME = TestsCommon;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG XCODE_BUILD";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		FAE6E72F26E6B41C007E975A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = WXV3RC5BLX;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2021 Alexander Albers. All rights reserved.";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "de.alex-albers.TestsCommon-macOS";
+				PRODUCT_NAME = TestsCommon;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		FAE6E74626E6B43B007E975A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = WXV3RC5BLX;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2021 Alexander Albers. All rights reserved.";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "de.alex-albers.TestsCommon-tvOS";
+				PRODUCT_NAME = TestsCommon;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG XCODE_BUILD";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Debug;
+		};
+		FAE6E74726E6B43B007E975A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = WXV3RC5BLX;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2021 Alexander Albers. All rights reserved.";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "de.alex-albers.TestsCommon-tvOS";
+				PRODUCT_NAME = TestsCommon;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 10.0;
 			};
 			name = Release;
 		};
@@ -2912,6 +3892,60 @@
 			buildConfigurations = (
 				FACB83DB1E3FD0CE00AC5F1F /* Debug */,
 				FACB83DC1E3FD0CE00AC5F1F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAE6E6C726E6AB6A007E975A /* Build configuration list for PBXNativeTarget "StaticTripKitTests iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAE6E6C826E6AB6A007E975A /* Debug */,
+				FAE6E6C926E6AB6A007E975A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAE6E6F126E6AC87007E975A /* Build configuration list for PBXNativeTarget "StaticTripKitTests macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAE6E6F226E6AC87007E975A /* Debug */,
+				FAE6E6F326E6AC87007E975A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAE6E6FF26E6AC95007E975A /* Build configuration list for PBXNativeTarget "StaticTripKitTests tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAE6E70026E6AC95007E975A /* Debug */,
+				FAE6E70126E6AC95007E975A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAE6E72126E6B40E007E975A /* Build configuration list for PBXNativeTarget "TestsCommon iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAE6E72226E6B40E007E975A /* Debug */,
+				FAE6E72326E6B40E007E975A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAE6E72D26E6B41C007E975A /* Build configuration list for PBXNativeTarget "TestsCommon macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAE6E72E26E6B41C007E975A /* Debug */,
+				FAE6E72F26E6B41C007E975A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAE6E74526E6B43B007E975A /* Build configuration list for PBXNativeTarget "TestsCommon tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAE6E74626E6B43B007E975A /* Debug */,
+				FAE6E74726E6B43B007E975A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
