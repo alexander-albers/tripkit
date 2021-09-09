@@ -1916,12 +1916,12 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
     func processIndividualLeg(_ xml: XMLIndexer, _ legs: inout [Leg], _ type: IndividualLeg.`Type`, _ departureTime: Date, _ departureLocation: Location, _ arrivalTime: Date, _ arrivalLocation: Location) {
         var path: [LocationPoint] = processItdPathCoordinates(xml["itdPathCoordinates"]) ?? []
         
+        let addTime: TimeInterval = !legs.isEmpty ? max(0, -departureTime.timeIntervalSince(legs.last!.getMaxTime())) : 0
         if let lastLeg = legs.last as? IndividualLeg, lastLeg.type == type {
             legs.removeLast()
             path.insert(contentsOf: lastLeg.path, at: 0)
-            legs.append(IndividualLeg(type: type, departureTime: lastLeg.departureTime, departure: lastLeg.departure, arrival: arrivalLocation, arrivalTime: arrivalTime, distance: 0, path: path))
+            legs.append(IndividualLeg(type: type, departureTime: lastLeg.departureTime, departure: lastLeg.departure, arrival: arrivalLocation, arrivalTime: arrivalTime.addingTimeInterval(addTime), distance: 0, path: path))
         } else {
-            let addTime: TimeInterval = !legs.isEmpty ? max(0, -departureTime.timeIntervalSince(legs.last!.getMaxTime())) : 0
             let leg = IndividualLeg(type: type, departureTime: departureTime.addingTimeInterval(addTime), departure: departureLocation, arrival: arrivalLocation, arrivalTime: arrivalTime.addingTimeInterval(addTime), distance: 0, path: path)
             legs.append(leg)
         }
