@@ -376,7 +376,9 @@ class TripKitProviderTestCase: XCTestCase {
     }
     
     func saveFixture(name: String, input: Data?, output: Any?) {
-        #if XCODE_BUILD
+        guard let _ = ProcessInfo.processInfo.environment["SAVE_FIXTURES"] else {
+            return
+        }
         guard let input = input else {
             XCTAssert(false, "No result fetched!")
             return
@@ -395,7 +397,6 @@ class TripKitProviderTestCase: XCTestCase {
         } catch let error as NSError {
             os_log("Failed to save fixture %@: %@", log: .testsLogger, type: .error, name, error.description)
         }
-        #endif
     }
     
     func parseTestCaseLocation(_ json: JSON) -> Location {
