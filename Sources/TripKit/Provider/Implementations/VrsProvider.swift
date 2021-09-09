@@ -915,12 +915,8 @@ public class VrsProvider: AbstractNetworkProvider {
     }
     
     func formatDate(from date: Date) -> String {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd'T'kk:mm:ss"
-        dateFormatter.timeZone = TimeZone(abbreviation: "UTC")
-        dateFormatter.locale = Locale(identifier: "de_DE")
-        
-        return dateFormatter.string(from: date) + "Z"
+        let dateFormatter = ISO8601DateFormatter()
+        return dateFormatter.string(from: date)
     }
     
     func generateProducts(from products: [Product]?) -> String? {
@@ -976,8 +972,7 @@ public class VrsProvider: AbstractNetworkProvider {
     }
     
     func parseDateTime(from dateTimeString: String) -> Date? {
-        let dateFormat = DateFormatter()
-        dateFormat.dateFormat = "yyyy-MM-dd'T'kk:mm:ssxxxxx"
+        let dateFormat = ISO8601DateFormatter()
         guard let date = dateFormat.date(from: dateTimeString) else { return nil }
         let timeInterval = floor(date.timeIntervalSinceReferenceDate / 60.0) * 60.0
         return Date(timeIntervalSinceReferenceDate: timeInterval)
