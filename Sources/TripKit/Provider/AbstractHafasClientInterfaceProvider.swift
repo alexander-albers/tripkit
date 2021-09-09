@@ -551,12 +551,14 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         }
         let remList = common["remL"] as? [Any]
         let himList = common["himL"] as? [Any]
+        let polyList = common["polyL"] as? [Any]
         
         let locations = try parseLocList(locList: locList)
         let operators = try parseOpList(opList: opList)
         let lines = try parseProdList(prodList: prodList, operators: operators)
         let rems = try parseRemList(remList: remList)
         let messages = try parseMessageList(himList: himList)
+        let encodedPolyList = try parsePolyList(polyL: polyList)
         let outConL = res["outConL"] as? [Any] ?? []
         if outConL.isEmpty {
             completion(request, .noTrips)
@@ -607,12 +609,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
                         intermediateStops.removeLast()
                     }
                     
-                    let path: [LocationPoint]
-                    if let polyline = try? decodePolyline(from: (jny["poly"] as? [String: Any])?["crdEncYX"] as? String) {
-                        path = polyline
-                    } else {
-                        path = []
-                    }
+                    let path = parsePath(encodedPolyList: encodedPolyList, jny: jny)
                     
                     if cancelled {
                         intermediateStops.forEach({$0.departureCancelled = true; $0.arrivalCancelled = true})
@@ -633,16 +630,18 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
                     guard let departureStop = try parseStop(dict: dep, locations: locations, rems: rems, baseDate: baseDate, line: nil), let arrivalStop = try parseStop(dict: arr, locations: locations, rems: rems, baseDate: baseDate, line: nil) else { throw ParseError(reason: "failed to parse departure/arrival stop") }
                     guard let gis = sec["gis"] as? [String: Any] else { throw ParseError(reason: "failed to parse outcon gis") }
                     let distance = gis["distance"] as? Int ?? 0
-                    processIndividualLeg(legs: &legs, type: .WALK, departureStop: departureStop, arrivalStop: arrivalStop, distance: distance, path: [])
+                    let path = parsePath(encodedPolyList: encodedPolyList, jny: gis)
+                    processIndividualLeg(legs: &legs, type: .WALK, departureStop: departureStop, arrivalStop: arrivalStop, distance: distance, path: path)
                 case "KISS":
                     guard let departureStop = try parseStop(dict: dep, locations: locations, rems: rems, baseDate: baseDate, line: nil), let arrivalStop = try parseStop(dict: arr, locations: locations, rems: rems, baseDate: baseDate, line: nil) else { throw ParseError(reason: "failed to parse departure/arrival stop") }
                     guard let gis = sec["gis"] as? [String: Any] else { throw ParseError(reason: "failed to parse outcon gis") }
+                    let path = parsePath(encodedPolyList: encodedPolyList, jny: gis)
                     let distance = gis["distance"] as? Int ?? 0
                     if let mcp = dep["mcp"] as? [String: Any], let mcpData = mcp["mcpData"] as? [String: Any], let provider = mcpData["provider"] as? String, let providerName = mcpData["providerName"] as? String, provider == "berlkoenig" {
                         let line = Line(id: nil, network: nil, product: .onDemand, label: providerName, name: providerName, number: nil, vehicleNumber: nil, style: lineStyle(network: nil, product: .onDemand, label: providerName), attr: nil, message: nil, direction: nil)
-                        legs.append(PublicLeg(line: line, destination: arrivalStop.location, departureStop: departureStop, arrivalStop: arrivalStop, intermediateStops: [], message: nil, path: [], journeyContext: nil))
+                        legs.append(PublicLeg(line: line, destination: arrivalStop.location, departureStop: departureStop, arrivalStop: arrivalStop, intermediateStops: [], message: nil, path: path, journeyContext: nil))
                     } else {
-                        processIndividualLeg(legs: &legs, type: .WALK, departureStop: departureStop, arrivalStop: arrivalStop, distance: distance, path: [])
+                        processIndividualLeg(legs: &legs, type: .WALK, departureStop: departureStop, arrivalStop: arrivalStop, distance: distance, path: path)
                     }
                 default:
                     throw ParseError(reason: "could not parse outcon sec type \(sec["type"] as? String ?? "")")
@@ -1263,6 +1262,28 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
             }
         }
         return (legMessages, attrs, cancelled)
+    }
+    
+    private func parsePolyList(polyL: [Any]?) throws -> [String]? {
+        guard let polyL = polyL as? [[String: Any]] else { return nil }
+        var result: [String] = []
+        for poly in polyL {
+            guard let coords = poly["crdEncYX"] as? String else { throw ParseError(reason: "failed to parse poly list") }
+            result.append(coords)
+        }
+        return result
+    }
+    
+    private func parsePath(encodedPolyList: [String]?, jny: [String: Any]) -> [LocationPoint] {
+        let path: [LocationPoint]
+        if let coords = (jny["poly"] as? [String: Any])?["crdEncYX"] as? String, let polyline = try? decodePolyline(from: coords) {
+            path = polyline
+        } else if let polyG = jny["polyG"] as? [String: Any], let polyXL = polyG["polyXL"] as? [Int], let polyX = polyXL.first, let polyline = try? decodePolyline(from: encodedPolyList?[polyX]) {
+            path = polyline
+        } else {
+            path = []
+        }
+        return path
     }
     
     func newLine(network: String?, product: Product?, name: String?, shortName: String?, number: String?, vehicleNumber: String?) -> Line {
