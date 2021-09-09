@@ -6,6 +6,9 @@ TripKit is built using Swift 5.0 and requires iOS 10.0/watchOS 3.0/tvOS 10.0/mac
 
 This library is currently used by the [ÖPNV Navigator app](http://navigatorapp.net) in the iOS App Store.
 
+![Static tests](https://github.com/alexander-albers/tripkit/actions/workflows/test-static.yml/badge.svg)
+![Provider tests](https://github.com/alexander-albers/tripkit/actions/workflows/test-providers.yml/badge.svg)
+
 ## Example Usage
 
 ### Create a new instance of a network provider:
