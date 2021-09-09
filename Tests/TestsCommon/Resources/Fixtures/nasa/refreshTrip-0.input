@@ -1,7 +1,7 @@
 {
   "ver":"1.15",
   "lang":"deu",
-  "id":"bt6c3gx642xhpwck",
+  "id":"vsku4mxm6sx4yick",
   "svcResL":
   [
     {
@@ -83,33 +83,16 @@
               "pCls":96
             },
             {
-              "lid":"A=1@O=Leipzig, Gerichtsweg@X=12395190@Y=51339094@U=80@L=11064@i=A×de:14713:11064@",
+              "lid":"A=1@O=Leipzig, Reclamstr.@X=12399846@Y=51339301@U=80@L=6465@i=A×de:14713:6465@",
               "type":"S",
-              "name":"Leipzig, Gerichtsweg",
-              "icoX":0,
-              "extId":"11064",
-              "state":"F",
-              "crd":
-              {
-                "x":12395190,
-                "y":51339094,
-                "type":"WGS84",
-                "layerX":0,
-                "crdSysX":0
-              },
-              "pCls":96
-            },
-            {
-              "lid":"A=1@O=Leipzig, Pommernstr.@X=12428899@Y=51331193@U=80@L=12155@i=A×de:14713:12155@",
-              "type":"S",
-              "name":"Leipzig, Pommernstr.",
+              "name":"Leipzig, Reclamstr.",
               "icoX":1,
-              "extId":"12155",
+              "extId":"6465",
               "state":"F",
               "crd":
               {
-                "x":12428899,
-                "y":51331193,
+                "x":12399846,
+                "y":51339301,
                 "type":"WGS84",
                 "layerX":0,
                 "crdSysX":0
@@ -117,10 +100,27 @@
               "pCls":64
             },
             {
+              "lid":"A=1@O=Leipzig, Breite Str.@X=12407999@Y=51335705@U=80@L=11329@i=A×de:14713:11329@",
+              "type":"S",
+              "name":"Leipzig, Breite Str.",
+              "icoX":0,
+              "extId":"11329",
+              "state":"F",
+              "crd":
+              {
+                "x":12407999,
+                "y":51335705,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":96
+            },
+            {
               "lid":"A=1@O=Leipzig Hbf@X=12382066@Y=51345467@U=80@L=8010205@i=A×de:14713:8010205@",
               "type":"S",
               "name":"Leipzig Hbf",
-              "icoX":5,
+              "icoX":6,
               "extId":"8010205",
               "state":"F",
               "crd":
@@ -148,7 +148,7 @@
               "prodCtx":
               {
                 "name":"Bus   73",
-                "num":"4978",
+                "num":"5022",
                 "line":"73",
                 "matchId":"73",
                 "catOut":"Bus     ",
@@ -161,7 +161,6 @@
               "himIdL":
               [
 "HIM_FREETEXT_219925",
-"HIM_FREETEXT_293871",
 "HIM_FREETEXT_294307",
 "HIM_FREETEXT_293539"
               ]
@@ -177,7 +176,7 @@
               "prodCtx":
               {
                 "name":"Bus   73",
-                "num":"4978",
+                "num":"5022",
                 "line":"73",
                 "lineId":"6_LVBUS__73",
                 "matchId":"73",
@@ -191,14 +190,13 @@
               "himIdL":
               [
 "HIM_FREETEXT_219925",
-"HIM_FREETEXT_293871",
 "HIM_FREETEXT_294307",
 "HIM_FREETEXT_293539"
               ]
             },
             {
               "name":"Fußweg",
-              "icoX":6,
+              "icoX":7,
               "cls":0,
               "prodCtx":
               {
@@ -255,38 +253,6 @@
           "himL":
           [
             {
-              "hid":"293871",
-              "act":true,
-              "pub":"",
-              "head":"BM Adler, Johannisplatz und Martin-Luther-Ring",
-              "lead":"",
-              "text":"Ab 06.09.2021 kommt es zu weiteren umfangreichen Änderungen im Linienverkehr. Informationen erhalten Sie unter www.L.de/baustellen",
-              "tckr":"",
-              "icoX":4,
-              "prio":50,
-              "altStart":"",
-              "altEnd":"",
-              "prod":65535,
-              "lModDate":"20210901",
-              "lModTime":"013750",
-              "sDate":"20210901",
-              "sTime":"060000",
-              "eDate":"20210906",
-              "eTime":"235900",
-              "comp":"LVB - Leipziger Verkehrsbetriebe",
-              "cat":4,
-              "pubChL":
-              [
-                {
-                  "name":"TIMETABLE",
-                  "fDate":"20210901",
-                  "fTime":"013600",
-                  "tDate":"20210906",
-                  "tTime":"235900"
-                }
-              ]
-            },
-            {
               "hid":"294307",
               "act":true,
               "pub":"",
@@ -317,6 +283,38 @@
                   "fTime":"180000",
                   "tDate":"20211011",
                   "tTime":"010000"
+                }
+              ]
+            },
+            {
+              "hid":"219925",
+              "act":true,
+              "pub":"",
+              "head":"Gemeinsam gegen Corona",
+              "lead":"",
+              "text":"Bitte tragen Sie in unseren Fahrzeugen eine medizinische Maske. Please wear a medical face mask in our vehicles.",
+              "tckr":"",
+              "icoX":5,
+              "prio":50,
+              "altStart":"",
+              "altEnd":"",
+              "prod":65535,
+              "lModDate":"20210901",
+              "lModTime":"013904",
+              "sDate":"20210907",
+              "sTime":"040000",
+              "eDate":"20211231",
+              "eTime":"235900",
+              "comp":"LVB - Leipziger Verkehrsbetriebe",
+              "cat":3,
+              "pubChL":
+              [
+                {
+                  "name":"TIMETABLE",
+                  "fDate":"20210907",
+                  "fTime":"040000",
+                  "tDate":"20211231",
+                  "tTime":"235900"
                 }
               ]
             }
@@ -368,6 +366,9 @@
               "res":"HIM4"
             },
             {
+              "res":"HIM3"
+            },
+            {
               "res":"prod_ice",
               "fg":
               {
@@ -407,23 +408,23 @@
         [
           {
             "cid":"DirectConReq-0",
-            "date":"20210906",
+            "date":"20210909",
             "dur":"001100",
             "chg":0,
             "sDays":
             {
               "sDaysR":"nicht täglich",
-              "sDaysI":"6. Sep bis 8. Okt 2021 Mo - Fr",
+              "sDaysI":"9. Sep bis 8. Okt 2021 Mo - Fr",
               "sDaysB":"0F9F3E7CF80000000000000000"
             },
             "dep":
             {
               "locX":0,
-              "idx":38,
+              "idx":19,
               "dProdX":0,
               "dInR":true,
-              "dTimeS":"143700",
-              "dTimeR":"144500",
+              "dTimeS":"121700",
+              "dTimeR":"121900",
               "dProgType":"PROGNOSED",
               "type":"N"
             },
@@ -431,7 +432,7 @@
             {
               "locX":6,
               "aOutR":true,
-              "aTimeS":"144800",
+              "aTimeS":"122800",
               "type":"N"
             },
             "secL":
@@ -442,29 +443,29 @@
                 "dep":
                 {
                   "locX":0,
-                  "idx":38,
+                  "idx":19,
                   "dProdX":0,
                   "dInR":true,
-                  "dTimeS":"143700",
-                  "dTimeR":"144500",
+                  "dTimeS":"121700",
+                  "dTimeR":"121900",
                   "dProgType":"PROGNOSED",
                   "type":"N"
                 },
                 "arr":
                 {
                   "locX":1,
-                  "idx":40,
+                  "idx":21,
                   "aProdX":0,
                   "aPlatfS":"K",
                   "aOutR":true,
-                  "aTimeS":"144100",
-                  "aTimeR":"144900",
+                  "aTimeS":"122100",
+                  "aTimeR":"122300",
                   "aProgType":"PROGNOSED",
                   "type":"N"
                 },
                 "jny":
                 {
-                  "jid":"1|139407|1|80|6092021",
+                  "jid":"1|139382|4|80|9092021",
                   "prodX":1,
                   "dirTxt":"Hauptbahnhof",
                   "dirFlg":"2",
@@ -474,11 +475,11 @@
                   [
                     {
                       "locX":0,
-                      "idx":38,
+                      "idx":19,
                       "dProdX":1,
                       "dInR":true,
-                      "dTimeS":"143700",
-                      "dTimeR":"144500",
+                      "dTimeS":"121700",
+                      "dTimeR":"121900",
                       "dProgType":"PROGNOSED",
                       "dDirTxt":"Hauptbahnhof",
                       "dDirFlg":"2",
@@ -486,27 +487,27 @@
                     },
                     {
                       "locX":2,
-                      "idx":39,
+                      "idx":20,
                       "aProdX":1,
                       "aOutR":true,
-                      "aTimeS":"143900",
-                      "aTimeR":"144700",
+                      "aTimeS":"121900",
+                      "aTimeR":"122100",
                       "aProgType":"PROGNOSED",
                       "dProdX":1,
                       "dInR":true,
-                      "dTimeS":"143900",
-                      "dTimeR":"144700",
+                      "dTimeS":"121900",
+                      "dTimeR":"122100",
                       "dProgType":"PROGNOSED",
                       "type":"N"
                     },
                     {
                       "locX":1,
-                      "idx":40,
+                      "idx":21,
                       "aProdX":1,
                       "aPlatfS":"K",
                       "aOutR":true,
-                      "aTimeS":"144100",
-                      "aTimeR":"144900",
+                      "aTimeS":"122100",
+                      "aTimeR":"122300",
                       "aProgType":"PROGNOSED",
                       "type":"N"
                     }
@@ -538,8 +539,8 @@
                   "proc":0,
                   "pos":
                   {
-                    "x":12428207,
-                    "y":51331202,
+                    "x":12406336,
+                    "y":51338105,
                     "layerX":0,
                     "crdSysX":0
                   },
@@ -550,7 +551,7 @@
                     "maxC":10,
                     "numC":13
                   },
-                  "ctxRecon":"T$A=1@O=Leipzig, Johannisplatz@L=11063@a=128@$A=1@O=Leipzig, Hauptbahnhof (Tram/Bus)@L=13000@a=128@$202109061437$202109061441$Bus   73$$1$$$$",
+                  "ctxRecon":"T$A=1@O=Leipzig, Johannisplatz@L=11063@a=128@$A=1@O=Leipzig, Hauptbahnhof (Tram/Bus)@L=13000@a=128@$202109091217$202109091221$Bus   73$$1$$$$",
                   "msgL":
                   [
                     {
@@ -590,19 +591,19 @@
               },
               {
                 "type":"WALK",
-                "icoX":6,
+                "icoX":7,
                 "dep":
                 {
                   "locX":1,
                   "dInR":true,
-                  "dTimeS":"144100",
+                  "dTimeS":"122100",
                   "type":"N"
                 },
                 "arr":
                 {
                   "locX":6,
                   "aOutR":true,
-                  "aTimeS":"144800",
+                  "aTimeS":"122800",
                   "type":"N"
                 },
                 "gis":
@@ -610,7 +611,7 @@
                   "dist":208,
                   "durS":"000700",
                   "dirGeo":4,
-                  "ctx":"H|1|W$A=1@O=Leipzig, Hauptbahnhof (Tram/Bus)@L=13000@a=128@$A=1@O=Leipzig Hbf@L=8010205@a=128@$202109061441$202109061448$$$1$$$$",
+                  "ctx":"H|1|W$A=1@O=Leipzig, Hauptbahnhof (Tram/Bus)@L=13000@a=128@$A=1@O=Leipzig Hbf@L=8010205@a=128@$202109091221$202109091228$$$1$$$$",
                   "poly":
                   {
                     "delta":true,
@@ -635,7 +636,7 @@
                 }
               }
             ],
-            "ctxRecon":"¶HKI¶T$A=1@O=Leipzig, Johannisplatz@L=11063@a=128@$A=1@O=Leipzig, Hauptbahnhof (Tram/Bus)@L=13000@a=128@$202109061437$202109061441$Bus   73$$1$$$$§W$A=1@O=Leipzig, Hauptbahnhof (Tram/Bus)@L=13000@a=128@$A=1@O=Leipzig Hbf@L=8010205@a=128@$202109061441$202109061448$$$1$$$$",
+            "ctxRecon":"¶HKI¶T$A=1@O=Leipzig, Johannisplatz@L=11063@a=128@$A=1@O=Leipzig, Hauptbahnhof (Tram/Bus)@L=13000@a=128@$202109091217$202109091221$Bus   73$$1$$$$§W$A=1@O=Leipzig, Hauptbahnhof (Tram/Bus)@L=13000@a=128@$A=1@O=Leipzig Hbf@L=8010205@a=128@$202109091221$202109091228$$$1$$$$",
             "freq":
             {
               "minC":10
@@ -879,12 +880,12 @@
               }
             ],
             "conSubscr":"F",
-            "cksum":"b8372690_3"
+            "cksum":"97d527b5_3"
           }
         ],
         "fpB":"20210902",
         "fpE":"20211211",
-        "planrtTS":"1630931701"
+        "planrtTS":"1631182424"
       }
     }
   ]
