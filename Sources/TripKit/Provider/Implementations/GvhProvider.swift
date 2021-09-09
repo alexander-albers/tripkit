@@ -1,12 +1,18 @@
 import Foundation
 
-public class GvhProvider: AbstractEfaProvider {
+public class GvhProvider: AbstractHafasClientInterfaceProvider {
     
-    static let API_BASE = "https://app.efa.de/mdv_server/app_gvh/"
+    static let API_BASE = "https://gvh.hafas.de/hamm"
+    static let PRODUCTS_MAP: [Product?] = [.highSpeedTrain, .highSpeedTrain, .highSpeedTrain, .regionalTrain, .suburbanTrain, .bus, nil, nil, .subway, .onDemand]
 
-    public init() {
-        super.init(networkId: .GVH, apiBase: GvhProvider.API_BASE)
-        includeRegionId = false
+    public init(apiAuthorization: [String: Any]) {
+        super.init(networkId: .GVH, apiBase: GvhProvider.API_BASE, productsMap: GvhProvider.PRODUCTS_MAP)
+        self.mgateEndpoint = GvhProvider.API_BASE
+        self.apiAuthorization = apiAuthorization
+        apiVersion = "1.19"
+        apiClient = [
+            "id": "HAFAS", "type": "WEB", "name": "webapp"
+        ]
         
         styles = [
             // Hannover
@@ -96,4 +102,34 @@ public class GvhProvider: AbstractEfaProvider {
         ]
     }
     
+    override func split(stationName: String?) -> (String?, String?) {
+        guard let stationName = stationName else { return super.split(stationName: nil) }
+        if let m = stationName.match(pattern: P_SPLIT_NAME_FIRST_COMMA) {
+            return (m[0], m[1])
+        }
+        return super.split(stationName: stationName)
+    }
+    
+    override func split(poi: String?) -> (String?, String?) {
+        guard let poi = poi else { return super.split(poi: nil) }
+        if let m = poi.match(pattern: P_SPLIT_NAME_FIRST_COMMA) {
+            return (m[0], m[1])
+        }
+        return super.split(poi: poi)
+    }
+    
+    override func split(address: String?) -> (String?, String?) {
+        guard let address = address else { return super.split(address: nil) }
+        if let m = address.match(pattern: P_SPLIT_NAME_FIRST_COMMA) {
+            return (m[0], m[1])
+        }
+        return super.split(address: address)
+    }
+    
+    override func jsonLocation(from location: Location) -> [String : Any] {
+        if location.type == .station, let id = location.id {
+            return ["type": "S", "lid": id]
+        }
+        return super.jsonLocation(from: location)
+    }
 }
