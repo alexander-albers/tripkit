@@ -894,12 +894,15 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
     
     private func processIndividualLeg(legs: inout [Leg], type: IndividualLeg.`Type`, departureStop: Stop, arrivalStop: Stop, distance: Int, path: [LocationPoint]) {
         var path = path
+        let departureTime = departureStop.predictedDepartureTime ?? departureStop.plannedDepartureTime!
+        let arrivalTime = arrivalStop.predictedArrivalTime ?? arrivalStop.plannedArrivalTime!
+        let addTime: TimeInterval = !legs.isEmpty ? max(0, -departureTime.timeIntervalSince(legs.last!.getMaxTime())) : 0
         if let lastLeg = legs.last as? IndividualLeg, lastLeg.type == type {
             legs.removeLast()
             path.insert(contentsOf: lastLeg.path, at: 0)
-            legs.append(IndividualLeg(type: lastLeg.type, departureTime: lastLeg.departureTime, departure: lastLeg.departure, arrival: arrivalStop.location, arrivalTime: arrivalStop.predictedArrivalTime ?? arrivalStop.plannedArrivalTime!, distance: 0, path: path))
+            legs.append(IndividualLeg(type: lastLeg.type, departureTime: lastLeg.departureTime, departure: lastLeg.departure, arrival: arrivalStop.location, arrivalTime: arrivalTime.addingTimeInterval(addTime), distance: 0, path: path))
         } else {
-            legs.append(IndividualLeg(type: type, departureTime: departureStop.predictedDepartureTime ?? departureStop.plannedDepartureTime!, departure: departureStop.location, arrival: arrivalStop.location, arrivalTime: arrivalStop.predictedArrivalTime ?? arrivalStop.plannedArrivalTime!, distance: distance, path: []))
+            legs.append(IndividualLeg(type: type, departureTime: departureTime.addingTimeInterval(addTime), departure: departureStop.location, arrival: arrivalStop.location, arrivalTime: arrivalTime.addingTimeInterval(addTime), distance: distance, path: []))
         }
     }
     
