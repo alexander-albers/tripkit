@@ -1,7 +1,7 @@
 {
   "ver":"1.15",
   "lang":"deu",
-  "id":"774cpgsm42xx824s",
+  "id":"fskqmmcu4sxyhgcs",
   "svcResL":
   [
     {
@@ -83,33 +83,16 @@
               "pCls":96
             },
             {
-              "lid":"A=1@O=Leipzig, Gerichtsweg@X=12395190@Y=51339094@U=80@L=11064@i=A×de:14713:11064@",
+              "lid":"A=1@O=Leipzig, Reclamstr.@X=12399846@Y=51339301@U=80@L=6465@i=A×de:14713:6465@",
               "type":"S",
-              "name":"Leipzig, Gerichtsweg",
-              "icoX":0,
-              "extId":"11064",
-              "state":"F",
-              "crd":
-              {
-                "x":12395190,
-                "y":51339094,
-                "type":"WGS84",
-                "layerX":0,
-                "crdSysX":0
-              },
-              "pCls":96
-            },
-            {
-              "lid":"A=1@O=Leipzig, Pommernstr.@X=12428899@Y=51331193@U=80@L=12155@i=A×de:14713:12155@",
-              "type":"S",
-              "name":"Leipzig, Pommernstr.",
+              "name":"Leipzig, Reclamstr.",
               "icoX":1,
-              "extId":"12155",
+              "extId":"6465",
               "state":"F",
               "crd":
               {
-                "x":12428899,
-                "y":51331193,
+                "x":12399846,
+                "y":51339301,
                 "type":"WGS84",
                 "layerX":0,
                 "crdSysX":0
@@ -117,10 +100,27 @@
               "pCls":64
             },
             {
+              "lid":"A=1@O=Leipzig, Breite Str.@X=12407999@Y=51335705@U=80@L=11329@i=A×de:14713:11329@",
+              "type":"S",
+              "name":"Leipzig, Breite Str.",
+              "icoX":0,
+              "extId":"11329",
+              "state":"F",
+              "crd":
+              {
+                "x":12407999,
+                "y":51335705,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":96
+            },
+            {
               "lid":"A=1@O=Leipzig Hbf@X=12382066@Y=51345467@U=80@L=8010205@i=A×de:14713:8010205@",
               "type":"S",
               "name":"Leipzig Hbf",
-              "icoX":5,
+              "icoX":6,
               "extId":"8010205",
               "state":"F",
               "crd":
@@ -169,38 +169,21 @@
               "pCls":96
             },
             {
-              "lid":"A=1@O=Leipzig, Ostplatz@X=12395891@Y=51331678@U=80@L=11972@i=A×de:14713:11972@",
+              "lid":"A=1@O=Leipzig, Gutenbergplatz@X=12391792@Y=51334447@U=80@L=11970@i=A×de:14713:11970@",
               "type":"S",
-              "name":"Leipzig, Ostplatz",
+              "name":"Leipzig, Gutenbergplatz",
               "icoX":0,
-              "extId":"11972",
+              "extId":"11970",
               "state":"F",
               "crd":
               {
-                "x":12395891,
-                "y":51331678,
+                "x":12391792,
+                "y":51334447,
                 "type":"WGS84",
                 "layerX":0,
                 "crdSysX":0
               },
               "pCls":96
-            },
-            {
-              "lid":"A=1@O=Leipzig, Anemonenweg@X=12438392@Y=51331696@U=80@L=11129@i=A×de:14713:11129@",
-              "type":"S",
-              "name":"Leipzig, Anemonenweg",
-              "icoX":1,
-              "extId":"11129",
-              "state":"F",
-              "crd":
-              {
-                "x":12438392,
-                "y":51331696,
-                "type":"WGS84",
-                "layerX":0,
-                "crdSysX":0
-              },
-              "pCls":64
             }
           ],
           "prodL":
@@ -216,7 +199,7 @@
               "prodCtx":
               {
                 "name":"Bus   73",
-                "num":"4978",
+                "num":"5022",
                 "line":"73",
                 "matchId":"73",
                 "catOut":"Bus     ",
@@ -229,7 +212,6 @@
               "himIdL":
               [
 "HIM_FREETEXT_219925",
-"HIM_FREETEXT_293871",
 "HIM_FREETEXT_294307",
 "HIM_FREETEXT_293539"
               ]
@@ -245,7 +227,7 @@
               "prodCtx":
               {
                 "name":"Bus   73",
-                "num":"4978",
+                "num":"5022",
                 "line":"73",
                 "lineId":"6_LVBUS__73",
                 "matchId":"73",
@@ -259,14 +241,13 @@
               "himIdL":
               [
 "HIM_FREETEXT_219925",
-"HIM_FREETEXT_293871",
 "HIM_FREETEXT_294307",
 "HIM_FREETEXT_293539"
               ]
             },
             {
               "name":"Fußweg",
-              "icoX":6,
+              "icoX":7,
               "cls":0,
               "prodCtx":
               {
@@ -285,7 +266,7 @@
               "prodCtx":
               {
                 "name":"BusSEV15",
-                "num":"7046",
+                "num":"7065",
                 "line":"SEV15",
                 "matchId":"SEV15",
                 "catOut":"Bus     ",
@@ -299,7 +280,6 @@
               [
 "HIM_FREETEXT_219925",
 "HIM_FREETEXT_291779",
-"HIM_FREETEXT_293871",
 "HIM_FREETEXT_294306",
 "HIM_FREETEXT_293539"
               ]
@@ -315,7 +295,7 @@
               "prodCtx":
               {
                 "name":"BusSEV15",
-                "num":"7046",
+                "num":"7065",
                 "line":"SEV15",
                 "lineId":"6_LVBUS__SEV15",
                 "matchId":"SEV15",
@@ -330,25 +310,24 @@
               [
 "HIM_FREETEXT_219925",
 "HIM_FREETEXT_291779",
-"HIM_FREETEXT_293871",
 "HIM_FREETEXT_294306",
 "HIM_FREETEXT_293539"
               ]
             },
             {
-              "pid":"L::6::Bus::B1129464397::6_LVBUS__72::*",
-              "name":"Bus 72",
-              "nameS":"72",
-              "number":"72",
+              "pid":"L::6::Bus::B1129464397::6_LVBUS__SEV15::*",
+              "name":"BusSEV15",
+              "nameS":"SEV15",
+              "number":"SEV15",
               "icoX":1,
               "cls":64,
               "oprX":0,
               "prodCtx":
               {
-                "name":"Bus   72",
-                "num":"4647",
-                "line":"72",
-                "matchId":"72",
+                "name":"BusSEV15",
+                "num":"7064",
+                "line":"SEV15",
+                "matchId":"SEV15",
                 "catOut":"Bus     ",
                 "catOutS":"Bus",
                 "catOutL":"Bus     ",
@@ -359,26 +338,26 @@
               "himIdL":
               [
 "HIM_FREETEXT_219925",
-"HIM_FREETEXT_293871",
-"HIM_FREETEXT_294307",
+"HIM_FREETEXT_291779",
+"HIM_FREETEXT_294306",
 "HIM_FREETEXT_293539"
               ]
             },
             {
-              "pid":"L::6::Bus::B1129464397::6_LVBUS__72::*",
-              "name":"Bus 72",
-              "nameS":"72",
-              "number":"72",
+              "pid":"L::6::Bus::B1129464397::6_LVBUS__SEV15::*",
+              "name":"BusSEV15",
+              "nameS":"SEV15",
+              "number":"SEV15",
               "icoX":1,
               "cls":64,
               "oprX":1,
               "prodCtx":
               {
-                "name":"Bus   72",
-                "num":"4647",
-                "line":"72",
-                "lineId":"6_LVBUS__72",
-                "matchId":"72",
+                "name":"BusSEV15",
+                "num":"7064",
+                "line":"SEV15",
+                "lineId":"6_LVBUS__SEV15",
+                "matchId":"SEV15",
                 "catOut":"Bus     ",
                 "catOutS":"Bus",
                 "catOutL":"Bus     ",
@@ -389,8 +368,8 @@
               "himIdL":
               [
 "HIM_FREETEXT_219925",
-"HIM_FREETEXT_293871",
-"HIM_FREETEXT_294307",
+"HIM_FREETEXT_291779",
+"HIM_FREETEXT_294306",
 "HIM_FREETEXT_293539"
               ]
             }
@@ -443,38 +422,6 @@
           "himL":
           [
             {
-              "hid":"293871",
-              "act":true,
-              "pub":"",
-              "head":"BM Adler, Johannisplatz und Martin-Luther-Ring",
-              "lead":"",
-              "text":"Ab 06.09.2021 kommt es zu weiteren umfangreichen Änderungen im Linienverkehr. Informationen erhalten Sie unter www.L.de/baustellen",
-              "tckr":"",
-              "icoX":4,
-              "prio":50,
-              "altStart":"",
-              "altEnd":"",
-              "prod":65535,
-              "lModDate":"20210901",
-              "lModTime":"013750",
-              "sDate":"20210901",
-              "sTime":"060000",
-              "eDate":"20210906",
-              "eTime":"235900",
-              "comp":"LVB - Leipziger Verkehrsbetriebe",
-              "cat":4,
-              "pubChL":
-              [
-                {
-                  "name":"TIMETABLE",
-                  "fDate":"20210901",
-                  "fTime":"013600",
-                  "tDate":"20210906",
-                  "tTime":"235900"
-                }
-              ]
-            },
-            {
               "hid":"294307",
               "act":true,
               "pub":"",
@@ -505,6 +452,38 @@
                   "fTime":"180000",
                   "tDate":"20211011",
                   "tTime":"010000"
+                }
+              ]
+            },
+            {
+              "hid":"219925",
+              "act":true,
+              "pub":"",
+              "head":"Gemeinsam gegen Corona",
+              "lead":"",
+              "text":"Bitte tragen Sie in unseren Fahrzeugen eine medizinische Maske. Please wear a medical face mask in our vehicles.",
+              "tckr":"",
+              "icoX":5,
+              "prio":50,
+              "altStart":"",
+              "altEnd":"",
+              "prod":65535,
+              "lModDate":"20210901",
+              "lModTime":"013904",
+              "sDate":"20210907",
+              "sTime":"040000",
+              "eDate":"20211231",
+              "eTime":"235900",
+              "comp":"LVB - Leipziger Verkehrsbetriebe",
+              "cat":3,
+              "pubChL":
+              [
+                {
+                  "name":"TIMETABLE",
+                  "fDate":"20210907",
+                  "fTime":"040000",
+                  "tDate":"20211231",
+                  "tTime":"235900"
                 }
               ]
             },
@@ -590,6 +569,9 @@
               "res":"HIM4"
             },
             {
+              "res":"HIM3"
+            },
+            {
               "res":"prod_ice",
               "fg":
               {
@@ -624,6 +606,9 @@
               }
             },
             {
+              "res":"rt_ont"
+            },
+            {
               "res":"navi_on"
             },
             {
@@ -641,23 +626,23 @@
         [
           {
             "cid":"C-0",
-            "date":"20210906",
+            "date":"20210909",
             "dur":"001100",
             "chg":0,
             "sDays":
             {
               "sDaysR":"nicht täglich",
-              "sDaysI":"6. Sep bis 8. Okt 2021 Mo - Fr",
+              "sDaysI":"9. Sep bis 8. Okt 2021 Mo - Fr",
               "sDaysB":"0F9F3E7CF80000000000000000"
             },
             "dep":
             {
               "locX":0,
-              "idx":38,
+              "idx":19,
               "dProdX":0,
               "dInR":true,
-              "dTimeS":"143700",
-              "dTimeR":"144500",
+              "dTimeS":"121700",
+              "dTimeR":"121900",
               "dProgType":"PROGNOSED",
               "type":"N"
             },
@@ -665,7 +650,7 @@
             {
               "locX":6,
               "aOutR":true,
-              "aTimeS":"144800",
+              "aTimeS":"122800",
               "type":"N"
             },
             "secL":
@@ -676,29 +661,29 @@
                 "dep":
                 {
                   "locX":0,
-                  "idx":38,
+                  "idx":19,
                   "dProdX":0,
                   "dInR":true,
-                  "dTimeS":"143700",
-                  "dTimeR":"144500",
+                  "dTimeS":"121700",
+                  "dTimeR":"121900",
                   "dProgType":"PROGNOSED",
                   "type":"N"
                 },
                 "arr":
                 {
                   "locX":1,
-                  "idx":40,
+                  "idx":21,
                   "aProdX":0,
                   "aPlatfS":"K",
                   "aOutR":true,
-                  "aTimeS":"144100",
-                  "aTimeR":"144900",
+                  "aTimeS":"122100",
+                  "aTimeR":"122300",
                   "aProgType":"PROGNOSED",
                   "type":"N"
                 },
                 "jny":
                 {
-                  "jid":"1|139407|1|80|6092021",
+                  "jid":"1|139382|4|80|9092021",
                   "prodX":1,
                   "dirTxt":"Hauptbahnhof",
                   "dirFlg":"2",
@@ -708,11 +693,11 @@
                   [
                     {
                       "locX":0,
-                      "idx":38,
+                      "idx":19,
                       "dProdX":1,
                       "dInR":true,
-                      "dTimeS":"143700",
-                      "dTimeR":"144500",
+                      "dTimeS":"121700",
+                      "dTimeR":"121900",
                       "dProgType":"PROGNOSED",
                       "dDirTxt":"Hauptbahnhof",
                       "dDirFlg":"2",
@@ -720,27 +705,27 @@
                     },
                     {
                       "locX":2,
-                      "idx":39,
+                      "idx":20,
                       "aProdX":1,
                       "aOutR":true,
-                      "aTimeS":"143900",
-                      "aTimeR":"144700",
+                      "aTimeS":"121900",
+                      "aTimeR":"122100",
                       "aProgType":"PROGNOSED",
                       "dProdX":1,
                       "dInR":true,
-                      "dTimeS":"143900",
-                      "dTimeR":"144700",
+                      "dTimeS":"121900",
+                      "dTimeR":"122100",
                       "dProgType":"PROGNOSED",
                       "type":"N"
                     },
                     {
                       "locX":1,
-                      "idx":40,
+                      "idx":21,
                       "aProdX":1,
                       "aPlatfS":"K",
                       "aOutR":true,
-                      "aTimeS":"144100",
-                      "aTimeR":"144900",
+                      "aTimeS":"122100",
+                      "aTimeR":"122300",
                       "aProgType":"PROGNOSED",
                       "type":"N"
                     }
@@ -772,8 +757,8 @@
                   "proc":0,
                   "pos":
                   {
-                    "x":12428207,
-                    "y":51331202,
+                    "x":12406426,
+                    "y":51338114,
                     "layerX":0,
                     "crdSysX":0
                   },
@@ -784,7 +769,7 @@
                     "maxC":10,
                     "numC":13
                   },
-                  "ctxRecon":"T$A=1@O=Leipzig, Johannisplatz@L=11063@a=128@$A=1@O=Leipzig, Hauptbahnhof (Tram/Bus)@L=13000@a=128@$202109061437$202109061441$Bus   73$$1$$$$",
+                  "ctxRecon":"T$A=1@O=Leipzig, Johannisplatz@L=11063@a=128@$A=1@O=Leipzig, Hauptbahnhof (Tram/Bus)@L=13000@a=128@$202109091217$202109091221$Bus   73$$1$$$$",
                   "msgL":
                   [
                     {
@@ -824,19 +809,19 @@
               },
               {
                 "type":"WALK",
-                "icoX":6,
+                "icoX":7,
                 "dep":
                 {
                   "locX":1,
                   "dInR":true,
-                  "dTimeS":"144100",
+                  "dTimeS":"122100",
                   "type":"N"
                 },
                 "arr":
                 {
                   "locX":6,
                   "aOutR":true,
-                  "aTimeS":"144800",
+                  "aTimeS":"122800",
                   "type":"N"
                 },
                 "gis":
@@ -844,7 +829,7 @@
                   "dist":208,
                   "durS":"000700",
                   "dirGeo":4,
-                  "ctx":"H|1|W$A=1@O=Leipzig, Hauptbahnhof (Tram/Bus)@L=13000@a=128@$A=1@O=Leipzig Hbf@L=8010205@a=128@$202109061441$202109061448$$$1$$$$",
+                  "ctx":"H|1|W$A=1@O=Leipzig, Hauptbahnhof (Tram/Bus)@L=13000@a=128@$A=1@O=Leipzig Hbf@L=8010205@a=128@$202109091221$202109091228$$$1$$$$",
                   "poly":
                   {
                     "delta":true,
@@ -869,7 +854,7 @@
                 }
               }
             ],
-            "ctxRecon":"¶HKI¶T$A=1@O=Leipzig, Johannisplatz@L=11063@a=128@$A=1@O=Leipzig, Hauptbahnhof (Tram/Bus)@L=13000@a=128@$202109061437$202109061441$Bus   73$$1$$$$§W$A=1@O=Leipzig, Hauptbahnhof (Tram/Bus)@L=13000@a=128@$A=1@O=Leipzig Hbf@L=8010205@a=128@$202109061441$202109061448$$$1$$$$",
+            "ctxRecon":"¶HKI¶T$A=1@O=Leipzig, Johannisplatz@L=11063@a=128@$A=1@O=Leipzig, Hauptbahnhof (Tram/Bus)@L=13000@a=128@$202109091217$202109091221$Bus   73$$1$$$$§W$A=1@O=Leipzig, Hauptbahnhof (Tram/Bus)@L=13000@a=128@$A=1@O=Leipzig Hbf@L=8010205@a=128@$202109091221$202109091228$$$1$$$$",
             "freq":
             {
               "minC":10
@@ -1113,17 +1098,17 @@
               }
             ],
             "conSubscr":"F",
-            "cksum":"b8372690_3"
+            "cksum":"97d527b5_3"
           },
           {
             "cid":"C-1",
-            "date":"20210906",
+            "date":"20210909",
             "dur":"001100",
             "chg":0,
             "sDays":
             {
               "sDaysR":"nicht täglich",
-              "sDaysI":"6. Sep bis 8. Okt 2021 Mo - Fr",
+              "sDaysI":"9. Sep bis 8. Okt 2021 Mo - Fr",
               "sDaysB":"0F9F3E7CF80000000000000000"
             },
             "dep":
@@ -1132,7 +1117,7 @@
               "idx":6,
               "dProdX":3,
               "dInR":true,
-              "dTimeS":"144100",
+              "dTimeS":"121800",
               "dProgType":"PROGNOSED",
               "type":"N"
             },
@@ -1140,7 +1125,7 @@
             {
               "locX":6,
               "aOutR":true,
-              "aTimeS":"145200",
+              "aTimeS":"122900",
               "type":"N"
             },
             "secL":
@@ -1154,7 +1139,7 @@
                   "idx":6,
                   "dProdX":3,
                   "dInR":true,
-                  "dTimeS":"144100",
+                  "dTimeS":"121800",
                   "dProgType":"PROGNOSED",
                   "type":"N"
                 },
@@ -1166,13 +1151,13 @@
                   "aPlatfS":"J",
                   "aPlatfR":"J",
                   "aOutR":true,
-                  "aTimeS":"144400",
+                  "aTimeS":"122100",
                   "aProgType":"PROGNOSED",
                   "type":"N"
                 },
                 "jny":
                 {
-                  "jid":"1|141259|33|80|6092021",
+                  "jid":"1|141258|24|80|9092021",
                   "prodX":4,
                   "dirTxt":"Hauptbahnhof",
                   "dirFlg":"2",
@@ -1185,7 +1170,7 @@
                       "idx":6,
                       "dProdX":4,
                       "dInR":true,
-                      "dTimeS":"144100",
+                      "dTimeS":"121800",
                       "dDirTxt":"Hauptbahnhof",
                       "dDirFlg":"2",
                       "type":"N"
@@ -1195,10 +1180,10 @@
                       "idx":7,
                       "aProdX":4,
                       "aOutR":true,
-                      "aTimeS":"144300",
+                      "aTimeS":"122000",
                       "dProdX":4,
                       "dInR":true,
-                      "dTimeS":"144300",
+                      "dTimeS":"122000",
                       "type":"N"
                     },
                     {
@@ -1208,7 +1193,7 @@
                       "aPlatfS":"J",
                       "aPlatfR":"J",
                       "aOutR":true,
-                      "aTimeS":"144400",
+                      "aTimeS":"122100",
                       "aProgType":"PROGNOSED",
                       "type":"N"
                     }
@@ -1240,8 +1225,8 @@
                   "proc":0,
                   "pos":
                   {
-                    "x":12395783,
-                    "y":51331831,
+                    "x":12391738,
+                    "y":51334510,
                     "layerX":0,
                     "crdSysX":0
                   },
@@ -1252,7 +1237,7 @@
                     "maxC":8,
                     "numC":17
                   },
-                  "ctxRecon":"T$A=1@O=Leipzig, Johannisplatz@L=11063@a=128@$A=1@O=Leipzig, Hauptbahnhof/Goethestr.@L=15738@a=128@$202109061441$202109061444$BusSEV15$$1$$$$",
+                  "ctxRecon":"T$A=1@O=Leipzig, Johannisplatz@L=11063@a=128@$A=1@O=Leipzig, Hauptbahnhof/Goethestr.@L=15738@a=128@$202109091218$202109091221$BusSEV15$$1$$$$",
                   "msgL":
                   [
                     {
@@ -1267,7 +1252,7 @@
                     },
                     {
                       "type":"HIM",
-                      "himX":0,
+                      "himX":2,
                       "fLocX":0,
                       "tLocX":7,
                       "tagL":
@@ -1277,7 +1262,7 @@
                     },
                     {
                       "type":"HIM",
-                      "himX":2,
+                      "himX":1,
                       "fLocX":0,
                       "tLocX":7,
                       "tagL":
@@ -1292,19 +1277,19 @@
               },
               {
                 "type":"WALK",
-                "icoX":6,
+                "icoX":7,
                 "dep":
                 {
                   "locX":7,
                   "dInR":true,
-                  "dTimeS":"144400",
+                  "dTimeS":"122100",
                   "type":"N"
                 },
                 "arr":
                 {
                   "locX":6,
                   "aOutR":true,
-                  "aTimeS":"145200",
+                  "aTimeS":"122900",
                   "type":"N"
                 },
                 "gis":
@@ -1312,7 +1297,7 @@
                   "dist":245,
                   "durS":"000800",
                   "dirGeo":8,
-                  "ctx":"H|1|W$A=1@O=Leipzig, Hauptbahnhof/Goethestr.@L=15738@a=128@$A=1@O=Leipzig Hbf@L=8010205@a=128@$202109061444$202109061452$$$1$$$$",
+                  "ctx":"H|1|W$A=1@O=Leipzig, Hauptbahnhof/Goethestr.@L=15738@a=128@$A=1@O=Leipzig Hbf@L=8010205@a=128@$202109091221$202109091229$$$1$$$$",
                   "poly":
                   {
                     "delta":true,
@@ -1337,7 +1322,7 @@
                 }
               }
             ],
-            "ctxRecon":"¶HKI¶T$A=1@O=Leipzig, Johannisplatz@L=11063@a=128@$A=1@O=Leipzig, Hauptbahnhof/Goethestr.@L=15738@a=128@$202109061441$202109061444$BusSEV15$$1$$$$§W$A=1@O=Leipzig, Hauptbahnhof/Goethestr.@L=15738@a=128@$A=1@O=Leipzig Hbf@L=8010205@a=128@$202109061444$202109061452$$$1$$$$",
+            "ctxRecon":"¶HKI¶T$A=1@O=Leipzig, Johannisplatz@L=11063@a=128@$A=1@O=Leipzig, Hauptbahnhof/Goethestr.@L=15738@a=128@$202109091218$202109091221$BusSEV15$$1$$$$§W$A=1@O=Leipzig, Hauptbahnhof/Goethestr.@L=15738@a=128@$A=1@O=Leipzig Hbf@L=8010205@a=128@$202109091221$202109091229$$$1$$$$",
             "freq":
             {
               "minC":7
@@ -1581,27 +1566,27 @@
               }
             ],
             "conSubscr":"F",
-            "cksum":"02b81e60_3"
+            "cksum":"74cd62b5_3"
           },
           {
             "cid":"C-2",
-            "date":"20210906",
+            "date":"20210909",
             "dur":"001100",
             "chg":0,
             "sDays":
             {
               "sDaysR":"nicht täglich",
-              "sDaysI":"6. Sep bis 10. Okt 2021 Mo - Fr, So; nicht 19. Sep",
-              "sDaysB":"0FBF3EFDFA0000000000000000"
+              "sDaysI":"9. Sep bis 8. Okt 2021 Mo - Fr",
+              "sDaysB":"0F9F3E7CF80000000000000000"
             },
             "dep":
             {
               "locX":0,
-              "idx":28,
+              "idx":6,
               "dProdX":5,
               "dInR":true,
-              "dTimeS":"144700",
-              "dTimeR":"144800",
+              "dTimeS":"122600",
+              "dTimeR":"122600",
               "dProgType":"PROGNOSED",
               "type":"N"
             },
@@ -1609,7 +1594,7 @@
             {
               "locX":6,
               "aOutR":true,
-              "aTimeS":"145800",
+              "aTimeS":"123700",
               "type":"N"
             },
             "secL":
@@ -1620,29 +1605,30 @@
                 "dep":
                 {
                   "locX":0,
-                  "idx":28,
+                  "idx":6,
                   "dProdX":5,
                   "dInR":true,
-                  "dTimeS":"144700",
-                  "dTimeR":"144800",
+                  "dTimeS":"122600",
+                  "dTimeR":"122600",
                   "dProgType":"PROGNOSED",
                   "type":"N"
                 },
                 "arr":
                 {
-                  "locX":1,
-                  "idx":30,
+                  "locX":7,
+                  "idx":8,
                   "aProdX":5,
-                  "aPlatfS":"K",
+                  "aPlatfS":"J",
+                  "aPlatfR":"J",
                   "aOutR":true,
-                  "aTimeS":"145100",
-                  "aTimeR":"145200",
+                  "aTimeS":"122900",
+                  "aTimeR":"122900",
                   "aProgType":"PROGNOSED",
                   "type":"N"
                 },
                 "jny":
                 {
-                  "jid":"1|139080|21|80|6092021",
+                  "jid":"1|141259|24|80|9092021",
                   "prodX":6,
                   "dirTxt":"Hauptbahnhof",
                   "dirFlg":"2",
@@ -1652,11 +1638,11 @@
                   [
                     {
                       "locX":0,
-                      "idx":28,
+                      "idx":6,
                       "dProdX":6,
                       "dInR":true,
-                      "dTimeS":"144700",
-                      "dTimeR":"144800",
+                      "dTimeS":"122600",
+                      "dTimeR":"122600",
                       "dProgType":"PROGNOSED",
                       "dDirTxt":"Hauptbahnhof",
                       "dDirFlg":"2",
@@ -1664,27 +1650,28 @@
                     },
                     {
                       "locX":2,
-                      "idx":29,
+                      "idx":7,
                       "aProdX":6,
                       "aOutR":true,
-                      "aTimeS":"144900",
-                      "aTimeR":"145000",
+                      "aTimeS":"122800",
+                      "aTimeR":"122800",
                       "aProgType":"PROGNOSED",
                       "dProdX":6,
                       "dInR":true,
-                      "dTimeS":"144900",
-                      "dTimeR":"145000",
+                      "dTimeS":"122800",
+                      "dTimeR":"122800",
                       "dProgType":"PROGNOSED",
                       "type":"N"
                     },
                     {
-                      "locX":1,
-                      "idx":30,
+                      "locX":7,
+                      "idx":8,
                       "aProdX":6,
-                      "aPlatfS":"K",
+                      "aPlatfS":"J",
+                      "aPlatfR":"J",
                       "aOutR":true,
-                      "aTimeS":"145100",
-                      "aTimeR":"145200",
+                      "aTimeS":"122900",
+                      "aTimeR":"122900",
                       "aProgType":"PROGNOSED",
                       "type":"N"
                     }
@@ -1694,7 +1681,7 @@
                     "delta":true,
                     "dim":2,
                     "type":"WGS84",
-                    "crdEncYX":"y|ixHierjAKjDoAbBYlGm@zEe@`BDa@{DkA}MiAeEeBc@T[lKwAdE",
+                    "crdEncYX":"y|ixHierjAKjDoAbBYlGm@zEe@`BDa@{DkA}MiAeEeBc@TUrJb@G",
                     "crdEncS":"NNMMKNMMNNNNN",
                     "crdEncF":"?????????????",
                     "ppLocRefL":
@@ -1709,33 +1696,33 @@
                       },
                       {
                         "ppIdx":12,
-                        "locX":1
+                        "locX":7
                       }
                     ]
                   },
                   "proc":0,
                   "pos":
                   {
-                    "x":12438392,
-                    "y":51331696,
+                    "x":12405833,
+                    "y":51319857,
                     "layerX":0,
                     "crdSysX":0
                   },
                   "lStop":-1,
                   "freq":
                   {
-                    "minC":10,
-                    "maxC":10,
-                    "numC":13
+                    "minC":7,
+                    "maxC":8,
+                    "numC":17
                   },
-                  "ctxRecon":"T$A=1@O=Leipzig, Johannisplatz@L=11063@a=128@$A=1@O=Leipzig, Hauptbahnhof (Tram/Bus)@L=13000@a=128@$202109061447$202109061451$Bus   72$$1$$$$",
+                  "ctxRecon":"T$A=1@O=Leipzig, Johannisplatz@L=11063@a=128@$A=1@O=Leipzig, Hauptbahnhof/Goethestr.@L=15738@a=128@$202109091226$202109091229$BusSEV15$$1$$$$",
                   "msgL":
                   [
                     {
                       "type":"REM",
                       "remX":0,
                       "fLocX":0,
-                      "tLocX":1,
+                      "tLocX":7,
                       "tagL":
                       [
                         "RES_JNY_DTL"
@@ -1743,9 +1730,9 @@
                     },
                     {
                       "type":"HIM",
-                      "himX":0,
+                      "himX":2,
                       "fLocX":0,
-                      "tLocX":1,
+                      "tLocX":7,
                       "tagL":
                       [
                         "SUM_SEC_H3","SUM_CON_HDR_H1"
@@ -1755,7 +1742,7 @@
                       "type":"HIM",
                       "himX":1,
                       "fLocX":0,
-                      "tLocX":1,
+                      "tLocX":7,
                       "tagL":
                       [
                         "SUM_SEC_H3","SUM_CON_HDR_H1"
@@ -1764,44 +1751,44 @@
                   ],
                   "subscr":"F"
                 },
-                "minChg":"000700"
+                "minChg":"000800"
               },
               {
                 "type":"WALK",
-                "icoX":6,
+                "icoX":7,
                 "dep":
                 {
-                  "locX":1,
+                  "locX":7,
                   "dInR":true,
-                  "dTimeS":"145100",
+                  "dTimeS":"122900",
                   "type":"N"
                 },
                 "arr":
                 {
                   "locX":6,
                   "aOutR":true,
-                  "aTimeS":"145800",
+                  "aTimeS":"123700",
                   "type":"N"
                 },
                 "gis":
                 {
-                  "dist":208,
-                  "durS":"000700",
-                  "dirGeo":4,
-                  "ctx":"H|1|W$A=1@O=Leipzig, Hauptbahnhof (Tram/Bus)@L=13000@a=128@$A=1@O=Leipzig Hbf@L=8010205@a=128@$202109061451$202109061458$$$1$$$$",
+                  "dist":245,
+                  "durS":"000800",
+                  "dirGeo":8,
+                  "ctx":"H|1|W$A=1@O=Leipzig, Hauptbahnhof/Goethestr.@L=15738@a=128@$A=1@O=Leipzig Hbf@L=8010205@a=128@$202109091229$202109091237$$$1$$$$",
                   "poly":
                   {
                     "delta":true,
                     "dim":2,
                     "type":"WGS84",
-                    "crdEncYX":"ubkxHa`qjAqH{I",
+                    "crdEncYX":"s~jxHigqjAsLsB",
                     "crdEncS":"NN",
                     "crdEncF":"??",
                     "ppLocRefL":
                     [
                       {
                         "ppIdx":0,
-                        "locX":1
+                        "locX":7
                       },
                       {
                         "ppIdx":1,
@@ -1813,10 +1800,10 @@
                 }
               }
             ],
-            "ctxRecon":"¶HKI¶T$A=1@O=Leipzig, Johannisplatz@L=11063@a=128@$A=1@O=Leipzig, Hauptbahnhof (Tram/Bus)@L=13000@a=128@$202109061447$202109061451$Bus   72$$1$$$$§W$A=1@O=Leipzig, Hauptbahnhof (Tram/Bus)@L=13000@a=128@$A=1@O=Leipzig Hbf@L=8010205@a=128@$202109061451$202109061458$$$1$$$$",
+            "ctxRecon":"¶HKI¶T$A=1@O=Leipzig, Johannisplatz@L=11063@a=128@$A=1@O=Leipzig, Hauptbahnhof/Goethestr.@L=15738@a=128@$202109091226$202109091229$BusSEV15$$1$$$$§W$A=1@O=Leipzig, Hauptbahnhof/Goethestr.@L=15738@a=128@$A=1@O=Leipzig Hbf@L=8010205@a=128@$202109091229$202109091237$$$1$$$$",
             "freq":
             {
-              "minC":10
+              "minC":7
             },
             "trfRes":
             {
@@ -2057,51 +2044,51 @@
               }
             ],
             "conSubscr":"F",
-            "cksum":"649babab_3"
+            "cksum":"58af70fa_3"
           },
           {
             "cid":"C-3",
-            "date":"20210906",
+            "date":"20210909",
             "dur":"001500",
             "chg":0,
             "dep":
             {
               "locX":0,
               "dInR":true,
-              "dTimeS":"143500",
+              "dTimeS":"121400",
               "type":"N"
             },
             "arr":
             {
               "locX":6,
               "aOutR":true,
-              "aTimeS":"145000",
+              "aTimeS":"122900",
               "type":"N"
             },
             "secL":
             [
               {
                 "type":"WALK",
-                "icoX":6,
+                "icoX":7,
                 "dep":
                 {
                   "locX":0,
                   "dInR":true,
-                  "dTimeS":"143500",
+                  "dTimeS":"121400",
                   "type":"N"
                 },
                 "arr":
                 {
                   "locX":6,
                   "aOutR":true,
-                  "aTimeS":"145000",
+                  "aTimeS":"122900",
                   "type":"N"
                 },
                 "gis":
                 {
                   "dist":1139,
                   "durS":"001500",
-                  "ctx":"G|1|G@F|A=1@O=Leipzig, Johannisplatz@X=12386290@Y=51337890@U=80@L=11063@i=A×de:14713:11063@|A=1@O=Leipzig Hbf@X=12382066@Y=51345467@U=80@L=8010205@i=A×de:14713:8010205@|6092021|143500|145000|ft|ft@0@2000@120@1@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§bt@0@2000@120@1@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§tt@0@5000@120@1@100@1@@0@@@@@false@0@-1@0@-1@-1@$t@0@25000@120@1@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$§||",
+                  "ctx":"G|1|G@F|A=1@O=Leipzig, Johannisplatz@X=12386290@Y=51337890@U=80@L=11063@i=A×de:14713:11063@|A=1@O=Leipzig Hbf@X=12382066@Y=51345467@U=80@L=8010205@i=A×de:14713:8010205@|9092021|121400|122900|ft|ft@0@2000@120@1@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§bt@0@2000@120@1@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§tt@0@5000@120@1@100@1@@0@@@@@false@0@-1@0@-1@-1@$t@0@25000@120@1@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$§||",
                   "segL":
                   [
                     {
@@ -2188,16 +2175,16 @@
                 }
               }
             ],
-            "ctxRecon":"¶HKI¶G@F$A=1@O=Leipzig, Johannisplatz@L=11063@a=0@$A=1@O=Leipzig Hbf@L=8010205@a=0@$202109061435$202109061450$$$1$$$$¶GP¶ft@0@2000@120@1@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§bt@0@2000@120@1@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§tt@0@5000@120@1@100@1@@0@@@@@false@0@-1@0@-1@-1@$t@0@25000@120@1@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$§",
+            "ctxRecon":"¶HKI¶G@F$A=1@O=Leipzig, Johannisplatz@L=11063@a=0@$A=1@O=Leipzig Hbf@L=8010205@a=0@$202109091214$202109091229$$$1$$$$¶GP¶ft@0@2000@120@1@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§bt@0@2000@120@1@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§tt@0@5000@120@1@100@1@@0@@@@@false@0@-1@0@-1@-1@$t@0@25000@120@1@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$§",
             "conSubscr":"N",
-            "cksum":"e312cacb_3"
+            "cksum":"33365c93_3"
           }
         ],
-        "outCtxScrB":"2|OB|MT#11#9517#9517#9528#9528#0#0#5#9515#1#-2147483646#0#1#2|PDH#45c493d8d37c0d13f34a1eb18dc371a5|RD#6092021|RT#143500|US#0",
-        "outCtxScrF":"2|OF|MT#11#9527#9527#9538#9538#0#0#5#9522#3#-2147483646#0#1#2|PDH#45c493d8d37c0d13f34a1eb18dc371a5|RD#6092021|RT#143500|US#0",
+        "outCtxScrB":"2|OB|MT#11#13697#13697#13708#13708#0#0#5#13694#1#-2147483646#0#1#2|PDH#45c493d8d37c0d13f34a1eb18dc371a5|RD#9092021|RT#121400|US#0",
+        "outCtxScrF":"2|OF|MT#11#13706#13706#13717#13717#0#0#5#13699#3#-2147483646#0#1#2|PDH#45c493d8d37c0d13f34a1eb18dc371a5|RD#9092021|RT#121400|US#0",
         "fpB":"20210902",
         "fpE":"20211211",
-        "planrtTS":"1630931672"
+        "planrtTS":"1631182424"
       }
     }
   ]

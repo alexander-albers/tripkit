@@ -2,7 +2,7 @@
   "ver":"1.15",
   "ext":"DB.R18.04.a",
   "lang":"deu",
-  "id":"b7wuakckku2hw2wx",
+  "id":"wk4emmsu6sa49ick",
   "cInfo":
   {
     "code":"OK",
@@ -163,16 +163,16 @@
               "mMastLocX":3
             },
             {
-              "lid":"A=1@O=Frankfurt(Main)Hbf@X=8663785@Y=50107149@U=80@L=8000105@",
+              "lid":"A=1@O=Nürnberg Hbf@X=11082989@Y=49445615@U=80@L=8000284@",
               "type":"S",
-              "name":"Frankfurt(Main)Hbf",
-              "icoX":9,
-              "extId":"8000105",
+              "name":"Nürnberg Hbf",
+              "icoX":4,
+              "extId":"8000284",
               "state":"F",
               "crd":
               {
-                "x":8663003,
-                "y":50106817,
+                "x":11082270,
+                "y":49445435,
                 "z":0,
                 "type":"WGS84",
                 "layerX":0,
@@ -199,22 +199,40 @@
               "pCls":63
             },
             {
-              "lid":"A=1@O=Halle(Saale)Hbf@X=11987088@Y=51477510@U=80@L=8010159@",
+              "lid":"A=1@O=Lutherstadt Wittenberg Hbf@X=12662286@Y=51867813@U=80@L=8010222@",
               "type":"S",
-              "name":"Halle(Saale)Hbf",
+              "name":"Lutherstadt Wittenberg Hbf",
               "icoX":4,
-              "extId":"8010159",
+              "extId":"8010222",
               "state":"F",
               "crd":
               {
-                "x":11986990,
-                "y":51477079,
+                "x":12661999,
+                "y":51867579,
                 "z":0,
                 "type":"WGS84",
                 "layerX":0,
                 "crdSysX":0
               },
-              "pCls":831
+              "pCls":571
+            },
+            {
+              "lid":"A=1@O=Leipzig Hbf@X=12382066@Y=51345467@U=80@L=8010205@",
+              "type":"S",
+              "name":"Leipzig Hbf",
+              "icoX":4,
+              "extId":"8010205",
+              "state":"F",
+              "crd":
+              {
+                "x":12381167,
+                "y":51345081,
+                "z":0,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":319
             },
             {
               "lid":"A=1@O=Erfurt Hbf@X=11038502@Y=50972550@U=80@L=8010101@",
@@ -235,42 +253,6 @@
               "pCls":303
             },
             {
-              "lid":"A=1@O=München Hbf@X=11558339@Y=48140229@U=80@L=8000261@",
-              "type":"S",
-              "name":"München Hbf",
-              "icoX":9,
-              "extId":"8000261",
-              "state":"F",
-              "crd":
-              {
-                "x":11558744,
-                "y":48140364,
-                "z":0,
-                "type":"WGS84",
-                "layerX":0,
-                "crdSysX":0
-              },
-              "pCls":447
-            },
-            {
-              "lid":"A=1@O=Aschaffenburg Hbf@X=9143693@Y=49980554@U=80@L=8000010@",
-              "type":"S",
-              "name":"Aschaffenburg Hbf",
-              "icoX":4,
-              "extId":"8000010",
-              "state":"F",
-              "crd":
-              {
-                "x":9143854,
-                "y":49980590,
-                "z":0,
-                "type":"WGS84",
-                "layerX":0,
-                "crdSysX":0
-              },
-              "pCls":47
-            },
-            {
               "lid":"A=1@O=Würzburg Hbf@X=9935777@Y=49801795@U=80@L=8000260@",
               "type":"S",
               "name":"Würzburg Hbf",
@@ -289,16 +271,16 @@
               "pCls":303
             },
             {
-              "lid":"A=1@O=Nürnberg Hbf@X=11082989@Y=49445615@U=80@L=8000284@",
+              "lid":"A=1@O=München Hbf@X=11558339@Y=48140229@U=80@L=8000261@",
               "type":"S",
-              "name":"Nürnberg Hbf",
-              "icoX":4,
-              "extId":"8000284",
+              "name":"München Hbf",
+              "icoX":13,
+              "extId":"8000261",
               "state":"F",
               "crd":
               {
-                "x":11082270,
-                "y":49445435,
+                "x":11558744,
+                "y":48140364,
                 "z":0,
                 "type":"WGS84",
                 "layerX":0,
@@ -325,16 +307,16 @@
               "pCls":45
             },
             {
-              "lid":"A=1@O=München Hbf Gl.27-36@X=11556712@Y=48141532@U=80@L=8098261@",
+              "lid":"A=1@O=München Hbf (tief)@X=11560496@Y=48141173@U=80@L=8098263@",
               "type":"S",
-              "name":"München Hbf Gl.27-36",
-              "icoX":9,
-              "extId":"8098261",
+              "name":"München Hbf (tief)",
+              "icoX":5,
+              "extId":"8098263",
               "state":"F",
               "crd":
               {
-                "x":11556712,
-                "y":48141532,
+                "x":11559166,
+                "y":48141496,
                 "z":0,
                 "type":"WGS84",
                 "layerX":0,
@@ -342,43 +324,7 @@
               },
               "pCls":447,
               "entry":true,
-              "mMastLocX":12
-            },
-            {
-              "lid":"A=1@O=Tutzing@X=11272887@Y=47907138@U=80@L=8005927@",
-              "type":"S",
-              "name":"Tutzing",
-              "icoX":4,
-              "extId":"8005927",
-              "state":"F",
-              "crd":
-              {
-                "x":11272653,
-                "y":47906815,
-                "z":0,
-                "type":"WGS84",
-                "layerX":0,
-                "crdSysX":0
-              },
-              "pCls":57
-            },
-            {
-              "lid":"A=1@O=München-Pasing@X=11461876@Y=48149856@U=80@L=8004158@",
-              "type":"S",
-              "name":"München-Pasing",
-              "icoX":4,
-              "extId":"8004158",
-              "state":"F",
-              "crd":
-              {
-                "x":11461633,
-                "y":48150036,
-                "z":0,
-                "type":"WGS84",
-                "layerX":0,
-                "crdSysX":0
-              },
-              "pCls":319
+              "mMastLocX":14
             },
             {
               "lid":"A=1@O=Starnberg@X=11343668@Y=47995961@U=80@L=8005676@",
@@ -400,16 +346,34 @@
               "isMainMast":true
             },
             {
-              "lid":"A=1@O=Feldafing@X=11290227@Y=47946934@U=80@L=8001970@",
+              "lid":"A=1@O=München Hackerbrücke@X=11548568@Y=48141973@U=80@L=8004129@",
               "type":"S",
-              "name":"Feldafing",
+              "name":"München Hackerbrücke",
               "icoX":1,
-              "extId":"8001970",
+              "extId":"8004129",
               "state":"F",
               "crd":
               {
-                "x":11290011,
-                "y":47946754,
+                "x":11548765,
+                "y":48141946,
+                "z":0,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":280
+            },
+            {
+              "lid":"A=1@O=München Donnersbergerbrücke@X=11536540@Y=48142620@U=80@L=8004128@",
+              "type":"S",
+              "name":"München Donnersbergerbrücke",
+              "icoX":15,
+              "extId":"8004128",
+              "state":"F",
+              "crd":
+              {
+                "x":11537133,
+                "y":48142683,
                 "z":0,
                 "type":"WGS84",
                 "layerX":0,
@@ -418,16 +382,178 @@
               "pCls":56
             },
             {
-              "lid":"A=1@O=Possenhofen@X=11306479@Y=47961964@U=80@L=8004874@",
+              "lid":"A=1@O=München Hirschgarten@X=11519245@Y=48143537@U=80@L=8004179@",
               "type":"S",
-              "name":"Possenhofen",
+              "name":"München Hirschgarten",
               "icoX":1,
-              "extId":"8004874",
+              "extId":"8004179",
               "state":"F",
               "crd":
               {
-                "x":11306039,
-                "y":47961613,
+                "x":11519506,
+                "y":48143546,
+                "z":0,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":56
+            },
+            {
+              "lid":"A=1@O=München-Laim@X=11503667@Y=48144373@U=80@L=8004151@",
+              "type":"S",
+              "name":"München-Laim",
+              "icoX":1,
+              "extId":"8004151",
+              "state":"F",
+              "crd":
+              {
+                "x":11504206,
+                "y":48144283,
+                "z":0,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":56
+            },
+            {
+              "lid":"A=1@O=München-Pasing@X=11461876@Y=48149856@U=80@L=8004158@",
+              "type":"S",
+              "name":"München-Pasing",
+              "icoX":4,
+              "extId":"8004158",
+              "state":"F",
+              "crd":
+              {
+                "x":11461633,
+                "y":48150036,
+                "z":0,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":319
+            },
+            {
+              "lid":"A=1@O=München-Westkreuz@X=11443942@Y=48149029@U=80@L=8004163@",
+              "type":"S",
+              "name":"München-Westkreuz",
+              "icoX":1,
+              "extId":"8004163",
+              "state":"F",
+              "crd":
+              {
+                "x":11443834,
+                "y":48149020,
+                "z":0,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":56
+            },
+            {
+              "lid":"A=1@O=Lochham@X=11430890@Y=48128246@U=80@L=8003720@",
+              "type":"S",
+              "name":"Lochham",
+              "icoX":5,
+              "extId":"8003720",
+              "state":"F",
+              "crd":
+              {
+                "x":11430746,
+                "y":48128291,
+                "z":0,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":48
+            },
+            {
+              "lid":"A=1@O=Gräfelfing@X=11425568@Y=48119778@U=80@L=8002339@",
+              "type":"S",
+              "name":"Gräfelfing",
+              "icoX":5,
+              "extId":"8002339",
+              "state":"F",
+              "crd":
+              {
+                "x":11425380,
+                "y":48119482,
+                "z":0,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":48
+            },
+            {
+              "lid":"A=1@O=Planegg@X=11413559@Y=48105306@U=80@L=8004827@",
+              "type":"S",
+              "name":"Planegg",
+              "icoX":5,
+              "extId":"8004827",
+              "state":"F",
+              "crd":
+              {
+                "x":11413451,
+                "y":48105333,
+                "z":0,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":48
+            },
+            {
+              "lid":"A=1@O=Stockdorf@X=11400848@Y=48093260@U=80@L=8005735@",
+              "type":"S",
+              "name":"Stockdorf",
+              "icoX":5,
+              "extId":"8005735",
+              "state":"F",
+              "crd":
+              {
+                "x":11401109,
+                "y":48093575,
+                "z":0,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":16
+            },
+            {
+              "lid":"A=1@O=Gauting@X=11376146@Y=48070661@U=80@L=8002198@",
+              "type":"S",
+              "name":"Gauting",
+              "icoX":1,
+              "extId":"8002198",
+              "state":"F",
+              "crd":
+              {
+                "x":11376218,
+                "y":48070688,
+                "z":0,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":56
+            },
+            {
+              "lid":"A=1@O=Starnberg Nord@X=11347389@Y=48005975@U=80@L=8005675@",
+              "type":"S",
+              "name":"Starnberg Nord",
+              "icoX":1,
+              "extId":"8005675",
+              "state":"F",
+              "crd":
+              {
+                "x":11347389,
+                "y":48005319,
                 "z":0,
                 "type":"WGS84",
                 "layerX":0,
@@ -439,7 +565,7 @@
               "lid":"A=1@O=Starnberg@X=11343038@Y=47995988@U=199@L=608005676@",
               "type":"S",
               "name":"Starnberg",
-              "icoX":14,
+              "icoX":17,
               "extId":"608005676",
               "state":"F",
               "crd":
@@ -452,7 +578,7 @@
               },
               "pCls":0,
               "entry":true,
-              "mMastLocX":20
+              "mMastLocX":17
             },
             {
               "lid":"A=2@O=Starnberg, Possenhofener Straße 13@X=11338508@Y=47994109@u=15@L=981214204@",
@@ -492,7 +618,7 @@
               "prodCtx":
               {
                 "name":"U      5",
-                "num":"15657",
+                "num":"15656",
                 "line":"5",
                 "matchId":"5",
                 "catOut":"U",
@@ -512,7 +638,7 @@
               "prodCtx":
               {
                 "name":"U      5",
-                "num":"15657",
+                "num":"15656",
                 "line":"5",
                 "lineId":"7_vbbBVU_5",
                 "matchId":"5",
@@ -525,16 +651,16 @@
               }
             },
             {
-              "name":"ICE 2930",
-              "number":"2930",
+              "name":"ICE 509",
+              "number":"509",
               "icoX":4,
               "cls":1,
               "oprX":0,
               "prodCtx":
               {
-                "name":"ICE 2930",
-                "num":"2930",
-                "matchId":"2930",
+                "name":"ICE  509",
+                "num":"509",
+                "matchId":"28",
                 "catOut":"ICE",
                 "catOutS":"ICE",
                 "catOutL":"Intercity-Express",
@@ -544,15 +670,15 @@
               }
             },
             {
-              "name":"ICE 725",
-              "number":"725",
+              "name":"ICE 721",
+              "number":"721",
               "icoX":4,
               "cls":1,
               "oprX":0,
               "prodCtx":
               {
-                "name":"ICE  725",
-                "num":"725",
+                "name":"ICE  721",
+                "num":"721",
                 "matchId":"41",
                 "catOut":"ICE",
                 "catOutS":"ICE",
@@ -561,28 +687,6 @@
                 "catCode":"0",
                 "admin":"80____"
               }
-            },
-            {
-              "name":"RB 59471",
-              "nameS":"RB",
-              "number":"59471",
-              "icoX":10,
-              "cls":8,
-              "oprX":1,
-              "prodCtx":
-              {
-                "name":"RB 59471",
-                "num":"59471",
-                "matchId":"6",
-                "catOut":"RB",
-                "catOutS":"RB",
-                "catOutL":"Regionalbahn",
-                "catIn":"RB",
-                "catCode":"3",
-                "admin":"800790",
-                "addName":"RB     6"
-              },
-              "addName":"RB 6"
             },
             {
               "name":"S 6",
@@ -594,7 +698,7 @@
               "prodCtx":
               {
                 "name":"S      6",
-                "num":"8619",
+                "num":"6698",
                 "line":"6",
                 "matchId":"6",
                 "catOut":"S",
@@ -615,7 +719,7 @@
               "prodCtx":
               {
                 "name":"S      6",
-                "num":"8619",
+                "num":"6698",
                 "line":"6",
                 "lineId":"4_800725_6",
                 "matchId":"6",
@@ -658,7 +762,7 @@
             },
             {
               "name":"DB Regio AG Bayern",
-              "icoX":11
+              "icoX":14
             }
           ],
           "remL":
@@ -678,18 +782,24 @@
               "txtN":"Behindertengerechtes Fahrzeug"
             },
             {
+              "type":"D",
+              "code":"",
+              "icoX":9,
+              "txtN":"Verzögerungen im Betriebsablauf",
+              "sIdx":3
+            },
+            {
+              "type":"G",
+              "code":"",
+              "icoX":9,
+              "txtN":"Gleiswechsel"
+            },
+            {
               "type":"A",
               "code":"CK",
               "prio":200,
               "icoX":7,
-              "txtN":"Sicher + kontaktlos ohne Ticketkontrolle reisen mit Komfort Check-in (Frankfurt(Main)Hbf - Würzburg Hbf)"
-            },
-            {
-              "type":"A",
-              "code":"PF",
-              "prio":200,
-              "icoX":7,
-              "txtN":"Maskenpflicht nach gesetzl. Regelung; wir empfehlen eine FFP2-Maske (Frankfurt(Main)Hbf - Würzburg Hbf)"
+              "txtN":"Sicher + kontaktlos ohne Ticketkontrolle reisen mit Komfort Check-in"
             },
             {
               "type":"A",
@@ -700,19 +810,24 @@
             },
             {
               "type":"A",
-              "code":"ER",
-              "prio":560,
-              "icoX":7,
-              "txtN":"Rampe im Zug"
+              "code":"FR",
+              "prio":260,
+              "icoX":11,
+              "txtN":"Fahrradmitnahme reservierungspflichtig"
             },
             {
-              "type":"M",
-              "code":"",
+              "type":"A",
+              "code":"BR",
+              "prio":450,
               "icoX":12,
-              "txtS":"S 6: Tutzing->Starnberg: Information.",
-              "txtN":"GDL-Streik von Donnerstag, 2. September, 2 Uhr, bis Dienstag, 7. September, 2 Uhr. Bei der S-Bahn gilt in diesem Zeitraum ein Ersatzfahrplan. Die Linien verkehren mindestens im Stundentakt, in einigen Linienabschnitten auch alle 20 bis 40 Minuten. Bitte informieren Sie sich vor Fahrtantritt auf www.s-bahn-muenchen.de über Ihre Reiseverbindungen.",
-              "url":"https://www.s-bahn-muenchen.de/aktuell",
-              "sIdx":6
+              "txtN":"Bordrestaurant"
+            },
+            {
+              "type":"A",
+              "code":"EH",
+              "prio":560,
+              "icoX":7,
+              "txtN":"Fahrzeuggebundene Einstiegshilfe vorhanden"
             },
             {
               "type":"A",
@@ -725,14 +840,8 @@
               "type":"A",
               "code":"K2",
               "prio":300,
-              "icoX":13,
+              "icoX":16,
               "txtN":"nur 2. Klasse"
-            },
-            {
-              "type":"C",
-              "code":"",
-              "icoX":15,
-              "txtN":"Es liegen aktuelle Informationen vor."
             }
           ],
           "icoL":
@@ -766,26 +875,101 @@
               "txt":"DB Fernverkehr AG"
             },
             {
-              "res":"ECE"
+              "res":"Empty"
             },
             {
-              "res":"RB"
+              "res":"rt_ont"
+            },
+            {
+              "res":"attr_bike_r"
+            },
+            {
+              "res":"attr_resto"
+            },
+            {
+              "res":"ECE"
             },
             {
               "res":"RE",
               "txt":"DB Regio AG Bayern"
             },
             {
-              "res":"HimInfo"
+              "res":"DPN"
             },
             {
               "res":"attr_2nd"
             },
             {
               "res":"STA"
+            }
+          ],
+          "tcocL":
+          [
+            {
+              "c":"FIRST"
             },
             {
-              "res":"HimWarn"
+              "c":"SECOND"
+            },
+            {
+              "c":"FIRST"
+            },
+            {
+              "c":"SECOND"
+            },
+            {
+              "c":"FIRST"
+            },
+            {
+              "c":"SECOND"
+            },
+            {
+              "c":"FIRST"
+            },
+            {
+              "c":"SECOND"
+            },
+            {
+              "c":"FIRST"
+            },
+            {
+              "c":"SECOND"
+            },
+            {
+              "c":"FIRST"
+            },
+            {
+              "c":"SECOND"
+            },
+            {
+              "c":"FIRST"
+            },
+            {
+              "c":"SECOND"
+            },
+            {
+              "c":"FIRST"
+            },
+            {
+              "c":"SECOND"
+            },
+            {
+              "c":"FIRST"
+            },
+            {
+              "c":"SECOND"
+            },
+            {
+              "c":"FIRST"
+            },
+            {
+              "c":"SECOND"
+            },
+            {
+              "c":"FIRST"
+            },
+            {
+              "c":"SECOND"
             }
           ]
         },
@@ -793,26 +977,26 @@
         [
           {
             "cid":"DirectConReq",
-            "date":"20210906",
-            "dur":"093900",
-            "chg":4,
+            "date":"20210909",
+            "dur":"075600",
+            "chg":3,
             "sDays":
             {
-              "sDaysR":"fährt 6. Sep ",
-              "sDaysB":"00000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000"
+              "sDaysR":"fährt 9. bis 13. Sep 2021 ",
+              "sDaysB":"0000000000000000000000000000000000000000000000000000000000000000007FE00000000000000000000000"
             },
             "dep":
             {
               "locX":0,
               "dInR":true,
-              "dTimeS":"122100",
+              "dTimeS":"121600",
               "type":"N"
             },
             "arr":
             {
-              "locX":24,
+              "locX":31,
               "aOutR":true,
-              "aTimeS":"222300",
+              "aTimeS":"201300",
               "type":"N"
             },
             "secL":
@@ -824,21 +1008,21 @@
                 {
                   "locX":0,
                   "dInR":true,
-                  "dTimeS":"122100",
+                  "dTimeS":"121600",
                   "type":"N"
                 },
                 "arr":
                 {
                   "locX":1,
                   "aOutR":true,
-                  "aTimeS":"122200",
+                  "aTimeS":"121700",
                   "type":"N"
                 },
                 "gis":
                 {
                   "dist":19,
                   "durS":"000100",
-                  "ctx":"G|1|G@F|A=2@O=Berlin - Mitte, Unter den Linden 24@X=13388714@Y=52517139@u=2@L=980133346@|A=1@O=Unter den Linden (U), Berlin@X=13388830@Y=52517041@U=80@L=732590@|6092021|122100|122200|bf|ft@0@2000@120@0@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§bt@0@2000@120@0@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§tf@$f@$f@$f@$f@$f@$§||"
+                  "ctx":"G|1|G@F|A=2@O=Berlin - Mitte, Unter den Linden 24@X=13388714@Y=52517139@u=2@L=980133346@|A=1@O=Unter den Linden (U), Berlin@X=13388830@Y=52517041@U=80@L=732590@|9092021|121600|121700|bf|ft@0@2000@120@0@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§bt@0@2000@120@0@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§tf@$f@$f@$f@$f@$f@$§||"
                 },
                 "resState":"N"
               },
@@ -848,11 +1032,11 @@
                 "dep":
                 {
                   "locX":1,
-                  "idx":20,
+                  "idx":17,
                   "dProdX":1,
                   "dInR":true,
-                  "dTimeS":"122200",
-                  "dTimeR":"124500",
+                  "dTimeS":"121700",
+                  "dTimeR":"121800",
                   "dProgType":"PROGNOSED",
                   "dTrnCmpSX":
                   {
@@ -864,10 +1048,10 @@
                 "arr":
                 {
                   "locX":2,
-                  "idx":23,
+                  "idx":20,
                   "aOutR":true,
-                  "aTimeS":"122600",
-                  "aTimeR":"124900",
+                  "aTimeS":"122100",
+                  "aTimeR":"122200",
                   "aProgType":"PROGNOSED",
                   "aTrnCmpSX":
                   {
@@ -878,7 +1062,7 @@
                 },
                 "jny":
                 {
-                  "jid":"1|1303053|21|80|6092021",
+                  "jid":"1|1303099|10|80|9092021",
                   "prodX":2,
                   "dirTxt":"S+U Hauptbahnhof",
                   "dirFlg":"1",
@@ -888,11 +1072,11 @@
                   [
                     {
                       "locX":1,
-                      "idx":20,
+                      "idx":17,
                       "dProdX":2,
                       "dInR":true,
-                      "dTimeS":"122200",
-                      "dTimeR":"124500",
+                      "dTimeS":"121700",
+                      "dTimeR":"121800",
                       "dProgType":"PROGNOSED",
                       "dDirTxt":"S+U Hauptbahnhof",
                       "dDirFlg":"1",
@@ -901,45 +1085,45 @@
                     },
                     {
                       "locX":4,
-                      "idx":21,
+                      "idx":18,
                       "aProdX":2,
                       "aOutR":true,
-                      "aTimeS":"122300",
-                      "aTimeR":"124600",
+                      "aTimeS":"121800",
+                      "aTimeR":"121900",
                       "aProgType":"PROGNOSED",
                       "aTZOffset":120,
                       "dProdX":2,
                       "dInR":true,
-                      "dTimeS":"122300",
-                      "dTimeR":"124600",
+                      "dTimeS":"121800",
+                      "dTimeR":"121900",
                       "dProgType":"PROGNOSED",
                       "dTZOffset":120,
                       "type":"N"
                     },
                     {
                       "locX":6,
-                      "idx":22,
+                      "idx":19,
                       "aProdX":2,
                       "aOutR":true,
-                      "aTimeS":"122500",
-                      "aTimeR":"124800",
+                      "aTimeS":"122000",
+                      "aTimeR":"122100",
                       "aProgType":"PROGNOSED",
                       "aTZOffset":120,
                       "dProdX":2,
                       "dInR":true,
-                      "dTimeS":"122500",
-                      "dTimeR":"124800",
+                      "dTimeS":"122000",
+                      "dTimeR":"122100",
                       "dProgType":"PROGNOSED",
                       "dTZOffset":120,
                       "type":"N"
                     },
                     {
                       "locX":2,
-                      "idx":23,
+                      "idx":20,
                       "aProdX":2,
                       "aOutR":true,
-                      "aTimeS":"122600",
-                      "aTimeR":"124900",
+                      "aTimeS":"122100",
+                      "aTimeR":"122200",
                       "aProgType":"PROGNOSED",
                       "aTZOffset":120,
                       "type":"N"
@@ -975,8 +1159,8 @@
                   },
                   "pos":
                   {
-                    "x":13403051,
-                    "y":52517760,
+                    "x":13414126,
+                    "y":52521652,
                     "layerX":0,
                     "crdSysX":0
                   },
@@ -986,7 +1170,7 @@
                     "maxC":5,
                     "numC":25
                   },
-                  "ctxRecon":"T$A=1@O=Unter den Linden (U), Berlin@L=732590@a=128@$A=1@O=Berlin Hauptbahnhof (S+U), Berlin@L=730749@a=128@$202109061222$202109061226$U      5$$1$$$$",
+                  "ctxRecon":"T$A=1@O=Unter den Linden (U), Berlin@L=732590@a=128@$A=1@O=Berlin Hauptbahnhof (S+U), Berlin@L=730749@a=128@$202109091217$202109091221$U      5$$1$$$$",
                   "msgL":
                   [
                     {
@@ -994,8 +1178,8 @@
                       "remX":0,
                       "fLocX":1,
                       "tLocX":2,
-                      "fIdx":20,
-                      "tIdx":23,
+                      "fIdx":17,
+                      "tIdx":20,
                       "tagL":
                       [
                         "RES_JNY_DTL_L"
@@ -1006,8 +1190,8 @@
                       "remX":1,
                       "fLocX":1,
                       "tLocX":2,
-                      "fIdx":20,
-                      "tIdx":23,
+                      "fIdx":17,
+                      "tIdx":20,
                       "tagL":
                       [
                         "RES_JNY_DTL"
@@ -1015,7 +1199,7 @@
                     }
                   ],
                   "subscr":"F",
-                  "chgDurR":15
+                  "chgDurR":10
                 },
                 "minChg":"000800",
                 "resState":"N"
@@ -1027,7 +1211,7 @@
                 {
                   "locX":2,
                   "dInR":true,
-                  "dTimeS":"124900",
+                  "dTimeS":"122100",
                   "dTZOffset":120,
                   "type":"N"
                 },
@@ -1035,7 +1219,7 @@
                 {
                   "locX":7,
                   "aOutR":true,
-                  "aTimeS":"125700",
+                  "aTimeS":"122900",
                   "aTZOffset":120,
                   "type":"N"
                 },
@@ -1044,7 +1228,7 @@
                   "dist":76,
                   "durS":"000800",
                   "dirGeo":24,
-                  "ctx":"H|1|W$A=1@O=Berlin Hauptbahnhof (S+U), Berlin@L=730749@a=128@$A=1@O=Berlin Hbf (tief)@L=8098160@a=128@$202109061249$202109061257$$$1$$$$",
+                  "ctx":"H|1|W$A=1@O=Berlin Hauptbahnhof (S+U), Berlin@L=730749@a=128@$A=1@O=Berlin Hbf (tief)@L=8098160@a=128@$202109091221$202109091229$$$1$$$$",
                   "poly":
                   {
                     "delta":true,
@@ -1075,109 +1259,280 @@
                 "dep":
                 {
                   "locX":7,
-                  "idx":1,
+                  "idx":4,
                   "dProdX":3,
                   "dPlatfS":"1",
                   "dInR":true,
-                  "dTimeS":"130400",
+                  "dTimeS":"123000",
+                  "dTimeR":"123200",
                   "dProgType":"PROGNOSED",
                   "dTrnCmpSX":
                   {
                     "tcM":1
                   },
                   "dTZOffset":120,
+                  "msgL":
+                  [
+                    {
+                      "type":"REM",
+                      "remX":2,
+                      "txtC":
+                      {
+                        "r":204,
+                        "g":0,
+                        "b":0,
+                        "a":255
+                      },
+                      "prio":478,
+                      "fIdx":-1,
+                      "tIdx":-1,
+                      "tagL":
+                      [
+                        "RES_LOC_H3"
+                      ]
+                    }
+                  ],
                   "type":"N"
                 },
                 "arr":
                 {
                   "locX":8,
-                  "idx":5,
+                  "idx":10,
                   "aProdX":3,
-                  "aPlatfS":"13",
+                  "aPlatfS":"9",
+                  "aPlatfR":"8",
+                  "aPlatfCh":true,
                   "aOutR":true,
-                  "aTimeS":"165600",
+                  "aTimeS":"171900",
+                  "aTimeR":"171900",
                   "aProgType":"PROGNOSED",
                   "aTrnCmpSX":
                   {
                     "tcM":1
                   },
                   "aTZOffset":120,
+                  "msgL":
+                  [
+                    {
+                      "type":"REM",
+                      "remX":3,
+                      "prio":478,
+                      "fIdx":-1,
+                      "tIdx":-1,
+                      "tagL":
+                      [
+                        "RES_LOC_H3"
+                      ]
+                    }
+                  ],
                   "type":"N"
                 },
                 "jny":
                 {
-                  "jid":"1|1862901|0|80|6092021",
+                  "jid":"1|167783|0|80|9092021",
                   "prodX":3,
-                  "dirTxt":"Frankfurt(Main)Hbf",
-                  "status":"R",
+                  "dirTxt":"Nürnberg Hbf",
+                  "dirFlg":"1",
+                  "status":"P",
                   "isRchbl":true,
                   "stopL":
                   [
                     {
                       "locX":7,
-                      "idx":1,
+                      "idx":4,
                       "dProdX":3,
                       "dPlatfS":"1",
                       "dInR":true,
-                      "dTimeS":"130400",
-                      "dDirTxt":"Frankfurt(Main)Hbf",
+                      "dTimeS":"123000",
+                      "dTimeR":"123200",
+                      "dProgType":"PROGNOSED",
+                      "dDirTxt":"Nürnberg Hbf",
+                      "dDirFlg":"1",
                       "dTZOffset":120,
+                      "msgL":
+                      [
+                        {
+                          "type":"REM",
+                          "remX":2,
+                          "txtC":
+                          {
+                            "r":204,
+                            "g":0,
+                            "b":0,
+                            "a":255
+                          },
+                          "prio":478,
+                          "fIdx":-1,
+                          "tIdx":-1,
+                          "tagL":
+                          [
+                            "RES_LOC_H3"
+                          ]
+                        }
+                      ],
                       "type":"N"
                     },
                     {
                       "locX":9,
-                      "idx":2,
+                      "idx":5,
                       "aProdX":3,
                       "aPlatfS":"3",
                       "aOutR":true,
-                      "aTimeS":"130900",
+                      "aTimeS":"123500",
+                      "aTimeR":"123700",
+                      "aProgType":"PROGNOSED",
                       "aTZOffset":120,
                       "dProdX":3,
                       "dPlatfS":"3",
                       "dInR":true,
-                      "dTimeS":"131100",
+                      "dTimeS":"123700",
+                      "dTimeR":"123900",
+                      "dProgType":"PROGNOSED",
+                      "dTrnCmpSX":
+                      {
+                        "tcocX":
+                        [
+2,
+3
+                        ]
+                      },
                       "dTZOffset":120,
                       "type":"N"
                     },
                     {
                       "locX":10,
-                      "idx":3,
+                      "idx":6,
                       "aProdX":3,
-                      "aPlatfS":"6",
+                      "aPlatfS":"2",
                       "aOutR":true,
-                      "aTimeS":"141300",
+                      "aTimeS":"131000",
+                      "aTimeR":"131200",
+                      "aProgType":"PROGNOSED",
                       "aTZOffset":120,
                       "dProdX":3,
-                      "dPlatfS":"6",
+                      "dPlatfS":"2",
                       "dInR":true,
-                      "dTimeS":"141500",
+                      "dTimeS":"131200",
+                      "dTimeR":"131200",
+                      "dProgType":"PROGNOSED",
+                      "dTrnCmpSX":
+                      {
+                        "tcocX":
+                        [
+4,
+5
+                        ]
+                      },
                       "dTZOffset":120,
                       "type":"N"
                     },
                     {
                       "locX":11,
-                      "idx":4,
+                      "idx":7,
+                      "aProdX":3,
+                      "aPlatfS":"11",
+                      "aOutR":true,
+                      "aTimeS":"134200",
+                      "aTimeR":"134200",
+                      "aProgType":"PROGNOSED",
+                      "aTZOffset":120,
+                      "dProdX":3,
+                      "dPlatfS":"11",
+                      "dInR":true,
+                      "dTimeS":"134800",
+                      "dTimeR":"134800",
+                      "dProgType":"PROGNOSED",
+                      "dTrnCmpSX":
+                      {
+                        "tcocX":
+                        [
+6,
+7
+                        ]
+                      },
+                      "dTZOffset":120,
+                      "type":"N"
+                    },
+                    {
+                      "locX":12,
+                      "idx":8,
                       "aProdX":3,
                       "aPlatfS":"1",
                       "aOutR":true,
-                      "aTimeS":"144800",
+                      "aTimeS":"142900",
+                      "aTimeR":"142900",
+                      "aProgType":"PROGNOSED",
                       "aTZOffset":120,
                       "dProdX":3,
                       "dPlatfS":"1",
                       "dInR":true,
-                      "dTimeS":"145000",
+                      "dTimeS":"143100",
+                      "dTimeR":"143100",
+                      "dProgType":"PROGNOSED",
+                      "dTrnCmpSX":
+                      {
+                        "tcocX":
+                        [
+8,
+9
+                        ]
+                      },
+                      "dTZOffset":120,
+                      "type":"N"
+                    },
+                    {
+                      "locX":13,
+                      "idx":9,
+                      "aProdX":3,
+                      "aPlatfS":"5",
+                      "aOutR":true,
+                      "aTimeS":"162300",
+                      "aTimeR":"162300",
+                      "aProgType":"PROGNOSED",
+                      "aTZOffset":120,
+                      "dProdX":3,
+                      "dPlatfS":"5",
+                      "dInR":true,
+                      "dTimeS":"162500",
+                      "dTimeR":"162500",
+                      "dProgType":"PROGNOSED",
+                      "dTrnCmpSX":
+                      {
+                        "tcocX":
+                        [
+10,
+11
+                        ]
+                      },
                       "dTZOffset":120,
                       "type":"N"
                     },
                     {
                       "locX":8,
-                      "idx":5,
+                      "idx":10,
                       "aProdX":3,
-                      "aPlatfS":"13",
+                      "aPlatfS":"9",
+                      "aPlatfR":"8",
+                      "aPlatfCh":true,
                       "aOutR":true,
-                      "aTimeS":"165600",
+                      "aTimeS":"171900",
+                      "aTimeR":"171900",
                       "aProgType":"PROGNOSED",
                       "aTZOffset":120,
+                      "msgL":
+                      [
+                        {
+                          "type":"REM",
+                          "remX":3,
+                          "prio":478,
+                          "fIdx":-1,
+                          "tIdx":-1,
+                          "tagL":
+                          [
+                            "RES_LOC_H3"
+                          ]
+                        }
+                      ],
                       "type":"N"
                     }
                   ],
@@ -1186,10 +1541,10 @@
                     "delta":true,
                     "dim":3,
                     "type":"WGS84",
-                    "crdEncYX":"q}q_IqbrpAvDsC??BRbSwL~NcGbL}B|WqJnG}@rIO?iBhB@BfBdMrA`SrIjTfF~DRfLy@~LEAv@??~Dp@`Rr@??`OXlJtBn`Add@|@xAlDkBh@pDDWxG~Bt_@rJLgBgAjI`b@hSdL|GLsAtFlApDPdVeBxHTdKpCdOrI??~N~LfLvMzI`MnWfc@N[py@ruAs@~AvG`Iw@`Cv@aChErGbIlP`HpK~NzQ`K|J??dRzNlMnHhH`E`HtCFe@bLbEnWxJRyA??beB|i@??~e@bObi@`NbpCxz@????j_@dL????xhBjj@jLrCAX@Yhd@~IBY??ba@lHAXvkBz[????vHlAbW~DzOn@biEiCfJJjGl@fGtAjL~ErKbIzOjQ??z_CtoCtMtLnF~D`f@vX??z`@`U~NvGzThGtOvBlUr@df@wBzOJjsH~[hMvAxHdBlMfEtNvH`NhKdMrM~GbJjG`Ktm@nhA??~d@xz@nIdNp_BztBhU~X??dSpWbPbX??raEx{IlOtW`QxTjMfM~MfKjIdF|N|GxIxCjmCls@nLhEzKdHfRrQnLhOzO`W??fV|`@~EjI??fXpc@`wAx_CvNbYdF`MpEzMtDvNvH|_@rD~Z~Bd\\??xOvlC??j[vlFbq@~}G??rf@z_FnBfP~EfZ??lCdMfPtp@??tgBdiHlHnUpIdTvJrR~K|Q??tKhObHlIniCbzC??tL|NtGpJfKtQrFhLfFzL|H~T`EfN~DtP??lE~U|B~O|C`YtBnYxJbxCtBjg@jAtg@~@xPpA|KfAjGdCvJjBfFxDxHdJxLxYzZ??dLbMvRlX`FjF`D`CrIvDje@vL~FnClFdE~GxI|DtHjVbp@pGrO??hHhPtGxKbDdDdCxAjGxA??qDxHnsEhxHvy@`vA??hxFfnJ??byDrpG??f|E~dI??|HrMpCbDdNhYxH`UtFbWrChTnArPn@lUXrg@v@jUbAdLvAxKlBfKhCvJzC~IlFlLhGfKtEfGbFdFbIxF|FlCnKjD??rXhIrIpDvKvHtJjKjEzGnH~OjE|MjRxp@pGxP|DtHrItMtLtNhFzEzKzG`GxBfGvAlv@fM|k@fH@m@r@JCj@ll@jHrLnDpIlEzMnK|s@dr@fh@~l@??????pq@hx@??vq@lx@`L`PxF|K`F`MnQ~l@??vaBlzF??lhCf|I??jAdE??ht@pfCjb@pjBpClOzCbTpZdrC??ziAjoKfArPTbO????CvI}@dYVlHbAfGjP|u@`CjMfB`OUF??fAzMtGz]UVHKzCrJ^PvD_FxC`H??FKnF~JeCtHILnCrGzFzIlLxN~C~B~Al@YlDNsAhIrCtDRhMs@nN}A|Bq@tDkCWgAxFoEtC{CzXq`@nBcB`CkAfJqAvr@pC?i@?h@xe@fArIvApDhBnCxBxOvQvEpChD|@`Jh@f`AzA`O`AhO\\hNS?GnGK?Q?PrQm@`JfBjDpA`HbEhHvG|EjG~EjJxEhMxAtF~BpLhAjJdApPv@zYpAxX?A?@fElk@bDzYxYzcCnE~WbJda@jL`_@nPf`@lh@`aA??j|@h`BfKbTxUrm@hS`s@bQnu@hJh^j[baAzwBttFrRjk@pV~_AbRncA`m@~eEbDjSdQ|y@|Tpv@ts@rqB??rv@twB`Spq@h\\ttArQtk@|P|a@zd@bbAtm@~fAzj@xz@xT`Zjf@`h@xh@da@hxAn|@fZ|Rl\\fZpZ|^fXjc@xUjg@bSfk@l]|mA??jd@~_B`Ujn@`Xlj@vZ~e@l]la@hpCxjCt^xb@tZ`f@~Wnj@xHzRrF`Q??~A`F??`IvVzPbu@tw@jmEvXtqAfd@d~Ade@buAtf@vfBz_@daB??`xClhMtKzg@xbAjkFdXxhA~\\bdAja@x~@xu@nxAb\\zi@zh@fr@`l@~j@vdBrtAlp@pe@`S`P`MfN??bD~DjEhHbFlKdErLhDpMv_@hvBDEHAzNxx@zDxPIHGHbD`MzCjN`DpW@AA@fCt[xHtpA????hClb@nAbe@`@hHp@nGfAhG??d@|BqDlCpDmCt@pDv@g@POxPd{@lDrNvDvHp\\z`@jCrDxBlE|ClKhEvWtClKMPxIpSbElGbFtExPzKvHtGpd@nm@fHrHdDzBdG~B`HjAxa@fE??z]bDxEtAjFzC~EtEhEtGvErLxBxJx@nGr@~KnCdsA?hLo@tOqAfLmKvf@qBjPa@vGQtLDrGz@tPxCh]|DbSjEnMlSrc@dDtIdClJtG`[rIlZPOfV|x@\\lAnHfXfXlnApCdO|AbPlGxdAHhLc@dLgB~OcBjKuAvFaDrIaLtR??_|@fxAgHtOkErMaCrJqCfOun@`}DgF`^??kBlRs@bLq@~]LvPbEvdBIdUcA|TcBbP_BjKok@nxC{BhN??????uBxUa@dLO~PAfX???xF_B@|BGRpRnAzTx@jGxChJ??kBx@bi@~{DbEzRhu@ruCnDlSnBxOrAhP~@~TRvPMdUm@rPgAjPub@h`EwD`XyC`O_Sdv@v@jAgCrEsCjI_{@~bDmF|ViCbToAzTu@|hA??i@r_@oAhb@uFbnA??qAhYm@rYBtY|@|\\??`VrrDt@pPNhLChLWfLo@dLcAxKcDvSsIr]??kjA`qEsQxt@aFfWgEvW_Fx`@yMdvAsBzOiDpSoEvR{D`NoYzw@??qE|LmM~b@s@w@oEvPaE`SkAxKw@pPKxPJzGlD~nA??~Bp|@JxPo@`U{AdPyAdJ??_ZxzA??mQr}@iEzRwCbJsLd[gHxO{GtI_DbC{FpCaJ|AaMEmGZeG~AiIbF{EpF}FrKwC`JcD|Q??wGff@c@dLKtYJzGt@bLlHbo@??|BzRzOzeA??vJ~p@dAlPFxP}B`y@??yAhf@_BtTwu@zvFcA|KOzGNhLz@`LhDpSnEtRfDlIhEzG|TnU??xLtKrInDjGr@xOc@lGZhb@zMj]nG~FbCt`@fUlFfE|EpFjEtGvDvHxFnQlLtj@rDlO`FvLnGpJzQjV??nZja@xFtKtCbJ`[hkA???B??nGrVlA~FxArKvCb]`@fLBdK??{E|sADvPh@bLhAxKtCdOfZ~cA??nJ~[tAxFfBhKlo@bcG??dArKP|GOnLa@vGeQ`aBmA~F{F|RgBnJaAjKeAnYaCzXc@rPr@|f@i@bUkGjrAoAvKeF~[{@|K]tP\\xYKdL}@rPaBtL??wGbb@oA|Ks@jQA~\\???lC_@`^a@tGeEta@qIbhBoEh\\aAxKBdLnAhSo@T????zBbBm@VhAnHpBjHdCrHhCzJ?@?ABH|AzE~BhE~E`F????hDxAhLlBrDbB~VxV|F`JzOxP??????l]z[`FlFfCrDxEzJd]t_A??nInUvFzKbHhIdIpFxIvCpDd@p_Ah@bJfA~FhCrH~GdE~G|FxL??nO`\\zVnp@|DlHvE`GhFjEfDfBpo@hU`v@de@??lRzLbG`BrDN|_Ek\\nLuD`I{FzEuFvTqZ??zEqGdF}EpIaEhG}@pD@hG~@jOjErDZjGWdGaBfDiBhFsElJuKbDwBlDgApDWpD\\jDlA`D|BnEjGlB~ErAxFbAxKBzGs@|]BzG\\vGt@lGzBxJhDfIfCxDvCvC`DvBjDpApDh@ft@mBjGv@`G~BvHtGjEvGpa@~~@|FpKfFrEfL~D??`U~GbDfB`FjF|K|OpFvDfGjAzOMpD^jDrA~M`K`GrBrDNfGeAtnAmv@|HcGj_CinCtM_LdIiFzFwCld@_RdDkBhCyB~CaErD{HnBsG??lTmv@|G_PjG{JtuAooB`HoI|CcCfD_BpD{@tS_A??hFGpDZnD~@~FdCnF~DpIhKdC|BlEfCpDdA~Ff@ziAjAjGt@bGjBvF`DhFrEbg@lo@nFvDjLzEjFhE`EbH`JnXdC`ErCvC|FrCzb@lI|L`AnPY??tWo@vOdA|IfCzt@zWdGdBpD^hGs@hD{A|CkCxGyIvCwCdDiBnD{@fDK|Dd@pWhHhDxA`DzBrC|C~DdHjZn|@pChM??v@pMKdLy@|K{F|g@o@nPPbLf@rGx@hGzBvJbBhFvBpEhC~DhErE`u@rb@@CABn]fRnDx@pDFhGcAdDiBvCuCxMoQXp@~@oA??jJmMlD}FzDeEhFyC`GgAvHGdb@lA???Mle@lA@K@QlNz@hIvCzjAdw@BIBO~\\jUlr@pc@vI~CpIhA~GGhGu@j~@{RhG{@jGCdJt@|I|BzFrC~H~F~EjFnGpJrDxHhp@trB??pi@jcBbK`XnCtFlG~I`HtGhJjG??j]|SdDdChFzFfG`KrZjv@??pItSxFtKbZ~g@hIzJx\\~[dGbHdRpWtP~[r@mAbK`SrG`IdGjEj\\~NvG|CpFpD`HjIzBjEzCxIpBzJt@lGzBbThA~F|AlFnBzE`CbElMlOs@tBr@uBdlEb_FhEfEvFxCbCc@KrA~n@|QpDb@rDQlDgA~C{B~MwRzCmCdLqFnDu@rDMhGv@hDrAbDtB|EnFdGrK??fDvHrFjQfA`GjDn\\lCbJdEzGn_@ta@pDxHvAtFhArKJtGkBv~ADvGfAdPdBbKxAtFhB`FxDlHxExFnF~DvIzCjUdBnDl@hD|AdFxExDlH|AnF`AbGd@rGl@~]??r@f]lAnKvArFt^lgAxApFhBdKn@lGf@~Kx@h|@^rGjBbK`FnLbn@ljAtX~g@??rM~RbHfInHfHrPpL`LbGjL`F??|f@pSdIlFdH~HbE`HfDfIlCdJjB~JdC`Tb~@tjInB~JlCdJhDbIrEnH~Az@??O`@hEjEbzBphBzJpJdCxDlRt^hB`FvArF`BfKt@xKDbLg@lM??kBv[MlPJjCx@vKvAnInB`HlB|E`E`HpCbDpeArfAxGzI~GnL??~_@`r@rDvHjGpPbFzQ`FzVjBtOv@fP~Ata@bCzYzAfO??th@bsF??hBfRdJ`}@tAzJvu@lkD??ndBf{H??`nA~uFnDjNdJbY??rzBpxGnO~f@hL~\\DCtEjLlBpDzN~PdCxDlBxEtArF|@fGZrG@tGw@xKwBtJmZrs@b@B??{B`CHNy@hBrAhB?@mDbH_A`DwAvEqChQiD~Kq@|D_@`Jf@vK?@??@DtBfK|Nh^QP|B~GjAzFn@lGN`Lq@zKqGf_@w@hGa@pGItGfBj`A`Cja@f@n]vBj}@??lCdgAM@??pBjy@JCfBtq@z@xK|AfKzBrJhb@d}AtQzk@KH?@x\\vfAjCbOj@lGb@|J??v@PvAje@x@dJPEQDfHtu@`Gxj@[JfCl[l@lIHvGQrGm@lGuBxJq]zvAsAjKg@~KB`LrBn`Ah@~~AtAxPvGxg@[JxAtItAtFpKtW@BxEbNtC`KlBbJlDhTzChMvBfMhBtGOJnA~DZ`AMN@A|AxEbAzEh@rH?hPg@nPeAvKsAxFqBjEyNzP????sDpFeF|GqN`PeByE?@{`@awAxAuA",
-                    "crdEncZ":"?????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????",
-                    "crdEncS":"NNNNMNMNLNNNNNNNLLNNNLNNNNNNNNNKNNNLNNKNMNNNNMNMNNNNNNNLLNMNNMNKNNNNNNNNMMNNNNNNLNNNNNNNNNNNNNNKNKNNNNNNKNNNMNMNNMNNLNMNMNKNNNLNLNNNNNNNNMNLNLMNNNMNNNNNNNLNLNNMNNNNNNNNLNNKNNNMNLNNKNNNLNKNLNKNNKNMNLMNLNKNKNMNNMNKNMNLNMNNNNMNKNNNNNNNNNNNNNLNNNNMNMMNKNKNLNKNLNKNNLNNNMNKNNKNLNNKNMNNNNNMNMNNNNNNNMNLNNNNNNNNNNNKNNNNMNNNLNNKNLNNNNNNNNNNNNNNNNMNNKNNNMNKNLNNKNNKNNNNNNNKNNLNKNNLNNNNNNKNMNMNKNLNLLNNNMNNNNNNNNNNNNLNNNNNNNMNNNNNNNNMNNMNNNLNNNNNNNNNNNNNNNNNLNNNNNNNNNNNNNNMNNNNNNNNNNNNNKMNLNNNNMNNNKNNNNLNNNMKNKNNNNNNNNLNNNKNMMNNMNLLNMNLNKNNNLNMNMNLNLNMNNNKNLNNNMLNKMNNNNNKNMNMNKNLNNNNMNKNKNNKNNLNMNKNLNNNNNKNNNNNNMNMNNNNMNLNLNLNLNNMNNNLNNNNNNNLNNNLNMNNNKNKNKNNNNNNKNMNKNLNNNNNNLNLNKNNNLNNLNNNNKNKMNNKNNKNMNMNMNNNMNKNNNLNNNNNNNMNNLNMNMNMNNNNNMLNNNLNLNLNNNNNKNNNNKNNNNNKNNLNNNMNMNNNNKNNNLNLNNKMNMMNNNNNKMNMLNMNNLNNNNNNKNNLNMNNNNNNLNKNNNNLNNNNMLNNMNNNNMKNMNNMNNNLNNNNNKNNNNLNKNNNNNLNNNNKNNLNNLNLNLNLNLMNLNLNMNLNNKNKNLNLNKNKNNMNNNMNNNNLNLNNNLNMMNMNMNNLNKKNKNLNNNNKNNKNMNNKNKNMKNLNLNLNLNNMMNNNLNNNNNNNNKNLNMNLKNLNLNNKNLNNNNNNLNNLNLNKNKNNNNNLNMNLNNNNKNMNMNNNNNNNNNNNNNNMNLNKNLNLNLNLNNNNNLNMNNNKNNNNMNNNLNNNNNNMNKNNLNLNNKNKNNNNNMNNNNLNLNMNNKNNKNMNNLNLNNNNMNMNKNNKNLNMNNKNMNNLNLNNNNKNKNKNNMNMKNNNKNNKNNNNMNLNLNNLNLNNNNLMNKNKNMNMNNNKNMNKNLNNLNNNLNMNMNNNNNNNNKNNNNNNLNNLKNNKNNLNKNKNNNNNNNLNNNNNMMLNNNNNNNNNLNMNNKNKNNMKNNNNNNNNLNKNNNNNNKNNNMNNNKNNNLNLNKNMNLNNMNNKNNNKNKMLLNNNNNNKNMNMNMNNNNNKNNNNN",
-                    "crdEncF":"?????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????",
+                    "crdEncYX":"q}q_IqbrpAvDsC??BRbSwL~NcGbL}B|WqJnG}@rIO?iBhB@BfBdMrA`SrIjTfF~DRfLy@~LEAv@??~Dp@`Rr@??`OXlJtBn`Add@|@xAlDkBh@pDDWxG~Bt_@rJLgBgAjI`b@hSdL|GLsAtFlApDPdVeBxHTdKpCdOrI??~N~LfLvMzI`MnWfc@N[py@ruAs@~AvG`Iw@`Cv@aChErGbIlP`HpK~NzQ`K|J??dRzNlMnHhH`E`HtCFe@bLbEnWxJRyA??beB|i@??~e@bObi@`NbpCxz@????j_@dL????xhBjj@jLrCAX@Yhd@~IBY??ba@lHAXvkBz[????vHlAbW~DzOn@biEiCfJJjGl@fGtAjL~ErKbIzOjQ??z_CtoCtMtLnF~D`f@vX??z`@`U~NvGzThGtOvBlUr@df@wBzOJjsH~[hMvAxHdBlMfEtNvH`NhKdMrM~GbJjG`Ktm@nhA??~d@xz@nIdNp_BztBhU~X??dSpWbPbX??raEx{IlOtW`QxTjMfM~MfKjIdF|N|GxIxCjmCls@nLhEzKdHfRrQnLhOzO`W??fV|`@~EjI??fXpc@`wAx_CvNbYdF`MpEzMtDvNvH|_@rD~Z~Bd\\??xOvlC??j[vlFbq@~}G??rf@z_FnBfP~EfZ??lCdMfPtp@??tgBdiHlHnUpIdTvJrR~K|Q??tKhObHlIniCbzC??tL|NtGpJfKtQrFhLfFzL|H~T`EfN~DtP??lE~U|B~O|C`YtBnYxJbxCtBjg@jAtg@~@xPpA|KfAjGdCvJjBfFxDxHdJxLxYzZ??dLbMvRlX`FjF`D`CrIvDje@vL~FnClFdE~GxI|DtHjVbp@pGrO??hHhPtGxKbDdDdCxAjGxA??qDxHnsEhxHvy@`vA??hxFfnJ??byDrpG??f|E~dI??|HrMpCbDdNhYxH`UtFbWrChTnArPn@lUXrg@v@jUbAdLvAxKlBfKhCvJzC~IlFlLhGfKtEfGbFdFbIxF|FlCnKjD??rXhIrIpDvKvHtJjKjEzGnH~OjE|MjRxp@pGxP|DtHrItMtLtNhFzEzKzG`GxBfGvAlv@fM|k@fH@m@r@JGtAf]jDzLlBzIfCrIxDfInFrMhLbW`Vf[p\\tHbHlNvIpTdIpI`E`I~FrJdKjC~C??nOhQvH|GzK~GlLlEzLrB~L^~Lw@|HaB??nM_FhNmJ~LyMdKkP??dJiT`EgNbD_OdCwOzLscA|EqWhCsJ|C_JfFuL~DoH|IcM|JyJfo@kc@pSkMbbAoh@??|HcEhOcI??np@e]??BA@?lHyBhGeAzk@{B|LwA`hBqf@??ht@cSlvE{_A??``@eHhJUdZZdKg@bJoA~IsB|mB_m@ff@uO~RiGGw@BA????|VmHFfACWlOoE??BA@?hf@{NEi@Dh@vj@iPjR_H~DoA?@?Arh@oO@LdDAxCr@|OhKlc@fj@~IxJDO?DjFtF`G`Ibe@rg@??ce@sg@aGaIkFuF?EEN_JyJmc@gj@}OiKyCs@eD@AMsh@nO?@?A_EnAkR~Gwj@hPEi@Dh@if@zNA?C@??mOnEBVGgA}VlH????C@??e`@vLmDfBgFrEuE~FcEhHsBzE}DdNeCtOeU|`CgExj@_Clk@_I`vEyBpjBmAvb@yBlb@uh@l{HgBx[??uUbqF???@??cYlpH???J??iHrnBD@PBQvERB_Clv@cE~n@@???A?_Brd@[zPM|PF~Yn@xYt@vPbAtPbCdYfF|`@vEvW|p@pkChI~^zi@f{CjGj`@bEna@~Blb@`@hOn@ncAd@b^|@nWvCnf@???A?@fElk@bDzYxYzcCnE~WbJda@jL`_@nPf`@lh@`aA??j|@h`BfKbTxUrm@hS`s@bQnu@hJh^j[baAzwBttFrRjk@pV~_AbRncA`m@~eEbDjSdQ|y@|Tpv@ts@rqB??rv@twB`Spq@h\\ttArQtk@|P|a@zd@bbAtm@~fAzj@xz@xT`Zjf@`h@xh@da@hxAn|@fZ|Rl\\fZpZ|^fXjc@xUjg@bSfk@l]|mA??jd@~_B`Ujn@`Xlj@vZ~e@l]la@hpCxjCt^xb@tZ`f@~Wnj@xHzRrF`Q??~A`F??`IvVzPbu@tw@jmEvXtqAfd@d~Ade@buAtf@vfBz_@daB??`xClhMtKzg@xbAjkFdXxhA~\\bdAja@x~@xu@nxAb\\zi@zh@fr@`l@~j@vdBrtAlp@pe@`S`P`MfN??bD~DjEhHbFlKdErLhDpMv_@hvBDEHAzNxx@zDxPIHGHbD`MzCjN`DpW@AA@fCt[xHtpA????hClb@nAbe@`@hHp@nGfAhG??d@|BqDlCpDmCt@pDv@g@POxPd{@lDrNvDvHp\\z`@jCrDxBlE|ClKhEvWtClK??fGpOdG`KpCtC|U|OnDzCpEbFf_@pg@~HrIxFhDdGfB~g@pF?Zz]bDxEtAjFzC~EtEhEtGvErLxBxJx@nGr@~KnCdsA?hLo@tOqAfLmKvf@qBjPa@vGQtLDrGz@tPxCh]|DbSjEnMlSrc@dDtIdClJtG`[rIlZPOfV|x@xEtKpEbFfCz@`CBzGkBlUcIjGInD|@xf@`U`GpBdJx@rDAzKcC??l|Aed@vNsHbNyL??fi@_i@zEuF|DkH~D}MpQyu@v\\knAfBgF`DsG`DqE|C{Cj^e]??pJgJhCwDzJ}QdFwEhD{AhGaAlGXvGnB??vCjA~CzBbHlI~C~BlD|@nLShBZdD`BnMrLhG~JrC~CbItFla@z\\dDpB~F|B`DzB~ElFpMbLpIrMjClDvKdHvCxCpGlJpFbLlCnDzMhKdLrOxMpKzZb\\xDzBtSjIdDpBlLrJ??hGjGfGfJbCzEdBfFpDjNfDpS~@zK`@dLjAfiBZvGxEx`@LxGGtP\\tGz@hGnHbZhDdXjG`[bDnIbQzZhFjLxD`NjJld@UNfFvV~AnFrHbOzCxD??Xo@|DpEnF~DhD|A~QbGtFhDpm@np@vBrEj@vB|@hGNlCN`UrApK`BlFzBhEtKrK??fEhEfNrRlAdAhDnArDEvA_@lIiE~IoB`G}BpDa@pDd@|FpCfFrElClDhO`W~CbCxIxCvCrCnElG~C|BhL~ErDNnDu@xHkGfDgBvAUpDLhD~AfWhUfD`BvAVrDKtAc@|CcCdAyAjHkOvKiP|EsFpAs@pDi@xAHjDlArKtHrE`GhEtMzC|NxBfTb@`La@rG}BpOQhO??FvZUxG_@bCi@xBuBrEoHnHyBpEkAzF]pG|MtfG`@bLf@pG`BfH????xFjO`KnQhErMlA|FzBtOxC|\\tApKlA~Fr@nBdC|D`DvBtA^rDDdJu@lRrCpDMdG_BpDEvAZdDpBfArAnF`LpCdDdDfBxQ|GrOnC`GjBdIrFvL~NrElFdDjBpDh@~IH??`PuB`DyB|CkFxAkFt@_HnCcu@hB{OjBaK`DsIhEuGxCoCdDmBdG}AlG?tL|CdJb@~InBrDXlDw@nK_IlDy@fJZxL|B~L^bJfAtFfDnCjDzBhEn@vBz@fGh@zTlA|FzBjE|C~BzT`GfHfG??lHfJjGvJpBxE~AnF|CxNlBxOdJnuAFxG[rGgJlg@}Er`@aEha@??q@~XqEv`@OvGLtPRvGh@pGnA|FhFvQtAnKhB~a@dEh\\b@pGTlf@??Jpb@nAdYxBl`AjAfPpArKzBnOtC`Ong@zhBnElMfGzJ~TjZbKlQ|LzMzBlEtFlQrBtEvW~[|BhEn@tBz@fGf@bLr@b\\??b@dRnApKxa@pyA`DrIfEzGdz@jiAfH`IjFhEvFbDj_@tMbFzE|s@zsArD|HzAnF|AjK|@zKjAdW??nC|p@rAnKxVvz@tBrEjCpDlF~DlDfApDXb[i@~Lm@`JyAhNiE??hEkBdIeFxCuCrB{CpDcJlIcYtBsEhCqDzCmCfD_BnDu@rDEfGpAt[|QbYjL??jI~CpEr@x]t@jGw@hDuA`DyBds@}i@xI{ClKi@vg@bHjDfAvFdDfHzH|DlHjEjMrHzW??dHdWlA|Ft@jG\\`La@bL{AhKiKh]kA~Fu@jGa@rGGbL~A|a@bBxObc@fnC|@xKh@bb@z@zKhA`G|AlFdMl[???@??vBvIjApKj@nPf@t]c@`L{H`v@[tGCvGzFlcBjArKpAxFhB`FdE|GxCpCdDjBxItC`JhBpDF~Z}BdJ|@lIdEjY~V??xLrLxE~FhUff@`C`EpC`DnF|DnTrIvF`DlW~T~GrIrFvKjVxj@bVbt@bExIdCzD`FxFjmAvdA~ItFfGtAjGUdUqDhGVlDjAbY|NfGzAdJ^|ZyBhG}@na@_RzVqKjGe@hGdAtFhDpCfDvFpKxCxI`DtNpMn{@|BrJbDlIdE|G`FfFdi@r`@??nIvFpKnEzr@fIhE|ApEjDlClDzBjExPlf@tFxKh_BlaChG~HhErDpI`EhGfA~dA|HlGJnJc@??p]{A~aAjIhJP~FiA|F_D`HyH~L}O??lPeSbD{BjDoArDc@tDLnDz@dTjJrDb@pDK`GiBtUiPdG}AjGLnXtElGh@bJs@l`@gF~FcCz_@uWlDgApDa@jGXlDbAnDnBrb@l_@~CzBhDxAxGlA`jAbJpDn@vEbCrDrDzDlHtD`NnUzaAxCxI|DlHdHfIhIvEnd@vI??fVxErIrDrFrDnHhH~u@j{@rEbGbEbHpc@~`AfCrDvCvClIhEnDp@rDF`J}AvUwIDV|VgKzGaC`Eo@lGLnDx@xF~CpTpS`DxB`ZjJdG|ArD^jG[~FoB|l@g\\??vTkLjGkAjGb@fWbJfGlAzFCtG_BfDiBnFqFdZsc@~EkFbIqFdb@wT??dUcMdFyElEmGrDwH`w@sqBlD{HhEwGlHoHxfB_vAxCqCbCyDpBwExBuJl@mGLsGW}Hq@gF{E_VeBeLd@WtElY|F`^b_@foCxBpJzCxIrBpEdEzGfHxHrFtDvfCvrAnLxDxY`D??p}@hIhGdA~FvBtFhDdFzElChDvJtQnEfMnBxJ~C~WbA~FhCfJnHpT|BhOvAd]l@xIhBdMrBvJjCdJtDjK??lc@tiArDvHdExGdH`I|tA~qAdDpBlCx@??pEXrDUlDcA`DsBrC_D|BgEbMw_@rBsEbCyDdF{EzFmChGy@pDDhGtAvF~CprCtsBhDvApDl@zOB??~Lo@jDmAbDqBjHoHzzAecBdFwErFoDtImD~IeBzbBuS??tOkB??hSeClGW`MRzLbBbO~ElInE~H|FvJ|JvIxLzFjK|aAvsBzV|i@|FdK|GlIhFpEtFhD~`@lSjFfEjElGpBvE|DtMzIl]pHj^jLps@dCdJrBrEzGvI|CzBjDvAhGx@bPe@??|Lg@~EFfGdAnFhDnE~F~CdIfBxJj@tKQtKk@fGiBpLo]pvBgCbJeDbIaMfTuDtHuC|ImB~JeAtK[bLFvGtA~\\D|K_JhnB}@`GaAlCeJtMgCnHo@hEyB~X]vDmCxQ{AnS??zAoSlCyQ\\wDxB_Yn@iEfCoHdJuM`AmC|@aG~IinBE}KuA_]GwGZcLdAuKlB_KtC}ItDuH`MgTdDcIfCcJn]qvBhBqLj@gGPuKk@uKgByJ_DeIoE_GoFiDgGeA_FG}Lf@CgAcQf@qD]mDiAqCeBeDkD_CaEiB{EoA{Fq@iGeBai@y@qKwCyNaUuv@}BiJaAcG_AsKIiPbA}OrC}NxCqIfO_]|BeE`HeIrUiPfFqE|d@il@??fnAs_BbC{DpBsEzAmFfA_GvMqeAnByJvHkYbB_Kv@sKvA{e@n@kGfA{FrC{I|DcH~EeFtMcJ??rXsRvCoCtLuNjFiE`q@k[vI{ClG]pDZnDbAtF`DpMxKxH|BlHExO_E??|KyDdIkFpC_DbC}DzCoItGo_@h@{FLuGa@}XZ{KzAeKzCsI`C{DtCwC|SsK|C}BnCgDxBiEbBgFxHog@hCgJrBqEjEoGp|@yhA??p^}d@fEuGlBwEzAoFdA}Fn@iGRgP]eHqAuJgCgJqXur@oBwJ}@sKGsGLuGf@mGz@aGdCkJfRyj@??|]efAfDiNxJgf@tD_N|CoIpDwHrIwM??z\\q^pIgMjFaLhEiMhEiRjCoSjAgT??fCcrCl@cP~@uKrBiOjEkRlRii@pD_NlC}NnRyoA??xD}WfBaTrHeuCfA_PtCkS`DmN|FyPng@kfAn\\gq@??tHwP|DqMvCuN|BwSp@cPZ{X|@cxBPgPlAiTtCiSxE}QxEyLbt@irAhFcL~G{TjXigA`FuN??xEkJhEsGrg@em@lGmJbyBkpEnGeJjs@ey@nEgG|BeEdF{NzKac@dB_Kx@_PEka@j@Am@eVR_GpAkJbKs\\jA{Fp@gGZqGBqGUsGeBqS??w@cLG}Kf@iKv@uGlDcN`K{VjCaJlIag@zAuO|Asr@F}K]yKyBu\\K}KtEo}Ad@yKj@kGvTisAdDiNtCuIlD}Hd[ci@lB{ExAoFzAcK^oGn@ef@??b@me@t@sKtBqJ`Lc[xAcKZePCcdAb@oTlB{S|Jwr@vDyMtBmEnEiGhFmEj[aQ??nI_FzCgCrC_DnD{F??bCsFbBeFpCwNhAyOr@cj@j@wKxBgO|DqMvBqE~DkGh`@kg@jFiEfQcJbFyEvDkH~BkJ~@oKEkL_AcK_NmeAe@_K?uGp@oN??bAsHlAyFnVwcAtLsw@rCuNda@anA`CiJ~@cGj@iGv@u^P?NyUn@yUt@wKpBiOpBwJhsAirE??bJwZ|EqLhe@qn@bCyDjFaLfLyZxDwMxBqL`F_`@??????jAgJ??lRq|Al@wKrBa{@`AoKdBkKpByN??tFwd@dHwg@HBEArJyq@~CoO|EkMlSoY??GMxGkKhDcIn`@mtACEBD~IiZBBMKfPao@????~Ia]jCgCjA_EIO`Ma^zAmI\\aGcA{YSDCYQBPC{@aQqAmHcDmL}@cFwBwViBuNn@Y",
+                    "crdEncZ":"?????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????",
+                    "crdEncS":"NNNNMNMNLNNNNNNNLLNNNLNNNNNNNNNKNNNLNNKNMNNNNMNMNNNNNNNLLNMNNMNKNNNNNNNNMMNNNNNNLNNNNNNNNNNNNNNKNKNNNNNNKNNNMNMNNMNNLNMNMNKNNNLNLNNNNNNNNMNLNLMNNNMNNNNNNNLNLNNMNNNNNNNNLNNKNNNMNLNNKNNNLNKNLNKNNKNMNLMNLNKNKNMNNMNKNMNLNMNNNNMNKNNNNNNNNNNNNNLNNNNMNMMNKNKNLNKNLNKNNLNNNMNKNNKNLNNKNMNNNNKNLNLNLKNNKNMNNNLNMNMNMNNNNNNNNLNLNNKNKNMNNMNNNNNNNNNKNMNNNNNNNLNKNLNNNNNNNNNNNNNNNNNLNNNNNNLNNLNNNKKNNKKNNNLNNLNNNNNNLNNNNNNNNNNNNNNNLNLNKNNNNNNMMNMLNNNNNNNNNNNNNNNNNNNNKNKNKNKNMNMNMNNNLKNLNNNNMNNNNNNNNNNNNLNNNNNNNMNNNNNNNNMNNMNNNLNNNNNNNNNNNNNNNNNLNNNNNNNNNNNNNNMNNNNNNNNNNNNNKMNLNNNNMNNNKNNNNLNNNMKNKNNNNNNNNLNNNKNMMNNMNLKNLMNMNNNNLNMNMNLNLNMNNNKNLNNNMLNKMNNNNNLNNNNLLNKNNNNNNNNMNMMNKNKNNNNKNNLNMNNKNLNNNKNNLNLNKKNKNKNLNLLNNNNMNNKNNNKNKNNLNNMNKNLNNNNMMNMNNLNMNNNLNKMNNNKNKNNLNNNMNKNKNMLNMNMNKNMNLMNNNNKNKNMNKNKNNKNLNKNKNNNMNMNMNNNNKNKNNNMNNKNNNNNNNKNLNKNNKNKNNLNKNKNMNKNLNNNMNLNNNMNMNNLNMNKNNNMMKNMNNLMLNNKNKNNMNNNNNLNKMNNNLNNLNNNNLNKNKNNNLNNNNMNKNKNMNLMNNMLNMNKNKNNNNMNLMNKNNNKNLNLNNNNNLNNLNKNMNNKNKNMLNLNLNMNNNNLNNNKNNNNNLNMNKNNKNMNMNNKNLNNMNMNNKNNNNNMNKNMNKNNMNMNKNLNLNNNNNLNNKNMLNNNLNNKNMNNNMNNLNMNKNKNNNMNMNMNMNMNNNMNNMNKNNNNMNMNNKNNNMNMNKNNNLNLNLNLNNNNMKNKNMNKNNKNNKNMNMNMNKNMNNNNNNLNLNKNNKNNKNNNNNLNLNMLNMKNMNNNNNNMNMNMNMNLNNNMNLNLNMNLNMNLNLNKNNNMNLNKNMNNNNNKNLNKNNNMKNKNNKNLNKNNNKNMNKNNLNLNLNNKNMNLNMNNKNNNNKNKNLNMNNNNNLNMNMNMNMNKMNLNKNMNLMNMNLNNKNNNNNLNNNNNNNKMNLNKNMNMNKLNNLNNNLNKMNNMKNLNNNLNNLKNMNMNKNLNMKNNNNNNNLNNNNKNLNLNLNMNNKNLNNNNMKNNLNNNNKNKNNLMNMNKNMNMNNNKMNMNNKNMNNNNNMNKNNLNLMNNNLNNLNLNNLNKNNLNKNKNNLNMNMNKNKNLNNNKMNKNNNNMNMNNNNNLNMNMNLNNMNNMNMNKNNMNMNLNKNNNMNMNMNNNLNMNNMNKNNMNNNNNMNNKNKNLNNMNLNNMNNNKNLMNMKNMNKNNKNLNNNNNNNNMMNMNNLNMNNKNKNNKNNNMNNNKNNMMNNNNNKNLNNNKNNMNLNKNNNNLNLNNNMNNKNMNLNNNNNNNLNLNNNNNNNMNNNNNMNNNNNNNNNNNNNNNMNNNNNNNLLNLNN",
+                    "crdEncF":"?????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????",
                     "ppLocRefL":
                     [
                       {
@@ -1201,25 +1556,114 @@
                         "locX":9
                       },
                       {
-                        "ppIdx":350,
+                        "ppIdx":207,
                         "locX":10
                       },
                       {
-                        "ppIdx":518,
+                        "ppIdx":383,
                         "locX":11
                       },
                       {
+                        "ppIdx":601,
+                        "locX":12
+                      },
+                      {
                         "ppIdx":1376,
+                        "locX":13
+                      },
+                      {
+                        "ppIdx":1748,
                         "locX":8
                       }
                     ]
                   },
-                  "ctxRecon":"T$A=1@O=Berlin Hbf (tief)@L=8098160@a=128@$A=1@O=Frankfurt(Main)Hbf@L=8000105@a=128@$202109061304$202109061656$ICE 2930$$2$$$$",
-                  "chRatingRT":0,
+                  "pos":
+                  {
+                    "x":13121482,
+                    "y":52551334,
+                    "layerX":0,
+                    "crdSysX":0
+                  },
+                  "ctxRecon":"T$A=1@O=Berlin Hbf (tief)@L=8098160@a=128@$A=1@O=Nürnberg Hbf@L=8000284@a=128@$202109091230$202109091719$ICE  509$$1$$$$",
+                  "msgL":
+                  [
+                    {
+                      "type":"REM",
+                      "remX":4,
+                      "fLocX":7,
+                      "tLocX":8,
+                      "fIdx":4,
+                      "tIdx":10,
+                      "tagL":
+                      [
+                        "RES_JNY_DTL"
+                      ]
+                    },
+                    {
+                      "type":"REM",
+                      "remX":5,
+                      "fLocX":7,
+                      "tLocX":8,
+                      "fIdx":4,
+                      "tIdx":10,
+                      "tagL":
+                      [
+                        "RES_JNY_DTL"
+                      ]
+                    },
+                    {
+                      "type":"REM",
+                      "remX":6,
+                      "fLocX":7,
+                      "tLocX":8,
+                      "fIdx":4,
+                      "tIdx":10,
+                      "tagL":
+                      [
+                        "RES_JNY_DTL_L"
+                      ]
+                    },
+                    {
+                      "type":"REM",
+                      "remX":0,
+                      "fLocX":7,
+                      "tLocX":8,
+                      "fIdx":4,
+                      "tIdx":10,
+                      "tagL":
+                      [
+                        "RES_JNY_DTL_L"
+                      ]
+                    },
+                    {
+                      "type":"REM",
+                      "remX":7,
+                      "fLocX":7,
+                      "tLocX":8,
+                      "fIdx":4,
+                      "tIdx":10,
+                      "tagL":
+                      [
+                        "RES_JNY_DTL_L"
+                      ]
+                    },
+                    {
+                      "type":"REM",
+                      "remX":8,
+                      "fLocX":7,
+                      "tLocX":8,
+                      "fIdx":4,
+                      "tIdx":10,
+                      "tagL":
+                      [
+                        "RES_JNY_DTL"
+                      ]
+                    }
+                  ],
                   "subscr":"F",
-                  "chgDurR":58
+                  "chgDurR":43
                 },
-                "minChg":"000800",
+                "minChg":"000500",
                 "resState":"N"
               },
               {
@@ -1230,12 +1674,17 @@
                   "locX":8,
                   "idx":8,
                   "dProdX":4,
-                  "dPlatfS":"7",
+                  "dPlatfS":"9",
                   "dInR":true,
-                  "dTimeS":"175400",
+                  "dTimeS":"180200",
                   "dProgType":"PROGNOSED",
                   "dTrnCmpSX":
                   {
+                    "tcocX":
+                    [
+14,
+15
+                    ],
                     "tcM":1
                   },
                   "dTZOffset":120,
@@ -1243,12 +1692,13 @@
                 },
                 "arr":
                 {
-                  "locX":12,
-                  "idx":13,
+                  "locX":14,
+                  "idx":10,
                   "aProdX":4,
-                  "aPlatfS":"19",
+                  "aPlatfS":"22",
                   "aOutR":true,
-                  "aTimeS":"211300",
+                  "aTimeS":"191600",
+                  "aProgType":"PROGNOSED",
                   "aTrnCmpSX":
                   {
                     "tcM":1
@@ -1258,11 +1708,10 @@
                 },
                 "jny":
                 {
-                  "jid":"1|1861179|0|80|6092021",
+                  "jid":"1|171947|0|80|9092021",
                   "prodX":4,
                   "dirTxt":"München Hbf",
                   "status":"P",
-                  "isPartCncl":true,
                   "isRchbl":true,
                   "stopL":
                   [
@@ -1270,25 +1719,41 @@
                       "locX":8,
                       "idx":8,
                       "dProdX":4,
-                      "dPlatfS":"7",
+                      "dPlatfS":"9",
                       "dInR":true,
-                      "dTimeS":"175400",
+                      "dTimeS":"180200",
                       "dDirTxt":"München Hbf",
+                      "dTrnCmpSX":
+                      {
+                        "tcocX":
+                        [
+16,
+17
+                        ]
+                      },
                       "dTZOffset":120,
                       "type":"N"
                     },
                     {
-                      "locX":13,
+                      "locX":15,
                       "idx":9,
                       "aProdX":4,
-                      "aPlatfS":"6",
+                      "aPlatfS":"3",
                       "aOutR":true,
-                      "aTimeS":"182200",
+                      "aTimeS":"183200",
                       "aTZOffset":120,
                       "dProdX":4,
-                      "dPlatfS":"6",
+                      "dPlatfS":"3",
                       "dInR":true,
-                      "dTimeS":"182300",
+                      "dTimeS":"183300",
+                      "dTrnCmpSX":
+                      {
+                        "tcocX":
+                        [
+18,
+19
+                        ]
+                      },
                       "dTZOffset":120,
                       "type":"N"
                     },
@@ -1296,54 +1761,9 @@
                       "locX":14,
                       "idx":10,
                       "aProdX":4,
-                      "aPlatfS":"5",
+                      "aPlatfS":"22",
                       "aOutR":true,
-                      "aTimeS":"190100",
-                      "aTZOffset":120,
-                      "dProdX":4,
-                      "dPlatfS":"5",
-                      "dInR":true,
-                      "dTimeS":"190400",
-                      "dTZOffset":120,
-                      "type":"N"
-                    },
-                    {
-                      "locX":15,
-                      "idx":11,
-                      "aProdX":4,
-                      "aPlatfS":"9",
-                      "aOutR":true,
-                      "aTimeS":"195900",
-                      "aTZOffset":120,
-                      "dProdX":4,
-                      "dPlatfS":"9",
-                      "dInR":true,
-                      "dTimeS":"200200",
-                      "dTZOffset":120,
-                      "type":"N"
-                    },
-                    {
-                      "locX":16,
-                      "idx":12,
-                      "aProdX":4,
-                      "aPlatfS":"3",
-                      "aOutR":true,
-                      "aTimeS":"203100",
-                      "aTZOffset":120,
-                      "dProdX":4,
-                      "dPlatfS":"3",
-                      "dInR":true,
-                      "dTimeS":"203200",
-                      "dTZOffset":120,
-                      "type":"N"
-                    },
-                    {
-                      "locX":12,
-                      "idx":13,
-                      "aProdX":4,
-                      "aPlatfS":"19",
-                      "aOutR":true,
-                      "aTimeS":"211300",
+                      "aTimeS":"191600",
                       "aProgType":"PROGNOSED",
                       "aTZOffset":120,
                       "type":"N"
@@ -1354,10 +1774,10 @@
                     "delta":true,
                     "dim":3,
                     "type":"WGS84",
-                    "crdEncYX":"snypHw~zs@yAtAz`@`wA?AdBxEpNaPdF}GrDqF????xN{PpBkErAyFdAwKf@oP?iPi@sHcA{E}AyEA@@A_B_FM]\\]iBuGwBgM{CiMmDiTmBcJuCaKyEcNACqKuWuAuFyAuIZKwGyg@uAyPi@__BsBo`ACaLf@_LrAkKp]{vAtByJl@mGPsGIwGm@mIgCm[ZKaGyj@gHuu@PEQDy@eJwAke@w@Q??c@}Jk@mGkCcOy\\wfA?AJIuQ{k@ib@e}A{BsJ}AgK{@yKgBuq@??oBiy@M@??mCcgALCwBk}@g@o]aCka@gBk`AHuG`@qGv@iGpGg_@p@{KOaLo@mGkA{F}B_HPQ}Ni^uBgKAE???Ag@wK^aJp@}DhD_LpCiQvAwE~@aDlDcH?AsAiBx@iBIOzBaC??t@pBlWqi@bEaHxCsCdDeBnOcDzFuCbF_FnIeM??bKmQ~I{Rp~A_fEfByE??rp@efB??~HgTCCBBlIeR??zIaNnIeJ~~DqiD??tjCyzB??fkB{~A??|aAyz@nLuNrIkO??????rKkTjHwTtFgV~DkWnBaTx@cPhBsyAF?D?~AauAHgYTiXy@C\\cZGwGm@wH????u@}EaNwm@_G_Vm_@mcBHG??yAuGk{@cyDoC}NiA}OB_OhHi`A??^{K?yE]oIo@mG{CuNaMq_@_CiOk@{K?yGLqGvA{XH_LYaLy@uK}AiKwIw\\??oDyIiIcNmDoHoCmJaCkP??qEeh@KiP`Bsa@tCup@v@qkA|@eUnDeh@JmJQkJ}A{PsCyMeRwg@eTap@TURUqMod@_Ik^eIwf@_H_m@u@uOLoLbBoP~CgMW]~EaMhD}LzFcVhDcIrE_GbNuJtCuCfEwGlB{E`BkGrAmJnDen@DuGSuGmAoKoAyFkKa\\iAmF{@uGw@ePNeY]_LuLaaA??eGkd@mBkHiE}JuDuHiCqDyCiCwKeHoCeDeJqReCwDgCmCoDgCiDuAqDm@kG?uPfCgFm@gDiBsC_DwBoEyBqJwCuW_@kL?wGxAyn@b@oGdCySb@qGJuG}Asa@EuG`@yKbCoXT_LgEqbBCwGd@{K|BgN??~CwJzBgElCiDlFeExScL~C_CpCaD~BaEfK}VzDmHxWmb@bK{I|CuDlBwDbGwPxBoExVo]jFeEfGkApDXpLzDjGL`G{BtEuFxBqEnC_J~AcKt@yKj@iPAaL{@wKeBeKuIi_@??iDoQm@mGwA}YaAoJoIw]cDmI}Ru]cOkW{Se\\a[uo@gEoM}Jib@gEgWqBkQ??????iHiq@iIqg@uCcXcBa]Oq]XiPzAyX~A{OvBkO`FuVtDaNjEkMzI_SfK}PzGyIhHsHxHqGlNsIhi@oV`OyFfOuEnOqDrOqCtOmBjUyAbw@_CfUcCzj@qMpb@kGp_@}H??pmA_W|NqDhJ{C~NeGxS}KfNkJtMuKhM{LdH_IrPoTffCi_E??fz@msAzO}UlP}Tlk@gt@v}AyyBxPeTzYa\\??pr@gv@rU{XtTqZj\\mg@jOyVpN_XrMoYnWep@??nx@esB`McZrMkYxs@eyA~EoLpC_J`EqRnC}V|G}lAlAqa@zAgUWGzAoSlCyQ\\wDxB_Yn@iEfCoHdJuM`AmC|@aG~IinBE}KuA_]GwGZcLdAuKlB_KtC}ItDuH`MgTdDcIfCcJn]qvBhBqLj@gGPuKk@uKgByJ_DeIoE_GoFiDgGeA_FG}Lf@CgAcQf@qD]mDiAqCeBeDkD_CaEiB{EoA{Fq@iGeBai@y@qKwCyNaUuv@}BiJaAcG_AsKIiPbA}OrC}NxCqIfO_]|BeE`HeIrUiPfFqE|d@il@??fnAs_BbC{DpBsEzAmFfA_GvMqeAnByJvHkYbB_Kv@sKvA{e@n@kGfA{FrC{I|DcH~EeFtMcJ??rXsRvCoCtLuNjFiE`q@k[vI{ClG]pDZnDbAtF`DpMxKxH|BlHExO_E??|KyDdIkFpC_DbC}DzCoItGo_@h@{FLuGa@}XZ{KzAeKzCsI`C{DtCwC|SsK|C}BnCgDxBiEbBgFxHog@hCgJrBqEjEoGp|@yhA??p^}d@fEuGlBwEzAoFdA}Fn@iGRgP]eHqAuJgCgJqXur@oBwJ}@sKGsGLuGf@mGz@aGdCkJfRyj@??|]efAfDiNxJgf@tD_N|CoIpDwHrIwM??z\\q^pIgMjFaLhEiMhEiRjCoSjAgT??fCcrCl@cP~@uKrBiOjEkRlRii@pD_NlC}NnRyoA??xD}WfBaTrHeuCfA_PtCkS`DmN|FyPng@kfAn\\gq@??tHwP|DqMvCuN|BwSp@cPZ{X|@cxBPgPlAiTtCiSxE}QxEyLbt@irAhFcL~G{TjXigA`FuN??xEkJhEsGrg@em@lGmJbyBkpEnGeJjs@ey@nEgG|BeEdF{NzKac@dB_Kx@_PEka@j@Am@eVR_GpAkJbKs\\jA{Fp@gGZqGBqGUsGeBqS??w@cLG}Kf@iKv@uGlDcN`K{VjCaJlIag@zAuO|Asr@F}K]yKyBu\\K}KtEo}Ad@yKj@kGvTisAdDiNtCuIlD}Hd[ci@lB{ExAoFzAcK^oGn@ef@??b@me@t@sKtBqJ`Lc[xAcKZePCcdAb@oTlB{S|Jwr@vDyMtBmEnEiGhFmEj[aQ??nI_FzCgCrC_DnD{F??bCsFbBeFpCwNhAyOr@cj@j@wKxBgO|DqMvBqE~DkGh`@kg@jFiEfQcJbFyEvDkH~BkJ~@oKEkL_AcK_NmeAe@_K?uGp@oN??bAsHlAyFnVwcAtLsw@rCuNda@anA`CiJ~@cGj@iGv@u^P?NyUn@yUt@wKpBiOpBwJhsAirE??bJwZ|EqLhe@qn@bCyDjFaLfLyZxDwMxBqL`F_`@??????jAgJ??lRq|Al@wKrBa{@`AoKdBkKpByN??tFwd@dHwg@HBEArJyq@~CoO|EkMlSoY??GMxGkKhDcIn`@mtACEBD~IiZBBMKfPao@????~Ia]jCgCjA_EIO`Ma^zAmI\\aGcA{YSDCYQBPC{@aQqAmHcDmL}@cFwBwViBuNx@_@mDoVyBmUgAwPu@aPkAkN??cA}LKqGTqGn@sFjE{R|AiFpDyH|EmGIUxFaFn]aUxCkC|B{C|@u@lE}IvHqSa@g@|Sij@LLnIaTpRci@|Je\\bL}Z|DsMv]kdBVNGChBkLhAoElCsGvFcKQ[jIwLhMoKnJoFj[}MFb@??dNqF|BiAx^aPnb@gTpn@c_@tTaO~PoH~NkFjPaDlQeBlYS~Zf@`Ya@tpFma@luEiIf\\mClyA}T??vkCy`@pqBgg@dWwIp^sSri@ae@lcC}nBrVaRxL}GdNqGxV{HfhFct@nRaFpf@}PfdAwZbx@aWxWsJhUoExR_C??jf@eGpQsEdP}F~OuIbVuQ~b@sb@l[eW`ToKzJcExOkEjOmCdhAkIf[iFnPcFtLgFlUaM`L{HzJwIhKyJxVmYjPcXhKaSn\\cv@xwBejF??xcAidCjR_c@lRo^pM{RxPyUdzDwlF|SqXbTwTbOiKrRsKxWiKbe@mI~ZgCpWQjX~AjMhBrm@hMbRfC|Md@pW]`v@aH|UOj[|BdxAzQbOnDbObFhStJdSzMfOtMpI|IvKzMtNlSfXhb@bRnWjO~OvQvNrNfJlN`H~RxGryAd]bKl@hNwAfM{DjM_GhJmBbLKxV`B~EQ|Du@vFuBfEoCtVeVKYfIcHpG_GfDcBlDeAdf@_DlGPnDr@d\\dNhG~@lGWb[kIjTgG??fvBsm@vjDg`A|vCyc@??f]uE??`NwBrImDrHsGfCoDlCgFhCiHnBoJ`Koz@??lmAcfKjCqNhFiOjEkIdk@g`Ar`@q}@rG{IvHiG`GuCvCw@lJy@rnBxC?OdJ^hYx@jG~@bGhBlIhE`h@lZbInFnHbHptC||C??lmBrsBtHnGzFrCbG~Alc@bDxInA`J|CvWhNjHpB`OlB??x_AfKfJ`@dJAdJe@bJkAbv@sO`Mc@jG`@|lAnObz@t@??bUb@`MdBhLvErP|KvHnGvErFbSj\\pG|I|J`JjSjMlF`EbHzHpNlS??bOhT??tIrLlHdHdIbFtI~CzL~Ale@ZxG\\rM`C~JlDzI|EpHjG|IrK`JlM??hIxKjGnGpLrHfLvDvH`AfHN`j@qCdMHjGp@np@bL`MfDzFhC`IpFfgAd`AbLpFvWpICTvPtEnOx@zlBeC???g@tZa@????@??n@z`@q@bJ}@~IuBlcBst@hIeDlJyBvMgAlJPhXjDfIf@|IKfMcA??vL_A`LN????vMbCtH|C~D~BhM`LjT~W`GrFtLrHdNnElZtGvFh@tGHbKw@zj@wJEs@fl@{HbU{Dz`C_r@????jWmHdJqDrb@uLJbA|y@aVjOoDdOoF~i@kPEUnd@{LpDaBj_@aK??loAw^D^dk@wOWyCr@J??~EWlDs@Bd@????jJuBvN}GfFqEzLyNdCeDnC{EFGq@k@~CyMRmA@c@bAaR~AoSjAyUF@pC`@j@uKRDc@IDgAaDg@V}E_@G??xBcc@xAqPDBlACc@yTBcKd@DtCo~@P}MFAMF]oFDmWQC`DugA??LqEd@BSqNAkHf@kQ~BT^wL`BN",
-                    "crdEncZ":"??????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????",
-                    "crdEncS":"NNNNNKNNNNNMNMNMNKNNNNNNLLMKNKNNNKNNMNNLNMNKNLNLNNNKNNNMNNNKNNNNNNKNLNNNNNNNNKMNNKNKNNMNLNNNNNNNNNLMMNNNNNLNNNNLNLNNNMNNMNNNNNNNNNNNMNNNNNNNNNNNNNNNMNLNNNNKNNNNLNNNKLKNNNNLNNNNNKNKNNNNLNKNLNLNNNMLNNNNNNNNNMNLNNNMNNNNNNNNNNNNMNNNNKNLNMNNKNNLNKNNMNNNNMNLNKMNLNKNKNMNNMNMNNKNNKNKNKNMMNKNNNNNKNMNKNKLNNLNKLNNNNMNNNNLNMNLNMNNNNKLNNMNLNNMNMNNNNNNNNNMNKNMNLNLNKNNLNKNKNLNNNNNNNKNMNLNKNNNNKNKNNLNNLNMNLNMNNKNLNLNNNMMNNMKNLNNNLNNLKNMNMNKNLNMKNNNNNNNLNNNNKNLNLNLNMNNKNLNNNNMKNNLNNNNKNKNNLMNMNKNMNMNNNKMNMNNKNMNNNNNMNKNNLNLMNNNLNNLNLNNLNKNNLNKNKNNLNMNMNKNKNLNNNKMNKNNNNMNMNNNNNLNMNMNLNNMNNMNMNKNNMNMNLNKNNNMNMNMNNNLNMNNMNKNNMNNNNNMNNKNKNLNNMNLNNMNNNKNLMNMKNMNKNNKNLNNNNNNNNMMNMNNLNMNNKNKNNKNNNMNNNKNNMMNNNNNKNLNNNKNNMNLNKNNNNLNLNNNMNNKNMNLNNNNNNNLNLNNNNNNNMNNNNNMNNNNNNNNNNNNNNNMNNNNNNNLLNLNNMNNLNNLNLNKNMNNMNKNNLNNNNKNLLNNNNKNKNNNNMNNNNNMNLNKNNNLLNNNNNNNNNNNLNKNNNMMMLNLNNNLNNNNNKNLNNNLNNLNMNMNMNNNNNKMNNNNNNNNNNLNMNNNNNNNMNMNKNLLNNNLNNNNNMMNMNKNLNNNNNKNNLNNNNNNNLNNNNNNNNKNMNNNNNNKNNNNKNNNNNNKNKKNLNNMNLNLNMNMNNNKNKNNNKNNNNNNNLNLNMKNMNNNNMNMNNKNMNMNKNNLNNNLNMNKMNLNNMNNNNNNNNNNNNNLNNLNMNKNLNNMNNNNKNNMNNNNKNMNNLNNNNNLNNLMLNNLNNNNNNNNNKNNNNNNLNNNNNNNNNKNNNNNNNNNNNMNNNLNNKNNNMNNNNNNKNNNNN",
-                    "crdEncF":"??????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????",
+                    "crdEncYX":"_ixlHeosbAHEmDoVyBmUgAwPu@aPkAkN??cA}LKqGTqGn@sFjE{R|AiFpDyH|EmGIUxFaFn]aUxCkC|B{C|@u@lE}IvHqSa@g@|Sij@LLnIaTpRci@|Je\\bL}Z|DsMv]kdBVNGChBkLhAoElCsGvFcKQ[jIwLhMoKnJoFj[}MFb@??dNqF|BiAx^aPnb@gTpn@c_@tTaO~PoH~NkFjPaDlQeBlYS~Zf@`Ya@tpFma@luEiIf\\mClyA}T??vkCy`@pqBgg@dWwIp^sSri@ae@lcC}nBrVaRxL}GdNqGxV{HfhFct@nRaFpf@}PfdAwZbx@aWxWsJhUoExR_C??jf@eGpQsEdP}F~OuIbVuQ~b@sb@l[eW`ToKzJcExOkEjOmCdhAkIf[iFnPcFtLgFlUaM`L{HzJwIhKyJxVmYjPcXhKaSn\\cv@xwBejF??xcAidCjR_c@lRo^pM{RxPyUdzDwlF|SqXbTwTbOiKrRsKxWiKbe@mI~ZgCpWQjX~AjMhBrm@hMbRfC|Md@pW]`v@aH|UOj[|BdxAzQbOnDbObFhStJdSzMfOtMpI|IvKzMtNlSfXhb@bRnWjO~OvQvNrNfJlN`H~RxGryAd]bKl@hNwAfM{DjM_GhJmBbLKxV`B~EQ|Du@vFuBfEoCtVeVKYfIcHpG_GfDcBlDeAdf@_DlGPnDr@d\\dNhG~@lGWb[kIjTgG??fvBsm@vjDg`A|vCyc@??f]uE??`NwBrImDrHsGfCoDlCgFhCiHnBoJ`Koz@??lmAcfKjCqNhFiOjEkIdk@g`Ar`@q}@rG{IvHiG`GuCvCw@lJy@rnBxC?OdJ^hYx@jG~@bGhBlIhE`h@lZbInFnHbHptC||C??lmBrsBtHnGzFrCbG~Alc@bDxInA`J|CvWhNjHpB`OlB??x_AfKfJ`@dJAdJe@bJkAbv@sO`Mc@jG`@|lAnObz@t@??bUb@`MdBhLvErP|KvHnGvErFbSj\\pG|I|J`JjSjMlF`EbHzHpNlS??bOhT??tIrLlHdHdIbFtI~CzL~Ale@ZxG\\rM`C~JlDzI|EpHjG|IrK`JlM??hIxKjGnGpLrHfLvDvH`AfHN`j@qCdMHjGp@np@bL`MfDzFhC`IpFfgAd`AbLpFvWpICTvPtEnOx@zlBeC???g@tZa@????@??n@z`@q@bJ}@~IuBlcBst@hIeDlJyBvMgAlJPhXjDfIf@|IKfMcA??vL_A`LN????vMbCtH|C~D~BhM`LjT~W`GrFtLrHdNnElZtGvFh@tGHbKw@zj@wJEs@fl@{HbU{Dz`C_r@????jWmHdJqDrb@uLJbA|y@aVjOoDdOoF~i@kPEUnd@{LpDaBj_@aK??loAw^D^dk@wOWyCr@J??~EWlDs@Bd@????jJuBvN}GfFqEzLyNdCeDnC{EFGq@k@~CyMRmA@c@bAaR~AoSjAyUF@pC`@j@uKRDc@IDgAaDg@V}E_@G??xBcc@xAqPDBlACc@yTBcKd@DtCo~@P}MFAMF]oFDmWQC`DugA??LqEd@BSqNAkHf@kQ~BT^wL`BN",
+                    "crdEncZ":"???????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????",
+                    "crdEncS":"NNMNNLNNLNLNKNMNNMNKNNLNNNNKNLLNNNNKNKNNNNMNNNNNMNLNKNNNLLNNNNNNNNNNNLNKNNNMMMLNLNNNLNNNNNKNLNNNLNNLNMNMNMNNNNNKMNNNNNNNNNNLNMNNNNNNNMNMNKNLLNNNLNNNNNMMNMNKNLNNNNNKNNLNNNNNNNLNNNNNNNNKNMNNNNNNKNNNNKNNNNNNKNKKNLNNMNLNLNMNMNNNKNKNNNKNNNNNNNLNLNMKNMNNNNMNMNNKNMNMNKNNLNNNLNMNKMNLNNMNNNNNNNNNNNNNLNNLNMNKNLNNMNNNNKNNMNNNNKNMNNLNNNNNLNNLMLNNLNNNNNNNNNKNNNNNNLNNNNNNNNNKNNNNNNNNNNNMNNNLNNKNNNMNNNNNNKNNNNN",
+                    "crdEncF":"???????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????",
                     "ppLocRefL":
                     [
                       {
@@ -1365,33 +1785,21 @@
                         "locX":8
                       },
                       {
-                        "ppIdx":157,
-                        "locX":13
-                      },
-                      {
-                        "ppIdx":408,
-                        "locX":14
-                      },
-                      {
-                        "ppIdx":779,
+                        "ppIdx":172,
                         "locX":15
                       },
                       {
-                        "ppIdx":951,
-                        "locX":16
-                      },
-                      {
-                        "ppIdx":1177,
-                        "locX":12
+                        "ppIdx":398,
+                        "locX":14
                       }
                     ]
                   },
-                  "ctxRecon":"T$A=1@O=Frankfurt(Main)Hbf@L=8000105@a=128@$A=1@O=München Hbf@L=8000261@a=128@$202109061754$202109062113$ICE  725$$3$$$$",
+                  "ctxRecon":"T$A=1@O=Nürnberg Hbf@L=8000284@a=128@$A=1@O=München Hbf@L=8000261@a=128@$202109091802$202109091916$ICE  721$$1$$$$",
                   "msgL":
                   [
                     {
                       "type":"REM",
-                      "remX":2,
+                      "remX":4,
                       "fLocX":8,
                       "tLocX":14,
                       "fIdx":8,
@@ -1403,7 +1811,7 @@
                     },
                     {
                       "type":"REM",
-                      "remX":3,
+                      "remX":5,
                       "fLocX":8,
                       "tLocX":14,
                       "fIdx":8,
@@ -1412,11 +1820,22 @@
                       [
                         "RES_JNY_DTL"
                       ]
+                    },
+                    {
+                      "type":"REM",
+                      "remX":7,
+                      "fLocX":8,
+                      "tLocX":14,
+                      "fIdx":8,
+                      "tIdx":10,
+                      "tagL":
+                      [
+                        "RES_JNY_DTL_L"
+                      ]
                     }
                   ],
-                  "chRatingRT":0,
                   "subscr":"F",
-                  "chgDurR":19
+                  "chgDurR":16
                 },
                 "minChg":"001000",
                 "resState":"N"
@@ -1426,32 +1845,32 @@
                 "icoX":2,
                 "dep":
                 {
-                  "locX":12,
+                  "locX":14,
                   "dInR":true,
-                  "dTimeS":"211300",
+                  "dTimeS":"191600",
                   "dTZOffset":120,
                   "type":"N"
                 },
                 "arr":
                 {
-                  "locX":17,
+                  "locX":16,
                   "aOutR":true,
-                  "aTimeS":"212300",
+                  "aTimeS":"192600",
                   "aTZOffset":120,
                   "type":"N"
                 },
                 "gis":
                 {
-                  "dist":199,
+                  "dist":130,
                   "durS":"001000",
-                  "dirGeo":12,
-                  "ctx":"H|1|W$A=1@O=München Hbf@L=8000261@a=128@$A=1@O=München Hbf Gl.27-36@L=8098261@a=128@$202109062113$202109062123$$$1$$$$",
+                  "dirGeo":2,
+                  "ctx":"H|1|W$A=1@O=München Hbf@L=8000261@a=128@$A=1@O=München Hbf (tief)@L=8098263@a=128@$202109091916$202109091926$$$1$$$$",
                   "poly":
                   {
                     "delta":true,
                     "dim":3,
                     "type":"WGS84",
-                    "crdEncYX":"ilydHcqpeAgFtK",
+                    "crdEncYX":"ilydHcqpeAaFuA",
                     "crdEncZ":"??",
                     "crdEncS":"NN",
                     "crdEncF":"??",
@@ -1459,11 +1878,11 @@
                     [
                       {
                         "ppIdx":0,
-                        "locX":12
+                        "locX":14
                       },
                       {
                         "ppIdx":1,
-                        "locX":17
+                        "locX":16
                       }
                     ]
                   },
@@ -1473,15 +1892,16 @@
               },
               {
                 "type":"JNY",
-                "icoX":10,
+                "icoX":5,
                 "dep":
                 {
-                  "locX":17,
-                  "idx":0,
+                  "locX":16,
+                  "idx":16,
                   "dProdX":5,
-                  "dPlatfS":"27",
+                  "dPlatfS":"2",
                   "dInR":true,
-                  "dTimeS":"213200",
+                  "dTimeS":"193200",
+                  "dProgType":"PROGNOSED",
                   "dTrnCmpSX":
                   {
                     "tcM":1
@@ -1491,12 +1911,13 @@
                 },
                 "arr":
                 {
-                  "locX":18,
-                  "idx":2,
+                  "locX":17,
+                  "idx":29,
                   "aProdX":5,
                   "aPlatfS":"3",
                   "aOutR":true,
-                  "aTimeS":"215900",
+                  "aTimeS":"200400",
+                  "aProgType":"PROGNOSED",
                   "aTrnCmpSX":
                   {
                     "tcM":1
@@ -1506,224 +1927,213 @@
                 },
                 "jny":
                 {
-                  "jid":"1|224845|0|80|6092021",
-                  "prodX":5,
-                  "dirTxt":"Mittenwald",
+                  "jid":"1|226358|0|80|9092021",
+                  "prodX":6,
+                  "dirTxt":"Tutzing",
+                  "dirFlg":"2",
                   "status":"P",
                   "isRchbl":true,
                   "stopL":
                   [
                     {
-                      "locX":17,
-                      "idx":0,
-                      "dProdX":5,
-                      "dPlatfS":"27",
+                      "locX":16,
+                      "idx":16,
+                      "dProdX":6,
+                      "dPlatfS":"2",
                       "dInR":true,
-                      "dTimeS":"213200",
-                      "dDirTxt":"Mittenwald",
+                      "dTimeS":"193200",
+                      "dDirTxt":"Tutzing",
+                      "dDirFlg":"2",
+                      "dTZOffset":120,
+                      "type":"N"
+                    },
+                    {
+                      "locX":18,
+                      "idx":17,
+                      "aProdX":6,
+                      "aPlatfS":"2",
+                      "aOutR":true,
+                      "aTimeS":"193300",
+                      "aTZOffset":120,
+                      "dProdX":6,
+                      "dPlatfS":"2",
+                      "dInR":true,
+                      "dTimeS":"193300",
                       "dTZOffset":120,
                       "type":"N"
                     },
                     {
                       "locX":19,
-                      "idx":1,
-                      "aProdX":5,
-                      "aPlatfS":"4",
+                      "idx":18,
+                      "aProdX":6,
+                      "aPlatfS":"1",
                       "aOutR":true,
-                      "aTimeS":"213800",
+                      "aTimeS":"193400",
                       "aTZOffset":120,
-                      "dProdX":5,
-                      "dPlatfS":"4",
+                      "dProdX":6,
+                      "dPlatfS":"1",
                       "dInR":true,
-                      "dTimeS":"213800",
-                      "dTZOffset":120,
-                      "type":"N"
-                    },
-                    {
-                      "locX":18,
-                      "idx":2,
-                      "aProdX":5,
-                      "aPlatfS":"3",
-                      "aOutR":true,
-                      "aTimeS":"215900",
-                      "aTZOffset":120,
-                      "type":"N"
-                    }
-                  ],
-                  "poly":
-                  {
-                    "delta":true,
-                    "dim":3,
-                    "type":"WGS84",
-                    "crdEncYX":"qsydHmdpeAYCg@jQ@jHRpNe@CMpE??aDtgAPBElW\\nFLGG@Q|MuCn~@e@ECbKb@xTmABECyApPyBbc@??^FW|EfC`@GfA~@NSEk@tKqCa@GAkAxU_BnScA`RAb@SlA_DxMp@j@dBDGbe@????aBxi@????_AbWeCfR_Kj`@GEp@f@gBjIVL_Ir^aAxFg@dG?jGN`CjFh]fDpJjEfH`D~C|@n@jjBj`AbNzH??zc@zTdQtJ??fQrI`IlF`{@nw@??dQfO??FUbIlH????xSzStWh]Q\\~iA|{Ads@jp@tNxLLc@fQpMfp@rp@|HvF`GxBveA~XzcAjTfDxA~CxB~HnJ??vH|JzCdCdD`BnDv@rDPpRuAjGd@`GtBtPvKbGfB`M`@bw@g@??rj@WdCb@zC|BtBhEb@xBb@`I??PfE??rApGtB~CdIbFbJzId[lTpJxJp{AxrBhF`E`OvFrFfDzEdFvJzNjC|C??hGbFdStMtCrCjGbJbUb_@d\\n]??dGpEdGxApDA`XiDrDO|h@~D`JxAvx@jQvFtCjW~SnC~CnJjQbCpDzCjCpMrHlMrHBM",
-                    "crdEncZ":"?????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????",
-                    "crdEncS":"NNNKNNNNNNMNNNKNNLNNNMNNNNNNNNNNNKNNNNNNNNNNNNNNNNNNNNNKNKNNMNNNKNNKNNMNNNNNNNNNNNNNKNNNNNLNNKNNNNKNKNNNMMNMNNMNNNLNNNNNNLNNNNMMNMKNNLLNKNNNNNLKNNKNMNMKNLNNN",
-                    "crdEncF":"?????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????",
-                    "ppLocRefL":
-                    [
-                      {
-                        "ppIdx":0,
-                        "locX":17
-                      },
-                      {
-                        "ppIdx":52,
-                        "locX":19
-                      },
-                      {
-                        "ppIdx":156,
-                        "locX":18
-                      }
-                    ]
-                  },
-                  "ctxRecon":"T$A=1@O=München Hbf Gl.27-36@L=8098261@a=128@$A=1@O=Tutzing@L=8005927@a=128@$202109062132$202109062159$RB 59471$$1$$$$",
-                  "msgL":
-                  [
-                    {
-                      "type":"REM",
-                      "remX":4,
-                      "fLocX":17,
-                      "tLocX":18,
-                      "fIdx":0,
-                      "tIdx":2,
-                      "tagL":
-                      [
-                        "RES_JNY_DTL"
-                      ]
-                    },
-                    {
-                      "type":"REM",
-                      "remX":0,
-                      "fLocX":17,
-                      "tLocX":18,
-                      "fIdx":0,
-                      "tIdx":2,
-                      "tagL":
-                      [
-                        "RES_JNY_DTL_L"
-                      ]
-                    },
-                    {
-                      "type":"REM",
-                      "remX":5,
-                      "fLocX":17,
-                      "tLocX":18,
-                      "fIdx":0,
-                      "tIdx":2,
-                      "tagL":
-                      [
-                        "RES_JNY_DTL"
-                      ]
-                    },
-                    {
-                      "type":"REM",
-                      "remX":6,
-                      "prio":240,
-                      "fIdx":-1,
-                      "tIdx":-1,
-                      "tagL":
-                      [
-                        "RES_CON_FTR_H3"
-                      ]
-                    }
-                  ],
-                  "subscr":"F",
-                  "chgDurR":5
-                },
-                "minChg":"000300",
-                "resState":"N"
-              },
-              {
-                "type":"JNY",
-                "icoX":5,
-                "dep":
-                {
-                  "locX":18,
-                  "idx":0,
-                  "dProdX":6,
-                  "dPlatfS":"2N",
-                  "dInR":true,
-                  "dTimeS":"220400",
-                  "dTrnCmpSX":
-                  {
-                    "tcM":1
-                  },
-                  "dTZOffset":120,
-                  "type":"N"
-                },
-                "arr":
-                {
-                  "locX":20,
-                  "idx":3,
-                  "aProdX":6,
-                  "aPlatfS":"4",
-                  "aOutR":true,
-                  "aTimeS":"221400",
-                  "aTrnCmpSX":
-                  {
-                    "tcM":1
-                  },
-                  "aTZOffset":120,
-                  "type":"N"
-                },
-                "jny":
-                {
-                  "jid":"1|227952|0|80|6092021",
-                  "prodX":7,
-                  "dirTxt":"Ebersberg(Oberbay)",
-                  "dirFlg":"1",
-                  "status":"P",
-                  "isRchbl":true,
-                  "stopL":
-                  [
-                    {
-                      "locX":18,
-                      "idx":0,
-                      "dProdX":7,
-                      "dPlatfS":"2N",
-                      "dInR":true,
-                      "dTimeS":"220400",
-                      "dDirTxt":"Ebersberg(Oberbay)",
-                      "dDirFlg":"1",
-                      "dTZOffset":120,
-                      "type":"N"
-                    },
-                    {
-                      "locX":21,
-                      "idx":1,
-                      "aProdX":7,
-                      "aPlatfS":"2",
-                      "aOutR":true,
-                      "aTimeS":"220700",
-                      "aTZOffset":120,
-                      "dProdX":7,
-                      "dPlatfS":"2",
-                      "dInR":true,
-                      "dTimeS":"220800",
-                      "dTZOffset":120,
-                      "type":"N"
-                    },
-                    {
-                      "locX":22,
-                      "idx":2,
-                      "aProdX":7,
-                      "aPlatfS":"2",
-                      "aOutR":true,
-                      "aTimeS":"221000",
-                      "aTZOffset":120,
-                      "dProdX":7,
-                      "dPlatfS":"2",
-                      "dInR":true,
-                      "dTimeS":"221000",
+                      "dTimeS":"193500",
                       "dTZOffset":120,
                       "type":"N"
                     },
                     {
                       "locX":20,
-                      "idx":3,
-                      "aProdX":7,
+                      "idx":19,
+                      "aProdX":6,
+                      "aPlatfS":"1",
+                      "aOutR":true,
+                      "aTimeS":"193600",
+                      "aTZOffset":120,
+                      "dProdX":6,
+                      "dPlatfS":"1",
+                      "dInR":true,
+                      "dTimeS":"193700",
+                      "dTZOffset":120,
+                      "type":"N"
+                    },
+                    {
+                      "locX":21,
+                      "idx":20,
+                      "aProdX":6,
+                      "aPlatfS":"1",
+                      "aOutR":true,
+                      "aTimeS":"193800",
+                      "aTZOffset":120,
+                      "dProdX":6,
+                      "dPlatfS":"1",
+                      "dInR":true,
+                      "dTimeS":"193900",
+                      "dTZOffset":120,
+                      "type":"N"
+                    },
+                    {
+                      "locX":22,
+                      "idx":21,
+                      "aProdX":6,
+                      "aPlatfS":"7",
+                      "aOutR":true,
+                      "aTimeS":"194100",
+                      "aTZOffset":120,
+                      "dProdX":6,
+                      "dPlatfS":"7",
+                      "dInR":true,
+                      "dTimeS":"194300",
+                      "dTZOffset":120,
+                      "type":"N"
+                    },
+                    {
+                      "locX":23,
+                      "idx":22,
+                      "aProdX":6,
+                      "aPlatfS":"1",
+                      "aOutR":true,
+                      "aTimeS":"194400",
+                      "aTZOffset":120,
+                      "dProdX":6,
+                      "dPlatfS":"1",
+                      "dInR":true,
+                      "dTimeS":"194500",
+                      "dTZOffset":120,
+                      "type":"N"
+                    },
+                    {
+                      "locX":24,
+                      "idx":23,
+                      "aProdX":6,
+                      "aPlatfS":"1",
+                      "aOutR":true,
+                      "aTimeS":"194700",
+                      "aTZOffset":120,
+                      "dProdX":6,
+                      "dPlatfS":"1",
+                      "dInR":true,
+                      "dTimeS":"194800",
+                      "dTZOffset":120,
+                      "type":"N"
+                    },
+                    {
+                      "locX":25,
+                      "idx":24,
+                      "aProdX":6,
+                      "aPlatfS":"1",
+                      "aOutR":true,
+                      "aTimeS":"194900",
+                      "aTZOffset":120,
+                      "dProdX":6,
+                      "dPlatfS":"1",
+                      "dInR":true,
+                      "dTimeS":"194900",
+                      "dTZOffset":120,
+                      "type":"N"
+                    },
+                    {
+                      "locX":26,
+                      "idx":25,
+                      "aProdX":6,
+                      "aPlatfS":"2",
+                      "aOutR":true,
+                      "aTimeS":"195100",
+                      "aTZOffset":120,
+                      "dProdX":6,
+                      "dPlatfS":"2",
+                      "dInR":true,
+                      "dTimeS":"195200",
+                      "dTZOffset":120,
+                      "type":"N"
+                    },
+                    {
+                      "locX":27,
+                      "idx":26,
+                      "aProdX":6,
+                      "aPlatfS":"1",
+                      "aOutR":true,
+                      "aTimeS":"195400",
+                      "aTZOffset":120,
+                      "dProdX":6,
+                      "dPlatfS":"1",
+                      "dInR":true,
+                      "dTimeS":"195400",
+                      "dTZOffset":120,
+                      "type":"N"
+                    },
+                    {
+                      "locX":28,
+                      "idx":27,
+                      "aProdX":6,
                       "aPlatfS":"4",
                       "aOutR":true,
-                      "aTimeS":"221400",
+                      "aTimeS":"195600",
+                      "aTZOffset":120,
+                      "dProdX":6,
+                      "dPlatfS":"4",
+                      "dInR":true,
+                      "dTimeS":"195700",
+                      "dTZOffset":120,
+                      "type":"N"
+                    },
+                    {
+                      "locX":29,
+                      "idx":28,
+                      "aProdX":6,
+                      "aPlatfS":"1",
+                      "aOutR":true,
+                      "aTimeS":"200200",
+                      "aTZOffset":120,
+                      "dProdX":6,
+                      "dPlatfS":"1",
+                      "dInR":true,
+                      "dTimeS":"200200",
+                      "dTZOffset":120,
+                      "type":"N"
+                    },
+                    {
+                      "locX":17,
+                      "idx":29,
+                      "aProdX":6,
+                      "aPlatfS":"3",
+                      "aOutR":true,
+                      "aTimeS":"200400",
                       "aTZOffset":120,
                       "type":"N"
                     }
@@ -1733,40 +2143,86 @@
                     "delta":true,
                     "dim":3,
                     "type":"WGS84",
-                    "crdEncYX":"sxkcHauxcACLmMsHqMsH{CkCcCqDoJkQoC_DkW_TwFuCwx@kQaJyA}h@_EsDNaXhDqD@eGyAeGqE??e\\o]cUc_@kGcJuCsCeSuMiGcF??kC}CwJ{N{EeFsFgDaOwFiFaEq{AyrBqJyJe[mTcJ{IeIcFuB_DsAqG??QgE??",
-                    "crdEncZ":"??????????????????????????????????????????",
-                    "crdEncS":"NNNLNKMNMNKNNKLNNNNNKNLLNNKMNMMNNNNLNNNNNN",
-                    "crdEncF":"??????????????????????????????????????????",
+                    "crdEncYX":"ksydHyspeAHD?D??cB|Lx@\\g@jQ@jHRpNe@CMpE??aDtgAPBElW\\nFLGG@Q|MuCn~@e@ECbKb@xTmABECyApPyBbc@??^FW|EfC`@GfA~@NSEk@tKqCa@GAkAxU_BnScA`RAb@SlA_DxMp@j@dBDGbe@????aBxi@????_AbWeCfR_Kj`@GEp@f@gBjIVL_Ir^aAxFg@dG?jGN`CjFh]fDpJjEfH`D~C|@n@jjBj`AbNzH??zc@zTdQtJ??fQrI`IlF`{@nw@??dQfO??FUbIlH??ERxS~SbLvNdJvM??~iA|{Ads@jp@tNxLLc@fQpMfp@rp@|HvF`GxBveA~XzcAjTfDxA~CxB~HnJ??vH|JzCdCdD`BnDv@rDPpRuAjGd@`GtBtPvKbGfB`M`@bw@g@??rj@WdCb@zC|BtBhEb@xBb@`I??",
+                    "crdEncZ":"??????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????",
+                    "crdEncS":"NNNNNNNKNNNNNNMNNNKNNLNNNMNNNNNNNNNNNKNNNNNNNNNNNNNNNNNNNNNKNKNNMNNNKNNKNNMNNNNNNNNNNKNNNKNNNNNLNNKNNNNKNKNNNMMNMNNMNNNLNN",
+                    "crdEncF":"??????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????",
                     "ppLocRefL":
                     [
                       {
                         "ppIdx":0,
+                        "locX":16
+                      },
+                      {
+                        "ppIdx":10,
                         "locX":18
                       },
                       {
-                        "ppIdx":17,
+                        "ppIdx":12,
+                        "locX":19
+                      },
+                      {
+                        "ppIdx":19,
+                        "locX":20
+                      },
+                      {
+                        "ppIdx":29,
                         "locX":21
                       },
                       {
-                        "ppIdx":24,
+                        "ppIdx":56,
                         "locX":22
                       },
                       {
-                        "ppIdx":41,
-                        "locX":20
+                        "ppIdx":65,
+                        "locX":23
+                      },
+                      {
+                        "ppIdx":69,
+                        "locX":24
+                      },
+                      {
+                        "ppIdx":72,
+                        "locX":25
+                      },
+                      {
+                        "ppIdx":76,
+                        "locX":26
+                      },
+                      {
+                        "ppIdx":86,
+                        "locX":27
+                      },
+                      {
+                        "ppIdx":90,
+                        "locX":28
+                      },
+                      {
+                        "ppIdx":113,
+                        "locX":29
+                      },
+                      {
+                        "ppIdx":121,
+                        "locX":17
                       }
                     ]
                   },
-                  "ctxRecon":"T$A=1@O=Tutzing@L=8005927@a=128@$A=1@O=Starnberg@L=8005676@a=128@$202109062204$202109062214$S      6$$1$$$$",
+                  "freq":
+                  {
+                    "minC":20,
+                    "maxC":20,
+                    "numC":7
+                  },
+                  "ctxRecon":"T$A=1@O=München Hbf (tief)@L=8098263@a=128@$A=1@O=Starnberg@L=8005676@a=128@$202109091932$202109092004$S      6$$1$$$$",
                   "msgL":
                   [
                     {
                       "type":"REM",
-                      "remX":4,
-                      "fLocX":18,
-                      "tLocX":20,
-                      "fIdx":0,
-                      "tIdx":3,
+                      "remX":5,
+                      "fLocX":16,
+                      "tLocX":17,
+                      "fIdx":16,
+                      "tIdx":29,
                       "tagL":
                       [
                         "RES_JNY_DTL"
@@ -1775,10 +2231,10 @@
                     {
                       "type":"REM",
                       "remX":0,
-                      "fLocX":18,
-                      "tLocX":20,
-                      "fIdx":0,
-                      "tIdx":3,
+                      "fLocX":16,
+                      "tLocX":17,
+                      "fIdx":16,
+                      "tIdx":29,
                       "tagL":
                       [
                         "RES_JNY_DTL_L"
@@ -1786,11 +2242,11 @@
                     },
                     {
                       "type":"REM",
-                      "remX":7,
-                      "fLocX":18,
-                      "tLocX":20,
-                      "fIdx":0,
-                      "tIdx":3,
+                      "remX":9,
+                      "fLocX":16,
+                      "tLocX":17,
+                      "fIdx":16,
+                      "tIdx":29,
                       "tagL":
                       [
                         "RES_JNY_DTL"
@@ -1798,11 +2254,11 @@
                     },
                     {
                       "type":"REM",
-                      "remX":8,
-                      "fLocX":18,
-                      "tLocX":20,
-                      "fIdx":0,
-                      "tIdx":3,
+                      "remX":10,
+                      "fLocX":16,
+                      "tLocX":17,
+                      "fIdx":16,
+                      "tIdx":29,
                       "tagL":
                       [
                         "RES_JNY_DTL_L"
@@ -1820,17 +2276,17 @@
                 "icoX":2,
                 "dep":
                 {
-                  "locX":20,
+                  "locX":17,
                   "dInR":true,
-                  "dTimeS":"221400",
+                  "dTimeS":"200400",
                   "dTZOffset":120,
                   "type":"N"
                 },
                 "arr":
                 {
-                  "locX":23,
+                  "locX":30,
                   "aOutR":true,
-                  "aTimeS":"221500",
+                  "aTimeS":"200500",
                   "aTZOffset":120,
                   "type":"N"
                 },
@@ -1839,7 +2295,7 @@
                   "dist":56,
                   "durS":"000200",
                   "dirGeo":16,
-                  "ctx":"H|1|W$A=1@O=Starnberg@L=8005676@a=128@$A=1@O=Starnberg@L=608005676@a=128@$202109062214$202109062215$$$1$$$$",
+                  "ctx":"H|1|W$A=1@O=Starnberg@L=8005676@a=128@$A=1@O=Starnberg@L=608005676@a=128@$202109092004$202109092005$$$1$$$$",
                   "poly":
                   {
                     "delta":true,
@@ -1853,11 +2309,11 @@
                     [
                       {
                         "ppIdx":0,
-                        "locX":20
+                        "locX":17
                       },
                       {
                         "ppIdx":1,
-                        "locX":23
+                        "locX":30
                       }
                     ]
                   },
@@ -1870,31 +2326,31 @@
                 "icoX":2,
                 "dep":
                 {
-                  "locX":23,
+                  "locX":30,
                   "dInR":true,
-                  "dTimeS":"221600",
+                  "dTimeS":"200600",
                   "type":"N"
                 },
                 "arr":
                 {
-                  "locX":24,
+                  "locX":31,
                   "aOutR":true,
-                  "aTimeS":"222300",
+                  "aTimeS":"201300",
                   "type":"N"
                 },
                 "gis":
                 {
                   "dist":529,
                   "durS":"000700",
-                  "ctx":"G|1|G@F|A=1@O=Starnberg@X=11343038@Y=47995988@U=199@L=608005676@|A=2@O=Starnberg, Possenhofener Straße 13@X=11338508@Y=47994109@u=15@L=981214204@|6092021|221600|222300|fb|ft@0@2000@120@0@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§bt@0@2000@120@0@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§tf@$f@$f@$f@$f@$f@$§||"
+                  "ctx":"G|1|G@F|A=1@O=Starnberg@X=11343038@Y=47995988@U=199@L=608005676@|A=2@O=Starnberg, Possenhofener Straße 13@X=11338508@Y=47994109@u=15@L=981214204@|9092021|200600|201300|fb|ft@0@2000@120@0@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§bt@0@2000@120@0@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§tf@$f@$f@$f@$f@$f@$§||"
                 },
                 "resState":"N"
               }
             ],
-            "ctxRecon":"¶HKI¶G@F$A=2@O=Berlin - Mitte, Unter den Linden 24@X=13388714@Y=52517139@u=2@L=980133346@a=128@$A=1@O=Unter den Linden (U), Berlin@L=732590@a=128@$202109061221$202109061222$$$1$$$$§T$A=1@O=Unter den Linden (U), Berlin@L=732590@a=128@$A=1@O=Berlin Hauptbahnhof (S+U), Berlin@L=730749@a=128@$202109061222$202109061226$U      5$$1$$$$§W$A=1@O=Berlin Hauptbahnhof (S+U), Berlin@L=730749@a=128@$A=1@O=Berlin Hbf (tief)@L=8098160@a=128@$202109061249$202109061257$$$1$$$$§T$A=1@O=Berlin Hbf (tief)@L=8098160@a=128@$A=1@O=Frankfurt(Main)Hbf@L=8000105@a=128@$202109061304$202109061656$ICE 2930$$2$$$$§T$A=1@O=Frankfurt(Main)Hbf@L=8000105@a=128@$A=1@O=München Hbf@L=8000261@a=128@$202109061754$202109062113$ICE  725$$3$$$$§W$A=1@O=München Hbf@L=8000261@a=128@$A=1@O=München Hbf Gl.27-36@L=8098261@a=128@$202109062113$202109062123$$$1$$$$§T$A=1@O=München Hbf Gl.27-36@L=8098261@a=128@$A=1@O=Tutzing@L=8005927@a=128@$202109062132$202109062159$RB 59471$$1$$$$§T$A=1@O=Tutzing@L=8005927@a=128@$A=1@O=Starnberg@L=8005676@a=128@$202109062204$202109062214$S      6$$1$$$$§W$A=1@O=Starnberg@L=8005676@a=128@$A=1@O=Starnberg@L=608005676@a=128@$202109062214$202109062215$$$1$$$$§G@F$A=1@O=Starnberg@L=608005676@a=128@$A=2@O=Starnberg, Possenhofener Straße 13@X=11338508@Y=47994109@u=15@L=981214204@a=128@$202109062216$202109062223$$$1$$$$¶GP¶ft@0@2000@120@0@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§bt@0@2000@120@0@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§tf@$f@$f@$f@$f@$f@$§",
+            "ctxRecon":"¶HKI¶G@F$A=2@O=Berlin - Mitte, Unter den Linden 24@X=13388714@Y=52517139@u=2@L=980133346@a=128@$A=1@O=Unter den Linden (U), Berlin@L=732590@a=128@$202109091216$202109091217$$$1$$$$§T$A=1@O=Unter den Linden (U), Berlin@L=732590@a=128@$A=1@O=Berlin Hauptbahnhof (S+U), Berlin@L=730749@a=128@$202109091217$202109091221$U      5$$1$$$$§W$A=1@O=Berlin Hauptbahnhof (S+U), Berlin@L=730749@a=128@$A=1@O=Berlin Hbf (tief)@L=8098160@a=128@$202109091221$202109091229$$$1$$$$§T$A=1@O=Berlin Hbf (tief)@L=8098160@a=128@$A=1@O=Nürnberg Hbf@L=8000284@a=128@$202109091230$202109091719$ICE  509$$1$$$$§T$A=1@O=Nürnberg Hbf@L=8000284@a=128@$A=1@O=München Hbf@L=8000261@a=128@$202109091802$202109091916$ICE  721$$1$$$$§W$A=1@O=München Hbf@L=8000261@a=128@$A=1@O=München Hbf (tief)@L=8098263@a=128@$202109091916$202109091926$$$1$$$$§T$A=1@O=München Hbf (tief)@L=8098263@a=128@$A=1@O=Starnberg@L=8005676@a=128@$202109091932$202109092004$S      6$$1$$$$§W$A=1@O=Starnberg@L=8005676@a=128@$A=1@O=Starnberg@L=608005676@a=128@$202109092004$202109092005$$$1$$$$§G@F$A=1@O=Starnberg@L=608005676@a=128@$A=2@O=Starnberg, Possenhofener Straße 13@X=11338508@Y=47994109@u=15@L=981214204@a=128@$202109092006$202109092013$$$1$$$$¶GP¶ft@0@2000@120@0@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§bt@0@2000@120@0@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§tf@$f@$f@$f@$f@$f@$§",
             "freq":
             {
-              "minC":5
+              "minC":20
             },
             "trfRes":
             {
@@ -1906,7 +2362,7 @@
                   [
                     {
                       "prc":13960,
-                      "isFromPrice":false,
+                      "isFromPrice":true,
                       "isPartPrice":true,
                       "isBookable":true,
                       "isUpsell":false,
@@ -1918,27 +2374,6 @@
                 }
               ]
             },
-            "msgL":
-            [
-              {
-                "type":"REM",
-                "remX":9,
-                "txtC":
-                {
-                  "r":204,
-                  "g":0,
-                  "b":0,
-                  "a":255
-                },
-                "prio":200,
-                "fIdx":-1,
-                "tIdx":-1,
-                "tagL":
-                [
-                  "SUM_CON_FTR_H3"
-                ]
-              }
-            ],
             "conSubscr":"N",
             "resState":"N",
             "recState":"C",
@@ -1947,21 +2382,19 @@
             "showARSLink":false,
             "sotCtxt":
             {
-              "calcDate":"20210906",
-              "jid":"1|1303053|21|80|-1",
-              "locMode":"FROM_START",
+              "calcDate":"20210909",
+              "locMode":"BEFORE_TRAVEL",
               "reqMode":"UNKNOWN",
-              "sectX":2,
-              "calcTime":"124315"
+              "calcTime":"121349"
             },
-            "cksum":"68dad938_3"
+            "cksum":"1ffe97b2_3"
           }
         ],
         "fpB":"20201213",
         "fpE":"20211211",
         "bfATS":-1,
         "bfIOSTS":-1,
-        "planrtTS":"1630924933"
+        "planrtTS":"1631182333"
       }
     }
   ]

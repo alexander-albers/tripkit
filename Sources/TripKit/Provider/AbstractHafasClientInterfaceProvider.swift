@@ -581,7 +581,6 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
             for sec in outCon["secL"] as? [Any] ?? [] {
                 guard let sec = sec as? [String: Any], let dep = sec["dep"] as? [String: Any], let arr = sec["arr"] as? [String: Any] else { throw ParseError(reason: "could not parse outcon sec") }
                 
-                let leg: Leg
                 switch sec["type"] as? String ?? "" {
                 case "JNY", "TETA":
                     guard let jny = sec["jny"] as? [String: Any], let prodX = jny["prodX"] as? Int else { throw ParseError(reason: "failed to parse outcon jny") }
@@ -629,29 +628,25 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
                         legMessages.insert(arrivalMessage)
                     }
                     
-                    leg = PublicLeg(line: line, destination: destination, departureStop: departureStop, arrivalStop: arrivalStop, intermediateStops: intermediateStops, message: legMessages.joined(separator: "\n").emptyToNil, path: path, journeyContext: journeyContext)
+                    legs.append(PublicLeg(line: line, destination: destination, departureStop: departureStop, arrivalStop: arrivalStop, intermediateStops: intermediateStops, message: legMessages.joined(separator: "\n").emptyToNil, path: path, journeyContext: journeyContext))
                 case "WALK", "TRSF", "DEVI":
                     guard let departureStop = try parseStop(dict: dep, locations: locations, rems: rems, baseDate: baseDate, line: nil), let arrivalStop = try parseStop(dict: arr, locations: locations, rems: rems, baseDate: baseDate, line: nil) else { throw ParseError(reason: "failed to parse departure/arrival stop") }
                     guard let gis = sec["gis"] as? [String: Any] else { throw ParseError(reason: "failed to parse outcon gis") }
                     let distance = gis["distance"] as? Int ?? 0
-                    let addTime: TimeInterval = !legs.isEmpty ? max(0, -departureStop.getMinTime().timeIntervalSince(legs.last!.getMaxTime())) : 0
-                    leg = IndividualLeg(type: .WALK, departureTime: departureStop.getMinTime().addingTimeInterval(addTime), departure: departureStop.location, arrival: arrivalStop.location, arrivalTime: arrivalStop.getMaxTime().addingTimeInterval(addTime), distance: distance, path: [])
+                    processIndividualLeg(legs: &legs, type: .WALK, departureStop: departureStop, arrivalStop: arrivalStop, distance: distance, path: [])
                 case "KISS":
                     guard let departureStop = try parseStop(dict: dep, locations: locations, rems: rems, baseDate: baseDate, line: nil), let arrivalStop = try parseStop(dict: arr, locations: locations, rems: rems, baseDate: baseDate, line: nil) else { throw ParseError(reason: "failed to parse departure/arrival stop") }
                     guard let gis = sec["gis"] as? [String: Any] else { throw ParseError(reason: "failed to parse outcon gis") }
                     let distance = gis["distance"] as? Int ?? 0
-                    let addTime: TimeInterval = !legs.isEmpty ? max(0, -departureStop.getMinTime().timeIntervalSince(legs.last!.getMaxTime())) : 0
                     if let mcp = dep["mcp"] as? [String: Any], let mcpData = mcp["mcpData"] as? [String: Any], let provider = mcpData["provider"] as? String, let providerName = mcpData["providerName"] as? String, provider == "berlkoenig" {
                         let line = Line(id: nil, network: nil, product: .onDemand, label: providerName, name: providerName, number: nil, vehicleNumber: nil, style: lineStyle(network: nil, product: .onDemand, label: providerName), attr: nil, message: nil, direction: nil)
-                        leg = PublicLeg(line: line, destination: arrivalStop.location, departureStop: departureStop, arrivalStop: arrivalStop, intermediateStops: [], message: nil, path: [], journeyContext: nil)
+                        legs.append(PublicLeg(line: line, destination: arrivalStop.location, departureStop: departureStop, arrivalStop: arrivalStop, intermediateStops: [], message: nil, path: [], journeyContext: nil))
                     } else {
-                        leg = IndividualLeg(type: .WALK, departureTime: departureStop.getMinTime().addingTimeInterval(addTime), departure: departureStop.location, arrival: arrivalStop.location, arrivalTime: arrivalStop.getMaxTime().addingTimeInterval(addTime), distance: distance, path: [])
+                        processIndividualLeg(legs: &legs, type: .WALK, departureStop: departureStop, arrivalStop: arrivalStop, distance: distance, path: [])
                     }
                 default:
                     throw ParseError(reason: "could not parse outcon sec type \(sec["type"] as? String ?? "")")
                 }
-                
-                legs.append(leg)
             }
             
 //            if tripCancelled {
@@ -900,6 +895,17 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
     }
     
     // MARK: Response parse methods
+    
+    private func processIndividualLeg(legs: inout [Leg], type: IndividualLeg.`Type`, departureStop: Stop, arrivalStop: Stop, distance: Int, path: [LocationPoint]) {
+        var path = path
+        if let lastLeg = legs.last as? IndividualLeg, lastLeg.type == type {
+            legs.removeLast()
+            path.insert(contentsOf: lastLeg.path, at: 0)
+            legs.append(IndividualLeg(type: lastLeg.type, departureTime: lastLeg.departureTime, departure: lastLeg.departure, arrival: arrivalStop.location, arrivalTime: arrivalStop.predictedArrivalTime ?? arrivalStop.plannedArrivalTime!, distance: 0, path: path))
+        } else {
+            legs.append(IndividualLeg(type: type, departureTime: departureStop.predictedDepartureTime ?? departureStop.plannedDepartureTime!, departure: departureStop.location, arrival: arrivalStop.location, arrivalTime: arrivalStop.predictedArrivalTime ?? arrivalStop.plannedArrivalTime!, distance: distance, path: []))
+        }
+    }
     
     func parseJsonTripFare(fareSetName: String, fareSetDescription: String, name: String, currency: String, price: Float) -> Fare? {
         if name.hasSuffix("- Jahreskarte") || name.hasSuffix("- Monatskarte") {

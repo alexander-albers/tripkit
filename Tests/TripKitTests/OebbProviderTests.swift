@@ -14,4 +14,6 @@ class OebbProviderTests: TripKitProviderTestCase, TripKitProviderTestsDelegate {
         return OebbProvider(apiAuthorization: authorizationData.hciAuthorization)
     }
     
+    var supportsRefreshTrip: Bool { return false }
+    
 }
