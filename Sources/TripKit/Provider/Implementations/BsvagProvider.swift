@@ -82,13 +82,5 @@ public class BsvagProvider: AbstractEfaProvider {
         builder.addParameter(key: "inclMOT_11", value: "on")
     }
     
-    override func parseLine(id: String?, network: String?, mot: String?, symbol: String?, name: String?, longName: String?, trainType: String?, trainNum: String?, trainName: String?) -> Line {
-        if mot == "13" {
-            return Line(id: id, network: network, product: .regionalTrain, label: symbol)
-        } else {
-            return super.parseLine(id: id, network: network, mot: mot, symbol: symbol, name: name, longName: longName, trainType: trainType, trainNum: trainNum, trainName: trainName)
-        }
-    }
-    
 }
 

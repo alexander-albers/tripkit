@@ -2634,7 +2634,7 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
                 if (trainName == "SEV" || trainName == "Ersatzverkehr") && trainType == nil {
                     return Line(id: id, network: network, product: .bus, label: "SEV")
                 }
-                return Line(id: id, network: network, product: .regionalTrain, label: (trainType ?? "") + (trainNum ?? ""))
+                return Line(id: id, network: network, product: .regionalTrain, label: symbol ?? "" != "" ? symbol! : name)
             } else if mot == "14" || mot == "15" || mot == "16" {
                 if trainNum != nil || trainType != nil {
                     return Line(id: id, network: network, product: .highSpeedTrain, label: (trainType ?? "") + (trainNum ?? ""))
