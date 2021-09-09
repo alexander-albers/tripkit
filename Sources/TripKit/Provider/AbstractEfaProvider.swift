@@ -2618,23 +2618,37 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
                 } else {
                     return Line(id: id, network: network, product: .bus, label: symbol ?? "" != "" ? symbol! : name)
                 }
-            } else if mot == "10" {
-                return Line(id: id, network: network, product: .onDemand, label: symbol ?? "" != "" ? symbol! : name)
             } else if mot == "8" {
                 return Line(id: id, network: network, product: .cablecar, label: name)
             } else if mot == "9" {
                 return Line(id: id, network: network, product: .ferry, label: name)
+            } else if mot == "10" {
+                return Line(id: id, network: network, product: .onDemand, label: symbol ?? "" != "" ? symbol! : name)
             } else if mot == "11" {
                 return Line(id: id, network: network, product: nil, label: symbol ?? "" != "" ? symbol! : name)
+            } else if mot == "12" {
+                if trainName == "Schulbus", symbol != nil {
+                    return Line(id: id, network: network, product: .bus, label: symbol)
+                }
             } else if mot == "13" {
-                return Line(id: id, network: network, product: .suburbanTrain, label: symbol)
+                if (trainName == "SEV" || trainName == "Ersatzverkehr") && trainType == nil {
+                    return Line(id: id, network: network, product: .bus, label: "SEV")
+                }
+                return Line(id: id, network: network, product: .regionalTrain, label: (trainType ?? "") + (trainNum ?? ""))
+            } else if mot == "14" || mot == "15" || mot == "16" {
+                if trainNum != nil || trainType != nil {
+                    return Line(id: id, network: network, product: .highSpeedTrain, label: (trainType ?? "") + (trainNum ?? ""))
+                }
+                return Line(id: id, network: network, product: .highSpeedTrain, label: name)
             } else if mot == "17" {
                 if trainNum == nil, let trainName = trainName,  trainName.hasPrefix("Schienenersatz") {
                     return Line(id: id, network: network, product: .bus, label: "SEV")
                 }
+            } else if mot == "18" { // Zug-Shuttle
+                return Line(id: id, network: network, product: .regionalTrain, label: name)
             } else if mot == "19" {
-                if trainName == "Bürgerbus" || trainName == "BürgerBus" {
-                    return Line(id: id, network: network, product: .bus, label: symbol);
+                if (trainName == "Bürgerbus" || trainName == "BürgerBus" || trainName == "Kleinbus") && symbol != nil {
+                    return Line(id: id, network: network, product: .bus, label: symbol)
                 }
             }
         }
