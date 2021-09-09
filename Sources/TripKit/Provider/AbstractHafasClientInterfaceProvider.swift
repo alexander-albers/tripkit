@@ -121,16 +121,13 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         // TODO: extract parameters to method
         let jsonDate = self.jsonDate(from: time ?? Date())
         let jsonTime = self.jsonTime(from: time ?? Date())
-        let normalizedStationId = normalize(stationId: stationId) ?? ""
+        var locJson = jsonLocation(from: Location(id: stationId))
+        locJson["state"] = "F"
         var req: [String: Any] = [
             "type": departures ? "DEP" : "ARR",
             "date": jsonDate,
             "time": jsonTime,
-            "stbLoc": [
-                "type": "S",
-                "state": "F",
-                normalizedStationId.hasSuffix("@") ? "lid" : "extId": normalizedStationId
-            ],
+            "stbLoc": locJson,
             "maxJny": maxDepartures != 0 ? maxDepartures : 50
         ]
         if let apiVersion = apiVersion, apiVersion.compare("1.19", options: .numeric) == .orderedAscending {
@@ -1080,6 +1077,11 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
                 placeAndName = split(address: locElem["name"] as? String)
                 products = nil
                 break
+            case "C":
+                locationType = .coord
+                id = nil
+                placeAndName = (nil, nil)
+                products = nil
             default:
                 throw ParseError(reason: "unknown loc type \(type)")
             }

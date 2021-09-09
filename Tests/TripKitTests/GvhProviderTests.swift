@@ -9,7 +9,7 @@ class GvhProviderTests: TripKitProviderTestCase, TripKitProviderTestsDelegate {
     var networkId: NetworkId { return .GVH }
     
     func initProvider(from authorizationData: AuthorizationData) -> NetworkProvider {
-        return GvhProvider()
+        return GvhProvider(apiAuthorization: authorizationData.hciAuthorization)
     }
     
 }
