@@ -1618,7 +1618,7 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
             builder.addParameter(key: "type_\(suffix)", value: "any")
             builder.addParameter(key: "name_\(suffix)", value: id)
         case let (type, _, coord?) where type == .coord || type == .address:
-            builder.addParameter(key: "type_\(suffix)", value: "any")
+            builder.addParameter(key: "type_\(suffix)", value: "coord")
             builder.addParameter(key: "name_\(suffix)", value: String(format: "%.6f:%.6f:WGS84", Double(coord.lon) / 1e6, Double(coord.lat) / 1e6))
         default:
             builder.addParameter(key: "type_\(suffix)", value: "any")
