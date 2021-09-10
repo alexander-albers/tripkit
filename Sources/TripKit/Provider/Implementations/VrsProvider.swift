@@ -1,5 +1,6 @@
 import Foundation
 import os.log
+import SwiftyJSON
 
 public class VrsProvider: AbstractNetworkProvider {
     
@@ -177,20 +178,18 @@ public class VrsProvider: AbstractNetworkProvider {
     }
     
     override public func queryNearbyLocations(location: Location, types: [LocationType]?, maxDistance: Int, maxLocations: Int, completion: @escaping (HttpRequest, NearbyLocationsResult) -> Void) -> AsyncRequest {
-        let urlBuilder = UrlBuilder(path: VrsProvider.API_BASE, encoding: .utf8)
+        let urlBuilder = UrlBuilder(path: "http://android.vrsinfo.de/index.php", encoding: .utf8)
         
-        urlBuilder.addParameter(key: "eID", value: "tx_vrsinfo_ass2_timetable")
+        urlBuilder.addParameter(key: "eID", value: "tx_ekap_here")
         if let coord = location.coord {
-            urlBuilder.addParameter(key: "r", value: String(format: "%.6f,%.6f", Double(coord.lat) / 1e6, Double(coord.lon) / 1e6))
-        } else if location.type == .station, let id = location.id {
-            urlBuilder.addParameter(key: "i", value: id)
+            urlBuilder.addParameter(key: "lat", value: Double(coord.lat) / 1e6)
+            urlBuilder.addParameter(key: "lon", value: Double(coord.lon) / 1e6)
+        } else if location.type == .station {
+            completion(HttpRequest(urlBuilder: UrlBuilder()), .invalidId)
+            return AsyncRequest(task: nil)
         } else {
             completion(HttpRequest(urlBuilder: UrlBuilder()), .invalidId)
             return AsyncRequest(task: nil)
-        }
-        urlBuilder.addParameter(key: "c", value: "1")
-        if maxLocations > 0 {
-            urlBuilder.addParameter(key: "s", value: "\(maxLocations)")
         }
         
         let httpRequest = HttpRequest(urlBuilder: urlBuilder)
@@ -216,11 +215,11 @@ public class VrsProvider: AbstractNetworkProvider {
     
     override func queryNearbyLocationsByCoordinateParsing(request: HttpRequest, location: Location, types: [LocationType]?, maxDistance: Int, maxLocations: Int, completion: @escaping (HttpRequest, NearbyLocationsResult) -> Void) throws {
         let types = types ?? [.station]
-        guard let json = try request.responseData?.toJson() as? [String: Any] else {
+        guard let data = request.responseData, let json = try? JSON(data: data) else {
             throw ParseError(reason: "failed to get data")
         }
-        if let error = (json["error"] as? String)?.trimmingCharacters(in: .whitespaces) {
-            if error == "Leere Koordinate." || error == "Leere ASS-ID und leere Koordinate" {
+        if let error = json["fehler"].string?.trimmingCharacters(in: .whitespaces) {
+            if error == "Leere Koordinate." || error == "Ungültige Umkreis-Koordinate" {
                 completion(request, .invalidId)
             } else if error == "ASS2-Server lieferte leere Antwort." {
                 throw ParseError(reason: "empty response")
@@ -231,11 +230,25 @@ public class VrsProvider: AbstractNetworkProvider {
         }
         
         var locations: [Location] = []
-        for entry in json["timetable"] as? [Any] ?? [] {
-            guard let entry = entry as? [String: Any], let stop = entry["stop"] as? [String: Any] else { throw ParseError(reason: "failed to parse timetable entry") }
-            let location = try parseLocationAndPosition(from: stop).location
-            let distance = stop["distance"] as? Int
-            if let distance = distance, maxDistance > 0, distance > maxDistance {
+        for (_, entry):(String, JSON) in json["objects"] {
+            let type: LocationType
+            switch entry["type"].stringValue {
+            case "stop": type = .station
+            case "poi": type = .poi
+            default: continue
+            }
+            
+            let coords: LocationPoint?
+            if let lat = entry["lat"].double, let lon = entry["lon"].double {
+                coords = LocationPoint(lat: Int(lat * 1e6), lon: Int(lon * 1e6))
+            } else {
+                coords = nil
+            }
+            guard let location = Location(type: type, id: entry["id"].description, coord: coords, place: entry["municipality"].string, name: entry["name"].string) else {
+                throw ParseError(reason: "failed to parse location")
+            }
+            
+            if let distance = entry["distance"].int, maxDistance > 0, distance > maxDistance {
                 break
             }
             if types.contains(location.type) || types.contains(.any) {
