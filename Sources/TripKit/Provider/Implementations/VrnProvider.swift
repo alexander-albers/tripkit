@@ -348,7 +348,36 @@ public class VrnProvider: AbstractEfaProvider {
             "B463": LineStyle(backgroundColor: LineStyle.parseColor("#A12486"), foregroundColor: LineStyle.white),
             "B464": LineStyle(backgroundColor: LineStyle.parseColor("#0398D8"), foregroundColor: LineStyle.white),
             "B466": LineStyle(backgroundColor: LineStyle.parseColor("#FDC500"), foregroundColor: LineStyle.white),
-            "B467": LineStyle(backgroundColor: LineStyle.parseColor("#C10625"), foregroundColor: LineStyle.white)
+            "B467": LineStyle(backgroundColor: LineStyle.parseColor("#C10625"), foregroundColor: LineStyle.white),
+            
+            // Stadtwerke Trier
+            "swt|B1": LineStyle(backgroundColor: LineStyle.parseColor("#02a54f"), foregroundColor: LineStyle.white, borderColor: LineStyle.black),
+            "swt|B2": LineStyle(backgroundColor: LineStyle.parseColor("#f070ab"), foregroundColor: LineStyle.white, borderColor: LineStyle.black),
+            "swt|B3": LineStyle(backgroundColor: LineStyle.parseColor("#ffdc00"), foregroundColor: LineStyle.white, borderColor: LineStyle.black),
+            "swt|B4": LineStyle(backgroundColor: LineStyle.parseColor("#00b59d"), foregroundColor: LineStyle.white, borderColor: LineStyle.black),
+            "swt|B5": LineStyle(backgroundColor: LineStyle.parseColor("#504fa1"), foregroundColor: LineStyle.white, borderColor: LineStyle.black),
+            "swt|B6": LineStyle(backgroundColor: LineStyle.parseColor("#f58220"), foregroundColor: LineStyle.white, borderColor: LineStyle.black),
+            "swt|B7": LineStyle(backgroundColor: LineStyle.parseColor("#ee1d23"), foregroundColor: LineStyle.white, borderColor: LineStyle.black),
+            "swt|B8": LineStyle(backgroundColor: LineStyle.parseColor("#8aacbc"), foregroundColor: LineStyle.white, borderColor: LineStyle.black),
+            "swt|B9": LineStyle(backgroundColor: LineStyle.parseColor("#c5168c"), foregroundColor: LineStyle.white, borderColor: LineStyle.black),
+            "swt|B10": LineStyle(backgroundColor: LineStyle.parseColor("#c7c8ca"), foregroundColor: LineStyle.black, borderColor: LineStyle.black),
+            "swt|B13": LineStyle(backgroundColor: LineStyle.parseColor("#bdd630"), foregroundColor: LineStyle.black, borderColor: LineStyle.black),
+            "swt|B14": LineStyle(backgroundColor: LineStyle.parseColor("#88322c"), foregroundColor: LineStyle.white, borderColor: LineStyle.black),
+            "swt|B15": LineStyle(backgroundColor: LineStyle.parseColor("#c7c8ca"), foregroundColor: LineStyle.black, borderColor: LineStyle.black),
+            "swt|B16": LineStyle(backgroundColor: LineStyle.parseColor("#8b2880"), foregroundColor: LineStyle.white, borderColor: LineStyle.black),
+            "swt|B17": LineStyle(backgroundColor: LineStyle.parseColor("#c7c8ca"), foregroundColor: LineStyle.black, borderColor: LineStyle.black),
+            "swt|B30": LineStyle(backgroundColor: LineStyle.parseColor("#f1d5ab"), foregroundColor: LineStyle.black, borderColor: LineStyle.black),
+            "swt|B31": LineStyle(backgroundColor: LineStyle.parseColor("#e9eb86"), foregroundColor: LineStyle.black, borderColor: LineStyle.black),
+            "swt|B32": LineStyle(backgroundColor: LineStyle.parseColor("#bfe1ca"), foregroundColor: LineStyle.black, borderColor: LineStyle.black),
+            "swt|B81": LineStyle(backgroundColor: LineStyle.parseColor("#a064aa"), foregroundColor: LineStyle.white, borderColor: LineStyle.black),
+            "swt|B82": LineStyle(backgroundColor: LineStyle.parseColor("#71bf44"), foregroundColor: LineStyle.white, borderColor: LineStyle.black),
+            "swt|B83": LineStyle(backgroundColor: LineStyle.parseColor("#f7aa96"), foregroundColor: LineStyle.white, borderColor: LineStyle.black),
+            "swt|B84": LineStyle(backgroundColor: LineStyle.parseColor("#01aeef"), foregroundColor: LineStyle.white, borderColor: LineStyle.black),
+            "swt|B85": LineStyle(backgroundColor: LineStyle.parseColor("#f6b7d4"), foregroundColor: LineStyle.black, borderColor: LineStyle.black),
+            "swt|B86": LineStyle(backgroundColor: LineStyle.parseColor("#6bcef6"), foregroundColor: LineStyle.white, borderColor: LineStyle.black),
+            "swt|B87": LineStyle(backgroundColor: LineStyle.parseColor("#d2acd0"), foregroundColor: LineStyle.white, borderColor: LineStyle.black),
+            "swt|B88": LineStyle(backgroundColor: LineStyle.parseColor("#cc9d80"), foregroundColor: LineStyle.white, borderColor: LineStyle.black),
+            "swt|B89": LineStyle(backgroundColor: LineStyle.parseColor("#fec34d"), foregroundColor: LineStyle.white, borderColor: LineStyle.black)
         ]
     }
     
