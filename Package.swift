@@ -15,7 +15,7 @@ let package = Package(
         .package(name: "SWXMLHash", url: "https://github.com/drmohundro/SWXMLHash", from: "5.0.1"),
     ],
     targets: [
-        .target(name: "TripKit", dependencies: ["Gzip", "SwiftyJSON", "SWXMLHash"], resources: [.copy("secrets.json")]),
+        .target(name: "TripKit", dependencies: ["Gzip", "SwiftyJSON", "SWXMLHash"], resources: [.process("Resources")]),
         
         // Tests
         .target(name: "TestsCommon", dependencies: ["TripKit"], path: "Tests/TestsCommon", resources: [.copy("Resources/Test Cases"), .copy("Resources/Fixtures")]),

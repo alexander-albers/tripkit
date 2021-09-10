@@ -3,16 +3,20 @@ import os.log
 import SwiftyJSON
 import SWXMLHash
 
-public class HttpClient {
+public class HttpClient: NSObject {
     
-    private static var urlSession: URLSession = {
+    private static var shared = HttpClient()
+    private static let DefaultUserAgent = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebKit/602.4.8 (KHTML, like Gecko) Version/10.0.3 Safari/602.4.8"
+    
+    private lazy var urlSession: URLSession = {
         let config = URLSessionConfiguration.default
         if #available(iOS 11.0, tvOS 11.0, watchOS 4.0, macOS 10.13, *) {
             config.waitsForConnectivity = true
         }
-        return URLSession(configuration: config)
+        return URLSession(configuration: config, delegate: self, delegateQueue: nil)
     }()
-    private static let DefaultUserAgent = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebKit/602.4.8 (KHTML, like Gecko) Version/10.0.3 Safari/602.4.8"
+    private var clientIdentityCache: [String: SecIdentity] = [:]
+    
     
     public static func get(httpRequest: HttpRequest, completion: @escaping (Result<(HTTPURLResponse, Data), HttpError>) -> Void) -> AsyncRequest {
         guard let url = httpRequest.urlBuilder.build() else {
@@ -35,7 +39,7 @@ public class HttpClient {
         } else {
             os_log("making http request to %{public}@", log: .requestLogger, type: .default, url.absoluteString)
         }
-        let task = urlSession.dataTask(with: urlRequest) { result in
+        let task = shared.urlSession.dataTask(with: urlRequest) { result in
             completion(result)
         }
         task.resume()
@@ -73,6 +77,26 @@ public class HttpClient {
     }
     
 }
+
+extension HttpClient: URLSessionDelegate {
+    public static func cacheIdentity(for host: String, identity: SecIdentity) {
+        shared.clientIdentityCache[host] = identity
+    }
+    
+    public func urlSession(_ session: URLSession, didReceive challenge: URLAuthenticationChallenge, completionHandler: @escaping (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
+        switch (challenge.protectionSpace.authenticationMethod) {
+            case (NSURLAuthenticationMethodClientCertificate):
+            if let identity = clientIdentityCache[challenge.protectionSpace.host] {
+                completionHandler(.useCredential, URLCredential(identity: identity, certificates: nil, persistence: .forSession))
+            } else {
+                completionHandler(.performDefaultHandling, nil)
+            }
+            default:
+                completionHandler(.performDefaultHandling, nil)
+        }
+    }
+}
+
 
 public enum HttpError: Error {
     case invalidUrl(String?)

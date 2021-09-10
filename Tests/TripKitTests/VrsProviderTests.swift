@@ -9,7 +9,7 @@ class VrsProviderTests: TripKitProviderTestCase, TripKitProviderTestsDelegate {
     var networkId: NetworkId { return .VRS }
     
     func initProvider(from authorizationData: AuthorizationData) -> NetworkProvider {
-        return VrsProvider()
+        return VrsProvider(certAuthorization: authorizationData.certAuthorization)
     }
     
 }
