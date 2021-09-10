@@ -2616,7 +2616,7 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
                 if name == "Schienenersatzverkehr" {
                     return Line(id: id, network: network, product: .bus, label: "SEV")
                 } else {
-                    return Line(id: id, network: network, product: .bus, label: symbol ?? "" != "" ? symbol! : name)
+                    return Line(id: id, network: network, product: .bus, label: name)
                 }
             } else if mot == "8" {
                 return Line(id: id, network: network, product: .cablecar, label: name)
