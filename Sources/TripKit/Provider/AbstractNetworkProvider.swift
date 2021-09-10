@@ -176,6 +176,7 @@ public class AbstractNetworkProvider: NetworkProvider {
         if let match = position.match(pattern: P_NAME_NOSW) {
             return match[0] ?? "" + (match[1]?.substring(to: 1) ?? "")
         }
+        if position.count > 10 { return nil }
         return position
     }
     
