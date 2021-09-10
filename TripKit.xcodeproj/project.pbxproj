@@ -37,6 +37,14 @@
 		FA47CC121E8A6E7800F95B0F /* AbstractHafasClientInterfaceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA47CC111E8A6E7800F95B0F /* AbstractHafasClientInterfaceProvider.swift */; };
 		FA4B56F8219735FE003CD7CF /* InvgProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4B56F7219735FE003CD7CF /* InvgProvider.swift */; };
 		FA4B56F9219735FE003CD7CF /* InvgProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4B56F7219735FE003CD7CF /* InvgProvider.swift */; };
+		FA4C7F2E26EB3AA700BFD671 /* vrs-client-certificate.pfx in Resources */ = {isa = PBXBuildFile; fileRef = FA4C7F2D26EB3AA700BFD671 /* vrs-client-certificate.pfx */; };
+		FA4C7F2F26EB3AA700BFD671 /* vrs-client-certificate.pfx in Resources */ = {isa = PBXBuildFile; fileRef = FA4C7F2D26EB3AA700BFD671 /* vrs-client-certificate.pfx */; };
+		FA4C7F3026EB3AA700BFD671 /* vrs-client-certificate.pfx in Resources */ = {isa = PBXBuildFile; fileRef = FA4C7F2D26EB3AA700BFD671 /* vrs-client-certificate.pfx */; };
+		FA4C7F3126EB3AA700BFD671 /* vrs-client-certificate.pfx in Resources */ = {isa = PBXBuildFile; fileRef = FA4C7F2D26EB3AA700BFD671 /* vrs-client-certificate.pfx */; };
+		FA4C7F3326EB44BD00BFD671 /* IdentityUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4C7F3226EB44BD00BFD671 /* IdentityUtils.swift */; };
+		FA4C7F3426EB44BD00BFD671 /* IdentityUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4C7F3226EB44BD00BFD671 /* IdentityUtils.swift */; };
+		FA4C7F3526EB44BD00BFD671 /* IdentityUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4C7F3226EB44BD00BFD671 /* IdentityUtils.swift */; };
+		FA4C7F3626EB44BD00BFD671 /* IdentityUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4C7F3226EB44BD00BFD671 /* IdentityUtils.swift */; };
 		FA4E0EDF214C0BE100D94D19 /* MockKvvProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA0A296213705030098EFED /* MockKvvProvider.swift */; };
 		FA4F58141E8BCA6800EA392F /* VmvProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4F58131E8BCA6800EA392F /* VmvProvider.swift */; };
 		FA4F58181E8BD1D800EA392F /* GvhProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4F58171E8BD1D800EA392F /* GvhProvider.swift */; };
@@ -862,6 +870,8 @@
 		FA47CC0F1E8A6B8A00F95B0F /* AbstractHafasProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbstractHafasProvider.swift; sourceTree = "<group>"; };
 		FA47CC111E8A6E7800F95B0F /* AbstractHafasClientInterfaceProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbstractHafasClientInterfaceProvider.swift; sourceTree = "<group>"; };
 		FA4B56F7219735FE003CD7CF /* InvgProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvgProvider.swift; sourceTree = "<group>"; };
+		FA4C7F2D26EB3AA700BFD671 /* vrs-client-certificate.pfx */ = {isa = PBXFileReference; lastKnownFileType = file; path = "vrs-client-certificate.pfx"; sourceTree = "<group>"; };
+		FA4C7F3226EB44BD00BFD671 /* IdentityUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentityUtils.swift; sourceTree = "<group>"; };
 		FA4F58131E8BCA6800EA392F /* VmvProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VmvProvider.swift; sourceTree = "<group>"; };
 		FA4F58171E8BD1D800EA392F /* GvhProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GvhProvider.swift; sourceTree = "<group>"; };
 		FA4F58191E8BD30500EA392F /* ShProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShProvider.swift; sourceTree = "<group>"; };
@@ -1246,6 +1256,16 @@
 			path = TestsCommon;
 			sourceTree = "<group>";
 		};
+		FA4C7F3726EB4C3600BFD671 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FA7058572271B3D80070D2C9 /* secrets.json */,
+				FA7D03E8228729A900DB192E /* secrets.json.template */,
+				FA4C7F2D26EB3AA700BFD671 /* vrs-client-certificate.pfx */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		FA5CD33724FBB5A300B4990A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -1456,8 +1476,7 @@
 				FACB83DD1E3FD0E900AC5F1F /* TripKit.swift */,
 				FA7572B01E673498009B41EF /* ParseError.swift */,
 				FABF2FB41EA1E0FE0002DE55 /* SessionExpiredError.swift */,
-				FA7058572271B3D80070D2C9 /* secrets.json */,
-				FA7D03E8228729A900DB192E /* secrets.json.template */,
+				FA4C7F3726EB4C3600BFD671 /* Resources */,
 				FA5CD33724FBB5A300B4990A /* Supporting Files */,
 			);
 			path = TripKit;
@@ -1529,6 +1548,7 @@
 				FA7058502271B01C0070D2C9 /* AuthorizationData.swift */,
 				FA70585F227205D30070D2C9 /* SecretsLoader.swift */,
 				FA2C85C225F13BBE003880FB /* Bundle.swift */,
+				FA4C7F3226EB44BD00BFD671 /* IdentityUtils.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -1959,6 +1979,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA4C7F3026EB3AA700BFD671 /* vrs-client-certificate.pfx in Resources */,
 				FA5CD2C924FBB2A900B4990A /* secrets.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1967,6 +1988,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA4C7F3126EB3AA700BFD671 /* vrs-client-certificate.pfx in Resources */,
 				FA5CD2D624FBB2AA00B4990A /* secrets.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1995,6 +2017,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA4C7F2E26EB3AA700BFD671 /* vrs-client-certificate.pfx in Resources */,
 				FA8FE64D22741E11003CE4B4 /* secrets.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2061,6 +2084,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA4C7F2F26EB3AA700BFD671 /* vrs-client-certificate.pfx in Resources */,
 				FA8FE64C22741E11003CE4B4 /* secrets.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2076,6 +2100,7 @@
 				FA5CD2C024FBB2A900B4990A /* Logging.swift in Sources */,
 				FA5CD23E24FBB29000B4990A /* GvhProvider.swift in Sources */,
 				FA5CD29424FBB29800B4990A /* NearbyLocationsResult.swift in Sources */,
+				FA4C7F3526EB44BD00BFD671 /* IdentityUtils.swift in Sources */,
 				FA5CD24E24FBB29000B4990A /* VagfrProvider.swift in Sources */,
 				FA5CD24124FBB29000B4990A /* VvoProvider.swift in Sources */,
 				FA5CD2C824FBB2A900B4990A /* SessionExpiredError.swift in Sources */,
@@ -2169,6 +2194,7 @@
 				FA5CD2CD24FBB2AA00B4990A /* Logging.swift in Sources */,
 				FA5CD27324FBB29000B4990A /* GvhProvider.swift in Sources */,
 				FA5CD29924FBB29900B4990A /* NearbyLocationsResult.swift in Sources */,
+				FA4C7F3626EB44BD00BFD671 /* IdentityUtils.swift in Sources */,
 				FA5CD28324FBB29000B4990A /* VagfrProvider.swift in Sources */,
 				FA5CD27624FBB29000B4990A /* VvoProvider.swift in Sources */,
 				FA5CD2D524FBB2AA00B4990A /* SessionExpiredError.swift in Sources */,
@@ -2368,6 +2394,7 @@
 				FA895A5B1E90FF30002FBA7A /* VrsProvider.swift in Sources */,
 				FAB754281E3FD3E500C343F2 /* Leg.swift in Sources */,
 				FA2454C61E86A2A500445AD5 /* BayernProvider.swift in Sources */,
+				FA4C7F3326EB44BD00BFD671 /* IdentityUtils.swift in Sources */,
 				FABFCC101E8FA02100905D5E /* NasaProvider.swift in Sources */,
 				FAB754301E3FD3E500C343F2 /* QueryTripsResult.swift in Sources */,
 				FA47CC121E8A6E7800F95B0F /* AbstractHafasClientInterfaceProvider.swift in Sources */,
@@ -2703,6 +2730,7 @@
 				FAFF187E1FA50B9500A8ED69 /* VrsProvider.swift in Sources */,
 				FAFF187F1FA50B9500A8ED69 /* Leg.swift in Sources */,
 				FAFF18811FA50B9500A8ED69 /* BayernProvider.swift in Sources */,
+				FA4C7F3426EB44BD00BFD671 /* IdentityUtils.swift in Sources */,
 				FAFF18821FA50B9500A8ED69 /* NasaProvider.swift in Sources */,
 				FAFF18831FA50B9500A8ED69 /* QueryTripsResult.swift in Sources */,
 				FAFF18841FA50B9500A8ED69 /* AbstractHafasClientInterfaceProvider.swift in Sources */,

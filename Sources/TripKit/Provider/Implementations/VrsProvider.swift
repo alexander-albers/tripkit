@@ -4,7 +4,9 @@ import SwiftyJSON
 
 public class VrsProvider: AbstractNetworkProvider {
     
-    static let API_BASE = "http://android.vrsinfo.de/index.php"
+    static let API_BASE = "https://ekapapp.vrs.de/index.php"
+    static let API_BASE_CACHE = "https://ekapappcache.vrs.de/index.php"
+    static let API_BASE_INSECURE = "http://android.vrsinfo.de/index.php"
     static let NAME_WITH_POSITION_PATTERNS: [NSRegularExpression] = [
         try! NSRegularExpression(pattern: "(.*) - (.*)"),
         try! NSRegularExpression(pattern: "(.*) Gleis (.*)"),
@@ -16,7 +18,28 @@ public class VrsProvider: AbstractNetworkProvider {
     ]
     static let P_NRW_TARIF = try! NSRegularExpression(pattern: "([\\d]+,\\d\\d)")
     
-    public init() {
+    var baseEndpoint: String
+    var baseCacheEndpoint: String
+    
+    public init(certAuthorization: [String: Any]) {
+        // Load tls client certificate
+        if let certName = certAuthorization["certName"] as? String, let certPassword = certAuthorization["password"] as? String {
+            do {
+                let identity = try Bundle.module.identity(named: certName, password: certPassword)
+                HttpClient.cacheIdentity(for: "ekapapp.vrs.de", identity: identity)
+                baseEndpoint = VrsProvider.API_BASE
+                baseCacheEndpoint = VrsProvider.API_BASE_CACHE
+            } catch let error as NSError {
+                os_log("VRS: failed to load client certificate, falling back to insecure http requests! %{public}@", log: .requestLogger, type: .error, error.description)
+                baseEndpoint = VrsProvider.API_BASE_INSECURE
+                baseCacheEndpoint = VrsProvider.API_BASE_INSECURE
+            }
+        } else {
+            os_log("VRS: failed to load client certificate, falling back to insecure http requests!", log: .requestLogger, type: .error)
+            baseEndpoint = VrsProvider.API_BASE_INSECURE
+            baseCacheEndpoint = VrsProvider.API_BASE_INSECURE
+        }
+        
         super.init(networkId: .VRS)
         
         styles = [
@@ -178,7 +201,7 @@ public class VrsProvider: AbstractNetworkProvider {
     }
     
     override public func queryNearbyLocations(location: Location, types: [LocationType]?, maxDistance: Int, maxLocations: Int, completion: @escaping (HttpRequest, NearbyLocationsResult) -> Void) -> AsyncRequest {
-        let urlBuilder = UrlBuilder(path: "http://android.vrsinfo.de/index.php", encoding: .utf8)
+        let urlBuilder = UrlBuilder(path: baseCacheEndpoint, encoding: .utf8)
         
         urlBuilder.addParameter(key: "eID", value: "tx_ekap_here")
         if let coord = location.coord {
@@ -260,7 +283,7 @@ public class VrsProvider: AbstractNetworkProvider {
     }
     
     override public func queryDepartures(stationId: String, departures: Bool, time: Date?, maxDepartures: Int, equivs: Bool, completion: @escaping (HttpRequest, QueryDeparturesResult) -> Void) -> AsyncRequest {
-        let urlBuilder = UrlBuilder(path: VrsProvider.API_BASE, encoding: .utf8)
+        let urlBuilder = UrlBuilder(path: baseEndpoint, encoding: .utf8)
 
         urlBuilder.addParameter(key: "eID", value: "tx_vrsinfo_ass2_timetable")
         urlBuilder.addParameter(key: "i", value: stationId)
@@ -386,7 +409,7 @@ public class VrsProvider: AbstractNetworkProvider {
     }
     
     func queryLines(for stationId: String, completion: @escaping ([ServingLine]) -> Void) {
-        let urlBuilder = UrlBuilder(path: VrsProvider.API_BASE, encoding: .utf8)
+        let urlBuilder = UrlBuilder(path: baseEndpoint, encoding: .utf8)
 
         urlBuilder.addParameter(key: "eID", value: "tx_vrsinfo_his_info")
         urlBuilder.addParameter(key: "i", value: stationId)
@@ -438,7 +461,7 @@ public class VrsProvider: AbstractNetworkProvider {
     }
     
     override public func suggestLocations(constraint: String, types: [LocationType]?, maxLocations: Int, completion: @escaping (HttpRequest, SuggestLocationsResult) -> Void) -> AsyncRequest {
-        let urlBuilder = UrlBuilder(path: VrsProvider.API_BASE, encoding: .utf8)
+        let urlBuilder = UrlBuilder(path: baseCacheEndpoint, encoding: .utf8)
 
         urlBuilder.addParameter(key: "eID", value: "tx_vrsinfo_ass2_objects")
         urlBuilder.addParameter(key: "sc", value: maxLocations > 0 ? maxLocations : 10) // station count
@@ -581,7 +604,7 @@ public class VrsProvider: AbstractNetworkProvider {
     }
     
     private func doQueryTrips(from: Location, via: Location?, to: Location, fromString: String, viaString: String?, toString: String, date: Date, departure: Bool, tripOptions: TripOptions, context: Context?, completion: @escaping (HttpRequest, QueryTripsResult) -> Void) -> AsyncRequest {
-        let urlBuilder = UrlBuilder(path: VrsProvider.API_BASE, encoding: .utf8)
+        let urlBuilder = UrlBuilder(path: baseEndpoint, encoding: .utf8)
 
         urlBuilder.addParameter(key: "eID", value: "tx_vrsinfo_ass2_router")
         urlBuilder.addParameter(key: "f", value: fromString)

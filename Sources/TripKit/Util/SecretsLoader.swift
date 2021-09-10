@@ -19,6 +19,7 @@ public class SecretsLoader {
             guard let id = NetworkId(rawValue: entry["id"].stringValue.uppercased()) else { continue }
             let apiBase = entry["apiBase"].stringValue
             let apiAuthorization = entry["apiAuthorization"].dictionaryObject ?? [:]
+            let certAuthorization = entry["certAuthorization"].dictionaryObject ?? [:]
             let requestVerificationType = entry["requestVerification"]["type"].stringValue
             let requestVerification: AbstractHafasClientInterfaceProvider.RequestVerification
             switch requestVerificationType {
@@ -31,7 +32,7 @@ public class SecretsLoader {
             default:
                 requestVerification = .none
             }
-            result[id] = AuthorizationData(apiBase: apiBase, hciAuthorization: apiAuthorization, hciRequestVerification: requestVerification)
+            result[id] = AuthorizationData(apiBase: apiBase, hciAuthorization: apiAuthorization, certAuthorization: certAuthorization, hciRequestVerification: requestVerification)
         }
         return result
     }
