@@ -452,15 +452,12 @@
 		FAC58F7226E74EA000E8EAF3 /* Test Cases in Resources */ = {isa = PBXBuildFile; fileRef = FAC58F7126E74EA000E8EAF3 /* Test Cases */; };
 		FAC58F7326E74EA000E8EAF3 /* Test Cases in Resources */ = {isa = PBXBuildFile; fileRef = FAC58F7126E74EA000E8EAF3 /* Test Cases */; };
 		FAC58F7426E74EA000E8EAF3 /* Test Cases in Resources */ = {isa = PBXBuildFile; fileRef = FAC58F7126E74EA000E8EAF3 /* Test Cases */; };
-		FAC58F8726E74FAC00E8EAF3 /* Info-iOS.plist in Resources */ = {isa = PBXBuildFile; fileRef = FAC58F8426E74FAB00E8EAF3 /* Info-iOS.plist */; };
 		FAC58F8826E74FAC00E8EAF3 /* Info-iOS.plist in Resources */ = {isa = PBXBuildFile; fileRef = FAC58F8426E74FAB00E8EAF3 /* Info-iOS.plist */; };
 		FAC58F8926E74FAC00E8EAF3 /* Info-iOS.plist in Resources */ = {isa = PBXBuildFile; fileRef = FAC58F8426E74FAB00E8EAF3 /* Info-iOS.plist */; };
 		FAC58F8A26E74FAC00E8EAF3 /* Info-tvOS.plist in Resources */ = {isa = PBXBuildFile; fileRef = FAC58F8526E74FAB00E8EAF3 /* Info-tvOS.plist */; };
-		FAC58F8B26E74FAC00E8EAF3 /* Info-tvOS.plist in Resources */ = {isa = PBXBuildFile; fileRef = FAC58F8526E74FAB00E8EAF3 /* Info-tvOS.plist */; };
 		FAC58F8C26E74FAC00E8EAF3 /* Info-tvOS.plist in Resources */ = {isa = PBXBuildFile; fileRef = FAC58F8526E74FAB00E8EAF3 /* Info-tvOS.plist */; };
 		FAC58F8D26E74FAC00E8EAF3 /* Info-macOS.plist in Resources */ = {isa = PBXBuildFile; fileRef = FAC58F8626E74FAC00E8EAF3 /* Info-macOS.plist */; };
 		FAC58F8E26E74FAC00E8EAF3 /* Info-macOS.plist in Resources */ = {isa = PBXBuildFile; fileRef = FAC58F8626E74FAC00E8EAF3 /* Info-macOS.plist */; };
-		FAC58F8F26E74FAC00E8EAF3 /* Info-macOS.plist in Resources */ = {isa = PBXBuildFile; fileRef = FAC58F8626E74FAC00E8EAF3 /* Info-macOS.plist */; };
 		FAC5900426E7507D00E8EAF3 /* HvvProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC58FF826E7507B00E8EAF3 /* HvvProviderTests.swift */; };
 		FAC5900526E7507D00E8EAF3 /* HvvProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC58FF826E7507B00E8EAF3 /* HvvProviderTests.swift */; };
 		FAC5900626E7507D00E8EAF3 /* HvvProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC58FF826E7507B00E8EAF3 /* HvvProviderTests.swift */; };
@@ -1885,7 +1882,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1300;
-				LastUpgradeCheck = 1250;
+				LastUpgradeCheck = 1300;
 				ORGANIZATIONNAME = "Alexander Albers";
 				TargetAttributes = {
 					FA5CD1D224FBB10C00B4990A = {
@@ -1997,7 +1994,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAC58F8F26E74FAC00E8EAF3 /* Info-macOS.plist in Resources */,
 				FAC58F8C26E74FAC00E8EAF3 /* Info-tvOS.plist in Resources */,
 				FAC58F8926E74FAC00E8EAF3 /* Info-iOS.plist in Resources */,
 			);
@@ -2008,7 +2004,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAC58F8E26E74FAC00E8EAF3 /* Info-macOS.plist in Resources */,
-				FAC58F8B26E74FAC00E8EAF3 /* Info-tvOS.plist in Resources */,
 				FAC58F8826E74FAC00E8EAF3 /* Info-iOS.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2028,7 +2023,6 @@
 			files = (
 				FAC58F8D26E74FAC00E8EAF3 /* Info-macOS.plist in Resources */,
 				FAC58F8A26E74FAC00E8EAF3 /* Info-tvOS.plist in Resources */,
-				FAC58F8726E74FAC00E8EAF3 /* Info-iOS.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
