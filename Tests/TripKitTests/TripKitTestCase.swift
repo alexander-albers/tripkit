@@ -34,7 +34,7 @@ class TripKitProviderTestCase: XCTestCase {
             case .success(let locations):
                 os_log("success: %@", log: .testsLogger, type: .default, locations.map({($0.location.id ?? "") + " " + $0.location.getUniqueLongName()}))
                 XCTAssert(!locations.isEmpty, "received empty result")
-                XCTAssert(locations.contains(where: {$0.location.id == testCase["result"]["id"].string || $0.location.getUniqueLongName() == testCase["result"]["name"].string}), "result does not contain the searched location")
+                XCTAssert(locations.contains(where: {compareLocationIds($0.location.id, testCase["result"]["id"].string) || $0.location.getUniqueLongName() == testCase["result"]["name"].string}), "result does not contain the searched location")
                 
                 saveFixture(name: "suggestLocations-\(index)", input: request.responseData, output: locations)
             case .failure(let error):
@@ -50,7 +50,7 @@ class TripKitProviderTestCase: XCTestCase {
             case .success(let locations):
                 os_log("success: %@", log: .testsLogger, type: .default, locations.map({($0.id ?? "") + " " + $0.getUniqueLongName()}))
                 XCTAssert(!locations.isEmpty, "received empty result")
-                XCTAssert(locations.contains(where: {$0.id == testCase["result"]["id"].string || $0.getUniqueLongName() == testCase["result"]["name"].string}), "result does not contain the searched location")
+                XCTAssert(locations.contains(where: {compareLocationIds($0.id, testCase["result"]["id"].string) || $0.getUniqueLongName() == testCase["result"]["name"].string}), "result does not contain the searched location")
                 
                 saveFixture(name: "queryNearbyLocationsByCoordinate-\(index)", input: request.responseData, output: locations)
             case .invalidId:
