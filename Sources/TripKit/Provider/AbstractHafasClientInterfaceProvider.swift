@@ -902,7 +902,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
             path.insert(contentsOf: lastLeg.path, at: 0)
             legs.append(IndividualLeg(type: lastLeg.type, departureTime: lastLeg.departureTime, departure: lastLeg.departure, arrival: arrivalStop.location, arrivalTime: arrivalTime.addingTimeInterval(addTime), distance: 0, path: path))
         } else {
-            legs.append(IndividualLeg(type: type, departureTime: departureTime.addingTimeInterval(addTime), departure: departureStop.location, arrival: arrivalStop.location, arrivalTime: arrivalTime.addingTimeInterval(addTime), distance: distance, path: []))
+            legs.append(IndividualLeg(type: type, departureTime: departureTime.addingTimeInterval(addTime), departure: departureStop.location, arrival: arrivalStop.location, arrivalTime: arrivalTime.addingTimeInterval(addTime), distance: distance, path: path))
         }
     }
     
