@@ -738,18 +738,15 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         let rems = try parseRemList(remList: remList)
         let himList = common["himL"] as? [Any]
         let messages = try parseMessageList(himList: himList)
+        let polyList = common["polyL"] as? [Any]
+        let encodedPolyList = try parsePolyList(polyL: polyList)
         
         guard let journey = res["journey"] as? [String: Any], let baseDateString = journey["date"] as? String else {
             throw ParseError(reason: "could not parse journey stop list")
         }
         let stopL = journey["stopL"] as? [Any]
         
-        let path: [LocationPoint]
-        if let polyline = try? decodePolyline(from: (journey["poly"] as? [String: Any])?["crdEncYX"] as? String) {
-            path = polyline
-        } else {
-            path = []
-        }
+        let path = parsePath(encodedPolyList: encodedPolyList, jny: journey)
         
         var dateComponents = DateComponents()
         dateComponents.timeZone = timeZone
