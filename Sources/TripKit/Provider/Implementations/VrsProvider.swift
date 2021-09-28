@@ -1116,9 +1116,6 @@ public class VrsProvider: AbstractNetworkProvider {
             name = ("\(street) \(number)").trimmingCharacters(in: .whitespaces)
         } else if let poiName = location["name"] as? String {
             locationType = .poi
-            if let tmpId = location["tempId"] as? Int {
-                id = "\(tmpId)"
-            }
             name = poiName
         } else if location["x"] != nil && location["y"] != nil {
             locationType = .any
