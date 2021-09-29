@@ -429,8 +429,9 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
             } else {
                 location = Location(type: .station, id: stationId)!
             }
-            let position = parsePosition(position: (departures ? stbStop["dPlatfR"] : stbStop["aPlatfR"]) as? String)
-            let plannedPosition = parsePosition(position: (departures ? stbStop["dPlatfS"] : stbStop["aPlatfS"]) as? String)
+            
+            let position = parsePosition(dict: stbStop, platfName: departures ? "dPlatfR" : "aPlatfR", pltfName: departures ? "dPltfR" : "aPltfR")
+            let plannedPosition = parsePosition(dict: stbStop, platfName: departures ? "dPlatfS" : "aPlatfS", pltfName: departures ? "dPltfS" : "aPltfS")
             
             let destination: Location?
             if let stopL = jny["stopL"] as? [Any] {
@@ -915,6 +916,16 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         }
     }
     
+    func parsePosition(dict: [String: Any], platfName: String, pltfName: String) -> String? {
+        if let pltfDic = dict[pltfName] as? [String: Any], let pltf = pltfDic["txt"] as? String {
+            return pltf
+        } else if let platf = dict[platfName] as? String {
+            return normalize(position: platf)
+        } else {
+            return nil
+        }
+    }
+    
     func parseStop(dict: [String: Any], locations: [Location], rems: [RemAttrib]?, baseDate: Date, line: Line?) throws -> Stop? {
         guard let locationIndex = dict["locX"] as? Int else { throw ParseError(reason: "failed to get stop index") }
         let location = locations[locationIndex]
@@ -922,14 +933,14 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         let arrivalCancelled = dict["isCncl"] as? Bool ?? dict["aCncl"] as? Bool ?? false
         let plannedArrivalTime = try parseJsonTime(baseDate: baseDate, dateString: dict["aTimeS"] as? String)
         let predictedArrivalTime = try parseJsonTime(baseDate: baseDate, dateString: dict["aTimeR"] as? String)
-        let plannedArrivalPosition = normalize(position: dict["aPlatfS"] as? String)
-        let predictedArrivalPosition = normalize(position: dict["aPlatfR"] as? String)
+        let plannedArrivalPosition = parsePosition(dict: dict, platfName: "aPlatfS", pltfName: "aPltfS")
+        let predictedArrivalPosition = parsePosition(dict: dict, platfName: "aPlatfR", pltfName: "aPltfR")
         
         let departureCancelled = dict["isCncl"] as? Bool ?? dict["dCncl"] as? Bool ?? false
         let plannedDepartureTime = try parseJsonTime(baseDate: baseDate, dateString: dict["dTimeS"] as? String)
         let predictedDepartureTime = try parseJsonTime(baseDate: baseDate, dateString: dict["dTimeR"] as? String)
-        let plannedDeparturePosition = normalize(position: dict["dPlatfS"] as? String)
-        let predictedDeparturePosition = normalize(position: dict["dPlatfR"] as? String)
+        let plannedDeparturePosition = parsePosition(dict: dict, platfName: "dPlatfS", pltfName: "dPltfS")
+        let predictedDeparturePosition = parsePosition(dict: dict, platfName: "dPlatfR", pltfName: "dPltfR")
         
         var message: String = ""
         for msg in dict["msgL"] as? [Any] ?? [] {
