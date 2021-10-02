@@ -34,7 +34,10 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
                     case .station:
                         type += "S"
                     case .poi:
-                        type += "P"
+                        // GVH does not support POI type
+                        if self.id != .GVH {
+                            type += "P"
+                        }
                     case .address:
                         type += "A"
                     default: break
