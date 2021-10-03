@@ -6,6 +6,7 @@ public class TripKit {
     
     public let hhmmFormatter = DateFormatter()
     public let ddmmhhmmFormatter = DateFormatter()
+    public let ddmmyyyyFormatter = DateFormatter()
     public let multilineWeekDayFormatter = DateFormatter()
     public let weekDayFormatter = DateFormatter()
     
@@ -19,6 +20,9 @@ public class TripKit {
         
         ddmmhhmmFormatter.dateFormat = (DateFormatter.dateFormat(fromTemplate: "ddMM", options: 0, locale: locale) ?? "dd.MM") + "', '" + hhmmFormatter.dateFormat
         ddmmhhmmFormatter.locale = locale
+        
+        ddmmyyyyFormatter.dateFormat = (DateFormatter.dateFormat(fromTemplate: "ddMMyyyy", options: 0, locale: locale) ?? "dd.MM.yyyy")
+        ddmmyyyyFormatter.locale = locale
         
         multilineWeekDayFormatter.dateFormat = (DateFormatter.dateFormat(fromTemplate: "EEEddMM", options: 0, locale: locale) ?? "EEE', 'dd.MM") + "'\n'" + hhmmFormatter.dateFormat
         multilineWeekDayFormatter.locale = locale
