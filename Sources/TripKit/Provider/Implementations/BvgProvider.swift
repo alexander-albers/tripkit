@@ -220,21 +220,8 @@ public class BvgProvider: AbstractHafasClientInterfaceProvider {
         }
     }
     
-    override func parseJsonTripFare(fareSetName: String, fareSetDescription: String, name: String, currency: String, price: Float) -> Fare? {
-        if !fareSetName.hasPrefix("Berlin Tarifgebiet ") || !fareSetName.hasSuffix(" Einzelfahrausweis") {
-            return nil
-        }
-        let fareSetName = "Berlin \(String(fareSetName[fareSetName.index(fareSetName.startIndex, offsetBy: 19)..<fareSetName.index(fareSetName.endIndex, offsetBy: -19)]))"
-
-        if name == "Regeltarif" {
-            return Fare(network: fareSetName, type: .adult, currency: currency, fare: price, unitsName: name, units: nil)
-        } else if name == "Ermäßigungstarif" {
-            return Fare(network: fareSetName, type: .child, currency: currency, fare: price, unitsName: name, units: nil)
-        } else if name == "Fahrrad" {
-            return Fare(network: fareSetName, type: .bike, currency: currency, fare: price, unitsName: name, units: nil)
-        } else {
-            return nil
-        }
+    override func parse(fareName: String?, ticketName: String?) -> String {
+        return super.parse(fareName: fareName, ticketName: nil)
     }
     
 }

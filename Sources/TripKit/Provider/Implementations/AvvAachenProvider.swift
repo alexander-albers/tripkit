@@ -42,4 +42,12 @@ public class AvvAachenProvider: AbstractHafasClientInterfaceProvider {
         return super.split(address: address)
     }
     
+    override func hideFare(_ fare: Fare) -> Bool {
+        let fareNameLc = fare.name?.lowercased() ?? ""
+        switch fareNameLc {
+        case let name where name.contains("einzel-ticket"): return false
+        default: return true
+        }
+    }
+    
 }

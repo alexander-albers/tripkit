@@ -885,13 +885,13 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
                     let level = elem.attribute(by: "levelAdult")?.text.trimmingCharacters(in: .whitespaces)
                     let units = elem.attribute(by: "unitsAdult")?.text.trimmingCharacters(in: .whitespaces)
                     
-                    fares.append(Fare(network: net.uppercased(), type: .adult, currency: currency, fare: fare, unitsName: level ?? "" != "" ? nil : (unitName ?? "" == "" ? nil : unitName), units: level ?? "" != "" ? level : units))
+                    fares.append(Fare(name: nil, type: .adult, currency: currency, fare: fare, unitsName: level ?? "" != "" ? nil : (unitName ?? "" == "" ? nil : unitName), units: level ?? "" != "" ? level : units))
                 }
                 if let fareChild = elem.attribute(by: "fareChild")?.text, let fare = Float(fareChild), fare != 0 {
                     let level = elem.attribute(by: "levelChild")?.text.trimmingCharacters(in: .whitespaces)
                     let units = elem.attribute(by: "unitsChild")?.text.trimmingCharacters(in: .whitespaces)
                     
-                    fares.append(Fare(network: net.uppercased(), type: .child, currency: currency, fare: fare, unitsName: level ?? "" != "" ? nil : (unitName ?? "" == "" ? nil : unitName), units: level ?? "" != "" ? level : units))
+                    fares.append(Fare(name: nil, type: .child, currency: currency, fare: fare, unitsName: level ?? "" != "" ? nil : (unitName ?? "" == "" ? nil : unitName), units: level ?? "" != "" ? level : units))
                 }
             } else {
                 let tickets = route["itdFare"]["itdUnifiedTicket"].all
@@ -909,9 +909,9 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
                     }
                     switch person {
                     case "ADULT":
-                        fares.append(Fare(network: net.uppercased(), type: .adult, currency: currency, fare: fare, unitsName: nil, units: nil))
+                        fares.append(Fare(name: nil, type: .adult, currency: currency, fare: fare, unitsName: nil, units: nil))
                     case "CHILD":
-                        fares.append(Fare(network: net.uppercased(), type: .child, currency: currency, fare: fare, unitsName: nil, units: nil))
+                        fares.append(Fare(name: nil, type: .child, currency: currency, fare: fare, unitsName: nil, units: nil))
                     default: break
                     }
                         
@@ -1276,11 +1276,11 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
                 let unitsName = elem["un"].element?.text
                 if let fareAdult = elem["fa"].element?.text, let fare = Float(fareAdult), fare != 0 {
                     let unit = elem["ua"].element?.text
-                    fares.append(Fare(network: net.uppercased(), type: .adult, currency: "EUR", fare: fare, unitsName: unitsName, units: unit))
+                    fares.append(Fare(name: nil, type: .adult, currency: "EUR", fare: fare, unitsName: unitsName, units: unit))
                 }
                 if let fareChild = elem["fc"].element?.text, let fare = Float(fareChild), fare != 0 {
                     let unit = elem["uc"].element?.text
-                    fares.append(Fare(network: net.uppercased(), type: .child, currency: "EUR", fare: fare, unitsName: unitsName, units: unit))
+                    fares.append(Fare(name: nil, type: .child, currency: "EUR", fare: fare, unitsName: unitsName, units: unit))
                 }
                 break
             }

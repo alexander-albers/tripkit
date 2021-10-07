@@ -94,8 +94,8 @@ public class MockKvvProvider: AbstractEfaProvider {
     }
     
     public override func queryTrips(from: Location, via: Location?, to: Location, date: Date, departure: Bool, tripOptions: TripOptions, completion: @escaping (HttpRequest, QueryTripsResult) -> Void) -> AsyncRequest {
-        let fare = Fare(network: "KVV", type: .adult, currency: "EUR", fare: 2.4, unitsName: "Waben", units: "2")
-        let fare2 = Fare(network: "KVV", type: .child, currency: "EUR", fare: 1.4, unitsName: "Waben", units: "2")
+        let fare = Fare(name: nil, type: .adult, currency: "EUR", fare: 2.4, unitsName: "Waben", units: "2")
+        let fare2 = Fare(name: nil, type: .child, currency: "EUR", fare: 1.4, unitsName: "Waben", units: "2")
         let fares = [fare, fare2]
         let trip1 = Trip(id: "", from: from, to: to, legs: [PublicLeg(line: createLine(.suburbanTrain, "S2"), destination: nil, departureStop: createStop("Kronenplatz (Kaiserstraße)", createTime(9, 40)), arrivalStop: createStop("Europaplatz (Kaiserstraße)", createTime(9, 46)), intermediateStops: createIntermediates(createTime(9, 40)), message: nil, journeyContext: nil)], fares: fares)
         let trip2 = Trip(id: "", from: from, to: to, legs: [PublicLeg(line: createLine(.suburbanTrain, "S5"), destination: nil, departureStop: createStop("Kronenplatz (Kaiserstraße)", createTime(9, 42)), arrivalStop: createStop("Europaplatz (Kaiserstraße)", createTime(9, 48)), intermediateStops: createIntermediates(createTime(9, 42)), message: nil, journeyContext: nil)], fares: fares)

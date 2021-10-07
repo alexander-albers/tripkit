@@ -63,16 +63,6 @@ public class HvvProvider: AbstractHafasClientInterfaceProvider {
         ]
     }
     
-    override func parseJsonTripFare(fareSetName: String, fareSetDescription: String, name: String, currency: String, price: Float) -> Fare? {
-        if name == "Single Ticket (Einzelkarte)" {
-            return Fare(network: fareSetName, type: .adult, currency: currency, fare: price, unitsName: "Einzelkarte", units: nil)
-        } else if name == "Single Ticket Child (Einzelkarte Kind)" {
-            return Fare(network: fareSetName, type: .child, currency: currency, fare: price, unitsName: "Einzelkarte Kind", units: nil)
-        } else {
-            return super.parseJsonTripFare(fareSetName: fareSetName, fareSetDescription: fareSetDescription, name: name, currency: currency, price: price)
-        }
-    }
-    
     override func split(stationName: String?) -> (String?, String?) {
         guard let stationName = stationName else { return super.split(stationName: nil) }
         if let m = stationName.match(pattern: P_SPLIT_NAME_FIRST_COMMA) {

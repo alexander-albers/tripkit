@@ -172,4 +172,8 @@ public class VbbProvider: AbstractHafasClientInterfaceProvider {
         return super.split(address: address)
     }
     
+    override func parse(fareName: String?, ticketName: String?) -> String {
+        return ticketName ?? ""
+    }
+    
 }

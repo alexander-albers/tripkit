@@ -246,14 +246,4 @@ public class VbnProvider: AbstractHafasClientInterfaceProvider {
         }
     }
     
-    override func parseJsonTripFare(fareSetName: String, fareSetDescription: String, name: String, currency: String, price: Float) -> Fare? {
-        if name == "EinzelTicket Erwachsene" {
-            return Fare(network: fareSetName, type: .adult, currency: currency, fare: price, unitsName: nil, units: nil)
-        } else if name == "Kinder-EinzelTicket" {
-            return Fare(network: fareSetName, type: .child, currency: currency, fare: price, unitsName: nil, units: nil)
-        } else {
-            return nil
-        }
-    }
-    
 }
