@@ -649,43 +649,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
                 }
             }
             
-//            if tripCancelled {
-            
-//                continue
-//            }
-            
-            var fares: [Fare] = []
-            if let trfRes = outCon["trfRes"] as? [String: Any] {
-                for fareSet in trfRes["fareSetL"] as? [Any] ?? [] {
-                    guard let fareSet = fareSet as? [String: Any] else { throw ParseError(reason: "failed to parse fareset") }
-                    let fareSetName = fareSet["name"] as? String
-                    let fareSetDescription = fareSet["desc"] as? String
-                    if fareSetName != nil || fareSetDescription != nil {
-                        for fare in fareSet["fareL"] as? [Any] ?? [] {
-                            guard let fare = fare as? [String: Any], let name = fare["name"] as? String else { throw ParseError(reason: "failed to parse fare") }
-                            if let ticketList = fare["ticketL"] as? [Any] {
-                                for ticket in ticketList {
-                                    guard let ticket = ticket as? [String: Any], let ticketName = ticket["name"] as? String, let currency = ticket["cur"] as? String, let priceInt = ticket["prc"] as? Int else { throw ParseError(reason: "failed to parse fare arr") }
-                                    let price = Float(priceInt) / 100.0
-                                    if let fare = parseJsonTripFare(fareSetName: name, fareSetDescription: fareSetDescription ?? "", name: ticketName, currency: currency, price: price) {
-                                        fares.append(fare)
-                                    }
-                                }
-                            } else {
-                                guard let currency = fare["cur"] as? String, let priceInt = fare["prc"] as? Int else { throw ParseError(reason: "failed to parse fare obj") }
-                                let price = Float(priceInt) / 100.0
-                                if let fare = parseJsonTripFare(fareSetName: fareSetName ?? "", fareSetDescription: fareSetDescription ?? "", name: name, currency: currency, price: price) {
-                                    fares.append(fare)
-                                }
-                            }
-                        }
-                    } else if let fareL = fareSet["fareL"] as? [Any], let fare = fareL.first as? [String: Any], let priceInt = fare["prc"] as? Int, priceInt > 0 {
-                        let price = Float(priceInt) / 100.0
-                        let fare = Fare(network: "", type: .adult, currency: "EUR", fare: price, unitsName: nil, units: nil)
-                        fares.append(fare)
-                    }
-                }
-            }
+            let fares = try parseFares(outCon: outCon)
             let context: HafasClientInterfaceRefreshTripContext?
             if let ctxRecon = outCon["ctxRecon"] as? String {
                 context = HafasClientInterfaceRefreshTripContext(contextRecon: ctxRecon, from: from, to: to)
@@ -904,18 +868,6 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
             legs.append(IndividualLeg(type: lastLeg.type, departureTime: lastLeg.departureTime, departure: lastLeg.departure, arrival: arrivalStop.location, arrivalTime: arrivalTime.addingTimeInterval(addTime), distance: 0, path: path))
         } else {
             legs.append(IndividualLeg(type: type, departureTime: departureTime.addingTimeInterval(addTime), departure: departureStop.location, arrival: arrivalStop.location, arrivalTime: arrivalTime.addingTimeInterval(addTime), distance: distance, path: path))
-        }
-    }
-    
-    func parseJsonTripFare(fareSetName: String, fareSetDescription: String, name: String, currency: String, price: Float) -> Fare? {
-        if name.hasSuffix("- Jahreskarte") || name.hasSuffix("- Monatskarte") {
-            return nil
-        } else if name.hasPrefix("Vollpreis - ") {
-            return Fare(network: fareSetName, type: .adult, currency: currency, fare: price, unitsName: name.substring(from: 12), units: nil)
-        } else if name.hasPrefix("Kind - ") {
-            return Fare(network: fareSetName, type: .child, currency: currency, fare: price, unitsName: name.substring(from: 7), units: nil)
-        } else {
-            return nil
         }
     }
     
@@ -1300,6 +1252,129 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
             path = []
         }
         return path
+    }
+    
+    private func parseFares(outCon: [String: Any]) throws -> [Fare] {
+        var fares: [Fare] = []
+        
+        guard let trfRes = outCon["trfRes"] as? [String: Any], let fareSetList = trfRes["fareSetL"] as? [[String: Any]] else { return fares }
+        
+        let ovwTrfRefList = outCon["ovwTrfRefL"] as? [[String: Any]] ?? []
+        // iterate over all fare sets, fares and tickets
+        // if ovwTrfRefList is not empty, only try add fares from this list, else add all fares
+        for (fareSetX, jsonFareSet) in fareSetList.enumerated() {
+            guard ovwTrfRefList.isEmpty || ovwTrfRefList.contains(where: { ovwTrfRef in
+                return (ovwTrfRef["fareSetX"] == nil || ovwTrfRef["fareSetX"] as? Int == fareSetX)
+            }) else { continue }
+            
+            guard let fareList = jsonFareSet["fareL"] as? [[String: Any]] else { continue }
+            for (fareX, jsonFare) in fareList.enumerated() {
+                guard ovwTrfRefList.isEmpty || ovwTrfRefList.contains(where: { ovwTrfRef in
+                    return (ovwTrfRef["fareSetX"] == nil || ovwTrfRef["fareSetX"] as? Int == fareSetX)
+                        && (ovwTrfRef["fareX"] == nil || ovwTrfRef["fareX"] as? Int == fareX)
+                }) else { continue }
+                
+                let fareName = jsonFare["name"] as? String ?? jsonFare["desc"] as? String
+                
+                if let ticketList = jsonFare["ticketL"] as? [[String: Any]] {
+                    for (ticketX, jsonTicket) in ticketList.enumerated() {
+                        guard ovwTrfRefList.isEmpty || ovwTrfRefList.contains(where: { ovwTrfRef in
+                            return (ovwTrfRef["fareSetX"] == nil || ovwTrfRef["fareSetX"] as? Int == fareSetX)
+                                && (ovwTrfRef["fareX"] == nil || ovwTrfRef["fareX"] as? Int == fareX)
+                                && (ovwTrfRef["ticketX"] == nil || ovwTrfRef["ticketX"] as? Int == ticketX)
+                        }) else { continue }
+                        
+                        if let fare = parseTicket(fareName: fareName, jsonTicket: jsonTicket), !hideFare(fare) {
+                            fares.append(fare)
+                        }
+                    }
+                } else {
+                    if let fare = parseFare(jsonFare: jsonFare), !hideFare(fare) {
+                        fares.append(fare)
+                    }
+                }
+            }
+        }
+        
+        return fares
+    }
+    
+    private func parseFare(jsonFare: [String: Any]) -> Fare? {
+        guard
+            let fareName = jsonFare["name"] as? String ?? jsonFare["desc"] as? String,
+            let price = jsonFare["prc"] as? Int
+        else {
+            return nil
+        }
+        let currency = jsonFare["cur"] as? String ?? "EUR"
+        let name = parse(fareName: fareName, ticketName: nil)
+        let fareType = normalize(fareType: fareName) ?? normalize(fareType: jsonFare["desc"] as? String ?? "") ?? .adult
+        return Fare(name: name.emptyToNil, type: fareType, currency: currency, fare: Float(price) / Float(100), unitsName: nil, units: nil)
+    }
+    
+    private func parseTicket(fareName: String?, jsonTicket: [String: Any]) -> Fare? {
+        guard
+            let ticketName = jsonTicket["name"] as? String,
+            let price = jsonTicket["prc"] as? Int
+        else {
+            return nil
+        }
+        let currency = jsonTicket["cur"] as? String ?? "EUR"
+        let name = parse(fareName: fareName, ticketName: ticketName)
+        let fareType = normalize(fareType: fareName ?? "") ?? normalize(fareType: ticketName) ?? normalize(fareType: jsonTicket["desc"] as? String ?? "") ?? .adult
+        return Fare(name: name.emptyToNil, type: fareType, currency: currency, fare: Float(price) / Float(100), unitsName: nil, units: nil)
+    }
+    
+    func normalize(fareType: String) -> Fare.FareType? {
+        let fareNameLc = fareType.lowercased()
+        switch fareNameLc {
+        case let name where name.contains("erwachsene"): return .adult
+        case let name where name.contains("adult"): return .adult
+        case let name where name.contains("kind"): return .child
+        case let name where name.contains("child"): return .child
+        case let name where name.contains("kids"): return .child
+        case let name where name.contains("ermäßigung"): return .child
+        case let name where name.contains("schüler"): return .student
+        case let name where name.contains("azubi"): return .student
+        case let name where name.contains("fahrrad"): return .bike
+        default: return nil
+        }
+    }
+
+    func parse(fareName: String?, ticketName: String?) -> String {
+        return [fareName, ticketName].compactMap { str in
+            str?.replacingOccurrences(of: "\n", with: " ")
+        }.joined(separator: " ")
+    }
+
+    func hideFare(_ fare: Fare) -> Bool {
+        let fareNameLc = fare.name?.lowercased() ?? ""
+        switch fareNameLc {
+        case let name where name.contains("tageskarte"): return true
+        case let name where name.contains("tagesticket"): return true
+        case let name where name.contains("monatskarte"): return true
+        case let name where name.contains("monatsticket"): return true
+        case let name where name.contains("jahreskarte"): return true
+        case let name where name.contains("jahresticket"): return true
+        case let name where name.contains("netzkarte"): return true
+        case let name where name.contains("abo"): return true
+        case let name where name.contains("2er"): return true
+        case let name where name.contains("3er"): return true
+        case let name where name.contains("4er"): return true
+        case let name where name.contains("5er"): return true
+        case let name where name.contains("6er"): return true
+        case let name where name.contains("2 personen"): return true
+        case let name where name.contains("3 personen"): return true
+        case let name where name.contains("4 personen"): return true
+        case let name where name.contains("5 personen"): return true
+        case let name where name.contains("6 personen"): return true
+        case let name where name.contains("2 adults"): return true
+        case let name where name.contains("3 adults"): return true
+        case let name where name.contains("4 adults"): return true
+        case let name where name.contains("5 adults"): return true
+        case let name where name.contains("6 adults"): return true
+        default: return false
+        }
     }
     
     func newLine(network: String?, product: Product?, name: String?, shortName: String?, number: String?, vehicleNumber: String?) -> Line {

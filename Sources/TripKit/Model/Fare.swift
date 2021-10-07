@@ -4,15 +4,15 @@ public class Fare: NSObject, NSSecureCoding {
     
     public static var supportsSecureCoding: Bool = true
     
-    public let network: String
+    public let name: String?
     public let type: FareType
     public let currency: String
     public let fare: Float
     public let unitsName: String?
     public let units: String?
     
-    init(network: String, type: FareType, currency: String, fare: Float, unitsName: String?, units: String?) {
-        self.network = network
+    init(name: String?, type: FareType, currency: String, fare: Float, unitsName: String?, units: String?) {
+        self.name = name
         self.type = type
         self.currency = currency
         self.fare = fare
@@ -21,17 +21,20 @@ public class Fare: NSObject, NSSecureCoding {
     }
     
     required public convenience init?(coder aDecoder: NSCoder) {
-        guard let network = aDecoder.decodeObject(of: NSString.self, forKey: PropertyKey.network) as String?, let type = FareType(rawValue: aDecoder.decodeInteger(forKey: PropertyKey.type)), let currency = aDecoder.decodeObject(of: NSString.self, forKey: PropertyKey.currency) as String? else { return nil }
+        guard let type = FareType(rawValue: aDecoder.decodeInteger(forKey: PropertyKey.type)), let currency = aDecoder.decodeObject(of: NSString.self, forKey: PropertyKey.currency) as String? else { return nil }
         
+        let name = aDecoder.decodeObject(of: NSString.self, forKey: PropertyKey.name) as String?
         let fare = aDecoder.decodeFloat(forKey: PropertyKey.fare)
         let unitsName = aDecoder.decodeObject(of: NSString.self, forKey: PropertyKey.unitsName) as String?
         let units = aDecoder.decodeObject(of: NSString.self, forKey: PropertyKey.units) as String?
         
-        self.init(network: network, type: type, currency: currency, fare: fare, unitsName: unitsName, units: units)
+        self.init(name: name, type: type, currency: currency, fare: fare, unitsName: unitsName, units: units)
     }
     
     public func encode(with aCoder: NSCoder) {
-        aCoder.encode(network, forKey: PropertyKey.network)
+        if let name = name {
+            aCoder.encode(name, forKey: PropertyKey.name)
+        }
         aCoder.encode(type.rawValue, forKey: PropertyKey.type)
         aCoder.encode(currency, forKey: PropertyKey.currency)
         aCoder.encode(fare, forKey: PropertyKey.fare)
@@ -44,12 +47,12 @@ public class Fare: NSObject, NSSecureCoding {
     }
     
     public enum FareType: Int {
-        case adult, child, bike
+        case adult, child, bike, student
     }
     
     struct PropertyKey {
         
-        static let network = "network"
+        static let name = "network"
         static let type = "type"
         static let currency = "currency"
         static let fare = "fare"

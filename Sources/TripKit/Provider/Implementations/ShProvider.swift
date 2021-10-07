@@ -117,18 +117,4 @@ public class ShProvider: AbstractHafasClientInterfaceProvider {
         return super.split(address: address)
     }
     
-    override func parseJsonTripFare(fareSetName: String, fareSetDescription: String, name: String, currency: String, price: Float) -> Fare? {
-        if fareSetName != "Normalpreis" || !name.hasPrefix("Einzelkarte ") {
-            return nil
-        }
-        let name = name.substring(from: "Einzelkarte ".count)
-        if name.hasPrefix("Übergang") {
-            return nil
-        } else if name.hasPrefix("Kind ") {
-            return Fare(network: "SH-Tarif", type: .child, currency: currency, fare: price, unitsName: name.substring(from: "Kind ".count), units: nil)
-        } else {
-            return Fare(network: "SH-Tarif", type: .adult, currency: currency, fare: price, unitsName: name, units: nil)
-        }
-    }
-    
 }

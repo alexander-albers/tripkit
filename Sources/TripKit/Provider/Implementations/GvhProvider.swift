@@ -133,13 +133,4 @@ public class GvhProvider: AbstractHafasClientInterfaceProvider {
         return super.jsonLocation(from: location)
     }
     
-    override func parseJsonTripFare(fareSetName: String, fareSetDescription: String, name: String, currency: String, price: Float) -> Fare? {
-        if name.hasPrefix("Einzelkarte Kind") {
-            return Fare(network: fareSetName, type: .child, currency: currency, fare: price, unitsName: nil, units: nil)
-        } else if name.hasPrefix("Einzelkarte") {
-            return Fare(network: fareSetName, type: .adult, currency: currency, fare: price, unitsName: nil, units: nil)
-        } else {
-            return super.parseJsonTripFare(fareSetName: fareSetName, fareSetDescription: fareSetDescription, name: name, currency: currency, price: price)
-        }
-    }
 }

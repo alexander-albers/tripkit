@@ -166,4 +166,8 @@ public class RmvProvider: AbstractHafasClientInterfaceProvider {
         return super.split(address: address)
     }
     
+    override func parse(fareName: String?, ticketName: String?) -> String {
+        return super.parse(fareName: nil, ticketName: ticketName)
+    }
+    
 }

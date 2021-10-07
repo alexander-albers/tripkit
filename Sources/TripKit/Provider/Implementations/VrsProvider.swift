@@ -1088,9 +1088,9 @@ public class VrsProvider: AbstractNetworkProvider {
         }
         
         if let name = name, price != 0, let level = level {
-            fares.append(Fare(network: name, type: .adult, currency: "EUR", fare: Float(price), unitsName: level, units: nil))
+            fares.append(Fare(name: name, type: .adult, currency: "EUR", fare: Float(price), unitsName: level, units: nil))
         } else if let name = name, name == "NRW-Tarif", let text = text, let match = text.match(pattern: VrsProvider.P_NRW_TARIF), let group = match[0], let price = Float(group) {
-            fares.append(Fare(network: name, type: .adult, currency: "EUR", fare: price, unitsName: nil, units: nil))
+            fares.append(Fare(name: name, type: .adult, currency: "EUR", fare: price, unitsName: nil, units: nil))
         }
         
         return fares
