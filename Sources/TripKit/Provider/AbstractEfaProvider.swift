@@ -879,7 +879,7 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
             }
             
             var fares: [Fare] = []
-            if let elem = route["itdFare"]["itdSingleTicket"].element, let net = elem.attribute(by: "net")?.text, let currency = elem.attribute(by: "currency")?.text {
+            if let elem = route["itdFare"]["itdSingleTicket"].element, let currency = elem.attribute(by: "currency")?.text {
                 let unitName = elem.attribute(by: "unitName")?.text.trimmingCharacters(in: .whitespaces)
                 if let fareAdult = elem.attribute(by: "fareAdult")?.text, let fare = Float(fareAdult), fare != 0 {
                     let level = elem.attribute(by: "levelAdult")?.text.trimmingCharacters(in: .whitespaces)
@@ -899,7 +899,6 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
                     guard
                         let name = ticket.element?.attribute(by: "name")?.text,
                         name.starts(with: "Einzelfahrschein"),
-                        let net = ticket.element?.attribute(by: "net")?.text,
                         let currency = ticket.element?.attribute(by: "currency")?.text,
                         let person = ticket.element?.attribute(by: "person")?.text,
                         let fareString = ticket.element?.attribute(by: "priceBrutto")?.text,
@@ -1272,7 +1271,7 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
             
             var fares: [Fare] = []
             for elem in tp["tcs"]["tc"].all {
-                guard let net = elem["net"].element?.text, let type = elem["n"].element?.text, type == "SINGLE_TICKET" else { continue }
+                guard let type = elem["n"].element?.text, type == "SINGLE_TICKET" else { continue }
                 let unitsName = elem["un"].element?.text
                 if let fareAdult = elem["fa"].element?.text, let fare = Float(fareAdult), fare != 0 {
                     let unit = elem["ua"].element?.text
