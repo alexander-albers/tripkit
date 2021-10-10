@@ -1301,27 +1301,28 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
     
     private func parseFare(jsonFare: [String: Any]) -> Fare? {
         guard
-            let fareName = jsonFare["name"] as? String ?? jsonFare["desc"] as? String,
             let price = jsonFare["prc"] as? Int
         else {
             return nil
         }
+        let desc = jsonFare["desc"] as? String
+        let fareName = jsonFare["name"] as? String ?? desc
         let currency = jsonFare["cur"] as? String ?? "EUR"
         let name = parse(fareName: fareName, ticketName: nil)
-        let fareType = normalize(fareType: fareName) ?? normalize(fareType: jsonFare["desc"] as? String ?? "") ?? .adult
+        let fareType = normalize(fareType: fareName ?? "") ?? normalize(fareType: desc ?? "") ?? .adult
         return Fare(name: name.emptyToNil, type: fareType, currency: currency, fare: Float(price) / Float(100), unitsName: nil, units: nil)
     }
     
     private func parseTicket(fareName: String?, jsonTicket: [String: Any]) -> Fare? {
         guard
-            let ticketName = jsonTicket["name"] as? String,
             let price = jsonTicket["prc"] as? Int
         else {
             return nil
         }
+        let ticketName = jsonTicket["name"] as? String
         let currency = jsonTicket["cur"] as? String ?? "EUR"
         let name = parse(fareName: fareName, ticketName: ticketName)
-        let fareType = normalize(fareType: fareName ?? "") ?? normalize(fareType: ticketName) ?? normalize(fareType: jsonTicket["desc"] as? String ?? "") ?? .adult
+        let fareType = normalize(fareType: fareName ?? "") ?? normalize(fareType: ticketName ?? "") ?? normalize(fareType: jsonTicket["desc"] as? String ?? "") ?? .adult
         return Fare(name: name.emptyToNil, type: fareType, currency: currency, fare: Float(price) / Float(100), unitsName: nil, units: nil)
     }
     
