@@ -625,7 +625,7 @@ public class VrsProvider: AbstractNetworkProvider {
             case .success((_, let data)):
                 httpRequest.responseData = data
                 do {
-                    try self.queryTripsParsing(request: httpRequest, from: from, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions, previousContext: nil, later: false, completion: completion)
+                    try self.queryTripsParsing(request: httpRequest, from: from, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions, previousContext: context, later: false, completion: completion)
                 } catch is SessionExpiredError {
                     completion(httpRequest, .sessionExpired)
                 } catch let err as ParseError {
