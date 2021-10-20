@@ -3,9 +3,9 @@ name: Fixtures Test
 on: [push, pull_request]
 
 jobs:
-  build:
+  test:
     runs-on: macos-11
-
+    name: Test
     steps:
       - uses: actions/checkout@v2
       - name: Decrypt secrets
