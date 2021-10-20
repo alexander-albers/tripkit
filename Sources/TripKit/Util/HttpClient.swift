@@ -35,7 +35,7 @@ public class HttpClient: NSObject {
         }
         
         if let payload = httpRequest.postPayload {
-            os_log("making http request to %{public}@: %{public}@", log: .requestLogger, type: .default, url.absoluteString, payload)
+            os_log("making http request to %{public}@: %{public}@", log: .requestLogger, type: .default, url.absoluteString, payload.replacingOccurrences(of: "\"auth\":\\s*(\\{[^}]*\\})", with: "\"auth\":<private>", options: .regularExpression))
         } else {
             os_log("making http request to %{public}@", log: .requestLogger, type: .default, url.absoluteString)
         }
