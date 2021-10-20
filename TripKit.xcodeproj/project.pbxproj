@@ -875,8 +875,8 @@
 		FA5CD1CD24FBAFFF00B4990A /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		FA5CD1D324FBB10C00B4990A /* TripKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TripKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA5CD1FB24FBB1D200B4990A /* TripKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TripKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FA5CD20324FBB1D200B4990A /* TripKit macOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TripKit macOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FA5CD21E24FBB1FC00B4990A /* TripKit tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TripKit tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA5CD20324FBB1D200B4990A /* TripKitTests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TripKitTests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA5CD21E24FBB1FC00B4990A /* TripKitTests tvOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TripKitTests tvOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA5CD33824FBB61300B4990A /* Info-macOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-macOS.plist"; sourceTree = "<group>"; };
 		FA5CD33924FBB61300B4990A /* Info-tvOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-tvOS.plist"; sourceTree = "<group>"; };
 		FA5CD33A24FBB61300B4990A /* Info-watchOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-watchOS.plist"; sourceTree = "<group>"; };
@@ -1449,8 +1449,8 @@
 				FAFF18D11FA50B9500A8ED69 /* TripKit.framework */,
 				FA5CD1D324FBB10C00B4990A /* TripKit.framework */,
 				FA5CD1FB24FBB1D200B4990A /* TripKit.framework */,
-				FA5CD20324FBB1D200B4990A /* TripKit macOSTests.xctest */,
-				FA5CD21E24FBB1FC00B4990A /* TripKit tvOSTests.xctest */,
+				FA5CD20324FBB1D200B4990A /* TripKitTests macOS.xctest */,
+				FA5CD21E24FBB1FC00B4990A /* TripKitTests tvOS.xctest */,
 				FAE6E6C026E6AB6A007E975A /* StaticTripKitTests iOS.xctest */,
 				FAE6E6EA26E6AC87007E975A /* StaticTripKitTests macOS.xctest */,
 				FAE6E6F826E6AC95007E975A /* StaticTripKitTests tvOS.xctest */,
@@ -1655,9 +1655,9 @@
 			productReference = FA5CD1FB24FBB1D200B4990A /* TripKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		FA5CD20224FBB1D200B4990A /* TripKit macOSTests */ = {
+		FA5CD20224FBB1D200B4990A /* TripKitTests macOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FA5CD20F24FBB1D200B4990A /* Build configuration list for PBXNativeTarget "TripKit macOSTests" */;
+			buildConfigurationList = FA5CD20F24FBB1D200B4990A /* Build configuration list for PBXNativeTarget "TripKitTests macOS" */;
 			buildPhases = (
 				FA5CD1FF24FBB1D200B4990A /* Sources */,
 				FA5CD20024FBB1D200B4990A /* Frameworks */,
@@ -1669,14 +1669,14 @@
 				FA5CD20624FBB1D200B4990A /* PBXTargetDependency */,
 				FAA931A526E6B4AA00D4CF61 /* PBXTargetDependency */,
 			);
-			name = "TripKit macOSTests";
+			name = "TripKitTests macOS";
 			productName = "TripKit macOSTests";
-			productReference = FA5CD20324FBB1D200B4990A /* TripKit macOSTests.xctest */;
+			productReference = FA5CD20324FBB1D200B4990A /* TripKitTests macOS.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		FA5CD21D24FBB1FC00B4990A /* TripKit tvOSTests */ = {
+		FA5CD21D24FBB1FC00B4990A /* TripKitTests tvOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FA5CD22624FBB1FC00B4990A /* Build configuration list for PBXNativeTarget "TripKit tvOSTests" */;
+			buildConfigurationList = FA5CD22624FBB1FC00B4990A /* Build configuration list for PBXNativeTarget "TripKitTests tvOS" */;
 			buildPhases = (
 				FA5CD21A24FBB1FC00B4990A /* Sources */,
 				FA5CD21B24FBB1FC00B4990A /* Frameworks */,
@@ -1688,9 +1688,9 @@
 				FA5CD22524FBB1FC00B4990A /* PBXTargetDependency */,
 				FAA9319F26E6B49800D4CF61 /* PBXTargetDependency */,
 			);
-			name = "TripKit tvOSTests";
+			name = "TripKitTests tvOS";
 			productName = "TripKitTests tvOS";
-			productReference = FA5CD21E24FBB1FC00B4990A /* TripKit tvOSTests.xctest */;
+			productReference = FA5CD21E24FBB1FC00B4990A /* TripKitTests tvOS.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		FACB83C21E3FD0CE00AC5F1F /* TripKit iOS */ = {
@@ -1961,11 +1961,11 @@
 				FAFF187B1FA50B9500A8ED69 /* TripKit watchOS */,
 				FA5CD1D224FBB10C00B4990A /* TripKit tvOS */,
 				FAE6E74026E6B43B007E975A /* TestsCommon tvOS */,
-				FA5CD21D24FBB1FC00B4990A /* TripKit tvOSTests */,
+				FA5CD21D24FBB1FC00B4990A /* TripKitTests tvOS */,
 				FAE6E6F726E6AC95007E975A /* StaticTripKitTests tvOS */,
 				FA5CD1FA24FBB1D200B4990A /* TripKit macOS */,
 				FAE6E72826E6B41C007E975A /* TestsCommon macOS */,
-				FA5CD20224FBB1D200B4990A /* TripKit macOSTests */,
+				FA5CD20224FBB1D200B4990A /* TripKitTests macOS */,
 				FAE6E6E926E6AC87007E975A /* StaticTripKitTests macOS */,
 			);
 		};
@@ -3873,7 +3873,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FA5CD20F24FBB1D200B4990A /* Build configuration list for PBXNativeTarget "TripKit macOSTests" */ = {
+		FA5CD20F24FBB1D200B4990A /* Build configuration list for PBXNativeTarget "TripKitTests macOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FA5CD21024FBB1D200B4990A /* Debug */,
@@ -3882,7 +3882,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FA5CD22624FBB1FC00B4990A /* Build configuration list for PBXNativeTarget "TripKit tvOSTests" */ = {
+		FA5CD22624FBB1FC00B4990A /* Build configuration list for PBXNativeTarget "TripKitTests tvOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FA5CD22724FBB1FC00B4990A /* Debug */,
