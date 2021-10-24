@@ -14,8 +14,9 @@ jobs:
           SECRETS_PASSPHRASE: ${{ secrets.SECRETS_PASSPHRASE }}
       - name: Test
         run: |
-          xcodebuild -scheme "StaticTripKitTests macOS" -resultBundlePath TestResults test
+          xcodebuild -scheme "StaticTripKitTests macOS" -resultBundlePath FixturesTestResults test
       - uses: kishikawakatsumi/xcresulttool@v1
         with:
-          path: TestResults.xcresult
+          path: FixturesTestResults.xcresult
+          title: Fixtures test results
         if: always()
