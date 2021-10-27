@@ -150,5 +150,15 @@ public class MvgProvider: AbstractEfaProvider {
             return super.parsePosition(position: position)
         }
     }
+    
+    override func parseLine(id: String?, network: String?, mot: String?, symbol: String?, name: String?, longName: String?, trainType: String?, trainNum: String?, trainName: String?) -> Line {
+        if mot == "5" {
+            // Bielefeld Uni/Laborschule, Stadtbus
+            if network == "owl" && (name ?? "").isEmpty && (longName == "Stadtbus" || trainName == "Stadtbus") {
+                return Line(id: id, network: network, product: .bus, label: "LBS")
+            }
+        }
+        return super.parseLine(id: id, network: network, mot: mot, symbol: symbol, name: name, longName: longName, trainType: trainType, trainNum: trainNum, trainName: trainName)
+    }
 
 }
