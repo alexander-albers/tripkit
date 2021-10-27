@@ -371,6 +371,11 @@ public class VrrProvider: AbstractEfaProvider {
             } else if trainType == nil && trainNum == "3SEV" {
                 return Line(id: id, network: network, product: .bus, label: trainNum)
             }
+        } else if mot == "5" {
+            // Bielefeld Uni/Laborschule, Stadtbus
+            if network == "owl" && (name ?? "").isEmpty && (longName == "Stadtbus" || trainName == "Stadtbus") {
+                return Line(id: id, network: network, product: .bus, label: "LBS")
+            }
         } else if mot == "11" {
             // Wuppertaler Schwebebahn & SkyTrain D'dorf
             if trainName == "Schwebebahn" || (longName ?? "").hasPrefix("Schwebebahn") {
