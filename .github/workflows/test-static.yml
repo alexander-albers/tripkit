@@ -15,8 +15,8 @@ jobs:
       - name: Test
         run: |
           xcodebuild -scheme "StaticTripKitTests macOS" -resultBundlePath FixturesTestResults test
-      - uses: kishikawakatsumi/xcresulttool@v1
+      - uses: kishikawakatsumi/xcresulttool@v1.0.5
         with:
           path: FixturesTestResults.xcresult
           title: Fixtures test results
-        if: always()
+        if: success() || failure()

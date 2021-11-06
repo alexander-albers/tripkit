@@ -21,8 +21,8 @@ jobs:
       - name: Test
         run: |
           xcodebuild -scheme "TripKitTests macOS" -resultBundlePath LiveTestResults test
-      - uses: kishikawakatsumi/xcresulttool@v1
+      - uses: kishikawakatsumi/xcresulttool@v1.0.5
         with:
           path: LiveTestResults.xcresult
           title: Live test results
-        if: always()
+        if: success() || failure()
