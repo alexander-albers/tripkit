@@ -1301,7 +1301,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
     
     private func parseFare(jsonFare: [String: Any]) -> Fare? {
         guard
-            let price = jsonFare["prc"] as? Int
+            let price = jsonFare["prc"] as? Int, price > 0
         else {
             return nil
         }
@@ -1315,7 +1315,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
     
     private func parseTicket(fareName: String?, jsonTicket: [String: Any]) -> Fare? {
         guard
-            let price = jsonTicket["prc"] as? Int
+            let price = jsonTicket["prc"] as? Int, price > 0
         else {
             return nil
         }
