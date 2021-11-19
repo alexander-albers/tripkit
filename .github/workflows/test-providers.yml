@@ -9,9 +9,9 @@ on:
   workflow_dispatch:
 
 jobs:
-  test:
+  LiveTests:
     runs-on: macos-11
-    name: Test
+    name: Live tests
     steps:
       - uses: actions/checkout@v2
       - name: Decrypt secrets
@@ -21,7 +21,7 @@ jobs:
       - name: Test
         run: |
           xcodebuild -scheme "TripKitTests macOS" -resultBundlePath LiveTestResults test
-      - uses: kishikawakatsumi/xcresulttool@v1.0.5
+      - uses: kishikawakatsumi/xcresulttool@v1.3.0
         with:
           path: LiveTestResults.xcresult
           title: Live test results
