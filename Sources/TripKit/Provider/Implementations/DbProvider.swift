@@ -23,7 +23,7 @@ public class DbProvider: AbstractHafasClientInterfaceProvider {
         self.requestVerification = requestVerification
         apiVersion = "1.15"
         apiClient = ["id": "DB", "v": "18040000", "type": "IPH", "name": "DB Navigator"]
-        extVersion = "DB.R18.04.a"
+        extVersion = "DB.R20.12.b"
         format.dateFormat = "yyyyMMddHHmm"
         configJson = ["rtMode": "HYBRID"]
     }

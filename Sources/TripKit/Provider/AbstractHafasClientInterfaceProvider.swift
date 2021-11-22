@@ -553,6 +553,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         let remList = common["remL"] as? [Any]
         let himList = common["himL"] as? [Any]
         let polyList = common["polyL"] as? [Any]
+        let loadFactorList = common["tcocL"] as? [Any]
         
         let locations = try parseLocList(locList: locList)
         let operators = try parseOpList(opList: opList)
@@ -560,6 +561,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         let rems = try parseRemList(remList: remList)
         let messages = try parseMessageList(himList: himList)
         let encodedPolyList = try parsePolyList(polyL: polyList)
+        let loadFactors = try parseLoadFactorList(tcocL: loadFactorList)
         let outConL = res["outConL"] as? [Any] ?? []
         if outConL.isEmpty {
             completion(request, .noTrips)
@@ -622,11 +624,16 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
                     } else {
                         journeyContext = nil
                     }
-                    if let arrivalMessage = arrivalStop.message {
-                        legMessages.insert(arrivalMessage)
+                    
+                    let loadFactor: LoadFactor?
+                    if let dTrnCmpSX = jny["dTrnCmpSX"] as? [String: Any], let tcocXL = dTrnCmpSX["tcocX"] as? [Int] {
+                        // TODO: support first class
+                        loadFactor = tcocXL.compactMap({ loadFactors?[$0] }).first(where: { $0.cls == "SECOND" })?.loadFactor
+                    } else {
+                        loadFactor = nil
                     }
                     
-                    legs.append(PublicLeg(line: line, destination: destination, departureStop: departureStop, arrivalStop: arrivalStop, intermediateStops: intermediateStops, message: legMessages.joined(separator: "\n").emptyToNil, path: path, journeyContext: journeyContext))
+                    legs.append(PublicLeg(line: line, destination: destination, departureStop: departureStop, arrivalStop: arrivalStop, intermediateStops: intermediateStops, message: legMessages.joined(separator: "\n").emptyToNil, path: path, journeyContext: journeyContext, loadFactor: loadFactor))
                 case "WALK", "TRSF", "DEVI":
                     guard let departureStop = try parseStop(dict: dep, locations: locations, rems: rems, baseDate: baseDate, line: nil), let arrivalStop = try parseStop(dict: arr, locations: locations, rems: rems, baseDate: baseDate, line: nil) else { throw ParseError(reason: "failed to parse departure/arrival stop") }
                     guard let gis = sec["gis"] as? [String: Any] else { throw ParseError(reason: "failed to parse outcon gis") }
@@ -640,7 +647,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
                     let distance = gis["distance"] as? Int ?? 0
                     if let mcp = dep["mcp"] as? [String: Any], let mcpData = mcp["mcpData"] as? [String: Any], let provider = mcpData["provider"] as? String, let providerName = mcpData["providerName"] as? String, provider == "berlkoenig" {
                         let line = Line(id: nil, network: nil, product: .onDemand, label: providerName, name: providerName, number: nil, vehicleNumber: nil, style: lineStyle(network: nil, product: .onDemand, label: providerName), attr: nil, message: nil, direction: nil)
-                        legs.append(PublicLeg(line: line, destination: arrivalStop.location, departureStop: departureStop, arrivalStop: arrivalStop, intermediateStops: [], message: nil, path: path, journeyContext: nil))
+                        legs.append(PublicLeg(line: line, destination: arrivalStop.location, departureStop: departureStop, arrivalStop: arrivalStop, intermediateStops: [], message: nil, path: path))
                     } else {
                         processIndividualLeg(legs: &legs, type: .WALK, departureStop: departureStop, arrivalStop: arrivalStop, distance: distance, path: path)
                     }
@@ -708,6 +715,8 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         let messages = try parseMessageList(himList: himList)
         let polyList = common["polyL"] as? [Any]
         let encodedPolyList = try parsePolyList(polyL: polyList)
+        let loadFactorList = common["tcocL"] as? [Any]
+        let loadFactors = try parseLoadFactorList(tcocL: loadFactorList)
         
         guard let journey = res["journey"] as? [String: Any], let baseDateString = journey["date"] as? String else {
             throw ParseError(reason: "could not parse journey stop list")
@@ -757,7 +766,15 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
             destination = arrival.location
         }
         
-        let leg = PublicLeg(line: line, destination: destination, departureStop: departure, arrivalStop: arrival, intermediateStops: intermediateStops, message: legMessages.joined(separator: "\n").emptyToNil, path: path, journeyContext: nil)
+        let loadFactor: LoadFactor?
+        if let dTrnCmpSX = journey["dTrnCmpSX"] as? [String: Any], let tcocXL = dTrnCmpSX["tcocX"] as? [Int] {
+            // TODO: support first class
+            loadFactor = tcocXL.compactMap({ loadFactors?[$0] }).first(where: { $0.cls == "SECOND" })?.loadFactor
+        } else {
+            loadFactor = nil
+        }
+        
+        let leg = PublicLeg(line: line, destination: destination, departureStop: departure, arrivalStop: arrival, intermediateStops: intermediateStops, message: legMessages.joined(separator: "\n").emptyToNil, path: path, journeyContext: nil, loadFactor: loadFactor)
         let trip = Trip(id: "", from: departure.location, to: arrival.location, legs: [leg], fares: [])
         completion(request, .success(trip: trip, leg: leg))
     }
@@ -1238,6 +1255,18 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         for poly in polyL {
             guard let coords = poly["crdEncYX"] as? String else { throw ParseError(reason: "failed to parse poly list") }
             result.append(coords)
+        }
+        return result
+    }
+    
+    private func parseLoadFactorList(tcocL: [Any]?) throws -> [(cls: String, loadFactor: LoadFactor)]? {
+        guard let tcocL = tcocL as? [[String: Any]] else {
+            return nil
+        }
+        var result: [(String, LoadFactor)] = []
+        for tcoc in tcocL {
+            guard let cls = tcoc["c"] as? String, let loadFactor = LoadFactor(rawValue: tcoc["r"] as? Int ?? 0) else { throw ParseError(reason: "failed to parse load factor") }
+            result.append((cls, loadFactor))
         }
         return result
     }
