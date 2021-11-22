@@ -599,6 +599,12 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
                     let destination: Location? = dirTxt == nil ? nil : Location(type: .any, id: nil, coord: nil, place: nameAndPlace.0, name: nameAndPlace.1)
                     
                     guard let departureStop = try parseStop(dict: dep, locations: locations, rems: rems, baseDate: baseDate, line: line), let arrivalStop = try parseStop(dict: arr, locations: locations, rems: rems, baseDate: baseDate, line: line) else { throw ParseError(reason: "failed to parse departure/arrival stop") }
+                    if let departureMessage = departureStop.message {
+                        legMessages.insert(departureMessage)
+                    }
+                    if let arrivalMessage = arrivalStop.message {
+                        legMessages.insert(arrivalMessage)
+                    }
                     
                     var intermediateStops: [Stop] = []
                     for stop in stopL ?? [] {
@@ -750,6 +756,9 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         guard intermediateStops.count >= 2 else { throw ParseError(reason: "failed to parse arr/dep stop") }
         let departure = intermediateStops.removeFirst()
         let arrival = intermediateStops.removeLast()
+        if let departureMessage = departure.message {
+            legMessages.insert(departureMessage)
+        }
         if let arrivalMessage = arrival.message {
             legMessages.insert(arrivalMessage)
         }
