@@ -35,8 +35,10 @@ public class PublicLeg: NSObject, Leg, NSSecureCoding {
     public let message: String?
     public let path: [LocationPoint]
     public let journeyContext: QueryJourneyDetailContext?
+    /// load factor tells the expected train capacity utilisation of a train of the DB provider
+    public let loadFactor: LoadFactor?
     
-    public init(line: Line, destination: Location?, departureStop: Stop, arrivalStop: Stop, intermediateStops: [Stop], message: String?, path: [LocationPoint] = [], journeyContext: QueryJourneyDetailContext?) {
+    public init(line: Line, destination: Location?, departureStop: Stop, arrivalStop: Stop, intermediateStops: [Stop], message: String?, path: [LocationPoint] = [], journeyContext: QueryJourneyDetailContext? = nil, loadFactor: LoadFactor? = nil) {
         self.departure = departureStop.location
         self.arrival = arrivalStop.location
         self.line = line
@@ -47,6 +49,7 @@ public class PublicLeg: NSObject, Leg, NSSecureCoding {
         self.message = message
         self.path = path
         self.journeyContext = journeyContext
+        self.loadFactor = loadFactor
     }
     
     required convenience public init?(coder aDecoder: NSCoder) {
@@ -61,7 +64,8 @@ public class PublicLeg: NSObject, Leg, NSSecureCoding {
             LocationPoint(lat: encodedPath[$0], lon: encodedPath[$0 + 1])
         }
         let journeyContext = aDecoder.decodeObject(of: QueryJourneyDetailContext.self, forKey: PropertyKey.journeyContext)
-        self.init(line: line, destination: destination, departureStop: departureStop, arrivalStop: arrivalStop, intermediateStops: intermediateStops, message: message, path: path, journeyContext: journeyContext)
+        let loadFactor = LoadFactor(rawValue: aDecoder.decodeInteger(forKey: PropertyKey.loadFactor))
+        self.init(line: line, destination: destination, departureStop: departureStop, arrivalStop: arrivalStop, intermediateStops: intermediateStops, message: message, path: path, journeyContext: journeyContext, loadFactor: loadFactor)
     }
     
     public func encode(with aCoder: NSCoder) {
@@ -78,6 +82,9 @@ public class PublicLeg: NSObject, Leg, NSSecureCoding {
         aCoder.encode(path.flatMap({[$0.lat, $0.lon]}), forKey: PropertyKey.path)
         if let journeyContext = journeyContext {
             aCoder.encode(journeyContext, forKey: PropertyKey.journeyContext)
+        }
+        if let loadFactor = loadFactor {
+            aCoder.encode(loadFactor.rawValue, forKey: PropertyKey.loadFactor)
         }
     }
     
@@ -126,6 +133,7 @@ public class PublicLeg: NSObject, Leg, NSSecureCoding {
         static let message = "message"
         static let path = "path"
         static let journeyContext = "journeyContext"
+        static let loadFactor = "loadFactor"
         
     }
     
