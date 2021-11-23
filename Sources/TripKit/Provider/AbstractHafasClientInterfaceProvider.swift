@@ -642,15 +642,15 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
                     legs.append(PublicLeg(line: line, destination: destination, departureStop: departureStop, arrivalStop: arrivalStop, intermediateStops: intermediateStops, message: legMessages.joined(separator: "\n").emptyToNil, path: path, journeyContext: journeyContext, loadFactor: loadFactor))
                 case "WALK", "TRSF", "DEVI":
                     guard let departureStop = try parseStop(dict: dep, locations: locations, rems: rems, baseDate: baseDate, line: nil), let arrivalStop = try parseStop(dict: arr, locations: locations, rems: rems, baseDate: baseDate, line: nil) else { throw ParseError(reason: "failed to parse departure/arrival stop") }
-                    guard let gis = sec["gis"] as? [String: Any] else { throw ParseError(reason: "failed to parse outcon gis") }
-                    let distance = gis["distance"] as? Int ?? 0
+                    let gis = sec["gis"] as? [String: Any]
+                    let distance = gis?["distance"] as? Int ?? 0
                     let path = parsePath(encodedPolyList: encodedPolyList, jny: gis)
                     processIndividualLeg(legs: &legs, type: .WALK, departureStop: departureStop, arrivalStop: arrivalStop, distance: distance, path: path)
                 case "KISS":
                     guard let departureStop = try parseStop(dict: dep, locations: locations, rems: rems, baseDate: baseDate, line: nil), let arrivalStop = try parseStop(dict: arr, locations: locations, rems: rems, baseDate: baseDate, line: nil) else { throw ParseError(reason: "failed to parse departure/arrival stop") }
-                    guard let gis = sec["gis"] as? [String: Any] else { throw ParseError(reason: "failed to parse outcon gis") }
+                    let gis = sec["gis"] as? [String: Any]
                     let path = parsePath(encodedPolyList: encodedPolyList, jny: gis)
-                    let distance = gis["distance"] as? Int ?? 0
+                    let distance = gis?["distance"] as? Int ?? 0
                     if let mcp = dep["mcp"] as? [String: Any], let mcpData = mcp["mcpData"] as? [String: Any], let provider = mcpData["provider"] as? String, let providerName = mcpData["providerName"] as? String, provider == "berlkoenig" {
                         let line = Line(id: nil, network: nil, product: .onDemand, label: providerName, name: providerName, number: nil, vehicleNumber: nil, style: lineStyle(network: nil, product: .onDemand, label: providerName), attr: nil, message: nil, direction: nil)
                         legs.append(PublicLeg(line: line, destination: arrivalStop.location, departureStop: departureStop, arrivalStop: arrivalStop, intermediateStops: [], message: nil, path: path))
@@ -1268,23 +1268,24 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         return result
     }
     
-    private func parseLoadFactorList(tcocL: [Any]?) throws -> [(cls: String, loadFactor: LoadFactor)]? {
+    private func parseLoadFactorList(tcocL: [Any]?) throws -> [(cls: String, loadFactor: LoadFactor?)]? {
         guard let tcocL = tcocL as? [[String: Any]] else {
             return nil
         }
-        var result: [(String, LoadFactor)] = []
+        var result: [(String, LoadFactor?)] = []
         for tcoc in tcocL {
-            guard let cls = tcoc["c"] as? String, let loadFactor = LoadFactor(rawValue: tcoc["r"] as? Int ?? 0) else { throw ParseError(reason: "failed to parse load factor") }
+            guard let cls = tcoc["c"] as? String else { throw ParseError(reason: "failed to parse load factor") }
+            let loadFactor = LoadFactor(rawValue: tcoc["r"] as? Int ?? 0)
             result.append((cls, loadFactor))
         }
         return result
     }
     
-    private func parsePath(encodedPolyList: [String]?, jny: [String: Any]) -> [LocationPoint] {
+    private func parsePath(encodedPolyList: [String]?, jny: [String: Any]?) -> [LocationPoint] {
         let path: [LocationPoint]
-        if let coords = (jny["poly"] as? [String: Any])?["crdEncYX"] as? String, let polyline = try? decodePolyline(from: coords) {
+        if let coords = (jny?["poly"] as? [String: Any])?["crdEncYX"] as? String, let polyline = try? decodePolyline(from: coords) {
             path = polyline
-        } else if let polyG = jny["polyG"] as? [String: Any], let polyXL = polyG["polyXL"] as? [Int], let polyX = polyXL.first, let polyline = try? decodePolyline(from: encodedPolyList?[polyX]) {
+        } else if let polyG = jny?["polyG"] as? [String: Any], let polyXL = polyG["polyXL"] as? [Int], let polyX = polyXL.first, let polyline = try? decodePolyline(from: encodedPolyList?[polyX]) {
             path = polyline
         } else {
             path = []
