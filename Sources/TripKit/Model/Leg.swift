@@ -53,13 +53,18 @@ public class PublicLeg: NSObject, Leg, NSSecureCoding {
     }
     
     required convenience public init?(coder aDecoder: NSCoder) {
-        guard let line = aDecoder.decodeObject(of: Line.self, forKey: PropertyKey.line), let departureStop = aDecoder.decodeObject(of: Stop.self, forKey: PropertyKey.departureStop), let arrivalStop = aDecoder.decodeObject(of: Stop.self, forKey: PropertyKey.arrivalStop), let intermediateStops = aDecoder.decodeObject(of: [NSArray.self, Stop.self], forKey: PropertyKey.intermediateStops) as? [Stop] else {
+        guard
+            let line = aDecoder.decodeObject(of: Line.self, forKey: PropertyKey.line),
+            let departureStop = aDecoder.decodeObject(of: Stop.self, forKey: PropertyKey.departureStop),
+            let arrivalStop = aDecoder.decodeObject(of: Stop.self, forKey: PropertyKey.arrivalStop),
+            let intermediateStops = aDecoder.decodeObject(of: [NSArray.self, Stop.self], forKey: PropertyKey.intermediateStops) as? [Stop]
+        else {
             os_log("failed to decode public leg", log: .default, type: .error)
             return nil
         }
         let destination = aDecoder.decodeObject(of: Location.self, forKey: PropertyKey.destination)
         let message = aDecoder.decodeObject(of: NSString.self, forKey: PropertyKey.message) as String?
-        let encodedPath = aDecoder.decodeObject(of: [NSArray.self], forKey: PropertyKey.path) as? [Int] ?? []
+        let encodedPath = aDecoder.decodeObject(of: [NSArray.self, NSNumber.self], forKey: PropertyKey.path) as? [Int] ?? []
         let path = stride(from: 0, to: encodedPath.count % 2 == 0 ? encodedPath.count : 0, by: 2).map {
             LocationPoint(lat: encodedPath[$0], lon: encodedPath[$0 + 1])
         }

@@ -42,7 +42,7 @@ public class Departure: NSObject, NSSecureCoding {
         let position = aDecoder.decodeObject(of: NSString.self, forKey: PropertyKey.positionKey) as String?
         let plannedPosition = aDecoder.decodeObject(of: NSString.self, forKey: PropertyKey.plannedPositionKey) as String?
         let destination = aDecoder.decodeObject(of: Location.self, forKey: PropertyKey.destinationKey) as Location?
-        let capacity = aDecoder.decodeObject(forKey: PropertyKey.capacityKey) as? [Int]
+        let capacity = aDecoder.decodeObject(of: [NSArray.self, NSNumber.self], forKey: PropertyKey.capacityKey) as? [Int]
         let message = aDecoder.decodeObject(of: NSString.self, forKey: PropertyKey.messageKey) as String?
         let journeyContext = aDecoder.decodeObject(of: QueryJourneyDetailContext.self, forKey: PropertyKey.journeyIdKey)
         let wagonSequenceContextPath = aDecoder.decodeObject(of: NSString.self, forKey: PropertyKey.wagonSequenceContext) as String?

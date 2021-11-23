@@ -39,10 +39,10 @@ public class LineStyle: NSObject, NSSecureCoding {
             os_log("failed to decode line style", log: .default, type: .error)
             return nil
         }
-        let backgroundColor = aDecoder.decodeObject(forKey: PropertyKey.backgroundColor) as! UInt32
-        let backgroundColor2 = aDecoder.decodeObject(forKey: PropertyKey.backgroundColor2) as! UInt32
-        let foregroundColor = aDecoder.decodeObject(forKey: PropertyKey.foregroundColor) as! UInt32
-        let borderColor = aDecoder.decodeObject(forKey: PropertyKey.borderColor) as! UInt32
+        let backgroundColor = aDecoder.decodeObject(of: NSNumber.self, forKey: PropertyKey.backgroundColor) as! UInt32
+        let backgroundColor2 = aDecoder.decodeObject(of: NSNumber.self, forKey: PropertyKey.backgroundColor2) as! UInt32
+        let foregroundColor = aDecoder.decodeObject(of: NSNumber.self, forKey: PropertyKey.foregroundColor) as! UInt32
+        let borderColor = aDecoder.decodeObject(of: NSNumber.self, forKey: PropertyKey.borderColor) as! UInt32
         
         self.init(shape: shape, backgroundColor: backgroundColor, backgroundColor2: backgroundColor2, foregroundColor: foregroundColor, borderColor: borderColor)
     }

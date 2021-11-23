@@ -32,7 +32,13 @@ public class Trip: NSObject, NSSecureCoding {
     }
     
     required convenience public init?(coder aDecoder: NSCoder) {
-        guard let id = aDecoder.decodeObject(of: NSString.self, forKey: PropertyKey.id) as String?, let from = aDecoder.decodeObject(of: Location.self, forKey: PropertyKey.from), let to = aDecoder.decodeObject(of: Location.self, forKey: PropertyKey.to), let legs = aDecoder.decodeObject(of: [NSArray.self, PublicLeg.self, IndividualLeg.self], forKey: PropertyKey.legs) as? [Leg], let fares = aDecoder.decodeObject(of: [NSArray.self, Fare.self], forKey: PropertyKey.fares) as? [Fare] else {
+        guard
+            let id = aDecoder.decodeObject(of: NSString.self, forKey: PropertyKey.id) as String?,
+            let from = aDecoder.decodeObject(of: Location.self, forKey: PropertyKey.from),
+            let to = aDecoder.decodeObject(of: Location.self, forKey: PropertyKey.to),
+            let legs = aDecoder.decodeObject(of: [NSArray.self, PublicLeg.self, IndividualLeg.self], forKey: PropertyKey.legs) as? [Leg],
+            let fares = aDecoder.decodeObject(of: [NSArray.self, Fare.self], forKey: PropertyKey.fares) as? [Fare]
+        else {
             os_log("failed to decode trip", log: .default, type: .error)
             return nil
         }
