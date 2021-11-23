@@ -784,7 +784,7 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
         var messages: [InfoText] = []
         for infoLink in xml["itdRequest"]["itdInfoLinkList"]["itdBannerInfoList"]["infoLink"].all {
             guard let infoLinkText = infoLink["infoLinkText"].element?.text, let infoLinkUrl = infoLink["infoLinkURL"].element?.text else { continue }
-            messages.append(InfoText(text: String(htmlEncodedString: infoLinkText) ?? infoLinkText, url: infoLinkUrl))
+            messages.append(InfoText(text: infoLinkText, url: infoLinkUrl))
         }
         
         var trips: [Trip] = []
@@ -809,7 +809,7 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
                 var legMessages: [String] = []
                 for infoLink in partialRoute["infoLink"].all {
                     guard let infoLinkText = infoLink["infoText"]["subtitle"].element?.text else { continue }
-                    legMessages.append(String(htmlEncodedString: infoLinkText) ?? infoLinkText)
+                    legMessages.append(infoLinkText)
                 }
                 
                 let points = partialRoute["itdPoint"].all
@@ -1821,13 +1821,13 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
                 if text.lowercased().hasPrefix("niederflurwagen") {
                     lowFloorVehicle = true
                 } else if text.lowercased().contains("ruf") || text.lowercased().contains("anmeld") || text.lowercased().contains("ast") {
-                    messages.insert(String(htmlEncodedString: text) ?? text)
+                    messages.insert(text)
                 }
             }
         }
         
         if let infoText = xml["infoLink"]["infoLinkText"].element?.text {
-            messages.insert(String(htmlEncodedString: infoText) ?? infoText)
+            messages.insert(infoText)
         }
         messages = messages.union(legMessages)
         

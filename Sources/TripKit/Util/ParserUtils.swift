@@ -33,37 +33,3 @@ func parseEuropeanTime(from timeString: String, dateComponents: inout DateCompon
         dateComponents.second = Int(match[2] ?? "")
     }
 }
-
-// Even though Foundation should contain NSAttributedString:init(data:options:documentAttributes:)
-// it actually does not. Thus we need to import UIKit or AppKit, depending on which is available.
-#if canImport(UIKit)
-import UIKit
-#elseif canImport(AppKit)
-import AppKit
-#endif
-extension String {
-    
-    init?(htmlEncodedString: String?) {
-        guard let htmlEncodedString = htmlEncodedString else {
-            return nil
-        }
-        guard let data = htmlEncodedString.data(using: .utf8) else {
-            self.init(htmlEncodedString)
-            return
-        }
-        
-        let options: [NSAttributedString.DocumentReadingOptionKey: Any] = [
-            .documentType: NSAttributedString.DocumentType.html,
-            .characterEncoding: String.Encoding.utf8.rawValue
-        ]
-        
-        guard let attributedString = try? NSAttributedString(data: data, options: options, documentAttributes: nil) else {
-            self.init(htmlEncodedString)
-            return
-        }
-        
-        self.init(attributedString.string)
-    }
-    
-}
-
