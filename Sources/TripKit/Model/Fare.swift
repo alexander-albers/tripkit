@@ -21,7 +21,10 @@ public class Fare: NSObject, NSSecureCoding {
     }
     
     required public convenience init?(coder aDecoder: NSCoder) {
-        guard let type = FareType(rawValue: aDecoder.decodeInteger(forKey: PropertyKey.type)), let currency = aDecoder.decodeObject(of: NSString.self, forKey: PropertyKey.currency) as String? else { return nil }
+        guard
+            let type = FareType(rawValue: aDecoder.decodeInteger(forKey: PropertyKey.type)),
+            let currency = aDecoder.decodeObject(of: NSString.self, forKey: PropertyKey.currency) as String?
+        else { return nil }
         
         let name = aDecoder.decodeObject(of: NSString.self, forKey: PropertyKey.name) as String?
         let fare = aDecoder.decodeFloat(forKey: PropertyKey.fare)

@@ -13,7 +13,10 @@ public class InfoText: NSObject, NSSecureCoding {
     }
     
     public required convenience init?(coder aDecoder: NSCoder) {
-        guard let text = aDecoder.decodeObject(of: NSString.self, forKey: PropertyKey.text) as String?, let url = aDecoder.decodeObject(of: NSString.self, forKey: PropertyKey.url) as String? else { return nil }
+        guard
+            let text = aDecoder.decodeObject(of: NSString.self, forKey: PropertyKey.text) as String?,
+            let url = aDecoder.decodeObject(of: NSString.self, forKey: PropertyKey.url) as String?
+        else { return nil }
         self.init(text: text, url: url)
     }
     
