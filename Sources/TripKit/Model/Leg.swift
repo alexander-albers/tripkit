@@ -169,11 +169,17 @@ public class IndividualLeg: NSObject, Leg, NSSecureCoding {
     }
     
     required convenience public init?(coder aDecoder: NSCoder) {
-        guard let type = Type(rawValue: aDecoder.decodeInteger(forKey: PropertyKey.type)), let departure = aDecoder.decodeObject(of: Location.self, forKey: PropertyKey.departure), let arrival = aDecoder.decodeObject(of: Location.self, forKey: PropertyKey.arrival), let departureTime = aDecoder.decodeObject(of: NSDate.self, forKey: PropertyKey.departureTime) as Date?, let arrivalTime = aDecoder.decodeObject(of: NSDate.self, forKey: PropertyKey.arrivalTime) as Date? else {
+        guard
+            let type = Type(rawValue: aDecoder.decodeInteger(forKey: PropertyKey.type)),
+            let departure = aDecoder.decodeObject(of: Location.self, forKey: PropertyKey.departure),
+            let arrival = aDecoder.decodeObject(of: Location.self, forKey: PropertyKey.arrival),
+            let departureTime = aDecoder.decodeObject(of: NSDate.self, forKey: PropertyKey.departureTime) as Date?,
+            let arrivalTime = aDecoder.decodeObject(of: NSDate.self, forKey: PropertyKey.arrivalTime) as Date?
+        else {
             os_log("failed to decode individual leg", log: .default, type: .error)
             return nil
         }
-        let encodedPath = aDecoder.decodeObject(of: [NSArray.self], forKey: PropertyKey.path) as? [Int] ?? []
+        let encodedPath = aDecoder.decodeObject(of: [NSArray.self, NSNumber.self], forKey: PropertyKey.path) as? [Int] ?? []
         let path = stride(from: 0, to: encodedPath.count % 2 == 0 ? encodedPath.count : 0, by: 2).map {
             LocationPoint(lat: encodedPath[$0], lon: encodedPath[$0 + 1])
         }
