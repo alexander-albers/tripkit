@@ -1006,13 +1006,7 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider {
                             let _ = strings.read(reader: reader)
                             let _ = strings.read(reader: reader) // disruption title
                             
-                            let disruptionShortTextHtml = strings.read(reader: reader)
-                            let disruptionShortText: String?
-                            if let disruptionShortTextHtml = disruptionShortTextHtml {
-                                disruptionShortText = String(htmlEncodedString: disruptionShortTextHtml)
-                            } else {
-                                disruptionShortText = nil
-                            }
+                            let disruptionShortText = strings.read(reader: reader)
                             disruptionsOffset = reader.readShortReverse()
                             
                             if legIndex == disruptionLeg {
