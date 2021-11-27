@@ -5,109 +5,131 @@ public class Stop: NSObject, NSSecureCoding {
     
     public static var supportsSecureCoding: Bool = true
     
+    /// Information about the station of the stop.
     public let location: Location
-    // TODO: separate arrival and departure
-    public let plannedArrivalTime: Date? // TODO: planned time should be never nil
-    public let predictedArrivalTime: Date?
-    public let plannedArrivalPlatform: String?
-    public let predictedArrivalPlatform: String?
-    public var arrivalCancelled: Bool
-    public let plannedDepartureTime: Date? // TODO: planned time should be never nil
-    public let predictedDepartureTime: Date?
-    public let plannedDeparturePlatform: String?
-    public let predictedDeparturePlatform: String?
-    public var departureCancelled: Bool
+    
+    /// Information about the arrival of this stop. Contains time, platform and a bool indicating if the stop has been cancelled.
+    ///
+    /// This value may be nil if *usually* the stop is taken but for this specific trip the stop is *planned to be skipped*, i.e. no arrival time has been scheduled in the first place.
+    /// If the stop has already been scheduled, but due to delays or other factors the stop is skipped, this value is *not nil*. Instead, the value contains the planned arrival time and the `cancelled`-flag is set to `true`.
+    ///
+    /// If arrival is non-nil than departure should also be non-nil and vice-versa.
+    public var arrival: StopEvent?
+    /// Information about the departure of this stop. Contains time, platform and a bool indicating if the stop has been cancelled.
+    ///
+    /// This value may be nil if *usually* the stop is taken but for this specific trip the stop is *planned to be skipped*, i.e. no departure time has been scheduled in the first place.
+    /// If the stop has already been scheduled, but due to delays or other factors the stop is skipped, this value is *not nil*. Instead, the value contains the planned departure time and the `cancelled`-flag is set to `true`.
+    ///
+    /// If arrival is non-nil than departure should also be non-nil and vice-versa.
+    public var departure: StopEvent?
+    
+    /// Message specific to this stop.
     public let message: String?
+    /// URL for querying the wagon sequence of a train.
+    /// See `DbProvider.getWagonSequenceUrl()`
     public let wagonSequenceContext: URL?
     
-    public init(location: Location, plannedArrivalTime: Date?, predictedArrivalTime: Date?, plannedArrivalPlatform: String?, predictedArrivalPlatform: String?, arrivalCancelled: Bool, plannedDepartureTime: Date?, predictedDepartureTime: Date?, plannedDeparturePlatform: String?, predictedDeparturePlatform: String?, departureCancelled: Bool, message: String? = nil, wagonSequenceContext: URL? = nil) {
+    /// Returns the earliest time of the stop, either departure or arrival.
+    public var minTime: Date? {
+        if let departure = departure, let arrival = arrival {
+            return min(departure.minTime, arrival.minTime)
+        } else if let departure = departure {
+            return departure.minTime
+        } else if let arrival = arrival {
+            return arrival.minTime
+        } else {
+            return nil
+        }
+    }
+    
+    /// Returns the latest time of the stop, either departure or arrival.
+    public var maxTime: Date? {
+        if let departure = departure, let arrival = arrival {
+            return max(departure.maxTime, arrival.maxTime)
+        } else if let departure = departure {
+            return departure.maxTime
+        } else if let arrival = arrival {
+            return arrival.maxTime
+        } else {
+            return nil
+        }
+    }
+    
+    public init(location: Location, departure: StopEvent?, arrival: StopEvent?, message: String?, wagonSequenceContext: URL?) {
+        departure?.message = message
+        arrival?.message = message
+        departure?.wagonSequenceContext = wagonSequenceContext
+        arrival?.wagonSequenceContext = wagonSequenceContext
+        
         self.location = location
-        self.plannedArrivalTime = plannedArrivalTime
-        self.predictedArrivalTime = predictedArrivalTime
-        self.plannedArrivalPlatform = plannedArrivalPlatform
-        self.predictedArrivalPlatform = predictedArrivalPlatform
-        self.arrivalCancelled = arrivalCancelled
-        self.plannedDepartureTime = plannedDepartureTime
-        self.predictedDepartureTime = predictedDepartureTime
-        self.plannedDeparturePlatform = plannedDeparturePlatform
-        self.predictedDeparturePlatform = predictedDeparturePlatform
-        self.departureCancelled = departureCancelled
+        self.departure = departure
+        self.arrival = arrival
         self.message = message
         self.wagonSequenceContext = wagonSequenceContext
     }
     
     required convenience public init?(coder aDecoder: NSCoder) {
         guard let location = aDecoder.decodeObject(of: Location.self, forKey: PropertyKey.location) else {
-            os_log("failed to decode stop", log: .default, type: .error)
+            os_log("failed to decode stop location", log: .default, type: .error)
             return nil
         }
-        let plannedArrivalTime = aDecoder.decodeObject(of: NSDate.self, forKey: PropertyKey.plannedArrivalTime) as Date?
-        let predictedArrivalTime = aDecoder.decodeObject(of: NSDate.self, forKey: PropertyKey.predictedArrivalTime) as Date?
-        let plannedArrivalPlatform = aDecoder.decodeObject(of: NSString.self, forKey: PropertyKey.plannedArrivalPlatform) as String?
-        let predictedArrivalPlatform = aDecoder.decodeObject(of: NSString.self, forKey: PropertyKey.predictedArrivalPlatform) as String?
-        let arrivalCancelled = aDecoder.decodeBool(forKey: PropertyKey.arrivalCancelled)
-        let plannedDepartureTime = aDecoder.decodeObject(of: NSDate.self, forKey: PropertyKey.plannedDepartureTime) as Date?
-        let predictedDepartureTime = aDecoder.decodeObject(of: NSDate.self, forKey: PropertyKey.predictedDepartureTime) as Date?
-        let plannedDeparturePlatform = aDecoder.decodeObject(of: NSString.self, forKey: PropertyKey.plannedDeparturePlatform) as String?
-        let predictedDeparturePlatform = aDecoder.decodeObject(of: NSString.self, forKey: PropertyKey.predictedDeparturePlatform) as String?
-        let departureCancelled = aDecoder.decodeBool(forKey: PropertyKey.departureCancelled)
+        
         let message = aDecoder.decodeObject(of: NSString.self, forKey: PropertyKey.message) as String?
         let wagonSequenceContextPath = aDecoder.decodeObject(of: NSString.self, forKey: PropertyKey.wagonSequenceContext) as String?
         let wagonSequenceContext = wagonSequenceContextPath != nil ? URL(string: wagonSequenceContextPath!) : nil
         
-        self.init(location: location, plannedArrivalTime: plannedArrivalTime, predictedArrivalTime: predictedArrivalTime, plannedArrivalPlatform: plannedArrivalPlatform, predictedArrivalPlatform: predictedArrivalPlatform, arrivalCancelled: arrivalCancelled, plannedDepartureTime: plannedDepartureTime, predictedDepartureTime: predictedDepartureTime, plannedDeparturePlatform: plannedDeparturePlatform, predictedDeparturePlatform: predictedDeparturePlatform, departureCancelled: departureCancelled, message: message, wagonSequenceContext: wagonSequenceContext)
+        let departure: StopEvent?
+        if let plannedDepartureTime = aDecoder.decodeObject(of: NSDate.self, forKey: PropertyKey.plannedDepartureTime) as Date? {
+            departure = StopEvent(
+                location: location,
+                plannedTime: plannedDepartureTime,
+                predictedTime: aDecoder.decodeObject(of: NSDate.self, forKey: PropertyKey.predictedDepartureTime) as Date?,
+                plannedPlatform: aDecoder.decodeObject(of: NSString.self, forKey: PropertyKey.plannedDeparturePlatform) as String?,
+                predictedPlatform: aDecoder.decodeObject(of: NSString.self, forKey: PropertyKey.predictedDeparturePlatform) as String?,
+                cancelled: aDecoder.decodeBool(forKey: PropertyKey.departureCancelled)
+            )
+        } else {
+            departure = nil
+        }
+        
+        let arrival: StopEvent?
+        if let plannedArrivalTime = aDecoder.decodeObject(of: NSDate.self, forKey: PropertyKey.plannedArrivalTime) as Date? {
+            arrival = StopEvent(
+                location: location,
+                plannedTime: plannedArrivalTime,
+                predictedTime: aDecoder.decodeObject(of: NSDate.self, forKey: PropertyKey.predictedArrivalTime) as Date?,
+                plannedPlatform: aDecoder.decodeObject(of: NSString.self, forKey: PropertyKey.plannedArrivalPlatform) as String?,
+                predictedPlatform: aDecoder.decodeObject(of: NSString.self, forKey: PropertyKey.predictedArrivalPlatform) as String?,
+                cancelled: aDecoder.decodeBool(forKey: PropertyKey.arrivalCancelled)
+            )
+        } else {
+            arrival = nil
+        }
+        
+        self.init(location: location, departure: departure, arrival: arrival, message: message, wagonSequenceContext: wagonSequenceContext)
     }
     
     public func encode(with aCoder: NSCoder) {
         aCoder.encode(location, forKey: PropertyKey.location)
-        if let plannedArrivalTime = plannedArrivalTime {
-            aCoder.encode(plannedArrivalTime, forKey: PropertyKey.plannedArrivalTime)
+        
+        if let departure = departure {
+            aCoder.encode(departure.plannedTime, forKey: PropertyKey.plannedDepartureTime)
+            aCoder.encode(departure.predictedTime, forKey: PropertyKey.predictedDepartureTime)
+            aCoder.encode(departure.plannedPlatform, forKey: PropertyKey.plannedDeparturePlatform)
+            aCoder.encode(departure.predictedPlatform, forKey: PropertyKey.predictedDeparturePlatform)
+            aCoder.encode(departure.cancelled, forKey: PropertyKey.departureCancelled)
         }
-        if let predictedArrivalTime = predictedArrivalTime {
-            aCoder.encode(predictedArrivalTime, forKey: PropertyKey.predictedArrivalTime)
+        
+        if let arrival = arrival {
+            aCoder.encode(arrival.plannedTime, forKey: PropertyKey.plannedArrivalTime)
+            aCoder.encode(arrival.predictedTime, forKey: PropertyKey.predictedArrivalTime)
+            aCoder.encode(arrival.plannedPlatform, forKey: PropertyKey.plannedArrivalPlatform)
+            aCoder.encode(arrival.predictedPlatform, forKey: PropertyKey.predictedArrivalPlatform)
+            aCoder.encode(arrival.cancelled, forKey: PropertyKey.arrivalCancelled)
         }
-        if let plannedArrivalPlatform = plannedArrivalPlatform {
-            aCoder.encode(plannedArrivalPlatform, forKey: PropertyKey.plannedArrivalPlatform)
-        }
-        if let predictedArrivalPlatform = predictedArrivalPlatform {
-            aCoder.encode(predictedArrivalPlatform, forKey: PropertyKey.predictedArrivalPlatform)
-        }
-        aCoder.encode(arrivalCancelled, forKey: PropertyKey.arrivalCancelled)
-        if let plannedDepartureTime = plannedDepartureTime {
-            aCoder.encode(plannedDepartureTime, forKey: PropertyKey.plannedDepartureTime)
-        }
-        if let predictedDepartureTime = predictedDepartureTime {
-            aCoder.encode(predictedDepartureTime, forKey: PropertyKey.predictedDepartureTime)
-        }
-        if let plannedDeparturePlatform = plannedDeparturePlatform {
-            aCoder.encode(plannedDeparturePlatform, forKey: PropertyKey.plannedDeparturePlatform)
-        }
-        if let predictedDeparturePlatform = predictedDeparturePlatform {
-            aCoder.encode(predictedDeparturePlatform, forKey: PropertyKey.predictedDeparturePlatform)
-        }
-        aCoder.encode(departureCancelled, forKey: PropertyKey.departureCancelled)
-        if let message = message {
-            aCoder.encode(message, forKey: PropertyKey.message)
-        }
-        if let wagonSequenceContext = wagonSequenceContext {
-            aCoder.encode(wagonSequenceContext.absoluteString, forKey: PropertyKey.wagonSequenceContext)
-        }
-    }
-    
-    public func getMinTime() -> Date {
-        if plannedDepartureTime == nil || (predictedDepartureTime != nil && predictedDepartureTime! < plannedDepartureTime!) {
-            return predictedDepartureTime!
-        } else {
-            return plannedDepartureTime!
-        }
-    }
-    
-    public func getMaxTime() -> Date {
-        if plannedArrivalTime == nil || (predictedArrivalTime != nil && predictedArrivalTime! > plannedArrivalTime!) {
-            return predictedArrivalTime!
-        } else {
-            return plannedArrivalTime!
-        }
+        
+        aCoder.encode(message, forKey: PropertyKey.message)
+        aCoder.encode(wagonSequenceContext, forKey: PropertyKey.wagonSequenceContext)
     }
     
     open override func isEqual(_ other: Any?) -> Bool {
@@ -116,13 +138,7 @@ public class Stop: NSObject, NSSecureCoding {
         if self.location != other.location {
             return false
         }
-        if !(self.plannedArrivalTime == other.plannedArrivalTime && self.predictedArrivalTime == other.predictedArrivalTime && self.plannedArrivalPlatform == other.plannedArrivalPlatform && self.predictedArrivalPlatform == other.predictedArrivalPlatform && self.arrivalCancelled == other.arrivalCancelled) {
-            return false
-        }
-        if !(self.plannedDepartureTime == other.plannedDepartureTime && self.predictedDepartureTime == other.predictedDepartureTime && self.plannedDeparturePlatform == other.plannedDeparturePlatform && self.predictedDeparturePlatform == other.predictedDeparturePlatform && self.departureCancelled == other.departureCancelled) {
-            return false
-        }
-        return true
+        return self.departure == other.departure && self.arrival == other.arrival
     }
     
     struct PropertyKey {
@@ -143,4 +159,61 @@ public class Stop: NSObject, NSSecureCoding {
         
     }
     
+}
+
+// MARK: deprecated properties and methods
+extension Stop {
+    @available(*, deprecated, renamed: "arrival.plannedTime")
+    public var plannedArrivalTime: Date? { arrival?.plannedTime }
+    @available(*, deprecated, renamed: "arrival.predictedTime")
+    public var predictedArrivalTime: Date? { arrival?.predictedTime }
+    @available(*, deprecated, renamed: "arrival.plannedPlatform")
+    public var plannedArrivalPlatform: String? { arrival?.plannedPlatform }
+    @available(*, deprecated, renamed: "arrival.predictedPlatform")
+    public var predictedArrivalPlatform: String? { arrival?.predictedPlatform }
+    @available(*, deprecated, renamed: "arrival.canceleld")
+    public var arrivalCancelled: Bool {
+        get { return arrival?.cancelled ?? false }
+        set { arrival?.cancelled = newValue }
+    }
+    @available(*, deprecated, renamed: "departure.plannedTime")
+    public var plannedDepartureTime: Date? { departure?.plannedTime }
+    @available(*, deprecated, renamed: "departure.predictedTime")
+    public var predictedDepartureTime: Date? { departure?.predictedTime }
+    @available(*, deprecated, renamed: "departure.plannedPlatform")
+    public var plannedDeparturePlatform: String? { departure?.plannedPlatform}
+    @available(*, deprecated, renamed: "departure.predictedPlatform")
+    public var predictedDeparturePlatform: String? { departure?.predictedPlatform }
+    @available(*, deprecated, renamed: "departure.cancelled")
+    public var departureCancelled: Bool {
+        get { return departure?.cancelled ?? false }
+        set { departure?.cancelled = newValue }
+    }
+    
+    @available(*, deprecated, renamed: "init(location:departure:arrival:message:wagonSequenceContext:)")
+    public convenience init(location: Location, plannedArrivalTime: Date?, predictedArrivalTime: Date?, plannedArrivalPlatform: String?, predictedArrivalPlatform: String?, arrivalCancelled: Bool, plannedDepartureTime: Date?, predictedDepartureTime: Date?, plannedDeparturePlatform: String?, predictedDeparturePlatform: String?, departureCancelled: Bool, message: String? = nil, wagonSequenceContext: URL? = nil) {
+        let departure: StopEvent?
+        if let plannedDepartureTime = plannedDepartureTime {
+            departure = StopEvent(location: location, plannedTime: plannedDepartureTime, predictedTime: predictedDepartureTime, plannedPlatform: plannedDeparturePlatform, predictedPlatform: predictedDeparturePlatform, cancelled: departureCancelled)
+        } else {
+            departure = nil
+        }
+        let arrival: StopEvent?
+        if let plannedArrivalTime = plannedArrivalTime {
+            arrival = StopEvent(location: location, plannedTime: plannedArrivalTime, predictedTime: predictedArrivalTime, plannedPlatform: plannedArrivalPlatform, predictedPlatform: predictedArrivalPlatform, cancelled: arrivalCancelled)
+        } else {
+            arrival = nil
+        }
+        self.init(location: location, departure: departure, arrival: arrival, message: message, wagonSequenceContext: wagonSequenceContext)
+    }
+    
+    @available(*, deprecated, renamed: "minTime")
+    public func getMinTime() -> Date {
+        return minTime!
+    }
+    
+    @available(*, deprecated, renamed: "maxTime")
+    public func getMaxTime() -> Date {
+        return maxTime!
+    }
 }

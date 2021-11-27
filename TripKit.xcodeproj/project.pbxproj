@@ -611,6 +611,10 @@
 		FAD0168E26E6B63D00331098 /* TripKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FA5CD1D324FBB10C00B4990A /* TripKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FAD0169226E6B64300331098 /* TripKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA5CD1FB24FBB1D200B4990A /* TripKit.framework */; };
 		FAD0169326E6B64300331098 /* TripKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FA5CD1FB24FBB1D200B4990A /* TripKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FAD1D51C274E1CEB009FFA52 /* StopEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD1D51B274E1CEB009FFA52 /* StopEvent.swift */; };
+		FAD1D51D274E1CEB009FFA52 /* StopEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD1D51B274E1CEB009FFA52 /* StopEvent.swift */; };
+		FAD1D51E274E1CEB009FFA52 /* StopEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD1D51B274E1CEB009FFA52 /* StopEvent.swift */; };
+		FAD1D51F274E1CEB009FFA52 /* StopEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD1D51B274E1CEB009FFA52 /* StopEvent.swift */; };
 		FAE6E6C426E6AB6A007E975A /* TripKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FACB83C31E3FD0CE00AC5F1F /* TripKit.framework */; };
 		FAE6E6EE26E6AC87007E975A /* TripKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA5CD1FB24FBB1D200B4990A /* TripKit.framework */; };
 		FAE6E6FC26E6AC95007E975A /* TripKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA5CD1D324FBB10C00B4990A /* TripKit.framework */; };
@@ -1050,6 +1054,7 @@
 		FACD98891E87F0D40019BE80 /* VvmProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VvmProvider.swift; sourceTree = "<group>"; };
 		FACD988D1E881A190019BE80 /* NvvProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NvvProvider.swift; sourceTree = "<group>"; };
 		FACFBBC71F850EE600679CD4 /* AvvAachenProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvvAachenProvider.swift; sourceTree = "<group>"; };
+		FAD1D51B274E1CEB009FFA52 /* StopEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopEvent.swift; sourceTree = "<group>"; };
 		FAD8E0CC2287197A00C0036C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		FAE6E6C026E6AB6A007E975A /* StaticTripKitTests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "StaticTripKitTests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAE6E6EA26E6AC87007E975A /* StaticTripKitTests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "StaticTripKitTests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1359,6 +1364,7 @@
 				FAB7541D1E3FD3E500C343F2 /* Point.swift */,
 				FAB7541E1E3FD3E500C343F2 /* Product.swift */,
 				FAB754221E3FD3E500C343F2 /* Stop.swift */,
+				FAD1D51B274E1CEB009FFA52 /* StopEvent.swift */,
 				FAB754261E3FD3E500C343F2 /* Trip.swift */,
 				FAA569431E7415DC006EB901 /* Fare.swift */,
 				FA4B90AE274C191C00C070C2 /* LoadFactor.swift */,
@@ -2180,6 +2186,7 @@
 				FA5CD24524FBB29000B4990A /* VosProvider.swift in Sources */,
 				FA5CD23224FBB29000B4990A /* HvvProvider.swift in Sources */,
 				FA5CD24624FBB29000B4990A /* VmtProvider.swift in Sources */,
+				FAD1D51E274E1CEB009FFA52 /* StopEvent.swift in Sources */,
 				FA5CD24224FBB29000B4990A /* VmsProvider.swift in Sources */,
 				FA5CD24D24FBB29000B4990A /* KvvProvider.swift in Sources */,
 				FA5CD22D24FBB29000B4990A /* AbstractHafasLegacyProvider.swift in Sources */,
@@ -2275,6 +2282,7 @@
 				FA5CD27A24FBB29000B4990A /* VosProvider.swift in Sources */,
 				FA5CD26724FBB29000B4990A /* HvvProvider.swift in Sources */,
 				FA5CD27B24FBB29000B4990A /* VmtProvider.swift in Sources */,
+				FAD1D51F274E1CEB009FFA52 /* StopEvent.swift in Sources */,
 				FA5CD27724FBB29000B4990A /* VmsProvider.swift in Sources */,
 				FA5CD28224FBB29000B4990A /* KvvProvider.swift in Sources */,
 				FA5CD26224FBB29000B4990A /* AbstractHafasLegacyProvider.swift in Sources */,
@@ -2476,6 +2484,7 @@
 				FA4F58181E8BD1D800EA392F /* GvhProvider.swift in Sources */,
 				FA780E341E9008E1004E2281 /* RtProvider.swift in Sources */,
 				FA2454CA1E86B05600445AD5 /* ParserUtils.swift in Sources */,
+				FAD1D51C274E1CEB009FFA52 /* StopEvent.swift in Sources */,
 				FABF2FB51EA1E0FE0002DE55 /* SessionExpiredError.swift in Sources */,
 				FAA0A297213705030098EFED /* MockKvvProvider.swift in Sources */,
 				FACD98821E87AF170019BE80 /* MvvProvider.swift in Sources */,
@@ -2813,6 +2822,7 @@
 				FAFF18C31FA50B9500A8ED69 /* GvhProvider.swift in Sources */,
 				FAFF18C41FA50B9500A8ED69 /* RtProvider.swift in Sources */,
 				FAFF18C51FA50B9500A8ED69 /* ParserUtils.swift in Sources */,
+				FAD1D51D274E1CEB009FFA52 /* StopEvent.swift in Sources */,
 				FAFF18C61FA50B9500A8ED69 /* SessionExpiredError.swift in Sources */,
 				FA4E0EDF214C0BE100D94D19 /* MockKvvProvider.swift in Sources */,
 				FAFF18C71FA50B9500A8ED69 /* MvvProvider.swift in Sources */,

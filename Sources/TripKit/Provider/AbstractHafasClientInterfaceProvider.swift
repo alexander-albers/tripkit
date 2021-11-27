@@ -577,8 +577,8 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
                     let destination: Location? = dirTxt == nil ? nil : Location(type: .any, id: nil, coord: nil, place: nameAndPlace.0, name: nameAndPlace.1)
                     
                     guard
-                        let departureStop = try parseStop(dict: dep, locations: locations, rems: rems, messages: messages, baseDate: baseDate, line: line),
-                        let arrivalStop = try parseStop(dict: arr, locations: locations, rems: rems, messages: messages, baseDate: baseDate, line: line)
+                        let departureStop = try parseStop(dict: dep, locations: locations, rems: rems, messages: messages, baseDate: baseDate, line: line)?.departure,
+                        let arrivalStop = try parseStop(dict: arr, locations: locations, rems: rems, messages: messages, baseDate: baseDate, line: line)?.arrival
                     else {
                         throw ParseError(reason: "failed to parse departure/arrival stop")
                     }
@@ -604,7 +604,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
                     let path = parsePath(encodedPolyList: encodedPolyList, jny: jny)
                     
                     if cancelled {
-                        intermediateStops.forEach({$0.departureCancelled = true; $0.arrivalCancelled = true})
+                        intermediateStops.forEach({$0.departure?.cancelled = true; $0.arrival?.cancelled = true})
                     }
                     
                     let journeyContext: HafasClientInterfaceJourneyContext?
@@ -623,11 +623,11 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
                     }
                     
                     let message = legMessages.map({$0.trimmingCharacters(in: .whitespacesAndNewlines)}).joined(separator: "\n").emptyToNil
-                    legs.append(PublicLeg(line: line, destination: destination, departureStop: departureStop, arrivalStop: arrivalStop, intermediateStops: intermediateStops, message: message, path: path, journeyContext: journeyContext, loadFactor: loadFactor))
+                    legs.append(PublicLeg(line: line, destination: destination, departure: departureStop, arrival: arrivalStop, intermediateStops: intermediateStops, message: message, path: path, journeyContext: journeyContext, loadFactor: loadFactor))
                 case "WALK", "TRSF", "DEVI":
                     guard
-                        let departureStop = try parseStop(dict: dep, locations: locations, rems: rems, messages: messages, baseDate: baseDate, line: nil),
-                        let arrivalStop = try parseStop(dict: arr, locations: locations, rems: rems, messages: messages, baseDate: baseDate, line: nil)
+                        let departureStop = try parseStop(dict: dep, locations: locations, rems: rems, messages: messages, baseDate: baseDate, line: nil)?.departure,
+                        let arrivalStop = try parseStop(dict: arr, locations: locations, rems: rems, messages: messages, baseDate: baseDate, line: nil)?.arrival
                     else {
                         throw ParseError(reason: "failed to parse departure/arrival stop")
                     }
@@ -637,8 +637,8 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
                     processIndividualLeg(legs: &legs, type: .WALK, departureStop: departureStop, arrivalStop: arrivalStop, distance: distance, path: path)
                 case "KISS":
                     guard
-                        let departureStop = try parseStop(dict: dep, locations: locations, rems: rems, messages: messages, baseDate: baseDate, line: nil),
-                        let arrivalStop = try parseStop(dict: arr, locations: locations, rems: rems, messages: messages, baseDate: baseDate, line: nil)
+                        let departureStop = try parseStop(dict: dep, locations: locations, rems: rems, messages: messages, baseDate: baseDate, line: nil)?.departure,
+                        let arrivalStop = try parseStop(dict: arr, locations: locations, rems: rems, messages: messages, baseDate: baseDate, line: nil)?.arrival
                     else {
                         throw ParseError(reason: "failed to parse departure/arrival stop")
                     }
@@ -647,7 +647,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
                     let distance = gis?["distance"] as? Int ?? 0
                     if let mcp = dep["mcp"] as? [String: Any], let mcpData = mcp["mcpData"] as? [String: Any], let provider = mcpData["provider"] as? String, let providerName = mcpData["providerName"] as? String, provider == "berlkoenig" {
                         let line = Line(id: nil, network: nil, product: .onDemand, label: providerName, name: providerName, number: nil, vehicleNumber: nil, style: lineStyle(network: nil, product: .onDemand, label: providerName), attr: nil, message: nil, direction: nil)
-                        legs.append(PublicLeg(line: line, destination: arrivalStop.location, departureStop: departureStop, arrivalStop: arrivalStop, intermediateStops: [], message: nil, path: path))
+                        legs.append(PublicLeg(line: line, destination: arrivalStop.location, departure: departureStop, arrival: arrivalStop, intermediateStops: [], message: nil, path: path, journeyContext: nil, loadFactor: nil))
                     } else {
                         processIndividualLeg(legs: &legs, type: .WALK, departureStop: departureStop, arrivalStop: arrivalStop, distance: distance, path: path)
                     }
@@ -748,8 +748,8 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         }
         
         guard intermediateStops.count >= 2 else { throw ParseError(reason: "failed to parse arr/dep stop") }
-        let departure = intermediateStops.removeFirst()
-        let arrival = intermediateStops.removeLast()
+        guard let departure = intermediateStops.removeFirst().departure else { throw ParseError(reason: "failed to parse dep stop") }
+        guard let arrival = intermediateStops.removeLast().arrival else { throw ParseError(reason: "failed to parse dep stop") }
         if let departureMessage = departure.message {
             legMessages.insert(departureMessage)
         }
@@ -758,7 +758,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         }
         
         if cancelled {
-            intermediateStops.forEach({$0.departureCancelled = true; $0.arrivalCancelled = true})
+            intermediateStops.forEach({$0.departure?.cancelled = true; $0.arrival?.cancelled = true})
         }
         
         let destination: Location?
@@ -778,7 +778,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         }
         
         let message = legMessages.map({$0.trimmingCharacters(in: .whitespacesAndNewlines)}).joined(separator: "\n").emptyToNil
-        let leg = PublicLeg(line: line, destination: destination, departureStop: departure, arrivalStop: arrival, intermediateStops: intermediateStops, message: message, path: path, journeyContext: nil, loadFactor: loadFactor)
+        let leg = PublicLeg(line: line, destination: destination, departure: departure, arrival: arrival, intermediateStops: intermediateStops, message: message, path: path, journeyContext: nil, loadFactor: loadFactor)
         let trip = Trip(id: "", from: departure.location, to: arrival.location, legs: [leg], fares: [])
         completion(request, .success(trip: trip, leg: leg))
     }
@@ -878,11 +878,11 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
     
     // MARK: Response parse methods
     
-    private func processIndividualLeg(legs: inout [Leg], type: IndividualLeg.`Type`, departureStop: Stop, arrivalStop: Stop, distance: Int, path: [LocationPoint]) {
+    private func processIndividualLeg(legs: inout [Leg], type: IndividualLeg.`Type`, departureStop: StopEvent, arrivalStop: StopEvent, distance: Int, path: [LocationPoint]) {
         var path = path
-        let departureTime = departureStop.predictedDepartureTime ?? departureStop.plannedDepartureTime!
-        let arrivalTime = arrivalStop.predictedArrivalTime ?? arrivalStop.plannedArrivalTime!
-        let addTime: TimeInterval = !legs.isEmpty ? max(0, -departureTime.timeIntervalSince(legs.last!.getMaxTime())) : 0
+        let departureTime = departureStop.predictedTime ?? departureStop.plannedTime
+        let arrivalTime = arrivalStop.predictedTime ?? arrivalStop.plannedTime
+        let addTime: TimeInterval = !legs.isEmpty ? max(0, -departureTime.timeIntervalSince(legs.last!.maxTime)) : 0
         if let lastLeg = legs.last as? IndividualLeg, lastLeg.type == type {
             legs.removeLast()
             path.insert(contentsOf: lastLeg.path, at: 0)
@@ -930,7 +930,21 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
             wagonSequenceContext = nil
         }
         
-        return Stop(location: location, plannedArrivalTime: plannedArrivalTime, predictedArrivalTime: predictedArrivalTime, plannedArrivalPlatform: plannedArrivalPosition, predictedArrivalPlatform: predictedArrivalPosition, arrivalCancelled: arrivalCancelled, plannedDepartureTime: plannedDepartureTime, predictedDepartureTime: predictedDepartureTime, plannedDeparturePlatform: plannedDeparturePosition, predictedDeparturePlatform: predictedDeparturePosition, departureCancelled: departureCancelled, message: message, wagonSequenceContext: wagonSequenceContext)
+        let departure: StopEvent?
+        if let plannedDepartureTime = plannedDepartureTime {
+            departure = StopEvent(location: location, plannedTime: plannedDepartureTime, predictedTime: predictedDepartureTime, plannedPlatform: plannedDeparturePosition, predictedPlatform: predictedDeparturePosition, cancelled: departureCancelled)
+        } else {
+            departure = nil
+        }
+        
+        let arrival: StopEvent?
+        if let plannedArrivalTime = plannedArrivalTime {
+            arrival = StopEvent(location: location, plannedTime: plannedArrivalTime, predictedTime: predictedArrivalTime, plannedPlatform: plannedArrivalPosition, predictedPlatform: predictedArrivalPosition, cancelled: arrivalCancelled)
+        } else {
+            arrival = nil
+        }
+        
+        return Stop(location: location, departure: departure, arrival: arrival, message: message, wagonSequenceContext: wagonSequenceContext)
     }
     
     func getWagonSequenceUrl(number: String, plannedTime: Date) -> URL? {

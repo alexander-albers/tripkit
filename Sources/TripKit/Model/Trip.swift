@@ -5,25 +5,82 @@ public class Trip: NSObject, NSSecureCoding {
     
     public static var supportsSecureCoding: Bool = true
     
-    var id: String
+    private var _id: String
+    /// A unique id for this trip.
+    ///
+    /// This value is either returned by the transit provider or computed once automatically if not such id exists.
+    public var id: String {
+        if !_id.isEmpty {
+            return _id
+        } else {
+            _id = buildSubstituteId()
+            return _id
+        }
+    }
+    /// The departure location.
     public let from: Location
+    /// The arrival location.
     public let to: Location
+    /// List of legs. Each leg represents a partial, direct trip between two locations.
     public let legs: [Leg]
+    /// List of fares for this trip. Fares for a whole day or month are excluded here.
     public let fares: [Fare]
+    /// Context for refreshing the trip. See `NetworkProvider.refreshTrip`
     public var refreshContext: RefreshTripContext?
     
+    /// Predicted departure time of the first leg, if available, otherwise the planned time.
+    public var departureTime: Date { legs[0].departureTime }
+    /// Predicted arrival time of the last leg, if available, otherwise the planned time.
+    public var arrivalTime: Date { legs[legs.count - 1].arrivalTime }
+    
+    /// Returns always the planned departure time of the first leg.
+    public var plannedDepartureTime: Date { legs[0].plannedDepartureTime }
+    /// Returns always the planned arrival time of the first leg.
+    public var plannedArrivalTime: Date { legs[legs.count - 1].plannedArrivalTime }
+    
+    /// Returns true if there is realtime departure information.
+    public var hasPredictedDepartureTime: Bool {
+        return (legs.first(where: {$0 is PublicLeg}) as? PublicLeg)?.departureStop.predictedTime != nil
+    }
+    /// Returns true if there is realtime arrival information.
+    public var hasPredictedArrivalTime: Bool {
+        return (legs.last(where: {$0 is PublicLeg}) as? PublicLeg)?.arrivalStop.predictedTime != nil
+    }
+    
+    /// Returns true if the predicted departure time of this trip deviates from the predicted arrival time (rounded to the next minute).
+    public var hasDeviantDeparture: Bool {
+        guard let leg = legs.first(where: {$0 is PublicLeg}) as? PublicLeg else { return false }
+        guard let predictedDeparture = leg.departureStop.predictedTime else { return false }
+        return Int(predictedDeparture.timeIntervalSince(leg.departureStop.plannedTime) / 60) != 0
+    }
+    /// Returns true if the predicted arrival time of this trip deviates from the predicted arrival time (rounded to the next minute).
+    public var hasDeviantArrival: Bool {
+        guard let leg = legs.last(where: {$0 is PublicLeg}) as? PublicLeg else { return false }
+        guard let predictedArrival = leg.arrivalStop.predictedTime else { return false }
+        return Int(predictedArrival.timeIntervalSince(leg.arrivalStop.plannedTime) / 60) != 0
+    }
+    
+    /// Returns the earliest departure time.
+    ///
+    /// This may be either the predicted or the planned time, depending on what is smaller.
+    public var minTime: Date {
+        return legs.map({ $0.minTime }).min()!
+    }
+    /// Returns the latest arrival time.
+    ///
+    /// This may be either the predicted or the planned time, depending on what is marger.
+    public var maxTime: Date {
+        return legs.map({ $0.maxTime }).max()!
+    }
+    
+    /// Returns true if any public leg of this trip has been cancelled.
     public var isCancelled: Bool {
-        for leg in legs {
-            guard let leg = leg as? PublicLeg else { continue }
-            if leg.departureStop.departureCancelled || leg.arrivalStop.arrivalCancelled {
-                return true
-            }
-        }
-        return false
+        legs.compactMap({ $0 as? PublicLeg }).contains(where: { $0.isCancelled })
     }
     
     public init(id: String, from: Location, to: Location, legs: [Leg], fares: [Fare], refreshContext: RefreshTripContext? = nil) {
-        self.id = id
+        assert(!legs.isEmpty, "Legs cannot be empty")
+        self._id = id
         self.from = from
         self.to = to
         self.legs = legs
@@ -57,15 +114,6 @@ public class Trip: NSObject, NSSecureCoding {
         }
     }
     
-    public func getId() -> String {
-        if id != "" {
-            return id
-        } else {
-            id = buildSubstituteId()
-            return id
-        }
-    }
-    
     private func buildSubstituteId() -> String {
         var result = ""
         for leg in legs {
@@ -75,12 +123,8 @@ public class Trip: NSObject, NSSecureCoding {
             if let _ = leg as? IndividualLeg {
                 result += "Individual"
             } else if let leg = leg as? PublicLeg {
-                if let plannedDeparture = leg.departureStop.plannedDepartureTime {
-                    result += "\(plannedDeparture.timeIntervalSince1970)-"
-                }
-                if let plannedArrival = leg.arrivalStop.plannedArrivalTime {
-                    result += "\(plannedArrival.timeIntervalSince1970)-"
-                }
+                result += "\(leg.departureStop.plannedTime.timeIntervalSince1970)-"
+                result += "\(leg.arrivalStop.plannedTime.timeIntervalSince1970)-"
                 result += "\(leg.line.product?.rawValue ?? "")-\(leg.line.label ?? "")"
             }
             result += "|"
@@ -88,95 +132,17 @@ public class Trip: NSObject, NSSecureCoding {
         return result
     }
     
-    public func getDepartureTime() -> Date {
-        return legs.first!.getDepartureTime()
-    }
-    
-    public func getArrivalTime() -> Date {
-        return legs.last!.getArrivalTime()
-    }
-    
-    public func getPlannedDepartureTime() -> Date {
-        return legs.first!.getPlannedDepartureTime()
-    }
-    
-    public func getPlannedArrivalTime() -> Date {
-        return legs.last!.getPlannedArrivalTime()
-    }
-    
-    public func isDeparturingLate() -> Bool {
-        if let leg = legs.first(where: {$0 is PublicLeg}) as? PublicLeg {
-            if let plannedTime = leg.departureStop.plannedDepartureTime, let predictedTime = leg.departureStop.predictedDepartureTime, Int(predictedTime.timeIntervalSince(plannedTime) / 60) != 0 {
-                return true
-            } else {
-                return false
-            }
-        } else {
-            return false
-        }
-    }
-    
-    public func isArrivingLate() -> Bool {
-        if let leg = legs.reversed().first(where: {$0 is PublicLeg}) as? PublicLeg {
-            if let plannedTime = leg.arrivalStop.plannedArrivalTime, let predictedTime = leg.arrivalStop.predictedArrivalTime, Int(predictedTime.timeIntervalSince(plannedTime) / 60) != 0 {
-                return true
-            } else {
-                return false
-            }
-        } else {
-            return false
-        }
-    }
-    
-    public func isPredictedDepartureTime() -> Bool {
-        if let leg = legs.first(where: {$0 is PublicLeg}) as? PublicLeg {
-            return leg.departureStop.predictedDepartureTime != nil
-        } else {
-            return false
-        }
-    }
-    
-    public func isPredictedArrivalTime() -> Bool {
-        if let leg = legs.reversed().first(where: {$0 is PublicLeg}) as? PublicLeg {
-            return leg.arrivalStop.predictedArrivalTime != nil
-        } else {
-            return false
-        }
-    }
-    
-    public func getMinTime() -> Date {
-        guard let firstLeg = legs.first else { return Date() }
-        var minTime = firstLeg.getMinTime()
-        for i in 1..<legs.count {
-            if legs[i].getMinTime() < minTime {
-                minTime = legs[i].getMinTime()
-            }
-        }
-        return minTime
-    }
-    
-    public func getMaxTime() -> Date {
-        guard let firstLeg = legs.first else { return Date() }
-        var maxTime = firstLeg.getMaxTime()
-        for i in 1..<legs.count {
-            if legs[i].getMaxTime() > maxTime {
-                maxTime = legs[i].getMaxTime()
-            }
-        }
-        return maxTime
-    }
-    
     public override var description: String {
-        return "Trip id=\(getId()) legs=\(legs)"
+        return "Trip id=\(id) legs=\(legs)"
     }
     
     public override func isEqual(_ object: Any?) -> Bool {
         guard let other = object as? Trip else { return false }
-        return other.getId() == getId()
+        return other.id == id
     }
     
     public override var hash: Int {
-        return getId().hash
+        return id.hash
     }
     
     struct PropertyKey {
@@ -190,5 +156,30 @@ public class Trip: NSObject, NSSecureCoding {
         
     }
     
-    
+}
+
+// MARK: deprecated properties and methods
+extension Trip {
+    @available(*, deprecated, renamed: "id")
+    public func getId() -> String { id }
+    @available(*, deprecated, renamed: "departureTime")
+    public func getDepartureTime() -> Date { departureTime }
+    @available(*, deprecated, renamed: "arrivalTime")
+    public func getArrivalTime() -> Date { arrivalTime }
+    @available(*, deprecated, renamed: "plannedDepartureTime")
+    public func getPlannedDepartureTime() -> Date { plannedDepartureTime }
+    @available(*, deprecated, renamed: "plannedArrivalTime")
+    public func getPlannedArrivalTime() -> Date { plannedArrivalTime }
+    @available(*, deprecated, renamed: "hasDeviantDeparture")
+    public func isDeparturingLate() -> Bool { hasDeviantDeparture }
+    @available(*, deprecated, renamed: "hasDeviantArrival")
+    public func isArrivingLate() -> Bool { hasDeviantArrival }
+    @available(*, deprecated, renamed: "hasPredictedDepartureTime")
+    public func isPredictedDepartureTime() -> Bool { hasPredictedDepartureTime }
+    @available(*, deprecated, renamed: "hasPredictedArrivalTime")
+    public func isPredictedArrivalTime() -> Bool { hasPredictedArrivalTime }
+    @available(*, deprecated, renamed: "minTime")
+    public func getMinTime() -> Date { minTime }
+    @available(*, deprecated, renamed: "maxTime")
+    public func getMaxTime() -> Date { maxTime }
 }

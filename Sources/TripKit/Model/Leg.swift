@@ -1,50 +1,93 @@
 import Foundation
 import os.log
 
+/// A leg represents a partial, direct trip between two locations. A leg can be an `IndividualLeg` or a `PublicLeg`.
 public protocol Leg {
     
-    var departure: Location {get}
-    var arrival: Location {get}
-    var path: [LocationPoint] {get}
+    /// Departure location or station.
+    var departure: Location { get }
+    /// Arrival location or station.
+    var arrival: Location { get }
+    /// Coordinate sequence of this leg.
+    var path: [LocationPoint] { get }
     
-    func getDepartureTime() -> Date
+    /// Predicted departure time, if available, otherwise the planned time.
+    var departureTime: Date { get }
+    /// Predicted departure time, if available, otherwise the planned time.
+    var arrivalTime: Date { get }
     
-    func getArrivalTime() -> Date
+    /// Returns always the planned departure time.
+    var plannedDepartureTime: Date { get }
+    /// Returns always the planned arrival time.
+    var plannedArrivalTime: Date { get }
     
-    func getPlannedDepartureTime() -> Date
-    
-    func getPlannedArrivalTime() -> Date
-    
-    func getMinTime() -> Date
-    
-    func getMaxTime() -> Date
-    
+    /// Returns the earliest departure time.
+    ///
+    /// This may be either the predicted or the planned time, depending on what is smaller.
+    var minTime: Date { get }
+    /// Returns the latest arrival time.
+    ///
+    /// This may be either the predicted or the planned time, depending on what is marger.
+    var maxTime: Date { get }
 }
 
+public extension Leg {
+    @available(*, deprecated, renamed: "departureTime")
+    func getDepartureTime() -> Date { departureTime }
+    @available(*, deprecated, renamed: "arrivalTime")
+    func getArrivalTime() -> Date { arrivalTime }
+    @available(*, deprecated, renamed: "plannedDepartureTime")
+    func getPlannedDepartureTime() -> Date { plannedDepartureTime }
+    @available(*, deprecated, renamed: "plannedArrivalTime")
+    func getPlannedArrivalTime() -> Date { plannedArrivalTime }
+    @available(*, deprecated, renamed: "minTime")
+    func getMinTime() -> Date { minTime }
+    @available(*, deprecated, renamed: "maxTime")
+    func getMaxTime() -> Date { maxTime }
+}
+
+/// A leg using a public means of transport.
 public class PublicLeg: NSObject, Leg, NSSecureCoding {
     
     public static var supportsSecureCoding: Bool = true
     
-    public var departure: Location
-    public var arrival: Location
-    public let line: Line
-    public let destination: Location?
-    public let departureStop: Stop
-    public let arrivalStop: Stop
-    public let intermediateStops: [Stop]
-    public let message: String?
+    public var departure: Location { departureStop.location }
+    public var arrival: Location { arrivalStop.location }
     public let path: [LocationPoint]
+    public var departureTime: Date { departureStop.predictedTime ?? departureStop.plannedTime }
+    public var arrivalTime: Date { arrivalStop.predictedTime ?? arrivalStop.plannedTime }
+    public var plannedDepartureTime: Date { departureStop.plannedTime }
+    public var plannedArrivalTime: Date { arrivalStop.plannedTime }
+    public var minTime: Date { departureStop.minTime }
+    public var maxTime: Date { arrivalStop.maxTime }
+    
+    /// Means of transport of this leg.
+    public let line: Line
+    /// The destination location of the line.
+    public let destination: Location?
+    /// Information about the departure of this stop. Contains time, platform and a bool indicating if the stop has been cancelled.
+    public let departureStop: StopEvent
+    /// Information about the arrival of this stop. Contains time, platform and a bool indicating if the stop has been cancelled.
+    public let arrivalStop: StopEvent
+    /// List of all intermediate stops in between the departure and arrival location.
+    public let intermediateStops: [Stop]
+    /// Message regarding this whole leg.
+    public let message: String?
+    /// Context for querying the journey of the line. See `NetworkProvider.queryJourneyDetail`
     public let journeyContext: QueryJourneyDetailContext?
-    /// load factor tells the expected train capacity utilisation of a train of the DB provider
+    /// Load factor tells the expected train capacity utilisation of a train of the DB provider.
     public let loadFactor: LoadFactor?
     
-    public init(line: Line, destination: Location?, departureStop: Stop, arrivalStop: Stop, intermediateStops: [Stop], message: String?, path: [LocationPoint] = [], journeyContext: QueryJourneyDetailContext? = nil, loadFactor: LoadFactor? = nil) {
-        self.departure = departureStop.location
-        self.arrival = arrivalStop.location
+    /// Returns true if either the departure or arrival stop have been cancelled.
+    public var isCancelled: Bool {
+        return departureStop.cancelled || arrivalStop.cancelled
+    }
+    
+    public init(line: Line, destination: Location?, departure: StopEvent, arrival: StopEvent, intermediateStops: [Stop], message: String?, path: [LocationPoint], journeyContext: QueryJourneyDetailContext?, loadFactor: LoadFactor?) {
         self.line = line
         self.destination = destination
-        self.departureStop = departureStop
-        self.arrivalStop = arrivalStop
+        self.departureStop = departure
+        self.arrivalStop = arrival
         self.intermediateStops = intermediateStops
         self.message = message
         self.path = path
@@ -52,11 +95,16 @@ public class PublicLeg: NSObject, Leg, NSSecureCoding {
         self.loadFactor = loadFactor
     }
     
+    @available(*, deprecated, renamed: "init(line:destination:departure:arrival:intermediateStops:message:path:journeyContext:loadFactor:)")
+    public convenience init(line: Line, destination: Location?, departureStop: Stop, arrivalStop: Stop, intermediateStops: [Stop], message: String?, path: [LocationPoint] = [], journeyContext: QueryJourneyDetailContext? = nil, loadFactor: LoadFactor? = nil) {
+        self.init(line: line, destination: destination, departure: departureStop.departure!, arrival: arrivalStop.arrival!, intermediateStops: intermediateStops, message: message, path: path, journeyContext: journeyContext, loadFactor: loadFactor)
+    }
+    
     required convenience public init?(coder aDecoder: NSCoder) {
         guard
             let line = aDecoder.decodeObject(of: Line.self, forKey: PropertyKey.line),
-            let departureStop = aDecoder.decodeObject(of: Stop.self, forKey: PropertyKey.departureStop),
-            let arrivalStop = aDecoder.decodeObject(of: Stop.self, forKey: PropertyKey.arrivalStop),
+            let departureStop = aDecoder.decodeObject(of: Stop.self, forKey: PropertyKey.departureStop)?.departure,
+            let arrivalStop = aDecoder.decodeObject(of: Stop.self, forKey: PropertyKey.arrivalStop)?.arrival,
             let intermediateStops = aDecoder.decodeObject(of: [NSArray.self, Stop.self], forKey: PropertyKey.intermediateStops) as? [Stop]
         else {
             os_log("failed to decode public leg", log: .default, type: .error)
@@ -70,7 +118,7 @@ public class PublicLeg: NSObject, Leg, NSSecureCoding {
         }
         let journeyContext = aDecoder.decodeObject(of: QueryJourneyDetailContext.self, forKey: PropertyKey.journeyContext)
         let loadFactor = LoadFactor(rawValue: aDecoder.decodeInteger(forKey: PropertyKey.loadFactor))
-        self.init(line: line, destination: destination, departureStop: departureStop, arrivalStop: arrivalStop, intermediateStops: intermediateStops, message: message, path: path, journeyContext: journeyContext, loadFactor: loadFactor)
+        self.init(line: line, destination: destination, departure: departureStop, arrival: arrivalStop, intermediateStops: intermediateStops, message: message, path: path, journeyContext: journeyContext, loadFactor: loadFactor)
     }
     
     public func encode(with aCoder: NSCoder) {
@@ -78,8 +126,8 @@ public class PublicLeg: NSObject, Leg, NSSecureCoding {
         if let destination = destination {
             aCoder.encode(destination, forKey: PropertyKey.destination)
         }
-        aCoder.encode(departureStop, forKey: PropertyKey.departureStop)
-        aCoder.encode(arrivalStop, forKey: PropertyKey.arrivalStop)
+        aCoder.encode(Stop(location: departureStop.location, departure: departureStop, arrival: nil, message: departureStop.message, wagonSequenceContext: departureStop.wagonSequenceContext), forKey: PropertyKey.departureStop)
+        aCoder.encode(Stop(location: arrivalStop.location, departure: nil, arrival: arrivalStop, message: arrivalStop.message, wagonSequenceContext: arrivalStop.wagonSequenceContext), forKey: PropertyKey.arrivalStop)
         aCoder.encode(intermediateStops, forKey: PropertyKey.intermediateStops)
         if let message = message {
             aCoder.encode(message, forKey: PropertyKey.message)
@@ -91,30 +139,6 @@ public class PublicLeg: NSObject, Leg, NSSecureCoding {
         if let loadFactor = loadFactor {
             aCoder.encode(loadFactor.rawValue, forKey: PropertyKey.loadFactor)
         }
-    }
-    
-    public func getDepartureTime() -> Date {
-        return (departureStop.predictedDepartureTime != nil ? departureStop.predictedDepartureTime : departureStop.plannedDepartureTime)!
-    }
-    
-    public func getArrivalTime() -> Date {
-        return (arrivalStop.predictedArrivalTime != nil ? arrivalStop.predictedArrivalTime : arrivalStop.plannedArrivalTime)!
-    }
-    
-    public func getPlannedDepartureTime() -> Date {
-        return (departureStop.plannedDepartureTime ?? departureStop.predictedDepartureTime)!
-    }
-    
-    public func getPlannedArrivalTime() -> Date {
-        return (arrivalStop.plannedArrivalTime ?? arrivalStop.predictedArrivalTime)!
-    }
-    
-    public func getMinTime() -> Date {
-        return departureStop.getMinTime()
-    }
-    
-    public func getMaxTime() -> Date {
-        return arrivalStop.getMaxTime()
     }
     
     public override var description: String {
@@ -144,20 +168,29 @@ public class PublicLeg: NSObject, Leg, NSSecureCoding {
     
 }
 
+/// A leg using an individual means of transport, like walking, driving a bike or renting a taxi.
 public class IndividualLeg: NSObject, Leg, NSSecureCoding {
     
     public static var supportsSecureCoding: Bool = true
     
-    public let type: Type
     public var departure: Location
     public var arrival: Location
+    public let path: [LocationPoint]
     public let departureTime: Date
     public let arrivalTime: Date
-    public let min: Int
-    public let distance: Int
-    public let path: [LocationPoint]
+    public var plannedDepartureTime: Date { departureTime }
+    public var plannedArrivalTime: Date { arrivalTime }
+    public var minTime: Date { departureTime }
+    public var maxTime: Date { arrivalTime }
     
-    public init(type: Type, departureTime: Date, departure: Location, arrival: Location, arrivalTime: Date, distance: Int, path: [LocationPoint]) {
+    /// Type of this individual leg.
+    public let type: `Type`
+    /// Number of minutes between departure and arrival.
+    public let min: Int
+    /// Diestance in meters between departure and arrival.
+    public let distance: Int
+    
+    public init(type: `Type`, departureTime: Date, departure: Location, arrival: Location, arrivalTime: Date, distance: Int, path: [LocationPoint]) {
         self.type = type
         self.departure = departure
         self.arrival = arrival
@@ -195,30 +228,6 @@ public class IndividualLeg: NSObject, Leg, NSSecureCoding {
         aCoder.encode(arrivalTime, forKey: PropertyKey.arrivalTime)
         aCoder.encode(distance, forKey: PropertyKey.distance)
         aCoder.encode(path.flatMap({[$0.lat, $0.lon]}), forKey: PropertyKey.path)
-    }
-    
-    public func getDepartureTime() -> Date {
-        return departureTime
-    }
-    
-    public func getArrivalTime() -> Date {
-        return arrivalTime
-    }
-    
-    public func getPlannedDepartureTime() -> Date {
-        return departureTime
-    }
-    
-    public func getPlannedArrivalTime() -> Date {
-        return arrivalTime
-    }
-    
-    public func getMinTime() -> Date {
-        return departureTime
-    }
-    
-    public func getMaxTime() -> Date {
-        return arrivalTime
     }
     
     public enum `Type`: Int {

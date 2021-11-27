@@ -723,64 +723,26 @@ public class VrsProvider: AbstractNetworkProvider {
                     let viaLocation = viaLocationWithPosition.location
                     let viaPosition = viaLocationWithPosition.position
                     
-                    var plannedArrival: Date? = nil
-                    var predictedArrival: Date? = nil
-                    if let arrivalScheduled = via["arrivalScheduled"] as? String {
-                        plannedArrival = parseDateTime(from: arrivalScheduled)
-                        if let arrival = via["arrival"] as? String {
-                            predictedArrival = parseDateTime(from: arrival)
-                        }
-                    } else if let arrival = via["arrival"] as? String {
-                        plannedArrival = parseDateTime(from: arrival)
-                    }
-                    let stop = Stop(location: viaLocation, plannedArrivalTime: plannedArrival, predictedArrivalTime: predictedArrival, plannedArrivalPlatform: viaPosition, predictedArrivalPlatform: nil, arrivalCancelled: false, plannedDepartureTime: plannedArrival, predictedDepartureTime: predictedArrival, plannedDeparturePlatform: viaPosition, predictedDeparturePlatform: nil, departureCancelled: false)
+                    let (plannedArrivalTime, predictedArrivalTime) = try parsePlannedPredictedTime(from: via, type: "arrival")
+                    let arrival = StopEvent(location: viaLocation, plannedTime: plannedArrivalTime, predictedTime: predictedArrivalTime, plannedPlatform: viaPosition, predictedPlatform: nil, cancelled: false)
+                    let (plannedDepartureTime, predictedDepartureTime) = try parsePlannedPredictedTime(from: via, type: "departure")
+                    let departure = StopEvent(location: viaLocation, plannedTime: plannedDepartureTime, predictedTime: predictedDepartureTime, plannedPlatform: viaPosition, predictedPlatform: nil, cancelled: false)
+                    let stop = Stop(location: viaLocation, departure: departure, arrival: arrival, message: nil, wagonSequenceContext: nil)
                     intermediateStops.append(stop)
                 }
-                var departurePlanned: Date? = nil
-                var departurePredicted: Date? = nil
-                if let departureScheduled = segment["departureScheduled"] as? String {
-                    departurePlanned = parseDateTime(from: departureScheduled)
-                    if let departure = segment["departure"] as? String {
-                        departurePredicted = parseDateTime(from: departure)
-                    }
-                    if index == 0 {
-                        context.departure(date: departurePredicted ?? departurePlanned)
-                    }
-                } else if let departure = segment["departure"] as? String {
-                    departurePlanned = parseDateTime(from: departure)
-                    if index == 0 {
-                        context.departure(date: departurePlanned)
-                    }
+                let (departurePlanned, departurePredicted) = try parsePlannedPredictedTime(from: segment, type: "departure")
+                if index == 0 {
+                    context.departure(date: departurePredicted ?? departurePlanned)
                 }
                 
-                var arrivalPlanned: Date? = nil
-                var arrivalPredicted: Date? = nil
-                if let arrivalScheduled = segment["arrivalScheduled"] as? String {
-                    arrivalPlanned = parseDateTime(from: arrivalScheduled)
-                    if let arrival = segment["arrival"] as? String {
-                        arrivalPredicted = parseDateTime(from: arrival)
-                    }
-                    if index == segments.count - 1 {
-                        context.arrival(date: arrivalPredicted ?? arrivalPlanned)
-                    }
-                } else if let arrival = segment["arrival"] as? String {
-                    arrivalPlanned = parseDateTime(from: arrival)
-                    if index == segments.count - 1 {
-                        context.arrival(date: arrivalPlanned)
-                    }
+                let (arrivalPlanned, arrivalPredicted) = try parsePlannedPredictedTime(from: segment, type: "arrival")
+                if index == segments.count - 1 {
+                    context.arrival(date: arrivalPredicted ?? arrivalPlanned)
                 }
                 
-                let travelTime = segment["traveltime"] as? Int ?? 0
-                let distance = segment["distance"] as? Int ?? 0
-                var line: Line? = nil
-                var direction: String? = nil
-                if let lineObject = segment["line"] as? [String: Any] {
-                    line = try parseLine(from: lineObject)
-                    direction = lineObject["direction"] as? String
-                }
                 var message = ""
                 for info in segment["info"] as? [Any] ?? [] {
-                    guard let info = info as? [String: Any], let text = info["text"] as? String else { throw ParseError(reason: "failed to parse segment info") }
+                    guard let info = info as? [String: Any], let text = info["text"] as? String else { continue }
                     if message.length > 0 {
                         message += ", "
                     }
@@ -804,30 +766,29 @@ public class VrsProvider: AbstractNetworkProvider {
                 }
                 
                 if type == "walk" {
-                    if departurePlanned == nil {
-                        departurePlanned = legs.last?.getArrivalTime()
-                    }
-                    if arrivalPlanned == nil {
-                        arrivalPlanned = departurePlanned?.addingTimeInterval(Double(travelTime))
-                    }
-                    let addTime: TimeInterval = !legs.isEmpty ? max(0, -departurePlanned!.timeIntervalSince(legs.last!.getMaxTime())) : 0
-                    legs.append(IndividualLeg(type: .WALK, departureTime: departurePlanned!.addingTimeInterval(addTime), departure: segmentOrigin, arrival: segmentDestination, arrivalTime: arrivalPlanned!.addingTimeInterval(addTime), distance: distance, path: points))
+                    let distance = segment["distance"] as? Int ?? 0
+                    let addTime: TimeInterval = !legs.isEmpty ? max(0, -departurePlanned.timeIntervalSince(legs.last!.maxTime)) : 0
+                    legs.append(IndividualLeg(type: .WALK, departureTime: departurePlanned.addingTimeInterval(addTime), departure: segmentOrigin, arrival: segmentDestination, arrivalTime: arrivalPlanned.addingTimeInterval(addTime), distance: distance, path: points))
                 } else if type == "publicTransport" {
                     let directionLoc: Location?
-                    if let direction = direction {
+                    guard let lineObject = segment["line"] as? [String: Any] else {
+                        throw ParseError(reason: "failed to parse line")
+                    }
+                    let line = try parseLine(from: lineObject)
+                    if let direction = lineObject["direction"] as? String {
                         directionLoc = Location(type: .station, id: nil, coord: nil, place: nil, name: direction)
                     } else {
                         directionLoc = nil
                     }
-                    let departureStop = Stop(location: segmentOrigin, plannedArrivalTime: nil, predictedArrivalTime: nil, plannedArrivalPlatform: nil, predictedArrivalPlatform: nil, arrivalCancelled: false, plannedDepartureTime: departurePlanned, predictedDepartureTime: departurePredicted, plannedDeparturePlatform: segmentOriginPosition, predictedDeparturePlatform: nil, departureCancelled: false)
-                    let arrivalStop = Stop(location: segmentDestination, plannedArrivalTime: arrivalPlanned, predictedArrivalTime: arrivalPredicted, plannedArrivalPlatform: segmentDestinationPosition, predictedArrivalPlatform: nil, arrivalCancelled: false, plannedDepartureTime: nil, predictedDepartureTime: nil, plannedDeparturePlatform: nil, predictedDeparturePlatform: nil, departureCancelled: false)
+                    let departure = StopEvent(location: segmentOrigin, plannedTime: departurePlanned, predictedTime: departurePredicted, plannedPlatform: segmentOriginPosition, predictedPlatform: nil, cancelled: false)
+                    let arrival = StopEvent(location: segmentDestination, plannedTime: arrivalPlanned, predictedTime: arrivalPredicted, plannedPlatform: segmentDestinationPosition, predictedPlatform: nil, cancelled: false)
                     let journeyContext: VrsJourneyContext?
                     if let destination = directionLoc {
-                        journeyContext = VrsJourneyContext(from: departureStop.location, to: destination, time: departureStop.predictedDepartureTime ?? departureStop.plannedDepartureTime ?? Date(), plannedTime: departureStop.plannedDepartureTime ?? departureStop.predictedDepartureTime ?? Date(), product: line?.product, line: line)
+                        journeyContext = VrsJourneyContext(from: segmentOrigin, to: destination, time: departure.predictedTime ?? departure.plannedTime, plannedTime: departure.plannedTime, product: line.product, line: line)
                     } else {
                         journeyContext = nil
                     }
-                    legs.append(PublicLeg(line: line!, destination: directionLoc, departureStop: departureStop, arrivalStop: arrivalStop, intermediateStops: intermediateStops, message: message.emptyToNil, path: points, journeyContext: journeyContext))
+                    legs.append(PublicLeg(line: line, destination: directionLoc, departure: departure, arrival: arrival, intermediateStops: intermediateStops, message: message.emptyToNil, path: points, journeyContext: journeyContext, loadFactor: nil))
                 } else {
                     throw ParseError(reason: "illegal segment type \(type)")
                 }
@@ -884,7 +845,7 @@ public class VrsProvider: AbstractNetworkProvider {
                 let trip = trips.first(where: { (trip) -> Bool in
                     guard trip.legs.filter({$0 is PublicLeg}).count == 1 else { return false }
                     guard let leg = trip.legs.filter({$0 is PublicLeg}).first as? PublicLeg else { return false }
-                    guard leg.departureStop.plannedDepartureTime == context.plannedTime || leg.departureStop.predictedDepartureTime == context.time else { return false }
+                    guard leg.departureStop.plannedTime == context.plannedTime || leg.departureStop.predictedTime == context.time else { return false }
                     guard leg.line == context.line else { return false }
                     return true
                 })
@@ -902,7 +863,7 @@ public class VrsProvider: AbstractNetworkProvider {
                             let trip = trips.first(where: { (trip) -> Bool in
                                 guard trip.legs.filter({$0 is PublicLeg}).count == 1 else { return false }
                                 guard let leg = trip.legs.filter({$0 is PublicLeg}).first as? PublicLeg else { return false }
-                                guard leg.departureStop.plannedDepartureTime == context.plannedTime || leg.departureStop.predictedDepartureTime == context.time else { return false }
+                                guard leg.departureStop.plannedTime == context.plannedTime || leg.departureStop.predictedTime == context.time else { return false }
                                 guard leg.line == context.line else { return false }
                                 return true
                             })
@@ -1012,6 +973,23 @@ public class VrsProvider: AbstractNetworkProvider {
         guard let date = dateFormat.date(from: dateTimeString) else { return nil }
         let timeInterval = floor(date.timeIntervalSinceReferenceDate / 60.0) * 60.0
         return Date(timeIntervalSinceReferenceDate: timeInterval)
+    }
+    
+    private func parsePlannedPredictedTime(from json: [String : Any], type: String) throws -> (plannedDate: Date, predictedDate: Date?) {
+        var plannedDate: Date? = nil
+        var predictedDate: Date? = nil
+        if let departureScheduled = json["\(type)Scheduled"] as? String {
+            plannedDate = parseDateTime(from: departureScheduled)
+            if let departure = json[type] as? String {
+                predictedDate = parseDateTime(from: departure)
+            }
+        } else if let departure = json[type] as? String {
+            plannedDate = parseDateTime(from: departure)
+        }
+        guard let plannedDate = plannedDate else {
+            throw ParseError(reason: "failed to parse \(type) time")
+        }
+        return (plannedDate, predictedDate)
     }
     
     func parsePolygon(polygon: String, points: inout [LocationPoint]) {
