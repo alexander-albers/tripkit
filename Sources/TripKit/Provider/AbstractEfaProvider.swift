@@ -860,7 +860,7 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
                         if let msg = legMessages.joined(separator: "\n").emptyToNil {
                             lastMessage += "\n" + msg
                         }
-                        legs[legs.count - 1] = PublicLeg(line: last.line, destination: last.destination, departureStop: last.departureStop, arrivalStop: last.arrivalStop, intermediateStops: last.intermediateStops, message: lastMessage, path: last.path, journeyContext: last.journeyContext)
+                        legs[legs.count - 1] = PublicLeg(line: last.line, destination: last.destination, departure: last.departureStop, arrival: last.arrivalStop, intermediateStops: last.intermediateStops, message: lastMessage, path: last.path, journeyContext: last.journeyContext, loadFactor: last.loadFactor)
                     }
                 } else if meansOfTransportType == 98 && meansOfTransportProductName == "gesicherter Anschluss" {
                     // ignore
@@ -1018,17 +1018,34 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
             let plannedStopDepartureTime = processItdDateTime(xml: point["itdDateTime"][1])
             let predictedStopDepartureTime = processItdDateTime(xml: point["itdDateTimeTarget"][1])
             
-            let stop = Stop(location: stopLocation, plannedArrivalTime: plannedStopArrivalTime, predictedArrivalTime: predictedStopArrivalTime, plannedArrivalPlatform: stopPosition, predictedArrivalPlatform: nil, arrivalCancelled: false, plannedDepartureTime: plannedStopDepartureTime, predictedDepartureTime: predictedStopDepartureTime, plannedDeparturePlatform: stopPosition, predictedDeparturePlatform: nil, departureCancelled: false)
+            let departure: StopEvent?
+            if let plannedStopDepartureTime = plannedStopDepartureTime {
+                departure = StopEvent(location: stopLocation, plannedTime: plannedStopDepartureTime, predictedTime: predictedStopDepartureTime, plannedPlatform: stopPosition, predictedPlatform: nil, cancelled: false)
+            } else {
+                departure = nil
+            }
+            let arrival: StopEvent?
+            if let plannedStopArrivalTime = plannedStopArrivalTime {
+                arrival = StopEvent(location: stopLocation, plannedTime: plannedStopArrivalTime, predictedTime: predictedStopArrivalTime, plannedPlatform: stopPosition, predictedPlatform: nil, cancelled: false)
+            } else {
+                arrival = nil
+            }
+            
+            let stop = Stop(location: stopLocation, departure: departure, arrival: arrival, message: nil, wagonSequenceContext: nil)
             
             stops.append(stop)
         }
         guard stops.count >= 2 else {
-            throw ParseError(reason: "could not parse points")
+            throw ParseError(reason: "could not parse departure and arrival")
         }
-        let departureStop = stops.removeFirst()
-        let arrivalStop = stops.removeLast()
+        guard let departureStop = stops.removeFirst().departure else {
+            throw ParseError(reason: "could not parse departure")
+        }
+        guard let arrivalStop = stops.removeLast().arrival else {
+            throw ParseError(reason: "could not parse arrival")
+        }
         let path = processItdPathCoordinates(xml["itdRequest"]["itdStopSeqCoordRequest"]["itdPathCoordinates"]) ?? []
-        let leg = PublicLeg(line: line, destination: arrivalStop.location, departureStop: departureStop, arrivalStop: arrivalStop, intermediateStops: stops, message: nil, path: path, journeyContext: nil)
+        let leg = PublicLeg(line: line, destination: arrivalStop.location, departure: departureStop, arrival: arrivalStop, intermediateStops: stops, message: nil, path: path, journeyContext: nil, loadFactor: nil)
         let trip = Trip(id: "", from: departureStop.location, to: arrivalStop.location, legs: [leg], fares: [])
         completion(request, .success(trip: trip, leg: leg))
     }
@@ -1144,14 +1161,16 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
             var legs: [Leg] = []
             for l in tp["ls"]["l"].all {
                 let realtime = l["realtime"].element?.text == "1"
-                var departure: Stop? = nil
-                var arrival: Stop? = nil
+                var departure: StopEvent? = nil
+                var arrival: StopEvent? = nil
                 for p in l["ps"]["p"].all {
                     let name = p["n"].element?.text
                     let id = p["r"]["id"].element?.text
                     let usage = p["u"].element?.text
                     
-                    let plannedTime = parseMobilePlannedTime(xml: p["st"])
+                    guard let plannedTime = parseMobilePlannedTime(xml: p["st"]) else {
+                        throw ParseError(reason: "failed to parse planned departure/arrival time")
+                    }
                     let predictedTime = realtime ? parseMobilePredictedTime(xml: p["st"]) : nil
                     
                     let position = parsePosition(position: p["r"]["pl"].element?.text)
@@ -1164,108 +1183,118 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
                     } else {
                         location = Location(type: .station, id: id, coord: coord, place: place, name: name)
                     }
-                    if let location = location {
-                        if usage == "departure" {
-                            departure = Stop(location: location, plannedArrivalTime: nil, predictedArrivalTime: nil, plannedArrivalPlatform: nil, predictedArrivalPlatform: nil, arrivalCancelled: false, plannedDepartureTime: plannedTime, predictedDepartureTime: predictedTime, plannedDeparturePlatform: position, predictedDeparturePlatform: nil, departureCancelled: false)
-                            if firstDepartureLocation == nil {
-                                firstDepartureLocation = location
-                            }
-                        } else if usage == "arrival" {
-                            arrival = Stop(location: location, plannedArrivalTime: plannedTime, predictedArrivalTime: predictedTime, plannedArrivalPlatform: position, predictedArrivalPlatform: nil, arrivalCancelled: false, plannedDepartureTime: nil, predictedDepartureTime: nil, plannedDeparturePlatform: nil, predictedDeparturePlatform: nil, departureCancelled: false)
-                            lastArrivalLocation = location
-                        } else {
-                            throw ParseError(reason: "unknown usage \(usage ?? "")")
-                        }
-                    } else {
+                    guard let location = location else {
                         throw ParseError(reason: "failed to parse location")
+                    }
+                    let stop = StopEvent(location: location, plannedTime: plannedTime, predictedTime: predictedTime, plannedPlatform: position, predictedPlatform: nil, cancelled: false)
+                    switch usage {
+                    case "departure":
+                        departure = stop
+                        if firstDepartureLocation == nil {
+                            firstDepartureLocation = location
+                        }
+                    case "arrival":
+                        arrival = stop
+                        lastArrivalLocation = location
+                    default:
+                        throw ParseError(reason: "unknown usage \(usage ?? "")")
                     }
                 }
                 
-                if let arrival = arrival, let departure = departure {
-                    let lineDestination = try parseMobileLineDestination(xml: l, tyOrCo: false)
-                    let path: [LocationPoint]
-                    if let coordString = l["pt"].element?.text {
-                        path = processCoordinateStrings(coordString)
-                    } else {
-                        path = []
-                    }
-                    
-                    var intermediateStops: [Stop] = []
-                    
-                    for stop in l["pss"]["s"].all {
-                        guard let s = stop.element?.text else { throw ParseError(reason: "failed to parse stop") }
-                        let intermediateParts = s.components(separatedBy: ";")
-                        guard intermediateParts.count > 4 else { throw ParseError(reason: "failed to parse intermediate") }
-                        let id = intermediateParts[0]
-                        if id != departure.location.id && id != arrival.location.id {
-                            let name = normalizeLocationName(name: intermediateParts[1])!
+                guard let departure = departure else {
+                    throw ParseError(reason: "failed to parse departure stop")
+                }
+                guard let arrival = arrival else {
+                    throw ParseError(reason: "failed to parse arrival stop")
+                }
+                
+                let lineDestination = try parseMobileLineDestination(xml: l, tyOrCo: false)
+                let path: [LocationPoint]
+                if let coordString = l["pt"].element?.text {
+                    path = processCoordinateStrings(coordString)
+                } else {
+                    path = []
+                }
+                
+                var intermediateStops: [Stop] = []
+                
+                for stop in l["pss"]["s"].all {
+                    guard let s = stop.element?.text else { throw ParseError(reason: "failed to parse stop") }
+                    let intermediateParts = s.components(separatedBy: ";")
+                    guard intermediateParts.count > 4 else { throw ParseError(reason: "failed to parse intermediate") }
+                    let id = intermediateParts[0]
+                    if id != departure.location.id && id != arrival.location.id {
+                        let name = normalizeLocationName(name: intermediateParts[1])!
+                        
+                        var plannedTime: Date? = nil
+                        var predictedTime: Date? = nil
+                        if !(intermediateParts[2] == "0000-1" && intermediateParts[3] == "000-1") {
+                            var dateComponents = DateComponents()
+                            dateComponents.timeZone = timeZone
+                            parseIsoDate(from: intermediateParts[2], dateComponents: &dateComponents)
+                            parseIsoTime(from: intermediateParts[3], dateComponents: &dateComponents)
+                            plannedTime = gregorianCalendar.date(from: dateComponents)
                             
-                            var plannedTime: Date? = nil
-                            var predictedTime: Date? = nil
-                            if !(intermediateParts[2] == "0000-1" && intermediateParts[3] == "000-1") {
-                                var dateComponents = DateComponents()
+                            if realtime {
+                                dateComponents = DateComponents()
                                 dateComponents.timeZone = timeZone
                                 parseIsoDate(from: intermediateParts[2], dateComponents: &dateComponents)
                                 parseIsoTime(from: intermediateParts[3], dateComponents: &dateComponents)
-                                plannedTime = gregorianCalendar.date(from: dateComponents)
+                                predictedTime = gregorianCalendar.date(from: dateComponents)
                                 
-                                if realtime {
-                                    dateComponents = DateComponents()
-                                    dateComponents.timeZone = timeZone
-                                    parseIsoDate(from: intermediateParts[2], dateComponents: &dateComponents)
-                                    parseIsoTime(from: intermediateParts[3], dateComponents: &dateComponents)
-                                    predictedTime = gregorianCalendar.date(from: dateComponents)
-                                    
-                                    if intermediateParts.count > 5 && intermediateParts[5].length > 0 {
-                                        if let delay = Int(intermediateParts[5]) {
-                                            predictedTime = predictedTime?.addingTimeInterval(Double(delay) * 60.0)
-                                        }
+                                if intermediateParts.count > 5 && intermediateParts[5].length > 0 {
+                                    if let delay = Int(intermediateParts[5]) {
+                                        predictedTime = predictedTime?.addingTimeInterval(Double(delay) * 60.0)
                                     }
                                 }
                             }
-                            let coordPart = intermediateParts[4]
-                            let coords: LocationPoint?
-                            if coordPart != "::" {
-                                let coordParts = coordPart.components(separatedBy: ":")
-                                if coordParts[2] == "WGS84", let lat = Double(coordParts[1]), let lon = Double(coordParts[0]) {
-                                    coords = LocationPoint(lat: Int(round(lat)), lon: Int(round(lon)))
-                                } else {
-                                    coords = nil
-                                }
+                        }
+                        let coordPart = intermediateParts[4]
+                        let coords: LocationPoint?
+                        if coordPart != "::" {
+                            let coordParts = coordPart.components(separatedBy: ":")
+                            if coordParts[2] == "WGS84", let lat = Double(coordParts[1]), let lon = Double(coordParts[0]) {
+                                coords = LocationPoint(lat: Int(round(lat)), lon: Int(round(lon)))
                             } else {
                                 coords = nil
                             }
-                            
-                            let location = Location(type: .station, id: id, coord: coords, place: nil, name: name)
-                            if let location = location {
-                                let stop = Stop(location: location, plannedArrivalTime: plannedTime, predictedArrivalTime: predictedTime, plannedArrivalPlatform: nil, predictedArrivalPlatform: nil, arrivalCancelled: false, plannedDepartureTime: nil, predictedDepartureTime: nil, plannedDeparturePlatform: nil, predictedDeparturePlatform: nil, departureCancelled: false)
-                                intermediateStops.append(stop)
+                        } else {
+                            coords = nil
+                        }
+                        
+                        let location = Location(type: .station, id: id, coord: coords, place: nil, name: name)
+                        if let location = location {
+                            let stopEvent: StopEvent?
+                            if let plannedTime = plannedTime {
+                                stopEvent = StopEvent(location: location, plannedTime: plannedTime, predictedTime: predictedTime, plannedPlatform: nil, predictedPlatform: nil, cancelled: false)
                             } else {
-                                throw ParseError(reason: "failed to parse stop location")
+                                stopEvent = nil
                             }
+                            let stop = Stop(location: location, departure: stopEvent, arrival: stopEvent, message: nil, wagonSequenceContext: nil)
+                            intermediateStops.append(stop)
+                        } else {
+                            throw ParseError(reason: "failed to parse stop location")
                         }
                     }
-                    let addTime: TimeInterval = !legs.isEmpty ? max(0, -departure.getMinTime().timeIntervalSince(legs.last!.getMaxTime())) : 0
-                    if lineDestination.line === Line.FOOTWAY {
-                        legs.append(IndividualLeg(type: .WALK, departureTime: departure.getMinTime().addingTimeInterval(addTime), departure: departure.location, arrival: arrival.location, arrivalTime: arrival.getMaxTime().addingTimeInterval(addTime), distance: 0, path: path))
-                    } else if lineDestination.line === Line.TRANSFER {
-                        legs.append(IndividualLeg(type: .TRANSFER, departureTime: departure.getMinTime().addingTimeInterval(addTime), departure: departure.location, arrival: arrival.location, arrivalTime: arrival.getMaxTime().addingTimeInterval(addTime), distance: 0, path: path))
-                    } else if lineDestination.line === Line.DO_NOT_CHANGE {
-                        if let last = legs.last as? PublicLeg {
-                            var lastMessage = "Nicht umsteigen, Weiterfahrt im selben Fahrzeug möglich."
-                            if let message = last.message?.emptyToNil {
-                                lastMessage += "\n" + message
-                            }
-                            legs[legs.count - 1] = PublicLeg(line: last.line, destination: last.destination, departureStop: last.departureStop, arrivalStop: last.arrivalStop, intermediateStops: last.intermediateStops, message: lastMessage, path: last.path, journeyContext: last.journeyContext)
+                }
+                let addTime: TimeInterval = !legs.isEmpty ? max(0, -departure.minTime.timeIntervalSince(legs.last!.maxTime)) : 0
+                if lineDestination.line === Line.FOOTWAY {
+                    legs.append(IndividualLeg(type: .WALK, departureTime: departure.minTime.addingTimeInterval(addTime), departure: departure.location, arrival: arrival.location, arrivalTime: arrival.maxTime.addingTimeInterval(addTime), distance: 0, path: path))
+                } else if lineDestination.line === Line.TRANSFER {
+                    legs.append(IndividualLeg(type: .TRANSFER, departureTime: departure.minTime.addingTimeInterval(addTime), departure: departure.location, arrival: arrival.location, arrivalTime: arrival.maxTime.addingTimeInterval(addTime), distance: 0, path: path))
+                } else if lineDestination.line === Line.DO_NOT_CHANGE {
+                    if let last = legs.last as? PublicLeg {
+                        var lastMessage = "Nicht umsteigen, Weiterfahrt im selben Fahrzeug möglich."
+                        if let message = last.message?.emptyToNil {
+                            lastMessage += "\n" + message
                         }
-                    } else if lineDestination.line === Line.SECURE_CONNECTION {
-                        // ignore
-                    } else {
-                        let journeyContext: EfaJourneyContext? = nil
-                        legs.append(PublicLeg(line: lineDestination.line, destination: lineDestination.destination, departureStop: departure, arrivalStop: arrival, intermediateStops: intermediateStops, message: nil, path: path, journeyContext: journeyContext))
+                        legs[legs.count - 1] = PublicLeg(line: last.line, destination: last.destination, departure: last.departureStop, arrival: last.arrivalStop, intermediateStops: last.intermediateStops, message: lastMessage, path: last.path, journeyContext: last.journeyContext, loadFactor: last.loadFactor)
                     }
+                } else if lineDestination.line === Line.SECURE_CONNECTION {
+                    // ignore
                 } else {
-                    throw ParseError(reason: "failed to parse stop")
+                    let journeyContext: EfaJourneyContext? = nil
+                    legs.append(PublicLeg(line: lineDestination.line, destination: lineDestination.destination, departure: departure, arrival: arrival, intermediateStops: intermediateStops, message: nil, path: path, journeyContext: journeyContext, loadFactor: nil))
                 }
             }
             
@@ -1285,11 +1314,6 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
             }
             
             let context: EfaRefreshTripContext? = nil
-            //            if let sessionId = sessionId, let requestId = requestId {
-            //                context = EfaRefreshTripContext(sessionId: sessionId, requestId: requestId, routeIndex: "\(trips.count + 1)")
-            //            } else {
-            //                context = nil
-            //            }
             if let firstDepartureLocation = firstDepartureLocation, let lastArrivalLocation = lastArrivalLocation {
                 let trip = Trip(id: tripId, from: firstDepartureLocation, to: lastArrivalLocation, legs: legs, fares: fares, refreshContext: context)
                 trips.append(trip)
@@ -1373,21 +1397,31 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
             let coord = parseCoordinates(string: p["r"]["c"].element?.text)
             
             guard let location = Location(type: .station, id: id, coord: coord, place: place, name: name) else { throw ParseError(reason: "failed to parse stop") }
-            let stop = Stop(location: location, plannedArrivalTime: plannedTime, predictedArrivalTime: nil, plannedArrivalPlatform: nil, predictedArrivalPlatform: nil, arrivalCancelled: false, plannedDepartureTime: plannedTime, predictedDepartureTime: nil, plannedDeparturePlatform: position, predictedDeparturePlatform: nil, departureCancelled: false)
+            let stopEvent: StopEvent?
+            if let plannedTime = plannedTime {
+                stopEvent = StopEvent(location: location, plannedTime: plannedTime, predictedTime: nil, plannedPlatform: position, predictedPlatform: nil, cancelled: false)
+            } else {
+                stopEvent = nil
+            }
+            let stop = Stop(location: location, departure: stopEvent, arrival: stopEvent, message: nil, wagonSequenceContext: nil)
             stops.append(stop)
         }
         guard stops.count >= 2 else {
-            throw ParseError(reason: "could not parse points")
+            throw ParseError(reason: "could not parse departure and arrival")
         }
-        let departureStop = stops.removeFirst()
-        let arrivalStop = stops.removeLast()
+        guard let departureStop = stops.removeFirst().departure else {
+            throw ParseError(reason: "could not parse departure")
+        }
+        guard let arrivalStop = stops.removeLast().arrival else {
+            throw ParseError(reason: "could not parse arrival")
+        }
         let path: [LocationPoint]
         if let coordString = response["c"]["pt"].element?.text {
             path = processCoordinateStrings(coordString)
         } else {
             path = []
         }
-        let leg = PublicLeg(line: line, destination: arrivalStop.location, departureStop: departureStop, arrivalStop: arrivalStop, intermediateStops: stops, message: nil, path: path, journeyContext: nil)
+        let leg = PublicLeg(line: line, destination: arrivalStop.location, departure: departureStop, arrival: arrivalStop, intermediateStops: stops, message: nil, path: path, journeyContext: nil, loadFactor: nil)
         let trip = Trip(id: "", from: departureStop.location, to: arrivalStop.location, legs: [leg], fares: [])
         completion(request, .success(trip: trip, leg: leg))
     }
@@ -1842,8 +1876,9 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
             
             let plannedStopArrivalTime = processItdDateTime(xml: point["itdDateTime"][0])
             var predictedStopArrivalTime = processItdDateTime(xml: point["itdDateTimeTarget"][0])
+            let arrValid = point.element?.attribute(by: "arrValid")?.text ?? "" == "1"
             var arrivalCancelled = cancelled
-            if let delay = Int(point.element?.attribute(by: "arrDelay")?.text ?? ""), delay != -1, predictedStopArrivalTime == nil {
+            if let delay = Int(point.element?.attribute(by: "arrDelay")?.text ?? ""), delay != -1 && arrValid, predictedStopArrivalTime == nil {
                 if delay == -9999 {
                     arrivalCancelled = true
                 } else {
@@ -1855,8 +1890,9 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
             }
             let plannedStopDepartureTime = point["itdDateTime"].all.count > 1 ? processItdDateTime(xml: point["itdDateTime"][1]) : plannedStopArrivalTime
             var predictedStopDepartureTime = point["itdDateTimeTarget"].all.count > 1 ? processItdDateTime(xml: point["itdDateTimeTarget"][1]) : predictedStopArrivalTime
+            let depValid = point.element?.attribute(by: "depValid")?.text ?? "" == "1"
             var departureCancelled = cancelled
-            if let delay = Int(point.element?.attribute(by: "depDelay")?.text ?? ""), delay != -1, predictedStopDepartureTime == nil {
+            if let delay = Int(point.element?.attribute(by: "depDelay")?.text ?? ""), delay != -1 && depValid, predictedStopDepartureTime == nil {
                 if delay == -9999 {
                     departureCancelled = true
                 } else {
@@ -1866,14 +1902,25 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
             if let rblDepartureDelay = rblDepartureDelay, rblDepartureDelay != -9999, predictedStopDepartureTime == nil {
                 predictedStopDepartureTime = plannedStopDepartureTime?.addingTimeInterval(TimeInterval(rblDepartureDelay * 60))
             }
+            let departure: StopEvent?
+            if let plannedStopDepartureTime = plannedStopDepartureTime {
+                departure = StopEvent(location: stopLocation, plannedTime: plannedStopDepartureTime, predictedTime: predictedStopDepartureTime, plannedPlatform: stopPosition, predictedPlatform: nil, cancelled: departureCancelled)
+            } else {
+                departure = nil
+            }
+            let arrival: StopEvent?
+            if let plannedStopArrivalTime = plannedStopArrivalTime {
+                arrival = StopEvent(location: stopLocation, plannedTime: plannedStopArrivalTime, predictedTime: predictedStopArrivalTime, plannedPlatform: stopPosition, predictedPlatform: nil, cancelled: arrivalCancelled)
+            } else {
+                arrival = nil
+            }
             
-            let stop = Stop(location: stopLocation, plannedArrivalTime: plannedStopArrivalTime, predictedArrivalTime: predictedStopArrivalTime, plannedArrivalPlatform: stopPosition, predictedArrivalPlatform: nil, arrivalCancelled: arrivalCancelled, plannedDepartureTime: plannedStopDepartureTime, predictedDepartureTime: predictedStopDepartureTime, plannedDeparturePlatform: stopPosition, predictedDeparturePlatform: nil, departureCancelled: departureCancelled)
-            
+            let stop = Stop(location: stopLocation, departure: departure, arrival: arrival, message: nil, wagonSequenceContext: nil)
             stops.append(stop)
         }
         
-        let departure: Stop
-        let arrival: Stop
+        let departure: StopEvent
+        let arrival: StopEvent
         if stops.count >= 2 {
             if !stops.last!.location.isEqual(arrivalLocation) {
                 throw ParseError(reason: "last intermediate stop is not arrival location!")
@@ -1881,15 +1928,20 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
             let a = stops.removeLast()
             // workaround for MVV sending wrong position for arrival and departure locations in intermediate stops
             // still use the time of the intermediate point because arrival and departure time is *always* sent as predicted, even when its not
-            arrival = Stop(location: a.location, plannedArrivalTime: a.plannedArrivalTime, predictedArrivalTime: a.predictedArrivalTime, plannedArrivalPlatform: plannedArrivalPosition ?? a.plannedArrivalPlatform, predictedArrivalPlatform: arrivalPosition ?? a.predictedArrivalPlatform, arrivalCancelled: a.arrivalCancelled, plannedDepartureTime: nil, predictedDepartureTime: nil, plannedDeparturePlatform: nil, predictedDeparturePlatform: nil, departureCancelled: false, message: a.message, wagonSequenceContext: a.wagonSequenceContext)
+            arrival = StopEvent(location: a.location, plannedTime: a.arrival?.plannedTime ?? arrivalTime, predictedTime: a.arrival?.predictedTime, plannedPlatform: plannedArrivalPosition ?? a.arrival?.plannedPlatform, predictedPlatform: a.arrival?.predictedPlatform, cancelled: a.arrival?.cancelled ?? cancelled)
+            arrival.message = a.message
+            arrival.wagonSequenceContext = a.wagonSequenceContext
+            
             if !stops.first!.location.isEqual(departureLocation) {
                 throw ParseError(reason: "first intermediate stop is not departure location!")
             }
             let d = stops.removeFirst()
-            departure = Stop(location: d.location, plannedArrivalTime: nil, predictedArrivalTime: nil, plannedArrivalPlatform: nil, predictedArrivalPlatform: nil, arrivalCancelled: false, plannedDepartureTime: d.plannedDepartureTime, predictedDepartureTime: d.predictedDepartureTime, plannedDeparturePlatform: plannedDeparturePosition ?? d.plannedDeparturePlatform, predictedDeparturePlatform: departurePosition ?? d.predictedDeparturePlatform, departureCancelled: d.departureCancelled, message: d.message, wagonSequenceContext: d.wagonSequenceContext)
+            departure = StopEvent(location: d.location, plannedTime: d.departure?.plannedTime ?? departureTime, predictedTime: d.departure?.predictedTime, plannedPlatform: plannedDeparturePosition ?? d.departure?.plannedPlatform, predictedPlatform: d.departure?.predictedPlatform, cancelled: d.departure?.cancelled ?? cancelled)
+            departure.message = d.message
+            departure.wagonSequenceContext = d.wagonSequenceContext
         } else {
-            departure = Stop(location: departureLocation, plannedArrivalTime: nil, predictedArrivalTime: nil, plannedArrivalPlatform: nil, predictedArrivalPlatform: nil, arrivalCancelled: false, plannedDepartureTime: departureTargetTime ?? departureTime, predictedDepartureTime: departureTime, plannedDeparturePlatform: departurePosition, predictedDeparturePlatform: nil, departureCancelled: cancelled)
-            arrival = Stop(location: arrivalLocation, plannedArrivalTime: arrivalTargetTime ?? arrivalTime, predictedArrivalTime: arrivalTime, plannedArrivalPlatform: arrivalPosition, predictedArrivalPlatform: nil, arrivalCancelled: cancelled, plannedDepartureTime: nil, predictedDepartureTime: nil, plannedDeparturePlatform: nil, predictedDeparturePlatform: nil, departureCancelled: false)
+            departure = StopEvent(location: departureLocation, plannedTime: departureTargetTime ?? departureTime, predictedTime: departureTargetTime == nil ? nil : departureTime, plannedPlatform: departurePosition, predictedPlatform: nil, cancelled: cancelled)
+            arrival = StopEvent(location: arrivalLocation, plannedTime: arrivalTargetTime ?? arrivalTime, predictedTime: arrivalTargetTime == nil ? nil : arrivalTime, plannedPlatform: arrivalPosition, predictedPlatform: nil, cancelled: cancelled)
         }
         
         let path = processItdPathCoordinates(xml["itdPathCoordinates"])
@@ -1908,14 +1960,14 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
             journeyContext = nil
         }
         
-        legs.append(PublicLeg(line: styledLine, destination: destination, departureStop: departure, arrivalStop: arrival, intermediateStops: stops, message: messages.joined(separator: "\n").emptyToNil, path: path ?? [LocationPoint](), journeyContext: journeyContext))
+        legs.append(PublicLeg(line: styledLine, destination: destination, departure: departure, arrival: arrival, intermediateStops: stops, message: messages.joined(separator: "\n").emptyToNil, path: path ?? [], journeyContext: journeyContext, loadFactor: nil))
         return cancelled
     }
     
     func processIndividualLeg(_ xml: XMLIndexer, _ legs: inout [Leg], _ type: IndividualLeg.`Type`, _ departureTime: Date, _ departureLocation: Location, _ arrivalTime: Date, _ arrivalLocation: Location) {
         var path: [LocationPoint] = processItdPathCoordinates(xml["itdPathCoordinates"]) ?? []
         
-        let addTime: TimeInterval = !legs.isEmpty ? max(0, -departureTime.timeIntervalSince(legs.last!.getMaxTime())) : 0
+        let addTime: TimeInterval = !legs.isEmpty ? max(0, -departureTime.timeIntervalSince(legs.last!.maxTime)) : 0
         if let lastLeg = legs.last as? IndividualLeg, lastLeg.type == type {
             legs.removeLast()
             path.insert(contentsOf: lastLeg.path, at: 0)

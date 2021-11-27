@@ -346,7 +346,7 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider {
                 let trip = trips.first(where: { (trip) -> Bool in
                     guard trip.legs.filter({$0 is PublicLeg}).count == 1 else { return false }
                     guard let leg = trip.legs.filter({$0 is PublicLeg}).first as? PublicLeg else { return false }
-                    guard leg.departureStop.plannedDepartureTime == context.plannedTime || leg.departureStop.predictedDepartureTime == context.time else { return false }
+                    guard leg.departureStop.plannedTime == context.plannedTime || leg.departureStop.predictedTime == context.time else { return false }
                     guard leg.line == context.line else { return false }
                     return true
                 })
@@ -367,7 +367,7 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider {
                         let trip = trips.first(where: { (trip) -> Bool in
                             guard trip.legs.filter({$0 is PublicLeg}).count == 1 else { return false }
                             guard let leg = trip.legs.filter({$0 is PublicLeg}).first as? PublicLeg else { return false }
-                            guard leg.departureStop.plannedDepartureTime == context.plannedTime || leg.departureStop.predictedDepartureTime == context.time else { return false }
+                            guard leg.departureStop.plannedTime == context.plannedTime || leg.departureStop.predictedTime == context.time else { return false }
                             guard leg.line == context.line else { return false }
                             return true
                         })
@@ -912,10 +912,10 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider {
                     reader.skipBytes(0x4a + legsOffset + legIndex * 20)
                     
                     let plannedDepartureTime = try parseTime(reader: reader, baseDate: resDate, dayOffset: tripDayOffset)
-                    let departureLocation = try stations.read(reader: reader)
+                    guard let departureLocation = try stations.read(reader: reader) else { throw ParseError(reason: "failed to parse departure location") }
                     
                     let plannedArrivalTime = try parseTime(reader: reader, baseDate: resDate, dayOffset: tripDayOffset)
-                    let arrivalLocation = try stations.read(reader: reader)
+                    guard let arrivalLocation = try stations.read(reader: reader) else { throw ParseError(reason: "failed to parse arrival location") }
                     
                     let type = reader.readShortReverse()
                     let lineName = strings.read(reader: reader)
@@ -1063,11 +1063,24 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider {
                             
                             reader.skipBytes(2)
                             
-                            let stopLocation = try stations.read(reader: reader)
+                            guard let stopLocation = try stations.read(reader: reader) else { throw ParseError(reason: "failed to parse stop location") }
                             
                             let validPredictedDate = !dominantPlanStopTime || (plannedStopArrivalDate != nil && plannedStopDepartureDate != nil)
                             
-                            let stop = Stop(location: stopLocation!, plannedArrivalTime: plannedStopArrivalDate, predictedArrivalTime: validPredictedDate ? predictedStopArrivalDate : nil, plannedArrivalPlatform: plannedStopArrivalPosition, predictedArrivalPlatform: predictedStopArrivalPosition, arrivalCancelled: stopArrivalCancelled, plannedDepartureTime: plannedStopDepartureDate, predictedDepartureTime: validPredictedDate ? predictedStopDepartureDate : nil, plannedDeparturePlatform: plannedStopDeparturePosition, predictedDeparturePlatform: predictedStopDeparturePosition, departureCancelled: stopDepartureCancelled)
+                            let departure: StopEvent?
+                            if let plannedStopDepartureDate = plannedStopDepartureDate {
+                                departure = StopEvent(location: stopLocation, plannedTime: plannedStopDepartureDate, predictedTime: validPredictedDate ? predictedStopDepartureDate : nil, plannedPlatform: plannedStopDeparturePosition, predictedPlatform: predictedStopDeparturePosition, cancelled: stopDepartureCancelled)
+                            } else {
+                                departure = nil
+                            }
+                            let arrival: StopEvent?
+                            if let plannedStopArrivalDate = plannedStopArrivalDate {
+                                arrival = StopEvent(location: stopLocation, plannedTime: plannedStopArrivalDate, predictedTime: validPredictedDate ? predictedStopArrivalDate : nil, plannedPlatform: plannedStopArrivalPosition, predictedPlatform: predictedStopArrivalPosition, cancelled: stopArrivalCancelled)
+                            } else {
+                                arrival = nil
+                            }
+                            
+                            let stop = Stop(location: stopLocation, departure: departure, arrival: arrival, message: nil, wagonSequenceContext: nil)
                             intermediateStops.append(stop)
                         }
                     }
@@ -1095,10 +1108,10 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider {
                         let lastLeg: Leg? = legs.count > 0 ? legs[legs.count - 1] : nil
                         if let lastLeg = lastLeg as? IndividualLeg, lastLeg.type == individualType {
                             let lastIndividualLeg = legs.remove(at: legs.count - 1)
-                            leg = IndividualLeg(type: individualType, departureTime: lastIndividualLeg.getDepartureTime(), departure: lastIndividualLeg.departure, arrival: arrivalLocation!, arrivalTime: arrivalTime, distance: 0, path: [])
+                            leg = IndividualLeg(type: individualType, departureTime: lastIndividualLeg.departureTime, departure: lastIndividualLeg.departure, arrival: arrivalLocation, arrivalTime: arrivalTime, distance: 0, path: [])
                         } else {
-                            let addTime: TimeInterval = !legs.isEmpty ? max(0, -departureTime.timeIntervalSince(legs.last!.getMaxTime())) : 0
-                            leg = IndividualLeg(type: individualType, departureTime: departureTime.addingTimeInterval(addTime), departure: departureLocation!, arrival: arrivalLocation!, arrivalTime: arrivalTime.addingTimeInterval(addTime), distance: 0, path: [])
+                            let addTime: TimeInterval = !legs.isEmpty ? max(0, -departureTime.timeIntervalSince(legs.last!.maxTime)) : 0
+                            leg = IndividualLeg(type: individualType, departureTime: departureTime.addingTimeInterval(addTime), departure: departureLocation, arrival: arrivalLocation, arrivalTime: arrivalTime.addingTimeInterval(addTime), distance: 0, path: [])
                         }
                     } else if type == 2 {
                         let lineProduct: Product?
@@ -1122,33 +1135,31 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider {
                             direction = nil
                         }
                         
-                        let departure = Stop(location: departureLocation!, plannedArrivalTime: nil, predictedArrivalTime: nil, plannedArrivalPlatform: nil, predictedArrivalPlatform: nil, arrivalCancelled: false, plannedDepartureTime: plannedDepartureTime != 0 ? Date(timeIntervalSince1970: plannedDepartureTime) : nil, predictedDepartureTime: predictedDepartureTime != 0 ? Date(timeIntervalSince1970: predictedDepartureTime) : nil, plannedDeparturePlatform: plannedDeparturePosition, predictedDeparturePlatform: predictedDeparturePosition, departureCancelled: departureCancelled)
-                        let arrival = Stop(location: arrivalLocation!, plannedArrivalTime: plannedArrivalTime != 0 ? Date(timeIntervalSince1970: plannedArrivalTime) : nil, predictedArrivalTime: predictedArrivalTime != 0 ? Date(timeIntervalSince1970: predictedArrivalTime) : nil, plannedArrivalPlatform: plannedArrivalPosition, predictedArrivalPlatform: predictedArrivalPosition, arrivalCancelled: arrivalCancelled, plannedDepartureTime: nil, predictedDepartureTime: nil, plannedDeparturePlatform: nil, predictedDeparturePlatform: nil, departureCancelled: false)
+                        guard plannedDepartureTime != 0 else { throw ParseError(reason: "failed to parse departure time") }
+                        guard plannedArrivalTime != 0 else { throw ParseError(reason: "failed to parse arrival time") }
+                        
+                        let departure = StopEvent(location: departureLocation, plannedTime: Date(timeIntervalSince1970: plannedDepartureTime), predictedTime: predictedDepartureTime != 0 ? Date(timeIntervalSince1970: predictedDepartureTime) : nil, plannedPlatform: plannedDeparturePosition, predictedPlatform: predictedDeparturePosition, cancelled: departureCancelled)
+                        let arrival = StopEvent(location: arrivalLocation, plannedTime: Date(timeIntervalSince1970: plannedArrivalTime), predictedTime: predictedArrivalTime != 0 ? Date(timeIntervalSince1970: predictedArrivalTime) : nil, plannedPlatform: plannedArrivalPosition, predictedPlatform: predictedArrivalPosition, cancelled: arrivalCancelled)
                         
                         let journeyContext: HafasLegacyJourneyContext?
                         if let destination = direction {
-                            journeyContext = HafasLegacyJourneyContext(from: departure.location, to: destination, time: departure.predictedDepartureTime ?? departure.plannedDepartureTime ?? Date(), plannedTime: departure.plannedDepartureTime ?? departure.predictedDepartureTime ?? Date(), product: line.product, line: line)
+                            journeyContext = HafasLegacyJourneyContext(from: departure.location, to: destination, time: departure.predictedTime ?? departure.plannedTime, plannedTime: departure.plannedTime, product: line.product, line: line)
                         } else {
                             journeyContext = nil
                         }
                         
-                        leg = PublicLeg(line: line, destination: direction, departureStop: departure, arrivalStop: arrival, intermediateStops: intermediateStops, message: disruptionText, journeyContext: journeyContext)
+                        leg = PublicLeg(line: line, destination: direction, departure: departure, arrival: arrival, intermediateStops: intermediateStops, message: disruptionText, path: [], journeyContext: journeyContext, loadFactor: nil)
                     } else {
                         throw ParseError(reason: "unhandled type \(type)")
                     }
                     legs.append(leg)
                 }
                 let context: HafasLegacyRefreshTripContext? = nil
-                //                    if let requestId = requestId, let connectionId = connectionId {
-                //                        context = HafasLegacyRefreshTripContext(ident: requestId, seqNr: "\(seqNr)", ld: ld, connectionId: connectionId)
-                //                    } else {
-                //                        context = nil
-                //                    }
                 let trip = Trip(id: "", from: resDeparture, to: resArrival, legs: legs, fares: [], refreshContext: context)
                 if realtimeStatus == 2 { // Verbindung fällt aus
                     for leg in trip.legs {
                         guard let leg = leg as? PublicLeg else { continue }
-                        leg.intermediateStops.forEach({$0.departureCancelled = true; $0.arrivalCancelled = true})
+                        leg.intermediateStops.forEach({$0.departure?.cancelled = true; $0.arrival?.cancelled = true})
                     }
                 }
                 trips.append(trip)
