@@ -8,11 +8,19 @@ public class Location: NSObject, NSSecureCoding {
     
     public static var supportsSecureCoding: Bool = true
     
+    /// Station, poi, coord, address or any
     public let type: LocationType
+    /// Unique location id of the transit provider.
+    ///
+    /// May not be nil for a station.
     public let id: String?
+    /// Coordinate of this location.
     public let coord: LocationPoint?
+    /// Name of the locality/city.
     public let place: String?
+    /// Name of the station, street or poi.
     public let name: String?
+    /// Products departing from this station.
     public let products: [Product]?
     
     lazy var distanceFormatter: NumberFormatter = {
@@ -37,7 +45,7 @@ public class Location: NSObject, NSSecureCoding {
         }
         
         self.type = type
-        self.id = id;
+        self.id = id
         self.coord = coord
         self.place = place
         self.name = name
@@ -111,14 +119,20 @@ public class Location: NSObject, NSSecureCoding {
         aCoder.encode(name, forKey: PropertyKey.locationNameKey)
     }
     
+    /// Returns true if the coordinate is non-nil.
     public func hasLocation() -> Bool {
         return coord != nil
     }
     
+    /// Returns true if either a name or a place exists.
     public func hasName() -> Bool {
         return name != nil || place != nil
     }
     
+    /// Returns this shortest, unambiguous name possible of this location.
+    ///
+    /// Locations with names like "Hbf" or "station" are not unambiguous, that's why the place is appended to the name in this case.
+    /// If no name or place is specified for this location, the id, coordinate or type is returned instead.
     public func getUniqueShortName() -> String {
         if let place = self.place, !place.isEmpty, let name = self.name, !name.contains(place) && (Location.NON_UNIQUE_NAMES.contains(name) || name.split(separator: " ").first(where: {Location.NON_UNIQUE_NAMES.contains(String($0))}) != nil || name.split(separator: ",").first(where: {Location.NON_UNIQUE_NAMES.contains(String($0))}) != nil) {
             return place + ", " + name
@@ -133,6 +147,7 @@ public class Location: NSObject, NSSecureCoding {
         }
     }
     
+    /// Returns the name and place of this location, if available. Otherwise, the coordinate or location type is returned.
     public func getUniqueLongName() -> String {
         var result = ""
         if let name = name {
@@ -154,6 +169,8 @@ public class Location: NSObject, NSSecureCoding {
         return result
     }
     
+    /// Returns the name of the place in one line and the name of the location in a new line, if available.
+    /// Otherwise, the coordinate or location type is returned.
     public func getMultilineLabel() -> String {
         var result = ""
         if let place = place {
@@ -175,6 +192,7 @@ public class Location: NSObject, NSSecureCoding {
         return result
     }
     
+    /// Returns the distance text in meters between this location and another location of the CoreLocation framework with a specified number of fraction digits.
     public func getDistanceText(_ location: CLLocation, maximumFractionDigits: Int = 2) -> String {
         let distance = getDistance(from: location)
         distanceFormatter.maximumFractionDigits = maximumFractionDigits
@@ -185,6 +203,7 @@ public class Location: NSObject, NSSecureCoding {
         }
     }
     
+    /// Returns the distance  in meters between this location and another location of the CoreLocation framework.
     public func getDistance(from location: CLLocation) -> CLLocationDistance {
         let distance: CLLocationDistance
         if let coord = coord {
@@ -195,6 +214,7 @@ public class Location: NSObject, NSSecureCoding {
         return distance
     }
     
+    /// Checks whether this location is uniquely identifiable to the transit provider.
     public func isIdentified() -> Bool {
         if type == .station {
             return id != nil && id != ""

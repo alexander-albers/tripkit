@@ -3,18 +3,29 @@ import Foundation
 public class Line: NSObject, NSSecureCoding {
     
     public static var supportsSecureCoding: Bool = true
-    
+    /// A unique id for this line.
     public let id: String?
+    /// Operator if the line.
     public let network: String?
+    /// Type of the line.
     public let product: Product?
+    /// Short name of the line, should be used for displaying the line.
+    ///
+    /// Example: ICE42, RE42, S4, U4, 201
     public let label: String?
+    /// Longer name of the line, including the number.
     public let name: String?
+    /// Line number, not specific to a specific train but to a route.
     public let number: String?
-    /// Contains the (internal) full line number
+    /// Contains the (internal) vehicle number of the line.
     public let vehicleNumber: String?
+    /// Specifies the visual style of a line label.
     public let style: LineStyle!
+    /// Attributes of this line, like bicycle carriage or wheelchair access.
     public let attr: [Attr]?
+    /// Line specific notice.
     public let message: String?
+    /// Outward or return direction.
     public let direction: Direction?
     
     static let FOOTWAY = Line(id: nil, network: nil, product: nil, label: nil)

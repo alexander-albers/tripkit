@@ -4,7 +4,9 @@ public class ServingLine: NSObject, NSSecureCoding {
     
     public static var supportsSecureCoding: Bool = true
     
+    /// Reference to a means of transport.
     public let line: Line
+    /// Destination station of the line.
     public let destination: Location?
     
     public init(line: Line, destination: Location?) {

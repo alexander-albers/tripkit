@@ -1,10 +1,13 @@
 import Foundation
 
+/// Represents a coordinate in WGS 84 format.
 public class LocationPoint: NSObject, NSSecureCoding {
     
     public static var supportsSecureCoding: Bool = true
     
+    /// Latitude, devided by 1,000,000 and rounded to an integer.
     public let lat: Int
+    /// Longitude, devided by 1,000,000 and rounded to an integer.
     public let lon: Int
     
     public init(lat: Int, lon: Int) {

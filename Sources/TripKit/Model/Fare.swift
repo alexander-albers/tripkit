@@ -4,11 +4,19 @@ public class Fare: NSObject, NSSecureCoding {
     
     public static var supportsSecureCoding: Bool = true
     
+    /// Example: Berlin Tarifgebiet A-B Regeltarif.
+    ///
+    /// May be nil in which case the type substitutes as the name.
     public let name: String?
+    /// Type of this fare, like adult or child.
     public let type: FareType
+    /// ISO 4217 currency name, like EUR.
     public let currency: String
+    /// Monetary units of the currency.
     public let fare: Float
+    /// Example: Waben (=number of tarif zones)
     public let unitsName: String?
+    /// Units of the `unitsName`. Example: 2, which means that the fare is valid for 2 tarif zones.
     public let units: String?
     
     init(name: String?, type: FareType, currency: String, fare: Float, unitsName: String?, units: String?) {

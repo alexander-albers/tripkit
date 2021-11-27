@@ -1,10 +1,13 @@
 import Foundation
 
+/// Represents a trip message.
 public class InfoText: NSObject, NSSecureCoding {
     
     public static var supportsSecureCoding: Bool = true
     
+    /// Short summary of the message.
     public let text: String
+    /// URL to the website of the transit provider.
     public let url: String
     
     init(text: String, url: String) {
