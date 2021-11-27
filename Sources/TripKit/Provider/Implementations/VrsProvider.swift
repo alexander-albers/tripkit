@@ -353,6 +353,9 @@ public class VrsProvider: AbstractNetworkProvider {
                 } else if let departure = event["departure"] as? String {
                     plannedTime = parseDateTime(from: departure)
                 }
+                guard let plannedTime = plannedTime else {
+                    continue
+                }
                 
                 guard let lineObject = event["line"] as? [String: Any] else { throw ParseError(reason: "failed to parse line") }
                 let line = try parseLine(from: lineObject)
@@ -373,7 +376,7 @@ public class VrsProvider: AbstractNetworkProvider {
                 }
                 let journeyContext: VrsJourneyContext?
                 if let destination = destination {
-                    journeyContext = VrsJourneyContext(from: location, to: destination, time: predictedTime ?? plannedTime ?? Date(), plannedTime: plannedTime ?? predictedTime ?? Date(), product: line.product, line: line)
+                    journeyContext = VrsJourneyContext(from: location, to: destination, time: predictedTime ?? plannedTime, plannedTime: plannedTime ?? predictedTime ?? Date(), product: line.product, line: line)
                 } else {
                     journeyContext = nil
                 }

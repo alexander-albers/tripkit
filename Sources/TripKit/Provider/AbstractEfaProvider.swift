@@ -977,11 +977,10 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
         
         for departure in response[departures ? "itdDepartureList" : "itdArrivalList"][departures ? "itdDeparture" : "itdArrival"].all {
             let assignedStopId = departure.element?.attribute(by: "stopID")?.text
-            let plannedTime = self.parseDate(xml: departure["itdDateTime"])
+            guard let plannedTime = self.parseDate(xml: departure["itdDateTime"]) else { continue }
             let predictedTime = self.parseDate(xml: departure["itdRTDateTime"])
             guard let (line, destination, cancelled) = self.parseLine(xml: departure["itdServingLine"]) else {
-                os_log("%{public}@: failed to parse departure line", log: .requestLogger, type: .error, #function)
-                continue
+                throw ParseError(reason: "failed to parse line")
             }
             if cancelled {
                 continue
@@ -991,8 +990,8 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
             
             let context: EfaJourneyContext?
             let tripCode = departure["itdServingTrip"].element?.attribute(by: "tripCode")?.text ?? departure["itdServingLine"].element?.attribute(by: "key")?.text
-            if let stopId = assignedStopId, let departureTime = plannedTime ?? predictedTime, let tripCode = tripCode, line.id != nil {
-                context = EfaJourneyContext(stopId: stopId, stopDepartureTime: departureTime, line: line, tripCode: tripCode)
+            if let stopId = assignedStopId, let tripCode = tripCode, line.id != nil {
+                context = EfaJourneyContext(stopId: stopId, stopDepartureTime: plannedTime, line: line, tripCode: tripCode)
             } else {
                 context = nil
             }
@@ -1354,7 +1353,7 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
         for dp in departures {
             guard let assignedId = dp["r"]["id"].element?.text else { throw ParseError(reason: "failed to parse departure id") }
             
-            let plannedTime = parseMobilePlannedTime(xml: dp["st"])
+            guard let plannedTime = parseMobilePlannedTime(xml: dp["st"]) else { continue }
             let predictedTime = parseMobilePredictedTime(xml: dp["st"])
             
             let lineDestination = try parseMobileLineDestination(xml: dp, tyOrCo: true)
@@ -1367,8 +1366,8 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
             }
             let context: EfaJourneyContext?
             let tripCode = dp["m"]["dv"]["tk"].element?.text
-            if let departureTime = plannedTime ?? predictedTime, let tripCode = tripCode, lineDestination.line.id != nil {
-                context = EfaJourneyContext(stopId: assignedId, stopDepartureTime: departureTime, line: lineDestination.line, tripCode: tripCode)
+            if let tripCode = tripCode, lineDestination.line.id != nil {
+                context = EfaJourneyContext(stopId: assignedId, stopDepartureTime: plannedTime, line: lineDestination.line, tripCode: tripCode)
             } else {
                 context = nil
             }
@@ -2131,7 +2130,7 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
     
     let P_MOBILE_M_SYMBOL = try! NSRegularExpression(pattern: "([^\\s]*)\\s+([^\\s]*)")
     
-    func parseMobileLineDestination(xml: XMLIndexer, tyOrCo: Bool) throws -> LineDestination {
+    func parseMobileLineDestination(xml: XMLIndexer, tyOrCo: Bool) throws -> ServingLine {
         let productNu = xml["m"]["nu"].element?.text
         let ty = xml["m"]["ty"].element?.text
         let n = xml["m"]["n"].element?.text
@@ -2187,7 +2186,7 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
             line = Line(id: parsedLine.id, network: parsedLine.network, product: parsedLine.product, label: parsedLine.label, name: parsedLine.name, style: lineStyle(network: parsedLine.network, product: parsedLine.product, label: parsedLine.label), attr: nil, message: nil)
         }
         
-        return LineDestination(line: line, destination: destination)
+        return ServingLine(line: line, destination: destination)
     }
     
     func parseMobileDiva(xml: XMLIndexer) throws -> String {

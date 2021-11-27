@@ -422,7 +422,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
             parseIsoDate(from: dateString, dateComponents: &dateComponents)
             guard let baseDate = calendar.date(from: dateComponents) else { throw ParseError(reason: "could not parse base date") }
             
-            let plannedTime = try parseJsonTime(baseDate: baseDate, dateString: (departures ? stbStop["dTimeS"] : stbStop["aTimeS"]) as? String)
+            guard let plannedTime = try parseJsonTime(baseDate: baseDate, dateString: (departures ? stbStop["dTimeS"] : stbStop["aTimeS"]) as? String) else { continue }
             let predictedTime = try parseJsonTime(baseDate: baseDate, dateString: (departures ? stbStop["dTimeR"] : stbStop["aTimeR"]) as? String)
             
             let line = lines[lineIndex]
@@ -464,7 +464,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
                 journeyContext = nil
             }
             let wagonSequenceContext: URL?
-            if line.label?.hasPrefix("ICE") ?? false, let number = line.number, let plannedTime = plannedTime {
+            if line.label?.hasPrefix("ICE") ?? false, let number = line.number {
                 wagonSequenceContext = getWagonSequenceUrl(number: number, plannedTime: plannedTime)
             } else {
                 wagonSequenceContext = nil
@@ -479,7 +479,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
             stationDepartures?.departures.append(departure)
         }
         for stationDeparture in result {
-            stationDeparture.departures.sort(by: {$0.getTime() < $1.getTime()})
+            stationDeparture.departures.sort(by: {$0.time < $1.time})
         }
         
         completion(request, .success(departures: result))

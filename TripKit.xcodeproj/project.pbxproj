@@ -15,7 +15,6 @@
 		FA1C85781E437D73002BFE6E /* AsyncRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1C85771E437D73002BFE6E /* AsyncRequest.swift */; };
 		FA2454C61E86A2A500445AD5 /* BayernProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2454C51E86A2A500445AD5 /* BayernProvider.swift */; };
 		FA2454CA1E86B05600445AD5 /* ParserUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2454C91E86B05600445AD5 /* ParserUtils.swift */; };
-		FA2454CC1E86D34B00445AD5 /* LineDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2454CB1E86D34B00445AD5 /* LineDestination.swift */; };
 		FA2C85C325F13BBE003880FB /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2C85C225F13BBE003880FB /* Bundle.swift */; };
 		FA2C85C425F13BBE003880FB /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2C85C225F13BBE003880FB /* Bundle.swift */; };
 		FA2C85C525F13BBE003880FB /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2C85C225F13BBE003880FB /* Bundle.swift */; };
@@ -184,7 +183,6 @@
 		FA5CD29D24FBB29C00B4990A /* StationDepartures.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB754211E3FD3E500C343F2 /* StationDepartures.swift */; };
 		FA5CD29E24FBB29C00B4990A /* SuggestedLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB754241E3FD3E500C343F2 /* SuggestedLocation.swift */; };
 		FA5CD29F24FBB29C00B4990A /* ServingLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA63D93E1E4D11BB00EF0540 /* ServingLine.swift */; };
-		FA5CD2A024FBB29C00B4990A /* LineDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2454CB1E86D34B00445AD5 /* LineDestination.swift */; };
 		FA5CD2A124FBB29C00B4990A /* Departure.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB754171E3FD3E500C343F2 /* Departure.swift */; };
 		FA5CD2A224FBB29C00B4990A /* InfoText.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA5693D1E740A70006EB901 /* InfoText.swift */; };
 		FA5CD2A324FBB29C00B4990A /* Leg.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB754181E3FD3E500C343F2 /* Leg.swift */; };
@@ -200,7 +198,6 @@
 		FA5CD2AD24FBB29D00B4990A /* StationDepartures.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB754211E3FD3E500C343F2 /* StationDepartures.swift */; };
 		FA5CD2AE24FBB29D00B4990A /* SuggestedLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB754241E3FD3E500C343F2 /* SuggestedLocation.swift */; };
 		FA5CD2AF24FBB29D00B4990A /* ServingLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA63D93E1E4D11BB00EF0540 /* ServingLine.swift */; };
-		FA5CD2B024FBB29D00B4990A /* LineDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2454CB1E86D34B00445AD5 /* LineDestination.swift */; };
 		FA5CD2B124FBB29D00B4990A /* Departure.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB754171E3FD3E500C343F2 /* Departure.swift */; };
 		FA5CD2B224FBB29D00B4990A /* InfoText.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA5693D1E740A70006EB901 /* InfoText.swift */; };
 		FA5CD2B324FBB29D00B4990A /* Leg.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB754181E3FD3E500C343F2 /* Leg.swift */; };
@@ -664,7 +661,6 @@
 		FAFF189D1FA50B9500A8ED69 /* Fare.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA569431E7415DC006EB901 /* Fare.swift */; };
 		FAFF189E1FA50B9500A8ED69 /* NvbwProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA780E2F1E90019E004E2281 /* NvbwProvider.swift */; };
 		FAFF189F1FA50B9500A8ED69 /* IvbProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4371311F6304F500F53B82 /* IvbProvider.swift */; };
-		FAFF18A01FA50B9500A8ED69 /* LineDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2454CB1E86D34B00445AD5 /* LineDestination.swift */; };
 		FAFF18A11FA50B9500A8ED69 /* AbstractHafasProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA47CC0F1E8A6B8A00F95B0F /* AbstractHafasProvider.swift */; };
 		FAFF18A21FA50B9500A8ED69 /* VvvProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA780E311E900720004E2281 /* VvvProvider.swift */; };
 		FAFF18A31FA50B9500A8ED69 /* StvProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4371331F63052700F53B82 /* StvProvider.swift */; };
@@ -860,7 +856,6 @@
 		FA1C85771E437D73002BFE6E /* AsyncRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncRequest.swift; sourceTree = "<group>"; };
 		FA2454C51E86A2A500445AD5 /* BayernProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BayernProvider.swift; sourceTree = "<group>"; };
 		FA2454C91E86B05600445AD5 /* ParserUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParserUtils.swift; sourceTree = "<group>"; };
-		FA2454CB1E86D34B00445AD5 /* LineDestination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineDestination.swift; sourceTree = "<group>"; };
 		FA2C85C225F13BBE003880FB /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
 		FA37CD7E1FFC0AE000B5D93D /* HvvProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HvvProvider.swift; sourceTree = "<group>"; };
 		FA37CD871FFC0D2500B5D93D /* MD5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MD5.swift; sourceTree = "<group>"; };
@@ -1353,7 +1348,6 @@
 				FAB754211E3FD3E500C343F2 /* StationDepartures.swift */,
 				FAB754241E3FD3E500C343F2 /* SuggestedLocation.swift */,
 				FA63D93E1E4D11BB00EF0540 /* ServingLine.swift */,
-				FA2454CB1E86D34B00445AD5 /* LineDestination.swift */,
 				FAB754171E3FD3E500C343F2 /* Departure.swift */,
 				FAA5693D1E740A70006EB901 /* InfoText.swift */,
 				FAB754181E3FD3E500C343F2 /* Leg.swift */,
@@ -2119,7 +2113,6 @@
 				FA5CD2A424FBB29C00B4990A /* Line.swift in Sources */,
 				FA5CD2AA24FBB29D00B4990A /* Stop.swift in Sources */,
 				FA5CD22924FBB29000B4990A /* NetworkProvider.swift in Sources */,
-				FA5CD2A024FBB29C00B4990A /* LineDestination.swift in Sources */,
 				FA5CD23B24FBB29000B4990A /* NvvProvider.swift in Sources */,
 				FA5CD2C424FBB2A900B4990A /* SecretsLoader.swift in Sources */,
 				FA5CD24324FBB29000B4990A /* NasaProvider.swift in Sources */,
@@ -2215,7 +2208,6 @@
 				FA5CD2B424FBB29D00B4990A /* Line.swift in Sources */,
 				FA5CD2BA24FBB29D00B4990A /* Stop.swift in Sources */,
 				FA5CD25E24FBB29000B4990A /* NetworkProvider.swift in Sources */,
-				FA5CD2B024FBB29D00B4990A /* LineDestination.swift in Sources */,
 				FA5CD27024FBB29000B4990A /* NvvProvider.swift in Sources */,
 				FA5CD2D124FBB2AA00B4990A /* SecretsLoader.swift in Sources */,
 				FA5CD27824FBB29000B4990A /* NasaProvider.swift in Sources */,
@@ -2441,7 +2433,6 @@
 				FA780E301E90019E004E2281 /* NvbwProvider.swift in Sources */,
 				FA7058512271B01C0070D2C9 /* AuthorizationData.swift in Sources */,
 				FA4371321F6304F500F53B82 /* IvbProvider.swift in Sources */,
-				FA2454CC1E86D34B00445AD5 /* LineDestination.swift in Sources */,
 				FA47CC101E8A6B8A00F95B0F /* AbstractHafasProvider.swift in Sources */,
 				FA780E321E900720004E2281 /* VvvProvider.swift in Sources */,
 				FA4371341F63052700F53B82 /* StvProvider.swift in Sources */,
@@ -2778,7 +2769,6 @@
 				FAFF189E1FA50B9500A8ED69 /* NvbwProvider.swift in Sources */,
 				FAFF189F1FA50B9500A8ED69 /* IvbProvider.swift in Sources */,
 				FA7058522271B01C0070D2C9 /* AuthorizationData.swift in Sources */,
-				FAFF18A01FA50B9500A8ED69 /* LineDestination.swift in Sources */,
 				FAFF18A11FA50B9500A8ED69 /* AbstractHafasProvider.swift in Sources */,
 				FAFF18A21FA50B9500A8ED69 /* VvvProvider.swift in Sources */,
 				FAFF18A31FA50B9500A8ED69 /* StvProvider.swift in Sources */,
