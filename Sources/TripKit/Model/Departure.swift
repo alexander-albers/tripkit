@@ -13,12 +13,12 @@ public class Departure: NSObject, NSSecureCoding {
     /// Means of transport of this departure.
     public let line: Line
     /// Actual departure platform of a station.
-    public let predictedPosition: String?
+    public let predictedPlatform: String?
     /// Scheduled departure platform of a station.
-    public let plannedPosition: String?
+    public let plannedPlatform: String?
     /// Predicted platform if available, otherwise the planned platform if available.
-    public var position: String? {
-        return predictedPosition ?? plannedPosition
+    public var platform: String? {
+        return predictedPlatform ?? plannedPlatform
     }
     /// The destination location of the line.
     public let destination: Location?
@@ -36,8 +36,8 @@ public class Departure: NSObject, NSSecureCoding {
         self.plannedTime = plannedTime
         self.predictedTime = predictedTime
         self.line = line
-        self.predictedPosition = position
-        self.plannedPosition = plannedPosition
+        self.predictedPlatform = position
+        self.plannedPlatform = plannedPosition
         self.destination = destination
         self.capacity = capacity
         self.message = message
@@ -70,8 +70,11 @@ public class Departure: NSObject, NSSecureCoding {
             aCoder.encode(predictedTime, forKey: PropertyKey.predictedTimeKey)
         }
         aCoder.encode(line, forKey: PropertyKey.lineKey)
-        if let position = position {
+        if let position = predictedPlatform {
             aCoder.encode(position, forKey: PropertyKey.positionKey)
+        }
+        if let position = plannedPlatform {
+            aCoder.encode(position, forKey: PropertyKey.plannedPositionKey)
         }
         if let destination = destination {
             aCoder.encode(destination, forKey: PropertyKey.destinationKey)
@@ -112,7 +115,7 @@ public class Departure: NSObject, NSSecureCoding {
     }
     
     public override var description: String {
-        return "Departure position=\(position ?? ""), plannedTime=\(String(describing: plannedTime)), predictedTime=\(String(describing: predictedTime)), destination=\(String(describing: destination)), message=\(message ?? ""), line=\(line)"
+        return "Departure position=\(platform ?? ""), plannedTime=\(String(describing: plannedTime)), predictedTime=\(String(describing: predictedTime)), destination=\(String(describing: destination)), message=\(message ?? ""), line=\(line)"
     }
     
     struct PropertyKey {
@@ -130,4 +133,14 @@ public class Departure: NSObject, NSSecureCoding {
         
     }
     
+}
+
+// MARK: deprecated properties and methods
+extension Departure {
+    @available(*, deprecated, renamed: "predictedPlatform")
+    public var predictedPosition: String? { predictedPlatform }
+    @available(*, deprecated, renamed: "plannedPlatform")
+    public var plannedPosition: String? { plannedPlatform }
+    @available(*, deprecated, renamed: "platform")
+    public var position: String? { platform }
 }

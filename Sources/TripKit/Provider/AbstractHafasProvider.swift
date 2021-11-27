@@ -107,7 +107,7 @@ public class AbstractHafasProvider: AbstractNetworkProvider {
         if position == "null" { return nil }
         if let match = P_POSITION_PLATFORM.firstMatch(in: position, options: [], range: NSMakeRange(0, position.count)) {
             let substring = (position as NSString).substring(with: match.range(at: 1))
-            return substring
+            return substring.emptyToNil
         }
         return position
     }

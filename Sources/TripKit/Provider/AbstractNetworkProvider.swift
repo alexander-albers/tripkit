@@ -164,17 +164,17 @@ public class AbstractNetworkProvider: NetworkProvider {
     let P_NAME_NOSW = try! NSRegularExpression(pattern: "^(\\d{1,5})\\s*(Nord|Süd|Ost|West)$", options: .caseInsensitive)
     
     func parsePosition(position: String?) -> String? {
-        guard let position = position else { return nil }
+        guard let position = position, !position.isEmpty else { return nil }
         if let match = position.match(pattern: P_NAME_SECTION) {
             let name = match[0] ?? ""
             if let m = match[1] {
-                return name + m.components(separatedBy: .whitespaces).joined()
+                return (name + m.components(separatedBy: .whitespaces).joined()).emptyToNil
             } else {
-                return name
+                return name.emptyToNil
             }
         }
         if let match = position.match(pattern: P_NAME_NOSW) {
-            return match[0] ?? "" + (match[1]?.substring(to: 1) ?? "")
+            return (match[0] ?? "" + (match[1]?.substring(to: 1) ?? "")).emptyToNil
         }
         if position.count > 10 { return nil }
         return position

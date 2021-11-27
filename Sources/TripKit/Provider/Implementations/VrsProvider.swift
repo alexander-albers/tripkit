@@ -362,7 +362,7 @@ public class VrsProvider: AbstractNetworkProvider {
                 var position: String? = nil
                 if let post = event["post"] as? [String: Any], let name = post["name"] as? String {
                     for pattern in VrsProvider.NAME_WITH_POSITION_PATTERNS {
-                        if let match = name.match(pattern: pattern), let group = match[1] {
+                        if let match = name.match(pattern: pattern), let group = match[1], !group.isEmpty {
                             position = group
                             break
                         }
@@ -376,7 +376,7 @@ public class VrsProvider: AbstractNetworkProvider {
                 }
                 let journeyContext: VrsJourneyContext?
                 if let destination = destination {
-                    journeyContext = VrsJourneyContext(from: location, to: destination, time: predictedTime ?? plannedTime, plannedTime: plannedTime ?? predictedTime ?? Date(), product: line.product, line: line)
+                    journeyContext = VrsJourneyContext(from: location, to: destination, time: predictedTime ?? plannedTime, plannedTime: plannedTime, product: line.product, line: line)
                 } else {
                     journeyContext = nil
                 }
@@ -1089,7 +1089,7 @@ public class VrsProvider: AbstractNetworkProvider {
             for pattern in VrsProvider.NAME_WITH_POSITION_PATTERNS {
                 guard let match = name?.match(pattern: pattern) else { continue }
                 name = match[0]
-                position = match[1]
+                position = match[1]?.emptyToNil
                 break
             }
         } else if let street = location["street"] as? String, let number = location["number"] as? String {
