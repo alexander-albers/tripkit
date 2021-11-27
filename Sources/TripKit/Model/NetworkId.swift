@@ -1,3 +1,4 @@
+/// ID of a transit provider.
 public enum NetworkId: String {
     // Europe
     case RT,

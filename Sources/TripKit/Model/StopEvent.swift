@@ -14,6 +14,11 @@ public class StopEvent: NSObject {
     /// True if the stop has been planned originally, but is now skipped.
     public var cancelled: Bool
     
+    /// Predicted time if available, otherwise the planned time.
+    public var time: Date { predictedTime ?? plannedTime }
+    /// Predicted platform if available, otherwise the planned platform if available.
+    public var platform: String? { predictedPlatform ?? plannedPlatform }
+    
     /// Message specific to this stop.
     public var message: String?
     /// URL for querying the wagon sequence of a train.
@@ -65,7 +70,7 @@ extension StopEvent {
     public var plannedArrivalPlatform: String? { plannedPlatform }
     @available(*, deprecated, renamed: "predictedPlatform")
     public var predictedArrivalPlatform: String? { predictedPlatform }
-    @available(*, deprecated, renamed: "canceleld")
+    @available(*, deprecated, renamed: "cancelled")
     public var arrivalCancelled: Bool {
         get { return cancelled }
         set { cancelled = newValue }

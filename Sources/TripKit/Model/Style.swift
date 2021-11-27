@@ -1,13 +1,18 @@
 import Foundation
 import os.log
 
+/// Specifies the visual style of a line label.
 public class LineStyle: NSObject, NSSecureCoding {
     
     public static var supportsSecureCoding: Bool = true
     
+    /// The shape of the background.
     public let shape: Shape!
+    /// The color of the background.
     public let backgroundColor, backgroundColor2: UInt32!
+    /// The color of the foreground, i.e. of the line label text.
     public let foregroundColor: UInt32!
+    /// The color of the border of the shape.
     public let borderColor: UInt32!
     
     public init(shape: Shape, backgroundColor: UInt32, backgroundColor2: UInt32, foregroundColor: UInt32, borderColor: UInt32) {

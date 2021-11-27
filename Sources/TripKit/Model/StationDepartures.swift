@@ -4,8 +4,11 @@ public class StationDepartures: NSObject, NSSecureCoding {
     
     public static var supportsSecureCoding: Bool = true
     
+    /// Location of the station.
     public let stopLocation: Location
+    /// Departures from the station.
     public var departures: [Departure]
+    /// All possible lines that may be departing from the specified location.
     public var lines: [ServingLine]
     
     init(stopLocation: Location, departures: [Departure], lines: [ServingLine]) {

@@ -4,21 +4,35 @@ public class Departure: NSObject, NSSecureCoding {
     
     public static var supportsSecureCoding: Bool = true
     
-    public let plannedTime: Date? // TODO: planned time should be never nil
+    /// Scheduled time of departure.
+    public let plannedTime: Date
+    /// Actual, prognosed time of departure.
     public let predictedTime: Date?
+    /// Predicted time if available, otherwise the planned time.
+    public var time: Date { return predictedTime ?? plannedTime }
+    /// Means of transport of this departure.
     public let line: Line
+    /// Actual departure platform of a station.
+    public let predictedPosition: String?
+    /// Scheduled departure platform of a station.
+    public let plannedPosition: String?
+    /// Predicted platform if available, otherwise the planned platform if available.
     public var position: String? {
         return predictedPosition ?? plannedPosition
     }
-    public let predictedPosition: String?
-    public let plannedPosition: String?
+    /// The destination location of the line.
     public let destination: Location?
+    /// Currently unused.
     public let capacity: [Int]?
+    /// Message specific to this departure.
     public let message: String?
+    /// Context for querying the journey of the line. See `NetworkProvider.queryJourneyDetail`
     public let journeyContext: QueryJourneyDetailContext?
+    /// URL for querying the wagon sequence of a train.
+    /// See `DbProvider.getWagonSequenceUrl()`
     public let wagonSequenceContext: URL?
     
-    public init(plannedTime: Date?, predictedTime: Date?, line: Line, position: String?, plannedPosition: String?, destination: Location?, capacity: [Int]?, message: String?, journeyContext: QueryJourneyDetailContext?, wagonSequenceContext: URL? = nil) {
+    public init(plannedTime: Date, predictedTime: Date?, line: Line, position: String?, plannedPosition: String?, destination: Location?, capacity: [Int]?, message: String?, journeyContext: QueryJourneyDetailContext?, wagonSequenceContext: URL? = nil) {
         self.plannedTime = plannedTime
         self.predictedTime = predictedTime
         self.line = line
@@ -31,13 +45,13 @@ public class Departure: NSObject, NSSecureCoding {
         self.wagonSequenceContext = wagonSequenceContext
     }
     
-    convenience init(plannedTime: Date?, predictedTime: Date?, line: Line, position: String?, plannedPosition: String?, destination: Location?, journeyContext: QueryJourneyDetailContext?, wagonSequenceContext: URL? = nil) {
+    convenience init(plannedTime: Date, predictedTime: Date?, line: Line, position: String?, plannedPosition: String?, destination: Location?, journeyContext: QueryJourneyDetailContext?, wagonSequenceContext: URL? = nil) {
         self.init(plannedTime: plannedTime, predictedTime: predictedTime, line: line, position: position, plannedPosition: plannedPosition, destination: destination, capacity: nil, message: nil, journeyContext: journeyContext, wagonSequenceContext: wagonSequenceContext)
     }
     
     public required convenience init?(coder aDecoder: NSCoder) {
         guard let line = aDecoder.decodeObject(of: Line.self, forKey: PropertyKey.lineKey) else { return nil}
-        let plannedTime = aDecoder.decodeObject(of: NSDate.self, forKey: PropertyKey.plannedTimeKey) as Date?
+        guard let plannedTime = aDecoder.decodeObject(of: NSDate.self, forKey: PropertyKey.plannedTimeKey) as Date? else { return nil }
         let predictedTime = aDecoder.decodeObject(of: NSDate.self, forKey: PropertyKey.predictedTimeKey) as Date?
         let position = aDecoder.decodeObject(of: NSString.self, forKey: PropertyKey.positionKey) as String?
         let plannedPosition = aDecoder.decodeObject(of: NSString.self, forKey: PropertyKey.plannedPositionKey) as String?
@@ -51,9 +65,7 @@ public class Departure: NSObject, NSSecureCoding {
     }
     
     public func encode(with aCoder: NSCoder) {
-        if let plannedTime = plannedTime {
-            aCoder.encode(plannedTime, forKey: PropertyKey.plannedTimeKey)
-        }
+        aCoder.encode(plannedTime, forKey: PropertyKey.plannedTimeKey)
         if let predictedTime = predictedTime {
             aCoder.encode(predictedTime, forKey: PropertyKey.predictedTimeKey)
         }
@@ -78,8 +90,9 @@ public class Departure: NSObject, NSSecureCoding {
         }
     }
 
+    @available(*, deprecated, renamed: "time")
     public func getTime() -> Date {
-        return predictedTime ?? plannedTime ?? Date()
+        return time
     }
     
     public override func isEqual(_ object: Any?) -> Bool {
@@ -94,7 +107,7 @@ public class Departure: NSObject, NSSecureCoding {
     
     public override var hash: Int {
         get {
-            return "\(plannedTime ?? Date()):\(destination?.getUniqueShortName() ?? ""):\(line.product?.rawValue ?? ""):\(line.label ?? ""):\(line.network ?? "")".hash
+            return "\(plannedTime):\(destination?.getUniqueShortName() ?? ""):\(line.product?.rawValue ?? ""):\(line.label ?? ""):\(line.network ?? "")".hash
         }
     }
     

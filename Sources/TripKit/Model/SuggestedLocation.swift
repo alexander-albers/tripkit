@@ -4,8 +4,10 @@ open class SuggestedLocation: NSObject, NSSecureCoding {
     
     public static var supportsSecureCoding: Bool = true
     
-    public let location: Location!
-    public let priority: Int!
+    /// Station, poi or address.
+    public let location: Location
+    /// Priority for sorting all suggested locations.
+    public let priority: Int
     
     public init(location: Location, priority: Int) {
         self.location = location
