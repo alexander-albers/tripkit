@@ -893,9 +893,9 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
     }
     
     func parsePosition(dict: [String: Any], platfName: String, pltfName: String) -> String? {
-        if let pltfDic = dict[pltfName] as? [String: Any], let pltf = pltfDic["txt"] as? String {
+        if let pltfDic = dict[pltfName] as? [String: Any], let pltf = pltfDic["txt"] as? String, !pltf.isEmpty {
             return pltf
-        } else if let platf = dict[platfName] as? String {
+        } else if let platf = dict[platfName] as? String, !platf.isEmpty {
             return normalize(position: platf)
         } else {
             return nil
