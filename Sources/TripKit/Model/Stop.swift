@@ -129,7 +129,7 @@ public class Stop: NSObject, NSSecureCoding {
         }
         
         aCoder.encode(message, forKey: PropertyKey.message)
-        aCoder.encode(wagonSequenceContext, forKey: PropertyKey.wagonSequenceContext)
+        aCoder.encode(wagonSequenceContext?.absoluteString, forKey: PropertyKey.wagonSequenceContext)
     }
     
     open override func isEqual(_ other: Any?) -> Bool {
