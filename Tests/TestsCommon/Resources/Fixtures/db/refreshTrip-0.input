@@ -1,8 +1,8 @@
 {
   "ver":"1.15",
-  "ext":"DB.R18.04.a",
+  "ext":"DB.R20.12.b",
   "lang":"deu",
-  "id":"jvka6mxe4saypw4k",
+  "id":"t6g8mkqa422mxgcs",
   "cInfo":
   {
     "code":"OK",
@@ -116,16 +116,16 @@
           "prodL":
           [
             {
-              "name":"ICE 509",
-              "number":"509",
+              "name":"ICE 803",
+              "number":"803",
               "icoX":0,
               "cls":1,
               "oprX":0,
               "prodCtx":
               {
-                "name":"ICE  509",
-                "num":"509",
-                "matchId":"28",
+                "name":"ICE  803",
+                "num":"803",
+                "matchId":"18",
                 "catOut":"ICE",
                 "catOutS":"ICE",
                 "catOutL":"Intercity-Express",
@@ -161,59 +161,46 @@
           [
             {
               "name":"DB Fernverkehr AG",
-              "icoX":1
+              "icoX":2
             }
           ],
           "remL":
           [
             {
-              "type":"D",
-              "code":"",
-              "icoX":2,
-              "txtN":"Verzögerungen im Betriebsablauf",
-              "sIdx":0
-            },
-            {
               "type":"A",
               "code":"CK",
               "prio":200,
-              "icoX":4,
+              "icoX":3,
               "txtN":"Sicher + kontaktlos ohne Ticketkontrolle reisen mit Komfort Check-in"
             },
             {
               "type":"A",
               "code":"PF",
               "prio":200,
-              "icoX":4,
-              "txtN":"Maskenpflicht nach gesetzl. Regelung; wir empfehlen eine FFP2-Maske"
+              "icoX":3,
+              "txtN":"Maskenpflicht nach gesetzl. Regelung; regional gilt FFP2-Maskenpflicht"
             },
             {
               "type":"A",
-              "code":"FR",
-              "prio":260,
-              "icoX":5,
-              "txtN":"Fahrradmitnahme reservierungspflichtig"
-            },
-            {
-              "type":"A",
-              "code":"FB",
-              "prio":260,
-              "icoX":6,
-              "txtN":"Fahrradmitnahme begrenzt möglich"
+              "code":"3G",
+              "prio":205,
+              "icoX":3,
+              "txtN":"Im Zug gilt bundesweit 3G-Regel: ein gültiger Nachweis ist mitzuführen"
             },
             {
               "type":"A",
               "code":"BR",
               "prio":450,
-              "icoX":7,
+              "icoX":4,
               "txtN":"Bordrestaurant"
             },
             {
-              "type":"A",
-              "code":"EH",
-              "prio":560,
-              "icoX":4,
-              "txtN":"Fahrzeuggebundene Einstiegshilfe vorhanden"
+              "type":"M",
+              "code":"",
+              "icoX":5,
+              "txtS":"ICE 803: Berlin Hbf (tief)->Leipzig Hbf: Information.",
+              "txtN":"Zug fährt ohne Wagen 5, 6 und 14. Zug fährt mit verringerter Anzahl an Sitzplätzen. Es kann heute zu Abweichungen in den Reservierungen kommen.",
+              "sIdx":0
             }
           ],
           "icoL":
@@ -222,53 +209,79 @@
               "res":"ICE"
             },
             {
+              "res":"rt_ont"
+            },
+            {
               "res":"D",
               "txt":"DB Fernverkehr AG"
-            },
-            {
-              "res":"Empty"
-            },
-            {
-              "res":"rt_ont"
             },
             {
               "res":"attr_info"
             },
             {
-              "res":"attr_bike_r"
-            },
-            {
-              "res":"attr_bike"
-            },
-            {
               "res":"attr_resto"
+            },
+            {
+              "res":"HimLow"
             }
           ],
           "tcocL":
           [
             {
-              "c":"FIRST"
+              "c":"FIRST",
+              "r":3
             },
             {
-              "c":"SECOND"
+              "c":"SECOND",
+              "r":3
             },
             {
-              "c":"FIRST"
+              "c":"FIRST",
+              "r":3
             },
             {
-              "c":"SECOND"
+              "c":"SECOND",
+              "r":3
             },
             {
-              "c":"FIRST"
+              "c":"FIRST",
+              "r":3
             },
             {
-              "c":"SECOND"
+              "c":"SECOND",
+              "r":3
             },
             {
-              "c":"FIRST"
+              "c":"FIRST",
+              "r":3
             },
             {
-              "c":"SECOND"
+              "c":"SECOND",
+              "r":3
+            },
+            {
+              "c":"FIRST",
+              "r":3
+            },
+            {
+              "c":"SECOND",
+              "r":3
+            },
+            {
+              "c":"FIRST",
+              "r":3
+            },
+            {
+              "c":"SECOND",
+              "r":3
+            },
+            {
+              "c":"FIRST",
+              "r":3
+            },
+            {
+              "c":"SECOND",
+              "r":3
             }
           ]
         },
@@ -276,59 +289,46 @@
         [
           {
             "cid":"DirectConReq",
-            "date":"20210909",
-            "dur":"011000",
+            "date":"20211205",
+            "dur":"011500",
             "chg":0,
             "sDays":
             {
-              "sDaysR":"fährt täglich, nicht 25. bis 28. Nov 2021 ",
-              "sDaysB":"FFFFFFFFFFFFFFFFFFFFFC001FFFFFFFFFFFFF1FFFFFFFF7FFFF87FE03FFFFFFFFFFFFFFFFFFFFFFFFFFFFE1FFF0"
+              "sDaysR":"fährt 5. bis 11. Dez 2021 ",
+              "sDaysB":"000000000000000000000000000000000000000000000000000000000000000000007FFFFFFFFFFFFFFFFFE1FFF0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
             },
             "dep":
             {
               "locX":0,
-              "idx":4,
+              "idx":0,
               "dProdX":0,
-              "dPlatfS":"1",
+              "dPlatfS":"2",
               "dInR":true,
-              "dTimeS":"123000",
-              "dTimeR":"123200",
+              "dTimeS":"192800",
+              "dTimeR":"192800",
               "dProgType":"PROGNOSED",
-              "dTZOffset":120,
-              "msgL":
-              [
-                {
-                  "type":"REM",
-                  "remX":0,
-                  "txtC":
-                  {
-                    "r":204,
-                    "g":0,
-                    "b":0,
-                    "a":255
-                  },
-                  "prio":478,
-                  "fIdx":-1,
-                  "tIdx":-1,
-                  "tagL":
-                  [
-                    "RES_LOC_H3"
-                  ]
-                }
-              ],
+              "dTrnCmpSX":
+              {
+                "tcocX":
+                [
+12,
+13
+                ]
+              },
+              "dTZOffset":60,
               "type":"N"
             },
             "arr":
             {
               "locX":2,
-              "idx":7,
+              "idx":3,
               "aProdX":0,
               "aPlatfS":"11",
               "aOutR":true,
-              "aTimeS":"134200",
-              "aTimeR":"134200",
+              "aTimeS":"204300",
+              "aTimeR":"204300",
               "aProgType":"PROGNOSED",
-              "aTZOffset":120,
+              "aTZOffset":60,
               "type":"N"
             },
             "secL":
@@ -339,62 +339,46 @@
                 "dep":
                 {
                   "locX":0,
-                  "idx":4,
+                  "idx":0,
                   "dProdX":0,
-                  "dPlatfS":"1",
+                  "dPlatfS":"2",
                   "dInR":true,
-                  "dTimeS":"123000",
-                  "dTimeR":"123200",
+                  "dTimeS":"192800",
+                  "dTimeR":"192800",
                   "dProgType":"PROGNOSED",
                   "dTrnCmpSX":
                   {
+                    "tcocX":
+                    [
+2,
+3
+                    ],
                     "tcM":1
                   },
-                  "dTZOffset":120,
-                  "msgL":
-                  [
-                    {
-                      "type":"REM",
-                      "remX":0,
-                      "txtC":
-                      {
-                        "r":204,
-                        "g":0,
-                        "b":0,
-                        "a":255
-                      },
-                      "prio":478,
-                      "fIdx":-1,
-                      "tIdx":-1,
-                      "tagL":
-                      [
-                        "RES_LOC_H3"
-                      ]
-                    }
-                  ],
+                  "dTZOffset":60,
                   "type":"N"
                 },
                 "arr":
                 {
                   "locX":2,
-                  "idx":7,
+                  "idx":3,
                   "aPlatfS":"11",
                   "aOutR":true,
-                  "aTimeS":"134200",
-                  "aTimeR":"134200",
+                  "aTimeS":"204300",
+                  "aTimeR":"204300",
                   "aProgType":"PROGNOSED",
                   "aTrnCmpSX":
                   {
                     "tcM":1
                   },
-                  "aTZOffset":120,
+                  "aTZOffset":60,
                   "type":"N"
                 },
                 "jny":
                 {
-                  "jid":"1|167783|0|80|9092021",
+                  "jid":"1|173363|0|80|5122021",
                   "prodX":0,
-                  "dirTxt":"Nürnberg Hbf",
+                  "dirTxt":"München Hbf",
                   "dirFlg":"1",
                   "status":"P",
                   "isRchbl":true,
@@ -402,82 +386,15 @@
                   [
                     {
                       "locX":0,
-                      "idx":4,
-                      "dProdX":0,
-                      "dPlatfS":"1",
-                      "dInR":true,
-                      "dTimeS":"123000",
-                      "dTimeR":"123200",
-                      "dProgType":"PROGNOSED",
-                      "dDirTxt":"Nürnberg Hbf",
-                      "dDirFlg":"1",
-                      "dTZOffset":120,
-                      "msgL":
-                      [
-                        {
-                          "type":"REM",
-                          "remX":0,
-                          "txtC":
-                          {
-                            "r":204,
-                            "g":0,
-                            "b":0,
-                            "a":255
-                          },
-                          "prio":478,
-                          "fIdx":-1,
-                          "tIdx":-1,
-                          "tagL":
-                          [
-                            "RES_LOC_H3"
-                          ]
-                        }
-                      ],
-                      "type":"N"
-                    },
-                    {
-                      "locX":3,
-                      "idx":5,
-                      "aProdX":0,
-                      "aPlatfS":"3",
-                      "aOutR":true,
-                      "aTimeS":"123500",
-                      "aTimeR":"123700",
-                      "aProgType":"PROGNOSED",
-                      "aTZOffset":120,
-                      "dProdX":0,
-                      "dPlatfS":"3",
-                      "dInR":true,
-                      "dTimeS":"123700",
-                      "dTimeR":"123900",
-                      "dProgType":"PROGNOSED",
-                      "dTrnCmpSX":
-                      {
-                        "tcocX":
-                        [
-2,
-3
-                        ]
-                      },
-                      "dTZOffset":120,
-                      "type":"N"
-                    },
-                    {
-                      "locX":4,
-                      "idx":6,
-                      "aProdX":0,
-                      "aPlatfS":"2",
-                      "aOutR":true,
-                      "aTimeS":"131000",
-                      "aTimeR":"131200",
-                      "aProgType":"PROGNOSED",
-                      "aTZOffset":120,
+                      "idx":0,
                       "dProdX":0,
                       "dPlatfS":"2",
                       "dInR":true,
-                      "dTimeS":"131200",
-                      "dTimeR":"131200",
+                      "dTimeS":"192800",
+                      "dTimeR":"192800",
                       "dProgType":"PROGNOSED",
+                      "dDirTxt":"München Hbf",
+                      "dDirFlg":"1",
                       "dTrnCmpSX":
                       {
                         "tcocX":
@@ -486,19 +403,73 @@
 5
                         ]
                       },
-                      "dTZOffset":120,
+                      "dTZOffset":60,
+                      "type":"N"
+                    },
+                    {
+                      "locX":3,
+                      "idx":1,
+                      "aProdX":0,
+                      "aPlatfS":"3",
+                      "aOutR":true,
+                      "aTimeS":"193300",
+                      "aTimeR":"193300",
+                      "aProgType":"PROGNOSED",
+                      "aTZOffset":60,
+                      "dProdX":0,
+                      "dPlatfS":"3",
+                      "dInR":true,
+                      "dTimeS":"193500",
+                      "dTimeR":"193500",
+                      "dProgType":"PROGNOSED",
+                      "dTrnCmpSX":
+                      {
+                        "tcocX":
+                        [
+6,
+7
+                        ]
+                      },
+                      "dTZOffset":60,
+                      "type":"N"
+                    },
+                    {
+                      "locX":4,
+                      "idx":2,
+                      "aProdX":0,
+                      "aPlatfS":"2",
+                      "aOutR":true,
+                      "aTimeS":"200900",
+                      "aTimeR":"200900",
+                      "aProgType":"PROGNOSED",
+                      "aTZOffset":60,
+                      "dProdX":0,
+                      "dPlatfS":"2",
+                      "dInR":true,
+                      "dTimeS":"201100",
+                      "dTimeR":"201100",
+                      "dProgType":"PROGNOSED",
+                      "dTrnCmpSX":
+                      {
+                        "tcocX":
+                        [
+8,
+9
+                        ]
+                      },
+                      "dTZOffset":60,
                       "type":"N"
                     },
                     {
                       "locX":2,
-                      "idx":7,
+                      "idx":3,
                       "aProdX":0,
                       "aPlatfS":"11",
                       "aOutR":true,
-                      "aTimeS":"134200",
-                      "aTimeR":"134200",
+                      "aTimeS":"204300",
+                      "aTimeR":"204300",
                       "aProgType":"PROGNOSED",
-                      "aTZOffset":120,
+                      "aTZOffset":60,
                       "type":"N"
                     }
                   ],
@@ -531,23 +502,28 @@
                       }
                     ]
                   },
-                  "pos":
-                  {
-                    "x":13119424,
-                    "y":52551856,
-                    "layerX":0,
-                    "crdSysX":0
-                  },
-                  "ctxRecon":"T$A=1@O=Berlin Hbf (tief)@L=8098160@a=128@$A=1@O=Leipzig Hbf@L=8010205@a=128@$202109091230$202109091342$ICE  509$$1$$$$",
+                  "ctxRecon":"T$A=1@O=Berlin Hbf (tief)@L=8098160@a=128@$A=1@O=Leipzig Hbf@L=8010205@a=128@$202112051928$202112052043$ICE  803$$1$$$$",
                   "msgL":
                   [
+                    {
+                      "type":"REM",
+                      "remX":0,
+                      "fLocX":0,
+                      "tLocX":2,
+                      "fIdx":0,
+                      "tIdx":3,
+                      "tagL":
+                      [
+                        "RES_JNY_DTL"
+                      ]
+                    },
                     {
                       "type":"REM",
                       "remX":1,
                       "fLocX":0,
                       "tLocX":2,
-                      "fIdx":4,
-                      "tIdx":7,
+                      "fIdx":0,
+                      "tIdx":3,
                       "tagL":
                       [
                         "RES_JNY_DTL"
@@ -558,8 +534,8 @@
                       "remX":2,
                       "fLocX":0,
                       "tLocX":2,
-                      "fIdx":4,
-                      "tIdx":7,
+                      "fIdx":0,
+                      "tIdx":3,
                       "tagL":
                       [
                         "RES_JNY_DTL"
@@ -570,8 +546,8 @@
                       "remX":3,
                       "fLocX":0,
                       "tLocX":2,
-                      "fIdx":4,
-                      "tIdx":7,
+                      "fIdx":0,
+                      "tIdx":3,
                       "tagL":
                       [
                         "RES_JNY_DTL_L"
@@ -580,46 +556,30 @@
                     {
                       "type":"REM",
                       "remX":4,
-                      "fLocX":0,
-                      "tLocX":2,
-                      "fIdx":4,
-                      "tIdx":7,
+                      "prio":240,
+                      "fIdx":-1,
+                      "tIdx":-1,
                       "tagL":
                       [
-                        "RES_JNY_DTL_L"
-                      ]
-                    },
-                    {
-                      "type":"REM",
-                      "remX":5,
-                      "fLocX":0,
-                      "tLocX":2,
-                      "fIdx":4,
-                      "tIdx":7,
-                      "tagL":
-                      [
-                        "RES_JNY_DTL_L"
-                      ]
-                    },
-                    {
-                      "type":"REM",
-                      "remX":6,
-                      "fLocX":0,
-                      "tLocX":2,
-                      "fIdx":4,
-                      "tIdx":7,
-                      "tagL":
-                      [
-                        "RES_JNY_DTL"
+                        "RES_CON_FTR_H3"
                       ]
                     }
                   ],
-                  "subscr":"F"
+                  "subscr":"F",
+                  "dTrnCmpSX":
+                  {
+                    "tcocX":
+                    [
+10,
+11
+                    ]
+                  }
                 },
-                "resState":"N"
+                "resState":"N",
+                "resRecommendation":"N"
               }
             ],
-            "ctxRecon":"¶HKI¶T$A=1@O=Berlin Hbf (tief)@L=8098160@a=128@$A=1@O=Leipzig Hbf@L=8010205@a=128@$202109091230$202109091342$ICE  509$$1$$$$",
+            "ctxRecon":"¶HKI¶T$A=1@O=Berlin Hbf (tief)@L=8098160@a=128@$A=1@O=Leipzig Hbf@L=8010205@a=128@$202112051928$202112052043$ICE  803$$1$$$$",
             "trfRes":
             {
               "statusCode":"OK",
@@ -629,13 +589,15 @@
                   "fareL":
                   [
                     {
-                      "prc":4560,
+                      "prc":5060,
                       "isFromPrice":false,
                       "isPartPrice":false,
                       "isBookable":true,
                       "isUpsell":false,
                       "targetCtx":"D",
-                      "buttonText":"Zur Angebotsauswahl"
+                      "buttonText":"Zur Angebotsauswahl",
+                      "retPriceIsCompletePrice":false,
+                      "retPrice":-1
                     }
                   ]
                 }
@@ -643,6 +605,7 @@
             },
             "conSubscr":"F",
             "resState":"N",
+            "resRecommendation":"N",
             "recState":"C",
             "sotRating":0,
             "isSotCon":false,
@@ -650,22 +613,30 @@
             "sotCtxt":
             {
               "cnLocX":0,
-              "calcDate":"20210909",
-              "jid":"1|167783|0|80|-1",
+              "calcDate":"20211205",
+              "jid":"1|173363|0|80|-1",
               "locMode":"FROM_START",
               "pLocX":0,
               "reqMode":"UNKNOWN",
               "sectX":0,
-              "calcTime":"121346"
+              "calcTime":"192420"
             },
-            "cksum":"14d153de_3"
+            "cksum":"91eec99f_3",
+            "dTrnCmpSX":
+            {
+              "tcocX":
+              [
+0,
+1
+              ]
+            }
           }
         ],
         "fpB":"20201213",
-        "fpE":"20211211",
+        "fpE":"20221210",
         "bfATS":-1,
         "bfIOSTS":-1,
-        "planrtTS":"1631182333"
+        "planrtTS":"1638728588"
       }
     }
   ]

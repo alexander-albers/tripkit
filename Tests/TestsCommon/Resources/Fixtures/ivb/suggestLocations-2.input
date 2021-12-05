@@ -2,7 +2,7 @@
   "ver":"1.20",
   "ext":"VAO.7",
   "lang":"deu",
-  "id":"ykgcpisuk2izygck",
+  "id":"snigmmcw462ap2wg",
   "err":"OK",
   "cInfo":
   {
@@ -37,7 +37,7 @@
               "id":"standard",
               "name":"standard",
               "index":0,
-              "annoCnt":384392
+              "annoCnt":0
             }
           ],
           "crdSysL":
@@ -86,6 +86,9 @@
               "res":"MH"
             },
             {
+              "res":"ADR"
+            },
+            {
               "res":"prod_regbus",
               "txtS":"453",
               "fg":
@@ -100,21 +103,6 @@
                 "g":163,
                 "b":212
               }
-            },
-            {
-              "res":"prod_ic",
-              "fg":
-              {
-                "r":255,
-                "g":255,
-                "b":255
-              },
-              "bg":
-              {
-                "r":80,
-                "g":80,
-                "b":80
-              }
             }
           ]
         },
@@ -125,7 +113,7 @@
           "locL":
           [
             {
-              "lid":"A=1@O=Innsbruck Mühlauer Brücke@X=11403608@Y=47278756@U=81@L=476434000@B=1@p=1630889505@i=at:47:64340@",
+              "lid":"A=1@O=Innsbruck Mühlauer Brücke@X=11403608@Y=47278756@U=81@L=476434000@B=1@p=1638666385@i=at:47:64340@",
               "type":"S",
               "name":"Innsbruck Mühlauer Brücke",
               "icoX":0,
@@ -140,11 +128,12 @@
               },
               "meta":true,
               "pCls":208,
-              "wt":914,
-              "isMainMast":true
+              "wt":936,
+              "isMainMast":true,
+              "mapSelectable":true
             },
             {
-              "lid":"A=4@O=Mühlauer Brücke, Innsbruck@X=11403913@Y=47278837@U=130@L=960014753@B=1@p=1630892207@",
+              "lid":"A=4@O=Mühlauer Brücke, Innsbruck@X=11403913@Y=47278837@U=130@L=960014753@B=1@p=1638671434@",
               "type":"P",
               "name":"Mühlauer Brücke, Innsbruck",
               "icoX":1,
@@ -164,22 +153,23 @@
                 "mcpid":"0",
                 "externalId":"ITSVR_203978"
               },
+              "mapSelectable":true,
               "msgL":
               [
                 {
                   "type":"REM",
                   "remX":0,
                   "dspl":"U",
-                  "sort":684195840
+                  "sort":818413568
                 }
               ]
             },
             {
-              "lid":"A=1@O=MÜHLDORF-MÖLLBRÜCKE@X=13366735@Y=46851418@U=81@L=900008660@B=1@p=1630889505@i=fe2f51a6-2ac8-4e73-a9dd-b3fafd561325@",
+              "lid":"A=1@O=MÜHLDORF-MÖLLBRÜCKE@X=13366735@Y=46851418@U=81@L=900008658@B=1@p=1638666385@i=fe2f51a6-2ac8-4e73-a9dd-b3fafd561325@",
               "type":"S",
               "name":"MÜHLDORF-MÖLLBRÜCKE",
               "icoX":2,
-              "extId":"900008660",
+              "extId":"900008658",
               "state":"F",
               "crd":
               {
@@ -190,13 +180,30 @@
               },
               "meta":true,
               "pCls":1,
-              "wt":282
+              "wt":199,
+              "mapSelectable":true
             },
             {
-              "lid":"A=1@O=Mühlgrub (Bad Hall) Brücke@X=14206948@Y=48023729@U=81@L=444344000@B=1@p=1630889505@i=at:44:43440@",
+              "lid":"A=2@O=Mühlaubrücke, Mannheim@X=8453501@Y=49489635@U=104@L=971720934@B=1@p=1636631415@",
+              "type":"A",
+              "name":"Mühlaubrücke, Mannheim",
+              "icoX":3,
+              "extId":"971720934",
+              "state":"F",
+              "crd":
+              {
+                "x":8453501,
+                "y":49489635,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "mapSelectable":true
+            },
+            {
+              "lid":"A=1@O=Mühlgrub (Bad Hall) Brücke@X=14206948@Y=48023729@U=81@L=444344000@B=1@p=1638666385@i=at:44:43440@",
               "type":"S",
               "name":"Mühlgrub (Bad Hall) Brücke",
-              "icoX":3,
+              "icoX":4,
               "extId":"444344000",
               "state":"F",
               "crd":
@@ -208,27 +215,9 @@
               },
               "meta":true,
               "pCls":64,
-              "wt":11,
-              "isMainMast":true
-            },
-            {
-              "lid":"A=1@O=Mühldorf-Möllbrücke Bahnhst@X=13366735@Y=46851418@U=81@L=420212600@B=1@p=1630889505@i=at:42:2126@",
-              "type":"S",
-              "name":"Mühldorf-Möllbrücke Bahnhst",
-              "icoX":4,
-              "extId":"420212600",
-              "state":"F",
-              "crd":
-              {
-                "x":13366735,
-                "y":46851418,
-                "layerX":0,
-                "crdSysX":0
-              },
-              "meta":true,
-              "pCls":1,
-              "wt":282,
-              "isMainMast":true
+              "wt":10,
+              "isMainMast":true,
+              "mapSelectable":true
             }
           ]
         }

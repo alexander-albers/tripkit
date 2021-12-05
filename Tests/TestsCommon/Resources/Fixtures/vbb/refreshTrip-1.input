@@ -1,7 +1,7 @@
 {
   "ver":"1.16",
   "lang":"deu",
-  "id":"cr6qqmxk6iwcyg4k",
+  "id":"pcmwumxq66w3xg8g",
   "svcResL":
   [
     {
@@ -78,16 +78,33 @@
               "pCls":13
             },
             {
-              "lid":"A=1@O=S+U Heidelberger Platz (Berlin)@X=13312287@Y=52480122@U=86@L=900045102@",
+              "lid":"A=1@O=S Südkreuz Bhf (Berlin)@X=13365575@Y=52475465@U=86@L=900058101@",
               "type":"S",
-              "name":"S+U Heidelberger Platz (Berlin)",
+              "name":"S Südkreuz Bhf (Berlin)",
               "icoX":1,
-              "extId":"900045102",
+              "extId":"900058101",
               "state":"F",
               "crd":
               {
-                "x":13312287,
-                "y":52480122,
+                "x":13365575,
+                "y":52475465,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":105
+            },
+            {
+              "lid":"A=1@O=S+U Innsbrucker Platz (Berlin)@X=13342878@Y=52478099@U=86@L=900054105@",
+              "type":"S",
+              "name":"S+U Innsbrucker Platz (Berlin)",
+              "icoX":1,
+              "extId":"900054105",
+              "state":"F",
+              "crd":
+              {
+                "x":13342878,
+                "y":52478099,
                 "type":"WGS84",
                 "layerX":0,
                 "crdSysX":0
@@ -95,16 +112,16 @@
               "pCls":11
             },
             {
-              "lid":"A=1@O=S Hohenzollerndamm (Berlin)@X=13300718@Y=52488338@U=86@L=900044101@",
+              "lid":"A=1@O=S Schöneberg (Berlin)@X=13352847@Y=52479807@U=86@L=900054104@",
               "type":"S",
-              "name":"S Hohenzollerndamm (Berlin)",
+              "name":"S Schöneberg (Berlin)",
               "icoX":1,
-              "extId":"900044101",
+              "extId":"900054104",
               "state":"F",
               "crd":
               {
-                "x":13300718,
-                "y":52488338,
+                "x":13352847,
+                "y":52479807,
                 "type":"WGS84",
                 "layerX":0,
                 "crdSysX":0
@@ -112,50 +129,16 @@
               "pCls":9
             },
             {
-              "lid":"A=1@O=S Halensee (Berlin)@X=13290147@Y=52496698@U=86@L=900040101@",
+              "lid":"A=1@O=S+U Tempelhof (Berlin)@X=13385756@Y=52470692@U=86@L=900068201@",
               "type":"S",
-              "name":"S Halensee (Berlin)",
+              "name":"S+U Tempelhof (Berlin)",
               "icoX":1,
-              "extId":"900040101",
+              "extId":"900068201",
               "state":"F",
               "crd":
               {
-                "x":13290147,
-                "y":52496698,
-                "type":"WGS84",
-                "layerX":0,
-                "crdSysX":0
-              },
-              "pCls":9
-            },
-            {
-              "lid":"A=1@O=S Westkreuz (Berlin)@X=13283036@Y=52501148@U=86@L=900024102@",
-              "type":"S",
-              "name":"S Westkreuz (Berlin)",
-              "icoX":1,
-              "extId":"900024102",
-              "state":"F",
-              "crd":
-              {
-                "x":13283036,
-                "y":52501148,
-                "type":"WGS84",
-                "layerX":0,
-                "crdSysX":0
-              },
-              "pCls":9
-            },
-            {
-              "lid":"A=1@O=S Messe Nord/ICC (Berlin)@X=13282884@Y=52506622@U=86@L=900024106@",
-              "type":"S",
-              "name":"S Messe Nord/ICC (Berlin)",
-              "icoX":1,
-              "extId":"900024106",
-              "state":"F",
-              "crd":
-              {
-                "x":13282884,
-                "y":52506622,
+                "x":13385756,
+                "y":52470692,
                 "type":"WGS84",
                 "layerX":0,
                 "crdSysX":0
@@ -163,67 +146,16 @@
               "pCls":11
             },
             {
-              "lid":"A=1@O=S Westend (Berlin)@X=13284241@Y=52518614@U=86@L=900026207@",
+              "lid":"A=1@O=S+U Hermannstr. (Berlin)@X=13431430@Y=52467339@U=86@L=900079221@",
               "type":"S",
-              "name":"S Westend (Berlin)",
+              "name":"S+U Hermannstr. (Berlin)",
               "icoX":1,
-              "extId":"900026207",
+              "extId":"900079221",
               "state":"F",
               "crd":
               {
-                "x":13284241,
-                "y":52518614,
-                "type":"WGS84",
-                "layerX":0,
-                "crdSysX":0
-              },
-              "pCls":9
-            },
-            {
-              "lid":"A=1@O=S+U Jungfernheide Bhf (Berlin)@X=13300134@Y=52530434@U=86@L=900020201@",
-              "type":"S",
-              "name":"S+U Jungfernheide Bhf (Berlin)",
-              "icoX":1,
-              "extId":"900020201",
-              "state":"F",
-              "crd":
-              {
-                "x":13300134,
-                "y":52530434,
-                "type":"WGS84",
-                "layerX":0,
-                "crdSysX":0
-              },
-              "pCls":75
-            },
-            {
-              "lid":"A=1@O=S Beusselstr. (Berlin)@X=13328702@Y=52534318@U=86@L=900020202@",
-              "type":"S",
-              "name":"S Beusselstr. (Berlin)",
-              "icoX":1,
-              "extId":"900020202",
-              "state":"F",
-              "crd":
-              {
-                "x":13328702,
-                "y":52534318,
-                "type":"WGS84",
-                "layerX":0,
-                "crdSysX":0
-              },
-              "pCls":9
-            },
-            {
-              "lid":"A=1@O=S+U Westhafen (Berlin)@X=13343839@Y=52536179@U=86@L=900001201@",
-              "type":"S",
-              "name":"S+U Westhafen (Berlin)",
-              "icoX":1,
-              "extId":"900001201",
-              "state":"F",
-              "crd":
-              {
-                "x":13343839,
-                "y":52536179,
+                "x":13431430,
+                "y":52467339,
                 "type":"WGS84",
                 "layerX":0,
                 "crdSysX":0
@@ -231,16 +163,16 @@
               "pCls":11
             },
             {
-              "lid":"A=1@O=S+U Wedding (Berlin)@X=13366061@Y=52542732@U=86@L=900009104@",
+              "lid":"A=1@O=S+U Neukölln (Berlin)@X=13443692@Y=52469281@U=86@L=900078201@",
               "type":"S",
-              "name":"S+U Wedding (Berlin)",
+              "name":"S+U Neukölln (Berlin)",
               "icoX":1,
-              "extId":"900009104",
+              "extId":"900078201",
               "state":"F",
               "crd":
               {
-                "x":13366061,
-                "y":52542732,
+                "x":13442721,
+                "y":52469389,
                 "type":"WGS84",
                 "layerX":0,
                 "crdSysX":0
@@ -248,38 +180,123 @@
               "pCls":11
             },
             {
-              "lid":"A=1@O=S+U Gesundbrunnen Bhf (Berlin)@X=13388372@Y=52548638@U=86@L=900007102@",
+              "lid":"A=1@O=S Sonnenallee (Berlin)@X=13455989@Y=52473847@U=86@L=900077106@",
               "type":"S",
-              "name":"S+U Gesundbrunnen Bhf (Berlin)",
+              "name":"S Sonnenallee (Berlin)",
               "icoX":1,
-              "extId":"900007102",
+              "extId":"900077106",
               "state":"F",
               "crd":
               {
-                "x":13388372,
-                "y":52548638,
+                "x":13455989,
+                "y":52473847,
                 "type":"WGS84",
                 "layerX":0,
                 "crdSysX":0
               },
-              "pCls":107
+              "pCls":9
             },
             {
-              "lid":"A=1@O=S+U Schönhauser Allee (Berlin)@X=13415142@Y=52549339@U=86@L=900110001@",
+              "lid":"A=1@O=S Treptower Park (Berlin)@X=13460888@Y=52493021@U=86@L=900190001@",
               "type":"S",
-              "name":"S+U Schönhauser Allee (Berlin)",
+              "name":"S Treptower Park (Berlin)",
               "icoX":1,
-              "extId":"900110001",
+              "extId":"900190001",
               "state":"F",
               "crd":
               {
-                "x":13415142,
-                "y":52549339,
+                "x":13461283,
+                "y":52493426,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":9
+            },
+            {
+              "lid":"A=1@O=S Ostkreuz Bhf (Berlin)@X=13469221@Y=52503116@U=86@L=900120003@",
+              "type":"S",
+              "name":"S Ostkreuz Bhf (Berlin)",
+              "icoX":1,
+              "extId":"900120003",
+              "state":"F",
+              "crd":
+              {
+                "x":13469221,
+                "y":52503116,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":105
+            },
+            {
+              "lid":"A=1@O=S+U Frankfurter Allee (Berlin)@X=13475846@Y=52513580@U=86@L=900120001@",
+              "type":"S",
+              "name":"S+U Frankfurter Allee (Berlin)",
+              "icoX":1,
+              "extId":"900120001",
+              "state":"F",
+              "crd":
+              {
+                "x":13475846,
+                "y":52513580,
                 "type":"WGS84",
                 "layerX":0,
                 "crdSysX":0
               },
               "pCls":15
+            },
+            {
+              "lid":"A=1@O=S Storkower Str. (Berlin)@X=13464708@Y=52523872@U=86@L=900110012@",
+              "type":"S",
+              "name":"S Storkower Str. (Berlin)",
+              "icoX":1,
+              "extId":"900110012",
+              "state":"F",
+              "crd":
+              {
+                "x":13464708,
+                "y":52523872,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":9
+            },
+            {
+              "lid":"A=1@O=S Landsberger Allee (Berlin)@X=13455944@Y=52528771@U=86@L=900110004@",
+              "type":"S",
+              "name":"S Landsberger Allee (Berlin)",
+              "icoX":1,
+              "extId":"900110004",
+              "state":"F",
+              "crd":
+              {
+                "x":13455944,
+                "y":52528771,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":13
+            },
+            {
+              "lid":"A=1@O=S Greifswalder Str. (Berlin)@X=13438352@Y=52540727@U=86@L=900110003@",
+              "type":"S",
+              "name":"S Greifswalder Str. (Berlin)",
+              "icoX":1,
+              "extId":"900110003",
+              "state":"F",
+              "crd":
+              {
+                "x":13438352,
+                "y":52540727,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":13
             }
           ],
           "prodL":
@@ -295,19 +312,19 @@
               }
             },
             {
-              "pid":"L::0::S::B1090519025::S_1090519025_S41::*",
-              "name":"S41",
-              "nameS":"S41",
-              "number":"S41",
+              "pid":"L::0::S::B1090519025::S_1090519025_S42::*",
+              "name":"S42",
+              "nameS":"S42",
+              "number":"S42",
               "icoX":4,
               "cls":1,
               "oprX":0,
               "prodCtx":
               {
-                "name":"     S41",
-                "num":"1230",
-                "line":"S41",
-                "matchId":"41088",
+                "name":"     S42",
+                "num":"1345",
+                "line":"S42",
+                "matchId":"42195",
                 "catOut":"S       ",
                 "catOutS":"S-3",
                 "catOutL":"S       ",
@@ -317,26 +334,23 @@
               },
               "himIdL":
               [
-"HIM_FREETEXT_135287",
-"HIM_FREETEXT_134923",
-"HIM_FREETEXT_135380",
-"HIM_FREETEXT_129636"
+"HIM_FREETEXT_145430"
               ]
             },
             {
-              "pid":"L::0::S::B1090519025::S_1090519025_S41::*",
-              "name":"S41",
-              "nameS":"S41",
-              "number":"S41",
+              "pid":"L::0::S::B1090519025::S_1090519025_S42::*",
+              "name":"S42",
+              "nameS":"S42",
+              "number":"S42",
               "icoX":4,
               "cls":1,
               "oprX":1,
               "prodCtx":
               {
-                "name":"     S41",
-                "num":"1230",
-                "line":"S41",
-                "matchId":"41088",
+                "name":"     S42",
+                "num":"1345",
+                "line":"S42",
+                "matchId":"42195",
                 "catOut":"S       ",
                 "catOutS":"S-3",
                 "catOutL":"S       ",
@@ -346,10 +360,33 @@
               },
               "himIdL":
               [
-"HIM_FREETEXT_135287",
-"HIM_FREETEXT_134923",
-"HIM_FREETEXT_135380",
-"HIM_FREETEXT_129636"
+"HIM_FREETEXT_145430"
+              ]
+            },
+            {
+              "pid":"L::0::S::B1090519025::S_1090519025_S42::*",
+              "name":"S42",
+              "nameS":"S42",
+              "number":"S42",
+              "icoX":4,
+              "cls":1,
+              "oprX":1,
+              "prodCtx":
+              {
+                "name":"     S42",
+                "num":"1303",
+                "line":"S42",
+                "matchId":"42207",
+                "catOut":"S       ",
+                "catOutS":"S-3",
+                "catOutL":"S       ",
+                "catIn":"S-3",
+                "catCode":"0",
+                "admin":"DBS---"
+              },
+              "himIdL":
+              [
+"HIM_FREETEXT_145430"
               ]
             }
           ],
@@ -359,9 +396,9 @@
               "delta":true,
               "dim":2,
               "type":"WGS84",
-              "crdEncYX":"koh_IcfjpAYuCE~z@UbFi@vG{AbKqDdLmCvF??Nk@{Sp\\o^dh@??wUn^kGtG{OjV??gOdU}FlL_ExE??cHdFaLnByIkAkImE??cNgIcLmCgIVuWbG??kHrAwb@~FoE{AyEeEqDoHqBaKyCoh@qD{^??qIsqAgGadAeEic@??iJeyA??uCse@aBi\\sBwHu^efA??\\fAsW}w@cCmJgBmKs@gHm@oSkB}Q??u@{ZSgx@YqOc@gW@sHt@_^L^??`A_L`HwWvKwV~DkLa@xBAsH",
-              "crdEncS":"NNLNKNLNNNMNNMMNNMMNNNNNNNNNNNNKNMNNNNNNKNNNNNKNLNNNLNKNNNNMLNKNMNNNNLNNN",
-              "crdEncF":"?????????????????????????????????????????????????????????????????????????",
+              "crdEncYX":"koh_IcfjpAYuCQkSeAgb@OsS??JaUMkIk@mFoEcY??cA_KKoQPkFpAiKxCuL~CoIfJmI??~I_EbDoCvDiIfAeF\\gJHyb@VyNfAsMnCsS??nEmYfBiIjPyh@fEgVlAsO?sSeEudA_@eHkHybA??aGkt@kAyIUaEeG_{@mFeLgFaG??gI{CaU}CqBu@c_@aDqEmAuIiAqLlAoDIqUqMO_@_FuEkDoEaIcNeF}Gw]aLKlA??JmA}DyAaHwFqXaXqDmBsGKyLlBkD|A??m\\xRcI~DaClBkEvIeA~EgBhN??cI`_@aClFuOpP??gGnFcIpJo\\|\\_BxB}EtLwGzVyFrP??eK``@{DlT}FvUAsH",
+              "crdEncS":"NNKKNNKNKNNNNLNMNNNMNMNLKNLNNLNNNNNNKNNKKNNNNNMLNMKNLNKNKNLNNNNNNKMNNMNNKKNNKNNNNNNLKKNMMNNMMNN",
+              "crdEncF":"???????????????????????????????????????????????????????????????????????????????????????????????",
               "ppLocRefL":
               [
                 {
@@ -369,55 +406,59 @@
                   "locX":2
                 },
                 {
-                  "ppIdx":7,
-                  "locX":4
-                },
-                {
-                  "ppIdx":11,
+                  "ppIdx":4,
                   "locX":5
                 },
                 {
-                  "ppIdx":15,
+                  "ppIdx":9,
                   "locX":6
                 },
                 {
-                  "ppIdx":19,
+                  "ppIdx":17,
+                  "locX":4
+                },
+                {
+                  "ppIdx":27,
                   "locX":7
                 },
                 {
-                  "ppIdx":24,
+                  "ppIdx":37,
                   "locX":8
                 },
                 {
-                  "ppIdx":29,
+                  "ppIdx":41,
                   "locX":9
                 },
                 {
-                  "ppIdx":38,
+                  "ppIdx":44,
                   "locX":10
                 },
                 {
-                  "ppIdx":42,
+                  "ppIdx":55,
                   "locX":11
                 },
                 {
-                  "ppIdx":44,
+                  "ppIdx":61,
                   "locX":12
                 },
                 {
-                  "ppIdx":49,
+                  "ppIdx":70,
                   "locX":13
                 },
                 {
-                  "ppIdx":57,
+                  "ppIdx":77,
                   "locX":14
                 },
                 {
-                  "ppIdx":65,
+                  "ppIdx":81,
                   "locX":15
                 },
                 {
-                  "ppIdx":72,
+                  "ppIdx":89,
+                  "locX":16
+                },
+                {
+                  "ppIdx":94,
                   "locX":3
                 }
               ]
@@ -479,7 +520,15 @@
               "code":"OPERATOR",
               "icoX":7,
               "txtS":"DBS",
-              "txtN":"DBS",
+              "txtN":"DBS (S+U Bundesplatz (Berlin) - S Südkreuz Bhf (Berlin))",
+              "txtL":"S-Bahn Berlin GmbH"
+            },
+            {
+              "type":"A",
+              "code":"OPERATOR",
+              "icoX":7,
+              "txtS":"DBS",
+              "txtN":"DBS (S Südkreuz Bhf (Berlin) - S Prenzlauer Allee (Berlin))",
               "txtL":"S-Bahn Berlin GmbH"
             },
             {
@@ -498,9 +547,9 @@
             },
             {
               "type":"R",
-              "code":"text.realtime.journey.cancelled",
-              "icoX":11,
-              "txtN":"S41: Fällt aus"
+              "code":"text.realtime.journey.partially.cancelled.between",
+              "icoX":10,
+              "txtN":"S42: Fahrt fällt aus zwischen S+U Bundesplatz (Berlin) und S Südkreuz Bhf (Berlin). Bitte benutzen Sie eine andere Verbindung."
             },
             {
               "type":"R",
@@ -512,49 +561,19 @@
           "himL":
           [
             {
-              "hid":"135319",
+              "hid":"144719",
               "act":true,
               "pub":"",
-              "head":"Streik im DB-Bahnverkehr von Donnerstag, 2 Uhr bis Dienstag, 2 Uhr",
+              "head":"Es gelten 3G-Regel und Maskenpflicht!",
               "lead":"",
-              "text":"Wegen Streiks der Gewerkschaft der Lokführer (GdL) kommt es im Regional- und Fernverkehr der DB sowie bei der S-Bahn Berlin zu erheblichen Einschränkungen. Bitte informieren Sie sich.<br><a href=\"https://www.vbb.de/streik\" target=\"_blank\" rel=\"noopener\">Weitere Informationen</a>",
+              "text":"Wir empfehlen eine FFP2-Maske.<br><a href=\"https://www.vbb.de/corona\" target=\"_blank\" rel=\"noopener\">Weitere Informationen</a>",
               "tckr":"",
               "icoX":9,
               "prio":100,
               "prod":65535,
-              "lModDate":"20210830",
-              "lModTime":"180823",
-              "sDate":"20210830",
-              "sTime":"170000",
-              "eDate":"20210907",
-              "eTime":"030000",
-              "comp":"VBB",
-              "cat":2,
-              "pubChL":
-              [
-                {
-                  "name":"TIMETABLE",
-                  "fDate":"20210830",
-                  "fTime":"172900",
-                  "tDate":"20210907",
-                  "tTime":"030000"
-                }
-              ]
-            },
-            {
-              "hid":"118634",
-              "act":true,
-              "pub":"",
-              "head":"Gemeinsam sicher unterwegs - mit Abstand und medizinischer Maske (in Berlin: FFP2)!",
-              "lead":"",
-              "text":"An Haltestellen und Bahnhöfen sowie in Fahrzeugen. Maskenmuffel riskieren mindestens 50 Euro.<br><a href=\"https://www.vbb.de/corona\" target=\"_blank\" rel=\"noopener\">Weitere Informationen</a>",
-              "tckr":"",
-              "icoX":10,
-              "prio":100,
-              "prod":65535,
-              "lModDate":"20210612",
-              "lModTime":"074336",
-              "sDate":"20210424",
+              "lModDate":"20211123",
+              "lModTime":"183110",
+              "sDate":"20211124",
               "sTime":"000000",
               "eDate":"20221231",
               "eTime":"000000",
@@ -564,8 +583,8 @@
               [
                 {
                   "name":"TIMETABLE",
-                  "fDate":"20210423",
-                  "fTime":"134200",
+                  "fDate":"20211123",
+                  "fTime":"173000",
                   "tDate":"20221231",
                   "tTime":"000000"
                 }
@@ -631,10 +650,10 @@
               "res":"attr_bike_r"
             },
             {
-              "res":"HIM2"
+              "res":"HIM0"
             },
             {
-              "res":"HIM0"
+              "res":"rt_critical"
             },
             {
               "res":"rt_cancel"
@@ -645,14 +664,13 @@
         [
           {
             "cid":"DirectConReq",
-            "date":"20210906",
-            "dur":"004700",
+            "date":"20211205",
+            "dur":"005000",
             "chg":0,
             "sDays":
             {
               "sDaysR":"täglich",
-              "sDaysI":"nicht 13. bis 19. Sep 2021",
-              "sDaysB":"7FFE03FFFFFFFFFFFFFFFFFFFF80"
+              "sDaysB":"FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF0"
             },
             "isNotRdbl":true,
             "badSecRefX":1,
@@ -660,14 +678,14 @@
             {
               "locX":0,
               "dInR":true,
-              "dTimeS":"094300",
+              "dTimeS":"192700",
               "type":"N"
             },
             "arr":
             {
               "locX":1,
               "aOutR":true,
-              "aTimeS":"103000",
+              "aTimeS":"201700",
               "type":"N"
             },
             "secL":
@@ -679,21 +697,21 @@
                 {
                   "locX":0,
                   "dInR":true,
-                  "dTimeS":"094300",
+                  "dTimeS":"192700",
                   "type":"N"
                 },
                 "arr":
                 {
                   "locX":2,
                   "aOutR":true,
-                  "aTimeS":"095100",
+                  "aTimeS":"193500",
                   "type":"N"
                 },
                 "gis":
                 {
                   "dist":532,
                   "durS":"000800",
-                  "ctx":"G|1|G@F|A=2@O=10715 Berlin-Wilmersdorf, Weimarische Str. 7@X=13324279@Y=52479663@U=103@L=770005219@|A=1@O=S+U Bundesplatz (Berlin)@X=13328495@Y=52477497@U=86@L=900044202@|6092021|94300|95100|bf|ft@0@2000@120@0@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§bt@0@2000@120@0@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§tt@0@250000@120@0@100@1@@0@@@@@false@0@-1@0@-1@-1@$t@0@250000@120@0@100@1@@0@@@@@false@0@-1@0@-1@-1@$t@0@0@0@0@100@-1@0@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$§||"
+                  "ctx":"G|1|G@F|A=2@O=10715 Berlin-Wilmersdorf, Weimarische Str. 7@X=13324279@Y=52479663@U=103@L=770005219@|A=1@O=S+U Bundesplatz (Berlin)@X=13328495@Y=52477497@U=86@L=900044202@|5122021|192700|193500|bf|ft@0@2000@120@0@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§bt@0@2000@120@0@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§tt@0@250000@120@0@100@1@@0@@@@@false@0@-1@0@-1@-1@$t@0@250000@120@0@100@1@@0@@@@@false@0@-1@0@-1@-1@$t@0@0@0@0@100@-1@0@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$§||"
                 }
               },
               {
@@ -702,10 +720,10 @@
                 "dep":
                 {
                   "locX":2,
-                  "idx":30,
+                  "idx":28,
                   "dProdX":1,
                   "dInR":false,
-                  "dTimeS":"095100",
+                  "dTimeS":"193500",
                   "dCncl":true,
                   "msgL":
                   [
@@ -723,43 +741,34 @@
                 "arr":
                 {
                   "locX":3,
-                  "idx":43,
-                  "aOutR":false,
-                  "aTimeS":"101900",
-                  "aCncl":true,
-                  "msgL":
-                  [
-                    {
-                      "type":"REM",
-                      "remX":0,
-                      "tagL":
-                      [
-                        "RES_LOC_H3"
-                      ]
-                    }
-                  ],
+                  "idx":42,
+                  "aPlatfS":"2",
+                  "aPlatfR":"2",
+                  "aOutR":true,
+                  "aTimeS":"200600",
+                  "aTimeR":"201300",
                   "type":"N"
                 },
                 "jny":
                 {
-                  "jid":"1|64722|16|86|6092021",
+                  "jid":"1|73140|0|86|5122021",
                   "prodX":2,
-                  "dirTxt":"Ringbahn S 41",
-                  "dirFlg":"1",
+                  "dirTxt":"Ringbahn S 42",
+                  "dirFlg":"2",
                   "status":"P",
-                  "isCncl":true,
+                  "isPartCncl":true,
                   "isRchbl":false,
                   "stopL":
                   [
                     {
                       "locX":2,
-                      "idx":30,
+                      "idx":28,
                       "dProdX":2,
                       "dInR":false,
-                      "dTimeS":"095100",
+                      "dTimeS":"193500",
                       "dCncl":true,
-                      "dDirTxt":"Ringbahn S 41",
-                      "dDirFlg":"1",
+                      "dDirTxt":"Ringbahn S 42",
+                      "dDirFlg":"2",
                       "msgL":
                       [
                         {
@@ -774,39 +783,15 @@
                       "type":"N"
                     },
                     {
-                      "locX":4,
-                      "idx":31,
-                      "aProdX":2,
-                      "aOutR":false,
-                      "aTimeS":"095300",
-                      "aCncl":true,
-                      "dProdX":2,
-                      "dInR":false,
-                      "dTimeS":"095300",
-                      "dCncl":true,
-                      "msgL":
-                      [
-                        {
-                          "type":"REM",
-                          "remX":0,
-                          "tagL":
-                          [
-                            "RES_LOC_H3"
-                          ]
-                        }
-                      ],
-                      "type":"N"
-                    },
-                    {
                       "locX":5,
-                      "idx":32,
+                      "idx":29,
                       "aProdX":2,
                       "aOutR":false,
-                      "aTimeS":"095500",
+                      "aTimeS":"193600",
                       "aCncl":true,
                       "dProdX":2,
                       "dInR":false,
-                      "dTimeS":"095500",
+                      "dTimeS":"193700",
                       "dCncl":true,
                       "msgL":
                       [
@@ -823,14 +808,14 @@
                     },
                     {
                       "locX":6,
-                      "idx":33,
+                      "idx":30,
                       "aProdX":2,
                       "aOutR":false,
-                      "aTimeS":"095700",
+                      "aTimeS":"193800",
                       "aCncl":true,
                       "dProdX":2,
                       "dInR":false,
-                      "dTimeS":"095700",
+                      "dTimeS":"193800",
                       "dCncl":true,
                       "msgL":
                       [
@@ -846,228 +831,16 @@
                       "type":"N"
                     },
                     {
-                      "locX":7,
-                      "idx":34,
+                      "locX":4,
+                      "idx":31,
                       "aProdX":2,
                       "aOutR":false,
-                      "aTimeS":"095800",
+                      "aTimeS":"194000",
                       "aCncl":true,
-                      "dProdX":2,
-                      "dInR":false,
-                      "dTimeS":"095900",
-                      "dCncl":true,
-                      "msgL":
-                      [
-                        {
-                          "type":"REM",
-                          "remX":0,
-                          "tagL":
-                          [
-                            "RES_LOC_H3"
-                          ]
-                        }
-                      ],
-                      "type":"N"
-                    },
-                    {
-                      "locX":8,
-                      "idx":35,
-                      "aProdX":2,
-                      "aOutR":false,
-                      "aTimeS":"100000",
-                      "aCncl":true,
-                      "dProdX":2,
-                      "dInR":false,
-                      "dTimeS":"100000",
-                      "dCncl":true,
-                      "msgL":
-                      [
-                        {
-                          "type":"REM",
-                          "remX":0,
-                          "tagL":
-                          [
-                            "RES_LOC_H3"
-                          ]
-                        }
-                      ],
-                      "type":"N"
-                    },
-                    {
-                      "locX":9,
-                      "idx":36,
-                      "aProdX":2,
-                      "aOutR":false,
-                      "aTimeS":"100200",
-                      "aCncl":true,
-                      "dProdX":2,
-                      "dInR":false,
-                      "dTimeS":"100200",
-                      "dCncl":true,
-                      "msgL":
-                      [
-                        {
-                          "type":"REM",
-                          "remX":0,
-                          "tagL":
-                          [
-                            "RES_LOC_H3"
-                          ]
-                        }
-                      ],
-                      "type":"N"
-                    },
-                    {
-                      "locX":10,
-                      "idx":37,
-                      "aProdX":2,
-                      "aOutR":false,
-                      "aTimeS":"100500",
-                      "aCncl":true,
-                      "dProdX":2,
-                      "dInR":false,
-                      "dTimeS":"100500",
-                      "dCncl":true,
-                      "msgL":
-                      [
-                        {
-                          "type":"REM",
-                          "remX":0,
-                          "tagL":
-                          [
-                            "RES_LOC_H3"
-                          ]
-                        }
-                      ],
-                      "type":"N"
-                    },
-                    {
-                      "locX":11,
-                      "idx":38,
-                      "aProdX":2,
-                      "aOutR":false,
-                      "aTimeS":"100800",
-                      "aCncl":true,
-                      "dProdX":2,
-                      "dInR":false,
-                      "dTimeS":"100800",
-                      "dCncl":true,
-                      "msgL":
-                      [
-                        {
-                          "type":"REM",
-                          "remX":0,
-                          "tagL":
-                          [
-                            "RES_LOC_H3"
-                          ]
-                        }
-                      ],
-                      "type":"N"
-                    },
-                    {
-                      "locX":12,
-                      "idx":39,
-                      "aProdX":2,
-                      "aOutR":false,
-                      "aTimeS":"100900",
-                      "aCncl":true,
-                      "dProdX":2,
-                      "dInR":false,
-                      "dTimeS":"101000",
-                      "dCncl":true,
-                      "msgL":
-                      [
-                        {
-                          "type":"REM",
-                          "remX":0,
-                          "tagL":
-                          [
-                            "RES_LOC_H3"
-                          ]
-                        }
-                      ],
-                      "type":"N"
-                    },
-                    {
-                      "locX":13,
-                      "idx":40,
-                      "aProdX":2,
-                      "aOutR":false,
-                      "aTimeS":"101200",
-                      "aCncl":true,
-                      "dProdX":2,
-                      "dInR":false,
-                      "dTimeS":"101300",
-                      "dCncl":true,
-                      "msgL":
-                      [
-                        {
-                          "type":"REM",
-                          "remX":0,
-                          "tagL":
-                          [
-                            "RES_LOC_H3"
-                          ]
-                        }
-                      ],
-                      "type":"N"
-                    },
-                    {
-                      "locX":14,
-                      "idx":41,
-                      "aProdX":2,
-                      "aOutR":false,
-                      "aTimeS":"101500",
-                      "aCncl":true,
-                      "dProdX":2,
-                      "dInR":false,
-                      "dTimeS":"101500",
-                      "dCncl":true,
-                      "msgL":
-                      [
-                        {
-                          "type":"REM",
-                          "remX":0,
-                          "tagL":
-                          [
-                            "RES_LOC_H3"
-                          ]
-                        }
-                      ],
-                      "type":"N"
-                    },
-                    {
-                      "locX":15,
-                      "idx":42,
-                      "aProdX":2,
-                      "aOutR":false,
-                      "aTimeS":"101700",
-                      "aCncl":true,
-                      "dProdX":2,
-                      "dInR":false,
-                      "dTimeS":"101800",
-                      "dCncl":true,
-                      "msgL":
-                      [
-                        {
-                          "type":"REM",
-                          "remX":0,
-                          "tagL":
-                          [
-                            "RES_LOC_H3"
-                          ]
-                        }
-                      ],
-                      "type":"N"
-                    },
-                    {
-                      "locX":3,
-                      "idx":43,
-                      "aProdX":2,
-                      "aOutR":false,
-                      "aTimeS":"101900",
-                      "aCncl":true,
+                      "dProdX":3,
+                      "dInR":true,
+                      "dTimeS":"194000",
+                      "dTimeR":"194700",
                       "msgL":
                       [
                         {
@@ -1079,6 +852,145 @@
                           ]
                         }
                       ],
+                      "type":"N"
+                    },
+                    {
+                      "locX":7,
+                      "idx":32,
+                      "aProdX":3,
+                      "aOutR":true,
+                      "aTimeS":"194200",
+                      "aTimeR":"194900",
+                      "dProdX":3,
+                      "dInR":true,
+                      "dTimeS":"194300",
+                      "dTimeR":"195000",
+                      "type":"N"
+                    },
+                    {
+                      "locX":8,
+                      "idx":33,
+                      "aProdX":3,
+                      "aOutR":true,
+                      "aTimeS":"194600",
+                      "aTimeR":"195300",
+                      "dProdX":3,
+                      "dInR":true,
+                      "dTimeS":"194700",
+                      "dTimeR":"195400",
+                      "type":"N"
+                    },
+                    {
+                      "locX":9,
+                      "idx":34,
+                      "aProdX":3,
+                      "aOutR":true,
+                      "aTimeS":"194800",
+                      "aTimeR":"195500",
+                      "dProdX":3,
+                      "dInR":true,
+                      "dTimeS":"194800",
+                      "dTimeR":"195500",
+                      "type":"N"
+                    },
+                    {
+                      "locX":10,
+                      "idx":35,
+                      "aProdX":3,
+                      "aOutR":true,
+                      "aTimeS":"195000",
+                      "aTimeR":"195700",
+                      "dProdX":3,
+                      "dInR":true,
+                      "dTimeS":"195000",
+                      "dTimeR":"195700",
+                      "type":"N"
+                    },
+                    {
+                      "locX":11,
+                      "idx":36,
+                      "aProdX":3,
+                      "aOutR":true,
+                      "aTimeS":"195300",
+                      "aTimeR":"200000",
+                      "dProdX":3,
+                      "dInR":true,
+                      "dTimeS":"195300",
+                      "dTimeR":"200000",
+                      "type":"N"
+                    },
+                    {
+                      "locX":12,
+                      "idx":37,
+                      "aProdX":3,
+                      "aOutR":true,
+                      "aTimeS":"195500",
+                      "aTimeR":"200200",
+                      "dProdX":3,
+                      "dInR":true,
+                      "dTimeS":"195600",
+                      "dTimeR":"200300",
+                      "type":"N"
+                    },
+                    {
+                      "locX":13,
+                      "idx":38,
+                      "aProdX":3,
+                      "aOutR":true,
+                      "aTimeS":"195700",
+                      "aTimeR":"200400",
+                      "dProdX":3,
+                      "dInR":true,
+                      "dTimeS":"195800",
+                      "dTimeR":"200500",
+                      "type":"N"
+                    },
+                    {
+                      "locX":14,
+                      "idx":39,
+                      "aProdX":3,
+                      "aOutR":true,
+                      "aTimeS":"200000",
+                      "aTimeR":"200700",
+                      "dProdX":3,
+                      "dInR":true,
+                      "dTimeS":"200000",
+                      "dTimeR":"200700",
+                      "type":"N"
+                    },
+                    {
+                      "locX":15,
+                      "idx":40,
+                      "aProdX":3,
+                      "aOutR":true,
+                      "aTimeS":"200100",
+                      "aTimeR":"200800",
+                      "dProdX":3,
+                      "dInR":true,
+                      "dTimeS":"200200",
+                      "dTimeR":"200900",
+                      "type":"N"
+                    },
+                    {
+                      "locX":16,
+                      "idx":41,
+                      "aProdX":3,
+                      "aOutR":true,
+                      "aTimeS":"200400",
+                      "aTimeR":"201100",
+                      "dProdX":3,
+                      "dInR":true,
+                      "dTimeS":"200400",
+                      "dTimeR":"201100",
+                      "type":"N"
+                    },
+                    {
+                      "locX":3,
+                      "idx":42,
+                      "aProdX":3,
+                      "aOutR":true,
+                      "aTimeS":"200600",
+                      "aTimeR":"201300",
                       "type":"N"
                     }
                   ],
@@ -1093,18 +1005,18 @@
                   },
                   "freq":
                   {
-                    "minC":40,
-                    "maxC":40,
-                    "numC":1
+                    "minC":4,
+                    "maxC":6,
+                    "numC":24
                   },
-                  "ctxRecon":"T$A=1@O=S+U Bundesplatz (Berlin)@L=900044202@a=128@$A=1@O=S Prenzlauer Allee (Berlin)@L=900110002@a=128@$202109060951$202109061019$     S41$$1$$$$",
+                  "ctxRecon":"T$A=1@O=S+U Bundesplatz (Berlin)@L=900044202@a=128@$A=1@O=S Prenzlauer Allee (Berlin)@L=900110002@a=128@$202112051935$202112052006$     S42$$3$$$$",
                   "msgL":
                   [
                     {
                       "type":"REM",
                       "remX":3,
                       "fLocX":2,
-                      "tLocX":3,
+                      "tLocX":4,
                       "tagL":
                       [
                         "RES_JNY_DTL"
@@ -1113,6 +1025,16 @@
                     {
                       "type":"REM",
                       "remX":4,
+                      "fLocX":4,
+                      "tLocX":3,
+                      "tagL":
+                      [
+                        "RES_JNY_DTL"
+                      ]
+                    },
+                    {
+                      "type":"REM",
+                      "remX":5,
                       "fLocX":2,
                       "tLocX":3,
                       "tagL":
@@ -1122,7 +1044,7 @@
                     },
                     {
                       "type":"REM",
-                      "remX":5,
+                      "remX":6,
                       "fLocX":2,
                       "tLocX":3,
                       "tagL":
@@ -1140,17 +1062,8 @@
                       ]
                     },
                     {
-                      "type":"HIM",
-                      "himX":1,
-                      "fLocX":2,
-                      "tagL":
-                      [
-                        "RES_GLB_HDR_H3","SUM_GLB_HDR_H3"
-                      ]
-                    },
-                    {
                       "type":"REM",
-                      "remX":6,
+                      "remX":7,
                       "tagL":
                       [
                         "SUM_CON_HDR_H3","RES_SEC_HDR_H3"
@@ -1167,28 +1080,28 @@
                 {
                   "locX":3,
                   "dInR":true,
-                  "dTimeS":"101900",
+                  "dTimeS":"200600",
                   "type":"N"
                 },
                 "arr":
                 {
                   "locX":1,
                   "aOutR":true,
-                  "aTimeS":"103000",
+                  "aTimeS":"201700",
                   "type":"N"
                 },
                 "gis":
                 {
                   "dist":761,
                   "durS":"001100",
-                  "ctx":"G|1|G@F|A=1@O=S Prenzlauer Allee (Berlin)@X=13427421@Y=52544799@U=86@L=900110002@|A=2@O=10437 Berlin-Prenzlauer Berg, Göhrener Str. 5@X=13421290@Y=52541536@U=103@L=770009577@|6092021|101900|103000|fb|ft@0@2000@120@0@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§bt@0@2000@120@0@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§tt@0@250000@120@0@100@1@@0@@@@@false@0@-1@0@-1@-1@$t@0@250000@120@0@100@1@@0@@@@@false@0@-1@0@-1@-1@$t@0@0@0@0@100@-1@0@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$§||"
+                  "ctx":"G|1|G@F|A=1@O=S Prenzlauer Allee (Berlin)@X=13427421@Y=52544799@U=86@L=900110002@|A=2@O=10437 Berlin-Prenzlauer Berg, Göhrener Str. 5@X=13421290@Y=52541536@U=103@L=770009577@|5122021|200600|201700|fb|ft@0@2000@120@0@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§bt@0@2000@120@0@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§tt@0@250000@120@0@100@1@@0@@@@@false@0@-1@0@-1@-1@$t@0@250000@120@0@100@1@@0@@@@@false@0@-1@0@-1@-1@$t@0@0@0@0@100@-1@0@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$§||"
                 }
               }
             ],
-            "ctxRecon":"¶HKI¶G@F$A=2@O=10715 Berlin-Wilmersdorf, Weimarische Str. 7@X=13324279@Y=52479663@L=770005219@a=128@$A=1@O=S+U Bundesplatz (Berlin)@L=900044202@a=128@$202109060943$202109060951$$$1$$$$§T$A=1@O=S+U Bundesplatz (Berlin)@L=900044202@a=128@$A=1@O=S Prenzlauer Allee (Berlin)@L=900110002@a=128@$202109060951$202109061019$     S41$$1$$$$§G@F$A=1@O=S Prenzlauer Allee (Berlin)@L=900110002@a=128@$A=2@O=10437 Berlin-Prenzlauer Berg, Göhrener Str. 5@X=13421290@Y=52541536@L=770009577@a=128@$202109061019$202109061030$$$1$$$$¶GP¶ft@0@2000@120@0@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§bt@0@2000@120@0@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§tt@0@250000@120@0@100@1@@0@@@@@false@0@-1@0@-1@-1@$t@0@250000@120@0@100@1@@0@@@@@false@0@-1@0@-1@-1@$t@0@0@0@0@100@-1@0@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$§",
+            "ctxRecon":"¶HKI¶G@F$A=2@O=10715 Berlin-Wilmersdorf, Weimarische Str. 7@X=13324279@Y=52479663@L=770005219@a=128@$A=1@O=S+U Bundesplatz (Berlin)@L=900044202@a=128@$202112051927$202112051935$$$1$$$$§T$A=1@O=S+U Bundesplatz (Berlin)@L=900044202@a=128@$A=1@O=S Prenzlauer Allee (Berlin)@L=900110002@a=128@$202112051935$202112052006$     S42$$3$$$$§G@F$A=1@O=S Prenzlauer Allee (Berlin)@L=900110002@a=128@$A=2@O=10437 Berlin-Prenzlauer Berg, Göhrener Str. 5@X=13421290@Y=52541536@L=770009577@a=128@$202112052006$202112052017$$$1$$$$¶GP¶ft@0@2000@120@0@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§bt@0@2000@120@0@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§tt@0@250000@120@0@100@1@@0@@@@@false@0@-1@0@-1@-1@$t@0@250000@120@0@100@1@@0@@@@@false@0@-1@0@-1@-1@$t@0@0@0@0@100@-1@0@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$§",
             "freq":
             {
-              "minC":40
+              "minC":4
             },
             "trfRes":
             {
@@ -1425,7 +1338,7 @@
             [
               {
                 "type":"REM",
-                "remX":7,
+                "remX":8,
                 "tagL":
                 [
                   "SUM_CON_HDR_H3","RES_CON_HDR_H3"
@@ -1433,12 +1346,12 @@
               }
             ],
             "conSubscr":"P",
-            "cksum":"dc69c327_3"
+            "cksum":"9c91cb45_3"
           }
         ],
-        "fpB":"20210829",
-        "fpE":"20211211",
-        "planrtTS":"1630914087"
+        "fpB":"20211128",
+        "fpE":"20220611",
+        "planrtTS":"1638728696"
       }
     }
   ]

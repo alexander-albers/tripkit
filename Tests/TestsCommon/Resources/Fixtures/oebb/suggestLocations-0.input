@@ -1,7 +1,7 @@
 {
   "ver":"1.19",
   "lang":"deu",
-  "id":"grkxhgqsk2wzxg8g",
+  "id":"d9ms4kqi46jmyi4s",
   "err":"OK",
   "svcResL":
   [
@@ -125,11 +125,11 @@
           "locL":
           [
             {
-              "lid":"A=1@O=Wien Schottenring (U)@X=16371280@Y=48217104@U=81@L=001390163@B=1@p=1630923242@",
+              "lid":"A=1@O=Wien Schottenring (U)@X=16371280@Y=48217104@U=181@L=1390163@B=1@p=1638449070@",
               "type":"S",
               "name":"Wien Schottenring (U)",
               "icoX":0,
-              "extId":"001390163",
+              "extId":"1390163",
               "state":"F",
               "crd":
               {
@@ -146,7 +146,7 @@
 1,
 2
               ],
-              "wt":4502
+              "wt":5579
             },
             {
               "lid":"A=4@O=Wien, Schottenring (Restaurant)@X=16367442@Y=48216358@U=105@L=970078074@B=1@p=1555424334@",
@@ -178,12 +178,11 @@
               }
             },
             {
-              "lid":"A=2@O=Schwechat, Werkstättenring Nord@X=16551379@Y=48124920@U=103@L=980157705@B=1@p=1520424776@",
+              "lid":"A=2@O=Schwechat, Werkstättenring Nord@X=16551379@Y=48124920@U=103@b=980157705@B=1@p=1520424776@",
               "type":"A",
               "name":"Schwechat, Werkstättenring Nord",
               "icoX":4,
-              "extId":"980157705",
-              "state":"F",
+              "state":"M",
               "crd":
               {
                 "x":16551379,
@@ -193,12 +192,11 @@
               }
             },
             {
-              "lid":"A=2@O=Schwechat, Werkstättenring Süd@X=16550930@Y=48124641@U=103@L=980157706@B=1@p=1520424776@",
+              "lid":"A=2@O=Schwechat, Werkstättenring Süd@X=16550930@Y=48124641@U=103@b=980157706@B=1@p=1520424776@",
               "type":"A",
               "name":"Schwechat, Werkstättenring Süd",
               "icoX":4,
-              "extId":"980157706",
-              "state":"F",
+              "state":"M",
               "crd":
               {
                 "x":16550930,

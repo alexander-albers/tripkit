@@ -1,7 +1,7 @@
 {
   "ver":"1.21",
   "lang":"deu",
-  "id":"4hmshgus6e8pgi8x",
+  "id":"b22w6msi66gfpgwx",
   "err":"OK",
   "svcResL":
   [
@@ -15,15 +15,15 @@
           "locL":
           [
             {
-              "lid":"A=2@O=49.239313, 6.992942@X=6992942@Y=49239313@u=0@",
+              "lid":"A=2@O=49.240927, 6.988747@X=6988747@Y=49240927@u=0@",
               "type":"A",
-              "name":"49.239313, 6.992942",
+              "name":"49.240927, 6.988747",
               "icoX":0,
               "state":"F",
               "crd":
               {
-                "x":6992942,
-                "y":49239313,
+                "x":6988747,
+                "y":49240927,
                 "layerX":0,
                 "crdSysX":0
               },
@@ -46,100 +46,52 @@
               "dist":1
             },
             {
-              "lid":"A=1@O=Kaiserstr., Saarbrücken@X=6994084@Y=49237704@U=80@L=10604@",
+              "lid":"A=1@O=Saarbrücken Hbf@X=6991019@Y=49241066@U=80@L=8000323@",
               "type":"S",
-              "name":"Kaiserstr., Saarbrücken",
+              "name":"Saarbrücken Hbf",
               "icoX":1,
-              "extId":"10604",
+              "extId":"8000323",
               "state":"F",
               "crd":
               {
-                "x":6994084,
-                "y":49237704,
+                "x":6991019,
+                "y":49241066,
                 "layerX":0,
                 "crdSysX":0
               },
-              "pCls":64
+              "pCls":1743
             },
             {
-              "lid":"A=1@O=Kieselhumes, Saarbrücken@X=7017393@Y=49228139@U=80@L=10605@",
+              "lid":"A=1@O=Saarbrücken Ost@X=7018391@Y=49230719@U=80@L=8005241@",
               "type":"S",
-              "name":"Kieselhumes, Saarbrücken",
-              "icoX":1,
-              "extId":"10605",
+              "name":"Saarbrücken Ost",
+              "icoX":3,
+              "extId":"8005241",
               "state":"F",
               "crd":
               {
-                "x":7017393,
-                "y":49228139,
+                "x":7018391,
+                "y":49230719,
                 "layerX":0,
                 "crdSysX":0
               },
-              "pCls":1228
+              "pCls":1224
             },
             {
-              "lid":"A=1@O=Johanneskirche, Saarbrücken@X=6996484@Y=49235816@U=80@L=10619@",
+              "lid":"A=1@O=Ostbahnhof, Saarbrücken@X=7020512@Y=49230575@U=80@L=10700@",
               "type":"S",
-              "name":"Johanneskirche, Saarbrücken",
-              "icoX":1,
-              "extId":"10619",
+              "name":"Ostbahnhof, Saarbrücken",
+              "icoX":6,
+              "extId":"10700",
               "state":"F",
               "crd":
               {
-                "x":6996484,
-                "y":49235816,
+                "x":7020512,
+                "y":49230575,
                 "layerX":0,
                 "crdSysX":0
               },
-              "pCls":1728
-            },
-            {
-              "lid":"A=1@O=Landwehrplatz, Saarbrücken@X=7001159@Y=49233155@U=80@L=10606@",
-              "type":"S",
-              "name":"Landwehrplatz, Saarbrücken",
-              "icoX":1,
-              "extId":"10606",
-              "state":"F",
-              "crd":
-              {
-                "x":7001159,
-                "y":49233155,
-                "layerX":0,
-                "crdSysX":0
-              },
-              "pCls":1728
-            },
-            {
-              "lid":"A=1@O=Uhlandstr., Saarbrücken@X=7006849@Y=49231223@U=80@L=10609@",
-              "type":"S",
-              "name":"Uhlandstr., Saarbrücken",
-              "icoX":1,
-              "extId":"10609",
-              "state":"F",
-              "crd":
-              {
-                "x":7006849,
-                "y":49231223,
-                "layerX":0,
-                "crdSysX":0
-              },
-              "pCls":192
-            },
-            {
-              "lid":"A=1@O=Hellwigstr., Saarbrücken@X=7011694@Y=49229155@U=80@L=10627@",
-              "type":"S",
-              "name":"Hellwigstr., Saarbrücken",
-              "icoX":1,
-              "extId":"10627",
-              "state":"F",
-              "crd":
-              {
-                "x":7011694,
-                "y":49229155,
-                "layerX":0,
-                "crdSysX":0
-              },
-              "pCls":192
+              "pCls":1224
             }
           ],
           "prodL":
@@ -153,25 +105,135 @@
               }
             },
             {
-              "pid":"L::6::S::B0664245212::S_0664245212_1::*",
-              "name":"S 1",
-              "nameS":"1",
-              "number":"1",
-              "icoX":1,
-              "cls":64,
+              "pid":"L::3::RB::B1715767794::RB_1715767794_RB71::*",
+              "name":"RB71",
+              "nameS":"RB71",
+              "number":"RB71",
+              "icoX":3,
+              "cls":8,
               "oprX":0,
               "prodCtx":
               {
-                "name":"S      1",
-                "num":"695",
-                "line":"1",
-                "matchId":"11141",
-                "catOut":"S       ",
-                "catOutS":"Sbs",
-                "catOutL":"Saarbahn",
-                "catIn":"Sbs",
-                "catCode":"6",
-                "admin":"SBSTR_"
+                "name":"    RB71",
+                "num":"12583",
+                "line":"RB71",
+                "matchId":"12583",
+                "catOut":"RB      ",
+                "catOutS":"RB",
+                "catOutL":"Regionalbahn",
+                "catIn":"RB",
+                "catCode":"3",
+                "admin":"8015A1"
+              }
+            },
+            {
+              "pid":"L::3::RB::B1715767794::RB_1715767794_RB68::*",
+              "name":"RB68",
+              "nameS":"RB68",
+              "number":"RB68",
+              "icoX":3,
+              "cls":8,
+              "oprX":0,
+              "prodCtx":
+              {
+                "name":"    RB68",
+                "num":"12938",
+                "line":"RB68",
+                "matchId":"12938",
+                "catOut":"RB      ",
+                "catOutS":"RB",
+                "catOutL":"Regionalbahn",
+                "catIn":"RB",
+                "catCode":"3",
+                "admin":"801566"
+              }
+            },
+            {
+              "pid":"L::3::RB::B1715767794::RB_1715767794_RB71::*",
+              "name":"RB71",
+              "nameS":"RB71",
+              "number":"RB71",
+              "icoX":3,
+              "cls":8,
+              "oprX":0,
+              "prodCtx":
+              {
+                "name":"    RB71",
+                "num":"12585",
+                "line":"RB71",
+                "matchId":"12585",
+                "catOut":"RB      ",
+                "catOutS":"RB",
+                "catOutL":"Regionalbahn",
+                "catIn":"RB",
+                "catCode":"3",
+                "admin":"8015A1"
+              }
+            },
+            {
+              "pid":"L::3::RB::B1715767794::RB_1715767794_RB68::*",
+              "name":"RB68",
+              "nameS":"RB68",
+              "number":"RB68",
+              "icoX":3,
+              "cls":8,
+              "oprX":0,
+              "prodCtx":
+              {
+                "name":"    RB68",
+                "num":"12940",
+                "line":"RB68",
+                "matchId":"12940",
+                "catOut":"RB      ",
+                "catOutS":"RB",
+                "catOutL":"Regionalbahn",
+                "catIn":"RB",
+                "catCode":"3",
+                "admin":"801566"
+              }
+            },
+            {
+              "pid":"L::3::RB::B1715767794::RB_1715767794_RB71::*",
+              "name":"RB71",
+              "nameS":"RB71",
+              "number":"RB71",
+              "icoX":3,
+              "cls":8,
+              "oprX":0,
+              "prodCtx":
+              {
+                "name":"    RB71",
+                "num":"12587",
+                "line":"RB71",
+                "matchId":"12587",
+                "catOut":"RB      ",
+                "catOutS":"RB",
+                "catOutL":"Regionalbahn",
+                "catIn":"RB",
+                "catCode":"3",
+                "admin":"8015A1"
+              }
+            },
+            {
+              "pid":"L::3::RB::B1715767794::RB_1715767794_RB71::*",
+              "name":"RB71",
+              "nameS":"RB71",
+              "number":"RB71",
+              "icoX":3,
+              "cls":8,
+              "oprX":0,
+              "prodCtx":
+              {
+                "name":"    RB71",
+                "num":"12589",
+                "line":"RB71",
+                "matchId":"12589",
+                "catOut":"RB      ",
+                "catOutS":"RB",
+                "catOutL":"Regionalbahn",
+                "catIn":"RB",
+                "catCode":"3",
+                "admin":"8015A1"
               }
             }
           ],
@@ -180,9 +242,9 @@
             {
               "delta":true,
               "dim":2,
-              "crdEncYX":"uvokH_`ui@xJ_NrOg\\`Kqb@|Kg]jEsb@",
-              "crdEncS":"NNNNNN",
-              "crdEncF":"??????",
+              "crdEncYX":"ukpkH{lti@t_AajD",
+              "crdEncS":"NN",
+              "crdEncF":"??",
               "ppLocRefL":
               [
                 {
@@ -191,23 +253,25 @@
                 },
                 {
                   "ppIdx":1,
-                  "locX":4
-                },
-                {
-                  "ppIdx":2,
-                  "locX":5
-                },
-                {
-                  "ppIdx":3,
-                  "locX":6
-                },
-                {
-                  "ppIdx":4,
-                  "locX":7
-                },
-                {
-                  "ppIdx":5,
                   "locX":3
+                }
+              ]
+            },
+            {
+              "delta":true,
+              "dim":2,
+              "crdEncYX":"_knkH}wyi@ZgL",
+              "crdEncS":"NN",
+              "crdEncF":"??",
+              "ppLocRefL":
+              [
+                {
+                  "ppIdx":0,
+                  "locX":3
+                },
+                {
+                  "ppIdx":1,
+                  "locX":4
                 }
               ]
             }
@@ -232,17 +296,52 @@
           "opL":
           [
             {
-              "name":"Saarbahn GmbH",
-              "icoX":3
+              "name":"DB Regio AG Mitte",
+              "icoX":4
             }
           ],
           "remL":
           [
             {
               "type":"A",
+              "code":"PF",
+              "prio":200,
+              "icoX":5,
+              "txtN":"Maskenpflicht nach gesetzl. Regelung; regional gilt FFP2-Maskenpflicht"
+            },
+            {
+              "type":"A",
+              "code":"3G",
+              "prio":205,
+              "icoX":5,
+              "txtN":"Im Zug gilt bundesweit 3G-Regel: ein gültiger Nachweis ist mitzuführen"
+            },
+            {
+              "type":"A",
+              "code":"FB",
+              "prio":260,
+              "icoX":5,
+              "txtN":"Fahrradmitnahme begrenzt möglich"
+            },
+            {
+              "type":"A",
+              "code":"EH",
+              "prio":560,
+              "icoX":5,
+              "txtN":"Fahrzeuggebundene Einstiegshilfe vorhanden"
+            },
+            {
+              "type":"A",
+              "code":"KL",
+              "prio":610,
+              "icoX":5,
+              "txtN":"Klimaanlage"
+            },
+            {
+              "type":"A",
               "code":"OPERATOR",
-              "icoX":4,
-              "txtN":"Betreiber: Saarbahn GmbH"
+              "icoX":5,
+              "txtN":"Betreiber: DB Regio AG Mitte"
             }
           ],
           "icoL":
@@ -251,7 +350,7 @@
               "res":"ADR"
             },
             {
-              "res":"prod_tram",
+              "res":"prod_ice",
               "fg":
               {
                 "r":255,
@@ -260,9 +359,9 @@
               },
               "bg":
               {
-                "r":237,
-                "g":135,
-                "b":34
+                "r":232,
+                "g":66,
+                "b":97
               }
             },
             {
@@ -281,18 +380,52 @@
               }
             },
             {
-              "res":"S+B",
-              "txt":"Saarbahn GmbH"
+              "res":"prod_reg",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255
+              },
+              "bg":
+              {
+                "r":152,
+                "g":194,
+                "b":28
+              }
+            },
+            {
+              "res":"RE",
+              "txt":"DB Regio AG Mitte"
             },
             {
               "res":"INFO"
+            },
+            {
+              "res":"prod_bus",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255
+              },
+              "bg":
+              {
+                "r":170,
+                "g":85,
+                "b":153
+              }
             }
           ],
           "dirL":
           [
             {
-              "txt":"Brebach",
-              "flg":"B"
+              "txt":"Homburg(Saar)Hbf",
+              "flg":"0"
+            },
+            {
+              "txt":"Pirmasens Hbf",
+              "flg":"0"
             }
           ]
         },
@@ -300,27 +433,26 @@
         [
           {
             "cid":"DirectConReq",
-            "date":"20210906",
-            "dur":"001800",
+            "date":"20211205",
+            "dur":"001300",
             "chg":0,
             "sDays":
             {
-              "sDaysR":"Mo - Sa",
-              "sDaysI":"nicht 1. Nov",
-              "sDaysB":"7EF1EBF7EFDFBF7EFDFBF7EFDFBD3EFDFBE7EEDF9F76FDFBF7EFDFBF7EFDFBF7EFDFBF7EFDFBF7EFCFBF7EFDFBF0"
+              "sDaysR":"täglich",
+              "sDaysB":"FFFFFFFFFFFFFFFFFFFFFFC0"
             },
             "dep":
             {
               "locX":0,
               "dInR":true,
-              "dTimeS":"154500",
+              "dTimeS":"192600",
               "type":"N"
             },
             "arr":
             {
               "locX":1,
               "aOutR":true,
-              "aTimeS":"160300",
+              "aTimeS":"193900",
               "type":"N"
             },
             "secL":
@@ -332,21 +464,21 @@
                 {
                   "locX":0,
                   "dInR":true,
-                  "dTimeS":"154500",
+                  "dTimeS":"192600",
                   "type":"N"
                 },
                 "arr":
                 {
                   "locX":2,
                   "aOutR":true,
-                  "aTimeS":"154900",
+                  "aTimeS":"193100",
                   "type":"N"
                 },
                 "gis":
                 {
-                  "dist":275,
-                  "durS":"000400",
-                  "ctx":"G|1|G@F|A=2@O=49.239313, 6.992942@X=6992942@Y=49239313@u=0@|A=1@O=Kaiserstr., Saarbrücken@X=6994084@Y=49237704@U=80@L=10604@|6092021|154500|154900|bf|ft@0@2000@120@1@100@1@@0@@@@@false@0@-1@$f@$f@$f@$f@$f@$§bt@0@2000@120@1@100@1@@0@@@@@false@0@-1@$f@$f@$f@$f@$f@$§tt@0@5000@120@1@100@1@@0@@@@@false@0@-1@$t@0@25000@120@1@100@1@@0@@@@@false@0@-1@$f@$f@$f@$f@$§|",
+                  "dist":329,
+                  "durS":"000500",
+                  "ctx":"G|1|G@F|A=2@O=49.240927, 6.988747@X=6988747@Y=49240927@u=0@|A=1@O=Saarbrücken Hbf@X=6991019@Y=49241066@U=80@L=8000323@|5122021|192600|193100|bf|ft@0@2000@120@1@100@1@@0@@@@@false@0@-1@$f@$f@$f@$f@$f@$§bt@0@2000@120@1@100@1@@0@@@@@false@0@-1@$f@$f@$f@$f@$f@$§tt@0@5000@120@1@100@1@@0@@@@@false@0@-1@$t@0@25000@120@1@100@1@@0@@@@@false@0@-1@$f@$f@$f@$f@$§|",
                   "gisPrvr":"E",
                   "getDescr":true,
                   "getPoly":true
@@ -354,117 +486,61 @@
               },
               {
                 "type":"JNY",
-                "icoX":1,
+                "icoX":3,
                 "dep":
                 {
                   "locX":2,
-                  "idx":29,
+                  "idx":25,
                   "dProdX":1,
+                  "dPlatfS":"5",
+                  "dPlatfR":"5",
                   "dInR":true,
-                  "dTimeS":"154900",
-                  "dTimeR":"155000",
+                  "dTimeS":"193100",
+                  "dTimeR":"193300",
                   "dProgType":"PROGNOSED",
                   "type":"N"
                 },
                 "arr":
                 {
                   "locX":3,
-                  "idx":34,
+                  "idx":26,
+                  "aPlatfS":"2",
+                  "aPlatfR":"2",
                   "aOutR":true,
-                  "aTimeS":"155700",
-                  "aTimeR":"155800",
+                  "aTimeS":"193400",
+                  "aTimeR":"193500",
                   "aProgType":"PROGNOSED",
                   "type":"N"
                 },
                 "jny":
                 {
-                  "jid":"1|33792|2|80|6092021",
+                  "jid":"1|3304|0|80|5122021",
                   "prodX":1,
-                  "dirTxt":"Brebach",
-                  "dirFlg":"B",
+                  "dirTxt":"Homburg(Saar)Hbf",
+                  "dirFlg":"0",
                   "status":"P",
                   "isRchbl":true,
                   "stopL":
                   [
                     {
                       "locX":2,
-                      "idx":29,
+                      "idx":25,
                       "dProdX":1,
                       "dInR":true,
-                      "dTimeS":"154900",
-                      "dTimeR":"155000",
+                      "dTimeS":"193100",
+                      "dTimeR":"193300",
                       "dProgType":"PROGNOSED",
-                      "dDirTxt":"Brebach",
-                      "dDirFlg":"B",
-                      "type":"N"
-                    },
-                    {
-                      "locX":4,
-                      "idx":30,
-                      "aProdX":1,
-                      "aOutR":true,
-                      "aTimeS":"155100",
-                      "aTimeR":"155200",
-                      "aProgType":"PROGNOSED",
-                      "dProdX":1,
-                      "dInR":true,
-                      "dTimeS":"155100",
-                      "dTimeR":"155200",
-                      "dProgType":"PROGNOSED",
-                      "type":"N"
-                    },
-                    {
-                      "locX":5,
-                      "idx":31,
-                      "aProdX":1,
-                      "aOutR":true,
-                      "aTimeS":"155200",
-                      "aTimeR":"155300",
-                      "aProgType":"PROGNOSED",
-                      "dProdX":1,
-                      "dInR":true,
-                      "dTimeS":"155200",
-                      "dTimeR":"155300",
-                      "dProgType":"PROGNOSED",
-                      "type":"N"
-                    },
-                    {
-                      "locX":6,
-                      "idx":32,
-                      "aProdX":1,
-                      "aOutR":true,
-                      "aTimeS":"155400",
-                      "aTimeR":"155500",
-                      "aProgType":"PROGNOSED",
-                      "dProdX":1,
-                      "dInR":true,
-                      "dTimeS":"155400",
-                      "dTimeR":"155500",
-                      "dProgType":"PROGNOSED",
-                      "type":"N"
-                    },
-                    {
-                      "locX":7,
-                      "idx":33,
-                      "aProdX":1,
-                      "aOutR":true,
-                      "aTimeS":"155500",
-                      "aTimeR":"155600",
-                      "aProgType":"PROGNOSED",
-                      "dProdX":1,
-                      "dInR":true,
-                      "dTimeS":"155500",
-                      "dTimeR":"155600",
-                      "dProgType":"PROGNOSED",
+                      "dDirTxt":"Homburg(Saar)Hbf",
+                      "dDirFlg":"0",
                       "type":"N"
                     },
                     {
                       "locX":3,
-                      "idx":34,
+                      "idx":26,
                       "aProdX":1,
                       "aOutR":true,
-                      "aTimeS":"155700",
-                      "aTimeR":"155800",
+                      "aTimeS":"193400",
+                      "aTimeR":"193500",
                       "aProgType":"PROGNOSED",
                       "type":"N"
                     }
@@ -480,16 +556,644 @@
                   },
                   "freq":
                   {
-                    "minC":7,
-                    "maxC":8,
-                    "numC":17
+                    "minC":24,
+                    "maxC":60,
+                    "numC":5,
+                    "jnyL":
+                    [
+                      {
+                        "jid":"1|3585|3|80|5122021",
+                        "prodX":2,
+                        "dirTxt":"Pirmasens Hbf",
+                        "dirFlg":"0",
+                        "stopL":
+                        [
+                          {
+                            "locX":2,
+                            "idx":0,
+                            "dProdX":2,
+                            "dTimeS":"200700",
+                            "dDirTxt":"Pirmasens Hbf",
+                            "dDirFlg":"0",
+                            "type":"N"
+                          },
+                          {
+                            "locX":3,
+                            "idx":1,
+                            "aProdX":2,
+                            "aTimeS":"201000",
+                            "type":"N"
+                          }
+                        ],
+                        "ctxRecon":"T$A=1@O=Saarbrücken Hbf@L=8000323@a=128@$A=1@O=Saarbrücken Ost@L=8005241@a=128@$202112052007$202112052010$    RB68$$1$$$$",
+                        "msgL":
+                        [
+                          {
+                            "type":"REM",
+                            "remX":0,
+                            "fLocX":2,
+                            "tLocX":3,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ],
+                            "sort":697303040
+                          },
+                          {
+                            "type":"REM",
+                            "remX":1,
+                            "fLocX":2,
+                            "tLocX":3,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ],
+                            "sort":697958400
+                          },
+                          {
+                            "type":"REM",
+                            "remX":2,
+                            "fLocX":2,
+                            "tLocX":3,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ],
+                            "sort":705167360
+                          },
+                          {
+                            "type":"REM",
+                            "remX":3,
+                            "fLocX":2,
+                            "tLocX":3,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ],
+                            "sort":744488960
+                          },
+                          {
+                            "type":"REM",
+                            "remX":4,
+                            "fLocX":2,
+                            "tLocX":3,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ],
+                            "sort":751042560
+                          },
+                          {
+                            "type":"REM",
+                            "remX":5,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL_H3"
+                            ],
+                            "sort":684195840
+                          }
+                        ],
+                        "subscr":"F",
+                        "prodL":
+                        [
+                          {
+                            "prodX":2,
+                            "fLocX":2,
+                            "tLocX":3,
+                            "fIdx":0,
+                            "tIdx":1
+                          }
+                        ],
+                        "dirL":
+                        [
+                          {
+                            "dirX":1,
+                            "fLocX":2,
+                            "tLocX":3,
+                            "fIdx":0,
+                            "tIdx":1
+                          }
+                        ]
+                      },
+                      {
+                        "jid":"1|3304|1|80|5122021",
+                        "prodX":3,
+                        "dirTxt":"Homburg(Saar)Hbf",
+                        "dirFlg":"0",
+                        "stopL":
+                        [
+                          {
+                            "locX":2,
+                            "idx":25,
+                            "dProdX":3,
+                            "dTimeS":"203100",
+                            "dDirTxt":"Homburg(Saar)Hbf",
+                            "dDirFlg":"0",
+                            "type":"N"
+                          },
+                          {
+                            "locX":3,
+                            "idx":26,
+                            "aProdX":3,
+                            "aTimeS":"203400",
+                            "type":"N"
+                          }
+                        ],
+                        "ctxRecon":"T$A=1@O=Saarbrücken Hbf@L=8000323@a=128@$A=1@O=Saarbrücken Ost@L=8005241@a=128@$202112052031$202112052034$    RB71$$1$$$$",
+                        "msgL":
+                        [
+                          {
+                            "type":"REM",
+                            "remX":0,
+                            "fLocX":2,
+                            "tLocX":3,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ],
+                            "sort":697303040
+                          },
+                          {
+                            "type":"REM",
+                            "remX":1,
+                            "fLocX":2,
+                            "tLocX":3,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ],
+                            "sort":697958400
+                          },
+                          {
+                            "type":"REM",
+                            "remX":2,
+                            "fLocX":2,
+                            "tLocX":3,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ],
+                            "sort":705167360
+                          },
+                          {
+                            "type":"REM",
+                            "remX":3,
+                            "fLocX":2,
+                            "tLocX":3,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ],
+                            "sort":744488960
+                          },
+                          {
+                            "type":"REM",
+                            "remX":4,
+                            "fLocX":2,
+                            "tLocX":3,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ],
+                            "sort":751042560
+                          },
+                          {
+                            "type":"REM",
+                            "remX":5,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL_H3"
+                            ],
+                            "sort":684195840
+                          }
+                        ],
+                        "subscr":"F",
+                        "prodL":
+                        [
+                          {
+                            "prodX":3,
+                            "fLocX":2,
+                            "tLocX":3,
+                            "fIdx":25,
+                            "tIdx":26
+                          }
+                        ],
+                        "dirL":
+                        [
+                          {
+                            "dirX":0,
+                            "fLocX":2,
+                            "tLocX":3,
+                            "fIdx":25,
+                            "tIdx":26
+                          }
+                        ]
+                      },
+                      {
+                        "jid":"1|3585|4|80|5122021",
+                        "prodX":4,
+                        "dirTxt":"Pirmasens Hbf",
+                        "dirFlg":"0",
+                        "stopL":
+                        [
+                          {
+                            "locX":2,
+                            "idx":0,
+                            "dProdX":4,
+                            "dTimeS":"210700",
+                            "dDirTxt":"Pirmasens Hbf",
+                            "dDirFlg":"0",
+                            "type":"N"
+                          },
+                          {
+                            "locX":3,
+                            "idx":1,
+                            "aProdX":4,
+                            "aTimeS":"211000",
+                            "type":"N"
+                          }
+                        ],
+                        "ctxRecon":"T$A=1@O=Saarbrücken Hbf@L=8000323@a=128@$A=1@O=Saarbrücken Ost@L=8005241@a=128@$202112052107$202112052110$    RB68$$1$$$$",
+                        "msgL":
+                        [
+                          {
+                            "type":"REM",
+                            "remX":0,
+                            "fLocX":2,
+                            "tLocX":3,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ],
+                            "sort":697303040
+                          },
+                          {
+                            "type":"REM",
+                            "remX":1,
+                            "fLocX":2,
+                            "tLocX":3,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ],
+                            "sort":697958400
+                          },
+                          {
+                            "type":"REM",
+                            "remX":2,
+                            "fLocX":2,
+                            "tLocX":3,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ],
+                            "sort":705167360
+                          },
+                          {
+                            "type":"REM",
+                            "remX":3,
+                            "fLocX":2,
+                            "tLocX":3,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ],
+                            "sort":744488960
+                          },
+                          {
+                            "type":"REM",
+                            "remX":4,
+                            "fLocX":2,
+                            "tLocX":3,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ],
+                            "sort":751042560
+                          },
+                          {
+                            "type":"REM",
+                            "remX":5,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL_H3"
+                            ],
+                            "sort":684195840
+                          }
+                        ],
+                        "subscr":"F",
+                        "prodL":
+                        [
+                          {
+                            "prodX":4,
+                            "fLocX":2,
+                            "tLocX":3,
+                            "fIdx":0,
+                            "tIdx":1
+                          }
+                        ],
+                        "dirL":
+                        [
+                          {
+                            "dirX":1,
+                            "fLocX":2,
+                            "tLocX":3,
+                            "fIdx":0,
+                            "tIdx":1
+                          }
+                        ]
+                      },
+                      {
+                        "jid":"1|3307|0|80|5122021",
+                        "prodX":5,
+                        "dirTxt":"Homburg(Saar)Hbf",
+                        "dirFlg":"0",
+                        "stopL":
+                        [
+                          {
+                            "locX":2,
+                            "idx":25,
+                            "dProdX":5,
+                            "dTimeS":"213100",
+                            "dDirTxt":"Homburg(Saar)Hbf",
+                            "dDirFlg":"0",
+                            "type":"N"
+                          },
+                          {
+                            "locX":3,
+                            "idx":26,
+                            "aProdX":5,
+                            "aTimeS":"213400",
+                            "type":"N"
+                          }
+                        ],
+                        "ctxRecon":"T$A=1@O=Saarbrücken Hbf@L=8000323@a=128@$A=1@O=Saarbrücken Ost@L=8005241@a=128@$202112052131$202112052134$    RB71$$1$$$$",
+                        "msgL":
+                        [
+                          {
+                            "type":"REM",
+                            "remX":0,
+                            "fLocX":2,
+                            "tLocX":3,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ],
+                            "sort":697303040
+                          },
+                          {
+                            "type":"REM",
+                            "remX":1,
+                            "fLocX":2,
+                            "tLocX":3,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ],
+                            "sort":697958400
+                          },
+                          {
+                            "type":"REM",
+                            "remX":2,
+                            "fLocX":2,
+                            "tLocX":3,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ],
+                            "sort":705167360
+                          },
+                          {
+                            "type":"REM",
+                            "remX":3,
+                            "fLocX":2,
+                            "tLocX":3,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ],
+                            "sort":744488960
+                          },
+                          {
+                            "type":"REM",
+                            "remX":4,
+                            "fLocX":2,
+                            "tLocX":3,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ],
+                            "sort":751042560
+                          },
+                          {
+                            "type":"REM",
+                            "remX":5,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL_H3"
+                            ],
+                            "sort":684195840
+                          }
+                        ],
+                        "subscr":"F",
+                        "prodL":
+                        [
+                          {
+                            "prodX":5,
+                            "fLocX":2,
+                            "tLocX":3,
+                            "fIdx":25,
+                            "tIdx":26
+                          }
+                        ],
+                        "dirL":
+                        [
+                          {
+                            "dirX":0,
+                            "fLocX":2,
+                            "tLocX":3,
+                            "fIdx":25,
+                            "tIdx":26
+                          }
+                        ]
+                      },
+                      {
+                        "jid":"1|3310|0|80|5122021",
+                        "prodX":6,
+                        "dirTxt":"Homburg(Saar)Hbf",
+                        "dirFlg":"0",
+                        "stopL":
+                        [
+                          {
+                            "locX":2,
+                            "idx":25,
+                            "dProdX":6,
+                            "dTimeS":"223100",
+                            "dDirTxt":"Homburg(Saar)Hbf",
+                            "dDirFlg":"0",
+                            "type":"N"
+                          },
+                          {
+                            "locX":3,
+                            "idx":26,
+                            "aProdX":6,
+                            "aTimeS":"223400",
+                            "type":"N"
+                          }
+                        ],
+                        "ctxRecon":"T$A=1@O=Saarbrücken Hbf@L=8000323@a=128@$A=1@O=Saarbrücken Ost@L=8005241@a=128@$202112052231$202112052234$    RB71$$1$$$$",
+                        "msgL":
+                        [
+                          {
+                            "type":"REM",
+                            "remX":0,
+                            "fLocX":2,
+                            "tLocX":3,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ],
+                            "sort":697303040
+                          },
+                          {
+                            "type":"REM",
+                            "remX":1,
+                            "fLocX":2,
+                            "tLocX":3,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ],
+                            "sort":697958400
+                          },
+                          {
+                            "type":"REM",
+                            "remX":2,
+                            "fLocX":2,
+                            "tLocX":3,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ],
+                            "sort":705167360
+                          },
+                          {
+                            "type":"REM",
+                            "remX":3,
+                            "fLocX":2,
+                            "tLocX":3,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ],
+                            "sort":744488960
+                          },
+                          {
+                            "type":"REM",
+                            "remX":4,
+                            "fLocX":2,
+                            "tLocX":3,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ],
+                            "sort":751042560
+                          },
+                          {
+                            "type":"REM",
+                            "remX":5,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL_H3"
+                            ],
+                            "sort":684195840
+                          }
+                        ],
+                        "subscr":"F",
+                        "prodL":
+                        [
+                          {
+                            "prodX":6,
+                            "fLocX":2,
+                            "tLocX":3,
+                            "fIdx":25,
+                            "tIdx":26
+                          }
+                        ],
+                        "dirL":
+                        [
+                          {
+                            "dirX":0,
+                            "fLocX":2,
+                            "tLocX":3,
+                            "fIdx":25,
+                            "tIdx":26
+                          }
+                        ]
+                      }
+                    ]
                   },
-                  "ctxRecon":"T$A=1@O=Kaiserstr., Saarbrücken@L=10604@a=128@$A=1@O=Kieselhumes, Saarbrücken@L=10605@a=128@$202109061549$202109061557$S      1$$1$$$$",
+                  "ctxRecon":"T$A=1@O=Saarbrücken Hbf@L=8000323@a=128@$A=1@O=Saarbrücken Ost@L=8005241@a=128@$202112051931$202112051934$    RB71$$1$$$$",
                   "msgL":
                   [
                     {
                       "type":"REM",
                       "remX":0,
+                      "fLocX":2,
+                      "tLocX":3,
+                      "tagL":
+                      [
+                        "RES_JNY_DTL"
+                      ],
+                      "sort":697303040
+                    },
+                    {
+                      "type":"REM",
+                      "remX":1,
+                      "fLocX":2,
+                      "tLocX":3,
+                      "tagL":
+                      [
+                        "RES_JNY_DTL"
+                      ],
+                      "sort":697958400
+                    },
+                    {
+                      "type":"REM",
+                      "remX":2,
+                      "fLocX":2,
+                      "tLocX":3,
+                      "tagL":
+                      [
+                        "RES_JNY_DTL"
+                      ],
+                      "sort":705167360
+                    },
+                    {
+                      "type":"REM",
+                      "remX":3,
+                      "fLocX":2,
+                      "tLocX":3,
+                      "tagL":
+                      [
+                        "RES_JNY_DTL"
+                      ],
+                      "sort":744488960
+                    },
+                    {
+                      "type":"REM",
+                      "remX":4,
+                      "fLocX":2,
+                      "tLocX":3,
+                      "tagL":
+                      [
+                        "RES_JNY_DTL"
+                      ],
+                      "sort":751042560
+                    },
+                    {
+                      "type":"REM",
+                      "remX":5,
                       "tagL":
                       [
                         "RES_JNY_DTL_H3"
@@ -504,8 +1208,8 @@
                       "prodX":1,
                       "fLocX":2,
                       "tLocX":3,
-                      "fIdx":29,
-                      "tIdx":34
+                      "fIdx":25,
+                      "tIdx":26
                     }
                   ],
                   "dirL":
@@ -514,44 +1218,40 @@
                       "dirX":0,
                       "fLocX":2,
                       "tLocX":3,
-                      "fIdx":29,
-                      "tIdx":34
+                      "fIdx":25,
+                      "tIdx":26
                     }
                   ]
-                }
+                },
+                "minChg":"000400"
               },
               {
                 "type":"WALK",
+                "hide":false,
                 "icoX":2,
                 "dep":
                 {
                   "locX":3,
-                  "dInR":true,
-                  "dTimeS":"155700",
-                  "type":"N"
+                  "dTimeS":"193400"
                 },
                 "arr":
                 {
                   "locX":1,
-                  "aOutR":true,
-                  "aTimeS":"160300",
-                  "type":"N"
+                  "aTimeS":"193900"
                 },
                 "gis":
                 {
-                  "dist":448,
-                  "durS":"000600",
-                  "ctx":"G|1|G@F|A=1@O=Kieselhumes, Saarbrücken@X=7017393@Y=49228139@U=80@L=10605@|A=2@O=Saarbrücken - Rotenbühl, Am Kieselhumes 26@X=7020512@Y=49230548@u=1@U=98@L=991085743@|6092021|155700|160300|fb|ft@0@2000@120@1@100@1@@0@@@@@false@0@-1@$f@$f@$f@$f@$f@$§bt@0@2000@120@1@100@1@@0@@@@@false@0@-1@$f@$f@$f@$f@$f@$§tt@0@5000@120@1@100@1@@0@@@@@false@0@-1@$t@0@25000@120@1@100@1@@0@@@@@false@0@-1@$f@$f@$f@$f@$§|",
-                  "gisPrvr":"E",
-                  "getDescr":true,
-                  "getPoly":true
+                  "dist":159,
+                  "durS":"000500",
+                  "ctx":"H|1|W$A=1@O=Saarbrücken Ost@L=8005241@a=128@$A=1@O=Ostbahnhof, Saarbrücken@L=10700@a=128@$202112051934$202112051938$$$1$$$$±G|1|G@F|A=1@O=Ostbahnhof, Saarbrücken@X=7020512@Y=49230575@U=80@L=10700@|A=2@O=Saarbrücken - Rotenbühl, Am Kieselhumes 26@X=7020512@Y=49230548@u=1@U=98@L=991085743@|5122021|193800|193900|fb|ft@0@2000@120@1@100@1@@0@@@@@false@0@-1@$f@$f@$f@$f@$f@$§bt@0@2000@120@1@100@1@@0@@@@@false@0@-1@$f@$f@$f@$f@$f@$§tt@0@5000@120@1@100@1@@0@@@@@false@0@-1@$t@0@25000@120@1@100@1@@0@@@@@false@0@-1@$f@$f@$f@$f@$§|",
+                  "gisPrvr":"M"
                 }
               }
             ],
-            "ctxRecon":"¶HKI¶G@F$A=2@O=49.239313, 6.992942@X=6992942@Y=49239313@u=0@a=128@$A=1@O=Kaiserstr., Saarbrücken@L=10604@a=128@$202109061545$202109061549$$$1$$$$§T$A=1@O=Kaiserstr., Saarbrücken@L=10604@a=128@$A=1@O=Kieselhumes, Saarbrücken@L=10605@a=128@$202109061549$202109061557$S      1$$1$$$$§G@F$A=1@O=Kieselhumes, Saarbrücken@L=10605@a=128@$A=2@O=Saarbrücken - Rotenbühl, Am Kieselhumes 26@X=7020512@Y=49230548@u=1@L=991085743@a=128@$202109061557$202109061603$$$1$$$$¶GP¶ft@0@2000@120@1@100@1@@0@@@@@false@0@-1@$f@$f@$f@$f@$f@$§bt@0@2000@120@1@100@1@@0@@@@@false@0@-1@$f@$f@$f@$f@$f@$§tt@0@5000@120@1@100@1@@0@@@@@false@0@-1@$t@0@25000@120@1@100@1@@0@@@@@false@0@-1@$f@$f@$f@$f@$§",
+            "ctxRecon":"¶HKI¶G@F$A=2@O=49.240927, 6.988747@X=6988747@Y=49240927@u=0@a=128@$A=1@O=Saarbrücken Hbf@L=8000323@a=128@$202112051926$202112051931$$$1$$$$§T$A=1@O=Saarbrücken Hbf@L=8000323@a=128@$A=1@O=Saarbrücken Ost@L=8005241@a=128@$202112051931$202112051934$    RB71$$1$$$$§W$A=1@O=Saarbrücken Ost@L=8005241@a=128@$A=1@O=Ostbahnhof, Saarbrücken@L=10700@a=128@$202112051934$202112051938$$$1$$$$§G@F$A=1@O=Ostbahnhof, Saarbrücken@L=10700@a=128@$A=2@O=Saarbrücken - Rotenbühl, Am Kieselhumes 26@X=7020512@Y=49230548@u=1@L=991085743@a=128@$202112051938$202112051939$$$1$$$$¶GP¶ft@0@2000@120@1@100@1@@0@@@@@false@0@-1@$f@$f@$f@$f@$f@$§bt@0@2000@120@1@100@1@@0@@@@@false@0@-1@$f@$f@$f@$f@$f@$§tt@0@5000@120@1@100@1@@0@@@@@false@0@-1@$t@0@25000@120@1@100@1@@0@@@@@false@0@-1@$f@$f@$f@$f@$§",
             "freq":
             {
-              "minC":7
+              "minC":24
             },
             "trfRes":
             {
@@ -562,37 +1262,17 @@
                   "fareL":
                   [
                     {
-                      "name":"Einzelfahrkarte Kurzstrecke(saarVV Preisstufe Kurzstrecke)",
-                      "prc":190,
-                      "cur":"EUR",
-                      "shpCtx":"~0-.25008-0",
-                      "buttonText":"Ticket kaufen",
-                      "extCont":
-                      {
-                        "content":
-                        {
-                          "type":"LIB_TARIFF",
-                          "content":"fjAtLjI1MDA4LTA="
-                        }
-                      }
-                    }
-                  ]
-                },
-                {
-                  "fareL":
-                  [
-                    {
                       "name":"Einzelfahrkarte Erwachsene(saarVV Preisstufe 0)",
                       "prc":260,
                       "cur":"EUR",
-                      "shpCtx":"~1-.25001-1",
+                      "shpCtx":"~0-.25001-1",
                       "buttonText":"Ticket kaufen",
                       "extCont":
                       {
                         "content":
                         {
                           "type":"LIB_TARIFF",
-                          "content":"fjEtLjI1MDAxLTE="
+                          "content":"fjAtLjI1MDAxLTE="
                         }
                       }
                     },
@@ -600,14 +1280,14 @@
                       "name":"Einzelfahrkarte BahnCard(saarVV Preisstufe 0)",
                       "prc":220,
                       "cur":"EUR",
-                      "shpCtx":"~1-.25166-1",
+                      "shpCtx":"~0-.25166-1",
                       "buttonText":"Ticket kaufen",
                       "extCont":
                       {
                         "content":
                         {
                           "type":"LIB_TARIFF",
-                          "content":"fjEtLjI1MTY2LTE="
+                          "content":"fjAtLjI1MTY2LTE="
                         }
                       }
                     },
@@ -615,14 +1295,14 @@
                       "name":"Einzelfahrkarte Kind (6-14 J.)(saarVV Preisstufe 0)",
                       "prc":200,
                       "cur":"EUR",
-                      "shpCtx":"~1-.25002-1",
+                      "shpCtx":"~0-.25002-1",
                       "buttonText":"Ticket kaufen",
                       "extCont":
                       {
                         "content":
                         {
                           "type":"LIB_TARIFF",
-                          "content":"fjEtLjI1MDAyLTE="
+                          "content":"fjAtLjI1MDAyLTE="
                         }
                       }
                     },
@@ -630,14 +1310,14 @@
                       "name":"4er-Karte(saarVV Preisstufe 0)",
                       "prc":936,
                       "cur":"EUR",
-                      "shpCtx":"~1-.25259-1",
+                      "shpCtx":"~0-.25259-1",
                       "buttonText":"Ticket kaufen",
                       "extCont":
                       {
                         "content":
                         {
                           "type":"LIB_TARIFF",
-                          "content":"fjEtLjI1MjU5LTE="
+                          "content":"fjAtLjI1MjU5LTE="
                         }
                       }
                     },
@@ -645,14 +1325,14 @@
                       "name":"Einzelfahrkarte Rad(saarVV Preisstufe 0)",
                       "prc":200,
                       "cur":"EUR",
-                      "shpCtx":"~1-.25248-1",
+                      "shpCtx":"~0-.25248-1",
                       "buttonText":"Ticket kaufen",
                       "extCont":
                       {
                         "content":
                         {
                           "type":"LIB_TARIFF",
-                          "content":"fjEtLjI1MjQ4LTE="
+                          "content":"fjAtLjI1MjQ4LTE="
                         }
                       }
                     },
@@ -660,14 +1340,14 @@
                       "name":"Tageskarte 1 Person(saarVV Preisstufe 0)",
                       "prc":490,
                       "cur":"EUR",
-                      "shpCtx":"~1-.25111-1",
+                      "shpCtx":"~0-.25111-1",
                       "buttonText":"Ticket kaufen",
                       "extCont":
                       {
                         "content":
                         {
                           "type":"LIB_TARIFF",
-                          "content":"fjEtLjI1MTExLTE="
+                          "content":"fjAtLjI1MTExLTE="
                         }
                       }
                     },
@@ -675,14 +1355,14 @@
                       "name":"Tageskarte 2 Personen(saarVV Preisstufe 0)",
                       "prc":690,
                       "cur":"EUR",
-                      "shpCtx":"~1-.25249-1",
+                      "shpCtx":"~0-.25249-1",
                       "buttonText":"Ticket kaufen",
                       "extCont":
                       {
                         "content":
                         {
                           "type":"LIB_TARIFF",
-                          "content":"fjEtLjI1MjQ5LTE="
+                          "content":"fjAtLjI1MjQ5LTE="
                         }
                       }
                     },
@@ -690,14 +1370,14 @@
                       "name":"Tageskarte 5 Personen(saarVV Preisstufe 0)",
                       "prc":990,
                       "cur":"EUR",
-                      "shpCtx":"~1-.25155-1",
+                      "shpCtx":"~0-.25155-1",
                       "buttonText":"Ticket kaufen",
                       "extCont":
                       {
                         "content":
                         {
                           "type":"LIB_TARIFF",
-                          "content":"fjEtLjI1MTU1LTE="
+                          "content":"fjAtLjI1MTU1LTE="
                         }
                       }
                     },
@@ -705,14 +1385,14 @@
                       "name":"1. Klasse Zuschlag DB&vlexx  Einzelfahrkarte(saarVV Preisstufe 0)",
                       "prc":160,
                       "cur":"EUR",
-                      "shpCtx":"~1-.25199-1",
+                      "shpCtx":"~0-.25199-1",
                       "buttonText":"Ticket kaufen",
                       "extCont":
                       {
                         "content":
                         {
                           "type":"LIB_TARIFF",
-                          "content":"fjEtLjI1MTk5LTE="
+                          "content":"fjAtLjI1MTk5LTE="
                         }
                       }
                     },
@@ -720,14 +1400,14 @@
                       "name":"Gruppenkarte (ab 10 Pers.) pro Erw. bzw. 2 Kinder (6-14 J.)(saarVV Preisstufe 0)",
                       "prc":240,
                       "cur":"EUR",
-                      "shpCtx":"~1-.25156-1",
+                      "shpCtx":"~0-.25156-1",
                       "buttonText":"Ticket kaufen",
                       "extCont":
                       {
                         "content":
                         {
                           "type":"LIB_TARIFF",
-                          "content":"fjEtLjI1MTU2LTE="
+                          "content":"fjAtLjI1MTU2LTE="
                         }
                       }
                     },
@@ -735,14 +1415,14 @@
                       "name":"Wochenkarte(saarVV Preisstufe 0)",
                       "prc":2330,
                       "cur":"EUR",
-                      "shpCtx":"~1-.25153-1",
+                      "shpCtx":"~0-.25153-1",
                       "buttonText":"Ticket kaufen",
                       "extCont":
                       {
                         "content":
                         {
                           "type":"LIB_TARIFF",
-                          "content":"fjEtLjI1MTUzLTE="
+                          "content":"fjAtLjI1MTUzLTE="
                         }
                       }
                     },
@@ -750,14 +1430,14 @@
                       "name":"Monatskarte(saarVV Preisstufe 0)",
                       "prc":6510,
                       "cur":"EUR",
-                      "shpCtx":"~1-.25152-1",
+                      "shpCtx":"~0-.25152-1",
                       "buttonText":"Ticket kaufen",
                       "extCont":
                       {
                         "content":
                         {
                           "type":"LIB_TARIFF",
-                          "content":"fjEtLjI1MTUyLTE="
+                          "content":"fjAtLjI1MTUyLTE="
                         }
                       }
                     },
@@ -765,14 +1445,14 @@
                       "name":"Wochenkarte Schüler & Azubis(saarVV Preisstufe 0)",
                       "prc":1740,
                       "cur":"EUR",
-                      "shpCtx":"~1-.25147-1",
+                      "shpCtx":"~0-.25147-1",
                       "buttonText":"Ticket kaufen",
                       "extCont":
                       {
                         "content":
                         {
                           "type":"LIB_TARIFF",
-                          "content":"fjEtLjI1MTQ3LTE="
+                          "content":"fjAtLjI1MTQ3LTE="
                         }
                       }
                     },
@@ -780,14 +1460,14 @@
                       "name":"Monatskarte Schüler & Azubis(saarVV Preisstufe 0)",
                       "prc":4900,
                       "cur":"EUR",
-                      "shpCtx":"~1-.25146-1",
+                      "shpCtx":"~0-.25146-1",
                       "buttonText":"Ticket kaufen",
                       "extCont":
                       {
                         "content":
                         {
                           "type":"LIB_TARIFF",
-                          "content":"fjEtLjI1MTQ2LTE="
+                          "content":"fjAtLjI1MTQ2LTE="
                         }
                       }
                     },
@@ -795,14 +1475,14 @@
                       "name":"Jahreskarte (Abo pro Monat)(saarVV Preisstufe 0)",
                       "prc":5425,
                       "cur":"EUR",
-                      "shpCtx":"~1-.25114-1",
+                      "shpCtx":"~0-.25115-1",
                       "buttonText":"Ticket kaufen",
                       "extCont":
                       {
                         "content":
                         {
                           "type":"LIB_TARIFF",
-                          "content":"fjEtLjI1MTE0LTE="
+                          "content":"fjAtLjI1MTE1LTE="
                         }
                       }
                     },
@@ -810,14 +1490,14 @@
                       "name":"Kreis-Abo Saarbrücken(saarVV Preisstufe 0)",
                       "prc":8950,
                       "cur":"EUR",
-                      "shpCtx":"~1-.25277-1",
+                      "shpCtx":"~0-.25277-1",
                       "buttonText":"Ticket kaufen",
                       "extCont":
                       {
                         "content":
                         {
                           "type":"LIB_TARIFF",
-                          "content":"fjEtLjI1Mjc3LTE="
+                          "content":"fjAtLjI1Mjc3LTE="
                         }
                       }
                     },
@@ -825,14 +1505,14 @@
                       "name":"Saarland-Abo(saarVV Preisstufe 0)",
                       "prc":9900,
                       "cur":"EUR",
-                      "shpCtx":"~1-.25279-1",
+                      "shpCtx":"~0-.25279-1",
                       "buttonText":"Ticket kaufen",
                       "extCont":
                       {
                         "content":
                         {
                           "type":"LIB_TARIFF",
-                          "content":"fjEtLjI1Mjc5LTE="
+                          "content":"fjAtLjI1Mjc5LTE="
                         }
                       }
                     },
@@ -840,14 +1520,14 @@
                       "name":"9 Uhr-Abo(saarVV Preisstufe 0)",
                       "prc":3900,
                       "cur":"EUR",
-                      "shpCtx":"~1-.25250-1",
+                      "shpCtx":"~0-.25250-1",
                       "buttonText":"Ticket kaufen",
                       "extCont":
                       {
                         "content":
                         {
                           "type":"LIB_TARIFF",
-                          "content":"fjEtLjI1MjUwLTE="
+                          "content":"fjAtLjI1MjUwLTE="
                         }
                       }
                     },
@@ -855,14 +1535,14 @@
                       "name":"Schüler-Abo(saarVV Preisstufe 0)",
                       "prc":4050,
                       "cur":"EUR",
-                      "shpCtx":"~1-.25253-1",
+                      "shpCtx":"~0-.25253-1",
                       "buttonText":"Ticket kaufen",
                       "extCont":
                       {
                         "content":
                         {
                           "type":"LIB_TARIFF",
-                          "content":"fjEtLjI1MjUzLTE="
+                          "content":"fjAtLjI1MjUzLTE="
                         }
                       }
                     },
@@ -870,14 +1550,14 @@
                       "name":"Azubi-Abo(saarVV Preisstufe 0)",
                       "prc":4050,
                       "cur":"EUR",
-                      "shpCtx":"~1-.25301-1",
+                      "shpCtx":"~0-.25301-1",
                       "buttonText":"Ticket kaufen",
                       "extCont":
                       {
                         "content":
                         {
                           "type":"LIB_TARIFF",
-                          "content":"fjEtLjI1MzAxLTE="
+                          "content":"fjAtLjI1MzAxLTE="
                         }
                       }
                     },
@@ -885,14 +1565,14 @@
                       "name":"Ü65-Abo(saarVV Preisstufe 0)",
                       "prc":5900,
                       "cur":"EUR",
-                      "shpCtx":"~1-.25303-1",
+                      "shpCtx":"~0-.25303-1",
                       "buttonText":"Ticket kaufen",
                       "extCont":
                       {
                         "content":
                         {
                           "type":"LIB_TARIFF",
-                          "content":"fjEtLjI1MzAzLTE="
+                          "content":"fjAtLjI1MzAzLTE="
                         }
                       }
                     },
@@ -900,14 +1580,14 @@
                       "name":"1. Klasse Zuschlag DB&vlexx Wochenkarte(saarVV Preisstufe 0)",
                       "prc":810,
                       "cur":"EUR",
-                      "shpCtx":"~1-.25195-1",
+                      "shpCtx":"~0-.25195-1",
                       "buttonText":"Ticket kaufen",
                       "extCont":
                       {
                         "content":
                         {
                           "type":"LIB_TARIFF",
-                          "content":"fjEtLjI1MTk1LTE="
+                          "content":"fjAtLjI1MTk1LTE="
                         }
                       }
                     },
@@ -915,14 +1595,14 @@
                       "name":"1. Klasse Zuschlag DB&vlexx Monatskarte(saarVV Preisstufe 0)",
                       "prc":2600,
                       "cur":"EUR",
-                      "shpCtx":"~1-.25196-1",
+                      "shpCtx":"~0-.25196-1",
                       "buttonText":"Ticket kaufen",
                       "extCont":
                       {
                         "content":
                         {
                           "type":"LIB_TARIFF",
-                          "content":"fjEtLjI1MTk2LTE="
+                          "content":"fjAtLjI1MTk2LTE="
                         }
                       }
                     },
@@ -930,14 +1610,14 @@
                       "name":"1. Klasse Zuschlag DB&vlexx Jahreskarte (Abo pro Monat)(saarVV Preisstufe 0)",
                       "prc":2170,
                       "cur":"EUR",
-                      "shpCtx":"~1-.25197-1",
+                      "shpCtx":"~0-.25197-1",
                       "buttonText":"Ticket kaufen",
                       "extCont":
                       {
                         "content":
                         {
                           "type":"LIB_TARIFF",
-                          "content":"fjEtLjI1MTk3LTE="
+                          "content":"fjAtLjI1MTk3LTE="
                         }
                       }
                     },
@@ -945,14 +1625,14 @@
                       "name":"Monatskarte Fair-Ticket(saarVV Preisstufe 0)",
                       "prc":2900,
                       "cur":"EUR",
-                      "shpCtx":"~1-.25252-1",
+                      "shpCtx":"~0-.25252-1",
                       "buttonText":"Ticket kaufen",
                       "extCont":
                       {
                         "content":
                         {
                           "type":"LIB_TARIFF",
-                          "content":"fjEtLjI1MjUyLTE="
+                          "content":"fjAtLjI1MjUyLTE="
                         }
                       }
                     },
@@ -960,14 +1640,14 @@
                       "name":"Monatskarte Fair-Ticket Plus(saarVV Preisstufe 0)",
                       "prc":3900,
                       "cur":"EUR",
-                      "shpCtx":"~1-.25264-1",
+                      "shpCtx":"~0-.25264-1",
                       "buttonText":"Ticket kaufen",
                       "extCont":
                       {
                         "content":
                         {
                           "type":"LIB_TARIFF",
-                          "content":"fjEtLjI1MjY0LTE="
+                          "content":"fjAtLjI1MjY0LTE="
                         }
                       }
                     }
@@ -980,91 +1660,6 @@
                 {
                   "FEL":
                   [
-                    {
-                      "ID":
-                      [
-"111"
-                      ]
-                    },
-                    {
-                      "ID":
-                      [
-"111"
-                      ]
-                    },
-                    {
-                      "ID":
-                      [
-"8110964"
-                      ]
-                    },
-                    {
-                      "ID":
-                      [
-"kürzester Weg"
-                      ]
-                    },
-                    {
-                      "ID":
-                      [
-"Kurzstrecke"
-                      ],
-                      "ON":
-                      [
-"Kurzstrecke"
-                      ],
-                      "PN":
-                      [
-"gilt bis zu fünf Haltestellenabschnitte"
-                      ]
-                    },
-                    {
-                      "ID":
-                      [
-"10604"
-                      ],
-                      "ON":
-                      [
-"Kaiserstr., Saarbrücken"
-                      ]
-                    },
-                    {
-                      "ID":
-                      [
-"10605"
-                      ],
-                      "ON":
-                      [
-"Kieselhumes, Saarbrücken"
-                      ]
-                    },
-                    {
-                      "ID":
-                      [
-"23473b59548da36265db5bb6582ede9d"
-                      ]
-                    },
-                    {
-                      "ID":
-                      [
-"0"
-                      ]
-                    },
-                    {
-                      "ID":
-                      [
-"25008"
-                      ],
-                      "ON":
-                      [
-"Einzelfahrkarte Kurzstrecke",
-"gilt bis zu fünf Haltestellenabschnitten"
-                      ],
-                      "XV":
-                      [
-"0"
-                      ]
-                    },
                     {
                       "ID":
                       [
@@ -1106,27 +1701,27 @@
                     {
                       "ID":
                       [
-"10604"
+"8000323"
                       ],
                       "ON":
                       [
-"Kaiserstr., Saarbrücken"
+"Saarbrücken Hbf"
                       ]
                     },
                     {
                       "ID":
                       [
-"10605"
+"8005241"
                       ],
                       "ON":
                       [
-"Kieselhumes, Saarbrücken"
+"Saarbrücken Ost"
                       ]
                     },
                     {
                       "ID":
                       [
-"23473b59548da36265db5bb6582ede9d"
+"fb3077da72c3d217c3437637bbf70ea1"
                       ]
                     },
                     {
@@ -1290,7 +1885,7 @@
                       "ON":
                       [
 "Tageskarte 5 Personen",
-"gilt montags bis freitags ab 8:00 Uhr bis Betriebsschluss und samstags, sonn- und feiertags ganztägig"
+""
                       ],
                       "XV":
                       [
@@ -1432,7 +2027,7 @@
                     {
                       "ID":
                       [
-"25114"
+"25115"
                       ],
                       "ON":
                       [
@@ -1686,14 +2281,14 @@
                       "BOL":
                       [
                         {
-                          "P":"~0-.25008-0",
+                          "P":"~0-.25001-1",
                           "VT":"saarVV-1",
                           "FS":"VGS",
                           "DV":8,
                           "PRC":
                           {
                             "CUR":"EUR",
-                            "AMT":190
+                            "AMT":260
                           },
                           "PRD":9,
                           "LVL":4,
@@ -1711,718 +2306,678 @@
                             ]
                           },
                           "FF":true
-                        }
-                      ],
-                      "DESCR":
-                      [
-"Kurzstrecke"
-                      ],
-                      "OPT":false,
-                      "ALT":true,
-                      "SEQ":false
-                    },
-                    {
-                      "P":"~1-",
-                      "BOL":
-                      [
+                        },
                         {
-                          "P":"~1-.25001-1",
+                          "P":"~0-.25166-1",
+                          "VT":"saarVV-1",
+                          "FS":"VGS",
+                          "DV":10,
+                          "PRC":
+                          {
+                            "CUR":"EUR",
+                            "AMT":220
+                          },
+                          "PRD":11,
+                          "LVL":4,
+                          "SV":
+                          {
+                            "OL":0,
+                            "OS":5,
+                            "DL":1,
+                            "DS":6,
+                            "VL":
+                            [
+2,
+3,
+7
+                            ]
+                          },
+                          "FF":true
+                        },
+                        {
+                          "P":"~0-.25002-1",
+                          "VT":"saarVV-1",
+                          "FS":"VGS",
+                          "DV":12,
+                          "PRC":
+                          {
+                            "CUR":"EUR",
+                            "AMT":200
+                          },
+                          "PRD":13,
+                          "LVL":4,
+                          "SV":
+                          {
+                            "OL":0,
+                            "OS":5,
+                            "DL":1,
+                            "DS":6,
+                            "VL":
+                            [
+2,
+3,
+7
+                            ]
+                          },
+                          "FF":true
+                        },
+                        {
+                          "P":"~0-.25259-1",
+                          "VT":"saarVV-1",
+                          "FS":"VGS",
+                          "DV":14,
+                          "PRC":
+                          {
+                            "CUR":"EUR",
+                            "AMT":936
+                          },
+                          "PRD":15,
+                          "LVL":4,
+                          "SV":
+                          {
+                            "OL":0,
+                            "OS":5,
+                            "DL":1,
+                            "DS":6,
+                            "VL":
+                            [
+2,
+3,
+7
+                            ]
+                          },
+                          "FF":true
+                        },
+                        {
+                          "P":"~0-.25248-1",
+                          "VT":"saarVV-1",
+                          "FS":"VGS",
+                          "DV":16,
+                          "PRC":
+                          {
+                            "CUR":"EUR",
+                            "AMT":200
+                          },
+                          "PRD":17,
+                          "LVL":4,
+                          "SV":
+                          {
+                            "OL":0,
+                            "OS":5,
+                            "DL":1,
+                            "DS":6,
+                            "VL":
+                            [
+2,
+3,
+7
+                            ]
+                          },
+                          "FF":true
+                        },
+                        {
+                          "P":"~0-.25111-1",
                           "VT":"saarVV-1",
                           "FS":"VGS",
                           "DV":18,
                           "PRC":
                           {
                             "CUR":"EUR",
-                            "AMT":260
+                            "AMT":490
                           },
                           "PRD":19,
-                          "LVL":14,
+                          "LVL":4,
                           "SV":
                           {
-                            "OL":10,
-                            "OS":15,
-                            "DL":11,
-                            "DS":16,
+                            "OL":0,
+                            "OS":5,
+                            "DL":1,
+                            "DS":6,
                             "VL":
                             [
-12,
-13,
-17
+2,
+3,
+7
                             ]
                           },
                           "FF":true
                         },
                         {
-                          "P":"~1-.25166-1",
+                          "P":"~0-.25249-1",
                           "VT":"saarVV-1",
                           "FS":"VGS",
                           "DV":20,
                           "PRC":
                           {
                             "CUR":"EUR",
-                            "AMT":220
+                            "AMT":690
                           },
                           "PRD":21,
-                          "LVL":14,
+                          "LVL":4,
                           "SV":
                           {
-                            "OL":10,
-                            "OS":15,
-                            "DL":11,
-                            "DS":16,
+                            "OL":0,
+                            "OS":5,
+                            "DL":1,
+                            "DS":6,
                             "VL":
                             [
-12,
-13,
-17
+2,
+3,
+7
                             ]
                           },
                           "FF":true
                         },
                         {
-                          "P":"~1-.25002-1",
+                          "P":"~0-.25155-1",
                           "VT":"saarVV-1",
                           "FS":"VGS",
                           "DV":22,
                           "PRC":
                           {
                             "CUR":"EUR",
-                            "AMT":200
+                            "AMT":990
                           },
                           "PRD":23,
-                          "LVL":14,
+                          "LVL":4,
                           "SV":
                           {
-                            "OL":10,
-                            "OS":15,
-                            "DL":11,
-                            "DS":16,
+                            "OL":0,
+                            "OS":5,
+                            "DL":1,
+                            "DS":6,
                             "VL":
                             [
-12,
-13,
-17
+2,
+3,
+7
                             ]
                           },
                           "FF":true
                         },
                         {
-                          "P":"~1-.25259-1",
+                          "P":"~0-.25199-1",
                           "VT":"saarVV-1",
                           "FS":"VGS",
                           "DV":24,
                           "PRC":
                           {
                             "CUR":"EUR",
-                            "AMT":936
+                            "AMT":160
                           },
                           "PRD":25,
-                          "LVL":14,
+                          "LVL":4,
                           "SV":
                           {
-                            "OL":10,
-                            "OS":15,
-                            "DL":11,
-                            "DS":16,
+                            "OL":0,
+                            "OS":5,
+                            "DL":1,
+                            "DS":6,
                             "VL":
                             [
-12,
-13,
-17
+2,
+3,
+7
                             ]
                           },
                           "FF":true
                         },
                         {
-                          "P":"~1-.25248-1",
+                          "P":"~0-.25156-1",
                           "VT":"saarVV-1",
                           "FS":"VGS",
                           "DV":26,
                           "PRC":
                           {
                             "CUR":"EUR",
-                            "AMT":200
+                            "AMT":240
                           },
                           "PRD":27,
-                          "LVL":14,
+                          "LVL":4,
                           "SV":
                           {
-                            "OL":10,
-                            "OS":15,
-                            "DL":11,
-                            "DS":16,
+                            "OL":0,
+                            "OS":5,
+                            "DL":1,
+                            "DS":6,
                             "VL":
                             [
-12,
-13,
-17
+2,
+3,
+7
                             ]
                           },
                           "FF":true
                         },
                         {
-                          "P":"~1-.25111-1",
+                          "P":"~0-.25153-1",
                           "VT":"saarVV-1",
                           "FS":"VGS",
                           "DV":28,
                           "PRC":
                           {
                             "CUR":"EUR",
-                            "AMT":490
+                            "AMT":2330
                           },
                           "PRD":29,
-                          "LVL":14,
+                          "LVL":4,
                           "SV":
                           {
-                            "OL":10,
-                            "OS":15,
-                            "DL":11,
-                            "DS":16,
+                            "OL":0,
+                            "OS":5,
+                            "DL":1,
+                            "DS":6,
                             "VL":
                             [
-12,
-13,
-17
+2,
+3,
+7
                             ]
                           },
                           "FF":true
                         },
                         {
-                          "P":"~1-.25249-1",
+                          "P":"~0-.25152-1",
                           "VT":"saarVV-1",
                           "FS":"VGS",
                           "DV":30,
                           "PRC":
                           {
                             "CUR":"EUR",
-                            "AMT":690
+                            "AMT":6510
                           },
                           "PRD":31,
-                          "LVL":14,
+                          "LVL":4,
                           "SV":
                           {
-                            "OL":10,
-                            "OS":15,
-                            "DL":11,
-                            "DS":16,
+                            "OL":0,
+                            "OS":5,
+                            "DL":1,
+                            "DS":6,
                             "VL":
                             [
-12,
-13,
-17
+2,
+3,
+7
                             ]
                           },
                           "FF":true
                         },
                         {
-                          "P":"~1-.25155-1",
+                          "P":"~0-.25147-1",
                           "VT":"saarVV-1",
                           "FS":"VGS",
                           "DV":32,
                           "PRC":
                           {
                             "CUR":"EUR",
-                            "AMT":990
+                            "AMT":1740
                           },
                           "PRD":33,
-                          "LVL":14,
+                          "LVL":4,
                           "SV":
                           {
-                            "OL":10,
-                            "OS":15,
-                            "DL":11,
-                            "DS":16,
+                            "OL":0,
+                            "OS":5,
+                            "DL":1,
+                            "DS":6,
                             "VL":
                             [
-12,
-13,
-17
+2,
+3,
+7
                             ]
                           },
                           "FF":true
                         },
                         {
-                          "P":"~1-.25199-1",
+                          "P":"~0-.25146-1",
                           "VT":"saarVV-1",
                           "FS":"VGS",
                           "DV":34,
                           "PRC":
                           {
                             "CUR":"EUR",
-                            "AMT":160
+                            "AMT":4900
                           },
                           "PRD":35,
-                          "LVL":14,
+                          "LVL":4,
                           "SV":
                           {
-                            "OL":10,
-                            "OS":15,
-                            "DL":11,
-                            "DS":16,
+                            "OL":0,
+                            "OS":5,
+                            "DL":1,
+                            "DS":6,
                             "VL":
                             [
-12,
-13,
-17
+2,
+3,
+7
                             ]
                           },
                           "FF":true
                         },
                         {
-                          "P":"~1-.25156-1",
+                          "P":"~0-.25115-1",
                           "VT":"saarVV-1",
                           "FS":"VGS",
                           "DV":36,
                           "PRC":
                           {
                             "CUR":"EUR",
-                            "AMT":240
+                            "AMT":5425
                           },
                           "PRD":37,
-                          "LVL":14,
+                          "LVL":4,
                           "SV":
                           {
-                            "OL":10,
-                            "OS":15,
-                            "DL":11,
-                            "DS":16,
+                            "OL":0,
+                            "OS":5,
+                            "DL":1,
+                            "DS":6,
                             "VL":
                             [
-12,
-13,
-17
+2,
+3,
+7
                             ]
                           },
                           "FF":true
                         },
                         {
-                          "P":"~1-.25153-1",
+                          "P":"~0-.25277-1",
                           "VT":"saarVV-1",
                           "FS":"VGS",
                           "DV":38,
                           "PRC":
                           {
                             "CUR":"EUR",
-                            "AMT":2330
+                            "AMT":8950
                           },
                           "PRD":39,
-                          "LVL":14,
+                          "LVL":4,
                           "SV":
                           {
-                            "OL":10,
-                            "OS":15,
-                            "DL":11,
-                            "DS":16,
+                            "OL":0,
+                            "OS":5,
+                            "DL":1,
+                            "DS":6,
                             "VL":
                             [
-12,
-13,
-17
+2,
+3,
+7
                             ]
                           },
                           "FF":true
                         },
                         {
-                          "P":"~1-.25152-1",
+                          "P":"~0-.25279-1",
                           "VT":"saarVV-1",
                           "FS":"VGS",
                           "DV":40,
                           "PRC":
                           {
                             "CUR":"EUR",
-                            "AMT":6510
+                            "AMT":9900
                           },
                           "PRD":41,
-                          "LVL":14,
+                          "LVL":4,
                           "SV":
                           {
-                            "OL":10,
-                            "OS":15,
-                            "DL":11,
-                            "DS":16,
+                            "OL":0,
+                            "OS":5,
+                            "DL":1,
+                            "DS":6,
                             "VL":
                             [
-12,
-13,
-17
+2,
+3,
+7
                             ]
                           },
                           "FF":true
                         },
                         {
-                          "P":"~1-.25147-1",
+                          "P":"~0-.25250-1",
                           "VT":"saarVV-1",
                           "FS":"VGS",
                           "DV":42,
                           "PRC":
                           {
                             "CUR":"EUR",
-                            "AMT":1740
+                            "AMT":3900
                           },
                           "PRD":43,
-                          "LVL":14,
+                          "LVL":4,
                           "SV":
                           {
-                            "OL":10,
-                            "OS":15,
-                            "DL":11,
-                            "DS":16,
+                            "OL":0,
+                            "OS":5,
+                            "DL":1,
+                            "DS":6,
                             "VL":
                             [
-12,
-13,
-17
+2,
+3,
+7
                             ]
                           },
                           "FF":true
                         },
                         {
-                          "P":"~1-.25146-1",
+                          "P":"~0-.25253-1",
                           "VT":"saarVV-1",
                           "FS":"VGS",
                           "DV":44,
                           "PRC":
                           {
                             "CUR":"EUR",
-                            "AMT":4900
+                            "AMT":4050
                           },
                           "PRD":45,
-                          "LVL":14,
+                          "LVL":4,
                           "SV":
                           {
-                            "OL":10,
-                            "OS":15,
-                            "DL":11,
-                            "DS":16,
+                            "OL":0,
+                            "OS":5,
+                            "DL":1,
+                            "DS":6,
                             "VL":
                             [
-12,
-13,
-17
+2,
+3,
+7
                             ]
                           },
                           "FF":true
                         },
                         {
-                          "P":"~1-.25114-1",
+                          "P":"~0-.25301-1",
                           "VT":"saarVV-1",
                           "FS":"VGS",
                           "DV":46,
                           "PRC":
                           {
                             "CUR":"EUR",
-                            "AMT":5425
+                            "AMT":4050
                           },
                           "PRD":47,
-                          "LVL":14,
+                          "LVL":4,
                           "SV":
                           {
-                            "OL":10,
-                            "OS":15,
-                            "DL":11,
-                            "DS":16,
+                            "OL":0,
+                            "OS":5,
+                            "DL":1,
+                            "DS":6,
                             "VL":
                             [
-12,
-13,
-17
+2,
+3,
+7
                             ]
                           },
                           "FF":true
                         },
                         {
-                          "P":"~1-.25277-1",
+                          "P":"~0-.25303-1",
                           "VT":"saarVV-1",
                           "FS":"VGS",
                           "DV":48,
                           "PRC":
                           {
                             "CUR":"EUR",
-                            "AMT":8950
+                            "AMT":5900
                           },
                           "PRD":49,
-                          "LVL":14,
+                          "LVL":4,
                           "SV":
                           {
-                            "OL":10,
-                            "OS":15,
-                            "DL":11,
-                            "DS":16,
+                            "OL":0,
+                            "OS":5,
+                            "DL":1,
+                            "DS":6,
                             "VL":
                             [
-12,
-13,
-17
+2,
+3,
+7
                             ]
                           },
                           "FF":true
                         },
                         {
-                          "P":"~1-.25279-1",
+                          "P":"~0-.25195-1",
                           "VT":"saarVV-1",
                           "FS":"VGS",
                           "DV":50,
                           "PRC":
                           {
                             "CUR":"EUR",
-                            "AMT":9900
+                            "AMT":810
                           },
                           "PRD":51,
-                          "LVL":14,
+                          "LVL":4,
                           "SV":
                           {
-                            "OL":10,
-                            "OS":15,
-                            "DL":11,
-                            "DS":16,
+                            "OL":0,
+                            "OS":5,
+                            "DL":1,
+                            "DS":6,
                             "VL":
                             [
-12,
-13,
-17
+2,
+3,
+7
                             ]
                           },
                           "FF":true
                         },
                         {
-                          "P":"~1-.25250-1",
+                          "P":"~0-.25196-1",
                           "VT":"saarVV-1",
                           "FS":"VGS",
                           "DV":52,
                           "PRC":
                           {
                             "CUR":"EUR",
-                            "AMT":3900
+                            "AMT":2600
                           },
                           "PRD":53,
-                          "LVL":14,
+                          "LVL":4,
                           "SV":
                           {
-                            "OL":10,
-                            "OS":15,
-                            "DL":11,
-                            "DS":16,
+                            "OL":0,
+                            "OS":5,
+                            "DL":1,
+                            "DS":6,
                             "VL":
                             [
-12,
-13,
-17
+2,
+3,
+7
                             ]
                           },
                           "FF":true
                         },
                         {
-                          "P":"~1-.25253-1",
+                          "P":"~0-.25197-1",
                           "VT":"saarVV-1",
                           "FS":"VGS",
                           "DV":54,
                           "PRC":
                           {
                             "CUR":"EUR",
-                            "AMT":4050
+                            "AMT":2170
                           },
                           "PRD":55,
-                          "LVL":14,
+                          "LVL":4,
                           "SV":
                           {
-                            "OL":10,
-                            "OS":15,
-                            "DL":11,
-                            "DS":16,
+                            "OL":0,
+                            "OS":5,
+                            "DL":1,
+                            "DS":6,
                             "VL":
                             [
-12,
-13,
-17
+2,
+3,
+7
                             ]
                           },
                           "FF":true
                         },
                         {
-                          "P":"~1-.25301-1",
+                          "P":"~0-.25252-1",
                           "VT":"saarVV-1",
                           "FS":"VGS",
                           "DV":56,
                           "PRC":
                           {
                             "CUR":"EUR",
-                            "AMT":4050
+                            "AMT":2900
                           },
                           "PRD":57,
-                          "LVL":14,
+                          "LVL":4,
                           "SV":
                           {
-                            "OL":10,
-                            "OS":15,
-                            "DL":11,
-                            "DS":16,
+                            "OL":0,
+                            "OS":5,
+                            "DL":1,
+                            "DS":6,
                             "VL":
                             [
-12,
-13,
-17
+2,
+3,
+7
                             ]
                           },
                           "FF":true
                         },
                         {
-                          "P":"~1-.25303-1",
+                          "P":"~0-.25264-1",
                           "VT":"saarVV-1",
                           "FS":"VGS",
                           "DV":58,
                           "PRC":
                           {
                             "CUR":"EUR",
-                            "AMT":5900
-                          },
-                          "PRD":59,
-                          "LVL":14,
-                          "SV":
-                          {
-                            "OL":10,
-                            "OS":15,
-                            "DL":11,
-                            "DS":16,
-                            "VL":
-                            [
-12,
-13,
-17
-                            ]
-                          },
-                          "FF":true
-                        },
-                        {
-                          "P":"~1-.25195-1",
-                          "VT":"saarVV-1",
-                          "FS":"VGS",
-                          "DV":60,
-                          "PRC":
-                          {
-                            "CUR":"EUR",
-                            "AMT":810
-                          },
-                          "PRD":61,
-                          "LVL":14,
-                          "SV":
-                          {
-                            "OL":10,
-                            "OS":15,
-                            "DL":11,
-                            "DS":16,
-                            "VL":
-                            [
-12,
-13,
-17
-                            ]
-                          },
-                          "FF":true
-                        },
-                        {
-                          "P":"~1-.25196-1",
-                          "VT":"saarVV-1",
-                          "FS":"VGS",
-                          "DV":62,
-                          "PRC":
-                          {
-                            "CUR":"EUR",
-                            "AMT":2600
-                          },
-                          "PRD":63,
-                          "LVL":14,
-                          "SV":
-                          {
-                            "OL":10,
-                            "OS":15,
-                            "DL":11,
-                            "DS":16,
-                            "VL":
-                            [
-12,
-13,
-17
-                            ]
-                          },
-                          "FF":true
-                        },
-                        {
-                          "P":"~1-.25197-1",
-                          "VT":"saarVV-1",
-                          "FS":"VGS",
-                          "DV":64,
-                          "PRC":
-                          {
-                            "CUR":"EUR",
-                            "AMT":2170
-                          },
-                          "PRD":65,
-                          "LVL":14,
-                          "SV":
-                          {
-                            "OL":10,
-                            "OS":15,
-                            "DL":11,
-                            "DS":16,
-                            "VL":
-                            [
-12,
-13,
-17
-                            ]
-                          },
-                          "FF":true
-                        },
-                        {
-                          "P":"~1-.25252-1",
-                          "VT":"saarVV-1",
-                          "FS":"VGS",
-                          "DV":66,
-                          "PRC":
-                          {
-                            "CUR":"EUR",
-                            "AMT":2900
-                          },
-                          "PRD":67,
-                          "LVL":14,
-                          "SV":
-                          {
-                            "OL":10,
-                            "OS":15,
-                            "DL":11,
-                            "DS":16,
-                            "VL":
-                            [
-12,
-13,
-17
-                            ]
-                          },
-                          "FF":true
-                        },
-                        {
-                          "P":"~1-.25264-1",
-                          "VT":"saarVV-1",
-                          "FS":"VGS",
-                          "DV":68,
-                          "PRC":
-                          {
-                            "CUR":"EUR",
                             "AMT":3900
                           },
-                          "PRD":69,
-                          "LVL":14,
+                          "PRD":59,
+                          "LVL":4,
                           "SV":
                           {
-                            "OL":10,
-                            "OS":15,
-                            "DL":11,
-                            "DS":16,
+                            "OL":0,
+                            "OS":5,
+                            "DL":1,
+                            "DS":6,
                             "VL":
                             [
-12,
-13,
-17
+2,
+3,
+7
                             ]
                           },
                           "FF":true
@@ -2455,13 +3010,13 @@
             ],
             "conSubscr":"P",
             "recState":"C",
-            "cksum":"c5d3ee5c_3",
-            "cksumDti":"c5fd960c_3"
+            "cksum":"4cfbf55a_3",
+            "cksumDti":"f7bea368_3"
           }
         ],
-        "fpB":"20201213",
-        "fpE":"20211211",
-        "planrtTS":"1630935463"
+        "fpB":"20211003",
+        "fpE":"20211231",
+        "planrtTS":"1638728698"
       }
     }
   ]

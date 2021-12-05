@@ -2,7 +2,7 @@
   "ver":"1.18",
   "ext":"VAO.13",
   "lang":"deu",
-  "id":"tkmx3gs6k2ahh2wx",
+  "id":"eg644mcq66weyi8x",
   "err":"OK",
   "cInfo":
   {
@@ -14,8 +14,8 @@
   [
     {
       "meth":"TripSearch",
-      "err":"H9220",
-      "errTxt":"HAFAS Kernel: Nearby to the given address stations could not be found."
+      "err":"FAIL",
+      "errTxt":"HCI Service: request failed"
     }
   ]
 }

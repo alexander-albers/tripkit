@@ -1,7 +1,7 @@
 {
   "ver":"1.16",
   "lang":"deu",
-  "id":"8v4gjgeuka89pwwg",
+  "id":"cs6xukqx42ijy2cs",
   "svcResL":
   [
     {
@@ -419,7 +419,7 @@
           "locL":
           [
             {
-              "lid":"A=1@O=Rathausplatz@X=11425263@Y=48762435@U=80@L=000060706@B=1@p=1630927009@",
+              "lid":"A=1@O=Rathausplatz@X=11425263@Y=48762435@U=80@L=000060706@B=1@p=1634295716@",
               "type":"S",
               "name":"Rathausplatz",
               "icoX":0,
@@ -474,9 +474,9 @@
               "wt":32767
             },
             {
-              "lid":"A=1@O=Ingolstadt, Rathausplatz/Schutterstraße@X=11426557@Y=48762642@U=80@L=000060720@B=1@p=1630927009@",
+              "lid":"A=1@O=Rathausplatz Ersatz@X=11426557@Y=48762642@U=80@L=000060720@B=1@p=1634295716@",
               "type":"S",
-              "name":"Ingolstadt, Rathausplatz/Schutterstraße",
+              "name":"Rathausplatz Ersatz",
               "icoX":0,
               "extId":"000060720",
               "state":"F",
@@ -484,6 +484,55 @@
               {
                 "x":11426557,
                 "y":48762642,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":0,
+              "pRefL":
+              [
+0,
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+19,
+21,
+22,
+23,
+24,
+25,
+26,
+27,
+28,
+29,
+30,
+31,
+32,
+33
+              ]
+            },
+            {
+              "lid":"A=1@O=Ingolstadt, Rathausplatz/Schutterstraße@X=11426144@Y=48762498@U=80@L=000060702@B=1@p=1634295716@",
+              "type":"S",
+              "name":"Ingolstadt, Rathausplatz/Schutterstraße",
+              "icoX":0,
+              "extId":"000060702",
+              "state":"F",
+              "crd":
+              {
+                "x":11426144,
+                "y":48762498,
                 "type":"WGS84",
                 "layerX":0,
                 "crdSysX":0
@@ -552,20 +601,6 @@
               {
                 "x":11207679,
                 "y":48997710,
-                "layerX":0,
-                "crdSysX":0
-              }
-            },
-            {
-              "lid":"A=2@O=Ingolstadt, Rathausplatz@X=11425191@Y=48762633@U=103@b=990004030@B=1@p=1607068022@",
-              "type":"A",
-              "name":"Ingolstadt, Rathausplatz",
-              "icoX":1,
-              "state":"M",
-              "crd":
-              {
-                "x":11425191,
-                "y":48762633,
                 "layerX":0,
                 "crdSysX":0
               }

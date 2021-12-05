@@ -1,5 +1,5 @@
-<Journey fpTime="20:12" fpDate="06.09.21" delay="-" platform="2" targetLoc="Tutzing" dirnr="8005927" prod="S      6#S" dir="Tutzing" depStation="M&#252;nchen Hbf (tief)" is_reachable="0" />
-<Journey fpTime="20:13" fpDate="06.09.21" delay="-" platform="2" targetLoc="Wolfratshausen" dirnr="8006550" prod="S      7#S" dir="Wolfratshausen" depStation="M&#252;nchen Hbf (tief)" is_reachable="0" />
-<Journey fpTime="20:15" fpDate="06.09.21" delay="-" platform="1" targetLoc="M&#252;nchen Flughafen Terminal" dirnr="8004168" prod="S      8#S" dir="M&#252;nchen Flughafen Terminal" depStation="M&#252;nchen Hbf (tief)" is_reachable="0" />
-<Journey fpTime="20:17" fpDate="06.09.21" delay="0" e_delay="0" platform="12" targetLoc="Salzburg Hbf" dirnr="8100002" prod="IC  1291#IC" is_reachable="0" />
-<Journey fpTime="20:17" fpDate="06.09.21" delay="-" platform="1" targetLoc="M&#252;nchen Leuchtenbergring" dirnr="8004134" prod="S      1#S" dir="M&#252;nchen Leuchtenbergring" depStation="M&#252;nchen Hbf (tief)" is_reachable="0" />
+<Journey fpTime="18:39" fpDate="05.12.21" delay="+ 60" e_delay="60" platform="30" targetLoc="Kempten(Allg&#228;u)Hbf" dirnr="8000197" prod="RE 57596#RE" depStation="M&#252;nchen Hbf Gl.27-36" is_reachable="0" />
+<Journey fpTime="18:46" fpDate="05.12.21" delay="+ 40" e_delay="40" newpl="15" platform="13" targetLoc="K&#246;ln Hbf" dirnr="8000207" prod="ICE 1110#ICE" is_reachable="0" />
+<Journey fpTime="18:51" fpDate="05.12.21" delay="+ 40" e_delay="40" platform="19" targetLoc="Dortmund Hbf" dirnr="8000080" prod="ICE  524#ICE" is_reachable="0" />
+<Journey fpTime="18:52" fpDate="05.12.21" delay="+ 40" e_delay="40" platform="16" targetLoc="Hamburg-Altona" dirnr="8002553" prod="ICE  580#ICE" is_reachable="0" />
+<Journey fpTime="18:52" fpDate="05.12.21" delay="+ 40" e_delay="40" platform="28" targetLoc="Z&#252;rich HB" dirnr="8503000" prod="ECE   96#ECE" depStation="M&#252;nchen Hbf Gl.27-36" is_reachable="0" />

@@ -1,7 +1,7 @@
 {
   "ver":"1.18",
   "lang":"deu",
-  "id":"ciwuxma6kuwgw28g",
+  "id":"v5wgcm8266wny2wx",
   "err":"OK",
   "svcResL":
   [
@@ -655,6 +655,16 @@
               {
                 "lineId":"de:VBN-VSN:141:"
               }
+            },
+            {
+              "name":"SEV",
+              "nameS":"SEV",
+              "icoX":3,
+              "cls":8,
+              "prodCtx":
+              {
+                "lineId":"N4_____SEV"
+              }
             }
           ],
           "polyL":
@@ -678,17 +688,17 @@
               "type":"WGS84"
             },
             {
-              "id":"G?tti_39",
+              "id":"Goett_40",
               "index":1,
               "type":"WGS84"
             },
             {
-              "id":"G?tt_164",
+              "id":"Goet_165",
               "index":1,
               "type":"WGS84"
             },
             {
-              "id":"G?tti_40",
+              "id":"Goett_41",
               "index":1,
               "type":"WGS84"
             },
@@ -815,7 +825,7 @@
           "locL":
           [
             {
-              "lid":"A=1@O=Göttingen Bahnhof/ZOB@X=9926374@Y=51535436@U=80@L=9033853@B=1@p=1630786923@",
+              "lid":"A=1@O=Göttingen Bahnhof/ZOB@X=9926419@Y=51535526@U=80@L=9033853@B=1@p=1638652114@",
               "type":"S",
               "name":"Göttingen Bahnhof/ZOB",
               "icoX":0,
@@ -823,8 +833,8 @@
               "state":"F",
               "crd":
               {
-                "x":9926374,
-                "y":51535436,
+                "x":9926419,
+                "y":51535526,
                 "layerX":0,
                 "crdSysX":0
               },
@@ -908,11 +918,11 @@
 58,
 59
               ],
-              "wt":26181,
+              "wt":26403,
               "isMainMast":true
             },
             {
-              "lid":"A=1@O=Göttingen Landgericht/Bahnhof@X=9929386@Y=51537989@U=80@L=9033982@B=1@p=1630786923@",
+              "lid":"A=1@O=Göttingen Landgericht/Bahnhof@X=9929386@Y=51537989@U=80@L=9033982@B=1@p=1638652114@",
               "type":"S",
               "name":"Göttingen Landgericht/Bahnhof",
               "icoX":4,
@@ -963,11 +973,11 @@
 53,
 54
               ],
-              "wt":1292,
+              "wt":1167,
               "isMainMast":true
             },
             {
-              "lid":"A=1@O=Göttingen Bahnhofsallee@X=9924541@Y=51537055@U=80@L=9033854@B=1@p=1630786923@",
+              "lid":"A=1@O=Göttingen Bahnhofsallee@X=9924541@Y=51537055@U=80@L=9033854@B=1@p=1638652114@",
               "type":"S",
               "name":"Göttingen Bahnhofsallee",
               "icoX":6,
@@ -1000,7 +1010,7 @@
               "isMainMast":true
             },
             {
-              "lid":"A=1@O=Friedland(Kr Göttingen) Bahnhof/Ostseite@X=9915452@Y=51421399@U=80@L=9028563@B=1@p=1630786923@",
+              "lid":"A=1@O=Friedland(Kr Göttingen) Bahnhof/Ostseite@X=9915452@Y=51421399@U=80@L=9028563@B=1@p=1638652114@",
               "type":"S",
               "name":"Friedland(Kr Göttingen) Bahnhof/Ostseite",
               "icoX":3,
@@ -1038,11 +1048,11 @@
 63,
 64
               ],
-              "wt":5356,
+              "wt":5429,
               "isMainMast":true
             },
             {
-              "lid":"A=1@O=Friedland(Kr Göttingen) Bahnhof/Westseite@X=9914715@Y=51421139@U=80@L=9028564@B=1@p=1630786923@",
+              "lid":"A=1@O=Friedland(Kr Göttingen) Bahnhof/Westseite@X=9914715@Y=51421139@U=80@L=9028564@B=1@p=1638652114@",
               "type":"S",
               "name":"Friedland(Kr Göttingen) Bahnhof/Westseite",
               "icoX":3,
@@ -1077,11 +1087,12 @@
 7,
 61,
 62,
+65,
 30,
 63,
 64
               ],
-              "wt":5589,
+              "wt":5635,
               "isMainMast":true
             }
           ]

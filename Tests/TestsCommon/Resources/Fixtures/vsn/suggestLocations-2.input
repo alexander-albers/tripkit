@@ -1,7 +1,7 @@
 {
   "ver":"1.16",
   "lang":"deu",
-  "id":"mdwspguc66xxgg4k",
+  "id":"282kcmxw46gmp2wx",
   "svcResL":
   [
     {
@@ -97,10 +97,10 @@
               "id":"standard",
               "index":0,
               "type":"WGS84",
-              "dim":3
+              "dim":2
             },
             {
-              "id":"G?tt_178",
+              "id":"Goet_179",
               "index":1,
               "type":"WGS84",
               "dim":2
@@ -145,7 +145,7 @@
           "locL":
           [
             {
-              "lid":"A=1@O=Göttingen Lönsweg@X=9953540@Y=51527193@U=80@L=9033996@B=1@p=1630786923@",
+              "lid":"A=1@O=Göttingen Lönsweg@X=9953827@Y=51527562@U=80@L=9033996@B=1@p=1638652114@",
               "type":"S",
               "name":"Göttingen Lönsweg",
               "icoX":0,
@@ -153,8 +153,8 @@
               "state":"F",
               "crd":
               {
-                "x":9953540,
-                "y":51527193,
+                "x":9953827,
+                "y":51527562,
                 "type":"WGS84",
                 "layerX":0,
                 "crdSysX":0
@@ -185,13 +185,27 @@
 4,
 5
               ],
-              "wt":1292,
+              "wt":1167,
               "isMainMast":true
             },
             {
-              "lid":"A=2@O=Dassel - Dassel, Lönsweg@X=9689994@Y=51799719@U=99@b=958128560@B=1@p=1617880347@",
+              "lid":"A=2@O=31061 Alfeld, Lönsweg@X=9858470@Y=51996475@U=99@b=958043445@B=1@p=1617880347@",
               "type":"A",
-              "name":"Dassel - Dassel, Lönsweg",
+              "name":"31061 Alfeld, Lönsweg",
+              "icoX":1,
+              "state":"M",
+              "crd":
+              {
+                "x":9858470,
+                "y":51996475,
+                "layerX":0,
+                "crdSysX":0
+              }
+            },
+            {
+              "lid":"A=2@O=37586 Dassel, Lönsweg@X=9689994@Y=51799719@U=99@b=958128560@B=1@p=1617880347@",
+              "type":"A",
+              "name":"37586 Dassel, Lönsweg",
               "icoX":1,
               "state":"M",
               "crd":
@@ -203,43 +217,29 @@
               }
             },
             {
-              "lid":"A=2@O=Bockenem - Nette, Lönsweg@X=10086203@Y=52038635@U=99@b=958096314@B=1@p=1617880347@",
+              "lid":"A=2@O=31089 Duingen, Lönsweg@X=9686371@Y=52003703@U=99@b=958134751@B=1@p=1617880347@",
               "type":"A",
-              "name":"Bockenem - Nette, Lönsweg",
-              "icoX":1,
-              "state":"M",
-              "crd":
-              {
-                "x":10086203,
-                "y":52038635,
-                "layerX":0,
-                "crdSysX":0
-              }
-            },
-            {
-              "lid":"A=2@O=Deensen - Deensen, Lönsweg@X=9589854@Y=51864819@U=99@b=958060836@B=1@p=1617880347@",
-              "type":"A",
-              "name":"Deensen - Deensen, Lönsweg",
-              "icoX":1,
-              "state":"M",
-              "crd":
-              {
-                "x":9589854,
-                "y":51864819,
-                "layerX":0,
-                "crdSysX":0
-              }
-            },
-            {
-              "lid":"A=2@O=Duingen - Duingen, Lönsweg@X=9686371@Y=52003703@U=99@b=958134751@B=1@p=1617880347@",
-              "type":"A",
-              "name":"Duingen - Duingen, Lönsweg",
+              "name":"31089 Duingen, Lönsweg",
               "icoX":1,
               "state":"M",
               "crd":
               {
                 "x":9686371,
                 "y":52003703,
+                "layerX":0,
+                "crdSysX":0
+              }
+            },
+            {
+              "lid":"A=2@O=37574 Einbeck, Lönsweg@X=9873365@Y=51826768@U=99@b=958008205@B=1@p=1617880347@",
+              "type":"A",
+              "name":"37574 Einbeck, Lönsweg",
+              "icoX":1,
+              "state":"M",
+              "crd":
+              {
+                "x":9873365,
+                "y":51826768,
                 "layerX":0,
                 "crdSysX":0
               }

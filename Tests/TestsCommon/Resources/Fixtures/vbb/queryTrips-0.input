@@ -1,7 +1,7 @@
 {
   "ver":"1.16",
   "lang":"deu",
-  "id":"8a6q8msm6iw8wi4s",
+  "id":"i7gkumc262w78w8x",
   "svcResL":
   [
     {
@@ -31,7 +31,7 @@
               "pCls":10
             },
             {
-              "lid":"A=1@O=U Prinzenstr. (Berlin)@X=13406530@Y=52498271@U=86@L=900013103@",
+              "lid":"A=1@O=U Prinzenstr. (Berlin)@X=13406548@Y=52498325@U=86@L=900013103@",
               "type":"S",
               "name":"U Prinzenstr. (Berlin)",
               "icoX":0,
@@ -39,8 +39,8 @@
               "state":"F",
               "crd":
               {
-                "x":13406530,
-                "y":52498271,
+                "x":13406548,
+                "y":52498325,
                 "type":"WGS84",
                 "layerX":0,
                 "crdSysX":0
@@ -119,6 +119,62 @@
           "prodL":
           [
             {
+              "pid":"L::1::U::B3041857784::U_3041857784_U3::*",
+              "name":"U3",
+              "nameS":"U3",
+              "number":"U3",
+              "icoX":2,
+              "cls":2,
+              "oprX":0,
+              "prodCtx":
+              {
+                "name":"      U3",
+                "num":"15265",
+                "line":"U3",
+                "matchId":"U3",
+                "catOut":"U       ",
+                "catOutS":"U",
+                "catOutL":"U       ",
+                "catIn":"U",
+                "catCode":"1",
+                "admin":"BVU---"
+              },
+              "himIdL":
+              [
+"HIM_FREETEXT_75748",
+"HIM_FREETEXT_41962",
+"HIM_FREETEXT_49856"
+              ]
+            },
+            {
+              "pid":"L::1::U::B3041857784::U_3041857784_U3::*",
+              "name":"U3",
+              "nameS":"U3",
+              "number":"U3",
+              "icoX":2,
+              "cls":2,
+              "oprX":1,
+              "prodCtx":
+              {
+                "name":"      U3",
+                "num":"15265",
+                "line":"U3",
+                "matchId":"U3",
+                "catOut":"U       ",
+                "catOutS":"U",
+                "catOutL":"U       ",
+                "catIn":"U",
+                "catCode":"1",
+                "admin":"BVU---"
+              },
+              "himIdL":
+              [
+"HIM_FREETEXT_75748",
+"HIM_FREETEXT_41962",
+"HIM_FREETEXT_49856"
+              ]
+            },
+            {
               "pid":"L::1::U::B3041857784::U_3041857784_U1::*",
               "name":"U1",
               "nameS":"U1",
@@ -129,7 +185,7 @@
               "prodCtx":
               {
                 "name":"      U1",
-                "num":"11822",
+                "num":"11771",
                 "line":"U1",
                 "matchId":"U1",
                 "catOut":"U       ",
@@ -141,7 +197,9 @@
               },
               "himIdL":
               [
-"HIM_FREETEXT_75748"
+"HIM_FREETEXT_75748",
+"HIM_FREETEXT_49856",
+"HIM_FREETEXT_49857"
               ]
             },
             {
@@ -155,7 +213,7 @@
               "prodCtx":
               {
                 "name":"      U1",
-                "num":"11822",
+                "num":"11771",
                 "line":"U1",
                 "matchId":"U1",
                 "catOut":"U       ",
@@ -167,7 +225,9 @@
               },
               "himIdL":
               [
-"HIM_FREETEXT_75748"
+"HIM_FREETEXT_75748",
+"HIM_FREETEXT_49856",
+"HIM_FREETEXT_49857"
               ]
             },
             {
@@ -181,7 +241,7 @@
               "prodCtx":
               {
                 "name":"      U3",
-                "num":"13430",
+                "num":"15266",
                 "line":"U3",
                 "matchId":"U3",
                 "catOut":"U       ",
@@ -194,7 +254,8 @@
               "himIdL":
               [
 "HIM_FREETEXT_75748",
-"HIM_FREETEXT_40164"
+"HIM_FREETEXT_41962",
+"HIM_FREETEXT_49856"
               ]
             },
             {
@@ -208,7 +269,7 @@
               "prodCtx":
               {
                 "name":"      U3",
-                "num":"13430",
+                "num":"15266",
                 "line":"U3",
                 "matchId":"U3",
                 "catOut":"U       ",
@@ -221,61 +282,8 @@
               "himIdL":
               [
 "HIM_FREETEXT_75748",
-"HIM_FREETEXT_40164"
-              ]
-            },
-            {
-              "pid":"L::1::U::B3041857784::U_3041857784_U3::*",
-              "name":"U3",
-              "nameS":"U3",
-              "number":"U3",
-              "icoX":2,
-              "cls":2,
-              "oprX":0,
-              "prodCtx":
-              {
-                "name":"      U3",
-                "num":"13431",
-                "line":"U3",
-                "matchId":"U3",
-                "catOut":"U       ",
-                "catOutS":"U",
-                "catOutL":"U       ",
-                "catIn":"U",
-                "catCode":"1",
-                "admin":"BVU---"
-              },
-              "himIdL":
-              [
-"HIM_FREETEXT_75748",
-"HIM_FREETEXT_40164"
-              ]
-            },
-            {
-              "pid":"L::1::U::B3041857784::U_3041857784_U3::*",
-              "name":"U3",
-              "nameS":"U3",
-              "number":"U3",
-              "icoX":2,
-              "cls":2,
-              "oprX":1,
-              "prodCtx":
-              {
-                "name":"      U3",
-                "num":"13431",
-                "line":"U3",
-                "matchId":"U3",
-                "catOut":"U       ",
-                "catOutS":"U",
-                "catOutL":"U       ",
-                "catIn":"U",
-                "catCode":"1",
-                "admin":"BVU---"
-              },
-              "himIdL":
-              [
-"HIM_FREETEXT_75748",
-"HIM_FREETEXT_40164"
+"HIM_FREETEXT_41962",
+"HIM_FREETEXT_49856"
               ]
             }
           ],
@@ -285,7 +293,7 @@
               "delta":true,
               "dim":2,
               "type":"WGS84",
-              "crdEncYX":"yyl_ImdopA{@kCkEyTlDqT??vA_IJsBoAqJfAuUj@{^??EoHVkGM}FrAwRUuF??TiJpDgW~@}J??EgKeBcZMuu@TaF",
+              "crdEncYX":"yyl_ImdopA{@kCkEyTlDqT??vA_IJsBoAqJfAuUj@{^??EoHVkGM}FrAwRUuF??TiJpDgW~@}J??EgKeBcZMuu@HeF",
               "crdEncS":"NNNNNLNNMNNLLNNNNNLNNMNNN",
               "crdEncF":"?????????????????????????",
               "ppLocRefL":
@@ -320,7 +328,7 @@
               "delta":true,
               "dim":2,
               "type":"WGS84",
-              "crdEncYX":"yyl_ImdopA{@kCkEyTlDqT??vA_IJsBoAqJfAuUj@{^??EoHVkGM}FrAwRUuF??TiJpDgW~@}J??EgKeBcZMuu@TaF",
+              "crdEncYX":"yyl_ImdopA{@kCkEyTlDqT??vA_IJsBoAqJfAuUj@{^??EoHVkGM}FrAwRUuF??TiJpDgW~@}J??EgKeBcZMuu@HeF",
               "crdEncS":"NNNNNLNNMNNLLNNNNNLNNMNNN",
               "crdEncF":"?????????????????????????",
               "ppLocRefL":
@@ -355,7 +363,7 @@
               "delta":true,
               "dim":2,
               "type":"WGS84",
-              "crdEncYX":"yyl_ImdopA{@kCkEyTlDqT??vA_IJsBoAqJfAuUj@{^??EoHVkGM}FrAwRUuF??TiJpDgW~@}J??EgKeBcZMuu@TaF",
+              "crdEncYX":"yyl_ImdopA{@kCkEyTlDqT??vA_IJsBoAqJfAuUj@{^??EoHVkGM}FrAwRUuF??TiJpDgW~@}J??EgKeBcZMuu@HeF",
               "crdEncS":"NNNNNLNNMNNLLNNNNNLNNMNNN",
               "crdEncF":"?????????????????????????",
               "ppLocRefL":
@@ -446,49 +454,19 @@
           "himL":
           [
             {
-              "hid":"135319",
+              "hid":"144719",
               "act":true,
               "pub":"",
-              "head":"Streik im DB-Bahnverkehr von Donnerstag, 2 Uhr bis Dienstag, 2 Uhr",
+              "head":"Es gelten 3G-Regel und Maskenpflicht!",
               "lead":"",
-              "text":"Wegen Streiks der Gewerkschaft der Lokführer (GdL) kommt es im Regional- und Fernverkehr der DB sowie bei der S-Bahn Berlin zu erheblichen Einschränkungen. Bitte informieren Sie sich.<br><a href=\"https://www.vbb.de/streik\" target=\"_blank\" rel=\"noopener\">Weitere Informationen</a>",
+              "text":"Wir empfehlen eine FFP2-Maske.<br><a href=\"https://www.vbb.de/corona\" target=\"_blank\" rel=\"noopener\">Weitere Informationen</a>",
               "tckr":"",
               "icoX":6,
               "prio":100,
               "prod":65535,
-              "lModDate":"20210830",
-              "lModTime":"180823",
-              "sDate":"20210830",
-              "sTime":"170000",
-              "eDate":"20210907",
-              "eTime":"030000",
-              "comp":"VBB",
-              "cat":2,
-              "pubChL":
-              [
-                {
-                  "name":"TIMETABLE",
-                  "fDate":"20210830",
-                  "fTime":"172900",
-                  "tDate":"20210907",
-                  "tTime":"030000"
-                }
-              ]
-            },
-            {
-              "hid":"118634",
-              "act":true,
-              "pub":"",
-              "head":"Gemeinsam sicher unterwegs - mit Abstand und medizinischer Maske (in Berlin: FFP2)!",
-              "lead":"",
-              "text":"An Haltestellen und Bahnhöfen sowie in Fahrzeugen. Maskenmuffel riskieren mindestens 50 Euro.<br><a href=\"https://www.vbb.de/corona\" target=\"_blank\" rel=\"noopener\">Weitere Informationen</a>",
-              "tckr":"",
-              "icoX":7,
-              "prio":100,
-              "prod":65535,
-              "lModDate":"20210612",
-              "lModTime":"074336",
-              "sDate":"20210424",
+              "lModDate":"20211123",
+              "lModTime":"183110",
+              "sDate":"20211124",
               "sTime":"000000",
               "eDate":"20221231",
               "eTime":"000000",
@@ -498,8 +476,8 @@
               [
                 {
                   "name":"TIMETABLE",
-                  "fDate":"20210423",
-                  "fTime":"134200",
+                  "fDate":"20211123",
+                  "fTime":"173000",
                   "tDate":"20221231",
                   "tTime":"000000"
                 }
@@ -542,9 +520,6 @@
               "res":"attr_bike_r"
             },
             {
-              "res":"HIM2"
-            },
-            {
               "res":"HIM0"
             }
           ]
@@ -553,32 +528,35 @@
         [
           {
             "cid":"C-0",
-            "date":"20210906",
+            "date":"20211205",
             "dur":"000900",
             "chg":0,
             "sDays":
             {
-              "sDaysR":"täglich",
-              "sDaysB":"FFFFFFFFFFFFFFFFFFFFFFFFFF80"
+              "sDaysR":"Sa, So",
+              "sDaysI":"auch 31. Dez, 8. Mär, 15., 18. Apr, 26. Mai, 6. Jun",
+              "sDaysB":"83060C187060C183060C183068C183060C3C3060C183160E10"
             },
             "dep":
             {
               "locX":0,
-              "idx":3,
+              "idx":14,
               "dProdX":0,
+              "dPlatfS":"2",
               "dInR":true,
-              "dTimeS":"094400",
-              "dTimeR":"094400",
+              "dTimeS":"192900",
+              "dTimeR":"192900",
               "dProgType":"PROGNOSED",
               "type":"N"
             },
             "arr":
             {
               "locX":1,
-              "idx":8,
+              "idx":19,
+              "aPlatfS":"2",
               "aOutR":true,
-              "aTimeS":"095300",
-              "aTimeR":"095300",
+              "aTimeS":"193800",
+              "aTimeR":"193800",
               "aProgType":"PROGNOSED",
               "type":"N"
             },
@@ -590,29 +568,31 @@
                 "dep":
                 {
                   "locX":0,
-                  "idx":3,
+                  "idx":14,
                   "dProdX":0,
+                  "dPlatfS":"2",
                   "dInR":true,
-                  "dTimeS":"094400",
-                  "dTimeR":"094400",
+                  "dTimeS":"192900",
+                  "dTimeR":"192900",
                   "dProgType":"PROGNOSED",
                   "type":"N"
                 },
                 "arr":
                 {
                   "locX":1,
-                  "idx":8,
+                  "idx":19,
+                  "aPlatfS":"2",
                   "aOutR":true,
-                  "aTimeS":"095300",
-                  "aTimeR":"095300",
+                  "aTimeS":"193800",
+                  "aTimeR":"193800",
                   "aProgType":"PROGNOSED",
                   "type":"N"
                 },
                 "jny":
                 {
-                  "jid":"1|31238|18|86|6092021",
+                  "jid":"1|34348|28|86|5122021",
                   "prodX":1,
-                  "dirTxt":"S+U Warschauer Straße",
+                  "dirTxt":"S+U Warschauer Str. (Berlin)",
                   "dirFlg":"2",
                   "status":"P",
                   "isRchbl":true,
@@ -620,83 +600,83 @@
                   [
                     {
                       "locX":0,
-                      "idx":3,
+                      "idx":14,
                       "dProdX":1,
                       "dInR":true,
-                      "dTimeS":"094400",
-                      "dTimeR":"094400",
+                      "dTimeS":"192900",
+                      "dTimeR":"192900",
                       "dProgType":"PROGNOSED",
-                      "dDirTxt":"S+U Warschauer Straße",
+                      "dDirTxt":"S+U Warschauer Str. (Berlin)",
                       "dDirFlg":"2",
                       "type":"N"
                     },
                     {
                       "locX":2,
-                      "idx":4,
+                      "idx":15,
                       "aProdX":1,
                       "aOutR":true,
-                      "aTimeS":"094600",
-                      "aTimeR":"094600",
+                      "aTimeS":"193100",
+                      "aTimeR":"193100",
                       "aProgType":"PROGNOSED",
                       "dProdX":1,
                       "dInR":true,
-                      "dTimeS":"094600",
-                      "dTimeR":"094600",
+                      "dTimeS":"193100",
+                      "dTimeR":"193100",
                       "dProgType":"PROGNOSED",
                       "type":"N"
                     },
                     {
                       "locX":3,
-                      "idx":5,
+                      "idx":16,
                       "aProdX":1,
                       "aOutR":true,
-                      "aTimeS":"094800",
-                      "aTimeR":"094800",
+                      "aTimeS":"193300",
+                      "aTimeR":"193300",
                       "aProgType":"PROGNOSED",
                       "dProdX":1,
                       "dInR":true,
-                      "dTimeS":"094800",
-                      "dTimeR":"094800",
+                      "dTimeS":"193300",
+                      "dTimeR":"193300",
                       "dProgType":"PROGNOSED",
                       "type":"N"
                     },
                     {
                       "locX":4,
-                      "idx":6,
+                      "idx":17,
                       "aProdX":1,
                       "aOutR":true,
-                      "aTimeS":"094900",
-                      "aTimeR":"094900",
+                      "aTimeS":"193400",
+                      "aTimeR":"193400",
                       "aProgType":"PROGNOSED",
                       "dProdX":1,
                       "dInR":true,
-                      "dTimeS":"094900",
-                      "dTimeR":"094900",
+                      "dTimeS":"193400",
+                      "dTimeR":"193400",
                       "dProgType":"PROGNOSED",
                       "type":"N"
                     },
                     {
                       "locX":5,
-                      "idx":7,
+                      "idx":18,
                       "aProdX":1,
                       "aOutR":true,
-                      "aTimeS":"095100",
-                      "aTimeR":"095100",
+                      "aTimeS":"193600",
+                      "aTimeR":"193600",
                       "aProgType":"PROGNOSED",
                       "dProdX":1,
                       "dInR":true,
-                      "dTimeS":"095100",
-                      "dTimeR":"095100",
+                      "dTimeS":"193600",
+                      "dTimeR":"193600",
                       "dProgType":"PROGNOSED",
                       "type":"N"
                     },
                     {
                       "locX":1,
-                      "idx":8,
+                      "idx":19,
                       "aProdX":1,
                       "aOutR":true,
-                      "aTimeS":"095300",
-                      "aTimeR":"095300",
+                      "aTimeS":"193800",
+                      "aTimeR":"193800",
                       "aProgType":"PROGNOSED",
                       "type":"N"
                     }
@@ -712,18 +692,18 @@
                   },
                   "pos":
                   {
-                    "x":13342869,
-                    "y":52501624,
+                    "x":13337673,
+                    "y":52501543,
                     "layerX":0,
                     "crdSysX":0
                   },
                   "freq":
                   {
-                    "minC":3,
-                    "maxC":4,
-                    "numC":37
+                    "minC":5,
+                    "maxC":5,
+                    "numC":25
                   },
-                  "ctxRecon":"T$A=1@O=U Nollendorfplatz (Berlin)@L=900056102@a=128@$A=1@O=U Prinzenstr. (Berlin)@L=900013103@a=128@$202109060944$202109060953$      U1$$1$$$$",
+                  "ctxRecon":"T$A=1@O=U Nollendorfplatz (Berlin)@L=900056102@a=128@$A=1@O=U Prinzenstr. (Berlin)@L=900013103@a=128@$202112051929$202112051938$      U3$$1$$$$",
                   "msgL":
                   [
                     {
@@ -764,25 +744,16 @@
                       [
                         "RES_GLB_HDR_H3","SUM_GLB_HDR_H3"
                       ]
-                    },
-                    {
-                      "type":"HIM",
-                      "himX":1,
-                      "fLocX":0,
-                      "tagL":
-                      [
-                        "RES_GLB_HDR_H3","SUM_GLB_HDR_H3"
-                      ]
                     }
                   ],
                   "subscr":"F"
                 }
               }
             ],
-            "ctxRecon":"¶HKI¶T$A=1@O=U Nollendorfplatz (Berlin)@L=900056102@a=128@$A=1@O=U Prinzenstr. (Berlin)@L=900013103@a=128@$202109060944$202109060953$      U1$$1$$$$",
+            "ctxRecon":"¶HKI¶T$A=1@O=U Nollendorfplatz (Berlin)@L=900056102@a=128@$A=1@O=U Prinzenstr. (Berlin)@L=900013103@a=128@$202112051929$202112051938$      U3$$1$$$$",
             "freq":
             {
-              "minC":3
+              "minC":5
             },
             "trfRes":
             {
@@ -1016,37 +987,39 @@
               }
             ],
             "conSubscr":"F",
-            "cksum":"1d0b772b_3"
+            "cksum":"5b024bb8_3"
           },
           {
             "cid":"C-1",
-            "date":"20210906",
+            "date":"20211205",
             "dur":"000900",
             "chg":0,
             "sDays":
             {
-              "sDaysR":"Mo - Fr",
-              "sDaysB":"7CF9F3E7CF9F3E7CF9F3E7CF9F00"
+              "sDaysR":"täglich",
+              "sDaysB":"FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF0"
             },
             "dep":
             {
               "locX":0,
-              "idx":13,
+              "idx":3,
               "dProdX":2,
+              "dPlatfS":"2",
               "dInR":true,
-              "dTimeS":"094700",
-              "dTimeR":"094700",
+              "dTimeS":"193400",
+              "dTimeR":"193400",
               "dProgType":"PROGNOSED",
               "type":"N"
             },
             "arr":
             {
               "locX":1,
-              "idx":18,
+              "idx":8,
               "aProdX":2,
+              "aPlatfS":"2",
               "aOutR":true,
-              "aTimeS":"095600",
-              "aTimeR":"095600",
+              "aTimeS":"194300",
+              "aTimeR":"194300",
               "aProgType":"PROGNOSED",
               "type":"N"
             },
@@ -1058,28 +1031,30 @@
                 "dep":
                 {
                   "locX":0,
-                  "idx":13,
+                  "idx":3,
                   "dProdX":2,
+                  "dPlatfS":"2",
                   "dInR":true,
-                  "dTimeS":"094700",
-                  "dTimeR":"094700",
+                  "dTimeS":"193400",
+                  "dTimeR":"193400",
                   "dProgType":"PROGNOSED",
                   "type":"N"
                 },
                 "arr":
                 {
                   "locX":1,
-                  "idx":18,
+                  "idx":8,
                   "aProdX":2,
+                  "aPlatfS":"2",
                   "aOutR":true,
-                  "aTimeS":"095600",
-                  "aTimeR":"095600",
+                  "aTimeS":"194300",
+                  "aTimeR":"194300",
                   "aProgType":"PROGNOSED",
                   "type":"N"
                 },
                 "jny":
                 {
-                  "jid":"1|31761|20|86|6092021",
+                  "jid":"1|33896|13|86|5122021",
                   "prodX":3,
                   "dirTxt":"S+U Warschauer Str. (Berlin)",
                   "dirFlg":"2",
@@ -1089,11 +1064,11 @@
                   [
                     {
                       "locX":0,
-                      "idx":13,
+                      "idx":3,
                       "dProdX":3,
                       "dInR":true,
-                      "dTimeS":"094700",
-                      "dTimeR":"094700",
+                      "dTimeS":"193400",
+                      "dTimeR":"193400",
                       "dProgType":"PROGNOSED",
                       "dDirTxt":"S+U Warschauer Str. (Berlin)",
                       "dDirFlg":"2",
@@ -1101,71 +1076,71 @@
                     },
                     {
                       "locX":2,
-                      "idx":14,
+                      "idx":4,
                       "aProdX":3,
                       "aOutR":true,
-                      "aTimeS":"094900",
-                      "aTimeR":"094900",
+                      "aTimeS":"193600",
+                      "aTimeR":"193600",
                       "aProgType":"PROGNOSED",
                       "dProdX":3,
                       "dInR":true,
-                      "dTimeS":"094900",
-                      "dTimeR":"094900",
+                      "dTimeS":"193600",
+                      "dTimeR":"193600",
                       "dProgType":"PROGNOSED",
                       "type":"N"
                     },
                     {
                       "locX":3,
-                      "idx":15,
+                      "idx":5,
                       "aProdX":3,
                       "aOutR":true,
-                      "aTimeS":"095100",
-                      "aTimeR":"095100",
+                      "aTimeS":"193800",
+                      "aTimeR":"193800",
                       "aProgType":"PROGNOSED",
                       "dProdX":3,
                       "dInR":true,
-                      "dTimeS":"095100",
-                      "dTimeR":"095100",
+                      "dTimeS":"193800",
+                      "dTimeR":"193800",
                       "dProgType":"PROGNOSED",
                       "type":"N"
                     },
                     {
                       "locX":4,
-                      "idx":16,
+                      "idx":6,
                       "aProdX":3,
                       "aOutR":true,
-                      "aTimeS":"095200",
-                      "aTimeR":"095200",
+                      "aTimeS":"193900",
+                      "aTimeR":"193900",
                       "aProgType":"PROGNOSED",
                       "dProdX":3,
                       "dInR":true,
-                      "dTimeS":"095200",
-                      "dTimeR":"095200",
+                      "dTimeS":"193900",
+                      "dTimeR":"193900",
                       "dProgType":"PROGNOSED",
                       "type":"N"
                     },
                     {
                       "locX":5,
-                      "idx":17,
+                      "idx":7,
                       "aProdX":3,
                       "aOutR":true,
-                      "aTimeS":"095400",
-                      "aTimeR":"095400",
+                      "aTimeS":"194100",
+                      "aTimeR":"194100",
                       "aProgType":"PROGNOSED",
                       "dProdX":3,
                       "dInR":true,
-                      "dTimeS":"095400",
-                      "dTimeR":"095400",
+                      "dTimeS":"194100",
+                      "dTimeR":"194100",
                       "dProgType":"PROGNOSED",
                       "type":"N"
                     },
                     {
                       "locX":1,
-                      "idx":18,
+                      "idx":8,
                       "aProdX":3,
                       "aOutR":true,
-                      "aTimeS":"095600",
-                      "aTimeR":"095600",
+                      "aTimeS":"194300",
+                      "aTimeR":"194300",
                       "aProgType":"PROGNOSED",
                       "type":"N"
                     }
@@ -1179,20 +1154,13 @@
                     "layerX":0,
                     "crdSysX":0
                   },
-                  "pos":
-                  {
-                    "x":13332090,
-                    "y":52496869,
-                    "layerX":0,
-                    "crdSysX":0
-                  },
                   "freq":
                   {
-                    "minC":3,
-                    "maxC":4,
-                    "numC":37
+                    "minC":5,
+                    "maxC":10,
+                    "numC":25
                   },
-                  "ctxRecon":"T$A=1@O=U Nollendorfplatz (Berlin)@L=900056102@a=128@$A=1@O=U Prinzenstr. (Berlin)@L=900013103@a=128@$202109060947$202109060956$      U3$$1$$$$",
+                  "ctxRecon":"T$A=1@O=U Nollendorfplatz (Berlin)@L=900056102@a=128@$A=1@O=U Prinzenstr. (Berlin)@L=900013103@a=128@$202112051934$202112051943$      U1$$1$$$$",
                   "msgL":
                   [
                     {
@@ -1233,25 +1201,16 @@
                       [
                         "RES_GLB_HDR_H3","SUM_GLB_HDR_H3"
                       ]
-                    },
-                    {
-                      "type":"HIM",
-                      "himX":1,
-                      "fLocX":0,
-                      "tagL":
-                      [
-                        "RES_GLB_HDR_H3","SUM_GLB_HDR_H3"
-                      ]
                     }
                   ],
                   "subscr":"F"
                 }
               }
             ],
-            "ctxRecon":"¶HKI¶T$A=1@O=U Nollendorfplatz (Berlin)@L=900056102@a=128@$A=1@O=U Prinzenstr. (Berlin)@L=900013103@a=128@$202109060947$202109060956$      U3$$1$$$$",
+            "ctxRecon":"¶HKI¶T$A=1@O=U Nollendorfplatz (Berlin)@L=900056102@a=128@$A=1@O=U Prinzenstr. (Berlin)@L=900013103@a=128@$202112051934$202112051943$      U1$$1$$$$",
             "freq":
             {
-              "minC":3
+              "minC":5
             },
             "trfRes":
             {
@@ -1485,37 +1444,40 @@
               }
             ],
             "conSubscr":"F",
-            "cksum":"2f67b5b9_3"
+            "cksum":"d8dc0f92_3"
           },
           {
             "cid":"C-2",
-            "date":"20210906",
+            "date":"20211205",
             "dur":"000900",
             "chg":0,
             "sDays":
             {
-              "sDaysR":"Mo - Fr",
-              "sDaysB":"7CF9F3E7CF9F3E7CF9F3E7CF9F00"
+              "sDaysR":"Sa, So",
+              "sDaysI":"auch 31. Dez, 8. Mär, 15., 18. Apr, 26. Mai, 6. Jun",
+              "sDaysB":"83060C187060C183060C183068C183060C3C3060C183160E10"
             },
             "dep":
             {
               "locX":0,
-              "idx":13,
+              "idx":14,
               "dProdX":4,
+              "dPlatfS":"2",
               "dInR":true,
-              "dTimeS":"095100",
-              "dTimeR":"095100",
+              "dTimeS":"193900",
+              "dTimeR":"193900",
               "dProgType":"PROGNOSED",
               "type":"N"
             },
             "arr":
             {
               "locX":1,
-              "idx":18,
+              "idx":19,
               "aProdX":4,
+              "aPlatfS":"2",
               "aOutR":true,
-              "aTimeS":"100000",
-              "aTimeR":"100000",
+              "aTimeS":"194800",
+              "aTimeR":"194800",
               "aProgType":"PROGNOSED",
               "type":"N"
             },
@@ -1527,28 +1489,30 @@
                 "dep":
                 {
                   "locX":0,
-                  "idx":13,
+                  "idx":14,
                   "dProdX":4,
+                  "dPlatfS":"2",
                   "dInR":true,
-                  "dTimeS":"095100",
-                  "dTimeR":"095100",
+                  "dTimeS":"193900",
+                  "dTimeR":"193900",
                   "dProgType":"PROGNOSED",
                   "type":"N"
                 },
                 "arr":
                 {
                   "locX":1,
-                  "idx":18,
+                  "idx":19,
                   "aProdX":4,
+                  "aPlatfS":"2",
                   "aOutR":true,
-                  "aTimeS":"100000",
-                  "aTimeR":"100000",
+                  "aTimeS":"194800",
+                  "aTimeR":"194800",
                   "aProgType":"PROGNOSED",
                   "type":"N"
                 },
                 "jny":
                 {
-                  "jid":"1|31760|22|86|6092021",
+                  "jid":"1|34348|29|86|5122021",
                   "prodX":5,
                   "dirTxt":"S+U Warschauer Str. (Berlin)",
                   "dirFlg":"2",
@@ -1558,11 +1522,11 @@
                   [
                     {
                       "locX":0,
-                      "idx":13,
+                      "idx":14,
                       "dProdX":5,
                       "dInR":true,
-                      "dTimeS":"095100",
-                      "dTimeR":"095100",
+                      "dTimeS":"193900",
+                      "dTimeR":"193900",
                       "dProgType":"PROGNOSED",
                       "dDirTxt":"S+U Warschauer Str. (Berlin)",
                       "dDirFlg":"2",
@@ -1570,71 +1534,71 @@
                     },
                     {
                       "locX":2,
-                      "idx":14,
+                      "idx":15,
                       "aProdX":5,
                       "aOutR":true,
-                      "aTimeS":"095300",
-                      "aTimeR":"095300",
+                      "aTimeS":"194100",
+                      "aTimeR":"194100",
                       "aProgType":"PROGNOSED",
                       "dProdX":5,
                       "dInR":true,
-                      "dTimeS":"095300",
-                      "dTimeR":"095300",
+                      "dTimeS":"194100",
+                      "dTimeR":"194100",
                       "dProgType":"PROGNOSED",
                       "type":"N"
                     },
                     {
                       "locX":3,
-                      "idx":15,
+                      "idx":16,
                       "aProdX":5,
                       "aOutR":true,
-                      "aTimeS":"095500",
-                      "aTimeR":"095500",
+                      "aTimeS":"194300",
+                      "aTimeR":"194300",
                       "aProgType":"PROGNOSED",
                       "dProdX":5,
                       "dInR":true,
-                      "dTimeS":"095500",
-                      "dTimeR":"095500",
+                      "dTimeS":"194300",
+                      "dTimeR":"194300",
                       "dProgType":"PROGNOSED",
                       "type":"N"
                     },
                     {
                       "locX":4,
-                      "idx":16,
+                      "idx":17,
                       "aProdX":5,
                       "aOutR":true,
-                      "aTimeS":"095600",
-                      "aTimeR":"095600",
+                      "aTimeS":"194400",
+                      "aTimeR":"194400",
                       "aProgType":"PROGNOSED",
                       "dProdX":5,
                       "dInR":true,
-                      "dTimeS":"095600",
-                      "dTimeR":"095600",
+                      "dTimeS":"194400",
+                      "dTimeR":"194400",
                       "dProgType":"PROGNOSED",
                       "type":"N"
                     },
                     {
                       "locX":5,
-                      "idx":17,
+                      "idx":18,
                       "aProdX":5,
                       "aOutR":true,
-                      "aTimeS":"095800",
-                      "aTimeR":"095800",
+                      "aTimeS":"194600",
+                      "aTimeR":"194600",
                       "aProgType":"PROGNOSED",
                       "dProdX":5,
                       "dInR":true,
-                      "dTimeS":"095800",
-                      "dTimeR":"095800",
+                      "dTimeS":"194600",
+                      "dTimeR":"194600",
                       "dProgType":"PROGNOSED",
                       "type":"N"
                     },
                     {
                       "locX":1,
-                      "idx":18,
+                      "idx":19,
                       "aProdX":5,
                       "aOutR":true,
-                      "aTimeS":"100000",
-                      "aTimeR":"100000",
+                      "aTimeS":"194800",
+                      "aTimeR":"194800",
                       "aProgType":"PROGNOSED",
                       "type":"N"
                     }
@@ -1650,18 +1614,18 @@
                   },
                   "pos":
                   {
-                    "x":13313869,
-                    "y":52486279,
+                    "x":13275917,
+                    "y":52449891,
                     "layerX":0,
                     "crdSysX":0
                   },
                   "freq":
                   {
-                    "minC":3,
-                    "maxC":4,
-                    "numC":37
+                    "minC":5,
+                    "maxC":10,
+                    "numC":24
                   },
-                  "ctxRecon":"T$A=1@O=U Nollendorfplatz (Berlin)@L=900056102@a=128@$A=1@O=U Prinzenstr. (Berlin)@L=900013103@a=128@$202109060951$202109061000$      U3$$1$$$$",
+                  "ctxRecon":"T$A=1@O=U Nollendorfplatz (Berlin)@L=900056102@a=128@$A=1@O=U Prinzenstr. (Berlin)@L=900013103@a=128@$202112051939$202112051948$      U3$$1$$$$",
                   "msgL":
                   [
                     {
@@ -1702,25 +1666,16 @@
                       [
                         "RES_GLB_HDR_H3","SUM_GLB_HDR_H3"
                       ]
-                    },
-                    {
-                      "type":"HIM",
-                      "himX":1,
-                      "fLocX":0,
-                      "tagL":
-                      [
-                        "RES_GLB_HDR_H3","SUM_GLB_HDR_H3"
-                      ]
                     }
                   ],
                   "subscr":"F"
                 }
               }
             ],
-            "ctxRecon":"¶HKI¶T$A=1@O=U Nollendorfplatz (Berlin)@L=900056102@a=128@$A=1@O=U Prinzenstr. (Berlin)@L=900013103@a=128@$202109060951$202109061000$      U3$$1$$$$",
+            "ctxRecon":"¶HKI¶T$A=1@O=U Nollendorfplatz (Berlin)@L=900056102@a=128@$A=1@O=U Prinzenstr. (Berlin)@L=900013103@a=128@$202112051939$202112051948$      U3$$1$$$$",
             "freq":
             {
-              "minC":3
+              "minC":5
             },
             "trfRes":
             {
@@ -1954,14 +1909,14 @@
               }
             ],
             "conSubscr":"F",
-            "cksum":"a5441f92_3"
+            "cksum":"8a8df19f_3"
           }
         ],
-        "outCtxScrB":"2|OB|MT#11#14984#14984#14993#14993#0#0#165#14982#1#-2147483638#0#1#2|PDH#ec7b427102fb4a5f19dcf55f46ba3845|RD#6092021|RT#94200|US#0",
-        "outCtxScrF":"2|OF|MT#11#14991#14991#15000#15000#0#0#165#14988#3#-2147483638#0#1#2|PDH#ec7b427102fb4a5f19dcf55f46ba3845|RD#6092021|RT#94200|US#0",
-        "fpB":"20210829",
-        "fpE":"20211211",
-        "planrtTS":"1630914116"
+        "outCtxScrB":"2|OB|MT#11#14129#14129#14138#14138#0#0#165#14125#1#-2147483638#0#1#2|PDH#36e546eee1913d4340a48c2762296947|RD#5122021|RT#192500|US#0",
+        "outCtxScrF":"2|OF|MT#11#14139#14139#14148#14148#0#0#165#14135#3#-2147483638#0#1#2|PDH#36e546eee1913d4340a48c2762296947|RD#5122021|RT#192500|US#0",
+        "fpB":"20211128",
+        "fpE":"20220611",
+        "planrtTS":"1638728696"
       }
     }
   ]

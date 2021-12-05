@@ -1,7 +1,7 @@
 {
   "ver":"1.18",
   "lang":"deu",
-  "id":"dwkewkss4qqcpg4k",
+  "id":"atwwsmxw42g7hgwg",
   "err":"OK",
   "svcResL":
   [
@@ -76,6 +76,16 @@
               "prodCtx":
               {
                 "lineId":"NX_016_RE 4"
+              }
+            },
+            {
+              "name":"RE 4",
+              "nameS":"RE 4",
+              "icoX":0,
+              "cls":1,
+              "prodCtx":
+              {
+                "lineId":"NX_____RE 4"
               }
             },
             {
@@ -269,16 +279,6 @@
               }
             },
             {
-              "name":"LT 74ALT",
-              "nameS":"74ALT",
-              "icoX":1,
-              "cls":128,
-              "prodCtx":
-              {
-                "lineId":"de:aac:05334|74ALT:aseag"
-              }
-            },
-            {
               "name":"QL 350",
               "nameS":"350",
               "icoX":1,
@@ -386,16 +386,6 @@
               "prodCtx":
               {
                 "lineId":"DBA004_SEV F"
-              }
-            },
-            {
-              "name":"SEV",
-              "nameS":"BUS",
-              "icoX":1,
-              "cls":128,
-              "prodCtx":
-              {
-                "lineId":"SNC033_BUS"
               }
             },
             {
@@ -569,6 +559,16 @@
               }
             },
             {
+              "name":"ALT74ALT",
+              "nameS":"74ALT",
+              "icoX":5,
+              "cls":512,
+              "prodCtx":
+              {
+                "lineId":"de:aac:05334|74ALT:aseag"
+              }
+            },
+            {
               "name":"RB 27",
               "nameS":"RB 27",
               "icoX":0,
@@ -596,6 +596,16 @@
               "prodCtx":
               {
                 "lineId":"ARRB___RB 35"
+              }
+            },
+            {
+              "name":"RB35",
+              "nameS":"RB35",
+              "icoX":0,
+              "cls":1,
+              "prodCtx":
+              {
+                "lineId":"ARRE___RB35"
               }
             },
             {
@@ -930,6 +940,16 @@
             },
             {
               "name":"SEV",
+              "nameS":"RE13",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"NX_____RE13"
+              }
+            },
+            {
+              "name":"SEV",
               "nameS":"SEV42",
               "icoX":1,
               "cls":128,
@@ -959,13 +979,13 @@
               }
             },
             {
-              "name":"SEV",
-              "nameS":"SEV",
-              "icoX":1,
-              "cls":128,
+              "name":"S 8",
+              "nameS":"S 8",
+              "icoX":2,
+              "cls":16,
               "prodCtx":
               {
-                "lineId":"VIA032_SEV"
+                "lineId":"DBA070_S 8"
               }
             },
             {
@@ -1174,6 +1194,21 @@
                 "g":38,
                 "b":48
               }
+            },
+            {
+              "res":"AST",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255
+              },
+              "bg":
+              {
+                "r":165,
+                "g":85,
+                "b":149
+              }
             }
           ]
         },
@@ -1184,7 +1219,7 @@
           "locL":
           [
             {
-              "lid":"A=1@O=Aachen, Hbf@X=6092044@Y=50767722@U=80@L=1008@B=1@p=1630627037@",
+              "lid":"A=1@O=Aachen, Hbf@X=6092044@Y=50767722@U=80@L=1008@B=1@p=1638608654@",
               "type":"S",
               "name":"Aachen, Hbf",
               "icoX":0,
@@ -1197,7 +1232,7 @@
                 "layerX":0,
                 "crdSysX":0
               },
-              "pCls":407,
+              "pCls":919,
               "pRefL":
               [
 0,
@@ -1256,10 +1291,10 @@
 53,
 54
               ],
-              "wt":28427
+              "wt":27197
             },
             {
-              "lid":"A=1@O=Mönchengladbach, Hbf@X=6445167@Y=51196984@U=80@L=4786@B=1@p=1630627037@",
+              "lid":"A=1@O=Mönchengladbach, Hbf@X=6445167@Y=51196984@U=80@L=4786@B=1@p=1638608654@",
               "type":"S",
               "name":"Mönchengladbach, Hbf",
               "icoX":0,
@@ -1279,8 +1314,8 @@
 3,
 56,
 57,
-5,
 58,
+5,
 59,
 60,
 61,
@@ -1314,19 +1349,23 @@
 89,
 90,
 91,
+28,
 92,
+93,
+94,
 30,
 31,
 32,
-93,
-94,
+33,
 95,
-43
+96,
+97,
+42
               ],
-              "wt":27586
+              "wt":26251
             },
             {
-              "lid":"A=1@O=Mönchengladbach, Rheydt Hbf@X=6440205@Y=51162771@U=80@L=4775@B=1@p=1630627037@",
+              "lid":"A=1@O=Mönchengladbach, Rheydt Hbf@X=6440205@Y=51162771@U=80@L=4775@B=1@p=1638608654@",
               "type":"S",
               "name":"Mönchengladbach, Rheydt Hbf",
               "icoX":0,
@@ -1346,31 +1385,31 @@
 3,
 56,
 5,
-58,
-96,
-61,
-64,
-66,
-97,
+59,
 98,
+62,
+65,
+67,
 99,
 100,
 101,
 102,
-85,
+103,
+104,
+86,
 28,
-92,
+94,
 30,
 32,
 33,
 35,
-93,
-43
+95,
+42
               ],
-              "wt":26182
+              "wt":24882
             },
             {
-              "lid":"A=1@O=Aachen, Eilendorf Bf@X=6154366@Y=50785565@U=80@L=1260@B=1@p=1630627037@",
+              "lid":"A=1@O=Aachen, Eilendorf Bf@X=6154366@Y=50785565@U=80@L=1260@B=1@p=1638608654@",
               "type":"S",
               "name":"Aachen, Eilendorf Bf",
               "icoX":0,
@@ -1391,10 +1430,10 @@
 27,
 30
               ],
-              "wt":25826
+              "wt":24500
             },
             {
-              "lid":"A=1@O=Aachen, Eich@X=6140630@Y=50730470@U=80@L=1209@B=1@p=1630627037@",
+              "lid":"A=1@O=Aachen, Eich@X=6140630@Y=50730470@U=80@L=1209@B=1@p=1638608654@",
               "type":"S",
               "name":"Aachen, Eich",
               "icoX":1,
@@ -1410,11 +1449,11 @@
               "pCls":384,
               "pRefL":
               [
-103,
-104,
-53
+105,
+106,
+52
               ],
-              "wt":165
+              "wt":144
             }
           ]
         }

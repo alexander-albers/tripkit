@@ -2,7 +2,7 @@
   "ver":"1.18",
   "ext":"VAO.6",
   "lang":"deu",
-  "id":"78kc3iqem22gy24k",
+  "id":"z728kkex66iqhick",
   "err":"OK",
   "cInfo":
   {
@@ -54,7 +54,12 @@
           ],
           "remL":
           [
-
+            {
+              "type":"W",
+              "code":"WW",
+              "txtN":"WEBVIEW",
+              "url":"https://app.verkehrsauskunft.at/bin/query.exe/dn?tpl=webview_poi&performLocating=128&look_station=960075453&look_nv=get_infotext|yes|get_attributes|yes&look_stationpool=130&L=vs_svv"
+            }
           ],
           "icoL":
           [
@@ -107,22 +112,6 @@
               }
             },
             {
-              "res":"prod_bus",
-              "txtS":"8",
-              "fg":
-              {
-                "r":255,
-                "g":255,
-                "b":255
-              },
-              "bg":
-              {
-                "r":120,
-                "g":0,
-                "b":140
-              }
-            },
-            {
               "res":"prod_ic_bus",
               "txtS":"8",
               "fg":
@@ -137,6 +126,9 @@
                 "g":0,
                 "b":140
               }
+            },
+            {
+              "res":"PCAT_SEHENWUERDIGKEIT"
             }
           ]
         },
@@ -147,7 +139,7 @@
           "locL":
           [
             {
-              "lid":"A=1@O=Salzburg Justizgebäude@X=13053632@Y=47797110@U=81@L=455002100@B=1@p=1630889505@i=at:45:50021@",
+              "lid":"A=1@O=Salzburg Justizgebäude@X=13053632@Y=47797110@U=81@L=455002100@B=1@p=1638666385@i=at:45:50021@",
               "type":"S",
               "name":"Salzburg Justizgebäude",
               "icoX":0,
@@ -162,11 +154,12 @@
               },
               "meta":true,
               "pCls":1216,
-              "wt":236,
-              "isMainMast":true
+              "wt":309,
+              "isMainMast":true,
+              "mapSelectable":true
             },
             {
-              "lid":"A=1@O=Wien Schloss Neugebäude@X=16447869@Y=48161021@U=81@L=490200600@B=1@p=1630889505@i=at:49:2006@",
+              "lid":"A=1@O=Wien Schloss Neugebäude@X=16447869@Y=48161021@U=81@L=490200600@B=1@p=1638666385@i=at:49:2006@",
               "type":"S",
               "name":"Wien Schloss Neugebäude",
               "icoX":1,
@@ -181,11 +174,12 @@
               },
               "meta":true,
               "pCls":2176,
-              "wt":206,
-              "isMainMast":true
+              "wt":200,
+              "isMainMast":true,
+              "mapSelectable":true
             },
             {
-              "lid":"A=1@O=St. Pölten Neugebäudeplatz@X=15630731@Y=48204717@U=81@L=431240000@B=1@p=1630889505@i=at:43:12400@",
+              "lid":"A=1@O=St. Pölten Neugebäudeplatz@X=15630731@Y=48204717@U=81@L=431240000@B=1@p=1638666385@i=at:43:12400@",
               "type":"S",
               "name":"St. Pölten Neugebäudeplatz",
               "icoX":2,
@@ -200,33 +194,15 @@
               },
               "meta":true,
               "pCls":192,
-              "wt":225,
-              "isMainMast":true
+              "wt":219,
+              "isMainMast":true,
+              "mapSelectable":true
             },
             {
-              "lid":"A=1@O=Bozen Krankenhaus Gebäude W@X=11314399@Y=46499086@U=81@L=230220400@B=1@p=1630889505@i=it:22021:2204@",
-              "type":"S",
-              "name":"Bozen Krankenhaus Gebäude W",
-              "icoX":3,
-              "extId":"230220400",
-              "state":"F",
-              "crd":
-              {
-                "x":11314399,
-                "y":46499086,
-                "layerX":0,
-                "crdSysX":0
-              },
-              "meta":true,
-              "pCls":128,
-              "wt":63,
-              "isMainMast":true
-            },
-            {
-              "lid":"A=1@O=Steyr Amtsgebäude Reithoffer@X=14412010@Y=48030812@U=81@L=444719500@B=1@p=1630889505@i=at:44:47195@",
+              "lid":"A=1@O=Steyr Amtsgebäude Reithoffer@X=14412010@Y=48030812@U=81@L=444719500@B=1@p=1638666385@i=at:44:47195@",
               "type":"S",
               "name":"Steyr Amtsgebäude Reithoffer",
-              "icoX":4,
+              "icoX":3,
               "extId":"444719500",
               "state":"F",
               "crd":
@@ -238,8 +214,41 @@
               },
               "meta":true,
               "pCls":64,
-              "wt":11,
-              "isMainMast":true
+              "wt":10,
+              "isMainMast":true,
+              "mapSelectable":true
+            },
+            {
+              "lid":"A=4@O=Neues Institutsgebäude, 1090 Wien (Sehenswürdigkeit)@X=16357698@Y=48214264@U=130@L=960075453@B=1@p=1638671434@",
+              "type":"P",
+              "name":"Neues Institutsgebäude, 1090 Wien (Sehenswürdigkeit)",
+              "icoX":4,
+              "extId":"960075453",
+              "state":"F",
+              "crd":
+              {
+                "x":16357698,
+                "y":48214264,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "mcpData":
+              {
+                "type":"P",
+                "occupancy":"N",
+                "mcpid":"0",
+                "externalId":"oeamtc_tf-608780719"
+              },
+              "mapSelectable":true,
+              "msgL":
+              [
+                {
+                  "type":"REM",
+                  "remX":0,
+                  "dspl":"U",
+                  "sort":818413568
+                }
+              ]
             }
           ]
         }

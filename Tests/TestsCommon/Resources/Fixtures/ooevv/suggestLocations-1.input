@@ -1,7 +1,7 @@
 {
   "ver":"1.15",
   "lang":"deu",
-  "id":"wai49iqck22dhwwx",
+  "id":"6qk84kai66ir9i4s",
   "cInfo":
   {
     "code":"OK",
@@ -35,7 +35,7 @@
               "id":"standard",
               "name":"standard",
               "index":0,
-              "annoCnt":0
+              "annoCnt":694319
             }
           ],
           "crdSysL":
@@ -77,24 +77,6 @@
             },
             {
               "res":"ADR"
-            },
-            {
-              "res":"prod_bus",
-              "txtS":"32A",
-              "fg":
-              {
-                "r":255,
-                "g":255,
-                "b":255,
-                "a":255
-              },
-              "bg":
-              {
-                "r":0,
-                "g":121,
-                "b":58,
-                "a":255
-              }
             }
           ]
         },
@@ -105,7 +87,7 @@
           "locL":
           [
             {
-              "lid":"A=1@O=Salzburg Merianstraße@X=13050279@Y=47811556@U=81@L=455084400@B=1@p=1630889505@i=at:45:50844@",
+              "lid":"A=1@O=Salzburg Merianstraße@X=13050279@Y=47811556@U=81@L=455084400@B=1@p=1638666385@i=at:45:50844@",
               "type":"S",
               "name":"Salzburg Merianstraße",
               "icoX":0,
@@ -121,11 +103,11 @@
               },
               "meta":true,
               "pCls":128,
-              "wt":63,
+              "wt":55,
               "isMainMast":true
             },
             {
-              "lid":"A=2@O=Merianstraße, 5020 Salzburg@X=13054306@Y=47811322@U=103@b=980079285@B=1@p=1629871314@",
+              "lid":"A=2@O=Merianstraße, 5020 Salzburg@X=13054306@Y=47811322@U=103@b=980079479@B=1@p=1637147511@",
               "type":"A",
               "name":"Merianstraße, 5020 Salzburg",
               "icoX":1,
@@ -139,56 +121,43 @@
               }
             },
             {
-              "lid":"A=1@O=Salzburg Gorianstraße@X=13029496@Y=47794189@U=81@L=455085200@B=1@p=1630889505@i=at:45:50852@",
-              "type":"S",
-              "name":"Salzburg Gorianstraße",
-              "icoX":0,
-              "extId":"455085200",
-              "state":"F",
-              "crd":
-              {
-                "x":13029496,
-                "y":47794189,
-                "type":"WGS84",
-                "layerX":0,
-                "crdSysX":0
-              },
-              "meta":true,
-              "pCls":1152,
-              "wt":197,
-              "isMainMast":true
-            },
-            {
-              "lid":"A=1@O=Wien Meriangasse@X=16384558@Y=48291409@U=81@L=490156900@B=1@p=1630889505@i=at:49:1569@",
-              "type":"S",
-              "name":"Wien Meriangasse",
-              "icoX":2,
-              "extId":"490156900",
-              "state":"F",
-              "crd":
-              {
-                "x":16384558,
-                "y":48291409,
-                "type":"WGS84",
-                "layerX":0,
-                "crdSysX":0
-              },
-              "meta":true,
-              "pCls":128,
-              "wt":8,
-              "isMainMast":true
-            },
-            {
-              "lid":"A=2@O=Merianweg 1, 4040 Linz@X=14279428@Y=48322368@U=103@L=980079286@B=1@p=1629871314@",
+              "lid":"A=2@O=Merianstraße, Bonn@X=7171297@Y=50672796@U=104@b=971526331@B=1@p=1636631415@",
               "type":"A",
-              "name":"Merianweg 1, 4040 Linz",
+              "name":"Merianstraße, Bonn",
               "icoX":1,
-              "extId":"980079286",
               "state":"F",
               "crd":
               {
-                "x":14279428,
-                "y":48322368,
+                "x":7171297,
+                "y":50672796,
+                "layerX":0,
+                "crdSysX":0
+              }
+            },
+            {
+              "lid":"A=2@O=Merianstraße, Köln@X=6890429@Y=51018143@U=104@b=971462169@B=1@p=1636631415@",
+              "type":"A",
+              "name":"Merianstraße, Köln",
+              "icoX":1,
+              "state":"F",
+              "crd":
+              {
+                "x":6890429,
+                "y":51018143,
+                "layerX":0,
+                "crdSysX":0
+              }
+            },
+            {
+              "lid":"A=2@O=Merianstraße, Wehr@X=7901141@Y=47623816@U=104@b=971152505@B=1@p=1636631415@",
+              "type":"A",
+              "name":"Merianstraße, Wehr",
+              "icoX":1,
+              "state":"F",
+              "crd":
+              {
+                "x":7901141,
+                "y":47623816,
                 "layerX":0,
                 "crdSysX":0
               }

@@ -2,7 +2,7 @@
   "ver":"1.20",
   "ext":"VAO.7",
   "lang":"deu",
-  "id":"evwsjic4k2izgwcs",
+  "id":"vj2kemcw6622xw8x",
   "err":"OK",
   "cInfo":
   {
@@ -37,7 +37,7 @@
               "id":"standard",
               "name":"standard",
               "index":0,
-              "annoCnt":0
+              "annoCnt":694319
             }
           ],
           "crdSysL":
@@ -70,11 +70,11 @@
           "locL":
           [
             {
-              "lid":"A=2@O=Falkstraße 26, 6020 Innsbruck@X=11403949@Y=47277606@U=103@L=980030171@B=1@p=1629871314@",
+              "lid":"A=2@O=Falkstraße 26, 6020 Innsbruck@H=26@X=11403949@Y=47277606@U=103@L=980030248@B=1@p=1637147511@",
               "type":"A",
               "name":"Falkstraße 26, 6020 Innsbruck",
               "icoX":0,
-              "extId":"980030171",
+              "extId":"980030248",
               "state":"F",
               "crd":
               {
@@ -82,14 +82,15 @@
                 "y":47277606,
                 "layerX":0,
                 "crdSysX":0
-              }
+              },
+              "mapSelectable":true
             },
             {
-              "lid":"A=2@O=Fallmerayerstraße 16, 6020 Innsbruck@X=11392128@Y=47262864@U=103@L=980030196@B=1@p=1629871314@",
+              "lid":"A=2@O=Fallmerayerstraße 16, 6020 Innsbruck@H=16@X=11392128@Y=47262864@U=103@L=980030273@B=1@p=1637147511@",
               "type":"A",
               "name":"Fallmerayerstraße 16, 6020 Innsbruck",
               "icoX":0,
-              "extId":"980030196",
+              "extId":"980030273",
               "state":"F",
               "crd":
               {
@@ -97,14 +98,15 @@
                 "y":47262864,
                 "layerX":0,
                 "crdSysX":0
-              }
+              },
+              "mapSelectable":true
             },
             {
-              "lid":"A=2@O=Santifallerstraße GNR 1575/1, 6020 Innsbruck@X=11380739@Y=47263762@U=103@L=980102404@B=1@p=1629871314@",
+              "lid":"A=2@O=Santifallerstraße GNR 1575/1, 6020 Innsbruck@H=GNR 1575/1@X=11380739@Y=47263762@U=103@L=980102634@B=1@p=1637147511@",
               "type":"A",
               "name":"Santifallerstraße GNR 1575/1, 6020 Innsbruck",
               "icoX":0,
-              "extId":"980102404",
+              "extId":"980102634",
               "state":"F",
               "crd":
               {
@@ -112,14 +114,15 @@
                 "y":47263762,
                 "layerX":0,
                 "crdSysX":0
-              }
+              },
+              "mapSelectable":true
             },
             {
-              "lid":"A=2@O=Felseckstraße 26, 6020 Innsbruck@X=11372847@Y=47251160@U=103@L=980031839@B=1@p=1629871314@",
+              "lid":"A=2@O=Felseckstraße 26, 6020 Innsbruck@H=26@X=11372847@Y=47251160@U=103@L=980031919@B=1@p=1637147511@",
               "type":"A",
               "name":"Felseckstraße 26, 6020 Innsbruck",
               "icoX":0,
-              "extId":"980031839",
+              "extId":"980031919",
               "state":"F",
               "crd":
               {
@@ -127,14 +130,15 @@
                 "y":47251160,
                 "layerX":0,
                 "crdSysX":0
-              }
+              },
+              "mapSelectable":true
             },
             {
-              "lid":"A=2@O=Felseckstraße 26a, 6020 Innsbruck@X=11372918@Y=47251187@U=103@L=980031839@B=1@p=1629871314@",
+              "lid":"A=2@O=Felseckstraße 26a, 6020 Innsbruck@H=26a@X=11372918@Y=47251187@U=103@L=980031919@B=1@p=1637147511@",
               "type":"A",
               "name":"Felseckstraße 26a, 6020 Innsbruck",
               "icoX":0,
-              "extId":"980031839",
+              "extId":"980031919",
               "state":"F",
               "crd":
               {
@@ -142,7 +146,8 @@
                 "y":47251187,
                 "layerX":0,
                 "crdSysX":0
-              }
+              },
+              "mapSelectable":true
             }
           ]
         }

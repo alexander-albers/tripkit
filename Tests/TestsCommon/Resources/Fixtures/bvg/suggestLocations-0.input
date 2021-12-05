@@ -1,8 +1,9 @@
 {
-  "ver":"1.16",
+  "ver":"1.24",
   "ext":"BVG.1",
   "lang":"deu",
-  "id":"z4mk3gxmkegzwick",
+  "id":"euixcka842wi8ycs",
+  "err":"OK",
   "svcResL":
   [
     {
@@ -79,16 +80,6 @@
               }
             },
             {
-              "name":"M6",
-              "nameS":"M6",
-              "icoX":2,
-              "cls":4,
-              "prodCtx":
-              {
-                "lineId":"M6"
-              }
-            },
-            {
               "name":"M8",
               "nameS":"M8",
               "icoX":2,
@@ -156,6 +147,26 @@
               "prodCtx":
               {
                 "lineId":"245"
+              }
+            },
+            {
+              "name":"M5",
+              "nameS":"M5",
+              "icoX":3,
+              "cls":8,
+              "prodCtx":
+              {
+                "lineId":"M5"
+              }
+            },
+            {
+              "name":"M10",
+              "nameS":"M10",
+              "icoX":3,
+              "cls":8,
+              "prodCtx":
+              {
+                "lineId":"M10"
               }
             },
             {
@@ -494,16 +505,6 @@
               }
             },
             {
-              "name":"S1",
-              "nameS":"S1",
-              "icoX":3,
-              "cls":8,
-              "prodCtx":
-              {
-                "lineId":"S1"
-              }
-            },
-            {
               "name":"X83",
               "nameS":"X83",
               "icoX":3,
@@ -521,6 +522,16 @@
               "prodCtx":
               {
                 "lineId":"S75"
+              }
+            },
+            {
+              "name":"S85",
+              "nameS":"S85",
+              "icoX":0,
+              "cls":1,
+              "prodCtx":
+              {
+                "lineId":"S85"
               }
             },
             {
@@ -574,6 +585,16 @@
               }
             },
             {
+              "name":"M13",
+              "nameS":"M13",
+              "icoX":3,
+              "cls":8,
+              "prodCtx":
+              {
+                "lineId":"M13"
+              }
+            },
+            {
               "name":"N1",
               "nameS":"N1",
               "icoX":3,
@@ -602,8 +623,7 @@
             {
               "id":"standard",
               "index":0,
-              "type":"WGS84",
-              "dim":2
+              "type":"WGS84"
             }
           ],
           "opL":
@@ -622,15 +642,13 @@
               {
                 "r":255,
                 "g":255,
-                "b":255,
-                "a":255
+                "b":255
               },
               "bg":
               {
                 "r":55,
                 "g":135,
-                "b":74,
-                "a":255
+                "b":74
               }
             },
             {
@@ -639,15 +657,13 @@
               {
                 "r":255,
                 "g":255,
-                "b":255,
-                "a":255
+                "b":255
               },
               "bg":
               {
                 "r":0,
                 "g":51,
-                "b":153,
-                "a":255
+                "b":153
               }
             },
             {
@@ -656,15 +672,13 @@
               {
                 "r":255,
                 "g":255,
-                "b":255,
-                "a":255
+                "b":255
               },
               "bg":
               {
                 "r":204,
                 "g":0,
-                "b":0,
-                "a":255
+                "b":0
               }
             },
             {
@@ -673,15 +687,13 @@
               {
                 "r":255,
                 "g":255,
-                "b":255,
-                "a":255
+                "b":255
               },
               "bg":
               {
                 "r":153,
                 "g":51,
-                "b":153,
-                "a":255
+                "b":153
               }
             },
             {
@@ -690,15 +702,13 @@
               {
                 "r":255,
                 "g":255,
-                "b":255,
-                "a":255
+                "b":255
               },
               "bg":
               {
                 "r":125,
                 "g":129,
-                "b":133,
-                "a":255
+                "b":133
               }
             },
             {
@@ -707,15 +717,13 @@
               {
                 "r":255,
                 "g":255,
-                "b":255,
-                "a":255
+                "b":255
               },
               "bg":
               {
                 "r":226,
                 "g":0,
-                "b":25,
-                "a":255
+                "b":25
               }
             }
           ]
@@ -727,7 +735,7 @@
           "locL":
           [
             {
-              "lid":"A=1@O=S+U Berlin Hauptbahnhof@X=13369072@Y=52525607@U=86@L=900003201@B=1@p=1630578354@",
+              "lid":"A=1@O=S+U Berlin Hauptbahnhof@X=13369072@Y=52525607@U=86@L=900003201@B=1@p=1638447507@",
               "type":"S",
               "name":"S+U Berlin Hauptbahnhof",
               "icoX":0,
@@ -737,7 +745,6 @@
               {
                 "x":13369072,
                 "y":52525607,
-                "type":"WGS84",
                 "layerX":0,
                 "crdSysX":0
               },
@@ -776,12 +783,13 @@
 29,
 30,
 31,
-32
+32,
+33
               ],
               "wt":32767
             },
             {
-              "lid":"A=1@O=S+U Berlin Hauptbahnhof (tief)@X=13369387@Y=52525041@U=86@L=900003200@B=1@p=1630578354@",
+              "lid":"A=1@O=S+U Berlin Hauptbahnhof (tief)@X=13369387@Y=52525041@U=86@L=900003200@B=1@p=1638447507@",
               "type":"S",
               "name":"S+U Berlin Hauptbahnhof (tief)",
               "icoX":0,
@@ -791,7 +799,6 @@
               {
                 "x":13369387,
                 "y":52525041,
-                "type":"WGS84",
                 "layerX":0,
                 "crdSysX":0
               },
@@ -830,12 +837,13 @@
 29,
 30,
 31,
-32
+32,
+33
               ],
-              "wt":5349
+              "wt":6485
             },
             {
-              "lid":"A=1@O=Washingtonplatz/Hauptbahnhof (Berlin)@X=13370708@Y=52523962@U=86@L=900003205@B=1@p=1630578354@",
+              "lid":"A=1@O=Washingtonplatz/Hauptbahnhof (Berlin)@X=13370708@Y=52523962@U=86@L=900003205@B=1@p=1638447507@",
               "type":"S",
               "name":"Washingtonplatz/Hauptbahnhof (Berlin)",
               "icoX":0,
@@ -845,7 +853,6 @@
               {
                 "x":13370708,
                 "y":52523962,
-                "type":"WGS84",
                 "layerX":0,
                 "crdSysX":0
               },
@@ -884,12 +891,13 @@
 29,
 30,
 31,
-32
+32,
+33
               ],
-              "wt":41
+              "wt":34
             },
             {
-              "lid":"A=1@O=S+U Rathaus Steglitz (Berlin) [Busbahnhof]@X=13320854@Y=52455887@U=86@L=900062282@B=1@p=1630578354@",
+              "lid":"A=1@O=S+U Rathaus Steglitz (Berlin) [Busbahnhof]@X=13320854@Y=52455887@U=86@L=900062282@B=1@p=1638447507@",
               "type":"S",
               "name":"S+U Rathaus Steglitz (Berlin) [Busbahnhof]",
               "icoX":0,
@@ -899,14 +907,12 @@
               {
                 "x":13320854,
                 "y":52455887,
-                "type":"WGS84",
                 "layerX":0,
                 "crdSysX":0
               },
               "pCls":11,
               "pRefL":
               [
-33,
 34,
 35,
 36,
@@ -919,16 +925,16 @@
 43,
 44,
 45,
-15,
 46,
+16,
 47,
 48,
 49
               ],
-              "wt":753
+              "wt":780
             },
             {
-              "lid":"A=1@O=S+U Warschauer Str. (Berlin)@X=13449157@Y=52505768@U=86@L=900120004@B=1@p=1630578354@",
+              "lid":"A=1@O=S+U Warschauer Str. (Berlin)@X=13449157@Y=52505768@U=86@L=900120004@B=1@p=1638447507@",
               "type":"S",
               "name":"S+U Warschauer Str. (Berlin)",
               "icoX":0,
@@ -938,7 +944,6 @@
               {
                 "x":13449157,
                 "y":52505768,
-                "type":"WGS84",
                 "layerX":0,
                 "crdSysX":0
               },
@@ -952,13 +957,15 @@
 50,
 51,
 52,
-8,
 53,
+7,
 54,
 55,
-56
+56,
+57,
+58
               ],
-              "wt":27417
+              "wt":26281
             }
           ]
         }

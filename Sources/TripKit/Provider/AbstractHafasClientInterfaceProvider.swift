@@ -374,7 +374,6 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         }
         if err != "OK" {
             let errTxt = svcRes["errTxt"] as? String ?? ""
-            // TODO: handle more errors
             os_log("Received hafas error %{public}@: %{public}@", log: .requestLogger, type: .error, err, errTxt)
             if err == "LOCATION" {
                 completion(request, .invalidStation)
@@ -388,12 +387,14 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
                 throw ParseError(reason: "unknown hafas error \(err): \(errTxt)")
             }
             return
-        } else if apiVersion == "1.10", let svcResJson = encodeJson(dict: svcRes), svcResJson.length == 170 {
-            completion(request, .invalidStation)
-            return
         }
         guard let res = svcRes["res"] as? [String: Any], let common = res["common"] as? [String: Any], let locList = common["locL"] as? [Any], let opList = common["opL"] as? [Any], let prodList = common["prodL"] as? [Any] else {
             throw ParseError(reason: "could not parse lists")
+        }
+        if locList.isEmpty {
+            // for example GVH: returns no locations when id is invalid
+            completion(request, .invalidStation)
+            return
         }
         
         let locations = try parseLocList(locList: locList)

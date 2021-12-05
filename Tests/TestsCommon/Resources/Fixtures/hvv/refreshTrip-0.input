@@ -1,7 +1,7 @@
 {
   "ver":"1.16",
   "lang":"deu",
-  "id":"f86aamq44igwh2ck",
+  "id":"ww48mku242gvhw4s",
   "svcResL":
   [
     {
@@ -207,7 +207,7 @@
               "prodCtx":
               {
                 "name":"      U2",
-                "num":"1166",
+                "num":"51128",
                 "line":"U2",
                 "lineId":"HHA-U#U2",
                 "matchId":"U2",
@@ -283,42 +283,44 @@
           "remL":
           [
             {
-              "type":"M",
-              "code":"extId",
-              "txtN":"210830009A"
-            },
-            {
-              "type":"M",
-              "code":"lineKeys",
-              "txtN":""
+              "type":"A",
+              "code":"ar",
+              "prio":0,
+              "icoX":3,
+              "txtN":"ACHTUNG: Diese App-Version wird zum 1.1.2022 abgeschaltet. Bitte updaten Sie bis dahin Ihre App!"
             },
             {
               "type":"M",
               "code":"extId",
               "txtN":"210423011B"
+            },
+            {
+              "type":"M",
+              "code":"lineKeys",
+              "txtN":""
             }
           ],
           "himL":
           [
             {
-              "hid":"HIM_ADAPTER_FREETEXT_609074540",
+              "hid":"HIM_ADAPTER_FREETEXT_5121348215",
               "act":true,
               "pub":"",
-              "head":"Streik der Gewerkschaft Deutscher Lokomotivführer",
+              "head":"3G-Regel und Maskenpflicht im hvv",
               "lead":"",
-              "text":"Die GDL bestreikt vom 02. September bis voraussichtlich 06. Septemer den Personennah- und Fernverkehr der Deutschen Bahn. Bitte verschieben Sie Ihre geplante Fahrt mit der DB bzw. informieren Sie sich kurz vor Fahrtantritt unter bahn.de/aktuell über Ihre Verbindung.<br /><br />Die S-Bahn Hamburg versucht, auf den Linien S1, S21 und S3 einen 20-Minuten-Takt anzubieten. Die Verstärker-/linien S11, S2 und S31 entfallen.",
+              "text":"Ab dem 24.11.2021 gilt im hvv die 3G-Regel: Fahrgäste müssen dann geimpft, genesen oder getestet sein. Weiterhin besteht in allen Verkehrsmitteln und Haltestellen die Pflicht zum Tragen einer medizinischen Maske.",
               "tckr":"",
-              "icoX":3,
+              "icoX":4,
               "prio":100,
               "fIdx":0,
               "tIdx":0,
               "prod":65535,
-              "lModDate":"20210906",
-              "lModTime":"074546",
-              "sDate":"20210830",
-              "sTime":"185000",
-              "eDate":"20210907",
-              "eTime":"020000",
+              "lModDate":"20211205",
+              "lModTime":"134834",
+              "sDate":"20211122",
+              "sTime":"000000",
+              "eDate":"20220201",
+              "eTime":"055959",
               "cat":0,
               "pubChL":
               [
@@ -326,68 +328,21 @@
                   "name":"CUSTOM1",
                   "fDate":"20150101",
                   "fTime":"130000",
-                  "tDate":"20210907",
-                  "tTime":"020000",
-                  "uRefL":
-                  [
-0
-                  ]
+                  "tDate":"20220201",
+                  "tTime":"055959"
                 },
                 {
                   "name":"TIMETABLE",
                   "fDate":"20150101",
                   "fTime":"130000",
-                  "tDate":"20210907",
-                  "tTime":"020000"
+                  "tDate":"20220201",
+                  "tTime":"055959"
                 }
               ],
               "rRefL":
               [
-0,
-1
-              ]
-            },
-            {
-              "hid":"HIM_ADAPTER_FREETEXT_6090745170",
-              "act":true,
-              "pub":"",
-              "head":"Kostenloser HVV",
-              "lead":"",
-              "text":"Am 05., 11., 18., 25.09. wird im HVV in den Ringen A-F keine Fahrkarte benötigt.<br />Aktuell besteht in allen Bahnen, Bussen und Fähren des HVV sowie an allen Bahnhöfen und Haltestellen in Hamburg die Pflicht zum Tragen eines medizinischen Mund-Nasen-Schutzes.",
-              "tckr":"",
-              "icoX":3,
-              "prio":100,
-              "fIdx":0,
-              "tIdx":0,
-              "prod":65535,
-              "lModDate":"20210906",
-              "lModTime":"074553",
-              "sDate":"20210702",
-              "sTime":"020000",
-              "eDate":"20211001",
-              "eTime":"075959",
-              "cat":0,
-              "pubChL":
-              [
-                {
-                  "name":"CUSTOM1",
-                  "fDate":"20150101",
-                  "fTime":"130000",
-                  "tDate":"20211001",
-                  "tTime":"075959"
-                },
-                {
-                  "name":"TIMETABLE",
-                  "fDate":"20150101",
-                  "fTime":"130000",
-                  "tDate":"20211001",
-                  "tTime":"075959"
-                }
-              ],
-              "rRefL":
-              [
-2,
-1
+1,
+2
               ]
             }
           ],
@@ -432,14 +387,10 @@
               "txt":"HOCHBAHN - U-Bahn"
             },
             {
-              "res":"rt_warn"
-            }
-          ],
-          "urlL":
-          [
+              "res":"attr_info"
+            },
             {
-              "label":"weitere Informationen auf bahn.de/aktuell",
-              "url":"http://www.bahn.de/aktuell"
+              "res":"rt_warn"
             }
           ]
         },
@@ -447,14 +398,14 @@
         [
           {
             "cid":"DirectConReq",
-            "date":"20210906",
+            "date":"20211205",
             "dur":"000700",
             "chg":0,
             "sDays":
             {
               "sDaysR":"nicht täglich",
-              "sDaysI":"6. Sep bis 11. Dez 2021",
-              "sDaysB":"FFFFFFFFFFFFFFFFFFFFFFFFF8000000000000000000000000000000000000000000000000000000000000000000"
+              "sDaysI":"5. bis 31. Dez 2021",
+              "sDaysB":"FFFFFFFC000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
             },
             "dep":
             {
@@ -462,8 +413,8 @@
               "dPlatfS":"2",
               "dPlatfR":"2",
               "dInR":true,
-              "dTimeS":"094800",
-              "dTimeR":"094800",
+              "dTimeS":"192800",
+              "dTimeR":"192800",
               "dProgType":"PROGNOSED",
               "type":"N"
             },
@@ -473,8 +424,8 @@
               "aPlatfS":"5",
               "aPlatfR":"5",
               "aOutR":true,
-              "aTimeS":"095500",
-              "aTimeR":"095500",
+              "aTimeS":"193500",
+              "aTimeR":"193500",
               "aProgType":"PROGNOSED",
               "type":"N"
             },
@@ -489,8 +440,8 @@
                   "dPlatfS":"2",
                   "dPlatfR":"2",
                   "dInR":true,
-                  "dTimeS":"094800",
-                  "dTimeR":"094800",
+                  "dTimeS":"192800",
+                  "dTimeR":"192800",
                   "dProgType":"PROGNOSED",
                   "type":"N"
                 },
@@ -500,14 +451,14 @@
                   "aPlatfS":"5",
                   "aPlatfR":"5",
                   "aOutR":true,
-                  "aTimeS":"095500",
-                  "aTimeR":"095500",
+                  "aTimeS":"193500",
+                  "aTimeR":"193500",
                   "aProgType":"PROGNOSED",
                   "type":"N"
                 },
                 "jny":
                 {
-                  "jid":"1|29996|3|80|6092021",
+                  "jid":"1|34056|28|80|5122021",
                   "prodX":0,
                   "dirTxt":"Niendorf Nord",
                   "dirFlg":"2",
@@ -519,12 +470,12 @@
                       "locX":0,
                       "idx":10,
                       "aOutR":true,
-                      "aTimeS":"094800",
+                      "aTimeS":"192800",
                       "aProgType":"PROGNOSED",
                       "dProdX":0,
                       "dInR":true,
-                      "dTimeS":"094800",
-                      "dTimeR":"094800",
+                      "dTimeS":"192800",
+                      "dTimeR":"192800",
                       "dProgType":"PROGNOSED",
                       "type":"N"
                     },
@@ -533,13 +484,13 @@
                       "idx":11,
                       "aProdX":0,
                       "aOutR":true,
-                      "aTimeS":"095000",
-                      "aTimeR":"095000",
+                      "aTimeS":"193000",
+                      "aTimeR":"193000",
                       "aProgType":"PROGNOSED",
                       "dProdX":0,
                       "dInR":true,
-                      "dTimeS":"095000",
-                      "dTimeR":"095000",
+                      "dTimeS":"193000",
+                      "dTimeR":"193000",
                       "dProgType":"PROGNOSED",
                       "type":"N"
                     },
@@ -548,13 +499,13 @@
                       "idx":12,
                       "aProdX":0,
                       "aOutR":true,
-                      "aTimeS":"095100",
-                      "aTimeR":"095100",
+                      "aTimeS":"193100",
+                      "aTimeR":"193100",
                       "aProgType":"PROGNOSED",
                       "dProdX":0,
                       "dInR":true,
-                      "dTimeS":"095100",
-                      "dTimeR":"095100",
+                      "dTimeS":"193100",
+                      "dTimeR":"193100",
                       "dProgType":"PROGNOSED",
                       "type":"N"
                     },
@@ -563,13 +514,13 @@
                       "idx":13,
                       "aProdX":0,
                       "aOutR":true,
-                      "aTimeS":"095300",
-                      "aTimeR":"095300",
+                      "aTimeS":"193300",
+                      "aTimeR":"193300",
                       "aProgType":"PROGNOSED",
                       "dProdX":0,
                       "dInR":true,
-                      "dTimeS":"095300",
-                      "dTimeR":"095300",
+                      "dTimeS":"193300",
+                      "dTimeR":"193300",
                       "dProgType":"PROGNOSED",
                       "type":"N"
                     },
@@ -578,11 +529,11 @@
                       "idx":14,
                       "aProdX":0,
                       "aOutR":true,
-                      "aTimeS":"095500",
-                      "aTimeR":"095500",
+                      "aTimeS":"193500",
+                      "aTimeR":"193500",
                       "aProgType":"PROGNOSED",
                       "dInR":true,
-                      "dTimeS":"095500",
+                      "dTimeS":"193500",
                       "dProgType":"PROGNOSED",
                       "type":"N"
                     }
@@ -598,24 +549,26 @@
                   },
                   "freq":
                   {
-                    "minC":5,
-                    "maxC":5,
-                    "numC":25
+                    "minC":10,
+                    "maxC":10,
+                    "numC":13
                   },
-                  "ctxRecon":"T$A=1@O=Hauptbahnhof Nord@L=16277@a=128@$A=1@O=Schlump@L=16441@a=128@$202109060948$202109060955$      U2$$1$",
+                  "ctxRecon":"T$A=1@O=Hauptbahnhof Nord@L=16277@a=128@$A=1@O=Schlump@L=16441@a=128@$202112051928$202112051935$      U2$$1$",
                   "msgL":
                   [
                     {
-                      "type":"HIM",
-                      "himX":0,
+                      "type":"REM",
+                      "remX":0,
+                      "fLocX":0,
+                      "tLocX":2,
                       "tagL":
                       [
-                        "SUM_GLB_HDR_H3","RES_GLB_HDR_H3"
+                        "RES_JNY_DTL_H3"
                       ]
                     },
                     {
                       "type":"HIM",
-                      "himX":1,
+                      "himX":0,
                       "tagL":
                       [
                         "SUM_GLB_HDR_H3","RES_GLB_HDR_H3"
@@ -626,10 +579,10 @@
                 }
               }
             ],
-            "ctxRecon":"T$A=1@O=Hauptbahnhof Nord@L=16277@a=128@$A=1@O=Schlump@L=16441@a=128@$202109060948$202109060955$      U2$$1$",
+            "ctxRecon":"T$A=1@O=Hauptbahnhof Nord@L=16277@a=128@$A=1@O=Schlump@L=16441@a=128@$202112051928$202112051935$      U2$$1$",
             "freq":
             {
-              "minC":5
+              "minC":10
             },
             "trfRes":
             {
@@ -735,7 +688,7 @@
                   ]
                 }
               ],
-              "shpCtx":"{\"common\":{\"FEL\":[{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"Nahbereich\"]},{\"ID\":[\"Einzelkarte\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"Hamburg AB\"]},{\"ID\":[\"Einzelkarte Kind\"]},{\"ID\":[\"A\"]},{\"ID\":[\"B\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"Hamburg AB\"]},{\"ID\":[\"9-Uhr-Tageskarte\"]},{\"ID\":[\"A\"]},{\"ID\":[\"B\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"Hamburg AB\"]},{\"ID\":[\"Ganztageskarte Kind\"]},{\"ID\":[\"A\"]},{\"ID\":[\"B\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"Hamburg AB\"]},{\"ID\":[\"9-Uhr-Gruppenkarte\"]},{\"ID\":[\"A\"]},{\"ID\":[\"B\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"2 Tarifzonen\"]},{\"ID\":[\"Vollzeit-Wochenkarte\"]},{\"ID\":[\"000\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"2 Tarifzonen\"]},{\"ID\":[\"Vollzeit-Monatskarte\"]},{\"ID\":[\"000\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"\"]},{\"ID\":[\"\"]},{\"ID\":[\"000\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"3 Tarifzonen\"]},{\"ID\":[\"Teilzeit-Monatskarte\"]},{\"ID\":[\"000\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"\"]},{\"ID\":[\"\"]},{\"ID\":[\"000\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"Hamburg AB\"]},{\"ID\":[\"Senioren-Karte\"]},{\"ID\":[\"A\"]},{\"ID\":[\"B\"]}]},\"BOG\":{\"BOL\":[{\"P\":\"0\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":0,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":223},\"PRD\":3,\"LVL\":2,\"SV\":{\"OS\":1},\"TV\":{\"BD\":\"20210906\",\"BT\":\"094800\"}},{\"P\":\"1\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":4,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":121},\"PRD\":7,\"LVL\":6,\"SV\":{\"OS\":5,\"VL\":[8,9]},\"TV\":{\"BD\":\"20210906\",\"BT\":\"094800\"}},{\"P\":\"2\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":10,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":623},\"PRD\":13,\"LVL\":12,\"SV\":{\"OS\":11,\"VL\":[14,15]},\"TV\":{\"BD\":\"20210906\",\"BT\":\"094800\"}},{\"P\":\"3\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":16,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":233},\"PRD\":19,\"LVL\":18,\"SV\":{\"OS\":17,\"VL\":[20,21]},\"TV\":{\"BD\":\"20210906\",\"BT\":\"094800\"}},{\"P\":\"4\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":22,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":1181},\"PRD\":25,\"LVL\":24,\"SV\":{\"OS\":23,\"VL\":[26,27]},\"TV\":{\"BD\":\"20210906\",\"BT\":\"094800\"}},{\"P\":\"5\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":28,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":1850},\"PRD\":31,\"LVL\":30,\"SV\":{\"OS\":29,\"VL\":[32]},\"TV\":{\"BD\":\"20210906\",\"BT\":\"094800\"}},{\"P\":\"6\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":33,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":7040},\"PRD\":36,\"LVL\":35,\"SV\":{\"OS\":34,\"VL\":[37]},\"TV\":{\"BD\":\"20210906\",\"BT\":\"094800\"}},{\"P\":\"7\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":38,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":5770},\"PRD\":41,\"LVL\":40,\"SV\":{\"OS\":39,\"VL\":[42]},\"TV\":{\"BD\":\"20210906\",\"BT\":\"094800\"}},{\"P\":\"8\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":43,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":4520},\"PRD\":46,\"LVL\":45,\"SV\":{\"OS\":44,\"VL\":[47]},\"TV\":{\"BD\":\"20210906\",\"BT\":\"094800\"}},{\"P\":\"9\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":48,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":3710},\"PRD\":51,\"LVL\":50,\"SV\":{\"OS\":49,\"VL\":[52]},\"TV\":{\"BD\":\"20210906\",\"BT\":\"094800\"}},{\"P\":\"10\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":53,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":6490},\"PRD\":56,\"LVL\":55,\"SV\":{\"OS\":54,\"VL\":[57,58]},\"TV\":{\"BD\":\"20210906\",\"BT\":\"094800\"}}],\"OPT\":false,\"ALT\":true,\"SEQ\":false}}"
+              "shpCtx":"{\"common\":{\"FEL\":[{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"Nahbereich\"]},{\"ID\":[\"Einzelkarte\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"Hamburg AB\"]},{\"ID\":[\"Einzelkarte Kind\"]},{\"ID\":[\"A\"]},{\"ID\":[\"B\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"Hamburg AB\"]},{\"ID\":[\"9-Uhr-Tageskarte\"]},{\"ID\":[\"A\"]},{\"ID\":[\"B\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"Hamburg AB\"]},{\"ID\":[\"Ganztageskarte Kind\"]},{\"ID\":[\"A\"]},{\"ID\":[\"B\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"Hamburg AB\"]},{\"ID\":[\"9-Uhr-Gruppenkarte\"]},{\"ID\":[\"A\"]},{\"ID\":[\"B\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"2 Tarifzonen\"]},{\"ID\":[\"Vollzeit-Wochenkarte\"]},{\"ID\":[\"000\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"2 Tarifzonen\"]},{\"ID\":[\"Vollzeit-Monatskarte\"]},{\"ID\":[\"000\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"\"]},{\"ID\":[\"\"]},{\"ID\":[\"000\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"3 Tarifzonen\"]},{\"ID\":[\"Teilzeit-Monatskarte\"]},{\"ID\":[\"000\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"\"]},{\"ID\":[\"\"]},{\"ID\":[\"000\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"Hamburg AB\"]},{\"ID\":[\"Senioren-Karte\"]},{\"ID\":[\"A\"]},{\"ID\":[\"B\"]}]},\"BOG\":{\"BOL\":[{\"P\":\"0\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":0,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":223},\"PRD\":3,\"LVL\":2,\"SV\":{\"OS\":1},\"TV\":{\"BD\":\"20211205\",\"BT\":\"192800\"}},{\"P\":\"1\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":4,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":121},\"PRD\":7,\"LVL\":6,\"SV\":{\"OS\":5,\"VL\":[8,9]},\"TV\":{\"BD\":\"20211205\",\"BT\":\"192800\"}},{\"P\":\"2\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":10,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":623},\"PRD\":13,\"LVL\":12,\"SV\":{\"OS\":11,\"VL\":[14,15]},\"TV\":{\"BD\":\"20211205\",\"BT\":\"192800\"}},{\"P\":\"3\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":16,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":233},\"PRD\":19,\"LVL\":18,\"SV\":{\"OS\":17,\"VL\":[20,21]},\"TV\":{\"BD\":\"20211205\",\"BT\":\"192800\"}},{\"P\":\"4\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":22,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":1181},\"PRD\":25,\"LVL\":24,\"SV\":{\"OS\":23,\"VL\":[26,27]},\"TV\":{\"BD\":\"20211205\",\"BT\":\"192800\"}},{\"P\":\"5\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":28,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":1850},\"PRD\":31,\"LVL\":30,\"SV\":{\"OS\":29,\"VL\":[32]},\"TV\":{\"BD\":\"20211205\",\"BT\":\"192800\"}},{\"P\":\"6\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":33,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":7040},\"PRD\":36,\"LVL\":35,\"SV\":{\"OS\":34,\"VL\":[37]},\"TV\":{\"BD\":\"20211205\",\"BT\":\"192800\"}},{\"P\":\"7\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":38,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":5770},\"PRD\":41,\"LVL\":40,\"SV\":{\"OS\":39,\"VL\":[42]},\"TV\":{\"BD\":\"20211205\",\"BT\":\"192800\"}},{\"P\":\"8\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":43,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":4520},\"PRD\":46,\"LVL\":45,\"SV\":{\"OS\":44,\"VL\":[47]},\"TV\":{\"BD\":\"20211205\",\"BT\":\"192800\"}},{\"P\":\"9\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":48,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":3710},\"PRD\":51,\"LVL\":50,\"SV\":{\"OS\":49,\"VL\":[52]},\"TV\":{\"BD\":\"20211205\",\"BT\":\"192800\"}},{\"P\":\"10\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":53,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":6490},\"PRD\":56,\"LVL\":55,\"SV\":{\"OS\":54,\"VL\":[57,58]},\"TV\":{\"BD\":\"20211205\",\"BT\":\"192800\"}}],\"OPT\":false,\"ALT\":true,\"SEQ\":false}}"
             },
             "ovwTrfRefL":
             [
@@ -751,12 +704,12 @@
               }
             ],
             "conSubscr":"U",
-            "cksum":"745ce0af_2"
+            "cksum":"71b963bb_2"
           }
         ],
-        "fpB":"20210902",
-        "fpE":"20220901",
-        "planrtTS":"1630914380"
+        "fpB":"20211202",
+        "fpE":"20221201",
+        "planrtTS":"1638728675"
       }
     }
   ]

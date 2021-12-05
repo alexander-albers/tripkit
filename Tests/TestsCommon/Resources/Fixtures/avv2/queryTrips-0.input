@@ -1,7 +1,7 @@
 {
   "ver":"1.18",
   "lang":"deu",
-  "id":"6d4axk866ux88i4k",
+  "id":"r6wwsmsw42gag28g",
   "err":"OK",
   "svcResL":
   [
@@ -28,7 +28,7 @@
                 "layerX":0,
                 "crdSysX":0
               },
-              "pCls":384
+              "pCls":896
             },
             {
               "lid":"A=1@O=Aachen, Schanz (Jakobstraße)@X=6074101@Y=50769106@U=80@L=1015@",
@@ -60,7 +60,7 @@
                 "layerX":0,
                 "crdSysX":0
               },
-              "pCls":384
+              "pCls":896
             },
             {
               "lid":"A=1@O=Aachen, Luisenhospital@X=6077535@Y=50768414@U=80@L=1045@",
@@ -82,7 +82,7 @@
               "lid":"A=1@O=Aachen, Hbf@X=6092044@Y=50767722@U=80@L=1008@",
               "type":"S",
               "name":"Aachen, Hbf",
-              "icoX":7,
+              "icoX":4,
               "extId":"1008",
               "state":"F",
               "crd":
@@ -98,7 +98,7 @@
               "lid":"A=1@O=Aachen, Schanz Bf@X=6073750@Y=50769861@U=80@L=1016@",
               "type":"S",
               "name":"Aachen, Schanz Bf",
-              "icoX":7,
+              "icoX":4,
               "extId":"1016",
               "state":"F",
               "crd":
@@ -114,19 +114,19 @@
           "prodL":
           [
             {
-              "pid":"L::7::Bus::B3908984967::de:aac:05334|13B:aseag::*",
-              "name":"Bus 13B",
-              "nameS":"13B",
-              "number":"13B",
+              "pid":"L::7::Bus::B3908984967::de:aac:05334|3B:aseag::*",
+              "name":"Bus 3B",
+              "nameS":"3B",
+              "number":"3B",
               "icoX":0,
               "cls":128,
               "oprX":0,
               "prodCtx":
               {
-                "name":"Bus  13B",
-                "num":"3438",
-                "line":"13B",
-                "matchId":"13B",
+                "name":"Bus   3B",
+                "num":"21295",
+                "line":"3B",
+                "matchId":"3B",
                 "catOut":"Bus     ",
                 "catOutS":"NFB",
                 "catOutL":"Niederflurbus",
@@ -136,64 +136,7 @@
               },
               "himIdL":
               [
-"HIM_FREETEXT_4160",
-"HIM_FREETEXT_11894"
-              ]
-            },
-            {
-              "pid":"L::7::Bus::B3908984967::de:aac:05334|13B:aseag::*",
-              "name":"Bus 13B",
-              "nameS":"13B",
-              "number":"13B",
-              "icoX":0,
-              "cls":128,
-              "oprX":1,
-              "prodCtx":
-              {
-                "name":"Bus  13B",
-                "num":"3438",
-                "line":"13B",
-                "lineId":"de:aac:05334|13B:aseag",
-                "matchId":"13B",
-                "catOut":"Bus     ",
-                "catOutS":"NFB",
-                "catOutL":"Niederflurbus",
-                "catIn":"NFB",
-                "catCode":"7",
-                "admin":"ASEAG_"
-              },
-              "himIdL":
-              [
-"HIM_FREETEXT_4160",
-"HIM_FREETEXT_11894"
-              ]
-            },
-            {
-              "pid":"L::7::Bus::B3908984967::de:aac:05334|13B:aseag::*",
-              "name":"Bus 13B",
-              "nameS":"13B",
-              "number":"13B",
-              "icoX":0,
-              "cls":128,
-              "oprX":1,
-              "prodCtx":
-              {
-                "name":"Bus  13B",
-                "num":"3492",
-                "line":"13B",
-                "lineId":"de:aac:05334|13B:aseag",
-                "matchId":"13B",
-                "catOut":"Bus     ",
-                "catOutS":"NFB",
-                "catOutL":"Niederflurbus",
-                "catIn":"NFB",
-                "catCode":"7",
-                "admin":"ASEAG_"
-              },
-              "himIdL":
-              [
-"HIM_FREETEXT_4160",
-"HIM_FREETEXT_11894"
+"HIM_FREETEXT_4160"
               ]
             },
             {
@@ -207,7 +150,7 @@
               "prodCtx":
               {
                 "name":"Bus   3B",
-                "num":"3520",
+                "num":"21295",
                 "line":"3B",
                 "lineId":"de:aac:05334|3B:aseag",
                 "matchId":"3B",
@@ -220,195 +163,23 @@
               },
               "himIdL":
               [
-"HIM_FREETEXT_4160",
-"HIM_FREETEXT_11894"
+"HIM_FREETEXT_4160"
               ]
             },
             {
-              "pid":"L::7::Bus::B3908984967::de:aac:05334|13B:aseag::*",
-              "name":"Bus 13B",
-              "nameS":"13B",
-              "number":"13B",
-              "icoX":0,
-              "cls":128,
-              "oprX":1,
-              "prodCtx":
-              {
-                "name":"Bus  13B",
-                "num":"3605",
-                "line":"13B",
-                "lineId":"de:aac:05334|13B:aseag",
-                "matchId":"13B",
-                "catOut":"Bus     ",
-                "catOutS":"NFB",
-                "catOutL":"Niederflurbus",
-                "catIn":"NFB",
-                "catCode":"7",
-                "admin":"ASEAG_"
-              },
-              "himIdL":
-              [
-"HIM_FREETEXT_4160",
-"HIM_FREETEXT_11894"
-              ]
-            },
-            {
-              "pid":"L::7::Bus::B3908984967::de:aac:05334|3B:aseag::*",
-              "name":"Bus 3B",
-              "nameS":"3B",
-              "number":"3B",
-              "icoX":0,
-              "cls":128,
-              "oprX":1,
-              "prodCtx":
-              {
-                "name":"Bus   3B",
-                "num":"3582",
-                "line":"3B",
-                "lineId":"de:aac:05334|3B:aseag",
-                "matchId":"3B",
-                "catOut":"Bus     ",
-                "catOutS":"NFB",
-                "catOutL":"Niederflurbus",
-                "catIn":"NFB",
-                "catCode":"7",
-                "admin":"ASEAG_"
-              },
-              "himIdL":
-              [
-"HIM_FREETEXT_4160",
-"HIM_FREETEXT_11894"
-              ]
-            },
-            {
-              "pid":"L::7::Bus::B3908984967::de:aac:05334|13B:aseag::*",
-              "name":"Bus 13B",
-              "nameS":"13B",
-              "number":"13B",
-              "icoX":0,
-              "cls":128,
-              "oprX":1,
-              "prodCtx":
-              {
-                "name":"Bus  13B",
-                "num":"3651",
-                "line":"13B",
-                "lineId":"de:aac:05334|13B:aseag",
-                "matchId":"13B",
-                "catOut":"Bus     ",
-                "catOutS":"NFB",
-                "catOutL":"Niederflurbus",
-                "catIn":"NFB",
-                "catCode":"7",
-                "admin":"ASEAG_"
-              },
-              "himIdL":
-              [
-"HIM_FREETEXT_4160",
-"HIM_FREETEXT_11894"
-              ]
-            },
-            {
-              "pid":"L::0::DPN::B0216225498::NX_016_RE 4::*",
-              "name":"RE 4",
-              "nameS":"RE 4",
-              "number":"RE 4",
-              "icoX":7,
+              "pid":"L::0::RB::B0291101248::DBA057_RB 20::*",
+              "name":"RB 20",
+              "nameS":"RB 20",
+              "number":"RB 20",
+              "icoX":4,
               "cls":1,
               "oprX":2,
               "prodCtx":
               {
-                "name":"    RE 4",
-                "num":"526",
-                "line":"RE 4",
-                "matchId":"21727",
-                "catOut":"DPN     ",
-                "catOutS":"DPN",
-                "catOutL":"Nahverkehrszug",
-                "catIn":"DPN",
-                "catCode":"0",
-                "admin":"NX_016"
-              },
-              "himIdL":
-              [
-"HIM_FREETEXT_13061",
-"HIM_FREETEXT_12506",
-"HIM_FREETEXT_11453"
-              ]
-            },
-            {
-              "pid":"L::0::DPN::B0216225498::NX_016_RE 4::*",
-              "name":"RE 4",
-              "nameS":"RE 4",
-              "number":"RE 4",
-              "icoX":7,
-              "cls":1,
-              "oprX":3,
-              "prodCtx":
-              {
-                "name":"    RE 4",
-                "num":"526",
-                "line":"RE 4",
-                "lineId":"NX_016_RE 4",
-                "matchId":"21727",
-                "catOut":"DPN     ",
-                "catOutS":"DPN",
-                "catOutL":"Nahverkehrszug",
-                "catIn":"DPN",
-                "catCode":"0",
-                "admin":"NX_016"
-              },
-              "himIdL":
-              [
-"HIM_FREETEXT_13061",
-"HIM_FREETEXT_12506",
-"HIM_FREETEXT_11453"
-              ]
-            },
-            {
-              "pid":"L::0::DPN::B0216225498::NX_016_RE 4::*",
-              "name":"RE 4",
-              "nameS":"RE 4",
-              "number":"RE 4",
-              "icoX":7,
-              "cls":1,
-              "oprX":3,
-              "prodCtx":
-              {
-                "name":"    RE 4",
-                "num":"525",
-                "line":"RE 4",
-                "lineId":"NX_016_RE 4",
-                "matchId":"21729",
-                "catOut":"DPN     ",
-                "catOutS":"DPN",
-                "catOutL":"Nahverkehrszug",
-                "catIn":"DPN",
-                "catCode":"0",
-                "admin":"NX_016"
-              },
-              "himIdL":
-              [
-"HIM_FREETEXT_13061",
-"HIM_FREETEXT_12506",
-"HIM_FREETEXT_11453"
-              ]
-            },
-            {
-              "pid":"L::0::RB::B0291101248::DBA057_RB 20::*",
-              "name":"RB 20",
-              "nameS":"RB 20",
-              "number":"RB 20",
-              "icoX":7,
-              "cls":1,
-              "oprX":4,
-              "prodCtx":
-              {
                 "name":"   RB 20",
-                "num":"464",
+                "num":"306",
                 "line":"RB 20",
-                "lineId":"DBA057_RB 20",
-                "matchId":"30018",
+                "matchId":"30578",
                 "catOut":"RB      ",
                 "catOutS":"RB",
                 "catOutL":"RegionalBahn",
@@ -419,37 +190,8 @@
               "himIdL":
               [
 "HIM_FREETEXT_13031",
-"HIM_FREETEXT_12028",
-"HIM_FREETEXT_14141"
-              ]
-            },
-            {
-              "pid":"L::0::DPN::B0216225498::NX_016_RE 4::*",
-              "name":"RE 4",
-              "nameS":"RE 4",
-              "number":"RE 4",
-              "icoX":7,
-              "cls":1,
-              "oprX":3,
-              "prodCtx":
-              {
-                "name":"    RE 4",
-                "num":"524",
-                "line":"RE 4",
-                "lineId":"NX_016_RE 4",
-                "matchId":"21731",
-                "catOut":"DPN     ",
-                "catOutS":"DPN",
-                "catOutL":"Nahverkehrszug",
-                "catIn":"DPN",
-                "catCode":"0",
-                "admin":"NX_016"
-              },
-              "himIdL":
-              [
-"HIM_FREETEXT_13061",
-"HIM_FREETEXT_12506",
-"HIM_FREETEXT_11453"
+"HIM_FREETEXT_17599",
+"HIM_FREETEXT_12028"
               ]
             },
             {
@@ -457,16 +199,16 @@
               "name":"RB 20",
               "nameS":"RB 20",
               "number":"RB 20",
-              "icoX":7,
+              "icoX":4,
               "cls":1,
-              "oprX":4,
+              "oprX":3,
               "prodCtx":
               {
                 "name":"   RB 20",
-                "num":"340",
+                "num":"306",
                 "line":"RB 20",
                 "lineId":"DBA057_RB 20",
-                "matchId":"30516",
+                "matchId":"30578",
                 "catOut":"RB      ",
                 "catOutS":"RB",
                 "catOutL":"RegionalBahn",
@@ -477,63 +219,204 @@
               "himIdL":
               [
 "HIM_FREETEXT_13031",
-"HIM_FREETEXT_12028",
-"HIM_FREETEXT_14141"
+"HIM_FREETEXT_17599",
+"HIM_FREETEXT_12028"
               ]
             },
             {
-              "pid":"L::7::Bus::B3908984967::de:aac:05334|13B:aseag::*",
-              "name":"Bus 13B",
-              "nameS":"13B",
-              "number":"13B",
-              "icoX":0,
-              "cls":128,
-              "oprX":0,
+              "pid":"L::0::RB::B0291101248::DBA069_RB 33::*",
+              "name":"RB 33",
+              "nameS":"RB 33",
+              "number":"RB 33",
+              "icoX":4,
+              "cls":1,
+              "oprX":3,
               "prodCtx":
               {
-                "name":"Bus  13B",
-                "num":"3492",
-                "line":"13B",
-                "matchId":"13B",
-                "catOut":"Bus     ",
-                "catOutS":"NFB",
-                "catOutL":"Niederflurbus",
-                "catIn":"NFB",
-                "catCode":"7",
-                "admin":"ASEAG_"
+                "name":"   RB 33",
+                "num":"104",
+                "line":"RB 33",
+                "lineId":"DBA069_RB 33",
+                "matchId":"10338",
+                "catOut":"RB      ",
+                "catOutS":"RB",
+                "catOutL":"RegionalBahn",
+                "catIn":"RB",
+                "catCode":"0",
+                "admin":"DBA069"
               },
               "himIdL":
               [
-"HIM_FREETEXT_4160",
-"HIM_FREETEXT_11894"
+"HIM_FREETEXT_17949"
               ]
             },
             {
-              "pid":"L::7::Bus::B3908984967::de:aac:05334|13B:aseag::*",
-              "name":"Bus 13B",
-              "nameS":"13B",
-              "number":"13B",
-              "icoX":0,
-              "cls":128,
-              "oprX":1,
+              "pid":"L::0::RB::B0291101248::DBA057_RB 20::*",
+              "name":"RB 20",
+              "nameS":"RB 20",
+              "number":"RB 20",
+              "icoX":4,
+              "cls":1,
+              "oprX":3,
               "prodCtx":
               {
-                "name":"Bus  13B",
-                "num":"3714",
-                "line":"13B",
-                "lineId":"de:aac:05334|13B:aseag",
-                "matchId":"13B",
-                "catOut":"Bus     ",
-                "catOutS":"NFB",
-                "catOutL":"Niederflurbus",
-                "catIn":"NFB",
-                "catCode":"7",
-                "admin":"ASEAG_"
+                "name":"   RB 20",
+                "num":"853",
+                "line":"RB 20",
+                "lineId":"DBA057_RB 20",
+                "matchId":"30032",
+                "catOut":"RB      ",
+                "catOutS":"RB",
+                "catOutL":"RegionalBahn",
+                "catIn":"RB",
+                "catCode":"0",
+                "admin":"DBA057"
               },
               "himIdL":
               [
-"HIM_FREETEXT_4160",
-"HIM_FREETEXT_11894"
+"HIM_FREETEXT_13031",
+"HIM_FREETEXT_17599",
+"HIM_FREETEXT_12028"
+              ]
+            },
+            {
+              "pid":"L::0::DPN::B0216225498::NX_016_RE 4::*",
+              "name":"RE 4",
+              "nameS":"RE 4",
+              "number":"RE 4",
+              "icoX":4,
+              "cls":1,
+              "oprX":4,
+              "prodCtx":
+              {
+                "name":"    RE 4",
+                "num":"334",
+                "line":"RE 4",
+                "lineId":"NX_016_RE 4",
+                "matchId":"26435",
+                "catOut":"DPN     ",
+                "catOutS":"DPN",
+                "catOutL":"Nahverkehrszug",
+                "catIn":"DPN",
+                "catCode":"0",
+                "admin":"NX_016"
+              },
+              "himIdL":
+              [
+"HIM_FREETEXT_12506",
+"HIM_FREETEXT_17283",
+"HIM_FREETEXT_17282"
+              ]
+            },
+            {
+              "pid":"L::0::RB::B0291101248::DBA057_RB 20::*",
+              "name":"RB 20",
+              "nameS":"RB 20",
+              "number":"RB 20",
+              "icoX":4,
+              "cls":1,
+              "oprX":3,
+              "prodCtx":
+              {
+                "name":"   RB 20",
+                "num":"330",
+                "line":"RB 20",
+                "lineId":"DBA057_RB 20",
+                "matchId":"30580",
+                "catOut":"RB      ",
+                "catOutS":"RB",
+                "catOutL":"RegionalBahn",
+                "catIn":"RB",
+                "catCode":"0",
+                "admin":"DBA057"
+              },
+              "himIdL":
+              [
+"HIM_FREETEXT_13031",
+"HIM_FREETEXT_17599",
+"HIM_FREETEXT_12028"
+              ]
+            },
+            {
+              "pid":"L::0::RB::B0291101248::DBA069_RB 33::*",
+              "name":"RB 33",
+              "nameS":"RB 33",
+              "number":"RB 33",
+              "icoX":4,
+              "cls":1,
+              "oprX":3,
+              "prodCtx":
+              {
+                "name":"   RB 33",
+                "num":"102",
+                "line":"RB 33",
+                "lineId":"DBA069_RB 33",
+                "matchId":"10340",
+                "catOut":"RB      ",
+                "catOutS":"RB",
+                "catOutL":"RegionalBahn",
+                "catIn":"RB",
+                "catCode":"0",
+                "admin":"DBA069"
+              },
+              "himIdL":
+              [
+"HIM_FREETEXT_17949"
+              ]
+            },
+            {
+              "pid":"L::0::RB::B0291101248::DBA069_RB 33::*",
+              "name":"RB 33",
+              "nameS":"RB 33",
+              "number":"RB 33",
+              "icoX":4,
+              "cls":1,
+              "oprX":2,
+              "prodCtx":
+              {
+                "name":"   RB 33",
+                "num":"104",
+                "line":"RB 33",
+                "matchId":"10338",
+                "catOut":"RB      ",
+                "catOutS":"RB",
+                "catOutL":"RegionalBahn",
+                "catIn":"RB",
+                "catCode":"0",
+                "admin":"DBA069"
+              },
+              "himIdL":
+              [
+"HIM_FREETEXT_17949"
+              ]
+            },
+            {
+              "pid":"L::0::RB::B0291101248::DBA057_RB 20::*",
+              "name":"RB 20",
+              "nameS":"RB 20",
+              "number":"RB 20",
+              "icoX":4,
+              "cls":1,
+              "oprX":3,
+              "prodCtx":
+              {
+                "name":"   RB 20",
+                "num":"849",
+                "line":"RB 20",
+                "lineId":"DBA057_RB 20",
+                "matchId":"30034",
+                "catOut":"RB      ",
+                "catOutS":"RB",
+                "catOutL":"RegionalBahn",
+                "catIn":"RB",
+                "catCode":"0",
+                "admin":"DBA057"
+              },
+              "himIdL":
+              [
+"HIM_FREETEXT_13031",
+"HIM_FREETEXT_17599",
+"HIM_FREETEXT_12028"
               ]
             }
           ],
@@ -586,26 +469,18 @@
             {
               "delta":true,
               "dim":2,
-              "crdEncYX":"uwztHmqdd@fCpU?`@yA|PCLANg@~JPhNn@~J@xAaAhJiAjF",
-              "crdEncS":"NINNNNNLNNIN",
-              "crdEncF":"????????????",
+              "crdEncYX":"yqztH{vdd@~CpNtHxMlAdF^zI{@pPyBpP{EjLqKzIyDpA",
+              "crdEncS":"NNNNNNNNNN",
+              "crdEncF":"??????????",
               "ppLocRefL":
               [
                 {
                   "ppIdx":0,
-                  "locX":0
+                  "locX":4
                 },
                 {
-                  "ppIdx":4,
-                  "locX":2
-                },
-                {
-                  "ppIdx":8,
-                  "locX":3
-                },
-                {
-                  "ppIdx":11,
-                  "locX":1
+                  "ppIdx":9,
+                  "locX":5
                 }
               ]
             }
@@ -644,239 +519,169 @@
               "id":"243"
             },
             {
-              "name":"National Express",
-              "icoX":9
-            },
-            {
-              "name":"National Express",
-              "icoX":9,
-              "id":"328"
+              "name":"Staatsbahnen",
+              "icoX":5
             },
             {
               "name":"Staatsbahnen",
-              "icoX":10,
+              "icoX":5,
               "id":"282"
+            },
+            {
+              "name":"National Express",
+              "icoX":7,
+              "id":"328"
             }
           ],
           "remL":
           [
             {
-              "type":"R",
-              "code":"text.realtime.stop.cancelled",
-              "icoX":1,
-              "txtN":"Halt entfällt"
-            },
-            {
-              "type":"R",
-              "code":"text.realtime.stop.entry.disabled",
-              "icoX":3,
-              "txtN":"Hält nur zum Aussteigen"
-            },
-            {
-              "type":"R",
-              "code":"text.realtime.stop.exit.disabled",
-              "icoX":3,
-              "txtN":"Hält nur zum Einsteigen"
-            },
-            {
               "type":"A",
               "code":"BE",
               "prio":350,
-              "icoX":4,
+              "icoX":3,
               "txtN":"Behindertengerecht"
             },
             {
               "type":"A",
               "code":"ay",
               "prio":350,
-              "icoX":4,
+              "icoX":3,
               "txtN":"Betreiber: ASEAG, Tel.: 02 41  16 88  0, <a href=\"https://www.aseag.de/kontakt/\">aseag.de/kontakt/</a>."
-            },
-            {
-              "type":"R",
-              "code":"text.realtime.journey.cancelled",
-              "icoX":6,
-              "txtN":"Bus 13B: Fällt aus"
-            },
-            {
-              "type":"R",
-              "code":"text.realtime.connection.cancelled",
-              "icoX":6,
-              "txtN":"Verbindung fällt aus"
             },
             {
               "type":"A",
               "code":"PF",
               "prio":200,
-              "icoX":4,
+              "icoX":3,
               "txtN":"Maskenpflicht nach gesetzl. Regelung; wir empfehlen eine FFP2-Maske"
+            },
+            {
+              "type":"A",
+              "code":"3G",
+              "prio":205,
+              "icoX":3,
+              "txtN":"Im Zug gilt bundesweit 3G-Regel: ein gültiger Nachweis ist mitzuführen"
             },
             {
               "type":"A",
               "code":"G ",
               "prio":260,
-              "icoX":4,
+              "icoX":3,
               "txtN":"Fahrradmitnahme begrenzt möglich"
             },
             {
               "type":"A",
-              "code":"aC",
+              "code":"kZ",
+              "prio":300,
+              "icoX":3,
+              "txtN":"nur 2. Klasse"
+            },
+            {
+              "type":"A",
+              "code":"dB",
               "prio":350,
-              "icoX":4,
+              "icoX":3,
+              "txtN":"Betreiber: Deutsche Bahn"
+            },
+            {
+              "type":"A",
+              "code":"hH",
+              "prio":350,
+              "icoX":3,
+              "txtN":"RB 20: die euregiobahn"
+            },
+            {
+              "type":"A",
+              "code":"gM",
+              "prio":350,
+              "icoX":3,
+              "txtN":"RB 33: Rhein-Niers-Bahn"
+            },
+            {
+              "type":"A",
+              "code":"cJ",
+              "prio":560,
+              "icoX":3,
+              "txtN":"Fahrzeuggebundene Einstiegshilfe vorhanden"
+            },
+            {
+              "type":"A",
+              "code":"cI",
+              "prio":350,
+              "icoX":3,
               "txtN":"Betreiber: National Express"
             },
             {
               "type":"A",
-              "code":"aK",
+              "code":"cP",
               "prio":350,
-              "icoX":4,
+              "icoX":3,
               "txtN":"RE 4: Wupper-Express"
             },
             {
               "type":"A",
-              "code":"aI",
+              "code":"RO",
               "prio":560,
-              "icoX":4,
+              "icoX":3,
               "txtN":"Rollstuhlstellplatz"
             },
             {
               "type":"A",
               "code":"EA",
               "prio":560,
-              "icoX":4,
+              "icoX":3,
               "txtN":"Behindertengerechte Ausstattung"
             },
             {
               "type":"A",
               "code":"LS",
               "prio":605,
-              "icoX":4,
+              "icoX":3,
               "txtN":"Laptop-Steckdosen"
             },
             {
               "type":"A",
               "code":"KL",
               "prio":610,
-              "icoX":4,
+              "icoX":3,
               "txtN":"Klimaanlage"
             },
             {
               "type":"A",
               "code":"WV",
               "prio":710,
-              "icoX":4,
+              "icoX":3,
               "txtN":"WLAN verfügbar"
-            },
-            {
-              "type":"A",
-              "code":"jC",
-              "prio":300,
-              "icoX":4,
-              "txtN":"nur 2. Klasse"
-            },
-            {
-              "type":"A",
-              "code":"aX",
-              "prio":350,
-              "icoX":4,
-              "txtN":"Betreiber: Deutsche Bahn"
-            },
-            {
-              "type":"A",
-              "code":"fB",
-              "prio":350,
-              "icoX":4,
-              "txtN":"RB 20: die euregiobahn"
             }
           ],
           "himL":
           [
             {
-              "hid":"11894",
+              "hid":"12028",
               "act":true,
-              "head":"Aachen: Sperrung der Lothringer Straße",
-              "lead":"Aachen: Sperrung der Lothringer Straße",
-              "text":"Linien N1 und N5:<br><br>Ab Montag, 12. Juli 2021, 8:00 Uhr wird die Lothringer Straße aufgrund von Bauarbeiten gesperrt.<br><br>Die aufgehobenen Haltestellen Hauptbahnhof, Misereor und Alter Posthof der Linie N5 werden von der Linie N1 angefahren.<br>Anstelle der aufgehobenen Haltestelle Normaluhr der Linie N5 in der Römerstraße wird die gleichnamige Haltestelle in der Theaterstraße angefahren.<br>Die aufgehobenen Haltestellen Wallstraße und Theater werden von der Linie N5 angefahren.<br>Anstelle der aufgehobenen Haltestelle Normaluhr der Linie N1 in der Theaterstraße wird die gleichnamige Haltestelle in der Römerstraße angefahren.<br><br>Quelle: ASEAG (Aachen, Hauptbahnhof (Bus) - Aachen, Misereor)",
-              "icoX":5,
+              "head":"Unwetterschäden auf dem Linienweg der RB 20",
+              "lead":"Unwetterschäden stören den Bahnverkehr zwischen Stolberg (Rheinl) Hbf - Stolberg Altstadt und Stolberg(Rheinl) Hbf und Langerwehe. Die Strecken sind gesperrt.",
+              "text":"Unwetterschäden stören den Bahnverkehr zwischen Stolberg (Rheinl) Hbf - Stolberg Altstadt und Stolberg(Rheinl) Hbf - Langerwehe. Die Strecken sind gesperrt. Die Folge sind Teilausfälle zwischen Stolberg(Rheinl) Hbf und Stolberg-Altstadt sowie zwischen Stolberg(Rheinl) Hbf und Langerwehe. Ersatzverkehr mit drei Bussen der Firma VIAS zwischen Aachen Hbf und Langerwehe. Ab dem 12. Dezember 2021 verkehren die Züge der Linie RB 20 wieder zwischen Eschweiler-Weisweiler und Düren.",
+              "icoX":6,
               "prio":100,
               "prod":65535,
-              "lModDate":"20210712",
-              "lModTime":"112912",
-              "sDate":"20210712",
-              "sTime":"174500",
-              "eDate":"20211231",
-              "eTime":"235600",
+              "lModDate":"20211123",
+              "lModTime":"104429",
+              "sDate":"20211022",
+              "sTime":"000000",
+              "eDate":"20211211",
+              "eTime":"220000",
               "comp":"AVV",
               "cat":0,
               "pubChL":
               [
                 {
                   "name":"TIMETABLE",
-                  "fDate":"20210712",
-                  "fTime":"112500",
-                  "tDate":"20211231",
-                  "tTime":"235600"
-                },
-                {
-                  "name":"RSS",
-                  "fDate":"20210712",
-                  "fTime":"112500",
-                  "tDate":"20211231",
-                  "tTime":"235600"
-                }
-              ]
-            },
-            {
-              "hid":"11453",
-              "act":true,
-              "head":"RE4/RB 33: Unwetterschäden zwischen Geilenkirchen und Herzogenrath",
-              "lead":"RE4/RB 33: Zugausfälle aufgrund von Unwetterschäden Unwetterschäden zwischen Geilenkirchen und Herzogenrath. Die Strecke ist gesperrt. Ein Schienenersatzverkehr ist eingerichtet.",
-              "text":"Unwetterschäden stören den Bahnverkehr zwischen Geilenkirchen und Herzogenrath. Die Strecke ist gesperrt. Die Züge aus Richtung Mönchengladbach enden und beginnen in Geilenkirchen. Zwischen Lindern und Heinsberg Pendelverkehr. Der RE4 verkehrt zusätzlich zwischen Aachen Hbf und Herzogenrath. Schienenersatzverkehr ist eingerichtet.",
-              "icoX":5,
-              "prio":100,
-              "prod":65535,
-              "lModDate":"20210820",
-              "lModTime":"125528",
-              "sDate":"20210630",
-              "sTime":"081100",
-              "eDate":"20211030",
-              "eTime":"235600",
-              "comp":"AVV",
-              "cat":0,
-              "pubChL":
-              [
-                {
-                  "name":"TIMETABLE",
-                  "fDate":"20210820",
-                  "fTime":"125500",
-                  "tDate":"20211030",
-                  "tTime":"235600",
-                  "uRefL":
-                  [
-0
-                  ]
-                },
-                {
-                  "name":"RSS",
-                  "fDate":"20210820",
-                  "fTime":"125500",
-                  "tDate":"20211030",
-                  "tTime":"235600",
-                  "uRefL":
-                  [
-0
-                  ]
-                },
-                {
-                  "name":"RSS_LINE_10",
-                  "fDate":"20210820",
-                  "fTime":"125500",
-                  "tDate":"20211030",
-                  "tTime":"235600",
-                  "uRefL":
-                  [
-0
-                  ]
+                  "fDate":"20210714",
+                  "fTime":"155700",
+                  "tDate":"20211211",
+                  "tTime":"230000"
                 }
               ]
             }
@@ -899,23 +704,14 @@
               }
             },
             {
-              "res":"rt_scancel"
+              "res":"rt_ont"
             },
             {
               "res":"ASE",
               "txt":"Aachener Straßenbahn und Energieversorgungs-AG"
             },
             {
-              "res":"rt_warn"
-            },
-            {
               "res":"INFO"
-            },
-            {
-              "res":"HIM0"
-            },
-            {
-              "res":"rt_cancel"
             },
             {
               "res":"RB",
@@ -933,45 +729,38 @@
               }
             },
             {
-              "res":"rt_ont"
+              "res":"DB",
+              "txt":"Staatsbahnen"
+            },
+            {
+              "res":"HIM0"
             },
             {
               "res":"NX",
               "txt":"National Express"
-            },
-            {
-              "res":"DB",
-              "txt":"Staatsbahnen"
-            }
-          ],
-          "urlL":
-          [
-            {
-              "label":"Fahrplan des Schienenersatzverkehrs",
-              "url":"http://avv-aachen.hafas.de/pdf/1627464477728_210714_M2Sa_Kundeninformation_RE_1_RE4_RB_33_KHEZ-KGEK_ab_25-07-2021.pdf"
             }
           ],
           "dirL":
           [
             {
-              "txt":"Schanz - Ponttor - Hauptbahnhof",
+              "txt":"Schanz - Uniklinik",
               "flg":"2"
             },
             {
-              "txt":"Schanz - Uniklinik - Ponttor",
-              "flg":"2"
+              "txt":"Alsdorf, Annapark Bf",
+              "flg":"1"
             },
             {
-              "txt":"Herzogenrath, Bf",
-              "flg":"2"
+              "txt":"Essen Hbf",
+              "flg":"1"
             },
             {
               "txt":"Stolberg, Hbf",
               "flg":"1"
             },
             {
-              "txt":"Alsdorf, Annapark Bf",
-              "flg":"1"
+              "txt":"Dortmund Hbf",
+              "flg":"2"
             }
           ]
         },
@@ -979,38 +768,26 @@
         [
           {
             "cid":"C-0",
-            "date":"20210906",
-            "dur":"000500",
+            "date":"20211205",
+            "dur":"000400",
             "chg":0,
             "sDays":
             {
-              "sDaysR":"Mo - Fr",
-              "sDaysI":"nicht 1. Nov",
-              "sDaysB":"1F3E7CF9F3E7CF9F3E7CF9E1E7CF9F3E74F8F3A7CF9F3E7CF9F3E7CF9F3E7CF9F3E7CF9F3E7C79F3E7CF9F00"
+              "sDaysR":"nicht täglich",
+              "sDaysI":"5. Dez 2021 bis 30. Jan 2022 So; auch 25. Dez, 1. Jan",
+              "sDaysB":"00000000000000000000000000000002040C10204081020418302040810000000000000000000000000000000000"
             },
-            "isNotRdbl":true,
-            "badSecRefX":0,
             "dep":
             {
               "locX":0,
               "idx":7,
               "dProdX":0,
-              "dInR":false,
-              "dTimeS":"111200",
-              "dCncl":true,
-              "msgL":
-              [
-                {
-                  "type":"REM",
-                  "remX":0,
-                  "tagL":
-                  [
-                    "RES_LOC_H3"
-                  ],
-                  "sort":13107200,
-                  "persist":false
-                }
-              ],
+              "dPlatfS":"H.2",
+              "dPlatfR":"H.2",
+              "dInR":true,
+              "dTimeS":"192800",
+              "dTimeR":"192800",
+              "dProgType":"PROGNOSED",
               "type":"N"
             },
             "arr":
@@ -1018,22 +795,13 @@
               "locX":1,
               "idx":10,
               "aProdX":0,
-              "aOutR":false,
-              "aTimeS":"111700",
-              "aCncl":true,
-              "msgL":
-              [
-                {
-                  "type":"REM",
-                  "remX":0,
-                  "tagL":
-                  [
-                    "RES_LOC_H3"
-                  ],
-                  "sort":13107200,
-                  "persist":false
-                }
-              ],
+              "aPlatfS":"H.3",
+              "aPlatfR":"H.3 (Box",
+              "aPlatfCh":true,
+              "aOutR":true,
+              "aTimeS":"193200",
+              "aTimeR":"193200",
+              "aProgType":"PROGNOSED",
               "type":"N"
             },
             "secL":
@@ -1046,22 +814,12 @@
                   "locX":0,
                   "idx":7,
                   "dProdX":0,
-                  "dInR":false,
-                  "dTimeS":"111200",
-                  "dCncl":true,
-                  "msgL":
-                  [
-                    {
-                      "type":"REM",
-                      "remX":0,
-                      "tagL":
-                      [
-                        "RES_LOC_H3"
-                      ],
-                      "sort":13107200,
-                      "persist":false
-                    }
-                  ],
+                  "dPlatfS":"H.2",
+                  "dPlatfR":"H.2",
+                  "dInR":true,
+                  "dTimeS":"192800",
+                  "dTimeR":"192800",
+                  "dProgType":"PROGNOSED",
                   "type":"N"
                 },
                 "arr":
@@ -1069,131 +827,75 @@
                   "locX":1,
                   "idx":10,
                   "aProdX":0,
-                  "aOutR":false,
-                  "aTimeS":"111700",
-                  "aCncl":true,
-                  "msgL":
-                  [
-                    {
-                      "type":"REM",
-                      "remX":0,
-                      "tagL":
-                      [
-                        "RES_LOC_H3"
-                      ],
-                      "sort":13107200,
-                      "persist":false
-                    }
-                  ],
+                  "aPlatfS":"H.3",
+                  "aPlatfR":"H.3 (Box",
+                  "aPlatfCh":true,
+                  "aOutR":true,
+                  "aTimeS":"193200",
+                  "aTimeR":"193200",
+                  "aProgType":"PROGNOSED",
                   "type":"N"
                 },
                 "jny":
                 {
-                  "jid":"1|262042|8|80|6092021",
+                  "jid":"1|8435|4|80|5122021",
                   "prodX":1,
-                  "dirTxt":"Schanz - Ponttor - Hauptbahnhof",
+                  "dirTxt":"Schanz - Uniklinik",
                   "dirFlg":"2",
                   "status":"P",
-                  "isCncl":true,
-                  "isRchbl":false,
+                  "isRchbl":true,
                   "stopL":
                   [
                     {
                       "locX":0,
                       "idx":7,
                       "dProdX":1,
-                      "dInR":false,
-                      "dTimeS":"111200",
-                      "dCncl":true,
-                      "dDirTxt":"Schanz - Ponttor - Hauptbahnhof",
+                      "dInR":true,
+                      "dTimeS":"192800",
+                      "dTimeR":"192800",
+                      "dProgType":"PROGNOSED",
+                      "dDirTxt":"Schanz - Uniklinik",
                       "dDirFlg":"2",
-                      "msgL":
-                      [
-                        {
-                          "type":"REM",
-                          "remX":1,
-                          "tagL":
-                          [
-                            "RES_LOC_H3"
-                          ],
-                          "sort":13107200,
-                          "persist":false
-                        }
-                      ],
                       "type":"N"
                     },
                     {
                       "locX":2,
                       "idx":8,
                       "aProdX":1,
-                      "aOutR":false,
-                      "aTimeS":"111400",
-                      "aCncl":true,
+                      "aOutR":true,
+                      "aTimeS":"192900",
+                      "aTimeR":"192900",
+                      "aProgType":"PROGNOSED",
                       "dProdX":1,
-                      "dInR":false,
-                      "dTimeS":"111400",
-                      "dCncl":true,
-                      "msgL":
-                      [
-                        {
-                          "type":"REM",
-                          "remX":0,
-                          "tagL":
-                          [
-                            "RES_LOC_H3"
-                          ],
-                          "sort":13107200,
-                          "persist":false
-                        }
-                      ],
+                      "dInR":true,
+                      "dTimeS":"192900",
+                      "dTimeR":"192900",
+                      "dProgType":"PROGNOSED",
                       "type":"N"
                     },
                     {
                       "locX":3,
                       "idx":9,
                       "aProdX":1,
-                      "aOutR":false,
-                      "aTimeS":"111500",
-                      "aCncl":true,
+                      "aOutR":true,
+                      "aTimeS":"193000",
+                      "aTimeR":"193000",
+                      "aProgType":"PROGNOSED",
                       "dProdX":1,
-                      "dInR":false,
-                      "dTimeS":"111500",
-                      "dCncl":true,
-                      "msgL":
-                      [
-                        {
-                          "type":"REM",
-                          "remX":0,
-                          "tagL":
-                          [
-                            "RES_LOC_H3"
-                          ],
-                          "sort":13107200,
-                          "persist":false
-                        }
-                      ],
+                      "dInR":true,
+                      "dTimeS":"193000",
+                      "dTimeR":"193000",
+                      "dProgType":"PROGNOSED",
                       "type":"N"
                     },
                     {
                       "locX":1,
                       "idx":10,
                       "aProdX":1,
-                      "aOutR":false,
-                      "aTimeS":"111700",
-                      "aCncl":true,
-                      "msgL":
-                      [
-                        {
-                          "type":"REM",
-                          "remX":2,
-                          "tagL":
-                          [
-                            "RES_LOC_H3"
-                          ],
-                          "sort":13107200,
-                          "persist":false
-                        }
-                      ],
+                      "aOutR":true,
+                      "aTimeS":"193200",
+                      "aTimeR":"193200",
+                      "aProgType":"PROGNOSED",
                       "type":"N"
                     }
                   ],
@@ -1206,358 +908,25 @@
                     "layerX":0,
                     "crdSysX":0
                   },
+                  "pos":
+                  {
+                    "x":6094543,
+                    "y":50768504,
+                    "layerX":0,
+                    "crdSysX":0
+                  },
                   "freq":
                   {
-                    "minC":7,
-                    "maxC":23,
-                    "numC":13,
-                    "jnyL":
-                    [
-                      {
-                        "jid":"1|261855|8|80|6092021",
-                        "prodX":2,
-                        "dirTxt":"Schanz - Ponttor - Hauptbahnhof",
-                        "dirFlg":"2",
-                        "stopL":
-                        [
-                          {
-                            "locX":0,
-                            "idx":23,
-                            "dProdX":2,
-                            "dTimeS":"112700",
-                            "dDirTxt":"Schanz - Ponttor - Hauptbahnhof",
-                            "dDirFlg":"2",
-                            "type":"N"
-                          },
-                          {
-                            "locX":1,
-                            "idx":26,
-                            "aProdX":2,
-                            "aTimeS":"113200",
-                            "type":"N"
-                          }
-                        ],
-                        "pos":
-                        {
-                          "x":6080295,
-                          "y":50778581,
-                          "layerX":0,
-                          "crdSysX":0
-                        },
-                        "ctxRecon":"T$A=1@O=Aachen, Hauptbahnhof (Bus)@L=1007@a=128@$A=1@O=Aachen, Schanz (Jakobstraße)@L=1015@a=128@$202109061127$202109061132$Bus  13B$$1$$$$",
-                        "msgL":
-                        [
-                          {
-                            "type":"REM",
-                            "remX":4,
-                            "fLocX":0,
-                            "tLocX":1,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ],
-                            "sort":716963840
-                          }
-                        ],
-                        "subscr":"F",
-                        "prodL":
-                        [
-                          {
-                            "prodX":2,
-                            "fLocX":0,
-                            "tLocX":1,
-                            "fIdx":23,
-                            "tIdx":26
-                          }
-                        ],
-                        "dirL":
-                        [
-                          {
-                            "dirX":0,
-                            "fLocX":0,
-                            "tLocX":1,
-                            "fIdx":23,
-                            "tIdx":26
-                          }
-                        ]
-                      },
-                      {
-                        "jid":"1|262409|3|80|6092021",
-                        "prodX":3,
-                        "dirTxt":"Schanz - Uniklinik - Ponttor",
-                        "dirFlg":"2",
-                        "stopL":
-                        [
-                          {
-                            "locX":0,
-                            "idx":48,
-                            "dProdX":3,
-                            "dTimeS":"115000",
-                            "dDirTxt":"Schanz - Uniklinik - Ponttor",
-                            "dDirFlg":"2",
-                            "type":"N"
-                          },
-                          {
-                            "locX":1,
-                            "idx":51,
-                            "aProdX":3,
-                            "aTimeS":"115500",
-                            "type":"N"
-                          }
-                        ],
-                        "pos":
-                        {
-                          "x":6077274,
-                          "y":50768405,
-                          "layerX":0,
-                          "crdSysX":0
-                        },
-                        "ctxRecon":"T$A=1@O=Aachen, Hauptbahnhof (Bus)@L=1007@a=128@$A=1@O=Aachen, Schanz (Jakobstraße)@L=1015@a=128@$202109061150$202109061155$Bus   3B$$1$$$$",
-                        "msgL":
-                        [
-                          {
-                            "type":"REM",
-                            "remX":4,
-                            "fLocX":0,
-                            "tLocX":1,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ],
-                            "sort":716963840
-                          }
-                        ],
-                        "subscr":"F",
-                        "prodL":
-                        [
-                          {
-                            "prodX":3,
-                            "fLocX":0,
-                            "tLocX":1,
-                            "fIdx":48,
-                            "tIdx":51
-                          }
-                        ],
-                        "dirL":
-                        [
-                          {
-                            "dirX":1,
-                            "fLocX":0,
-                            "tLocX":1,
-                            "fIdx":48,
-                            "tIdx":51
-                          }
-                        ]
-                      },
-                      {
-                        "jid":"1|261855|9|80|6092021",
-                        "prodX":4,
-                        "dirTxt":"Schanz - Ponttor - Hauptbahnhof",
-                        "dirFlg":"2",
-                        "stopL":
-                        [
-                          {
-                            "locX":0,
-                            "idx":23,
-                            "dProdX":4,
-                            "dTimeS":"115700",
-                            "dDirTxt":"Schanz - Ponttor - Hauptbahnhof",
-                            "dDirFlg":"2",
-                            "type":"N"
-                          },
-                          {
-                            "locX":1,
-                            "idx":26,
-                            "aProdX":4,
-                            "aTimeS":"120200",
-                            "type":"N"
-                          }
-                        ],
-                        "ctxRecon":"T$A=1@O=Aachen, Hauptbahnhof (Bus)@L=1007@a=128@$A=1@O=Aachen, Schanz (Jakobstraße)@L=1015@a=128@$202109061157$202109061202$Bus  13B$$1$$$$",
-                        "msgL":
-                        [
-                          {
-                            "type":"REM",
-                            "remX":4,
-                            "fLocX":0,
-                            "tLocX":1,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ],
-                            "sort":716963840
-                          }
-                        ],
-                        "subscr":"F",
-                        "prodL":
-                        [
-                          {
-                            "prodX":4,
-                            "fLocX":0,
-                            "tLocX":1,
-                            "fIdx":23,
-                            "tIdx":26
-                          }
-                        ],
-                        "dirL":
-                        [
-                          {
-                            "dirX":0,
-                            "fLocX":0,
-                            "tLocX":1,
-                            "fIdx":23,
-                            "tIdx":26
-                          }
-                        ]
-                      },
-                      {
-                        "jid":"1|262285|4|80|6092021",
-                        "prodX":5,
-                        "dirTxt":"Schanz - Uniklinik - Ponttor",
-                        "dirFlg":"2",
-                        "stopL":
-                        [
-                          {
-                            "locX":0,
-                            "idx":48,
-                            "dProdX":5,
-                            "dTimeS":"120500",
-                            "dDirTxt":"Schanz - Uniklinik - Ponttor",
-                            "dDirFlg":"2",
-                            "type":"N"
-                          },
-                          {
-                            "locX":1,
-                            "idx":51,
-                            "aProdX":5,
-                            "aTimeS":"121000",
-                            "type":"N"
-                          }
-                        ],
-                        "pos":
-                        {
-                          "x":6081409,
-                          "y":50782086,
-                          "layerX":0,
-                          "crdSysX":0
-                        },
-                        "ctxRecon":"T$A=1@O=Aachen, Hauptbahnhof (Bus)@L=1007@a=128@$A=1@O=Aachen, Schanz (Jakobstraße)@L=1015@a=128@$202109061205$202109061210$Bus   3B$$1$$$$",
-                        "msgL":
-                        [
-                          {
-                            "type":"REM",
-                            "remX":4,
-                            "fLocX":0,
-                            "tLocX":1,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ],
-                            "sort":716963840
-                          }
-                        ],
-                        "subscr":"F",
-                        "prodL":
-                        [
-                          {
-                            "prodX":5,
-                            "fLocX":0,
-                            "tLocX":1,
-                            "fIdx":48,
-                            "tIdx":51
-                          }
-                        ],
-                        "dirL":
-                        [
-                          {
-                            "dirX":1,
-                            "fLocX":0,
-                            "tLocX":1,
-                            "fIdx":48,
-                            "tIdx":51
-                          }
-                        ]
-                      },
-                      {
-                        "jid":"1|263078|0|80|6092021",
-                        "prodX":6,
-                        "dirTxt":"Schanz - Ponttor - Hauptbahnhof",
-                        "dirFlg":"2",
-                        "stopL":
-                        [
-                          {
-                            "locX":0,
-                            "idx":7,
-                            "dProdX":6,
-                            "dTimeS":"121200",
-                            "dDirTxt":"Schanz - Ponttor - Hauptbahnhof",
-                            "dDirFlg":"2",
-                            "type":"N"
-                          },
-                          {
-                            "locX":1,
-                            "idx":10,
-                            "aProdX":6,
-                            "aTimeS":"121700",
-                            "type":"N"
-                          }
-                        ],
-                        "ctxRecon":"T$A=1@O=Aachen, Hauptbahnhof (Bus)@L=1007@a=128@$A=1@O=Aachen, Schanz (Jakobstraße)@L=1015@a=128@$202109061212$202109061217$Bus  13B$$1$$$$",
-                        "msgL":
-                        [
-                          {
-                            "type":"REM",
-                            "remX":3,
-                            "fLocX":0,
-                            "tLocX":1,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ],
-                            "sort":716963840
-                          },
-                          {
-                            "type":"REM",
-                            "remX":4,
-                            "fLocX":0,
-                            "tLocX":1,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ],
-                            "sort":716963840
-                          }
-                        ],
-                        "subscr":"F",
-                        "prodL":
-                        [
-                          {
-                            "prodX":6,
-                            "fLocX":0,
-                            "tLocX":1,
-                            "fIdx":7,
-                            "tIdx":10
-                          }
-                        ],
-                        "dirL":
-                        [
-                          {
-                            "dirX":0,
-                            "fLocX":0,
-                            "tLocX":1,
-                            "fIdx":7,
-                            "tIdx":10
-                          }
-                        ]
-                      }
-                    ]
+                    "minC":23,
+                    "maxC":30,
+                    "numC":5
                   },
-                  "ctxRecon":"T$A=1@O=Aachen, Hauptbahnhof (Bus)@L=1007@a=128@$A=1@O=Aachen, Schanz (Jakobstraße)@L=1015@a=128@$202109061112$202109061117$Bus  13B$$3$$$$",
+                  "ctxRecon":"T$A=1@O=Aachen, Hauptbahnhof (Bus)@L=1007@a=128@$A=1@O=Aachen, Schanz (Jakobstraße)@L=1015@a=128@$202112051928$202112051932$Bus   3B$$1$$$$",
                   "msgL":
                   [
                     {
                       "type":"REM",
-                      "remX":3,
+                      "remX":0,
                       "fLocX":0,
                       "tLocX":1,
                       "tagL":
@@ -1568,7 +937,7 @@
                     },
                     {
                       "type":"REM",
-                      "remX":4,
+                      "remX":1,
                       "fLocX":0,
                       "tLocX":1,
                       "tagL":
@@ -1576,27 +945,6 @@
                         "RES_JNY_DTL"
                       ],
                       "sort":716963840
-                    },
-                    {
-                      "type":"HIM",
-                      "himX":0,
-                      "fLocX":0,
-                      "tLocX":2,
-                      "tagL":
-                      [
-                        "RES_CON_HDR","RES_SEC_HDR_H3","SUM_CON_HDR"
-                      ],
-                      "sort":373511247
-                    },
-                    {
-                      "type":"REM",
-                      "remX":5,
-                      "tagL":
-                      [
-                        "SUM_CON_HDR_H3","RES_SEC_HDR_H3"
-                      ],
-                      "sort":13107200,
-                      "persist":false
                     }
                   ],
                   "subscr":"F",
@@ -1623,10 +971,10 @@
                 }
               }
             ],
-            "ctxRecon":"¶HKI¶T$A=1@O=Aachen, Hauptbahnhof (Bus)@L=1007@a=128@$A=1@O=Aachen, Schanz (Jakobstraße)@L=1015@a=128@$202109061112$202109061117$Bus  13B$$3$$$$",
+            "ctxRecon":"¶HKI¶T$A=1@O=Aachen, Hauptbahnhof (Bus)@L=1007@a=128@$A=1@O=Aachen, Schanz (Jakobstraße)@L=1015@a=128@$202112051928$202112051932$Bus   3B$$1$$$$",
             "freq":
             {
-              "minC":7
+              "minC":23
             },
             "trfRes":
             {
@@ -1717,6 +1065,18 @@
                     {
                       "name":"Monats-Ticket Erwachsene Preisstufe 1C",
                       "prc":7250,
+                      "cur":"EUR",
+                      "verbundName":"AVV"
+                    },
+                    {
+                      "name":"Fun-Ticket im ABO",
+                      "prc":1762,
+                      "cur":"EUR",
+                      "verbundName":"AVV"
+                    },
+                    {
+                      "name":"Fun-Ticket",
+                      "prc":2080,
                       "cur":"EUR",
                       "verbundName":"AVV"
                     },
@@ -1854,59 +1214,59 @@
               },
               {
                 "type":"F",
+                "fareSetX":0,
+                "fareX":18
+              },
+              {
+                "type":"F",
+                "fareSetX":0,
+                "fareX":19
+              },
+              {
+                "type":"F",
                 "fareSetX":1,
                 "fareX":0
               }
             ],
-            "msgL":
-            [
-              {
-                "type":"REM",
-                "remX":6,
-                "tagL":
-                [
-                  "SUM_CON_HDR_H3","RES_CON_HDR_H3"
-                ],
-                "sort":13107200,
-                "persist":false
-              }
-            ],
             "conSubscr":"F",
             "recState":"U",
-            "cksum":"c0d50b95_3",
-            "cksumDti":"6ade0900_3"
+            "cksum":"11023a48_3",
+            "cksumDti":"f58ef0b7_3"
           },
           {
             "cid":"C-1",
-            "date":"20210906",
-            "dur":"000200",
+            "date":"20211205",
+            "dur":"000300",
             "chg":0,
             "sDays":
             {
-              "sDaysR":"täglich",
-              "sDaysB":"FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFCFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF80"
+              "sDaysR":"nicht täglich",
+              "sDaysI":"5. bis 11. Dez 2021",
+              "sDaysB":"FFFFFFFFFFFFFFFFFFFFFFFFFFFFF0FFFFFFFFFFFFFFFC0000000000000000000000000000000000000000000000"
             },
             "dep":
             {
               "locX":4,
-              "idx":0,
-              "dProdX":7,
-              "dPlatfS":"7",
+              "idx":3,
+              "dProdX":2,
+              "dPlatfS":"1",
+              "dPlatfR":"1",
               "dInR":true,
-              "dTimeS":"112300",
-              "dTimeR":"112300",
+              "dTimeS":"193100",
+              "dTimeR":"193400",
               "dProgType":"PROGNOSED",
               "type":"N"
             },
             "arr":
             {
               "locX":5,
-              "idx":1,
-              "aProdX":7,
+              "idx":4,
+              "aProdX":2,
               "aPlatfS":"2",
+              "aPlatfR":"2",
               "aOutR":true,
-              "aTimeS":"112500",
-              "aTimeR":"112500",
+              "aTimeS":"193400",
+              "aTimeR":"193600",
               "aProgType":"PROGNOSED",
               "type":"N"
             },
@@ -1914,60 +1274,62 @@
             [
               {
                 "type":"JNY",
-                "icoX":7,
+                "icoX":4,
                 "dep":
                 {
                   "locX":4,
-                  "idx":0,
-                  "dProdX":7,
-                  "dPlatfS":"7",
+                  "idx":3,
+                  "dProdX":2,
+                  "dPlatfS":"1",
+                  "dPlatfR":"1",
                   "dInR":true,
-                  "dTimeS":"112300",
-                  "dTimeR":"112300",
+                  "dTimeS":"193100",
+                  "dTimeR":"193400",
                   "dProgType":"PROGNOSED",
                   "type":"N"
                 },
                 "arr":
                 {
                   "locX":5,
-                  "idx":1,
-                  "aProdX":7,
+                  "idx":4,
+                  "aProdX":2,
                   "aPlatfS":"2",
+                  "aPlatfR":"2",
                   "aOutR":true,
-                  "aTimeS":"112500",
-                  "aTimeR":"112500",
+                  "aTimeS":"193400",
+                  "aTimeR":"193600",
                   "aProgType":"PROGNOSED",
                   "type":"N"
                 },
                 "jny":
                 {
-                  "jid":"1|128490|3|80|6092021",
-                  "prodX":8,
-                  "dirTxt":"Herzogenrath, Bf",
-                  "dirFlg":"2",
+                  "jid":"1|210758|0|80|5122021",
+                  "prodX":3,
+                  "dirTxt":"Alsdorf, Annapark Bf",
+                  "dirFlg":"1",
                   "status":"P",
                   "isRchbl":true,
                   "stopL":
                   [
                     {
                       "locX":4,
-                      "idx":0,
-                      "dProdX":8,
+                      "idx":3,
+                      "dProdX":3,
                       "dInR":true,
-                      "dTimeS":"112300",
-                      "dTimeR":"112300",
+                      "dTimeS":"193100",
+                      "dTimeR":"193400",
                       "dProgType":"PROGNOSED",
-                      "dDirTxt":"Herzogenrath, Bf",
-                      "dDirFlg":"2",
+                      "dDirTxt":"Alsdorf, Annapark Bf",
+                      "dDirFlg":"1",
                       "type":"N"
                     },
                     {
                       "locX":5,
-                      "idx":1,
-                      "aProdX":8,
+                      "idx":4,
+                      "aProdX":3,
                       "aOutR":true,
-                      "aTimeS":"112500",
-                      "aTimeR":"112500",
+                      "aTimeS":"193400",
+                      "aTimeR":"193600",
                       "aProgType":"PROGNOSED",
                       "type":"N"
                     }
@@ -1981,43 +1343,50 @@
                     "layerX":0,
                     "crdSysX":0
                   },
+                  "pos":
+                  {
+                    "x":6157278,
+                    "y":50785907,
+                    "layerX":0,
+                    "crdSysX":0
+                  },
                   "freq":
                   {
-                    "minC":9,
-                    "maxC":60,
-                    "numC":4,
+                    "minC":5,
+                    "maxC":25,
+                    "numC":8,
                     "jnyL":
                     [
                       {
-                        "jid":"1|128490|4|80|6092021",
-                        "prodX":9,
-                        "dirTxt":"Herzogenrath, Bf",
-                        "dirFlg":"2",
+                        "jid":"1|204873|0|80|5122021",
+                        "prodX":4,
+                        "dirTxt":"Essen Hbf",
+                        "dirFlg":"1",
                         "stopL":
                         [
                           {
                             "locX":4,
                             "idx":0,
-                            "dProdX":9,
-                            "dTimeS":"122300",
-                            "dDirTxt":"Herzogenrath, Bf",
-                            "dDirFlg":"2",
+                            "dProdX":4,
+                            "dTimeS":"193700",
+                            "dDirTxt":"Essen Hbf",
+                            "dDirFlg":"1",
                             "type":"N"
                           },
                           {
                             "locX":5,
                             "idx":1,
-                            "aProdX":9,
-                            "aTimeS":"122500",
+                            "aProdX":4,
+                            "aTimeS":"193900",
                             "type":"N"
                           }
                         ],
-                        "ctxRecon":"T$A=1@O=Aachen, Hbf@L=1008@a=128@$A=1@O=Aachen, Schanz Bf@L=1016@a=128@$202109061223$202109061225$    RE 4$$1$$$$",
+                        "ctxRecon":"T$A=1@O=Aachen, Hbf@L=1008@a=128@$A=1@O=Aachen, Schanz Bf@L=1016@a=128@$202112051937$202112051939$   RB 33$$1$$$$",
                         "msgL":
                         [
                           {
                             "type":"REM",
-                            "remX":7,
+                            "remX":2,
                             "fLocX":4,
                             "tLocX":5,
                             "tagL":
@@ -2028,7 +1397,18 @@
                           },
                           {
                             "type":"REM",
-                            "remX":8,
+                            "remX":3,
+                            "fLocX":4,
+                            "tLocX":5,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ],
+                            "sort":697958400
+                          },
+                          {
+                            "type":"REM",
+                            "remX":4,
                             "fLocX":4,
                             "tLocX":5,
                             "tagL":
@@ -2039,7 +1419,7 @@
                           },
                           {
                             "type":"REM",
-                            "remX":9,
+                            "remX":6,
                             "fLocX":4,
                             "tLocX":5,
                             "tagL":
@@ -2047,6 +1427,227 @@
                               "RES_JNY_DTL"
                             ],
                             "sort":716963840
+                          },
+                          {
+                            "type":"REM",
+                            "remX":8,
+                            "fLocX":4,
+                            "tLocX":5,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ],
+                            "sort":716963840
+                          },
+                          {
+                            "type":"REM",
+                            "remX":9,
+                            "fLocX":4,
+                            "tLocX":5,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ],
+                            "sort":744488960
+                          }
+                        ],
+                        "subscr":"F",
+                        "prodL":
+                        [
+                          {
+                            "prodX":4,
+                            "fLocX":4,
+                            "tLocX":5,
+                            "fIdx":0,
+                            "tIdx":1
+                          }
+                        ],
+                        "dirL":
+                        [
+                          {
+                            "dirX":2,
+                            "fLocX":4,
+                            "tLocX":5,
+                            "fIdx":0,
+                            "tIdx":1
+                          }
+                        ]
+                      },
+                      {
+                        "jid":"1|210588|1|80|5122021",
+                        "prodX":5,
+                        "dirTxt":"Stolberg, Hbf",
+                        "dirFlg":"1",
+                        "stopL":
+                        [
+                          {
+                            "locX":4,
+                            "idx":3,
+                            "dProdX":5,
+                            "dTimeS":"200200",
+                            "dDirTxt":"Stolberg, Hbf",
+                            "dDirFlg":"1",
+                            "type":"N"
+                          },
+                          {
+                            "locX":5,
+                            "idx":4,
+                            "aProdX":5,
+                            "aTimeS":"200500",
+                            "type":"N"
+                          }
+                        ],
+                        "ctxRecon":"T$A=1@O=Aachen, Hbf@L=1008@a=128@$A=1@O=Aachen, Schanz Bf@L=1016@a=128@$202112052002$202112052005$   RB 20$$1$$$$",
+                        "msgL":
+                        [
+                          {
+                            "type":"REM",
+                            "remX":2,
+                            "fLocX":4,
+                            "tLocX":5,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ],
+                            "sort":697303040
+                          },
+                          {
+                            "type":"REM",
+                            "remX":3,
+                            "fLocX":4,
+                            "tLocX":5,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ],
+                            "sort":697958400
+                          },
+                          {
+                            "type":"REM",
+                            "remX":4,
+                            "fLocX":4,
+                            "tLocX":5,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ],
+                            "sort":705167360
+                          },
+                          {
+                            "type":"REM",
+                            "remX":5,
+                            "fLocX":4,
+                            "tLocX":5,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ],
+                            "sort":710410240
+                          },
+                          {
+                            "type":"REM",
+                            "remX":6,
+                            "fLocX":4,
+                            "tLocX":5,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ],
+                            "sort":716963840
+                          },
+                          {
+                            "type":"REM",
+                            "remX":7,
+                            "fLocX":4,
+                            "tLocX":5,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ],
+                            "sort":716963840
+                          }
+                        ],
+                        "subscr":"F",
+                        "prodL":
+                        [
+                          {
+                            "prodX":5,
+                            "fLocX":4,
+                            "tLocX":5,
+                            "fIdx":3,
+                            "tIdx":4
+                          }
+                        ],
+                        "dirL":
+                        [
+                          {
+                            "dirX":3,
+                            "fLocX":4,
+                            "tLocX":5,
+                            "fIdx":3,
+                            "tIdx":4
+                          }
+                        ]
+                      },
+                      {
+                        "jid":"1|157061|0|80|5122021",
+                        "prodX":6,
+                        "dirTxt":"Dortmund Hbf",
+                        "dirFlg":"2",
+                        "stopL":
+                        [
+                          {
+                            "locX":4,
+                            "idx":0,
+                            "dProdX":6,
+                            "dTimeS":"202300",
+                            "dDirTxt":"Dortmund Hbf",
+                            "dDirFlg":"2",
+                            "type":"N"
+                          },
+                          {
+                            "locX":5,
+                            "idx":1,
+                            "aProdX":6,
+                            "aTimeS":"202500",
+                            "type":"N"
+                          }
+                        ],
+                        "ctxRecon":"T$A=1@O=Aachen, Hbf@L=1008@a=128@$A=1@O=Aachen, Schanz Bf@L=1016@a=128@$202112052023$202112052025$    RE 4$$1$$$$",
+                        "msgL":
+                        [
+                          {
+                            "type":"REM",
+                            "remX":2,
+                            "fLocX":4,
+                            "tLocX":5,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ],
+                            "sort":697303040
+                          },
+                          {
+                            "type":"REM",
+                            "remX":3,
+                            "fLocX":4,
+                            "tLocX":5,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ],
+                            "sort":697958400
+                          },
+                          {
+                            "type":"REM",
+                            "remX":4,
+                            "fLocX":4,
+                            "tLocX":5,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ],
+                            "sort":705167360
                           },
                           {
                             "type":"REM",
@@ -2068,7 +1669,7 @@
                             [
                               "RES_JNY_DTL"
                             ],
-                            "sort":744488960
+                            "sort":716963840
                           },
                           {
                             "type":"REM",
@@ -2090,7 +1691,7 @@
                             [
                               "RES_JNY_DTL"
                             ],
-                            "sort":750387200
+                            "sort":744488960
                           },
                           {
                             "type":"REM",
@@ -2101,11 +1702,22 @@
                             [
                               "RES_JNY_DTL"
                             ],
-                            "sort":751042560
+                            "sort":750387200
                           },
                           {
                             "type":"REM",
                             "remX":15,
+                            "fLocX":4,
+                            "tLocX":5,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ],
+                            "sort":751042560
+                          },
+                          {
+                            "type":"REM",
+                            "remX":16,
                             "fLocX":4,
                             "tLocX":5,
                             "tagL":
@@ -2119,7 +1731,1188 @@
                         "prodL":
                         [
                           {
-                            "prodX":9,
+                            "prodX":6,
+                            "fLocX":4,
+                            "tLocX":5,
+                            "fIdx":0,
+                            "tIdx":1
+                          }
+                        ],
+                        "dirL":
+                        [
+                          {
+                            "dirX":4,
+                            "fLocX":4,
+                            "tLocX":5,
+                            "fIdx":0,
+                            "tIdx":1
+                          }
+                        ]
+                      },
+                      {
+                        "jid":"1|210748|1|80|5122021",
+                        "prodX":7,
+                        "dirTxt":"Alsdorf, Annapark Bf",
+                        "dirFlg":"1",
+                        "stopL":
+                        [
+                          {
+                            "locX":4,
+                            "idx":3,
+                            "dProdX":7,
+                            "dTimeS":"203200",
+                            "dDirTxt":"Alsdorf, Annapark Bf",
+                            "dDirFlg":"1",
+                            "type":"N"
+                          },
+                          {
+                            "locX":5,
+                            "idx":4,
+                            "aProdX":7,
+                            "aTimeS":"203500",
+                            "type":"N"
+                          }
+                        ],
+                        "ctxRecon":"T$A=1@O=Aachen, Hbf@L=1008@a=128@$A=1@O=Aachen, Schanz Bf@L=1016@a=128@$202112052032$202112052035$   RB 20$$1$$$$",
+                        "msgL":
+                        [
+                          {
+                            "type":"REM",
+                            "remX":2,
+                            "fLocX":4,
+                            "tLocX":5,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ],
+                            "sort":697303040
+                          },
+                          {
+                            "type":"REM",
+                            "remX":3,
+                            "fLocX":4,
+                            "tLocX":5,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ],
+                            "sort":697958400
+                          },
+                          {
+                            "type":"REM",
+                            "remX":4,
+                            "fLocX":4,
+                            "tLocX":5,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ],
+                            "sort":705167360
+                          },
+                          {
+                            "type":"REM",
+                            "remX":5,
+                            "fLocX":4,
+                            "tLocX":5,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ],
+                            "sort":710410240
+                          },
+                          {
+                            "type":"REM",
+                            "remX":6,
+                            "fLocX":4,
+                            "tLocX":5,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ],
+                            "sort":716963840
+                          },
+                          {
+                            "type":"REM",
+                            "remX":7,
+                            "fLocX":4,
+                            "tLocX":5,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ],
+                            "sort":716963840
+                          }
+                        ],
+                        "subscr":"F",
+                        "prodL":
+                        [
+                          {
+                            "prodX":7,
+                            "fLocX":4,
+                            "tLocX":5,
+                            "fIdx":3,
+                            "tIdx":4
+                          }
+                        ],
+                        "dirL":
+                        [
+                          {
+                            "dirX":1,
+                            "fLocX":4,
+                            "tLocX":5,
+                            "fIdx":3,
+                            "tIdx":4
+                          }
+                        ]
+                      },
+                      {
+                        "jid":"1|204872|0|80|5122021",
+                        "prodX":8,
+                        "dirTxt":"Essen Hbf",
+                        "dirFlg":"1",
+                        "stopL":
+                        [
+                          {
+                            "locX":4,
+                            "idx":0,
+                            "dProdX":8,
+                            "dTimeS":"203700",
+                            "dDirTxt":"Essen Hbf",
+                            "dDirFlg":"1",
+                            "type":"N"
+                          },
+                          {
+                            "locX":5,
+                            "idx":1,
+                            "aProdX":8,
+                            "aTimeS":"203900",
+                            "type":"N"
+                          }
+                        ],
+                        "ctxRecon":"T$A=1@O=Aachen, Hbf@L=1008@a=128@$A=1@O=Aachen, Schanz Bf@L=1016@a=128@$202112052037$202112052039$   RB 33$$1$$$$",
+                        "msgL":
+                        [
+                          {
+                            "type":"REM",
+                            "remX":2,
+                            "fLocX":4,
+                            "tLocX":5,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ],
+                            "sort":697303040
+                          },
+                          {
+                            "type":"REM",
+                            "remX":3,
+                            "fLocX":4,
+                            "tLocX":5,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ],
+                            "sort":697958400
+                          },
+                          {
+                            "type":"REM",
+                            "remX":4,
+                            "fLocX":4,
+                            "tLocX":5,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ],
+                            "sort":705167360
+                          },
+                          {
+                            "type":"REM",
+                            "remX":6,
+                            "fLocX":4,
+                            "tLocX":5,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ],
+                            "sort":716963840
+                          },
+                          {
+                            "type":"REM",
+                            "remX":8,
+                            "fLocX":4,
+                            "tLocX":5,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ],
+                            "sort":716963840
+                          },
+                          {
+                            "type":"REM",
+                            "remX":9,
+                            "fLocX":4,
+                            "tLocX":5,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ],
+                            "sort":744488960
+                          }
+                        ],
+                        "subscr":"F",
+                        "prodL":
+                        [
+                          {
+                            "prodX":8,
+                            "fLocX":4,
+                            "tLocX":5,
+                            "fIdx":0,
+                            "tIdx":1
+                          }
+                        ],
+                        "dirL":
+                        [
+                          {
+                            "dirX":2,
+                            "fLocX":4,
+                            "tLocX":5,
+                            "fIdx":0,
+                            "tIdx":1
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "ctxRecon":"T$A=1@O=Aachen, Hbf@L=1008@a=128@$A=1@O=Aachen, Schanz Bf@L=1016@a=128@$202112051931$202112051934$   RB 20$$1$$$$",
+                  "msgL":
+                  [
+                    {
+                      "type":"REM",
+                      "remX":2,
+                      "fLocX":4,
+                      "tLocX":5,
+                      "tagL":
+                      [
+                        "RES_JNY_DTL"
+                      ],
+                      "sort":697303040
+                    },
+                    {
+                      "type":"REM",
+                      "remX":3,
+                      "fLocX":4,
+                      "tLocX":5,
+                      "tagL":
+                      [
+                        "RES_JNY_DTL"
+                      ],
+                      "sort":697958400
+                    },
+                    {
+                      "type":"REM",
+                      "remX":4,
+                      "fLocX":4,
+                      "tLocX":5,
+                      "tagL":
+                      [
+                        "RES_JNY_DTL"
+                      ],
+                      "sort":705167360
+                    },
+                    {
+                      "type":"REM",
+                      "remX":5,
+                      "fLocX":4,
+                      "tLocX":5,
+                      "tagL":
+                      [
+                        "RES_JNY_DTL"
+                      ],
+                      "sort":710410240
+                    },
+                    {
+                      "type":"REM",
+                      "remX":6,
+                      "fLocX":4,
+                      "tLocX":5,
+                      "tagL":
+                      [
+                        "RES_JNY_DTL"
+                      ],
+                      "sort":716963840
+                    },
+                    {
+                      "type":"REM",
+                      "remX":7,
+                      "fLocX":4,
+                      "tLocX":5,
+                      "tagL":
+                      [
+                        "RES_JNY_DTL"
+                      ],
+                      "sort":716963840
+                    },
+                    {
+                      "type":"HIM",
+                      "himX":0,
+                      "fLocX":4,
+                      "tLocX":5,
+                      "tagL":
+                      [
+                        "RES_CON_HDR","RES_SEC_HDR_H3","SUM_CON_HDR"
+                      ],
+                      "sort":373580412
+                    }
+                  ],
+                  "subscr":"F",
+                  "prodL":
+                  [
+                    {
+                      "prodX":3,
+                      "fLocX":4,
+                      "tLocX":5,
+                      "fIdx":3,
+                      "tIdx":4
+                    }
+                  ],
+                  "dirL":
+                  [
+                    {
+                      "dirX":1,
+                      "fLocX":4,
+                      "tLocX":5,
+                      "fIdx":3,
+                      "tIdx":4
+                    }
+                  ]
+                }
+              }
+            ],
+            "ctxRecon":"¶HKI¶T$A=1@O=Aachen, Hbf@L=1008@a=128@$A=1@O=Aachen, Schanz Bf@L=1016@a=128@$202112051931$202112051934$   RB 20$$1$$$$",
+            "freq":
+            {
+              "minC":5
+            },
+            "trfRes":
+            {
+              "fareSetL":
+              [
+                {
+                  "desc":"AVV-Tarif",
+                  "fareL":
+                  [
+                    {
+                      "name":"Einzel-Ticket Erwachsene City-XL Aachen",
+                      "prc":180,
+                      "cur":"EUR",
+                      "verbundName":"AVV"
+                    },
+                    {
+                      "name":"4Fahrten-Ticket Erwachsene City XL Aachen",
+                      "prc":720,
+                      "cur":"EUR",
+                      "verbundName":"AVV"
+                    },
+                    {
+                      "name":"Einzel-Ticket Kinder Preisstufe 1",
+                      "prc":150,
+                      "cur":"EUR",
+                      "verbundName":"AVV"
+                    },
+                    {
+                      "name":"4-Fahrten Ticket Kinder Preisstufe 1",
+                      "prc":600,
+                      "cur":"EUR",
+                      "verbundName":"AVV"
+                    },
+                    {
+                      "name":"24-Stunden-Ticket 1 Person Preisstufe 1",
+                      "prc":810,
+                      "cur":"EUR",
+                      "verbundName":"AVV"
+                    },
+                    {
+                      "name":"24-Stunden-Ticket 5 Personen Preisstufe 1",
+                      "prc":1100,
+                      "cur":"EUR",
+                      "verbundName":"AVV"
+                    },
+                    {
+                      "name":"Wochen-Ticket Erwachsene Preisstufe 1",
+                      "prc":2460,
+                      "cur":"EUR",
+                      "verbundName":"AVV"
+                    },
+                    {
+                      "name":"Monats-Ticket Erwachsene City XL Aachen ",
+                      "prc":4150,
+                      "cur":"EUR",
+                      "verbundName":"AVV"
+                    },
+                    {
+                      "name":"Monats-ABO Erwachsene Preisstufe 1C",
+                      "prc":6126,
+                      "cur":"EUR",
+                      "verbundName":"AVV"
+                    },
+                    {
+                      "name":"Monats-Ticket Erwachsene Preisstufe 1C",
+                      "prc":7250,
+                      "cur":"EUR",
+                      "verbundName":"AVV"
+                    },
+                    {
+                      "name":"Fun-Ticket im ABO",
+                      "prc":1762,
+                      "cur":"EUR",
+                      "verbundName":"AVV"
+                    },
+                    {
+                      "name":"Fun-Ticket",
+                      "prc":2080,
+                      "cur":"EUR",
+                      "verbundName":"AVV"
+                    },
+                    {
+                      "name":"Schüler-ABO Preisstufe 1C",
+                      "prc":4891,
+                      "cur":"EUR",
+                      "verbundName":"AVV"
+                    },
+                    {
+                      "name":"Schüler-Ticket (Monat) Preisstufe 1C",
+                      "prc":5655,
+                      "cur":"EUR",
+                      "verbundName":"AVV"
+                    },
+                    {
+                      "name":"Azubi-ABO",
+                      "prc":6300,
+                      "cur":"EUR",
+                      "verbundName":"AVV"
+                    },
+                    {
+                      "name":"Aktiv-ABO (für Senioren ab 60; 1 Person)",
+                      "prc":6350,
+                      "cur":"EUR",
+                      "verbundName":"AVV"
+                    }
+                  ]
+                },
+                {
+                  "desc":"euregioticket",
+                  "fareL":
+                  [
+                    {
+                      "name":"euregioticket. Ggf. weitere lokale Tickets beachten.",
+                      "prc":1900,
+                      "cur":"EUR",
+                      "verbundName":"euregio"
+                    }
+                  ]
+                }
+              ]
+            },
+            "ovwTrfRefL":
+            [
+              {
+                "type":"F",
+                "fareSetX":0,
+                "fareX":0
+              },
+              {
+                "type":"F",
+                "fareSetX":0,
+                "fareX":1
+              },
+              {
+                "type":"F",
+                "fareSetX":0,
+                "fareX":2
+              },
+              {
+                "type":"F",
+                "fareSetX":0,
+                "fareX":3
+              },
+              {
+                "type":"F",
+                "fareSetX":0,
+                "fareX":4
+              },
+              {
+                "type":"F",
+                "fareSetX":0,
+                "fareX":5
+              },
+              {
+                "type":"F",
+                "fareSetX":0,
+                "fareX":6
+              },
+              {
+                "type":"F",
+                "fareSetX":0,
+                "fareX":7
+              },
+              {
+                "type":"F",
+                "fareSetX":0,
+                "fareX":8
+              },
+              {
+                "type":"F",
+                "fareSetX":0,
+                "fareX":9
+              },
+              {
+                "type":"F",
+                "fareSetX":0,
+                "fareX":10
+              },
+              {
+                "type":"F",
+                "fareSetX":0,
+                "fareX":11
+              },
+              {
+                "type":"F",
+                "fareSetX":0,
+                "fareX":12
+              },
+              {
+                "type":"F",
+                "fareSetX":0,
+                "fareX":13
+              },
+              {
+                "type":"F",
+                "fareSetX":0,
+                "fareX":14
+              },
+              {
+                "type":"F",
+                "fareSetX":0,
+                "fareX":15
+              },
+              {
+                "type":"F",
+                "fareSetX":1,
+                "fareX":0
+              }
+            ],
+            "conSubscr":"F",
+            "recState":"U",
+            "cksum":"de6b7e6b_3",
+            "cksumDti":"c1eaf511_3"
+          },
+          {
+            "cid":"C-2",
+            "date":"20211205",
+            "dur":"000200",
+            "chg":0,
+            "sDays":
+            {
+              "sDaysR":"täglich",
+              "sDaysB":"FFFFF000000000000000000000000000000007FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF0"
+            },
+            "dep":
+            {
+              "locX":4,
+              "idx":0,
+              "dProdX":9,
+              "dPlatfS":"6",
+              "dPlatfR":"6",
+              "dInR":true,
+              "dTimeS":"193700",
+              "dTimeR":"193700",
+              "dProgType":"PROGNOSED",
+              "type":"N"
+            },
+            "arr":
+            {
+              "locX":5,
+              "idx":1,
+              "aProdX":9,
+              "aPlatfS":"2",
+              "aPlatfR":"2",
+              "aOutR":true,
+              "aTimeS":"193900",
+              "aTimeR":"193900",
+              "aProgType":"PROGNOSED",
+              "type":"N"
+            },
+            "secL":
+            [
+              {
+                "type":"JNY",
+                "icoX":4,
+                "dep":
+                {
+                  "locX":4,
+                  "idx":0,
+                  "dProdX":9,
+                  "dPlatfS":"6",
+                  "dPlatfR":"6",
+                  "dInR":true,
+                  "dTimeS":"193700",
+                  "dTimeR":"193700",
+                  "dProgType":"PROGNOSED",
+                  "type":"N"
+                },
+                "arr":
+                {
+                  "locX":5,
+                  "idx":1,
+                  "aProdX":9,
+                  "aPlatfS":"2",
+                  "aPlatfR":"2",
+                  "aOutR":true,
+                  "aTimeS":"193900",
+                  "aTimeR":"193900",
+                  "aProgType":"PROGNOSED",
+                  "type":"N"
+                },
+                "jny":
+                {
+                  "jid":"1|204873|0|80|5122021",
+                  "prodX":4,
+                  "dirTxt":"Essen Hbf",
+                  "dirFlg":"1",
+                  "status":"P",
+                  "isRchbl":true,
+                  "stopL":
+                  [
+                    {
+                      "locX":4,
+                      "idx":0,
+                      "dProdX":4,
+                      "dInR":true,
+                      "dTimeS":"193700",
+                      "dTimeR":"193700",
+                      "dProgType":"PROGNOSED",
+                      "dDirTxt":"Essen Hbf",
+                      "dDirFlg":"1",
+                      "type":"N"
+                    },
+                    {
+                      "locX":5,
+                      "idx":1,
+                      "aProdX":4,
+                      "aOutR":true,
+                      "aTimeS":"193900",
+                      "aTimeR":"193900",
+                      "aProgType":"PROGNOSED",
+                      "type":"N"
+                    }
+                  ],
+                  "polyG":
+                  {
+                    "polyXL":
+                    [
+                      2
+                    ],
+                    "layerX":0,
+                    "crdSysX":0
+                  },
+                  "freq":
+                  {
+                    "minC":5,
+                    "maxC":25,
+                    "numC":9,
+                    "jnyL":
+                    [
+                      {
+                        "jid":"1|210588|1|80|5122021",
+                        "prodX":5,
+                        "dirTxt":"Stolberg, Hbf",
+                        "dirFlg":"1",
+                        "stopL":
+                        [
+                          {
+                            "locX":4,
+                            "idx":3,
+                            "dProdX":5,
+                            "dTimeS":"200200",
+                            "dDirTxt":"Stolberg, Hbf",
+                            "dDirFlg":"1",
+                            "type":"N"
+                          },
+                          {
+                            "locX":5,
+                            "idx":4,
+                            "aProdX":5,
+                            "aTimeS":"200500",
+                            "type":"N"
+                          }
+                        ],
+                        "ctxRecon":"T$A=1@O=Aachen, Hbf@L=1008@a=128@$A=1@O=Aachen, Schanz Bf@L=1016@a=128@$202112052002$202112052005$   RB 20$$1$$$$",
+                        "msgL":
+                        [
+                          {
+                            "type":"REM",
+                            "remX":2,
+                            "fLocX":4,
+                            "tLocX":5,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ],
+                            "sort":697303040
+                          },
+                          {
+                            "type":"REM",
+                            "remX":3,
+                            "fLocX":4,
+                            "tLocX":5,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ],
+                            "sort":697958400
+                          },
+                          {
+                            "type":"REM",
+                            "remX":4,
+                            "fLocX":4,
+                            "tLocX":5,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ],
+                            "sort":705167360
+                          },
+                          {
+                            "type":"REM",
+                            "remX":5,
+                            "fLocX":4,
+                            "tLocX":5,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ],
+                            "sort":710410240
+                          },
+                          {
+                            "type":"REM",
+                            "remX":6,
+                            "fLocX":4,
+                            "tLocX":5,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ],
+                            "sort":716963840
+                          },
+                          {
+                            "type":"REM",
+                            "remX":7,
+                            "fLocX":4,
+                            "tLocX":5,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ],
+                            "sort":716963840
+                          }
+                        ],
+                        "subscr":"F",
+                        "prodL":
+                        [
+                          {
+                            "prodX":5,
+                            "fLocX":4,
+                            "tLocX":5,
+                            "fIdx":3,
+                            "tIdx":4
+                          }
+                        ],
+                        "dirL":
+                        [
+                          {
+                            "dirX":3,
+                            "fLocX":4,
+                            "tLocX":5,
+                            "fIdx":3,
+                            "tIdx":4
+                          }
+                        ]
+                      },
+                      {
+                        "jid":"1|157061|0|80|5122021",
+                        "prodX":6,
+                        "dirTxt":"Dortmund Hbf",
+                        "dirFlg":"2",
+                        "stopL":
+                        [
+                          {
+                            "locX":4,
+                            "idx":0,
+                            "dProdX":6,
+                            "dTimeS":"202300",
+                            "dDirTxt":"Dortmund Hbf",
+                            "dDirFlg":"2",
+                            "type":"N"
+                          },
+                          {
+                            "locX":5,
+                            "idx":1,
+                            "aProdX":6,
+                            "aTimeS":"202500",
+                            "type":"N"
+                          }
+                        ],
+                        "ctxRecon":"T$A=1@O=Aachen, Hbf@L=1008@a=128@$A=1@O=Aachen, Schanz Bf@L=1016@a=128@$202112052023$202112052025$    RE 4$$1$$$$",
+                        "msgL":
+                        [
+                          {
+                            "type":"REM",
+                            "remX":2,
+                            "fLocX":4,
+                            "tLocX":5,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ],
+                            "sort":697303040
+                          },
+                          {
+                            "type":"REM",
+                            "remX":3,
+                            "fLocX":4,
+                            "tLocX":5,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ],
+                            "sort":697958400
+                          },
+                          {
+                            "type":"REM",
+                            "remX":4,
+                            "fLocX":4,
+                            "tLocX":5,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ],
+                            "sort":705167360
+                          },
+                          {
+                            "type":"REM",
+                            "remX":10,
+                            "fLocX":4,
+                            "tLocX":5,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ],
+                            "sort":716963840
+                          },
+                          {
+                            "type":"REM",
+                            "remX":11,
+                            "fLocX":4,
+                            "tLocX":5,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ],
+                            "sort":716963840
+                          },
+                          {
+                            "type":"REM",
+                            "remX":12,
+                            "fLocX":4,
+                            "tLocX":5,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ],
+                            "sort":744488960
+                          },
+                          {
+                            "type":"REM",
+                            "remX":13,
+                            "fLocX":4,
+                            "tLocX":5,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ],
+                            "sort":744488960
+                          },
+                          {
+                            "type":"REM",
+                            "remX":14,
+                            "fLocX":4,
+                            "tLocX":5,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ],
+                            "sort":750387200
+                          },
+                          {
+                            "type":"REM",
+                            "remX":15,
+                            "fLocX":4,
+                            "tLocX":5,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ],
+                            "sort":751042560
+                          },
+                          {
+                            "type":"REM",
+                            "remX":16,
+                            "fLocX":4,
+                            "tLocX":5,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ],
+                            "sort":764149760
+                          }
+                        ],
+                        "subscr":"F",
+                        "prodL":
+                        [
+                          {
+                            "prodX":6,
+                            "fLocX":4,
+                            "tLocX":5,
+                            "fIdx":0,
+                            "tIdx":1
+                          }
+                        ],
+                        "dirL":
+                        [
+                          {
+                            "dirX":4,
+                            "fLocX":4,
+                            "tLocX":5,
+                            "fIdx":0,
+                            "tIdx":1
+                          }
+                        ]
+                      },
+                      {
+                        "jid":"1|210748|1|80|5122021",
+                        "prodX":7,
+                        "dirTxt":"Alsdorf, Annapark Bf",
+                        "dirFlg":"1",
+                        "stopL":
+                        [
+                          {
+                            "locX":4,
+                            "idx":3,
+                            "dProdX":7,
+                            "dTimeS":"203200",
+                            "dDirTxt":"Alsdorf, Annapark Bf",
+                            "dDirFlg":"1",
+                            "type":"N"
+                          },
+                          {
+                            "locX":5,
+                            "idx":4,
+                            "aProdX":7,
+                            "aTimeS":"203500",
+                            "type":"N"
+                          }
+                        ],
+                        "ctxRecon":"T$A=1@O=Aachen, Hbf@L=1008@a=128@$A=1@O=Aachen, Schanz Bf@L=1016@a=128@$202112052032$202112052035$   RB 20$$1$$$$",
+                        "msgL":
+                        [
+                          {
+                            "type":"REM",
+                            "remX":2,
+                            "fLocX":4,
+                            "tLocX":5,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ],
+                            "sort":697303040
+                          },
+                          {
+                            "type":"REM",
+                            "remX":3,
+                            "fLocX":4,
+                            "tLocX":5,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ],
+                            "sort":697958400
+                          },
+                          {
+                            "type":"REM",
+                            "remX":4,
+                            "fLocX":4,
+                            "tLocX":5,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ],
+                            "sort":705167360
+                          },
+                          {
+                            "type":"REM",
+                            "remX":5,
+                            "fLocX":4,
+                            "tLocX":5,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ],
+                            "sort":710410240
+                          },
+                          {
+                            "type":"REM",
+                            "remX":6,
+                            "fLocX":4,
+                            "tLocX":5,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ],
+                            "sort":716963840
+                          },
+                          {
+                            "type":"REM",
+                            "remX":7,
+                            "fLocX":4,
+                            "tLocX":5,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ],
+                            "sort":716963840
+                          }
+                        ],
+                        "subscr":"F",
+                        "prodL":
+                        [
+                          {
+                            "prodX":7,
+                            "fLocX":4,
+                            "tLocX":5,
+                            "fIdx":3,
+                            "tIdx":4
+                          }
+                        ],
+                        "dirL":
+                        [
+                          {
+                            "dirX":1,
+                            "fLocX":4,
+                            "tLocX":5,
+                            "fIdx":3,
+                            "tIdx":4
+                          }
+                        ]
+                      },
+                      {
+                        "jid":"1|204872|0|80|5122021",
+                        "prodX":8,
+                        "dirTxt":"Essen Hbf",
+                        "dirFlg":"1",
+                        "stopL":
+                        [
+                          {
+                            "locX":4,
+                            "idx":0,
+                            "dProdX":8,
+                            "dTimeS":"203700",
+                            "dDirTxt":"Essen Hbf",
+                            "dDirFlg":"1",
+                            "type":"N"
+                          },
+                          {
+                            "locX":5,
+                            "idx":1,
+                            "aProdX":8,
+                            "aTimeS":"203900",
+                            "type":"N"
+                          }
+                        ],
+                        "ctxRecon":"T$A=1@O=Aachen, Hbf@L=1008@a=128@$A=1@O=Aachen, Schanz Bf@L=1016@a=128@$202112052037$202112052039$   RB 33$$1$$$$",
+                        "msgL":
+                        [
+                          {
+                            "type":"REM",
+                            "remX":2,
+                            "fLocX":4,
+                            "tLocX":5,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ],
+                            "sort":697303040
+                          },
+                          {
+                            "type":"REM",
+                            "remX":3,
+                            "fLocX":4,
+                            "tLocX":5,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ],
+                            "sort":697958400
+                          },
+                          {
+                            "type":"REM",
+                            "remX":4,
+                            "fLocX":4,
+                            "tLocX":5,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ],
+                            "sort":705167360
+                          },
+                          {
+                            "type":"REM",
+                            "remX":6,
+                            "fLocX":4,
+                            "tLocX":5,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ],
+                            "sort":716963840
+                          },
+                          {
+                            "type":"REM",
+                            "remX":8,
+                            "fLocX":4,
+                            "tLocX":5,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ],
+                            "sort":716963840
+                          },
+                          {
+                            "type":"REM",
+                            "remX":9,
+                            "fLocX":4,
+                            "tLocX":5,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ],
+                            "sort":744488960
+                          }
+                        ],
+                        "subscr":"F",
+                        "prodL":
+                        [
+                          {
+                            "prodX":8,
                             "fLocX":4,
                             "tLocX":5,
                             "fIdx":0,
@@ -2138,7 +2931,7 @@
                         ]
                       },
                       {
-                        "jid":"1|184367|0|80|6092021",
+                        "jid":"1|210588|2|80|5122021",
                         "prodX":10,
                         "dirTxt":"Stolberg, Hbf",
                         "dirFlg":"1",
@@ -2148,7 +2941,7 @@
                             "locX":4,
                             "idx":3,
                             "dProdX":10,
-                            "dTimeS":"130200",
+                            "dTimeS":"210200",
                             "dDirTxt":"Stolberg, Hbf",
                             "dDirFlg":"1",
                             "type":"N"
@@ -2157,16 +2950,16 @@
                             "locX":5,
                             "idx":4,
                             "aProdX":10,
-                            "aTimeS":"130500",
+                            "aTimeS":"210500",
                             "type":"N"
                           }
                         ],
-                        "ctxRecon":"T$A=1@O=Aachen, Hbf@L=1008@a=128@$A=1@O=Aachen, Schanz Bf@L=1016@a=128@$202109061302$202109061305$   RB 20$$1$$$$",
+                        "ctxRecon":"T$A=1@O=Aachen, Hbf@L=1008@a=128@$A=1@O=Aachen, Schanz Bf@L=1016@a=128@$202112052102$202112052105$   RB 20$$1$$$$",
                         "msgL":
                         [
                           {
                             "type":"REM",
-                            "remX":7,
+                            "remX":2,
                             "fLocX":4,
                             "tLocX":5,
                             "tagL":
@@ -2177,7 +2970,18 @@
                           },
                           {
                             "type":"REM",
-                            "remX":8,
+                            "remX":3,
+                            "fLocX":4,
+                            "tLocX":5,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ],
+                            "sort":697958400
+                          },
+                          {
+                            "type":"REM",
+                            "remX":4,
                             "fLocX":4,
                             "tLocX":5,
                             "tagL":
@@ -2188,7 +2992,7 @@
                           },
                           {
                             "type":"REM",
-                            "remX":16,
+                            "remX":5,
                             "fLocX":4,
                             "tLocX":5,
                             "tagL":
@@ -2199,7 +3003,7 @@
                           },
                           {
                             "type":"REM",
-                            "remX":17,
+                            "remX":6,
                             "fLocX":4,
                             "tLocX":5,
                             "tagL":
@@ -2210,7 +3014,7 @@
                           },
                           {
                             "type":"REM",
-                            "remX":18,
+                            "remX":7,
                             "fLocX":4,
                             "tLocX":5,
                             "tagL":
@@ -2241,269 +3045,15 @@
                             "tIdx":4
                           }
                         ]
-                      },
-                      {
-                        "jid":"1|128490|5|80|6092021",
-                        "prodX":11,
-                        "dirTxt":"Herzogenrath, Bf",
-                        "dirFlg":"2",
-                        "stopL":
-                        [
-                          {
-                            "locX":4,
-                            "idx":0,
-                            "dProdX":11,
-                            "dTimeS":"132300",
-                            "dDirTxt":"Herzogenrath, Bf",
-                            "dDirFlg":"2",
-                            "type":"N"
-                          },
-                          {
-                            "locX":5,
-                            "idx":1,
-                            "aProdX":11,
-                            "aTimeS":"132500",
-                            "type":"N"
-                          }
-                        ],
-                        "ctxRecon":"T$A=1@O=Aachen, Hbf@L=1008@a=128@$A=1@O=Aachen, Schanz Bf@L=1016@a=128@$202109061323$202109061325$    RE 4$$1$$$$",
-                        "msgL":
-                        [
-                          {
-                            "type":"REM",
-                            "remX":7,
-                            "fLocX":4,
-                            "tLocX":5,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ],
-                            "sort":697303040
-                          },
-                          {
-                            "type":"REM",
-                            "remX":8,
-                            "fLocX":4,
-                            "tLocX":5,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ],
-                            "sort":705167360
-                          },
-                          {
-                            "type":"REM",
-                            "remX":9,
-                            "fLocX":4,
-                            "tLocX":5,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ],
-                            "sort":716963840
-                          },
-                          {
-                            "type":"REM",
-                            "remX":10,
-                            "fLocX":4,
-                            "tLocX":5,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ],
-                            "sort":716963840
-                          },
-                          {
-                            "type":"REM",
-                            "remX":11,
-                            "fLocX":4,
-                            "tLocX":5,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ],
-                            "sort":744488960
-                          },
-                          {
-                            "type":"REM",
-                            "remX":12,
-                            "fLocX":4,
-                            "tLocX":5,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ],
-                            "sort":744488960
-                          },
-                          {
-                            "type":"REM",
-                            "remX":13,
-                            "fLocX":4,
-                            "tLocX":5,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ],
-                            "sort":750387200
-                          },
-                          {
-                            "type":"REM",
-                            "remX":14,
-                            "fLocX":4,
-                            "tLocX":5,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ],
-                            "sort":751042560
-                          },
-                          {
-                            "type":"REM",
-                            "remX":15,
-                            "fLocX":4,
-                            "tLocX":5,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ],
-                            "sort":764149760
-                          }
-                        ],
-                        "subscr":"F",
-                        "prodL":
-                        [
-                          {
-                            "prodX":11,
-                            "fLocX":4,
-                            "tLocX":5,
-                            "fIdx":0,
-                            "tIdx":1
-                          }
-                        ],
-                        "dirL":
-                        [
-                          {
-                            "dirX":2,
-                            "fLocX":4,
-                            "tLocX":5,
-                            "fIdx":0,
-                            "tIdx":1
-                          }
-                        ]
-                      },
-                      {
-                        "jid":"1|184484|0|80|6092021",
-                        "prodX":12,
-                        "dirTxt":"Alsdorf, Annapark Bf",
-                        "dirFlg":"1",
-                        "stopL":
-                        [
-                          {
-                            "locX":4,
-                            "idx":3,
-                            "dProdX":12,
-                            "dTimeS":"133200",
-                            "dDirTxt":"Alsdorf, Annapark Bf",
-                            "dDirFlg":"1",
-                            "type":"N"
-                          },
-                          {
-                            "locX":5,
-                            "idx":4,
-                            "aProdX":12,
-                            "aTimeS":"133500",
-                            "type":"N"
-                          }
-                        ],
-                        "ctxRecon":"T$A=1@O=Aachen, Hbf@L=1008@a=128@$A=1@O=Aachen, Schanz Bf@L=1016@a=128@$202109061332$202109061335$   RB 20$$1$$$$",
-                        "msgL":
-                        [
-                          {
-                            "type":"REM",
-                            "remX":7,
-                            "fLocX":4,
-                            "tLocX":5,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ],
-                            "sort":697303040
-                          },
-                          {
-                            "type":"REM",
-                            "remX":8,
-                            "fLocX":4,
-                            "tLocX":5,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ],
-                            "sort":705167360
-                          },
-                          {
-                            "type":"REM",
-                            "remX":16,
-                            "fLocX":4,
-                            "tLocX":5,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ],
-                            "sort":710410240
-                          },
-                          {
-                            "type":"REM",
-                            "remX":17,
-                            "fLocX":4,
-                            "tLocX":5,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ],
-                            "sort":716963840
-                          },
-                          {
-                            "type":"REM",
-                            "remX":18,
-                            "fLocX":4,
-                            "tLocX":5,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ],
-                            "sort":716963840
-                          }
-                        ],
-                        "subscr":"F",
-                        "prodL":
-                        [
-                          {
-                            "prodX":12,
-                            "fLocX":4,
-                            "tLocX":5,
-                            "fIdx":3,
-                            "tIdx":4
-                          }
-                        ],
-                        "dirL":
-                        [
-                          {
-                            "dirX":4,
-                            "fLocX":4,
-                            "tLocX":5,
-                            "fIdx":3,
-                            "tIdx":4
-                          }
-                        ]
                       }
                     ]
                   },
-                  "ctxRecon":"T$A=1@O=Aachen, Hbf@L=1008@a=128@$A=1@O=Aachen, Schanz Bf@L=1016@a=128@$202109061123$202109061125$    RE 4$$1$$$$",
+                  "ctxRecon":"T$A=1@O=Aachen, Hbf@L=1008@a=128@$A=1@O=Aachen, Schanz Bf@L=1016@a=128@$202112051937$202112051939$   RB 33$$1$$$$",
                   "msgL":
                   [
                     {
                       "type":"REM",
-                      "remX":7,
+                      "remX":2,
                       "fLocX":4,
                       "tLocX":5,
                       "tagL":
@@ -2514,7 +3064,18 @@
                     },
                     {
                       "type":"REM",
-                      "remX":8,
+                      "remX":3,
+                      "fLocX":4,
+                      "tLocX":5,
+                      "tagL":
+                      [
+                        "RES_JNY_DTL"
+                      ],
+                      "sort":697958400
+                    },
+                    {
+                      "type":"REM",
+                      "remX":4,
                       "fLocX":4,
                       "tLocX":5,
                       "tagL":
@@ -2525,6 +3086,28 @@
                     },
                     {
                       "type":"REM",
+                      "remX":6,
+                      "fLocX":4,
+                      "tLocX":5,
+                      "tagL":
+                      [
+                        "RES_JNY_DTL"
+                      ],
+                      "sort":716963840
+                    },
+                    {
+                      "type":"REM",
+                      "remX":8,
+                      "fLocX":4,
+                      "tLocX":5,
+                      "tagL":
+                      [
+                        "RES_JNY_DTL"
+                      ],
+                      "sort":716963840
+                    },
+                    {
+                      "type":"REM",
                       "remX":9,
                       "fLocX":4,
                       "tLocX":5,
@@ -2532,91 +3115,14 @@
                       [
                         "RES_JNY_DTL"
                       ],
-                      "sort":716963840
-                    },
-                    {
-                      "type":"REM",
-                      "remX":10,
-                      "fLocX":4,
-                      "tLocX":5,
-                      "tagL":
-                      [
-                        "RES_JNY_DTL"
-                      ],
-                      "sort":716963840
-                    },
-                    {
-                      "type":"REM",
-                      "remX":11,
-                      "fLocX":4,
-                      "tLocX":5,
-                      "tagL":
-                      [
-                        "RES_JNY_DTL"
-                      ],
                       "sort":744488960
-                    },
-                    {
-                      "type":"REM",
-                      "remX":12,
-                      "fLocX":4,
-                      "tLocX":5,
-                      "tagL":
-                      [
-                        "RES_JNY_DTL"
-                      ],
-                      "sort":744488960
-                    },
-                    {
-                      "type":"REM",
-                      "remX":13,
-                      "fLocX":4,
-                      "tLocX":5,
-                      "tagL":
-                      [
-                        "RES_JNY_DTL"
-                      ],
-                      "sort":750387200
-                    },
-                    {
-                      "type":"REM",
-                      "remX":14,
-                      "fLocX":4,
-                      "tLocX":5,
-                      "tagL":
-                      [
-                        "RES_JNY_DTL"
-                      ],
-                      "sort":751042560
-                    },
-                    {
-                      "type":"REM",
-                      "remX":15,
-                      "fLocX":4,
-                      "tLocX":5,
-                      "tagL":
-                      [
-                        "RES_JNY_DTL"
-                      ],
-                      "sort":764149760
-                    },
-                    {
-                      "type":"HIM",
-                      "himX":1,
-                      "fLocX":4,
-                      "tLocX":5,
-                      "tagL":
-                      [
-                        "RES_CON_HDR","RES_SEC_HDR_H3","SUM_CON_HDR"
-                      ],
-                      "sort":373455001
                     }
                   ],
                   "subscr":"F",
                   "prodL":
                   [
                     {
-                      "prodX":8,
+                      "prodX":4,
                       "fLocX":4,
                       "tLocX":5,
                       "fIdx":0,
@@ -2636,10 +3142,10 @@
                 }
               }
             ],
-            "ctxRecon":"¶HKI¶T$A=1@O=Aachen, Hbf@L=1008@a=128@$A=1@O=Aachen, Schanz Bf@L=1016@a=128@$202109061123$202109061125$    RE 4$$1$$$$",
+            "ctxRecon":"¶HKI¶T$A=1@O=Aachen, Hbf@L=1008@a=128@$A=1@O=Aachen, Schanz Bf@L=1016@a=128@$202112051937$202112051939$   RB 33$$1$$$$",
             "freq":
             {
-              "minC":9
+              "minC":5
             },
             "trfRes":
             {
@@ -2710,753 +3216,14 @@
                       "verbundName":"AVV"
                     },
                     {
-                      "name":"Schüler-ABO Preisstufe 1C",
-                      "prc":4891,
+                      "name":"Fun-Ticket im ABO",
+                      "prc":1762,
                       "cur":"EUR",
                       "verbundName":"AVV"
                     },
                     {
-                      "name":"Schüler-Ticket (Monat) Preisstufe 1C",
-                      "prc":5655,
-                      "cur":"EUR",
-                      "verbundName":"AVV"
-                    },
-                    {
-                      "name":"Azubi-ABO",
-                      "prc":6300,
-                      "cur":"EUR",
-                      "verbundName":"AVV"
-                    },
-                    {
-                      "name":"Aktiv-ABO (für Senioren ab 60; 1 Person)",
-                      "prc":6350,
-                      "cur":"EUR",
-                      "verbundName":"AVV"
-                    }
-                  ]
-                },
-                {
-                  "desc":"euregioticket",
-                  "fareL":
-                  [
-                    {
-                      "name":"euregioticket. Ggf. weitere lokale Tickets beachten.",
-                      "prc":1900,
-                      "cur":"EUR",
-                      "verbundName":"euregio"
-                    }
-                  ]
-                }
-              ]
-            },
-            "ovwTrfRefL":
-            [
-              {
-                "type":"F",
-                "fareSetX":0,
-                "fareX":0
-              },
-              {
-                "type":"F",
-                "fareSetX":0,
-                "fareX":1
-              },
-              {
-                "type":"F",
-                "fareSetX":0,
-                "fareX":2
-              },
-              {
-                "type":"F",
-                "fareSetX":0,
-                "fareX":3
-              },
-              {
-                "type":"F",
-                "fareSetX":0,
-                "fareX":4
-              },
-              {
-                "type":"F",
-                "fareSetX":0,
-                "fareX":5
-              },
-              {
-                "type":"F",
-                "fareSetX":0,
-                "fareX":6
-              },
-              {
-                "type":"F",
-                "fareSetX":0,
-                "fareX":7
-              },
-              {
-                "type":"F",
-                "fareSetX":0,
-                "fareX":8
-              },
-              {
-                "type":"F",
-                "fareSetX":0,
-                "fareX":9
-              },
-              {
-                "type":"F",
-                "fareSetX":0,
-                "fareX":10
-              },
-              {
-                "type":"F",
-                "fareSetX":0,
-                "fareX":11
-              },
-              {
-                "type":"F",
-                "fareSetX":0,
-                "fareX":12
-              },
-              {
-                "type":"F",
-                "fareSetX":0,
-                "fareX":13
-              },
-              {
-                "type":"F",
-                "fareSetX":1,
-                "fareX":0
-              }
-            ],
-            "conSubscr":"F",
-            "recState":"U",
-            "cksum":"c6ff8090_3",
-            "cksumDti":"ffaf351d_3"
-          },
-          {
-            "cid":"C-2",
-            "date":"20210906",
-            "dur":"000500",
-            "chg":0,
-            "sDays":
-            {
-              "sDaysR":"Mo - Fr",
-              "sDaysI":"nicht 1. Nov",
-              "sDaysB":"1F3E7CF9F3E7CF9F3E7CF9E1E7CF9F3E74F8F3A7CF9F3E7CF9F3E7CF9F3E7CF9F3E7CF9F3E7C79F3E7CF9F00"
-            },
-            "dep":
-            {
-              "locX":0,
-              "idx":7,
-              "dProdX":13,
-              "dPlatfS":"H.2",
-              "dPlatfR":"H.2",
-              "dInR":true,
-              "dTimeS":"112700",
-              "dTimeR":"112700",
-              "dProgType":"PROGNOSED",
-              "type":"N"
-            },
-            "arr":
-            {
-              "locX":1,
-              "idx":10,
-              "aProdX":13,
-              "aPlatfS":"H.3",
-              "aPlatfR":"H.3 (Box",
-              "aPlatfCh":true,
-              "aOutR":true,
-              "aTimeS":"113200",
-              "aTimeR":"113200",
-              "aProgType":"PROGNOSED",
-              "type":"N"
-            },
-            "secL":
-            [
-              {
-                "type":"JNY",
-                "icoX":0,
-                "dep":
-                {
-                  "locX":0,
-                  "idx":7,
-                  "dProdX":13,
-                  "dPlatfS":"H.2",
-                  "dPlatfR":"H.2",
-                  "dInR":true,
-                  "dTimeS":"112700",
-                  "dTimeR":"112700",
-                  "dProgType":"PROGNOSED",
-                  "type":"N"
-                },
-                "arr":
-                {
-                  "locX":1,
-                  "idx":10,
-                  "aProdX":13,
-                  "aPlatfS":"H.3",
-                  "aPlatfR":"H.3 (Box",
-                  "aPlatfCh":true,
-                  "aOutR":true,
-                  "aTimeS":"113200",
-                  "aTimeR":"113200",
-                  "aProgType":"PROGNOSED",
-                  "type":"N"
-                },
-                "jny":
-                {
-                  "jid":"1|261855|9|80|6092021",
-                  "prodX":2,
-                  "dirTxt":"Schanz - Ponttor - Hauptbahnhof",
-                  "dirFlg":"2",
-                  "status":"P",
-                  "isRchbl":true,
-                  "stopL":
-                  [
-                    {
-                      "locX":0,
-                      "idx":7,
-                      "dProdX":2,
-                      "dInR":true,
-                      "dTimeS":"112700",
-                      "dTimeR":"112700",
-                      "dProgType":"PROGNOSED",
-                      "dDirTxt":"Schanz - Ponttor - Hauptbahnhof",
-                      "dDirFlg":"2",
-                      "type":"N"
-                    },
-                    {
-                      "locX":2,
-                      "idx":8,
-                      "aProdX":2,
-                      "aOutR":true,
-                      "aTimeS":"112900",
-                      "aTimeR":"112900",
-                      "aProgType":"PROGNOSED",
-                      "dProdX":2,
-                      "dInR":true,
-                      "dTimeS":"112900",
-                      "dTimeR":"112900",
-                      "dProgType":"PROGNOSED",
-                      "type":"N"
-                    },
-                    {
-                      "locX":3,
-                      "idx":9,
-                      "aProdX":2,
-                      "aOutR":true,
-                      "aTimeS":"113000",
-                      "aTimeR":"113000",
-                      "aProgType":"PROGNOSED",
-                      "dProdX":2,
-                      "dInR":true,
-                      "dTimeS":"113000",
-                      "dTimeR":"113000",
-                      "dProgType":"PROGNOSED",
-                      "type":"N"
-                    },
-                    {
-                      "locX":1,
-                      "idx":10,
-                      "aProdX":2,
-                      "aOutR":true,
-                      "aTimeS":"113200",
-                      "aTimeR":"113200",
-                      "aProgType":"PROGNOSED",
-                      "type":"N"
-                    }
-                  ],
-                  "polyG":
-                  {
-                    "polyXL":
-                    [
-                      2
-                    ],
-                    "layerX":0,
-                    "crdSysX":0
-                  },
-                  "freq":
-                  {
-                    "minC":7,
-                    "maxC":23,
-                    "numC":14,
-                    "jnyL":
-                    [
-                      {
-                        "jid":"1|262409|3|80|6092021",
-                        "prodX":3,
-                        "dirTxt":"Schanz - Uniklinik - Ponttor",
-                        "dirFlg":"2",
-                        "stopL":
-                        [
-                          {
-                            "locX":0,
-                            "idx":48,
-                            "dProdX":3,
-                            "dTimeS":"115000",
-                            "dDirTxt":"Schanz - Uniklinik - Ponttor",
-                            "dDirFlg":"2",
-                            "type":"N"
-                          },
-                          {
-                            "locX":1,
-                            "idx":51,
-                            "aProdX":3,
-                            "aTimeS":"115500",
-                            "type":"N"
-                          }
-                        ],
-                        "pos":
-                        {
-                          "x":6077274,
-                          "y":50768405,
-                          "layerX":0,
-                          "crdSysX":0
-                        },
-                        "ctxRecon":"T$A=1@O=Aachen, Hauptbahnhof (Bus)@L=1007@a=128@$A=1@O=Aachen, Schanz (Jakobstraße)@L=1015@a=128@$202109061150$202109061155$Bus   3B$$1$$$$",
-                        "msgL":
-                        [
-                          {
-                            "type":"REM",
-                            "remX":4,
-                            "fLocX":0,
-                            "tLocX":1,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ],
-                            "sort":716963840
-                          }
-                        ],
-                        "subscr":"F",
-                        "prodL":
-                        [
-                          {
-                            "prodX":3,
-                            "fLocX":0,
-                            "tLocX":1,
-                            "fIdx":48,
-                            "tIdx":51
-                          }
-                        ],
-                        "dirL":
-                        [
-                          {
-                            "dirX":1,
-                            "fLocX":0,
-                            "tLocX":1,
-                            "fIdx":48,
-                            "tIdx":51
-                          }
-                        ]
-                      },
-                      {
-                        "jid":"1|261855|9|80|6092021",
-                        "prodX":4,
-                        "dirTxt":"Schanz - Ponttor - Hauptbahnhof",
-                        "dirFlg":"2",
-                        "stopL":
-                        [
-                          {
-                            "locX":0,
-                            "idx":23,
-                            "dProdX":4,
-                            "dTimeS":"115700",
-                            "dDirTxt":"Schanz - Ponttor - Hauptbahnhof",
-                            "dDirFlg":"2",
-                            "type":"N"
-                          },
-                          {
-                            "locX":1,
-                            "idx":26,
-                            "aProdX":4,
-                            "aTimeS":"120200",
-                            "type":"N"
-                          }
-                        ],
-                        "ctxRecon":"T$A=1@O=Aachen, Hauptbahnhof (Bus)@L=1007@a=128@$A=1@O=Aachen, Schanz (Jakobstraße)@L=1015@a=128@$202109061157$202109061202$Bus  13B$$1$$$$",
-                        "msgL":
-                        [
-                          {
-                            "type":"REM",
-                            "remX":4,
-                            "fLocX":0,
-                            "tLocX":1,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ],
-                            "sort":716963840
-                          }
-                        ],
-                        "subscr":"F",
-                        "prodL":
-                        [
-                          {
-                            "prodX":4,
-                            "fLocX":0,
-                            "tLocX":1,
-                            "fIdx":23,
-                            "tIdx":26
-                          }
-                        ],
-                        "dirL":
-                        [
-                          {
-                            "dirX":0,
-                            "fLocX":0,
-                            "tLocX":1,
-                            "fIdx":23,
-                            "tIdx":26
-                          }
-                        ]
-                      },
-                      {
-                        "jid":"1|262285|4|80|6092021",
-                        "prodX":5,
-                        "dirTxt":"Schanz - Uniklinik - Ponttor",
-                        "dirFlg":"2",
-                        "stopL":
-                        [
-                          {
-                            "locX":0,
-                            "idx":48,
-                            "dProdX":5,
-                            "dTimeS":"120500",
-                            "dDirTxt":"Schanz - Uniklinik - Ponttor",
-                            "dDirFlg":"2",
-                            "type":"N"
-                          },
-                          {
-                            "locX":1,
-                            "idx":51,
-                            "aProdX":5,
-                            "aTimeS":"121000",
-                            "type":"N"
-                          }
-                        ],
-                        "pos":
-                        {
-                          "x":6081409,
-                          "y":50782086,
-                          "layerX":0,
-                          "crdSysX":0
-                        },
-                        "ctxRecon":"T$A=1@O=Aachen, Hauptbahnhof (Bus)@L=1007@a=128@$A=1@O=Aachen, Schanz (Jakobstraße)@L=1015@a=128@$202109061205$202109061210$Bus   3B$$1$$$$",
-                        "msgL":
-                        [
-                          {
-                            "type":"REM",
-                            "remX":4,
-                            "fLocX":0,
-                            "tLocX":1,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ],
-                            "sort":716963840
-                          }
-                        ],
-                        "subscr":"F",
-                        "prodL":
-                        [
-                          {
-                            "prodX":5,
-                            "fLocX":0,
-                            "tLocX":1,
-                            "fIdx":48,
-                            "tIdx":51
-                          }
-                        ],
-                        "dirL":
-                        [
-                          {
-                            "dirX":1,
-                            "fLocX":0,
-                            "tLocX":1,
-                            "fIdx":48,
-                            "tIdx":51
-                          }
-                        ]
-                      },
-                      {
-                        "jid":"1|263078|0|80|6092021",
-                        "prodX":6,
-                        "dirTxt":"Schanz - Ponttor - Hauptbahnhof",
-                        "dirFlg":"2",
-                        "stopL":
-                        [
-                          {
-                            "locX":0,
-                            "idx":7,
-                            "dProdX":6,
-                            "dTimeS":"121200",
-                            "dDirTxt":"Schanz - Ponttor - Hauptbahnhof",
-                            "dDirFlg":"2",
-                            "type":"N"
-                          },
-                          {
-                            "locX":1,
-                            "idx":10,
-                            "aProdX":6,
-                            "aTimeS":"121700",
-                            "type":"N"
-                          }
-                        ],
-                        "ctxRecon":"T$A=1@O=Aachen, Hauptbahnhof (Bus)@L=1007@a=128@$A=1@O=Aachen, Schanz (Jakobstraße)@L=1015@a=128@$202109061212$202109061217$Bus  13B$$1$$$$",
-                        "msgL":
-                        [
-                          {
-                            "type":"REM",
-                            "remX":3,
-                            "fLocX":0,
-                            "tLocX":1,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ],
-                            "sort":716963840
-                          },
-                          {
-                            "type":"REM",
-                            "remX":4,
-                            "fLocX":0,
-                            "tLocX":1,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ],
-                            "sort":716963840
-                          }
-                        ],
-                        "subscr":"F",
-                        "prodL":
-                        [
-                          {
-                            "prodX":6,
-                            "fLocX":0,
-                            "tLocX":1,
-                            "fIdx":7,
-                            "tIdx":10
-                          }
-                        ],
-                        "dirL":
-                        [
-                          {
-                            "dirX":0,
-                            "fLocX":0,
-                            "tLocX":1,
-                            "fIdx":7,
-                            "tIdx":10
-                          }
-                        ]
-                      },
-                      {
-                        "jid":"1|261855|10|80|6092021",
-                        "prodX":14,
-                        "dirTxt":"Schanz - Ponttor - Hauptbahnhof",
-                        "dirFlg":"2",
-                        "stopL":
-                        [
-                          {
-                            "locX":0,
-                            "idx":23,
-                            "dProdX":14,
-                            "dTimeS":"122700",
-                            "dDirTxt":"Schanz - Ponttor - Hauptbahnhof",
-                            "dDirFlg":"2",
-                            "type":"N"
-                          },
-                          {
-                            "locX":1,
-                            "idx":26,
-                            "aProdX":14,
-                            "aTimeS":"123200",
-                            "type":"N"
-                          }
-                        ],
-                        "ctxRecon":"T$A=1@O=Aachen, Hauptbahnhof (Bus)@L=1007@a=128@$A=1@O=Aachen, Schanz (Jakobstraße)@L=1015@a=128@$202109061227$202109061232$Bus  13B$$1$$$$",
-                        "msgL":
-                        [
-                          {
-                            "type":"REM",
-                            "remX":4,
-                            "fLocX":0,
-                            "tLocX":1,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ],
-                            "sort":716963840
-                          }
-                        ],
-                        "subscr":"F",
-                        "prodL":
-                        [
-                          {
-                            "prodX":14,
-                            "fLocX":0,
-                            "tLocX":1,
-                            "fIdx":23,
-                            "tIdx":26
-                          }
-                        ],
-                        "dirL":
-                        [
-                          {
-                            "dirX":0,
-                            "fLocX":0,
-                            "tLocX":1,
-                            "fIdx":23,
-                            "tIdx":26
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  "ctxRecon":"T$A=1@O=Aachen, Hauptbahnhof (Bus)@L=1007@a=128@$A=1@O=Aachen, Schanz (Jakobstraße)@L=1015@a=128@$202109061127$202109061132$Bus  13B$$1$$$$",
-                  "msgL":
-                  [
-                    {
-                      "type":"REM",
-                      "remX":4,
-                      "fLocX":0,
-                      "tLocX":1,
-                      "tagL":
-                      [
-                        "RES_JNY_DTL"
-                      ],
-                      "sort":716963840
-                    },
-                    {
-                      "type":"HIM",
-                      "himX":0,
-                      "fLocX":0,
-                      "tLocX":2,
-                      "tagL":
-                      [
-                        "RES_CON_HDR","RES_SEC_HDR_H3","SUM_CON_HDR"
-                      ],
-                      "sort":373511247
-                    }
-                  ],
-                  "subscr":"F",
-                  "prodL":
-                  [
-                    {
-                      "prodX":2,
-                      "fLocX":0,
-                      "tLocX":1,
-                      "fIdx":7,
-                      "tIdx":10
-                    }
-                  ],
-                  "dirL":
-                  [
-                    {
-                      "dirX":0,
-                      "fLocX":0,
-                      "tLocX":1,
-                      "fIdx":7,
-                      "tIdx":10
-                    }
-                  ]
-                }
-              }
-            ],
-            "ctxRecon":"¶HKI¶T$A=1@O=Aachen, Hauptbahnhof (Bus)@L=1007@a=128@$A=1@O=Aachen, Schanz (Jakobstraße)@L=1015@a=128@$202109061127$202109061132$Bus  13B$$1$$$$",
-            "freq":
-            {
-              "minC":7
-            },
-            "trfRes":
-            {
-              "fareSetL":
-              [
-                {
-                  "desc":"AVV-Tarif",
-                  "fareL":
-                  [
-                    {
-                      "name":"Flugs-Ticket Erwachsene",
-                      "prc":160,
-                      "cur":"EUR",
-                      "verbundName":"AVV"
-                    },
-                    {
-                      "name":"4-Fahrten Flugs-Ticket Erwachsene",
-                      "prc":640,
-                      "cur":"EUR",
-                      "verbundName":"AVV"
-                    },
-                    {
-                      "name":"Flugs-Ticket Kinder",
-                      "prc":100,
-                      "cur":"EUR",
-                      "verbundName":"AVV"
-                    },
-                    {
-                      "name":"4-Fahrten Flugs-Ticket Kinder",
-                      "prc":400,
-                      "cur":"EUR",
-                      "verbundName":"AVV"
-                    },
-                    {
-                      "name":"Einzel-Ticket Erwachsene City-XL Aachen",
-                      "prc":180,
-                      "cur":"EUR",
-                      "verbundName":"AVV"
-                    },
-                    {
-                      "name":"4Fahrten-Ticket Erwachsene City XL Aachen",
-                      "prc":720,
-                      "cur":"EUR",
-                      "verbundName":"AVV"
-                    },
-                    {
-                      "name":"Einzel-Ticket Kinder Preisstufe 1",
-                      "prc":150,
-                      "cur":"EUR",
-                      "verbundName":"AVV"
-                    },
-                    {
-                      "name":"4-Fahrten Ticket Kinder Preisstufe 1",
-                      "prc":600,
-                      "cur":"EUR",
-                      "verbundName":"AVV"
-                    },
-                    {
-                      "name":"24-Stunden-Ticket 1 Person Preisstufe 1",
-                      "prc":810,
-                      "cur":"EUR",
-                      "verbundName":"AVV"
-                    },
-                    {
-                      "name":"24-Stunden-Ticket 5 Personen Preisstufe 1",
-                      "prc":1100,
-                      "cur":"EUR",
-                      "verbundName":"AVV"
-                    },
-                    {
-                      "name":"Wochen-Ticket Erwachsene Preisstufe 1",
-                      "prc":2460,
-                      "cur":"EUR",
-                      "verbundName":"AVV"
-                    },
-                    {
-                      "name":"Monats-Ticket Erwachsene City XL Aachen ",
-                      "prc":4150,
-                      "cur":"EUR",
-                      "verbundName":"AVV"
-                    },
-                    {
-                      "name":"Monats-ABO Erwachsene Preisstufe 1C",
-                      "prc":6126,
-                      "cur":"EUR",
-                      "verbundName":"AVV"
-                    },
-                    {
-                      "name":"Monats-Ticket Erwachsene Preisstufe 1C",
-                      "prc":7250,
+                      "name":"Fun-Ticket",
+                      "prc":2080,
                       "cur":"EUR",
                       "verbundName":"AVV"
                     },
@@ -3584,31 +3351,21 @@
               },
               {
                 "type":"F",
-                "fareSetX":0,
-                "fareX":16
-              },
-              {
-                "type":"F",
-                "fareSetX":0,
-                "fareX":17
-              },
-              {
-                "type":"F",
                 "fareSetX":1,
                 "fareX":0
               }
             ],
             "conSubscr":"F",
             "recState":"U",
-            "cksum":"e838b677_3",
-            "cksumDti":"52c9ee71_3"
+            "cksum":"78732799_3",
+            "cksumDti":"d3fed137_3"
           }
         ],
-        "outCtxScrB":"2|OB|MT#11#360672#360672#360677#360677#0#0#165#360668#1#-2147483638#0#1#2|PDH#be6cc9b578ca77c07f920aecd6d33553|RD#6092021|RT#110800|US#1",
-        "outCtxScrF":"2|OF|MT#11#360687#360687#360692#360692#0#0#165#360684#3#-2147483638#0#1#2|PDH#be6cc9b578ca77c07f920aecd6d33553|RD#6092021|RT#110800|US#1",
-        "fpB":"20210101",
-        "fpE":"20211211",
-        "planrtTS":"1630919270"
+        "outCtxScrB":"2|OB|MT#11#256048#256048#256052#256052#0#0#165#256045#1#-2147483638#0#1#2|PDH#f372ec32c2acdbcb96934f932baf1bf5|RD#5122021|RT#192500|US#1",
+        "outCtxScrF":"2|OF|MT#11#256057#256057#256059#256059#0#0#165#256052#3#-2147483638#0#1#2|PDH#f372ec32c2acdbcb96934f932baf1bf5|RD#5122021|RT#192500|US#1",
+        "fpB":"20210613",
+        "fpE":"20220611",
+        "planrtTS":"1638728721"
       }
     }
   ]

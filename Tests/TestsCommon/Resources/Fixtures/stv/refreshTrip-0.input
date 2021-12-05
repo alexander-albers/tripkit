@@ -2,7 +2,7 @@
   "ver":"1.18",
   "ext":"VAO.13",
   "lang":"deu",
-  "id":"v92sbgs4k2ahygwx",
+  "id":"msiwmmsa66wfywwx",
   "err":"OK",
   "cInfo":
   {
@@ -22,79 +22,6 @@
           "locL":
           [
             {
-              "lid":"A=1@O=Hauptbahnhof@l=Hauptbahnhof (F)@X=15417992@Y=47072859@U=81@L=460304009@i=at:46:3040:0:9@",
-              "type":"S",
-              "name":"Hauptbahnhof",
-              "nameAlt":"Hauptbahnhof (F)",
-              "icoX":0,
-              "extId":"460304009",
-              "state":"F",
-              "crd":
-              {
-                "x":15417992,
-                "y":47072859,
-                "layerX":0,
-                "crdSysX":0
-              },
-              "pCls":243,
-              "entry":true,
-              "mMastLocX":1
-            },
-            {
-              "lid":"A=1@O=Graz Hauptbahnhof@X=15417507@Y=47072481@U=81@L=460304000@i=at:46:3040@",
-              "type":"S",
-              "name":"Graz Hauptbahnhof",
-              "icoX":1,
-              "extId":"460304000",
-              "state":"F",
-              "crd":
-              {
-                "x":15417507,
-                "y":47072481,
-                "layerX":0,
-                "crdSysX":0
-              },
-              "meta":true,
-              "pCls":243,
-              "isMainMast":true
-            },
-            {
-              "lid":"A=1@O=Babenbergerstraße@X=15420303@Y=47073434@U=81@L=460314902@i=at:46:3149:0:2@",
-              "type":"S",
-              "name":"Babenbergerstraße",
-              "icoX":5,
-              "extId":"460314902",
-              "state":"F",
-              "crd":
-              {
-                "x":15420303,
-                "y":47073434,
-                "layerX":0,
-                "crdSysX":0
-              },
-              "pCls":192,
-              "entry":true,
-              "mMastLocX":3
-            },
-            {
-              "lid":"A=1@O=Graz Babenbergerstraße@X=15420500@Y=47073569@U=81@L=460314900@i=at:46:3149@",
-              "type":"S",
-              "name":"Graz Babenbergerstraße",
-              "icoX":6,
-              "extId":"460314900",
-              "state":"F",
-              "crd":
-              {
-                "x":15420500,
-                "y":47073569,
-                "layerX":0,
-                "crdSysX":0
-              },
-              "meta":true,
-              "pCls":192,
-              "isMainMast":true
-            },
-            {
               "lid":"A=1@O=Hauptbahnhof@l=Hauptbahnhof (D)@X=15418181@Y=47072733@U=81@L=460304023@i=at:46:3040:0:23@",
               "type":"S",
               "name":"Hauptbahnhof",
@@ -112,24 +39,97 @@
               "pCls":243,
               "entry":true,
               "mMastLocX":1
+            },
+            {
+              "lid":"A=1@O=Graz Hauptbahnhof@X=15417507@Y=47072481@U=81@L=460304000@i=at:46:3040@",
+              "type":"S",
+              "name":"Graz Hauptbahnhof",
+              "icoX":0,
+              "extId":"460304000",
+              "state":"F",
+              "crd":
+              {
+                "x":15417507,
+                "y":47072481,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "meta":true,
+              "pCls":243,
+              "isMainMast":true
+            },
+            {
+              "lid":"A=1@O=Babenbergerstraße@X=15420303@Y=47073434@U=81@L=460314902@i=at:46:3149:0:2@",
+              "type":"S",
+              "name":"Babenbergerstraße",
+              "icoX":0,
+              "extId":"460314902",
+              "state":"F",
+              "crd":
+              {
+                "x":15420303,
+                "y":47073434,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":128,
+              "entry":true,
+              "mMastLocX":3
+            },
+            {
+              "lid":"A=1@O=Graz Babenbergerstraße@X=15420500@Y=47073569@U=81@L=460314900@i=at:46:3149@",
+              "type":"S",
+              "name":"Graz Babenbergerstraße",
+              "icoX":0,
+              "extId":"460314900",
+              "state":"F",
+              "crd":
+              {
+                "x":15420500,
+                "y":47073569,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "meta":true,
+              "pCls":128,
+              "isMainMast":true
+            },
+            {
+              "lid":"A=1@O=Hauptbahnhof@l=Hauptbahnhof (F)@X=15417992@Y=47072859@U=81@L=460304009@i=at:46:3040:0:9@",
+              "type":"S",
+              "name":"Hauptbahnhof",
+              "nameAlt":"Hauptbahnhof (F)",
+              "icoX":0,
+              "extId":"460304009",
+              "state":"F",
+              "crd":
+              {
+                "x":15417992,
+                "y":47072859,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":243,
+              "entry":true,
+              "mMastLocX":1
             }
           ],
           "prodL":
           [
             {
-              "pid":"L::7::::B0498775311::stv-38-58-j21-7::*",
-              "name":"Stadtbus 58",
-              "nameS":"58",
-              "number":"58",
-              "icoX":3,
+              "pid":"L::7::::B0498775311::stv-38-53-j21-14::*",
+              "name":"Stadtbus 53",
+              "nameS":"53",
+              "number":"53",
+              "icoX":2,
               "cls":128,
               "oprX":0,
               "prodCtx":
               {
-                "name":"      58",
-                "num":"19039",
-                "line":"58",
-                "matchId":"stv-38-58#215",
+                "name":"      53",
+                "num":"19686",
+                "line":"53",
+                "matchId":"stv-38-53#893",
                 "catOutS":"s01",
                 "catOutL":"Stadtbus",
                 "catIn":"s01",
@@ -138,92 +138,20 @@
               }
             },
             {
-              "pid":"L::7::::B0498775311::stv-38-58-j21-7::*",
-              "name":"Stadtbus 58",
-              "nameS":"58",
-              "number":"58",
-              "icoX":3,
-              "cls":128,
-              "oprX":1,
-              "prodCtx":
-              {
-                "name":"      58",
-                "num":"19039",
-                "line":"58",
-                "lineId":"stv-38-58-j21-7",
-                "matchId":"stv-38-58#215",
-                "catOutS":"s01",
-                "catOutL":"Stadtbus",
-                "catIn":"s01",
-                "catCode":"7",
-                "admin":"s3800_"
-              }
-            },
-            {
-              "pid":"L::7::::B0498775311::stv-38-63-j21-7::*",
-              "name":"Stadtbus 63",
-              "nameS":"63",
-              "number":"63",
-              "icoX":9,
-              "cls":128,
-              "oprX":1,
-              "prodCtx":
-              {
-                "name":"      63",
-                "num":"23979",
-                "line":"63",
-                "lineId":"stv-38-63-j21-7",
-                "matchId":"stv-38-63#62",
-                "catOutS":"s01",
-                "catOutL":"Stadtbus",
-                "catIn":"s01",
-                "catCode":"7",
-                "admin":"s3800_"
-              }
-            },
-            {
-              "pid":"L::7::::B0498775311::stv-38-53-j21-7::*",
+              "pid":"L::7::::B0498775311::stv-38-53-j21-14::*",
               "name":"Stadtbus 53",
               "nameS":"53",
               "number":"53",
-              "icoX":10,
+              "icoX":2,
               "cls":128,
               "oprX":1,
               "prodCtx":
               {
                 "name":"      53",
-                "num":"17048",
+                "num":"19686",
                 "line":"53",
-                "lineId":"stv-38-53-j21-7",
-                "matchId":"stv-38-53#220",
-                "catOutS":"s01",
-                "catOutL":"Stadtbus",
-                "catIn":"s01",
-                "catCode":"7",
-                "admin":"s3800_"
-              },
-              "himIdL":
-              [
-"HIM_FREETEXT_148972",
-"HIM_FREETEXT_148976",
-"HIM_FREETEXT_148977"
-              ]
-            },
-            {
-              "pid":"L::7::::B0498775311::stv-38-58-j21-7::*",
-              "name":"Stadtbus 58",
-              "nameS":"58",
-              "number":"58",
-              "icoX":3,
-              "cls":128,
-              "oprX":1,
-              "prodCtx":
-              {
-                "name":"      58",
-                "num":"19069",
-                "line":"58",
-                "lineId":"stv-38-58-j21-7",
-                "matchId":"stv-38-58#309",
+                "lineId":"stv-38-53-j21-14",
+                "matchId":"stv-38-53#893",
                 "catOutS":"s01",
                 "catOutL":"Stadtbus",
                 "catIn":"s01",
@@ -232,20 +160,20 @@
               }
             },
             {
-              "pid":"L::7::::B0498775311::stv-38-63-j21-7::*",
+              "pid":"L::7::::B0498775311::stv-38-63-j21-14::*",
               "name":"Stadtbus 63",
               "nameS":"63",
               "number":"63",
-              "icoX":9,
+              "icoX":6,
               "cls":128,
               "oprX":1,
               "prodCtx":
               {
                 "name":"      63",
-                "num":"23966",
+                "num":"27559",
                 "line":"63",
-                "lineId":"stv-38-63-j21-7",
-                "matchId":"stv-38-63#24",
+                "lineId":"stv-38-63-j21-14",
+                "matchId":"stv-38-63#793",
                 "catOutS":"s01",
                 "catOutL":"Stadtbus",
                 "catIn":"s01",
@@ -254,32 +182,92 @@
               }
             },
             {
-              "pid":"L::7::::B0498775311::stv-38-53-j21-7::*",
-              "name":"Stadtbus 53",
-              "nameS":"53",
-              "number":"53",
-              "icoX":10,
+              "pid":"L::7::::B0498775311::stv-38-58-j21-14::*",
+              "name":"Stadtbus 58",
+              "nameS":"58",
+              "number":"58",
+              "icoX":7,
               "cls":128,
               "oprX":1,
               "prodCtx":
               {
-                "name":"      53",
-                "num":"17077",
-                "line":"53",
-                "lineId":"stv-38-53-j21-7",
-                "matchId":"stv-38-53#304",
+                "name":"      58",
+                "num":"21791",
+                "line":"58",
+                "lineId":"stv-38-58-j21-14",
+                "matchId":"stv-38-58#849",
                 "catOutS":"s01",
                 "catOutL":"Stadtbus",
                 "catIn":"s01",
                 "catCode":"7",
                 "admin":"s3800_"
-              },
-              "himIdL":
-              [
-"HIM_FREETEXT_148972",
-"HIM_FREETEXT_148976",
-"HIM_FREETEXT_148977"
-              ]
+              }
+            },
+            {
+              "pid":"L::7::::B0498775311::stv-38-53-j21-14::*",
+              "name":"Stadtbus 53",
+              "nameS":"53",
+              "number":"53",
+              "icoX":2,
+              "cls":128,
+              "oprX":1,
+              "prodCtx":
+              {
+                "name":"      53",
+                "num":"19674",
+                "line":"53",
+                "lineId":"stv-38-53-j21-14",
+                "matchId":"stv-38-53#832",
+                "catOutS":"s01",
+                "catOutL":"Stadtbus",
+                "catIn":"s01",
+                "catCode":"7",
+                "admin":"s3800_"
+              }
+            },
+            {
+              "pid":"L::7::::B0498775311::stv-38-63-j21-14::*",
+              "name":"Stadtbus 63",
+              "nameS":"63",
+              "number":"63",
+              "icoX":6,
+              "cls":128,
+              "oprX":1,
+              "prodCtx":
+              {
+                "name":"      63",
+                "num":"27582",
+                "line":"63",
+                "lineId":"stv-38-63-j21-14",
+                "matchId":"stv-38-63#863",
+                "catOutS":"s01",
+                "catOutL":"Stadtbus",
+                "catIn":"s01",
+                "catCode":"7",
+                "admin":"s3800_"
+              }
+            },
+            {
+              "pid":"L::7::::B0498775311::stv-38-58-j21-14::*",
+              "name":"Stadtbus 58",
+              "nameS":"58",
+              "number":"58",
+              "icoX":7,
+              "cls":128,
+              "oprX":1,
+              "prodCtx":
+              {
+                "name":"      58",
+                "num":"21838",
+                "line":"58",
+                "lineId":"stv-38-58-j21-14",
+                "matchId":"stv-38-58#944",
+                "catOutS":"s01",
+                "catOutL":"Stadtbus",
+                "catIn":"s01",
+                "catCode":"7",
+                "admin":"s3800_"
+              }
             }
           ],
           "polyL":
@@ -287,9 +275,9 @@
             {
               "delta":true,
               "dim":2,
-              "crdEncYX":"k|h~Gmib}AG@Gk@UMSME]CUaAoIPC",
-              "crdEncS":"NNKCNDENN",
-              "crdEncF":"?????????",
+              "crdEncYX":"s{h~Gsjb}AKBE]UTi@[kAcKPC",
+              "crdEncS":"NNKLNNN",
+              "crdEncF":"???????",
               "ppLocRefL":
               [
                 {
@@ -297,7 +285,7 @@
                   "locX":0
                 },
                 {
-                  "ppIdx":8,
+                  "ppIdx":6,
                   "locX":2
                 }
               ]
@@ -309,7 +297,7 @@
               "id":"standard",
               "name":"standard",
               "index":0,
-              "annoCnt":384392
+              "annoCnt":694319
             }
           ],
           "crdSysL":
@@ -324,11 +312,11 @@
           [
             {
               "name":"Graz Linien",
-              "icoX":4
+              "icoX":3
             },
             {
               "name":"Graz Linien",
-              "icoX":4,
+              "icoX":3,
               "street":"Steyrergasse 113a, 8010 Graz, +43 316 887-4224",
               "id":"stv+38+00"
             }
@@ -339,13 +327,13 @@
               "type":"A",
               "code":"LF",
               "prio":50,
-              "icoX":7,
+              "icoX":4,
               "txtN":"Niederflurfahrzeug"
             },
             {
               "type":"H",
               "code":"text.connection.eco.co2.decreased.consumption.message",
-              "icoX":12,
+              "icoX":9,
               "txtN":"Im Vergleich zu einer Fahrt mit dem eigenen PKW werden 0,04 kg CO<sub>2</sub> Emissionen eingespart. <a target=\"_blank\" href=\"https://web.verkehrsauskunft.at/co2berechnung/CO2_Berechnung.pdf\">Mehr Informationen</a>"
             }
           ],
@@ -354,16 +342,18 @@
             {
               "hid":"126891",
               "act":true,
-              "head":"Tragen eines Mund-Nasen-Schutzes",
-              "text":"Bitte Tragen Sie in allen öffentlichen Verkehrsmitteln einen geeigneten Mund-Nasen-Schutz und wahren Sie nach Möglichkeit Distanz zu anderen Personen.",
-              "icoX":8,
+              "head":"FFP2-Maskenpflicht",
+              "text":"Bitte tragen Sie in allen öffentlichen Verkehrsmitteln eine FFP2-Maske und wahren Sie nach Möglichkeit Distanz zu anderen Personen.",
+              "icoX":5,
               "prio":100,
+              "fLocX":0,
+              "tLocX":0,
               "prod":65535,
-              "lModDate":"20210630",
-              "lModTime":"210847",
+              "lModDate":"20211126",
+              "lModTime":"093953",
               "sDate":"20210125",
               "sTime":"000000",
-              "eDate":"20211211",
+              "eDate":"20220531",
               "eTime":"235900",
               "comp":"KGÖVV",
               "cat":4,
@@ -371,9 +361,9 @@
               [
                 {
                   "name":"TIMETABLE",
-                  "fDate":"20210630",
-                  "fTime":"210800",
-                  "tDate":"20211211",
+                  "fDate":"20211021",
+                  "fTime":"095900",
+                  "tDate":"20220531",
                   "tTime":"235900",
                   "uRefL":
                   [
@@ -386,42 +376,14 @@
           "icoL":
           [
             {
-              "res":"prod_ic",
-              "txtS":"D",
-              "fg":
-              {
-                "r":255,
-                "g":255,
-                "b":255
-              },
-              "bg":
-              {
-                "r":226,
-                "g":0,
-                "b":26
-              }
-            },
-            {
-              "res":"prod_ic",
-              "fg":
-              {
-                "r":255,
-                "g":255,
-                "b":255
-              },
-              "bg":
-              {
-                "r":226,
-                "g":0,
-                "b":26
-              }
+              "res":"prod_station"
             },
             {
               "res":"rt_ont"
             },
             {
               "res":"prod_bus",
-              "txtS":"58",
+              "txtS":"53",
               "fg":
               {
                 "r":255,
@@ -438,37 +400,6 @@
             {
               "res":"38",
               "txt":"Graz Linien"
-            },
-            {
-              "res":"prod_regbus",
-              "txtS":"711",
-              "fg":
-              {
-                "r":255,
-                "g":255,
-                "b":255
-              },
-              "bg":
-              {
-                "r":149,
-                "g":191,
-                "b":15
-              }
-            },
-            {
-              "res":"prod_regbus",
-              "fg":
-              {
-                "r":255,
-                "g":255,
-                "b":255
-              },
-              "bg":
-              {
-                "r":149,
-                "g":191,
-                "b":15
-              }
             },
             {
               "res":"LF"
@@ -494,7 +425,7 @@
             },
             {
               "res":"prod_bus",
-              "txtS":"53",
+              "txtS":"58",
               "fg":
               {
                 "r":255,
@@ -519,21 +450,21 @@
           [
             {
               "label":"Fahrgast-Charta - sicher und gesund mit den Öffis ans Ziel",
-              "url":"https://routenplaner.verkehrsauskunft.at/him-upload/1625080040721_Fahrgastcharta_Juli2021.pdf"
+              "url":"https://routenplaner.verkehrsauskunft.at/him-upload/1637915993266_Fahrgastcharta_November021.pdf"
             }
           ],
           "dirL":
           [
             {
+              "txt":"Stattegg-Fuß d. L",
+              "flg":"H"
+            },
+            {
+              "txt":"Schulz. St.Peter",
+              "flg":"H"
+            },
+            {
               "txt":"Ragnitz",
-              "flg":"H"
-            },
-            {
-              "txt":"Schulzentrum St.Peter",
-              "flg":"H"
-            },
-            {
-              "txt":"Stattegg Fuß der Leber",
               "flg":"H"
             }
           ]
@@ -542,24 +473,24 @@
         [
           {
             "cid":"DirectConReq-0",
-            "date":"20210906",
-            "dur":"000100",
+            "date":"20211205",
+            "dur":"000000",
             "chg":0,
             "sDays":
             {
-              "sDaysR":"Mo - Sa",
-              "sDaysI":"nicht 26. Okt, 1. Nov, 8. Dez",
-              "sDaysB":"FBF7EFDFBF7EFDFBF7EFDFBF7EFD79F7EFDFBF6E"
+              "sDaysR":"Sa, So",
+              "sDaysI":"nicht 25. Dez, 1. Jan; auch 8. Dez",
+              "sDaysB":"0000003860C183064C181020C183060C183060C183060C183060C183060C"
             },
             "dep":
             {
               "locX":0,
               "idx":0,
               "dProdX":0,
-              "dPlatfS":"F",
+              "dPlatfS":"D",
               "dInR":true,
-              "dTimeS":"164400",
-              "dTimeR":"164400",
+              "dTimeS":"192700",
+              "dTimeR":"192700",
               "dProgType":"PROGNOSED",
               "type":"N"
             },
@@ -569,8 +500,8 @@
               "idx":1,
               "aProdX":0,
               "aOutR":true,
-              "aTimeS":"164500",
-              "aTimeR":"164500",
+              "aTimeS":"192700",
+              "aTimeR":"192700",
               "aProgType":"PROGNOSED",
               "type":"N"
             },
@@ -578,16 +509,16 @@
             [
               {
                 "type":"JNY",
-                "icoX":3,
+                "icoX":2,
                 "dep":
                 {
                   "locX":0,
                   "idx":0,
                   "dProdX":0,
-                  "dPlatfS":"F",
+                  "dPlatfS":"D",
                   "dInR":true,
-                  "dTimeS":"164400",
-                  "dTimeR":"164400",
+                  "dTimeS":"192700",
+                  "dTimeR":"192700",
                   "dProgType":"PROGNOSED",
                   "type":"N"
                 },
@@ -597,16 +528,16 @@
                   "idx":1,
                   "aProdX":0,
                   "aOutR":true,
-                  "aTimeS":"164500",
-                  "aTimeR":"164500",
+                  "aTimeS":"192700",
+                  "aTimeR":"192700",
                   "aProgType":"PROGNOSED",
                   "type":"N"
                 },
                 "jny":
                 {
-                  "jid":"2|#VN#1#ST#1630889505#PI#0#ZI#45437#TA#43#DA#60921#1S#460304009#1T#1644#LS#460306502#LT#1714#PU#81#RT#1#CA#s01#ZE#58#ZB#      58#PC#7#FR#460304009#FT#1644#TO#460306502#TT#1714#",
+                  "jid":"2|#VN#1#ST#1638666385#PI#0#ZI#59002#TA#4#DA#51221#1S#460304023#1T#1927#LS#460363001#LT#1956#PU#81#RT#1#CA#s01#ZE#53#ZB#      53#PC#7#FR#460304023#FT#1927#TO#460363001#TT#1956#",
                   "prodX":1,
-                  "dirTxt":"Ragnitz",
+                  "dirTxt":"Stattegg-Fuß d. L",
                   "dirFlg":"H",
                   "status":"P",
                   "isRchbl":true,
@@ -617,10 +548,10 @@
                       "idx":0,
                       "dProdX":1,
                       "dInR":true,
-                      "dTimeS":"164400",
-                      "dTimeR":"164400",
+                      "dTimeS":"192700",
+                      "dTimeR":"192700",
                       "dProgType":"PROGNOSED",
-                      "dDirTxt":"Ragnitz",
+                      "dDirTxt":"Stattegg-Fuß d. L",
                       "dDirFlg":"H",
                       "type":"N"
                     },
@@ -629,8 +560,8 @@
                       "idx":1,
                       "aProdX":1,
                       "aOutR":true,
-                      "aTimeS":"164500",
-                      "aTimeR":"164500",
+                      "aTimeS":"192700",
+                      "aTimeR":"192700",
                       "aProgType":"PROGNOSED",
                       "type":"N"
                     }
@@ -646,24 +577,24 @@
                   },
                   "freq":
                   {
-                    "minC":3,
-                    "maxC":9,
+                    "minC":2,
+                    "maxC":12,
                     "numC":24,
                     "jnyL":
                     [
                       {
-                        "jid":"2|#VN#1#ST#1630889505#PI#0#ZI#46425#TA#42#DA#60921#1S#460304009#1T#1652#LS#460299701#LT#1713#PU#81#RT#1#CA#s01#ZE#63#ZB#      63#PC#7#FR#460304009#FT#1652#TO#460299701#TT#1713#",
+                        "jid":"2|#VN#1#ST#1638666385#PI#0#ZI#60557#TA#37#DA#51221#1S#460304009#1T#1929#LS#460299701#LT#1949#PU#81#RT#1#CA#s01#ZE#63#ZB#      63#PC#7#FR#460304009#FT#1929#TO#460299701#TT#1949#",
                         "prodX":2,
-                        "dirTxt":"Schulzentrum St.Peter",
+                        "dirTxt":"Schulz. St.Peter",
                         "dirFlg":"H",
                         "stopL":
                         [
                           {
-                            "locX":0,
+                            "locX":4,
                             "idx":0,
                             "dProdX":2,
-                            "dTimeS":"165200",
-                            "dDirTxt":"Schulzentrum St.Peter",
+                            "dTimeS":"192900",
+                            "dDirTxt":"Schulz. St.Peter",
                             "dDirFlg":"H",
                             "type":"N"
                           },
@@ -671,31 +602,17 @@
                             "locX":2,
                             "idx":1,
                             "aProdX":2,
-                            "aTimeS":"165300",
+                            "aTimeS":"193000",
                             "type":"N"
                           }
                         ],
-                        "ctxRecon":"T$A=1@O=Hauptbahnhof@L=460304009@a=128@$A=1@O=Babenbergerstraße@L=460314902@a=128@$202109061652$202109061653$      63$$1$$$$",
-                        "msgL":
-                        [
-                          {
-                            "type":"REM",
-                            "remX":0,
-                            "fLocX":0,
-                            "tLocX":2,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL_H3"
-                            ],
-                            "sort":409206784
-                          }
-                        ],
+                        "ctxRecon":"T$A=1@O=Hauptbahnhof@L=460304009@a=128@$A=1@O=Babenbergerstraße@L=460314902@a=128@$202112051929$202112051930$      63$$1$$$$$$",
                         "subscr":"F",
                         "prodL":
                         [
                           {
                             "prodX":2,
-                            "fLocX":0,
+                            "fLocX":4,
                             "tLocX":2,
                             "fIdx":0,
                             "tIdx":1
@@ -705,7 +622,7 @@
                         [
                           {
                             "dirX":1,
-                            "fLocX":0,
+                            "fLocX":4,
                             "tLocX":2,
                             "fIdx":0,
                             "tIdx":1
@@ -713,9 +630,9 @@
                         ]
                       },
                       {
-                        "jid":"2|#VN#1#ST#1630889505#PI#0#ZI#45071#TA#42#DA#60921#1S#460304023#1T#1655#LS#460363001#LT#1728#PU#81#RT#1#CA#s01#ZE#53#ZB#      53#PC#7#FR#460304023#FT#1655#TO#460363001#TT#1728#",
+                        "jid":"2|#VN#1#ST#1638666385#PI#0#ZI#59410#TA#37#DA#51221#1S#460304009#1T#1937#LS#460306502#LT#2007#PU#81#RT#1#CA#s01#ZE#58#ZB#      58#PC#7#FR#460304009#FT#1937#TO#460306502#TT#2007#",
                         "prodX":3,
-                        "dirTxt":"Stattegg Fuß der Leber",
+                        "dirTxt":"Ragnitz",
                         "dirFlg":"H",
                         "stopL":
                         [
@@ -723,8 +640,8 @@
                             "locX":4,
                             "idx":0,
                             "dProdX":3,
-                            "dTimeS":"165500",
-                            "dDirTxt":"Stattegg Fuß der Leber",
+                            "dTimeS":"193700",
+                            "dDirTxt":"Ragnitz",
                             "dDirFlg":"H",
                             "type":"N"
                           },
@@ -732,25 +649,11 @@
                             "locX":2,
                             "idx":1,
                             "aProdX":3,
-                            "aTimeS":"165600",
+                            "aTimeS":"193800",
                             "type":"N"
                           }
                         ],
-                        "ctxRecon":"T$A=1@O=Hauptbahnhof@L=460304023@a=128@$A=1@O=Babenbergerstraße@L=460314902@a=128@$202109061655$202109061656$      53$$1$$$$",
-                        "msgL":
-                        [
-                          {
-                            "type":"REM",
-                            "remX":0,
-                            "fLocX":4,
-                            "tLocX":2,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL_H3"
-                            ],
-                            "sort":409206784
-                          }
-                        ],
+                        "ctxRecon":"T$A=1@O=Hauptbahnhof@L=460304009@a=128@$A=1@O=Babenbergerstraße@L=460314902@a=128@$202112051937$202112051938$      58$$1$$$$$$",
                         "subscr":"F",
                         "prodL":
                         [
@@ -774,9 +677,9 @@
                         ]
                       },
                       {
-                        "jid":"2|#VN#1#ST#1630889505#PI#0#ZI#45437#TA#44#DA#60921#1S#460304009#1T#1659#LS#460306502#LT#1729#PU#81#RT#1#CA#s01#ZE#58#ZB#      58#PC#7#FR#460304009#FT#1659#TO#460306502#TT#1729#",
+                        "jid":"2|#VN#1#ST#1638666385#PI#0#ZI#59002#TA#5#DA#51221#1S#460304023#1T#1942#LS#460363001#LT#2011#PU#81#RT#1#CA#s01#ZE#53#ZB#      53#PC#7#FR#460304023#FT#1942#TO#460363001#TT#2011#",
                         "prodX":4,
-                        "dirTxt":"Ragnitz",
+                        "dirTxt":"Stattegg-Fuß d. L",
                         "dirFlg":"H",
                         "stopL":
                         [
@@ -784,8 +687,8 @@
                             "locX":0,
                             "idx":0,
                             "dProdX":4,
-                            "dTimeS":"165900",
-                            "dDirTxt":"Ragnitz",
+                            "dTimeS":"194200",
+                            "dDirTxt":"Stattegg-Fuß d. L",
                             "dDirFlg":"H",
                             "type":"N"
                           },
@@ -793,25 +696,11 @@
                             "locX":2,
                             "idx":1,
                             "aProdX":4,
-                            "aTimeS":"170000",
+                            "aTimeS":"194200",
                             "type":"N"
                           }
                         ],
-                        "ctxRecon":"T$A=1@O=Hauptbahnhof@L=460304009@a=128@$A=1@O=Babenbergerstraße@L=460314902@a=128@$202109061659$202109061700$      58$$1$$$$",
-                        "msgL":
-                        [
-                          {
-                            "type":"REM",
-                            "remX":0,
-                            "fLocX":0,
-                            "tLocX":2,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL_H3"
-                            ],
-                            "sort":409206784
-                          }
-                        ],
+                        "ctxRecon":"T$A=1@O=Hauptbahnhof@L=460304023@a=128@$A=1@O=Babenbergerstraße@L=460314902@a=128@$202112051942$202112051942$      53$$1$$$$$$",
                         "subscr":"F",
                         "prodL":
                         [
@@ -835,18 +724,18 @@
                         ]
                       },
                       {
-                        "jid":"2|#VN#1#ST#1630889505#PI#0#ZI#46425#TA#43#DA#60921#1S#460304009#1T#1707#LS#460299701#LT#1728#PU#81#RT#1#CA#s01#ZE#63#ZB#      63#PC#7#FR#460304009#FT#1707#TO#460299701#TT#1728#",
+                        "jid":"2|#VN#1#ST#1638666385#PI#0#ZI#60557#TA#38#DA#51221#1S#460304009#1T#1944#LS#460299701#LT#2004#PU#81#RT#1#CA#s01#ZE#63#ZB#      63#PC#7#FR#460304009#FT#1944#TO#460299701#TT#2004#",
                         "prodX":5,
-                        "dirTxt":"Schulzentrum St.Peter",
+                        "dirTxt":"Schulz. St.Peter",
                         "dirFlg":"H",
                         "stopL":
                         [
                           {
-                            "locX":0,
+                            "locX":4,
                             "idx":0,
                             "dProdX":5,
-                            "dTimeS":"170700",
-                            "dDirTxt":"Schulzentrum St.Peter",
+                            "dTimeS":"194400",
+                            "dDirTxt":"Schulz. St.Peter",
                             "dDirFlg":"H",
                             "type":"N"
                           },
@@ -854,31 +743,17 @@
                             "locX":2,
                             "idx":1,
                             "aProdX":5,
-                            "aTimeS":"170800",
+                            "aTimeS":"194500",
                             "type":"N"
                           }
                         ],
-                        "ctxRecon":"T$A=1@O=Hauptbahnhof@L=460304009@a=128@$A=1@O=Babenbergerstraße@L=460314902@a=128@$202109061707$202109061708$      63$$1$$$$",
-                        "msgL":
-                        [
-                          {
-                            "type":"REM",
-                            "remX":0,
-                            "fLocX":0,
-                            "tLocX":2,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL_H3"
-                            ],
-                            "sort":409206784
-                          }
-                        ],
+                        "ctxRecon":"T$A=1@O=Hauptbahnhof@L=460304009@a=128@$A=1@O=Babenbergerstraße@L=460314902@a=128@$202112051944$202112051945$      63$$1$$$$$$",
                         "subscr":"F",
                         "prodL":
                         [
                           {
                             "prodX":5,
-                            "fLocX":0,
+                            "fLocX":4,
                             "tLocX":2,
                             "fIdx":0,
                             "tIdx":1
@@ -888,7 +763,7 @@
                         [
                           {
                             "dirX":1,
-                            "fLocX":0,
+                            "fLocX":4,
                             "tLocX":2,
                             "fIdx":0,
                             "tIdx":1
@@ -896,9 +771,9 @@
                         ]
                       },
                       {
-                        "jid":"2|#VN#1#ST#1630889505#PI#0#ZI#45071#TA#43#DA#60921#1S#460304023#1T#1710#LS#460363001#LT#1743#PU#81#RT#1#CA#s01#ZE#53#ZB#      53#PC#7#FR#460304023#FT#1710#TO#460363001#TT#1743#",
+                        "jid":"2|#VN#1#ST#1638666385#PI#0#ZI#59410#TA#38#DA#51221#1S#460304009#1T#1952#LS#460306502#LT#2022#PU#81#RT#1#CA#s01#ZE#58#ZB#      58#PC#7#FR#460304009#FT#1952#TO#460306502#TT#2022#",
                         "prodX":6,
-                        "dirTxt":"Stattegg Fuß der Leber",
+                        "dirTxt":"Ragnitz",
                         "dirFlg":"H",
                         "stopL":
                         [
@@ -906,8 +781,8 @@
                             "locX":4,
                             "idx":0,
                             "dProdX":6,
-                            "dTimeS":"171000",
-                            "dDirTxt":"Stattegg Fuß der Leber",
+                            "dTimeS":"195200",
+                            "dDirTxt":"Ragnitz",
                             "dDirFlg":"H",
                             "type":"N"
                           },
@@ -915,25 +790,11 @@
                             "locX":2,
                             "idx":1,
                             "aProdX":6,
-                            "aTimeS":"171100",
+                            "aTimeS":"195300",
                             "type":"N"
                           }
                         ],
-                        "ctxRecon":"T$A=1@O=Hauptbahnhof@L=460304023@a=128@$A=1@O=Babenbergerstraße@L=460314902@a=128@$202109061710$202109061711$      53$$1$$$$",
-                        "msgL":
-                        [
-                          {
-                            "type":"REM",
-                            "remX":0,
-                            "fLocX":4,
-                            "tLocX":2,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL_H3"
-                            ],
-                            "sort":409206784
-                          }
-                        ],
+                        "ctxRecon":"T$A=1@O=Hauptbahnhof@L=460304009@a=128@$A=1@O=Babenbergerstraße@L=460314902@a=128@$202112051952$202112051953$      58$$1$$$$$$",
                         "subscr":"F",
                         "prodL":
                         [
@@ -958,7 +819,7 @@
                       }
                     ]
                   },
-                  "ctxRecon":"T$A=1@O=Hauptbahnhof@L=460304009@a=128@$A=1@O=Babenbergerstraße@L=460314902@a=128@$202109061644$202109061645$      58$$1$$$$",
+                  "ctxRecon":"T$A=1@O=Hauptbahnhof@L=460304023@a=128@$A=1@O=Babenbergerstraße@L=460314902@a=128@$202112051927$202112051927$      53$$1$$$$$$",
                   "msgL":
                   [
                     {
@@ -970,7 +831,7 @@
                       [
                         "RES_JNY_DTL_H3"
                       ],
-                      "sort":409206784
+                      "sort":543424512
                     },
                     {
                       "type":"HIM",
@@ -981,7 +842,7 @@
                       [
                         "RES_GLB_HDR_H3","SUM_GLB_HDR_H3"
                       ],
-                      "sort":373527948
+                      "sort":373560317
                     }
                   ],
                   "subscr":"F",
@@ -1008,10 +869,10 @@
                 }
               }
             ],
-            "ctxRecon":"¶HKI¶T$A=1@O=Hauptbahnhof@L=460304009@a=128@$A=1@O=Babenbergerstraße@L=460314902@a=128@$202109061644$202109061645$      58$$1$$$$",
+            "ctxRecon":"¶HKI¶T$A=1@O=Hauptbahnhof@L=460304023@a=128@$A=1@O=Babenbergerstraße@L=460314902@a=128@$202112051927$202112051927$      53$$1$$$$$$¶KI¶H4sIAAAAAAACA+1W247bIBD9lYqHPmUl7GQ3m/xKFSGCsY1sgwU4V+XfOwPYzkbbdlu1Uh82eYHDwMww55i5Eq5LyyvZmWJwZEvoaUWXGVkQN4h6BrM1QP1xBijM77fm76LM+gl3nlvP9iXZfrsSVZzIli6IPAFUA7Z6oUu6ohSwQQmyfc0WpOCDtMHswNtBwui2W5CLku1Pj8lWmw8cc1A8nrIbQ+MFWF2JP/cyWLdGYPBfIHbNOzmOT40xtggW53nIW89EnF1JGDDwpnDxdkMPpv+nDnoL9934cCs92eZ0uVkQE3YCmD3fFn8J300VvkgF0HOW51m2yZ/f4HnYgRxS2ksLkbaRRyX+IEkpGrSTGiKmi3f+4KfjJwalEQ2rpapqH84cOudhxkreeAP3udnM2GVwom55RbZP2Yx2ShfS+Rjuw8IQIkCwbLkUtdQYs2SJ6FeMIfEno/SVhqAK5eCkZb5+WSO7zq5WJQCbuAo8nF0JOLZKEiJQJj64iu8lK1Xr8VC0gT2dalvlpHARqaTrpQVKWpkYCvG2IbI0tVy73oCFqI0SEiMtrdE+8AsXWc8t79xblWi+b8EWPCjHUDO9lU62YREyjkvFYLlXRjNT4u2fU5BKs5h3zDJN8qDYcZHteTPlxLxCTmc5em5bBhlhmjIaIGJ5oYaU8pErP+4A4vRSArOz5RKu0CSvQHG4NpQJifKFDOJmnAS5r+gGeNgbx7j3NlpqWd3Ngk5EPLCEOz6zY+CW0ok1rlE9s2aICFjhWLJJtFAD0UC+MdZQY0TA6A7ShnWDj7dNUUqhBC8fKgH9zRIAL39ZhPHGP1yDp7kIIcVQAxz9B0XI6J+VYQf628PX5FMjnxr51MiPNaIO7yhkh00GlOPx5WFKK6+gEbkEMj6UjKVHiT7iUYcAV0qwvuZOxkcydQfYjb3pS4EdujRz65newjQzB2mPFrqJhGCoGrqBCjdetEGVrPJsvc7hwfa8GfsArAQO+B47wTiKbzc2XHoC9QSWxxEsj2F7wNIyvu8aO5DBuckzvfc4NgbYsHHbfLWqCG93b1l48aVmok1CnhBwzyDBfdh4+w4ilqxFsgsAAA==",
             "freq":
             {
-              "minC":3
+              "minC":2
             },
             "trfRes":
             {
@@ -1104,22 +965,20 @@
                       "cur":"EUR"
                     }
                   ]
-                }
-              ],
-              "bkgData":
-              {
-                "common":
-                {
-                  "FEL":
-                  [
-
-                  ]
                 },
-                "BOG":
                 {
-
+                  "name":"Verbund Linie Freizeit-Ticket",
+                  "desc":"",
+                  "fareL":
+                  [
+                    {
+                      "name":"Sondertarif - Freizeit-Ticket Steiermark",
+                      "prc":1100,
+                      "cur":"EUR"
+                    }
+                  ]
                 }
-              }
+              ]
             },
             "ovwTrfRefL":
             [
@@ -1144,17 +1003,17 @@
             ],
             "eco":
             {
-              "co2":0.011440000000000
+              "co2":0.012100000000000
             },
             "conSubscr":"F",
             "recState":"C",
-            "cksum":"83e99e2b_3",
-            "cksumDti":"1c11d4e6_3"
+            "cksum":"3ca413cd_3",
+            "cksumDti":"7eff3600_3"
           }
         ],
-        "fpB":"20210706",
-        "fpE":"20211211",
-        "planrtTS":"1630939283"
+        "fpB":"20211004",
+        "fpE":"20220531",
+        "planrtTS":"1638728681"
       }
     }
   ]

@@ -2,7 +2,7 @@
   "ver":"1.20",
   "ext":"VAO.7",
   "lang":"deu",
-  "id":"tb2xbic6m2izwick",
+  "id":"n4gw4mx8462apiwg",
   "err":"OK",
   "cInfo":
   {
@@ -59,6 +59,9 @@
           "icoL":
           [
             {
+              "res":"ADR"
+            },
+            {
               "res":"prod_regbus",
               "txtS":"502N",
               "fg":
@@ -73,9 +76,6 @@
                 "g":163,
                 "b":212
               }
-            },
-            {
-              "res":"ADR"
             }
           ]
         },
@@ -86,10 +86,38 @@
           "locL":
           [
             {
-              "lid":"A=1@O=Innsbruck Kochstraße@X=11400363@Y=47272851@U=81@L=476640200@B=1@p=1630889505@i=at:47:66402@",
+              "lid":"A=2@O=Kochstrasse, Selm@X=7484554@Y=51696164@U=104@b=971932699@B=1@p=1636631415@",
+              "type":"A",
+              "name":"Kochstrasse, Selm",
+              "icoX":0,
+              "state":"F",
+              "crd":
+              {
+                "x":7484554,
+                "y":51696164,
+                "layerX":0,
+                "crdSysX":0
+              }
+            },
+            {
+              "lid":"A=2@O=Kochstrasse, Zürich@X=8514600@Y=47378402@U=104@b=970989777@B=1@p=1636631415@",
+              "type":"A",
+              "name":"Kochstrasse, Zürich",
+              "icoX":0,
+              "state":"F",
+              "crd":
+              {
+                "x":8514600,
+                "y":47378402,
+                "layerX":0,
+                "crdSysX":0
+              }
+            },
+            {
+              "lid":"A=1@O=Innsbruck Kochstraße@X=11400363@Y=47272851@U=81@L=476640200@B=1@p=1638666385@i=at:47:66402@",
               "type":"S",
               "name":"Innsbruck Kochstraße",
-              "icoX":0,
+              "icoX":1,
               "extId":"476640200",
               "state":"F",
               "crd":
@@ -101,14 +129,15 @@
               },
               "meta":true,
               "pCls":192,
-              "wt":225,
-              "isMainMast":true
+              "wt":219,
+              "isMainMast":true,
+              "mapSelectable":true
             },
             {
-              "lid":"A=2@O=Kochstraße, 8010 Graz@X=15461887@Y=47055842@U=103@b=980066789@B=1@p=1629871314@",
+              "lid":"A=2@O=Kochstraße, 8010 Graz@X=15461887@Y=47055842@U=103@b=980066961@B=1@p=1637147511@",
               "type":"A",
               "name":"Kochstraße, 8010 Graz",
-              "icoX":1,
+              "icoX":0,
               "state":"F",
               "crd":
               {
@@ -119,43 +148,15 @@
               }
             },
             {
-              "lid":"A=2@O=Kochstraße, 4820 Bad Ischl@X=13627341@Y=47708288@U=103@b=980066787@B=1@p=1629871314@",
+              "lid":"A=2@O=Kochstraße, 4820 Bad Ischl@X=13627341@Y=47708288@U=103@b=980066959@B=1@p=1637147511@",
               "type":"A",
               "name":"Kochstraße, 4820 Bad Ischl",
-              "icoX":1,
+              "icoX":0,
               "state":"F",
               "crd":
               {
                 "x":13627341,
                 "y":47708288,
-                "layerX":0,
-                "crdSysX":0
-              }
-            },
-            {
-              "lid":"A=2@O=Kochstraße, 6020 Innsbruck@X=11400578@Y=47272078@U=103@b=980066788@B=1@p=1629871314@",
-              "type":"A",
-              "name":"Kochstraße, 6020 Innsbruck",
-              "icoX":1,
-              "state":"F",
-              "crd":
-              {
-                "x":11400578,
-                "y":47272078,
-                "layerX":0,
-                "crdSysX":0
-              }
-            },
-            {
-              "lid":"A=2@O=Kochstraße, 2620 Neunkirchen@X=16088624@Y=47728325@U=103@b=980066785@B=1@p=1629871314@",
-              "type":"A",
-              "name":"Kochstraße, 2620 Neunkirchen",
-              "icoX":1,
-              "state":"F",
-              "crd":
-              {
-                "x":16088624,
-                "y":47728325,
                 "layerX":0,
                 "crdSysX":0
               }

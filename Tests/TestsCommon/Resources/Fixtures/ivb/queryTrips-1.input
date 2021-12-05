@@ -2,7 +2,7 @@
   "ver":"1.20",
   "ext":"VAO.7",
   "lang":"deu",
-  "id":"2vgxji84m2ihyg4k",
+  "id":"s764cmca46wewi8x",
   "err":"OK",
   "cInfo":
   {
@@ -94,10 +94,46 @@
               "isMainMast":true
             },
             {
+              "lid":"A=1@O=Innsbruck Rehgasse@X=11362976@Y=47255897@U=81@L=476152201@i=at:47:61522:0:1@",
+              "type":"S",
+              "name":"Innsbruck Rehgasse",
+              "icoX":7,
+              "extId":"476152201",
+              "state":"F",
+              "crd":
+              {
+                "x":11362976,
+                "y":47255897,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":128,
+              "entry":true,
+              "mMastLocX":5
+            },
+            {
+              "lid":"A=1@O=Innsbruck Rehgasse@X=11362967@Y=47255897@U=81@L=476152200@i=at:47:61522@",
+              "type":"S",
+              "name":"Innsbruck Rehgasse",
+              "icoX":8,
+              "extId":"476152200",
+              "state":"F",
+              "crd":
+              {
+                "x":11362967,
+                "y":47255897,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "meta":true,
+              "pCls":128,
+              "isMainMast":true
+            },
+            {
               "lid":"A=2@O=47.271233, 11.404534@X=11404534@Y=47271233@",
               "type":"A",
               "name":"47.271233, 11.404534",
-              "icoX":8,
+              "icoX":10,
               "state":"F",
               "crd":
               {
@@ -111,7 +147,7 @@
               "lid":"A=1@O=Innsbruck Tschurtschenthalerstraße@X=11399751@Y=47274082@U=81@L=476157802@i=at:47:61578:0:2@",
               "type":"S",
               "name":"Innsbruck Tschurtschenthalerstraße",
-              "icoX":13,
+              "icoX":15,
               "extId":"476157802",
               "state":"F",
               "crd":
@@ -123,13 +159,13 @@
               },
               "pCls":128,
               "entry":true,
-              "mMastLocX":6
+              "mMastLocX":8
             },
             {
               "lid":"A=1@O=Innsbruck Tschurtschenthalerstraße@X=11399823@Y=47274100@U=81@L=476157800@i=at:47:61578@",
               "type":"S",
               "name":"Innsbruck Tschurtschenthalerstraße",
-              "icoX":14,
+              "icoX":8,
               "extId":"476157800",
               "state":"F",
               "crd":
@@ -144,226 +180,47 @@
               "isMainMast":true
             },
             {
-              "lid":"A=1@O=Innsbruck Kochstraße@X=11400390@Y=47273327@U=81@L=476640201@i=at:47:66402:0:1@",
+              "lid":"A=1@O=Innsbruck Hauptbahnhof@l=Innsbruck Hauptbahnhof (F)@X=11400237@Y=47263987@U=81@L=470118709@i=at:47:1187:0:9@",
               "type":"S",
-              "name":"Innsbruck Kochstraße",
-              "icoX":0,
-              "extId":"476640201",
+              "name":"Innsbruck Hauptbahnhof",
+              "nameAlt":"Innsbruck Hauptbahnhof (F)",
+              "icoX":16,
+              "extId":"470118709",
               "state":"F",
               "crd":
               {
-                "x":11400390,
-                "y":47273327,
+                "x":11400237,
+                "y":47263987,
                 "layerX":0,
                 "crdSysX":0
               },
-              "pCls":192,
+              "pCls":211,
               "entry":true,
-              "mMastLocX":1
+              "mMastLocX":10
             },
             {
-              "lid":"A=1@O=Innsbruck Landesmuseum@X=11398214@Y=47266918@U=81@L=476155902@i=at:47:61559:0:2@",
+              "lid":"A=1@O=Innsbruck Hauptbahnhof@X=11400273@Y=47263538@U=81@L=470118700@i=at:47:1187@",
               "type":"S",
-              "name":"Innsbruck Landesmuseum",
-              "icoX":4,
-              "extId":"476155902",
+              "name":"Innsbruck Hauptbahnhof",
+              "icoX":17,
+              "extId":"470118700",
               "state":"F",
               "crd":
               {
-                "x":11398214,
-                "y":47266918,
-                "layerX":0,
-                "crdSysX":0
-              },
-              "pCls":208,
-              "entry":true,
-              "mMastLocX":9
-            },
-            {
-              "lid":"A=1@O=Innsbruck Landesmuseum@X=11398529@Y=47266855@U=81@L=476155900@i=at:47:61559@",
-              "type":"S",
-              "name":"Innsbruck Landesmuseum",
-              "icoX":5,
-              "extId":"476155900",
-              "state":"F",
-              "crd":
-              {
-                "x":11398529,
-                "y":47266855,
+                "x":11400273,
+                "y":47263538,
                 "layerX":0,
                 "crdSysX":0
               },
               "meta":true,
-              "pCls":208,
-              "isMainMast":true
-            },
-            {
-              "lid":"A=1@O=Innsbruck Polizeidirektion@X=11399554@Y=47269686@U=81@L=476640103@i=at:47:66401:0:3@",
-              "type":"S",
-              "name":"Innsbruck Polizeidirektion",
-              "icoX":0,
-              "extId":"476640103",
-              "state":"F",
-              "crd":
-              {
-                "x":11399554,
-                "y":47269686,
-                "layerX":0,
-                "crdSysX":0
-              },
-              "pCls":192,
-              "entry":true,
-              "mMastLocX":11
-            },
-            {
-              "lid":"A=1@O=Innsbruck Polizeidirektion@X=11399688@Y=47269893@U=81@L=476640100@i=at:47:66401@",
-              "type":"S",
-              "name":"Innsbruck Polizeidirektion",
-              "icoX":1,
-              "extId":"476640100",
-              "state":"F",
-              "crd":
-              {
-                "x":11399688,
-                "y":47269893,
-                "layerX":0,
-                "crdSysX":0
-              },
-              "meta":true,
-              "pCls":192,
-              "isMainMast":true
-            },
-            {
-              "lid":"A=1@O=Innsbruck Landesmuseum@X=11398906@Y=47266783@U=81@L=476155901@i=at:47:61559:0:1@",
-              "type":"S",
-              "name":"Innsbruck Landesmuseum",
-              "icoX":4,
-              "extId":"476155901",
-              "state":"F",
-              "crd":
-              {
-                "x":11398906,
-                "y":47266783,
-                "layerX":0,
-                "crdSysX":0
-              },
-              "pCls":208,
-              "entry":true,
-              "mMastLocX":9
-            },
-            {
-              "lid":"A=1@O=Innsbruck Messe/Zeughaus@X=11404534@Y=47271197@U=81@L=476167902@i=at:47:61679:0:2@",
-              "type":"S",
-              "name":"Innsbruck Messe/Zeughaus",
-              "icoX":4,
-              "extId":"476167902",
-              "state":"F",
-              "crd":
-              {
-                "x":11404534,
-                "y":47271197,
-                "layerX":0,
-                "crdSysX":0
-              },
-              "pCls":16,
-              "entry":true,
-              "mMastLocX":14
-            },
-            {
-              "lid":"A=1@O=Innsbruck Messe/Zeughaus@X=11404534@Y=47271233@U=81@L=476167900@i=at:47:61679@",
-              "type":"S",
-              "name":"Innsbruck Messe/Zeughaus",
-              "icoX":5,
-              "extId":"476167900",
-              "state":"F",
-              "crd":
-              {
-                "x":11404534,
-                "y":47271233,
-                "layerX":0,
-                "crdSysX":0
-              },
-              "meta":true,
-              "pCls":16,
-              "isMainMast":true
-            },
-            {
-              "lid":"A=1@O=Innsbruck Brunecker Straße/BFI@X=11401918@Y=47266945@U=81@L=476157601@i=at:47:61576:0:1@",
-              "type":"S",
-              "name":"Innsbruck Brunecker Straße/BFI",
-              "icoX":4,
-              "extId":"476157601",
-              "state":"F",
-              "crd":
-              {
-                "x":11401918,
-                "y":47266945,
-                "layerX":0,
-                "crdSysX":0
-              },
-              "pCls":144,
-              "entry":true,
-              "mMastLocX":16
-            },
-            {
-              "lid":"A=1@O=Innsbruck Brunecker Straße/BFI@X=11401828@Y=47266711@U=81@L=476157600@i=at:47:61576@",
-              "type":"S",
-              "name":"Innsbruck Brunecker Straße/BFI",
-              "icoX":5,
-              "extId":"476157600",
-              "state":"F",
-              "crd":
-              {
-                "x":11401828,
-                "y":47266711,
-                "layerX":0,
-                "crdSysX":0
-              },
-              "meta":true,
-              "pCls":144,
-              "isMainMast":true
-            },
-            {
-              "lid":"A=1@O=Innsbruck Ing.-Etzel-Straße@X=11402673@Y=47269273@U=81@L=476157702@i=at:47:61577:0:2@",
-              "type":"S",
-              "name":"Innsbruck Ing.-Etzel-Straße",
-              "icoX":4,
-              "extId":"476157702",
-              "state":"F",
-              "crd":
-              {
-                "x":11402673,
-                "y":47269273,
-                "layerX":0,
-                "crdSysX":0
-              },
-              "pCls":144,
-              "entry":true,
-              "mMastLocX":18
-            },
-            {
-              "lid":"A=1@O=Innsbruck Ing.-Etzel-Straße@X=11402646@Y=47269291@U=81@L=476157700@i=at:47:61577@",
-              "type":"S",
-              "name":"Innsbruck Ing.-Etzel-Straße",
-              "icoX":5,
-              "extId":"476157700",
-              "state":"F",
-              "crd":
-              {
-                "x":11402646,
-                "y":47269291,
-                "layerX":0,
-                "crdSysX":0
-              },
-              "meta":true,
-              "pCls":144,
+              "pCls":211,
               "isMainMast":true
             }
           ],
           "prodL":
           [
             {
-              "pid":"L::7::::B1506840680::vvt-1-R-P-j21-4::*",
+              "pid":"L::7::::B1506840680::vvt-1-R-P-j21-6::*",
               "name":"Stadtbus R",
               "nameS":"R",
               "number":"R",
@@ -373,7 +230,7 @@
               "prodCtx":
               {
                 "name":"       R",
-                "num":"5319",
+                "num":"8513",
                 "line":"R",
                 "matchId":"30",
                 "catOutS":"t01",
@@ -381,10 +238,14 @@
                 "catIn":"t01",
                 "catCode":"7",
                 "admin":"t1900_"
-              }
+              },
+              "himIdL":
+              [
+"HIM_FREETEXT_153867"
+              ]
             },
             {
-              "pid":"L::7::::B1506840680::vvt-1-R-P-j21-4::*",
+              "pid":"L::7::::B1506840680::vvt-1-R-P-j21-6::*",
               "name":"Stadtbus R",
               "nameS":"R",
               "number":"R",
@@ -394,27 +255,31 @@
               "prodCtx":
               {
                 "name":"       R",
-                "num":"5319",
+                "num":"8513",
                 "line":"R",
-                "lineId":"vvt-1-R-P-j21-4",
+                "lineId":"vvt-1-R-P-j21-6",
                 "matchId":"30",
                 "catOutS":"t01",
                 "catOutL":"Stadtbus",
                 "catIn":"t01",
                 "catCode":"7",
                 "admin":"t1900_"
-              }
+              },
+              "himIdL":
+              [
+"HIM_FREETEXT_153867"
+              ]
             },
             {
               "name":"Fußweg",
-              "icoX":9,
+              "icoX":11,
               "prodCtx":
               {
                 "name":"Fußweg"
               }
             },
             {
-              "pid":"L::7::::B1506840680::vvt-1-R-P-j21-4::*",
+              "pid":"L::7::::B1506840680::vvt-1-R-P-j21-6::*",
               "name":"Stadtbus R",
               "nameS":"R",
               "number":"R",
@@ -424,7 +289,7 @@
               "prodCtx":
               {
                 "name":"       R",
-                "num":"5196",
+                "num":"8459",
                 "line":"R",
                 "matchId":"30",
                 "catOutS":"t01",
@@ -432,10 +297,14 @@
                 "catIn":"t01",
                 "catCode":"7",
                 "admin":"t1900_"
-              }
+              },
+              "himIdL":
+              [
+"HIM_FREETEXT_153867"
+              ]
             },
             {
-              "pid":"L::7::::B1506840680::vvt-1-R-P-j21-4::*",
+              "pid":"L::7::::B1506840680::vvt-1-R-P-j21-6::*",
               "name":"Stadtbus R",
               "nameS":"R",
               "number":"R",
@@ -445,29 +314,33 @@
               "prodCtx":
               {
                 "name":"       R",
-                "num":"5196",
+                "num":"8459",
                 "line":"R",
-                "lineId":"vvt-1-R-P-j21-4",
+                "lineId":"vvt-1-R-P-j21-6",
                 "matchId":"30",
                 "catOutS":"t01",
                 "catOutL":"Stadtbus",
                 "catIn":"t01",
                 "catCode":"7",
                 "admin":"t1900_"
-              }
+              },
+              "himIdL":
+              [
+"HIM_FREETEXT_153867"
+              ]
             },
             {
               "pid":"L::7::::B1506840680::vvt-1-B-P-j21-3::*",
               "name":"Stadtbus B",
               "nameS":"B",
               "number":"B",
-              "icoX":13,
+              "icoX":15,
               "cls":128,
               "oprX":0,
               "prodCtx":
               {
                 "name":"       B",
-                "num":"430",
+                "num":"1567",
                 "line":"B",
                 "matchId":"22",
                 "catOutS":"t01",
@@ -482,13 +355,13 @@
               "name":"Stadtbus B",
               "nameS":"B",
               "number":"B",
-              "icoX":13,
+              "icoX":15,
               "cls":128,
               "oprX":1,
               "prodCtx":
               {
                 "name":"       B",
-                "num":"430",
+                "num":"1567",
                 "line":"B",
                 "lineId":"vvt-1-B-P-j21-3",
                 "matchId":"22",
@@ -498,100 +371,6 @@
                 "catCode":"7",
                 "admin":"t1900_"
               }
-            },
-            {
-              "pid":"L::7::::B1506840680::vvt-1-A-P-j21-1::*",
-              "name":"Stadtbus A",
-              "nameS":"A",
-              "number":"A",
-              "icoX":15,
-              "cls":128,
-              "oprX":0,
-              "prodCtx":
-              {
-                "name":"       A",
-                "num":"123",
-                "line":"A",
-                "matchId":"10",
-                "catOutS":"t01",
-                "catOutL":"Stadtbus",
-                "catIn":"t01",
-                "catCode":"7",
-                "admin":"t1900_"
-              }
-            },
-            {
-              "pid":"L::7::::B1506840680::vvt-1-A-P-j21-1::*",
-              "name":"Stadtbus A",
-              "nameS":"A",
-              "number":"A",
-              "icoX":15,
-              "cls":128,
-              "oprX":1,
-              "prodCtx":
-              {
-                "name":"       A",
-                "num":"123",
-                "line":"A",
-                "lineId":"vvt-1-A-P-j21-1",
-                "matchId":"10",
-                "catOutS":"t01",
-                "catOutL":"Stadtbus",
-                "catIn":"t01",
-                "catCode":"7",
-                "admin":"t1900_"
-              }
-            },
-            {
-              "name":"Übergang",
-              "icoX":16,
-              "prodCtx":
-              {
-                "name":"Übergang"
-              }
-            },
-            {
-              "pid":"L::4::::B1506840680::vvt-3-1-P-j21-1::*",
-              "name":"Tram 1",
-              "nameS":"1",
-              "number":"1",
-              "icoX":4,
-              "cls":16,
-              "oprX":0,
-              "prodCtx":
-              {
-                "name":"       1",
-                "num":"7085",
-                "line":"1",
-                "matchId":"1",
-                "catOutS":"t11",
-                "catOutL":"Tram",
-                "catIn":"t11",
-                "catCode":"4",
-                "admin":"t1900_"
-              }
-            },
-            {
-              "pid":"L::4::::B1506840680::vvt-3-1-P-j21-1::*",
-              "name":"Tram 1",
-              "nameS":"1",
-              "number":"1",
-              "icoX":4,
-              "cls":16,
-              "oprX":1,
-              "prodCtx":
-              {
-                "name":"       1",
-                "num":"7085",
-                "line":"1",
-                "lineId":"vvt-3-1-P-j21-1",
-                "matchId":"1",
-                "catOutS":"t11",
-                "catOutL":"Tram",
-                "catIn":"t11",
-                "catCode":"4",
-                "admin":"t1900_"
-              }
             }
           ],
           "polyL":
@@ -599,9 +378,9 @@
             {
               "delta":true,
               "dim":2,
-              "crdEncYX":"e{o_HgsqdAAP]E{@IEAMCQE{@G{@ImAKMA@YT_DZgFB]BYt@sK@SB_@JaBD@",
-              "crdEncS":"NNBFBCGCDCNEEDEBFCDNN",
-              "crdEncF":"?????????????????????",
+              "crdEncYX":"e{o_HgsqdAAPyAOe@KsE_@pBmZPuCD@",
+              "crdEncS":"NNFGNFNN",
+              "crdEncF":"????????",
               "ppLocRefL":
               [
                 {
@@ -609,7 +388,7 @@
                   "locX":0
                 },
                 {
-                  "ppIdx":20,
+                  "ppIdx":7,
                   "locX":2
                 }
               ]
@@ -617,9 +396,9 @@
             {
               "delta":true,
               "dim":2,
-              "crdEncYX":"e{o_HgsqdAAP]E{@IEAMCQE{@G{@ImAKMA@YT_DZgFB]BYt@sK@SB_@JaBD@",
-              "crdEncS":"NNBFBCGCDCNEEDEBFCDNN",
-              "crdEncF":"?????????????????????",
+              "crdEncYX":"e{o_HgsqdAAPyAOe@KsE_@pBmZPuCD@",
+              "crdEncS":"NNFGNFNN",
+              "crdEncF":"????????",
               "ppLocRefL":
               [
                 {
@@ -627,7 +406,7 @@
                   "locX":0
                 },
                 {
-                  "ppIdx":20,
+                  "ppIdx":7,
                   "locX":2
                 }
               ]
@@ -635,27 +414,9 @@
             {
               "delta":true,
               "dim":2,
-              "crdEncYX":"_fp_HmoqdACCDcC@[@YT_DZgFB]BYt@sK@SB_@JaBD@",
-              "crdEncS":"NNDBLEDEBFCDNN",
-              "crdEncF":"??????????????",
-              "ppLocRefL":
-              [
-                {
-                  "ppIdx":0,
-                  "locX":5
-                },
-                {
-                  "ppIdx":13,
-                  "locX":2
-                }
-              ]
-            },
-            {
-              "delta":true,
-              "dim":2,
-              "crdEncYX":"iap_HmsqdA@MB@z@FPDLBD@z@HlALN@J@bBPjAN|AP`AJTHD@XH\\LXJLD??rAh@JDBRJn@nDgA|@QLAJ?F?fB`@f@H^FVFC^WdDC?",
-              "crdEncS":"NNDFBCECDBDFDDMDDECCNNDNDNHENAHFECNENN",
-              "crdEncF":"??????????????????????????????????????",
+              "crdEncYX":"_fp_HmoqdACCHyDnBsYPuCD@",
+              "crdEncS":"NNLFNN",
+              "crdEncF":"??????",
               "ppLocRefL":
               [
                 {
@@ -663,57 +424,8 @@
                   "locX":7
                 },
                 {
-                  "ppIdx":20,
-                  "locX":10
-                },
-                {
-                  "ppIdx":37,
-                  "locX":8
-                }
-              ]
-            },
-            {
-              "delta":true,
-              "dim":2,
-              "crdEncYX":"gyn_HyeqdA??D?RkC????",
-              "crdEncS":"NNNNNN",
-              "crdEncF":"??????",
-              "ppLocRefL":
-              [
-                {
-                  "ppIdx":0,
-                  "locX":8
-                },
-                {
                   "ppIdx":5,
-                  "locX":12
-                }
-              ],
-              "sty":"DOT"
-            },
-            {
-              "delta":true,
-              "dim":2,
-              "crdEncYX":"mxn_HejqdA?AB]@M@S@K@S@U`@{F@K@G?A????@Q@OFSFSBOBQ@E?[??CKCIEIGCECEAm@MA?CAC?AAC?E?KA????EAIAGAIAg@IcB[_Ce@MCc@ICACAGCGCICIAICGEICECKCGCIEEC??C?GEGCe@WMGOIGGGEAAAAA?MMOIACAAOIKMECGEEEGGMKKMGIKICEEEGGCEEGECEIGIGECGEGGICECE]i@[c@@?",
-              "crdEncS":"NNBCCDAFDDE??CJECAEDIBNAHEBLCDCDDF@DNN?CAAHCDDCKCCDACCEDC@CGBNNGDECJBBDE?CDC@DED@M@AADEFD@E@DCDEJCDBDBDNN",
-              "crdEncF":"?????????????????????????????????????????????????????????????????????????????????????????????????????????",
-              "ppLocRefL":
-              [
-                {
-                  "ppIdx":0,
-                  "locX":12
-                },
-                {
-                  "ppIdx":36,
-                  "locX":15
-                },
-                {
-                  "ppIdx":61,
-                  "locX":17
-                },
-                {
-                  "ppIdx":104,
-                  "locX":13
+                  "locX":2
                 }
               ]
             }
@@ -724,7 +436,7 @@
               "id":"standard",
               "name":"standard",
               "index":0,
-              "annoCnt":384392
+              "annoCnt":694319
             }
           ],
           "crdSysL":
@@ -760,20 +472,14 @@
             {
               "type":"H",
               "code":"text.connection.eco.co2.decreased.consumption.message",
-              "icoX":11,
+              "icoX":13,
               "txtN":"Im Vergleich zu einer Fahrt mit dem eigenen PKW werden 0,06 kg CO<sub>2</sub> Emissionen eingespart. <a target=\"_blank\" href=\"https://web.verkehrsauskunft.at/co2berechnung/CO2_Berechnung.pdf\">Mehr Informationen</a>"
             },
             {
               "type":"H",
               "code":"text.connection.eco.co2.decreased.consumption.message",
-              "icoX":11,
+              "icoX":13,
               "txtN":"Im Vergleich zu einer Fahrt mit dem eigenen PKW werden 0,07 kg CO<sub>2</sub> Emissionen eingespart. <a target=\"_blank\" href=\"https://web.verkehrsauskunft.at/co2berechnung/CO2_Berechnung.pdf\">Mehr Informationen</a>"
-            },
-            {
-              "type":"H",
-              "code":"text.connection.eco.co2.decreased.consumption.message",
-              "icoX":11,
-              "txtN":"Im Vergleich zu einer Fahrt mit dem eigenen PKW werden 0,05 kg CO<sub>2</sub> Emissionen eingespart. <a target=\"_blank\" href=\"https://web.verkehrsauskunft.at/co2berechnung/CO2_Berechnung.pdf\">Mehr Informationen</a>"
             }
           ],
           "himL":
@@ -781,16 +487,18 @@
             {
               "hid":"126891",
               "act":true,
-              "head":"Tragen eines Mund-Nasen-Schutzes",
-              "text":"Bitte Tragen Sie in allen öffentlichen Verkehrsmitteln einen geeigneten Mund-Nasen-Schutz und wahren Sie nach Möglichkeit Distanz zu anderen Personen.",
-              "icoX":7,
+              "head":"FFP2-Maskenpflicht",
+              "text":"Bitte tragen Sie in allen öffentlichen Verkehrsmitteln eine FFP2-Maske und wahren Sie nach Möglichkeit Distanz zu anderen Personen.",
+              "icoX":9,
               "prio":100,
+              "fLocX":4,
+              "tLocX":4,
               "prod":65535,
-              "lModDate":"20210630",
-              "lModTime":"210847",
+              "lModDate":"20211126",
+              "lModTime":"093953",
               "sDate":"20210125",
               "sTime":"000000",
-              "eDate":"20211211",
+              "eDate":"20220531",
               "eTime":"235900",
               "comp":"KGÖVV",
               "catRefL":
@@ -801,9 +509,45 @@
               [
                 {
                   "name":"TIMETABLE",
-                  "fDate":"20210630",
-                  "fTime":"210800",
-                  "tDate":"20211211",
+                  "fDate":"20211021",
+                  "fTime":"095900",
+                  "tDate":"20220531",
+                  "tTime":"235900",
+                  "uRefL":
+                  [
+0
+                  ]
+                }
+              ]
+            },
+            {
+              "hid":"126891",
+              "act":true,
+              "head":"FFP2-Maskenpflicht",
+              "text":"Bitte tragen Sie in allen öffentlichen Verkehrsmitteln eine FFP2-Maske und wahren Sie nach Möglichkeit Distanz zu anderen Personen.",
+              "icoX":9,
+              "prio":100,
+              "fLocX":9,
+              "tLocX":9,
+              "prod":65535,
+              "lModDate":"20211126",
+              "lModTime":"093953",
+              "sDate":"20210125",
+              "sTime":"000000",
+              "eDate":"20220531",
+              "eTime":"235900",
+              "comp":"KGÖVV",
+              "catRefL":
+              [
+0
+              ],
+              "pubChL":
+              [
+                {
+                  "name":"TIMETABLE",
+                  "fDate":"20211021",
+                  "fTime":"095900",
+                  "tDate":"20220531",
                   "tTime":"235900",
                   "uRefL":
                   [
@@ -901,6 +645,37 @@
               "res":"INFO"
             },
             {
+              "res":"prod_bus",
+              "txtS":"N3",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255
+              },
+              "bg":
+              {
+                "r":0,
+                "g":163,
+                "b":212
+              }
+            },
+            {
+              "res":"prod_bus",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255
+              },
+              "bg":
+              {
+                "r":0,
+                "g":163,
+                "b":212
+              }
+            },
+            {
               "res":"HIM4"
             },
             {
@@ -947,7 +722,8 @@
               }
             },
             {
-              "res":"prod_bus",
+              "res":"prod_ic",
+              "txtS":"CJX",
               "fg":
               {
                 "r":255,
@@ -956,14 +732,13 @@
               },
               "bg":
               {
-                "r":0,
-                "g":163,
-                "b":212
+                "r":80,
+                "g":80,
+                "b":80
               }
             },
             {
-              "res":"prod_bus",
-              "txtS":"A",
+              "res":"prod_ic",
               "fg":
               {
                 "r":255,
@@ -972,24 +747,9 @@
               },
               "bg":
               {
-                "r":0,
-                "g":163,
-                "b":212
-              }
-            },
-            {
-              "res":"TRSF",
-              "fg":
-              {
-                "r":255,
-                "g":255,
-                "b":255
-              },
-              "bg":
-              {
-                "r":142,
-                "g":142,
-                "b":142
+                "r":80,
+                "g":80,
+                "b":80
               }
             },
             {
@@ -1027,7 +787,7 @@
           [
             {
               "label":"Fahrgast-Charta - sicher und gesund mit den Öffis ans Ziel",
-              "url":"https://routenplaner.verkehrsauskunft.at/him-upload/1625080040721_Fahrgastcharta_Juli2021.pdf"
+              "url":"https://routenplaner.verkehrsauskunft.at/him-upload/1637915993266_Fahrgastcharta_November021.pdf"
             }
           ],
           "himMsgCatL":
@@ -1046,14 +806,6 @@
             {
               "txt":"Innsbruck Kletterzentrum",
               "flg":"R"
-            },
-            {
-              "txt":"Innsbruck Sadrach",
-              "flg":"H"
-            },
-            {
-              "txt":"Innsbruck Mühlauer Brücke",
-              "flg":"H"
             }
           ]
         },
@@ -1061,14 +813,14 @@
         [
           {
             "cid":"C-0",
-            "date":"20210906",
-            "dur":"000600",
+            "date":"20211205",
+            "dur":"000500",
             "chg":0,
             "sDays":
             {
-              "sDaysR":"Sa",
-              "sDaysI":"auch 6. bis 10. Sep 2021, 27. bis 29. Okt 2021, 2. Nov",
-              "sDaysB":"0BF7EFDFBF7EFDFBF02040810204791020408102"
+              "sDaysR":"So",
+              "sDaysI":"auch 8., 25. Dez, 1., 6. Jan, 18. Apr, 26. Mai",
+              "sDaysB":"02040A182040810244083062408102040810204081020408182040810224"
             },
             "dep":
             {
@@ -1076,16 +828,16 @@
               "idx":13,
               "dProdX":0,
               "dInR":true,
-              "dTimeS":"164000",
-              "dTimeR":"164200",
+              "dTimeS":"193300",
+              "dTimeR":"193400",
               "dProgType":"PROGNOSED",
               "type":"N"
             },
             "arr":
             {
-              "locX":4,
+              "locX":6,
               "aOutR":true,
-              "aTimeS":"164600",
+              "aTimeS":"193800",
               "type":"N"
             },
             "secL":
@@ -1099,8 +851,8 @@
                   "idx":13,
                   "dProdX":0,
                   "dInR":true,
-                  "dTimeS":"164000",
-                  "dTimeR":"164200",
+                  "dTimeS":"193300",
+                  "dTimeR":"193400",
                   "dProgType":"PROGNOSED",
                   "type":"N"
                 },
@@ -1110,14 +862,14 @@
                   "idx":14,
                   "aProdX":0,
                   "aOutR":true,
-                  "aTimeS":"164200",
-                  "aTimeR":"164400",
+                  "aTimeS":"193400",
+                  "aTimeR":"193500",
                   "aProgType":"PROGNOSED",
                   "type":"N"
                 },
                 "jny":
                 {
-                  "jid":"2|#VN#1#ST#1630889505#PI#0#ZI#112744#TA#28#DA#60921#1S#476152201#1T#1620#LS#476420703#LT#1657#PU#81#RT#1#CA#t01#ZE#R#ZB#       R#PC#7#FR#476152201#FT#1620#TO#476420703#TT#1657#",
+                  "jid":"2|#VN#1#ST#1638666385#PI#0#ZI#181988#TA#24#DA#51221#1S#476152201#1T#1916#LS#476420703#LT#1948#PU#81#RT#1#CA#t01#ZE#R#ZB#       R#PC#7#FR#476152201#FT#1916#TO#476420703#TT#1948#",
                   "prodX":1,
                   "dirTxt":"Innsbruck DEZ/EKZ",
                   "dirFlg":"R",
@@ -1130,8 +882,8 @@
                       "idx":13,
                       "dProdX":1,
                       "dInR":true,
-                      "dTimeS":"164000",
-                      "dTimeR":"164200",
+                      "dTimeS":"193300",
+                      "dTimeR":"193400",
                       "dProgType":"PROGNOSED",
                       "dDirTxt":"Innsbruck DEZ/EKZ",
                       "dDirFlg":"R",
@@ -1142,8 +894,8 @@
                       "idx":14,
                       "aProdX":1,
                       "aOutR":true,
-                      "aTimeS":"164200",
-                      "aTimeR":"164400",
+                      "aTimeS":"193400",
+                      "aTimeR":"193500",
                       "aProgType":"PROGNOSED",
                       "type":"N"
                     }
@@ -1159,18 +911,18 @@
                   },
                   "pos":
                   {
-                    "x":11400039,
-                    "y":47262792,
+                    "x":11394834,
+                    "y":47264320,
                     "layerX":0,
                     "crdSysX":0
                   },
                   "freq":
                   {
-                    "minC":10,
-                    "maxC":10,
-                    "numC":13
+                    "minC":15,
+                    "maxC":15,
+                    "numC":9
                   },
-                  "ctxRecon":"T$A=1@O=Innsbruck Kochstraße@L=476640202@a=128@$A=1@O=Innsbruck Bundesbahndirektion@L=476158004@a=128@$202109061640$202109061642$       R$$1$$$$",
+                  "ctxRecon":"T$A=1@O=Innsbruck Kochstraße@L=476640202@a=128@$A=1@O=Innsbruck Bundesbahndirektion@L=476158004@a=128@$202112051933$202112051934$       R$$1$$$$$$",
                   "msgL":
                   [
                     {
@@ -1182,7 +934,7 @@
                       [
                         "RES_JNY_DTL_H3"
                       ],
-                      "sort":409206784
+                      "sort":543424512
                     },
                     {
                       "type":"HIM",
@@ -1193,7 +945,7 @@
                       [
                         "SUM_GLB_HDR_H3","RES_GLB_HDR_H3"
                       ],
-                      "sort":373527948
+                      "sort":373560317
                     }
                   ],
                   "subscr":"F",
@@ -1222,1520 +974,32 @@
               },
               {
                 "type":"WALK",
-                "icoX":9,
+                "icoX":11,
                 "dep":
                 {
                   "locX":2,
                   "dInR":true,
-                  "dTimeS":"164200",
+                  "dTimeS":"193400",
                   "type":"N"
                 },
                 "arr":
                 {
-                  "locX":4,
+                  "locX":6,
                   "aOutR":true,
-                  "aTimeS":"164600",
+                  "aTimeS":"193800",
                   "type":"N"
                 },
                 "gis":
                 {
                   "dist":312,
                   "durS":"000400",
-                  "ctx":"C|cd2fafc7|G|1|G@F|A=1@O=Innsbruck Bundesbahndirektion@X=11405702@Y=47273372@U=81@L=476158004@i=at:47:61580:0:4@|A=2@O=47.271233, 11.404534@X=11404534@Y=47271233@|6092021|164200|164600|fb|ft@0@2000@120@1@133@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§bt@0@2000@120@1@133@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§tf@$f@$f@$f@$f@$f@$§||",
+                  "ctx":"C|0924d70e|G|1|G@F|A=1@O=Innsbruck Bundesbahndirektion@X=11405702@Y=47273372@U=81@L=476158004@i=at:47:61580:0:4@|A=2@O=47.271233, 11.404534@X=11404534@Y=47271233@|5122021|193400|193800|fb|ft@0@2000@120@1@133@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§bt@0@2000@120@1@133@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§tf@$f@$f@$f@$f@$f@$§|||",
                   "getDescr":true,
                   "getPoly":true
                 }
               }
             ],
-            "ctxRecon":"¶HKI¶T$A=1@O=Innsbruck Kochstraße@L=476640202@a=128@$A=1@O=Innsbruck Bundesbahndirektion@L=476158004@a=128@$202109061640$202109061642$       R$$1$$$$§G@F$A=1@O=Innsbruck Bundesbahndirektion@L=476158004@a=128@$A=2@O=47.271233, 11.404534@X=11404534@Y=47271233@u=0@a=128@$202109061642$202109061646$$$1$$$$¶GP¶ft@0@2000@120@1@133@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§bt@0@2000@120@1@133@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§tf@$f@$f@$f@$f@$f@$§",
-            "freq":
-            {
-              "minC":10
-            },
-            "trfRes":
-            {
-              "statusCode":"OK",
-              "fareSetL":
-              [
-                {
-                  "name":"VVT Innsbruck",
-                  "desc":"",
-                  "fareL":
-                  [
-                    {
-                      "name":"Einzel-Ticket ",
-                      "prc":270,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"Wochen-Ticket ",
-                      "prc":2310,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"Monats-Ticket ",
-                      "prc":5850,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"Jahres-Ticket ",
-                      "prc":38700,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"24h-Ticket ",
-                      "prc":600,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"8-Fahrten-Ticket ",
-                      "prc":1580,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"24h-Ticket 2Plus ",
-                      "prc":880,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"Einzel-Ticket Family",
-                      "prc":270,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"24h-Ticket Family",
-                      "prc":600,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"8-Fahrten-Ticket Family",
-                      "prc":1550,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"Einzel-Ticket Jugend, Family-Light, Spezial",
-                      "prc":170,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"24h-Ticket Jugend, Family-Light, Spezial",
-                      "prc":410,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"8-Fahrten-Ticket Jugend, Family-Light, Spezial",
-                      "prc":1250,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"Einzel-Ticket Kind",
-                      "prc":170,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"24h-Ticket Kind",
-                      "prc":400,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"8-Fahrten-Ticket Kind",
-                      "prc":1250,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"Semester-Ticket-Innsbruck ",
-                      "prc":14280,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"Einzel-Ticket SeniorIn",
-                      "prc":170,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"24h-Ticket SeniorIn",
-                      "prc":410,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"8-Fahrten-Ticket SeniorIn",
-                      "prc":1250,
-                      "cur":"EUR"
-                    }
-                  ]
-                },
-                {
-                  "name":"VVT Region",
-                  "desc":"",
-                  "fareL":
-                  [
-                    {
-                      "name":"Jahres-Ticket ",
-                      "prc":39500,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"Monats-Ticket Region ",
-                      "prc":7900,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"Wochen-Ticket Region ",
-                      "prc":2550,
-                      "cur":"EUR"
-                    }
-                  ]
-                },
-                {
-                  "name":"VVT Tirol",
-                  "desc":"",
-                  "fareL":
-                  [
-                    {
-                      "name":"Jahres-Ticket ",
-                      "prc":50940,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"Monats-Ticket Land ",
-                      "prc":10190,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"Wochen-Ticket Land ",
-                      "prc":4590,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"Tages-Ticket 2Plus (nur Nahverkehr) ",
-                      "prc":3470,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"Tages-Ticket Bike (nur Linie 110 und 210) ",
-                      "prc":500,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"Jahres-Ticket Spezial ",
-                      "prc":26000,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"Semester-Ticket Land ",
-                      "prc":18720,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"Jahres-Ticket SeniorIn",
-                      "prc":26000,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"Jahres-Ticket SeniorIn (ab 75)",
-                      "prc":13000,
-                      "cur":"EUR"
-                    }
-                  ]
-                }
-              ],
-              "bkgData":
-              {
-                "common":
-                {
-                  "FEL":
-                  [
-
-                  ]
-                },
-                "BOG":
-                {
-
-                }
-              }
-            },
-            "ovwTrfRefL":
-            [
-              {
-                "type":"F",
-                "fareSetX":0,
-                "fareX":0
-              }
-            ],
-            "msgL":
-            [
-              {
-                "type":"REM",
-                "remX":1,
-                "dspl":"U",
-                "tagL":
-                [
-                  "RES_CON_FTR_H3"
-                ],
-                "sort":147324928
-              }
-            ],
-            "eco":
-            {
-              "co2":0.032725000000000,
-              "type":"PUT"
-            },
-            "conSubscr":"P",
-            "recState":"U",
-            "cksum":"9c99f11f_3",
-            "cksumDti":"aabda0bd_3"
-          },
-          {
-            "cid":"C-1",
-            "date":"20210906",
-            "dur":"000600",
-            "chg":0,
-            "sDays":
-            {
-              "sDaysR":"Sa",
-              "sDaysI":"auch 6. bis 10. Sep 2021, 27. bis 29. Okt 2021, 2. Nov",
-              "sDaysB":"0BF7EFDFBF7EFDFBF02040810204791020408102"
-            },
-            "dep":
-            {
-              "locX":0,
-              "idx":13,
-              "dProdX":3,
-              "dInR":true,
-              "dTimeS":"165000",
-              "dTimeR":"165000",
-              "dProgType":"PROGNOSED",
-              "type":"N"
-            },
-            "arr":
-            {
-              "locX":4,
-              "aOutR":true,
-              "aTimeS":"165600",
-              "type":"N"
-            },
-            "secL":
-            [
-              {
-                "type":"JNY",
-                "icoX":2,
-                "dep":
-                {
-                  "locX":0,
-                  "idx":13,
-                  "dProdX":3,
-                  "dInR":true,
-                  "dTimeS":"165000",
-                  "dTimeR":"165000",
-                  "dProgType":"PROGNOSED",
-                  "type":"N"
-                },
-                "arr":
-                {
-                  "locX":2,
-                  "idx":14,
-                  "aProdX":3,
-                  "aOutR":true,
-                  "aTimeS":"165200",
-                  "aTimeR":"165200",
-                  "aProgType":"PROGNOSED",
-                  "type":"N"
-                },
-                "jny":
-                {
-                  "jid":"2|#VN#1#ST#1630889505#PI#0#ZI#112740#TA#28#DA#60921#1S#476152201#1T#1630#LS#476420701#LT#1705#PU#81#RT#1#CA#t01#ZE#R#ZB#       R#PC#7#FR#476152201#FT#1630#TO#476420701#TT#1705#",
-                  "prodX":4,
-                  "dirTxt":"Innsbruck DEZ/EKZ",
-                  "dirFlg":"R",
-                  "status":"P",
-                  "isRchbl":true,
-                  "stopL":
-                  [
-                    {
-                      "locX":0,
-                      "idx":13,
-                      "dProdX":4,
-                      "dInR":true,
-                      "dTimeS":"165000",
-                      "dTimeR":"165000",
-                      "dProgType":"PROGNOSED",
-                      "dDirTxt":"Innsbruck DEZ/EKZ",
-                      "dDirFlg":"R",
-                      "type":"N"
-                    },
-                    {
-                      "locX":2,
-                      "idx":14,
-                      "aProdX":4,
-                      "aOutR":true,
-                      "aTimeS":"165200",
-                      "aTimeR":"165200",
-                      "aProgType":"PROGNOSED",
-                      "type":"N"
-                    }
-                  ],
-                  "polyG":
-                  {
-                    "polyXL":
-                    [
-                      1
-                    ],
-                    "layerX":0,
-                    "crdSysX":0
-                  },
-                  "pos":
-                  {
-                    "x":11379840,
-                    "y":47261722,
-                    "layerX":0,
-                    "crdSysX":0
-                  },
-                  "freq":
-                  {
-                    "minC":10,
-                    "maxC":10,
-                    "numC":13
-                  },
-                  "ctxRecon":"T$A=1@O=Innsbruck Kochstraße@L=476640202@a=128@$A=1@O=Innsbruck Bundesbahndirektion@L=476158004@a=128@$202109061650$202109061652$       R$$1$$$$",
-                  "msgL":
-                  [
-                    {
-                      "type":"REM",
-                      "remX":0,
-                      "fLocX":0,
-                      "tLocX":2,
-                      "tagL":
-                      [
-                        "RES_JNY_DTL_H3"
-                      ],
-                      "sort":409206784
-                    },
-                    {
-                      "type":"HIM",
-                      "himX":0,
-                      "dspl":"U",
-                      "fLocX":0,
-                      "tagL":
-                      [
-                        "SUM_GLB_HDR_H3","RES_GLB_HDR_H3"
-                      ],
-                      "sort":373527948
-                    }
-                  ],
-                  "subscr":"F",
-                  "prodL":
-                  [
-                    {
-                      "prodX":4,
-                      "fLocX":0,
-                      "tLocX":2,
-                      "fIdx":13,
-                      "tIdx":14
-                    }
-                  ],
-                  "dirL":
-                  [
-                    {
-                      "dirX":0,
-                      "fLocX":0,
-                      "tLocX":2,
-                      "fIdx":13,
-                      "tIdx":14
-                    }
-                  ]
-                },
-                "minChg":"000400"
-              },
-              {
-                "type":"WALK",
-                "icoX":9,
-                "dep":
-                {
-                  "locX":2,
-                  "dInR":true,
-                  "dTimeS":"165200",
-                  "type":"N"
-                },
-                "arr":
-                {
-                  "locX":4,
-                  "aOutR":true,
-                  "aTimeS":"165600",
-                  "type":"N"
-                },
-                "gis":
-                {
-                  "dist":312,
-                  "durS":"000400",
-                  "ctx":"C|b4dcf449|G|1|G@F|A=1@O=Innsbruck Bundesbahndirektion@X=11405702@Y=47273372@U=81@L=476158004@i=at:47:61580:0:4@|A=2@O=47.271233, 11.404534@X=11404534@Y=47271233@|6092021|165200|165600|fb|ft@0@2000@120@1@133@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§bt@0@2000@120@1@133@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§tf@$f@$f@$f@$f@$f@$§||",
-                  "getDescr":true,
-                  "getPoly":true
-                }
-              }
-            ],
-            "ctxRecon":"¶HKI¶T$A=1@O=Innsbruck Kochstraße@L=476640202@a=128@$A=1@O=Innsbruck Bundesbahndirektion@L=476158004@a=128@$202109061650$202109061652$       R$$1$$$$§G@F$A=1@O=Innsbruck Bundesbahndirektion@L=476158004@a=128@$A=2@O=47.271233, 11.404534@X=11404534@Y=47271233@u=0@a=128@$202109061652$202109061656$$$1$$$$¶GP¶ft@0@2000@120@1@133@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§bt@0@2000@120@1@133@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§tf@$f@$f@$f@$f@$f@$§",
-            "freq":
-            {
-              "minC":10
-            },
-            "trfRes":
-            {
-              "statusCode":"OK",
-              "fareSetL":
-              [
-                {
-                  "name":"VVT Innsbruck",
-                  "desc":"",
-                  "fareL":
-                  [
-                    {
-                      "name":"Einzel-Ticket ",
-                      "prc":270,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"Wochen-Ticket ",
-                      "prc":2310,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"Monats-Ticket ",
-                      "prc":5850,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"Jahres-Ticket ",
-                      "prc":38700,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"24h-Ticket ",
-                      "prc":600,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"8-Fahrten-Ticket ",
-                      "prc":1580,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"24h-Ticket 2Plus ",
-                      "prc":880,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"Einzel-Ticket Family",
-                      "prc":270,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"24h-Ticket Family",
-                      "prc":600,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"8-Fahrten-Ticket Family",
-                      "prc":1550,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"Einzel-Ticket Jugend, Family-Light, Spezial",
-                      "prc":170,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"24h-Ticket Jugend, Family-Light, Spezial",
-                      "prc":410,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"8-Fahrten-Ticket Jugend, Family-Light, Spezial",
-                      "prc":1250,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"Einzel-Ticket Kind",
-                      "prc":170,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"24h-Ticket Kind",
-                      "prc":400,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"8-Fahrten-Ticket Kind",
-                      "prc":1250,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"Semester-Ticket-Innsbruck ",
-                      "prc":14280,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"Einzel-Ticket SeniorIn",
-                      "prc":170,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"24h-Ticket SeniorIn",
-                      "prc":410,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"8-Fahrten-Ticket SeniorIn",
-                      "prc":1250,
-                      "cur":"EUR"
-                    }
-                  ]
-                },
-                {
-                  "name":"VVT Region",
-                  "desc":"",
-                  "fareL":
-                  [
-                    {
-                      "name":"Jahres-Ticket ",
-                      "prc":39500,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"Monats-Ticket Region ",
-                      "prc":7900,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"Wochen-Ticket Region ",
-                      "prc":2550,
-                      "cur":"EUR"
-                    }
-                  ]
-                },
-                {
-                  "name":"VVT Tirol",
-                  "desc":"",
-                  "fareL":
-                  [
-                    {
-                      "name":"Jahres-Ticket ",
-                      "prc":50940,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"Monats-Ticket Land ",
-                      "prc":10190,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"Wochen-Ticket Land ",
-                      "prc":4590,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"Tages-Ticket 2Plus (nur Nahverkehr) ",
-                      "prc":3470,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"Tages-Ticket Bike (nur Linie 110 und 210) ",
-                      "prc":500,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"Jahres-Ticket Spezial ",
-                      "prc":26000,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"Semester-Ticket Land ",
-                      "prc":18720,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"Jahres-Ticket SeniorIn",
-                      "prc":26000,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"Jahres-Ticket SeniorIn (ab 75)",
-                      "prc":13000,
-                      "cur":"EUR"
-                    }
-                  ]
-                }
-              ],
-              "bkgData":
-              {
-                "common":
-                {
-                  "FEL":
-                  [
-
-                  ]
-                },
-                "BOG":
-                {
-
-                }
-              }
-            },
-            "ovwTrfRefL":
-            [
-              {
-                "type":"F",
-                "fareSetX":0,
-                "fareX":0
-              }
-            ],
-            "msgL":
-            [
-              {
-                "type":"REM",
-                "remX":1,
-                "dspl":"U",
-                "tagL":
-                [
-                  "RES_CON_FTR_H3"
-                ],
-                "sort":147324928
-              }
-            ],
-            "eco":
-            {
-              "co2":0.032725000000000,
-              "type":"PUT"
-            },
-            "conSubscr":"P",
-            "recState":"U",
-            "cksum":"29ca6c65_3",
-            "cksumDti":"f1053298_3"
-          },
-          {
-            "cid":"C-2",
-            "date":"20210906",
-            "dur":"000900",
-            "chg":0,
-            "sDays":
-            {
-              "sDaysR":"täglich",
-              "sDaysB":"FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE"
-            },
-            "dep":
-            {
-              "locX":0,
-              "dInR":true,
-              "dTimeS":"165100",
-              "type":"N"
-            },
-            "arr":
-            {
-              "locX":4,
-              "aOutR":true,
-              "aTimeS":"170000",
-              "type":"N"
-            },
-            "secL":
-            [
-              {
-                "type":"WALK",
-                "icoX":9,
-                "dep":
-                {
-                  "locX":0,
-                  "dInR":true,
-                  "dTimeS":"165100",
-                  "type":"N"
-                },
-                "arr":
-                {
-                  "locX":5,
-                  "aOutR":true,
-                  "aTimeS":"165500",
-                  "type":"N"
-                },
-                "gis":
-                {
-                  "dist":261,
-                  "durS":"000400",
-                  "ctx":"C|7761d0c8|G|1|G@F|A=1@O=Innsbruck Kochstraße@X=11400363@Y=47272347@U=81@L=476640202@i=at:47:66402:0:2@|A=1@O=Innsbruck Tschurtschenthalerstraße@X=11399751@Y=47274082@U=81@L=476157802@i=at:47:61578:0:2@|6092021|165100|165500|bf|ft@0@2000@120@1@133@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§bt@0@2000@120@1@133@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§tf@$f@$f@$f@$f@$f@$§||",
-                  "getDescr":true,
-                  "getPoly":true
-                }
-              },
-              {
-                "type":"JNY",
-                "icoX":13,
-                "dep":
-                {
-                  "locX":5,
-                  "idx":4,
-                  "dProdX":5,
-                  "dInR":true,
-                  "dTimeS":"165500",
-                  "dTimeR":"165500",
-                  "dProgType":"PROGNOSED",
-                  "type":"N"
-                },
-                "arr":
-                {
-                  "locX":2,
-                  "idx":5,
-                  "aProdX":5,
-                  "aOutR":true,
-                  "aTimeS":"165600",
-                  "aTimeR":"165600",
-                  "aProgType":"PROGNOSED",
-                  "type":"N"
-                },
-                "jny":
-                {
-                  "jid":"2|#VN#1#ST#1630889505#PI#0#ZI#111958#TA#21#DA#60921#1S#470118709#1T#1650#LS#476837101#LT#1700#PU#81#RT#1#CA#t01#ZE#B#ZB#       B#PC#7#FR#470118709#FT#1650#TO#476837101#TT#1700#",
-                  "prodX":6,
-                  "dirTxt":"Innsbruck Kletterzentrum",
-                  "dirFlg":"R",
-                  "status":"P",
-                  "isRchbl":true,
-                  "stopL":
-                  [
-                    {
-                      "locX":5,
-                      "idx":4,
-                      "dProdX":6,
-                      "dInR":true,
-                      "dTimeS":"165500",
-                      "dTimeR":"165500",
-                      "dProgType":"PROGNOSED",
-                      "dDirTxt":"Innsbruck Kletterzentrum",
-                      "dDirFlg":"R",
-                      "type":"N"
-                    },
-                    {
-                      "locX":2,
-                      "idx":5,
-                      "aProdX":6,
-                      "aOutR":true,
-                      "aTimeS":"165600",
-                      "aTimeR":"165600",
-                      "aProgType":"PROGNOSED",
-                      "type":"N"
-                    }
-                  ],
-                  "polyG":
-                  {
-                    "polyXL":
-                    [
-                      2
-                    ],
-                    "layerX":0,
-                    "crdSysX":0
-                  },
-                  "freq":
-                  {
-                    "minC":30,
-                    "maxC":30,
-                    "numC":5
-                  },
-                  "ctxRecon":"T$A=1@O=Innsbruck Tschurtschenthalerstraße@L=476157802@a=128@$A=1@O=Innsbruck Bundesbahndirektion@L=476158004@a=128@$202109061655$202109061656$       B$$1$$$$",
-                  "msgL":
-                  [
-                    {
-                      "type":"REM",
-                      "remX":0,
-                      "fLocX":5,
-                      "tLocX":2,
-                      "tagL":
-                      [
-                        "RES_JNY_DTL_H3"
-                      ],
-                      "sort":409206784
-                    },
-                    {
-                      "type":"HIM",
-                      "himX":0,
-                      "dspl":"U",
-                      "fLocX":5,
-                      "tagL":
-                      [
-                        "SUM_GLB_HDR_H3","RES_GLB_HDR_H3"
-                      ],
-                      "sort":373527948
-                    }
-                  ],
-                  "subscr":"F",
-                  "prodL":
-                  [
-                    {
-                      "prodX":6,
-                      "fLocX":5,
-                      "tLocX":2,
-                      "fIdx":4,
-                      "tIdx":5
-                    }
-                  ],
-                  "dirL":
-                  [
-                    {
-                      "dirX":1,
-                      "fLocX":5,
-                      "tLocX":2,
-                      "fIdx":4,
-                      "tIdx":5
-                    }
-                  ]
-                },
-                "minChg":"000400"
-              },
-              {
-                "type":"WALK",
-                "icoX":9,
-                "dep":
-                {
-                  "locX":2,
-                  "dInR":true,
-                  "dTimeS":"165600",
-                  "type":"N"
-                },
-                "arr":
-                {
-                  "locX":4,
-                  "aOutR":true,
-                  "aTimeS":"170000",
-                  "type":"N"
-                },
-                "gis":
-                {
-                  "dist":312,
-                  "durS":"000400",
-                  "ctx":"C|34cc4d77|G|1|G@F|A=1@O=Innsbruck Bundesbahndirektion@X=11405702@Y=47273372@U=81@L=476158004@i=at:47:61580:0:4@|A=2@O=47.271233, 11.404534@X=11404534@Y=47271233@|6092021|165600|170000|fb|ft@0@2000@120@1@133@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§bt@0@2000@120@1@133@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§tf@$f@$f@$f@$f@$f@$§||",
-                  "getDescr":true,
-                  "getPoly":true
-                }
-              }
-            ],
-            "ctxRecon":"¶HKI¶G@F$A=1@O=Innsbruck Kochstraße@L=476640202@a=128@$A=1@O=Innsbruck Tschurtschenthalerstraße@L=476157802@a=128@$202109061651$202109061655$$$1$$$$§T$A=1@O=Innsbruck Tschurtschenthalerstraße@L=476157802@a=128@$A=1@O=Innsbruck Bundesbahndirektion@L=476158004@a=128@$202109061655$202109061656$       B$$1$$$$§G@F$A=1@O=Innsbruck Bundesbahndirektion@L=476158004@a=128@$A=2@O=47.271233, 11.404534@X=11404534@Y=47271233@u=0@a=128@$202109061656$202109061700$$$1$$$$¶GP¶ft@0@2000@120@1@133@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§bt@0@2000@120@1@133@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§tf@$f@$f@$f@$f@$f@$§",
-            "freq":
-            {
-              "minC":30
-            },
-            "trfRes":
-            {
-              "statusCode":"OK",
-              "fareSetL":
-              [
-                {
-                  "name":"VVT Innsbruck",
-                  "desc":"",
-                  "fareL":
-                  [
-                    {
-                      "name":"Einzel-Ticket ",
-                      "prc":270,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"Wochen-Ticket ",
-                      "prc":2310,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"Monats-Ticket ",
-                      "prc":5850,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"Jahres-Ticket ",
-                      "prc":38700,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"24h-Ticket ",
-                      "prc":600,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"8-Fahrten-Ticket ",
-                      "prc":1580,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"24h-Ticket 2Plus ",
-                      "prc":880,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"Einzel-Ticket Family",
-                      "prc":270,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"24h-Ticket Family",
-                      "prc":600,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"8-Fahrten-Ticket Family",
-                      "prc":1550,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"Einzel-Ticket Jugend, Family-Light, Spezial",
-                      "prc":170,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"24h-Ticket Jugend, Family-Light, Spezial",
-                      "prc":410,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"8-Fahrten-Ticket Jugend, Family-Light, Spezial",
-                      "prc":1250,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"Einzel-Ticket Kind",
-                      "prc":170,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"24h-Ticket Kind",
-                      "prc":400,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"8-Fahrten-Ticket Kind",
-                      "prc":1250,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"Semester-Ticket-Innsbruck ",
-                      "prc":14280,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"Einzel-Ticket SeniorIn",
-                      "prc":170,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"24h-Ticket SeniorIn",
-                      "prc":410,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"8-Fahrten-Ticket SeniorIn",
-                      "prc":1250,
-                      "cur":"EUR"
-                    }
-                  ]
-                },
-                {
-                  "name":"VVT Region",
-                  "desc":"",
-                  "fareL":
-                  [
-                    {
-                      "name":"Jahres-Ticket ",
-                      "prc":39500,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"Monats-Ticket Region ",
-                      "prc":7900,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"Wochen-Ticket Region ",
-                      "prc":2550,
-                      "cur":"EUR"
-                    }
-                  ]
-                },
-                {
-                  "name":"VVT Tirol",
-                  "desc":"",
-                  "fareL":
-                  [
-                    {
-                      "name":"Jahres-Ticket ",
-                      "prc":50940,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"Monats-Ticket Land ",
-                      "prc":10190,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"Wochen-Ticket Land ",
-                      "prc":4590,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"Tages-Ticket 2Plus (nur Nahverkehr) ",
-                      "prc":3470,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"Tages-Ticket Bike (nur Linie 110 und 210) ",
-                      "prc":500,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"Jahres-Ticket Spezial ",
-                      "prc":26000,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"Semester-Ticket Land ",
-                      "prc":18720,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"Jahres-Ticket SeniorIn",
-                      "prc":26000,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"Jahres-Ticket SeniorIn (ab 75)",
-                      "prc":13000,
-                      "cur":"EUR"
-                    }
-                  ]
-                }
-              ],
-              "bkgData":
-              {
-                "common":
-                {
-                  "FEL":
-                  [
-
-                  ]
-                },
-                "BOG":
-                {
-
-                }
-              }
-            },
-            "ovwTrfRefL":
-            [
-              {
-                "type":"F",
-                "fareSetX":0,
-                "fareX":0
-              }
-            ],
-            "msgL":
-            [
-              {
-                "type":"REM",
-                "remX":2,
-                "dspl":"U",
-                "tagL":
-                [
-                  "RES_CON_FTR_H3"
-                ],
-                "sort":147324928
-              }
-            ],
-            "eco":
-            {
-              "co2":0.025355000000000,
-              "type":"PUT"
-            },
-            "conSubscr":"P",
-            "recState":"U",
-            "cksum":"0725a9f3_3",
-            "cksumDti":"d596fdd9_3"
-          },
-          {
-            "cid":"C-3",
-            "date":"20210906",
-            "dur":"001000",
-            "chg":1,
-            "sDays":
-            {
-              "sDaysR":"Mo - Fr",
-              "sDaysI":"nicht 26. Okt, 1. Nov, 8. Dez",
-              "sDaysB":"F3E7CF9F3E7CF9F3E7CF9F3E7CF971E7CF9F3E6C"
-            },
-            "dep":
-            {
-              "locX":7,
-              "idx":11,
-              "dProdX":7,
-              "dInR":true,
-              "dTimeS":"165300",
-              "dTimeR":"165300",
-              "dProgType":"PROGNOSED",
-              "type":"N"
-            },
-            "arr":
-            {
-              "locX":4,
-              "aOutR":true,
-              "aTimeS":"170300",
-              "type":"N"
-            },
-            "secL":
-            [
-              {
-                "type":"JNY",
-                "icoX":15,
-                "dep":
-                {
-                  "locX":7,
-                  "idx":11,
-                  "dProdX":7,
-                  "dInR":true,
-                  "dTimeS":"165300",
-                  "dTimeR":"165300",
-                  "dProgType":"PROGNOSED",
-                  "type":"N"
-                },
-                "arr":
-                {
-                  "locX":8,
-                  "idx":13,
-                  "aProdX":7,
-                  "aOutR":true,
-                  "aTimeS":"165600",
-                  "aTimeR":"165600",
-                  "aProgType":"PROGNOSED",
-                  "type":"N"
-                },
-                "jny":
-                {
-                  "jid":"2|#VN#1#ST#1630889505#PI#0#ZI#111902#TA#41#DA#60921#1S#476164601#1T#1640#LS#476154201#LT#1711#PU#81#RT#1#CA#t01#ZE#A#ZB#       A#PC#7#FR#476164601#FT#1640#TO#476154201#TT#1711#",
-                  "prodX":8,
-                  "dirTxt":"Innsbruck Sadrach",
-                  "dirFlg":"H",
-                  "status":"P",
-                  "isRchbl":true,
-                  "stopL":
-                  [
-                    {
-                      "locX":7,
-                      "idx":11,
-                      "dProdX":8,
-                      "dInR":true,
-                      "dTimeS":"165300",
-                      "dTimeR":"165300",
-                      "dProgType":"PROGNOSED",
-                      "dDirTxt":"Innsbruck Sadrach",
-                      "dDirFlg":"H",
-                      "type":"N"
-                    },
-                    {
-                      "locX":10,
-                      "idx":12,
-                      "aProdX":8,
-                      "aOutR":true,
-                      "aTimeS":"165400",
-                      "aTimeR":"165400",
-                      "aProgType":"PROGNOSED",
-                      "dProdX":8,
-                      "dInR":true,
-                      "dTimeS":"165400",
-                      "dTimeR":"165400",
-                      "dProgType":"PROGNOSED",
-                      "type":"N"
-                    },
-                    {
-                      "locX":8,
-                      "idx":13,
-                      "aProdX":8,
-                      "aOutR":true,
-                      "aTimeS":"165600",
-                      "aTimeR":"165600",
-                      "aProgType":"PROGNOSED",
-                      "type":"N"
-                    }
-                  ],
-                  "polyG":
-                  {
-                    "polyXL":
-                    [
-                      3
-                    ],
-                    "layerX":0,
-                    "crdSysX":0
-                  },
-                  "freq":
-                  {
-                    "minC":15,
-                    "maxC":15,
-                    "numC":9
-                  },
-                  "ctxRecon":"T$A=1@O=Innsbruck Kochstraße@L=476640201@a=128@$A=1@O=Innsbruck Landesmuseum@L=476155902@a=128@$202109061653$202109061656$       A$$1$$$$",
-                  "msgL":
-                  [
-                    {
-                      "type":"REM",
-                      "remX":0,
-                      "fLocX":7,
-                      "tLocX":8,
-                      "tagL":
-                      [
-                        "RES_JNY_DTL_H3"
-                      ],
-                      "sort":409206784
-                    },
-                    {
-                      "type":"HIM",
-                      "himX":0,
-                      "dspl":"U",
-                      "fLocX":7,
-                      "tagL":
-                      [
-                        "SUM_GLB_HDR_H3","RES_GLB_HDR_H3"
-                      ],
-                      "sort":373527948
-                    }
-                  ],
-                  "subscr":"F",
-                  "prodL":
-                  [
-                    {
-                      "prodX":8,
-                      "fLocX":7,
-                      "tLocX":8,
-                      "fIdx":11,
-                      "tIdx":13
-                    }
-                  ],
-                  "dirL":
-                  [
-                    {
-                      "dirX":2,
-                      "fLocX":7,
-                      "tLocX":8,
-                      "fIdx":11,
-                      "tIdx":13
-                    }
-                  ]
-                },
-                "minChg":"000200"
-              },
-              {
-                "type":"TRSF",
-                "icoX":16,
-                "dep":
-                {
-                  "locX":8,
-                  "dInR":true,
-                  "dTimeS":"165600",
-                  "type":"N"
-                },
-                "arr":
-                {
-                  "locX":12,
-                  "aOutR":true,
-                  "aTimeS":"165800",
-                  "type":"N"
-                },
-                "gis":
-                {
-                  "durS":"000200",
-                  "dirGeo":30,
-                  "polyG":
-                  {
-                    "polyXL":
-                    [
-                      4
-                    ],
-                    "layerX":0,
-                    "crdSysX":0
-                  },
-                  "gisPrvr":"H",
-                  "getDescr":true,
-                  "getPoly":true
-                }
-              },
-              {
-                "type":"JNY",
-                "icoX":4,
-                "dep":
-                {
-                  "locX":12,
-                  "idx":10,
-                  "dProdX":10,
-                  "dInR":true,
-                  "dTimeS":"165800",
-                  "dTimeR":"165800",
-                  "dProgType":"PROGNOSED",
-                  "type":"N"
-                },
-                "arr":
-                {
-                  "locX":13,
-                  "idx":13,
-                  "aProdX":10,
-                  "aOutR":true,
-                  "aTimeS":"170200",
-                  "aTimeR":"170200",
-                  "aProgType":"PROGNOSED",
-                  "type":"N"
-                },
-                "jny":
-                {
-                  "jid":"2|#VN#1#ST#1630889505#PI#0#ZI#132006#TA#0#DA#60921#1S#476157403#1T#1643#LS#476157403#LT#1729#PU#81#RT#1#CA#t11#ZE#1#ZB#       1#PC#4#FR#476157403#FT#1643#TO#476157403#TT#1729#",
-                  "prodX":11,
-                  "dirTxt":"Innsbruck Mühlauer Brücke",
-                  "dirFlg":"H",
-                  "status":"P",
-                  "isRchbl":true,
-                  "stopL":
-                  [
-                    {
-                      "locX":12,
-                      "idx":10,
-                      "dProdX":11,
-                      "dInR":true,
-                      "dTimeS":"165800",
-                      "dTimeR":"165800",
-                      "dProgType":"PROGNOSED",
-                      "dDirTxt":"Innsbruck Mühlauer Brücke",
-                      "dDirFlg":"H",
-                      "type":"N"
-                    },
-                    {
-                      "locX":15,
-                      "idx":11,
-                      "aProdX":11,
-                      "aOutR":true,
-                      "aTimeS":"170000",
-                      "aTimeR":"170000",
-                      "aProgType":"PROGNOSED",
-                      "dProdX":11,
-                      "dInR":true,
-                      "dTimeS":"170000",
-                      "dTimeR":"170000",
-                      "dProgType":"PROGNOSED",
-                      "type":"N"
-                    },
-                    {
-                      "locX":17,
-                      "idx":12,
-                      "aProdX":11,
-                      "aOutR":true,
-                      "aTimeS":"170100",
-                      "aTimeR":"170100",
-                      "aProgType":"PROGNOSED",
-                      "dProdX":11,
-                      "dInR":true,
-                      "dTimeS":"170100",
-                      "dTimeR":"170100",
-                      "dProgType":"PROGNOSED",
-                      "type":"N"
-                    },
-                    {
-                      "locX":13,
-                      "idx":13,
-                      "aProdX":11,
-                      "aOutR":true,
-                      "aTimeS":"170200",
-                      "aTimeR":"170200",
-                      "aProgType":"PROGNOSED",
-                      "type":"N"
-                    }
-                  ],
-                  "polyG":
-                  {
-                    "polyXL":
-                    [
-                      5
-                    ],
-                    "layerX":0,
-                    "crdSysX":0
-                  },
-                  "freq":
-                  {
-                    "minC":10,
-                    "maxC":10,
-                    "numC":13
-                  },
-                  "ctxRecon":"T$A=1@O=Innsbruck Landesmuseum@L=476155901@a=128@$A=1@O=Innsbruck Messe/Zeughaus@L=476167902@a=128@$202109061658$202109061702$       1$$1$$$$",
-                  "msgL":
-                  [
-                    {
-                      "type":"REM",
-                      "remX":0,
-                      "fLocX":12,
-                      "tLocX":13,
-                      "tagL":
-                      [
-                        "RES_JNY_DTL_H3"
-                      ],
-                      "sort":409206784
-                    },
-                    {
-                      "type":"HIM",
-                      "himX":0,
-                      "dspl":"U",
-                      "fLocX":12,
-                      "tagL":
-                      [
-                        "SUM_GLB_HDR_H3","RES_GLB_HDR_H3"
-                      ],
-                      "sort":373527948
-                    }
-                  ],
-                  "subscr":"F",
-                  "prodL":
-                  [
-                    {
-                      "prodX":11,
-                      "fLocX":12,
-                      "tLocX":13,
-                      "fIdx":10,
-                      "tIdx":13
-                    }
-                  ],
-                  "dirL":
-                  [
-                    {
-                      "dirX":3,
-                      "fLocX":12,
-                      "tLocX":13,
-                      "fIdx":10,
-                      "tIdx":13
-                    }
-                  ]
-                },
-                "minChg":"000100"
-              },
-              {
-                "type":"WALK",
-                "icoX":9,
-                "dep":
-                {
-                  "locX":13,
-                  "dInR":true,
-                  "dTimeS":"170200",
-                  "type":"N"
-                },
-                "arr":
-                {
-                  "locX":4,
-                  "aOutR":true,
-                  "aTimeS":"170300",
-                  "type":"N"
-                },
-                "gis":
-                {
-                  "dist":6,
-                  "durS":"000100",
-                  "ctx":"C|ed38d097|G|1|G@F|A=1@O=Innsbruck Messe/Zeughaus@X=11404534@Y=47271197@U=81@L=476167902@i=at:47:61679:0:2@|A=2@O=47.271233, 11.404534@X=11404534@Y=47271233@|6092021|170200|170300|fb|ft@0@2000@120@1@133@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§bt@0@2000@120@1@133@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§tf@$f@$f@$f@$f@$f@$§||",
-                  "getDescr":true,
-                  "getPoly":true
-                }
-              }
-            ],
-            "ctxRecon":"¶HKI¶T$A=1@O=Innsbruck Kochstraße@L=476640201@a=128@$A=1@O=Innsbruck Landesmuseum@L=476155902@a=128@$202109061653$202109061656$       A$$1$$$$§W$A=1@O=Innsbruck Landesmuseum@L=476155902@a=128@$A=1@O=Innsbruck Landesmuseum@L=476155901@a=128@$202109061656$202109061658$$$1$$$$§T$A=1@O=Innsbruck Landesmuseum@L=476155901@a=128@$A=1@O=Innsbruck Messe/Zeughaus@L=476167902@a=128@$202109061658$202109061702$       1$$1$$$$§G@F$A=1@O=Innsbruck Messe/Zeughaus@L=476167902@a=128@$A=2@O=47.271233, 11.404534@X=11404534@Y=47271233@u=0@a=128@$202109061702$202109061703$$$1$$$$¶GP¶ft@0@2000@120@1@133@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§bt@0@2000@120@1@133@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§tf@$f@$f@$f@$f@$f@$§",
+            "ctxRecon":"¶HKI¶T$A=1@O=Innsbruck Kochstraße@L=476640202@a=128@$A=1@O=Innsbruck Bundesbahndirektion@L=476158004@a=128@$202112051933$202112051934$       R$$1$$$$$$§G@F$A=1@O=Innsbruck Bundesbahndirektion@L=476158004@a=128@$A=2@O=47.271233, 11.404534@X=11404534@Y=47271233@u=0@a=128@$202112051934$202112051938$$$1$$$$$$¶GP¶ft@0@2000@120@1@133@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§bt@0@2000@120@1@133@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§tf@$f@$f@$f@$f@$f@$§¶KI¶H4sIAAAAAAACA+1W247bIBD9lYqHPnlXQJzrr1QrRGxsIztgAd7clH/vDDh2drXVtlUf+rDJCxwYZoY5x8yVSFM5WauDLQdPdoSecrpgJCN+KJoZ3K4B6o8zQGH+aMo/RIULE+6DdEHsK7L7cSW6PJEdzYg6AdQAlq9Xq5xyyjMy6ILsNiwjpRyUi9teZTcoGN1eMnLRqkvHwORVy2mcHMgSTK4knHsVTTtbYAjfIAIjD+o+PrXWujLuOM9D2QVRpNmVxIEA1xoXbzf0YPu3DtjdwXx8vn7ma8YXi+wbY885zZeL/MEh46vNastmt0u+3KxW/FPnvYMbbUO8vh4vaLPIiI1hA8iWt+wf4S9TDS9KA7RknDO25cs3OI8WyBJtgnIQaRdLzSr8QcKqaHGfMhAxzT74g5+DPAkoW9GKRum6CfHM4eADzEQl22DhrrfbGbsMvmg6WZPdE5vRgzal8iGF+25hiBEgWHVSFY0yGLMSI5WvGMNINEbphsagSu3hpAVfr9ZIw7NvdAXANq0CYWdXBRxbJ00wAmWSg6/lXolKdwEPxT1gc9Bdp70qfEJq5XvlgK5OjeyFeLsY2Th10vjewo6isbpQGGnlrAmRe7goeunkwb+Vk5H7LtFSe4Hi6p3yqouLkHFaKgcng7ZG2Apv/zwGqY1IeacsxwmnlM6LYi/bKScRNDKecfTcdQIywjRV2oCIk6UexpSPUoe7BRCnVwrVADIBro9egeJwbSrJCaUNGSRjnMTvQk63wMPeeiFDcKPwVP0wizop0oEV3PFZHCO3tBlZ41vdC2eHhMAuHCsxfTGgBkUL+aZYY40RgU0PkLHiMIR02xSlFEuw+q0S0D8sAfDy0yLcb/y3a/A0FyGmGGuAo/+gCIz+XRleQH97+Jp8aeRLI18a+bVG9OsHCnnBJgPK8f7lEdrooKERuUQyviuZGB8l+h5POgS41oXoG+lVeiTH7gA7tTedJ7DDVHZuLse3cJzZV+WODrqJEcFQDXQDNRpejEWV5Jyt1xwe7CDbex+AlcCB3GOXmEbp7cZuz0ygmcDqeAerYzSP2LiM77vBDmTwfvJMHz3eGwNs2KRrvztdxre7dyK++MqIohuFPCHgXkCC+2h4+wk7M9LDlAsAAA==",
             "freq":
             {
               "minC":15
@@ -2926,21 +1190,7 @@
                     }
                   ]
                 }
-              ],
-              "bkgData":
-              {
-                "common":
-                {
-                  "FEL":
-                  [
-
-                  ]
-                },
-                "BOG":
-                {
-
-                }
-              }
+              ]
             },
             "ovwTrfRefL":
             [
@@ -2954,7 +1204,7 @@
             [
               {
                 "type":"REM",
-                "remX":3,
+                "remX":1,
                 "dspl":"U",
                 "tagL":
                 [
@@ -2965,25 +1215,857 @@
             ],
             "eco":
             {
-              "co2":0.051060000000000,
+              "co2":0.032725000000000,
               "type":"PUT"
             },
             "conSubscr":"P",
             "recState":"U",
-            "cksum":"f921bd77_3",
-            "cksumDti":"74b21bcd_3"
+            "cksum":"f2a63aca_3",
+            "cksumDti":"5b976f87_3"
+          },
+          {
+            "cid":"C-1",
+            "date":"20211205",
+            "dur":"000500",
+            "chg":0,
+            "sDays":
+            {
+              "sDaysR":"täglich",
+              "sDaysI":"nicht 24., 31. Dez",
+              "sDaysB":"FFFFFFFFFFFFFFFFFFFFBF7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
+            },
+            "dep":
+            {
+              "locX":0,
+              "idx":13,
+              "dProdX":3,
+              "dInR":true,
+              "dTimeS":"194800",
+              "dTimeR":"194800",
+              "dProgType":"PROGNOSED",
+              "type":"N"
+            },
+            "arr":
+            {
+              "locX":6,
+              "aOutR":true,
+              "aTimeS":"195300",
+              "type":"N"
+            },
+            "secL":
+            [
+              {
+                "type":"JNY",
+                "icoX":2,
+                "dep":
+                {
+                  "locX":0,
+                  "idx":13,
+                  "dProdX":3,
+                  "dInR":true,
+                  "dTimeS":"194800",
+                  "dTimeR":"194800",
+                  "dProgType":"PROGNOSED",
+                  "type":"N"
+                },
+                "arr":
+                {
+                  "locX":2,
+                  "idx":14,
+                  "aProdX":3,
+                  "aOutR":true,
+                  "aTimeS":"194900",
+                  "aTimeR":"194900",
+                  "aProgType":"PROGNOSED",
+                  "type":"N"
+                },
+                "jny":
+                {
+                  "jid":"2|#VN#1#ST#1638666385#PI#0#ZI#181981#TA#25#DA#51221#1S#476152201#1T#1931#LS#476420701#LT#2001#PU#81#RT#1#CA#t01#ZE#R#ZB#       R#PC#7#FR#476152201#FT#1931#TO#476420701#TT#2001#",
+                  "prodX":4,
+                  "dirTxt":"Innsbruck DEZ/EKZ",
+                  "dirFlg":"R",
+                  "status":"P",
+                  "isRchbl":true,
+                  "stopL":
+                  [
+                    {
+                      "locX":0,
+                      "idx":13,
+                      "dProdX":4,
+                      "dInR":true,
+                      "dTimeS":"194800",
+                      "dTimeR":"194800",
+                      "dProgType":"PROGNOSED",
+                      "dDirTxt":"Innsbruck DEZ/EKZ",
+                      "dDirFlg":"R",
+                      "type":"N"
+                    },
+                    {
+                      "locX":2,
+                      "idx":14,
+                      "aProdX":4,
+                      "aOutR":true,
+                      "aTimeS":"194900",
+                      "aTimeR":"194900",
+                      "aProgType":"PROGNOSED",
+                      "type":"N"
+                    }
+                  ],
+                  "polyG":
+                  {
+                    "polyXL":
+                    [
+                      1
+                    ],
+                    "layerX":0,
+                    "crdSysX":0
+                  },
+                  "freq":
+                  {
+                    "minC":15,
+                    "maxC":15,
+                    "numC":9
+                  },
+                  "ctxRecon":"T$A=1@O=Innsbruck Kochstraße@L=476640202@a=128@$A=1@O=Innsbruck Bundesbahndirektion@L=476158004@a=128@$202112051948$202112051949$       R$$1$$$$$$",
+                  "msgL":
+                  [
+                    {
+                      "type":"REM",
+                      "remX":0,
+                      "fLocX":0,
+                      "tLocX":2,
+                      "tagL":
+                      [
+                        "RES_JNY_DTL_H3"
+                      ],
+                      "sort":543424512
+                    },
+                    {
+                      "type":"HIM",
+                      "himX":0,
+                      "dspl":"U",
+                      "fLocX":0,
+                      "tagL":
+                      [
+                        "SUM_GLB_HDR_H3","RES_GLB_HDR_H3"
+                      ],
+                      "sort":373560317
+                    }
+                  ],
+                  "subscr":"F",
+                  "prodL":
+                  [
+                    {
+                      "prodX":4,
+                      "fLocX":0,
+                      "tLocX":2,
+                      "fIdx":13,
+                      "tIdx":14
+                    }
+                  ],
+                  "dirL":
+                  [
+                    {
+                      "dirX":0,
+                      "fLocX":0,
+                      "tLocX":2,
+                      "fIdx":13,
+                      "tIdx":14
+                    }
+                  ]
+                },
+                "minChg":"000400"
+              },
+              {
+                "type":"WALK",
+                "icoX":11,
+                "dep":
+                {
+                  "locX":2,
+                  "dInR":true,
+                  "dTimeS":"194900",
+                  "type":"N"
+                },
+                "arr":
+                {
+                  "locX":6,
+                  "aOutR":true,
+                  "aTimeS":"195300",
+                  "type":"N"
+                },
+                "gis":
+                {
+                  "dist":312,
+                  "durS":"000400",
+                  "ctx":"C|0f5b5ced|G|1|G@F|A=1@O=Innsbruck Bundesbahndirektion@X=11405702@Y=47273372@U=81@L=476158004@i=at:47:61580:0:4@|A=2@O=47.271233, 11.404534@X=11404534@Y=47271233@|5122021|194900|195300|fb|ft@0@2000@120@1@133@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§bt@0@2000@120@1@133@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§tf@$f@$f@$f@$f@$f@$§|||",
+                  "getDescr":true,
+                  "getPoly":true
+                }
+              }
+            ],
+            "ctxRecon":"¶HKI¶T$A=1@O=Innsbruck Kochstraße@L=476640202@a=128@$A=1@O=Innsbruck Bundesbahndirektion@L=476158004@a=128@$202112051948$202112051949$       R$$1$$$$$$§G@F$A=1@O=Innsbruck Bundesbahndirektion@L=476158004@a=128@$A=2@O=47.271233, 11.404534@X=11404534@Y=47271233@u=0@a=128@$202112051949$202112051953$$$1$$$$$$¶GP¶ft@0@2000@120@1@133@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§bt@0@2000@120@1@133@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§tf@$f@$f@$f@$f@$f@$§¶KI¶H4sIAAAAAAACA+1W247bIBD9lYqHPnlXQJzrr1QrRGxsIztgAd7clH/vDDh2drXVtlUf+rDJCxwYZoY5x8yVSFM5WauDLQdPdoSecrpgJCN+KJoZ3K4B6o8zQGH+aMo/RIULE+6DdEHsK7L7cSW6PJEdzYg6AdQAlq9Xq5xyyjMy6ILsNiwjpRyUi9teZTcoGN1eMnLRqkvHwORVy2mcHMgSTK4knHsVTTtbYAjfIAIjD+o+PrXWujLuOM9D2QVRpNmVxIEA1xoXbzf0YPu3DtjdwXx8vn7ma8YXi+wbY885zZeL/MEh46vNastmt0u+3KxW/FPnvYMbbUO8vh4vaLPIiI1hA8iWt+wf4S9TDS9KA7RknDO25cs3OI8WyBJtgnIQaRdLzSr8QcKqaHGfMhAxzT74g5+DPAkoW9GKRum6CfHM4eADzEQl22DhrrfbGbsMvmg6WZPdE5vRgzal8iGF+25hiBEgWHVSFY0yGLMSI5WvGMNINEbphsagSu3hpAVfr9ZIw7NvdAXANq0CYWdXBRxbJ00wAmWSg6/lXolKdwEPxT1gc9Bdp70qfEJq5XvlgK5OjeyFeLsY2Th10vjewo6isbpQGGnlrAmRe7goeunkwb+Vk5H7LtFSe4Hi6p3yqouLkHFaKgcng7ZG2Apv/zwGqY1IeacsxwmnlM6LYi/bKScRNDKecfTcdQIywjRV2oCIk6UexpSPUoe7BRCnVwrVADIBro9egeJwbSrJCaUNGSRjnMTvQk63wMPeeiFDcKPwVP0wizop0oEV3PFZHCO3tBlZ41vdC2eHhMAuHCsxfTGgBkUL+aZYY40RgU0PkLHiMIR02xSlFEuw+q0S0D8sAfDy0yLcb/y3a/A0FyGmGGuAo/+gCIz+XRleQH97+Jp8aeRLI18a+bVG9OsHCnnBJgPK8f7lEdrooKERuUQyviuZGB8l+h5POgS41oXoG+lVeiTH7gA7tTedJ7DDVHZuLse3cJzZV+WODrqJEcFQDXQDNRpejEWV5Jyt1xwe7CDbex+AlcCB3GOXmEbp7cZuz0ygmcDqeAerYzSP2LiM77vBDmTwfvJMHz3eGwNs2KRrvztdxre7dyK++MqIohuFPCHgXkCC+2h4+wk7M9LDlAsAAA==",
+            "freq":
+            {
+              "minC":15
+            },
+            "trfRes":
+            {
+              "statusCode":"OK",
+              "fareSetL":
+              [
+                {
+                  "name":"VVT Innsbruck",
+                  "desc":"",
+                  "fareL":
+                  [
+                    {
+                      "name":"Einzel-Ticket ",
+                      "prc":270,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Wochen-Ticket ",
+                      "prc":2310,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Monats-Ticket ",
+                      "prc":5850,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Jahres-Ticket ",
+                      "prc":38700,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"24h-Ticket ",
+                      "prc":600,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"8-Fahrten-Ticket ",
+                      "prc":1580,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"24h-Ticket 2Plus ",
+                      "prc":880,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Einzel-Ticket Family",
+                      "prc":270,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"24h-Ticket Family",
+                      "prc":600,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"8-Fahrten-Ticket Family",
+                      "prc":1550,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Einzel-Ticket Jugend, Family-Light, Spezial",
+                      "prc":170,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"24h-Ticket Jugend, Family-Light, Spezial",
+                      "prc":410,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"8-Fahrten-Ticket Jugend, Family-Light, Spezial",
+                      "prc":1250,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Einzel-Ticket Kind",
+                      "prc":170,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"24h-Ticket Kind",
+                      "prc":400,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"8-Fahrten-Ticket Kind",
+                      "prc":1250,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Semester-Ticket-Innsbruck ",
+                      "prc":14280,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Einzel-Ticket SeniorIn",
+                      "prc":170,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"24h-Ticket SeniorIn",
+                      "prc":410,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"8-Fahrten-Ticket SeniorIn",
+                      "prc":1250,
+                      "cur":"EUR"
+                    }
+                  ]
+                },
+                {
+                  "name":"VVT Region",
+                  "desc":"",
+                  "fareL":
+                  [
+                    {
+                      "name":"Jahres-Ticket ",
+                      "prc":39500,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Monats-Ticket Region ",
+                      "prc":7900,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Wochen-Ticket Region ",
+                      "prc":2550,
+                      "cur":"EUR"
+                    }
+                  ]
+                },
+                {
+                  "name":"VVT Tirol",
+                  "desc":"",
+                  "fareL":
+                  [
+                    {
+                      "name":"Jahres-Ticket ",
+                      "prc":50940,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Monats-Ticket Land ",
+                      "prc":10190,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Wochen-Ticket Land ",
+                      "prc":4590,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Tages-Ticket 2Plus (nur Nahverkehr) ",
+                      "prc":3470,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Tages-Ticket Bike (nur Linie 110 und 210) ",
+                      "prc":500,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Jahres-Ticket Spezial ",
+                      "prc":26000,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Semester-Ticket Land ",
+                      "prc":18720,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Jahres-Ticket SeniorIn",
+                      "prc":26000,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Jahres-Ticket SeniorIn (ab 75)",
+                      "prc":13000,
+                      "cur":"EUR"
+                    }
+                  ]
+                }
+              ]
+            },
+            "ovwTrfRefL":
+            [
+              {
+                "type":"F",
+                "fareSetX":0,
+                "fareX":0
+              }
+            ],
+            "msgL":
+            [
+              {
+                "type":"REM",
+                "remX":1,
+                "dspl":"U",
+                "tagL":
+                [
+                  "RES_CON_FTR_H3"
+                ],
+                "sort":147324928
+              }
+            ],
+            "eco":
+            {
+              "co2":0.032725000000000,
+              "type":"PUT"
+            },
+            "conSubscr":"P",
+            "recState":"U",
+            "cksum":"8f073f1e_3",
+            "cksumDti":"7e337a00_3"
+          },
+          {
+            "cid":"C-2",
+            "date":"20211205",
+            "dur":"000900",
+            "chg":0,
+            "sDays":
+            {
+              "sDaysR":"täglich",
+              "sDaysI":"nicht 24., 31. Dez",
+              "sDaysB":"FFFFFFFFFFFFFFFFFFFFBF7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
+            },
+            "dep":
+            {
+              "locX":0,
+              "dInR":true,
+              "dTimeS":"195100",
+              "type":"N"
+            },
+            "arr":
+            {
+              "locX":6,
+              "aOutR":true,
+              "aTimeS":"200000",
+              "type":"N"
+            },
+            "secL":
+            [
+              {
+                "type":"WALK",
+                "icoX":11,
+                "dep":
+                {
+                  "locX":0,
+                  "dInR":true,
+                  "dTimeS":"195100",
+                  "type":"N"
+                },
+                "arr":
+                {
+                  "locX":7,
+                  "aOutR":true,
+                  "aTimeS":"195500",
+                  "type":"N"
+                },
+                "gis":
+                {
+                  "dist":261,
+                  "durS":"000400",
+                  "ctx":"C|f25aca03|G|1|G@F|A=1@O=Innsbruck Kochstraße@X=11400363@Y=47272347@U=81@L=476640202@i=at:47:66402:0:2@|A=1@O=Innsbruck Tschurtschenthalerstraße@X=11399751@Y=47274082@U=81@L=476157802@i=at:47:61578:0:2@|5122021|195100|195500|bf|ft@0@2000@120@1@133@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§bt@0@2000@120@1@133@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§tf@$f@$f@$f@$f@$f@$§|||",
+                  "getDescr":true,
+                  "getPoly":true
+                }
+              },
+              {
+                "type":"JNY",
+                "icoX":15,
+                "dep":
+                {
+                  "locX":7,
+                  "idx":4,
+                  "dProdX":5,
+                  "dInR":true,
+                  "dTimeS":"195500",
+                  "dTimeR":"195500",
+                  "dProgType":"PROGNOSED",
+                  "type":"N"
+                },
+                "arr":
+                {
+                  "locX":2,
+                  "idx":5,
+                  "aProdX":5,
+                  "aOutR":true,
+                  "aTimeS":"195600",
+                  "aTimeR":"195600",
+                  "aProgType":"PROGNOSED",
+                  "type":"N"
+                },
+                "jny":
+                {
+                  "jid":"2|#VN#1#ST#1638666385#PI#0#ZI#180407#TA#26#DA#51221#1S#470118709#1T#1950#LS#476837101#LT#1959#PU#81#RT#1#CA#t01#ZE#B#ZB#       B#PC#7#FR#470118709#FT#1950#TO#476837101#TT#1959#",
+                  "prodX":6,
+                  "dirTxt":"Innsbruck Kletterzentrum",
+                  "dirFlg":"R",
+                  "status":"P",
+                  "isRchbl":true,
+                  "stopL":
+                  [
+                    {
+                      "locX":7,
+                      "idx":4,
+                      "dProdX":6,
+                      "dInR":true,
+                      "dTimeS":"195500",
+                      "dTimeR":"195500",
+                      "dProgType":"PROGNOSED",
+                      "dDirTxt":"Innsbruck Kletterzentrum",
+                      "dDirFlg":"R",
+                      "type":"N"
+                    },
+                    {
+                      "locX":2,
+                      "idx":5,
+                      "aProdX":6,
+                      "aOutR":true,
+                      "aTimeS":"195600",
+                      "aTimeR":"195600",
+                      "aProgType":"PROGNOSED",
+                      "type":"N"
+                    }
+                  ],
+                  "polyG":
+                  {
+                    "polyXL":
+                    [
+                      2
+                    ],
+                    "layerX":0,
+                    "crdSysX":0
+                  },
+                  "freq":
+                  {
+                    "minC":30,
+                    "maxC":30,
+                    "numC":5
+                  },
+                  "ctxRecon":"T$A=1@O=Innsbruck Tschurtschenthalerstraße@L=476157802@a=128@$A=1@O=Innsbruck Bundesbahndirektion@L=476158004@a=128@$202112051955$202112051956$       B$$1$$$$$$",
+                  "msgL":
+                  [
+                    {
+                      "type":"REM",
+                      "remX":0,
+                      "fLocX":7,
+                      "tLocX":2,
+                      "tagL":
+                      [
+                        "RES_JNY_DTL_H3"
+                      ],
+                      "sort":543424512
+                    },
+                    {
+                      "type":"HIM",
+                      "himX":1,
+                      "dspl":"U",
+                      "fLocX":7,
+                      "tagL":
+                      [
+                        "SUM_GLB_HDR_H3","RES_GLB_HDR_H3"
+                      ],
+                      "sort":373560317
+                    }
+                  ],
+                  "subscr":"F",
+                  "prodL":
+                  [
+                    {
+                      "prodX":6,
+                      "fLocX":7,
+                      "tLocX":2,
+                      "fIdx":4,
+                      "tIdx":5
+                    }
+                  ],
+                  "dirL":
+                  [
+                    {
+                      "dirX":1,
+                      "fLocX":7,
+                      "tLocX":2,
+                      "fIdx":4,
+                      "tIdx":5
+                    }
+                  ]
+                },
+                "minChg":"000400"
+              },
+              {
+                "type":"WALK",
+                "icoX":11,
+                "dep":
+                {
+                  "locX":2,
+                  "dInR":true,
+                  "dTimeS":"195600",
+                  "type":"N"
+                },
+                "arr":
+                {
+                  "locX":6,
+                  "aOutR":true,
+                  "aTimeS":"200000",
+                  "type":"N"
+                },
+                "gis":
+                {
+                  "dist":312,
+                  "durS":"000400",
+                  "ctx":"C|45839f68|G|1|G@F|A=1@O=Innsbruck Bundesbahndirektion@X=11405702@Y=47273372@U=81@L=476158004@i=at:47:61580:0:4@|A=2@O=47.271233, 11.404534@X=11404534@Y=47271233@|5122021|195600|200000|fb|ft@0@2000@120@1@133@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§bt@0@2000@120@1@133@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§tf@$f@$f@$f@$f@$f@$§|||",
+                  "getDescr":true,
+                  "getPoly":true
+                }
+              }
+            ],
+            "ctxRecon":"¶HKI¶G@F$A=1@O=Innsbruck Kochstraße@L=476640202@a=128@$A=1@O=Innsbruck Tschurtschenthalerstraße@L=476157802@a=128@$202112051951$202112051955$$$1$$$$$$§T$A=1@O=Innsbruck Tschurtschenthalerstraße@L=476157802@a=128@$A=1@O=Innsbruck Bundesbahndirektion@L=476158004@a=128@$202112051955$202112051956$       B$$1$$$$$$§G@F$A=1@O=Innsbruck Bundesbahndirektion@L=476158004@a=128@$A=2@O=47.271233, 11.404534@X=11404534@Y=47271233@u=0@a=128@$202112051956$202112052000$$$1$$$$$$¶GP¶ft@0@2000@120@1@133@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§bt@0@2000@120@1@133@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§tf@$f@$f@$f@$f@$f@$§¶KI¶H4sIAAAAAAACA+1W247bIBD9lYqHPnlXQJzrr1QrRGxsIztgAd7clH/vDDh2drXVtlUf+rDJCxwYZoY5x8yVSFM5WauDLQdPdoSecrpgJCN+KJoZ3K4B6o8zQGH+aMo/RIULE+6DdEHsK7L7cSW6PJEdzYg6AdQAlq9Xq5xyyjMy6ILsNiwjpRyUi9teZTcoGN1eMnLRqkvHwORVy2mcHMgSTK4knHsVTTtbYAjfIAIjD+o+PrXWujLuOM9D2QVRpNmVxIEA1xoXbzf0YPu3DtjdwXx8vn7ma8YXi+wbY885zZeL/MEh46vNastmt0u+3KxW/FPnvYMbbUO8vh4vaLPIiI1hA8iWt+wf4S9TDS9KA7RknDO25cs3OI8WyBJtgnIQaRdLzSr8QcKqaHGfMhAxzT74g5+DPAkoW9GKRum6CfHM4eADzEQl22DhrrfbGbsMvmg6WZPdE5vRgzal8iGF+25hiBEgWHVSFY0yGLMSI5WvGMNINEbphsagSu3hpAVfr9ZIw7NvdAXANq0CYWdXBRxbJ00wAmWSg6/lXolKdwEPxT1gc9Bdp70qfEJq5XvlgK5OjeyFeLsY2Th10vjewo6isbpQGGnlrAmRe7goeunkwb+Vk5H7LtFSe4Hi6p3yqouLkHFaKgcng7ZG2Apv/zwGqY1IeacsxwmnlM6LYi/bKScRNDKecfTcdQIywjRV2oCIk6UexpSPUoe7BRCnVwrVADIBro9egeJwbSrJCaUNGSRjnMTvQk63wMPeeiFDcKPwVP0wizop0oEV3PFZHCO3tBlZ41vdC2eHhMAuHCsxfTGgBkUL+aZYY40RgU0PkLHiMIR02xSlFEuw+q0S0D8sAfDy0yLcb/y3a/A0FyGmGGuAo/+gCIz+XRleQH97+Jp8aeRLI18a+bVG9OsHCnnBJgPK8f7lEdrooKERuUQyviuZGB8l+h5POgS41oXoG+lVeiTH7gA7tTedJ7DDVHZuLse3cJzZV+WODrqJEcFQDXQDNRpejEWV5Jyt1xwe7CDbex+AlcCB3GOXmEbp7cZuz0ygmcDqeAerYzSP2LiM77vBDmTwfvJMHz3eGwNs2KRrvztdxre7dyK++MqIohuFPCHgXkCC+2h4+wk7M9LDlAsAAA==",
+            "freq":
+            {
+              "minC":30
+            },
+            "trfRes":
+            {
+              "statusCode":"OK",
+              "fareSetL":
+              [
+                {
+                  "name":"VVT Innsbruck",
+                  "desc":"",
+                  "fareL":
+                  [
+                    {
+                      "name":"Einzel-Ticket ",
+                      "prc":270,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Wochen-Ticket ",
+                      "prc":2310,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Monats-Ticket ",
+                      "prc":5850,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Jahres-Ticket ",
+                      "prc":38700,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"24h-Ticket ",
+                      "prc":600,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"8-Fahrten-Ticket ",
+                      "prc":1580,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"24h-Ticket 2Plus ",
+                      "prc":880,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Einzel-Ticket Family",
+                      "prc":270,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"24h-Ticket Family",
+                      "prc":600,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"8-Fahrten-Ticket Family",
+                      "prc":1550,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Einzel-Ticket Jugend, Family-Light, Spezial",
+                      "prc":170,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"24h-Ticket Jugend, Family-Light, Spezial",
+                      "prc":410,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"8-Fahrten-Ticket Jugend, Family-Light, Spezial",
+                      "prc":1250,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Einzel-Ticket Kind",
+                      "prc":170,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"24h-Ticket Kind",
+                      "prc":400,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"8-Fahrten-Ticket Kind",
+                      "prc":1250,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Semester-Ticket-Innsbruck ",
+                      "prc":14280,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Einzel-Ticket SeniorIn",
+                      "prc":170,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"24h-Ticket SeniorIn",
+                      "prc":410,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"8-Fahrten-Ticket SeniorIn",
+                      "prc":1250,
+                      "cur":"EUR"
+                    }
+                  ]
+                },
+                {
+                  "name":"VVT Region",
+                  "desc":"",
+                  "fareL":
+                  [
+                    {
+                      "name":"Jahres-Ticket ",
+                      "prc":39500,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Monats-Ticket Region ",
+                      "prc":7900,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Wochen-Ticket Region ",
+                      "prc":2550,
+                      "cur":"EUR"
+                    }
+                  ]
+                },
+                {
+                  "name":"VVT Tirol",
+                  "desc":"",
+                  "fareL":
+                  [
+                    {
+                      "name":"Jahres-Ticket ",
+                      "prc":50940,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Monats-Ticket Land ",
+                      "prc":10190,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Wochen-Ticket Land ",
+                      "prc":4590,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Tages-Ticket 2Plus (nur Nahverkehr) ",
+                      "prc":3470,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Tages-Ticket Bike (nur Linie 110 und 210) ",
+                      "prc":500,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Jahres-Ticket Spezial ",
+                      "prc":26000,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Semester-Ticket Land ",
+                      "prc":18720,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Jahres-Ticket SeniorIn",
+                      "prc":26000,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Jahres-Ticket SeniorIn (ab 75)",
+                      "prc":13000,
+                      "cur":"EUR"
+                    }
+                  ]
+                }
+              ]
+            },
+            "ovwTrfRefL":
+            [
+              {
+                "type":"F",
+                "fareSetX":0,
+                "fareX":0
+              }
+            ],
+            "msgL":
+            [
+              {
+                "type":"REM",
+                "remX":2,
+                "dspl":"U",
+                "tagL":
+                [
+                  "RES_CON_FTR_H3"
+                ],
+                "sort":147324928
+              }
+            ],
+            "eco":
+            {
+              "co2":0.025355000000000,
+              "type":"PUT"
+            },
+            "conSubscr":"P",
+            "recState":"U",
+            "cksum":"1aa9c3f6_3",
+            "cksumDti":"dedb705e_3"
           }
         ],
-        "outCtxScrB":"2|OB|MT#11#93160#93160#93166#93166#0#0#85#93154#1#-2147483646#0#1#2|PDH#85628c0be0db0f6c3e64c0b5edfd3bbb|RD#6092021|RT#163400|US#1",
-        "outCtxScrF":"2|OF|MT#11#93171#93171#93180#93183#0#0#85#93171#4#-2147483646#0#1#2|PDH#85628c0be0db0f6c3e64c0b5edfd3bbb|RD#6092021|RT#163400|US#1",
-        "fpB":"20210706",
-        "fpE":"20211211",
-        "planrtTS":"1630938809",
+        "outCtxScrB":"2|OB|MT#11#93333#93333#93338#93338#0#0#85#93325#1#-2147483646#0#1#2|PDH#28ca23a3810a215b61d0753423ba1dec|RD#5122021|RT#192500|US#1",
+        "outCtxScrF":"2|OF|MT#11#93351#93351#93360#93360#0#0#85#93349#3#-2147483646#0#1#2|PDH#28ca23a3810a215b61d0753423ba1dec|RD#5122021|RT#192500|US#1",
+        "fpB":"20211004",
+        "fpE":"20220531",
+        "planrtTS":"1638728681",
         "outConGrpL":
         [
           {
             "name":"Öffentliche Verkehrsmittel",
-            "icoX":17,
+            "icoX":18,
             "grpid":"pt_only",
             "conScoringL":
             [
@@ -3013,7 +2095,7 @@
           },
           {
             "name":"Fußweg",
-            "icoX":18,
+            "icoX":19,
             "grpid":"walk_only",
             "conScoringL":
             [
@@ -3039,7 +2121,7 @@
           },
           {
             "name":"Fahrrad",
-            "icoX":19,
+            "icoX":20,
             "grpid":"bike_only",
             "conScoringL":
             [
@@ -3065,7 +2147,7 @@
           },
           {
             "name":"Auto",
-            "icoX":20,
+            "icoX":21,
             "grpid":"car_only",
             "conScoringL":
             [
@@ -3091,7 +2173,7 @@
           },
           {
             "name":"Fahrradmitnahme",
-            "icoX":21,
+            "icoX":22,
             "grpid":"bike_carriage",
             "conScoringL":
             [
@@ -3117,7 +2199,7 @@
           },
           {
             "name":"Bike and Ride",
-            "icoX":22,
+            "icoX":23,
             "grpid":"bike_ride",
             "conScoringL":
             [
@@ -3147,7 +2229,7 @@
           },
           {
             "name":"Park and Ride",
-            "icoX":23,
+            "icoX":24,
             "grpid":"park_ride",
             "conScoringL":
             [
@@ -3173,7 +2255,7 @@
           },
           {
             "name":"Autoreisezug",
-            "icoX":24,
+            "icoX":25,
             "grpid":"cartrain",
             "conScoringL":
             [
@@ -3199,7 +2281,7 @@
           },
           {
             "name":"Bikesharing",
-            "icoX":25,
+            "icoX":26,
             "grpid":"bikeshare",
             "conScoringL":
             [
@@ -3217,15 +2299,19 @@
             "requests":
             [
               {
-                "id":"BIKESHARE_NEXTBIKE",
+                "id":"GROUP_BIKESHR_NEXTBIKE_ONLY",
                 "autosend":false
               },
               {
-                "id":"BIKESHARE_CITYBIKE",
+                "id":"GROUP_BIKESHR_NEXTBIKE",
                 "autosend":false
               },
               {
-                "id":"WALK_OEV_BIKESHARE",
+                "id":"GROUP_BIKESHR_CITYBIKE_ONLY",
+                "autosend":false
+              },
+              {
+                "id":"GROUP_BIKESHR_CITYBIKE",
                 "autosend":false
               }
             ],
@@ -3233,7 +2319,7 @@
           },
           {
             "name":"Sharing",
-            "icoX":26,
+            "icoX":27,
             "grpid":"carshare",
             "conScoringL":
             [
@@ -3251,27 +2337,23 @@
             "requests":
             [
               {
-                "id":"GROUP_SCOOTER_SHR",
+                "id":"GROUP_SCOOTERSHR_EASYWAY_ONLY",
                 "autosend":false
               },
               {
-                "id":"GROUP_PT_SCOOTER_SHR",
+                "id":"GROUP_SCOOTERSHR_EASYWAY",
                 "autosend":false
               },
               {
-                "id":"GROUP_SCOOTER_SHR_PT",
+                "id":"GROUP_CARSHR_FLOMOBIL_ONLY",
                 "autosend":false
               },
               {
-                "id":"GROUP_CAR_SHR",
+                "id":"GROUP_CARSHR_FLOMOBIL",
                 "autosend":false
               },
               {
-                "id":"GROUP_PT_CAR_SHR",
-                "autosend":false
-              },
-              {
-                "id":"GROUP_CAR_SHR_PT",
+                "id":"GROUP_CARUSOSHR_ONLY",
                 "autosend":false
               },
               {
@@ -3279,19 +2361,11 @@
                 "autosend":false
               },
               {
-                "id":"GROUP_PT_CARUSO_SHR",
+                "id":"GROUP_SCOOTERSHR_TIER_ONLY",
                 "autosend":false
               },
               {
-                "id":"GROUP_CARUSO_SHR_PT",
-                "autosend":false
-              },
-              {
-                "id":"GROUP_SCOOTERSH_TIER_ONLY",
-                "autosend":false
-              },
-              {
-                "id":"GROUP_SCOOTERSH_TIER",
+                "id":"GROUP_SCOOTERSHR_TIER",
                 "autosend":false
               }
             ],

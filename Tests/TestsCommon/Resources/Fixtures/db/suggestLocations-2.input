@@ -1,8 +1,8 @@
 {
   "ver":"1.15",
-  "ext":"DB.R18.04.a",
+  "ext":"DB.R20.12.b",
   "lang":"deu",
-  "id":"5uk2xk8kmqizww8g",
+  "id":"pe4cukeq662nxg4s",
   "cInfo":
   {
     "code":"OK",
@@ -84,7 +84,7 @@
               "id":"standard",
               "index":0,
               "type":"WGS84",
-              "dim":2
+              "dim":3
             }
           ],
           "opL":
@@ -118,7 +118,7 @@
           "locL":
           [
             {
-              "lid":"A=1@O=Güntzelstr. (U), Berlin@X=13330868@Y=52492033@U=80@L=731371@B=1@p=1630529292@",
+              "lid":"A=1@O=Güntzelstr. (U), Berlin@X=13330868@Y=52492033@U=81@L=731371@B=1@p=1638389990@",
               "type":"S",
               "name":"Güntzelstr. (U), Berlin",
               "icoX":0,
@@ -139,10 +139,10 @@
 1,
 2
               ],
-              "wt":361
+              "wt":754
             },
             {
-              "lid":"A=1@O=Güntzelstr./Uhlandstr., Berlin@X=13323245@Y=52491583@U=80@L=731368@B=1@p=1630529292@",
+              "lid":"A=1@O=Güntzelstr./Uhlandstr., Berlin@X=13323245@Y=52491583@U=81@L=731368@B=1@p=1638389990@",
               "type":"S",
               "name":"Güntzelstr./Uhlandstr., Berlin",
               "icoX":0,
@@ -161,10 +161,10 @@
               [
 3
               ],
-              "wt":854
+              "wt":953
             },
             {
-              "lid":"A=4@O=Berlin, Taverna Hellas (Güntzelstraße 19) (Gastron@X=13326391@Y=52491188@U=104@L=991525574@B=1@p=1630423186@",
+              "lid":"A=4@O=Berlin, Taverna Hellas (Güntzelstraße 19) (Gastron@X=13326391@Y=52491188@U=104@L=991525574@B=1@p=1638372207@",
               "type":"P",
               "name":"Berlin, Taverna Hellas (Güntzelstraße 19) (Gastron",
               "icoX":2,

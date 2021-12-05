@@ -1,7 +1,7 @@
 {
   "ver":"1.15",
   "lang":"deu",
-  "id":"kg2kpiemk22wywwg",
+  "id":"idwc4ku866gu8wcs",
   "cInfo":
   {
     "code":"OK",
@@ -94,12 +94,50 @@
               "meta":true,
               "pCls":2196,
               "isMainMast":true
+            },
+            {
+              "lid":"A=1@O=Wien Ottakring@l=Wien Ottakring (1)@X=16311439@Y=48211567@U=81@L=490098106@i=at:49:981:0:6@",
+              "type":"S",
+              "name":"Wien Ottakring",
+              "nameAlt":"Wien Ottakring (1)",
+              "icoX":6,
+              "extId":"490098106",
+              "state":"F",
+              "crd":
+              {
+                "x":16311439,
+                "y":48211567,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":2198,
+              "mMastLocX":5
+            },
+            {
+              "lid":"A=1@O=Wien Ottakring@X=16311673@Y=48212026@U=81@L=490098100@i=at:49:981@",
+              "type":"S",
+              "name":"Wien Ottakring",
+              "icoX":7,
+              "extId":"490098100",
+              "state":"F",
+              "crd":
+              {
+                "x":16311673,
+                "y":48212026,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "meta":true,
+              "pCls":2198,
+              "isMainMast":true
             }
           ],
           "prodL":
           [
             {
-              "pid":"L::2::::B3575658520::vor-21-U3-j21-5::*",
+              "pid":"L::2::::B3575658520::vor-21-U3-j21-7::*",
               "name":"U3",
               "nameS":"U3",
               "number":"U3",
@@ -109,9 +147,9 @@
               "prodCtx":
               {
                 "name":"      U3",
-                "num":"8278",
+                "num":"14328",
                 "line":"U3",
-                "matchId":"0U36072",
+                "matchId":"0U38879",
                 "catOutS":"v18",
                 "catOutL":"U-Bahn",
                 "catIn":"v18",
@@ -120,7 +158,7 @@
               }
             },
             {
-              "pid":"L::2::::B3575658520::vor-21-U3-j21-5::*",
+              "pid":"L::2::::B3575658520::vor-21-U3-j21-7::*",
               "name":"U3",
               "nameS":"U3",
               "number":"U3",
@@ -130,10 +168,10 @@
               "prodCtx":
               {
                 "name":"      U3",
-                "num":"8278",
+                "num":"14328",
                 "line":"U3",
-                "lineId":"vor-21-U3-j21-5",
-                "matchId":"0U36072",
+                "lineId":"vor-21-U3-j21-7",
+                "matchId":"0U38879",
                 "catOutS":"v18",
                 "catOutL":"U-Bahn",
                 "catIn":"v18",
@@ -142,7 +180,7 @@
               }
             },
             {
-              "pid":"L::2::::B3575658520::vor-21-U3-j21-5::*",
+              "pid":"L::2::::B3575658520::vor-21-U3-j21-7::*",
               "name":"U3",
               "nameS":"U3",
               "number":"U3",
@@ -152,10 +190,10 @@
               "prodCtx":
               {
                 "name":"      U3",
-                "num":"8279",
+                "num":"14329",
                 "line":"U3",
-                "lineId":"vor-21-U3-j21-5",
-                "matchId":"0U36073",
+                "lineId":"vor-21-U3-j21-7",
+                "matchId":"0U38880",
                 "catOutS":"v18",
                 "catOutL":"U-Bahn",
                 "catIn":"v18",
@@ -164,7 +202,7 @@
               }
             },
             {
-              "pid":"L::2::::B3575658520::vor-21-U3-j21-5::*",
+              "pid":"L::2::::B3575658520::vor-21-U3-j21-7::*",
               "name":"U3",
               "nameS":"U3",
               "number":"U3",
@@ -174,10 +212,10 @@
               "prodCtx":
               {
                 "name":"      U3",
-                "num":"8280",
+                "num":"14373",
                 "line":"U3",
-                "lineId":"vor-21-U3-j21-5",
-                "matchId":"0U36074",
+                "lineId":"vor-21-U3-j21-7",
+                "matchId":"0U38881",
                 "catOutS":"v18",
                 "catOutL":"U-Bahn",
                 "catIn":"v18",
@@ -186,7 +224,7 @@
               }
             },
             {
-              "pid":"L::2::::B3575658520::vor-21-U3-j21-5::*",
+              "pid":"L::2::::B3575658520::vor-21-U3-j21-7::*",
               "name":"U3",
               "nameS":"U3",
               "number":"U3",
@@ -196,10 +234,10 @@
               "prodCtx":
               {
                 "name":"      U3",
-                "num":"8281",
+                "num":"14374",
                 "line":"U3",
-                "lineId":"vor-21-U3-j21-5",
-                "matchId":"0U36075",
+                "lineId":"vor-21-U3-j21-7",
+                "matchId":"0U38882",
                 "catOutS":"v18",
                 "catOutL":"U-Bahn",
                 "catIn":"v18",
@@ -208,7 +246,7 @@
               }
             },
             {
-              "pid":"L::2::::B3575658520::vor-21-U3-j21-5::*",
+              "pid":"L::2::::B3575658520::vor-21-U3-j21-7::*",
               "name":"U3",
               "nameS":"U3",
               "number":"U3",
@@ -218,10 +256,10 @@
               "prodCtx":
               {
                 "name":"      U3",
-                "num":"8282",
+                "num":"14375",
                 "line":"U3",
-                "lineId":"vor-21-U3-j21-5",
-                "matchId":"0U36076",
+                "lineId":"vor-21-U3-j21-7",
+                "matchId":"0U38883",
                 "catOutS":"v18",
                 "catOutL":"U-Bahn",
                 "catIn":"v18",
@@ -230,7 +268,7 @@
               }
             },
             {
-              "pid":"L::2::::B3575658520::vor-21-U3-j21-5::*",
+              "pid":"L::2::::B3575658520::vor-21-U3-j21-7::*",
               "name":"U3",
               "nameS":"U3",
               "number":"U3",
@@ -240,10 +278,10 @@
               "prodCtx":
               {
                 "name":"      U3",
-                "num":"8283",
+                "num":"14376",
                 "line":"U3",
-                "lineId":"vor-21-U3-j21-5",
-                "matchId":"0U36077",
+                "lineId":"vor-21-U3-j21-7",
+                "matchId":"0U38884",
                 "catOutS":"v18",
                 "catOutL":"U-Bahn",
                 "catIn":"v18",
@@ -252,7 +290,7 @@
               }
             },
             {
-              "pid":"L::2::::B3575658520::vor-21-U3-j21-5::*",
+              "pid":"L::2::::B3575658520::vor-21-U3-j21-7::*",
               "name":"U3",
               "nameS":"U3",
               "number":"U3",
@@ -262,9 +300,9 @@
               "prodCtx":
               {
                 "name":"      U3",
-                "num":"8279",
+                "num":"14329",
                 "line":"U3",
-                "matchId":"0U36073",
+                "matchId":"0U38880",
                 "catOutS":"v18",
                 "catOutL":"U-Bahn",
                 "catIn":"v18",
@@ -273,7 +311,7 @@
               }
             },
             {
-              "pid":"L::2::::B3575658520::vor-21-U3-j21-5::*",
+              "pid":"L::2::::B3575658520::vor-21-U3-j21-7::*",
               "name":"U3",
               "nameS":"U3",
               "number":"U3",
@@ -283,10 +321,10 @@
               "prodCtx":
               {
                 "name":"      U3",
-                "num":"8284",
+                "num":"14377",
                 "line":"U3",
-                "lineId":"vor-21-U3-j21-5",
-                "matchId":"0U36078",
+                "lineId":"vor-21-U3-j21-7",
+                "matchId":"0U38885",
                 "catOutS":"v18",
                 "catOutL":"U-Bahn",
                 "catIn":"v18",
@@ -295,7 +333,7 @@
               }
             },
             {
-              "pid":"L::2::::B3575658520::vor-21-U3-j21-5::*",
+              "pid":"L::2::::B3575658520::vor-21-U3-j21-7::*",
               "name":"U3",
               "nameS":"U3",
               "number":"U3",
@@ -305,9 +343,9 @@
               "prodCtx":
               {
                 "name":"      U3",
-                "num":"8280",
+                "num":"14373",
                 "line":"U3",
-                "matchId":"0U36074",
+                "matchId":"0U38881",
                 "catOutS":"v18",
                 "catOutL":"U-Bahn",
                 "catIn":"v18",
@@ -316,7 +354,7 @@
               }
             },
             {
-              "pid":"L::2::::B3575658520::vor-21-U3-j21-5::*",
+              "pid":"L::2::::B3575658520::vor-21-U3-j21-7::*",
               "name":"U3",
               "nameS":"U3",
               "number":"U3",
@@ -326,10 +364,10 @@
               "prodCtx":
               {
                 "name":"      U3",
-                "num":"8285",
+                "num":"14378",
                 "line":"U3",
-                "lineId":"vor-21-U3-j21-5",
-                "matchId":"0U36079",
+                "lineId":"vor-21-U3-j21-7",
+                "matchId":"0U38886",
                 "catOutS":"v18",
                 "catOutL":"U-Bahn",
                 "catIn":"v18",
@@ -348,7 +386,7 @@
               "id":"standard",
               "name":"standard",
               "index":0,
-              "annoCnt":384392
+              "annoCnt":694319
             }
           ],
           "crdSysL":
@@ -383,9 +421,16 @@
               "txtN":"Niederflurfahrzeug"
             },
             {
+              "type":"A",
+              "code":"fb",
+              "prio":50,
+              "icoX":5,
+              "txtN":"Fahrradmitnahme begrenzt möglich"
+            },
+            {
               "type":"H",
               "code":"text.connection.eco.co2.decreased.consumption.message",
-              "icoX":7,
+              "icoX":10,
               "txtN":"Im Vergleich zu einer Fahrt mit dem eigenen PKW werden 0,16 kg CO<sub>2</sub> Emissionen eingespart. <a target=\"_blank\" href=\"https://web.verkehrsauskunft.at/co2berechnung/CO2_Berechnung.pdf\">Mehr Informationen</a>"
             }
           ],
@@ -395,18 +440,20 @@
               "hid":"126891",
               "act":true,
               "pub":"",
-              "head":"Tragen eines Mund-Nasen-Schutzes",
+              "head":"FFP2-Maskenpflicht",
               "lead":"",
-              "text":"Bitte Tragen Sie in allen öffentlichen Verkehrsmitteln einen geeigneten Mund-Nasen-Schutz und wahren Sie nach Möglichkeit Distanz zu anderen Personen.<br><a href=\"https://routenplaner.verkehrsauskunft.at/him-upload/1625080040721_Fahrgastcharta_Juli2021.pdf\" target=\"_blank\" rel=\"noopener\">Fahrgast-Charta - sicher und gesund mit den Öffis ans Ziel</a>",
+              "text":"Bitte tragen Sie in allen öffentlichen Verkehrsmitteln eine FFP2-Maske und wahren Sie nach Möglichkeit Distanz zu anderen Personen.<br><a href=\"https://routenplaner.verkehrsauskunft.at/him-upload/1637915993266_Fahrgastcharta_November021.pdf\" target=\"_blank\" rel=\"noopener\">Fahrgast-Charta - sicher und gesund mit den Öffis ans Ziel</a>",
               "tckr":"",
-              "icoX":5,
+              "icoX":8,
               "prio":100,
+              "fLocX":4,
+              "tLocX":4,
               "prod":65535,
-              "lModDate":"20210630",
-              "lModTime":"210847",
+              "lModDate":"20211126",
+              "lModTime":"093953",
               "sDate":"20210125",
               "sTime":"000000",
-              "eDate":"20211211",
+              "eDate":"20220531",
               "eTime":"235900",
               "comp":"KGÖVV",
               "cat":4,
@@ -414,9 +461,9 @@
               [
                 {
                   "name":"TIMETABLE",
-                  "fDate":"20210630",
-                  "fTime":"210800",
-                  "tDate":"20211211",
+                  "fDate":"20211021",
+                  "fTime":"095900",
+                  "tDate":"20220531",
                   "tTime":"235900"
                 }
               ]
@@ -485,6 +532,44 @@
               "res":"LF"
             },
             {
+              "res":"INFO"
+            },
+            {
+              "res":"prod_comm_t",
+              "txtS":"S45",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255,
+                "a":255
+              },
+              "bg":
+              {
+                "r":0,
+                "g":157,
+                "b":221,
+                "a":255
+              }
+            },
+            {
+              "res":"prod_comm_t",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255,
+                "a":255
+              },
+              "bg":
+              {
+                "r":0,
+                "g":157,
+                "b":221,
+                "a":255
+              }
+            },
+            {
               "res":"warn"
             },
             {
@@ -499,14 +584,14 @@
         [
           {
             "cid":"C-0",
-            "date":"20210906",
+            "date":"20211205",
             "dur":"000100",
             "chg":0,
             "sDays":
             {
-              "sDaysR":"Mo - Fr",
-              "sDaysI":"nicht 26. Okt, 1. Nov, 8. Dez",
-              "sDaysB":"00000000007CF9F3E7CF9F3E7CF971E7CF9F3E6C"
+              "sDaysR":"Sa, So",
+              "sDaysI":"nicht 11., 18. Dez; auch 24., 31. Dez, 6. Jan, 18. Apr, 26. Mai",
+              "sDaysB":"060C1A3860C18102040870E2C183060C183060C183060C183860C183062C"
             },
             "dep":
             {
@@ -515,7 +600,7 @@
               "dProdX":0,
               "dPlatfS":"1",
               "dInR":true,
-              "dTimeS":"162600",
+              "dTimeS":"192500",
               "dProgType":"PROGNOSED",
               "type":"N"
             },
@@ -526,7 +611,7 @@
               "aProdX":0,
               "aPlatfS":"1",
               "aOutR":true,
-              "aTimeS":"162700",
+              "aTimeS":"192600",
               "aProgType":"PROGNOSED",
               "type":"N"
             },
@@ -542,7 +627,7 @@
                   "dProdX":0,
                   "dPlatfS":"1",
                   "dInR":true,
-                  "dTimeS":"162600",
+                  "dTimeS":"192500",
                   "dProgType":"PROGNOSED",
                   "type":"N"
                 },
@@ -553,13 +638,13 @@
                   "aProdX":0,
                   "aPlatfS":"1",
                   "aOutR":true,
-                  "aTimeS":"162700",
+                  "aTimeS":"192600",
                   "aProgType":"PROGNOSED",
                   "type":"N"
                 },
                 "jny":
                 {
-                  "jid":"2|#VN#1#ST#1630889505#PI#0#ZI#70067#TA#0#DA#60921#1S#490098106#1T#1612#LS#490126010#LT#1638#PU#81#RT#1#CA#v18#ZE#U3#ZB#      U3#PC#2#FR#490098106#FT#1612#TO#490126010#TT#1638#",
+                  "jid":"2|#VN#1#ST#1638666385#PI#0#ZI#96127#TA#50#DA#51221#1S#490098106#1T#1911#LS#490126010#LT#1937#PU#81#RT#1#CA#v18#ZE#U3#ZB#      U3#PC#2#FR#490098106#FT#1911#TO#490126010#TT#1937#",
                   "prodX":1,
                   "dirTxt":"Wien Simmering",
                   "dirFlg":"H",
@@ -572,7 +657,7 @@
                       "idx":10,
                       "dProdX":1,
                       "dInR":true,
-                      "dTimeS":"162600",
+                      "dTimeS":"192500",
                       "dDirTxt":"Wien Simmering",
                       "dDirFlg":"H",
                       "type":"N"
@@ -582,7 +667,7 @@
                       "idx":11,
                       "aProdX":1,
                       "aOutR":true,
-                      "aTimeS":"162700",
+                      "aTimeS":"192600",
                       "type":"N"
                     }
                   ],
@@ -591,9 +676,9 @@
                     "delta":true,
                     "dim":2,
                     "type":"WGS84",
-                    "crdEncYX":"_sfeH{p|bBCAvCcOTqBNqC@cCCiD@mBDuBHwAP{CB@",
-                    "crdEncS":"NNINKGIDLENN",
-                    "crdEncF":"????????????",
+                    "crdEncYX":"_sfeH{p|bBCAvCcOTqBNqC@cCCiDFcFZsFB@",
+                    "crdEncS":"NNINKGILNN",
+                    "crdEncF":"??????????",
                     "ppLocRefL":
                     [
                       {
@@ -601,27 +686,27 @@
                         "locX":0
                       },
                       {
-                        "ppIdx":11,
+                        "ppIdx":9,
                         "locX":2
                       }
                     ]
                   },
                   "pos":
                   {
-                    "x":16373114,
-                    "y":48207558,
+                    "x":16371505,
+                    "y":48208016,
                     "layerX":0,
                     "crdSysX":0
                   },
                   "freq":
                   {
-                    "minC":2,
-                    "maxC":3,
-                    "numC":46,
+                    "minC":5,
+                    "maxC":8,
+                    "numC":21,
                     "jnyL":
                     [
                       {
-                        "jid":"2|#VN#1#ST#1630889505#PI#0#ZI#70068#TA#0#DA#60921#1S#490098106#1T#1615#LS#490126010#LT#1641#PU#81#RT#1#CA#v18#ZE#U3#ZB#      U3#PC#2#FR#490098106#FT#1615#TO#490126010#TT#1641#",
+                        "jid":"2|#VN#1#ST#1638666385#PI#0#ZI#96127#TA#51#DA#51221#1S#490098106#1T#1916#LS#490126010#LT#1942#PU#81#RT#1#CA#v18#ZE#U3#ZB#      U3#PC#2#FR#490098106#FT#1916#TO#490126010#TT#1942#",
                         "prodX":2,
                         "dirTxt":"Wien Simmering",
                         "dirFlg":"H",
@@ -631,7 +716,7 @@
                             "locX":0,
                             "idx":10,
                             "dProdX":2,
-                            "dTimeS":"162900",
+                            "dTimeS":"193000",
                             "dDirTxt":"Wien Simmering",
                             "dDirFlg":"H",
                             "type":"N"
@@ -640,35 +725,22 @@
                             "locX":2,
                             "idx":11,
                             "aProdX":2,
-                            "aTimeS":"163000",
+                            "aTimeS":"193100",
                             "type":"N"
                           }
                         ],
                         "pos":
                         {
-                          "x":16360233,
-                          "y":48206587,
+                          "x":16352502,
+                          "y":48199189,
                           "layerX":0,
                           "crdSysX":0
                         },
-                        "ctxRecon":"T$A=1@O=Wien Stephansplatz@L=490132005@a=128@$A=1@O=Wien Stubentor@L=490024510@a=128@$202109061629$202109061630$      U3$$1$$$$",
-                        "msgL":
-                        [
-                          {
-                            "type":"REM",
-                            "remX":0,
-                            "fLocX":0,
-                            "tLocX":2,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL_H3"
-                            ]
-                          }
-                        ],
+                        "ctxRecon":"T$A=1@O=Wien Stephansplatz@L=490132005@a=128@$A=1@O=Wien Stubentor@L=490024510@a=128@$202112051930$202112051931$      U3$$1$$$$$$",
                         "subscr":"F"
                       },
                       {
-                        "jid":"2|#VN#1#ST#1630889505#PI#0#ZI#70069#TA#0#DA#60921#1S#490098106#1T#1618#LS#490126010#LT#1644#PU#81#RT#1#CA#v18#ZE#U3#ZB#      U3#PC#2#FR#490098106#FT#1618#TO#490126010#TT#1644#",
+                        "jid":"2|#VN#1#ST#1638666385#PI#0#ZI#96127#TA#52#DA#51221#1S#490098106#1T#1921#LS#490126010#LT#1947#PU#81#RT#1#CA#v18#ZE#U3#ZB#      U3#PC#2#FR#490098106#FT#1921#TO#490126010#TT#1947#",
                         "prodX":3,
                         "dirTxt":"Wien Simmering",
                         "dirFlg":"H",
@@ -678,7 +750,7 @@
                             "locX":0,
                             "idx":10,
                             "dProdX":3,
-                            "dTimeS":"163200",
+                            "dTimeS":"193500",
                             "dDirTxt":"Wien Simmering",
                             "dDirFlg":"H",
                             "type":"N"
@@ -687,35 +759,22 @@
                             "locX":2,
                             "idx":11,
                             "aProdX":3,
-                            "aTimeS":"163300",
+                            "aTimeS":"193600",
                             "type":"N"
                           }
                         ],
                         "pos":
                         {
-                          "x":16347702,
-                          "y":48197472,
+                          "x":16320051,
+                          "y":48197634,
                           "layerX":0,
                           "crdSysX":0
                         },
-                        "ctxRecon":"T$A=1@O=Wien Stephansplatz@L=490132005@a=128@$A=1@O=Wien Stubentor@L=490024510@a=128@$202109061632$202109061633$      U3$$1$$$$",
-                        "msgL":
-                        [
-                          {
-                            "type":"REM",
-                            "remX":0,
-                            "fLocX":0,
-                            "tLocX":2,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL_H3"
-                            ]
-                          }
-                        ],
+                        "ctxRecon":"T$A=1@O=Wien Stephansplatz@L=490132005@a=128@$A=1@O=Wien Stubentor@L=490024510@a=128@$202112051935$202112051936$      U3$$1$$$$$$",
                         "subscr":"F"
                       },
                       {
-                        "jid":"2|#VN#1#ST#1630889505#PI#0#ZI#70067#TA#1#DA#60921#1S#490098106#1T#1620#LS#490126010#LT#1646#PU#81#RT#1#CA#v18#ZE#U3#ZB#      U3#PC#2#FR#490098106#FT#1620#TO#490126010#TT#1646#",
+                        "jid":"2|#VN#1#ST#1638666385#PI#0#ZI#96127#TA#53#DA#51221#1S#490098106#1T#1926#LS#490126010#LT#1952#PU#81#RT#1#CA#v18#ZE#U3#ZB#      U3#PC#2#FR#490098106#FT#1926#TO#490126010#TT#1952#",
                         "prodX":4,
                         "dirTxt":"Wien Simmering",
                         "dirFlg":"H",
@@ -725,7 +784,7 @@
                             "locX":0,
                             "idx":10,
                             "dProdX":4,
-                            "dTimeS":"163400",
+                            "dTimeS":"194000",
                             "dDirTxt":"Wien Simmering",
                             "dDirFlg":"H",
                             "type":"N"
@@ -734,35 +793,15 @@
                             "locX":2,
                             "idx":11,
                             "aProdX":4,
-                            "aTimeS":"163500",
+                            "aTimeS":"194100",
                             "type":"N"
                           }
                         ],
-                        "pos":
-                        {
-                          "x":16334829,
-                          "y":48196133,
-                          "layerX":0,
-                          "crdSysX":0
-                        },
-                        "ctxRecon":"T$A=1@O=Wien Stephansplatz@L=490132005@a=128@$A=1@O=Wien Stubentor@L=490024510@a=128@$202109061634$202109061635$      U3$$1$$$$",
-                        "msgL":
-                        [
-                          {
-                            "type":"REM",
-                            "remX":0,
-                            "fLocX":0,
-                            "tLocX":2,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL_H3"
-                            ]
-                          }
-                        ],
+                        "ctxRecon":"T$A=1@O=Wien Stephansplatz@L=490132005@a=128@$A=1@O=Wien Stubentor@L=490024510@a=128@$202112051940$202112051941$      U3$$1$$$$$$",
                         "subscr":"F"
                       },
                       {
-                        "jid":"2|#VN#1#ST#1630889505#PI#0#ZI#70068#TA#1#DA#60921#1S#490098106#1T#1623#LS#490126010#LT#1649#PU#81#RT#1#CA#v18#ZE#U3#ZB#      U3#PC#2#FR#490098106#FT#1623#TO#490126010#TT#1649#",
+                        "jid":"2|#VN#1#ST#1638666385#PI#0#ZI#96127#TA#54#DA#51221#1S#490098106#1T#1931#LS#490126010#LT#1957#PU#81#RT#1#CA#v18#ZE#U3#ZB#      U3#PC#2#FR#490098106#FT#1931#TO#490126010#TT#1957#",
                         "prodX":5,
                         "dirTxt":"Wien Simmering",
                         "dirFlg":"H",
@@ -772,7 +811,7 @@
                             "locX":0,
                             "idx":10,
                             "dProdX":5,
-                            "dTimeS":"163700",
+                            "dTimeS":"194500",
                             "dDirTxt":"Wien Simmering",
                             "dDirFlg":"H",
                             "type":"N"
@@ -781,35 +820,15 @@
                             "locX":2,
                             "idx":11,
                             "aProdX":5,
-                            "aTimeS":"163800",
+                            "aTimeS":"194600",
                             "type":"N"
                           }
                         ],
-                        "pos":
-                        {
-                          "x":16320878,
-                          "y":48197580,
-                          "layerX":0,
-                          "crdSysX":0
-                        },
-                        "ctxRecon":"T$A=1@O=Wien Stephansplatz@L=490132005@a=128@$A=1@O=Wien Stubentor@L=490024510@a=128@$202109061637$202109061638$      U3$$1$$$$",
-                        "msgL":
-                        [
-                          {
-                            "type":"REM",
-                            "remX":0,
-                            "fLocX":0,
-                            "tLocX":2,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL_H3"
-                            ]
-                          }
-                        ],
+                        "ctxRecon":"T$A=1@O=Wien Stephansplatz@L=490132005@a=128@$A=1@O=Wien Stubentor@L=490024510@a=128@$202112051945$202112051946$      U3$$1$$$$$$",
                         "subscr":"F"
                       },
                       {
-                        "jid":"2|#VN#1#ST#1630889505#PI#0#ZI#70069#TA#1#DA#60921#1S#490098106#1T#1626#LS#490126010#LT#1652#PU#81#RT#1#CA#v18#ZE#U3#ZB#      U3#PC#2#FR#490098106#FT#1626#TO#490126010#TT#1652#",
+                        "jid":"2|#VN#1#ST#1638666385#PI#0#ZI#96127#TA#55#DA#51221#1S#490098106#1T#1936#LS#490126010#LT#2002#PU#81#RT#1#CA#v18#ZE#U3#ZB#      U3#PC#2#FR#490098106#FT#1936#TO#490126010#TT#2002#",
                         "prodX":6,
                         "dirTxt":"Wien Simmering",
                         "dirFlg":"H",
@@ -819,7 +838,7 @@
                             "locX":0,
                             "idx":10,
                             "dProdX":6,
-                            "dTimeS":"164000",
+                            "dTimeS":"195000",
                             "dDirTxt":"Wien Simmering",
                             "dDirFlg":"H",
                             "type":"N"
@@ -828,41 +847,31 @@
                             "locX":2,
                             "idx":11,
                             "aProdX":6,
-                            "aTimeS":"164100",
+                            "aTimeS":"195100",
                             "type":"N"
                           }
                         ],
-                        "pos":
-                        {
-                          "x":16311035,
-                          "y":48210075,
-                          "layerX":0,
-                          "crdSysX":0
-                        },
-                        "ctxRecon":"T$A=1@O=Wien Stephansplatz@L=490132005@a=128@$A=1@O=Wien Stubentor@L=490024510@a=128@$202109061640$202109061641$      U3$$1$$$$",
-                        "msgL":
-                        [
-                          {
-                            "type":"REM",
-                            "remX":0,
-                            "fLocX":0,
-                            "tLocX":2,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL_H3"
-                            ]
-                          }
-                        ],
+                        "ctxRecon":"T$A=1@O=Wien Stephansplatz@L=490132005@a=128@$A=1@O=Wien Stubentor@L=490024510@a=128@$202112051950$202112051951$      U3$$1$$$$$$",
                         "subscr":"F"
                       }
                     ]
                   },
-                  "ctxRecon":"T$A=1@O=Wien Stephansplatz@L=490132005@a=128@$A=1@O=Wien Stubentor@L=490024510@a=128@$202109061626$202109061627$      U3$$1$$$$",
+                  "ctxRecon":"T$A=1@O=Wien Stephansplatz@L=490132005@a=128@$A=1@O=Wien Stubentor@L=490024510@a=128@$202112051925$202112051926$      U3$$1$$$$$$",
                   "msgL":
                   [
                     {
                       "type":"REM",
                       "remX":0,
+                      "fLocX":0,
+                      "tLocX":2,
+                      "tagL":
+                      [
+                        "RES_JNY_DTL_H3"
+                      ]
+                    },
+                    {
+                      "type":"REM",
+                      "remX":1,
                       "fLocX":0,
                       "tLocX":2,
                       "tagL":
@@ -885,10 +894,10 @@
                 }
               }
             ],
-            "ctxRecon":"¶HKI¶T$A=1@O=Wien Stephansplatz@L=490132005@a=128@$A=1@O=Wien Stubentor@L=490024510@a=128@$202109061626$202109061627$      U3$$1$$$$",
+            "ctxRecon":"¶HKI¶T$A=1@O=Wien Stephansplatz@L=490132005@a=128@$A=1@O=Wien Stubentor@L=490024510@a=128@$202112051925$202112051926$      U3$$1$$$$$$¶KI¶H4sIAAAAAAACA+1W247bIBD9lYqHPnkl7CSbTX6lihDB2Ea2wQKcq/LvnQFiZ1fbblu1Uh82eYHDwMww55i5Eq4ry2vZm3J0ZEvoaUkXOcmIG0Uzg/kaoOE4AxTmj1uLd1Fm/YQ7z61n+4psv12JKk9kSzMiTwA1gC03NF8UlK4yMipBti95Rko+ShvMDrwbJYxuu4xclOx+dgwtlqucfnjMQfF4yu4eGi/B6kr8eZDBujMCg/8CsWvey/v41Bpjy2Bxnoe880zE2ZWEAQNvChdvN/Rghn/qYLBw360PtzJg3i+LjJiwE8B8dcv+Er6bKnyRCqBVXhR5vimWr/Ai7EAOKe2lhUi7yKMKf5CkFC3aSQ0R0+ydP/jp+YlBaUTLGqnqxoczx955mLGKt97AfW42M3YZnWg6XpPtUz6jvdKldD6G+2ZhDBEgWHVcikZqjFmyRPQrxpD4k1P6QkNQpXJw0qJYP6+RXWfXqAqATVwFHs6uBBxbJwkRKBMfXc33klWq83go2sCeXnWdclK4iNTSDdICJa1MDIV4uxBZmlqu3WDAQjRGCYmRVtZoH/iFi2zglvfutUo033dgCx6UY6iZwUonu7AIGcelcrTcK6OZqfD2zylIpVnMO2aZJqBYOi+yPW+nnJhXyOm8QM9dxyAjTFNGA0QsL9WYUj5y5e87gDiDlMDsfAHkEyZ5BYrDtaFMSJQvZBA34yTIfUk38AEZjGPcexsttawfZkEnIh5YwR2f2TFwS+nEGteqgVkzRgSscCzZJFqogWgh3xhrqDEiYPQAacP60cfbpiilUILnXyoB/c0SAC8/LML9xn+5Bk9zEUKKoQY4+g+KkNM/K8MO9LeHr8mnRj418qmRH2tEHd5RyA6bDCjH25eHKa28gkbkEsj4pmQsPUr0LR51CHCtBBsa7mR8JFN3gN3Yq74U2KErM7ee6S1MM3OQ9mihm0gIhqqhG6hx40UbVMmyyNfrAh5sz9t7H4CVwAHfYycYR/HtxoZLT6CewOp4B6tj2B6wtIzvu8YOZHRu8kwfPd4bA2zYuG2/WlWGt3uwLLz4UjPRJSFPCLhnkOA+bLx9B3sT+G+yCwAA",
             "freq":
             {
-              "minC":2
+              "minC":5
             },
             "trfRes":
             {
@@ -921,7 +930,7 @@
             [
               {
                 "type":"REM",
-                "remX":1,
+                "remX":2,
                 "dspl":"U",
                 "tagL":
                 [
@@ -934,18 +943,17 @@
               "co2":0.003010000000000
             },
             "conSubscr":"F",
-            "cksum":"b95b707b_3"
+            "cksum":"a6aad411_3"
           },
           {
             "cid":"C-1",
-            "date":"20210906",
+            "date":"20211205",
             "dur":"000100",
             "chg":0,
             "sDays":
             {
-              "sDaysR":"Mo - Fr",
-              "sDaysI":"nicht 26. Okt, 1. Nov, 8. Dez",
-              "sDaysB":"F3F83060C1FCF9F3E7CF9F3E7CF971E7CF9F3E6C"
+              "sDaysR":"täglich",
+              "sDaysB":"FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
             },
             "dep":
             {
@@ -954,7 +962,7 @@
               "dProdX":7,
               "dPlatfS":"1",
               "dInR":true,
-              "dTimeS":"162900",
+              "dTimeS":"193000",
               "dProgType":"PROGNOSED",
               "type":"N"
             },
@@ -965,7 +973,7 @@
               "aProdX":7,
               "aPlatfS":"1",
               "aOutR":true,
-              "aTimeS":"163000",
+              "aTimeS":"193100",
               "aProgType":"PROGNOSED",
               "type":"N"
             },
@@ -981,7 +989,7 @@
                   "dProdX":7,
                   "dPlatfS":"1",
                   "dInR":true,
-                  "dTimeS":"162900",
+                  "dTimeS":"193000",
                   "dProgType":"PROGNOSED",
                   "type":"N"
                 },
@@ -992,13 +1000,13 @@
                   "aProdX":7,
                   "aPlatfS":"1",
                   "aOutR":true,
-                  "aTimeS":"163000",
+                  "aTimeS":"193100",
                   "aProgType":"PROGNOSED",
                   "type":"N"
                 },
                 "jny":
                 {
-                  "jid":"2|#VN#1#ST#1630889505#PI#0#ZI#70068#TA#0#DA#60921#1S#490098106#1T#1615#LS#490126010#LT#1641#PU#81#RT#1#CA#v18#ZE#U3#ZB#      U3#PC#2#FR#490098106#FT#1615#TO#490126010#TT#1641#",
+                  "jid":"2|#VN#1#ST#1638666385#PI#0#ZI#96127#TA#51#DA#51221#1S#490098106#1T#1916#LS#490126010#LT#1942#PU#81#RT#1#CA#v18#ZE#U3#ZB#      U3#PC#2#FR#490098106#FT#1916#TO#490126010#TT#1942#",
                   "prodX":2,
                   "dirTxt":"Wien Simmering",
                   "dirFlg":"H",
@@ -1011,7 +1019,7 @@
                       "idx":10,
                       "dProdX":2,
                       "dInR":true,
-                      "dTimeS":"162900",
+                      "dTimeS":"193000",
                       "dDirTxt":"Wien Simmering",
                       "dDirFlg":"H",
                       "type":"N"
@@ -1021,7 +1029,7 @@
                       "idx":11,
                       "aProdX":2,
                       "aOutR":true,
-                      "aTimeS":"163000",
+                      "aTimeS":"193100",
                       "type":"N"
                     }
                   ],
@@ -1030,9 +1038,9 @@
                     "delta":true,
                     "dim":2,
                     "type":"WGS84",
-                    "crdEncYX":"_sfeH{p|bBCAvCcOTqBNqC@cCCiD@mBDuBHwAP{CB@",
-                    "crdEncS":"NNINKGIDLENN",
-                    "crdEncF":"????????????",
+                    "crdEncYX":"_sfeH{p|bBCAvCcOTqBNqC@cCCiDFcFZsFB@",
+                    "crdEncS":"NNINKGILNN",
+                    "crdEncF":"??????????",
                     "ppLocRefL":
                     [
                       {
@@ -1040,27 +1048,27 @@
                         "locX":0
                       },
                       {
-                        "ppIdx":11,
+                        "ppIdx":9,
                         "locX":2
                       }
                     ]
                   },
                   "pos":
                   {
-                    "x":16360233,
-                    "y":48206587,
+                    "x":16352502,
+                    "y":48199189,
                     "layerX":0,
                     "crdSysX":0
                   },
                   "freq":
                   {
-                    "minC":2,
-                    "maxC":3,
-                    "numC":46,
+                    "minC":5,
+                    "maxC":8,
+                    "numC":20,
                     "jnyL":
                     [
                       {
-                        "jid":"2|#VN#1#ST#1630889505#PI#0#ZI#70069#TA#0#DA#60921#1S#490098106#1T#1618#LS#490126010#LT#1644#PU#81#RT#1#CA#v18#ZE#U3#ZB#      U3#PC#2#FR#490098106#FT#1618#TO#490126010#TT#1644#",
+                        "jid":"2|#VN#1#ST#1638666385#PI#0#ZI#96127#TA#52#DA#51221#1S#490098106#1T#1921#LS#490126010#LT#1947#PU#81#RT#1#CA#v18#ZE#U3#ZB#      U3#PC#2#FR#490098106#FT#1921#TO#490126010#TT#1947#",
                         "prodX":3,
                         "dirTxt":"Wien Simmering",
                         "dirFlg":"H",
@@ -1070,7 +1078,7 @@
                             "locX":0,
                             "idx":10,
                             "dProdX":3,
-                            "dTimeS":"163200",
+                            "dTimeS":"193500",
                             "dDirTxt":"Wien Simmering",
                             "dDirFlg":"H",
                             "type":"N"
@@ -1079,35 +1087,22 @@
                             "locX":2,
                             "idx":11,
                             "aProdX":3,
-                            "aTimeS":"163300",
+                            "aTimeS":"193600",
                             "type":"N"
                           }
                         ],
                         "pos":
                         {
-                          "x":16347702,
-                          "y":48197472,
+                          "x":16320051,
+                          "y":48197634,
                           "layerX":0,
                           "crdSysX":0
                         },
-                        "ctxRecon":"T$A=1@O=Wien Stephansplatz@L=490132005@a=128@$A=1@O=Wien Stubentor@L=490024510@a=128@$202109061632$202109061633$      U3$$1$$$$",
-                        "msgL":
-                        [
-                          {
-                            "type":"REM",
-                            "remX":0,
-                            "fLocX":0,
-                            "tLocX":2,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL_H3"
-                            ]
-                          }
-                        ],
+                        "ctxRecon":"T$A=1@O=Wien Stephansplatz@L=490132005@a=128@$A=1@O=Wien Stubentor@L=490024510@a=128@$202112051935$202112051936$      U3$$1$$$$$$",
                         "subscr":"F"
                       },
                       {
-                        "jid":"2|#VN#1#ST#1630889505#PI#0#ZI#70067#TA#1#DA#60921#1S#490098106#1T#1620#LS#490126010#LT#1646#PU#81#RT#1#CA#v18#ZE#U3#ZB#      U3#PC#2#FR#490098106#FT#1620#TO#490126010#TT#1646#",
+                        "jid":"2|#VN#1#ST#1638666385#PI#0#ZI#96127#TA#53#DA#51221#1S#490098106#1T#1926#LS#490126010#LT#1952#PU#81#RT#1#CA#v18#ZE#U3#ZB#      U3#PC#2#FR#490098106#FT#1926#TO#490126010#TT#1952#",
                         "prodX":4,
                         "dirTxt":"Wien Simmering",
                         "dirFlg":"H",
@@ -1117,7 +1112,7 @@
                             "locX":0,
                             "idx":10,
                             "dProdX":4,
-                            "dTimeS":"163400",
+                            "dTimeS":"194000",
                             "dDirTxt":"Wien Simmering",
                             "dDirFlg":"H",
                             "type":"N"
@@ -1126,35 +1121,15 @@
                             "locX":2,
                             "idx":11,
                             "aProdX":4,
-                            "aTimeS":"163500",
+                            "aTimeS":"194100",
                             "type":"N"
                           }
                         ],
-                        "pos":
-                        {
-                          "x":16334829,
-                          "y":48196133,
-                          "layerX":0,
-                          "crdSysX":0
-                        },
-                        "ctxRecon":"T$A=1@O=Wien Stephansplatz@L=490132005@a=128@$A=1@O=Wien Stubentor@L=490024510@a=128@$202109061634$202109061635$      U3$$1$$$$",
-                        "msgL":
-                        [
-                          {
-                            "type":"REM",
-                            "remX":0,
-                            "fLocX":0,
-                            "tLocX":2,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL_H3"
-                            ]
-                          }
-                        ],
+                        "ctxRecon":"T$A=1@O=Wien Stephansplatz@L=490132005@a=128@$A=1@O=Wien Stubentor@L=490024510@a=128@$202112051940$202112051941$      U3$$1$$$$$$",
                         "subscr":"F"
                       },
                       {
-                        "jid":"2|#VN#1#ST#1630889505#PI#0#ZI#70068#TA#1#DA#60921#1S#490098106#1T#1623#LS#490126010#LT#1649#PU#81#RT#1#CA#v18#ZE#U3#ZB#      U3#PC#2#FR#490098106#FT#1623#TO#490126010#TT#1649#",
+                        "jid":"2|#VN#1#ST#1638666385#PI#0#ZI#96127#TA#54#DA#51221#1S#490098106#1T#1931#LS#490126010#LT#1957#PU#81#RT#1#CA#v18#ZE#U3#ZB#      U3#PC#2#FR#490098106#FT#1931#TO#490126010#TT#1957#",
                         "prodX":5,
                         "dirTxt":"Wien Simmering",
                         "dirFlg":"H",
@@ -1164,7 +1139,7 @@
                             "locX":0,
                             "idx":10,
                             "dProdX":5,
-                            "dTimeS":"163700",
+                            "dTimeS":"194500",
                             "dDirTxt":"Wien Simmering",
                             "dDirFlg":"H",
                             "type":"N"
@@ -1173,35 +1148,15 @@
                             "locX":2,
                             "idx":11,
                             "aProdX":5,
-                            "aTimeS":"163800",
+                            "aTimeS":"194600",
                             "type":"N"
                           }
                         ],
-                        "pos":
-                        {
-                          "x":16320878,
-                          "y":48197580,
-                          "layerX":0,
-                          "crdSysX":0
-                        },
-                        "ctxRecon":"T$A=1@O=Wien Stephansplatz@L=490132005@a=128@$A=1@O=Wien Stubentor@L=490024510@a=128@$202109061637$202109061638$      U3$$1$$$$",
-                        "msgL":
-                        [
-                          {
-                            "type":"REM",
-                            "remX":0,
-                            "fLocX":0,
-                            "tLocX":2,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL_H3"
-                            ]
-                          }
-                        ],
+                        "ctxRecon":"T$A=1@O=Wien Stephansplatz@L=490132005@a=128@$A=1@O=Wien Stubentor@L=490024510@a=128@$202112051945$202112051946$      U3$$1$$$$$$",
                         "subscr":"F"
                       },
                       {
-                        "jid":"2|#VN#1#ST#1630889505#PI#0#ZI#70069#TA#1#DA#60921#1S#490098106#1T#1626#LS#490126010#LT#1652#PU#81#RT#1#CA#v18#ZE#U3#ZB#      U3#PC#2#FR#490098106#FT#1626#TO#490126010#TT#1652#",
+                        "jid":"2|#VN#1#ST#1638666385#PI#0#ZI#96127#TA#55#DA#51221#1S#490098106#1T#1936#LS#490126010#LT#2002#PU#81#RT#1#CA#v18#ZE#U3#ZB#      U3#PC#2#FR#490098106#FT#1936#TO#490126010#TT#2002#",
                         "prodX":6,
                         "dirTxt":"Wien Simmering",
                         "dirFlg":"H",
@@ -1211,7 +1166,7 @@
                             "locX":0,
                             "idx":10,
                             "dProdX":6,
-                            "dTimeS":"164000",
+                            "dTimeS":"195000",
                             "dDirTxt":"Wien Simmering",
                             "dDirFlg":"H",
                             "type":"N"
@@ -1220,35 +1175,15 @@
                             "locX":2,
                             "idx":11,
                             "aProdX":6,
-                            "aTimeS":"164100",
+                            "aTimeS":"195100",
                             "type":"N"
                           }
                         ],
-                        "pos":
-                        {
-                          "x":16311035,
-                          "y":48210075,
-                          "layerX":0,
-                          "crdSysX":0
-                        },
-                        "ctxRecon":"T$A=1@O=Wien Stephansplatz@L=490132005@a=128@$A=1@O=Wien Stubentor@L=490024510@a=128@$202109061640$202109061641$      U3$$1$$$$",
-                        "msgL":
-                        [
-                          {
-                            "type":"REM",
-                            "remX":0,
-                            "fLocX":0,
-                            "tLocX":2,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL_H3"
-                            ]
-                          }
-                        ],
+                        "ctxRecon":"T$A=1@O=Wien Stephansplatz@L=490132005@a=128@$A=1@O=Wien Stubentor@L=490024510@a=128@$202112051950$202112051951$      U3$$1$$$$$$",
                         "subscr":"F"
                       },
                       {
-                        "jid":"2|#VN#1#ST#1630889505#PI#0#ZI#70067#TA#2#DA#60921#1S#490098106#1T#1628#LS#490126010#LT#1654#PU#81#RT#1#CA#v18#ZE#U3#ZB#      U3#PC#2#FR#490098106#FT#1628#TO#490126010#TT#1654#",
+                        "jid":"2|#VN#1#ST#1638666385#PI#0#ZI#96127#TA#56#DA#51221#1S#490098106#1T#1941#LS#490126010#LT#2007#PU#81#RT#1#CA#v18#ZE#U3#ZB#      U3#PC#2#FR#490098106#FT#1941#TO#490126010#TT#2007#",
                         "prodX":8,
                         "dirTxt":"Wien Simmering",
                         "dirFlg":"H",
@@ -1258,7 +1193,7 @@
                             "locX":0,
                             "idx":10,
                             "dProdX":8,
-                            "dTimeS":"164200",
+                            "dTimeS":"195500",
                             "dDirTxt":"Wien Simmering",
                             "dDirFlg":"H",
                             "type":"N"
@@ -1267,34 +1202,31 @@
                             "locX":2,
                             "idx":11,
                             "aProdX":8,
-                            "aTimeS":"164300",
+                            "aTimeS":"195600",
                             "type":"N"
                           }
                         ],
-                        "ctxRecon":"T$A=1@O=Wien Stephansplatz@L=490132005@a=128@$A=1@O=Wien Stubentor@L=490024510@a=128@$202109061642$202109061643$      U3$$1$$$$",
-                        "msgL":
-                        [
-                          {
-                            "type":"REM",
-                            "remX":0,
-                            "fLocX":0,
-                            "tLocX":2,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL_H3"
-                            ]
-                          }
-                        ],
+                        "ctxRecon":"T$A=1@O=Wien Stephansplatz@L=490132005@a=128@$A=1@O=Wien Stubentor@L=490024510@a=128@$202112051955$202112051956$      U3$$1$$$$$$",
                         "subscr":"F"
                       }
                     ]
                   },
-                  "ctxRecon":"T$A=1@O=Wien Stephansplatz@L=490132005@a=128@$A=1@O=Wien Stubentor@L=490024510@a=128@$202109061629$202109061630$      U3$$1$$$$",
+                  "ctxRecon":"T$A=1@O=Wien Stephansplatz@L=490132005@a=128@$A=1@O=Wien Stubentor@L=490024510@a=128@$202112051930$202112051931$      U3$$1$$$$$$",
                   "msgL":
                   [
                     {
                       "type":"REM",
                       "remX":0,
+                      "fLocX":0,
+                      "tLocX":2,
+                      "tagL":
+                      [
+                        "RES_JNY_DTL_H3"
+                      ]
+                    },
+                    {
+                      "type":"REM",
+                      "remX":1,
                       "fLocX":0,
                       "tLocX":2,
                       "tagL":
@@ -1317,10 +1249,10 @@
                 }
               }
             ],
-            "ctxRecon":"¶HKI¶T$A=1@O=Wien Stephansplatz@L=490132005@a=128@$A=1@O=Wien Stubentor@L=490024510@a=128@$202109061629$202109061630$      U3$$1$$$$",
+            "ctxRecon":"¶HKI¶T$A=1@O=Wien Stephansplatz@L=490132005@a=128@$A=1@O=Wien Stubentor@L=490024510@a=128@$202112051930$202112051931$      U3$$1$$$$$$¶KI¶H4sIAAAAAAACA+1W247bIBD9lYqHPnkl7CSbTX6lihDB2Ea2wQKcq/LvnQFiZ1fbblu1Uh82eYHDwMww55i5Eq4ry2vZm3J0ZEvoaUkXOcmIG0Uzg/kaoOE4AxTmj1uLd1Fm/YQ7z61n+4psv12JKk9kSzMiTwA1gC03NF8UlK4yMipBti95Rko+ShvMDrwbJYxuu4xclOx+dgwtlqucfnjMQfF4yu4eGi/B6kr8eZDBujMCg/8CsWvey/v41Bpjy2Bxnoe880zE2ZWEAQNvChdvN/Rghn/qYLBw360PtzJg3i+LjJiwE8B8dcv+Er6bKnyRCqBVXhR5vimWr/Ai7EAOKe2lhUi7yKMKf5CkFC3aSQ0R0+ydP/jp+YlBaUTLGqnqxoczx955mLGKt97AfW42M3YZnWg6XpPtUz6jvdKldD6G+2ZhDBEgWHVcikZqjFmyRPQrxpD4k1P6QkNQpXJw0qJYP6+RXWfXqAqATVwFHs6uBBxbJwkRKBMfXc33klWq83go2sCeXnWdclK4iNTSDdICJa1MDIV4uxBZmlqu3WDAQjRGCYmRVtZoH/iFi2zglvfutUo033dgCx6UY6iZwUonu7AIGcelcrTcK6OZqfD2zylIpVnMO2aZJqBYOi+yPW+nnJhXyOm8QM9dxyAjTFNGA0QsL9WYUj5y5e87gDiDlMDsfAHkEyZ5BYrDtaFMSJQvZBA34yTIfUk38AEZjGPcexsttawfZkEnIh5YwR2f2TFwS+nEGteqgVkzRgSscCzZJFqogWgh3xhrqDEiYPQAacP60cfbpiilUILnXyoB/c0SAC8/LML9xn+5Bk9zEUKKoQY4+g+KkNM/K8MO9LeHr8mnRj418qmRH2tEHd5RyA6bDCjH25eHKa28gkbkEsj4pmQsPUr0LR51CHCtBBsa7mR8JFN3gN3Yq74U2KErM7ee6S1MM3OQ9mihm0gIhqqhG6hx40UbVMmyyNfrAh5sz9t7H4CVwAHfYycYR/HtxoZLT6CewOp4B6tj2B6wtIzvu8YOZHRu8kwfPd4bA2zYuG2/WlWGt3uwLLz4UjPRJSFPCLhnkOA+bLx9B3sT+G+yCwAA",
             "freq":
             {
-              "minC":2
+              "minC":5
             },
             "trfRes":
             {
@@ -1353,7 +1285,7 @@
             [
               {
                 "type":"REM",
-                "remX":1,
+                "remX":2,
                 "dspl":"U",
                 "tagL":
                 [
@@ -1366,18 +1298,18 @@
               "co2":0.003010000000000
             },
             "conSubscr":"F",
-            "cksum":"62e47fa3_3"
+            "cksum":"0e500272_3"
           },
           {
             "cid":"C-2",
-            "date":"20210906",
+            "date":"20211205",
             "dur":"000100",
             "chg":0,
             "sDays":
             {
-              "sDaysR":"Mo - Fr",
-              "sDaysI":"nicht 26. Okt bis 2. Nov 2021, 15. Nov, 8. Dez",
-              "sDaysB":"F3E7CF9F3E000003E7CF9F3E7CF900E7C79F3E6C"
+              "sDaysR":"Sa, So",
+              "sDaysI":"nicht 11., 18. Dez; auch 24., 31. Dez, 6. Jan, 18. Apr, 26. Mai",
+              "sDaysB":"060C1A3860C18102040870E2C183060C183060C183060C183860C183062C"
             },
             "dep":
             {
@@ -1386,7 +1318,7 @@
               "dProdX":9,
               "dPlatfS":"1",
               "dInR":true,
-              "dTimeS":"163200",
+              "dTimeS":"193500",
               "dProgType":"PROGNOSED",
               "type":"N"
             },
@@ -1397,7 +1329,7 @@
               "aProdX":9,
               "aPlatfS":"1",
               "aOutR":true,
-              "aTimeS":"163300",
+              "aTimeS":"193600",
               "aProgType":"PROGNOSED",
               "type":"N"
             },
@@ -1413,7 +1345,7 @@
                   "dProdX":9,
                   "dPlatfS":"1",
                   "dInR":true,
-                  "dTimeS":"163200",
+                  "dTimeS":"193500",
                   "dProgType":"PROGNOSED",
                   "type":"N"
                 },
@@ -1424,13 +1356,13 @@
                   "aProdX":9,
                   "aPlatfS":"1",
                   "aOutR":true,
-                  "aTimeS":"163300",
+                  "aTimeS":"193600",
                   "aProgType":"PROGNOSED",
                   "type":"N"
                 },
                 "jny":
                 {
-                  "jid":"2|#VN#1#ST#1630889505#PI#0#ZI#70069#TA#0#DA#60921#1S#490098106#1T#1618#LS#490126010#LT#1644#PU#81#RT#1#CA#v18#ZE#U3#ZB#      U3#PC#2#FR#490098106#FT#1618#TO#490126010#TT#1644#",
+                  "jid":"2|#VN#1#ST#1638666385#PI#0#ZI#96127#TA#52#DA#51221#1S#490098106#1T#1921#LS#490126010#LT#1947#PU#81#RT#1#CA#v18#ZE#U3#ZB#      U3#PC#2#FR#490098106#FT#1921#TO#490126010#TT#1947#",
                   "prodX":3,
                   "dirTxt":"Wien Simmering",
                   "dirFlg":"H",
@@ -1443,7 +1375,7 @@
                       "idx":10,
                       "dProdX":3,
                       "dInR":true,
-                      "dTimeS":"163200",
+                      "dTimeS":"193500",
                       "dDirTxt":"Wien Simmering",
                       "dDirFlg":"H",
                       "type":"N"
@@ -1453,7 +1385,7 @@
                       "idx":11,
                       "aProdX":3,
                       "aOutR":true,
-                      "aTimeS":"163300",
+                      "aTimeS":"193600",
                       "type":"N"
                     }
                   ],
@@ -1462,9 +1394,9 @@
                     "delta":true,
                     "dim":2,
                     "type":"WGS84",
-                    "crdEncYX":"_sfeH{p|bBCAvCcOTqBNqC@cCCiD@mBDuBHwAP{CB@",
-                    "crdEncS":"NNINKGIDLENN",
-                    "crdEncF":"????????????",
+                    "crdEncYX":"_sfeH{p|bBCAvCcOTqBNqC@cCCiDFcFZsFB@",
+                    "crdEncS":"NNINKGILNN",
+                    "crdEncF":"??????????",
                     "ppLocRefL":
                     [
                       {
@@ -1472,27 +1404,27 @@
                         "locX":0
                       },
                       {
-                        "ppIdx":11,
+                        "ppIdx":9,
                         "locX":2
                       }
                     ]
                   },
                   "pos":
                   {
-                    "x":16347702,
-                    "y":48197472,
+                    "x":16320051,
+                    "y":48197634,
                     "layerX":0,
                     "crdSysX":0
                   },
                   "freq":
                   {
-                    "minC":2,
-                    "maxC":3,
-                    "numC":46,
+                    "minC":5,
+                    "maxC":8,
+                    "numC":20,
                     "jnyL":
                     [
                       {
-                        "jid":"2|#VN#1#ST#1630889505#PI#0#ZI#70067#TA#1#DA#60921#1S#490098106#1T#1620#LS#490126010#LT#1646#PU#81#RT#1#CA#v18#ZE#U3#ZB#      U3#PC#2#FR#490098106#FT#1620#TO#490126010#TT#1646#",
+                        "jid":"2|#VN#1#ST#1638666385#PI#0#ZI#96127#TA#53#DA#51221#1S#490098106#1T#1926#LS#490126010#LT#1952#PU#81#RT#1#CA#v18#ZE#U3#ZB#      U3#PC#2#FR#490098106#FT#1926#TO#490126010#TT#1952#",
                         "prodX":4,
                         "dirTxt":"Wien Simmering",
                         "dirFlg":"H",
@@ -1502,7 +1434,7 @@
                             "locX":0,
                             "idx":10,
                             "dProdX":4,
-                            "dTimeS":"163400",
+                            "dTimeS":"194000",
                             "dDirTxt":"Wien Simmering",
                             "dDirFlg":"H",
                             "type":"N"
@@ -1511,35 +1443,15 @@
                             "locX":2,
                             "idx":11,
                             "aProdX":4,
-                            "aTimeS":"163500",
+                            "aTimeS":"194100",
                             "type":"N"
                           }
                         ],
-                        "pos":
-                        {
-                          "x":16334829,
-                          "y":48196133,
-                          "layerX":0,
-                          "crdSysX":0
-                        },
-                        "ctxRecon":"T$A=1@O=Wien Stephansplatz@L=490132005@a=128@$A=1@O=Wien Stubentor@L=490024510@a=128@$202109061634$202109061635$      U3$$1$$$$",
-                        "msgL":
-                        [
-                          {
-                            "type":"REM",
-                            "remX":0,
-                            "fLocX":0,
-                            "tLocX":2,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL_H3"
-                            ]
-                          }
-                        ],
+                        "ctxRecon":"T$A=1@O=Wien Stephansplatz@L=490132005@a=128@$A=1@O=Wien Stubentor@L=490024510@a=128@$202112051940$202112051941$      U3$$1$$$$$$",
                         "subscr":"F"
                       },
                       {
-                        "jid":"2|#VN#1#ST#1630889505#PI#0#ZI#70068#TA#1#DA#60921#1S#490098106#1T#1623#LS#490126010#LT#1649#PU#81#RT#1#CA#v18#ZE#U3#ZB#      U3#PC#2#FR#490098106#FT#1623#TO#490126010#TT#1649#",
+                        "jid":"2|#VN#1#ST#1638666385#PI#0#ZI#96127#TA#54#DA#51221#1S#490098106#1T#1931#LS#490126010#LT#1957#PU#81#RT#1#CA#v18#ZE#U3#ZB#      U3#PC#2#FR#490098106#FT#1931#TO#490126010#TT#1957#",
                         "prodX":5,
                         "dirTxt":"Wien Simmering",
                         "dirFlg":"H",
@@ -1549,7 +1461,7 @@
                             "locX":0,
                             "idx":10,
                             "dProdX":5,
-                            "dTimeS":"163700",
+                            "dTimeS":"194500",
                             "dDirTxt":"Wien Simmering",
                             "dDirFlg":"H",
                             "type":"N"
@@ -1558,35 +1470,15 @@
                             "locX":2,
                             "idx":11,
                             "aProdX":5,
-                            "aTimeS":"163800",
+                            "aTimeS":"194600",
                             "type":"N"
                           }
                         ],
-                        "pos":
-                        {
-                          "x":16320878,
-                          "y":48197580,
-                          "layerX":0,
-                          "crdSysX":0
-                        },
-                        "ctxRecon":"T$A=1@O=Wien Stephansplatz@L=490132005@a=128@$A=1@O=Wien Stubentor@L=490024510@a=128@$202109061637$202109061638$      U3$$1$$$$",
-                        "msgL":
-                        [
-                          {
-                            "type":"REM",
-                            "remX":0,
-                            "fLocX":0,
-                            "tLocX":2,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL_H3"
-                            ]
-                          }
-                        ],
+                        "ctxRecon":"T$A=1@O=Wien Stephansplatz@L=490132005@a=128@$A=1@O=Wien Stubentor@L=490024510@a=128@$202112051945$202112051946$      U3$$1$$$$$$",
                         "subscr":"F"
                       },
                       {
-                        "jid":"2|#VN#1#ST#1630889505#PI#0#ZI#70069#TA#1#DA#60921#1S#490098106#1T#1626#LS#490126010#LT#1652#PU#81#RT#1#CA#v18#ZE#U3#ZB#      U3#PC#2#FR#490098106#FT#1626#TO#490126010#TT#1652#",
+                        "jid":"2|#VN#1#ST#1638666385#PI#0#ZI#96127#TA#55#DA#51221#1S#490098106#1T#1936#LS#490126010#LT#2002#PU#81#RT#1#CA#v18#ZE#U3#ZB#      U3#PC#2#FR#490098106#FT#1936#TO#490126010#TT#2002#",
                         "prodX":6,
                         "dirTxt":"Wien Simmering",
                         "dirFlg":"H",
@@ -1596,7 +1488,7 @@
                             "locX":0,
                             "idx":10,
                             "dProdX":6,
-                            "dTimeS":"164000",
+                            "dTimeS":"195000",
                             "dDirTxt":"Wien Simmering",
                             "dDirFlg":"H",
                             "type":"N"
@@ -1605,35 +1497,15 @@
                             "locX":2,
                             "idx":11,
                             "aProdX":6,
-                            "aTimeS":"164100",
+                            "aTimeS":"195100",
                             "type":"N"
                           }
                         ],
-                        "pos":
-                        {
-                          "x":16311035,
-                          "y":48210075,
-                          "layerX":0,
-                          "crdSysX":0
-                        },
-                        "ctxRecon":"T$A=1@O=Wien Stephansplatz@L=490132005@a=128@$A=1@O=Wien Stubentor@L=490024510@a=128@$202109061640$202109061641$      U3$$1$$$$",
-                        "msgL":
-                        [
-                          {
-                            "type":"REM",
-                            "remX":0,
-                            "fLocX":0,
-                            "tLocX":2,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL_H3"
-                            ]
-                          }
-                        ],
+                        "ctxRecon":"T$A=1@O=Wien Stephansplatz@L=490132005@a=128@$A=1@O=Wien Stubentor@L=490024510@a=128@$202112051950$202112051951$      U3$$1$$$$$$",
                         "subscr":"F"
                       },
                       {
-                        "jid":"2|#VN#1#ST#1630889505#PI#0#ZI#70067#TA#2#DA#60921#1S#490098106#1T#1628#LS#490126010#LT#1654#PU#81#RT#1#CA#v18#ZE#U3#ZB#      U3#PC#2#FR#490098106#FT#1628#TO#490126010#TT#1654#",
+                        "jid":"2|#VN#1#ST#1638666385#PI#0#ZI#96127#TA#56#DA#51221#1S#490098106#1T#1941#LS#490126010#LT#2007#PU#81#RT#1#CA#v18#ZE#U3#ZB#      U3#PC#2#FR#490098106#FT#1941#TO#490126010#TT#2007#",
                         "prodX":8,
                         "dirTxt":"Wien Simmering",
                         "dirFlg":"H",
@@ -1643,7 +1515,7 @@
                             "locX":0,
                             "idx":10,
                             "dProdX":8,
-                            "dTimeS":"164200",
+                            "dTimeS":"195500",
                             "dDirTxt":"Wien Simmering",
                             "dDirFlg":"H",
                             "type":"N"
@@ -1652,28 +1524,15 @@
                             "locX":2,
                             "idx":11,
                             "aProdX":8,
-                            "aTimeS":"164300",
+                            "aTimeS":"195600",
                             "type":"N"
                           }
                         ],
-                        "ctxRecon":"T$A=1@O=Wien Stephansplatz@L=490132005@a=128@$A=1@O=Wien Stubentor@L=490024510@a=128@$202109061642$202109061643$      U3$$1$$$$",
-                        "msgL":
-                        [
-                          {
-                            "type":"REM",
-                            "remX":0,
-                            "fLocX":0,
-                            "tLocX":2,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL_H3"
-                            ]
-                          }
-                        ],
+                        "ctxRecon":"T$A=1@O=Wien Stephansplatz@L=490132005@a=128@$A=1@O=Wien Stubentor@L=490024510@a=128@$202112051955$202112051956$      U3$$1$$$$$$",
                         "subscr":"F"
                       },
                       {
-                        "jid":"2|#VN#1#ST#1630889505#PI#0#ZI#70068#TA#2#DA#60921#1S#490098106#1T#1631#LS#490126010#LT#1657#PU#81#RT#1#CA#v18#ZE#U3#ZB#      U3#PC#2#FR#490098106#FT#1631#TO#490126010#TT#1657#",
+                        "jid":"2|#VN#1#ST#1638666385#PI#0#ZI#96127#TA#57#DA#51221#1S#490098106#1T#1946#LS#490126010#LT#2012#PU#81#RT#1#CA#v18#ZE#U3#ZB#      U3#PC#2#FR#490098106#FT#1946#TO#490126010#TT#2012#",
                         "prodX":10,
                         "dirTxt":"Wien Simmering",
                         "dirFlg":"H",
@@ -1683,7 +1542,7 @@
                             "locX":0,
                             "idx":10,
                             "dProdX":10,
-                            "dTimeS":"164500",
+                            "dTimeS":"200000",
                             "dDirTxt":"Wien Simmering",
                             "dDirFlg":"H",
                             "type":"N"
@@ -1692,34 +1551,31 @@
                             "locX":2,
                             "idx":11,
                             "aProdX":10,
-                            "aTimeS":"164600",
+                            "aTimeS":"200100",
                             "type":"N"
                           }
                         ],
-                        "ctxRecon":"T$A=1@O=Wien Stephansplatz@L=490132005@a=128@$A=1@O=Wien Stubentor@L=490024510@a=128@$202109061645$202109061646$      U3$$1$$$$",
-                        "msgL":
-                        [
-                          {
-                            "type":"REM",
-                            "remX":0,
-                            "fLocX":0,
-                            "tLocX":2,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL_H3"
-                            ]
-                          }
-                        ],
+                        "ctxRecon":"T$A=1@O=Wien Stephansplatz@L=490132005@a=128@$A=1@O=Wien Stubentor@L=490024510@a=128@$202112052000$202112052001$      U3$$1$$$$$$",
                         "subscr":"F"
                       }
                     ]
                   },
-                  "ctxRecon":"T$A=1@O=Wien Stephansplatz@L=490132005@a=128@$A=1@O=Wien Stubentor@L=490024510@a=128@$202109061632$202109061633$      U3$$1$$$$",
+                  "ctxRecon":"T$A=1@O=Wien Stephansplatz@L=490132005@a=128@$A=1@O=Wien Stubentor@L=490024510@a=128@$202112051935$202112051936$      U3$$1$$$$$$",
                   "msgL":
                   [
                     {
                       "type":"REM",
                       "remX":0,
+                      "fLocX":0,
+                      "tLocX":2,
+                      "tagL":
+                      [
+                        "RES_JNY_DTL_H3"
+                      ]
+                    },
+                    {
+                      "type":"REM",
+                      "remX":1,
                       "fLocX":0,
                       "tLocX":2,
                       "tagL":
@@ -1742,10 +1598,10 @@
                 }
               }
             ],
-            "ctxRecon":"¶HKI¶T$A=1@O=Wien Stephansplatz@L=490132005@a=128@$A=1@O=Wien Stubentor@L=490024510@a=128@$202109061632$202109061633$      U3$$1$$$$",
+            "ctxRecon":"¶HKI¶T$A=1@O=Wien Stephansplatz@L=490132005@a=128@$A=1@O=Wien Stubentor@L=490024510@a=128@$202112051935$202112051936$      U3$$1$$$$$$¶KI¶H4sIAAAAAAACA+1W247bIBD9lYqHPnkl7CSbTX6lihDB2Ea2wQKcq/LvnQFiZ1fbblu1Uh82eYHDwMww55i5Eq4ry2vZm3J0ZEvoaUkXOcmIG0Uzg/kaoOE4AxTmj1uLd1Fm/YQ7z61n+4psv12JKk9kSzMiTwA1gC03NF8UlK4yMipBti95Rko+ShvMDrwbJYxuu4xclOx+dgwtlqucfnjMQfF4yu4eGi/B6kr8eZDBujMCg/8CsWvey/v41Bpjy2Bxnoe880zE2ZWEAQNvChdvN/Rghn/qYLBw360PtzJg3i+LjJiwE8B8dcv+Er6bKnyRCqBVXhR5vimWr/Ai7EAOKe2lhUi7yKMKf5CkFC3aSQ0R0+ydP/jp+YlBaUTLGqnqxoczx955mLGKt97AfW42M3YZnWg6XpPtUz6jvdKldD6G+2ZhDBEgWHVcikZqjFmyRPQrxpD4k1P6QkNQpXJw0qJYP6+RXWfXqAqATVwFHs6uBBxbJwkRKBMfXc33klWq83go2sCeXnWdclK4iNTSDdICJa1MDIV4uxBZmlqu3WDAQjRGCYmRVtZoH/iFi2zglvfutUo033dgCx6UY6iZwUonu7AIGcelcrTcK6OZqfD2zylIpVnMO2aZJqBYOi+yPW+nnJhXyOm8QM9dxyAjTFNGA0QsL9WYUj5y5e87gDiDlMDsfAHkEyZ5BYrDtaFMSJQvZBA34yTIfUk38AEZjGPcexsttawfZkEnIh5YwR2f2TFwS+nEGteqgVkzRgSscCzZJFqogWgh3xhrqDEiYPQAacP60cfbpiilUILnXyoB/c0SAC8/LML9xn+5Bk9zEUKKoQY4+g+KkNM/K8MO9LeHr8mnRj418qmRH2tEHd5RyA6bDCjH25eHKa28gkbkEsj4pmQsPUr0LR51CHCtBBsa7mR8JFN3gN3Yq74U2KErM7ee6S1MM3OQ9mihm0gIhqqhG6hx40UbVMmyyNfrAh5sz9t7H4CVwAHfYycYR/HtxoZLT6CewOp4B6tj2B6wtIzvu8YOZHRu8kwfPd4bA2zYuG2/WlWGt3uwLLz4UjPRJSFPCLhnkOA+bLx9B3sT+G+yCwAA",
             "freq":
             {
-              "minC":2
+              "minC":5
             },
             "trfRes":
             {
@@ -1778,7 +1634,7 @@
             [
               {
                 "type":"REM",
-                "remX":1,
+                "remX":2,
                 "dspl":"U",
                 "tagL":
                 [
@@ -1791,14 +1647,14 @@
               "co2":0.003010000000000
             },
             "conSubscr":"F",
-            "cksum":"f48cbae4_3"
+            "cksum":"5ca22a15_3"
           }
         ],
-        "outCtxScrB":"2|OB|MT#11#93146#93146#93147#93147#0#0#5#93146#1#-2147483646#0#1#2|PDH#85628c0be0db0f6c3e64c0b5edfd3bbb|RD#6092021|RT#162600|US#1",
-        "outCtxScrF":"2|OF|MT#11#93152#93152#93153#93153#0#0#5#93150#3#-2147483646#0#1#2|PDH#85628c0be0db0f6c3e64c0b5edfd3bbb|RD#6092021|RT#162600|US#1",
-        "fpB":"20210706",
-        "fpE":"20211211",
-        "planrtTS":"1630938328"
+        "outCtxScrB":"2|OB|MT#11#93325#93325#93326#93326#0#0#5#93324#1#-2147483646#0#1#2|PDH#28ca23a3810a215b61d0753423ba1dec|RD#5122021|RT#192400|US#1",
+        "outCtxScrF":"2|OF|MT#11#93335#93335#93336#93336#0#0#5#93331#3#-2147483646#0#1#2|PDH#28ca23a3810a215b61d0753423ba1dec|RD#5122021|RT#192400|US#1",
+        "fpB":"20211004",
+        "fpE":"20220531",
+        "planrtTS":"1638728681"
       }
     }
   ]

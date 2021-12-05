@@ -1,7 +1,7 @@
 {
   "ver":"1.15",
   "lang":"deu",
-  "id":"dk6cbgx442xzpwck",
+  "id":"gzksmmc242g68gwg",
   "svcResL":
   [
     {
@@ -62,9 +62,9 @@
               },
               "bg":
               {
-                "r":67,
-                "g":152,
-                "b":68,
+                "r":0,
+                "g":111,
+                "b":53,
                 "a":255
               }
             },
@@ -96,8 +96,8 @@
               },
               "bg":
               {
-                "r":170,
-                "g":85,
+                "r":153,
+                "g":51,
                 "b":153,
                 "a":255
               }
@@ -111,7 +111,7 @@
           "locL":
           [
             {
-              "lid":"A=1@O=Berlin-Johannisthal@X=13523678@Y=52446907@U=80@L=8089007@B=1@p=1630666846@i=A×de:11000:900193001@",
+              "lid":"A=1@O=Berlin-Johannisthal@X=13523678@Y=52446907@U=80@L=8089007@B=1@p=1638614192@i=A×de:11000:900193001@",
               "type":"S",
               "name":"Berlin-Johannisthal",
               "icoX":0,
@@ -126,10 +126,10 @@
                 "crdSysX":0
               },
               "pCls":16,
-              "wt":4110
+              "wt":4103
             },
             {
-              "lid":"A=1@O=Leipzig, Johannisallee@X=12388789@Y=51327300@U=80@L=11557@B=1@p=1630666846@i=A×de:14713:11557@",
+              "lid":"A=1@O=Leipzig, Johannisallee@X=12388789@Y=51327300@U=80@L=11557@B=1@p=1638614192@i=A×de:14713:11557@",
               "type":"S",
               "name":"Leipzig, Johannisallee",
               "icoX":1,
@@ -144,10 +144,10 @@
                 "crdSysX":0
               },
               "pCls":96,
-              "wt":3852
+              "wt":3847
             },
             {
-              "lid":"A=1@O=Leipzig, Johannisplatz@X=12386290@Y=51337890@U=80@L=11063@B=1@p=1630666846@i=A×de:14713:11063@",
+              "lid":"A=1@O=Leipzig, Johannisplatz@X=12385014@Y=51338168@U=80@L=11063@B=1@p=1638614192@i=A×de:14713:11063@",
               "type":"S",
               "name":"Leipzig, Johannisplatz",
               "icoX":1,
@@ -155,17 +155,17 @@
               "state":"F",
               "crd":
               {
-                "x":12386290,
-                "y":51337890,
+                "x":12385014,
+                "y":51338168,
                 "type":"WGS84",
                 "layerX":0,
                 "crdSysX":0
               },
               "pCls":96,
-              "wt":1007
+              "wt":3847
             },
             {
-              "lid":"A=1@O=Leipzig, Johannishöhe@X=12407289@Y=51286669@U=80@L=3863@B=1@p=1630666846@i=A×de:14713:3863@",
+              "lid":"A=1@O=Leipzig, Johannishöhe@X=12407289@Y=51286669@U=80@L=3863@B=1@p=1638614192@i=A×de:14713:3863@",
               "type":"S",
               "name":"Leipzig, Johannishöhe",
               "icoX":2,
@@ -180,10 +180,10 @@
                 "crdSysX":0
               },
               "pCls":64,
-              "wt":42
+              "wt":110
             },
             {
-              "lid":"A=1@O=Hettstedt, Johannisstr.@X=11506336@Y=51651406@U=80@L=1674@B=1@p=1630666846@i=A×de:15087:1674@",
+              "lid":"A=1@O=Hettstedt, Johannisstr.@X=11506336@Y=51651406@U=80@L=1674@B=1@p=1638614192@i=A×de:15087:1674@",
               "type":"S",
               "name":"Hettstedt, Johannisstr.",
               "icoX":2,
@@ -198,7 +198,7 @@
                 "crdSysX":0
               },
               "pCls":64,
-              "wt":42
+              "wt":2
             }
           ]
         }

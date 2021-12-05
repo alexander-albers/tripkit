@@ -1,7 +1,7 @@
 {
   "ver":"1.16",
   "lang":"deu",
-  "id":"jxgixmsk4igkhgcs",
+  "id":"q8m4cmcg46w79g8g",
   "svcResL":
   [
     {
@@ -203,16 +203,6 @@
               }
             },
             {
-              "name":"M6",
-              "nameS":"M6",
-              "icoX":4,
-              "cls":4,
-              "prodCtx":
-              {
-                "lineId":"M6"
-              }
-            },
-            {
               "name":"M8",
               "nameS":"M8",
               "icoX":4,
@@ -280,6 +270,26 @@
               "prodCtx":
               {
                 "lineId":"245"
+              }
+            },
+            {
+              "name":"M5",
+              "nameS":"M5",
+              "icoX":5,
+              "cls":8,
+              "prodCtx":
+              {
+                "lineId":"M5"
+              }
+            },
+            {
+              "name":"M10",
+              "nameS":"M10",
+              "icoX":5,
+              "cls":8,
+              "prodCtx":
+              {
+                "lineId":"M10"
               }
             },
             {
@@ -353,6 +363,16 @@
               }
             },
             {
+              "name":"S85",
+              "nameS":"S85",
+              "icoX":2,
+              "cls":1,
+              "prodCtx":
+              {
+                "lineId":"S85"
+              }
+            },
+            {
               "name":"U1",
               "nameS":"U1",
               "icoX":3,
@@ -403,6 +423,16 @@
               }
             },
             {
+              "name":"M13",
+              "nameS":"M13",
+              "icoX":5,
+              "cls":8,
+              "prodCtx":
+              {
+                "lineId":"M13"
+              }
+            },
+            {
               "name":"N1",
               "nameS":"N1",
               "icoX":5,
@@ -410,16 +440,6 @@
               "prodCtx":
               {
                 "lineId":"N1"
-              }
-            },
-            {
-              "name":"S2",
-              "nameS":"S2",
-              "icoX":2,
-              "cls":1,
-              "prodCtx":
-              {
-                "lineId":"S2"
               }
             },
             {
@@ -453,16 +473,6 @@
               }
             },
             {
-              "name":"S85",
-              "nameS":"S85",
-              "icoX":2,
-              "cls":1,
-              "prodCtx":
-              {
-                "lineId":"S85"
-              }
-            },
-            {
               "name":"U2",
               "nameS":"U2",
               "icoX":3,
@@ -483,6 +493,16 @@
               }
             },
             {
+              "name":"M1",
+              "nameS":"M1",
+              "icoX":5,
+              "cls":8,
+              "prodCtx":
+              {
+                "lineId":"M1"
+              }
+            },
+            {
               "name":"N2",
               "nameS":"N2",
               "icoX":5,
@@ -490,26 +510,6 @@
               "prodCtx":
               {
                 "lineId":"N2"
-              }
-            },
-            {
-              "name":"S41",
-              "nameS":"S41",
-              "icoX":5,
-              "cls":8,
-              "prodCtx":
-              {
-                "lineId":"S41"
-              }
-            },
-            {
-              "name":"S42",
-              "nameS":"S42",
-              "icoX":5,
-              "cls":8,
-              "prodCtx":
-              {
-                "lineId":"S42"
               }
             }
           ],
@@ -659,7 +659,7 @@
           "locL":
           [
             {
-              "lid":"A=1@O=S+U Berlin Hauptbahnhof@X=13369072@Y=52525607@U=86@L=900003201@B=1@p=1630578354@",
+              "lid":"A=1@O=S+U Berlin Hauptbahnhof@X=13369072@Y=52525607@U=86@L=900003201@B=1@p=1638447507@",
               "type":"S",
               "name":"S+U Berlin Hauptbahnhof",
               "icoX":6,
@@ -708,12 +708,13 @@
 29,
 30,
 31,
-32
+32,
+33
               ],
               "wt":32767
             },
             {
-              "lid":"A=1@O=S+U Berlin Hauptbahnhof (tief)@X=13369387@Y=52525041@U=86@L=900003200@B=1@p=1630578354@",
+              "lid":"A=1@O=S+U Berlin Hauptbahnhof (tief)@X=13369387@Y=52525041@U=86@L=900003200@B=1@p=1638447507@",
               "type":"S",
               "name":"S+U Berlin Hauptbahnhof (tief)",
               "icoX":6,
@@ -762,12 +763,13 @@
 29,
 30,
 31,
-32
+32,
+33
               ],
-              "wt":5349
+              "wt":6485
             },
             {
-              "lid":"A=1@O=Washingtonplatz/Hauptbahnhof (Berlin)@X=13370708@Y=52523962@U=86@L=900003205@B=1@p=1630578354@",
+              "lid":"A=1@O=Washingtonplatz/Hauptbahnhof (Berlin)@X=13370708@Y=52523962@U=86@L=900003205@B=1@p=1638447507@",
               "type":"S",
               "name":"Washingtonplatz/Hauptbahnhof (Berlin)",
               "icoX":6,
@@ -816,12 +818,13 @@
 29,
 30,
 31,
-32
+32,
+33
               ],
-              "wt":41
+              "wt":34
             },
             {
-              "lid":"A=1@O=S+U Warschauer Str. (Berlin)@X=13449157@Y=52505768@U=86@L=900120004@B=1@p=1630578354@",
+              "lid":"A=1@O=S+U Warschauer Str. (Berlin)@X=13449157@Y=52505768@U=86@L=900120004@B=1@p=1638447507@",
               "type":"S",
               "name":"S+U Warschauer Str. (Berlin)",
               "icoX":6,
@@ -842,19 +845,21 @@
 14,
 15,
 16,
-33,
 34,
 35,
-21,
 36,
 37,
+20,
 38,
-39
+39,
+40,
+41,
+42
               ],
-              "wt":27417
+              "wt":26281
             },
             {
-              "lid":"A=1@O=S+U Schönhauser Allee (Berlin)@X=13415142@Y=52549339@U=86@L=900110001@B=1@p=1630578354@",
+              "lid":"A=1@O=S+U Schönhauser Allee (Berlin)@X=13415142@Y=52549339@U=86@L=900110001@B=1@p=1638447507@",
               "type":"S",
               "name":"S+U Schönhauser Allee (Berlin)",
               "icoX":6,
@@ -871,18 +876,16 @@
               "pCls":15,
               "pRefL":
               [
-40,
-41,
-42,
 43,
 44,
 45,
+35,
 46,
 47,
 48,
 49
               ],
-              "wt":24935
+              "wt":23819
             }
           ]
         }

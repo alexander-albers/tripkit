@@ -2,7 +2,7 @@
   "ver":"1.24",
   "ext":"BVG.1",
   "lang":"deu",
-  "id":"ngikjie6meggh28g",
+  "id":"c62xkkua662vygcs",
   "err":"OK",
   "svcResL":
   [
@@ -16,7 +16,7 @@
           "locL":
           [
             {
-              "lid":"A=1@O=U Prinzenstr. (Berlin)@X=13406530@Y=52498271@U=86@L=900013103@",
+              "lid":"A=1@O=U Prinzenstr. (Berlin)@X=13406548@Y=52498325@U=86@L=900013103@",
               "type":"S",
               "name":"U Prinzenstr. (Berlin)",
               "icoX":0,
@@ -24,8 +24,8 @@
               "state":"F",
               "crd":
               {
-                "x":13406530,
-                "y":52498271,
+                "x":13406548,
+                "y":52498325,
                 "layerX":0,
                 "crdSysX":0
               },
@@ -110,147 +110,11 @@
                 "crdSysX":0
               },
               "pCls":10
-            },
-            {
-              "lid":"A=1@O=U Fehrbelliner Platz (Berlin)@X=13314508@Y=52490190@U=86@L=900041101@",
-              "type":"S",
-              "name":"U Fehrbelliner Platz (Berlin)",
-              "icoX":0,
-              "extId":"900041101",
-              "state":"F",
-              "crd":
-              {
-                "x":13314508,
-                "y":52490190,
-                "layerX":0,
-                "crdSysX":0
-              },
-              "pCls":10
             }
           ],
           "prodL":
           [
             {
-              "pid":"L::1::U::B3041857784::U_3041857784_U3::*",
-              "name":"U3",
-              "nameS":"U3",
-              "number":"U3",
-              "icoX":0,
-              "cls":2,
-              "oprX":0,
-              "prodCtx":
-              {
-                "name":"      U3",
-                "num":"13924",
-                "line":"U3",
-                "matchId":"U3",
-                "catOut":"U       ",
-                "catOutS":"U",
-                "catOutL":"U       ",
-                "catIn":"U",
-                "catCode":"1",
-                "admin":"BVU---"
-              },
-              "himIdL":
-              [
-"HIM_FREETEXT_75748",
-"HIM_FREETEXT_17360",
-"HIM_FREETEXT_26792",
-"HIM_FREETEXT_38900",
-"HIM_FREETEXT_32681"
-              ]
-            },
-            {
-              "pid":"L::1::U::B3041857784::U_3041857784_U3::*",
-              "name":"U3",
-              "nameS":"U3",
-              "number":"U3",
-              "icoX":0,
-              "cls":2,
-              "oprX":1,
-              "prodCtx":
-              {
-                "name":"      U3",
-                "num":"13924",
-                "line":"U3",
-                "matchId":"U3",
-                "catOut":"U       ",
-                "catOutS":"U",
-                "catOutL":"U       ",
-                "catIn":"U",
-                "catCode":"1",
-                "admin":"BVU---"
-              },
-              "himIdL":
-              [
-"HIM_FREETEXT_75748",
-"HIM_FREETEXT_17360",
-"HIM_FREETEXT_26792",
-"HIM_FREETEXT_38900",
-"HIM_FREETEXT_32681"
-              ]
-            },
-            {
-              "pid":"L::1::U::B3041857784::U_3041857784_U3::*",
-              "name":"U3",
-              "nameS":"U3",
-              "number":"U3",
-              "icoX":0,
-              "cls":2,
-              "oprX":0,
-              "prodCtx":
-              {
-                "name":"      U3",
-                "num":"13925",
-                "line":"U3",
-                "matchId":"U3",
-                "catOut":"U       ",
-                "catOutS":"U",
-                "catOutL":"U       ",
-                "catIn":"U",
-                "catCode":"1",
-                "admin":"BVU---"
-              },
-              "himIdL":
-              [
-"HIM_FREETEXT_75748",
-"HIM_FREETEXT_17360",
-"HIM_FREETEXT_26792",
-"HIM_FREETEXT_38900",
-"HIM_FREETEXT_32681"
-              ]
-            },
-            {
-              "pid":"L::1::U::B3041857784::U_3041857784_U3::*",
-              "name":"U3",
-              "nameS":"U3",
-              "number":"U3",
-              "icoX":0,
-              "cls":2,
-              "oprX":1,
-              "prodCtx":
-              {
-                "name":"      U3",
-                "num":"13925",
-                "line":"U3",
-                "matchId":"U3",
-                "catOut":"U       ",
-                "catOutS":"U",
-                "catOutL":"U       ",
-                "catIn":"U",
-                "catCode":"1",
-                "admin":"BVU---"
-              },
-              "himIdL":
-              [
-"HIM_FREETEXT_75748",
-"HIM_FREETEXT_17360",
-"HIM_FREETEXT_26792",
-"HIM_FREETEXT_38900",
-"HIM_FREETEXT_32681"
-              ]
-            },
-            {
               "pid":"L::1::U::B3041857784::U_3041857784_U1::*",
               "name":"U1",
               "nameS":"U1",
@@ -261,7 +125,7 @@
               "prodCtx":
               {
                 "name":"      U1",
-                "num":"11977",
+                "num":"11913",
                 "line":"U1",
                 "matchId":"U1",
                 "catOut":"U       ",
@@ -273,9 +137,7 @@
               },
               "himIdL":
               [
-"HIM_FREETEXT_75748",
-"HIM_FREETEXT_26792",
-"HIM_FREETEXT_38900"
+"HIM_FREETEXT_75748"
               ]
             },
             {
@@ -289,7 +151,7 @@
               "prodCtx":
               {
                 "name":"      U1",
-                "num":"11977",
+                "num":"11913",
                 "line":"U1",
                 "matchId":"U1",
                 "catOut":"U       ",
@@ -301,9 +163,7 @@
               },
               "himIdL":
               [
-"HIM_FREETEXT_75748",
-"HIM_FREETEXT_26792",
-"HIM_FREETEXT_38900"
+"HIM_FREETEXT_75748"
               ]
             },
             {
@@ -317,7 +177,7 @@
               "prodCtx":
               {
                 "name":"      U3",
-                "num":"13926",
+                "num":"15659",
                 "line":"U3",
                 "matchId":"U3",
                 "catOut":"U       ",
@@ -330,10 +190,7 @@
               "himIdL":
               [
 "HIM_FREETEXT_75748",
-"HIM_FREETEXT_17360",
-"HIM_FREETEXT_26792",
-"HIM_FREETEXT_38900",
-"HIM_FREETEXT_32681"
+"HIM_FREETEXT_41962"
               ]
             },
             {
@@ -347,7 +204,7 @@
               "prodCtx":
               {
                 "name":"      U3",
-                "num":"13926",
+                "num":"15659",
                 "line":"U3",
                 "matchId":"U3",
                 "catOut":"U       ",
@@ -360,10 +217,113 @@
               "himIdL":
               [
 "HIM_FREETEXT_75748",
-"HIM_FREETEXT_17360",
-"HIM_FREETEXT_26792",
-"HIM_FREETEXT_38900",
-"HIM_FREETEXT_32681"
+"HIM_FREETEXT_41962"
+              ]
+            },
+            {
+              "pid":"L::1::U::B3041857784::U_3041857784_U1::*",
+              "name":"U1",
+              "nameS":"U1",
+              "number":"U1",
+              "icoX":0,
+              "cls":2,
+              "oprX":0,
+              "prodCtx":
+              {
+                "name":"      U1",
+                "num":"11914",
+                "line":"U1",
+                "matchId":"U1",
+                "catOut":"U       ",
+                "catOutS":"U",
+                "catOutL":"U       ",
+                "catIn":"U",
+                "catCode":"1",
+                "admin":"BVU---"
+              },
+              "himIdL":
+              [
+"HIM_FREETEXT_75748"
+              ]
+            },
+            {
+              "pid":"L::1::U::B3041857784::U_3041857784_U1::*",
+              "name":"U1",
+              "nameS":"U1",
+              "number":"U1",
+              "icoX":0,
+              "cls":2,
+              "oprX":1,
+              "prodCtx":
+              {
+                "name":"      U1",
+                "num":"11914",
+                "line":"U1",
+                "matchId":"U1",
+                "catOut":"U       ",
+                "catOutS":"U",
+                "catOutL":"U       ",
+                "catIn":"U",
+                "catCode":"1",
+                "admin":"BVU---"
+              },
+              "himIdL":
+              [
+"HIM_FREETEXT_75748"
+              ]
+            },
+            {
+              "pid":"L::1::U::B3041857784::U_3041857784_U3::*",
+              "name":"U3",
+              "nameS":"U3",
+              "number":"U3",
+              "icoX":0,
+              "cls":2,
+              "oprX":0,
+              "prodCtx":
+              {
+                "name":"      U3",
+                "num":"15660",
+                "line":"U3",
+                "matchId":"U3",
+                "catOut":"U       ",
+                "catOutS":"U",
+                "catOutL":"U       ",
+                "catIn":"U",
+                "catCode":"1",
+                "admin":"BVU---"
+              },
+              "himIdL":
+              [
+"HIM_FREETEXT_75748",
+"HIM_FREETEXT_41962"
+              ]
+            },
+            {
+              "pid":"L::1::U::B3041857784::U_3041857784_U3::*",
+              "name":"U3",
+              "nameS":"U3",
+              "number":"U3",
+              "icoX":0,
+              "cls":2,
+              "oprX":1,
+              "prodCtx":
+              {
+                "name":"      U3",
+                "num":"15660",
+                "line":"U3",
+                "matchId":"U3",
+                "catOut":"U       ",
+                "catOutS":"U",
+                "catOutL":"U       ",
+                "catIn":"U",
+                "catCode":"1",
+                "admin":"BVU---"
+              },
+              "himIdL":
+              [
+"HIM_FREETEXT_75748",
+"HIM_FREETEXT_41962"
               ]
             }
           ],
@@ -372,7 +332,7 @@
             {
               "delta":true,
               "dim":2,
-              "crdEncYX":"eql_IymypA]`FLvu@fB`ZLrEKpD??S~DaEtXg@rGGhF??P|HoArPLlDe@dS??Wf_@gAhUjApJC~A}AlI??oD`SJtB`ErQdApD",
+              "crdEncYX":"qql_I}mypAQdFLvu@fB`ZLrEKpD??S~DaEtXg@rGGhF??P|HoArPLlDe@dS??Wf_@gAhUjApJC~A}AlI??oD`SJtB`ErQdApD",
               "crdEncS":"NNNMKNNLNKNNNNLNNNNNLNNNLNN",
               "crdEncF":"???????????????????????????",
               "ppLocRefL":
@@ -407,7 +367,7 @@
             {
               "delta":true,
               "dim":2,
-              "crdEncYX":"eql_IymypA]`FLvu@fB`ZLrEKpD??S~DaEtXg@rGGhF??P|HoArPLlDe@dS??Wf_@gAhUjApJC~A}AlI??oD`SJtB`ErQdApD",
+              "crdEncYX":"qql_I}mypAQdFLvu@fB`ZLrEKpD??S~DaEtXg@rGGhF??P|HoArPLlDe@dS??Wf_@gAhUjApJC~A}AlI??oD`SJtB`ErQdApD",
               "crdEncS":"NNNMKNNLNKNNNNLNNNNNLNNNLNN",
               "crdEncF":"???????????????????????????",
               "ppLocRefL":
@@ -442,7 +402,7 @@
             {
               "delta":true,
               "dim":2,
-              "crdEncYX":"eql_IymypA]`FLvu@fB`ZLrEKpD??S~DaEtXg@rGGhF??P|HoArPLlDe@dS??Wf_@gAhUjApJC~A}AlI??oD`SJtB`ErQdApD",
+              "crdEncYX":"qql_I}mypAQdFLvu@fB`ZLrEKpD??S~DaEtXg@rGGhF??P|HoArPLlDe@dS??Wf_@gAhUjApJC~A}AlI??oD`SJtB`ErQdApD",
               "crdEncS":"NNNMKNNLNKNNNNLNNNNNLNNNLNN",
               "crdEncF":"???????????????????????????",
               "ppLocRefL":
@@ -477,7 +437,7 @@
             {
               "delta":true,
               "dim":2,
-              "crdEncYX":"eql_IymypA]`FLvu@fB`ZLrEKpD??S~DaEtXg@rGGhF??P|HoArPLlDe@dS??Wf_@gAhUjApJC~A}AlI??oD`SJtB`ErQdApD",
+              "crdEncYX":"qql_I}mypAQdFLvu@fB`ZLrEKpD??S~DaEtXg@rGGhF??P|HoArPLlDe@dS??Wf_@gAhUjApJC~A}AlI??oD`SJtB`ErQdApD",
               "crdEncS":"NNNMKNNLNKNNNNLNNNNNLNNNLNN",
               "crdEncF":"???????????????????????????",
               "ppLocRefL":
@@ -550,29 +510,17 @@
             },
             {
               "type":"A",
-              "code":"text.occup.loc.max.12",
-              "icoX":4,
-              "txtN":"Mittlere Auslastung erwartet"
-            },
-            {
-              "type":"A",
               "code":"bf",
               "prio":2,
-              "icoX":5,
+              "icoX":4,
               "txtN":"barrierefrei"
             },
             {
               "type":"A",
               "code":"FB",
               "prio":10,
-              "icoX":6,
+              "icoX":5,
               "txtN":"Fahrradmitnahme möglich"
-            },
-            {
-              "type":"A",
-              "code":"text.occup.jny.max.12",
-              "icoX":4,
-              "txtN":"Mittlere Auslastung erwartet"
             },
             {
               "type":"A",
@@ -584,81 +532,16 @@
           "himL":
           [
             {
-              "hid":"32681",
+              "hid":"144719",
               "act":true,
-              "head":"Ersatzverkehr",
-              "text":"U7: Ersatzverkehr mit Bussen zwischen U Fehrbelliner Platz &lt; > U Möckernbrücke, jeweils So-Do von 22 bis 2 Uhr. Die Busse fahren für einen barrierefreien Umstieg über U Mehringdamm.<br />",
-              "icoX":7,
-              "prio":100,
-              "fLocX":6,
-              "tLocX":3,
-              "prod":61442,
-              "lModDate":"20210906",
-              "lModTime":"112805",
-              "sDate":"20210627",
-              "sTime":"220000",
-              "eDate":"20211008",
-              "eTime":"033000",
-              "sDaily":"000000",
-              "eDaily":"235900",
-              "catRefL":
-              [
-0
-              ],
-              "pubChL":
-              [
-                {
-                  "name":"timetable",
-                  "fDate":"20210906",
-                  "fTime":"112803",
-                  "tDate":"20211008",
-                  "tTime":"033000"
-                }
-              ]
-            },
-            {
-              "hid":"135319",
-              "act":true,
-              "head":"Streik im DB-Bahnverkehr von Donnerstag, 2 Uhr bis Dienstag, 2 Uhr",
-              "text":"Wegen Streiks der Gewerkschaft der Lokführer (GdL) kommt es im Regional- und Fernverkehr der DB sowie bei der S-Bahn Berlin zu erheblichen Einschränkungen. Bitte informieren Sie sich.<br><a href=\"https://www.vbb.de/streik\" target=\"_blank\" rel=\"noopener\">Weitere Informationen</a>",
-              "icoX":8,
+              "head":"Es gelten 3G-Regel und Maskenpflicht!",
+              "text":"Wir empfehlen eine FFP2-Maske.<br><a href=\"https://www.vbb.de/corona\" target=\"_blank\" rel=\"noopener\">Weitere Informationen</a>",
+              "icoX":6,
               "prio":100,
               "prod":65535,
-              "lModDate":"20210830",
-              "lModTime":"180823",
-              "sDate":"20210830",
-              "sTime":"170000",
-              "eDate":"20210907",
-              "eTime":"030000",
-              "sDaily":"000000",
-              "eDaily":"235900",
-              "comp":"VBB",
-              "catRefL":
-              [
-1
-              ],
-              "pubChL":
-              [
-                {
-                  "name":"TIMETABLE",
-                  "fDate":"20210830",
-                  "fTime":"172900",
-                  "tDate":"20210907",
-                  "tTime":"030000"
-                }
-              ]
-            },
-            {
-              "hid":"118634",
-              "act":true,
-              "head":"Gemeinsam sicher unterwegs - mit Abstand und medizinischer Maske (in Berlin: FFP2)!",
-              "text":"An Haltestellen und Bahnhöfen sowie in Fahrzeugen. Maskenmuffel riskieren mindestens 50 Euro.<br><a href=\"https://www.vbb.de/corona\" target=\"_blank\" rel=\"noopener\">Weitere Informationen</a>",
-              "icoX":9,
-              "prio":100,
-              "prod":65535,
-              "lModDate":"20210612",
-              "lModTime":"074336",
-              "sDate":"20210424",
+              "lModDate":"20211123",
+              "lModTime":"183110",
+              "sDate":"20211124",
               "sTime":"000000",
               "eDate":"20221231",
               "eTime":"000000",
@@ -667,14 +550,14 @@
               "comp":"VBB",
               "catRefL":
               [
-2
+0
               ],
               "pubChL":
               [
                 {
                   "name":"TIMETABLE",
-                  "fDate":"20210423",
-                  "fTime":"134200",
+                  "fDate":"20211123",
+                  "fTime":"173000",
                   "tDate":"20221231",
                   "tTime":"000000"
                 }
@@ -709,19 +592,10 @@
               "res":"occup_fig_low"
             },
             {
-              "res":"occup_fig_mid"
-            },
-            {
               "res":"attr_info"
             },
             {
               "res":"attr_bike"
-            },
-            {
-              "res":"HIM1"
-            },
-            {
-              "res":"HIM2"
             },
             {
               "res":"HIM0"
@@ -829,23 +703,17 @@
           "himMsgCatL":
           [
             {
-              "id":1
-            },
-            {
-              "id":2
-            },
-            {
               "id":0
             }
           ],
           "dirL":
           [
             {
-              "txt":"U Krumme Lanke (Berlin)",
+              "txt":"U Uhlandstr. (Berlin)",
               "flg":"1"
             },
             {
-              "txt":"U Uhlandstr. (Berlin)",
+              "txt":"U Krumme Lanke (Berlin)",
               "flg":"1"
             }
           ],
@@ -876,21 +744,27 @@
         [
           {
             "cid":"C-0",
-            "date":"20210906",
+            "date":"20211205",
             "dur":"000800",
             "chg":0,
             "sDays":
             {
-              "sDaysR":"Mo - Fr",
-              "sDaysB":"7CF9F3E7CF9F3E7CF9F3E7CF9F00"
+              "sDaysR":"täglich",
+              "sDaysI":"nicht 24. Dez",
+              "sDaysB":"FFFFFFDFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF0"
             },
             "dep":
             {
               "locX":0,
               "idx":4,
               "dProdX":0,
-              "dTimeS":"173700",
-              "dTimeR":"173700",
+              "dPltfS":
+              {
+                "type":"PL",
+                "txt":"1"
+              },
+              "dTimeS":"192400",
+              "dTimeR":"192400",
               "dProgType":"CALCULATED",
               "dTrnCmpSX":
               {
@@ -919,8 +793,13 @@
             {
               "locX":1,
               "idx":9,
-              "aTimeS":"174500",
-              "aTimeR":"174500",
+              "aPltfS":
+              {
+                "type":"PL",
+                "txt":"1"
+              },
+              "aTimeS":"193200",
+              "aTimeR":"193200",
               "aProgType":"CALCULATED",
               "type":"N"
             },
@@ -933,8 +812,13 @@
                   "locX":0,
                   "idx":4,
                   "dProdX":0,
-                  "dTimeS":"173700",
-                  "dTimeR":"173700",
+                  "dPltfS":
+                  {
+                    "type":"PL",
+                    "txt":"1"
+                  },
+                  "dTimeS":"192400",
+                  "dTimeR":"192400",
                   "dProgType":"CALCULATED",
                   "dTrnCmpSX":
                   {
@@ -963,16 +847,21 @@
                 {
                   "locX":1,
                   "idx":9,
-                  "aTimeS":"174500",
-                  "aTimeR":"174500",
+                  "aPltfS":
+                  {
+                    "type":"PL",
+                    "txt":"1"
+                  },
+                  "aTimeS":"193200",
+                  "aTimeR":"193200",
                   "aProgType":"CALCULATED",
                   "type":"N"
                 },
                 "jny":
                 {
-                  "jid":"1|31729|6|86|6092021",
+                  "jid":"1|33888|27|86|5122021",
                   "prodX":1,
-                  "dirTxt":"U Krumme Lanke (Berlin)",
+                  "dirTxt":"U Uhlandstr. (Berlin)",
                   "dirFlg":"1",
                   "status":"P",
                   "isRchbl":true,
@@ -982,10 +871,15 @@
                       "locX":0,
                       "idx":4,
                       "dProdX":1,
-                      "dTimeS":"173700",
-                      "dTimeR":"173700",
+                      "dPltfS":
+                      {
+                        "type":"PL",
+                        "txt":"1"
+                      },
+                      "dTimeS":"192400",
+                      "dTimeR":"192400",
                       "dProgType":"CALCULATED",
-                      "dDirTxt":"U Krumme Lanke (Berlin)",
+                      "dDirTxt":"U Uhlandstr. (Berlin)",
                       "dDirFlg":"1",
                       "dTrnCmpSX":
                       {
@@ -1014,12 +908,22 @@
                       "locX":2,
                       "idx":5,
                       "aProdX":1,
-                      "aTimeS":"173900",
-                      "aTimeR":"173900",
+                      "aPltfS":
+                      {
+                        "type":"PL",
+                        "txt":"1"
+                      },
+                      "aTimeS":"192600",
+                      "aTimeR":"192600",
                       "aProgType":"CALCULATED",
                       "dProdX":1,
-                      "dTimeS":"173900",
-                      "dTimeR":"173900",
+                      "dPltfS":
+                      {
+                        "type":"PL",
+                        "txt":"1"
+                      },
+                      "dTimeS":"192600",
+                      "dTimeR":"192600",
                       "dProgType":"CALCULATED",
                       "dTrnCmpSX":
                       {
@@ -1032,7 +936,7 @@
                       [
                         {
                           "type":"REM",
-                          "remX":1,
+                          "remX":0,
                           "sty":"I",
                           "dspl":"U",
                           "tagL":
@@ -1048,12 +952,22 @@
                       "locX":3,
                       "idx":6,
                       "aProdX":1,
-                      "aTimeS":"174000",
-                      "aTimeR":"174000",
+                      "aPltfS":
+                      {
+                        "type":"PL",
+                        "txt":"1"
+                      },
+                      "aTimeS":"192700",
+                      "aTimeR":"192700",
                       "aProgType":"CALCULATED",
                       "dProdX":1,
-                      "dTimeS":"174000",
-                      "dTimeR":"174000",
+                      "dPltfS":
+                      {
+                        "type":"PL",
+                        "txt":"1"
+                      },
+                      "dTimeS":"192700",
+                      "dTimeR":"192700",
                       "dProgType":"CALCULATED",
                       "dTrnCmpSX":
                       {
@@ -1082,12 +996,22 @@
                       "locX":4,
                       "idx":7,
                       "aProdX":1,
-                      "aTimeS":"174200",
-                      "aTimeR":"174200",
+                      "aPltfS":
+                      {
+                        "type":"PL",
+                        "txt":"1"
+                      },
+                      "aTimeS":"192900",
+                      "aTimeR":"192900",
                       "aProgType":"CALCULATED",
                       "dProdX":1,
-                      "dTimeS":"174200",
-                      "dTimeR":"174200",
+                      "dPltfS":
+                      {
+                        "type":"PL",
+                        "txt":"1"
+                      },
+                      "dTimeS":"192900",
+                      "dTimeR":"192900",
                       "dProgType":"CALCULATED",
                       "dTrnCmpSX":
                       {
@@ -1116,12 +1040,22 @@
                       "locX":5,
                       "idx":8,
                       "aProdX":1,
-                      "aTimeS":"174400",
-                      "aTimeR":"174400",
+                      "aPltfS":
+                      {
+                        "type":"PL",
+                        "txt":"1"
+                      },
+                      "aTimeS":"193100",
+                      "aTimeR":"193100",
                       "aProgType":"CALCULATED",
                       "dProdX":1,
-                      "dTimeS":"174400",
-                      "dTimeR":"174400",
+                      "dPltfS":
+                      {
+                        "type":"PL",
+                        "txt":"1"
+                      },
+                      "dTimeS":"193100",
+                      "dTimeR":"193100",
                       "dProgType":"CALCULATED",
                       "dTrnCmpSX":
                       {
@@ -1150,8 +1084,13 @@
                       "locX":1,
                       "idx":9,
                       "aProdX":1,
-                      "aTimeS":"174500",
-                      "aTimeR":"174500",
+                      "aPltfS":
+                      {
+                        "type":"PL",
+                        "txt":"1"
+                      },
+                      "aTimeS":"193200",
+                      "aTimeR":"193200",
                       "aProgType":"CALCULATED",
                       "type":"N"
                     }
@@ -1174,16 +1113,16 @@
                   },
                   "freq":
                   {
-                    "minC":3,
-                    "maxC":4,
-                    "numC":37
+                    "minC":5,
+                    "maxC":5,
+                    "numC":25
                   },
-                  "ctxRecon":"T$A=1@O=U Prinzenstr. (Berlin)@L=900013103@a=128@$A=1@O=U Nollendorfplatz (Berlin)@L=900056102@a=128@$202109061737$202109061745$      U3$$1$$$$",
+                  "ctxRecon":"T$A=1@O=U Prinzenstr. (Berlin)@L=900013103@a=128@$A=1@O=U Nollendorfplatz (Berlin)@L=900056102@a=128@$202112051924$202112051932$      U1$$1$$$$",
                   "msgL":
                   [
                     {
                       "type":"REM",
-                      "remX":2,
+                      "remX":1,
                       "sty":"I",
                       "fLocX":0,
                       "tLocX":1,
@@ -1195,7 +1134,7 @@
                     },
                     {
                       "type":"REM",
-                      "remX":3,
+                      "remX":2,
                       "sty":"I",
                       "fLocX":0,
                       "tLocX":1,
@@ -1209,39 +1148,16 @@
                       "type":"HIM",
                       "himX":0,
                       "sty":"M",
-                      "fLocX":3,
-                      "tLocX":1,
-                      "tagL":
-                      [
-                        "RES_CON_HDR","RES_SEC_HDR_H3","SUM_CON_HDR"
-                      ],
-                      "sort":373430608
-                    },
-                    {
-                      "type":"HIM",
-                      "himX":1,
-                      "sty":"M",
                       "fLocX":0,
                       "tagL":
                       [
                         "RES_GLB_HDR_H3","SUM_GLB_HDR_H3"
                       ],
-                      "sort":373440288
-                    },
-                    {
-                      "type":"HIM",
-                      "himX":2,
-                      "sty":"M",
-                      "fLocX":0,
-                      "tagL":
-                      [
-                        "RES_GLB_HDR_H3","SUM_GLB_HDR_H3"
-                      ],
-                      "sort":373554673
+                      "sort":373579945
                     },
                     {
                       "type":"REM",
-                      "remX":4,
+                      "remX":3,
                       "sty":"I",
                       "dspl":"U",
                       "tagL":
@@ -1277,10 +1193,10 @@
                 }
               }
             ],
-            "ctxRecon":"¶HKI¶T$A=1@O=U Prinzenstr. (Berlin)@L=900013103@a=128@$A=1@O=U Nollendorfplatz (Berlin)@L=900056102@a=128@$202109061737$202109061745$      U3$$1$$$$",
+            "ctxRecon":"¶HKI¶T$A=1@O=U Prinzenstr. (Berlin)@L=900013103@a=128@$A=1@O=U Nollendorfplatz (Berlin)@L=900056102@a=128@$202112051924$202112051932$      U1$$1$$$$",
             "freq":
             {
-              "minC":3
+              "minC":5
             },
             "trfRes":
             {
@@ -1803,8 +1719,8 @@
                       },
                       "TV":
                       {
-                        "BD":"20210906",
-                        "BT":"173700"
+                        "BD":"20211205",
+                        "BT":"192400"
                       }
                     },
                     {
@@ -1825,8 +1741,8 @@
                       },
                       "TV":
                       {
-                        "BD":"20210906",
-                        "BT":"173700"
+                        "BD":"20211205",
+                        "BT":"192400"
                       }
                     },
                     {
@@ -1847,8 +1763,8 @@
                       },
                       "TV":
                       {
-                        "BD":"20210906",
-                        "BT":"173700"
+                        "BD":"20211205",
+                        "BT":"192400"
                       }
                     },
                     {
@@ -1869,8 +1785,8 @@
                       },
                       "TV":
                       {
-                        "BD":"20210906",
-                        "BT":"173700"
+                        "BD":"20211205",
+                        "BT":"192400"
                       }
                     },
                     {
@@ -1891,8 +1807,8 @@
                       },
                       "TV":
                       {
-                        "BD":"20210906",
-                        "BT":"173700"
+                        "BD":"20211205",
+                        "BT":"192400"
                       }
                     },
                     {
@@ -1913,8 +1829,8 @@
                       },
                       "TV":
                       {
-                        "BD":"20210906",
-                        "BT":"173700"
+                        "BD":"20211205",
+                        "BT":"192400"
                       }
                     },
                     {
@@ -1935,8 +1851,8 @@
                       },
                       "TV":
                       {
-                        "BD":"20210906",
-                        "BT":"173700"
+                        "BD":"20211205",
+                        "BT":"192400"
                       }
                     },
                     {
@@ -1957,8 +1873,8 @@
                       },
                       "TV":
                       {
-                        "BD":"20210906",
-                        "BT":"173700"
+                        "BD":"20211205",
+                        "BT":"192400"
                       }
                     },
                     {
@@ -1979,8 +1895,8 @@
                       },
                       "TV":
                       {
-                        "BD":"20210906",
-                        "BT":"173700"
+                        "BD":"20211205",
+                        "BT":"192400"
                       }
                     },
                     {
@@ -2001,8 +1917,8 @@
                       },
                       "TV":
                       {
-                        "BD":"20210906",
-                        "BT":"173700"
+                        "BD":"20211205",
+                        "BT":"192400"
                       }
                     }
                   ],
@@ -2043,26 +1959,32 @@
             ],
             "conSubscr":"F",
             "recState":"U",
-            "cksum":"a2fa188f_3",
-            "cksumDti":"e2944a56_3"
+            "cksum":"bd45c32d_3",
+            "cksumDti":"25caff92_3"
           },
           {
             "cid":"C-1",
-            "date":"20210906",
+            "date":"20211205",
             "dur":"000800",
             "chg":0,
             "sDays":
             {
-              "sDaysR":"Mo - Fr",
-              "sDaysB":"7CF9F3E7CF9F3E7CF9F3E7CF9F00"
+              "sDaysR":"Sa, So",
+              "sDaysI":"auch 31. Dez, 8. Mär, 15., 18. Apr, 26. Mai, 6. Jun",
+              "sDaysB":"83060C187060C183060C183068C183060C3C3060C183160E10"
             },
             "dep":
             {
               "locX":0,
               "idx":4,
               "dProdX":2,
-              "dTimeS":"174100",
-              "dTimeR":"174100",
+              "dPltfS":
+              {
+                "type":"PL",
+                "txt":"1"
+              },
+              "dTimeS":"192900",
+              "dTimeR":"193000",
               "dProgType":"CALCULATED",
               "dTrnCmpSX":
               {
@@ -2092,8 +2014,13 @@
               "locX":1,
               "idx":9,
               "aProdX":2,
-              "aTimeS":"174900",
-              "aTimeR":"174900",
+              "aPltfS":
+              {
+                "type":"PL",
+                "txt":"1"
+              },
+              "aTimeS":"193700",
+              "aTimeR":"193800",
               "aProgType":"CALCULATED",
               "type":"N"
             },
@@ -2106,8 +2033,13 @@
                   "locX":0,
                   "idx":4,
                   "dProdX":2,
-                  "dTimeS":"174100",
-                  "dTimeR":"174100",
+                  "dPltfS":
+                  {
+                    "type":"PL",
+                    "txt":"1"
+                  },
+                  "dTimeS":"192900",
+                  "dTimeR":"193000",
                   "dProgType":"CALCULATED",
                   "dTrnCmpSX":
                   {
@@ -2137,14 +2069,19 @@
                   "locX":1,
                   "idx":9,
                   "aProdX":2,
-                  "aTimeS":"174900",
-                  "aTimeR":"174900",
+                  "aPltfS":
+                  {
+                    "type":"PL",
+                    "txt":"1"
+                  },
+                  "aTimeS":"193700",
+                  "aTimeR":"193800",
                   "aProgType":"CALCULATED",
                   "type":"N"
                 },
                 "jny":
                 {
-                  "jid":"1|31730|2|86|6092021",
+                  "jid":"1|34317|28|86|5122021",
                   "prodX":3,
                   "dirTxt":"U Krumme Lanke (Berlin)",
                   "dirFlg":"1",
@@ -2156,8 +2093,13 @@
                       "locX":0,
                       "idx":4,
                       "dProdX":3,
-                      "dTimeS":"174100",
-                      "dTimeR":"174100",
+                      "dPltfS":
+                      {
+                        "type":"PL",
+                        "txt":"1"
+                      },
+                      "dTimeS":"192900",
+                      "dTimeR":"193000",
                       "dProgType":"CALCULATED",
                       "dDirTxt":"U Krumme Lanke (Berlin)",
                       "dDirFlg":"1",
@@ -2188,12 +2130,22 @@
                       "locX":2,
                       "idx":5,
                       "aProdX":3,
-                      "aTimeS":"174300",
-                      "aTimeR":"174300",
+                      "aPltfS":
+                      {
+                        "type":"PL",
+                        "txt":"1"
+                      },
+                      "aTimeS":"193100",
+                      "aTimeR":"193200",
                       "aProgType":"CALCULATED",
                       "dProdX":3,
-                      "dTimeS":"174300",
-                      "dTimeR":"174300",
+                      "dPltfS":
+                      {
+                        "type":"PL",
+                        "txt":"1"
+                      },
+                      "dTimeS":"193100",
+                      "dTimeR":"193200",
                       "dProgType":"CALCULATED",
                       "dTrnCmpSX":
                       {
@@ -2206,7 +2158,7 @@
                       [
                         {
                           "type":"REM",
-                          "remX":1,
+                          "remX":0,
                           "sty":"I",
                           "dspl":"U",
                           "tagL":
@@ -2222,12 +2174,22 @@
                       "locX":3,
                       "idx":6,
                       "aProdX":3,
-                      "aTimeS":"174400",
-                      "aTimeR":"174400",
+                      "aPltfS":
+                      {
+                        "type":"PL",
+                        "txt":"1"
+                      },
+                      "aTimeS":"193200",
+                      "aTimeR":"193300",
                       "aProgType":"CALCULATED",
                       "dProdX":3,
-                      "dTimeS":"174400",
-                      "dTimeR":"174400",
+                      "dPltfS":
+                      {
+                        "type":"PL",
+                        "txt":"1"
+                      },
+                      "dTimeS":"193200",
+                      "dTimeR":"193300",
                       "dProgType":"CALCULATED",
                       "dTrnCmpSX":
                       {
@@ -2256,12 +2218,22 @@
                       "locX":4,
                       "idx":7,
                       "aProdX":3,
-                      "aTimeS":"174600",
-                      "aTimeR":"174600",
+                      "aPltfS":
+                      {
+                        "type":"PL",
+                        "txt":"1"
+                      },
+                      "aTimeS":"193400",
+                      "aTimeR":"193500",
                       "aProgType":"CALCULATED",
                       "dProdX":3,
-                      "dTimeS":"174600",
-                      "dTimeR":"174600",
+                      "dPltfS":
+                      {
+                        "type":"PL",
+                        "txt":"1"
+                      },
+                      "dTimeS":"193400",
+                      "dTimeR":"193500",
                       "dProgType":"CALCULATED",
                       "dTrnCmpSX":
                       {
@@ -2290,12 +2262,22 @@
                       "locX":5,
                       "idx":8,
                       "aProdX":3,
-                      "aTimeS":"174800",
-                      "aTimeR":"174800",
+                      "aPltfS":
+                      {
+                        "type":"PL",
+                        "txt":"1"
+                      },
+                      "aTimeS":"193600",
+                      "aTimeR":"193700",
                       "aProgType":"CALCULATED",
                       "dProdX":3,
-                      "dTimeS":"174800",
-                      "dTimeR":"174800",
+                      "dPltfS":
+                      {
+                        "type":"PL",
+                        "txt":"1"
+                      },
+                      "dTimeS":"193600",
+                      "dTimeR":"193700",
                       "dProgType":"CALCULATED",
                       "dTrnCmpSX":
                       {
@@ -2324,8 +2306,13 @@
                       "locX":1,
                       "idx":9,
                       "aProdX":3,
-                      "aTimeS":"174900",
-                      "aTimeR":"174900",
+                      "aPltfS":
+                      {
+                        "type":"PL",
+                        "txt":"1"
+                      },
+                      "aTimeS":"193700",
+                      "aTimeR":"193800",
                       "aProgType":"CALCULATED",
                       "type":"N"
                     }
@@ -2341,23 +2328,23 @@
                   },
                   "pos":
                   {
-                    "x":13428185,
-                    "y":52499314,
+                    "x":13441076,
+                    "y":52500779,
                     "layerX":0,
                     "crdSysX":0
                   },
                   "freq":
                   {
-                    "minC":3,
-                    "maxC":4,
-                    "numC":37
+                    "minC":5,
+                    "maxC":5,
+                    "numC":25
                   },
-                  "ctxRecon":"T$A=1@O=U Prinzenstr. (Berlin)@L=900013103@a=128@$A=1@O=U Nollendorfplatz (Berlin)@L=900056102@a=128@$202109061741$202109061749$      U3$$1$$$$",
+                  "ctxRecon":"T$A=1@O=U Prinzenstr. (Berlin)@L=900013103@a=128@$A=1@O=U Nollendorfplatz (Berlin)@L=900056102@a=128@$202112051929$202112051937$      U3$$1$$$$",
                   "msgL":
                   [
                     {
                       "type":"REM",
-                      "remX":2,
+                      "remX":1,
                       "sty":"I",
                       "fLocX":0,
                       "tLocX":1,
@@ -2369,7 +2356,7 @@
                     },
                     {
                       "type":"REM",
-                      "remX":3,
+                      "remX":2,
                       "sty":"I",
                       "fLocX":0,
                       "tLocX":1,
@@ -2383,39 +2370,16 @@
                       "type":"HIM",
                       "himX":0,
                       "sty":"M",
-                      "fLocX":3,
-                      "tLocX":1,
-                      "tagL":
-                      [
-                        "RES_CON_HDR","RES_SEC_HDR_H3","SUM_CON_HDR"
-                      ],
-                      "sort":373430608
-                    },
-                    {
-                      "type":"HIM",
-                      "himX":1,
-                      "sty":"M",
                       "fLocX":0,
                       "tagL":
                       [
                         "RES_GLB_HDR_H3","SUM_GLB_HDR_H3"
                       ],
-                      "sort":373440288
-                    },
-                    {
-                      "type":"HIM",
-                      "himX":2,
-                      "sty":"M",
-                      "fLocX":0,
-                      "tagL":
-                      [
-                        "RES_GLB_HDR_H3","SUM_GLB_HDR_H3"
-                      ],
-                      "sort":373554673
+                      "sort":373579945
                     },
                     {
                       "type":"REM",
-                      "remX":4,
+                      "remX":3,
                       "sty":"I",
                       "dspl":"U",
                       "tagL":
@@ -2439,7 +2403,7 @@
                   "dirL":
                   [
                     {
-                      "dirX":0,
+                      "dirX":1,
                       "fLocX":0,
                       "tLocX":1,
                       "fIdx":4,
@@ -2451,10 +2415,10 @@
                 }
               }
             ],
-            "ctxRecon":"¶HKI¶T$A=1@O=U Prinzenstr. (Berlin)@L=900013103@a=128@$A=1@O=U Nollendorfplatz (Berlin)@L=900056102@a=128@$202109061741$202109061749$      U3$$1$$$$",
+            "ctxRecon":"¶HKI¶T$A=1@O=U Prinzenstr. (Berlin)@L=900013103@a=128@$A=1@O=U Nollendorfplatz (Berlin)@L=900056102@a=128@$202112051929$202112051937$      U3$$1$$$$",
             "freq":
             {
-              "minC":3
+              "minC":5
             },
             "trfRes":
             {
@@ -2977,8 +2941,8 @@
                       },
                       "TV":
                       {
-                        "BD":"20210906",
-                        "BT":"174100"
+                        "BD":"20211205",
+                        "BT":"192900"
                       }
                     },
                     {
@@ -2999,8 +2963,8 @@
                       },
                       "TV":
                       {
-                        "BD":"20210906",
-                        "BT":"174100"
+                        "BD":"20211205",
+                        "BT":"192900"
                       }
                     },
                     {
@@ -3021,8 +2985,8 @@
                       },
                       "TV":
                       {
-                        "BD":"20210906",
-                        "BT":"174100"
+                        "BD":"20211205",
+                        "BT":"192900"
                       }
                     },
                     {
@@ -3043,8 +3007,8 @@
                       },
                       "TV":
                       {
-                        "BD":"20210906",
-                        "BT":"174100"
+                        "BD":"20211205",
+                        "BT":"192900"
                       }
                     },
                     {
@@ -3065,8 +3029,8 @@
                       },
                       "TV":
                       {
-                        "BD":"20210906",
-                        "BT":"174100"
+                        "BD":"20211205",
+                        "BT":"192900"
                       }
                     },
                     {
@@ -3087,8 +3051,8 @@
                       },
                       "TV":
                       {
-                        "BD":"20210906",
-                        "BT":"174100"
+                        "BD":"20211205",
+                        "BT":"192900"
                       }
                     },
                     {
@@ -3109,8 +3073,8 @@
                       },
                       "TV":
                       {
-                        "BD":"20210906",
-                        "BT":"174100"
+                        "BD":"20211205",
+                        "BT":"192900"
                       }
                     },
                     {
@@ -3131,8 +3095,8 @@
                       },
                       "TV":
                       {
-                        "BD":"20210906",
-                        "BT":"174100"
+                        "BD":"20211205",
+                        "BT":"192900"
                       }
                     },
                     {
@@ -3153,8 +3117,8 @@
                       },
                       "TV":
                       {
-                        "BD":"20210906",
-                        "BT":"174100"
+                        "BD":"20211205",
+                        "BT":"192900"
                       }
                     },
                     {
@@ -3175,8 +3139,8 @@
                       },
                       "TV":
                       {
-                        "BD":"20210906",
-                        "BT":"174100"
+                        "BD":"20211205",
+                        "BT":"192900"
                       }
                     }
                   ],
@@ -3217,26 +3181,32 @@
             ],
             "conSubscr":"F",
             "recState":"U",
-            "cksum":"57588f64_3",
-            "cksumDti":"34472689_3"
+            "cksum":"78a99c4f_3",
+            "cksumDti":"a73e594b_3"
           },
           {
             "cid":"C-2",
-            "date":"20210906",
+            "date":"20211205",
             "dur":"000800",
             "chg":0,
             "sDays":
             {
               "sDaysR":"täglich",
-              "sDaysB":"FFFFFFFFFFFFFFFFFFFFFFFFFF80"
+              "sDaysI":"nicht 24. Dez",
+              "sDaysB":"FFFFFFDFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF0"
             },
             "dep":
             {
               "locX":0,
               "idx":4,
               "dProdX":4,
-              "dTimeS":"174400",
-              "dTimeR":"174400",
+              "dPltfS":
+              {
+                "type":"PL",
+                "txt":"1"
+              },
+              "dTimeS":"193400",
+              "dTimeR":"193400",
               "dProgType":"CALCULATED",
               "dTrnCmpSX":
               {
@@ -3266,8 +3236,13 @@
               "locX":1,
               "idx":9,
               "aProdX":4,
-              "aTimeS":"175200",
-              "aTimeR":"175200",
+              "aPltfS":
+              {
+                "type":"PL",
+                "txt":"1"
+              },
+              "aTimeS":"194200",
+              "aTimeR":"194200",
               "aProgType":"CALCULATED",
               "type":"N"
             },
@@ -3280,8 +3255,13 @@
                   "locX":0,
                   "idx":4,
                   "dProdX":4,
-                  "dTimeS":"174400",
-                  "dTimeR":"174400",
+                  "dPltfS":
+                  {
+                    "type":"PL",
+                    "txt":"1"
+                  },
+                  "dTimeS":"193400",
+                  "dTimeR":"193400",
                   "dProgType":"CALCULATED",
                   "dTrnCmpSX":
                   {
@@ -3311,14 +3291,19 @@
                   "locX":1,
                   "idx":9,
                   "aProdX":4,
-                  "aTimeS":"175200",
-                  "aTimeR":"175200",
+                  "aPltfS":
+                  {
+                    "type":"PL",
+                    "txt":"1"
+                  },
+                  "aTimeS":"194200",
+                  "aTimeR":"194200",
                   "aProgType":"CALCULATED",
                   "type":"N"
                 },
                 "jny":
                 {
-                  "jid":"1|31233|46|86|6092021",
+                  "jid":"1|33888|28|86|5122021",
                   "prodX":5,
                   "dirTxt":"U Uhlandstr. (Berlin)",
                   "dirFlg":"1",
@@ -3330,8 +3315,13 @@
                       "locX":0,
                       "idx":4,
                       "dProdX":5,
-                      "dTimeS":"174400",
-                      "dTimeR":"174400",
+                      "dPltfS":
+                      {
+                        "type":"PL",
+                        "txt":"1"
+                      },
+                      "dTimeS":"193400",
+                      "dTimeR":"193400",
                       "dProgType":"CALCULATED",
                       "dDirTxt":"U Uhlandstr. (Berlin)",
                       "dDirFlg":"1",
@@ -3362,12 +3352,22 @@
                       "locX":2,
                       "idx":5,
                       "aProdX":5,
-                      "aTimeS":"174600",
-                      "aTimeR":"174600",
+                      "aPltfS":
+                      {
+                        "type":"PL",
+                        "txt":"1"
+                      },
+                      "aTimeS":"193600",
+                      "aTimeR":"193600",
                       "aProgType":"CALCULATED",
                       "dProdX":5,
-                      "dTimeS":"174600",
-                      "dTimeR":"174600",
+                      "dPltfS":
+                      {
+                        "type":"PL",
+                        "txt":"1"
+                      },
+                      "dTimeS":"193600",
+                      "dTimeR":"193600",
                       "dProgType":"CALCULATED",
                       "dTrnCmpSX":
                       {
@@ -3396,12 +3396,22 @@
                       "locX":3,
                       "idx":6,
                       "aProdX":5,
-                      "aTimeS":"174700",
-                      "aTimeR":"174700",
+                      "aPltfS":
+                      {
+                        "type":"PL",
+                        "txt":"1"
+                      },
+                      "aTimeS":"193700",
+                      "aTimeR":"193700",
                       "aProgType":"CALCULATED",
                       "dProdX":5,
-                      "dTimeS":"174700",
-                      "dTimeR":"174700",
+                      "dPltfS":
+                      {
+                        "type":"PL",
+                        "txt":"1"
+                      },
+                      "dTimeS":"193700",
+                      "dTimeR":"193700",
                       "dProgType":"CALCULATED",
                       "dTrnCmpSX":
                       {
@@ -3430,12 +3440,22 @@
                       "locX":4,
                       "idx":7,
                       "aProdX":5,
-                      "aTimeS":"174900",
-                      "aTimeR":"174900",
+                      "aPltfS":
+                      {
+                        "type":"PL",
+                        "txt":"1"
+                      },
+                      "aTimeS":"193900",
+                      "aTimeR":"193900",
                       "aProgType":"CALCULATED",
                       "dProdX":5,
-                      "dTimeS":"174900",
-                      "dTimeR":"174900",
+                      "dPltfS":
+                      {
+                        "type":"PL",
+                        "txt":"1"
+                      },
+                      "dTimeS":"193900",
+                      "dTimeR":"193900",
                       "dProgType":"CALCULATED",
                       "dTrnCmpSX":
                       {
@@ -3464,12 +3484,22 @@
                       "locX":5,
                       "idx":8,
                       "aProdX":5,
-                      "aTimeS":"175100",
-                      "aTimeR":"175100",
+                      "aPltfS":
+                      {
+                        "type":"PL",
+                        "txt":"1"
+                      },
+                      "aTimeS":"194100",
+                      "aTimeR":"194100",
                       "aProgType":"CALCULATED",
                       "dProdX":5,
-                      "dTimeS":"175100",
-                      "dTimeR":"175100",
+                      "dPltfS":
+                      {
+                        "type":"PL",
+                        "txt":"1"
+                      },
+                      "dTimeS":"194100",
+                      "dTimeR":"194100",
                       "dProgType":"CALCULATED",
                       "dTrnCmpSX":
                       {
@@ -3498,8 +3528,13 @@
                       "locX":1,
                       "idx":9,
                       "aProdX":5,
-                      "aTimeS":"175200",
-                      "aTimeR":"175200",
+                      "aPltfS":
+                      {
+                        "type":"PL",
+                        "txt":"1"
+                      },
+                      "aTimeS":"194200",
+                      "aTimeR":"194200",
                       "aProgType":"CALCULATED",
                       "type":"N"
                     }
@@ -3513,25 +3548,18 @@
                     "layerX":0,
                     "crdSysX":0
                   },
-                  "pos":
-                  {
-                    "x":13445364,
-                    "y":52501408,
-                    "layerX":0,
-                    "crdSysX":0
-                  },
                   "freq":
                   {
                     "minC":3,
-                    "maxC":4,
-                    "numC":37
+                    "maxC":5,
+                    "numC":25
                   },
-                  "ctxRecon":"T$A=1@O=U Prinzenstr. (Berlin)@L=900013103@a=128@$A=1@O=U Nollendorfplatz (Berlin)@L=900056102@a=128@$202109061744$202109061752$      U1$$1$$$$",
+                  "ctxRecon":"T$A=1@O=U Prinzenstr. (Berlin)@L=900013103@a=128@$A=1@O=U Nollendorfplatz (Berlin)@L=900056102@a=128@$202112051934$202112051942$      U1$$1$$$$",
                   "msgL":
                   [
                     {
                       "type":"REM",
-                      "remX":2,
+                      "remX":1,
                       "sty":"I",
                       "fLocX":0,
                       "tLocX":1,
@@ -3543,7 +3571,7 @@
                     },
                     {
                       "type":"REM",
-                      "remX":3,
+                      "remX":2,
                       "sty":"I",
                       "fLocX":0,
                       "tLocX":1,
@@ -3555,29 +3583,18 @@
                     },
                     {
                       "type":"HIM",
-                      "himX":1,
+                      "himX":0,
                       "sty":"M",
                       "fLocX":0,
                       "tagL":
                       [
                         "RES_GLB_HDR_H3","SUM_GLB_HDR_H3"
                       ],
-                      "sort":373440288
-                    },
-                    {
-                      "type":"HIM",
-                      "himX":2,
-                      "sty":"M",
-                      "fLocX":0,
-                      "tagL":
-                      [
-                        "RES_GLB_HDR_H3","SUM_GLB_HDR_H3"
-                      ],
-                      "sort":373554673
+                      "sort":373579945
                     },
                     {
                       "type":"REM",
-                      "remX":5,
+                      "remX":3,
                       "sty":"I",
                       "dspl":"U",
                       "tagL":
@@ -3601,7 +3618,7 @@
                   "dirL":
                   [
                     {
-                      "dirX":1,
+                      "dirX":0,
                       "fLocX":0,
                       "tLocX":1,
                       "fIdx":4,
@@ -3613,7 +3630,7 @@
                 }
               }
             ],
-            "ctxRecon":"¶HKI¶T$A=1@O=U Prinzenstr. (Berlin)@L=900013103@a=128@$A=1@O=U Nollendorfplatz (Berlin)@L=900056102@a=128@$202109061744$202109061752$      U1$$1$$$$",
+            "ctxRecon":"¶HKI¶T$A=1@O=U Prinzenstr. (Berlin)@L=900013103@a=128@$A=1@O=U Nollendorfplatz (Berlin)@L=900056102@a=128@$202112051934$202112051942$      U1$$1$$$$",
             "freq":
             {
               "minC":3
@@ -4139,8 +4156,8 @@
                       },
                       "TV":
                       {
-                        "BD":"20210906",
-                        "BT":"174400"
+                        "BD":"20211205",
+                        "BT":"193400"
                       }
                     },
                     {
@@ -4161,8 +4178,8 @@
                       },
                       "TV":
                       {
-                        "BD":"20210906",
-                        "BT":"174400"
+                        "BD":"20211205",
+                        "BT":"193400"
                       }
                     },
                     {
@@ -4183,8 +4200,8 @@
                       },
                       "TV":
                       {
-                        "BD":"20210906",
-                        "BT":"174400"
+                        "BD":"20211205",
+                        "BT":"193400"
                       }
                     },
                     {
@@ -4205,8 +4222,8 @@
                       },
                       "TV":
                       {
-                        "BD":"20210906",
-                        "BT":"174400"
+                        "BD":"20211205",
+                        "BT":"193400"
                       }
                     },
                     {
@@ -4227,8 +4244,8 @@
                       },
                       "TV":
                       {
-                        "BD":"20210906",
-                        "BT":"174400"
+                        "BD":"20211205",
+                        "BT":"193400"
                       }
                     },
                     {
@@ -4249,8 +4266,8 @@
                       },
                       "TV":
                       {
-                        "BD":"20210906",
-                        "BT":"174400"
+                        "BD":"20211205",
+                        "BT":"193400"
                       }
                     },
                     {
@@ -4271,8 +4288,8 @@
                       },
                       "TV":
                       {
-                        "BD":"20210906",
-                        "BT":"174400"
+                        "BD":"20211205",
+                        "BT":"193400"
                       }
                     },
                     {
@@ -4293,8 +4310,8 @@
                       },
                       "TV":
                       {
-                        "BD":"20210906",
-                        "BT":"174400"
+                        "BD":"20211205",
+                        "BT":"193400"
                       }
                     },
                     {
@@ -4315,8 +4332,8 @@
                       },
                       "TV":
                       {
-                        "BD":"20210906",
-                        "BT":"174400"
+                        "BD":"20211205",
+                        "BT":"193400"
                       }
                     },
                     {
@@ -4337,8 +4354,8 @@
                       },
                       "TV":
                       {
-                        "BD":"20210906",
-                        "BT":"174400"
+                        "BD":"20211205",
+                        "BT":"193400"
                       }
                     }
                   ],
@@ -4379,26 +4396,32 @@
             ],
             "conSubscr":"F",
             "recState":"U",
-            "cksum":"a0b2d266_3",
-            "cksumDti":"57fbb9c5_3"
+            "cksum":"07f23c26_3",
+            "cksumDti":"7f376515_3"
           },
           {
             "cid":"C-3",
-            "date":"20210906",
+            "date":"20211205",
             "dur":"000800",
             "chg":0,
             "sDays":
             {
-              "sDaysR":"Mo - Fr",
-              "sDaysB":"7CF9F3E7CF9F3E7CF9F3E7CF9F00"
+              "sDaysR":"Sa, So",
+              "sDaysI":"auch 31. Dez, 8. Mär, 15., 18. Apr, 26. Mai, 6. Jun",
+              "sDaysB":"83060C187060C183060C183068C183060C3C3060C183160E10"
             },
             "dep":
             {
               "locX":0,
               "idx":4,
               "dProdX":6,
-              "dTimeS":"174700",
-              "dTimeR":"174700",
+              "dPltfS":
+              {
+                "type":"PL",
+                "txt":"1"
+              },
+              "dTimeS":"193900",
+              "dTimeR":"193900",
               "dProgType":"CALCULATED",
               "dTrnCmpSX":
               {
@@ -4428,8 +4451,13 @@
               "locX":1,
               "idx":9,
               "aProdX":6,
-              "aTimeS":"175500",
-              "aTimeR":"175500",
+              "aPltfS":
+              {
+                "type":"PL",
+                "txt":"1"
+              },
+              "aTimeS":"194700",
+              "aTimeR":"194700",
               "aProgType":"CALCULATED",
               "type":"N"
             },
@@ -4442,8 +4470,13 @@
                   "locX":0,
                   "idx":4,
                   "dProdX":6,
-                  "dTimeS":"174700",
-                  "dTimeR":"174700",
+                  "dPltfS":
+                  {
+                    "type":"PL",
+                    "txt":"1"
+                  },
+                  "dTimeS":"193900",
+                  "dTimeR":"193900",
                   "dProgType":"CALCULATED",
                   "dTrnCmpSX":
                   {
@@ -4473,14 +4506,19 @@
                   "locX":1,
                   "idx":9,
                   "aProdX":6,
-                  "aTimeS":"175500",
-                  "aTimeR":"175500",
+                  "aPltfS":
+                  {
+                    "type":"PL",
+                    "txt":"1"
+                  },
+                  "aTimeS":"194700",
+                  "aTimeR":"194700",
                   "aProgType":"CALCULATED",
                   "type":"N"
                 },
                 "jny":
                 {
-                  "jid":"1|31729|7|86|6092021",
+                  "jid":"1|34317|29|86|5122021",
                   "prodX":7,
                   "dirTxt":"U Krumme Lanke (Berlin)",
                   "dirFlg":"1",
@@ -4492,8 +4530,13 @@
                       "locX":0,
                       "idx":4,
                       "dProdX":7,
-                      "dTimeS":"174700",
-                      "dTimeR":"174700",
+                      "dPltfS":
+                      {
+                        "type":"PL",
+                        "txt":"1"
+                      },
+                      "dTimeS":"193900",
+                      "dTimeR":"193900",
                       "dProgType":"CALCULATED",
                       "dDirTxt":"U Krumme Lanke (Berlin)",
                       "dDirFlg":"1",
@@ -4524,12 +4567,22 @@
                       "locX":2,
                       "idx":5,
                       "aProdX":7,
-                      "aTimeS":"174900",
-                      "aTimeR":"174900",
+                      "aPltfS":
+                      {
+                        "type":"PL",
+                        "txt":"1"
+                      },
+                      "aTimeS":"194100",
+                      "aTimeR":"194100",
                       "aProgType":"CALCULATED",
                       "dProdX":7,
-                      "dTimeS":"174900",
-                      "dTimeR":"174900",
+                      "dPltfS":
+                      {
+                        "type":"PL",
+                        "txt":"1"
+                      },
+                      "dTimeS":"194100",
+                      "dTimeR":"194100",
                       "dProgType":"CALCULATED",
                       "dTrnCmpSX":
                       {
@@ -4542,7 +4595,7 @@
                       [
                         {
                           "type":"REM",
-                          "remX":1,
+                          "remX":0,
                           "sty":"I",
                           "dspl":"U",
                           "tagL":
@@ -4558,12 +4611,22 @@
                       "locX":3,
                       "idx":6,
                       "aProdX":7,
-                      "aTimeS":"175000",
-                      "aTimeR":"175000",
+                      "aPltfS":
+                      {
+                        "type":"PL",
+                        "txt":"1"
+                      },
+                      "aTimeS":"194200",
+                      "aTimeR":"194200",
                       "aProgType":"CALCULATED",
                       "dProdX":7,
-                      "dTimeS":"175000",
-                      "dTimeR":"175000",
+                      "dPltfS":
+                      {
+                        "type":"PL",
+                        "txt":"1"
+                      },
+                      "dTimeS":"194200",
+                      "dTimeR":"194200",
                       "dProgType":"CALCULATED",
                       "dTrnCmpSX":
                       {
@@ -4592,12 +4655,22 @@
                       "locX":4,
                       "idx":7,
                       "aProdX":7,
-                      "aTimeS":"175200",
-                      "aTimeR":"175200",
+                      "aPltfS":
+                      {
+                        "type":"PL",
+                        "txt":"1"
+                      },
+                      "aTimeS":"194400",
+                      "aTimeR":"194400",
                       "aProgType":"CALCULATED",
                       "dProdX":7,
-                      "dTimeS":"175200",
-                      "dTimeR":"175200",
+                      "dPltfS":
+                      {
+                        "type":"PL",
+                        "txt":"1"
+                      },
+                      "dTimeS":"194400",
+                      "dTimeR":"194400",
                       "dProgType":"CALCULATED",
                       "dTrnCmpSX":
                       {
@@ -4626,12 +4699,22 @@
                       "locX":5,
                       "idx":8,
                       "aProdX":7,
-                      "aTimeS":"175400",
-                      "aTimeR":"175400",
+                      "aPltfS":
+                      {
+                        "type":"PL",
+                        "txt":"1"
+                      },
+                      "aTimeS":"194600",
+                      "aTimeR":"194600",
                       "aProgType":"CALCULATED",
                       "dProdX":7,
-                      "dTimeS":"175400",
-                      "dTimeR":"175400",
+                      "dPltfS":
+                      {
+                        "type":"PL",
+                        "txt":"1"
+                      },
+                      "dTimeS":"194600",
+                      "dTimeR":"194600",
                       "dProgType":"CALCULATED",
                       "dTrnCmpSX":
                       {
@@ -4660,8 +4743,13 @@
                       "locX":1,
                       "idx":9,
                       "aProdX":7,
-                      "aTimeS":"175500",
-                      "aTimeR":"175500",
+                      "aPltfS":
+                      {
+                        "type":"PL",
+                        "txt":"1"
+                      },
+                      "aTimeS":"194700",
+                      "aTimeR":"194700",
                       "aProgType":"CALCULATED",
                       "type":"N"
                     }
@@ -4678,15 +4766,15 @@
                   "freq":
                   {
                     "minC":3,
-                    "maxC":4,
-                    "numC":37
+                    "maxC":7,
+                    "numC":25
                   },
-                  "ctxRecon":"T$A=1@O=U Prinzenstr. (Berlin)@L=900013103@a=128@$A=1@O=U Nollendorfplatz (Berlin)@L=900056102@a=128@$202109061747$202109061755$      U3$$1$$$$",
+                  "ctxRecon":"T$A=1@O=U Prinzenstr. (Berlin)@L=900013103@a=128@$A=1@O=U Nollendorfplatz (Berlin)@L=900056102@a=128@$202112051939$202112051947$      U3$$1$$$$",
                   "msgL":
                   [
                     {
                       "type":"REM",
-                      "remX":2,
+                      "remX":1,
                       "sty":"I",
                       "fLocX":0,
                       "tLocX":1,
@@ -4698,7 +4786,7 @@
                     },
                     {
                       "type":"REM",
-                      "remX":3,
+                      "remX":2,
                       "sty":"I",
                       "fLocX":0,
                       "tLocX":1,
@@ -4712,39 +4800,16 @@
                       "type":"HIM",
                       "himX":0,
                       "sty":"M",
-                      "fLocX":3,
-                      "tLocX":1,
-                      "tagL":
-                      [
-                        "RES_CON_HDR","RES_SEC_HDR_H3","SUM_CON_HDR"
-                      ],
-                      "sort":373430608
-                    },
-                    {
-                      "type":"HIM",
-                      "himX":1,
-                      "sty":"M",
                       "fLocX":0,
                       "tagL":
                       [
                         "RES_GLB_HDR_H3","SUM_GLB_HDR_H3"
                       ],
-                      "sort":373440288
-                    },
-                    {
-                      "type":"HIM",
-                      "himX":2,
-                      "sty":"M",
-                      "fLocX":0,
-                      "tagL":
-                      [
-                        "RES_GLB_HDR_H3","SUM_GLB_HDR_H3"
-                      ],
-                      "sort":373554673
+                      "sort":373579945
                     },
                     {
                       "type":"REM",
-                      "remX":4,
+                      "remX":3,
                       "sty":"I",
                       "dspl":"U",
                       "tagL":
@@ -4768,7 +4833,7 @@
                   "dirL":
                   [
                     {
-                      "dirX":0,
+                      "dirX":1,
                       "fLocX":0,
                       "tLocX":1,
                       "fIdx":4,
@@ -4780,7 +4845,7 @@
                 }
               }
             ],
-            "ctxRecon":"¶HKI¶T$A=1@O=U Prinzenstr. (Berlin)@L=900013103@a=128@$A=1@O=U Nollendorfplatz (Berlin)@L=900056102@a=128@$202109061747$202109061755$      U3$$1$$$$",
+            "ctxRecon":"¶HKI¶T$A=1@O=U Prinzenstr. (Berlin)@L=900013103@a=128@$A=1@O=U Nollendorfplatz (Berlin)@L=900056102@a=128@$202112051939$202112051947$      U3$$1$$$$",
             "freq":
             {
               "minC":3
@@ -5306,8 +5371,8 @@
                       },
                       "TV":
                       {
-                        "BD":"20210906",
-                        "BT":"174700"
+                        "BD":"20211205",
+                        "BT":"193900"
                       }
                     },
                     {
@@ -5328,8 +5393,8 @@
                       },
                       "TV":
                       {
-                        "BD":"20210906",
-                        "BT":"174700"
+                        "BD":"20211205",
+                        "BT":"193900"
                       }
                     },
                     {
@@ -5350,8 +5415,8 @@
                       },
                       "TV":
                       {
-                        "BD":"20210906",
-                        "BT":"174700"
+                        "BD":"20211205",
+                        "BT":"193900"
                       }
                     },
                     {
@@ -5372,8 +5437,8 @@
                       },
                       "TV":
                       {
-                        "BD":"20210906",
-                        "BT":"174700"
+                        "BD":"20211205",
+                        "BT":"193900"
                       }
                     },
                     {
@@ -5394,8 +5459,8 @@
                       },
                       "TV":
                       {
-                        "BD":"20210906",
-                        "BT":"174700"
+                        "BD":"20211205",
+                        "BT":"193900"
                       }
                     },
                     {
@@ -5416,8 +5481,8 @@
                       },
                       "TV":
                       {
-                        "BD":"20210906",
-                        "BT":"174700"
+                        "BD":"20211205",
+                        "BT":"193900"
                       }
                     },
                     {
@@ -5438,8 +5503,8 @@
                       },
                       "TV":
                       {
-                        "BD":"20210906",
-                        "BT":"174700"
+                        "BD":"20211205",
+                        "BT":"193900"
                       }
                     },
                     {
@@ -5460,8 +5525,8 @@
                       },
                       "TV":
                       {
-                        "BD":"20210906",
-                        "BT":"174700"
+                        "BD":"20211205",
+                        "BT":"193900"
                       }
                     },
                     {
@@ -5482,8 +5547,8 @@
                       },
                       "TV":
                       {
-                        "BD":"20210906",
-                        "BT":"174700"
+                        "BD":"20211205",
+                        "BT":"193900"
                       }
                     },
                     {
@@ -5504,8 +5569,8 @@
                       },
                       "TV":
                       {
-                        "BD":"20210906",
-                        "BT":"174700"
+                        "BD":"20211205",
+                        "BT":"193900"
                       }
                     }
                   ],
@@ -5546,20 +5611,20 @@
             ],
             "conSubscr":"F",
             "recState":"U",
-            "cksum":"fce00c39_3",
-            "cksumDti":"572bbfff_3"
+            "cksum":"5c6a63d3_3",
+            "cksumDti":"763d5bbf_3"
           }
         ],
-        "outCtxScrB":"2|OB|MT#11#15457#15457#15465#15465#0#0#165#15457#1#-2147483638#0#1#2|PDH#ec7b427102fb4a5f19dcf55f46ba3845|RD#6092021|RT#173700|US#1",
-        "outCtxScrF":"2|OF|MT#11#15467#15467#15475#15475#0#0#165#15465#4#-2147483638#0#1#2|PDH#ec7b427102fb4a5f19dcf55f46ba3845|RD#6092021|RT#173700|US#1",
-        "fpB":"20210829",
-        "fpE":"20211211",
-        "planrtTS":"1630942592",
+        "outCtxScrB":"2|OB|MT#11#14124#14124#14132#14132#0#0#165#14124#1#-2147483638#0#1#2|PDH#36e546eee1913d4340a48c2762296947|RD#5122021|RT#192400|US#1",
+        "outCtxScrF":"2|OF|MT#11#14139#14139#14147#14147#0#0#165#14135#4#-2147483638#0#1#2|PDH#36e546eee1913d4340a48c2762296947|RD#5122021|RT#192400|US#1",
+        "fpB":"20211128",
+        "fpE":"20220611",
+        "planrtTS":"1638728617",
         "outConGrpL":
         [
           {
             "name":"Öffentlicher Nahverkehr",
-            "icoX":10,
+            "icoX":7,
             "grpid":"cl_pt",
             "conScoringL":
             [
@@ -5568,32 +5633,32 @@
                 "conScoreL":
                 [
                   {
-                    "score":9168054507345543167,
-                    "scoreS":"09168054507345543167",
+                    "score":9173917103344844799,
+                    "scoreS":"09173917103344844799",
                     "conRefL":
                     [
 0
                     ]
                   },
                   {
-                    "score":9168036915159498751,
-                    "scoreS":"09168036915159498751",
+                    "score":9173890715065778175,
+                    "scoreS":"09173890715065778175",
                     "conRefL":
                     [
 1
                     ]
                   },
                   {
-                    "score":9168023721019965439,
-                    "scoreS":"09168023721019965439",
+                    "score":9173873122879733759,
+                    "scoreS":"09173873122879733759",
                     "conRefL":
                     [
 2
                     ]
                   },
                   {
-                    "score":9168010526880432127,
-                    "scoreS":"09168010526880432127",
+                    "score":9173851132647178239,
+                    "scoreS":"09173851132647178239",
                     "conRefL":
                     [
 3
@@ -5607,32 +5672,32 @@
                 "conScoreL":
                 [
                   {
-                    "score":9168019322973454335,
-                    "scoreS":"09168019322973454335",
+                    "score":9173881918972755967,
+                    "scoreS":"09173881918972755967",
                     "conRefL":
                     [
 0
                     ]
                   },
                   {
-                    "score":9168001730787409919,
-                    "scoreS":"09168001730787409919",
+                    "score":9173855530693689343,
+                    "scoreS":"09173855530693689343",
                     "conRefL":
                     [
 1
                     ]
                   },
                   {
-                    "score":9167988536647876607,
-                    "scoreS":"09167988536647876607",
+                    "score":9173837938507644927,
+                    "scoreS":"09173837938507644927",
                     "conRefL":
                     [
 2
                     ]
                   },
                   {
-                    "score":9167975342508343295,
-                    "scoreS":"09167975342508343295",
+                    "score":9173815948275089407,
+                    "scoreS":"09173815948275089407",
                     "conRefL":
                     [
 3
@@ -5646,32 +5711,32 @@
                 "conScoreL":
                 [
                   {
-                    "score":9223333547353833471,
-                    "scoreS":"09223333547353833471",
+                    "score":9223333548052709375,
+                    "scoreS":"09223333548052709375",
                     "conRefL":
                     [
 0
                     ]
                   },
                   {
-                    "score":9223333547351736319,
-                    "scoreS":"09223333547351736319",
+                    "score":9223333548049563647,
+                    "scoreS":"09223333548049563647",
                     "conRefL":
                     [
 1
                     ]
                   },
                   {
-                    "score":9223333547350163455,
-                    "scoreS":"09223333547350163455",
+                    "score":9223333548047466495,
+                    "scoreS":"09223333548047466495",
                     "conRefL":
                     [
 2
                     ]
                   },
                   {
-                    "score":9223333547348590591,
-                    "scoreS":"09223333547348590591",
+                    "score":9223333548044845055,
+                    "scoreS":"09223333548044845055",
                     "conRefL":
                     [
 3
@@ -5697,7 +5762,7 @@
           },
           {
             "name":"Fahrrad & Öffentlicher Nahverkehr",
-            "icoX":11,
+            "icoX":8,
             "grpid":"cl_pt_bike",
             "conScoringL":
             [
@@ -5730,7 +5795,7 @@
           },
           {
             "name":"Fahrrad",
-            "icoX":12,
+            "icoX":9,
             "grpid":"cl_bike",
             "conScoringL":
             [
@@ -5771,7 +5836,7 @@
           },
           {
             "name":"Scooter",
-            "icoX":13,
+            "icoX":10,
             "grpid":"cl_scooter",
             "conScoringL":
             [

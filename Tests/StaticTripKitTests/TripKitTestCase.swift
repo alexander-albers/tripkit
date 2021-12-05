@@ -58,7 +58,7 @@ class TripKitProviderTestCase: XCTestCase {
                     case .success(let locations):
                         os_log("success: %@", log: .testsLogger, type: .default, locations.map({($0.id ?? "") + " " + $0.getUniqueLongName()}))
                         XCTAssert(!locations.isEmpty, "received empty result")
-                        XCTAssert(locations.contains(where: {$0.id == testCase["result"]["id"].string || $0.getUniqueLongName() == testCase["result"]["name"].string}), "result does not contain the searched location")
+                        XCTAssert(locations.contains(where: {compareLocationIds($0.id, testCase["result"]["id"].string) || $0.getUniqueLongName() == testCase["result"]["name"].string}), "result does not contain the searched location")
                         
                         XCTAssert(expected == locations)
                     case .invalidId:
@@ -81,10 +81,7 @@ class TripKitProviderTestCase: XCTestCase {
                     switch result {
                     case .success(let departures):
                         os_log("success: %@", log: .testsLogger, type: .default, departures)
-                        XCTAssert(!departures.isEmpty, "received empty result")
-                        if let first = departures.first {
-                            XCTAssert(!first.departures.isEmpty, "received empty result")
-                        }
+                        XCTAssert(!departures.flatMap({$0.departures}).isEmpty, "received empty result")
                         
                         XCTAssert(expected == departures)
                     case .invalidStation:
@@ -130,10 +127,7 @@ class TripKitProviderTestCase: XCTestCase {
                     switch result {
                     case .success(let departures):
                         os_log("success: %@", log: .testsLogger, type: .default, departures)
-                        XCTAssert(!departures.isEmpty, "received empty result")
-                        if let first = departures.first {
-                            XCTAssert(!first.departures.isEmpty, "received empty result")
-                        }
+                        XCTAssert(!departures.flatMap({$0.departures}).isEmpty, "received empty result")
                         
                         XCTAssert(expected == departures)
                     case .invalidStation:
@@ -156,10 +150,7 @@ class TripKitProviderTestCase: XCTestCase {
                     switch result {
                     case .success(let departures):
                         os_log("success: %@", log: .testsLogger, type: .default, departures)
-                        XCTAssert(!departures.isEmpty, "received empty result")
-                        if let first = departures.first {
-                            XCTAssert(!first.departures.isEmpty, "received empty result")
-                        }
+                        XCTAssert(!departures.flatMap({$0.departures}).isEmpty, "received empty result")
                         
                         XCTAssert(expected == departures)
                     case .invalidStation:

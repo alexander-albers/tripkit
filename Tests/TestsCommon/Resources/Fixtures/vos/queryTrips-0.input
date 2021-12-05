@@ -1,7 +1,7 @@
 {
   "ver":"1.16",
   "lang":"deu",
-  "id":"eumw3iuu46848i8g",
+  "id":"x5gwumcw66w2wi8x",
   "svcResL":
   [
     {
@@ -94,7 +94,7 @@
               "isMainMast":true
             },
             {
-              "lid":"A=1@O=Osnabrück Neumarkt@X=8047656@Y=52272588@U=80@L=100082@",
+              "lid":"A=1@O=Osnabrück Neumarkt@X=8047620@Y=52272579@U=80@L=100082@",
               "type":"S",
               "name":"Osnabrück Neumarkt",
               "icoX":1,
@@ -102,8 +102,8 @@
               "state":"F",
               "crd":
               {
-                "x":8047656,
-                "y":52272588,
+                "x":8047620,
+                "y":52272579,
                 "type":"WGS84",
                 "layerX":0,
                 "crdSysX":0
@@ -128,7 +128,7 @@
               "mMastLocX":3
             },
             {
-              "lid":"A=1@O=Osnabrück Neumarkt@X=8048824@Y=52272372@U=80@L=9071700@",
+              "lid":"A=1@O=Osnabrück Neumarkt@X=8048510@Y=52272462@U=80@L=9071700@",
               "type":"S",
               "name":"Osnabrück Neumarkt",
               "icoX":1,
@@ -136,8 +136,8 @@
               "state":"F",
               "crd":
               {
-                "x":8048824,
-                "y":52272372,
+                "x":8048510,
+                "y":52272462,
                 "type":"WGS84",
                 "layerX":0,
                 "crdSysX":0
@@ -230,16 +230,16 @@
               "isMainMast":true
             },
             {
-              "lid":"A=1@O=Osnabrück Stresemannplatz@X=8054658@Y=52273406@U=80@L=170009@",
+              "lid":"A=1@O=Osnabrück Dodesheide Waldfriedhof@X=8077940@Y=52301371@U=80@L=170332@",
               "type":"S",
-              "name":"Osnabrück Stresemannplatz",
+              "name":"Osnabrück Dodesheide Waldfriedhof",
               "icoX":1,
-              "extId":"170009",
+              "extId":"170332",
               "state":"F",
               "crd":
               {
-                "x":8054658,
-                "y":52273406,
+                "x":8077940,
+                "y":52301371,
                 "type":"WGS84",
                 "layerX":0,
                 "crdSysX":0
@@ -256,30 +256,268 @@
                   "x":99999999,
                   "y":99999999,
                   "layerX":0,
-                  "crdSysX":3
+                  "crdSysX":4
                 }
               ],
               "pCls":32,
               "entry":true,
-              "mMastLocX":5
+              "mMastLocX":7
+            },
+            {
+              "lid":"A=1@O=Osnabrück Dodesheide Waldfriedhof@X=8077994@Y=52301254@U=80@L=9071558@",
+              "type":"S",
+              "name":"Osnabrück Dodesheide Waldfriedhof",
+              "icoX":1,
+              "extId":"9071558",
+              "state":"F",
+              "crd":
+              {
+                "x":8077994,
+                "y":52301254,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "crdAltL":
+              [
+                {
+                  "x":99999999,
+                  "y":99999999,
+                  "layerX":0,
+                  "crdSysX":0
+                },
+                {
+                  "x":99999999,
+                  "y":99999999,
+                  "layerX":0,
+                  "crdSysX":4
+                }
+              ],
+              "meta":true,
+              "pCls":32,
+              "isMainMast":true
+            },
+            {
+              "lid":"A=1@O=Osnabrück Neumarkt@X=8048959@Y=52272849@U=80@L=150091@",
+              "type":"S",
+              "name":"Osnabrück Neumarkt",
+              "icoX":1,
+              "extId":"150091",
+              "state":"F",
+              "crd":
+              {
+                "x":8048959,
+                "y":52272849,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "crdAltL":
+              [
+                {
+                  "x":99999999,
+                  "y":99999999,
+                  "layerX":0,
+                  "crdSysX":0
+                },
+                {
+                  "x":99999999,
+                  "y":99999999,
+                  "layerX":0,
+                  "crdSysX":2
+                }
+              ],
+              "pCls":32,
+              "entry":true,
+              "mMastLocX":3
+            },
+            {
+              "lid":"A=1@O=Osnabrück Neumarkt@X=8046604@Y=52272264@U=80@L=100081@",
+              "type":"S",
+              "name":"Osnabrück Neumarkt",
+              "icoX":1,
+              "extId":"100081",
+              "state":"F",
+              "crd":
+              {
+                "x":8046604,
+                "y":52272264,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "crdAltL":
+              [
+                {
+                  "x":99999999,
+                  "y":99999999,
+                  "layerX":0,
+                  "crdSysX":0
+                },
+                {
+                  "x":99999999,
+                  "y":99999999,
+                  "layerX":0,
+                  "crdSysX":2
+                }
+              ],
+              "pCls":32,
+              "entry":true,
+              "mMastLocX":3
+            },
+            {
+              "lid":"A=1@O=Osnabrück Gretesch@X=8124073@Y=52280570@U=80@L=170238@",
+              "type":"S",
+              "name":"Osnabrück Gretesch",
+              "icoX":1,
+              "extId":"170238",
+              "state":"F",
+              "crd":
+              {
+                "x":8124073,
+                "y":52280570,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "crdAltL":
+              [
+                {
+                  "x":99999999,
+                  "y":99999999,
+                  "layerX":0,
+                  "crdSysX":0
+                },
+                {
+                  "x":99999999,
+                  "y":99999999,
+                  "layerX":0,
+                  "crdSysX":5
+                }
+              ],
+              "pCls":32,
+              "entry":true,
+              "mMastLocX":11
+            },
+            {
+              "lid":"A=1@O=Osnabrück Gretesch@X=8124487@Y=52280795@U=80@L=9071587@",
+              "type":"S",
+              "name":"Osnabrück Gretesch",
+              "icoX":1,
+              "extId":"9071587",
+              "state":"F",
+              "crd":
+              {
+                "x":8124487,
+                "y":52280795,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "crdAltL":
+              [
+                {
+                  "x":99999999,
+                  "y":99999999,
+                  "layerX":0,
+                  "crdSysX":0
+                },
+                {
+                  "x":99999999,
+                  "y":99999999,
+                  "layerX":0,
+                  "crdSysX":5
+                }
+              ],
+              "meta":true,
+              "pCls":32,
+              "isMainMast":true
+            },
+            {
+              "lid":"A=1@O=Osnabrück Nettebad@X=8052825@Y=52302450@U=80@L=206581@",
+              "type":"S",
+              "name":"Osnabrück Nettebad",
+              "icoX":1,
+              "extId":"206581",
+              "state":"F",
+              "crd":
+              {
+                "x":8052825,
+                "y":52302450,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "crdAltL":
+              [
+                {
+                  "x":99999999,
+                  "y":99999999,
+                  "layerX":0,
+                  "crdSysX":0
+                },
+                {
+                  "x":99999999,
+                  "y":99999999,
+                  "layerX":0,
+                  "crdSysX":6
+                }
+              ],
+              "pCls":32,
+              "entry":true,
+              "mMastLocX":13
+            },
+            {
+              "lid":"A=1@O=Osnabrück Nettebad@X=8052600@Y=52302396@U=80@L=9071698@",
+              "type":"S",
+              "name":"Osnabrück Nettebad",
+              "icoX":1,
+              "extId":"9071698",
+              "state":"F",
+              "crd":
+              {
+                "x":8052600,
+                "y":52302396,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "crdAltL":
+              [
+                {
+                  "x":99999999,
+                  "y":99999999,
+                  "layerX":0,
+                  "crdSysX":0
+                },
+                {
+                  "x":99999999,
+                  "y":99999999,
+                  "layerX":0,
+                  "crdSysX":6
+                }
+              ],
+              "meta":true,
+              "pCls":32,
+              "isMainMast":true
             }
           ],
           "prodL":
           [
             {
-              "pid":"L::5::Bus::B4256719609::de:VBN-VOS:14:1::*",
-              "name":"Bus 14",
-              "nameS":"14",
-              "number":"14",
+              "pid":"L::5::Bus::B4256719609::de:VBN-VOS:15:1::*",
+              "name":"Bus 15",
+              "nameS":"15",
+              "number":"15",
               "icoX":1,
               "cls":32,
               "oprX":0,
               "prodCtx":
               {
-                "name":"Bus 14  ",
-                "num":"16805",
-                "line":"14",
-                "matchId":"2928",
+                "name":"Bus 15  ",
+                "num":"8426",
+                "line":"15",
+                "matchId":"3010",
                 "catOut":"Bus     ",
                 "catOutS":"NB",
                 "catOutL":"Bus",
@@ -289,7 +527,62 @@
               },
               "himIdL":
               [
-"HIM_FREETEXT_15645"
+"HIM_FREETEXT_16133"
+              ]
+            },
+            {
+              "pid":"L::5::Bus::B4256719609::de:VBN-VOS:15:1::*",
+              "name":"Bus 15",
+              "nameS":"15",
+              "number":"15",
+              "icoX":1,
+              "cls":32,
+              "oprX":1,
+              "prodCtx":
+              {
+                "name":"Bus 15  ",
+                "num":"8426",
+                "line":"15",
+                "lineId":"de:VBN-VOS:15:1",
+                "matchId":"3010",
+                "catOut":"Bus     ",
+                "catOutS":"NB",
+                "catOutL":"Bus",
+                "catIn":"NB",
+                "catCode":"5",
+                "admin":"VOSSWO"
+              },
+              "himIdL":
+              [
+"HIM_FREETEXT_16133"
+              ]
+            },
+            {
+              "pid":"L::5::Bus::B4256719609::de:VBN-VOS:16:1::*",
+              "name":"Bus 16",
+              "nameS":"16",
+              "number":"16",
+              "icoX":1,
+              "cls":32,
+              "oprX":1,
+              "prodCtx":
+              {
+                "name":"Bus 16  ",
+                "num":"31301",
+                "line":"16",
+                "lineId":"de:VBN-VOS:16:1",
+                "matchId":"3211",
+                "catOut":"Bus     ",
+                "catOutS":"NB",
+                "catOutL":"Bus",
+                "catIn":"NB",
+                "catCode":"5",
+                "admin":"VOSSWO"
+              },
+              "himIdL":
+              [
+"HIM_FREETEXT_23885",
+"HIM_FREETEXT_25656"
               ]
             },
             {
@@ -303,10 +596,10 @@
               "prodCtx":
               {
                 "name":"Bus 14  ",
-                "num":"16805",
+                "num":"31141",
                 "line":"14",
                 "lineId":"de:VBN-VOS:14:1",
-                "matchId":"2928",
+                "matchId":"2820",
                 "catOut":"Bus     ",
                 "catOutS":"NB",
                 "catOutL":"Bus",
@@ -320,83 +613,31 @@
               ]
             },
             {
-              "pid":"L::5::Bus::B3491130686::VOSBEC_10::*",
-              "name":"Bus 10",
-              "nameS":"10",
-              "number":"10",
+              "pid":"L::5::Bus::B4256719609::de:VBN-VOS:17:1::*",
+              "name":"Bus 17",
+              "nameS":"17",
+              "number":"17",
               "icoX":1,
               "cls":32,
-              "oprX":2,
+              "oprX":1,
               "prodCtx":
               {
-                "name":"Bus 10  ",
-                "num":"529",
-                "line":"10",
-                "matchId":"9",
+                "name":"Bus 17  ",
+                "num":"31374",
+                "line":"17",
+                "lineId":"de:VBN-VOS:17:1",
+                "matchId":"3615",
                 "catOut":"Bus     ",
-                "catOutS":"Bus",
+                "catOutS":"NB",
                 "catOutL":"Bus",
-                "catIn":"Bus",
-                "catCode":"5",
-                "admin":"VOSBEC"
-              },
-              "himIdL":
-              [
-"HIM_FREETEXT_16133"
-              ]
-            },
-            {
-              "pid":"L::5::Bus::B3491130686::VOSBEC_10::*",
-              "name":"Bus 10",
-              "nameS":"10",
-              "number":"10",
-              "icoX":1,
-              "cls":32,
-              "oprX":3,
-              "prodCtx":
-              {
-                "name":"Bus 10  ",
-                "num":"529",
-                "line":"10",
-                "lineId":"VOSBEC_10",
-                "matchId":"9",
-                "catOut":"Bus     ",
-                "catOutS":"Bus",
-                "catOutL":"Bus",
-                "catIn":"Bus",
-                "catCode":"5",
-                "admin":"VOSBEC"
-              },
-              "himIdL":
-              [
-"HIM_FREETEXT_16133"
-              ]
-            },
-            {
-              "pid":"L::5::Bus::B4256719609::de:VBN-VOS:M2:::*",
-              "name":"Bus M2",
-              "nameS":"M2",
-              "number":"M2",
-              "icoX":1,
-              "cls":32,
-              "oprX":0,
-              "prodCtx":
-              {
-                "name":"Bus M2  ",
-                "num":"17880",
-                "line":"M2",
-                "matchId":"729",
-                "catOut":"Bus     ",
-                "catOutS":"GB_",
-                "catOutL":"Gelenkbus",
-                "catIn":"GB_",
+                "catIn":"NB",
                 "catCode":"5",
                 "admin":"VOSSWO"
               },
               "himIdL":
               [
-"HIM_FREETEXT_16133",
-"HIM_FREETEXT_23566"
+"HIM_FREETEXT_23734",
+"HIM_FREETEXT_25656"
               ]
             },
             {
@@ -410,10 +651,10 @@
               "prodCtx":
               {
                 "name":"Bus M2  ",
-                "num":"17880",
+                "num":"32539",
                 "line":"M2",
                 "lineId":"de:VBN-VOS:M2:",
-                "matchId":"729",
+                "matchId":"831",
                 "catOut":"Bus     ",
                 "catOutS":"GB_",
                 "catOutL":"Gelenkbus",
@@ -424,29 +665,30 @@
               "himIdL":
               [
 "HIM_FREETEXT_16133",
-"HIM_FREETEXT_23566"
+"HIM_FREETEXT_25656"
               ]
             },
             {
-              "pid":"L::5::Bus::B1477578485::de:NWL:05566|Bus|R15:RVM::*",
-              "name":"Bus R15",
-              "nameS":"R15",
-              "number":"R15",
+              "pid":"L::5::Bus::B4256719609::de:VBN-VOS:15:1::*",
+              "name":"Bus 15",
+              "nameS":"15",
+              "number":"15",
               "icoX":1,
               "cls":32,
-              "oprX":4,
+              "oprX":1,
               "prodCtx":
               {
-                "name":"Bus R15 ",
-                "num":"607",
-                "line":"R15",
-                "matchId":"R15",
+                "name":"Bus 15  ",
+                "num":"31211",
+                "line":"15",
+                "lineId":"de:VBN-VOS:15:1",
+                "matchId":"3013",
                 "catOut":"Bus     ",
                 "catOutS":"NB",
                 "catOutL":"Bus",
                 "catIn":"NB",
                 "catCode":"5",
-                "admin":"VOS_ST"
+                "admin":"VOSSWO"
               },
               "himIdL":
               [
@@ -454,26 +696,162 @@
               ]
             },
             {
-              "pid":"L::5::Bus::B1477578485::de:NWL:05566|Bus|R15:RVM::*",
-              "name":"Bus R15",
-              "nameS":"R15",
-              "number":"R15",
+              "pid":"L::5::Bus::B4256719609::de:VBN-VOS:16:1::*",
+              "name":"Bus 16",
+              "nameS":"16",
+              "number":"16",
               "icoX":1,
               "cls":32,
-              "oprX":5,
+              "oprX":0,
               "prodCtx":
               {
-                "name":"Bus R15 ",
-                "num":"607",
-                "line":"R15",
-                "lineId":"de:NWL:05566|Bus|R15:RVM",
-                "matchId":"R15",
+                "name":"Bus 16  ",
+                "num":"31301",
+                "line":"16",
+                "matchId":"3211",
                 "catOut":"Bus     ",
                 "catOutS":"NB",
                 "catOutL":"Bus",
                 "catIn":"NB",
                 "catCode":"5",
-                "admin":"VOS_ST"
+                "admin":"VOSSWO"
+              },
+              "himIdL":
+              [
+"HIM_FREETEXT_23885",
+"HIM_FREETEXT_25656"
+              ]
+            },
+            {
+              "pid":"L::5::Bus::B4256719609::de:VBN-VOS:16:1::*",
+              "name":"Bus 16",
+              "nameS":"16",
+              "number":"16",
+              "icoX":1,
+              "cls":32,
+              "oprX":1,
+              "prodCtx":
+              {
+                "name":"Bus 16  ",
+                "num":"31300",
+                "line":"16",
+                "lineId":"de:VBN-VOS:16:1",
+                "matchId":"3215",
+                "catOut":"Bus     ",
+                "catOutS":"GB_",
+                "catOutL":"Gelenkbus",
+                "catIn":"GB_",
+                "catCode":"5",
+                "admin":"VOSSWO"
+              },
+              "himIdL":
+              [
+"HIM_FREETEXT_23885",
+"HIM_FREETEXT_25656"
+              ]
+            },
+            {
+              "pid":"L::5::Bus::B4256719609::de:VBN-VOS:M2:::*",
+              "name":"Bus M2",
+              "nameS":"M2",
+              "number":"M2",
+              "icoX":1,
+              "cls":32,
+              "oprX":0,
+              "prodCtx":
+              {
+                "name":"Bus M2  ",
+                "num":"32540",
+                "line":"M2",
+                "matchId":"829",
+                "catOut":"Bus     ",
+                "catOutS":"GB_",
+                "catOutL":"Gelenkbus",
+                "catIn":"GB_",
+                "catCode":"5",
+                "admin":"VOSSWO"
+              },
+              "himIdL":
+              [
+"HIM_FREETEXT_16133",
+"HIM_FREETEXT_25656"
+              ]
+            },
+            {
+              "pid":"L::5::Bus::B4256719609::de:VBN-VOS:M2:::*",
+              "name":"Bus M2",
+              "nameS":"M2",
+              "number":"M2",
+              "icoX":1,
+              "cls":32,
+              "oprX":1,
+              "prodCtx":
+              {
+                "name":"Bus M2  ",
+                "num":"32540",
+                "line":"M2",
+                "lineId":"de:VBN-VOS:M2:",
+                "matchId":"829",
+                "catOut":"Bus     ",
+                "catOutS":"GB_",
+                "catOutL":"Gelenkbus",
+                "catIn":"GB_",
+                "catCode":"5",
+                "admin":"VOSSWO"
+              },
+              "himIdL":
+              [
+"HIM_FREETEXT_16133",
+"HIM_FREETEXT_25656"
+              ]
+            },
+            {
+              "pid":"L::5::Bus::B4256719609::de:VBN-VOS:14:1::*",
+              "name":"Bus 14",
+              "nameS":"14",
+              "number":"14",
+              "icoX":1,
+              "cls":32,
+              "oprX":0,
+              "prodCtx":
+              {
+                "name":"Bus 14  ",
+                "num":"31141",
+                "line":"14",
+                "matchId":"2820",
+                "catOut":"Bus     ",
+                "catOutS":"NB",
+                "catOutL":"Bus",
+                "catIn":"NB",
+                "catCode":"5",
+                "admin":"VOSSWO"
+              },
+              "himIdL":
+              [
+"HIM_FREETEXT_15645"
+              ]
+            },
+            {
+              "pid":"L::5::Bus::B4256719609::de:VBN-VOS:10:1::*",
+              "name":"Bus 10",
+              "nameS":"10",
+              "number":"10",
+              "icoX":1,
+              "cls":32,
+              "oprX":1,
+              "prodCtx":
+              {
+                "name":"Bus 10  ",
+                "num":"31116",
+                "line":"10",
+                "lineId":"de:VBN-VOS:10:1",
+                "matchId":"2646",
+                "catOut":"Bus     ",
+                "catOutS":"NB",
+                "catOutL":"Bus",
+                "catIn":"NB",
+                "catCode":"5",
+                "admin":"VOSSWO"
               },
               "himIdL":
               [
@@ -487,7 +865,7 @@
               "delta":true,
               "dim":2,
               "type":"WGS84",
-              "crdEncYX":"eo`~Hwcep@??Gi@UIc@dAOlCr@T{BbX??_C`YhFxEn@nDAfBPlA",
+              "crdEncYX":"eo`~Hwcep@??Gi@UIc@dAOlCr@T{BbX??_C`YhFxEn@nDAfBRtA",
               "crdEncS":"NNKNNNNNNNNLKN",
               "crdEncF":"??????????????",
               "ppLocRefL":
@@ -510,7 +888,53 @@
               "delta":true,
               "dim":2,
               "type":"WGS84",
-              "crdEncYX":"eo`~Hwcep@??Gi@UIc@dAOlCr@T{BbX??_C`YhFxEn@nDAfBPlA",
+              "crdEncYX":"eo`~Hwcep@??Gi@UIc@dAOlCr@T{BbX??_C`YhFxEZxAOF??",
+              "crdEncS":"NNKNNNNNNNNLNN",
+              "crdEncF":"??????????????",
+              "ppLocRefL":
+              [
+                {
+                  "ppIdx":0,
+                  "locX":0
+                },
+                {
+                  "ppIdx":7,
+                  "locX":4
+                },
+                {
+                  "ppIdx":13,
+                  "locX":8
+                }
+              ]
+            },
+            {
+              "delta":true,
+              "dim":2,
+              "type":"WGS84",
+              "crdEncYX":"eo`~Hwcep@??Gi@UIc@dAOlCr@T{BbX??_C`YhFxEn@nDAfBpA`H",
+              "crdEncS":"NNKNNNNNNNNLLN",
+              "crdEncF":"??????????????",
+              "ppLocRefL":
+              [
+                {
+                  "ppIdx":0,
+                  "locX":0
+                },
+                {
+                  "ppIdx":7,
+                  "locX":4
+                },
+                {
+                  "ppIdx":13,
+                  "locX":9
+                }
+              ]
+            },
+            {
+              "delta":true,
+              "dim":2,
+              "type":"WGS84",
+              "crdEncYX":"eo`~Hwcep@??Gi@UIc@dAOlCr@T{BbX??_C`YhFxEn@nDAfBRtA",
               "crdEncS":"NNKNNNNNNNNLKN",
               "crdEncF":"??????????????",
               "ppLocRefL":
@@ -525,52 +949,6 @@
                 },
                 {
                   "ppIdx":13,
-                  "locX":2
-                }
-              ]
-            },
-            {
-              "delta":true,
-              "dim":2,
-              "type":"WGS84",
-              "crdEncYX":"eo`~Hwcep@??Gi@UIc@dAOlCr@T{BbX??_C`YhFxEn@nDAfBPlA",
-              "crdEncS":"NNKNNNNNNNNLKN",
-              "crdEncF":"??????????????",
-              "ppLocRefL":
-              [
-                {
-                  "ppIdx":0,
-                  "locX":0
-                },
-                {
-                  "ppIdx":7,
-                  "locX":4
-                },
-                {
-                  "ppIdx":13,
-                  "locX":2
-                }
-              ]
-            },
-            {
-              "delta":true,
-              "dim":2,
-              "type":"WGS84",
-              "crdEncYX":"eo`~Hwcep@??sCb^??eCvXhFxEn@nDAfBPlA",
-              "crdEncS":"NNNNNNLKN",
-              "crdEncF":"?????????",
-              "ppLocRefL":
-              [
-                {
-                  "ppIdx":0,
-                  "locX":0
-                },
-                {
-                  "ppIdx":2,
-                  "locX":6
-                },
-                {
-                  "ppIdx":8,
                   "locX":2
                 }
               ]
@@ -610,6 +988,24 @@
               "index":1,
               "type":"WGS84",
               "dim":2
+            },
+            {
+              "id":"Osna_104",
+              "index":1,
+              "type":"WGS84",
+              "dim":2
+            },
+            {
+              "id":"Osna_132",
+              "index":1,
+              "type":"WGS84",
+              "dim":2
+            },
+            {
+              "id":"Osna_243",
+              "index":1,
+              "type":"WGS84",
+              "dim":2
             }
           ],
           "opL":
@@ -622,24 +1018,6 @@
               "name":"Stadtwerke Osnabrück AG - Verkehrsbetriebe",
               "icoX":3,
               "id":"81"
-            },
-            {
-              "name":"Reisebüro Beckermann",
-              "icoX":6
-            },
-            {
-              "name":"Reisebüro Beckermann",
-              "icoX":6,
-              "id":"2305"
-            },
-            {
-              "name":"Regionalverkehr Münsterl",
-              "icoX":9
-            },
-            {
-              "name":"Regionalverkehr Münsterl",
-              "icoX":9,
-              "id":"1945"
             }
           ],
           "remL":
@@ -652,10 +1030,10 @@
             },
             {
               "type":"A",
-              "code":"kp",
+              "code":"ak",
               "prio":899,
-              "icoX":7,
-              "txtN":"Linie der Firma Reisebüro Beckermann, Info: 05461 93390"
+              "icoX":4,
+              "txtN":"Linie der Stadtwerke Osnabrück AG, Info: 0541 2002-2211"
             },
             {
               "type":"R",
@@ -668,61 +1046,28 @@
               "code":"text.realtime.connection.alternative.detail",
               "icoX":8,
               "txtN":"Fahrtmöglichkeit gemäß aktueller Verkehrslage. Bitte beachten Sie die aktuellen Echtzeitinformationen."
-            },
-            {
-              "type":"A",
-              "code":"al",
-              "prio":899,
-              "icoX":7,
-              "txtN":"Linie der Stadtwerke Osnabrück AG, Info: 0541 2002-2211"
-            },
-            {
-              "type":"A",
-              "code":"FK",
-              "prio":260,
-              "icoX":10,
-              "txtN":"Fahrradmitnahme begrenzt möglich (Osnabrück Hauptbahnhof/ZOB)"
-            },
-            {
-              "type":"A",
-              "code":"FK",
-              "prio":260,
-              "icoX":10,
-              "txtN":"Fahrradmitnahme begrenzt möglich (Osnabrück Neumarkt)"
-            },
-            {
-              "type":"A",
-              "code":"D_",
-              "prio":350,
-              "icoX":7,
-              "txtN":"Fahrkartenautomat (info) 1"
-            },
-            {
-              "type":"A",
-              "code":"mp",
-              "prio":350,
-              "icoX":7,
-              "txtN":"Anzahl Stufen im Fahrzeug (routing) 0"
             }
           ],
           "himL":
           [
             {
-              "hid":"20944",
+              "hid":"25662",
               "act":true,
               "pub":"",
               "head":"Corona-Präventionsmaßnahme",
               "lead":"",
-              "text":"Tragen Sie in Bussen und Bahnen, an Haltestellen und Bahnhöfen medizinische Masken oder FFP2-Masken. Rücksicht nehmen - gut für alle!",
+              "text":"3G-Regel im ÖPNV (geimpft, genesen oder getestet). Bitte beachten Sie die Maskenpflicht!",
               "tckr":"",
-              "icoX":4,
+              "icoX":5,
               "prio":1,
+              "fLocX":6,
+              "tLocX":6,
               "prod":65535,
-              "lModDate":"20210614",
-              "lModTime":"102418",
-              "sDate":"20210424",
+              "lModDate":"20211123",
+              "lModTime":"171447",
+              "sDate":"20211124",
               "sTime":"000000",
-              "eDate":"20211211",
+              "eDate":"20221231",
               "eTime":"235900",
               "comp":"VBN",
               "cat":2,
@@ -730,9 +1075,105 @@
               [
                 {
                   "name":"TIMETABLE",
-                  "fDate":"20210423",
-                  "fTime":"153800",
-                  "tDate":"20211211",
+                  "fDate":"20211123",
+                  "fTime":"171300",
+                  "tDate":"20221231",
+                  "tTime":"235900"
+                }
+              ]
+            },
+            {
+              "hid":"25662",
+              "act":true,
+              "pub":"",
+              "head":"Corona-Präventionsmaßnahme",
+              "lead":"",
+              "text":"3G-Regel im ÖPNV (geimpft, genesen oder getestet). Bitte beachten Sie die Maskenpflicht!",
+              "tckr":"",
+              "icoX":5,
+              "prio":1,
+              "fLocX":10,
+              "tLocX":10,
+              "prod":65535,
+              "lModDate":"20211123",
+              "lModTime":"171447",
+              "sDate":"20211124",
+              "sTime":"000000",
+              "eDate":"20221231",
+              "eTime":"235900",
+              "comp":"VBN",
+              "cat":2,
+              "pubChL":
+              [
+                {
+                  "name":"TIMETABLE",
+                  "fDate":"20211123",
+                  "fTime":"171300",
+                  "tDate":"20221231",
+                  "tTime":"235900"
+                }
+              ]
+            },
+            {
+              "hid":"25662",
+              "act":true,
+              "pub":"",
+              "head":"Corona-Präventionsmaßnahme",
+              "lead":"",
+              "text":"3G-Regel im ÖPNV (geimpft, genesen oder getestet). Bitte beachten Sie die Maskenpflicht!",
+              "tckr":"",
+              "icoX":5,
+              "prio":1,
+              "fLocX":0,
+              "tLocX":0,
+              "prod":65535,
+              "lModDate":"20211123",
+              "lModTime":"171447",
+              "sDate":"20211124",
+              "sTime":"000000",
+              "eDate":"20221231",
+              "eTime":"235900",
+              "comp":"VBN",
+              "cat":2,
+              "pubChL":
+              [
+                {
+                  "name":"TIMETABLE",
+                  "fDate":"20211123",
+                  "fTime":"171300",
+                  "tDate":"20221231",
+                  "tTime":"235900"
+                }
+              ]
+            },
+            {
+              "hid":"25662",
+              "act":true,
+              "pub":"",
+              "head":"Corona-Präventionsmaßnahme",
+              "lead":"",
+              "text":"3G-Regel im ÖPNV (geimpft, genesen oder getestet). Bitte beachten Sie die Maskenpflicht!",
+              "tckr":"",
+              "icoX":5,
+              "prio":1,
+              "fLocX":12,
+              "tLocX":12,
+              "prod":65535,
+              "lModDate":"20211123",
+              "lModTime":"171447",
+              "sDate":"20211124",
+              "sTime":"000000",
+              "eDate":"20221231",
+              "eTime":"235900",
+              "comp":"VBN",
+              "cat":2,
+              "pubChL":
+              [
+                {
+                  "name":"TIMETABLE",
+                  "fDate":"20211123",
+                  "fTime":"171300",
+                  "tDate":"20221231",
                   "tTime":"235900"
                 }
               ]
@@ -782,27 +1223,19 @@
               "txt":"Stadtwerke Osnabrück AG - Verkehrsbetriebe"
             },
             {
+              "res":"INFO"
+            },
+            {
               "res":"HIM2"
             },
             {
               "res":"tariff_vos"
             },
             {
-              "res":"VOS",
-              "txt":"Reisebüro Beckermann"
-            },
-            {
-              "res":"INFO"
+              "res":"rt_ont"
             },
             {
               "res":"rt_other"
-            },
-            {
-              "res":"VOS",
-              "txt":"Regionalverkehr Münsterl"
-            },
-            {
-              "res":"attr_bike"
             }
           ]
         },
@@ -810,35 +1243,36 @@
         [
           {
             "cid":"C-0",
-            "date":"20210906",
-            "dur":"000500",
+            "date":"20211205",
+            "dur":"000400",
             "chg":0,
             "sDays":
             {
-              "sDaysR":"Mo - Fr",
-              "sDaysB":"00000000000000019F3E7CF9F3E7CF9F3E7CF9F3E0"
+              "sDaysR":"täglich",
+              "sDaysI":"nicht 24. Dez",
+              "sDaysB":"FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8"
             },
             "dep":
             {
               "locX":0,
-              "idx":11,
+              "idx":15,
               "dProdX":0,
               "dPlatfS":"1",
               "dInR":true,
-              "dTimeS":"144600",
-              "dTimeR":"144900",
+              "dTimeS":"192600",
+              "dTimeR":"192800",
               "dProgType":"PROGNOSED",
               "type":"N"
             },
             "arr":
             {
               "locX":2,
-              "idx":13,
+              "idx":17,
               "aProdX":0,
               "aPlatfS":"A2",
               "aOutR":true,
-              "aTimeS":"145100",
-              "aTimeR":"145400",
+              "aTimeS":"193000",
+              "aTimeR":"193300",
               "aProgType":"PROGNOSED",
               "type":"N"
             },
@@ -850,32 +1284,32 @@
                 "dep":
                 {
                   "locX":0,
-                  "idx":11,
+                  "idx":15,
                   "dProdX":0,
                   "dPlatfS":"1",
                   "dInR":true,
-                  "dTimeS":"144600",
-                  "dTimeR":"144900",
+                  "dTimeS":"192600",
+                  "dTimeR":"192800",
                   "dProgType":"PROGNOSED",
                   "type":"N"
                 },
                 "arr":
                 {
                   "locX":2,
-                  "idx":13,
+                  "idx":17,
                   "aProdX":0,
                   "aPlatfS":"A2",
                   "aOutR":true,
-                  "aTimeS":"145100",
-                  "aTimeR":"145400",
+                  "aTimeS":"193000",
+                  "aTimeR":"193300",
                   "aProgType":"PROGNOSED",
                   "type":"N"
                 },
                 "jny":
                 {
-                  "jid":"1|107421|4|80|6092021",
+                  "jid":"1|372907|0|80|5122021",
                   "prodX":1,
-                  "dirTxt":"Berningshöhe",
+                  "dirTxt":"Ibbenbüren - 15 IKEA",
                   "dirFlg":"2",
                   "status":"P",
                   "isRchbl":true,
@@ -883,38 +1317,38 @@
                   [
                     {
                       "locX":0,
-                      "idx":11,
+                      "idx":15,
                       "dProdX":1,
                       "dInR":true,
-                      "dTimeS":"144600",
-                      "dTimeR":"144900",
+                      "dTimeS":"192600",
+                      "dTimeR":"192800",
                       "dProgType":"PROGNOSED",
-                      "dDirTxt":"Berningshöhe",
+                      "dDirTxt":"Ibbenbüren - 15 IKEA",
                       "dDirFlg":"2",
                       "type":"N"
                     },
                     {
                       "locX":4,
-                      "idx":12,
+                      "idx":16,
                       "aProdX":1,
                       "aOutR":true,
-                      "aTimeS":"144800",
-                      "aTimeR":"145100",
+                      "aTimeS":"192800",
+                      "aTimeR":"192900",
                       "aProgType":"PROGNOSED",
                       "dProdX":1,
                       "dInR":true,
-                      "dTimeS":"144800",
-                      "dTimeR":"145100",
+                      "dTimeS":"192800",
+                      "dTimeR":"192900",
                       "dProgType":"PROGNOSED",
                       "type":"N"
                     },
                     {
                       "locX":2,
-                      "idx":13,
+                      "idx":17,
                       "aProdX":1,
                       "aOutR":true,
-                      "aTimeS":"145100",
-                      "aTimeR":"145400",
+                      "aTimeS":"193000",
+                      "aTimeR":"193300",
                       "aProgType":"PROGNOSED",
                       "type":"N"
                     }
@@ -941,20 +1375,189 @@
                   ],
                   "pos":
                   {
-                    "x":8050505,
-                    "y":52276291,
+                    "x":8052735,
+                    "y":52275186,
                     "layerX":0,
                     "crdSysX":0
                   },
                   "freq":
                   {
-                    "minC":1,
-                    "maxC":5,
-                    "numC":62
+                    "minC":2,
+                    "maxC":12,
+                    "numC":20,
+                    "jnyL":
+                    [
+                      {
+                        "jid":"1|155757|0|80|5122021",
+                        "prodX":2,
+                        "dirTxt":"Neumarkt",
+                        "dirFlg":"2",
+                        "stopL":
+                        [
+                          {
+                            "locX":0,
+                            "idx":17,
+                            "dProdX":2,
+                            "dTimeS":"193400",
+                            "dDirTxt":"Neumarkt",
+                            "dDirFlg":"2",
+                            "type":"N"
+                          },
+                          {
+                            "locX":8,
+                            "idx":19,
+                            "aProdX":2,
+                            "aTimeS":"193800",
+                            "type":"N"
+                          }
+                        ],
+                        "pos":
+                        {
+                          "x":8086660,
+                          "y":52276705,
+                          "layerX":0,
+                          "crdSysX":0
+                        },
+                        "ctxRecon":"T$A=1@O=Osnabrück Hauptbahnhof/ZOB@L=100071@a=128@$A=1@O=Osnabrück Neumarkt@L=150091@a=128@$202112051934$202112051938$Bus 16  $$1$$$$$$",
+                        "subscr":"F"
+                      },
+                      {
+                        "jid":"1|156288|0|80|5122021",
+                        "prodX":3,
+                        "dirTxt":"Berningshöhe",
+                        "dirFlg":"2",
+                        "stopL":
+                        [
+                          {
+                            "locX":0,
+                            "idx":11,
+                            "dProdX":3,
+                            "dTimeS":"194100",
+                            "dDirTxt":"Berningshöhe",
+                            "dDirFlg":"2",
+                            "type":"N"
+                          },
+                          {
+                            "locX":2,
+                            "idx":13,
+                            "aProdX":3,
+                            "aTimeS":"194500",
+                            "type":"N"
+                          }
+                        ],
+                        "pos":
+                        {
+                          "x":8052303,
+                          "y":52302279,
+                          "layerX":0,
+                          "crdSysX":0
+                        },
+                        "ctxRecon":"T$A=1@O=Osnabrück Hauptbahnhof/ZOB@L=100071@a=128@$A=1@O=Osnabrück Neumarkt@L=100082@a=128@$202112051941$202112051945$Bus 14  $$1$$$$$$",
+                        "subscr":"F"
+                      },
+                      {
+                        "jid":"1|154656|6|80|5122021",
+                        "prodX":4,
+                        "dirTxt":"Hellern Nord ü. Eversburg",
+                        "dirFlg":"2",
+                        "stopL":
+                        [
+                          {
+                            "locX":0,
+                            "idx":17,
+                            "dProdX":4,
+                            "dTimeS":"194400",
+                            "dDirTxt":"Hellern Nord ü. Eversburg",
+                            "dDirFlg":"2",
+                            "type":"N"
+                          },
+                          {
+                            "locX":8,
+                            "idx":19,
+                            "aProdX":4,
+                            "aTimeS":"194800",
+                            "type":"N"
+                          }
+                        ],
+                        "pos":
+                        {
+                          "x":8107839,
+                          "y":52248731,
+                          "layerX":0,
+                          "crdSysX":0
+                        },
+                        "ctxRecon":"T$A=1@O=Osnabrück Hauptbahnhof/ZOB@L=100071@a=128@$A=1@O=Osnabrück Neumarkt@L=150091@a=128@$202112051944$202112051948$Bus 17  $$3$$$$$$",
+                        "subscr":"F"
+                      },
+                      {
+                        "jid":"1|376359|0|80|5122021",
+                        "prodX":5,
+                        "dirTxt":"Landwehrviertel",
+                        "dirFlg":"2",
+                        "stopL":
+                        [
+                          {
+                            "locX":0,
+                            "idx":0,
+                            "dProdX":5,
+                            "dTimeS":"195400",
+                            "dDirTxt":"Landwehrviertel",
+                            "dDirFlg":"2",
+                            "type":"N"
+                          },
+                          {
+                            "locX":9,
+                            "idx":2,
+                            "aProdX":5,
+                            "aTimeS":"195800",
+                            "type":"N"
+                          }
+                        ],
+                        "ctxRecon":"T$A=1@O=Osnabrück Hauptbahnhof/ZOB@L=100071@a=128@$A=1@O=Osnabrück Neumarkt@L=100081@a=128@$202112051954$202112051958$Bus M2  $$3$$$$$$",
+                        "subscr":"F"
+                      },
+                      {
+                        "jid":"1|155900|6|80|5122021",
+                        "prodX":6,
+                        "dirTxt":"Heger Friedhof",
+                        "dirFlg":"2",
+                        "stopL":
+                        [
+                          {
+                            "locX":0,
+                            "idx":15,
+                            "dProdX":6,
+                            "dTimeS":"195600",
+                            "dDirTxt":"Heger Friedhof",
+                            "dDirFlg":"2",
+                            "type":"N"
+                          },
+                          {
+                            "locX":2,
+                            "idx":17,
+                            "aProdX":6,
+                            "aTimeS":"200000",
+                            "type":"N"
+                          }
+                        ],
+                        "ctxRecon":"T$A=1@O=Osnabrück Hauptbahnhof/ZOB@L=100071@a=128@$A=1@O=Osnabrück Neumarkt@L=100082@a=128@$202112051956$202112052000$Bus 15  $$1$$$$$$",
+                        "subscr":"F"
+                      }
+                    ]
                   },
-                  "ctxRecon":"T$A=1@O=Osnabrück Hauptbahnhof/ZOB@L=100071@a=128@$A=1@O=Osnabrück Neumarkt@L=100082@a=128@$202109061446$202109061451$Bus 14  $$1$$$$",
+                  "ctxRecon":"T$A=1@O=Osnabrück Hauptbahnhof/ZOB@L=100071@a=128@$A=1@O=Osnabrück Neumarkt@L=100082@a=128@$202112051926$202112051930$Bus 15  $$1$$$$$$",
                   "msgL":
                   [
+                    {
+                      "type":"REM",
+                      "remX":1,
+                      "fLocX":0,
+                      "tLocX":2,
+                      "tagL":
+                      [
+                        "RES_JNY_DTL"
+                      ]
+                    },
                     {
                       "type":"HIM",
                       "himX":0,
@@ -969,10 +1572,10 @@
                 }
               }
             ],
-            "ctxRecon":"¶HKI¶T$A=1@O=Osnabrück Hauptbahnhof/ZOB@L=100071@a=128@$A=1@O=Osnabrück Neumarkt@L=100082@a=128@$202109061446$202109061451$Bus 14  $$1$$$$",
+            "ctxRecon":"¶HKI¶T$A=1@O=Osnabrück Hauptbahnhof/ZOB@L=100071@a=128@$A=1@O=Osnabrück Neumarkt@L=100082@a=128@$202112051926$202112051930$Bus 15  $$1$$$$$$",
             "freq":
             {
-              "minC":1
+              "minC":2
             },
             "trfRes":
             {
@@ -1085,6 +1688,17 @@
                       "cur":"EUR"
                     },
                     {
+                      "name":"8-FahrtenTicket",
+                      "desc":"nur in der YANiQ-App",
+                      "prc":1790,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"8-FahrtenTicket",
+                      "prc":1840,
+                      "cur":"EUR"
+                    },
+                    {
                       "name":"12-FahrtenTicket",
                       "prc":2640,
                       "cur":"EUR"
@@ -1116,7 +1730,7 @@
                     },
                     {
                       "name":"JahresTicket Schüler",
-                      "prc":41300,
+                      "prc":43365,
                       "cur":"EUR"
                     },
                     {
@@ -1149,7 +1763,7 @@
                   "tSecRefX":0
                 }
               ],
-              "shpCtx":"{\"common\":{\"FEL\":[{\"XV\":[\"0\",\"0\"]},{\"ID\":[\"100\"],\"ON\":[\"Osnabrück/Belm\"]},{\"ID\":[\"100\"],\"ON\":[\"Osnabrück/Belm\"]},{\"ID\":[\"100\"],\"ON\":[\"Osnabrück/Belm\"]},{\"ID\":[\"-1\",\"10000\"]},{\"ID\":[\"1\"],\"ON\":[\"VOS 0\"]},{\"ID\":[\"70001\"],\"ON\":[\"Osnabrück Hauptbahnhof/ZOB\"]},{\"ID\":[\"70002\"],\"ON\":[\"Osnabrück Neumarkt\"]},{\"ID\":[\"0\"]},{\"ID\":[\"10001\",\"6423\",\"1\"],\"ON\":[\"KurzstreckenTicket Digital\"],\"PN\":[\"KurzstreckenTicket\"]},{\"ID\":[\"10002\",\"6423\",\"2\"],\"ON\":[\"EinzelTicket Digital\"],\"PN\":[\"EinzelTicket\"]},{\"ID\":[\"10004\",\"6423\",\"5\"],\"ON\":[\"TagesTicket Digital\"],\"PN\":[\"TagesTicket\"]},{\"ID\":[\"10005\",\"6423\",\"6\"],\"ON\":[\"TagesTicket Familie Digital\"],\"PN\":[\"TagesTicket Familie\"]},{\"ID\":[\"10006\",\"6423\",\"7\"],\"ON\":[\"WochenTicket Digital\"],\"PN\":[\"WochenTicket\"]},{\"ID\":[\"10007\",\"6423\",\"8\"],\"ON\":[\"MonatsTicket Digital\"],\"PN\":[\"MonatsTicket\"]},{\"ID\":[\"10008\",\"6423\",\"16\"],\"ON\":[\"WochenTicket Schüler Digital\"],\"PN\":[\"WochenTicket Schüler\"]},{\"ID\":[\"10009\",\"6423\",\"18\"],\"ON\":[\"MonatsTicket Schüler Digital\"],\"PN\":[\"MonatsTicket Schüler\"]},{\"ID\":[\"KurzstreckenTicket Digital\"]},{\"ID\":[\"EinzelTicket Digital\"]},{\"ID\":[\"TagesTicket Digital\"]},{\"ID\":[\"TagesTicket Familie Digital\"]},{\"ID\":[\"WochenTicket Digital\"]},{\"ID\":[\"MonatsTicket Digital\"]},{\"ID\":[\"WochenTicket Schüler Digital\"]},{\"ID\":[\"MonatsTicket Schüler Digital\"]}]},\"BOG\":{\"BOGL\":[{\"P\":\"~0-\",\"BOL\":[{\"P\":\"~0-.0-\",\"VT\":\"SWO-1\",\"FS\":\"\",\"DV\":8,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":150,\"VR\":700},\"PRD\":17,\"FP\":{\"PS\":0,\"NV\":[{\"N\":\"Infotext1\",\"V\":\"Das KurzstreckenTicket ermöglicht es Ihnen, für kleines Geld inklusive Ihrer Einstiegshaltestelle insgesamt fünf Haltestellen im Stadtverkehr Osnabrück/Belm (Preisstufe 0) zu fahren.<br />Erreichen Sie Ihr Ziel nicht auf direktem Weg, dürfen Sie in die nächstmögliche Anschlussfahrt umsteigen, sofern diese noch in den vier Haltestellen inbegriffen ist. <br /><br /><strong>Nicht gültig zur Rückfahrt. Fahrtunterbrechungen sind nicht erlaubt.</strong>\"},{\"N\":\"PersFlags\",\"V\":\"{\\\"MainTraveller\\\":[\\\"FIRSTNAME\\\",\\\"LASTNAME\\\",\\\"BIRTHDATE\\\"]}\"}]},\"LVL\":9,\"SV\":{\"OL\":1,\"OS\":6,\"DL\":2,\"DS\":7,\"RI\":4},\"TV\":{\"BD\":\"20210906\",\"BT\":\"144600\",\"VD\":30,\"VC\":\"m\"}},{\"P\":\"~0-.1-\",\"VT\":\"SWO-1\",\"FS\":\"\",\"DV\":8,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":270,\"VR\":700},\"PRD\":18,\"FP\":{\"PS\":0,\"NV\":[{\"N\":\"Infotext1\",\"V\":\"Das EinzelTicket berechtigt zu einer Fahrt. Erreichen Sie Ihr Ziel nicht auf direktem Weg, dürfen Sie in die nächstmögliche Anschlussfahrt umsteigen. Nicht gültig zur Rückfahrt. Fahrtunterbrechungen sind nicht erlaubt.\"},{\"N\":\"PersFlags\",\"V\":\"{\\\"MainTraveller\\\":[\\\"FIRSTNAME\\\",\\\"LASTNAME\\\",\\\"BIRTHDATE\\\"]}\"}]},\"LVL\":10,\"SV\":{\"OL\":1,\"OS\":6,\"DL\":2,\"DS\":7,\"RI\":4},\"TV\":{\"BD\":\"20210906\",\"BT\":\"144600\",\"VD\":2,\"VC\":\"h\"}},{\"P\":\"~0-.2-\",\"VT\":\"SWO-1\",\"FS\":\"\",\"DV\":8,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":540,\"VR\":700},\"PRD\":19,\"FP\":{\"PS\":60,\"NV\":[{\"N\":\"Infotext1\",\"V\":\"Das TagesTicket berechtigt zu beliebig vielen Fahrten. Das Ticket gilt von Betriebsbeginn bis Betriebsende. Mitnahme eines Kindes bis einschließlich 14 Jahre und aller familienangehörigen Kinder bis 5 Jahre.\"},{\"N\":\"PersFlags\",\"V\":\"{\\\"MainTraveller\\\":[\\\"FIRSTNAME\\\",\\\"LASTNAME\\\",\\\"BIRTHDATE\\\"]}\"}]},\"LVL\":11,\"SV\":{\"OL\":1,\"OS\":6,\"DL\":2,\"DS\":7,\"RI\":4},\"TV\":{\"BD\":\"20210906\",\"BT\":\"000000\",\"ED\":\"20210907\",\"ET\":\"053000\"}},{\"P\":\"~0-.3-\",\"VT\":\"SWO-1\",\"FS\":\"\",\"DV\":8,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":660,\"VR\":700},\"PRD\":20,\"FP\":{\"PS\":60,\"NV\":[{\"N\":\"Infotext1\",\"V\":\"Das TagesTicket Familie berechtigt Sie einen Tag lang zu beliebig vielen Fahrten. \\nACHTUNG: Gültigkeit montags bis freitags ab 9 Uhr und an Samstagen, Sonn- und Feiertagen bereits ab Betriebsbeginn für maximal zwei Erwachsene und alle familienangehörigen Kinder bis einschließlich 14 Jahre.\"},{\"N\":\"PersFlags\",\"V\":\"{\\\"MainTraveller\\\":[\\\"FIRSTNAME\\\",\\\"LASTNAME\\\",\\\"BIRTHDATE\\\"]}\"}]},\"LVL\":12,\"SV\":{\"OL\":1,\"OS\":6,\"DL\":2,\"DS\":7,\"RI\":4},\"TV\":{\"BD\":\"20210906\",\"BT\":\"090000\",\"ED\":\"20210907\",\"ET\":\"053000\"}},{\"P\":\"~0-.4-\",\"VT\":\"SWO-1\",\"FS\":\"\",\"DV\":8,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":1870,\"VR\":700},\"PRD\":21,\"FP\":{\"PS\":30,\"NV\":[{\"N\":\"Infotext1\",\"V\":\"<p>Persönliches Ticket für beliebig viele Fahrten im jeweiligen Geltungszeitraum in der Tarifzone <strong>Osnabrück/Belm (100)</strong>. Das Ticket gilt für die jeweilige Kalenderwoche.</p>\\n<p>An Wochenenden und Feiertagen werden WochenTickets zu FamilienTickets  für bis zu zwei Erwachsene und familienangehörige Kinder bis einschließlich 14 Jahre.</p>\"},{\"N\":\"PersFlags\",\"V\":\"{\\\"MainTraveller\\\":[\\\"FIRSTNAME\\\",\\\"LASTNAME\\\",\\\"BIRTHDATE\\\"]}\"}]},\"LVL\":13,\"SV\":{\"OL\":1,\"OS\":6,\"DL\":2,\"DS\":7,\"RI\":4},\"TV\":{\"BD\":\"20210906\",\"BT\":\"000000\",\"ED\":\"20210913\",\"ET\":\"120000\"}},{\"P\":\"~0-.5-\",\"VT\":\"SWO-1\",\"FS\":\"\",\"DV\":8,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":5790,\"VR\":700},\"PRD\":22,\"FP\":{\"PS\":45,\"NV\":[{\"N\":\"Infotext1\",\"V\":\"Persönliches Ticket für beliebig viele Fahrten im jeweiligen Geltungszeitraum in der Tarifzone <strong>Osnabrück/Belm (100)</strong>. Das Ticket gilt für den jeweilige Kalendermonat.<br />An Wochenenden und Feiertagen werden WochenTickets zu FamilienTickets  für bis zu zwei Erwachsene und familienangehörige Kinder bis einschließlich 14 Jahre.\"},{\"N\":\"PersFlags\",\"V\":\"{\\\"MainTraveller\\\":[\\\"FIRSTNAME\\\",\\\"LASTNAME\\\",\\\"BIRTHDATE\\\"]}\"}]},\"LVL\":14,\"SV\":{\"OL\":1,\"OS\":6,\"DL\":2,\"DS\":7,\"RI\":4},\"TV\":{\"BD\":\"20210901\",\"BT\":\"000000\",\"ED\":\"20211001\",\"ET\":\"120000\"}},{\"P\":\"~0-.6-\",\"VT\":\"SWO-1\",\"FS\":\"\",\"DV\":8,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":1400,\"VR\":700},\"PRD\":23,\"FP\":{\"PS\":7,\"NV\":[{\"N\":\"Infotext1\",\"V\":\"Persönliches Ticket für Schüler und Auszubildende. Es berechtigen zu beliebig vielen Fahrten im Gültigkeitszeitraum in der Tarifzone <strong>Osnabrück/Belm (100)</strong>. Das Ticket gilt für die jeweilige Kalenderwoche. Gültig nur in Verbindung mit der Kundenkarte für Schüler und Auszubildende und Ihren Angaben zum räumlichen Geltungsbereich.<br /> <br /><strong>Für Schüler und Auszubildenden ab 18 Jahren. Bei Fragen hierzu wenden Sie sich bitte an ticketshop@vos.info .</strong>\"},{\"N\":\"PersFlags\",\"V\":\"{\\\"MainTraveller\\\":[\\\"FIRSTNAME\\\",\\\"LASTNAME\\\",\\\"BIRTHDATE\\\"]}\"}]},\"LVL\":15,\"SV\":{\"OL\":1,\"OS\":6,\"DL\":2,\"DS\":7,\"RI\":4},\"TV\":{\"BD\":\"20210906\",\"BT\":\"000000\",\"ED\":\"20210913\",\"ET\":\"120000\"}},{\"P\":\"~0-.7-\",\"VT\":\"SWO-1\",\"FS\":\"\",\"DV\":8,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":4340,\"VR\":700},\"PRD\":24,\"FP\":{\"PS\":45,\"NV\":[{\"N\":\"Infotext1\",\"V\":\"<p>Persönliches Ticket für Schüler und Auszubildende. Es berechtigen zu beliebig vielen Fahrten im Gültigkeitszeitraum in der Tarifzone <strong>Osnabrück/Belm (100)</strong>. Das Ticket gilt für den jeweilige Kalendermonat. Gültig nur in Verbindung mit der Kundenkarte für Schüler und Auszubildende und Ihren Angaben zum räumlichen Geltungsbereich. <br /><strong>Für Schüler und Auszubildenden ab 18 Jahren. Bei Fragen hierzu wenden Sie sich bitte an <a href=\"},{\"N\":\"PersFlags\",\"V\":\"{\\\"MainTraveller\\\":[\\\"FIRSTNAME\\\",\\\"LASTNAME\\\",\\\"BIRTHDATE\\\"]}\"}]},\"LVL\":16,\"SV\":{\"OL\":1,\"OS\":6,\"DL\":2,\"DS\":7,\"RI\":4},\"TV\":{\"BD\":\"20210901\",\"BT\":\"000000\",\"ED\":\"20211001\",\"ET\":\"120000\"}}],\"DESCR\":[\"VOS 0\",\"\"],\"OPT\":false,\"ALT\":true,\"SEQ\":false}],\"OPT\":false,\"ALT\":true,\"SEQ\":false},\"errCode\":0,\"errMsg\":\"\"}"
+              "shpCtx":"{\"common\":{\"FEL\":[{\"XV\":[\"0\",\"0\"]},{\"ID\":[\"100\"],\"ON\":[\"Osnabrück/Belm\"]},{\"ID\":[\"100\"],\"ON\":[\"Osnabrück/Belm\"]},{\"ID\":[\"100\"],\"ON\":[\"Osnabrück/Belm\"]},{\"ID\":[\"-1\",\"10000\"]},{\"ID\":[\"1\"],\"ON\":[\"VOS 0\"]},{\"ID\":[\"70001\"],\"ON\":[\"Osnabrück Hauptbahnhof/ZOB\"]},{\"ID\":[\"70002\"],\"ON\":[\"Osnabrück Neumarkt\"]},{\"ID\":[\"0\"]},{\"ID\":[\"10001\",\"6423\",\"1\"],\"ON\":[\"KurzstreckenTicket Digital\"],\"PN\":[\"KurzstreckenTicket\"]},{\"ID\":[\"10002\",\"6423\",\"2\"],\"ON\":[\"EinzelTicket Digital\"],\"PN\":[\"EinzelTicket\"]},{\"ID\":[\"10004\",\"6423\",\"5\"],\"ON\":[\"TagesTicket Digital\"],\"PN\":[\"TagesTicket\"]},{\"ID\":[\"10005\",\"6423\",\"6\"],\"ON\":[\"TagesTicket Familie Digital\"],\"PN\":[\"TagesTicket Familie\"]},{\"ID\":[\"10006\",\"6423\",\"7\"],\"ON\":[\"WochenTicket Digital\"],\"PN\":[\"WochenTicket\"]},{\"ID\":[\"10007\",\"6423\",\"8\"],\"ON\":[\"MonatsTicket Digital\"],\"PN\":[\"MonatsTicket\"]},{\"ID\":[\"10008\",\"6423\",\"16\"],\"ON\":[\"WochenTicket Schüler Digital\"],\"PN\":[\"WochenTicket Schüler\"]},{\"ID\":[\"10009\",\"6423\",\"18\"],\"ON\":[\"MonatsTicket Schüler Digital\"],\"PN\":[\"MonatsTicket Schüler\"]}]},\"BOG\":{\"BOGL\":[{\"P\":\"~0-\",\"BOL\":[{\"P\":\"~0-.0-\",\"VT\":\"SWO-1\",\"FS\":\"\",\"DV\":8,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":150,\"VR\":700},\"PRD\":9,\"FP\":{\"PS\":0,\"NV\":[{\"N\":\"Infotext1\",\"V\":\"Das KurzstreckenTicket ermöglicht es Ihnen, für kleines Geld inklusive Ihrer Einstiegshaltestelle insgesamt fünf Haltestellen im Stadtverkehr Osnabrück/Belm (Preisstufe 0) zu fahren.<br />Erreichen Sie Ihr Ziel nicht auf direktem Weg, dürfen Sie in die nächstmögliche Anschlussfahrt umsteigen, sofern diese noch in den vier Haltestellen inbegriffen ist. <br /><br /><strong>Nicht gültig zur Rückfahrt. Fahrtunterbrechungen sind nicht erlaubt.</strong>\"},{\"N\":\"PersFlags\",\"V\":\"{\\\"MainTraveller\\\":[\\\"FIRSTNAME\\\",\\\"LASTNAME\\\",\\\"BIRTHDATE\\\"]}\"}]},\"LVL\":5,\"SV\":{\"OL\":1,\"OS\":6,\"DL\":2,\"DS\":7,\"RI\":4},\"TV\":{\"BD\":\"20211205\",\"BT\":\"192600\",\"VD\":30,\"VC\":\"m\"}},{\"P\":\"~0-.1-\",\"VT\":\"SWO-1\",\"FS\":\"\",\"DV\":8,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":270,\"VR\":700},\"PRD\":10,\"FP\":{\"PS\":0,\"NV\":[{\"N\":\"Infotext1\",\"V\":\"Das EinzelTicket berechtigt zu einer Fahrt. Erreichen Sie Ihr Ziel nicht auf direktem Weg, dürfen Sie in die nächstmögliche Anschlussfahrt umsteigen. Nicht gültig zur Rückfahrt. Fahrtunterbrechungen sind nicht erlaubt.\"},{\"N\":\"PersFlags\",\"V\":\"{\\\"MainTraveller\\\":[\\\"FIRSTNAME\\\",\\\"LASTNAME\\\",\\\"BIRTHDATE\\\"]}\"}]},\"LVL\":5,\"SV\":{\"OL\":1,\"OS\":6,\"DL\":2,\"DS\":7,\"RI\":4},\"TV\":{\"BD\":\"20211205\",\"BT\":\"192600\",\"VD\":2,\"VC\":\"h\"}},{\"P\":\"~0-.2-\",\"VT\":\"SWO-1\",\"FS\":\"\",\"DV\":8,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":540,\"VR\":700},\"PRD\":11,\"FP\":{\"PS\":60,\"NV\":[{\"N\":\"Infotext1\",\"V\":\"Das TagesTicket berechtigt zu beliebig vielen Fahrten. Das Ticket gilt von Betriebsbeginn bis Betriebsende. Mitnahme eines Kindes bis einschließlich 14 Jahre und aller familienangehörigen Kinder bis 5 Jahre.\"},{\"N\":\"PersFlags\",\"V\":\"{\\\"MainTraveller\\\":[\\\"FIRSTNAME\\\",\\\"LASTNAME\\\",\\\"BIRTHDATE\\\"]}\"}]},\"LVL\":5,\"SV\":{\"OL\":1,\"OS\":6,\"DL\":2,\"DS\":7,\"RI\":4},\"TV\":{\"BD\":\"20211205\",\"BT\":\"000000\",\"ED\":\"20211206\",\"ET\":\"053000\"}},{\"P\":\"~0-.3-\",\"VT\":\"SWO-1\",\"FS\":\"\",\"DV\":8,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":660,\"VR\":700},\"PRD\":12,\"FP\":{\"PS\":60,\"NV\":[{\"N\":\"Infotext1\",\"V\":\"Das TagesTicket Familie berechtigt Sie einen Tag lang zu beliebig vielen Fahrten. \\nACHTUNG: Gültigkeit montags bis freitags ab 9 Uhr und an Samstagen, Sonn- und Feiertagen bereits ab Betriebsbeginn für maximal zwei Erwachsene und alle familienangehörigen Kinder bis einschließlich 14 Jahre.\"},{\"N\":\"PersFlags\",\"V\":\"{\\\"MainTraveller\\\":[\\\"FIRSTNAME\\\",\\\"LASTNAME\\\",\\\"BIRTHDATE\\\"]}\"}]},\"LVL\":5,\"SV\":{\"OL\":1,\"OS\":6,\"DL\":2,\"DS\":7,\"RI\":4},\"TV\":{\"BD\":\"20211205\",\"BT\":\"000000\",\"ED\":\"20211206\",\"ET\":\"053000\"}},{\"P\":\"~0-.4-\",\"VT\":\"SWO-1\",\"FS\":\"\",\"DV\":8,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":1870,\"VR\":700},\"PRD\":13,\"FP\":{\"PS\":30,\"NV\":[{\"N\":\"Infotext1\",\"V\":\"<p>Persönliches Ticket für beliebig viele Fahrten im jeweiligen Geltungszeitraum in der Tarifzone <strong>Osnabrück/Belm (100)</strong>. Das Ticket gilt für die jeweilige Kalenderwoche.</p>\\n<p>An Wochenenden und Feiertagen werden WochenTickets zu FamilienTickets  für bis zu zwei Erwachsene und familienangehörige Kinder bis einschließlich 14 Jahre.</p>\"},{\"N\":\"PersFlags\",\"V\":\"{\\\"MainTraveller\\\":[\\\"FIRSTNAME\\\",\\\"LASTNAME\\\",\\\"BIRTHDATE\\\"]}\"}]},\"LVL\":5,\"SV\":{\"OL\":1,\"OS\":6,\"DL\":2,\"DS\":7,\"RI\":4},\"TV\":{\"BD\":\"20211129\",\"BT\":\"000000\",\"ED\":\"20211206\",\"ET\":\"120000\"}},{\"P\":\"~0-.5-\",\"VT\":\"SWO-1\",\"FS\":\"\",\"DV\":8,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":5790,\"VR\":700},\"PRD\":14,\"FP\":{\"PS\":45,\"NV\":[{\"N\":\"Infotext1\",\"V\":\"Persönliches Ticket für beliebig viele Fahrten im jeweiligen Geltungszeitraum in der Tarifzone <strong>Osnabrück/Belm (100)</strong>. Das Ticket gilt für den jeweilige Kalendermonat.<br />An Wochenenden und Feiertagen werden WochenTickets zu FamilienTickets  für bis zu zwei Erwachsene und familienangehörige Kinder bis einschließlich 14 Jahre.\"},{\"N\":\"PersFlags\",\"V\":\"{\\\"MainTraveller\\\":[\\\"FIRSTNAME\\\",\\\"LASTNAME\\\",\\\"BIRTHDATE\\\"]}\"}]},\"LVL\":5,\"SV\":{\"OL\":1,\"OS\":6,\"DL\":2,\"DS\":7,\"RI\":4},\"TV\":{\"BD\":\"20211201\",\"BT\":\"000000\",\"ED\":\"20220103\",\"ET\":\"120000\"}},{\"P\":\"~0-.6-\",\"VT\":\"SWO-1\",\"FS\":\"\",\"DV\":8,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":1400,\"VR\":700},\"PRD\":15,\"FP\":{\"PS\":7,\"NV\":[{\"N\":\"Infotext1\",\"V\":\"Persönliches Ticket für Schüler und Auszubildende. Es berechtigen zu beliebig vielen Fahrten im Gültigkeitszeitraum in der Tarifzone <strong>Osnabrück/Belm (100)</strong>. Das Ticket gilt für die jeweilige Kalenderwoche. Gültig nur in Verbindung mit der Kundenkarte für Schüler und Auszubildende und Ihren Angaben zum räumlichen Geltungsbereich.<br /> <br /><strong>Für Schüler und Auszubildenden ab 18 Jahren. Bei Fragen hierzu wenden Sie sich bitte an ticketshop@vos.info .</strong>\"},{\"N\":\"PersFlags\",\"V\":\"{\\\"MainTraveller\\\":[\\\"FIRSTNAME\\\",\\\"LASTNAME\\\",\\\"BIRTHDATE\\\"]}\"}]},\"LVL\":5,\"SV\":{\"OL\":1,\"OS\":6,\"DL\":2,\"DS\":7,\"RI\":4},\"TV\":{\"BD\":\"20211129\",\"BT\":\"000000\",\"ED\":\"20211206\",\"ET\":\"120000\"}},{\"P\":\"~0-.7-\",\"VT\":\"SWO-1\",\"FS\":\"\",\"DV\":8,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":4340,\"VR\":700},\"PRD\":16,\"FP\":{\"PS\":45,\"NV\":[{\"N\":\"Infotext1\",\"V\":\"<p>Persönliches Ticket für Schüler und Auszubildende. Es berechtigen zu beliebig vielen Fahrten im Gültigkeitszeitraum in der Tarifzone <strong>Osnabrück/Belm (100)</strong>. Das Ticket gilt für den jeweilige Kalendermonat. Gültig nur in Verbindung mit der Kundenkarte für Schüler und Auszubildende und Ihren Angaben zum räumlichen Geltungsbereich. <br /><strong>Für Schüler und Auszubildenden ab 18 Jahren. Bei Fragen hierzu wenden Sie sich bitte an <a href=\"},{\"N\":\"PersFlags\",\"V\":\"{\\\"MainTraveller\\\":[\\\"FIRSTNAME\\\",\\\"LASTNAME\\\",\\\"BIRTHDATE\\\"]}\"}]},\"LVL\":5,\"SV\":{\"OL\":1,\"OS\":6,\"DL\":2,\"DS\":7,\"RI\":4},\"TV\":{\"BD\":\"20211201\",\"BT\":\"000000\",\"ED\":\"20220103\",\"ET\":\"120000\"}}],\"DESCR\":[\"VOS 0\",\"\"],\"OPT\":false,\"ALT\":true,\"SEQ\":false}],\"OPT\":false,\"ALT\":true,\"SEQ\":false},\"errCode\":0,\"errMsg\":\"\"}"
             },
             "ovwTrfRefL":
             [
@@ -1175,38 +1789,40 @@
               }
             ],
             "conSubscr":"F",
-            "cksum":"8e4cc6be_3"
+            "cksum":"590b2df1_3"
           },
           {
             "cid":"C-1",
-            "date":"20210906",
-            "dur":"000500",
+            "date":"20211205",
+            "dur":"000400",
             "chg":0,
             "sDays":
             {
-              "sDaysR":"Mo - Fr",
-              "sDaysB":"CF9F3E7CF9F3E7CF9F3E7CF9F3E7CF9F3E7CF9F3E0"
+              "sDaysR":"täglich",
+              "sDaysI":"nicht 24. Dez",
+              "sDaysB":"0000000000000001FFFFFFFFFFFFFFFFFFFFFFFFFFFF7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8"
             },
-            "isAlt":true,
             "dep":
             {
               "locX":0,
-              "idx":0,
-              "dProdX":2,
+              "idx":17,
+              "dProdX":7,
               "dPlatfS":"1",
               "dInR":true,
-              "dTimeS":"144600",
+              "dTimeS":"193400",
+              "dTimeR":"193900",
               "dProgType":"PROGNOSED",
               "type":"N"
             },
             "arr":
             {
-              "locX":2,
-              "idx":2,
-              "aProdX":2,
-              "aPlatfS":"A2",
+              "locX":8,
+              "idx":19,
+              "aProdX":7,
+              "aPlatfS":"A1",
               "aOutR":true,
-              "aTimeS":"145100",
+              "aTimeS":"193800",
+              "aTimeR":"194300",
               "aProgType":"PROGNOSED",
               "type":"N"
             },
@@ -1218,63 +1834,72 @@
                 "dep":
                 {
                   "locX":0,
-                  "idx":0,
-                  "dProdX":2,
+                  "idx":17,
+                  "dProdX":7,
                   "dPlatfS":"1",
                   "dInR":true,
-                  "dTimeS":"144600",
+                  "dTimeS":"193400",
+                  "dTimeR":"193900",
                   "dProgType":"PROGNOSED",
                   "type":"N"
                 },
                 "arr":
                 {
-                  "locX":2,
-                  "idx":2,
-                  "aProdX":2,
-                  "aPlatfS":"A2",
+                  "locX":8,
+                  "idx":19,
+                  "aProdX":7,
+                  "aPlatfS":"A1",
                   "aOutR":true,
-                  "aTimeS":"145100",
+                  "aTimeS":"193800",
+                  "aTimeR":"194300",
                   "aProgType":"PROGNOSED",
                   "type":"N"
                 },
                 "jny":
                 {
-                  "jid":"1|217190|3|80|6092021",
-                  "prodX":3,
-                  "dirTxt":"Osnabrück Rosenburg",
-                  "dirFlg":"1",
+                  "jid":"1|155757|0|80|5122021",
+                  "prodX":2,
+                  "dirTxt":"Neumarkt",
+                  "dirFlg":"2",
                   "status":"P",
                   "isRchbl":true,
                   "stopL":
                   [
                     {
                       "locX":0,
-                      "idx":0,
-                      "dProdX":3,
+                      "idx":17,
+                      "dProdX":2,
                       "dInR":true,
-                      "dTimeS":"144600",
+                      "dTimeS":"193400",
+                      "dTimeR":"193900",
                       "dProgType":"PROGNOSED",
-                      "dDirTxt":"Osnabrück Rosenburg",
-                      "dDirFlg":"1",
+                      "dDirTxt":"Neumarkt",
+                      "dDirFlg":"2",
                       "type":"N"
                     },
                     {
                       "locX":4,
-                      "idx":1,
-                      "aProdX":3,
+                      "idx":18,
+                      "aProdX":2,
                       "aOutR":true,
-                      "aTimeS":"144800",
-                      "dProdX":3,
+                      "aTimeS":"193600",
+                      "aTimeR":"194100",
+                      "aProgType":"PROGNOSED",
+                      "dProdX":2,
                       "dInR":true,
-                      "dTimeS":"144800",
+                      "dTimeS":"193600",
+                      "dTimeR":"194100",
+                      "dProgType":"PROGNOSED",
                       "type":"N"
                     },
                     {
-                      "locX":2,
-                      "idx":2,
-                      "aProdX":3,
+                      "locX":8,
+                      "idx":19,
+                      "aProdX":2,
                       "aOutR":true,
-                      "aTimeS":"145100",
+                      "aTimeS":"193800",
+                      "aTimeR":"194300",
+                      "aProgType":"PROGNOSED",
                       "type":"N"
                     }
                   ],
@@ -1298,20 +1923,179 @@
                       "crdSysX":1
                     }
                   ],
+                  "pos":
+                  {
+                    "x":8086660,
+                    "y":52276705,
+                    "layerX":0,
+                    "crdSysX":0
+                  },
                   "freq":
                   {
-                    "minC":1,
-                    "maxC":5,
-                    "numC":62
+                    "minC":2,
+                    "maxC":12,
+                    "numC":20,
+                    "jnyL":
+                    [
+                      {
+                        "jid":"1|156288|0|80|5122021",
+                        "prodX":3,
+                        "dirTxt":"Berningshöhe",
+                        "dirFlg":"2",
+                        "stopL":
+                        [
+                          {
+                            "locX":0,
+                            "idx":11,
+                            "dProdX":3,
+                            "dTimeS":"194100",
+                            "dDirTxt":"Berningshöhe",
+                            "dDirFlg":"2",
+                            "type":"N"
+                          },
+                          {
+                            "locX":2,
+                            "idx":13,
+                            "aProdX":3,
+                            "aTimeS":"194500",
+                            "type":"N"
+                          }
+                        ],
+                        "pos":
+                        {
+                          "x":8052303,
+                          "y":52302279,
+                          "layerX":0,
+                          "crdSysX":0
+                        },
+                        "ctxRecon":"T$A=1@O=Osnabrück Hauptbahnhof/ZOB@L=100071@a=128@$A=1@O=Osnabrück Neumarkt@L=100082@a=128@$202112051941$202112051945$Bus 14  $$1$$$$$$",
+                        "subscr":"F"
+                      },
+                      {
+                        "jid":"1|154656|6|80|5122021",
+                        "prodX":4,
+                        "dirTxt":"Hellern Nord ü. Eversburg",
+                        "dirFlg":"2",
+                        "stopL":
+                        [
+                          {
+                            "locX":0,
+                            "idx":17,
+                            "dProdX":4,
+                            "dTimeS":"194400",
+                            "dDirTxt":"Hellern Nord ü. Eversburg",
+                            "dDirFlg":"2",
+                            "type":"N"
+                          },
+                          {
+                            "locX":8,
+                            "idx":19,
+                            "aProdX":4,
+                            "aTimeS":"194800",
+                            "type":"N"
+                          }
+                        ],
+                        "pos":
+                        {
+                          "x":8107839,
+                          "y":52248731,
+                          "layerX":0,
+                          "crdSysX":0
+                        },
+                        "ctxRecon":"T$A=1@O=Osnabrück Hauptbahnhof/ZOB@L=100071@a=128@$A=1@O=Osnabrück Neumarkt@L=150091@a=128@$202112051944$202112051948$Bus 17  $$3$$$$$$",
+                        "subscr":"F"
+                      },
+                      {
+                        "jid":"1|376359|0|80|5122021",
+                        "prodX":5,
+                        "dirTxt":"Landwehrviertel",
+                        "dirFlg":"2",
+                        "stopL":
+                        [
+                          {
+                            "locX":0,
+                            "idx":0,
+                            "dProdX":5,
+                            "dTimeS":"195400",
+                            "dDirTxt":"Landwehrviertel",
+                            "dDirFlg":"2",
+                            "type":"N"
+                          },
+                          {
+                            "locX":9,
+                            "idx":2,
+                            "aProdX":5,
+                            "aTimeS":"195800",
+                            "type":"N"
+                          }
+                        ],
+                        "ctxRecon":"T$A=1@O=Osnabrück Hauptbahnhof/ZOB@L=100071@a=128@$A=1@O=Osnabrück Neumarkt@L=100081@a=128@$202112051954$202112051958$Bus M2  $$3$$$$$$",
+                        "subscr":"F"
+                      },
+                      {
+                        "jid":"1|155900|6|80|5122021",
+                        "prodX":6,
+                        "dirTxt":"Heger Friedhof",
+                        "dirFlg":"2",
+                        "stopL":
+                        [
+                          {
+                            "locX":0,
+                            "idx":15,
+                            "dProdX":6,
+                            "dTimeS":"195600",
+                            "dDirTxt":"Heger Friedhof",
+                            "dDirFlg":"2",
+                            "type":"N"
+                          },
+                          {
+                            "locX":2,
+                            "idx":17,
+                            "aProdX":6,
+                            "aTimeS":"200000",
+                            "type":"N"
+                          }
+                        ],
+                        "ctxRecon":"T$A=1@O=Osnabrück Hauptbahnhof/ZOB@L=100071@a=128@$A=1@O=Osnabrück Neumarkt@L=100082@a=128@$202112051956$202112052000$Bus 15  $$1$$$$$$",
+                        "subscr":"F"
+                      },
+                      {
+                        "jid":"1|155760|7|80|5122021",
+                        "prodX":8,
+                        "dirTxt":"Neumarkt",
+                        "dirFlg":"2",
+                        "stopL":
+                        [
+                          {
+                            "locX":0,
+                            "idx":17,
+                            "dProdX":8,
+                            "dTimeS":"200400",
+                            "dDirTxt":"Neumarkt",
+                            "dDirFlg":"2",
+                            "type":"N"
+                          },
+                          {
+                            "locX":8,
+                            "idx":19,
+                            "aProdX":8,
+                            "aTimeS":"200800",
+                            "type":"N"
+                          }
+                        ],
+                        "ctxRecon":"T$A=1@O=Osnabrück Hauptbahnhof/ZOB@L=100071@a=128@$A=1@O=Osnabrück Neumarkt@L=150091@a=128@$202112052004$202112052008$Bus 16  $$1$$$$$$",
+                        "subscr":"F"
+                      }
+                    ]
                   },
-                  "ctxRecon":"T$A=1@O=Osnabrück Hauptbahnhof/ZOB@L=100071@a=128@$A=1@O=Osnabrück Neumarkt@L=100082@a=128@$202109061446$202109061451$Bus 10  $$1$$$$",
+                  "ctxRecon":"T$A=1@O=Osnabrück Hauptbahnhof/ZOB@L=100071@a=128@$A=1@O=Osnabrück Neumarkt@L=150091@a=128@$202112051934$202112051938$Bus 16  $$1$$$$$$",
                   "msgL":
                   [
                     {
                       "type":"REM",
                       "remX":1,
                       "fLocX":0,
-                      "tLocX":2,
+                      "tLocX":8,
                       "tagL":
                       [
                         "RES_JNY_DTL"
@@ -1319,9 +2103,8 @@
                     },
                     {
                       "type":"HIM",
-                      "himX":0,
+                      "himX":1,
                       "fLocX":0,
-                      "tLocX":0,
                       "tagL":
                       [
                         "RES_GLB_HDR_H3","SUM_GLB_HDR_H3"
@@ -1332,10 +2115,10 @@
                 }
               }
             ],
-            "ctxRecon":"¶HKI¶T$A=1@O=Osnabrück Hauptbahnhof/ZOB@L=100071@a=128@$A=1@O=Osnabrück Neumarkt@L=100082@a=128@$202109061446$202109061451$Bus 10  $$1$$$$",
+            "ctxRecon":"¶HKI¶T$A=1@O=Osnabrück Hauptbahnhof/ZOB@L=100071@a=128@$A=1@O=Osnabrück Neumarkt@L=150091@a=128@$202112051934$202112051938$Bus 16  $$1$$$$$$",
             "freq":
             {
-              "minC":1
+              "minC":2
             },
             "trfRes":
             {
@@ -1448,6 +2231,17 @@
                       "cur":"EUR"
                     },
                     {
+                      "name":"8-FahrtenTicket",
+                      "desc":"nur in der YANiQ-App",
+                      "prc":1790,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"8-FahrtenTicket",
+                      "prc":1840,
+                      "cur":"EUR"
+                    },
+                    {
                       "name":"12-FahrtenTicket",
                       "prc":2640,
                       "cur":"EUR"
@@ -1479,7 +2273,7 @@
                     },
                     {
                       "name":"JahresTicket Schüler",
-                      "prc":41300,
+                      "prc":43365,
                       "cur":"EUR"
                     },
                     {
@@ -1512,7 +2306,546 @@
                   "tSecRefX":0
                 }
               ],
-              "shpCtx":"{\"common\":{\"FEL\":[{\"XV\":[\"0\",\"0\"]},{\"ID\":[\"100\"],\"ON\":[\"Osnabrück/Belm\"]},{\"ID\":[\"100\"],\"ON\":[\"Osnabrück/Belm\"]},{\"ID\":[\"100\"],\"ON\":[\"Osnabrück/Belm\"]},{\"ID\":[\"-1\",\"10000\"]},{\"ID\":[\"1\"],\"ON\":[\"VOS 0\"]},{\"ID\":[\"70001\"],\"ON\":[\"Osnabrück Hauptbahnhof/ZOB\"]},{\"ID\":[\"70002\"],\"ON\":[\"Osnabrück Neumarkt\"]},{\"ID\":[\"0\"]},{\"ID\":[\"10001\",\"6423\",\"1\"],\"ON\":[\"KurzstreckenTicket Digital\"],\"PN\":[\"KurzstreckenTicket\"]},{\"ID\":[\"10002\",\"6423\",\"2\"],\"ON\":[\"EinzelTicket Digital\"],\"PN\":[\"EinzelTicket\"]},{\"ID\":[\"10004\",\"6423\",\"5\"],\"ON\":[\"TagesTicket Digital\"],\"PN\":[\"TagesTicket\"]},{\"ID\":[\"10005\",\"6423\",\"6\"],\"ON\":[\"TagesTicket Familie Digital\"],\"PN\":[\"TagesTicket Familie\"]},{\"ID\":[\"10006\",\"6423\",\"7\"],\"ON\":[\"WochenTicket Digital\"],\"PN\":[\"WochenTicket\"]},{\"ID\":[\"10007\",\"6423\",\"8\"],\"ON\":[\"MonatsTicket Digital\"],\"PN\":[\"MonatsTicket\"]},{\"ID\":[\"10008\",\"6423\",\"16\"],\"ON\":[\"WochenTicket Schüler Digital\"],\"PN\":[\"WochenTicket Schüler\"]},{\"ID\":[\"10009\",\"6423\",\"18\"],\"ON\":[\"MonatsTicket Schüler Digital\"],\"PN\":[\"MonatsTicket Schüler\"]},{\"ID\":[\"KurzstreckenTicket Digital\"]},{\"ID\":[\"EinzelTicket Digital\"]},{\"ID\":[\"TagesTicket Digital\"]},{\"ID\":[\"TagesTicket Familie Digital\"]},{\"ID\":[\"WochenTicket Digital\"]},{\"ID\":[\"MonatsTicket Digital\"]},{\"ID\":[\"WochenTicket Schüler Digital\"]},{\"ID\":[\"MonatsTicket Schüler Digital\"]}]},\"BOG\":{\"BOGL\":[{\"P\":\"~0-\",\"BOL\":[{\"P\":\"~0-.0-\",\"VT\":\"SWO-1\",\"FS\":\"\",\"DV\":8,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":150,\"VR\":700},\"PRD\":17,\"FP\":{\"PS\":0,\"NV\":[{\"N\":\"Infotext1\",\"V\":\"Das KurzstreckenTicket ermöglicht es Ihnen, für kleines Geld inklusive Ihrer Einstiegshaltestelle insgesamt fünf Haltestellen im Stadtverkehr Osnabrück/Belm (Preisstufe 0) zu fahren.<br />Erreichen Sie Ihr Ziel nicht auf direktem Weg, dürfen Sie in die nächstmögliche Anschlussfahrt umsteigen, sofern diese noch in den vier Haltestellen inbegriffen ist. <br /><br /><strong>Nicht gültig zur Rückfahrt. Fahrtunterbrechungen sind nicht erlaubt.</strong>\"},{\"N\":\"PersFlags\",\"V\":\"{\\\"MainTraveller\\\":[\\\"FIRSTNAME\\\",\\\"LASTNAME\\\",\\\"BIRTHDATE\\\"]}\"}]},\"LVL\":9,\"SV\":{\"OL\":1,\"OS\":6,\"DL\":2,\"DS\":7,\"RI\":4},\"TV\":{\"BD\":\"20210906\",\"BT\":\"144600\",\"VD\":30,\"VC\":\"m\"}},{\"P\":\"~0-.1-\",\"VT\":\"SWO-1\",\"FS\":\"\",\"DV\":8,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":270,\"VR\":700},\"PRD\":18,\"FP\":{\"PS\":0,\"NV\":[{\"N\":\"Infotext1\",\"V\":\"Das EinzelTicket berechtigt zu einer Fahrt. Erreichen Sie Ihr Ziel nicht auf direktem Weg, dürfen Sie in die nächstmögliche Anschlussfahrt umsteigen. Nicht gültig zur Rückfahrt. Fahrtunterbrechungen sind nicht erlaubt.\"},{\"N\":\"PersFlags\",\"V\":\"{\\\"MainTraveller\\\":[\\\"FIRSTNAME\\\",\\\"LASTNAME\\\",\\\"BIRTHDATE\\\"]}\"}]},\"LVL\":10,\"SV\":{\"OL\":1,\"OS\":6,\"DL\":2,\"DS\":7,\"RI\":4},\"TV\":{\"BD\":\"20210906\",\"BT\":\"144600\",\"VD\":2,\"VC\":\"h\"}},{\"P\":\"~0-.2-\",\"VT\":\"SWO-1\",\"FS\":\"\",\"DV\":8,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":540,\"VR\":700},\"PRD\":19,\"FP\":{\"PS\":60,\"NV\":[{\"N\":\"Infotext1\",\"V\":\"Das TagesTicket berechtigt zu beliebig vielen Fahrten. Das Ticket gilt von Betriebsbeginn bis Betriebsende. Mitnahme eines Kindes bis einschließlich 14 Jahre und aller familienangehörigen Kinder bis 5 Jahre.\"},{\"N\":\"PersFlags\",\"V\":\"{\\\"MainTraveller\\\":[\\\"FIRSTNAME\\\",\\\"LASTNAME\\\",\\\"BIRTHDATE\\\"]}\"}]},\"LVL\":11,\"SV\":{\"OL\":1,\"OS\":6,\"DL\":2,\"DS\":7,\"RI\":4},\"TV\":{\"BD\":\"20210906\",\"BT\":\"000000\",\"ED\":\"20210907\",\"ET\":\"053000\"}},{\"P\":\"~0-.3-\",\"VT\":\"SWO-1\",\"FS\":\"\",\"DV\":8,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":660,\"VR\":700},\"PRD\":20,\"FP\":{\"PS\":60,\"NV\":[{\"N\":\"Infotext1\",\"V\":\"Das TagesTicket Familie berechtigt Sie einen Tag lang zu beliebig vielen Fahrten. \\nACHTUNG: Gültigkeit montags bis freitags ab 9 Uhr und an Samstagen, Sonn- und Feiertagen bereits ab Betriebsbeginn für maximal zwei Erwachsene und alle familienangehörigen Kinder bis einschließlich 14 Jahre.\"},{\"N\":\"PersFlags\",\"V\":\"{\\\"MainTraveller\\\":[\\\"FIRSTNAME\\\",\\\"LASTNAME\\\",\\\"BIRTHDATE\\\"]}\"}]},\"LVL\":12,\"SV\":{\"OL\":1,\"OS\":6,\"DL\":2,\"DS\":7,\"RI\":4},\"TV\":{\"BD\":\"20210906\",\"BT\":\"090000\",\"ED\":\"20210907\",\"ET\":\"053000\"}},{\"P\":\"~0-.4-\",\"VT\":\"SWO-1\",\"FS\":\"\",\"DV\":8,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":1870,\"VR\":700},\"PRD\":21,\"FP\":{\"PS\":30,\"NV\":[{\"N\":\"Infotext1\",\"V\":\"<p>Persönliches Ticket für beliebig viele Fahrten im jeweiligen Geltungszeitraum in der Tarifzone <strong>Osnabrück/Belm (100)</strong>. Das Ticket gilt für die jeweilige Kalenderwoche.</p>\\n<p>An Wochenenden und Feiertagen werden WochenTickets zu FamilienTickets  für bis zu zwei Erwachsene und familienangehörige Kinder bis einschließlich 14 Jahre.</p>\"},{\"N\":\"PersFlags\",\"V\":\"{\\\"MainTraveller\\\":[\\\"FIRSTNAME\\\",\\\"LASTNAME\\\",\\\"BIRTHDATE\\\"]}\"}]},\"LVL\":13,\"SV\":{\"OL\":1,\"OS\":6,\"DL\":2,\"DS\":7,\"RI\":4},\"TV\":{\"BD\":\"20210906\",\"BT\":\"000000\",\"ED\":\"20210913\",\"ET\":\"120000\"}},{\"P\":\"~0-.5-\",\"VT\":\"SWO-1\",\"FS\":\"\",\"DV\":8,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":5790,\"VR\":700},\"PRD\":22,\"FP\":{\"PS\":45,\"NV\":[{\"N\":\"Infotext1\",\"V\":\"Persönliches Ticket für beliebig viele Fahrten im jeweiligen Geltungszeitraum in der Tarifzone <strong>Osnabrück/Belm (100)</strong>. Das Ticket gilt für den jeweilige Kalendermonat.<br />An Wochenenden und Feiertagen werden WochenTickets zu FamilienTickets  für bis zu zwei Erwachsene und familienangehörige Kinder bis einschließlich 14 Jahre.\"},{\"N\":\"PersFlags\",\"V\":\"{\\\"MainTraveller\\\":[\\\"FIRSTNAME\\\",\\\"LASTNAME\\\",\\\"BIRTHDATE\\\"]}\"}]},\"LVL\":14,\"SV\":{\"OL\":1,\"OS\":6,\"DL\":2,\"DS\":7,\"RI\":4},\"TV\":{\"BD\":\"20210901\",\"BT\":\"000000\",\"ED\":\"20211001\",\"ET\":\"120000\"}},{\"P\":\"~0-.6-\",\"VT\":\"SWO-1\",\"FS\":\"\",\"DV\":8,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":1400,\"VR\":700},\"PRD\":23,\"FP\":{\"PS\":7,\"NV\":[{\"N\":\"Infotext1\",\"V\":\"Persönliches Ticket für Schüler und Auszubildende. Es berechtigen zu beliebig vielen Fahrten im Gültigkeitszeitraum in der Tarifzone <strong>Osnabrück/Belm (100)</strong>. Das Ticket gilt für die jeweilige Kalenderwoche. Gültig nur in Verbindung mit der Kundenkarte für Schüler und Auszubildende und Ihren Angaben zum räumlichen Geltungsbereich.<br /> <br /><strong>Für Schüler und Auszubildenden ab 18 Jahren. Bei Fragen hierzu wenden Sie sich bitte an ticketshop@vos.info .</strong>\"},{\"N\":\"PersFlags\",\"V\":\"{\\\"MainTraveller\\\":[\\\"FIRSTNAME\\\",\\\"LASTNAME\\\",\\\"BIRTHDATE\\\"]}\"}]},\"LVL\":15,\"SV\":{\"OL\":1,\"OS\":6,\"DL\":2,\"DS\":7,\"RI\":4},\"TV\":{\"BD\":\"20210906\",\"BT\":\"000000\",\"ED\":\"20210913\",\"ET\":\"120000\"}},{\"P\":\"~0-.7-\",\"VT\":\"SWO-1\",\"FS\":\"\",\"DV\":8,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":4340,\"VR\":700},\"PRD\":24,\"FP\":{\"PS\":45,\"NV\":[{\"N\":\"Infotext1\",\"V\":\"<p>Persönliches Ticket für Schüler und Auszubildende. Es berechtigen zu beliebig vielen Fahrten im Gültigkeitszeitraum in der Tarifzone <strong>Osnabrück/Belm (100)</strong>. Das Ticket gilt für den jeweilige Kalendermonat. Gültig nur in Verbindung mit der Kundenkarte für Schüler und Auszubildende und Ihren Angaben zum räumlichen Geltungsbereich. <br /><strong>Für Schüler und Auszubildenden ab 18 Jahren. Bei Fragen hierzu wenden Sie sich bitte an <a href=\"},{\"N\":\"PersFlags\",\"V\":\"{\\\"MainTraveller\\\":[\\\"FIRSTNAME\\\",\\\"LASTNAME\\\",\\\"BIRTHDATE\\\"]}\"}]},\"LVL\":16,\"SV\":{\"OL\":1,\"OS\":6,\"DL\":2,\"DS\":7,\"RI\":4},\"TV\":{\"BD\":\"20210901\",\"BT\":\"000000\",\"ED\":\"20211001\",\"ET\":\"120000\"}}],\"DESCR\":[\"VOS 0\",\"\"],\"OPT\":false,\"ALT\":true,\"SEQ\":false}],\"OPT\":false,\"ALT\":true,\"SEQ\":false},\"errCode\":0,\"errMsg\":\"\"}"
+              "shpCtx":"{\"common\":{\"FEL\":[{\"XV\":[\"0\",\"0\"]},{\"ID\":[\"100\"],\"ON\":[\"Osnabrück/Belm\"]},{\"ID\":[\"100\"],\"ON\":[\"Osnabrück/Belm\"]},{\"ID\":[\"100\"],\"ON\":[\"Osnabrück/Belm\"]},{\"ID\":[\"-1\",\"10000\"]},{\"ID\":[\"1\"],\"ON\":[\"VOS 0\"]},{\"ID\":[\"70001\"],\"ON\":[\"Osnabrück Hauptbahnhof/ZOB\"]},{\"ID\":[\"70002\"],\"ON\":[\"Osnabrück Neumarkt\"]},{\"ID\":[\"0\"]},{\"ID\":[\"10001\",\"6423\",\"1\"],\"ON\":[\"KurzstreckenTicket Digital\"],\"PN\":[\"KurzstreckenTicket\"]},{\"ID\":[\"10002\",\"6423\",\"2\"],\"ON\":[\"EinzelTicket Digital\"],\"PN\":[\"EinzelTicket\"]},{\"ID\":[\"10004\",\"6423\",\"5\"],\"ON\":[\"TagesTicket Digital\"],\"PN\":[\"TagesTicket\"]},{\"ID\":[\"10005\",\"6423\",\"6\"],\"ON\":[\"TagesTicket Familie Digital\"],\"PN\":[\"TagesTicket Familie\"]},{\"ID\":[\"10006\",\"6423\",\"7\"],\"ON\":[\"WochenTicket Digital\"],\"PN\":[\"WochenTicket\"]},{\"ID\":[\"10007\",\"6423\",\"8\"],\"ON\":[\"MonatsTicket Digital\"],\"PN\":[\"MonatsTicket\"]},{\"ID\":[\"10008\",\"6423\",\"16\"],\"ON\":[\"WochenTicket Schüler Digital\"],\"PN\":[\"WochenTicket Schüler\"]},{\"ID\":[\"10009\",\"6423\",\"18\"],\"ON\":[\"MonatsTicket Schüler Digital\"],\"PN\":[\"MonatsTicket Schüler\"]}]},\"BOG\":{\"BOGL\":[{\"P\":\"~0-\",\"BOL\":[{\"P\":\"~0-.0-\",\"VT\":\"SWO-1\",\"FS\":\"\",\"DV\":8,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":150,\"VR\":700},\"PRD\":9,\"FP\":{\"PS\":0,\"NV\":[{\"N\":\"Infotext1\",\"V\":\"Das KurzstreckenTicket ermöglicht es Ihnen, für kleines Geld inklusive Ihrer Einstiegshaltestelle insgesamt fünf Haltestellen im Stadtverkehr Osnabrück/Belm (Preisstufe 0) zu fahren.<br />Erreichen Sie Ihr Ziel nicht auf direktem Weg, dürfen Sie in die nächstmögliche Anschlussfahrt umsteigen, sofern diese noch in den vier Haltestellen inbegriffen ist. <br /><br /><strong>Nicht gültig zur Rückfahrt. Fahrtunterbrechungen sind nicht erlaubt.</strong>\"},{\"N\":\"PersFlags\",\"V\":\"{\\\"MainTraveller\\\":[\\\"FIRSTNAME\\\",\\\"LASTNAME\\\",\\\"BIRTHDATE\\\"]}\"}]},\"LVL\":5,\"SV\":{\"OL\":1,\"OS\":6,\"DL\":2,\"DS\":7,\"RI\":4},\"TV\":{\"BD\":\"20211205\",\"BT\":\"193400\",\"VD\":30,\"VC\":\"m\"}},{\"P\":\"~0-.1-\",\"VT\":\"SWO-1\",\"FS\":\"\",\"DV\":8,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":270,\"VR\":700},\"PRD\":10,\"FP\":{\"PS\":0,\"NV\":[{\"N\":\"Infotext1\",\"V\":\"Das EinzelTicket berechtigt zu einer Fahrt. Erreichen Sie Ihr Ziel nicht auf direktem Weg, dürfen Sie in die nächstmögliche Anschlussfahrt umsteigen. Nicht gültig zur Rückfahrt. Fahrtunterbrechungen sind nicht erlaubt.\"},{\"N\":\"PersFlags\",\"V\":\"{\\\"MainTraveller\\\":[\\\"FIRSTNAME\\\",\\\"LASTNAME\\\",\\\"BIRTHDATE\\\"]}\"}]},\"LVL\":5,\"SV\":{\"OL\":1,\"OS\":6,\"DL\":2,\"DS\":7,\"RI\":4},\"TV\":{\"BD\":\"20211205\",\"BT\":\"193400\",\"VD\":2,\"VC\":\"h\"}},{\"P\":\"~0-.2-\",\"VT\":\"SWO-1\",\"FS\":\"\",\"DV\":8,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":540,\"VR\":700},\"PRD\":11,\"FP\":{\"PS\":60,\"NV\":[{\"N\":\"Infotext1\",\"V\":\"Das TagesTicket berechtigt zu beliebig vielen Fahrten. Das Ticket gilt von Betriebsbeginn bis Betriebsende. Mitnahme eines Kindes bis einschließlich 14 Jahre und aller familienangehörigen Kinder bis 5 Jahre.\"},{\"N\":\"PersFlags\",\"V\":\"{\\\"MainTraveller\\\":[\\\"FIRSTNAME\\\",\\\"LASTNAME\\\",\\\"BIRTHDATE\\\"]}\"}]},\"LVL\":5,\"SV\":{\"OL\":1,\"OS\":6,\"DL\":2,\"DS\":7,\"RI\":4},\"TV\":{\"BD\":\"20211205\",\"BT\":\"000000\",\"ED\":\"20211206\",\"ET\":\"053000\"}},{\"P\":\"~0-.3-\",\"VT\":\"SWO-1\",\"FS\":\"\",\"DV\":8,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":660,\"VR\":700},\"PRD\":12,\"FP\":{\"PS\":60,\"NV\":[{\"N\":\"Infotext1\",\"V\":\"Das TagesTicket Familie berechtigt Sie einen Tag lang zu beliebig vielen Fahrten. \\nACHTUNG: Gültigkeit montags bis freitags ab 9 Uhr und an Samstagen, Sonn- und Feiertagen bereits ab Betriebsbeginn für maximal zwei Erwachsene und alle familienangehörigen Kinder bis einschließlich 14 Jahre.\"},{\"N\":\"PersFlags\",\"V\":\"{\\\"MainTraveller\\\":[\\\"FIRSTNAME\\\",\\\"LASTNAME\\\",\\\"BIRTHDATE\\\"]}\"}]},\"LVL\":5,\"SV\":{\"OL\":1,\"OS\":6,\"DL\":2,\"DS\":7,\"RI\":4},\"TV\":{\"BD\":\"20211205\",\"BT\":\"000000\",\"ED\":\"20211206\",\"ET\":\"053000\"}},{\"P\":\"~0-.4-\",\"VT\":\"SWO-1\",\"FS\":\"\",\"DV\":8,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":1870,\"VR\":700},\"PRD\":13,\"FP\":{\"PS\":30,\"NV\":[{\"N\":\"Infotext1\",\"V\":\"<p>Persönliches Ticket für beliebig viele Fahrten im jeweiligen Geltungszeitraum in der Tarifzone <strong>Osnabrück/Belm (100)</strong>. Das Ticket gilt für die jeweilige Kalenderwoche.</p>\\n<p>An Wochenenden und Feiertagen werden WochenTickets zu FamilienTickets  für bis zu zwei Erwachsene und familienangehörige Kinder bis einschließlich 14 Jahre.</p>\"},{\"N\":\"PersFlags\",\"V\":\"{\\\"MainTraveller\\\":[\\\"FIRSTNAME\\\",\\\"LASTNAME\\\",\\\"BIRTHDATE\\\"]}\"}]},\"LVL\":5,\"SV\":{\"OL\":1,\"OS\":6,\"DL\":2,\"DS\":7,\"RI\":4},\"TV\":{\"BD\":\"20211129\",\"BT\":\"000000\",\"ED\":\"20211206\",\"ET\":\"120000\"}},{\"P\":\"~0-.5-\",\"VT\":\"SWO-1\",\"FS\":\"\",\"DV\":8,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":5790,\"VR\":700},\"PRD\":14,\"FP\":{\"PS\":45,\"NV\":[{\"N\":\"Infotext1\",\"V\":\"Persönliches Ticket für beliebig viele Fahrten im jeweiligen Geltungszeitraum in der Tarifzone <strong>Osnabrück/Belm (100)</strong>. Das Ticket gilt für den jeweilige Kalendermonat.<br />An Wochenenden und Feiertagen werden WochenTickets zu FamilienTickets  für bis zu zwei Erwachsene und familienangehörige Kinder bis einschließlich 14 Jahre.\"},{\"N\":\"PersFlags\",\"V\":\"{\\\"MainTraveller\\\":[\\\"FIRSTNAME\\\",\\\"LASTNAME\\\",\\\"BIRTHDATE\\\"]}\"}]},\"LVL\":5,\"SV\":{\"OL\":1,\"OS\":6,\"DL\":2,\"DS\":7,\"RI\":4},\"TV\":{\"BD\":\"20211201\",\"BT\":\"000000\",\"ED\":\"20220103\",\"ET\":\"120000\"}},{\"P\":\"~0-.6-\",\"VT\":\"SWO-1\",\"FS\":\"\",\"DV\":8,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":1400,\"VR\":700},\"PRD\":15,\"FP\":{\"PS\":7,\"NV\":[{\"N\":\"Infotext1\",\"V\":\"Persönliches Ticket für Schüler und Auszubildende. Es berechtigen zu beliebig vielen Fahrten im Gültigkeitszeitraum in der Tarifzone <strong>Osnabrück/Belm (100)</strong>. Das Ticket gilt für die jeweilige Kalenderwoche. Gültig nur in Verbindung mit der Kundenkarte für Schüler und Auszubildende und Ihren Angaben zum räumlichen Geltungsbereich.<br /> <br /><strong>Für Schüler und Auszubildenden ab 18 Jahren. Bei Fragen hierzu wenden Sie sich bitte an ticketshop@vos.info .</strong>\"},{\"N\":\"PersFlags\",\"V\":\"{\\\"MainTraveller\\\":[\\\"FIRSTNAME\\\",\\\"LASTNAME\\\",\\\"BIRTHDATE\\\"]}\"}]},\"LVL\":5,\"SV\":{\"OL\":1,\"OS\":6,\"DL\":2,\"DS\":7,\"RI\":4},\"TV\":{\"BD\":\"20211129\",\"BT\":\"000000\",\"ED\":\"20211206\",\"ET\":\"120000\"}},{\"P\":\"~0-.7-\",\"VT\":\"SWO-1\",\"FS\":\"\",\"DV\":8,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":4340,\"VR\":700},\"PRD\":16,\"FP\":{\"PS\":45,\"NV\":[{\"N\":\"Infotext1\",\"V\":\"<p>Persönliches Ticket für Schüler und Auszubildende. Es berechtigen zu beliebig vielen Fahrten im Gültigkeitszeitraum in der Tarifzone <strong>Osnabrück/Belm (100)</strong>. Das Ticket gilt für den jeweilige Kalendermonat. Gültig nur in Verbindung mit der Kundenkarte für Schüler und Auszubildende und Ihren Angaben zum räumlichen Geltungsbereich. <br /><strong>Für Schüler und Auszubildenden ab 18 Jahren. Bei Fragen hierzu wenden Sie sich bitte an <a href=\"},{\"N\":\"PersFlags\",\"V\":\"{\\\"MainTraveller\\\":[\\\"FIRSTNAME\\\",\\\"LASTNAME\\\",\\\"BIRTHDATE\\\"]}\"}]},\"LVL\":5,\"SV\":{\"OL\":1,\"OS\":6,\"DL\":2,\"DS\":7,\"RI\":4},\"TV\":{\"BD\":\"20211201\",\"BT\":\"000000\",\"ED\":\"20220103\",\"ET\":\"120000\"}}],\"DESCR\":[\"VOS 0\",\"\"],\"OPT\":false,\"ALT\":true,\"SEQ\":false}],\"OPT\":false,\"ALT\":true,\"SEQ\":false},\"errCode\":0,\"errMsg\":\"\"}"
+            },
+            "ovwTrfRefL":
+            [
+              {
+                "type":"F",
+                "fareSetX":0,
+                "fareX":0
+              },
+              {
+                "type":"F",
+                "fareSetX":0,
+                "fareX":1
+              },
+              {
+                "type":"F",
+                "fareSetX":0,
+                "fareX":2
+              },
+              {
+                "type":"F",
+                "fareSetX":0,
+                "fareX":3
+              }
+            ],
+            "conSubscr":"F",
+            "cksum":"5dc03c04_3"
+          },
+          {
+            "cid":"C-2",
+            "date":"20211205",
+            "dur":"000400",
+            "chg":0,
+            "sDays":
+            {
+              "sDaysR":"täglich",
+              "sDaysI":"nicht 24. Dez",
+              "sDaysB":"FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8"
+            },
+            "isAlt":true,
+            "dep":
+            {
+              "locX":0,
+              "idx":0,
+              "dProdX":9,
+              "dPlatfS":"1",
+              "dInR":true,
+              "dTimeS":"193400",
+              "dTimeR":"193400",
+              "dProgType":"PROGNOSED",
+              "type":"N"
+            },
+            "arr":
+            {
+              "locX":9,
+              "idx":2,
+              "aProdX":9,
+              "aPlatfS":"A2(Ersatz)",
+              "aOutR":true,
+              "aTimeS":"193800",
+              "aTimeR":"193800",
+              "aProgType":"PROGNOSED",
+              "type":"N"
+            },
+            "secL":
+            [
+              {
+                "type":"JNY",
+                "icoX":1,
+                "dep":
+                {
+                  "locX":0,
+                  "idx":0,
+                  "dProdX":9,
+                  "dPlatfS":"1",
+                  "dInR":true,
+                  "dTimeS":"193400",
+                  "dTimeR":"193400",
+                  "dProgType":"PROGNOSED",
+                  "type":"N"
+                },
+                "arr":
+                {
+                  "locX":9,
+                  "idx":2,
+                  "aProdX":9,
+                  "aPlatfS":"A2(Ersatz)",
+                  "aOutR":true,
+                  "aTimeS":"193800",
+                  "aTimeR":"193800",
+                  "aProgType":"PROGNOSED",
+                  "type":"N"
+                },
+                "jny":
+                {
+                  "jid":"1|376674|0|80|5122021",
+                  "prodX":10,
+                  "dirTxt":"Landwehrviertel",
+                  "dirFlg":"2",
+                  "status":"P",
+                  "isRedir":true,
+                  "isRchbl":true,
+                  "stopL":
+                  [
+                    {
+                      "locX":0,
+                      "idx":0,
+                      "dProdX":10,
+                      "dInR":true,
+                      "dTimeS":"193400",
+                      "dTimeR":"193400",
+                      "dProgType":"PROGNOSED",
+                      "dDirTxt":"Landwehrviertel",
+                      "dDirFlg":"2",
+                      "type":"N"
+                    },
+                    {
+                      "locX":4,
+                      "idx":1,
+                      "aProdX":10,
+                      "aOutR":true,
+                      "aTimeS":"193600",
+                      "aTimeR":"193600",
+                      "aProgType":"PROGNOSED",
+                      "dProdX":10,
+                      "dInR":true,
+                      "dTimeS":"193600",
+                      "dTimeR":"193600",
+                      "dProgType":"PROGNOSED",
+                      "type":"N"
+                    },
+                    {
+                      "locX":9,
+                      "idx":2,
+                      "aProdX":10,
+                      "aOutR":true,
+                      "aTimeS":"193800",
+                      "aTimeR":"193800",
+                      "aProgType":"PROGNOSED",
+                      "type":"N"
+                    }
+                  ],
+                  "polyG":
+                  {
+                    "polyXL":
+                    [
+                      2
+                    ],
+                    "layerX":0,
+                    "crdSysX":0
+                  },
+                  "polyGAltL":
+                  [
+                    {
+                      "layerX":0,
+                      "crdSysX":0
+                    },
+                    {
+                      "layerX":0,
+                      "crdSysX":1
+                    }
+                  ],
+                  "freq":
+                  {
+                    "minC":2,
+                    "maxC":12,
+                    "numC":20,
+                    "jnyL":
+                    [
+                      {
+                        "jid":"1|156288|0|80|5122021",
+                        "prodX":3,
+                        "dirTxt":"Berningshöhe",
+                        "dirFlg":"2",
+                        "stopL":
+                        [
+                          {
+                            "locX":0,
+                            "idx":11,
+                            "dProdX":3,
+                            "dTimeS":"194100",
+                            "dDirTxt":"Berningshöhe",
+                            "dDirFlg":"2",
+                            "type":"N"
+                          },
+                          {
+                            "locX":2,
+                            "idx":13,
+                            "aProdX":3,
+                            "aTimeS":"194500",
+                            "type":"N"
+                          }
+                        ],
+                        "pos":
+                        {
+                          "x":8052303,
+                          "y":52302279,
+                          "layerX":0,
+                          "crdSysX":0
+                        },
+                        "ctxRecon":"T$A=1@O=Osnabrück Hauptbahnhof/ZOB@L=100071@a=128@$A=1@O=Osnabrück Neumarkt@L=100082@a=128@$202112051941$202112051945$Bus 14  $$1$$$$$$",
+                        "subscr":"F"
+                      },
+                      {
+                        "jid":"1|154656|6|80|5122021",
+                        "prodX":4,
+                        "dirTxt":"Hellern Nord ü. Eversburg",
+                        "dirFlg":"2",
+                        "stopL":
+                        [
+                          {
+                            "locX":0,
+                            "idx":17,
+                            "dProdX":4,
+                            "dTimeS":"194400",
+                            "dDirTxt":"Hellern Nord ü. Eversburg",
+                            "dDirFlg":"2",
+                            "type":"N"
+                          },
+                          {
+                            "locX":8,
+                            "idx":19,
+                            "aProdX":4,
+                            "aTimeS":"194800",
+                            "type":"N"
+                          }
+                        ],
+                        "pos":
+                        {
+                          "x":8107839,
+                          "y":52248731,
+                          "layerX":0,
+                          "crdSysX":0
+                        },
+                        "ctxRecon":"T$A=1@O=Osnabrück Hauptbahnhof/ZOB@L=100071@a=128@$A=1@O=Osnabrück Neumarkt@L=150091@a=128@$202112051944$202112051948$Bus 17  $$3$$$$$$",
+                        "subscr":"F"
+                      },
+                      {
+                        "jid":"1|376359|0|80|5122021",
+                        "prodX":5,
+                        "dirTxt":"Landwehrviertel",
+                        "dirFlg":"2",
+                        "stopL":
+                        [
+                          {
+                            "locX":0,
+                            "idx":0,
+                            "dProdX":5,
+                            "dTimeS":"195400",
+                            "dDirTxt":"Landwehrviertel",
+                            "dDirFlg":"2",
+                            "type":"N"
+                          },
+                          {
+                            "locX":9,
+                            "idx":2,
+                            "aProdX":5,
+                            "aTimeS":"195800",
+                            "type":"N"
+                          }
+                        ],
+                        "ctxRecon":"T$A=1@O=Osnabrück Hauptbahnhof/ZOB@L=100071@a=128@$A=1@O=Osnabrück Neumarkt@L=100081@a=128@$202112051954$202112051958$Bus M2  $$3$$$$$$",
+                        "subscr":"F"
+                      },
+                      {
+                        "jid":"1|155900|6|80|5122021",
+                        "prodX":6,
+                        "dirTxt":"Heger Friedhof",
+                        "dirFlg":"2",
+                        "stopL":
+                        [
+                          {
+                            "locX":0,
+                            "idx":15,
+                            "dProdX":6,
+                            "dTimeS":"195600",
+                            "dDirTxt":"Heger Friedhof",
+                            "dDirFlg":"2",
+                            "type":"N"
+                          },
+                          {
+                            "locX":2,
+                            "idx":17,
+                            "aProdX":6,
+                            "aTimeS":"200000",
+                            "type":"N"
+                          }
+                        ],
+                        "ctxRecon":"T$A=1@O=Osnabrück Hauptbahnhof/ZOB@L=100071@a=128@$A=1@O=Osnabrück Neumarkt@L=100082@a=128@$202112051956$202112052000$Bus 15  $$1$$$$$$",
+                        "subscr":"F"
+                      },
+                      {
+                        "jid":"1|155760|7|80|5122021",
+                        "prodX":8,
+                        "dirTxt":"Neumarkt",
+                        "dirFlg":"2",
+                        "stopL":
+                        [
+                          {
+                            "locX":0,
+                            "idx":17,
+                            "dProdX":8,
+                            "dTimeS":"200400",
+                            "dDirTxt":"Neumarkt",
+                            "dDirFlg":"2",
+                            "type":"N"
+                          },
+                          {
+                            "locX":8,
+                            "idx":19,
+                            "aProdX":8,
+                            "aTimeS":"200800",
+                            "type":"N"
+                          }
+                        ],
+                        "ctxRecon":"T$A=1@O=Osnabrück Hauptbahnhof/ZOB@L=100071@a=128@$A=1@O=Osnabrück Neumarkt@L=150091@a=128@$202112052004$202112052008$Bus 16  $$1$$$$$$",
+                        "subscr":"F"
+                      }
+                    ]
+                  },
+                  "ctxRecon":"T$A=1@O=Osnabrück Hauptbahnhof/ZOB@L=100071@a=128@$A=1@O=Osnabrück Neumarkt@L=100081@a=128@$202112051934$202112051938$Bus M2  $$3$$$$$$",
+                  "msgL":
+                  [
+                    {
+                      "type":"REM",
+                      "remX":1,
+                      "fLocX":0,
+                      "tLocX":9,
+                      "tagL":
+                      [
+                        "RES_JNY_DTL"
+                      ]
+                    },
+                    {
+                      "type":"HIM",
+                      "himX":2,
+                      "fLocX":0,
+                      "tLocX":0,
+                      "tagL":
+                      [
+                        "RES_GLB_HDR_H3","SUM_GLB_HDR_H3"
+                      ]
+                    }
+                  ],
+                  "subscr":"F"
+                }
+              }
+            ],
+            "ctxRecon":"¶HKI¶T$A=1@O=Osnabrück Hauptbahnhof/ZOB@L=100071@a=128@$A=1@O=Osnabrück Neumarkt@L=100081@a=128@$202112051934$202112051938$Bus M2  $$3$$$$$$",
+            "freq":
+            {
+              "minC":2
+            },
+            "trfRes":
+            {
+              "statusCode":"OK",
+              "fareSetL":
+              [
+                {
+                  "desc":"Verbund: VOS |  VOS 0 |  Startzone 100 |  Zielzone 100",
+                  "fareL":
+                  [
+                    {
+                      "name":"KurzstreckenTicket Digital",
+                      "desc":"nur über VOSpilot & YANiQ App",
+                      "prc":150,
+                      "cur":"EUR",
+                      "shpCtx":"~0-.0-"
+                    },
+                    {
+                      "name":"KurzstreckenTicket",
+                      "prc":160,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"EinzelTicket Digital",
+                      "desc":"nur über VOSpilot & YANiQ App",
+                      "prc":270,
+                      "cur":"EUR",
+                      "shpCtx":"~0-.1-"
+                    },
+                    {
+                      "name":"EinzelTicket",
+                      "prc":280,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"EinzelTicket Kind",
+                      "prc":140,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"TagesTicket Digital",
+                      "desc":"nur über VOSpilot & YANiQ App",
+                      "prc":540,
+                      "cur":"EUR",
+                      "shpCtx":"~0-.2-"
+                    },
+                    {
+                      "name":"TagesTicket",
+                      "prc":590,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"TagesTicket Familie Digital",
+                      "desc":"nur über VOSpilot App",
+                      "prc":660,
+                      "cur":"EUR",
+                      "shpCtx":"~0-.3-"
+                    },
+                    {
+                      "name":"TagesTicket Familie",
+                      "prc":710,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"WochenTicket Digital",
+                      "desc":"nur über VOSpilot & YANiQ App",
+                      "prc":1870,
+                      "cur":"EUR",
+                      "shpCtx":"~0-.4-"
+                    },
+                    {
+                      "name":"WochenTicket",
+                      "prc":1930,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"MonatsTicket Digital",
+                      "desc":"nur über VOSpilot App",
+                      "prc":5790,
+                      "cur":"EUR",
+                      "shpCtx":"~0-.5-"
+                    },
+                    {
+                      "name":"MonatsTicket",
+                      "prc":5980,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"WochenTicket Schüler Digital",
+                      "desc":"nur über VOSpilot App",
+                      "prc":1400,
+                      "cur":"EUR",
+                      "shpCtx":"~0-.6-"
+                    },
+                    {
+                      "name":"WochenTicket Schüler",
+                      "prc":1440,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"MonatsTicket Schüler Digital",
+                      "desc":"nur über VOSpilot App",
+                      "prc":4340,
+                      "cur":"EUR",
+                      "shpCtx":"~0-.7-"
+                    },
+                    {
+                      "name":"MonatsTicket Schüler",
+                      "prc":4410,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"8-FahrtenTicket",
+                      "desc":"nur in der YANiQ-App",
+                      "prc":1790,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"8-FahrtenTicket",
+                      "prc":1840,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"12-FahrtenTicket",
+                      "prc":2640,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"BasisAbo",
+                      "prc":4530,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"PremiumAbo",
+                      "prc":4870,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"YoungAbo",
+                      "prc":3880,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"63plusAbo",
+                      "prc":3000,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"JobTicket",
+                      "prc":4090,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"JahresTicket Schüler",
+                      "prc":43365,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"ErgänzungsTicket Schüler",
+                      "prc":800,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"MobilAbo",
+                      "prc":5990,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"FreizeitTicket Schüler",
+                      "prc":1300,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"FahrradTicket",
+                      "prc":170,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"JobTicket (VOS-Plus)",
+                      "prc":4690,
+                      "cur":"EUR"
+                    }
+                  ],
+                  "fSecRefX":0,
+                  "tSecRefX":0
+                }
+              ],
+              "shpCtx":"{\"common\":{\"FEL\":[{\"XV\":[\"0\",\"0\"]},{\"ID\":[\"100\"],\"ON\":[\"Osnabrück/Belm\"]},{\"ID\":[\"100\"],\"ON\":[\"Osnabrück/Belm\"]},{\"ID\":[\"100\"],\"ON\":[\"Osnabrück/Belm\"]},{\"ID\":[\"-1\",\"10000\"]},{\"ID\":[\"1\"],\"ON\":[\"VOS 0\"]},{\"ID\":[\"70001\"],\"ON\":[\"Osnabrück Hauptbahnhof/ZOB\"]},{\"ID\":[\"70002\"],\"ON\":[\"Osnabrück Neumarkt\"]},{\"ID\":[\"0\"]},{\"ID\":[\"10001\",\"6423\",\"1\"],\"ON\":[\"KurzstreckenTicket Digital\"],\"PN\":[\"KurzstreckenTicket\"]},{\"ID\":[\"10002\",\"6423\",\"2\"],\"ON\":[\"EinzelTicket Digital\"],\"PN\":[\"EinzelTicket\"]},{\"ID\":[\"10004\",\"6423\",\"5\"],\"ON\":[\"TagesTicket Digital\"],\"PN\":[\"TagesTicket\"]},{\"ID\":[\"10005\",\"6423\",\"6\"],\"ON\":[\"TagesTicket Familie Digital\"],\"PN\":[\"TagesTicket Familie\"]},{\"ID\":[\"10006\",\"6423\",\"7\"],\"ON\":[\"WochenTicket Digital\"],\"PN\":[\"WochenTicket\"]},{\"ID\":[\"10007\",\"6423\",\"8\"],\"ON\":[\"MonatsTicket Digital\"],\"PN\":[\"MonatsTicket\"]},{\"ID\":[\"10008\",\"6423\",\"16\"],\"ON\":[\"WochenTicket Schüler Digital\"],\"PN\":[\"WochenTicket Schüler\"]},{\"ID\":[\"10009\",\"6423\",\"18\"],\"ON\":[\"MonatsTicket Schüler Digital\"],\"PN\":[\"MonatsTicket Schüler\"]}]},\"BOG\":{\"BOGL\":[{\"P\":\"~0-\",\"BOL\":[{\"P\":\"~0-.0-\",\"VT\":\"SWO-1\",\"FS\":\"\",\"DV\":8,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":150,\"VR\":700},\"PRD\":9,\"FP\":{\"PS\":0,\"NV\":[{\"N\":\"Infotext1\",\"V\":\"Das KurzstreckenTicket ermöglicht es Ihnen, für kleines Geld inklusive Ihrer Einstiegshaltestelle insgesamt fünf Haltestellen im Stadtverkehr Osnabrück/Belm (Preisstufe 0) zu fahren.<br />Erreichen Sie Ihr Ziel nicht auf direktem Weg, dürfen Sie in die nächstmögliche Anschlussfahrt umsteigen, sofern diese noch in den vier Haltestellen inbegriffen ist. <br /><br /><strong>Nicht gültig zur Rückfahrt. Fahrtunterbrechungen sind nicht erlaubt.</strong>\"},{\"N\":\"PersFlags\",\"V\":\"{\\\"MainTraveller\\\":[\\\"FIRSTNAME\\\",\\\"LASTNAME\\\",\\\"BIRTHDATE\\\"]}\"}]},\"LVL\":5,\"SV\":{\"OL\":1,\"OS\":6,\"DL\":2,\"DS\":7,\"RI\":4},\"TV\":{\"BD\":\"20211205\",\"BT\":\"193400\",\"VD\":30,\"VC\":\"m\"}},{\"P\":\"~0-.1-\",\"VT\":\"SWO-1\",\"FS\":\"\",\"DV\":8,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":270,\"VR\":700},\"PRD\":10,\"FP\":{\"PS\":0,\"NV\":[{\"N\":\"Infotext1\",\"V\":\"Das EinzelTicket berechtigt zu einer Fahrt. Erreichen Sie Ihr Ziel nicht auf direktem Weg, dürfen Sie in die nächstmögliche Anschlussfahrt umsteigen. Nicht gültig zur Rückfahrt. Fahrtunterbrechungen sind nicht erlaubt.\"},{\"N\":\"PersFlags\",\"V\":\"{\\\"MainTraveller\\\":[\\\"FIRSTNAME\\\",\\\"LASTNAME\\\",\\\"BIRTHDATE\\\"]}\"}]},\"LVL\":5,\"SV\":{\"OL\":1,\"OS\":6,\"DL\":2,\"DS\":7,\"RI\":4},\"TV\":{\"BD\":\"20211205\",\"BT\":\"193400\",\"VD\":2,\"VC\":\"h\"}},{\"P\":\"~0-.2-\",\"VT\":\"SWO-1\",\"FS\":\"\",\"DV\":8,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":540,\"VR\":700},\"PRD\":11,\"FP\":{\"PS\":60,\"NV\":[{\"N\":\"Infotext1\",\"V\":\"Das TagesTicket berechtigt zu beliebig vielen Fahrten. Das Ticket gilt von Betriebsbeginn bis Betriebsende. Mitnahme eines Kindes bis einschließlich 14 Jahre und aller familienangehörigen Kinder bis 5 Jahre.\"},{\"N\":\"PersFlags\",\"V\":\"{\\\"MainTraveller\\\":[\\\"FIRSTNAME\\\",\\\"LASTNAME\\\",\\\"BIRTHDATE\\\"]}\"}]},\"LVL\":5,\"SV\":{\"OL\":1,\"OS\":6,\"DL\":2,\"DS\":7,\"RI\":4},\"TV\":{\"BD\":\"20211205\",\"BT\":\"000000\",\"ED\":\"20211206\",\"ET\":\"053000\"}},{\"P\":\"~0-.3-\",\"VT\":\"SWO-1\",\"FS\":\"\",\"DV\":8,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":660,\"VR\":700},\"PRD\":12,\"FP\":{\"PS\":60,\"NV\":[{\"N\":\"Infotext1\",\"V\":\"Das TagesTicket Familie berechtigt Sie einen Tag lang zu beliebig vielen Fahrten. \\nACHTUNG: Gültigkeit montags bis freitags ab 9 Uhr und an Samstagen, Sonn- und Feiertagen bereits ab Betriebsbeginn für maximal zwei Erwachsene und alle familienangehörigen Kinder bis einschließlich 14 Jahre.\"},{\"N\":\"PersFlags\",\"V\":\"{\\\"MainTraveller\\\":[\\\"FIRSTNAME\\\",\\\"LASTNAME\\\",\\\"BIRTHDATE\\\"]}\"}]},\"LVL\":5,\"SV\":{\"OL\":1,\"OS\":6,\"DL\":2,\"DS\":7,\"RI\":4},\"TV\":{\"BD\":\"20211205\",\"BT\":\"000000\",\"ED\":\"20211206\",\"ET\":\"053000\"}},{\"P\":\"~0-.4-\",\"VT\":\"SWO-1\",\"FS\":\"\",\"DV\":8,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":1870,\"VR\":700},\"PRD\":13,\"FP\":{\"PS\":30,\"NV\":[{\"N\":\"Infotext1\",\"V\":\"<p>Persönliches Ticket für beliebig viele Fahrten im jeweiligen Geltungszeitraum in der Tarifzone <strong>Osnabrück/Belm (100)</strong>. Das Ticket gilt für die jeweilige Kalenderwoche.</p>\\n<p>An Wochenenden und Feiertagen werden WochenTickets zu FamilienTickets  für bis zu zwei Erwachsene und familienangehörige Kinder bis einschließlich 14 Jahre.</p>\"},{\"N\":\"PersFlags\",\"V\":\"{\\\"MainTraveller\\\":[\\\"FIRSTNAME\\\",\\\"LASTNAME\\\",\\\"BIRTHDATE\\\"]}\"}]},\"LVL\":5,\"SV\":{\"OL\":1,\"OS\":6,\"DL\":2,\"DS\":7,\"RI\":4},\"TV\":{\"BD\":\"20211129\",\"BT\":\"000000\",\"ED\":\"20211206\",\"ET\":\"120000\"}},{\"P\":\"~0-.5-\",\"VT\":\"SWO-1\",\"FS\":\"\",\"DV\":8,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":5790,\"VR\":700},\"PRD\":14,\"FP\":{\"PS\":45,\"NV\":[{\"N\":\"Infotext1\",\"V\":\"Persönliches Ticket für beliebig viele Fahrten im jeweiligen Geltungszeitraum in der Tarifzone <strong>Osnabrück/Belm (100)</strong>. Das Ticket gilt für den jeweilige Kalendermonat.<br />An Wochenenden und Feiertagen werden WochenTickets zu FamilienTickets  für bis zu zwei Erwachsene und familienangehörige Kinder bis einschließlich 14 Jahre.\"},{\"N\":\"PersFlags\",\"V\":\"{\\\"MainTraveller\\\":[\\\"FIRSTNAME\\\",\\\"LASTNAME\\\",\\\"BIRTHDATE\\\"]}\"}]},\"LVL\":5,\"SV\":{\"OL\":1,\"OS\":6,\"DL\":2,\"DS\":7,\"RI\":4},\"TV\":{\"BD\":\"20211201\",\"BT\":\"000000\",\"ED\":\"20220103\",\"ET\":\"120000\"}},{\"P\":\"~0-.6-\",\"VT\":\"SWO-1\",\"FS\":\"\",\"DV\":8,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":1400,\"VR\":700},\"PRD\":15,\"FP\":{\"PS\":7,\"NV\":[{\"N\":\"Infotext1\",\"V\":\"Persönliches Ticket für Schüler und Auszubildende. Es berechtigen zu beliebig vielen Fahrten im Gültigkeitszeitraum in der Tarifzone <strong>Osnabrück/Belm (100)</strong>. Das Ticket gilt für die jeweilige Kalenderwoche. Gültig nur in Verbindung mit der Kundenkarte für Schüler und Auszubildende und Ihren Angaben zum räumlichen Geltungsbereich.<br /> <br /><strong>Für Schüler und Auszubildenden ab 18 Jahren. Bei Fragen hierzu wenden Sie sich bitte an ticketshop@vos.info .</strong>\"},{\"N\":\"PersFlags\",\"V\":\"{\\\"MainTraveller\\\":[\\\"FIRSTNAME\\\",\\\"LASTNAME\\\",\\\"BIRTHDATE\\\"]}\"}]},\"LVL\":5,\"SV\":{\"OL\":1,\"OS\":6,\"DL\":2,\"DS\":7,\"RI\":4},\"TV\":{\"BD\":\"20211129\",\"BT\":\"000000\",\"ED\":\"20211206\",\"ET\":\"120000\"}},{\"P\":\"~0-.7-\",\"VT\":\"SWO-1\",\"FS\":\"\",\"DV\":8,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":4340,\"VR\":700},\"PRD\":16,\"FP\":{\"PS\":45,\"NV\":[{\"N\":\"Infotext1\",\"V\":\"<p>Persönliches Ticket für Schüler und Auszubildende. Es berechtigen zu beliebig vielen Fahrten im Gültigkeitszeitraum in der Tarifzone <strong>Osnabrück/Belm (100)</strong>. Das Ticket gilt für den jeweilige Kalendermonat. Gültig nur in Verbindung mit der Kundenkarte für Schüler und Auszubildende und Ihren Angaben zum räumlichen Geltungsbereich. <br /><strong>Für Schüler und Auszubildenden ab 18 Jahren. Bei Fragen hierzu wenden Sie sich bitte an <a href=\"},{\"N\":\"PersFlags\",\"V\":\"{\\\"MainTraveller\\\":[\\\"FIRSTNAME\\\",\\\"LASTNAME\\\",\\\"BIRTHDATE\\\"]}\"}]},\"LVL\":5,\"SV\":{\"OL\":1,\"OS\":6,\"DL\":2,\"DS\":7,\"RI\":4},\"TV\":{\"BD\":\"20211201\",\"BT\":\"000000\",\"ED\":\"20220103\",\"ET\":\"120000\"}}],\"DESCR\":[\"VOS 0\",\"\"],\"OPT\":false,\"ALT\":true,\"SEQ\":false}],\"OPT\":false,\"ALT\":true,\"SEQ\":false},\"errCode\":0,\"errMsg\":\"\"}"
             },
             "ovwTrfRefL":
             [
@@ -1557,37 +2890,40 @@
               }
             ],
             "conSubscr":"F",
-            "cksum":"d93e4f18_3"
+            "cksum":"f1b13855_3"
           },
           {
-            "cid":"C-2",
-            "date":"20210906",
-            "dur":"000500",
+            "cid":"C-3",
+            "date":"20211205",
+            "dur":"000400",
             "chg":0,
             "sDays":
             {
-              "sDaysR":"Mo - Sa",
-              "sDaysB":"EFDFBF7EFDFBF7EFDFBF7EFDFBF7EFDFBF7EFDFBF0"
+              "sDaysR":"täglich",
+              "sDaysI":"nicht 24. Dez",
+              "sDaysB":"3060C183060C1831FFFFFFFFFFFFFFFFFFFFFFFFFFFF7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8"
             },
             "dep":
             {
               "locX":0,
-              "idx":0,
-              "dProdX":4,
+              "idx":11,
+              "dProdX":11,
               "dPlatfS":"1",
               "dInR":true,
-              "dTimeS":"145100",
+              "dTimeS":"194100",
+              "dTimeR":"194100",
               "dProgType":"PROGNOSED",
               "type":"N"
             },
             "arr":
             {
               "locX":2,
-              "idx":2,
-              "aProdX":4,
+              "idx":13,
+              "aProdX":11,
               "aPlatfS":"A2",
               "aOutR":true,
-              "aTimeS":"145600",
+              "aTimeS":"194500",
+              "aTimeR":"194500",
               "aProgType":"PROGNOSED",
               "type":"N"
             },
@@ -1599,30 +2935,32 @@
                 "dep":
                 {
                   "locX":0,
-                  "idx":0,
-                  "dProdX":4,
+                  "idx":11,
+                  "dProdX":11,
                   "dPlatfS":"1",
                   "dInR":true,
-                  "dTimeS":"145100",
+                  "dTimeS":"194100",
+                  "dTimeR":"194100",
                   "dProgType":"PROGNOSED",
                   "type":"N"
                 },
                 "arr":
                 {
                   "locX":2,
-                  "idx":2,
-                  "aProdX":4,
+                  "idx":13,
+                  "aProdX":11,
                   "aPlatfS":"A2",
                   "aOutR":true,
-                  "aTimeS":"145600",
+                  "aTimeS":"194500",
+                  "aTimeR":"194500",
                   "aProgType":"PROGNOSED",
                   "type":"N"
                 },
                 "jny":
                 {
-                  "jid":"1|106379|29|80|6092021",
-                  "prodX":5,
-                  "dirTxt":"Landwehrviertel",
+                  "jid":"1|156288|0|80|5122021",
+                  "prodX":3,
+                  "dirTxt":"Berningshöhe",
                   "dirFlg":"2",
                   "status":"P",
                   "isRchbl":true,
@@ -1630,395 +2968,39 @@
                   [
                     {
                       "locX":0,
-                      "idx":0,
-                      "dProdX":5,
+                      "idx":11,
+                      "dProdX":3,
                       "dInR":true,
-                      "dTimeS":"145100",
+                      "dTimeS":"194100",
+                      "dTimeR":"194100",
                       "dProgType":"PROGNOSED",
-                      "dDirTxt":"Landwehrviertel",
+                      "dDirTxt":"Berningshöhe",
                       "dDirFlg":"2",
                       "type":"N"
                     },
                     {
                       "locX":4,
-                      "idx":1,
-                      "aProdX":5,
+                      "idx":12,
+                      "aProdX":3,
                       "aOutR":true,
-                      "aTimeS":"145300",
-                      "dProdX":5,
+                      "aTimeS":"194300",
+                      "aTimeR":"194300",
+                      "aProgType":"PROGNOSED",
+                      "dProdX":3,
                       "dInR":true,
-                      "dTimeS":"145300",
-                      "type":"N"
-                    },
-                    {
-                      "locX":2,
-                      "idx":2,
-                      "aProdX":5,
-                      "aOutR":true,
-                      "aTimeS":"145600",
-                      "type":"N"
-                    }
-                  ],
-                  "polyG":
-                  {
-                    "polyXL":
-                    [
-                      2
-                    ],
-                    "layerX":0,
-                    "crdSysX":0
-                  },
-                  "polyGAltL":
-                  [
-                    {
-                      "layerX":0,
-                      "crdSysX":0
-                    },
-                    {
-                      "layerX":0,
-                      "crdSysX":1
-                    }
-                  ],
-                  "freq":
-                  {
-                    "minC":1,
-                    "maxC":5,
-                    "numC":61
-                  },
-                  "ctxRecon":"T$A=1@O=Osnabrück Hauptbahnhof/ZOB@L=100071@a=128@$A=1@O=Osnabrück Neumarkt@L=100082@a=128@$202109061451$202109061456$Bus M2  $$1$$$$",
-                  "msgL":
-                  [
-                    {
-                      "type":"REM",
-                      "remX":4,
-                      "fLocX":0,
-                      "tLocX":2,
-                      "tagL":
-                      [
-                        "RES_JNY_DTL"
-                      ]
-                    },
-                    {
-                      "type":"HIM",
-                      "himX":0,
-                      "fLocX":0,
-                      "tLocX":0,
-                      "tagL":
-                      [
-                        "RES_GLB_HDR_H3","SUM_GLB_HDR_H3"
-                      ]
-                    }
-                  ],
-                  "subscr":"F"
-                }
-              }
-            ],
-            "ctxRecon":"¶HKI¶T$A=1@O=Osnabrück Hauptbahnhof/ZOB@L=100071@a=128@$A=1@O=Osnabrück Neumarkt@L=100082@a=128@$202109061451$202109061456$Bus M2  $$1$$$$",
-            "freq":
-            {
-              "minC":1
-            },
-            "trfRes":
-            {
-              "statusCode":"OK",
-              "fareSetL":
-              [
-                {
-                  "desc":"Verbund: VOS |  VOS 0 |  Startzone 100 |  Zielzone 100",
-                  "fareL":
-                  [
-                    {
-                      "name":"KurzstreckenTicket Digital",
-                      "desc":"nur über VOSpilot & YANiQ App",
-                      "prc":150,
-                      "cur":"EUR",
-                      "shpCtx":"~0-.0-"
-                    },
-                    {
-                      "name":"KurzstreckenTicket",
-                      "prc":160,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"EinzelTicket Digital",
-                      "desc":"nur über VOSpilot & YANiQ App",
-                      "prc":270,
-                      "cur":"EUR",
-                      "shpCtx":"~0-.1-"
-                    },
-                    {
-                      "name":"EinzelTicket",
-                      "prc":280,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"EinzelTicket Kind",
-                      "prc":140,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"TagesTicket Digital",
-                      "desc":"nur über VOSpilot & YANiQ App",
-                      "prc":540,
-                      "cur":"EUR",
-                      "shpCtx":"~0-.2-"
-                    },
-                    {
-                      "name":"TagesTicket",
-                      "prc":590,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"TagesTicket Familie Digital",
-                      "desc":"nur über VOSpilot App",
-                      "prc":660,
-                      "cur":"EUR",
-                      "shpCtx":"~0-.3-"
-                    },
-                    {
-                      "name":"TagesTicket Familie",
-                      "prc":710,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"WochenTicket Digital",
-                      "desc":"nur über VOSpilot & YANiQ App",
-                      "prc":1870,
-                      "cur":"EUR",
-                      "shpCtx":"~0-.4-"
-                    },
-                    {
-                      "name":"WochenTicket",
-                      "prc":1930,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"MonatsTicket Digital",
-                      "desc":"nur über VOSpilot App",
-                      "prc":5790,
-                      "cur":"EUR",
-                      "shpCtx":"~0-.5-"
-                    },
-                    {
-                      "name":"MonatsTicket",
-                      "prc":5980,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"WochenTicket Schüler Digital",
-                      "desc":"nur über VOSpilot App",
-                      "prc":1400,
-                      "cur":"EUR",
-                      "shpCtx":"~0-.6-"
-                    },
-                    {
-                      "name":"WochenTicket Schüler",
-                      "prc":1440,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"MonatsTicket Schüler Digital",
-                      "desc":"nur über VOSpilot App",
-                      "prc":4340,
-                      "cur":"EUR",
-                      "shpCtx":"~0-.7-"
-                    },
-                    {
-                      "name":"MonatsTicket Schüler",
-                      "prc":4410,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"12-FahrtenTicket",
-                      "prc":2640,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"BasisAbo",
-                      "prc":4530,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"PremiumAbo",
-                      "prc":4870,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"YoungAbo",
-                      "prc":3880,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"63plusAbo",
-                      "prc":3000,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"JobTicket",
-                      "prc":4090,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"JahresTicket Schüler",
-                      "prc":41300,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"ErgänzungsTicket Schüler",
-                      "prc":800,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"MobilAbo",
-                      "prc":5990,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"FreizeitTicket Schüler",
-                      "prc":1300,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"FahrradTicket",
-                      "prc":170,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"JobTicket (VOS-Plus)",
-                      "prc":4690,
-                      "cur":"EUR"
-                    }
-                  ],
-                  "fSecRefX":0,
-                  "tSecRefX":0
-                }
-              ],
-              "shpCtx":"{\"common\":{\"FEL\":[{\"XV\":[\"0\",\"0\"]},{\"ID\":[\"100\"],\"ON\":[\"Osnabrück/Belm\"]},{\"ID\":[\"100\"],\"ON\":[\"Osnabrück/Belm\"]},{\"ID\":[\"100\"],\"ON\":[\"Osnabrück/Belm\"]},{\"ID\":[\"-1\",\"10000\"]},{\"ID\":[\"1\"],\"ON\":[\"VOS 0\"]},{\"ID\":[\"70001\"],\"ON\":[\"Osnabrück Hauptbahnhof/ZOB\"]},{\"ID\":[\"70002\"],\"ON\":[\"Osnabrück Neumarkt\"]},{\"ID\":[\"0\"]},{\"ID\":[\"10001\",\"6423\",\"1\"],\"ON\":[\"KurzstreckenTicket Digital\"],\"PN\":[\"KurzstreckenTicket\"]},{\"ID\":[\"10002\",\"6423\",\"2\"],\"ON\":[\"EinzelTicket Digital\"],\"PN\":[\"EinzelTicket\"]},{\"ID\":[\"10004\",\"6423\",\"5\"],\"ON\":[\"TagesTicket Digital\"],\"PN\":[\"TagesTicket\"]},{\"ID\":[\"10005\",\"6423\",\"6\"],\"ON\":[\"TagesTicket Familie Digital\"],\"PN\":[\"TagesTicket Familie\"]},{\"ID\":[\"10006\",\"6423\",\"7\"],\"ON\":[\"WochenTicket Digital\"],\"PN\":[\"WochenTicket\"]},{\"ID\":[\"10007\",\"6423\",\"8\"],\"ON\":[\"MonatsTicket Digital\"],\"PN\":[\"MonatsTicket\"]},{\"ID\":[\"10008\",\"6423\",\"16\"],\"ON\":[\"WochenTicket Schüler Digital\"],\"PN\":[\"WochenTicket Schüler\"]},{\"ID\":[\"10009\",\"6423\",\"18\"],\"ON\":[\"MonatsTicket Schüler Digital\"],\"PN\":[\"MonatsTicket Schüler\"]},{\"ID\":[\"KurzstreckenTicket Digital\"]},{\"ID\":[\"EinzelTicket Digital\"]},{\"ID\":[\"TagesTicket Digital\"]},{\"ID\":[\"TagesTicket Familie Digital\"]},{\"ID\":[\"WochenTicket Digital\"]},{\"ID\":[\"MonatsTicket Digital\"]},{\"ID\":[\"WochenTicket Schüler Digital\"]},{\"ID\":[\"MonatsTicket Schüler Digital\"]}]},\"BOG\":{\"BOGL\":[{\"P\":\"~0-\",\"BOL\":[{\"P\":\"~0-.0-\",\"VT\":\"SWO-1\",\"FS\":\"\",\"DV\":8,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":150,\"VR\":700},\"PRD\":17,\"FP\":{\"PS\":0,\"NV\":[{\"N\":\"Infotext1\",\"V\":\"Das KurzstreckenTicket ermöglicht es Ihnen, für kleines Geld inklusive Ihrer Einstiegshaltestelle insgesamt fünf Haltestellen im Stadtverkehr Osnabrück/Belm (Preisstufe 0) zu fahren.<br />Erreichen Sie Ihr Ziel nicht auf direktem Weg, dürfen Sie in die nächstmögliche Anschlussfahrt umsteigen, sofern diese noch in den vier Haltestellen inbegriffen ist. <br /><br /><strong>Nicht gültig zur Rückfahrt. Fahrtunterbrechungen sind nicht erlaubt.</strong>\"},{\"N\":\"PersFlags\",\"V\":\"{\\\"MainTraveller\\\":[\\\"FIRSTNAME\\\",\\\"LASTNAME\\\",\\\"BIRTHDATE\\\"]}\"}]},\"LVL\":9,\"SV\":{\"OL\":1,\"OS\":6,\"DL\":2,\"DS\":7,\"RI\":4},\"TV\":{\"BD\":\"20210906\",\"BT\":\"145100\",\"VD\":30,\"VC\":\"m\"}},{\"P\":\"~0-.1-\",\"VT\":\"SWO-1\",\"FS\":\"\",\"DV\":8,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":270,\"VR\":700},\"PRD\":18,\"FP\":{\"PS\":0,\"NV\":[{\"N\":\"Infotext1\",\"V\":\"Das EinzelTicket berechtigt zu einer Fahrt. Erreichen Sie Ihr Ziel nicht auf direktem Weg, dürfen Sie in die nächstmögliche Anschlussfahrt umsteigen. Nicht gültig zur Rückfahrt. Fahrtunterbrechungen sind nicht erlaubt.\"},{\"N\":\"PersFlags\",\"V\":\"{\\\"MainTraveller\\\":[\\\"FIRSTNAME\\\",\\\"LASTNAME\\\",\\\"BIRTHDATE\\\"]}\"}]},\"LVL\":10,\"SV\":{\"OL\":1,\"OS\":6,\"DL\":2,\"DS\":7,\"RI\":4},\"TV\":{\"BD\":\"20210906\",\"BT\":\"145100\",\"VD\":2,\"VC\":\"h\"}},{\"P\":\"~0-.2-\",\"VT\":\"SWO-1\",\"FS\":\"\",\"DV\":8,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":540,\"VR\":700},\"PRD\":19,\"FP\":{\"PS\":60,\"NV\":[{\"N\":\"Infotext1\",\"V\":\"Das TagesTicket berechtigt zu beliebig vielen Fahrten. Das Ticket gilt von Betriebsbeginn bis Betriebsende. Mitnahme eines Kindes bis einschließlich 14 Jahre und aller familienangehörigen Kinder bis 5 Jahre.\"},{\"N\":\"PersFlags\",\"V\":\"{\\\"MainTraveller\\\":[\\\"FIRSTNAME\\\",\\\"LASTNAME\\\",\\\"BIRTHDATE\\\"]}\"}]},\"LVL\":11,\"SV\":{\"OL\":1,\"OS\":6,\"DL\":2,\"DS\":7,\"RI\":4},\"TV\":{\"BD\":\"20210906\",\"BT\":\"000000\",\"ED\":\"20210907\",\"ET\":\"053000\"}},{\"P\":\"~0-.3-\",\"VT\":\"SWO-1\",\"FS\":\"\",\"DV\":8,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":660,\"VR\":700},\"PRD\":20,\"FP\":{\"PS\":60,\"NV\":[{\"N\":\"Infotext1\",\"V\":\"Das TagesTicket Familie berechtigt Sie einen Tag lang zu beliebig vielen Fahrten. \\nACHTUNG: Gültigkeit montags bis freitags ab 9 Uhr und an Samstagen, Sonn- und Feiertagen bereits ab Betriebsbeginn für maximal zwei Erwachsene und alle familienangehörigen Kinder bis einschließlich 14 Jahre.\"},{\"N\":\"PersFlags\",\"V\":\"{\\\"MainTraveller\\\":[\\\"FIRSTNAME\\\",\\\"LASTNAME\\\",\\\"BIRTHDATE\\\"]}\"}]},\"LVL\":12,\"SV\":{\"OL\":1,\"OS\":6,\"DL\":2,\"DS\":7,\"RI\":4},\"TV\":{\"BD\":\"20210906\",\"BT\":\"090000\",\"ED\":\"20210907\",\"ET\":\"053000\"}},{\"P\":\"~0-.4-\",\"VT\":\"SWO-1\",\"FS\":\"\",\"DV\":8,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":1870,\"VR\":700},\"PRD\":21,\"FP\":{\"PS\":30,\"NV\":[{\"N\":\"Infotext1\",\"V\":\"<p>Persönliches Ticket für beliebig viele Fahrten im jeweiligen Geltungszeitraum in der Tarifzone <strong>Osnabrück/Belm (100)</strong>. Das Ticket gilt für die jeweilige Kalenderwoche.</p>\\n<p>An Wochenenden und Feiertagen werden WochenTickets zu FamilienTickets  für bis zu zwei Erwachsene und familienangehörige Kinder bis einschließlich 14 Jahre.</p>\"},{\"N\":\"PersFlags\",\"V\":\"{\\\"MainTraveller\\\":[\\\"FIRSTNAME\\\",\\\"LASTNAME\\\",\\\"BIRTHDATE\\\"]}\"}]},\"LVL\":13,\"SV\":{\"OL\":1,\"OS\":6,\"DL\":2,\"DS\":7,\"RI\":4},\"TV\":{\"BD\":\"20210906\",\"BT\":\"000000\",\"ED\":\"20210913\",\"ET\":\"120000\"}},{\"P\":\"~0-.5-\",\"VT\":\"SWO-1\",\"FS\":\"\",\"DV\":8,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":5790,\"VR\":700},\"PRD\":22,\"FP\":{\"PS\":45,\"NV\":[{\"N\":\"Infotext1\",\"V\":\"Persönliches Ticket für beliebig viele Fahrten im jeweiligen Geltungszeitraum in der Tarifzone <strong>Osnabrück/Belm (100)</strong>. Das Ticket gilt für den jeweilige Kalendermonat.<br />An Wochenenden und Feiertagen werden WochenTickets zu FamilienTickets  für bis zu zwei Erwachsene und familienangehörige Kinder bis einschließlich 14 Jahre.\"},{\"N\":\"PersFlags\",\"V\":\"{\\\"MainTraveller\\\":[\\\"FIRSTNAME\\\",\\\"LASTNAME\\\",\\\"BIRTHDATE\\\"]}\"}]},\"LVL\":14,\"SV\":{\"OL\":1,\"OS\":6,\"DL\":2,\"DS\":7,\"RI\":4},\"TV\":{\"BD\":\"20210901\",\"BT\":\"000000\",\"ED\":\"20211001\",\"ET\":\"120000\"}},{\"P\":\"~0-.6-\",\"VT\":\"SWO-1\",\"FS\":\"\",\"DV\":8,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":1400,\"VR\":700},\"PRD\":23,\"FP\":{\"PS\":7,\"NV\":[{\"N\":\"Infotext1\",\"V\":\"Persönliches Ticket für Schüler und Auszubildende. Es berechtigen zu beliebig vielen Fahrten im Gültigkeitszeitraum in der Tarifzone <strong>Osnabrück/Belm (100)</strong>. Das Ticket gilt für die jeweilige Kalenderwoche. Gültig nur in Verbindung mit der Kundenkarte für Schüler und Auszubildende und Ihren Angaben zum räumlichen Geltungsbereich.<br /> <br /><strong>Für Schüler und Auszubildenden ab 18 Jahren. Bei Fragen hierzu wenden Sie sich bitte an ticketshop@vos.info .</strong>\"},{\"N\":\"PersFlags\",\"V\":\"{\\\"MainTraveller\\\":[\\\"FIRSTNAME\\\",\\\"LASTNAME\\\",\\\"BIRTHDATE\\\"]}\"}]},\"LVL\":15,\"SV\":{\"OL\":1,\"OS\":6,\"DL\":2,\"DS\":7,\"RI\":4},\"TV\":{\"BD\":\"20210906\",\"BT\":\"000000\",\"ED\":\"20210913\",\"ET\":\"120000\"}},{\"P\":\"~0-.7-\",\"VT\":\"SWO-1\",\"FS\":\"\",\"DV\":8,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":4340,\"VR\":700},\"PRD\":24,\"FP\":{\"PS\":45,\"NV\":[{\"N\":\"Infotext1\",\"V\":\"<p>Persönliches Ticket für Schüler und Auszubildende. Es berechtigen zu beliebig vielen Fahrten im Gültigkeitszeitraum in der Tarifzone <strong>Osnabrück/Belm (100)</strong>. Das Ticket gilt für den jeweilige Kalendermonat. Gültig nur in Verbindung mit der Kundenkarte für Schüler und Auszubildende und Ihren Angaben zum räumlichen Geltungsbereich. <br /><strong>Für Schüler und Auszubildenden ab 18 Jahren. Bei Fragen hierzu wenden Sie sich bitte an <a href=\"},{\"N\":\"PersFlags\",\"V\":\"{\\\"MainTraveller\\\":[\\\"FIRSTNAME\\\",\\\"LASTNAME\\\",\\\"BIRTHDATE\\\"]}\"}]},\"LVL\":16,\"SV\":{\"OL\":1,\"OS\":6,\"DL\":2,\"DS\":7,\"RI\":4},\"TV\":{\"BD\":\"20210901\",\"BT\":\"000000\",\"ED\":\"20211001\",\"ET\":\"120000\"}}],\"DESCR\":[\"VOS 0\",\"\"],\"OPT\":false,\"ALT\":true,\"SEQ\":false}],\"OPT\":false,\"ALT\":true,\"SEQ\":false},\"errCode\":0,\"errMsg\":\"\"}"
-            },
-            "ovwTrfRefL":
-            [
-              {
-                "type":"F",
-                "fareSetX":0,
-                "fareX":0
-              },
-              {
-                "type":"F",
-                "fareSetX":0,
-                "fareX":1
-              },
-              {
-                "type":"F",
-                "fareSetX":0,
-                "fareX":2
-              },
-              {
-                "type":"F",
-                "fareSetX":0,
-                "fareX":3
-              }
-            ],
-            "conSubscr":"F",
-            "cksum":"9d31b3f1_3"
-          },
-          {
-            "cid":"C-3",
-            "date":"20210906",
-            "dur":"000500",
-            "chg":0,
-            "sDays":
-            {
-              "sDaysR":"Mo - Fr",
-              "sDaysI":"nicht 1. Nov",
-              "sDaysB":"00000000000000019F3E7CF9F3E7CF8F3E7CF9F3E0"
-            },
-            "dep":
-            {
-              "locX":0,
-              "idx":0,
-              "dProdX":6,
-              "dPlatfS":"1",
-              "dInR":true,
-              "dTimeS":"145600",
-              "dProgType":"PROGNOSED",
-              "type":"N"
-            },
-            "arr":
-            {
-              "locX":2,
-              "idx":2,
-              "aProdX":6,
-              "aPlatfS":"A2",
-              "aOutR":true,
-              "aTimeS":"150100",
-              "aProgType":"PROGNOSED",
-              "type":"N"
-            },
-            "secL":
-            [
-              {
-                "type":"JNY",
-                "icoX":1,
-                "dep":
-                {
-                  "locX":0,
-                  "idx":0,
-                  "dProdX":6,
-                  "dPlatfS":"1",
-                  "dInR":true,
-                  "dTimeS":"145600",
-                  "dProgType":"PROGNOSED",
-                  "type":"N"
-                },
-                "arr":
-                {
-                  "locX":2,
-                  "idx":2,
-                  "aProdX":6,
-                  "aPlatfS":"A2",
-                  "aOutR":true,
-                  "aTimeS":"150100",
-                  "aProgType":"PROGNOSED",
-                  "type":"N"
-                },
-                "jny":
-                {
-                  "jid":"1|193334|8|80|6092021",
-                  "prodX":7,
-                  "dirTxt":"Lotte L 501",
-                  "dirFlg":"2",
-                  "status":"P",
-                  "isRchbl":true,
-                  "stopL":
-                  [
-                    {
-                      "locX":0,
-                      "idx":0,
-                      "dProdX":7,
-                      "dInR":true,
-                      "dTimeS":"145600",
+                      "dTimeS":"194300",
+                      "dTimeR":"194300",
                       "dProgType":"PROGNOSED",
-                      "dDirTxt":"Lotte L 501",
-                      "dDirFlg":"2",
-                      "type":"N"
-                    },
-                    {
-                      "locX":6,
-                      "idx":1,
-                      "aProdX":7,
-                      "aOutR":true,
-                      "aTimeS":"145800",
-                      "dProdX":7,
-                      "dInR":true,
-                      "dTimeS":"145800",
                       "type":"N"
                     },
                     {
                       "locX":2,
-                      "idx":2,
-                      "aProdX":7,
+                      "idx":13,
+                      "aProdX":3,
                       "aOutR":true,
-                      "aTimeS":"150100",
+                      "aTimeS":"194500",
+                      "aTimeR":"194500",
+                      "aProgType":"PROGNOSED",
                       "type":"N"
                     }
                   ],
@@ -2042,60 +3024,171 @@
                       "crdSysX":1
                     }
                   ],
+                  "pos":
+                  {
+                    "x":8052303,
+                    "y":52302279,
+                    "layerX":0,
+                    "crdSysX":0
+                  },
                   "freq":
                   {
-                    "minC":1,
-                    "maxC":5,
-                    "numC":61
+                    "minC":2,
+                    "maxC":12,
+                    "numC":19,
+                    "jnyL":
+                    [
+                      {
+                        "jid":"1|154656|6|80|5122021",
+                        "prodX":4,
+                        "dirTxt":"Hellern Nord ü. Eversburg",
+                        "dirFlg":"2",
+                        "stopL":
+                        [
+                          {
+                            "locX":0,
+                            "idx":17,
+                            "dProdX":4,
+                            "dTimeS":"194400",
+                            "dDirTxt":"Hellern Nord ü. Eversburg",
+                            "dDirFlg":"2",
+                            "type":"N"
+                          },
+                          {
+                            "locX":8,
+                            "idx":19,
+                            "aProdX":4,
+                            "aTimeS":"194800",
+                            "type":"N"
+                          }
+                        ],
+                        "pos":
+                        {
+                          "x":8107839,
+                          "y":52248731,
+                          "layerX":0,
+                          "crdSysX":0
+                        },
+                        "ctxRecon":"T$A=1@O=Osnabrück Hauptbahnhof/ZOB@L=100071@a=128@$A=1@O=Osnabrück Neumarkt@L=150091@a=128@$202112051944$202112051948$Bus 17  $$3$$$$$$",
+                        "subscr":"F"
+                      },
+                      {
+                        "jid":"1|376359|0|80|5122021",
+                        "prodX":5,
+                        "dirTxt":"Landwehrviertel",
+                        "dirFlg":"2",
+                        "stopL":
+                        [
+                          {
+                            "locX":0,
+                            "idx":0,
+                            "dProdX":5,
+                            "dTimeS":"195400",
+                            "dDirTxt":"Landwehrviertel",
+                            "dDirFlg":"2",
+                            "type":"N"
+                          },
+                          {
+                            "locX":9,
+                            "idx":2,
+                            "aProdX":5,
+                            "aTimeS":"195800",
+                            "type":"N"
+                          }
+                        ],
+                        "ctxRecon":"T$A=1@O=Osnabrück Hauptbahnhof/ZOB@L=100071@a=128@$A=1@O=Osnabrück Neumarkt@L=100081@a=128@$202112051954$202112051958$Bus M2  $$3$$$$$$",
+                        "subscr":"F"
+                      },
+                      {
+                        "jid":"1|155900|6|80|5122021",
+                        "prodX":6,
+                        "dirTxt":"Heger Friedhof",
+                        "dirFlg":"2",
+                        "stopL":
+                        [
+                          {
+                            "locX":0,
+                            "idx":15,
+                            "dProdX":6,
+                            "dTimeS":"195600",
+                            "dDirTxt":"Heger Friedhof",
+                            "dDirFlg":"2",
+                            "type":"N"
+                          },
+                          {
+                            "locX":2,
+                            "idx":17,
+                            "aProdX":6,
+                            "aTimeS":"200000",
+                            "type":"N"
+                          }
+                        ],
+                        "ctxRecon":"T$A=1@O=Osnabrück Hauptbahnhof/ZOB@L=100071@a=128@$A=1@O=Osnabrück Neumarkt@L=100082@a=128@$202112051956$202112052000$Bus 15  $$1$$$$$$",
+                        "subscr":"F"
+                      },
+                      {
+                        "jid":"1|155760|7|80|5122021",
+                        "prodX":8,
+                        "dirTxt":"Neumarkt",
+                        "dirFlg":"2",
+                        "stopL":
+                        [
+                          {
+                            "locX":0,
+                            "idx":17,
+                            "dProdX":8,
+                            "dTimeS":"200400",
+                            "dDirTxt":"Neumarkt",
+                            "dDirFlg":"2",
+                            "type":"N"
+                          },
+                          {
+                            "locX":8,
+                            "idx":19,
+                            "aProdX":8,
+                            "aTimeS":"200800",
+                            "type":"N"
+                          }
+                        ],
+                        "ctxRecon":"T$A=1@O=Osnabrück Hauptbahnhof/ZOB@L=100071@a=128@$A=1@O=Osnabrück Neumarkt@L=150091@a=128@$202112052004$202112052008$Bus 16  $$1$$$$$$",
+                        "subscr":"F"
+                      },
+                      {
+                        "jid":"1|156577|0|80|5122021",
+                        "prodX":12,
+                        "dirTxt":"Eversburger Platz ü. Neumarkt - Kliniken",
+                        "dirFlg":"2",
+                        "stopL":
+                        [
+                          {
+                            "locX":0,
+                            "idx":0,
+                            "dProdX":12,
+                            "dTimeS":"201100",
+                            "dDirTxt":"Eversburger Platz ü. Neumarkt - Kliniken",
+                            "dDirFlg":"2",
+                            "type":"N"
+                          },
+                          {
+                            "locX":9,
+                            "idx":2,
+                            "aProdX":12,
+                            "aTimeS":"201500",
+                            "type":"N"
+                          }
+                        ],
+                        "ctxRecon":"T$A=1@O=Osnabrück Hauptbahnhof/ZOB@L=100071@a=128@$A=1@O=Osnabrück Neumarkt@L=100081@a=128@$202112052011$202112052015$Bus 10  $$1$$$$$$",
+                        "subscr":"F"
+                      }
+                    ]
                   },
-                  "ctxRecon":"T$A=1@O=Osnabrück Hauptbahnhof/ZOB@L=100071@a=128@$A=1@O=Osnabrück Neumarkt@L=100082@a=128@$202109061456$202109061501$Bus R15 $$1$$$$",
+                  "ctxRecon":"T$A=1@O=Osnabrück Hauptbahnhof/ZOB@L=100071@a=128@$A=1@O=Osnabrück Neumarkt@L=100082@a=128@$202112051941$202112051945$Bus 14  $$1$$$$$$",
                   "msgL":
                   [
                     {
-                      "type":"REM",
-                      "remX":5,
-                      "fLocX":0,
-                      "tLocX":0,
-                      "tagL":
-                      [
-                        "RES_JNY_DTL"
-                      ]
-                    },
-                    {
-                      "type":"REM",
-                      "remX":6,
-                      "fLocX":2,
-                      "tLocX":2,
-                      "tagL":
-                      [
-                        "RES_JNY_DTL"
-                      ]
-                    },
-                    {
-                      "type":"REM",
-                      "remX":7,
-                      "fLocX":0,
-                      "tLocX":2,
-                      "tagL":
-                      [
-                        "RES_JNY_DTL"
-                      ]
-                    },
-                    {
-                      "type":"REM",
-                      "remX":8,
-                      "fLocX":0,
-                      "tLocX":2,
-                      "tagL":
-                      [
-                        "RES_JNY_DTL"
-                      ]
-                    },
-                    {
                       "type":"HIM",
-                      "himX":0,
+                      "himX":3,
                       "fLocX":0,
-                      "tLocX":0,
                       "tagL":
                       [
                         "RES_GLB_HDR_H3","SUM_GLB_HDR_H3"
@@ -2106,10 +3199,10 @@
                 }
               }
             ],
-            "ctxRecon":"¶HKI¶T$A=1@O=Osnabrück Hauptbahnhof/ZOB@L=100071@a=128@$A=1@O=Osnabrück Neumarkt@L=100082@a=128@$202109061456$202109061501$Bus R15 $$1$$$$",
+            "ctxRecon":"¶HKI¶T$A=1@O=Osnabrück Hauptbahnhof/ZOB@L=100071@a=128@$A=1@O=Osnabrück Neumarkt@L=100082@a=128@$202112051941$202112051945$Bus 14  $$1$$$$$$",
             "freq":
             {
-              "minC":1
+              "minC":2
             },
             "trfRes":
             {
@@ -2222,6 +3315,17 @@
                       "cur":"EUR"
                     },
                     {
+                      "name":"8-FahrtenTicket",
+                      "desc":"nur in der YANiQ-App",
+                      "prc":1790,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"8-FahrtenTicket",
+                      "prc":1840,
+                      "cur":"EUR"
+                    },
+                    {
                       "name":"12-FahrtenTicket",
                       "prc":2640,
                       "cur":"EUR"
@@ -2253,7 +3357,7 @@
                     },
                     {
                       "name":"JahresTicket Schüler",
-                      "prc":41300,
+                      "prc":43365,
                       "cur":"EUR"
                     },
                     {
@@ -2286,7 +3390,7 @@
                   "tSecRefX":0
                 }
               ],
-              "shpCtx":"{\"common\":{\"FEL\":[{\"XV\":[\"0\",\"0\"]},{\"ID\":[\"100\"],\"ON\":[\"Osnabrück/Belm\"]},{\"ID\":[\"100\"],\"ON\":[\"Osnabrück/Belm\"]},{\"ID\":[\"100\"],\"ON\":[\"Osnabrück/Belm\"]},{\"ID\":[\"-1\",\"10000\"]},{\"ID\":[\"1\"],\"ON\":[\"VOS 0\"]},{\"ID\":[\"70001\"],\"ON\":[\"Osnabrück Hauptbahnhof/ZOB\"]},{\"ID\":[\"70002\"],\"ON\":[\"Osnabrück Neumarkt\"]},{\"ID\":[\"0\"]},{\"ID\":[\"10001\",\"6423\",\"1\"],\"ON\":[\"KurzstreckenTicket Digital\"],\"PN\":[\"KurzstreckenTicket\"]},{\"ID\":[\"10002\",\"6423\",\"2\"],\"ON\":[\"EinzelTicket Digital\"],\"PN\":[\"EinzelTicket\"]},{\"ID\":[\"10004\",\"6423\",\"5\"],\"ON\":[\"TagesTicket Digital\"],\"PN\":[\"TagesTicket\"]},{\"ID\":[\"10005\",\"6423\",\"6\"],\"ON\":[\"TagesTicket Familie Digital\"],\"PN\":[\"TagesTicket Familie\"]},{\"ID\":[\"10006\",\"6423\",\"7\"],\"ON\":[\"WochenTicket Digital\"],\"PN\":[\"WochenTicket\"]},{\"ID\":[\"10007\",\"6423\",\"8\"],\"ON\":[\"MonatsTicket Digital\"],\"PN\":[\"MonatsTicket\"]},{\"ID\":[\"10008\",\"6423\",\"16\"],\"ON\":[\"WochenTicket Schüler Digital\"],\"PN\":[\"WochenTicket Schüler\"]},{\"ID\":[\"10009\",\"6423\",\"18\"],\"ON\":[\"MonatsTicket Schüler Digital\"],\"PN\":[\"MonatsTicket Schüler\"]},{\"ID\":[\"KurzstreckenTicket Digital\"]},{\"ID\":[\"EinzelTicket Digital\"]},{\"ID\":[\"TagesTicket Digital\"]},{\"ID\":[\"TagesTicket Familie Digital\"]},{\"ID\":[\"WochenTicket Digital\"]},{\"ID\":[\"MonatsTicket Digital\"]},{\"ID\":[\"WochenTicket Schüler Digital\"]},{\"ID\":[\"MonatsTicket Schüler Digital\"]}]},\"BOG\":{\"BOGL\":[{\"P\":\"~0-\",\"BOL\":[{\"P\":\"~0-.0-\",\"VT\":\"SWO-1\",\"FS\":\"\",\"DV\":8,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":150,\"VR\":700},\"PRD\":17,\"FP\":{\"PS\":0,\"NV\":[{\"N\":\"Infotext1\",\"V\":\"Das KurzstreckenTicket ermöglicht es Ihnen, für kleines Geld inklusive Ihrer Einstiegshaltestelle insgesamt fünf Haltestellen im Stadtverkehr Osnabrück/Belm (Preisstufe 0) zu fahren.<br />Erreichen Sie Ihr Ziel nicht auf direktem Weg, dürfen Sie in die nächstmögliche Anschlussfahrt umsteigen, sofern diese noch in den vier Haltestellen inbegriffen ist. <br /><br /><strong>Nicht gültig zur Rückfahrt. Fahrtunterbrechungen sind nicht erlaubt.</strong>\"},{\"N\":\"PersFlags\",\"V\":\"{\\\"MainTraveller\\\":[\\\"FIRSTNAME\\\",\\\"LASTNAME\\\",\\\"BIRTHDATE\\\"]}\"}]},\"LVL\":9,\"SV\":{\"OL\":1,\"OS\":6,\"DL\":2,\"DS\":7,\"RI\":4},\"TV\":{\"BD\":\"20210906\",\"BT\":\"145600\",\"VD\":30,\"VC\":\"m\"}},{\"P\":\"~0-.1-\",\"VT\":\"SWO-1\",\"FS\":\"\",\"DV\":8,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":270,\"VR\":700},\"PRD\":18,\"FP\":{\"PS\":0,\"NV\":[{\"N\":\"Infotext1\",\"V\":\"Das EinzelTicket berechtigt zu einer Fahrt. Erreichen Sie Ihr Ziel nicht auf direktem Weg, dürfen Sie in die nächstmögliche Anschlussfahrt umsteigen. Nicht gültig zur Rückfahrt. Fahrtunterbrechungen sind nicht erlaubt.\"},{\"N\":\"PersFlags\",\"V\":\"{\\\"MainTraveller\\\":[\\\"FIRSTNAME\\\",\\\"LASTNAME\\\",\\\"BIRTHDATE\\\"]}\"}]},\"LVL\":10,\"SV\":{\"OL\":1,\"OS\":6,\"DL\":2,\"DS\":7,\"RI\":4},\"TV\":{\"BD\":\"20210906\",\"BT\":\"145600\",\"VD\":2,\"VC\":\"h\"}},{\"P\":\"~0-.2-\",\"VT\":\"SWO-1\",\"FS\":\"\",\"DV\":8,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":540,\"VR\":700},\"PRD\":19,\"FP\":{\"PS\":60,\"NV\":[{\"N\":\"Infotext1\",\"V\":\"Das TagesTicket berechtigt zu beliebig vielen Fahrten. Das Ticket gilt von Betriebsbeginn bis Betriebsende. Mitnahme eines Kindes bis einschließlich 14 Jahre und aller familienangehörigen Kinder bis 5 Jahre.\"},{\"N\":\"PersFlags\",\"V\":\"{\\\"MainTraveller\\\":[\\\"FIRSTNAME\\\",\\\"LASTNAME\\\",\\\"BIRTHDATE\\\"]}\"}]},\"LVL\":11,\"SV\":{\"OL\":1,\"OS\":6,\"DL\":2,\"DS\":7,\"RI\":4},\"TV\":{\"BD\":\"20210906\",\"BT\":\"000000\",\"ED\":\"20210907\",\"ET\":\"053000\"}},{\"P\":\"~0-.3-\",\"VT\":\"SWO-1\",\"FS\":\"\",\"DV\":8,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":660,\"VR\":700},\"PRD\":20,\"FP\":{\"PS\":60,\"NV\":[{\"N\":\"Infotext1\",\"V\":\"Das TagesTicket Familie berechtigt Sie einen Tag lang zu beliebig vielen Fahrten. \\nACHTUNG: Gültigkeit montags bis freitags ab 9 Uhr und an Samstagen, Sonn- und Feiertagen bereits ab Betriebsbeginn für maximal zwei Erwachsene und alle familienangehörigen Kinder bis einschließlich 14 Jahre.\"},{\"N\":\"PersFlags\",\"V\":\"{\\\"MainTraveller\\\":[\\\"FIRSTNAME\\\",\\\"LASTNAME\\\",\\\"BIRTHDATE\\\"]}\"}]},\"LVL\":12,\"SV\":{\"OL\":1,\"OS\":6,\"DL\":2,\"DS\":7,\"RI\":4},\"TV\":{\"BD\":\"20210906\",\"BT\":\"090000\",\"ED\":\"20210907\",\"ET\":\"053000\"}},{\"P\":\"~0-.4-\",\"VT\":\"SWO-1\",\"FS\":\"\",\"DV\":8,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":1870,\"VR\":700},\"PRD\":21,\"FP\":{\"PS\":30,\"NV\":[{\"N\":\"Infotext1\",\"V\":\"<p>Persönliches Ticket für beliebig viele Fahrten im jeweiligen Geltungszeitraum in der Tarifzone <strong>Osnabrück/Belm (100)</strong>. Das Ticket gilt für die jeweilige Kalenderwoche.</p>\\n<p>An Wochenenden und Feiertagen werden WochenTickets zu FamilienTickets  für bis zu zwei Erwachsene und familienangehörige Kinder bis einschließlich 14 Jahre.</p>\"},{\"N\":\"PersFlags\",\"V\":\"{\\\"MainTraveller\\\":[\\\"FIRSTNAME\\\",\\\"LASTNAME\\\",\\\"BIRTHDATE\\\"]}\"}]},\"LVL\":13,\"SV\":{\"OL\":1,\"OS\":6,\"DL\":2,\"DS\":7,\"RI\":4},\"TV\":{\"BD\":\"20210906\",\"BT\":\"000000\",\"ED\":\"20210913\",\"ET\":\"120000\"}},{\"P\":\"~0-.5-\",\"VT\":\"SWO-1\",\"FS\":\"\",\"DV\":8,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":5790,\"VR\":700},\"PRD\":22,\"FP\":{\"PS\":45,\"NV\":[{\"N\":\"Infotext1\",\"V\":\"Persönliches Ticket für beliebig viele Fahrten im jeweiligen Geltungszeitraum in der Tarifzone <strong>Osnabrück/Belm (100)</strong>. Das Ticket gilt für den jeweilige Kalendermonat.<br />An Wochenenden und Feiertagen werden WochenTickets zu FamilienTickets  für bis zu zwei Erwachsene und familienangehörige Kinder bis einschließlich 14 Jahre.\"},{\"N\":\"PersFlags\",\"V\":\"{\\\"MainTraveller\\\":[\\\"FIRSTNAME\\\",\\\"LASTNAME\\\",\\\"BIRTHDATE\\\"]}\"}]},\"LVL\":14,\"SV\":{\"OL\":1,\"OS\":6,\"DL\":2,\"DS\":7,\"RI\":4},\"TV\":{\"BD\":\"20210901\",\"BT\":\"000000\",\"ED\":\"20211001\",\"ET\":\"120000\"}},{\"P\":\"~0-.6-\",\"VT\":\"SWO-1\",\"FS\":\"\",\"DV\":8,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":1400,\"VR\":700},\"PRD\":23,\"FP\":{\"PS\":7,\"NV\":[{\"N\":\"Infotext1\",\"V\":\"Persönliches Ticket für Schüler und Auszubildende. Es berechtigen zu beliebig vielen Fahrten im Gültigkeitszeitraum in der Tarifzone <strong>Osnabrück/Belm (100)</strong>. Das Ticket gilt für die jeweilige Kalenderwoche. Gültig nur in Verbindung mit der Kundenkarte für Schüler und Auszubildende und Ihren Angaben zum räumlichen Geltungsbereich.<br /> <br /><strong>Für Schüler und Auszubildenden ab 18 Jahren. Bei Fragen hierzu wenden Sie sich bitte an ticketshop@vos.info .</strong>\"},{\"N\":\"PersFlags\",\"V\":\"{\\\"MainTraveller\\\":[\\\"FIRSTNAME\\\",\\\"LASTNAME\\\",\\\"BIRTHDATE\\\"]}\"}]},\"LVL\":15,\"SV\":{\"OL\":1,\"OS\":6,\"DL\":2,\"DS\":7,\"RI\":4},\"TV\":{\"BD\":\"20210906\",\"BT\":\"000000\",\"ED\":\"20210913\",\"ET\":\"120000\"}},{\"P\":\"~0-.7-\",\"VT\":\"SWO-1\",\"FS\":\"\",\"DV\":8,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":4340,\"VR\":700},\"PRD\":24,\"FP\":{\"PS\":45,\"NV\":[{\"N\":\"Infotext1\",\"V\":\"<p>Persönliches Ticket für Schüler und Auszubildende. Es berechtigen zu beliebig vielen Fahrten im Gültigkeitszeitraum in der Tarifzone <strong>Osnabrück/Belm (100)</strong>. Das Ticket gilt für den jeweilige Kalendermonat. Gültig nur in Verbindung mit der Kundenkarte für Schüler und Auszubildende und Ihren Angaben zum räumlichen Geltungsbereich. <br /><strong>Für Schüler und Auszubildenden ab 18 Jahren. Bei Fragen hierzu wenden Sie sich bitte an <a href=\"},{\"N\":\"PersFlags\",\"V\":\"{\\\"MainTraveller\\\":[\\\"FIRSTNAME\\\",\\\"LASTNAME\\\",\\\"BIRTHDATE\\\"]}\"}]},\"LVL\":16,\"SV\":{\"OL\":1,\"OS\":6,\"DL\":2,\"DS\":7,\"RI\":4},\"TV\":{\"BD\":\"20210901\",\"BT\":\"000000\",\"ED\":\"20211001\",\"ET\":\"120000\"}}],\"DESCR\":[\"VOS 0\",\"\"],\"OPT\":false,\"ALT\":true,\"SEQ\":false}],\"OPT\":false,\"ALT\":true,\"SEQ\":false},\"errCode\":0,\"errMsg\":\"\"}"
+              "shpCtx":"{\"common\":{\"FEL\":[{\"XV\":[\"0\",\"0\"]},{\"ID\":[\"100\"],\"ON\":[\"Osnabrück/Belm\"]},{\"ID\":[\"100\"],\"ON\":[\"Osnabrück/Belm\"]},{\"ID\":[\"100\"],\"ON\":[\"Osnabrück/Belm\"]},{\"ID\":[\"-1\",\"10000\"]},{\"ID\":[\"1\"],\"ON\":[\"VOS 0\"]},{\"ID\":[\"70001\"],\"ON\":[\"Osnabrück Hauptbahnhof/ZOB\"]},{\"ID\":[\"70002\"],\"ON\":[\"Osnabrück Neumarkt\"]},{\"ID\":[\"0\"]},{\"ID\":[\"10001\",\"6423\",\"1\"],\"ON\":[\"KurzstreckenTicket Digital\"],\"PN\":[\"KurzstreckenTicket\"]},{\"ID\":[\"10002\",\"6423\",\"2\"],\"ON\":[\"EinzelTicket Digital\"],\"PN\":[\"EinzelTicket\"]},{\"ID\":[\"10004\",\"6423\",\"5\"],\"ON\":[\"TagesTicket Digital\"],\"PN\":[\"TagesTicket\"]},{\"ID\":[\"10005\",\"6423\",\"6\"],\"ON\":[\"TagesTicket Familie Digital\"],\"PN\":[\"TagesTicket Familie\"]},{\"ID\":[\"10006\",\"6423\",\"7\"],\"ON\":[\"WochenTicket Digital\"],\"PN\":[\"WochenTicket\"]},{\"ID\":[\"10007\",\"6423\",\"8\"],\"ON\":[\"MonatsTicket Digital\"],\"PN\":[\"MonatsTicket\"]},{\"ID\":[\"10008\",\"6423\",\"16\"],\"ON\":[\"WochenTicket Schüler Digital\"],\"PN\":[\"WochenTicket Schüler\"]},{\"ID\":[\"10009\",\"6423\",\"18\"],\"ON\":[\"MonatsTicket Schüler Digital\"],\"PN\":[\"MonatsTicket Schüler\"]}]},\"BOG\":{\"BOGL\":[{\"P\":\"~0-\",\"BOL\":[{\"P\":\"~0-.0-\",\"VT\":\"SWO-1\",\"FS\":\"\",\"DV\":8,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":150,\"VR\":700},\"PRD\":9,\"FP\":{\"PS\":0,\"NV\":[{\"N\":\"Infotext1\",\"V\":\"Das KurzstreckenTicket ermöglicht es Ihnen, für kleines Geld inklusive Ihrer Einstiegshaltestelle insgesamt fünf Haltestellen im Stadtverkehr Osnabrück/Belm (Preisstufe 0) zu fahren.<br />Erreichen Sie Ihr Ziel nicht auf direktem Weg, dürfen Sie in die nächstmögliche Anschlussfahrt umsteigen, sofern diese noch in den vier Haltestellen inbegriffen ist. <br /><br /><strong>Nicht gültig zur Rückfahrt. Fahrtunterbrechungen sind nicht erlaubt.</strong>\"},{\"N\":\"PersFlags\",\"V\":\"{\\\"MainTraveller\\\":[\\\"FIRSTNAME\\\",\\\"LASTNAME\\\",\\\"BIRTHDATE\\\"]}\"}]},\"LVL\":5,\"SV\":{\"OL\":1,\"OS\":6,\"DL\":2,\"DS\":7,\"RI\":4},\"TV\":{\"BD\":\"20211205\",\"BT\":\"194100\",\"VD\":30,\"VC\":\"m\"}},{\"P\":\"~0-.1-\",\"VT\":\"SWO-1\",\"FS\":\"\",\"DV\":8,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":270,\"VR\":700},\"PRD\":10,\"FP\":{\"PS\":0,\"NV\":[{\"N\":\"Infotext1\",\"V\":\"Das EinzelTicket berechtigt zu einer Fahrt. Erreichen Sie Ihr Ziel nicht auf direktem Weg, dürfen Sie in die nächstmögliche Anschlussfahrt umsteigen. Nicht gültig zur Rückfahrt. Fahrtunterbrechungen sind nicht erlaubt.\"},{\"N\":\"PersFlags\",\"V\":\"{\\\"MainTraveller\\\":[\\\"FIRSTNAME\\\",\\\"LASTNAME\\\",\\\"BIRTHDATE\\\"]}\"}]},\"LVL\":5,\"SV\":{\"OL\":1,\"OS\":6,\"DL\":2,\"DS\":7,\"RI\":4},\"TV\":{\"BD\":\"20211205\",\"BT\":\"194100\",\"VD\":2,\"VC\":\"h\"}},{\"P\":\"~0-.2-\",\"VT\":\"SWO-1\",\"FS\":\"\",\"DV\":8,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":540,\"VR\":700},\"PRD\":11,\"FP\":{\"PS\":60,\"NV\":[{\"N\":\"Infotext1\",\"V\":\"Das TagesTicket berechtigt zu beliebig vielen Fahrten. Das Ticket gilt von Betriebsbeginn bis Betriebsende. Mitnahme eines Kindes bis einschließlich 14 Jahre und aller familienangehörigen Kinder bis 5 Jahre.\"},{\"N\":\"PersFlags\",\"V\":\"{\\\"MainTraveller\\\":[\\\"FIRSTNAME\\\",\\\"LASTNAME\\\",\\\"BIRTHDATE\\\"]}\"}]},\"LVL\":5,\"SV\":{\"OL\":1,\"OS\":6,\"DL\":2,\"DS\":7,\"RI\":4},\"TV\":{\"BD\":\"20211205\",\"BT\":\"000000\",\"ED\":\"20211206\",\"ET\":\"053000\"}},{\"P\":\"~0-.3-\",\"VT\":\"SWO-1\",\"FS\":\"\",\"DV\":8,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":660,\"VR\":700},\"PRD\":12,\"FP\":{\"PS\":60,\"NV\":[{\"N\":\"Infotext1\",\"V\":\"Das TagesTicket Familie berechtigt Sie einen Tag lang zu beliebig vielen Fahrten. \\nACHTUNG: Gültigkeit montags bis freitags ab 9 Uhr und an Samstagen, Sonn- und Feiertagen bereits ab Betriebsbeginn für maximal zwei Erwachsene und alle familienangehörigen Kinder bis einschließlich 14 Jahre.\"},{\"N\":\"PersFlags\",\"V\":\"{\\\"MainTraveller\\\":[\\\"FIRSTNAME\\\",\\\"LASTNAME\\\",\\\"BIRTHDATE\\\"]}\"}]},\"LVL\":5,\"SV\":{\"OL\":1,\"OS\":6,\"DL\":2,\"DS\":7,\"RI\":4},\"TV\":{\"BD\":\"20211205\",\"BT\":\"000000\",\"ED\":\"20211206\",\"ET\":\"053000\"}},{\"P\":\"~0-.4-\",\"VT\":\"SWO-1\",\"FS\":\"\",\"DV\":8,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":1870,\"VR\":700},\"PRD\":13,\"FP\":{\"PS\":30,\"NV\":[{\"N\":\"Infotext1\",\"V\":\"<p>Persönliches Ticket für beliebig viele Fahrten im jeweiligen Geltungszeitraum in der Tarifzone <strong>Osnabrück/Belm (100)</strong>. Das Ticket gilt für die jeweilige Kalenderwoche.</p>\\n<p>An Wochenenden und Feiertagen werden WochenTickets zu FamilienTickets  für bis zu zwei Erwachsene und familienangehörige Kinder bis einschließlich 14 Jahre.</p>\"},{\"N\":\"PersFlags\",\"V\":\"{\\\"MainTraveller\\\":[\\\"FIRSTNAME\\\",\\\"LASTNAME\\\",\\\"BIRTHDATE\\\"]}\"}]},\"LVL\":5,\"SV\":{\"OL\":1,\"OS\":6,\"DL\":2,\"DS\":7,\"RI\":4},\"TV\":{\"BD\":\"20211129\",\"BT\":\"000000\",\"ED\":\"20211206\",\"ET\":\"120000\"}},{\"P\":\"~0-.5-\",\"VT\":\"SWO-1\",\"FS\":\"\",\"DV\":8,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":5790,\"VR\":700},\"PRD\":14,\"FP\":{\"PS\":45,\"NV\":[{\"N\":\"Infotext1\",\"V\":\"Persönliches Ticket für beliebig viele Fahrten im jeweiligen Geltungszeitraum in der Tarifzone <strong>Osnabrück/Belm (100)</strong>. Das Ticket gilt für den jeweilige Kalendermonat.<br />An Wochenenden und Feiertagen werden WochenTickets zu FamilienTickets  für bis zu zwei Erwachsene und familienangehörige Kinder bis einschließlich 14 Jahre.\"},{\"N\":\"PersFlags\",\"V\":\"{\\\"MainTraveller\\\":[\\\"FIRSTNAME\\\",\\\"LASTNAME\\\",\\\"BIRTHDATE\\\"]}\"}]},\"LVL\":5,\"SV\":{\"OL\":1,\"OS\":6,\"DL\":2,\"DS\":7,\"RI\":4},\"TV\":{\"BD\":\"20211201\",\"BT\":\"000000\",\"ED\":\"20220103\",\"ET\":\"120000\"}},{\"P\":\"~0-.6-\",\"VT\":\"SWO-1\",\"FS\":\"\",\"DV\":8,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":1400,\"VR\":700},\"PRD\":15,\"FP\":{\"PS\":7,\"NV\":[{\"N\":\"Infotext1\",\"V\":\"Persönliches Ticket für Schüler und Auszubildende. Es berechtigen zu beliebig vielen Fahrten im Gültigkeitszeitraum in der Tarifzone <strong>Osnabrück/Belm (100)</strong>. Das Ticket gilt für die jeweilige Kalenderwoche. Gültig nur in Verbindung mit der Kundenkarte für Schüler und Auszubildende und Ihren Angaben zum räumlichen Geltungsbereich.<br /> <br /><strong>Für Schüler und Auszubildenden ab 18 Jahren. Bei Fragen hierzu wenden Sie sich bitte an ticketshop@vos.info .</strong>\"},{\"N\":\"PersFlags\",\"V\":\"{\\\"MainTraveller\\\":[\\\"FIRSTNAME\\\",\\\"LASTNAME\\\",\\\"BIRTHDATE\\\"]}\"}]},\"LVL\":5,\"SV\":{\"OL\":1,\"OS\":6,\"DL\":2,\"DS\":7,\"RI\":4},\"TV\":{\"BD\":\"20211129\",\"BT\":\"000000\",\"ED\":\"20211206\",\"ET\":\"120000\"}},{\"P\":\"~0-.7-\",\"VT\":\"SWO-1\",\"FS\":\"\",\"DV\":8,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":4340,\"VR\":700},\"PRD\":16,\"FP\":{\"PS\":45,\"NV\":[{\"N\":\"Infotext1\",\"V\":\"<p>Persönliches Ticket für Schüler und Auszubildende. Es berechtigen zu beliebig vielen Fahrten im Gültigkeitszeitraum in der Tarifzone <strong>Osnabrück/Belm (100)</strong>. Das Ticket gilt für den jeweilige Kalendermonat. Gültig nur in Verbindung mit der Kundenkarte für Schüler und Auszubildende und Ihren Angaben zum räumlichen Geltungsbereich. <br /><strong>Für Schüler und Auszubildenden ab 18 Jahren. Bei Fragen hierzu wenden Sie sich bitte an <a href=\"},{\"N\":\"PersFlags\",\"V\":\"{\\\"MainTraveller\\\":[\\\"FIRSTNAME\\\",\\\"LASTNAME\\\",\\\"BIRTHDATE\\\"]}\"}]},\"LVL\":5,\"SV\":{\"OL\":1,\"OS\":6,\"DL\":2,\"DS\":7,\"RI\":4},\"TV\":{\"BD\":\"20211201\",\"BT\":\"000000\",\"ED\":\"20220103\",\"ET\":\"120000\"}}],\"DESCR\":[\"VOS 0\",\"\"],\"OPT\":false,\"ALT\":true,\"SEQ\":false}],\"OPT\":false,\"ALT\":true,\"SEQ\":false},\"errCode\":0,\"errMsg\":\"\"}"
             },
             "ovwTrfRefL":
             [
@@ -2312,14 +3416,14 @@
               }
             ],
             "conSubscr":"F",
-            "cksum":"8be4987b_3"
+            "cksum":"b97cf58b_3"
           }
         ],
-        "outCtxScrB":"2|OB|MT#11#100246#100246#100251#100251#0#0#165#100244#1#-2147483134#0#1#2|PDH#be0ae54963dab1730bdf9bcb97a409d8|RD#6092021|RT#144400|US#1",
-        "outCtxScrF":"2|OF|MT#11#100256#100256#100261#100261#0#0#165#100252#3#-2147483134#0#1#2|PDH#be0ae54963dab1730bdf9bcb97a409d8|RD#6092021|RT#144400|US#1",
+        "outCtxScrB":"2|OB|MT#11#230126#230126#230130#230130#0#0#165#230125#1#-2147483134#0#1#2|PDH#7cbaf0be96b4b02b0540d3a1a1a00862|RD#5122021|RT#192500|US#1",
+        "outCtxScrF":"2|OF|MT#11#230141#230141#230145#230145#0#0#165#230135#3#-2147483134#0#1#2|PDH#7cbaf0be96b4b02b0540d3a1a1a00862|RD#5122021|RT#192500|US#1",
         "fpB":"20210701",
-        "fpE":"20211211",
-        "planrtTS":"1630932212"
+        "fpE":"20220630",
+        "planrtTS":"1638728643"
       }
     }
   ]

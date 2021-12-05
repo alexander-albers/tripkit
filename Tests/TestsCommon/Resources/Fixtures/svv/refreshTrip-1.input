@@ -2,7 +2,7 @@
   "ver":"1.18",
   "ext":"VAO.6",
   "lang":"deu",
-  "id":"hiwxyia4k22kggck",
+  "id":"tt48ukuq66wupg4s",
   "err":"OK",
   "cInfo":
   {
@@ -107,6 +107,42 @@
               "meta":true,
               "pCls":1216,
               "isMainMast":true
+            },
+            {
+              "lid":"A=1@O=Salzburg Salzburgarena@X=13026844@Y=47824429@U=81@L=455103701@i=at:45:51037:0:1@",
+              "type":"S",
+              "name":"Salzburg Salzburgarena",
+              "icoX":8,
+              "extId":"455103701",
+              "state":"F",
+              "crd":
+              {
+                "x":13026844,
+                "y":47824429,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":128,
+              "entry":true,
+              "mMastLocX":6
+            },
+            {
+              "lid":"A=1@O=Salzburg Salzburgarena@X=13026853@Y=47824411@U=81@L=455103700@i=at:45:51037@",
+              "type":"S",
+              "name":"Salzburg Salzburgarena",
+              "icoX":9,
+              "extId":"455103700",
+              "state":"F",
+              "crd":
+              {
+                "x":13026853,
+                "y":47824411,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "meta":true,
+              "pCls":128,
+              "isMainMast":true
             }
           ],
           "prodL":
@@ -120,156 +156,156 @@
               }
             },
             {
-              "pid":"L::6::::B1590575099::svv-4-175-j21-10::*",
-              "name":"Regionalbus 175",
-              "nameS":"175",
-              "number":"175",
+              "pid":"L::7::::B1387864268::svv-1-8-j21-1::*",
+              "name":"Obus 8",
+              "nameS":"8",
+              "number":"8",
               "icoX":4,
-              "cls":64,
+              "cls":128,
               "oprX":0,
               "prodCtx":
               {
-                "name":"     175",
-                "num":"264",
-                "line":"175",
-                "matchId":"317500139",
-                "catOutS":"S04",
-                "catOutL":"Regionalbus",
-                "catIn":"S04",
-                "catCode":"6",
-                "admin":"S40390"
+                "name":"       8",
+                "num":"11470",
+                "line":"8",
+                "matchId":"null0",
+                "catOutS":"S01",
+                "catOutL":"Obus",
+                "catIn":"S01",
+                "catCode":"7",
+                "admin":"S10000"
               }
             },
             {
-              "pid":"L::6::::B1590575099::svv-4-175-j21-10::*",
-              "name":"Regionalbus 175",
-              "nameS":"175",
-              "number":"175",
+              "pid":"L::7::::B1387864268::svv-1-8-j21-1::*",
+              "name":"Obus 8",
+              "nameS":"8",
+              "number":"8",
               "icoX":4,
-              "cls":64,
+              "cls":128,
               "oprX":1,
               "prodCtx":
               {
-                "name":"     175",
-                "num":"264",
-                "line":"175",
-                "lineId":"svv-4-175-j21-10",
-                "matchId":"317500139",
-                "catOutS":"S04",
-                "catOutL":"Regionalbus",
-                "catIn":"S04",
-                "catCode":"6",
-                "admin":"S40390"
+                "name":"       8",
+                "num":"11470",
+                "line":"8",
+                "lineId":"svv-1-8-j21-1",
+                "matchId":"null0",
+                "catOutS":"S01",
+                "catOutL":"Obus",
+                "catIn":"S01",
+                "catCode":"7",
+                "admin":"S10000"
               }
             },
             {
-              "pid":"L::6::::B1249869123::svv-4-170-j21-10::*",
-              "name":"Regionalbus 170",
-              "nameS":"170",
-              "number":"170",
-              "icoX":7,
-              "cls":64,
-              "oprX":2,
-              "prodCtx":
-              {
-                "name":"     170",
-                "num":"2041",
-                "line":"170",
-                "lineId":"svv-4-170-j21-10",
-                "matchId":"317000161",
-                "catOutS":"S04",
-                "catOutL":"Regionalbus",
-                "catIn":"S04",
-                "catCode":"6",
-                "admin":"S19340"
-              }
-            },
-            {
-              "pid":"L::6::::B1590575099::svv-4-175-j21-10::*",
-              "name":"Regionalbus 175",
-              "nameS":"175",
-              "number":"175",
-              "icoX":4,
-              "cls":64,
+              "pid":"L::7::::B1387864268::svv-1-3-j21-1::*",
+              "name":"Obus 3",
+              "nameS":"3",
+              "number":"3",
+              "icoX":11,
+              "cls":128,
               "oprX":1,
               "prodCtx":
               {
-                "name":"     175",
-                "num":"265",
-                "line":"175",
-                "lineId":"svv-4-175-j21-10",
-                "matchId":"317500141",
-                "catOutS":"S04",
-                "catOutL":"Regionalbus",
-                "catIn":"S04",
-                "catCode":"6",
-                "admin":"S40390"
+                "name":"       3",
+                "num":"4433",
+                "line":"3",
+                "lineId":"svv-1-3-j21-1",
+                "matchId":"null0",
+                "catOutS":"S01",
+                "catOutL":"Obus",
+                "catIn":"S01",
+                "catCode":"7",
+                "admin":"S10000"
               }
             },
             {
-              "pid":"L::6::::B1249869123::svv-4-170-j21-10::*",
-              "name":"Regionalbus 170",
-              "nameS":"170",
-              "number":"170",
-              "icoX":7,
-              "cls":64,
-              "oprX":2,
-              "prodCtx":
-              {
-                "name":"     170",
-                "num":"1953",
-                "line":"170",
-                "lineId":"svv-4-170-j21-10",
-                "matchId":"317000163",
-                "catOutS":"S04",
-                "catOutL":"Regionalbus",
-                "catIn":"S04",
-                "catCode":"6",
-                "admin":"S19340"
-              }
-            },
-            {
-              "pid":"L::6::::B2879860817::svv-7-270-j21-30::*",
-              "name":"Regionalbus 270",
-              "nameS":"270",
-              "number":"270",
-              "icoX":10,
-              "cls":64,
-              "oprX":3,
-              "prodCtx":
-              {
-                "name":"     270",
-                "num":"460",
-                "line":"270",
-                "lineId":"svv-7-270-j21-30",
-                "matchId":"270129",
-                "catOutS":"S04",
-                "catOutL":"Regionalbus",
-                "catIn":"S04",
-                "catCode":"6",
-                "admin":"S19080"
-              }
-            },
-            {
-              "pid":"L::6::::B1590575099::svv-4-175-j21-10::*",
-              "name":"Regionalbus 175",
-              "nameS":"175",
-              "number":"175",
+              "pid":"L::7::::B1387864268::svv-1-8-j21-1::*",
+              "name":"Obus 8",
+              "nameS":"8",
+              "number":"8",
               "icoX":4,
-              "cls":64,
+              "cls":128,
               "oprX":1,
               "prodCtx":
               {
-                "name":"     175",
-                "num":"266",
-                "line":"175",
-                "lineId":"svv-4-175-j21-10",
-                "matchId":"317500143",
-                "catOutS":"S04",
-                "catOutL":"Regionalbus",
-                "catIn":"S04",
-                "catCode":"6",
-                "admin":"S40390"
+                "name":"       8",
+                "num":"11455",
+                "line":"8",
+                "lineId":"svv-1-8-j21-1",
+                "matchId":"null0",
+                "catOutS":"S01",
+                "catOutL":"Obus",
+                "catIn":"S01",
+                "catCode":"7",
+                "admin":"S10000"
+              }
+            },
+            {
+              "pid":"L::7::::B1387864268::svv-1-3-j21-1::*",
+              "name":"Obus 3",
+              "nameS":"3",
+              "number":"3",
+              "icoX":11,
+              "cls":128,
+              "oprX":1,
+              "prodCtx":
+              {
+                "name":"       3",
+                "num":"4444",
+                "line":"3",
+                "lineId":"svv-1-3-j21-1",
+                "matchId":"null0",
+                "catOutS":"S01",
+                "catOutL":"Obus",
+                "catIn":"S01",
+                "catCode":"7",
+                "admin":"S10000"
+              }
+            },
+            {
+              "pid":"L::7::::B1387864268::svv-1-8-j21-1::*",
+              "name":"Obus 8",
+              "nameS":"8",
+              "number":"8",
+              "icoX":4,
+              "cls":128,
+              "oprX":1,
+              "prodCtx":
+              {
+                "name":"       8",
+                "num":"11462",
+                "line":"8",
+                "lineId":"svv-1-8-j21-1",
+                "matchId":"null0",
+                "catOutS":"S01",
+                "catOutL":"Obus",
+                "catIn":"S01",
+                "catCode":"7",
+                "admin":"S10000"
+              }
+            },
+            {
+              "pid":"L::7::::B1387864268::svv-1-3-j21-1::*",
+              "name":"Obus 3",
+              "nameS":"3",
+              "number":"3",
+              "icoX":11,
+              "cls":128,
+              "oprX":1,
+              "prodCtx":
+              {
+                "name":"       3",
+                "num":"4430",
+                "line":"3",
+                "lineId":"svv-1-3-j21-1",
+                "matchId":"null0",
+                "catOutS":"S01",
+                "catOutL":"Obus",
+                "catIn":"S01",
+                "catCode":"7",
+                "admin":"S10000"
               }
             }
           ],
@@ -278,9 +314,9 @@
             {
               "delta":true,
               "dim":2,
-              "crdEncYX":"yfvbHkvtnAGIp@wAZw@DGL[JUH]HYNi@Lm@N_AF[Ha@Nq@DQXaATq@JSN[@APWTWRQ\\_@XWp@m@fAcADT",
-              "crdEncS":"NNEDIBFCLDFDDFCJCNBECJDELBDNN",
-              "crdEncF":"?????????????????????????????",
+              "crdEncYX":"yfvbHkvtnAGIrAwCXq@Rw@\\wA`@}BTcAn@sBn@iAfAiArCiCDT",
+              "crdEncS":"NNIFLFFJNJLNN",
+              "crdEncF":"?????????????",
               "ppLocRefL":
               [
                 {
@@ -288,7 +324,7 @@
                   "locX":1
                 },
                 {
-                  "ppIdx":28,
+                  "ppIdx":12,
                   "locX":3
                 }
               ]
@@ -300,7 +336,7 @@
               "id":"standard",
               "name":"standard",
               "index":0,
-              "annoCnt":384392
+              "annoCnt":694319
             }
           ],
           "crdSysL":
@@ -314,42 +350,37 @@
           "opL":
           [
             {
-              "name":"Krautgartner Bus",
+              "name":"Salzburg AG - OBus",
               "icoX":5
             },
             {
-              "name":"Krautgartner Bus",
+              "name":"Salzburg AG - OBus",
               "icoX":5,
-              "street":"krautgartner-bus salzburg gmbh, Anton-Graf-Straße 6, 5020 Salzburg",
-              "id":"svv+4039+00"
-            },
-            {
-              "name":"Österr. Postbus AG (Salzburg)",
-              "icoX":8,
-              "street":"Österr. Postbus AG, Andreas-Hofer-Straße 9, 5020 Salzburg",
-              "id":"svv+1934+00"
-            },
-            {
-              "name":"Österr. Postbus AG (Ennspongau)",
-              "icoX":11,
-              "street":"Österr. Postbus AG, Ransburggasse 191, 5542 Flachau",
-              "id":"svv+1908+00"
+              "street":"Obus-SLB, Plainstraße 70, 5020 Salzburg",
+              "id":"svv+1000+00"
             }
           ],
           "remL":
           [
             {
               "type":"A",
-              "code":"RL",
+              "code":"LF",
               "prio":50,
-              "icoX":9,
-              "txtN":"Rampe oder Lift"
+              "icoX":6,
+              "txtN":"Niederflurfahrzeug"
+            },
+            {
+              "type":"A",
+              "code":"fb",
+              "prio":50,
+              "icoX":7,
+              "txtN":"Fahrradmitnahme begrenzt möglich"
             },
             {
               "type":"H",
               "code":"text.connection.eco.co2.decreased.consumption.message",
               "icoX":13,
-              "txtN":"Im Vergleich zu einer Fahrt mit dem eigenen PKW werden 0,13 kg CO<sub>2</sub> Emissionen eingespart. <a target=\"_blank\" href=\"https://web.verkehrsauskunft.at/co2berechnung/CO2_Berechnung.pdf\">Mehr Informationen</a>"
+              "txtN":"Im Vergleich zu einer Fahrt mit dem eigenen PKW werden 0,12 kg CO<sub>2</sub> Emissionen eingespart. <a target=\"_blank\" href=\"https://web.verkehrsauskunft.at/co2berechnung/CO2_Berechnung.pdf\">Mehr Informationen</a>"
             }
           ],
           "himL":
@@ -357,16 +388,18 @@
             {
               "hid":"126891",
               "act":true,
-              "head":"Tragen eines Mund-Nasen-Schutzes",
-              "text":"Bitte Tragen Sie in allen öffentlichen Verkehrsmitteln einen geeigneten Mund-Nasen-Schutz und wahren Sie nach Möglichkeit Distanz zu anderen Personen.<br><a href=\"https://routenplaner.verkehrsauskunft.at/him-upload/1625080040721_Fahrgastcharta_Juli2021.pdf\" target=\"_blank\" rel=\"noopener\">Fahrgast-Charta - sicher und gesund mit den Öffis ans Ziel</a>",
-              "icoX":6,
+              "head":"FFP2-Maskenpflicht",
+              "text":"Bitte tragen Sie in allen öffentlichen Verkehrsmitteln eine FFP2-Maske und wahren Sie nach Möglichkeit Distanz zu anderen Personen.<br><a href=\"https://routenplaner.verkehrsauskunft.at/him-upload/1637915993266_Fahrgastcharta_November021.pdf\" target=\"_blank\" rel=\"noopener\">Fahrgast-Charta - sicher und gesund mit den Öffis ans Ziel</a>",
+              "icoX":10,
               "prio":100,
+              "fLocX":5,
+              "tLocX":5,
               "prod":65535,
-              "lModDate":"20210630",
-              "lModTime":"210847",
+              "lModDate":"20211126",
+              "lModTime":"093953",
               "sDate":"20210125",
               "sTime":"000000",
-              "eDate":"20211211",
+              "eDate":"20220531",
               "eTime":"235900",
               "comp":"KGÖVV",
               "cat":4,
@@ -374,9 +407,9 @@
               [
                 {
                   "name":"TIMETABLE",
-                  "fDate":"20210630",
-                  "fTime":"210800",
-                  "tDate":"20211211",
+                  "fDate":"20211021",
+                  "fTime":"095900",
+                  "tDate":"20220531",
                   "tTime":"235900"
                 }
               ]
@@ -434,8 +467,8 @@
               }
             },
             {
-              "res":"prod_ic_bus",
-              "txtS":"175",
+              "res":"prod_bus",
+              "txtS":"8",
               "fg":
               {
                 "r":255,
@@ -450,36 +483,17 @@
               }
             },
             {
-              "txt":"Krautgartner Bus"
+              "txt":"Salzburg AG - OBus"
             },
             {
-              "res":"warn"
-            },
-            {
-              "res":"prod_ic_bus",
-              "txtS":"170",
-              "fg":
-              {
-                "r":255,
-                "g":255,
-                "b":255
-              },
-              "bg":
-              {
-                "r":120,
-                "g":0,
-                "b":140
-              }
-            },
-            {
-              "txt":"Österr. Postbus AG (Salzburg)"
+              "res":"LF"
             },
             {
               "res":"INFO"
             },
             {
-              "res":"prod_ic_bus",
-              "txtS":"270",
+              "res":"prod_bus",
+              "txtS":"1",
               "fg":
               {
                 "r":255,
@@ -494,7 +508,38 @@
               }
             },
             {
-              "txt":"Österr. Postbus AG (Ennspongau)"
+              "res":"prod_bus",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255
+              },
+              "bg":
+              {
+                "r":120,
+                "g":0,
+                "b":140
+              }
+            },
+            {
+              "res":"warn"
+            },
+            {
+              "res":"prod_bus",
+              "txtS":"3",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255
+              },
+              "bg":
+              {
+                "r":120,
+                "g":0,
+                "b":140
+              }
             },
             {
               "res":"attr_co2_info"
@@ -506,20 +551,8 @@
           "dirL":
           [
             {
-              "txt":"Rif Ortszentrum",
-              "flg":"H"
-            },
-            {
-              "txt":"Hallein Bahnhof via Anif - Niederalm",
-              "flg":"H"
-            },
-            {
-              "txt":"Golling via Anif - Niederalm - Hallein - Kuchl",
-              "flg":"H"
-            },
-            {
-              "txt":"Radstadt Bahnhof",
-              "flg":"H"
+              "txt":"P+R - Salzburg Süd",
+              "flg":"R"
             }
           ]
         },
@@ -527,29 +560,30 @@
         [
           {
             "cid":"DirectConReq-0",
-            "date":"20210906",
+            "date":"20211205",
             "dur":"000300",
             "chg":0,
             "sDays":
             {
-              "sDaysR":"Mo - Fr",
-              "sDaysI":"nicht 26. Okt, 1. Nov, 8. Dez",
-              "sDaysB":"F3E7CF9F3E7CF9F3E7CF9F3E7CF971E7CF9F3E6C"
+              "sDaysR":"Sa, So",
+              "sDaysI":"auch 8., 24., 31. Dez, 6. Jan, 18. Apr, 26. Mai",
+              "sDaysB":"060C1A3860C183064C1870E2C183060C183060C183060C183860C183062C"
             },
             "dep":
             {
               "locX":0,
               "dInR":true,
-              "dTimeS":"163900",
+              "dTimeS":"192600",
               "type":"N"
             },
             "arr":
             {
               "locX":3,
-              "idx":7,
+              "idx":19,
               "aProdX":1,
               "aOutR":true,
-              "aTimeS":"164200",
+              "aTimeS":"192900",
+              "aTimeR":"192800",
               "aProgType":"PROGNOSED",
               "type":"N"
             },
@@ -562,21 +596,21 @@
                 {
                   "locX":0,
                   "dInR":true,
-                  "dTimeS":"163900",
+                  "dTimeS":"192600",
                   "type":"N"
                 },
                 "arr":
                 {
                   "locX":1,
                   "aOutR":true,
-                  "aTimeS":"164100",
+                  "aTimeS":"192800",
                   "type":"N"
                 },
                 "gis":
                 {
                   "dist":115,
                   "durS":"000200",
-                  "ctx":"C|105d1d11|G|1|G@F|A=2@O=47.797110, 13.053632@X=13053632@Y=47797110@|A=1@O=Salzburg Justizgebäude@l=Salzburg Justizgebäude (B)@X=13054620@Y=47796445@U=81@L=455002101@i=at:45:50021:0:1@|6092021|163900|164100|bf|ft@0@2000@120@1@133@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§bt@0@2000@120@1@133@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§tf@$f@$f@$f@$f@$f@$§||",
+                  "ctx":"C|43715bd2|G|1|G@F|A=2@O=47.797110, 13.053632@X=13053632@Y=47797110@|A=1@O=Salzburg Justizgebäude@l=Salzburg Justizgebäude (B)@X=13054620@Y=47796445@U=81@L=455002101@i=at:45:50021:0:1@|5122021|192600|192800|bf|ft@0@2000@120@1@133@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§bt@0@2000@120@1@133@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§tf@$f@$f@$f@$f@$f@$§|||",
                   "getDescr":true,
                   "getPoly":true
                 }
@@ -587,50 +621,56 @@
                 "dep":
                 {
                   "locX":1,
-                  "idx":6,
+                  "idx":18,
                   "dProdX":1,
                   "dPlatfS":"B",
                   "dInR":true,
-                  "dTimeS":"164100",
+                  "dTimeS":"192800",
+                  "dTimeR":"192700",
                   "dProgType":"PROGNOSED",
                   "type":"N"
                 },
                 "arr":
                 {
                   "locX":3,
-                  "idx":7,
+                  "idx":19,
                   "aProdX":1,
                   "aOutR":true,
-                  "aTimeS":"164200",
+                  "aTimeS":"192900",
+                  "aTimeR":"192800",
                   "aProgType":"PROGNOSED",
                   "type":"N"
                 },
                 "jny":
                 {
-                  "jid":"2|#VN#1#ST#1630889505#PI#0#ZI#65195#TA#18#DA#60921#1S#455000222#1T#1630#LS#455052301#LT#1707#PU#81#RT#1#CA#S04#ZE#175#ZB#     175#PC#6#FR#455000222#FT#1630#TO#455052301#TT#1707#",
+                  "jid":"2|#VN#1#ST#1638666385#PI#0#ZI#80960#TA#25#DA#51221#1S#455103701#1T#1905#LS#455045802#LT#1938#PU#81#RT#1#CA#S01#ZE#8#ZB#       8#PC#7#FR#455103701#FT#1905#TO#455045802#TT#1938#",
                   "prodX":2,
-                  "dirTxt":"Rif Ortszentrum",
-                  "dirFlg":"H",
+                  "dirTxt":"P+R - Salzburg Süd",
+                  "dirFlg":"R",
                   "status":"P",
                   "isRchbl":true,
                   "stopL":
                   [
                     {
                       "locX":1,
-                      "idx":6,
+                      "idx":18,
                       "dProdX":2,
                       "dInR":true,
-                      "dTimeS":"164100",
-                      "dDirTxt":"Rif Ortszentrum",
-                      "dDirFlg":"H",
+                      "dTimeS":"192800",
+                      "dTimeR":"192700",
+                      "dProgType":"PROGNOSED",
+                      "dDirTxt":"P+R - Salzburg Süd",
+                      "dDirFlg":"R",
                       "type":"N"
                     },
                     {
                       "locX":3,
-                      "idx":7,
+                      "idx":19,
                       "aProdX":2,
                       "aOutR":true,
-                      "aTimeS":"164200",
+                      "aTimeS":"192900",
+                      "aTimeR":"192800",
+                      "aProgType":"PROGNOSED",
                       "type":"N"
                     }
                   ],
@@ -645,57 +685,50 @@
                   },
                   "pos":
                   {
-                    "x":13044957,
-                    "y":47800418,
+                    "x":13047528,
+                    "y":47799735,
                     "layerX":0,
                     "crdSysX":0
                   },
                   "freq":
                   {
-                    "minC":3,
-                    "maxC":15,
-                    "numC":11,
+                    "minC":10,
+                    "maxC":20,
+                    "numC":10,
                     "jnyL":
                     [
                       {
-                        "jid":"2|#VN#1#ST#1630889505#PI#0#ZI#65159#TA#9#DA#60921#1S#455000222#1T#1645#LS#455049401#LT#1725#PU#81#RT#1#CA#S04#ZE#170#ZB#     170#PC#6#FR#455000222#FT#1645#TO#455049401#TT#1725#",
+                        "jid":"2|#VN#1#ST#1638666385#PI#0#ZI#79794#TA#28#DA#51221#1S#455085404#1T#1918#LS#455045802#LT#1948#PU#81#RT#1#CA#S01#ZE#3#ZB#       3#PC#7#FR#455085404#FT#1918#TO#455045802#TT#1948#",
                         "prodX":3,
-                        "dirTxt":"Hallein Bahnhof via Anif - Niederalm",
-                        "dirFlg":"H",
+                        "dirTxt":"P+R - Salzburg Süd",
+                        "dirFlg":"R",
                         "stopL":
                         [
                           {
                             "locX":1,
-                            "idx":6,
+                            "idx":14,
                             "dProdX":3,
-                            "dTimeS":"165600",
-                            "dDirTxt":"Hallein Bahnhof via Anif - Niederalm",
-                            "dDirFlg":"H",
+                            "dTimeS":"193800",
+                            "dDirTxt":"P+R - Salzburg Süd",
+                            "dDirFlg":"R",
                             "type":"N"
                           },
                           {
                             "locX":3,
-                            "idx":7,
+                            "idx":15,
                             "aProdX":3,
-                            "aTimeS":"165700",
+                            "aTimeS":"193900",
                             "type":"N"
                           }
                         ],
-                        "ctxRecon":"T$A=1@O=Salzburg Justizgebäude@L=455002101@a=128@$A=1@O=Salzburg Akademiestraße@L=455002201@a=128@$202109061656$202109061657$     170$$1$$$$",
-                        "msgL":
-                        [
-                          {
-                            "type":"REM",
-                            "remX":0,
-                            "fLocX":1,
-                            "tLocX":3,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL_H3"
-                            ],
-                            "sort":409206784
-                          }
-                        ],
+                        "pos":
+                        {
+                          "x":13045308,
+                          "y":47815413,
+                          "layerX":0,
+                          "crdSysX":0
+                        },
+                        "ctxRecon":"T$A=1@O=Salzburg Justizgebäude@L=455002101@a=128@$A=1@O=Salzburg Akademiestraße@L=455002201@a=128@$202112051938$202112051939$       3$$1$$$$$$",
                         "subscr":"F",
                         "prodL":
                         [
@@ -703,46 +736,46 @@
                             "prodX":3,
                             "fLocX":1,
                             "tLocX":3,
-                            "fIdx":6,
-                            "tIdx":7
+                            "fIdx":14,
+                            "tIdx":15
                           }
                         ],
                         "dirL":
                         [
                           {
-                            "dirX":1,
+                            "dirX":0,
                             "fLocX":1,
                             "tLocX":3,
-                            "fIdx":6,
-                            "tIdx":7
+                            "fIdx":14,
+                            "tIdx":15
                           }
                         ]
                       },
                       {
-                        "jid":"2|#VN#1#ST#1630889505#PI#0#ZI#65195#TA#19#DA#60921#1S#455000222#1T#1700#LS#455052301#LT#1737#PU#81#RT#1#CA#S04#ZE#175#ZB#     175#PC#6#FR#455000222#FT#1700#TO#455052301#TT#1737#",
+                        "jid":"2|#VN#1#ST#1638666385#PI#0#ZI#80960#TA#26#DA#51221#1S#455103701#1T#1925#LS#455045802#LT#1958#PU#81#RT#1#CA#S01#ZE#8#ZB#       8#PC#7#FR#455103701#FT#1925#TO#455045802#TT#1958#",
                         "prodX":4,
-                        "dirTxt":"Rif Ortszentrum",
-                        "dirFlg":"H",
+                        "dirTxt":"P+R - Salzburg Süd",
+                        "dirFlg":"R",
                         "stopL":
                         [
                           {
                             "locX":1,
-                            "idx":6,
+                            "idx":18,
                             "dProdX":4,
-                            "dTimeS":"171100",
-                            "dDirTxt":"Rif Ortszentrum",
-                            "dDirFlg":"H",
+                            "dTimeS":"194800",
+                            "dDirTxt":"P+R - Salzburg Süd",
+                            "dDirFlg":"R",
                             "type":"N"
                           },
                           {
                             "locX":3,
-                            "idx":7,
+                            "idx":19,
                             "aProdX":4,
-                            "aTimeS":"171200",
+                            "aTimeS":"194900",
                             "type":"N"
                           }
                         ],
-                        "ctxRecon":"T$A=1@O=Salzburg Justizgebäude@L=455002101@a=128@$A=1@O=Salzburg Akademiestraße@L=455002201@a=128@$202109061711$202109061712$     175$$1$$$$",
+                        "ctxRecon":"T$A=1@O=Salzburg Justizgebäude@L=455002101@a=128@$A=1@O=Salzburg Akademiestraße@L=455002201@a=128@$202112051948$202112051949$       8$$1$$$$$$",
                         "subscr":"F",
                         "prodL":
                         [
@@ -750,8 +783,8 @@
                             "prodX":4,
                             "fLocX":1,
                             "tLocX":3,
-                            "fIdx":6,
-                            "tIdx":7
+                            "fIdx":18,
+                            "tIdx":19
                           }
                         ],
                         "dirL":
@@ -760,50 +793,36 @@
                             "dirX":0,
                             "fLocX":1,
                             "tLocX":3,
-                            "fIdx":6,
-                            "tIdx":7
+                            "fIdx":18,
+                            "tIdx":19
                           }
                         ]
                       },
                       {
-                        "jid":"2|#VN#1#ST#1630889505#PI#0#ZI#65121#TA#1#DA#60921#1S#455000222#1T#1715#LS#455059105#LT#1819#PU#81#RT#1#CA#S04#ZE#170#ZB#     170#PC#6#FR#455000222#FT#1715#TO#455059105#TT#1819#",
+                        "jid":"2|#VN#1#ST#1638666385#PI#0#ZI#79794#TA#29#DA#51221#1S#455085404#1T#1938#LS#455045802#LT#2008#PU#81#RT#1#CA#S01#ZE#3#ZB#       3#PC#7#FR#455085404#FT#1938#TO#455045802#TT#2008#",
                         "prodX":5,
-                        "dirTxt":"Golling via Anif - Niederalm - Hallein - Kuchl",
-                        "dirFlg":"H",
+                        "dirTxt":"P+R - Salzburg Süd",
+                        "dirFlg":"R",
                         "stopL":
                         [
                           {
                             "locX":1,
-                            "idx":6,
+                            "idx":14,
                             "dProdX":5,
-                            "dTimeS":"172600",
-                            "dDirTxt":"Golling via Anif - Niederalm - Hallein - Kuchl",
-                            "dDirFlg":"H",
+                            "dTimeS":"195800",
+                            "dDirTxt":"P+R - Salzburg Süd",
+                            "dDirFlg":"R",
                             "type":"N"
                           },
                           {
                             "locX":3,
-                            "idx":7,
+                            "idx":15,
                             "aProdX":5,
-                            "aTimeS":"172700",
+                            "aTimeS":"195900",
                             "type":"N"
                           }
                         ],
-                        "ctxRecon":"T$A=1@O=Salzburg Justizgebäude@L=455002101@a=128@$A=1@O=Salzburg Akademiestraße@L=455002201@a=128@$202109061726$202109061727$     170$$1$$$$",
-                        "msgL":
-                        [
-                          {
-                            "type":"REM",
-                            "remX":0,
-                            "fLocX":1,
-                            "tLocX":3,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL_H3"
-                            ],
-                            "sort":409206784
-                          }
-                        ],
+                        "ctxRecon":"T$A=1@O=Salzburg Justizgebäude@L=455002101@a=128@$A=1@O=Salzburg Akademiestraße@L=455002201@a=128@$202112051958$202112051959$       3$$1$$$$$$",
                         "subscr":"F",
                         "prodL":
                         [
@@ -811,102 +830,8 @@
                             "prodX":5,
                             "fLocX":1,
                             "tLocX":3,
-                            "fIdx":6,
-                            "tIdx":7
-                          }
-                        ],
-                        "dirL":
-                        [
-                          {
-                            "dirX":2,
-                            "fLocX":1,
-                            "tLocX":3,
-                            "fIdx":6,
-                            "tIdx":7
-                          }
-                        ]
-                      },
-                      {
-                        "jid":"2|#VN#1#ST#1630889505#PI#0#ZI#68484#TA#0#DA#60921#1S#455045901#1T#1705#LS#455211401#LT#1848#PU#81#RT#1#CA#S04#ZE#270#ZB#     270#PC#6#FR#455045901#FT#1705#TO#455211401#TT#1848#",
-                        "prodX":6,
-                        "dirTxt":"Radstadt Bahnhof",
-                        "dirFlg":"H",
-                        "stopL":
-                        [
-                          {
-                            "locX":1,
-                            "idx":5,
-                            "dProdX":6,
-                            "dTimeS":"172900",
-                            "dDirTxt":"Radstadt Bahnhof",
-                            "dDirFlg":"H",
-                            "type":"N"
-                          },
-                          {
-                            "locX":3,
-                            "idx":6,
-                            "aProdX":6,
-                            "aTimeS":"173000",
-                            "type":"N"
-                          }
-                        ],
-                        "ctxRecon":"T$A=1@O=Salzburg Justizgebäude@L=455002101@a=128@$A=1@O=Salzburg Akademiestraße@L=455002201@a=128@$202109061729$202109061730$     270$$1$$$$",
-                        "subscr":"F",
-                        "prodL":
-                        [
-                          {
-                            "prodX":6,
-                            "fLocX":1,
-                            "tLocX":3,
-                            "fIdx":5,
-                            "tIdx":6
-                          }
-                        ],
-                        "dirL":
-                        [
-                          {
-                            "dirX":3,
-                            "fLocX":1,
-                            "tLocX":3,
-                            "fIdx":5,
-                            "tIdx":6
-                          }
-                        ]
-                      },
-                      {
-                        "jid":"2|#VN#1#ST#1630889505#PI#0#ZI#65195#TA#20#DA#60921#1S#455000222#1T#1730#LS#455052301#LT#1807#PU#81#RT#1#CA#S04#ZE#175#ZB#     175#PC#6#FR#455000222#FT#1730#TO#455052301#TT#1807#",
-                        "prodX":7,
-                        "dirTxt":"Rif Ortszentrum",
-                        "dirFlg":"H",
-                        "stopL":
-                        [
-                          {
-                            "locX":1,
-                            "idx":6,
-                            "dProdX":7,
-                            "dTimeS":"174100",
-                            "dDirTxt":"Rif Ortszentrum",
-                            "dDirFlg":"H",
-                            "type":"N"
-                          },
-                          {
-                            "locX":3,
-                            "idx":7,
-                            "aProdX":7,
-                            "aTimeS":"174200",
-                            "type":"N"
-                          }
-                        ],
-                        "ctxRecon":"T$A=1@O=Salzburg Justizgebäude@L=455002101@a=128@$A=1@O=Salzburg Akademiestraße@L=455002201@a=128@$202109061741$202109061742$     175$$1$$$$",
-                        "subscr":"F",
-                        "prodL":
-                        [
-                          {
-                            "prodX":7,
-                            "fLocX":1,
-                            "tLocX":3,
-                            "fIdx":6,
-                            "tIdx":7
+                            "fIdx":14,
+                            "tIdx":15
                           }
                         ],
                         "dirL":
@@ -915,16 +840,132 @@
                             "dirX":0,
                             "fLocX":1,
                             "tLocX":3,
-                            "fIdx":6,
-                            "tIdx":7
+                            "fIdx":14,
+                            "tIdx":15
+                          }
+                        ]
+                      },
+                      {
+                        "jid":"2|#VN#1#ST#1638666385#PI#0#ZI#80960#TA#27#DA#51221#1S#455103701#1T#1945#LS#455045802#LT#2018#PU#81#RT#1#CA#S01#ZE#8#ZB#       8#PC#7#FR#455103701#FT#1945#TO#455045802#TT#2018#",
+                        "prodX":6,
+                        "dirTxt":"P+R - Salzburg Süd",
+                        "dirFlg":"R",
+                        "stopL":
+                        [
+                          {
+                            "locX":1,
+                            "idx":18,
+                            "dProdX":6,
+                            "dTimeS":"200800",
+                            "dDirTxt":"P+R - Salzburg Süd",
+                            "dDirFlg":"R",
+                            "type":"N"
+                          },
+                          {
+                            "locX":3,
+                            "idx":19,
+                            "aProdX":6,
+                            "aTimeS":"200900",
+                            "type":"N"
+                          }
+                        ],
+                        "ctxRecon":"T$A=1@O=Salzburg Justizgebäude@L=455002101@a=128@$A=1@O=Salzburg Akademiestraße@L=455002201@a=128@$202112052008$202112052009$       8$$1$$$$$$",
+                        "subscr":"F",
+                        "prodL":
+                        [
+                          {
+                            "prodX":6,
+                            "fLocX":1,
+                            "tLocX":3,
+                            "fIdx":18,
+                            "tIdx":19
+                          }
+                        ],
+                        "dirL":
+                        [
+                          {
+                            "dirX":0,
+                            "fLocX":1,
+                            "tLocX":3,
+                            "fIdx":18,
+                            "tIdx":19
+                          }
+                        ]
+                      },
+                      {
+                        "jid":"2|#VN#1#ST#1638666385#PI#0#ZI#79794#TA#30#DA#51221#1S#455085404#1T#1958#LS#455045802#LT#2028#PU#81#RT#1#CA#S01#ZE#3#ZB#       3#PC#7#FR#455085404#FT#1958#TO#455045802#TT#2028#",
+                        "prodX":7,
+                        "dirTxt":"P+R - Salzburg Süd",
+                        "dirFlg":"R",
+                        "stopL":
+                        [
+                          {
+                            "locX":1,
+                            "idx":14,
+                            "dProdX":7,
+                            "dTimeS":"201800",
+                            "dDirTxt":"P+R - Salzburg Süd",
+                            "dDirFlg":"R",
+                            "type":"N"
+                          },
+                          {
+                            "locX":3,
+                            "idx":15,
+                            "aProdX":7,
+                            "aTimeS":"201900",
+                            "type":"N"
+                          }
+                        ],
+                        "ctxRecon":"T$A=1@O=Salzburg Justizgebäude@L=455002101@a=128@$A=1@O=Salzburg Akademiestraße@L=455002201@a=128@$202112052018$202112052019$       3$$1$$$$$$",
+                        "subscr":"F",
+                        "prodL":
+                        [
+                          {
+                            "prodX":7,
+                            "fLocX":1,
+                            "tLocX":3,
+                            "fIdx":14,
+                            "tIdx":15
+                          }
+                        ],
+                        "dirL":
+                        [
+                          {
+                            "dirX":0,
+                            "fLocX":1,
+                            "tLocX":3,
+                            "fIdx":14,
+                            "tIdx":15
                           }
                         ]
                       }
                     ]
                   },
-                  "ctxRecon":"T$A=1@O=Salzburg Justizgebäude@L=455002101@a=128@$A=1@O=Salzburg Akademiestraße@L=455002201@a=128@$202109061641$202109061642$     175$$1$$$$",
+                  "ctxRecon":"T$A=1@O=Salzburg Justizgebäude@L=455002101@a=128@$A=1@O=Salzburg Akademiestraße@L=455002201@a=128@$202112051928$202112051929$       8$$1$$$$$$",
                   "msgL":
                   [
+                    {
+                      "type":"REM",
+                      "remX":0,
+                      "fLocX":1,
+                      "tLocX":3,
+                      "tagL":
+                      [
+                        "RES_JNY_DTL_H3"
+                      ],
+                      "sort":543424512
+                    },
+                    {
+                      "type":"REM",
+                      "remX":1,
+                      "fLocX":1,
+                      "tLocX":3,
+                      "tagL":
+                      [
+                        "RES_JNY_DTL_H3"
+                      ],
+                      "sort":543424512
+                    },
                     {
                       "type":"HIM",
                       "himX":0,
@@ -933,7 +974,7 @@
                       [
                         "RES_GLB_HDR_H3","SUM_GLB_HDR_H3"
                       ],
-                      "sort":373527948
+                      "sort":373560317
                     }
                   ],
                   "subscr":"F",
@@ -943,8 +984,8 @@
                       "prodX":2,
                       "fLocX":1,
                       "tLocX":3,
-                      "fIdx":6,
-                      "tIdx":7
+                      "fIdx":18,
+                      "tIdx":19
                     }
                   ],
                   "dirL":
@@ -953,17 +994,17 @@
                       "dirX":0,
                       "fLocX":1,
                       "tLocX":3,
-                      "fIdx":6,
-                      "tIdx":7
+                      "fIdx":18,
+                      "tIdx":19
                     }
                   ]
                 }
               }
             ],
-            "ctxRecon":"¶HKI¶G@F$A=2@O=47.797110, 13.053632@X=13053632@Y=47797110@u=0@a=128@$A=1@O=Salzburg Justizgebäude@L=455002101@a=128@$202109061639$202109061641$$$1$$$$§T$A=1@O=Salzburg Justizgebäude@L=455002101@a=128@$A=1@O=Salzburg Akademiestraße@L=455002201@a=128@$202109061641$202109061642$     175$$1$$$$¶GP¶ft@0@2000@120@1@133@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§bt@0@2000@120@1@133@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§tf@$f@$f@$f@$f@$f@$§",
+            "ctxRecon":"¶HKI¶G@F$A=2@O=47.797110, 13.053632@X=13053632@Y=47797110@u=0@a=128@$A=1@O=Salzburg Justizgebäude@L=455002101@a=128@$202112051926$202112051928$$$1$$$$$$§T$A=1@O=Salzburg Justizgebäude@L=455002101@a=128@$A=1@O=Salzburg Akademiestraße@L=455002201@a=128@$202112051928$202112051929$       8$$1$$$$$$¶GP¶ft@0@2000@120@1@133@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§bt@0@2000@120@1@133@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§tf@$f@$f@$f@$f@$f@$§¶KI¶H4sIAAAAAAACA+1WzW7jIBB+lYrDntIKHDtu8iqrChEb28gOWICbP/XddwaI3VZdtbvawx6aXOBjhplh5vPMlQjdWNHKg6knR3aEnnK6ZmRF3FR1C1iUAI3HBaCwf62afYhy62fceWE93zdk9/NpRS5KDnFzJao+kR1dEXmC8w6wvCgozbINW5FJVWT3CItaTNIGsWcxTBJWL3DNsxLzldGAqEHqSvx5BBnQGwxcQMC+FgdASF4+lNuSMbq6Y+sHWqw36wxOT70xtgaNvMhYnq/IOQHFmpVss4a4Bs+riF1JWHDwRNXoyQtaN+Nb4/RmnN4t5sP6ZowuZuinBkYLL9r78GIjvskjOGWCJoCseFn9I/xpzuFFKoAKlmWMbbP8DZ4FDawSpb204OkQUs0a/EGQsupRTmrwmK4++IOdgzhxSFvV806qtvPhzungPOx4I3pv4D232wW7TK7qBtGS3T1b0IPStXQ+uvvuYAoeINgMQlad1Oiz5KmUr+hDqi1G6SMNTtXKwU3rrNyUWHln16kGgG08hRpdTFVwbRs5wQikSUyuFXvJGzV4vBRlQOeghkE5WbmItNKN0kK5WpmqF/wdgmdpa4V2owGJqjOqkuhpY432ob7wkI/CioN7yyAt9kOse+U48mm00skhHELE8aierPDKaG4afP1zclJpHuOOUaZNRildDvle9HNM3CusaZah5WHgEBGGKaMAIlbUakohH4XyNw0onFFKpNsaiq8yySqUODybjHxFakMEURk34VOQ020BgsZx4b1NzJbtq13gSRUvbOCNz/wYakvpVDWuVyO3ZooISOFa8pm0kIOqh3ijryHHiIDQK0gbfph8fG2KVAop2HwpBfQPUwB1+WkSbi/+5RzcL0kIIYYc4Oo/SAKjf5eGJ+DfHr4m3xz55sg3R37PEfX8AUOecMiAdLzvPFxp5RUMIpdQjO9SxlNTou/xyEOAW1XxsRNOxiaZpgOc1N5MnlAdujHLcJl6YdqZZ2mPFqaJhKCrGqaBFhUv2iBL8oyVZQYN24v+NgdgJnAh9jglxlXs3Thw6RnUM9gcb2BzDOoBS8fY3zVOIJNzs2X62uJtMMCBTdj+h1V16N2j5aHjS82rIRF5RsA8hwD3QfHlFz/yhaSUCwAA",
             "freq":
             {
-              "minC":3
+              "minC":10
             },
             "trfRes":
             {
@@ -1096,16 +1137,6 @@
                   "fareL":
                   [
                     {
-                      "name":"myRegio Edelweiß-Ticket",
-                      "prc":29900,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"myRegio Edelweiß-Ticket Abonnement ",
-                      "prc":30000,
-                      "cur":"EUR"
-                    },
-                    {
                       "name":"myRegio Wochenkarte ",
                       "prc":1900,
                       "cur":"EUR",
@@ -1118,16 +1149,6 @@
                       "cur":"EUR",
                       "shpCtx":"#211_2_1",
                       "buttonText":"59,0 €"
-                    },
-                    {
-                      "name":"myRegio Jahreskarte ",
-                      "prc":36500,
-                      "cur":"EUR"
-                    },
-                    {
-                      "name":"myRegio Jahreskarte PLUS",
-                      "prc":46500,
-                      "cur":"EUR"
                     }
                   ]
                 }
@@ -1588,10 +1609,10 @@
                       },
                       "TV":
                       {
-                        "BD":"20210906",
-                        "BT":"164100",
-                        "ED":"20210906",
-                        "ET":"174100",
+                        "BD":"20211205",
+                        "BT":"192800",
+                        "ED":"20211205",
+                        "ET":"202800",
                         "VD":1,
                         "VC":"h"
                       },
@@ -1609,9 +1630,9 @@
                           }
                         }
                       ],
-                      "PCR":"VDS;SVV;201;0;SVV/DIVA-Mapping 2015-02-03;50021;Salzburg Justizgebäude;50022;Salzburg Akademiestraße;50021,50022;50101;-1;174849;-1;0;0;1;2;{{purchase_date}};{{purchase_time}};{{validity_begin_date}};{{validity_begin_time}};2021010120211231;66;{{person_number}};210;210;191;19;0;0;0;{{payment_mode}};{{is_cancellation}};V:201|0;;{{unique_ticket_number}};{{company_number}};{{vendor_number}};{{device_number}};{{payment_id_string}};0;-1",
+                      "PCR":"VDS;SVV;204;0;SVV/DIVA-Mapping 2015-02-03;50021;Salzburg Justizgebäude;50022;Salzburg Akademiestraße;50021,50022;50101;-1;174849;-1;0;0;1;2;{{purchase_date}};{{purchase_time}};{{validity_begin_date}};{{validity_begin_time}};2021010120211231;66;{{person_number}};210;210;191;19;0;0;0;{{payment_mode}};{{is_cancellation}};V:204|0;;{{unique_ticket_number}};{{company_number}};{{vendor_number}};{{device_number}};{{payment_id_string}};0;-1",
                       "FF":false,
-                      "CS":"50a85420a0d053889663a738bf3b598d"
+                      "CS":"de0d9c61b5e1aeb719492761813980d5"
                     },
                     {
                       "P":"#67_2_1",
@@ -1641,10 +1662,10 @@
                       },
                       "TV":
                       {
-                        "BD":"20210906",
-                        "BT":"164100",
-                        "ED":"20210906",
-                        "ET":"174100",
+                        "BD":"20211205",
+                        "BT":"192800",
+                        "ED":"20211205",
+                        "ET":"202800",
                         "VD":1,
                         "VC":"h"
                       },
@@ -1662,9 +1683,9 @@
                           }
                         }
                       ],
-                      "PCR":"VDS;SVV;201;0;SVV/DIVA-Mapping 2015-02-03;50021;Salzburg Justizgebäude;50022;Salzburg Akademiestraße;50021,50022;50101;-1;174849;-1;0;0;1;2;{{purchase_date}};{{purchase_time}};{{validity_begin_date}};{{validity_begin_time}};2021010120211231;67;{{person_number}};170;170;155;15;0;0;0;{{payment_mode}};{{is_cancellation}};V:201|0;;{{unique_ticket_number}};{{company_number}};{{vendor_number}};{{device_number}};{{payment_id_string}};0;-1",
+                      "PCR":"VDS;SVV;204;0;SVV/DIVA-Mapping 2015-02-03;50021;Salzburg Justizgebäude;50022;Salzburg Akademiestraße;50021,50022;50101;-1;174849;-1;0;0;1;2;{{purchase_date}};{{purchase_time}};{{validity_begin_date}};{{validity_begin_time}};2021010120211231;67;{{person_number}};170;170;155;15;0;0;0;{{payment_mode}};{{is_cancellation}};V:204|0;;{{unique_ticket_number}};{{company_number}};{{vendor_number}};{{device_number}};{{payment_id_string}};0;-1",
                       "FF":false,
-                      "CS":"98e6cd6b2ff438cbd22d634e5316c29d"
+                      "CS":"b63b29948d211ba8971b4b1daf3804e9"
                     },
                     {
                       "P":"#102_2_1",
@@ -1694,10 +1715,10 @@
                       },
                       "TV":
                       {
-                        "BD":"20210906",
-                        "BT":"164100",
-                        "ED":"20210906",
-                        "ET":"174100",
+                        "BD":"20211205",
+                        "BT":"192800",
+                        "ED":"20211205",
+                        "ET":"202800",
                         "VD":1,
                         "VC":"h"
                       },
@@ -1715,9 +1736,9 @@
                           }
                         }
                       ],
-                      "PCR":"VDS;SVV;201;0;SVV/DIVA-Mapping 2015-02-03;50021;Salzburg Justizgebäude;50022;Salzburg Akademiestraße;50021,50022;50101;-1;174849;-1;0;0;1;2;{{purchase_date}};{{purchase_time}};{{validity_begin_date}};{{validity_begin_time}};2021010120211231;102;{{person_number}};100;100;91;9;0;0;0;{{payment_mode}};{{is_cancellation}};V:201|0;;{{unique_ticket_number}};{{company_number}};{{vendor_number}};{{device_number}};{{payment_id_string}};0;-1",
+                      "PCR":"VDS;SVV;204;0;SVV/DIVA-Mapping 2015-02-03;50021;Salzburg Justizgebäude;50022;Salzburg Akademiestraße;50021,50022;50101;-1;174849;-1;0;0;1;2;{{purchase_date}};{{purchase_time}};{{validity_begin_date}};{{validity_begin_time}};2021010120211231;102;{{person_number}};100;100;91;9;0;0;0;{{payment_mode}};{{is_cancellation}};V:204|0;;{{unique_ticket_number}};{{company_number}};{{vendor_number}};{{device_number}};{{payment_id_string}};0;-1",
                       "FF":false,
-                      "CS":"681c43a7c1d4ff6d4b2668e5689781b5"
+                      "CS":"e0b866149cb7deb4161a76cc07835b70"
                     },
                     {
                       "P":"#126_2_1",
@@ -1747,10 +1768,10 @@
                       },
                       "TV":
                       {
-                        "BD":"20210906",
-                        "BT":"164100",
-                        "ED":"20210906",
-                        "ET":"174100",
+                        "BD":"20211205",
+                        "BT":"192800",
+                        "ED":"20211205",
+                        "ET":"202800",
                         "VD":1,
                         "VC":"h"
                       },
@@ -1768,9 +1789,9 @@
                           }
                         }
                       ],
-                      "PCR":"VDS;SVV;201;0;SVV/DIVA-Mapping 2015-02-03;50021;Salzburg Justizgebäude;50022;Salzburg Akademiestraße;50021,50022;50101;-1;174849;-1;0;0;1;2;{{purchase_date}};{{purchase_time}};{{validity_begin_date}};{{validity_begin_time}};2021010120211231;126;{{person_number}};150;150;136;14;0;0;0;{{payment_mode}};{{is_cancellation}};V:201|0;;{{unique_ticket_number}};{{company_number}};{{vendor_number}};{{device_number}};{{payment_id_string}};0;-1",
+                      "PCR":"VDS;SVV;204;0;SVV/DIVA-Mapping 2015-02-03;50021;Salzburg Justizgebäude;50022;Salzburg Akademiestraße;50021,50022;50101;-1;174849;-1;0;0;1;2;{{purchase_date}};{{purchase_time}};{{validity_begin_date}};{{validity_begin_time}};2021010120211231;126;{{person_number}};150;150;136;14;0;0;0;{{payment_mode}};{{is_cancellation}};V:204|0;;{{unique_ticket_number}};{{company_number}};{{vendor_number}};{{device_number}};{{payment_id_string}};0;-1",
                       "FF":false,
-                      "CS":"5b4c88c27979b10c4766aac465d6d6a0"
+                      "CS":"0ec17a87ab18ed7cc5901af4d0153f9b"
                     },
                     {
                       "P":"#68_2_1",
@@ -1800,10 +1821,10 @@
                       },
                       "TV":
                       {
-                        "BD":"20210906",
-                        "BT":"164100",
-                        "ED":"20210907",
-                        "ET":"164100",
+                        "BD":"20211205",
+                        "BT":"192800",
+                        "ED":"20211206",
+                        "ET":"192800",
                         "VD":24,
                         "VC":"h"
                       },
@@ -1821,9 +1842,9 @@
                           }
                         }
                       ],
-                      "PCR":"VDS;SVV;201;0;SVV/DIVA-Mapping 2015-02-03;50021;Salzburg Justizgebäude;50022;Salzburg Akademiestraße;50021,50022;50101;-1;174849;-1;0;0;1;2;{{purchase_date}};{{purchase_time}};{{validity_begin_date}};{{validity_begin_time}};2021010120211231;68;{{person_number}};430;430;391;39;0;0;0;{{payment_mode}};{{is_cancellation}};V:201|0;;{{unique_ticket_number}};{{company_number}};{{vendor_number}};{{device_number}};{{payment_id_string}};0;-1",
+                      "PCR":"VDS;SVV;204;0;SVV/DIVA-Mapping 2015-02-03;50021;Salzburg Justizgebäude;50022;Salzburg Akademiestraße;50021,50022;50101;-1;174849;-1;0;0;1;2;{{purchase_date}};{{purchase_time}};{{validity_begin_date}};{{validity_begin_time}};2021010120211231;68;{{person_number}};430;430;391;39;0;0;0;{{payment_mode}};{{is_cancellation}};V:204|0;;{{unique_ticket_number}};{{company_number}};{{vendor_number}};{{device_number}};{{payment_id_string}};0;-1",
                       "FF":false,
-                      "CS":"6ad1429000e66ab4d76606413c926161"
+                      "CS":"d0284c699dcaa04cab5ac4339fbd15d9"
                     },
                     {
                       "P":"#69_2_1",
@@ -1853,10 +1874,10 @@
                       },
                       "TV":
                       {
-                        "BD":"20210906",
-                        "BT":"164100",
-                        "ED":"20210907",
-                        "ET":"164100",
+                        "BD":"20211205",
+                        "BT":"192800",
+                        "ED":"20211206",
+                        "ET":"192800",
                         "VD":24,
                         "VC":"h"
                       },
@@ -1874,9 +1895,9 @@
                           }
                         }
                       ],
-                      "PCR":"VDS;SVV;201;0;SVV/DIVA-Mapping 2015-02-03;50021;Salzburg Justizgebäude;50022;Salzburg Akademiestraße;50021,50022;50101;-1;174849;-1;0;0;1;2;{{purchase_date}};{{purchase_time}};{{validity_begin_date}};{{validity_begin_time}};2021010120211231;69;{{person_number}};340;340;309;31;0;0;0;{{payment_mode}};{{is_cancellation}};V:201|0;;{{unique_ticket_number}};{{company_number}};{{vendor_number}};{{device_number}};{{payment_id_string}};0;-1",
+                      "PCR":"VDS;SVV;204;0;SVV/DIVA-Mapping 2015-02-03;50021;Salzburg Justizgebäude;50022;Salzburg Akademiestraße;50021,50022;50101;-1;174849;-1;0;0;1;2;{{purchase_date}};{{purchase_time}};{{validity_begin_date}};{{validity_begin_time}};2021010120211231;69;{{person_number}};340;340;309;31;0;0;0;{{payment_mode}};{{is_cancellation}};V:204|0;;{{unique_ticket_number}};{{company_number}};{{vendor_number}};{{device_number}};{{payment_id_string}};0;-1",
                       "FF":false,
-                      "CS":"0120b6425df815ed069cd518684e776d"
+                      "CS":"a5b73d15a20dac17f15953b1aaceb111"
                     },
                     {
                       "P":"#103_2_1",
@@ -1906,10 +1927,10 @@
                       },
                       "TV":
                       {
-                        "BD":"20210906",
-                        "BT":"164100",
-                        "ED":"20210907",
-                        "ET":"164100",
+                        "BD":"20211205",
+                        "BT":"192800",
+                        "ED":"20211206",
+                        "ET":"192800",
                         "VD":24,
                         "VC":"h"
                       },
@@ -1927,9 +1948,9 @@
                           }
                         }
                       ],
-                      "PCR":"VDS;SVV;201;0;SVV/DIVA-Mapping 2015-02-03;50021;Salzburg Justizgebäude;50022;Salzburg Akademiestraße;50021,50022;50101;-1;174849;-1;0;0;1;2;{{purchase_date}};{{purchase_time}};{{validity_begin_date}};{{validity_begin_time}};2021010120211231;103;{{person_number}};210;210;191;19;0;0;0;{{payment_mode}};{{is_cancellation}};V:201|0;;{{unique_ticket_number}};{{company_number}};{{vendor_number}};{{device_number}};{{payment_id_string}};0;-1",
+                      "PCR":"VDS;SVV;204;0;SVV/DIVA-Mapping 2015-02-03;50021;Salzburg Justizgebäude;50022;Salzburg Akademiestraße;50021,50022;50101;-1;174849;-1;0;0;1;2;{{purchase_date}};{{purchase_time}};{{validity_begin_date}};{{validity_begin_time}};2021010120211231;103;{{person_number}};210;210;191;19;0;0;0;{{payment_mode}};{{is_cancellation}};V:204|0;;{{unique_ticket_number}};{{company_number}};{{vendor_number}};{{device_number}};{{payment_id_string}};0;-1",
                       "FF":false,
-                      "CS":"4b03798f2402b20cb3b93b561096569c"
+                      "CS":"33d3213e5d68faa68a152899e543c22b"
                     },
                     {
                       "P":"#84_2_1",
@@ -1959,10 +1980,10 @@
                       },
                       "TV":
                       {
-                        "BD":"20210906",
-                        "BT":"164100",
-                        "ED":"20210907",
-                        "ET":"164100",
+                        "BD":"20211205",
+                        "BT":"192800",
+                        "ED":"20211206",
+                        "ET":"192800",
                         "VD":24,
                         "VC":"h"
                       },
@@ -1980,9 +2001,9 @@
                           }
                         }
                       ],
-                      "PCR":"VDS;SVV;201;0;SVV/DIVA-Mapping 2015-02-03;50021;Salzburg Justizgebäude;50022;Salzburg Akademiestraße;50021,50022;50101;-1;174849;-1;0;0;1;2;{{purchase_date}};{{purchase_time}};{{validity_begin_date}};{{validity_begin_time}};2021010120211231;84;{{person_number}};300;300;273;27;0;0;0;{{payment_mode}};{{is_cancellation}};V:201|0;;{{unique_ticket_number}};{{company_number}};{{vendor_number}};{{device_number}};{{payment_id_string}};0;-1",
+                      "PCR":"VDS;SVV;204;0;SVV/DIVA-Mapping 2015-02-03;50021;Salzburg Justizgebäude;50022;Salzburg Akademiestraße;50021,50022;50101;-1;174849;-1;0;0;1;2;{{purchase_date}};{{purchase_time}};{{validity_begin_date}};{{validity_begin_time}};2021010120211231;84;{{person_number}};300;300;273;27;0;0;0;{{payment_mode}};{{is_cancellation}};V:204|0;;{{unique_ticket_number}};{{company_number}};{{vendor_number}};{{device_number}};{{payment_id_string}};0;-1",
                       "FF":false,
-                      "CS":"3e26402ba7e6a914a225d7c405daf162"
+                      "CS":"835572bb835edbea8ef486cb7dd97e76"
                     },
                     {
                       "P":"#1_2_1",
@@ -2012,10 +2033,10 @@
                       },
                       "TV":
                       {
-                        "BD":"20210906",
-                        "BT":"164100",
-                        "ED":"20210906",
-                        "ET":"204100",
+                        "BD":"20211205",
+                        "BT":"192800",
+                        "ED":"20211205",
+                        "ET":"232800",
                         "VD":4,
                         "VC":"h"
                       },
@@ -2033,9 +2054,9 @@
                           }
                         }
                       ],
-                      "PCR":"VDS;SVV;201;0;SVV/DIVA-Mapping 2015-02-03;50021;Salzburg Justizgebäude;50022;Salzburg Akademiestraße;50021,50022;50101;-1;174849;-1;0;0;1;2;{{purchase_date}};{{purchase_time}};{{validity_begin_date}};{{validity_begin_time}};2021010120211231;1;{{person_number}};290;290;264;26;0;0;0;{{payment_mode}};{{is_cancellation}};V:201|0;;{{unique_ticket_number}};{{company_number}};{{vendor_number}};{{device_number}};{{payment_id_string}};0;-1",
+                      "PCR":"VDS;SVV;204;0;SVV/DIVA-Mapping 2015-02-03;50021;Salzburg Justizgebäude;50022;Salzburg Akademiestraße;50021,50022;50101;-1;174849;-1;0;0;1;2;{{purchase_date}};{{purchase_time}};{{validity_begin_date}};{{validity_begin_time}};2021010120211231;1;{{person_number}};290;290;264;26;0;0;0;{{payment_mode}};{{is_cancellation}};V:204|0;;{{unique_ticket_number}};{{company_number}};{{vendor_number}};{{device_number}};{{payment_id_string}};0;-1",
                       "FF":false,
-                      "CS":"e0a19f1d52e321a36ca5a4cf01989479"
+                      "CS":"2cb9bfc47371720a32b49f7b4bce5632"
                     },
                     {
                       "P":"#2_2_1",
@@ -2065,10 +2086,10 @@
                       },
                       "TV":
                       {
-                        "BD":"20210906",
-                        "BT":"164100",
-                        "ED":"20210906",
-                        "ET":"204100",
+                        "BD":"20211205",
+                        "BT":"192800",
+                        "ED":"20211205",
+                        "ET":"232800",
                         "VD":4,
                         "VC":"h"
                       },
@@ -2086,9 +2107,9 @@
                           }
                         }
                       ],
-                      "PCR":"VDS;SVV;201;0;SVV/DIVA-Mapping 2015-02-03;50021;Salzburg Justizgebäude;50022;Salzburg Akademiestraße;50021,50022;50101;-1;174849;-1;0;0;1;2;{{purchase_date}};{{purchase_time}};{{validity_begin_date}};{{validity_begin_time}};2021010120211231;2;{{person_number}};220;220;200;20;0;0;0;{{payment_mode}};{{is_cancellation}};V:201|0;;{{unique_ticket_number}};{{company_number}};{{vendor_number}};{{device_number}};{{payment_id_string}};0;-1",
+                      "PCR":"VDS;SVV;204;0;SVV/DIVA-Mapping 2015-02-03;50021;Salzburg Justizgebäude;50022;Salzburg Akademiestraße;50021,50022;50101;-1;174849;-1;0;0;1;2;{{purchase_date}};{{purchase_time}};{{validity_begin_date}};{{validity_begin_time}};2021010120211231;2;{{person_number}};220;220;200;20;0;0;0;{{payment_mode}};{{is_cancellation}};V:204|0;;{{unique_ticket_number}};{{company_number}};{{vendor_number}};{{device_number}};{{payment_id_string}};0;-1",
                       "FF":false,
-                      "CS":"5c7b1fbdf3e4a3e0f5978290aa72d32b"
+                      "CS":"16cdd46e37291141d5e5c53764c78d80"
                     },
                     {
                       "P":"#25_2_1",
@@ -2118,10 +2139,10 @@
                       },
                       "TV":
                       {
-                        "BD":"20210906",
-                        "BT":"164100",
-                        "ED":"20210906",
-                        "ET":"204100",
+                        "BD":"20211205",
+                        "BT":"192800",
+                        "ED":"20211205",
+                        "ET":"232800",
                         "VD":4,
                         "VC":"h"
                       },
@@ -2139,9 +2160,9 @@
                           }
                         }
                       ],
-                      "PCR":"VDS;SVV;201;0;SVV/DIVA-Mapping 2015-02-03;50021;Salzburg Justizgebäude;50022;Salzburg Akademiestraße;50021,50022;50101;-1;174849;-1;0;0;1;2;{{purchase_date}};{{purchase_time}};{{validity_begin_date}};{{validity_begin_time}};2021010120211231;25;{{person_number}};150;150;136;14;0;0;0;{{payment_mode}};{{is_cancellation}};V:201|0;;{{unique_ticket_number}};{{company_number}};{{vendor_number}};{{device_number}};{{payment_id_string}};0;-1",
+                      "PCR":"VDS;SVV;204;0;SVV/DIVA-Mapping 2015-02-03;50021;Salzburg Justizgebäude;50022;Salzburg Akademiestraße;50021,50022;50101;-1;174849;-1;0;0;1;2;{{purchase_date}};{{purchase_time}};{{validity_begin_date}};{{validity_begin_time}};2021010120211231;25;{{person_number}};150;150;136;14;0;0;0;{{payment_mode}};{{is_cancellation}};V:204|0;;{{unique_ticket_number}};{{company_number}};{{vendor_number}};{{device_number}};{{payment_id_string}};0;-1",
                       "FF":false,
-                      "CS":"46c8bf44e212e5b65097e7b4136c12b9"
+                      "CS":"3816bc3608e7a9899e21cc298b62be1c"
                     },
                     {
                       "P":"#77_2_1",
@@ -2171,10 +2192,10 @@
                       },
                       "TV":
                       {
-                        "BD":"20210906",
-                        "BT":"164100",
-                        "ED":"20210906",
-                        "ET":"204100",
+                        "BD":"20211205",
+                        "BT":"192800",
+                        "ED":"20211205",
+                        "ET":"232800",
                         "VD":4,
                         "VC":"h"
                       },
@@ -2192,9 +2213,9 @@
                           }
                         }
                       ],
-                      "PCR":"VDS;SVV;201;0;SVV/DIVA-Mapping 2015-02-03;50021;Salzburg Justizgebäude;50022;Salzburg Akademiestraße;50021,50022;50101;-1;174849;-1;0;0;1;2;{{purchase_date}};{{purchase_time}};{{validity_begin_date}};{{validity_begin_time}};2021010120211231;77;{{person_number}};200;200;182;18;0;0;0;{{payment_mode}};{{is_cancellation}};V:201|0;;{{unique_ticket_number}};{{company_number}};{{vendor_number}};{{device_number}};{{payment_id_string}};0;-1",
+                      "PCR":"VDS;SVV;204;0;SVV/DIVA-Mapping 2015-02-03;50021;Salzburg Justizgebäude;50022;Salzburg Akademiestraße;50021,50022;50101;-1;174849;-1;0;0;1;2;{{purchase_date}};{{purchase_time}};{{validity_begin_date}};{{validity_begin_time}};2021010120211231;77;{{person_number}};200;200;182;18;0;0;0;{{payment_mode}};{{is_cancellation}};V:204|0;;{{unique_ticket_number}};{{company_number}};{{vendor_number}};{{device_number}};{{payment_id_string}};0;-1",
                       "FF":false,
-                      "CS":"c022538a6abf1720ddca3d0a4a141757"
+                      "CS":"6467ab9486245158cbb583afede893d0"
                     },
                     {
                       "P":"#210_2_1",
@@ -2224,9 +2245,9 @@
                       },
                       "TV":
                       {
-                        "BD":"20210906",
-                        "BT":"164100",
-                        "ED":"20210912",
+                        "BD":"20211205",
+                        "BT":"192800",
+                        "ED":"20211211",
                         "ET":"235900",
                         "VD":1,
                         "VC":"W"
@@ -2245,9 +2266,9 @@
                           }
                         }
                       ],
-                      "PCR":"VDS;SVV;201;0;SVV/DIVA-Mapping 2015-02-03;50021;Salzburg Justizgebäude;50022;Salzburg Akademiestraße;50021,50022;50101;-1;174849;-1;0;0;1;2;{{purchase_date}};{{purchase_time}};{{validity_begin_date}};{{validity_begin_time}};2021010120211231;210;{{person_number}};1900;1900;1727;173;0;0;0;{{payment_mode}};{{is_cancellation}};V:201|0;;{{unique_ticket_number}};{{company_number}};{{vendor_number}};{{device_number}};{{payment_id_string}};0;6",
+                      "PCR":"VDS;SVV;204;0;SVV/DIVA-Mapping 2015-02-03;50021;Salzburg Justizgebäude;50022;Salzburg Akademiestraße;50021,50022;50101;-1;174849;-1;0;0;1;2;{{purchase_date}};{{purchase_time}};{{validity_begin_date}};{{validity_begin_time}};2021010120211231;210;{{person_number}};1900;1900;1727;173;0;0;0;{{payment_mode}};{{is_cancellation}};V:204|0;;{{unique_ticket_number}};{{company_number}};{{vendor_number}};{{device_number}};{{payment_id_string}};0;6",
                       "FF":false,
-                      "CS":"bb50f3e9cf2d77b48a3ec3ac8a6d3dc7"
+                      "CS":"1869f82d3d1d98cef9ee6244613a2f70"
                     },
                     {
                       "P":"#211_2_1",
@@ -2277,9 +2298,9 @@
                       },
                       "TV":
                       {
-                        "BD":"20210906",
-                        "BT":"164100",
-                        "ED":"20211005",
+                        "BD":"20211205",
+                        "BT":"192800",
+                        "ED":"20220104",
                         "ET":"235900",
                         "VD":1,
                         "VC":"M"
@@ -2298,9 +2319,9 @@
                           }
                         }
                       ],
-                      "PCR":"VDS;SVV;201;0;SVV/DIVA-Mapping 2015-02-03;50021;Salzburg Justizgebäude;50022;Salzburg Akademiestraße;50021,50022;50101;-1;174849;-1;0;0;1;2;{{purchase_date}};{{purchase_time}};{{validity_begin_date}};{{validity_begin_time}};2021010120211231;211;{{person_number}};5900;5900;5364;536;0;0;0;{{payment_mode}};{{is_cancellation}};V:201|0;;{{unique_ticket_number}};{{company_number}};{{vendor_number}};{{device_number}};{{payment_id_string}};0;6",
+                      "PCR":"VDS;SVV;204;0;SVV/DIVA-Mapping 2015-02-03;50021;Salzburg Justizgebäude;50022;Salzburg Akademiestraße;50021,50022;50101;-1;174849;-1;0;0;1;2;{{purchase_date}};{{purchase_time}};{{validity_begin_date}};{{validity_begin_time}};2021010120211231;211;{{person_number}};5900;5900;5364;536;0;0;0;{{payment_mode}};{{is_cancellation}};V:204|0;;{{unique_ticket_number}};{{company_number}};{{vendor_number}};{{device_number}};{{payment_id_string}};0;6",
                       "FF":false,
-                      "CS":"ce48fbe2e54d3f05a470c29f55ba2566"
+                      "CS":"3f5909d15990901c456741f831c4274a"
                     }
                   ],
                   "OPT":false,
@@ -2331,7 +2352,7 @@
             [
               {
                 "type":"REM",
-                "remX":1,
+                "remX":2,
                 "dspl":"U",
                 "tagL":
                 [
@@ -2342,17 +2363,17 @@
             ],
             "eco":
             {
-              "co2":0.024350000000000
+              "co2":0.026785000000000
             },
             "conSubscr":"P",
             "recState":"C",
-            "cksum":"2d57d3bb_3",
-            "cksumDti":"9f7dc6b5_3"
+            "cksum":"4c6530d9_3",
+            "cksumDti":"e661b504_3"
           }
         ],
-        "fpB":"20210706",
-        "fpE":"20211211",
-        "planrtTS":"1630939049"
+        "fpB":"20211004",
+        "fpE":"20220531",
+        "planrtTS":"1638728649"
       }
     }
   ]

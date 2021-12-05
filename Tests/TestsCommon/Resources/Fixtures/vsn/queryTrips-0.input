@@ -1,7 +1,7 @@
 {
   "ver":"1.16",
   "lang":"deu",
-  "id":"xrm2smse6x8shg4s",
+  "id":"w3mwumsg46w3w28x",
   "svcResL":
   [
     {
@@ -43,12 +43,12 @@
                   "crdSysX":1
                 }
               ],
-              "pCls":544,
+              "pCls":552,
               "entry":true,
               "mMastLocX":1
             },
             {
-              "lid":"A=1@O=Göttingen Bahnhof/ZOB@X=9926374@Y=51535436@U=80@L=9033853@",
+              "lid":"A=1@O=Göttingen Bahnhof/ZOB@X=9926419@Y=51535526@U=80@L=9033853@",
               "type":"S",
               "name":"Göttingen Bahnhof/ZOB",
               "icoX":1,
@@ -56,8 +56,8 @@
               "state":"F",
               "crd":
               {
-                "x":9926374,
-                "y":51535436,
+                "x":9926419,
+                "y":51535526,
                 "type":"WGS84",
                 "layerX":0,
                 "crdSysX":0
@@ -85,7 +85,7 @@
               "lid":"A=1@O=Göttingen Kornmarkt@X=9934968@Y=51531859@U=80@L=1190020@",
               "type":"S",
               "name":"Göttingen Kornmarkt",
-              "icoX":0,
+              "icoX":3,
               "extId":"1190020",
               "state":"F",
               "crd":
@@ -119,7 +119,7 @@
               "lid":"A=1@O=Göttingen Kornmarkt@X=9934968@Y=51531859@U=80@L=9033977@",
               "type":"S",
               "name":"Göttingen Kornmarkt",
-              "icoX":0,
+              "icoX":3,
               "extId":"9033977",
               "state":"F",
               "crd":
@@ -153,7 +153,7 @@
               "lid":"A=1@O=Göttingen Groner Tor@X=9928846@Y=51532542@U=80@L=1189201@",
               "type":"S",
               "name":"Göttingen Groner Tor",
-              "icoX":0,
+              "icoX":3,
               "extId":"1189201",
               "state":"F",
               "crd":
@@ -187,7 +187,7 @@
               "lid":"A=1@O=Göttingen Groner Tor@X=9928999@Y=51532551@U=80@L=9033919@",
               "type":"S",
               "name":"Göttingen Groner Tor",
-              "icoX":0,
+              "icoX":3,
               "extId":"9033919",
               "state":"F",
               "crd":
@@ -221,7 +221,7 @@
               "lid":"A=1@O=Göttingen Groner Straße@X=9931516@Y=51532110@U=80@L=1160081@",
               "type":"S",
               "name":"Göttingen Groner Straße",
-              "icoX":0,
+              "icoX":3,
               "extId":"1160081",
               "state":"F",
               "crd":
@@ -255,7 +255,7 @@
               "lid":"A=1@O=Göttingen Groner Straße@X=9932029@Y=51532128@U=80@L=9033918@",
               "type":"S",
               "name":"Göttingen Groner Straße",
-              "icoX":0,
+              "icoX":3,
               "extId":"9033918",
               "state":"F",
               "crd":
@@ -286,16 +286,16 @@
               "isMainMast":true
             },
             {
-              "lid":"A=1@O=Göttingen Markt@X=9934393@Y=51532875@U=80@L=1190010@",
+              "lid":"A=1@O=Göttingen Betriebshof@X=9885806@Y=51546349@U=80@L=1190001@",
               "type":"S",
-              "name":"Göttingen Markt",
-              "icoX":0,
-              "extId":"1190010",
+              "name":"Göttingen Betriebshof",
+              "icoX":3,
+              "extId":"1190001",
               "state":"F",
               "crd":
               {
-                "x":9934393,
-                "y":51532875,
+                "x":9885806,
+                "y":51546349,
                 "type":"WGS84",
                 "layerX":0,
                 "crdSysX":0
@@ -320,16 +320,16 @@
               "mMastLocX":9
             },
             {
-              "lid":"A=1@O=Göttingen Markt@X=9934006@Y=51533117@U=80@L=9034001@",
+              "lid":"A=1@O=Göttingen Betriebshof@X=9885806@Y=51546349@U=80@L=9033856@",
               "type":"S",
-              "name":"Göttingen Markt",
-              "icoX":0,
-              "extId":"9034001",
+              "name":"Göttingen Betriebshof",
+              "icoX":3,
+              "extId":"9033856",
               "state":"F",
               "crd":
               {
-                "x":9934006,
-                "y":51533117,
+                "x":9885806,
+                "y":51546349,
                 "type":"WGS84",
                 "layerX":0,
                 "crdSysX":0
@@ -354,16 +354,16 @@
               "isMainMast":true
             },
             {
-              "lid":"A=1@O=Göttingen Groner Tor/Hirtenbrunnen@X=9927013@Y=51533612@U=80@L=853109@",
+              "lid":"A=1@O=Göttingen Stumpfe Eiche@X=9940874@Y=51563312@U=80@L=1130581@",
               "type":"S",
-              "name":"Göttingen Groner Tor/Hirtenbrunnen",
-              "icoX":0,
-              "extId":"853109",
+              "name":"Göttingen Stumpfe Eiche",
+              "icoX":3,
+              "extId":"1130581",
               "state":"F",
               "crd":
               {
-                "x":9927013,
-                "y":51533612,
+                "x":9940874,
+                "y":51563312,
                 "type":"WGS84",
                 "layerX":0,
                 "crdSysX":0
@@ -388,16 +388,16 @@
               "mMastLocX":11
             },
             {
-              "lid":"A=1@O=Göttingen Groner Tor/Hirtenbrunnen@X=9927013@Y=51533612@U=80@L=9033920@",
+              "lid":"A=1@O=Göttingen Stumpfe Eiche@X=9940874@Y=51563312@U=80@L=9034056@",
               "type":"S",
-              "name":"Göttingen Groner Tor/Hirtenbrunnen",
-              "icoX":0,
-              "extId":"9033920",
+              "name":"Göttingen Stumpfe Eiche",
+              "icoX":3,
+              "extId":"9034056",
               "state":"F",
               "crd":
               {
-                "x":9927013,
-                "y":51533612,
+                "x":9940874,
+                "y":51563312,
                 "type":"WGS84",
                 "layerX":0,
                 "crdSysX":0
@@ -420,78 +420,364 @@
               "meta":true,
               "pCls":32,
               "isMainMast":true
+            },
+            {
+              "lid":"A=1@O=Göttingen Markt@X=9934393@Y=51532875@U=80@L=1190010@",
+              "type":"S",
+              "name":"Göttingen Markt",
+              "icoX":3,
+              "extId":"1190010",
+              "state":"F",
+              "crd":
+              {
+                "x":9934393,
+                "y":51532875,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "crdAltL":
+              [
+                {
+                  "x":99999999,
+                  "y":99999999,
+                  "layerX":0,
+                  "crdSysX":0
+                },
+                {
+                  "x":99999999,
+                  "y":99999999,
+                  "layerX":0,
+                  "crdSysX":7
+                }
+              ],
+              "pCls":32,
+              "entry":true,
+              "mMastLocX":13
+            },
+            {
+              "lid":"A=1@O=Göttingen Markt@X=9934006@Y=51533117@U=80@L=9034001@",
+              "type":"S",
+              "name":"Göttingen Markt",
+              "icoX":3,
+              "extId":"9034001",
+              "state":"F",
+              "crd":
+              {
+                "x":9934006,
+                "y":51533117,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "crdAltL":
+              [
+                {
+                  "x":99999999,
+                  "y":99999999,
+                  "layerX":0,
+                  "crdSysX":0
+                },
+                {
+                  "x":99999999,
+                  "y":99999999,
+                  "layerX":0,
+                  "crdSysX":7
+                }
+              ],
+              "meta":true,
+              "pCls":32,
+              "isMainMast":true
+            },
+            {
+              "lid":"A=1@O=Göttingen Groner Tor/Hirtenbrunnen@X=9927013@Y=51533612@U=80@L=853109@",
+              "type":"S",
+              "name":"Göttingen Groner Tor/Hirtenbrunnen",
+              "icoX":3,
+              "extId":"853109",
+              "state":"F",
+              "crd":
+              {
+                "x":9927013,
+                "y":51533612,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "crdAltL":
+              [
+                {
+                  "x":99999999,
+                  "y":99999999,
+                  "layerX":0,
+                  "crdSysX":0
+                },
+                {
+                  "x":99999999,
+                  "y":99999999,
+                  "layerX":0,
+                  "crdSysX":8
+                }
+              ],
+              "pCls":32,
+              "entry":true,
+              "mMastLocX":15
+            },
+            {
+              "lid":"A=1@O=Göttingen Groner Tor/Hirtenbrunnen@X=9927013@Y=51533612@U=80@L=9033920@",
+              "type":"S",
+              "name":"Göttingen Groner Tor/Hirtenbrunnen",
+              "icoX":3,
+              "extId":"9033920",
+              "state":"F",
+              "crd":
+              {
+                "x":9927013,
+                "y":51533612,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "crdAltL":
+              [
+                {
+                  "x":99999999,
+                  "y":99999999,
+                  "layerX":0,
+                  "crdSysX":0
+                },
+                {
+                  "x":99999999,
+                  "y":99999999,
+                  "layerX":0,
+                  "crdSysX":8
+                }
+              ],
+              "meta":true,
+              "pCls":32,
+              "isMainMast":true
+            },
+            {
+              "lid":"A=1@O=Göttingen Siekweg@X=9890741@Y=51526267@U=80@L=1110471@",
+              "type":"S",
+              "name":"Göttingen Siekweg",
+              "icoX":3,
+              "extId":"1110471",
+              "state":"F",
+              "crd":
+              {
+                "x":9890741,
+                "y":51526267,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "crdAltL":
+              [
+                {
+                  "x":99999999,
+                  "y":99999999,
+                  "layerX":0,
+                  "crdSysX":0
+                },
+                {
+                  "x":99999999,
+                  "y":99999999,
+                  "layerX":0,
+                  "crdSysX":9
+                }
+              ],
+              "pCls":32,
+              "entry":true,
+              "mMastLocX":17
+            },
+            {
+              "lid":"A=1@O=Göttingen Siekweg@X=9890741@Y=51526267@U=80@L=9034044@",
+              "type":"S",
+              "name":"Göttingen Siekweg",
+              "icoX":3,
+              "extId":"9034044",
+              "state":"F",
+              "crd":
+              {
+                "x":9890741,
+                "y":51526267,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "crdAltL":
+              [
+                {
+                  "x":99999999,
+                  "y":99999999,
+                  "layerX":0,
+                  "crdSysX":0
+                },
+                {
+                  "x":99999999,
+                  "y":99999999,
+                  "layerX":0,
+                  "crdSysX":9
+                }
+              ],
+              "meta":true,
+              "pCls":32,
+              "isMainMast":true
+            },
+            {
+              "lid":"A=1@O=Göttingen Esebeck@X=9843260@Y=51564544@U=80@L=1121871@",
+              "type":"S",
+              "name":"Göttingen Esebeck",
+              "icoX":3,
+              "extId":"1121871",
+              "state":"F",
+              "crd":
+              {
+                "x":9843260,
+                "y":51564544,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "crdAltL":
+              [
+                {
+                  "x":99999999,
+                  "y":99999999,
+                  "layerX":0,
+                  "crdSysX":0
+                },
+                {
+                  "x":99999999,
+                  "y":99999999,
+                  "layerX":0,
+                  "crdSysX":10
+                }
+              ],
+              "pCls":32,
+              "entry":true,
+              "mMastLocX":19
+            },
+            {
+              "lid":"A=1@O=Göttingen Esebeck@X=9843458@Y=51564606@U=80@L=9033893@",
+              "type":"S",
+              "name":"Göttingen Esebeck",
+              "icoX":3,
+              "extId":"9033893",
+              "state":"F",
+              "crd":
+              {
+                "x":9843458,
+                "y":51564606,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "crdAltL":
+              [
+                {
+                  "x":99999999,
+                  "y":99999999,
+                  "layerX":0,
+                  "crdSysX":0
+                },
+                {
+                  "x":99999999,
+                  "y":99999999,
+                  "layerX":0,
+                  "crdSysX":10
+                }
+              ],
+              "meta":true,
+              "pCls":32,
+              "isMainMast":true
+            },
+            {
+              "lid":"A=1@O=Göttingen Grete-Henry-Straße@X=9977640@Y=51519678@U=80@L=1170411@",
+              "type":"S",
+              "name":"Göttingen Grete-Henry-Straße",
+              "icoX":3,
+              "extId":"1170411",
+              "state":"F",
+              "crd":
+              {
+                "x":9977640,
+                "y":51519678,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "crdAltL":
+              [
+                {
+                  "x":99999999,
+                  "y":99999999,
+                  "layerX":0,
+                  "crdSysX":0
+                },
+                {
+                  "x":99999999,
+                  "y":99999999,
+                  "layerX":0,
+                  "crdSysX":11
+                }
+              ],
+              "pCls":32,
+              "entry":true,
+              "mMastLocX":21
+            },
+            {
+              "lid":"A=1@O=Göttingen Grete-Henry-Straße@X=9977927@Y=51519373@U=80@L=9033917@",
+              "type":"S",
+              "name":"Göttingen Grete-Henry-Straße",
+              "icoX":3,
+              "extId":"9033917",
+              "state":"F",
+              "crd":
+              {
+                "x":9977927,
+                "y":51519373,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "crdAltL":
+              [
+                {
+                  "x":99999999,
+                  "y":99999999,
+                  "layerX":0,
+                  "crdSysX":0
+                },
+                {
+                  "x":99999999,
+                  "y":99999999,
+                  "layerX":0,
+                  "crdSysX":11
+                }
+              ],
+              "meta":true,
+              "pCls":32,
+              "isMainMast":true
             }
           ],
           "prodL":
           [
             {
-              "pid":"L::5::Bus::B3339626257::de:VBN-VSN:72:::*",
-              "name":"Bus 72",
-              "nameS":"72",
-              "number":"72",
-              "icoX":0,
+              "pid":"L::5::Bus::B3339626257::de:VBN-VSN:41:::*",
+              "name":"Bus 41",
+              "nameS":"41",
+              "number":"41",
+              "icoX":3,
               "cls":32,
               "oprX":0,
               "prodCtx":
               {
-                "name":"Bus 72  ",
-                "num":"5809",
-                "line":"72",
-                "matchId":"1607",
-                "catOut":"Bus     ",
-                "catOutS":"NB",
-                "catOutL":"Bus",
-                "catIn":"NB",
-                "catCode":"5",
-                "admin":"GOE___"
-              },
-              "himIdL":
-              [
-"HIM_FREETEXT_22983"
-              ]
-            },
-            {
-              "pid":"L::5::Bus::B3339626257::de:VBN-VSN:72:::*",
-              "name":"Bus 72",
-              "nameS":"72",
-              "number":"72",
-              "icoX":0,
-              "cls":32,
-              "oprX":1,
-              "prodCtx":
-              {
-                "name":"Bus 72  ",
-                "num":"5809",
-                "line":"72",
-                "lineId":"de:VBN-VSN:72:",
-                "matchId":"1607",
-                "catOut":"Bus     ",
-                "catOutS":"NB",
-                "catOutL":"Bus",
-                "catIn":"NB",
-                "catCode":"5",
-                "admin":"GOE___"
-              },
-              "himIdL":
-              [
-"HIM_FREETEXT_22983"
-              ]
-            },
-            {
-              "pid":"L::5::Bus::B3339626257::de:VBN-VSN:42:::*",
-              "name":"Bus 42",
-              "nameS":"42",
-              "number":"42",
-              "icoX":0,
-              "cls":32,
-              "oprX":1,
-              "prodCtx":
-              {
-                "name":"Bus 42  ",
-                "num":"5466",
-                "line":"42",
-                "lineId":"de:VBN-VSN:42:",
-                "matchId":"1163",
+                "name":"Bus 41  ",
+                "num":"10861",
+                "line":"41",
+                "matchId":"971",
                 "catOut":"Bus     ",
                 "catOutS":"NB",
                 "catOutL":"Bus",
@@ -502,34 +788,7 @@
               "himIdL":
               [
 "HIM_FREETEXT_21838",
-"HIM_FREETEXT_21665"
-              ]
-            },
-            {
-              "pid":"L::5::Bus::B3339626257::de:VBN-VSN:50:::*",
-              "name":"Bus 50",
-              "nameS":"50",
-              "number":"50",
-              "icoX":0,
-              "cls":32,
-              "oprX":1,
-              "prodCtx":
-              {
-                "name":"Bus 50  ",
-                "num":"5559",
-                "line":"50",
-                "lineId":"de:VBN-VSN:50:",
-                "matchId":"1261",
-                "catOut":"Bus     ",
-                "catOutS":"NB",
-                "catOutL":"Bus",
-                "catIn":"NB",
-                "catCode":"5",
-                "admin":"GOE___"
-              },
-              "himIdL":
-              [
-"HIM_FREETEXT_22875"
+"HIM_FREETEXT_25640"
               ]
             },
             {
@@ -537,16 +796,16 @@
               "name":"Bus 41",
               "nameS":"41",
               "number":"41",
-              "icoX":0,
+              "icoX":3,
               "cls":32,
               "oprX":1,
               "prodCtx":
               {
                 "name":"Bus 41  ",
-                "num":"5376",
+                "num":"10861",
                 "line":"41",
                 "lineId":"de:VBN-VSN:41:",
-                "matchId":"1068",
+                "matchId":"971",
                 "catOut":"Bus     ",
                 "catOutS":"NB",
                 "catOutL":"Bus",
@@ -557,67 +816,12 @@
               "himIdL":
               [
 "HIM_FREETEXT_21838",
-"HIM_FREETEXT_21665"
-              ]
-            },
-            {
-              "pid":"L::5::Bus::B3339626257::de:VBN-VSN:71:::*",
-              "name":"Bus 71",
-              "nameS":"71",
-              "number":"71",
-              "icoX":0,
-              "cls":32,
-              "oprX":1,
-              "prodCtx":
-              {
-                "name":"Bus 71  ",
-                "num":"5783",
-                "line":"71",
-                "lineId":"de:VBN-VSN:71:",
-                "matchId":"1557",
-                "catOut":"Bus     ",
-                "catOutS":"NB",
-                "catOutL":"Bus",
-                "catIn":"NB",
-                "catCode":"5",
-                "admin":"GOE___"
-              },
-              "himIdL":
-              [
-"HIM_FREETEXT_22983"
-              ]
-            },
-            {
-              "pid":"L::5::Bus::B3339626257::de:VBN-VSN:42:::*",
-              "name":"Bus 42",
-              "nameS":"42",
-              "number":"42",
-              "icoX":0,
-              "cls":32,
-              "oprX":1,
-              "prodCtx":
-              {
-                "name":"Bus 42  ",
-                "num":"5465",
-                "line":"42",
-                "lineId":"de:VBN-VSN:42:",
-                "matchId":"1166",
-                "catOut":"Bus     ",
-                "catOutS":"NB",
-                "catOutL":"Bus",
-                "catIn":"NB",
-                "catCode":"5",
-                "admin":"GOE___"
-              },
-              "himIdL":
-              [
-"HIM_FREETEXT_21838",
-"HIM_FREETEXT_21665"
+"HIM_FREETEXT_25640"
               ]
             },
             {
               "name":"Fußweg",
-              "icoX":6,
+              "icoX":8,
               "cls":0,
               "prodCtx":
               {
@@ -626,42 +830,19 @@
               }
             },
             {
-              "pid":"L::5::Bus::B3339626257::de:VBN-VSN:32:::*",
-              "name":"Bus 32",
-              "nameS":"32",
-              "number":"32",
-              "icoX":0,
+              "pid":"L::5::Bus::B3339626257::de:VBN-VSN:31:::*",
+              "name":"Bus 31",
+              "nameS":"31",
+              "number":"31",
+              "icoX":3,
               "cls":32,
               "oprX":0,
               "prodCtx":
               {
-                "name":"Bus 32  ",
-                "num":"9109",
-                "line":"32",
-                "matchId":"767",
-                "catOut":"Bus     ",
-                "catOutS":"NB",
-                "catOutL":"Bus",
-                "catIn":"NB",
-                "catCode":"5",
-                "admin":"GOE___"
-              }
-            },
-            {
-              "pid":"L::5::Bus::B3339626257::de:VBN-VSN:32:::*",
-              "name":"Bus 32",
-              "nameS":"32",
-              "number":"32",
-              "icoX":0,
-              "cls":32,
-              "oprX":1,
-              "prodCtx":
-              {
-                "name":"Bus 32  ",
-                "num":"9109",
-                "line":"32",
-                "lineId":"de:VBN-VSN:32:",
-                "matchId":"767",
+                "name":"Bus 31  ",
+                "num":"18191",
+                "line":"31",
+                "matchId":"584",
                 "catOut":"Bus     ",
                 "catOutS":"NB",
                 "catOutL":"Bus",
@@ -675,16 +856,16 @@
               "name":"Bus 31",
               "nameS":"31",
               "number":"31",
-              "icoX":0,
+              "icoX":3,
               "cls":32,
               "oprX":1,
               "prodCtx":
               {
                 "name":"Bus 31  ",
-                "num":"9632",
+                "num":"18191",
                 "line":"31",
                 "lineId":"de:VBN-VSN:31:",
-                "matchId":"657",
+                "matchId":"584",
                 "catOut":"Bus     ",
                 "catOutS":"NB",
                 "catOutL":"Bus",
@@ -694,20 +875,20 @@
               }
             },
             {
-              "pid":"L::5::Bus::B3339626257::de:VBN-VSN:80:::*",
-              "name":"Bus 80",
-              "nameS":"80",
-              "number":"80",
-              "icoX":0,
+              "pid":"L::5::Bus::B3339626257::de:VBN-VSN:71:::*",
+              "name":"Bus 71",
+              "nameS":"71",
+              "number":"71",
+              "icoX":3,
               "cls":32,
               "oprX":1,
               "prodCtx":
               {
-                "name":"Bus 80  ",
-                "num":"6740",
-                "line":"80",
-                "lineId":"de:VBN-VSN:80:",
-                "matchId":"1761",
+                "name":"Bus 71  ",
+                "num":"11278",
+                "line":"71",
+                "lineId":"de:VBN-VSN:71:",
+                "matchId":"1446",
                 "catOut":"Bus     ",
                 "catOutS":"NB",
                 "catOutL":"Bus",
@@ -717,23 +898,48 @@
               },
               "himIdL":
               [
-"HIM_FREETEXT_21665"
+"HIM_FREETEXT_25701",
+"HIM_FREETEXT_25702"
               ]
+            },
+            {
+              "pid":"L::5::Bus::B3339626257::de:VBN-VSN:80:::*",
+              "name":"Bus 80",
+              "nameS":"80",
+              "number":"80",
+              "icoX":3,
+              "cls":32,
+              "oprX":1,
+              "prodCtx":
+              {
+                "name":"Bus 80  ",
+                "num":"13079",
+                "line":"80",
+                "lineId":"de:VBN-VSN:80:",
+                "matchId":"1669",
+                "catOut":"Bus     ",
+                "catOutS":"NB",
+                "catOutL":"Bus",
+                "catIn":"NB",
+                "catCode":"5",
+                "admin":"GOE___"
+              }
             },
             {
               "pid":"L::5::Bus::B3339626257::de:VBN-VSN:42:::*",
               "name":"Bus 42",
               "nameS":"42",
               "number":"42",
-              "icoX":0,
+              "icoX":3,
               "cls":32,
-              "oprX":0,
+              "oprX":1,
               "prodCtx":
               {
                 "name":"Bus 42  ",
-                "num":"5466",
+                "num":"10951",
                 "line":"42",
-                "matchId":"1163",
+                "lineId":"de:VBN-VSN:42:",
+                "matchId":"1068",
                 "catOut":"Bus     ",
                 "catOutS":"NB",
                 "catOutL":"Bus",
@@ -743,25 +949,69 @@
               },
               "himIdL":
               [
-"HIM_FREETEXT_21838",
-"HIM_FREETEXT_21665"
+"HIM_FREETEXT_21838"
               ]
+            },
+            {
+              "pid":"L::5::Bus::B3339626257::de:VBN-VSN:32:::*",
+              "name":"Bus 32",
+              "nameS":"32",
+              "number":"32",
+              "icoX":3,
+              "cls":32,
+              "oprX":1,
+              "prodCtx":
+              {
+                "name":"Bus 32  ",
+                "num":"17200",
+                "line":"32",
+                "lineId":"de:VBN-VSN:32:",
+                "matchId":"695",
+                "catOut":"Bus     ",
+                "catOutS":"NB",
+                "catOutL":"Bus",
+                "catIn":"NB",
+                "catCode":"5",
+                "admin":"GOE___"
+              }
             },
             {
               "pid":"L::5::Bus::B3339626257::de:VBN-VSN:50:::*",
               "name":"Bus 50",
               "nameS":"50",
               "number":"50",
-              "icoX":0,
+              "icoX":3,
               "cls":32,
               "oprX":1,
               "prodCtx":
               {
                 "name":"Bus 50  ",
-                "num":"5558",
+                "num":"11041",
                 "line":"50",
                 "lineId":"de:VBN-VSN:50:",
-                "matchId":"1264",
+                "matchId":"1179",
+                "catOut":"Bus     ",
+                "catOutS":"NB",
+                "catOutL":"Bus",
+                "catIn":"NB",
+                "catCode":"5",
+                "admin":"GOE___"
+              }
+            },
+            {
+              "pid":"L::5::Bus::B3339626257::de:VBN-VSN:71:::*",
+              "name":"Bus 71",
+              "nameS":"71",
+              "number":"71",
+              "icoX":3,
+              "cls":32,
+              "oprX":0,
+              "prodCtx":
+              {
+                "name":"Bus 71  ",
+                "num":"11278",
+                "line":"71",
+                "matchId":"1446",
                 "catOut":"Bus     ",
                 "catOutS":"NB",
                 "catOutL":"Bus",
@@ -771,7 +1021,8 @@
               },
               "himIdL":
               [
-"HIM_FREETEXT_22875"
+"HIM_FREETEXT_25701",
+"HIM_FREETEXT_25702"
               ]
             }
           ],
@@ -781,9 +1032,9 @@
               "delta":true,
               "dim":2,
               "type":"WGS84",
-              "crdEncYX":"impyHk{q{@??dA]vHrA|AcG`@oCXoKl@_ALeAp@qT",
-              "crdEncS":"NNMNKNNLNN",
-              "crdEncF":"??????????",
+              "crdEncYX":"impyHk{q{@dA]vHrA|AcG`@oCXoKl@_ALeAp@qT",
+              "crdEncS":"NMNKNNLNN",
+              "crdEncF":"?????????",
               "ppLocRefL":
               [
                 {
@@ -791,15 +1042,15 @@
                   "locX":0
                 },
                 {
-                  "ppIdx":5,
+                  "ppIdx":4,
                   "locX":4
                 },
                 {
-                  "ppIdx":8,
+                  "ppIdx":7,
                   "locX":6
                 },
                 {
-                  "ppIdx":9,
+                  "ppIdx":8,
                   "locX":2
                 }
               ]
@@ -819,7 +1070,7 @@
                 },
                 {
                   "ppIdx":1,
-                  "locX":8
+                  "locX":12
                 }
               ]
             },
@@ -834,7 +1085,7 @@
               [
                 {
                   "ppIdx":0,
-                  "locX":10
+                  "locX":14
                 },
                 {
                   "ppIdx":1,
@@ -880,7 +1131,7 @@
                 },
                 {
                   "ppIdx":1,
-                  "locX":8
+                  "locX":12
                 }
               ]
             },
@@ -888,9 +1139,9 @@
               "delta":true,
               "dim":2,
               "type":"WGS84",
-              "crdEncYX":"impyHk{q{@??dA]vHrA|AcG`@oCXoKl@_ALeAp@qT",
-              "crdEncS":"NNMNKNNLNN",
-              "crdEncF":"??????????",
+              "crdEncYX":"impyHk{q{@dA]vHrA|AcG`@oCXoKl@_ALeAp@qT",
+              "crdEncS":"NMNKNNLNN",
+              "crdEncF":"?????????",
               "ppLocRefL":
               [
                 {
@@ -898,15 +1149,15 @@
                   "locX":0
                 },
                 {
-                  "ppIdx":5,
+                  "ppIdx":4,
                   "locX":4
                 },
                 {
-                  "ppIdx":8,
+                  "ppIdx":7,
                   "locX":6
                 },
                 {
-                  "ppIdx":9,
+                  "ppIdx":8,
                   "locX":2
                 }
               ]
@@ -926,7 +1177,7 @@
                 },
                 {
                   "ppIdx":1,
-                  "locX":8
+                  "locX":12
                 }
               ]
             }
@@ -949,37 +1200,67 @@
               "dim":3
             },
             {
-              "id":"G?tti_39",
+              "id":"Goett_40",
               "index":1,
               "type":"WGS84",
               "dim":2
             },
             {
-              "id":"G?tt_160",
+              "id":"Goet_161",
               "index":1,
               "type":"WGS84",
               "dim":2
             },
             {
-              "id":"G?tt_103",
+              "id":"Goet_104",
               "index":1,
               "type":"WGS84",
               "dim":2
             },
             {
-              "id":"G?tt_102",
+              "id":"Goet_103",
               "index":1,
               "type":"WGS84",
               "dim":2
             },
             {
-              "id":"G?tt_182",
+              "id":"Goett_43",
               "index":1,
               "type":"WGS84",
               "dim":2
             },
             {
-              "id":"G?tt_104",
+              "id":"Goet_238",
+              "index":1,
+              "type":"WGS84",
+              "dim":2
+            },
+            {
+              "id":"Goet_183",
+              "index":1,
+              "type":"WGS84",
+              "dim":2
+            },
+            {
+              "id":"Goet_105",
+              "index":1,
+              "type":"WGS84",
+              "dim":2
+            },
+            {
+              "id":"Goet_226",
+              "index":1,
+              "type":"WGS84",
+              "dim":2
+            },
+            {
+              "id":"Goett_79",
+              "index":1,
+              "type":"WGS84",
+              "dim":2
+            },
+            {
+              "id":"Goet_102",
               "index":1,
               "type":"WGS84",
               "dim":2
@@ -989,11 +1270,11 @@
           [
             {
               "name":"Göttinger Verkehrsbetriebe (GöVB)",
-              "icoX":3
+              "icoX":4
             },
             {
               "name":"Göttinger Verkehrsbetriebe (GöVB)",
-              "icoX":3,
+              "icoX":4,
               "id":"226"
             }
           ],
@@ -1001,44 +1282,14 @@
           [
             {
               "type":"A",
-              "code":"bu",
+              "code":"br",
               "prio":899,
-              "icoX":4,
+              "icoX":5,
               "txtN":"Linie der Göttinger Verkehrsbetriebe GmbH, Info: 0551 38444-444"
             }
           ],
           "himL":
           [
-            {
-              "hid":"20944",
-              "act":true,
-              "pub":"",
-              "head":"Corona-Präventionsmaßnahme",
-              "lead":"",
-              "text":"Tragen Sie in Bussen und Bahnen, an Haltestellen und Bahnhöfen medizinische Masken oder FFP2-Masken. Rücksicht nehmen - gut für alle!",
-              "tckr":"",
-              "icoX":5,
-              "prio":1,
-              "prod":65535,
-              "lModDate":"20210614",
-              "lModTime":"102418",
-              "sDate":"20210424",
-              "sTime":"000000",
-              "eDate":"20211211",
-              "eTime":"235900",
-              "comp":"VBN",
-              "cat":2,
-              "pubChL":
-              [
-                {
-                  "name":"TIMETABLE",
-                  "fDate":"20210423",
-                  "fTime":"153800",
-                  "tDate":"20211211",
-                  "tTime":"235900"
-                }
-              ]
-            },
             {
               "hid":"21838",
               "act":true,
@@ -1047,14 +1298,16 @@
               "lead":"",
               "text":"Aufgrund von Bauarbeiten im Nikolausberger Weg verkehren die Linien 41/42 ab der Haltestelle Jüdenstraße über Theaterplatz - Bühlstraße. Die Haltestellen Weender Straße Ost, Auditorium und Nikolausberger Weg werden nicht bedient. In Richtung stadteinwärts ist keine Umleitung notwendig.",
               "tckr":"",
-              "icoX":8,
+              "icoX":6,
               "prio":100,
+              "fLocX":8,
+              "tLocX":10,
               "prod":65535,
-              "lModDate":"20210614",
-              "lModTime":"151452",
-              "sDate":"20210614",
+              "lModDate":"20211203",
+              "lModTime":"115002",
+              "sDate":"20211101",
               "sTime":"150800",
-              "eDate":"20211031",
+              "eDate":"20211231",
               "eTime":"235900",
               "comp":"VSN",
               "cat":5,
@@ -1064,7 +1317,135 @@
                   "name":"TIMETABLE",
                   "fDate":"20210614",
                   "fTime":"150800",
-                  "tDate":"20211031",
+                  "tDate":"20211231",
+                  "tTime":"235900"
+                }
+              ]
+            },
+            {
+              "hid":"25662",
+              "act":true,
+              "pub":"",
+              "head":"Corona-Präventionsmaßnahme",
+              "lead":"",
+              "text":"3G-Regel im ÖPNV (geimpft, genesen oder getestet). Bitte beachten Sie die Maskenpflicht!",
+              "tckr":"",
+              "icoX":7,
+              "prio":1,
+              "fLocX":8,
+              "tLocX":8,
+              "prod":65535,
+              "lModDate":"20211123",
+              "lModTime":"171447",
+              "sDate":"20211124",
+              "sTime":"000000",
+              "eDate":"20221231",
+              "eTime":"235900",
+              "comp":"VBN",
+              "cat":2,
+              "pubChL":
+              [
+                {
+                  "name":"TIMETABLE",
+                  "fDate":"20211123",
+                  "fTime":"171300",
+                  "tDate":"20221231",
+                  "tTime":"235900"
+                }
+              ]
+            },
+            {
+              "hid":"25662",
+              "act":true,
+              "pub":"",
+              "head":"Corona-Präventionsmaßnahme",
+              "lead":"",
+              "text":"3G-Regel im ÖPNV (geimpft, genesen oder getestet). Bitte beachten Sie die Maskenpflicht!",
+              "tckr":"",
+              "icoX":7,
+              "prio":1,
+              "fLocX":16,
+              "tLocX":16,
+              "prod":65535,
+              "lModDate":"20211123",
+              "lModTime":"171447",
+              "sDate":"20211124",
+              "sTime":"000000",
+              "eDate":"20221231",
+              "eTime":"235900",
+              "comp":"VBN",
+              "cat":2,
+              "pubChL":
+              [
+                {
+                  "name":"TIMETABLE",
+                  "fDate":"20211123",
+                  "fTime":"171300",
+                  "tDate":"20221231",
+                  "tTime":"235900"
+                }
+              ]
+            },
+            {
+              "hid":"25702",
+              "act":true,
+              "pub":"",
+              "head":"Sperrung Elliehäuser Weg",
+              "lead":"",
+              "text":"Aufgrund dringender Baumaßnahmen im Elliehäuser Weg kann dieser ab dem 01.12.2021 für ca 14 Tage nicht befahren werden. Die Haltestellen Tuchmacherweg in stadtauswärts Richtung und die Haltestelle Elliehäuser Weg in stadteinwärts Richtung können in dieser Zeit von der Linie 71 (in der Schwachverkehrszeit) nicht angefahren werden. Alle anderen Linien sind von dieser Maßnahme nicht betroffen.",
+              "tckr":"",
+              "icoX":10,
+              "prio":100,
+              "fLocX":18,
+              "tLocX":20,
+              "prod":65535,
+              "lModDate":"20211126",
+              "lModTime":"104237",
+              "sDate":"20211201",
+              "sTime":"080000",
+              "eDate":"20211212",
+              "eTime":"235900",
+              "comp":"VSN",
+              "cat":1,
+              "pubChL":
+              [
+                {
+                  "name":"TIMETABLE",
+                  "fDate":"20211126",
+                  "fTime":"103800",
+                  "tDate":"20211212",
+                  "tTime":"235900"
+                }
+              ]
+            },
+            {
+              "hid":"25662",
+              "act":true,
+              "pub":"",
+              "head":"Corona-Präventionsmaßnahme",
+              "lead":"",
+              "text":"3G-Regel im ÖPNV (geimpft, genesen oder getestet). Bitte beachten Sie die Maskenpflicht!",
+              "tckr":"",
+              "icoX":7,
+              "prio":1,
+              "fLocX":18,
+              "tLocX":18,
+              "prod":65535,
+              "lModDate":"20211123",
+              "lModTime":"171447",
+              "sDate":"20211124",
+              "sTime":"000000",
+              "eDate":"20221231",
+              "eTime":"235900",
+              "comp":"VBN",
+              "cat":2,
+              "pubChL":
+              [
+                {
+                  "name":"TIMETABLE",
+                  "fDate":"20211123",
+                  "fTime":"171300",
+                  "tDate":"20221231",
                   "tTime":"235900"
                 }
               ]
@@ -1073,7 +1454,7 @@
           "icoL":
           [
             {
-              "res":"prod_bus",
+              "res":"prod_reg",
               "fg":
               {
                 "r":255,
@@ -1083,9 +1464,9 @@
               },
               "bg":
               {
-                "r":0,
-                "g":92,
-                "b":169,
+                "r":82,
+                "g":38,
+                "b":125,
                 "a":255
               }
             },
@@ -1110,11 +1491,31 @@
               "res":"rt_ont"
             },
             {
+              "res":"prod_bus",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255,
+                "a":255
+              },
+              "bg":
+              {
+                "r":0,
+                "g":92,
+                "b":169,
+                "a":255
+              }
+            },
+            {
               "res":"GOE",
               "txt":"Göttinger Verkehrsbetriebe (GöVB)"
             },
             {
               "res":"INFO"
+            },
+            {
+              "res":"HIM5"
             },
             {
               "res":"HIM2"
@@ -1140,7 +1541,7 @@
               "res":"tariff_vsn"
             },
             {
-              "res":"HIM5"
+              "res":"HIM1"
             }
           ]
         },
@@ -1148,121 +1549,121 @@
         [
           {
             "cid":"C-0",
-            "date":"20210909",
-            "dur":"000600",
+            "date":"20211205",
+            "dur":"000700",
             "chg":0,
             "sDays":
             {
               "sDaysR":"nicht täglich",
-              "sDaysI":"9. Sep bis 16. Okt 2021 Mo - Sa",
-              "sDaysB":"EFDFBF7EFDFBF7EFDFBF7EFDFBF000000000000000"
+              "sDaysI":"5. bis 19. Dez 2021 Sa, So",
+              "sDaysB":"3060C183060C183060C183060C183060C183060C1830000000000000000000000000000000000000000000000000"
             },
             "dep":
             {
               "locX":0,
-              "idx":17,
+              "idx":12,
               "dProdX":0,
               "dPlatfS":"A",
               "dInR":true,
-              "dTimeS":"121900",
-              "dTimeR":"121900",
+              "dTimeS":"192800",
+              "dTimeR":"192800",
               "dProgType":"PROGNOSED",
               "type":"N"
             },
             "arr":
             {
-              "locX":8,
+              "locX":12,
               "aOutR":true,
-              "aTimeS":"122500",
+              "aTimeS":"193500",
               "type":"N"
             },
             "secL":
             [
               {
                 "type":"JNY",
-                "icoX":0,
+                "icoX":3,
                 "dep":
                 {
                   "locX":0,
-                  "idx":17,
+                  "idx":12,
                   "dProdX":0,
                   "dPlatfS":"A",
                   "dInR":true,
-                  "dTimeS":"121900",
-                  "dTimeR":"121900",
+                  "dTimeS":"192800",
+                  "dTimeR":"192800",
                   "dProgType":"PROGNOSED",
                   "type":"N"
                 },
                 "arr":
                 {
                   "locX":2,
-                  "idx":20,
+                  "idx":15,
                   "aProdX":0,
                   "aOutR":true,
-                  "aTimeS":"122200",
-                  "aTimeR":"122200",
+                  "aTimeS":"193200",
+                  "aTimeR":"193200",
                   "aProgType":"PROGNOSED",
                   "type":"N"
                 },
                 "jny":
                 {
-                  "jid":"1|7928|2|80|9092021",
+                  "jid":"1|11274|1|80|5122021",
                   "prodX":1,
-                  "dirTxt":"Zietenterrassen über Zentrum",
-                  "dirFlg":"1",
+                  "dirTxt":"Weende-Ost",
+                  "dirFlg":"2",
                   "status":"P",
                   "isRchbl":true,
                   "stopL":
                   [
                     {
                       "locX":0,
-                      "idx":17,
+                      "idx":12,
                       "dProdX":1,
                       "dInR":true,
-                      "dTimeS":"121900",
-                      "dTimeR":"121900",
+                      "dTimeS":"192800",
+                      "dTimeR":"192800",
                       "dProgType":"PROGNOSED",
-                      "dDirTxt":"Zietenterrassen über Zentrum",
-                      "dDirFlg":"1",
+                      "dDirTxt":"Weende-Ost",
+                      "dDirFlg":"2",
                       "type":"N"
                     },
                     {
                       "locX":4,
-                      "idx":18,
+                      "idx":13,
                       "aProdX":1,
                       "aOutR":true,
-                      "aTimeS":"122000",
-                      "aTimeR":"122000",
+                      "aTimeS":"192900",
+                      "aTimeR":"192900",
                       "aProgType":"PROGNOSED",
                       "dProdX":1,
                       "dInR":true,
-                      "dTimeS":"122000",
-                      "dTimeR":"122000",
+                      "dTimeS":"193000",
+                      "dTimeR":"193000",
                       "dProgType":"PROGNOSED",
                       "type":"N"
                     },
                     {
                       "locX":6,
-                      "idx":19,
+                      "idx":14,
                       "aProdX":1,
                       "aOutR":true,
-                      "aTimeS":"122100",
-                      "aTimeR":"122100",
+                      "aTimeS":"193100",
+                      "aTimeR":"193100",
                       "aProgType":"PROGNOSED",
                       "dProdX":1,
                       "dInR":true,
-                      "dTimeS":"122100",
-                      "dTimeR":"122100",
+                      "dTimeS":"193100",
+                      "dTimeR":"193100",
                       "dProgType":"PROGNOSED",
                       "type":"N"
                     },
                     {
                       "locX":2,
-                      "idx":20,
+                      "idx":15,
                       "aProdX":1,
                       "aOutR":true,
-                      "aTimeS":"122200",
-                      "aTimeR":"122200",
+                      "aTimeS":"193200",
+                      "aTimeR":"193200",
                       "aProgType":"PROGNOSED",
                       "type":"N"
                     }
@@ -1289,228 +1690,18 @@
                   ],
                   "pos":
                   {
-                    "x":9921403,
-                    "y":51540866,
+                    "x":9924819,
+                    "y":51539778,
                     "layerX":0,
                     "crdSysX":0
                   },
                   "freq":
                   {
-                    "minC":1,
-                    "maxC":10,
-                    "numC":18,
-                    "jnyL":
-                    [
-                      {
-                        "jid":"1|8707|5|80|9092021",
-                        "prodX":2,
-                        "dirTxt":"Papenberg",
-                        "dirFlg":"2",
-                        "stopL":
-                        [
-                          {
-                            "locX":0,
-                            "idx":12,
-                            "dProdX":2,
-                            "dTimeS":"122800",
-                            "dDirTxt":"Papenberg",
-                            "dDirFlg":"2",
-                            "type":"N"
-                          },
-                          {
-                            "locX":2,
-                            "idx":15,
-                            "aProdX":2,
-                            "aTimeS":"123200",
-                            "type":"N"
-                          }
-                        ],
-                        "pos":
-                        {
-                          "x":9890004,
-                          "y":51546538,
-                          "layerX":0,
-                          "crdSysX":0
-                        },
-                        "ctxRecon":"T$A=1@O=Göttingen Bahnhof/ZOB@L=1101000@a=128@$A=1@O=Göttingen Kornmarkt@L=1190020@a=128@$202109091228$202109091232$Bus 42  $$1$$$$",
-                        "msgL":
-                        [
-                          {
-                            "type":"REM",
-                            "remX":0,
-                            "fLocX":0,
-                            "tLocX":2,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ]
-                          }
-                        ],
-                        "subscr":"F"
-                      },
-                      {
-                        "jid":"1|8555|2|80|9092021",
-                        "prodX":3,
-                        "dirTxt":"Rohns",
-                        "dirFlg":"2",
-                        "stopL":
-                        [
-                          {
-                            "locX":0,
-                            "idx":1,
-                            "dProdX":3,
-                            "dTimeS":"123300",
-                            "dDirTxt":"Rohns",
-                            "dDirFlg":"2",
-                            "type":"N"
-                          },
-                          {
-                            "locX":2,
-                            "idx":4,
-                            "aProdX":3,
-                            "aTimeS":"123600",
-                            "type":"N"
-                          }
-                        ],
-                        "ctxRecon":"T$A=1@O=Göttingen Bahnhof/ZOB@L=1101000@a=128@$A=1@O=Göttingen Kornmarkt@L=1190020@a=128@$202109091233$202109091236$Bus 50  $$1$$$$",
-                        "msgL":
-                        [
-                          {
-                            "type":"REM",
-                            "remX":0,
-                            "fLocX":0,
-                            "tLocX":2,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ]
-                          }
-                        ],
-                        "subscr":"F"
-                      },
-                      {
-                        "jid":"1|8793|5|80|9092021",
-                        "prodX":4,
-                        "dirTxt":"Weende-Ost",
-                        "dirFlg":"2",
-                        "stopL":
-                        [
-                          {
-                            "locX":0,
-                            "idx":12,
-                            "dProdX":4,
-                            "dTimeS":"124300",
-                            "dDirTxt":"Weende-Ost",
-                            "dDirFlg":"2",
-                            "type":"N"
-                          },
-                          {
-                            "locX":2,
-                            "idx":15,
-                            "aProdX":4,
-                            "aTimeS":"124700",
-                            "type":"N"
-                          }
-                        ],
-                        "ctxRecon":"T$A=1@O=Göttingen Bahnhof/ZOB@L=1101000@a=128@$A=1@O=Göttingen Kornmarkt@L=1190020@a=128@$202109091243$202109091247$Bus 41  $$1$$$$",
-                        "msgL":
-                        [
-                          {
-                            "type":"REM",
-                            "remX":0,
-                            "fLocX":0,
-                            "tLocX":2,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ]
-                          }
-                        ],
-                        "subscr":"F"
-                      },
-                      {
-                        "jid":"1|8007|2|80|9092021",
-                        "prodX":5,
-                        "dirTxt":"Zietenterrassen über Zentrum",
-                        "dirFlg":"1",
-                        "stopL":
-                        [
-                          {
-                            "locX":0,
-                            "idx":20,
-                            "dProdX":5,
-                            "dTimeS":"124900",
-                            "dDirTxt":"Zietenterrassen über Zentrum",
-                            "dDirFlg":"1",
-                            "type":"N"
-                          },
-                          {
-                            "locX":2,
-                            "idx":23,
-                            "aProdX":5,
-                            "aTimeS":"125200",
-                            "type":"N"
-                          }
-                        ],
-                        "ctxRecon":"T$A=1@O=Göttingen Bahnhof/ZOB@L=1101000@a=128@$A=1@O=Göttingen Kornmarkt@L=1190020@a=128@$202109091249$202109091252$Bus 71  $$1$$$$",
-                        "msgL":
-                        [
-                          {
-                            "type":"REM",
-                            "remX":0,
-                            "fLocX":0,
-                            "tLocX":2,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ]
-                          }
-                        ],
-                        "subscr":"F"
-                      },
-                      {
-                        "jid":"1|8707|6|80|9092021",
-                        "prodX":6,
-                        "dirTxt":"Papenberg",
-                        "dirFlg":"2",
-                        "stopL":
-                        [
-                          {
-                            "locX":0,
-                            "idx":12,
-                            "dProdX":6,
-                            "dTimeS":"125800",
-                            "dDirTxt":"Papenberg",
-                            "dDirFlg":"2",
-                            "type":"N"
-                          },
-                          {
-                            "locX":2,
-                            "idx":15,
-                            "aProdX":6,
-                            "aTimeS":"130200",
-                            "type":"N"
-                          }
-                        ],
-                        "ctxRecon":"T$A=1@O=Göttingen Bahnhof/ZOB@L=1101000@a=128@$A=1@O=Göttingen Kornmarkt@L=1190020@a=128@$202109091258$202109091302$Bus 42  $$1$$$$",
-                        "msgL":
-                        [
-                          {
-                            "type":"REM",
-                            "remX":0,
-                            "fLocX":0,
-                            "tLocX":2,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ]
-                          }
-                        ],
-                        "subscr":"F"
-                      }
-                    ]
+                    "minC":14,
+                    "maxC":16,
+                    "numC":9
                   },
-                  "ctxRecon":"T$A=1@O=Göttingen Bahnhof/ZOB@L=1101000@a=128@$A=1@O=Göttingen Kornmarkt@L=1190020@a=128@$202109091219$202109091222$Bus 72  $$1$$$$",
+                  "ctxRecon":"T$A=1@O=Göttingen Bahnhof/ZOB@L=1101000@a=128@$A=1@O=Göttingen Kornmarkt@L=1190020@a=128@$202112051928$202112051932$Bus 41  $$1$$$$$$",
                   "msgL":
                   [
                     {
@@ -1527,6 +1718,16 @@
                       "type":"HIM",
                       "himX":0,
                       "fLocX":0,
+                      "tLocX":2,
+                      "tagL":
+                      [
+                        "RES_CON_HDR","RES_SEC_HDR_H3","SUM_CON_HDR"
+                      ]
+                    },
+                    {
+                      "type":"HIM",
+                      "himX":1,
+                      "fLocX":0,
                       "tagL":
                       [
                         "RES_GLB_HDR_H3","SUM_GLB_HDR_H3"
@@ -1539,19 +1740,19 @@
               },
               {
                 "type":"WALK",
-                "icoX":6,
+                "icoX":8,
                 "dep":
                 {
                   "locX":2,
                   "dInR":true,
-                  "dTimeS":"122200",
+                  "dTimeS":"193200",
                   "type":"N"
                 },
                 "arr":
                 {
-                  "locX":8,
+                  "locX":12,
                   "aOutR":true,
-                  "aTimeS":"122500",
+                  "aTimeS":"193500",
                   "type":"N"
                 },
                 "gis":
@@ -1559,7 +1760,7 @@
                   "dist":120,
                   "durS":"000300",
                   "dirGeo":10,
-                  "ctx":"H|1|W$A=1@O=Göttingen Kornmarkt@L=1190020@a=128@$A=1@O=Göttingen Markt@L=1190010@a=128@$202109091222$202109091225$$$1$$$$",
+                  "ctx":"H|1|W$A=1@O=Göttingen Kornmarkt@L=1190020@a=128@$A=1@O=Göttingen Markt@L=1190010@a=128@$202112051932$202112051935$$$1$$$$$$",
                   "polyG":
                   {
                     "polyXL":
@@ -1584,10 +1785,10 @@
                 }
               }
             ],
-            "ctxRecon":"¶HKI¶T$A=1@O=Göttingen Bahnhof/ZOB@L=1101000@a=128@$A=1@O=Göttingen Kornmarkt@L=1190020@a=128@$202109091219$202109091222$Bus 72  $$1$$$$§W$A=1@O=Göttingen Kornmarkt@L=1190020@a=128@$A=1@O=Göttingen Markt@L=1190010@a=128@$202109091222$202109091225$$$1$$$$",
+            "ctxRecon":"¶HKI¶T$A=1@O=Göttingen Bahnhof/ZOB@L=1101000@a=128@$A=1@O=Göttingen Kornmarkt@L=1190020@a=128@$202112051928$202112051932$Bus 41  $$1$$$$$$§W$A=1@O=Göttingen Kornmarkt@L=1190020@a=128@$A=1@O=Göttingen Markt@L=1190010@a=128@$202112051932$202112051935$$$1$$$$$$",
             "freq":
             {
-              "minC":1
+              "minC":14
             },
             "trfRes":
             {
@@ -1818,74 +2019,74 @@
               }
             ],
             "conSubscr":"F",
-            "cksum":"4b244807_3"
+            "cksum":"56a7be7d_3"
           },
           {
             "cid":"C-1",
-            "date":"20210909",
+            "date":"20211205",
             "dur":"001100",
             "chg":0,
             "sDays":
             {
               "sDaysR":"nicht täglich",
-              "sDaysI":"9. Sep bis 16. Okt 2021 Mo - Sa",
-              "sDaysB":"EFDFBF7EFDFBF7EFDFBF7EFDFBF000000000000000"
+              "sDaysI":"5. bis 19. Dez 2021 Sa, So",
+              "sDaysB":"3060C183060C183060C183060C183060C183060C1830000000000000000000000000000000000000000000000000"
             },
             "dep":
             {
               "locX":0,
               "dInR":true,
-              "dTimeS":"122100",
+              "dTimeS":"193100",
               "type":"N"
             },
             "arr":
             {
-              "locX":8,
+              "locX":12,
               "aOutR":true,
-              "aTimeS":"123200",
+              "aTimeS":"194200",
               "type":"N"
             },
             "secL":
             [
               {
                 "type":"WALK",
-                "icoX":6,
+                "icoX":8,
                 "dep":
                 {
                   "locX":0,
                   "dInR":true,
-                  "dTimeS":"122100",
+                  "dTimeS":"193100",
                   "type":"N"
                 },
                 "arr":
                 {
-                  "locX":10,
+                  "locX":14,
                   "aOutR":true,
-                  "aTimeS":"122400",
+                  "aTimeS":"193400",
                   "type":"N"
                 },
                 "gis":
                 {
                   "dist":178,
                   "durS":"000300",
-                  "ctx":"G|1|G@F|A=1@O=Göttingen Bahnhof/ZOB@X=9927102@Y=51535086@U=80@L=1101000@|A=1@O=Göttingen Groner Tor/Hirtenbrunnen@X=9927013@Y=51533612@U=80@L=853109@|9092021|122100|122400|bf|ft@0@2000@120@1@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§bt@0@2000@120@1@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§tt@0@5000@120@1@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§||"
+                  "ctx":"G|1|G@F|A=1@O=Göttingen Bahnhof/ZOB@X=9927102@Y=51535086@U=80@L=1101000@|A=1@O=Göttingen Groner Tor/Hirtenbrunnen@X=9927013@Y=51533612@U=80@L=853109@|5122021|193100|193400|bf|ft@0@2000@120@1@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§bt@0@2000@120@1@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§tt@0@5000@120@1@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§|||"
                 }
               },
               {
                 "type":"WALK",
-                "icoX":6,
+                "icoX":8,
                 "dep":
                 {
-                  "locX":10,
+                  "locX":14,
                   "dInR":true,
-                  "dTimeS":"122400",
+                  "dTimeS":"193400",
                   "type":"N"
                 },
                 "arr":
                 {
                   "locX":4,
                   "aOutR":true,
-                  "aTimeS":"122700",
+                  "aTimeS":"193700",
                   "type":"N"
                 },
                 "gis":
@@ -1893,7 +2094,7 @@
                   "dist":174,
                   "durS":"000300",
                   "dirGeo":28,
-                  "ctx":"H|1|W$A=1@O=Göttingen Groner Tor/Hirtenbrunnen@L=853109@a=128@$A=1@O=Göttingen Groner Tor@L=1189201@a=128@$202109091224$202109091227$$$1$$$$",
+                  "ctx":"H|1|W$A=1@O=Göttingen Groner Tor/Hirtenbrunnen@L=853109@a=128@$A=1@O=Göttingen Groner Tor@L=1189201@a=128@$202112051934$202112051937$$$1$$$$$$",
                   "polyG":
                   {
                     "polyXL":
@@ -1919,33 +2120,33 @@
               },
               {
                 "type":"JNY",
-                "icoX":0,
+                "icoX":3,
                 "dep":
                 {
                   "locX":4,
-                  "idx":13,
-                  "dProdX":8,
+                  "idx":9,
+                  "dProdX":3,
                   "dInR":true,
-                  "dTimeS":"122700",
-                  "dTimeR":"122700",
+                  "dTimeS":"193700",
+                  "dTimeR":"193700",
                   "dProgType":"PROGNOSED",
                   "type":"N"
                 },
                 "arr":
                 {
                   "locX":2,
-                  "idx":15,
-                  "aProdX":8,
+                  "idx":11,
+                  "aProdX":3,
                   "aOutR":true,
-                  "aTimeS":"122900",
-                  "aTimeR":"122900",
+                  "aTimeS":"193900",
+                  "aTimeR":"193900",
                   "aProgType":"PROGNOSED",
                   "type":"N"
                 },
                 "jny":
                 {
-                  "jid":"1|9058|5|80|9092021",
-                  "prodX":9,
+                  "jid":"1|12082|10|80|5122021",
+                  "prodX":4,
                   "dirTxt":"Weende-Nord über Zentrum",
                   "dirFlg":"2",
                   "status":"P",
@@ -1954,11 +2155,11 @@
                   [
                     {
                       "locX":4,
-                      "idx":13,
-                      "dProdX":9,
+                      "idx":9,
+                      "dProdX":4,
                       "dInR":true,
-                      "dTimeS":"122700",
-                      "dTimeR":"122700",
+                      "dTimeS":"193700",
+                      "dTimeR":"193700",
                       "dProgType":"PROGNOSED",
                       "dDirTxt":"Weende-Nord über Zentrum",
                       "dDirFlg":"2",
@@ -1966,26 +2167,26 @@
                     },
                     {
                       "locX":6,
-                      "idx":14,
-                      "aProdX":9,
+                      "idx":10,
+                      "aProdX":4,
                       "aOutR":true,
-                      "aTimeS":"122800",
-                      "aTimeR":"122800",
+                      "aTimeS":"193800",
+                      "aTimeR":"193800",
                       "aProgType":"PROGNOSED",
-                      "dProdX":9,
+                      "dProdX":4,
                       "dInR":true,
-                      "dTimeS":"122800",
-                      "dTimeR":"122800",
+                      "dTimeS":"193800",
+                      "dTimeR":"193800",
                       "dProgType":"PROGNOSED",
                       "type":"N"
                     },
                     {
                       "locX":2,
-                      "idx":15,
-                      "aProdX":9,
+                      "idx":11,
+                      "aProdX":4,
                       "aOutR":true,
-                      "aTimeS":"122900",
-                      "aTimeR":"122900",
+                      "aTimeS":"193900",
+                      "aTimeR":"193900",
                       "aProgType":"PROGNOSED",
                       "type":"N"
                     }
@@ -2010,190 +2211,50 @@
                       "crdSysX":3
                     }
                   ],
-                  "pos":
-                  {
-                    "x":9892602,
-                    "y":51526151,
-                    "layerX":0,
-                    "crdSysX":0
-                  },
                   "freq":
                   {
-                    "minC":1,
-                    "maxC":8,
-                    "numC":26,
+                    "minC":4,
+                    "maxC":17,
+                    "numC":15,
                     "jnyL":
                     [
                       {
-                        "jid":"1|8707|5|80|9092021",
-                        "prodX":2,
-                        "dirTxt":"Papenberg",
-                        "dirFlg":"2",
+                        "jid":"1|9814|1|80|5122021",
+                        "prodX":5,
+                        "dirTxt":"Zietenterrassen über Zentrum",
+                        "dirFlg":"1",
                         "stopL":
                         [
                           {
                             "locX":4,
-                            "idx":13,
-                            "dProdX":2,
-                            "dTimeS":"123000",
-                            "dDirTxt":"Papenberg",
-                            "dDirFlg":"2",
+                            "idx":21,
+                            "dProdX":5,
+                            "dTimeS":"194400",
+                            "dDirTxt":"Zietenterrassen über Zentrum",
+                            "dDirFlg":"1",
                             "type":"N"
                           },
                           {
                             "locX":2,
-                            "idx":15,
-                            "aProdX":2,
-                            "aTimeS":"123200",
+                            "idx":23,
+                            "aProdX":5,
+                            "aTimeS":"194600",
                             "type":"N"
                           }
                         ],
                         "pos":
                         {
-                          "x":9890013,
-                          "y":51546466,
+                          "x":9873104,
+                          "y":51549612,
                           "layerX":0,
                           "crdSysX":0
                         },
-                        "ctxRecon":"T$A=1@O=Göttingen Groner Tor@L=1189201@a=128@$A=1@O=Göttingen Kornmarkt@L=1190020@a=128@$202109091230$202109091232$Bus 42  $$1$$$$",
-                        "msgL":
-                        [
-                          {
-                            "type":"REM",
-                            "remX":0,
-                            "fLocX":4,
-                            "tLocX":2,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ]
-                          }
-                        ],
+                        "ctxRecon":"T$A=1@O=Göttingen Groner Tor@L=1189201@a=128@$A=1@O=Göttingen Kornmarkt@L=1190020@a=128@$202112051944$202112051946$Bus 71  $$3$$$$$$",
                         "subscr":"F"
                       },
                       {
-                        "jid":"1|8555|2|80|9092021",
-                        "prodX":3,
-                        "dirTxt":"Rohns",
-                        "dirFlg":"2",
-                        "stopL":
-                        [
-                          {
-                            "locX":4,
-                            "idx":2,
-                            "dProdX":3,
-                            "dTimeS":"123400",
-                            "dDirTxt":"Rohns",
-                            "dDirFlg":"2",
-                            "type":"N"
-                          },
-                          {
-                            "locX":2,
-                            "idx":4,
-                            "aProdX":3,
-                            "aTimeS":"123600",
-                            "type":"N"
-                          }
-                        ],
-                        "ctxRecon":"T$A=1@O=Göttingen Groner Tor@L=1189201@a=128@$A=1@O=Göttingen Kornmarkt@L=1190020@a=128@$202109091234$202109091236$Bus 50  $$1$$$$",
-                        "msgL":
-                        [
-                          {
-                            "type":"REM",
-                            "remX":0,
-                            "fLocX":4,
-                            "tLocX":2,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ]
-                          }
-                        ],
-                        "subscr":"F"
-                      },
-                      {
-                        "jid":"1|9191|5|80|9092021",
-                        "prodX":10,
-                        "dirTxt":"Weende-Nord ü. Zentr./Luttera.",
-                        "dirFlg":"2",
-                        "stopL":
-                        [
-                          {
-                            "locX":4,
-                            "idx":11,
-                            "dProdX":10,
-                            "dTimeS":"124200",
-                            "dDirTxt":"Weende-Nord ü. Zentr./Luttera.",
-                            "dDirFlg":"2",
-                            "type":"N"
-                          },
-                          {
-                            "locX":2,
-                            "idx":13,
-                            "aProdX":10,
-                            "aTimeS":"124400",
-                            "type":"N"
-                          }
-                        ],
-                        "ctxRecon":"T$A=1@O=Göttingen Groner Tor@L=1189201@a=128@$A=1@O=Göttingen Kornmarkt@L=1190020@a=128@$202109091242$202109091244$Bus 31  $$1$$$$",
-                        "msgL":
-                        [
-                          {
-                            "type":"REM",
-                            "remX":0,
-                            "fLocX":4,
-                            "tLocX":2,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ]
-                          }
-                        ],
-                        "subscr":"F"
-                      },
-                      {
-                        "jid":"1|8793|5|80|9092021",
-                        "prodX":4,
-                        "dirTxt":"Weende-Ost",
-                        "dirFlg":"2",
-                        "stopL":
-                        [
-                          {
-                            "locX":4,
-                            "idx":13,
-                            "dProdX":4,
-                            "dTimeS":"124500",
-                            "dDirTxt":"Weende-Ost",
-                            "dDirFlg":"2",
-                            "type":"N"
-                          },
-                          {
-                            "locX":2,
-                            "idx":15,
-                            "aProdX":4,
-                            "aTimeS":"124700",
-                            "type":"N"
-                          }
-                        ],
-                        "ctxRecon":"T$A=1@O=Göttingen Groner Tor@L=1189201@a=128@$A=1@O=Göttingen Kornmarkt@L=1190020@a=128@$202109091245$202109091247$Bus 41  $$1$$$$",
-                        "msgL":
-                        [
-                          {
-                            "type":"REM",
-                            "remX":0,
-                            "fLocX":4,
-                            "tLocX":2,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ]
-                          }
-                        ],
-                        "subscr":"F"
-                      },
-                      {
-                        "jid":"1|7660|5|80|9092021",
-                        "prodX":11,
+                        "jid":"1|9074|1|80|5122021",
+                        "prodX":6,
                         "dirTxt":"Klausberg über Zentrum",
                         "dirFlg":"2",
                         "stopL":
@@ -2201,8 +2262,8 @@
                           {
                             "locX":4,
                             "idx":6,
-                            "dProdX":11,
-                            "dTimeS":"125000",
+                            "dProdX":6,
+                            "dTimeS":"194800",
                             "dDirTxt":"Klausberg über Zentrum",
                             "dDirFlg":"2",
                             "type":"N"
@@ -2210,30 +2271,98 @@
                           {
                             "locX":2,
                             "idx":8,
-                            "aProdX":11,
-                            "aTimeS":"125200",
+                            "aProdX":6,
+                            "aTimeS":"195000",
                             "type":"N"
                           }
                         ],
-                        "ctxRecon":"T$A=1@O=Göttingen Groner Tor@L=1189201@a=128@$A=1@O=Göttingen Kornmarkt@L=1190020@a=128@$202109091250$202109091252$Bus 80  $$1$$$$",
-                        "msgL":
+                        "ctxRecon":"T$A=1@O=Göttingen Groner Tor@L=1189201@a=128@$A=1@O=Göttingen Kornmarkt@L=1190020@a=128@$202112051948$202112051950$Bus 80  $$1$$$$$$",
+                        "subscr":"F"
+                      },
+                      {
+                        "jid":"1|11105|0|80|5122021",
+                        "prodX":7,
+                        "dirTxt":"Papenberg",
+                        "dirFlg":"2",
+                        "stopL":
                         [
                           {
-                            "type":"REM",
-                            "remX":0,
-                            "fLocX":4,
-                            "tLocX":2,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ]
+                            "locX":4,
+                            "idx":13,
+                            "dProdX":7,
+                            "dTimeS":"200000",
+                            "dDirTxt":"Papenberg",
+                            "dDirFlg":"2",
+                            "type":"N"
+                          },
+                          {
+                            "locX":2,
+                            "idx":15,
+                            "aProdX":7,
+                            "aTimeS":"200200",
+                            "type":"N"
                           }
                         ],
+                        "ctxRecon":"T$A=1@O=Göttingen Groner Tor@L=1189201@a=128@$A=1@O=Göttingen Kornmarkt@L=1190020@a=128@$202112052000$202112052002$Bus 42  $$1$$$$$$",
+                        "subscr":"F"
+                      },
+                      {
+                        "jid":"1|11817|10|80|5122021",
+                        "prodX":8,
+                        "dirTxt":"Weende-Nord über Zentrum",
+                        "dirFlg":"2",
+                        "stopL":
+                        [
+                          {
+                            "locX":4,
+                            "idx":9,
+                            "dProdX":8,
+                            "dTimeS":"200700",
+                            "dDirTxt":"Weende-Nord über Zentrum",
+                            "dDirFlg":"2",
+                            "type":"N"
+                          },
+                          {
+                            "locX":2,
+                            "idx":11,
+                            "aProdX":8,
+                            "aTimeS":"200900",
+                            "type":"N"
+                          }
+                        ],
+                        "ctxRecon":"T$A=1@O=Göttingen Groner Tor@L=1189201@a=128@$A=1@O=Göttingen Kornmarkt@L=1190020@a=128@$202112052007$202112052009$Bus 32  $$1$$$$$$",
+                        "subscr":"F"
+                      },
+                      {
+                        "jid":"1|10779|0|80|5122021",
+                        "prodX":9,
+                        "dirTxt":"Rohns",
+                        "dirFlg":"2",
+                        "stopL":
+                        [
+                          {
+                            "locX":4,
+                            "idx":2,
+                            "dProdX":9,
+                            "dTimeS":"201300",
+                            "dDirTxt":"Rohns",
+                            "dDirFlg":"2",
+                            "type":"N"
+                          },
+                          {
+                            "locX":2,
+                            "idx":4,
+                            "aProdX":9,
+                            "aTimeS":"201500",
+                            "type":"N"
+                          }
+                        ],
+                        "ctxRecon":"T$A=1@O=Göttingen Groner Tor@L=1189201@a=128@$A=1@O=Göttingen Kornmarkt@L=1190020@a=128@$202112052013$202112052015$Bus 50  $$1$$$$$$",
                         "subscr":"F"
                       }
                     ]
                   },
-                  "ctxRecon":"T$A=1@O=Göttingen Groner Tor@L=1189201@a=128@$A=1@O=Göttingen Kornmarkt@L=1190020@a=128@$202109091227$202109091229$Bus 32  $$1$$$$",
+                  "ctxRecon":"T$A=1@O=Göttingen Groner Tor@L=1189201@a=128@$A=1@O=Göttingen Kornmarkt@L=1190020@a=128@$202112051937$202112051939$Bus 31  $$1$$$$$$",
                   "msgL":
                   [
                     {
@@ -2248,7 +2377,7 @@
                     },
                     {
                       "type":"HIM",
-                      "himX":0,
+                      "himX":2,
                       "fLocX":4,
                       "tagL":
                       [
@@ -2262,19 +2391,19 @@
               },
               {
                 "type":"WALK",
-                "icoX":6,
+                "icoX":8,
                 "dep":
                 {
                   "locX":2,
                   "dInR":true,
-                  "dTimeS":"122900",
+                  "dTimeS":"193900",
                   "type":"N"
                 },
                 "arr":
                 {
-                  "locX":8,
+                  "locX":12,
                   "aOutR":true,
-                  "aTimeS":"123200",
+                  "aTimeS":"194200",
                   "type":"N"
                 },
                 "gis":
@@ -2282,7 +2411,7 @@
                   "dist":120,
                   "durS":"000300",
                   "dirGeo":10,
-                  "ctx":"H|1|W$A=1@O=Göttingen Kornmarkt@L=1190020@a=128@$A=1@O=Göttingen Markt@L=1190010@a=128@$202109091229$202109091232$$$1$$$$",
+                  "ctx":"H|1|W$A=1@O=Göttingen Kornmarkt@L=1190020@a=128@$A=1@O=Göttingen Markt@L=1190010@a=128@$202112051939$202112051942$$$1$$$$$$",
                   "polyG":
                   {
                     "polyXL":
@@ -2307,10 +2436,10 @@
                 }
               }
             ],
-            "ctxRecon":"¶HKI¶G@F$A=1@O=Göttingen Bahnhof/ZOB@L=1101000@a=128@$A=1@O=Göttingen Groner Tor/Hirtenbrunnen@L=853109@a=128@$202109091221$202109091224$$$1$$$$§W$A=1@O=Göttingen Groner Tor/Hirtenbrunnen@L=853109@a=128@$A=1@O=Göttingen Groner Tor@L=1189201@a=128@$202109091224$202109091227$$$1$$$$§T$A=1@O=Göttingen Groner Tor@L=1189201@a=128@$A=1@O=Göttingen Kornmarkt@L=1190020@a=128@$202109091227$202109091229$Bus 32  $$1$$$$§W$A=1@O=Göttingen Kornmarkt@L=1190020@a=128@$A=1@O=Göttingen Markt@L=1190010@a=128@$202109091229$202109091232$$$1$$$$¶GP¶ft@0@2000@120@1@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§bt@0@2000@120@1@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§tt@0@5000@120@1@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§",
+            "ctxRecon":"¶HKI¶G@F$A=1@O=Göttingen Bahnhof/ZOB@L=1101000@a=128@$A=1@O=Göttingen Groner Tor/Hirtenbrunnen@L=853109@a=128@$202112051931$202112051934$$$1$$$$$$§W$A=1@O=Göttingen Groner Tor/Hirtenbrunnen@L=853109@a=128@$A=1@O=Göttingen Groner Tor@L=1189201@a=128@$202112051934$202112051937$$$1$$$$$$§T$A=1@O=Göttingen Groner Tor@L=1189201@a=128@$A=1@O=Göttingen Kornmarkt@L=1190020@a=128@$202112051937$202112051939$Bus 31  $$1$$$$$$§W$A=1@O=Göttingen Kornmarkt@L=1190020@a=128@$A=1@O=Göttingen Markt@L=1190010@a=128@$202112051939$202112051942$$$1$$$$$$¶GP¶ft@0@2000@120@1@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§bt@0@2000@120@1@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§tt@0@5000@120@1@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§",
             "freq":
             {
-              "minC":1
+              "minC":4
             },
             "trfRes":
             {
@@ -2541,125 +2670,126 @@
               }
             ],
             "conSubscr":"P",
-            "cksum":"e483b8e5_3"
+            "cksum":"d3363dab_3"
           },
           {
             "cid":"C-2",
-            "date":"20210909",
+            "date":"20211205",
             "dur":"000700",
             "chg":0,
             "sDays":
             {
               "sDaysR":"nicht täglich",
-              "sDaysI":"9. Sep bis 16. Okt 2021 Mo - Sa",
-              "sDaysB":"EFDFBF7EFDFBF7EFDFBF7EFDFBF000000000000000"
+              "sDaysI":"5. bis 19. Dez 2021 Sa, So",
+              "sDaysB":"3060C183060C183060C183060C183060C183060C1830000000000000000000000000000000000000000000000000"
             },
             "dep":
             {
               "locX":0,
-              "idx":12,
-              "dProdX":12,
+              "idx":20,
+              "dProdX":10,
               "dPlatfS":"A",
               "dInR":true,
-              "dTimeS":"122800",
-              "dTimeR":"122800",
+              "dTimeS":"194200",
+              "dTimeR":"194300",
               "dProgType":"PROGNOSED",
               "type":"N"
             },
             "arr":
             {
-              "locX":8,
+              "locX":12,
               "aOutR":true,
-              "aTimeS":"123500",
+              "aTimeS":"194900",
               "type":"N"
             },
             "secL":
             [
               {
                 "type":"JNY",
-                "icoX":0,
+                "icoX":3,
                 "dep":
                 {
                   "locX":0,
-                  "idx":12,
-                  "dProdX":12,
+                  "idx":20,
+                  "dProdX":10,
                   "dPlatfS":"A",
                   "dInR":true,
-                  "dTimeS":"122800",
-                  "dTimeR":"122800",
+                  "dTimeS":"194200",
+                  "dTimeR":"194300",
                   "dProgType":"PROGNOSED",
                   "type":"N"
                 },
                 "arr":
                 {
                   "locX":2,
-                  "idx":15,
-                  "aProdX":12,
+                  "idx":23,
+                  "aProdX":10,
                   "aOutR":true,
-                  "aTimeS":"123200",
-                  "aTimeR":"123200",
+                  "aTimeS":"194600",
+                  "aTimeR":"194600",
                   "aProgType":"PROGNOSED",
                   "type":"N"
                 },
                 "jny":
                 {
-                  "jid":"1|8707|5|80|9092021",
-                  "prodX":2,
-                  "dirTxt":"Papenberg",
-                  "dirFlg":"2",
+                  "jid":"1|9814|1|80|5122021",
+                  "prodX":5,
+                  "dirTxt":"Zietenterrassen über Zentrum",
+                  "dirFlg":"1",
                   "status":"P",
+                  "isRedir":true,
                   "isRchbl":true,
                   "stopL":
                   [
                     {
                       "locX":0,
-                      "idx":12,
-                      "dProdX":2,
+                      "idx":20,
+                      "dProdX":5,
                       "dInR":true,
-                      "dTimeS":"122800",
-                      "dTimeR":"122800",
+                      "dTimeS":"194200",
+                      "dTimeR":"194300",
                       "dProgType":"PROGNOSED",
-                      "dDirTxt":"Papenberg",
-                      "dDirFlg":"2",
+                      "dDirTxt":"Zietenterrassen über Zentrum",
+                      "dDirFlg":"1",
                       "type":"N"
                     },
                     {
                       "locX":4,
-                      "idx":13,
-                      "aProdX":2,
+                      "idx":21,
+                      "aProdX":5,
                       "aOutR":true,
-                      "aTimeS":"122900",
-                      "aTimeR":"122900",
+                      "aTimeS":"194300",
+                      "aTimeR":"194300",
                       "aProgType":"PROGNOSED",
-                      "dProdX":2,
+                      "dProdX":5,
                       "dInR":true,
-                      "dTimeS":"123000",
-                      "dTimeR":"123000",
+                      "dTimeS":"194400",
+                      "dTimeR":"194400",
                       "dProgType":"PROGNOSED",
                       "type":"N"
                     },
                     {
                       "locX":6,
-                      "idx":14,
-                      "aProdX":2,
+                      "idx":22,
+                      "aProdX":5,
                       "aOutR":true,
-                      "aTimeS":"123100",
-                      "aTimeR":"123100",
+                      "aTimeS":"194500",
+                      "aTimeR":"194500",
                       "aProgType":"PROGNOSED",
-                      "dProdX":2,
+                      "dProdX":5,
                       "dInR":true,
-                      "dTimeS":"123100",
-                      "dTimeR":"123100",
+                      "dTimeS":"194500",
+                      "dTimeR":"194500",
                       "dProgType":"PROGNOSED",
                       "type":"N"
                     },
                     {
                       "locX":2,
-                      "idx":15,
-                      "aProdX":2,
+                      "idx":23,
+                      "aProdX":5,
                       "aOutR":true,
-                      "aTimeS":"123200",
-                      "aTimeR":"123200",
+                      "aTimeS":"194600",
+                      "aTimeR":"194600",
                       "aProgType":"PROGNOSED",
                       "type":"N"
                     }
@@ -2686,221 +2816,18 @@
                   ],
                   "pos":
                   {
-                    "x":9890013,
-                    "y":51546466,
+                    "x":9873104,
+                    "y":51549612,
                     "layerX":0,
                     "crdSysX":0
                   },
                   "freq":
                   {
-                    "minC":1,
-                    "maxC":10,
-                    "numC":18,
-                    "jnyL":
-                    [
-                      {
-                        "jid":"1|8555|2|80|9092021",
-                        "prodX":3,
-                        "dirTxt":"Rohns",
-                        "dirFlg":"2",
-                        "stopL":
-                        [
-                          {
-                            "locX":0,
-                            "idx":1,
-                            "dProdX":3,
-                            "dTimeS":"123300",
-                            "dDirTxt":"Rohns",
-                            "dDirFlg":"2",
-                            "type":"N"
-                          },
-                          {
-                            "locX":2,
-                            "idx":4,
-                            "aProdX":3,
-                            "aTimeS":"123600",
-                            "type":"N"
-                          }
-                        ],
-                        "ctxRecon":"T$A=1@O=Göttingen Bahnhof/ZOB@L=1101000@a=128@$A=1@O=Göttingen Kornmarkt@L=1190020@a=128@$202109091233$202109091236$Bus 50  $$1$$$$",
-                        "msgL":
-                        [
-                          {
-                            "type":"REM",
-                            "remX":0,
-                            "fLocX":0,
-                            "tLocX":2,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ]
-                          }
-                        ],
-                        "subscr":"F"
-                      },
-                      {
-                        "jid":"1|8793|5|80|9092021",
-                        "prodX":4,
-                        "dirTxt":"Weende-Ost",
-                        "dirFlg":"2",
-                        "stopL":
-                        [
-                          {
-                            "locX":0,
-                            "idx":12,
-                            "dProdX":4,
-                            "dTimeS":"124300",
-                            "dDirTxt":"Weende-Ost",
-                            "dDirFlg":"2",
-                            "type":"N"
-                          },
-                          {
-                            "locX":2,
-                            "idx":15,
-                            "aProdX":4,
-                            "aTimeS":"124700",
-                            "type":"N"
-                          }
-                        ],
-                        "ctxRecon":"T$A=1@O=Göttingen Bahnhof/ZOB@L=1101000@a=128@$A=1@O=Göttingen Kornmarkt@L=1190020@a=128@$202109091243$202109091247$Bus 41  $$1$$$$",
-                        "msgL":
-                        [
-                          {
-                            "type":"REM",
-                            "remX":0,
-                            "fLocX":0,
-                            "tLocX":2,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ]
-                          }
-                        ],
-                        "subscr":"F"
-                      },
-                      {
-                        "jid":"1|8007|2|80|9092021",
-                        "prodX":5,
-                        "dirTxt":"Zietenterrassen über Zentrum",
-                        "dirFlg":"1",
-                        "stopL":
-                        [
-                          {
-                            "locX":0,
-                            "idx":20,
-                            "dProdX":5,
-                            "dTimeS":"124900",
-                            "dDirTxt":"Zietenterrassen über Zentrum",
-                            "dDirFlg":"1",
-                            "type":"N"
-                          },
-                          {
-                            "locX":2,
-                            "idx":23,
-                            "aProdX":5,
-                            "aTimeS":"125200",
-                            "type":"N"
-                          }
-                        ],
-                        "ctxRecon":"T$A=1@O=Göttingen Bahnhof/ZOB@L=1101000@a=128@$A=1@O=Göttingen Kornmarkt@L=1190020@a=128@$202109091249$202109091252$Bus 71  $$1$$$$",
-                        "msgL":
-                        [
-                          {
-                            "type":"REM",
-                            "remX":0,
-                            "fLocX":0,
-                            "tLocX":2,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ]
-                          }
-                        ],
-                        "subscr":"F"
-                      },
-                      {
-                        "jid":"1|8707|6|80|9092021",
-                        "prodX":6,
-                        "dirTxt":"Papenberg",
-                        "dirFlg":"2",
-                        "stopL":
-                        [
-                          {
-                            "locX":0,
-                            "idx":12,
-                            "dProdX":6,
-                            "dTimeS":"125800",
-                            "dDirTxt":"Papenberg",
-                            "dDirFlg":"2",
-                            "type":"N"
-                          },
-                          {
-                            "locX":2,
-                            "idx":15,
-                            "aProdX":6,
-                            "aTimeS":"130200",
-                            "type":"N"
-                          }
-                        ],
-                        "ctxRecon":"T$A=1@O=Göttingen Bahnhof/ZOB@L=1101000@a=128@$A=1@O=Göttingen Kornmarkt@L=1190020@a=128@$202109091258$202109091302$Bus 42  $$1$$$$",
-                        "msgL":
-                        [
-                          {
-                            "type":"REM",
-                            "remX":0,
-                            "fLocX":0,
-                            "tLocX":2,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ]
-                          }
-                        ],
-                        "subscr":"F"
-                      },
-                      {
-                        "jid":"1|8550|5|80|9092021",
-                        "prodX":13,
-                        "dirTxt":"Rohns",
-                        "dirFlg":"2",
-                        "stopL":
-                        [
-                          {
-                            "locX":0,
-                            "idx":1,
-                            "dProdX":13,
-                            "dTimeS":"130300",
-                            "dDirTxt":"Rohns",
-                            "dDirFlg":"2",
-                            "type":"N"
-                          },
-                          {
-                            "locX":2,
-                            "idx":4,
-                            "aProdX":13,
-                            "aTimeS":"130600",
-                            "type":"N"
-                          }
-                        ],
-                        "ctxRecon":"T$A=1@O=Göttingen Bahnhof/ZOB@L=1101000@a=128@$A=1@O=Göttingen Kornmarkt@L=1190020@a=128@$202109091303$202109091306$Bus 50  $$1$$$$",
-                        "msgL":
-                        [
-                          {
-                            "type":"REM",
-                            "remX":0,
-                            "fLocX":0,
-                            "tLocX":2,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ]
-                          }
-                        ],
-                        "subscr":"F"
-                      }
-                    ]
+                    "minC":14,
+                    "maxC":16,
+                    "numC":9
                   },
-                  "ctxRecon":"T$A=1@O=Göttingen Bahnhof/ZOB@L=1101000@a=128@$A=1@O=Göttingen Kornmarkt@L=1190020@a=128@$202109091228$202109091232$Bus 42  $$1$$$$",
+                  "ctxRecon":"T$A=1@O=Göttingen Bahnhof/ZOB@L=1101000@a=128@$A=1@O=Göttingen Kornmarkt@L=1190020@a=128@$202112051942$202112051946$Bus 71  $$3$$$$$$",
                   "msgL":
                   [
                     {
@@ -2915,7 +2842,7 @@
                     },
                     {
                       "type":"HIM",
-                      "himX":1,
+                      "himX":3,
                       "fLocX":0,
                       "tLocX":2,
                       "tagL":
@@ -2925,7 +2852,7 @@
                     },
                     {
                       "type":"HIM",
-                      "himX":0,
+                      "himX":4,
                       "fLocX":0,
                       "tagL":
                       [
@@ -2939,19 +2866,19 @@
               },
               {
                 "type":"WALK",
-                "icoX":6,
+                "icoX":8,
                 "dep":
                 {
                   "locX":2,
                   "dInR":true,
-                  "dTimeS":"123200",
+                  "dTimeS":"194600",
                   "type":"N"
                 },
                 "arr":
                 {
-                  "locX":8,
+                  "locX":12,
                   "aOutR":true,
-                  "aTimeS":"123500",
+                  "aTimeS":"194900",
                   "type":"N"
                 },
                 "gis":
@@ -2959,7 +2886,7 @@
                   "dist":120,
                   "durS":"000300",
                   "dirGeo":10,
-                  "ctx":"H|1|W$A=1@O=Göttingen Kornmarkt@L=1190020@a=128@$A=1@O=Göttingen Markt@L=1190010@a=128@$202109091232$202109091235$$$1$$$$",
+                  "ctx":"H|1|W$A=1@O=Göttingen Kornmarkt@L=1190020@a=128@$A=1@O=Göttingen Markt@L=1190010@a=128@$202112051946$202112051949$$$1$$$$$$",
                   "polyG":
                   {
                     "polyXL":
@@ -2984,10 +2911,10 @@
                 }
               }
             ],
-            "ctxRecon":"¶HKI¶T$A=1@O=Göttingen Bahnhof/ZOB@L=1101000@a=128@$A=1@O=Göttingen Kornmarkt@L=1190020@a=128@$202109091228$202109091232$Bus 42  $$1$$$$§W$A=1@O=Göttingen Kornmarkt@L=1190020@a=128@$A=1@O=Göttingen Markt@L=1190010@a=128@$202109091232$202109091235$$$1$$$$",
+            "ctxRecon":"¶HKI¶T$A=1@O=Göttingen Bahnhof/ZOB@L=1101000@a=128@$A=1@O=Göttingen Kornmarkt@L=1190020@a=128@$202112051942$202112051946$Bus 71  $$3$$$$$$§W$A=1@O=Göttingen Kornmarkt@L=1190020@a=128@$A=1@O=Göttingen Markt@L=1190010@a=128@$202112051946$202112051949$$$1$$$$$$",
             "freq":
             {
-              "minC":1
+              "minC":14
             },
             "trfRes":
             {
@@ -3218,14 +3145,14 @@
               }
             ],
             "conSubscr":"F",
-            "cksum":"629da40f_3"
+            "cksum":"ad6e3ac8_3"
           }
         ],
-        "outCtxScrB":"2|OB|MT#11#104419#104419#104425#104425#0#0#165#104414#1#-2147483134#0#1#2|PDH#56df974851dee95869c5bb683fe1759d|RD#9092021|RT#121400|US#1",
-        "outCtxScrF":"2|OF|MT#11#104428#104428#104435#104435#0#0#165#104422#3#-2147483134#0#1#2|PDH#56df974851dee95869c5bb683fe1759d|RD#9092021|RT#121400|US#1",
+        "outCtxScrB":"2|OB|MT#11#230128#230128#230135#230135#0#0#165#230125#1#-2147483134#0#1#2|PDH#7cbaf0be96b4b02b0540d3a1a1a00862|RD#5122021|RT#192500|US#1",
+        "outCtxScrF":"2|OF|MT#11#230142#230142#230149#230149#0#0#165#230132#3#-2147483134#0#1#2|PDH#7cbaf0be96b4b02b0540d3a1a1a00862|RD#5122021|RT#192500|US#1",
         "fpB":"20210701",
-        "fpE":"20211211",
-        "planrtTS":"1631182425"
+        "fpE":"20220630",
+        "planrtTS":"1638728704"
       }
     }
   ]

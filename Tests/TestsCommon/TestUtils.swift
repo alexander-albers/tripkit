@@ -53,18 +53,26 @@ public func parseTestCaseLocation(_ json: JSON) -> Location {
     return location
 }
 
-fileprivate let P_HAFAS_IDS = try! NSRegularExpression(pattern: "A=\\d@O=[^@]+@X=[^@]+@Y=[^@]+@U=[^@]+@L=([^@]+)@B=\\d(?:@p=\\d*@)?")
-
-/// compares station ids and only checks specific parts in hafas ids
+/// compares station ids and filters out the timestamp inside the location id
 public func compareLocationIds(_ expected: String?, _ response: String?) -> Bool {
-    guard let expected = expected, let response = response else {
+    guard var expected = expected, var response = response else {
         return false
     }
-    guard let expectedMatch = expected.match(pattern: P_HAFAS_IDS), expectedMatch.count == 1 else {
-        return expected == response
-    }
-    guard let responseMatch = response.match(pattern: P_HAFAS_IDS), responseMatch.count == 1 else {
-        return expected == response
-    }
-    return expectedMatch[0] == responseMatch[0]
+    expected = expected.replacingOccurrences(of: "p=\\d+@", with: "", options: .regularExpression)
+    expected = expected.replacingOccurrences(of: "u=\\d+@", with: "", options: .regularExpression)
+    expected = expected.replacingOccurrences(of: "U=\\d+@", with: "", options: .regularExpression)
+    expected = expected.replacingOccurrences(of: "H=\\d+@", with: "", options: .regularExpression)
+    expected = expected.replacingOccurrences(of: "B=\\d+@", with: "", options: .regularExpression)
+    expected = expected.replacingOccurrences(of: "X=\\d+@", with: "", options: .regularExpression)
+    expected = expected.replacingOccurrences(of: "Y=\\d+@", with: "", options: .regularExpression)
+    
+    response = response.replacingOccurrences(of: "p=\\d+@", with: "", options: .regularExpression)
+    response = response.replacingOccurrences(of: "u=\\d+@", with: "", options: .regularExpression)
+    response = response.replacingOccurrences(of: "U=\\d+@", with: "", options: .regularExpression)
+    response = response.replacingOccurrences(of: "H=\\d+@", with: "", options: .regularExpression)
+    response = response.replacingOccurrences(of: "B=\\d+@", with: "", options: .regularExpression)
+    response = response.replacingOccurrences(of: "X=\\d+@", with: "", options: .regularExpression)
+    response = response.replacingOccurrences(of: "Y=\\d+@", with: "", options: .regularExpression)
+    
+    return expected == response
 }

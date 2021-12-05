@@ -2,7 +2,7 @@
   "ver":"1.18",
   "ext":"VAO.13",
   "lang":"deu",
-  "id":"7m4spgsmk2ahwg8g",
+  "id":"mbkw6mx84626gg8g",
   "err":"OK",
   "cInfo":
   {
@@ -59,22 +59,6 @@
           "icoL":
           [
             {
-              "res":"prod_bus",
-              "txtS":"52",
-              "fg":
-              {
-                "r":255,
-                "g":255,
-                "b":255
-              },
-              "bg":
-              {
-                "r":0,
-                "g":130,
-                "b":50
-              }
-            },
-            {
               "res":"prod_station"
             },
             {
@@ -89,10 +73,10 @@
           "locL":
           [
             {
-              "lid":"A=1@O=Graz Babenbergerstraße@X=15420500@Y=47073569@U=81@L=460314900@B=1@p=1630889505@i=at:46:3149@",
+              "lid":"A=1@O=Graz Babenbergerstraße@X=15420500@Y=47073569@U=81@L=460314900@B=1@p=1638666385@i=at:46:3149@",
               "type":"S",
               "name":"Graz Babenbergerstraße",
-              "icoX":1,
+              "icoX":0,
               "extId":"460314900",
               "state":"F",
               "crd":
@@ -103,15 +87,16 @@
                 "crdSysX":0
               },
               "meta":true,
-              "pCls":192,
-              "wt":196,
-              "isMainMast":true
+              "pCls":128,
+              "wt":189,
+              "isMainMast":true,
+              "mapSelectable":true
             },
             {
-              "lid":"A=2@O=Babenbergerstraße, 1010 Wien@X=16363514@Y=48203522@U=103@b=980010778@B=1@p=1629871314@",
+              "lid":"A=2@O=Babenbergerstraße, 1010 Wien@X=16363514@Y=48203522@U=103@b=980010820@B=1@p=1637147511@",
               "type":"A",
               "name":"Babenbergerstraße, 1010 Wien",
-              "icoX":2,
+              "icoX":1,
               "state":"F",
               "crd":
               {
@@ -122,10 +107,10 @@
               }
             },
             {
-              "lid":"A=2@O=Babenbergerstraße, 3390 Melk@X=15333602@Y=48226804@U=103@b=980010785@B=1@p=1629871314@",
+              "lid":"A=2@O=Babenbergerstraße, 3390 Melk@X=15333602@Y=48226804@U=103@b=980010827@B=1@p=1637147511@",
               "type":"A",
               "name":"Babenbergerstraße, 3390 Melk",
-              "icoX":2,
+              "icoX":1,
               "state":"F",
               "crd":
               {
@@ -136,10 +121,10 @@
               }
             },
             {
-              "lid":"A=2@O=Babenbergerstraße, 8020 Graz@X=15421094@Y=47071780@U=103@b=980010789@B=1@p=1629871314@",
+              "lid":"A=2@O=Babenbergerstraße, 8020 Graz@X=15421094@Y=47071780@U=103@b=980010831@B=1@p=1637147511@",
               "type":"A",
               "name":"Babenbergerstraße, 8020 Graz",
-              "icoX":2,
+              "icoX":1,
               "state":"F",
               "crd":
               {
@@ -150,10 +135,10 @@
               }
             },
             {
-              "lid":"A=2@O=Babenbergerstraße, 2500 Baden@X=16219605@Y=48000204@U=103@b=980010782@B=1@p=1629871314@",
+              "lid":"A=2@O=Babenbergerstraße, 2500 Baden@X=16219605@Y=48000204@U=103@b=980010824@B=1@p=1637147511@",
               "type":"A",
               "name":"Babenbergerstraße, 2500 Baden",
-              "icoX":2,
+              "icoX":1,
               "state":"F",
               "crd":
               {

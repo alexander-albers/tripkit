@@ -1,7 +1,7 @@
 {
   "ver":"1.15",
   "lang":"deu",
-  "id":"i9g2qmu6mix5p24k",
+  "id":"2ggxkkai46gipics",
   "svcResL":
   [
     {
@@ -45,58 +45,7 @@
                 "layerX":0,
                 "crdSysX":0
               },
-              "pCls":255
-            },
-            {
-              "lid":"A=1@O=Frankfurt (Main) Konstablerwache@X=8687850@Y=50114682@U=80@L=3000510@",
-              "type":"S",
-              "name":"Frankfurt (Main) Konstablerwache",
-              "icoX":0,
-              "extId":"3000510",
-              "state":"F",
-              "crd":
-              {
-                "x":8687850,
-                "y":50114682,
-                "type":"WGS84",
-                "layerX":0,
-                "crdSysX":0
-              },
-              "pCls":248
-            },
-            {
-              "lid":"A=1@O=Frankfurt (Main) Ostendstraße@X=8697010@Y=50112498@U=80@L=3000525@",
-              "type":"S",
-              "name":"Frankfurt (Main) Ostendstraße",
-              "icoX":0,
-              "extId":"3000525",
-              "state":"F",
-              "crd":
-              {
-                "x":8697010,
-                "y":50112498,
-                "type":"WGS84",
-                "layerX":0,
-                "crdSysX":0
-              },
-              "pCls":104
-            },
-            {
-              "lid":"A=1@O=Frankfurt (Main) Lokalbahnhof@X=8692128@Y=50101954@U=80@L=3000907@",
-              "type":"S",
-              "name":"Frankfurt (Main) Lokalbahnhof",
-              "icoX":0,
-              "extId":"3000907",
-              "state":"F",
-              "crd":
-              {
-                "x":8692128,
-                "y":50101954,
-                "type":"WGS84",
-                "layerX":0,
-                "crdSysX":0
-              },
-              "pCls":104
+              "pCls":127
             },
             {
               "lid":"A=1@O=Frankfurt (Main) Willy-Brandt-Platz@X=8673898@Y=50108992@U=80@L=3000004@",
@@ -131,46 +80,229 @@
                 "crdSysX":0
               },
               "pCls":112
+            },
+            {
+              "lid":"A=1@O=Frankfurt (Main) Konstablerwache@X=8687850@Y=50114682@U=80@L=3000510@",
+              "type":"S",
+              "name":"Frankfurt (Main) Konstablerwache",
+              "icoX":0,
+              "extId":"3000510",
+              "state":"F",
+              "crd":
+              {
+                "x":8687850,
+                "y":50114682,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":120
+            },
+            {
+              "lid":"A=1@O=Frankfurt (Main) Ostendstraße@X=8697010@Y=50112498@U=80@L=3000525@",
+              "type":"S",
+              "name":"Frankfurt (Main) Ostendstraße",
+              "icoX":0,
+              "extId":"3000525",
+              "state":"F",
+              "crd":
+              {
+                "x":8697010,
+                "y":50112498,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":104
+            },
+            {
+              "lid":"A=1@O=Frankfurt (Main) Lokalbahnhof@X=8692128@Y=50101954@U=80@L=3000907@",
+              "type":"S",
+              "name":"Frankfurt (Main) Lokalbahnhof",
+              "icoX":0,
+              "extId":"3000907",
+              "state":"F",
+              "crd":
+              {
+                "x":8692128,
+                "y":50101954,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":104
             }
           ],
           "prodL":
           [
             {
-              "pid":"L::3::S::B0785163512::S_0785163512_S4::*",
-              "name":"S4",
-              "nameS":"S4",
-              "number":"S4",
-              "icoX":2,
-              "cls":8,
+              "pid":"L::4::U-Bahn::B3370764234::U-Bahn_3370764234_U8::*",
+              "name":"U8",
+              "nameS":"U8",
+              "number":"U8",
+              "icoX":1,
+              "cls":16,
               "oprX":0,
               "prodCtx":
               {
-                "name":"      S4",
-                "num":"4024",
-                "line":"S4",
-                "matchId":"35437",
-                "catOut":"S       ",
-                "catOutS":"SBU",
-                "catOutL":"S-Bahn",
-                "catIn":"SBU",
-                "catCode":"3",
-                "admin":"800528"
+                "name":"      U8",
+                "num":"17128",
+                "line":"U8",
+                "matchId":"80343",
+                "catOut":"U-Bahn  ",
+                "catOutS":"BU5",
+                "catOutL":"U-Bahn",
+                "catIn":"BU5",
+                "catCode":"4",
+                "admin":"TRAFBU"
               }
             },
             {
-              "pid":"L::3::S::B0785163512::S_0785163512_S3::*",
-              "name":"S3",
-              "nameS":"S3",
-              "number":"S3",
-              "icoX":2,
-              "cls":8,
+              "pid":"L::4::U-Bahn::B3370764234::U-Bahn_3370764234_U1::*",
+              "name":"U1",
+              "nameS":"U1",
+              "number":"U1",
+              "icoX":1,
+              "cls":16,
               "oprX":0,
               "prodCtx":
               {
-                "name":"      S3",
-                "num":"3656",
-                "line":"S3",
-                "matchId":"35339",
+                "name":"      U1",
+                "num":"1290",
+                "line":"U1",
+                "matchId":"10385",
+                "catOut":"U-Bahn  ",
+                "catOutS":"BU5",
+                "catOutL":"U-Bahn",
+                "catIn":"BU5",
+                "catCode":"4",
+                "admin":"TRAFBU"
+              }
+            },
+            {
+              "pid":"L::4::U-Bahn::B3370764234::U-Bahn_3370764234_U2::*",
+              "name":"U2",
+              "nameS":"U2",
+              "number":"U2",
+              "icoX":1,
+              "cls":16,
+              "oprX":0,
+              "prodCtx":
+              {
+                "name":"      U2",
+                "num":"4553",
+                "line":"U2",
+                "matchId":"20440",
+                "catOut":"U-Bahn  ",
+                "catOutS":"BU5",
+                "catOutL":"U-Bahn",
+                "catIn":"BU5",
+                "catCode":"4",
+                "admin":"TRAFBU"
+              }
+            },
+            {
+              "pid":"L::4::U-Bahn::B3370764234::U-Bahn_3370764234_U3::*",
+              "name":"U3",
+              "nameS":"U3",
+              "number":"U3",
+              "icoX":1,
+              "cls":16,
+              "oprX":0,
+              "prodCtx":
+              {
+                "name":"      U3",
+                "num":"5758",
+                "line":"U3",
+                "matchId":"30250",
+                "catOut":"U-Bahn  ",
+                "catOutS":"BU5",
+                "catOutL":"U-Bahn",
+                "catIn":"BU5",
+                "catCode":"4",
+                "admin":"TRAFBU"
+              }
+            },
+            {
+              "pid":"L::4::U-Bahn::B3370764234::U-Bahn_3370764234_U8::*",
+              "name":"U8",
+              "nameS":"U8",
+              "number":"U8",
+              "icoX":1,
+              "cls":16,
+              "oprX":0,
+              "prodCtx":
+              {
+                "name":"      U8",
+                "num":"17129",
+                "line":"U8",
+                "matchId":"80344",
+                "catOut":"U-Bahn  ",
+                "catOutS":"BU5",
+                "catOutL":"U-Bahn",
+                "catIn":"BU5",
+                "catCode":"4",
+                "admin":"TRAFBU"
+              }
+            },
+            {
+              "pid":"L::4::U-Bahn::B3370764234::U-Bahn_3370764234_U1::*",
+              "name":"U1",
+              "nameS":"U1",
+              "number":"U1",
+              "icoX":1,
+              "cls":16,
+              "oprX":0,
+              "prodCtx":
+              {
+                "name":"      U1",
+                "num":"1291",
+                "line":"U1",
+                "matchId":"10386",
+                "catOut":"U-Bahn  ",
+                "catOutS":"BU5",
+                "catOutL":"U-Bahn",
+                "catIn":"BU5",
+                "catCode":"4",
+                "admin":"TRAFBU"
+              }
+            },
+            {
+              "pid":"L::4::U-Bahn::B3370764234::U-Bahn_3370764234_U2::*",
+              "name":"U2",
+              "nameS":"U2",
+              "number":"U2",
+              "icoX":1,
+              "cls":16,
+              "oprX":0,
+              "prodCtx":
+              {
+                "name":"      U2",
+                "num":"4554",
+                "line":"U2",
+                "matchId":"20441",
+                "catOut":"U-Bahn  ",
+                "catOutS":"BU5",
+                "catOutL":"U-Bahn",
+                "catIn":"BU5",
+                "catCode":"4",
+                "admin":"TRAFBU"
+              }
+            },
+            {
+              "pid":"L::3::S::B0785163512::S_0785163512_S6::*",
+              "name":"S6",
+              "nameS":"S6",
+              "number":"S6",
+              "icoX":3,
+              "cls":8,
+              "oprX":1,
+              "prodCtx":
+              {
+                "name":"      S6",
+                "num":"2244",
+                "line":"S6",
+                "matchId":"35663",
                 "catOut":"S       ",
                 "catOutS":"SBU",
                 "catOutL":"S-Bahn",
@@ -184,15 +316,15 @@
               "name":"S5",
               "nameS":"S5",
               "number":"S5",
-              "icoX":2,
+              "icoX":3,
               "cls":8,
-              "oprX":0,
+              "oprX":1,
               "prodCtx":
               {
                 "name":"      S5",
-                "num":"4305",
+                "num":"1739",
                 "line":"S5",
-                "matchId":"35543",
+                "matchId":"35565",
                 "catOut":"S       ",
                 "catOutS":"SBU",
                 "catOutL":"S-Bahn",
@@ -206,15 +338,15 @@
               "name":"S3",
               "nameS":"S3",
               "number":"S3",
-              "icoX":2,
+              "icoX":3,
               "cls":8,
-              "oprX":0,
+              "oprX":1,
               "prodCtx":
               {
                 "name":"      S3",
-                "num":"3650",
+                "num":"1165",
                 "line":"S3",
-                "matchId":"35343",
+                "matchId":"35365",
                 "catOut":"S       ",
                 "catOutS":"SBU",
                 "catOutL":"S-Bahn",
@@ -224,19 +356,19 @@
               }
             },
             {
-              "pid":"L::3::S::B0785163512::S_0785163512_S4::*",
-              "name":"S4",
-              "nameS":"S4",
-              "number":"S4",
-              "icoX":2,
+              "pid":"L::3::S::B0785163512::S_0785163512_S5::*",
+              "name":"S5",
+              "nameS":"S5",
+              "number":"S5",
+              "icoX":3,
               "cls":8,
-              "oprX":0,
+              "oprX":1,
               "prodCtx":
               {
-                "name":"      S4",
-                "num":"4014",
-                "line":"S4",
-                "matchId":"35447",
+                "name":"      S5",
+                "num":"1738",
+                "line":"S5",
+                "matchId":"35567",
                 "catOut":"S       ",
                 "catOutS":"SBU",
                 "catOutL":"S-Bahn",
@@ -246,157 +378,47 @@
               }
             },
             {
-              "pid":"L::4::U-Bahn::B3370764234::U-Bahn_3370764234_U2::*",
-              "name":"U2",
-              "nameS":"U2",
-              "number":"U2",
-              "icoX":7,
-              "cls":16,
+              "pid":"L::3::S::B0785163512::S_0785163512_S3::*",
+              "name":"S3",
+              "nameS":"S3",
+              "number":"S3",
+              "icoX":3,
+              "cls":8,
               "oprX":1,
               "prodCtx":
               {
-                "name":"      U2",
-                "num":"1411",
-                "line":"U2",
-                "matchId":"20053",
-                "catOut":"U-Bahn  ",
-                "catOutS":"BU4",
-                "catOutL":"U-Bahn",
-                "catIn":"BU4",
-                "catCode":"4",
-                "admin":"TRAFBU"
+                "name":"      S3",
+                "num":"1162",
+                "line":"S3",
+                "matchId":"35367",
+                "catOut":"S       ",
+                "catOutS":"SBU",
+                "catOutL":"S-Bahn",
+                "catIn":"SBU",
+                "catCode":"3",
+                "admin":"800528"
               }
             },
             {
-              "pid":"L::4::U-Bahn::B3370764234::U-Bahn_3370764234_U3::*",
-              "name":"U3",
-              "nameS":"U3",
-              "number":"U3",
-              "icoX":9,
-              "cls":16,
+              "pid":"L::3::S::B0785163512::S_0785163512_S6::*",
+              "name":"S6",
+              "nameS":"S6",
+              "number":"S6",
+              "icoX":3,
+              "cls":8,
               "oprX":1,
               "prodCtx":
               {
-                "name":"      U3",
-                "num":"4158",
-                "line":"U3",
-                "matchId":"30033",
-                "catOut":"U-Bahn  ",
-                "catOutS":"BU5",
-                "catOutL":"U-Bahn",
-                "catIn":"BU5",
-                "catCode":"4",
-                "admin":"TRAFBU"
-              }
-            },
-            {
-              "pid":"L::4::U-Bahn::B3370764234::U-Bahn_3370764234_U1::*",
-              "name":"U1",
-              "nameS":"U1",
-              "number":"U1",
-              "icoX":7,
-              "cls":16,
-              "oprX":1,
-              "prodCtx":
-              {
-                "name":"      U1",
-                "num":"245",
-                "line":"U1",
-                "matchId":"10045",
-                "catOut":"U-Bahn  ",
-                "catOutS":"BU4",
-                "catOutL":"U-Bahn",
-                "catIn":"BU4",
-                "catCode":"4",
-                "admin":"TRAFBU"
-              }
-            },
-            {
-              "pid":"L::4::U-Bahn::B3370764234::U-Bahn_3370764234_U8::*",
-              "name":"U8",
-              "nameS":"U8",
-              "number":"U8",
-              "icoX":7,
-              "cls":16,
-              "oprX":1,
-              "prodCtx":
-              {
-                "name":"      U8",
-                "num":"9459",
-                "line":"U8",
-                "matchId":"80042",
-                "catOut":"U-Bahn  ",
-                "catOutS":"BU4",
-                "catOutL":"U-Bahn",
-                "catIn":"BU4",
-                "catCode":"4",
-                "admin":"TRAFBU"
-              }
-            },
-            {
-              "pid":"L::4::U-Bahn::B3370764234::U-Bahn_3370764234_U2::*",
-              "name":"U2",
-              "nameS":"U2",
-              "number":"U2",
-              "icoX":7,
-              "cls":16,
-              "oprX":1,
-              "prodCtx":
-              {
-                "name":"      U2",
-                "num":"1494",
-                "line":"U2",
-                "matchId":"20054",
-                "catOut":"U-Bahn  ",
-                "catOutS":"BU4",
-                "catOutL":"U-Bahn",
-                "catIn":"BU4",
-                "catCode":"4",
-                "admin":"TRAFBU"
-              }
-            },
-            {
-              "pid":"L::4::U-Bahn::B3370764234::U-Bahn_3370764234_U1::*",
-              "name":"U1",
-              "nameS":"U1",
-              "number":"U1",
-              "icoX":7,
-              "cls":16,
-              "oprX":1,
-              "prodCtx":
-              {
-                "name":"      U1",
-                "num":"246",
-                "line":"U1",
-                "matchId":"10046",
-                "catOut":"U-Bahn  ",
-                "catOutS":"BU4",
-                "catOutL":"U-Bahn",
-                "catIn":"BU4",
-                "catCode":"4",
-                "admin":"TRAFBU"
-              }
-            },
-            {
-              "pid":"L::4::U-Bahn::B3370764234::U-Bahn_3370764234_U3::*",
-              "name":"U3",
-              "nameS":"U3",
-              "number":"U3",
-              "icoX":9,
-              "cls":16,
-              "oprX":1,
-              "prodCtx":
-              {
-                "name":"      U3",
-                "num":"4159",
-                "line":"U3",
-                "matchId":"30034",
-                "catOut":"U-Bahn  ",
-                "catOutS":"BU5",
-                "catOutL":"U-Bahn",
-                "catIn":"BU5",
-                "catCode":"4",
-                "admin":"TRAFBU"
+                "name":"      S6",
+                "num":"2067",
+                "line":"S6",
+                "matchId":"35697",
+                "catOut":"S       ",
+                "catOutS":"SBU",
+                "catOutL":"S-Bahn",
+                "catIn":"SBU",
+                "catCode":"3",
+                "admin":"800528"
               }
             }
           ],
@@ -425,66 +447,43 @@
           "opL":
           [
             {
-              "name":"DB Regio AG S-Bahn Rhein-Main",
-              "icoX":3
+              "name":"Stadtwerke Verkehrsgesellschaft Frankfurt",
+              "icoX":2
             },
             {
-              "name":"Stadtwerke Verkehrsgesellschaft Frankfurt",
-              "icoX":8
+              "name":"DB Regio AG S-Bahn Rhein-Main",
+              "icoX":4
             }
           ],
           "remL":
           [
             {
-              "type":"R",
-              "code":"text.realtime.stop.cancelled",
-              "icoX":1,
-              "txtN":"Halt entfällt"
-            },
-            {
-              "type":"R",
-              "code":"text.realtime.stop.entry.disabled",
-              "icoX":4,
-              "txtN":"Hält nur zum Aussteigen"
-            },
-            {
-              "type":"R",
-              "code":"text.realtime.stop.exit.disabled",
-              "icoX":4,
-              "txtN":"Hält nur zum Einsteigen"
-            },
-            {
               "type":"A",
-              "code":"qp",
+              "code":"sc",
               "prio":200,
               "icoX":5,
-              "txtN":"Maskenpflicht nach gesetzl. Regelung; wir empfehlen eine FFP2-Maske"
+              "txtN":"Maskenpflicht nach gesetzl. Regelung; regional gilt FFP2-Maskenpflicht"
             },
             {
               "type":"A",
-              "code":"qy",
+              "code":"3G",
+              "prio":205,
+              "icoX":5,
+              "txtN":"Im Zug gilt bundesweit 3G-Regel: ein gültiger Nachweis ist mitzuführen"
+            },
+            {
+              "type":"A",
+              "code":"sb",
               "prio":560,
               "icoX":5,
               "txtN":"Fahrzeuggebundene Einstiegshilfe vorhanden"
             },
             {
               "type":"A",
-              "code":"qo",
+              "code":"sa",
               "prio":610,
               "icoX":5,
               "txtN":"Klimaanlage"
-            },
-            {
-              "type":"R",
-              "code":"text.realtime.journey.cancelled",
-              "icoX":6,
-              "txtN":"S4: Fällt aus"
-            },
-            {
-              "type":"R",
-              "code":"text.realtime.connection.cancelled",
-              "icoX":6,
-              "txtN":"Verbindung fällt aus"
             }
           ],
           "icoL":
@@ -493,7 +492,27 @@
               "res":"STA"
             },
             {
-              "res":"rt_scancel"
+              "res":"BU5",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255,
+                "a":255
+              },
+              "bg":
+              {
+                "r":68,
+                "g":118,
+                "b":185,
+                "a":255
+              },
+              "shp":"C",
+              "sty":"B"
+            },
+            {
+              "res":"VGF",
+              "txt":"Stadtwerke Verkehrsgesellschaft Frankfurt"
             },
             {
               "res":"SBU",
@@ -519,55 +538,7 @@
               "txt":"DB Regio AG S-Bahn Rhein-Main"
             },
             {
-              "res":"rt_warn"
-            },
-            {
               "res":"INFO"
-            },
-            {
-              "res":"rt_cancel"
-            },
-            {
-              "res":"BU4",
-              "fg":
-              {
-                "r":255,
-                "g":255,
-                "b":255,
-                "a":255
-              },
-              "bg":
-              {
-                "r":68,
-                "g":118,
-                "b":185,
-                "a":255
-              },
-              "shp":"C",
-              "sty":"B"
-            },
-            {
-              "res":"VGF",
-              "txt":"Stadtwerke Verkehrsgesellschaft Frankfurt"
-            },
-            {
-              "res":"BU5",
-              "fg":
-              {
-                "r":255,
-                "g":255,
-                "b":255,
-                "a":255
-              },
-              "bg":
-              {
-                "r":68,
-                "g":118,
-                "b":185,
-                "a":255
-              },
-              "shp":"C",
-              "sty":"B"
             }
           ]
         },
@@ -575,226 +546,928 @@
         [
           {
             "cid":"C-0",
-            "date":"20210906",
-            "dur":"000600",
+            "date":"20211205",
+            "dur":"000500",
             "chg":0,
             "sDays":
             {
-              "sDaysR":"täglich",
-              "sDaysB":"003FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
+              "sDaysR":"So",
+              "sDaysI":"auch 25. Dez, 1. Jan, 15., 18. Apr, 26. Mai, 6., 16. Jun",
+              "sDaysB":"10204081020408102040810204081060C0810204081020408102040810B0408102044818224080"
             },
-            "isNotRdbl":true,
-            "badSecRefX":0,
             "dep":
             {
               "locX":0,
-              "idx":11,
+              "idx":15,
               "dProdX":0,
-              "dInR":false,
-              "dTimeS":"123600",
-              "dCncl":true,
-              "msgL":
-              [
-                {
-                  "type":"REM",
-                  "remX":0,
-                  "tagL":
-                  [
-                    "RES_LOC_H3"
-                  ]
-                }
-              ],
+              "dInR":true,
+              "dTimeS":"192500",
+              "dTimeR":"192600",
+              "dProgType":"PROGNOSED",
               "type":"N"
             },
             "arr":
             {
               "locX":1,
-              "idx":15,
-              "aOutR":false,
-              "aTimeS":"124200",
-              "aCncl":true,
-              "msgL":
-              [
-                {
-                  "type":"REM",
-                  "remX":0,
-                  "tagL":
-                  [
-                    "RES_LOC_H3"
-                  ]
-                }
-              ],
+              "idx":18,
+              "aProdX":0,
+              "aOutR":true,
+              "aTimeS":"193000",
+              "aTimeR":"193100",
+              "aProgType":"PROGNOSED",
               "type":"N"
             },
             "secL":
             [
               {
                 "type":"JNY",
-                "icoX":2,
+                "icoX":1,
                 "dep":
                 {
                   "locX":0,
-                  "idx":11,
+                  "idx":15,
                   "dProdX":0,
-                  "dInR":false,
-                  "dTimeS":"123600",
-                  "dCncl":true,
-                  "msgL":
-                  [
-                    {
-                      "type":"REM",
-                      "remX":0,
-                      "tagL":
-                      [
-                        "RES_LOC_H3"
-                      ]
-                    }
-                  ],
+                  "dInR":true,
+                  "dTimeS":"192500",
+                  "dTimeR":"192600",
+                  "dProgType":"PROGNOSED",
                   "type":"N"
                 },
                 "arr":
                 {
                   "locX":1,
-                  "idx":15,
-                  "aOutR":false,
-                  "aTimeS":"124200",
-                  "aCncl":true,
-                  "msgL":
-                  [
-                    {
-                      "type":"REM",
-                      "remX":0,
-                      "tagL":
-                      [
-                        "RES_LOC_H3"
-                      ]
-                    }
-                  ],
+                  "idx":18,
+                  "aProdX":0,
+                  "aOutR":true,
+                  "aTimeS":"193000",
+                  "aTimeR":"193100",
+                  "aProgType":"PROGNOSED",
                   "type":"N"
                 },
                 "jny":
                 {
-                  "jid":"1|153397|10|80|6092021",
+                  "jid":"1|30829|42|80|5122021",
                   "prodX":0,
-                  "dirTxt":"Langen (Hessen) Bahnhof",
+                  "dirTxt":"Frankfurt (Main) Südbahnhof",
                   "dirFlg":"1",
                   "status":"P",
-                  "isCncl":true,
-                  "isRchbl":false,
+                  "isRchbl":true,
                   "stopL":
                   [
                     {
                       "locX":0,
-                      "idx":11,
+                      "idx":15,
                       "dProdX":0,
-                      "dInR":false,
-                      "dTimeS":"123600",
-                      "dCncl":true,
-                      "dDirTxt":"Langen (Hessen) Bahnhof",
+                      "dInR":true,
+                      "dTimeS":"192500",
+                      "dTimeR":"192600",
+                      "dProgType":"PROGNOSED",
+                      "dDirTxt":"Frankfurt (Main) Südbahnhof",
                       "dDirFlg":"1",
-                      "msgL":
-                      [
-                        {
-                          "type":"REM",
-                          "remX":1,
-                          "tagL":
-                          [
-                            "RES_LOC_H3"
-                          ]
-                        }
-                      ],
                       "type":"N"
                     },
                     {
                       "locX":2,
-                      "idx":12,
+                      "idx":16,
                       "aProdX":0,
-                      "aOutR":false,
-                      "aTimeS":"123700",
-                      "aCncl":true,
+                      "aOutR":true,
+                      "aTimeS":"192600",
+                      "aTimeR":"192700",
+                      "aProgType":"PROGNOSED",
                       "dProdX":0,
-                      "dInR":false,
-                      "dTimeS":"123700",
-                      "dCncl":true,
-                      "msgL":
-                      [
-                        {
-                          "type":"REM",
-                          "remX":0,
-                          "tagL":
-                          [
-                            "RES_LOC_H3"
-                          ]
-                        }
-                      ],
+                      "dInR":true,
+                      "dTimeS":"192600",
+                      "dTimeR":"192700",
+                      "dProgType":"PROGNOSED",
                       "type":"N"
                     },
                     {
                       "locX":3,
-                      "idx":13,
+                      "idx":17,
                       "aProdX":0,
-                      "aOutR":false,
-                      "aTimeS":"123800",
-                      "aCncl":true,
+                      "aOutR":true,
+                      "aTimeS":"192800",
+                      "aTimeR":"192900",
+                      "aProgType":"PROGNOSED",
                       "dProdX":0,
-                      "dInR":false,
-                      "dTimeS":"123900",
-                      "dCncl":true,
-                      "msgL":
-                      [
-                        {
-                          "type":"REM",
-                          "remX":0,
-                          "tagL":
-                          [
-                            "RES_LOC_H3"
-                          ]
-                        }
-                      ],
-                      "type":"N"
-                    },
-                    {
-                      "locX":4,
-                      "idx":14,
-                      "aProdX":0,
-                      "aOutR":false,
-                      "aTimeS":"124000",
-                      "aCncl":true,
-                      "dProdX":0,
-                      "dInR":false,
-                      "dTimeS":"124100",
-                      "dCncl":true,
-                      "msgL":
-                      [
-                        {
-                          "type":"REM",
-                          "remX":0,
-                          "tagL":
-                          [
-                            "RES_LOC_H3"
-                          ]
-                        }
-                      ],
+                      "dInR":true,
+                      "dTimeS":"192800",
+                      "dTimeR":"192900",
+                      "dProgType":"PROGNOSED",
                       "type":"N"
                     },
                     {
                       "locX":1,
-                      "idx":15,
+                      "idx":18,
                       "aProdX":0,
-                      "aOutR":false,
-                      "aTimeS":"124200",
-                      "aCncl":true,
-                      "msgL":
-                      [
+                      "aOutR":true,
+                      "aTimeS":"193000",
+                      "aTimeR":"193100",
+                      "aProgType":"PROGNOSED",
+                      "type":"N"
+                    }
+                  ],
+                  "poly":
+                  {
+                    "delta":true,
+                    "dim":2,
+                    "type":"WGS84",
+                    "crdEncYX":"i{zpHod~s@fE|BnExInFjGbDdBjCZ??~BStIuDpIgEvDoChB{AxDeFvD_IvK}[bB{D",
+                    "crdEncS":"NNMNMNNMNKNKNNNN",
+                    "crdEncF":"????????????????",
+                    "ppLocRefL":
+                    [
+                      {
+                        "ppIdx":0,
+                        "locX":0
+                      },
+                      {
+                        "ppIdx":5,
+                        "locX":2
+                      },
+                      {
+                        "ppIdx":13,
+                        "locX":3
+                      },
+                      {
+                        "ppIdx":15,
+                        "locX":1
+                      }
+                    ]
+                  },
+                  "pos":
+                  {
+                    "x":8679040,
+                    "y":50117685,
+                    "layerX":0,
+                    "crdSysX":0
+                  },
+                  "freq":
+                  {
+                    "minC":2,
+                    "maxC":5,
+                    "numC":29,
+                    "jnyL":
+                    [
+                      {
+                        "jid":"1|28896|43|80|5122021",
+                        "prodX":1,
+                        "dirTxt":"Frankfurt (Main) Südbahnhof",
+                        "dirFlg":"1",
+                        "stbStop":
                         {
-                          "type":"REM",
-                          "remX":2,
-                          "tagL":
-                          [
-                            "RES_LOC_H3"
-                          ]
-                        }
-                      ],
+                          "locX":0,
+                          "idx":16,
+                          "dProdX":1,
+                          "dTimeS":"193000",
+                          "type":"N"
+                        },
+                        "stopL":
+                        [
+                          {
+                            "locX":0,
+                            "idx":16,
+                            "dProdX":1,
+                            "dTimeS":"193000",
+                            "dDirTxt":"Frankfurt (Main) Südbahnhof",
+                            "dDirFlg":"1",
+                            "type":"N"
+                          },
+                          {
+                            "locX":1,
+                            "idx":19,
+                            "aProdX":1,
+                            "aTimeS":"193500",
+                            "type":"N"
+                          }
+                        ],
+                        "pos":
+                        {
+                          "x":8669314,
+                          "y":50141048,
+                          "layerX":0,
+                          "crdSysX":0
+                        },
+                        "ctxRecon":"T$A=1@O=Frankfurt (Main) Hauptwache@L=3000001@a=128@$A=1@O=Frankfurt (Main) Südbahnhof@L=3000912@a=128@$202112051930$202112051935$      U1$$1$$$$",
+                        "subscr":"F"
+                      },
+                      {
+                        "jid":"1|29278|30|80|5122021",
+                        "prodX":2,
+                        "dirTxt":"Frankfurt (Main) Südbahnhof",
+                        "dirFlg":"1",
+                        "stbStop":
+                        {
+                          "locX":0,
+                          "idx":17,
+                          "dProdX":2,
+                          "dTimeS":"193500",
+                          "type":"N"
+                        },
+                        "stopL":
+                        [
+                          {
+                            "locX":0,
+                            "idx":17,
+                            "dProdX":2,
+                            "dTimeS":"193500",
+                            "dDirTxt":"Frankfurt (Main) Südbahnhof",
+                            "dDirFlg":"1",
+                            "type":"N"
+                          },
+                          {
+                            "locX":1,
+                            "idx":20,
+                            "aProdX":2,
+                            "aTimeS":"194000",
+                            "type":"N"
+                          }
+                        ],
+                        "pos":
+                        {
+                          "x":8656855,
+                          "y":50156464,
+                          "layerX":0,
+                          "crdSysX":0
+                        },
+                        "ctxRecon":"T$A=1@O=Frankfurt (Main) Hauptwache@L=3000001@a=128@$A=1@O=Frankfurt (Main) Südbahnhof@L=3000912@a=128@$202112051935$202112051940$      U2$$1$$$$",
+                        "subscr":"F"
+                      },
+                      {
+                        "jid":"1|29462|21|80|5122021",
+                        "prodX":3,
+                        "dirTxt":"Frankfurt (Main) Südbahnhof",
+                        "dirFlg":"1",
+                        "stbStop":
+                        {
+                          "locX":0,
+                          "idx":24,
+                          "dProdX":3,
+                          "dTimeS":"193800",
+                          "type":"N"
+                        },
+                        "stopL":
+                        [
+                          {
+                            "locX":0,
+                            "idx":24,
+                            "dProdX":3,
+                            "dTimeS":"193800",
+                            "dDirTxt":"Frankfurt (Main) Südbahnhof",
+                            "dDirFlg":"1",
+                            "type":"N"
+                          },
+                          {
+                            "locX":1,
+                            "idx":27,
+                            "aProdX":3,
+                            "aTimeS":"194300",
+                            "type":"N"
+                          }
+                        ],
+                        "pos":
+                        {
+                          "x":8645483,
+                          "y":50163557,
+                          "layerX":0,
+                          "crdSysX":0
+                        },
+                        "ctxRecon":"T$A=1@O=Frankfurt (Main) Hauptwache@L=3000001@a=128@$A=1@O=Frankfurt (Main) Südbahnhof@L=3000912@a=128@$202112051938$202112051943$      U3$$1$$$$",
+                        "subscr":"F"
+                      },
+                      {
+                        "jid":"1|30829|43|80|5122021",
+                        "prodX":4,
+                        "dirTxt":"Frankfurt (Main) Südbahnhof",
+                        "dirFlg":"1",
+                        "stbStop":
+                        {
+                          "locX":0,
+                          "idx":15,
+                          "dProdX":4,
+                          "dTimeS":"194000",
+                          "type":"N"
+                        },
+                        "stopL":
+                        [
+                          {
+                            "locX":0,
+                            "idx":15,
+                            "dProdX":4,
+                            "dTimeS":"194000",
+                            "dDirTxt":"Frankfurt (Main) Südbahnhof",
+                            "dDirFlg":"1",
+                            "type":"N"
+                          },
+                          {
+                            "locX":1,
+                            "idx":18,
+                            "aProdX":4,
+                            "aTimeS":"194500",
+                            "type":"N"
+                          }
+                        ],
+                        "pos":
+                        {
+                          "x":8629375,
+                          "y":50167116,
+                          "layerX":0,
+                          "crdSysX":0
+                        },
+                        "ctxRecon":"T$A=1@O=Frankfurt (Main) Hauptwache@L=3000001@a=128@$A=1@O=Frankfurt (Main) Südbahnhof@L=3000912@a=128@$202112051940$202112051945$      U8$$1$$$$",
+                        "subscr":"F"
+                      },
+                      {
+                        "jid":"1|28896|44|80|5122021",
+                        "prodX":5,
+                        "dirTxt":"Frankfurt (Main) Südbahnhof",
+                        "dirFlg":"1",
+                        "stbStop":
+                        {
+                          "locX":0,
+                          "idx":16,
+                          "dProdX":5,
+                          "dTimeS":"194500",
+                          "type":"N"
+                        },
+                        "stopL":
+                        [
+                          {
+                            "locX":0,
+                            "idx":16,
+                            "dProdX":5,
+                            "dTimeS":"194500",
+                            "dDirTxt":"Frankfurt (Main) Südbahnhof",
+                            "dDirFlg":"1",
+                            "type":"N"
+                          },
+                          {
+                            "locX":1,
+                            "idx":19,
+                            "aProdX":5,
+                            "aTimeS":"195000",
+                            "type":"N"
+                          }
+                        ],
+                        "pos":
+                        {
+                          "x":8642337,
+                          "y":50143583,
+                          "layerX":0,
+                          "crdSysX":0
+                        },
+                        "ctxRecon":"T$A=1@O=Frankfurt (Main) Hauptwache@L=3000001@a=128@$A=1@O=Frankfurt (Main) Südbahnhof@L=3000912@a=128@$202112051945$202112051950$      U1$$1$$$$",
+                        "subscr":"F"
+                      }
+                    ]
+                  },
+                  "ctxRecon":"T$A=1@O=Frankfurt (Main) Hauptwache@L=3000001@a=128@$A=1@O=Frankfurt (Main) Südbahnhof@L=3000912@a=128@$202112051925$202112051930$      U8$$1$$$$",
+                  "subscr":"F"
+                }
+              }
+            ],
+            "ctxRecon":"¶HKI¶T$A=1@O=Frankfurt (Main) Hauptwache@L=3000001@a=128@$A=1@O=Frankfurt (Main) Südbahnhof@L=3000912@a=128@$202112051925$202112051930$      U8$$1$$$$",
+            "freq":
+            {
+              "minC":2
+            },
+            "conSubscr":"F",
+            "cksum":"0b78dc38_3"
+          },
+          {
+            "cid":"C-1",
+            "date":"20211205",
+            "dur":"000500",
+            "chg":0,
+            "sDays":
+            {
+              "sDaysR":"So",
+              "sDaysI":"auch 25. Dez, 1. Jan, 15., 18. Apr, 26. Mai, 6., 16. Jun",
+              "sDaysB":"10204081020408102040810204081060C0810204081020408102040810B0408102044818224080"
+            },
+            "dep":
+            {
+              "locX":0,
+              "idx":16,
+              "dProdX":1,
+              "dInR":true,
+              "dTimeS":"193000",
+              "dTimeR":"193100",
+              "dProgType":"PROGNOSED",
+              "type":"N"
+            },
+            "arr":
+            {
+              "locX":1,
+              "idx":19,
+              "aProdX":1,
+              "aOutR":true,
+              "aTimeS":"193500",
+              "aTimeR":"193600",
+              "aProgType":"PROGNOSED",
+              "type":"N"
+            },
+            "secL":
+            [
+              {
+                "type":"JNY",
+                "icoX":1,
+                "dep":
+                {
+                  "locX":0,
+                  "idx":16,
+                  "dProdX":1,
+                  "dInR":true,
+                  "dTimeS":"193000",
+                  "dTimeR":"193100",
+                  "dProgType":"PROGNOSED",
+                  "type":"N"
+                },
+                "arr":
+                {
+                  "locX":1,
+                  "idx":19,
+                  "aProdX":1,
+                  "aOutR":true,
+                  "aTimeS":"193500",
+                  "aTimeR":"193600",
+                  "aProgType":"PROGNOSED",
+                  "type":"N"
+                },
+                "jny":
+                {
+                  "jid":"1|28896|43|80|5122021",
+                  "prodX":1,
+                  "dirTxt":"Frankfurt (Main) Südbahnhof",
+                  "dirFlg":"1",
+                  "status":"P",
+                  "isRchbl":true,
+                  "stopL":
+                  [
+                    {
+                      "locX":0,
+                      "idx":16,
+                      "dProdX":1,
+                      "dInR":true,
+                      "dTimeS":"193000",
+                      "dTimeR":"193100",
+                      "dProgType":"PROGNOSED",
+                      "dDirTxt":"Frankfurt (Main) Südbahnhof",
+                      "dDirFlg":"1",
+                      "type":"N"
+                    },
+                    {
+                      "locX":2,
+                      "idx":17,
+                      "aProdX":1,
+                      "aOutR":true,
+                      "aTimeS":"193100",
+                      "aTimeR":"193200",
+                      "aProgType":"PROGNOSED",
+                      "dProdX":1,
+                      "dInR":true,
+                      "dTimeS":"193100",
+                      "dTimeR":"193200",
+                      "dProgType":"PROGNOSED",
+                      "type":"N"
+                    },
+                    {
+                      "locX":3,
+                      "idx":18,
+                      "aProdX":1,
+                      "aOutR":true,
+                      "aTimeS":"193300",
+                      "aTimeR":"193400",
+                      "aProgType":"PROGNOSED",
+                      "dProdX":1,
+                      "dInR":true,
+                      "dTimeS":"193300",
+                      "dTimeR":"193400",
+                      "dProgType":"PROGNOSED",
+                      "type":"N"
+                    },
+                    {
+                      "locX":1,
+                      "idx":19,
+                      "aProdX":1,
+                      "aOutR":true,
+                      "aTimeS":"193500",
+                      "aTimeR":"193600",
+                      "aProgType":"PROGNOSED",
+                      "type":"N"
+                    }
+                  ],
+                  "poly":
+                  {
+                    "delta":true,
+                    "dim":2,
+                    "type":"WGS84",
+                    "crdEncYX":"i{zpHod~s@fE|BnExInFjGbDdBjCZ??~BStIuDpIgEvDoChB{AxDeFvD_IvK}[bB{D",
+                    "crdEncS":"NNMNMNNMNKNKNNNN",
+                    "crdEncF":"????????????????",
+                    "ppLocRefL":
+                    [
+                      {
+                        "ppIdx":0,
+                        "locX":0
+                      },
+                      {
+                        "ppIdx":5,
+                        "locX":2
+                      },
+                      {
+                        "ppIdx":13,
+                        "locX":3
+                      },
+                      {
+                        "ppIdx":15,
+                        "locX":1
+                      }
+                    ]
+                  },
+                  "pos":
+                  {
+                    "x":8669314,
+                    "y":50141048,
+                    "layerX":0,
+                    "crdSysX":0
+                  },
+                  "freq":
+                  {
+                    "minC":2,
+                    "maxC":5,
+                    "numC":29,
+                    "jnyL":
+                    [
+                      {
+                        "jid":"1|29278|30|80|5122021",
+                        "prodX":2,
+                        "dirTxt":"Frankfurt (Main) Südbahnhof",
+                        "dirFlg":"1",
+                        "stbStop":
+                        {
+                          "locX":0,
+                          "idx":17,
+                          "dProdX":2,
+                          "dTimeS":"193500",
+                          "type":"N"
+                        },
+                        "stopL":
+                        [
+                          {
+                            "locX":0,
+                            "idx":17,
+                            "dProdX":2,
+                            "dTimeS":"193500",
+                            "dDirTxt":"Frankfurt (Main) Südbahnhof",
+                            "dDirFlg":"1",
+                            "type":"N"
+                          },
+                          {
+                            "locX":1,
+                            "idx":20,
+                            "aProdX":2,
+                            "aTimeS":"194000",
+                            "type":"N"
+                          }
+                        ],
+                        "pos":
+                        {
+                          "x":8656855,
+                          "y":50156464,
+                          "layerX":0,
+                          "crdSysX":0
+                        },
+                        "ctxRecon":"T$A=1@O=Frankfurt (Main) Hauptwache@L=3000001@a=128@$A=1@O=Frankfurt (Main) Südbahnhof@L=3000912@a=128@$202112051935$202112051940$      U2$$1$$$$",
+                        "subscr":"F"
+                      },
+                      {
+                        "jid":"1|29462|21|80|5122021",
+                        "prodX":3,
+                        "dirTxt":"Frankfurt (Main) Südbahnhof",
+                        "dirFlg":"1",
+                        "stbStop":
+                        {
+                          "locX":0,
+                          "idx":24,
+                          "dProdX":3,
+                          "dTimeS":"193800",
+                          "type":"N"
+                        },
+                        "stopL":
+                        [
+                          {
+                            "locX":0,
+                            "idx":24,
+                            "dProdX":3,
+                            "dTimeS":"193800",
+                            "dDirTxt":"Frankfurt (Main) Südbahnhof",
+                            "dDirFlg":"1",
+                            "type":"N"
+                          },
+                          {
+                            "locX":1,
+                            "idx":27,
+                            "aProdX":3,
+                            "aTimeS":"194300",
+                            "type":"N"
+                          }
+                        ],
+                        "pos":
+                        {
+                          "x":8645483,
+                          "y":50163557,
+                          "layerX":0,
+                          "crdSysX":0
+                        },
+                        "ctxRecon":"T$A=1@O=Frankfurt (Main) Hauptwache@L=3000001@a=128@$A=1@O=Frankfurt (Main) Südbahnhof@L=3000912@a=128@$202112051938$202112051943$      U3$$1$$$$",
+                        "subscr":"F"
+                      },
+                      {
+                        "jid":"1|30829|43|80|5122021",
+                        "prodX":4,
+                        "dirTxt":"Frankfurt (Main) Südbahnhof",
+                        "dirFlg":"1",
+                        "stbStop":
+                        {
+                          "locX":0,
+                          "idx":15,
+                          "dProdX":4,
+                          "dTimeS":"194000",
+                          "type":"N"
+                        },
+                        "stopL":
+                        [
+                          {
+                            "locX":0,
+                            "idx":15,
+                            "dProdX":4,
+                            "dTimeS":"194000",
+                            "dDirTxt":"Frankfurt (Main) Südbahnhof",
+                            "dDirFlg":"1",
+                            "type":"N"
+                          },
+                          {
+                            "locX":1,
+                            "idx":18,
+                            "aProdX":4,
+                            "aTimeS":"194500",
+                            "type":"N"
+                          }
+                        ],
+                        "pos":
+                        {
+                          "x":8629375,
+                          "y":50167116,
+                          "layerX":0,
+                          "crdSysX":0
+                        },
+                        "ctxRecon":"T$A=1@O=Frankfurt (Main) Hauptwache@L=3000001@a=128@$A=1@O=Frankfurt (Main) Südbahnhof@L=3000912@a=128@$202112051940$202112051945$      U8$$1$$$$",
+                        "subscr":"F"
+                      },
+                      {
+                        "jid":"1|28896|44|80|5122021",
+                        "prodX":5,
+                        "dirTxt":"Frankfurt (Main) Südbahnhof",
+                        "dirFlg":"1",
+                        "stbStop":
+                        {
+                          "locX":0,
+                          "idx":16,
+                          "dProdX":5,
+                          "dTimeS":"194500",
+                          "type":"N"
+                        },
+                        "stopL":
+                        [
+                          {
+                            "locX":0,
+                            "idx":16,
+                            "dProdX":5,
+                            "dTimeS":"194500",
+                            "dDirTxt":"Frankfurt (Main) Südbahnhof",
+                            "dDirFlg":"1",
+                            "type":"N"
+                          },
+                          {
+                            "locX":1,
+                            "idx":19,
+                            "aProdX":5,
+                            "aTimeS":"195000",
+                            "type":"N"
+                          }
+                        ],
+                        "pos":
+                        {
+                          "x":8642337,
+                          "y":50143583,
+                          "layerX":0,
+                          "crdSysX":0
+                        },
+                        "ctxRecon":"T$A=1@O=Frankfurt (Main) Hauptwache@L=3000001@a=128@$A=1@O=Frankfurt (Main) Südbahnhof@L=3000912@a=128@$202112051945$202112051950$      U1$$1$$$$",
+                        "subscr":"F"
+                      },
+                      {
+                        "jid":"1|29278|31|80|5122021",
+                        "prodX":6,
+                        "dirTxt":"Frankfurt (Main) Südbahnhof",
+                        "dirFlg":"1",
+                        "stbStop":
+                        {
+                          "locX":0,
+                          "idx":17,
+                          "dProdX":6,
+                          "dTimeS":"195000",
+                          "type":"N"
+                        },
+                        "stopL":
+                        [
+                          {
+                            "locX":0,
+                            "idx":17,
+                            "dProdX":6,
+                            "dTimeS":"195000",
+                            "dDirTxt":"Frankfurt (Main) Südbahnhof",
+                            "dDirFlg":"1",
+                            "type":"N"
+                          },
+                          {
+                            "locX":1,
+                            "idx":20,
+                            "aProdX":6,
+                            "aTimeS":"195500",
+                            "type":"N"
+                          }
+                        ],
+                        "pos":
+                        {
+                          "x":8649538,
+                          "y":50215029,
+                          "layerX":0,
+                          "crdSysX":0
+                        },
+                        "ctxRecon":"T$A=1@O=Frankfurt (Main) Hauptwache@L=3000001@a=128@$A=1@O=Frankfurt (Main) Südbahnhof@L=3000912@a=128@$202112051950$202112051955$      U2$$1$$$$",
+                        "subscr":"F"
+                      }
+                    ]
+                  },
+                  "ctxRecon":"T$A=1@O=Frankfurt (Main) Hauptwache@L=3000001@a=128@$A=1@O=Frankfurt (Main) Südbahnhof@L=3000912@a=128@$202112051930$202112051935$      U1$$1$$$$",
+                  "subscr":"F"
+                }
+              }
+            ],
+            "ctxRecon":"¶HKI¶T$A=1@O=Frankfurt (Main) Hauptwache@L=3000001@a=128@$A=1@O=Frankfurt (Main) Südbahnhof@L=3000912@a=128@$202112051930$202112051935$      U1$$1$$$$",
+            "freq":
+            {
+              "minC":2
+            },
+            "conSubscr":"F",
+            "cksum":"7a84b6f6_3"
+          },
+          {
+            "cid":"C-2",
+            "date":"20211205",
+            "dur":"000600",
+            "chg":0,
+            "sDays":
+            {
+              "sDaysR":"nicht täglich",
+              "sDaysI":"5. bis 11. Dez 2021",
+              "sDaysB":"079F3C7CFFFFFFFFFFFFFFFFFFF000000000000000000000000000000000000000000000000000"
+            },
+            "dep":
+            {
+              "locX":0,
+              "idx":16,
+              "dProdX":7,
+              "dPlatfS":"2",
+              "dPlatfR":"2",
+              "dInR":true,
+              "dTimeS":"193100",
+              "dTimeR":"193400",
+              "dProgType":"PROGNOSED",
+              "type":"N"
+            },
+            "arr":
+            {
+              "locX":1,
+              "idx":20,
+              "aProdX":7,
+              "aPlatfS":"3",
+              "aPlatfR":"3",
+              "aOutR":true,
+              "aTimeS":"193700",
+              "aTimeR":"194000",
+              "aProgType":"PROGNOSED",
+              "type":"N"
+            },
+            "secL":
+            [
+              {
+                "type":"JNY",
+                "icoX":3,
+                "dep":
+                {
+                  "locX":0,
+                  "idx":16,
+                  "dProdX":7,
+                  "dPlatfS":"2",
+                  "dPlatfR":"2",
+                  "dInR":true,
+                  "dTimeS":"193100",
+                  "dTimeR":"193400",
+                  "dProgType":"PROGNOSED",
+                  "type":"N"
+                },
+                "arr":
+                {
+                  "locX":1,
+                  "idx":20,
+                  "aProdX":7,
+                  "aPlatfS":"3",
+                  "aPlatfR":"3",
+                  "aOutR":true,
+                  "aTimeS":"193700",
+                  "aTimeR":"194000",
+                  "aProgType":"PROGNOSED",
+                  "type":"N"
+                },
+                "jny":
+                {
+                  "jid":"1|184367|1|80|5122021",
+                  "prodX":7,
+                  "dirTxt":"Frankfurt (Main) Südbahnhof",
+                  "dirFlg":"1",
+                  "status":"P",
+                  "isRedir":true,
+                  "isRchbl":true,
+                  "stopL":
+                  [
+                    {
+                      "locX":0,
+                      "idx":16,
+                      "dProdX":7,
+                      "dInR":true,
+                      "dTimeS":"193100",
+                      "dTimeR":"193400",
+                      "dProgType":"PROGNOSED",
+                      "dDirTxt":"Frankfurt (Main) Südbahnhof",
+                      "dDirFlg":"1",
+                      "type":"N"
+                    },
+                    {
+                      "locX":4,
+                      "idx":17,
+                      "aProdX":7,
+                      "aOutR":true,
+                      "aTimeS":"193200",
+                      "aTimeR":"193500",
+                      "aProgType":"PROGNOSED",
+                      "dProdX":7,
+                      "dInR":true,
+                      "dTimeS":"193200",
+                      "dTimeR":"193600",
+                      "dProgType":"PROGNOSED",
+                      "type":"N"
+                    },
+                    {
+                      "locX":5,
+                      "idx":18,
+                      "aProdX":7,
+                      "aOutR":true,
+                      "aTimeS":"193300",
+                      "aTimeR":"193700",
+                      "aProgType":"PROGNOSED",
+                      "dProdX":7,
+                      "dInR":true,
+                      "dTimeS":"193400",
+                      "dTimeR":"193700",
+                      "dProgType":"PROGNOSED",
+                      "type":"N"
+                    },
+                    {
+                      "locX":6,
+                      "idx":19,
+                      "aProdX":7,
+                      "aOutR":true,
+                      "aTimeS":"193500",
+                      "aTimeR":"193900",
+                      "aProgType":"PROGNOSED",
+                      "dProdX":7,
+                      "dInR":true,
+                      "dTimeS":"193600",
+                      "dTimeR":"193900",
+                      "dProgType":"PROGNOSED",
+                      "type":"N"
+                    },
+                    {
+                      "locX":1,
+                      "idx":20,
+                      "aProdX":7,
+                      "aOutR":true,
+                      "aTimeS":"193700",
+                      "aTimeR":"194000",
+                      "aProgType":"PROGNOSED",
                       "type":"N"
                     }
                   ],
@@ -814,15 +1487,15 @@
                       },
                       {
                         "ppIdx":5,
-                        "locX":2
+                        "locX":4
                       },
                       {
                         "ppIdx":13,
-                        "locX":3
+                        "locX":5
                       },
                       {
                         "ppIdx":23,
-                        "locX":4
+                        "locX":6
                       },
                       {
                         "ppIdx":29,
@@ -830,92 +1503,31 @@
                       }
                     ]
                   },
+                  "pos":
+                  {
+                    "x":8643425,
+                    "y":50111680,
+                    "layerX":0,
+                    "crdSysX":0
+                  },
                   "freq":
                   {
                     "minC":10,
-                    "maxC":50,
-                    "numC":4,
+                    "maxC":20,
+                    "numC":11,
                     "jnyL":
                     [
                       {
-                        "jid":"1|153196|12|80|6092021",
-                        "prodX":1,
-                        "dirTxt":"Darmstadt Hauptbahnhof",
-                        "dirFlg":"1",
-                        "stbStop":
-                        {
-                          "locX":0,
-                          "idx":13,
-                          "dProdX":1,
-                          "dTimeS":"132100",
-                          "type":"N"
-                        },
-                        "stopL":
-                        [
-                          {
-                            "locX":0,
-                            "idx":13,
-                            "dProdX":1,
-                            "dTimeS":"132100",
-                            "dDirTxt":"Darmstadt Hauptbahnhof",
-                            "dDirFlg":"1",
-                            "type":"N"
-                          },
-                          {
-                            "locX":1,
-                            "idx":17,
-                            "aProdX":1,
-                            "aTimeS":"132700",
-                            "type":"N"
-                          }
-                        ],
-                        "ctxRecon":"T$A=1@O=Frankfurt (Main) Hauptwache@L=3000001@a=128@$A=1@O=Frankfurt (Main) Südbahnhof@L=3000912@a=128@$202109061321$202109061327$      S3$$1$$$$",
-                        "msgL":
-                        [
-                          {
-                            "type":"REM",
-                            "remX":3,
-                            "fLocX":0,
-                            "tLocX":1,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ]
-                          },
-                          {
-                            "type":"REM",
-                            "remX":4,
-                            "fLocX":0,
-                            "tLocX":1,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ]
-                          },
-                          {
-                            "type":"REM",
-                            "remX":5,
-                            "fLocX":0,
-                            "tLocX":1,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ]
-                          }
-                        ],
-                        "subscr":"F"
-                      },
-                      {
-                        "jid":"1|153557|13|80|6092021",
-                        "prodX":2,
+                        "jid":"1|184163|24|80|5122021",
+                        "prodX":8,
                         "dirTxt":"Frankfurt (Main) Südbahnhof",
                         "dirFlg":"1",
                         "stbStop":
                         {
                           "locX":0,
                           "idx":12,
-                          "dProdX":2,
-                          "dTimeS":"141100",
+                          "dProdX":8,
+                          "dTimeS":"194100",
                           "type":"N"
                         },
                         "stopL":
@@ -923,8 +1535,8 @@
                           {
                             "locX":0,
                             "idx":12,
-                            "dProdX":2,
-                            "dTimeS":"141100",
+                            "dProdX":8,
+                            "dTimeS":"194100",
                             "dDirTxt":"Frankfurt (Main) Südbahnhof",
                             "dDirFlg":"1",
                             "type":"N"
@@ -932,37 +1544,54 @@
                           {
                             "locX":1,
                             "idx":16,
-                            "aProdX":2,
-                            "aTimeS":"141700",
+                            "aProdX":8,
+                            "aTimeS":"194700",
                             "type":"N"
                           }
                         ],
-                        "ctxRecon":"T$A=1@O=Frankfurt (Main) Hauptwache@L=3000001@a=128@$A=1@O=Frankfurt (Main) Südbahnhof@L=3000912@a=128@$202109061411$202109061417$      S5$$1$$$$",
+                        "pos":
+                        {
+                          "x":8591126,
+                          "y":50149938,
+                          "layerX":0,
+                          "crdSysX":0
+                        },
+                        "ctxRecon":"T$A=1@O=Frankfurt (Main) Hauptwache@L=3000001@a=128@$A=1@O=Frankfurt (Main) Südbahnhof@L=3000912@a=128@$202112051941$202112051947$      S5$$1$$$$",
                         "msgL":
                         [
                           {
                             "type":"REM",
+                            "remX":0,
+                            "fLocX":0,
+                            "tLocX":1,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ]
+                          },
+                          {
+                            "type":"REM",
+                            "remX":1,
+                            "fLocX":0,
+                            "tLocX":1,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ]
+                          },
+                          {
+                            "type":"REM",
+                            "remX":2,
+                            "fLocX":0,
+                            "tLocX":1,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ]
+                          },
+                          {
+                            "type":"REM",
                             "remX":3,
-                            "fLocX":0,
-                            "tLocX":1,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ]
-                          },
-                          {
-                            "type":"REM",
-                            "remX":4,
-                            "fLocX":0,
-                            "tLocX":1,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ]
-                          },
-                          {
-                            "type":"REM",
-                            "remX":5,
                             "fLocX":0,
                             "tLocX":1,
                             "tagL":
@@ -974,16 +1603,16 @@
                         "subscr":"F"
                       },
                       {
-                        "jid":"1|153197|1|80|6092021",
-                        "prodX":3,
+                        "jid":"1|183896|25|80|5122021",
+                        "prodX":9,
                         "dirTxt":"Darmstadt Hauptbahnhof",
                         "dirFlg":"1",
                         "stbStop":
                         {
                           "locX":0,
                           "idx":13,
-                          "dProdX":3,
-                          "dTimeS":"142100",
+                          "dProdX":9,
+                          "dTimeS":"195100",
                           "type":"N"
                         },
                         "stopL":
@@ -991,8 +1620,8 @@
                           {
                             "locX":0,
                             "idx":13,
-                            "dProdX":3,
-                            "dTimeS":"142100",
+                            "dProdX":9,
+                            "dTimeS":"195100",
                             "dDirTxt":"Darmstadt Hauptbahnhof",
                             "dDirFlg":"1",
                             "type":"N"
@@ -1000,37 +1629,54 @@
                           {
                             "locX":1,
                             "idx":17,
-                            "aProdX":3,
-                            "aTimeS":"142700",
+                            "aProdX":9,
+                            "aTimeS":"195700",
                             "type":"N"
                           }
                         ],
-                        "ctxRecon":"T$A=1@O=Frankfurt (Main) Hauptwache@L=3000001@a=128@$A=1@O=Frankfurt (Main) Südbahnhof@L=3000912@a=128@$202109061421$202109061427$      S3$$1$$$$",
+                        "pos":
+                        {
+                          "x":8528219,
+                          "y":50154585,
+                          "layerX":0,
+                          "crdSysX":0
+                        },
+                        "ctxRecon":"T$A=1@O=Frankfurt (Main) Hauptwache@L=3000001@a=128@$A=1@O=Frankfurt (Main) Südbahnhof@L=3000912@a=128@$202112051951$202112051957$      S3$$1$$$$",
                         "msgL":
                         [
                           {
                             "type":"REM",
+                            "remX":0,
+                            "fLocX":0,
+                            "tLocX":1,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ]
+                          },
+                          {
+                            "type":"REM",
+                            "remX":1,
+                            "fLocX":0,
+                            "tLocX":1,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ]
+                          },
+                          {
+                            "type":"REM",
+                            "remX":2,
+                            "fLocX":0,
+                            "tLocX":1,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ]
+                          },
+                          {
+                            "type":"REM",
                             "remX":3,
-                            "fLocX":0,
-                            "tLocX":1,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ]
-                          },
-                          {
-                            "type":"REM",
-                            "remX":4,
-                            "fLocX":0,
-                            "tLocX":1,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ]
-                          },
-                          {
-                            "type":"REM",
-                            "remX":5,
                             "fLocX":0,
                             "tLocX":1,
                             "tagL":
@@ -1042,40 +1688,70 @@
                         "subscr":"F"
                       },
                       {
-                        "jid":"1|153397|15|80|6092021",
-                        "prodX":4,
-                        "dirTxt":"Langen (Hessen) Bahnhof",
+                        "jid":"1|184163|25|80|5122021",
+                        "prodX":10,
+                        "dirTxt":"Frankfurt (Main) Südbahnhof",
                         "dirFlg":"1",
                         "stbStop":
                         {
                           "locX":0,
-                          "idx":11,
-                          "dProdX":4,
-                          "dTimeS":"150600",
+                          "idx":12,
+                          "dProdX":10,
+                          "dTimeS":"201100",
                           "type":"N"
                         },
                         "stopL":
                         [
                           {
                             "locX":0,
-                            "idx":11,
-                            "dProdX":4,
-                            "dTimeS":"150600",
-                            "dDirTxt":"Langen (Hessen) Bahnhof",
+                            "idx":12,
+                            "dProdX":10,
+                            "dTimeS":"201100",
+                            "dDirTxt":"Frankfurt (Main) Südbahnhof",
                             "dDirFlg":"1",
                             "type":"N"
                           },
                           {
                             "locX":1,
-                            "idx":15,
-                            "aProdX":4,
-                            "aTimeS":"151200",
+                            "idx":16,
+                            "aProdX":10,
+                            "aTimeS":"201700",
                             "type":"N"
                           }
                         ],
-                        "ctxRecon":"T$A=1@O=Frankfurt (Main) Hauptwache@L=3000001@a=128@$A=1@O=Frankfurt (Main) Südbahnhof@L=3000912@a=128@$202109061506$202109061512$      S4$$1$$$$",
+                        "ctxRecon":"T$A=1@O=Frankfurt (Main) Hauptwache@L=3000001@a=128@$A=1@O=Frankfurt (Main) Südbahnhof@L=3000912@a=128@$202112052011$202112052017$      S5$$1$$$$",
                         "msgL":
                         [
+                          {
+                            "type":"REM",
+                            "remX":0,
+                            "fLocX":0,
+                            "tLocX":1,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ]
+                          },
+                          {
+                            "type":"REM",
+                            "remX":1,
+                            "fLocX":0,
+                            "tLocX":1,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ]
+                          },
+                          {
+                            "type":"REM",
+                            "remX":2,
+                            "fLocX":0,
+                            "tLocX":1,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ]
+                          },
                           {
                             "type":"REM",
                             "remX":3,
@@ -1085,10 +1761,48 @@
                             [
                               "RES_JNY_DTL"
                             ]
+                          }
+                        ],
+                        "subscr":"F"
+                      },
+                      {
+                        "jid":"1|183896|26|80|5122021",
+                        "prodX":11,
+                        "dirTxt":"Darmstadt Hauptbahnhof",
+                        "dirFlg":"1",
+                        "stbStop":
+                        {
+                          "locX":0,
+                          "idx":13,
+                          "dProdX":11,
+                          "dTimeS":"202100",
+                          "type":"N"
+                        },
+                        "stopL":
+                        [
+                          {
+                            "locX":0,
+                            "idx":13,
+                            "dProdX":11,
+                            "dTimeS":"202100",
+                            "dDirTxt":"Darmstadt Hauptbahnhof",
+                            "dDirFlg":"1",
+                            "type":"N"
                           },
                           {
+                            "locX":1,
+                            "idx":17,
+                            "aProdX":11,
+                            "aTimeS":"202700",
+                            "type":"N"
+                          }
+                        ],
+                        "ctxRecon":"T$A=1@O=Frankfurt (Main) Hauptwache@L=3000001@a=128@$A=1@O=Frankfurt (Main) Südbahnhof@L=3000912@a=128@$202112052021$202112052027$      S3$$1$$$$",
+                        "msgL":
+                        [
+                          {
                             "type":"REM",
-                            "remX":4,
+                            "remX":0,
                             "fLocX":0,
                             "tLocX":1,
                             "tagL":
@@ -1098,7 +1812,105 @@
                           },
                           {
                             "type":"REM",
-                            "remX":5,
+                            "remX":1,
+                            "fLocX":0,
+                            "tLocX":1,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ]
+                          },
+                          {
+                            "type":"REM",
+                            "remX":2,
+                            "fLocX":0,
+                            "tLocX":1,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ]
+                          },
+                          {
+                            "type":"REM",
+                            "remX":3,
+                            "fLocX":0,
+                            "tLocX":1,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ]
+                          }
+                        ],
+                        "subscr":"F"
+                      },
+                      {
+                        "jid":"1|184422|0|80|5122021",
+                        "prodX":12,
+                        "dirTxt":"Frankfurt (Main) Südbahnhof",
+                        "dirFlg":"1",
+                        "stbStop":
+                        {
+                          "locX":0,
+                          "idx":16,
+                          "dProdX":12,
+                          "dTimeS":"203100",
+                          "type":"N"
+                        },
+                        "stopL":
+                        [
+                          {
+                            "locX":0,
+                            "idx":16,
+                            "dProdX":12,
+                            "dTimeS":"203100",
+                            "dDirTxt":"Frankfurt (Main) Südbahnhof",
+                            "dDirFlg":"1",
+                            "type":"N"
+                          },
+                          {
+                            "locX":1,
+                            "idx":20,
+                            "aProdX":12,
+                            "aTimeS":"203700",
+                            "type":"N"
+                          }
+                        ],
+                        "ctxRecon":"T$A=1@O=Frankfurt (Main) Hauptwache@L=3000001@a=128@$A=1@O=Frankfurt (Main) Südbahnhof@L=3000912@a=128@$202112052031$202112052037$      S6$$1$$$$",
+                        "msgL":
+                        [
+                          {
+                            "type":"REM",
+                            "remX":0,
+                            "fLocX":0,
+                            "tLocX":1,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ]
+                          },
+                          {
+                            "type":"REM",
+                            "remX":1,
+                            "fLocX":0,
+                            "tLocX":1,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ]
+                          },
+                          {
+                            "type":"REM",
+                            "remX":2,
+                            "fLocX":0,
+                            "tLocX":1,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ]
+                          },
+                          {
+                            "type":"REM",
+                            "remX":3,
                             "fLocX":0,
                             "tLocX":1,
                             "tagL":
@@ -1111,9 +1923,39 @@
                       }
                     ]
                   },
-                  "ctxRecon":"T$A=1@O=Frankfurt (Main) Hauptwache@L=3000001@a=128@$A=1@O=Frankfurt (Main) Südbahnhof@L=3000912@a=128@$202109061236$202109061242$      S4$$1$$$$",
+                  "ctxRecon":"T$A=1@O=Frankfurt (Main) Hauptwache@L=3000001@a=128@$A=1@O=Frankfurt (Main) Südbahnhof@L=3000912@a=128@$202112051931$202112051937$      S6$$3$$$$",
                   "msgL":
                   [
+                    {
+                      "type":"REM",
+                      "remX":0,
+                      "fLocX":0,
+                      "tLocX":1,
+                      "tagL":
+                      [
+                        "RES_JNY_DTL"
+                      ]
+                    },
+                    {
+                      "type":"REM",
+                      "remX":1,
+                      "fLocX":0,
+                      "tLocX":1,
+                      "tagL":
+                      [
+                        "RES_JNY_DTL"
+                      ]
+                    },
+                    {
+                      "type":"REM",
+                      "remX":2,
+                      "fLocX":0,
+                      "tLocX":1,
+                      "tagL":
+                      [
+                        "RES_JNY_DTL"
+                      ]
+                    },
                     {
                       "type":"REM",
                       "remX":3,
@@ -1123,843 +1965,26 @@
                       [
                         "RES_JNY_DTL"
                       ]
-                    },
-                    {
-                      "type":"REM",
-                      "remX":4,
-                      "fLocX":0,
-                      "tLocX":1,
-                      "tagL":
-                      [
-                        "RES_JNY_DTL"
-                      ]
-                    },
-                    {
-                      "type":"REM",
-                      "remX":5,
-                      "fLocX":0,
-                      "tLocX":1,
-                      "tagL":
-                      [
-                        "RES_JNY_DTL"
-                      ]
-                    },
-                    {
-                      "type":"REM",
-                      "remX":6,
-                      "tagL":
-                      [
-                        "SUM_CON_HDR_H3","RES_SEC_HDR_H3"
-                      ]
                     }
                   ],
                   "subscr":"F"
                 }
               }
             ],
-            "ctxRecon":"¶HKI¶T$A=1@O=Frankfurt (Main) Hauptwache@L=3000001@a=128@$A=1@O=Frankfurt (Main) Südbahnhof@L=3000912@a=128@$202109061236$202109061242$      S4$$1$$$$",
+            "ctxRecon":"¶HKI¶T$A=1@O=Frankfurt (Main) Hauptwache@L=3000001@a=128@$A=1@O=Frankfurt (Main) Südbahnhof@L=3000912@a=128@$202112051931$202112051937$      S6$$3$$$$",
             "freq":
             {
               "minC":10
             },
-            "msgL":
-            [
-              {
-                "type":"REM",
-                "remX":7,
-                "tagL":
-                [
-                  "SUM_CON_HDR_H3","RES_CON_HDR_H3"
-                ]
-              }
-            ],
             "conSubscr":"F",
-            "cksum":"bf4a99f6_3"
-          },
-          {
-            "cid":"C-1",
-            "date":"20210906",
-            "dur":"000500",
-            "chg":0,
-            "sDays":
-            {
-              "sDaysR":"Mo - Sa",
-              "sDaysB":"6FDFBF7EFDFBF7EFDFBF7EFDFBF7EFDFBF7EFDFBF7EFDFBF"
-            },
-            "dep":
-            {
-              "locX":0,
-              "idx":17,
-              "dProdX":5,
-              "dInR":true,
-              "dTimeS":"123900",
-              "dTimeR":"124100",
-              "dProgType":"PROGNOSED",
-              "type":"N"
-            },
-            "arr":
-            {
-              "locX":1,
-              "idx":20,
-              "aProdX":5,
-              "aOutR":true,
-              "aTimeS":"124400",
-              "aTimeR":"124600",
-              "aProgType":"PROGNOSED",
-              "type":"N"
-            },
-            "secL":
-            [
-              {
-                "type":"JNY",
-                "icoX":7,
-                "dep":
-                {
-                  "locX":0,
-                  "idx":17,
-                  "dProdX":5,
-                  "dInR":true,
-                  "dTimeS":"123900",
-                  "dTimeR":"124100",
-                  "dProgType":"PROGNOSED",
-                  "type":"N"
-                },
-                "arr":
-                {
-                  "locX":1,
-                  "idx":20,
-                  "aProdX":5,
-                  "aOutR":true,
-                  "aTimeS":"124400",
-                  "aTimeR":"124600",
-                  "aProgType":"PROGNOSED",
-                  "type":"N"
-                },
-                "jny":
-                {
-                  "jid":"1|18794|9|80|6092021",
-                  "prodX":5,
-                  "dirTxt":"Frankfurt (Main) Südbahnhof",
-                  "dirFlg":"1",
-                  "status":"P",
-                  "isRchbl":true,
-                  "stopL":
-                  [
-                    {
-                      "locX":0,
-                      "idx":17,
-                      "dProdX":5,
-                      "dInR":true,
-                      "dTimeS":"123900",
-                      "dTimeR":"124100",
-                      "dProgType":"PROGNOSED",
-                      "dDirTxt":"Frankfurt (Main) Südbahnhof",
-                      "dDirFlg":"1",
-                      "type":"N"
-                    },
-                    {
-                      "locX":5,
-                      "idx":18,
-                      "aProdX":5,
-                      "aOutR":true,
-                      "aTimeS":"124000",
-                      "aTimeR":"124200",
-                      "aProgType":"PROGNOSED",
-                      "dProdX":5,
-                      "dInR":true,
-                      "dTimeS":"124000",
-                      "dTimeR":"124200",
-                      "dProgType":"PROGNOSED",
-                      "type":"N"
-                    },
-                    {
-                      "locX":6,
-                      "idx":19,
-                      "aProdX":5,
-                      "aOutR":true,
-                      "aTimeS":"124200",
-                      "aTimeR":"124400",
-                      "aProgType":"PROGNOSED",
-                      "dProdX":5,
-                      "dInR":true,
-                      "dTimeS":"124200",
-                      "dTimeR":"124400",
-                      "dProgType":"PROGNOSED",
-                      "type":"N"
-                    },
-                    {
-                      "locX":1,
-                      "idx":20,
-                      "aProdX":5,
-                      "aOutR":true,
-                      "aTimeS":"124400",
-                      "aTimeR":"124600",
-                      "aProgType":"PROGNOSED",
-                      "type":"N"
-                    }
-                  ],
-                  "poly":
-                  {
-                    "delta":true,
-                    "dim":2,
-                    "type":"WGS84",
-                    "crdEncYX":"i{zpHod~s@fE|BnExInFjGbDdBjCZ??~BStIuDpIgEvDoChB{AxDeFvD_IvK}[bB{D",
-                    "crdEncS":"NNMNMNNMNKNKNNNN",
-                    "crdEncF":"????????????????",
-                    "ppLocRefL":
-                    [
-                      {
-                        "ppIdx":0,
-                        "locX":0
-                      },
-                      {
-                        "ppIdx":5,
-                        "locX":5
-                      },
-                      {
-                        "ppIdx":13,
-                        "locX":6
-                      },
-                      {
-                        "ppIdx":15,
-                        "locX":1
-                      }
-                    ]
-                  },
-                  "pos":
-                  {
-                    "x":8672118,
-                    "y":50132202,
-                    "layerX":0,
-                    "crdSysX":0
-                  },
-                  "freq":
-                  {
-                    "minC":2,
-                    "maxC":5,
-                    "numC":41,
-                    "jnyL":
-                    [
-                      {
-                        "jid":"1|19171|23|80|6092021",
-                        "prodX":6,
-                        "dirTxt":"Frankfurt (Main) Südbahnhof",
-                        "dirFlg":"1",
-                        "stbStop":
-                        {
-                          "locX":0,
-                          "idx":24,
-                          "dProdX":6,
-                          "dTimeS":"124100",
-                          "type":"N"
-                        },
-                        "stopL":
-                        [
-                          {
-                            "locX":0,
-                            "idx":24,
-                            "dProdX":6,
-                            "dTimeS":"124100",
-                            "dDirTxt":"Frankfurt (Main) Südbahnhof",
-                            "dDirFlg":"1",
-                            "type":"N"
-                          },
-                          {
-                            "locX":1,
-                            "idx":27,
-                            "aProdX":6,
-                            "aTimeS":"124600",
-                            "type":"N"
-                          }
-                        ],
-                        "pos":
-                        {
-                          "x":8670977,
-                          "y":50137227,
-                          "layerX":0,
-                          "crdSysX":0
-                        },
-                        "ctxRecon":"T$A=1@O=Frankfurt (Main) Hauptwache@L=3000001@a=128@$A=1@O=Frankfurt (Main) Südbahnhof@L=3000912@a=128@$202109061241$202109061246$      U3$$1$$$$",
-                        "subscr":"F"
-                      },
-                      {
-                        "jid":"1|18679|35|80|6092021",
-                        "prodX":7,
-                        "dirTxt":"Frankfurt (Main) Südbahnhof",
-                        "dirFlg":"1",
-                        "stbStop":
-                        {
-                          "locX":0,
-                          "idx":13,
-                          "dProdX":7,
-                          "dTimeS":"124400",
-                          "type":"N"
-                        },
-                        "stopL":
-                        [
-                          {
-                            "locX":0,
-                            "idx":13,
-                            "dProdX":7,
-                            "dTimeS":"124400",
-                            "dDirTxt":"Frankfurt (Main) Südbahnhof",
-                            "dDirFlg":"1",
-                            "type":"N"
-                          },
-                          {
-                            "locX":1,
-                            "idx":16,
-                            "aProdX":7,
-                            "aTimeS":"124900",
-                            "type":"N"
-                          }
-                        ],
-                        "pos":
-                        {
-                          "x":8669664,
-                          "y":50140418,
-                          "layerX":0,
-                          "crdSysX":0
-                        },
-                        "ctxRecon":"T$A=1@O=Frankfurt (Main) Hauptwache@L=3000001@a=128@$A=1@O=Frankfurt (Main) Südbahnhof@L=3000912@a=128@$202109061244$202109061249$      U1$$1$$$$",
-                        "subscr":"F"
-                      },
-                      {
-                        "jid":"1|270628|0|80|6092021",
-                        "prodX":8,
-                        "dirTxt":"Frankfurt (Main) Südbahnhof",
-                        "dirFlg":"1",
-                        "stbStop":
-                        {
-                          "locX":0,
-                          "idx":18,
-                          "dProdX":8,
-                          "dTimeS":"124600",
-                          "type":"N"
-                        },
-                        "stopL":
-                        [
-                          {
-                            "locX":0,
-                            "idx":18,
-                            "dProdX":8,
-                            "dTimeS":"124600",
-                            "dDirTxt":"Frankfurt (Main) Südbahnhof",
-                            "dDirFlg":"1",
-                            "type":"N"
-                          },
-                          {
-                            "locX":1,
-                            "idx":21,
-                            "aProdX":8,
-                            "aTimeS":"125100",
-                            "type":"N"
-                          }
-                        ],
-                        "pos":
-                        {
-                          "x":8660621,
-                          "y":50153399,
-                          "layerX":0,
-                          "crdSysX":0
-                        },
-                        "ctxRecon":"T$A=1@O=Frankfurt (Main) Hauptwache@L=3000001@a=128@$A=1@O=Frankfurt (Main) Südbahnhof@L=3000912@a=128@$202109061246$202109061251$      U8$$3$$$$",
-                        "subscr":"F"
-                      },
-                      {
-                        "jid":"1|18806|6|80|6092021",
-                        "prodX":9,
-                        "dirTxt":"Frankfurt (Main) Südbahnhof",
-                        "dirFlg":"1",
-                        "stbStop":
-                        {
-                          "locX":0,
-                          "idx":15,
-                          "dProdX":9,
-                          "dTimeS":"124900",
-                          "type":"N"
-                        },
-                        "stopL":
-                        [
-                          {
-                            "locX":0,
-                            "idx":15,
-                            "dProdX":9,
-                            "dTimeS":"124900",
-                            "dDirTxt":"Frankfurt (Main) Südbahnhof",
-                            "dDirFlg":"1",
-                            "type":"N"
-                          },
-                          {
-                            "locX":1,
-                            "idx":18,
-                            "aProdX":9,
-                            "aTimeS":"125400",
-                            "type":"N"
-                          }
-                        ],
-                        "pos":
-                        {
-                          "x":8651857,
-                          "y":50159898,
-                          "layerX":0,
-                          "crdSysX":0
-                        },
-                        "ctxRecon":"T$A=1@O=Frankfurt (Main) Hauptwache@L=3000001@a=128@$A=1@O=Frankfurt (Main) Südbahnhof@L=3000912@a=128@$202109061249$202109061254$      U2$$1$$$$",
-                        "subscr":"F"
-                      },
-                      {
-                        "jid":"1|18679|36|80|6092021",
-                        "prodX":10,
-                        "dirTxt":"Frankfurt (Main) Südbahnhof",
-                        "dirFlg":"1",
-                        "stbStop":
-                        {
-                          "locX":0,
-                          "idx":13,
-                          "dProdX":10,
-                          "dTimeS":"125400",
-                          "type":"N"
-                        },
-                        "stopL":
-                        [
-                          {
-                            "locX":0,
-                            "idx":13,
-                            "dProdX":10,
-                            "dTimeS":"125400",
-                            "dDirTxt":"Frankfurt (Main) Südbahnhof",
-                            "dDirFlg":"1",
-                            "type":"N"
-                          },
-                          {
-                            "locX":1,
-                            "idx":16,
-                            "aProdX":10,
-                            "aTimeS":"125900",
-                            "type":"N"
-                          }
-                        ],
-                        "pos":
-                        {
-                          "x":8634669,
-                          "y":50162595,
-                          "layerX":0,
-                          "crdSysX":0
-                        },
-                        "ctxRecon":"T$A=1@O=Frankfurt (Main) Hauptwache@L=3000001@a=128@$A=1@O=Frankfurt (Main) Südbahnhof@L=3000912@a=128@$202109061254$202109061259$      U1$$1$$$$",
-                        "subscr":"F"
-                      }
-                    ]
-                  },
-                  "ctxRecon":"T$A=1@O=Frankfurt (Main) Hauptwache@L=3000001@a=128@$A=1@O=Frankfurt (Main) Südbahnhof@L=3000912@a=128@$202109061239$202109061244$      U2$$1$$$$",
-                  "subscr":"F"
-                }
-              }
-            ],
-            "ctxRecon":"¶HKI¶T$A=1@O=Frankfurt (Main) Hauptwache@L=3000001@a=128@$A=1@O=Frankfurt (Main) Südbahnhof@L=3000912@a=128@$202109061239$202109061244$      U2$$1$$$$",
-            "freq":
-            {
-              "minC":2
-            },
-            "conSubscr":"F",
-            "cksum":"0973bd66_3"
-          },
-          {
-            "cid":"C-2",
-            "date":"20210906",
-            "dur":"000500",
-            "chg":0,
-            "sDays":
-            {
-              "sDaysR":"Mo - Sa",
-              "sDaysB":"6FDFBF7EFDFBF7EFDFBF7EFDFBF7EFDFBF7EFDFBF7EFDFBF"
-            },
-            "dep":
-            {
-              "locX":0,
-              "idx":24,
-              "dProdX":6,
-              "dInR":true,
-              "dTimeS":"124100",
-              "dTimeR":"124300",
-              "dProgType":"PROGNOSED",
-              "type":"N"
-            },
-            "arr":
-            {
-              "locX":1,
-              "idx":27,
-              "aProdX":6,
-              "aOutR":true,
-              "aTimeS":"124600",
-              "aTimeR":"124800",
-              "aProgType":"PROGNOSED",
-              "type":"N"
-            },
-            "secL":
-            [
-              {
-                "type":"JNY",
-                "icoX":9,
-                "dep":
-                {
-                  "locX":0,
-                  "idx":24,
-                  "dProdX":6,
-                  "dInR":true,
-                  "dTimeS":"124100",
-                  "dTimeR":"124300",
-                  "dProgType":"PROGNOSED",
-                  "type":"N"
-                },
-                "arr":
-                {
-                  "locX":1,
-                  "idx":27,
-                  "aProdX":6,
-                  "aOutR":true,
-                  "aTimeS":"124600",
-                  "aTimeR":"124800",
-                  "aProgType":"PROGNOSED",
-                  "type":"N"
-                },
-                "jny":
-                {
-                  "jid":"1|19171|23|80|6092021",
-                  "prodX":6,
-                  "dirTxt":"Frankfurt (Main) Südbahnhof",
-                  "dirFlg":"1",
-                  "status":"P",
-                  "isRchbl":true,
-                  "stopL":
-                  [
-                    {
-                      "locX":0,
-                      "idx":24,
-                      "dProdX":6,
-                      "dInR":true,
-                      "dTimeS":"124100",
-                      "dTimeR":"124300",
-                      "dProgType":"PROGNOSED",
-                      "dDirTxt":"Frankfurt (Main) Südbahnhof",
-                      "dDirFlg":"1",
-                      "type":"N"
-                    },
-                    {
-                      "locX":5,
-                      "idx":25,
-                      "aProdX":6,
-                      "aOutR":true,
-                      "aTimeS":"124200",
-                      "aTimeR":"124400",
-                      "aProgType":"PROGNOSED",
-                      "dProdX":6,
-                      "dInR":true,
-                      "dTimeS":"124200",
-                      "dTimeR":"124400",
-                      "dProgType":"PROGNOSED",
-                      "type":"N"
-                    },
-                    {
-                      "locX":6,
-                      "idx":26,
-                      "aProdX":6,
-                      "aOutR":true,
-                      "aTimeS":"124400",
-                      "aTimeR":"124600",
-                      "aProgType":"PROGNOSED",
-                      "dProdX":6,
-                      "dInR":true,
-                      "dTimeS":"124400",
-                      "dTimeR":"124600",
-                      "dProgType":"PROGNOSED",
-                      "type":"N"
-                    },
-                    {
-                      "locX":1,
-                      "idx":27,
-                      "aProdX":6,
-                      "aOutR":true,
-                      "aTimeS":"124600",
-                      "aTimeR":"124800",
-                      "aProgType":"PROGNOSED",
-                      "type":"N"
-                    }
-                  ],
-                  "poly":
-                  {
-                    "delta":true,
-                    "dim":2,
-                    "type":"WGS84",
-                    "crdEncYX":"i{zpHod~s@fE|BnExInFjGbDdBjCZ??~BStIuDpIgEvDoChB{AxDeFvD_IvK}[bB{D",
-                    "crdEncS":"NNMNMNNMNKNKNNNN",
-                    "crdEncF":"????????????????",
-                    "ppLocRefL":
-                    [
-                      {
-                        "ppIdx":0,
-                        "locX":0
-                      },
-                      {
-                        "ppIdx":5,
-                        "locX":5
-                      },
-                      {
-                        "ppIdx":13,
-                        "locX":6
-                      },
-                      {
-                        "ppIdx":15,
-                        "locX":1
-                      }
-                    ]
-                  },
-                  "pos":
-                  {
-                    "x":8670977,
-                    "y":50137227,
-                    "layerX":0,
-                    "crdSysX":0
-                  },
-                  "freq":
-                  {
-                    "minC":2,
-                    "maxC":5,
-                    "numC":41,
-                    "jnyL":
-                    [
-                      {
-                        "jid":"1|18679|35|80|6092021",
-                        "prodX":7,
-                        "dirTxt":"Frankfurt (Main) Südbahnhof",
-                        "dirFlg":"1",
-                        "stbStop":
-                        {
-                          "locX":0,
-                          "idx":13,
-                          "dProdX":7,
-                          "dTimeS":"124400",
-                          "type":"N"
-                        },
-                        "stopL":
-                        [
-                          {
-                            "locX":0,
-                            "idx":13,
-                            "dProdX":7,
-                            "dTimeS":"124400",
-                            "dDirTxt":"Frankfurt (Main) Südbahnhof",
-                            "dDirFlg":"1",
-                            "type":"N"
-                          },
-                          {
-                            "locX":1,
-                            "idx":16,
-                            "aProdX":7,
-                            "aTimeS":"124900",
-                            "type":"N"
-                          }
-                        ],
-                        "pos":
-                        {
-                          "x":8669664,
-                          "y":50140418,
-                          "layerX":0,
-                          "crdSysX":0
-                        },
-                        "ctxRecon":"T$A=1@O=Frankfurt (Main) Hauptwache@L=3000001@a=128@$A=1@O=Frankfurt (Main) Südbahnhof@L=3000912@a=128@$202109061244$202109061249$      U1$$1$$$$",
-                        "subscr":"F"
-                      },
-                      {
-                        "jid":"1|270628|0|80|6092021",
-                        "prodX":8,
-                        "dirTxt":"Frankfurt (Main) Südbahnhof",
-                        "dirFlg":"1",
-                        "stbStop":
-                        {
-                          "locX":0,
-                          "idx":18,
-                          "dProdX":8,
-                          "dTimeS":"124600",
-                          "type":"N"
-                        },
-                        "stopL":
-                        [
-                          {
-                            "locX":0,
-                            "idx":18,
-                            "dProdX":8,
-                            "dTimeS":"124600",
-                            "dDirTxt":"Frankfurt (Main) Südbahnhof",
-                            "dDirFlg":"1",
-                            "type":"N"
-                          },
-                          {
-                            "locX":1,
-                            "idx":21,
-                            "aProdX":8,
-                            "aTimeS":"125100",
-                            "type":"N"
-                          }
-                        ],
-                        "pos":
-                        {
-                          "x":8660621,
-                          "y":50153399,
-                          "layerX":0,
-                          "crdSysX":0
-                        },
-                        "ctxRecon":"T$A=1@O=Frankfurt (Main) Hauptwache@L=3000001@a=128@$A=1@O=Frankfurt (Main) Südbahnhof@L=3000912@a=128@$202109061246$202109061251$      U8$$3$$$$",
-                        "subscr":"F"
-                      },
-                      {
-                        "jid":"1|18806|6|80|6092021",
-                        "prodX":9,
-                        "dirTxt":"Frankfurt (Main) Südbahnhof",
-                        "dirFlg":"1",
-                        "stbStop":
-                        {
-                          "locX":0,
-                          "idx":15,
-                          "dProdX":9,
-                          "dTimeS":"124900",
-                          "type":"N"
-                        },
-                        "stopL":
-                        [
-                          {
-                            "locX":0,
-                            "idx":15,
-                            "dProdX":9,
-                            "dTimeS":"124900",
-                            "dDirTxt":"Frankfurt (Main) Südbahnhof",
-                            "dDirFlg":"1",
-                            "type":"N"
-                          },
-                          {
-                            "locX":1,
-                            "idx":18,
-                            "aProdX":9,
-                            "aTimeS":"125400",
-                            "type":"N"
-                          }
-                        ],
-                        "pos":
-                        {
-                          "x":8651857,
-                          "y":50159898,
-                          "layerX":0,
-                          "crdSysX":0
-                        },
-                        "ctxRecon":"T$A=1@O=Frankfurt (Main) Hauptwache@L=3000001@a=128@$A=1@O=Frankfurt (Main) Südbahnhof@L=3000912@a=128@$202109061249$202109061254$      U2$$1$$$$",
-                        "subscr":"F"
-                      },
-                      {
-                        "jid":"1|18679|36|80|6092021",
-                        "prodX":10,
-                        "dirTxt":"Frankfurt (Main) Südbahnhof",
-                        "dirFlg":"1",
-                        "stbStop":
-                        {
-                          "locX":0,
-                          "idx":13,
-                          "dProdX":10,
-                          "dTimeS":"125400",
-                          "type":"N"
-                        },
-                        "stopL":
-                        [
-                          {
-                            "locX":0,
-                            "idx":13,
-                            "dProdX":10,
-                            "dTimeS":"125400",
-                            "dDirTxt":"Frankfurt (Main) Südbahnhof",
-                            "dDirFlg":"1",
-                            "type":"N"
-                          },
-                          {
-                            "locX":1,
-                            "idx":16,
-                            "aProdX":10,
-                            "aTimeS":"125900",
-                            "type":"N"
-                          }
-                        ],
-                        "pos":
-                        {
-                          "x":8634669,
-                          "y":50162595,
-                          "layerX":0,
-                          "crdSysX":0
-                        },
-                        "ctxRecon":"T$A=1@O=Frankfurt (Main) Hauptwache@L=3000001@a=128@$A=1@O=Frankfurt (Main) Südbahnhof@L=3000912@a=128@$202109061254$202109061259$      U1$$1$$$$",
-                        "subscr":"F"
-                      },
-                      {
-                        "jid":"1|19171|24|80|6092021",
-                        "prodX":11,
-                        "dirTxt":"Frankfurt (Main) Südbahnhof",
-                        "dirFlg":"1",
-                        "stbStop":
-                        {
-                          "locX":0,
-                          "idx":24,
-                          "dProdX":11,
-                          "dTimeS":"125600",
-                          "type":"N"
-                        },
-                        "stopL":
-                        [
-                          {
-                            "locX":0,
-                            "idx":24,
-                            "dProdX":11,
-                            "dTimeS":"125600",
-                            "dDirTxt":"Frankfurt (Main) Südbahnhof",
-                            "dDirFlg":"1",
-                            "type":"N"
-                          },
-                          {
-                            "locX":1,
-                            "idx":27,
-                            "aProdX":11,
-                            "aTimeS":"130100",
-                            "type":"N"
-                          }
-                        ],
-                        "pos":
-                        {
-                          "x":8611396,
-                          "y":50175045,
-                          "layerX":0,
-                          "crdSysX":0
-                        },
-                        "ctxRecon":"T$A=1@O=Frankfurt (Main) Hauptwache@L=3000001@a=128@$A=1@O=Frankfurt (Main) Südbahnhof@L=3000912@a=128@$202109061256$202109061301$      U3$$1$$$$",
-                        "subscr":"F"
-                      }
-                    ]
-                  },
-                  "ctxRecon":"T$A=1@O=Frankfurt (Main) Hauptwache@L=3000001@a=128@$A=1@O=Frankfurt (Main) Südbahnhof@L=3000912@a=128@$202109061241$202109061246$      U3$$1$$$$",
-                  "subscr":"F"
-                }
-              }
-            ],
-            "ctxRecon":"¶HKI¶T$A=1@O=Frankfurt (Main) Hauptwache@L=3000001@a=128@$A=1@O=Frankfurt (Main) Südbahnhof@L=3000912@a=128@$202109061241$202109061246$      U3$$1$$$$",
-            "freq":
-            {
-              "minC":2
-            },
-            "conSubscr":"F",
-            "cksum":"234dd42f_3"
+            "cksum":"c9d22594_3"
           }
         ],
-        "outCtxScrB":"2|OB|MT#11#140436#140436#140442#140442#0#0#125#140436#1#-2147483550#0#1#2|PDH#aecd2f6a06c416fdd14c95eca2d411c3|RD#6092021|RT#123600|US#0",
-        "outCtxScrF":"2|OF|MT#11#140441#140441#140446#140446#0#0#125#140440#3#-2147483550#0#1#2|PDH#aecd2f6a06c416fdd14c95eca2d411c3|RD#6092021|RT#123600|US#0",
-        "fpB":"20210603",
-        "fpE":"20211211",
-        "planrtTS":"1630924558"
+        "outCtxScrB":"2|OB|MT#11#149485#149485#149490#149490#0#0#125#149484#1#-2147483550#0#1#2|PDH#b70265791339d74217fdd6eac73b1686|RD#5122021|RT#192400|US#0",
+        "outCtxScrF":"2|OF|MT#11#149491#149491#149497#149497#0#0#125#149491#3#-2147483550#0#1#2|PDH#b70265791339d74217fdd6eac73b1686|RD#5122021|RT#192400|US#0",
+        "fpB":"20210826",
+        "fpE":"20220630",
+        "planrtTS":"1638728499"
       }
     }
   ]

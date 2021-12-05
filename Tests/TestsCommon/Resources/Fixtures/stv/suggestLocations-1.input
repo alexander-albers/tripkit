@@ -2,7 +2,7 @@
   "ver":"1.18",
   "ext":"VAO.13",
   "lang":"deu",
-  "id":"3r6sjgsmm2apgi8g",
+  "id":"4fmwemxq6626gg8g",
   "err":"OK",
   "cInfo":
   {
@@ -37,7 +37,7 @@
               "id":"standard",
               "name":"standard",
               "index":0,
-              "annoCnt":384392
+              "annoCnt":0
             }
           ],
           "crdSysL":
@@ -76,39 +76,7 @@
           "icoL":
           [
             {
-              "res":"prod_bus",
-              "txtS":"52",
-              "fg":
-              {
-                "r":255,
-                "g":255,
-                "b":255
-              },
-              "bg":
-              {
-                "r":0,
-                "g":130,
-                "b":50
-              }
-            },
-            {
               "res":"prod_station"
-            },
-            {
-              "res":"prod_bus",
-              "txtS":"1",
-              "fg":
-              {
-                "r":255,
-                "g":255,
-                "b":255
-              },
-              "bg":
-              {
-                "r":0,
-                "g":130,
-                "b":50
-              }
             },
             {
               "res":"PCAT_APOTHEKE"
@@ -128,10 +96,10 @@
           "locL":
           [
             {
-              "lid":"A=1@O=Graz Babenbergerstraße@X=15420500@Y=47073569@U=81@L=460314900@B=1@p=1630889505@i=at:46:3149@",
+              "lid":"A=1@O=Graz Babenbergerstraße@X=15420500@Y=47073569@U=81@L=460314900@B=1@p=1638666385@i=at:46:3149@",
               "type":"S",
               "name":"Graz Babenbergerstraße",
-              "icoX":1,
+              "icoX":0,
               "extId":"460314900",
               "state":"F",
               "crd":
@@ -142,15 +110,16 @@
                 "crdSysX":0
               },
               "meta":true,
-              "pCls":192,
-              "wt":196,
-              "isMainMast":true
+              "pCls":128,
+              "wt":189,
+              "isMainMast":true,
+              "mapSelectable":true
             },
             {
-              "lid":"A=1@O=Mödling Babenbergergasse@X=16284022@Y=48083929@U=81@L=430424200@B=1@p=1630889505@i=at:43:4242@",
+              "lid":"A=1@O=Mödling Babenbergergasse@X=16284022@Y=48083929@U=81@L=430424200@B=1@p=1638666385@i=at:43:4242@",
               "type":"S",
               "name":"Mödling Babenbergergasse",
-              "icoX":1,
+              "icoX":0,
               "extId":"430424200",
               "state":"F",
               "crd":
@@ -162,14 +131,15 @@
               },
               "meta":true,
               "pCls":128,
-              "wt":8,
-              "isMainMast":true
+              "wt":6,
+              "isMainMast":true,
+              "mapSelectable":true
             },
             {
-              "lid":"A=4@O=Babenberger-Apotheke, 1070 Wien (Apotheke)@X=16359783@Y=48201499@U=130@L=960058444@B=1@p=1630892207@",
+              "lid":"A=4@O=Babenberger-Apotheke, 1070 Wien (Apotheke)@X=16359783@Y=48201499@U=130@L=960058444@B=1@p=1638671434@",
               "type":"P",
               "name":"Babenberger-Apotheke, 1070 Wien (Apotheke)",
-              "icoX":3,
+              "icoX":1,
               "extId":"960058444",
               "state":"F",
               "crd":
@@ -186,21 +156,22 @@
                 "mcpid":"0",
                 "externalId":"oeamtc_ap-34_109-138"
               },
+              "mapSelectable":true,
               "msgL":
               [
                 {
                   "type":"REM",
                   "remX":0,
                   "dspl":"U",
-                  "sort":684195840
+                  "sort":818413568
                 }
               ]
             },
             {
-              "lid":"A=4@O=Babenberger Passage, 1010 Wien (Essen und Trinken)@X=16363837@Y=48203908@U=130@L=960167075@B=1@p=1630892207@",
+              "lid":"A=4@O=Babenberger Passage, 1010 Wien (Essen und Trinken)@X=16363837@Y=48203908@U=130@L=960167075@B=1@p=1638671434@",
               "type":"P",
               "name":"Babenberger Passage, 1010 Wien (Essen und Trinken)",
-              "icoX":4,
+              "icoX":2,
               "extId":"960167075",
               "state":"F",
               "crd":
@@ -217,21 +188,22 @@
                 "mcpid":"0",
                 "externalId":"oeamtc_to-10_841a0cd1202df3fd96461adc09a8ebca"
               },
+              "mapSelectable":true,
               "msgL":
               [
                 {
                   "type":"REM",
                   "remX":1,
                   "dspl":"U",
-                  "sort":684195840
+                  "sort":818413568
                 }
               ]
             },
             {
-              "lid":"A=4@O=Babenberger-Ruine, 3571 Gars am Kamp (Sehenswürdigkeit)@X=15653006@Y=48594076@U=130@L=960075592@B=1@p=1630892207@",
+              "lid":"A=4@O=Babenberger-Ruine, 3571 Gars am Kamp (Sehenswürdigkeit)@X=15653006@Y=48594076@U=130@L=960075592@B=1@p=1638671434@",
               "type":"P",
               "name":"Babenberger-Ruine, 3571 Gars am Kamp (Sehenswürdigkeit)",
-              "icoX":5,
+              "icoX":3,
               "extId":"960075592",
               "state":"F",
               "crd":
@@ -248,13 +220,14 @@
                 "mcpid":"0",
                 "externalId":"oeamtc_tf-608825641"
               },
+              "mapSelectable":true,
               "msgL":
               [
                 {
                   "type":"REM",
                   "remX":2,
                   "dspl":"U",
-                  "sort":684195840
+                  "sort":818413568
                 }
               ]
             }

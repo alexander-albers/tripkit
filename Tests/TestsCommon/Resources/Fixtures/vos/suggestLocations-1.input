@@ -1,7 +1,7 @@
 {
   "ver":"1.16",
   "lang":"deu",
-  "id":"qb2g3iuu66qdwi8g",
+  "id":"5bw4sms262wfy28x",
   "svcResL":
   [
     {
@@ -24,7 +24,7 @@
               "cls":32,
               "prodCtx":
               {
-                "lineId":"de:VBN-VOS:10:"
+                "lineId":"de:VBN-VOS:10:5"
               }
             },
             {
@@ -74,7 +74,7 @@
               "cls":32,
               "prodCtx":
               {
-                "lineId":"de:VBN-VOS:16:2"
+                "lineId":"de:VBN-VOS:16:1"
               }
             },
             {
@@ -104,7 +104,7 @@
               "cls":32,
               "prodCtx":
               {
-                "lineId":"de:VBN-VOS:151:"
+                "lineId":"de:VBN-VOS:151:1"
               }
             },
             {
@@ -248,16 +248,6 @@
               }
             },
             {
-              "name":"Bus 586",
-              "nameS":"586",
-              "icoX":0,
-              "cls":32,
-              "prodCtx":
-              {
-                "lineId":"VOSBEC_586"
-              }
-            },
-            {
               "name":"Bus 610",
               "nameS":"610",
               "icoX":0,
@@ -305,26 +295,6 @@
               "prodCtx":
               {
                 "lineId":"de:VBN-VOS:N276:"
-              }
-            },
-            {
-              "name":"Bus R15",
-              "nameS":"R15",
-              "icoX":0,
-              "cls":32,
-              "prodCtx":
-              {
-                "lineId":"de:NWL:05566|Bus|R15:RVM"
-              }
-            },
-            {
-              "name":"Bus R16",
-              "nameS":"R16",
-              "icoX":0,
-              "cls":32,
-              "prodCtx":
-              {
-                "lineId":"de:NWL:05566|Bus|R16:RVM"
               }
             },
             {
@@ -414,7 +384,7 @@
               "cls":32,
               "prodCtx":
               {
-                "lineId":"VOSHUM_X584"
+                "lineId":"de:VBN-VOS:584:5"
               }
             },
             {
@@ -434,7 +404,7 @@
               "cls":32,
               "prodCtx":
               {
-                "lineId":"de:VBN-VOS:586:"
+                "lineId":"de:VBN-VOS:586:2"
               }
             },
             {
@@ -494,7 +464,7 @@
               "cls":32,
               "prodCtx":
               {
-                "lineId":"de:VBN-VOS:168:"
+                "lineId":"de:VBN-VOS:168:1"
               }
             },
             {
@@ -593,7 +563,7 @@
           "locL":
           [
             {
-              "lid":"A=1@O=Osnabrück Stresemannplatz@X=8054685@Y=52273424@U=80@L=9071765@B=1@p=1630786923@",
+              "lid":"A=1@O=Osnabrück Stresemannplatz@X=8054685@Y=52273424@U=80@L=9071765@B=1@p=1638652114@",
               "type":"S",
               "name":"Osnabrück Stresemannplatz",
               "icoX":0,
@@ -664,18 +634,15 @@
 35,
 36,
 37,
-38,
-39,
-40,
-41
+38
               ],
-              "wt":1292,
+              "wt":1167,
               "isMainMast":true
             },
             {
-              "lid":"A=2@O=Osnabrück - Sutthausen, Gustav-Stresemann-Straße@X=8028581@Y=52241881@U=99@b=958112975@B=1@p=1617880347@",
+              "lid":"A=2@O=49082 Osnabrück, Gustav-Stresemann-Straße@X=8028581@Y=52241881@U=99@b=958112975@B=1@p=1617880347@",
               "type":"A",
-              "name":"Osnabrück - Sutthausen, Gustav-Stresemann-Straße",
+              "name":"49082 Osnabrück, Gustav-Stresemann-Straße",
               "icoX":1,
               "state":"M",
               "crd":
@@ -687,7 +654,7 @@
               }
             },
             {
-              "lid":"A=1@O=Osnabrück Wesereschstraße@X=8072772@Y=52282107@U=80@L=9070287@B=1@p=1630786923@",
+              "lid":"A=1@O=Osnabrück Wesereschstraße@X=8072772@Y=52282107@U=80@L=9070287@B=1@p=1638652114@",
               "type":"S",
               "name":"Osnabrück Wesereschstraße",
               "icoX":0,
@@ -720,14 +687,14 @@
               "pCls":32,
               "pRefL":
               [
-42,
+39,
 7
               ],
-              "wt":1292,
+              "wt":1167,
               "isMainMast":true
             },
             {
-              "lid":"A=1@O=Oesede Tulpenstraße@X=8081419@Y=52210751@U=80@L=9105207@B=1@p=1630786923@",
+              "lid":"A=1@O=Oesede Tulpenstraße@X=8081419@Y=52210751@U=80@L=9105207@B=1@p=1638652114@",
               "type":"S",
               "name":"Oesede Tulpenstraße",
               "icoX":0,
@@ -760,16 +727,16 @@
               "pCls":32,
               "pRefL":
               [
-43,
-44,
-45,
-46
+40,
+41,
+42,
+43
               ],
-              "wt":71,
+              "wt":72,
               "isMainMast":true
             },
             {
-              "lid":"A=1@O=Hollage Wiesenstraße@X=7999806@Y=52337472@U=80@L=9043202@B=1@p=1630786923@",
+              "lid":"A=1@O=Hollage Wiesenstraße@X=7999806@Y=52337472@U=80@L=9043202@B=1@p=1638652114@",
               "type":"S",
               "name":"Hollage Wiesenstraße",
               "icoX":0,
@@ -802,10 +769,10 @@
               "pCls":32,
               "pRefL":
               [
-47,
-48
+44,
+45
               ],
-              "wt":71,
+              "wt":72,
               "isMainMast":true
             }
           ]

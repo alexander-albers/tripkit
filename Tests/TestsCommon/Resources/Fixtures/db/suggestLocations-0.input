@@ -1,8 +1,8 @@
 {
   "ver":"1.15",
-  "ext":"DB.R18.04.a",
+  "ext":"DB.R20.12.b",
   "lang":"deu",
-  "id":"9n468k8ekqizwg8x",
+  "id":"pfm8ske8422n92ck",
   "cInfo":
   {
     "code":"OK",
@@ -75,6 +75,11 @@
               "cls":4
             },
             {
+              "name":"UEX",
+              "icoX":9,
+              "cls":4
+            },
+            {
               "name":"Bus RE1",
               "nameS":"RE1",
               "icoX":6,
@@ -91,7 +96,7 @@
               "cls":8,
               "prodCtx":
               {
-                "lineId":"3_BB_____RE3!!1487358!!5842925"
+                "lineId":"3_BB_____RE3!!1489398!!5845780"
               }
             },
             {
@@ -190,6 +195,16 @@
               }
             },
             {
+              "name":"Bus M5",
+              "nameS":"M5",
+              "icoX":6,
+              "cls":32,
+              "prodCtx":
+              {
+                "lineId":"5_vbbBVB_M5"
+              }
+            },
+            {
               "name":"Bus N5",
               "nameS":"N5",
               "icoX":6,
@@ -247,6 +262,16 @@
               "prodCtx":
               {
                 "lineId":"5_vbbBVB_245"
+              }
+            },
+            {
+              "name":"Bus M10",
+              "nameS":"M10",
+              "icoX":6,
+              "cls":32,
+              "prodCtx":
+              {
+                "lineId":"5_vbbBVB_M10"
               }
             },
             {
@@ -310,16 +335,6 @@
               }
             },
             {
-              "name":"STR M6",
-              "nameS":"M6",
-              "icoX":16,
-              "cls":256,
-              "prodCtx":
-              {
-                "lineId":"8_vbbBVT_M6"
-              }
-            },
-            {
               "name":"STR M8",
               "nameS":"M8",
               "icoX":16,
@@ -359,7 +374,7 @@
               "id":"standard",
               "index":0,
               "type":"WGS84",
-              "dim":3
+              "dim":2
             }
           ],
           "opL":
@@ -462,7 +477,7 @@
           "locL":
           [
             {
-              "lid":"A=1@O=Berlin Hbf@X=13369549@Y=52525589@U=80@L=8011160@B=1@p=1630529292@",
+              "lid":"A=1@O=Berlin Hbf@X=13369549@Y=52525589@U=80@L=8011160@B=1@p=1638395739@",
               "type":"S",
               "name":"Berlin Hbf",
               "icoX":0,
@@ -518,9 +533,11 @@
 35,
 36,
 37,
-38
+38,
+39,
+40
               ],
-              "wt":32767
+              "wt":32236
             },
             {
               "name":"Berlin Hbf",

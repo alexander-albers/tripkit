@@ -1,7 +1,7 @@
 {
   "ver":"1.15",
   "lang":"deu",
-  "id":"vsku4mxm6sx4yick",
+  "id":"6ig4umsg62g78iwg",
   "svcResL":
   [
     {
@@ -14,7 +14,7 @@
           "locL":
           [
             {
-              "lid":"A=1@O=Leipzig, Johannisplatz@X=12386290@Y=51337890@U=80@L=11063@i=A×de:14713:11063@",
+              "lid":"A=1@O=Leipzig, Johannisplatz@X=12385014@Y=51338168@U=80@L=11063@i=A×de:14713:11063@",
               "type":"S",
               "name":"Leipzig, Johannisplatz",
               "icoX":0,
@@ -22,8 +22,8 @@
               "state":"F",
               "crd":
               {
-                "x":12386290,
-                "y":51337890,
+                "x":12385014,
+                "y":51338168,
                 "type":"WGS84",
                 "layerX":0,
                 "crdSysX":0
@@ -66,16 +66,16 @@
               "pCls":96
             },
             {
-              "lid":"A=1@O=Leipzig, Reudnitz, Koehlerstr.@X=12403082@Y=51338896@U=80@L=11061@i=A×de:14713:11061@",
+              "lid":"A=1@O=Leipzig, Meusdorf@X=12439695@Y=51294490@U=80@L=11559@i=A×de:14713:11559@",
               "type":"S",
-              "name":"Leipzig, Reudnitz, Koehlerstr.",
+              "name":"Leipzig, Meusdorf",
               "icoX":0,
-              "extId":"11061",
+              "extId":"11559",
               "state":"F",
               "crd":
               {
-                "x":12403082,
-                "y":51338896,
+                "x":12439695,
+                "y":51294490,
                 "type":"WGS84",
                 "layerX":0,
                 "crdSysX":0
@@ -83,44 +83,44 @@
               "pCls":96
             },
             {
-              "lid":"A=1@O=Leipzig, Reclamstr.@X=12399846@Y=51339301@U=80@L=6465@i=A×de:14713:6465@",
+              "lid":"A=1@O=Leipzig, Sportforum Süd@X=12351188@Y=51340685@U=80@L=11071@i=A×de:14713:11071@",
               "type":"S",
-              "name":"Leipzig, Reclamstr.",
-              "icoX":1,
-              "extId":"6465",
-              "state":"F",
-              "crd":
-              {
-                "x":12399846,
-                "y":51339301,
-                "type":"WGS84",
-                "layerX":0,
-                "crdSysX":0
-              },
-              "pCls":64
-            },
-            {
-              "lid":"A=1@O=Leipzig, Breite Str.@X=12407999@Y=51335705@U=80@L=11329@i=A×de:14713:11329@",
-              "type":"S",
-              "name":"Leipzig, Breite Str.",
+              "name":"Leipzig, Sportforum Süd",
               "icoX":0,
-              "extId":"11329",
+              "extId":"11071",
               "state":"F",
               "crd":
               {
-                "x":12407999,
-                "y":51335705,
+                "x":12351188,
+                "y":51340685,
                 "type":"WGS84",
                 "layerX":0,
                 "crdSysX":0
               },
               "pCls":96
+            },
+            {
+              "lid":"A=1@O=Leipzig, Gutenbergplatz@X=12391792@Y=51334447@U=80@L=11970@i=A×de:14713:11970@",
+              "type":"S",
+              "name":"Leipzig, Gutenbergplatz",
+              "icoX":0,
+              "extId":"11970",
+              "state":"F",
+              "crd":
+              {
+                "x":12391792,
+                "y":51334447,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":32
             },
             {
               "lid":"A=1@O=Leipzig Hbf@X=12382066@Y=51345467@U=80@L=8010205@i=A×de:14713:8010205@",
               "type":"S",
               "name":"Leipzig Hbf",
-              "icoX":6,
+              "icoX":4,
               "extId":"8010205",
               "state":"F",
               "crd":
@@ -138,65 +138,61 @@
           "prodL":
           [
             {
-              "pid":"L::6::Bus::B1129464397::6_LVBUS__73::*",
-              "name":"Bus 73",
-              "nameS":"73",
-              "number":"73",
-              "icoX":1,
-              "cls":64,
+              "pid":"L::5::Str::B1129464397::5_LVTRAM_15::*",
+              "name":"Str 15",
+              "nameS":"15",
+              "number":"15",
+              "icoX":0,
+              "cls":32,
               "oprX":0,
               "prodCtx":
               {
-                "name":"Bus   73",
-                "num":"5022",
-                "line":"73",
-                "matchId":"73",
-                "catOut":"Bus     ",
-                "catOutS":"Bus",
-                "catOutL":"Bus     ",
-                "catIn":"Bus",
-                "catCode":"6",
-                "admin":"LVBUS_"
+                "name":"Str   15",
+                "num":"17356",
+                "line":"15",
+                "matchId":"15",
+                "catOut":"Str     ",
+                "catOutS":"StN",
+                "catOutL":"Str     ",
+                "catIn":"StN",
+                "catCode":"5",
+                "admin":"LVTRAM"
               },
               "himIdL":
               [
-"HIM_FREETEXT_219925",
-"HIM_FREETEXT_294307",
-"HIM_FREETEXT_293539"
+"HIM_FREETEXT_323162"
               ]
             },
             {
-              "pid":"L::6::Bus::B1129464397::6_LVBUS__73::*",
-              "name":"Bus 73",
-              "nameS":"73",
-              "number":"73",
-              "icoX":1,
-              "cls":64,
+              "pid":"L::5::Str::B1129464397::5_LVTRAM_15::*",
+              "name":"Str 15",
+              "nameS":"15",
+              "number":"15",
+              "icoX":0,
+              "cls":32,
               "oprX":1,
               "prodCtx":
               {
-                "name":"Bus   73",
-                "num":"5022",
-                "line":"73",
-                "lineId":"6_LVBUS__73",
-                "matchId":"73",
-                "catOut":"Bus     ",
-                "catOutS":"Bus",
-                "catOutL":"Bus     ",
-                "catIn":"Bus",
-                "catCode":"6",
-                "admin":"LVBUS_"
+                "name":"Str   15",
+                "num":"17356",
+                "line":"15",
+                "lineId":"5_LVTRAM_15",
+                "matchId":"15",
+                "catOut":"Str     ",
+                "catOutS":"StN",
+                "catOutL":"Str     ",
+                "catIn":"StN",
+                "catCode":"5",
+                "admin":"LVTRAM"
               },
               "himIdL":
               [
-"HIM_FREETEXT_219925",
-"HIM_FREETEXT_294307",
-"HIM_FREETEXT_293539"
+"HIM_FREETEXT_323162"
               ]
             },
             {
               "name":"Fußweg",
-              "icoX":7,
+              "icoX":5,
               "cls":0,
               "prodCtx":
               {
@@ -231,11 +227,11 @@
           [
             {
               "name":"Leipziger Verkehrsbetriebe",
-              "icoX":2
+              "icoX":1
             },
             {
               "name":"Leipziger Verkehrsbetriebe",
-              "icoX":2,
+              "icoX":1,
               "id":"186"
             }
           ],
@@ -244,66 +240,41 @@
             {
               "type":"A",
               "code":"OPERATOR",
-              "icoX":3,
+              "icoX":2,
               "txtS":"LVB",
               "txtN":"LVB",
               "txtL":"Leipziger Verkehrsbetriebe"
+            },
+            {
+              "type":"A",
+              "code":"ok",
+              "prio":350,
+              "icoX":2,
+              "txtN":"Fahrzeug mit niederflurigem Einstieg geplant"
             }
           ],
           "himL":
           [
             {
-              "hid":"294307",
-              "act":true,
-              "pub":"",
-              "head":"BM Johannisplatz",
-              "lead":"",
-              "text":"BUS 72, 73 und N7 fahren zwischen Hauptbahnhof und Reudnitz, Koehlerstr. über Augustusplatz, Johannisplatz und Dresdner Straße.",
-              "tckr":"",
-              "icoX":4,
-              "prio":50,
-              "fLocX":1,
-              "tLocX":3,
-              "altStart":"",
-              "altEnd":"",
-              "prod":64,
-              "lModDate":"20210903",
-              "lModTime":"180647",
-              "sDate":"20210906",
-              "sTime":"040000",
-              "eDate":"20211011",
-              "eTime":"010000",
-              "comp":"LVB - Leipziger Verkehrsbetriebe",
-              "cat":4,
-              "pubChL":
-              [
-                {
-                  "name":"timetable",
-                  "fDate":"20210903",
-                  "fTime":"180000",
-                  "tDate":"20211011",
-                  "tTime":"010000"
-                }
-              ]
-            },
-            {
-              "hid":"219925",
+              "hid":"323162",
               "act":true,
               "pub":"",
               "head":"Gemeinsam gegen Corona",
               "lead":"",
-              "text":"Bitte tragen Sie in unseren Fahrzeugen eine medizinische Maske. Please wear a medical face mask in our vehicles.",
+              "text":"In Bussen und Straßenbahnen gilt die 3G-Regelung und FFP2-Maskenpflicht. Weitere Infos unter L.de/sicher-unterwegs",
               "tckr":"",
-              "icoX":5,
+              "icoX":3,
               "prio":50,
+              "fLocX":3,
+              "tLocX":4,
               "altStart":"",
               "altEnd":"",
               "prod":65535,
-              "lModDate":"20210901",
-              "lModTime":"013904",
-              "sDate":"20210907",
+              "lModDate":"20211124",
+              "lModTime":"150214",
+              "sDate":"20211124",
               "sTime":"040000",
-              "eDate":"20211231",
+              "eDate":"20211210",
               "eTime":"235900",
               "comp":"LVB - Leipziger Verkehrsbetriebe",
               "cat":3,
@@ -311,9 +282,9 @@
               [
                 {
                   "name":"TIMETABLE",
-                  "fDate":"20210907",
+                  "fDate":"20211124",
                   "fTime":"040000",
-                  "tDate":"20211231",
+                  "tDate":"20211210",
                   "tTime":"235900"
                 }
               ]
@@ -339,31 +310,11 @@
               }
             },
             {
-              "res":"prod_bus",
-              "fg":
-              {
-                "r":255,
-                "g":255,
-                "b":255,
-                "a":255
-              },
-              "bg":
-              {
-                "r":170,
-                "g":85,
-                "b":153,
-                "a":255
-              }
-            },
-            {
               "res":"LVB",
               "txt":"Leipziger Verkehrsbetriebe"
             },
             {
               "res":"INFO"
-            },
-            {
-              "res":"HIM4"
             },
             {
               "res":"HIM3"
@@ -408,23 +359,23 @@
         [
           {
             "cid":"DirectConReq-0",
-            "date":"20210909",
+            "date":"20211205",
             "dur":"001100",
             "chg":0,
             "sDays":
             {
               "sDaysR":"nicht täglich",
-              "sDaysI":"9. Sep bis 8. Okt 2021 Mo - Fr",
-              "sDaysB":"0F9F3E7CF80000000000000000"
+              "sDaysI":"5. Dez 2021 bis 31. Mär 2022; nicht 24. Dez",
+              "sDaysB":"FFFFFDFFFFFFFFFFFFFFFFFFFFFFFF000000000000000000"
             },
             "dep":
             {
               "locX":0,
-              "idx":19,
+              "idx":13,
               "dProdX":0,
               "dInR":true,
-              "dTimeS":"121700",
-              "dTimeR":"121900",
+              "dTimeS":"192600",
+              "dTimeR":"192700",
               "dProgType":"PROGNOSED",
               "type":"N"
             },
@@ -432,42 +383,43 @@
             {
               "locX":6,
               "aOutR":true,
-              "aTimeS":"122800",
+              "aTimeS":"193700",
               "type":"N"
             },
             "secL":
             [
               {
                 "type":"JNY",
-                "icoX":1,
+                "icoX":0,
                 "dep":
                 {
                   "locX":0,
-                  "idx":19,
+                  "idx":13,
                   "dProdX":0,
                   "dInR":true,
-                  "dTimeS":"121700",
-                  "dTimeR":"121900",
+                  "dTimeS":"192600",
+                  "dTimeR":"192700",
                   "dProgType":"PROGNOSED",
                   "type":"N"
                 },
                 "arr":
                 {
                   "locX":1,
-                  "idx":21,
+                  "idx":15,
                   "aProdX":0,
-                  "aPlatfS":"K",
+                  "aPlatfS":"C",
+                  "aPlatfR":"C",
                   "aOutR":true,
-                  "aTimeS":"122100",
-                  "aTimeR":"122300",
+                  "aTimeS":"193000",
+                  "aTimeR":"193100",
                   "aProgType":"PROGNOSED",
                   "type":"N"
                 },
                 "jny":
                 {
-                  "jid":"1|139382|4|80|9092021",
+                  "jid":"1|64459|2|80|5122021",
                   "prodX":1,
-                  "dirTxt":"Hauptbahnhof",
+                  "dirTxt":"Miltitz",
                   "dirFlg":"2",
                   "status":"P",
                   "isRchbl":true,
@@ -475,39 +427,40 @@
                   [
                     {
                       "locX":0,
-                      "idx":19,
+                      "idx":13,
                       "dProdX":1,
                       "dInR":true,
-                      "dTimeS":"121700",
-                      "dTimeR":"121900",
+                      "dTimeS":"192600",
+                      "dTimeR":"192700",
                       "dProgType":"PROGNOSED",
-                      "dDirTxt":"Hauptbahnhof",
+                      "dDirTxt":"Miltitz",
                       "dDirFlg":"2",
                       "type":"N"
                     },
                     {
                       "locX":2,
-                      "idx":20,
+                      "idx":14,
                       "aProdX":1,
                       "aOutR":true,
-                      "aTimeS":"121900",
-                      "aTimeR":"122100",
+                      "aTimeS":"192800",
+                      "aTimeR":"192900",
                       "aProgType":"PROGNOSED",
                       "dProdX":1,
                       "dInR":true,
-                      "dTimeS":"121900",
-                      "dTimeR":"122100",
+                      "dTimeS":"192800",
+                      "dTimeR":"192900",
                       "dProgType":"PROGNOSED",
                       "type":"N"
                     },
                     {
                       "locX":1,
-                      "idx":21,
+                      "idx":15,
                       "aProdX":1,
-                      "aPlatfS":"K",
+                      "aPlatfS":"C",
+                      "aPlatfR":"C",
                       "aOutR":true,
-                      "aTimeS":"122100",
-                      "aTimeR":"122300",
+                      "aTimeS":"193000",
+                      "aTimeR":"193100",
                       "aProgType":"PROGNOSED",
                       "type":"N"
                     }
@@ -517,9 +470,9 @@
                     "delta":true,
                     "dim":2,
                     "type":"WGS84",
-                    "crdEncYX":"y|ixHierjAKjDoAbBYlGm@zEe@`BDa@{DkA}MiAeEeBc@T[lKwAdE",
-                    "crdEncS":"NNMMKNMMNNNNN",
-                    "crdEncF":"?????????????",
+                    "crdEncYX":"q~ixHi}qjAyAbOw@vAkB_AsDu@}Ji@eD}@_@j@{@hIqArD",
+                    "crdEncS":"NNNKMLNMMN",
+                    "crdEncF":"??????????",
                     "ppLocRefL":
                     [
                       {
@@ -527,11 +480,11 @@
                         "locX":0
                       },
                       {
-                        "ppIdx":5,
+                        "ppIdx":2,
                         "locX":2
                       },
                       {
-                        "ppIdx":12,
+                        "ppIdx":9,
                         "locX":1
                       }
                     ]
@@ -539,24 +492,35 @@
                   "proc":0,
                   "pos":
                   {
-                    "x":12406336,
-                    "y":51338105,
+                    "x":12388232,
+                    "y":51336523,
                     "layerX":0,
                     "crdSysX":0
                   },
                   "lStop":-1,
                   "freq":
                   {
-                    "minC":10,
-                    "maxC":10,
-                    "numC":13
+                    "minC":2,
+                    "maxC":5,
+                    "numC":33
                   },
-                  "ctxRecon":"T$A=1@O=Leipzig, Johannisplatz@L=11063@a=128@$A=1@O=Leipzig, Hauptbahnhof (Tram/Bus)@L=13000@a=128@$202109091217$202109091221$Bus   73$$1$$$$",
+                  "ctxRecon":"T$A=1@O=Leipzig, Johannisplatz@L=11063@a=128@$A=1@O=Leipzig, Hauptbahnhof (Tram/Bus)@L=13000@a=128@$202112051926$202112051930$Str   15$$1$$$$",
                   "msgL":
                   [
                     {
                       "type":"REM",
                       "remX":0,
+                      "fLocX":0,
+                      "tLocX":1,
+                      "tagL":
+                      [
+                        "RES_JNY_DTL"
+                      ]
+                    },
+                    {
+                      "type":"REM",
+                      "remX":1,
+                      "dspl":"U",
                       "fLocX":0,
                       "tLocX":1,
                       "tagL":
@@ -573,16 +537,6 @@
                       [
                         "SUM_SEC_H3","SUM_CON_HDR_H1"
                       ]
-                    },
-                    {
-                      "type":"HIM",
-                      "himX":1,
-                      "fLocX":0,
-                      "tLocX":1,
-                      "tagL":
-                      [
-                        "SUM_SEC_H3","SUM_CON_HDR_H1"
-                      ]
                     }
                   ],
                   "subscr":"F"
@@ -591,19 +545,19 @@
               },
               {
                 "type":"WALK",
-                "icoX":7,
+                "icoX":5,
                 "dep":
                 {
                   "locX":1,
                   "dInR":true,
-                  "dTimeS":"122100",
+                  "dTimeS":"193000",
                   "type":"N"
                 },
                 "arr":
                 {
                   "locX":6,
                   "aOutR":true,
-                  "aTimeS":"122800",
+                  "aTimeS":"193700",
                   "type":"N"
                 },
                 "gis":
@@ -611,7 +565,7 @@
                   "dist":208,
                   "durS":"000700",
                   "dirGeo":4,
-                  "ctx":"H|1|W$A=1@O=Leipzig, Hauptbahnhof (Tram/Bus)@L=13000@a=128@$A=1@O=Leipzig Hbf@L=8010205@a=128@$202109091221$202109091228$$$1$$$$",
+                  "ctx":"H|1|W$A=1@O=Leipzig, Hauptbahnhof (Tram/Bus)@L=13000@a=128@$A=1@O=Leipzig Hbf@L=8010205@a=128@$202112051930$202112051937$$$1$$$$",
                   "poly":
                   {
                     "delta":true,
@@ -636,13 +590,14 @@
                 }
               }
             ],
-            "ctxRecon":"¶HKI¶T$A=1@O=Leipzig, Johannisplatz@L=11063@a=128@$A=1@O=Leipzig, Hauptbahnhof (Tram/Bus)@L=13000@a=128@$202109091217$202109091221$Bus   73$$1$$$$§W$A=1@O=Leipzig, Hauptbahnhof (Tram/Bus)@L=13000@a=128@$A=1@O=Leipzig Hbf@L=8010205@a=128@$202109091221$202109091228$$$1$$$$",
+            "ctxRecon":"¶HKI¶T$A=1@O=Leipzig, Johannisplatz@L=11063@a=128@$A=1@O=Leipzig, Hauptbahnhof (Tram/Bus)@L=13000@a=128@$202112051926$202112051930$Str   15$$1$$$$§W$A=1@O=Leipzig, Hauptbahnhof (Tram/Bus)@L=13000@a=128@$A=1@O=Leipzig Hbf@L=8010205@a=128@$202112051930$202112051937$$$1$$$$¶KCC¶I1ZFIzEjRVJHIzIjSElOIzAjRUNLIzgzNjZ8ODM2Nnw4Mzc3fDgzNzd8MHwwfDV8ODM2NXwxfC0yMTQ3NDgzNjQ2fDAjR0FNIzUxMjIxMTkyNiMKWiNWTiMxI1NUIzE2Mzg2MTQxOTIjUEkjMCNaSSM2NDQ1OSNUQSMyI0RBIzUxMjIxIzFTIzExNTU5IzFUIzE5MTAjTFMjMTEwNzEjTFQjMTkzOCNQVSM4MCNSVCMxI0NBI1N0TiNaRSMxNSNaQiNTdHIgICAxNSNQQyM1I0ZSIzExMDYzI0ZUIzE5MjYjVE8jMTMwMDAjVFQjMTkzMCMKRiNWTiMwI1NUIzE2Mzg2MTQxOTIjUEkjMCNQVSM4MCNaSSMyMjgxNzgzMDQzI0RBIzUxMjIxI0ZSIzEzMDAwI1RPIzgwMTAyMDUjRlQjMTkzMCNUVCMxOTM3I1RTIzQjRkYjI0ZWIzAj",
             "freq":
             {
-              "minC":10
+              "minC":2
             },
             "trfRes":
             {
+              "statusCode":"OK",
               "fareSetL":
               [
                 {
@@ -652,220 +607,189 @@
                   [
                     {
                       "name":"Einzelfahrkarte Kurzstrecke ABO Flex",
-                      "desc":"<ul><li>gültig für eine Person und eine Fahrt</li><li>gilt nur in Tram und Bus innerhalb des Stadtverkehrs Leipzig (Tarifzone 110) bis zu 4 Haltestellen, wobei die Einstiegshaltestelle nicht mitgezählt wird</li><li>im Citytunnel Leipzig für alle 4 Haltestellen gültig, das heißt zwischen den Tunnelendpunkten Leipzig Hauptbahnhof (tief) und Leipzig Bayerischer Bahnhof</li><li>Umsteigen ist nicht möglich</li><li>ist nur entwertet zur Fahrt gültig</li><li>ist nicht auf andere Personen übertragbar (bitte amtliches Personaldokument mit Lichtbild mitführen</li><li>Gilt ab Entwertung: 0,33 Std.</li><li>Tarifzone(n)/Preisstufe: Leipzig</li><li>Gilt in der/den Tarifzone(n): 110</li></ul><h2>Besonderheiten</h2><p>Für eine monatliche Grundgebühr von 6,90 EUR erhalten Sie eine UmweltCard (Chipkarte).</p><p>Die UmweltCard (Chipkarte) beinhaltet keine eigenständige Fahrtberechtigung, sondern berechtigt zum Erwerb und zur Nutzung der aufgeführten rabattierten Tickets.</p><p>Die rabattierten Tickets können bargeldlos bei den Leipziger Verkehrsbetrieben (LVB) an stationären und mobilen Automaten sowie in Servicestellen gekauft werden. Bei DB Regio an allen DB-Automatengegen sofortige Zahlung.</p><p>Die Einzelfahrkarte Kurzstrecke ABO Flex ist auch über die App <a href='https://www.moovme.de/' target='_blank'>MOOVME</a> erhältlich.</p><div><div>Voraussetzung für den bargeldlosen Kauf über MOOVME ist ein Vertragsabschluss für das ABO Flex bei DB Regio oder den Leipziger Verkehrsbetrieben (LVB).</div><div>Die Rechnungsstellung der Grundgebühr erfolgt im Rahmen der monatlichen Abrechnung durch den Vertragspartner (Verkehrsunternehmen).</div><div>Die Abrechnung von Ticketkäufen erfolgt über die App - hier kann zwischen verschiedene Bezahlverfahren gewählt werden.</div></div>",
-                      "dtl":"<ul><li>gültig für eine Person und eine Fahrt</li><li>gilt nur in Tram und Bus innerhalb des Stadtverkehrs Leipzig (Tarifzone 110) bis zu 4 Haltestellen, wobei die Einstiegshaltestelle nicht mitgezählt wird</li><li>im Citytunnel Leipzig für alle 4 Haltestellen gültig, das heißt zwischen den Tunnelendpunkten Leipzig Hauptbahnhof (tief) und Leipzig Bayerischer Bahnhof</li><li>Umsteigen ist nicht möglich</li><li>ist nur entwertet zur Fahrt gültig</li><li>ist nicht auf andere Personen übertragbar (bitte amtliches Personaldokument mit Lichtbild mitführen</li><li>Gilt ab Entwertung: 0,33 Std.</li><li>Tarifzone(n)/Preisstufe: Leipzig</li><li>Gilt in der/den Tarifzone(n): 110</li></ul><h2>Besonderheiten</h2><p>Für eine monatliche Grundgebühr von 6,90 EUR erhalten Sie eine UmweltCard (Chipkarte).</p><p>Die UmweltCard (Chipkarte) beinhaltet keine eigenständige Fahrtberechtigung, sondern berechtigt zum Erwerb und zur Nutzung der aufgeführten rabattierten Tickets.</p><p>Die rabattierten Tickets können bargeldlos bei den Leipziger Verkehrsbetrieben (LVB) an stationären und mobilen Automaten sowie in Servicestellen gekauft werden. Bei DB Regio an allen DB-Automatengegen sofortige Zahlung.</p><p>Die Einzelfahrkarte Kurzstrecke ABO Flex ist auch über die App <a href='https://www.moovme.de/' target='_blank'>MOOVME</a> erhältlich.</p><div><div>Voraussetzung für den bargeldlosen Kauf über MOOVME ist ein Vertragsabschluss für das ABO Flex bei DB Regio oder den Leipziger Verkehrsbetrieben (LVB).</div><div>Die Rechnungsstellung der Grundgebühr erfolgt im Rahmen der monatlichen Abrechnung durch den Vertragspartner (Verkehrsunternehmen).</div><div>Die Abrechnung von Ticketkäufen erfolgt über die App - hier kann zwischen verschiedene Bezahlverfahren gewählt werden.</div></div>",
                       "prc":90,
-                      "cur":"EUR"
+                      "cur":"EUR",
+                      "shpCtx":"2017"
                     },
                     {
                       "name":"Einzelfahrkarte Kurzstrecke",
-                      "desc":"<ul><li>gültig für eine Person und eine Fahrt</li><li>gilt nur in Tram und Bus innerhalb der Stadtverkehre Leipzig (Tarifzone 110) und Halle (Tarifzone 210) bis zu 4 Haltestellen, wobei die Einstiegshaltestelle nicht mitgezählt wird</li><li>in den Landkreisen bis zu 4 Entfernungskilometern</li><li>in den Nahverkehrszügen zwischen 2 benachbarten Haltepunkten (planmäßig durchfahrene Haltepunkte werden mitgezählt), Ausnahmen können unter <a href='https://www.mdv.de/site/uploads/anlage_10.pdf' target='_blank'>www.mdv.de/site/uploads/anlage_10.pdf</a> eingesehen werden</li><li>Umsteigen ist nicht möglich</li><li>ist nur entwertet zur Fahrt gültig</li><li>ist nach Fahrtantritt nicht übertragbar</li><li>Gilt ab Entwertung: 0,33 Std.</li><li>Tarifzone(n)/Preisstufe: Leipzig</li><li>Gilt in der/den Tarifzone(n): 110</li></ul><h2>Mitnahme</h2><p>Es ist keine Mitnahme von weiteren Personen möglich.</p><h2>Besonderheiten</h2><p>Im Citytunnel Leipzig gilt die Einzelfahrkarte Kurzstrecke für alle 4 Haltestellen, das heißt zwischen den Tunnelendpunkten Leipzig Hauptbahnhof (tief) und Leipzig Bayerischer Bahnhof.</p><p>Mit dem <a href='https://www.mdv.de/ticket/abo-flex/' target='_blank'>ABO Flex</a> für Leipzig (Tarifzone 110) erhalten Sie die Einzelfahrkarte Kurzstrecke zum Vorzugspreis! Für mehrere Fahrten auf kurzen Strecken empfehlen wir die <a href='https://www.mdv.de/ticket/4-fahrtenkarte-kurzstrecke/' target='_blank'>4-Fahrtenkarte Kurzstrecke</a>.</p>",
-                      "dtl":"<ul><li>gültig für eine Person und eine Fahrt</li><li>gilt nur in Tram und Bus innerhalb der Stadtverkehre Leipzig (Tarifzone 110) und Halle (Tarifzone 210) bis zu 4 Haltestellen, wobei die Einstiegshaltestelle nicht mitgezählt wird</li><li>in den Landkreisen bis zu 4 Entfernungskilometern</li><li>in den Nahverkehrszügen zwischen 2 benachbarten Haltepunkten (planmäßig durchfahrene Haltepunkte werden mitgezählt), Ausnahmen können unter <a href='https://www.mdv.de/site/uploads/anlage_10.pdf' target='_blank'>www.mdv.de/site/uploads/anlage_10.pdf</a> eingesehen werden</li><li>Umsteigen ist nicht möglich</li><li>ist nur entwertet zur Fahrt gültig</li><li>ist nach Fahrtantritt nicht übertragbar</li><li>Gilt ab Entwertung: 0,33 Std.</li><li>Tarifzone(n)/Preisstufe: Leipzig</li><li>Gilt in der/den Tarifzone(n): 110</li></ul><h2>Mitnahme</h2><p>Es ist keine Mitnahme von weiteren Personen möglich.</p><h2>Besonderheiten</h2><p>Im Citytunnel Leipzig gilt die Einzelfahrkarte Kurzstrecke für alle 4 Haltestellen, das heißt zwischen den Tunnelendpunkten Leipzig Hauptbahnhof (tief) und Leipzig Bayerischer Bahnhof.</p><p>Mit dem <a href='https://www.mdv.de/ticket/abo-flex/' target='_blank'>ABO Flex</a> für Leipzig (Tarifzone 110) erhalten Sie die Einzelfahrkarte Kurzstrecke zum Vorzugspreis! Für mehrere Fahrten auf kurzen Strecken empfehlen wir die <a href='https://www.mdv.de/ticket/4-fahrtenkarte-kurzstrecke/' target='_blank'>4-Fahrtenkarte Kurzstrecke</a>.</p>",
                       "prc":200,
-                      "cur":"EUR"
+                      "cur":"EUR",
+                      "shpCtx":"3"
                     },
                     {
                       "name":"4-Fahrten-Karte Kurzstrecke",
-                      "desc":"<ul><li>gültig für maximal 4 Fahrten</li><li>gilt nur in Tram und Bus innerhalb der Stadtverkehre Leipzig (Tarifzone 110) und Halle (Tarifzone 210) bis zu 4 Haltestellen, wobei die Einstiegshaltestelle nicht mitgezählt wird</li><li>in den Landkreisen bis zu 4 Entfernungskilometern</li><li>in den Nahverkehrszügen zwischen 2 benachbarten Haltepunkten (planmäßig durchfahrene Haltepunkte werden mitgezählt), Ausnahmen können unter <a href='https://www.mdv.de/site/uploads/anlage_10.pdf' target='_blank'>www.mdv.de/site/uploads/anlage_10.pdf</a> eingesehen werden</li><li>Umsteigen ist nicht möglich</li><li>ist nur entwertet zur Fahrt gültig</li><li>ist nach Fahrtantritt nicht übertragbar</li><li>Gilt ab Entwertung: 0,33 Std.</li><li>Tarifzone(n)/Preisstufe: Leipzig</li><li>Gilt in der/den Tarifzone(n): 110</li></ul><h2>Mitnahme</h2><p>Es ist keine Mitnahme von weiteren Personen möglich.</p><h2>Besonderheiten</h2><p>Im Citytunnel Leipzig gilt der gelöste Abschnitt der 4-Fahrtenkarte Kurzstrecke für alle 4 Haltestellen, das heißt zwischen den Tunnelendpunkten Leipzig Hauptbahnhof (tief) und Leipzig Bayerischer Bahnhof.</p>",
-                      "dtl":"<ul><li>gültig für maximal 4 Fahrten</li><li>gilt nur in Tram und Bus innerhalb der Stadtverkehre Leipzig (Tarifzone 110) und Halle (Tarifzone 210) bis zu 4 Haltestellen, wobei die Einstiegshaltestelle nicht mitgezählt wird</li><li>in den Landkreisen bis zu 4 Entfernungskilometern</li><li>in den Nahverkehrszügen zwischen 2 benachbarten Haltepunkten (planmäßig durchfahrene Haltepunkte werden mitgezählt), Ausnahmen können unter <a href='https://www.mdv.de/site/uploads/anlage_10.pdf' target='_blank'>www.mdv.de/site/uploads/anlage_10.pdf</a> eingesehen werden</li><li>Umsteigen ist nicht möglich</li><li>ist nur entwertet zur Fahrt gültig</li><li>ist nach Fahrtantritt nicht übertragbar</li><li>Gilt ab Entwertung: 0,33 Std.</li><li>Tarifzone(n)/Preisstufe: Leipzig</li><li>Gilt in der/den Tarifzone(n): 110</li></ul><h2>Mitnahme</h2><p>Es ist keine Mitnahme von weiteren Personen möglich.</p><h2>Besonderheiten</h2><p>Im Citytunnel Leipzig gilt der gelöste Abschnitt der 4-Fahrtenkarte Kurzstrecke für alle 4 Haltestellen, das heißt zwischen den Tunnelendpunkten Leipzig Hauptbahnhof (tief) und Leipzig Bayerischer Bahnhof.</p>",
                       "prc":800,
-                      "cur":"EUR"
+                      "cur":"EUR",
+                      "shpCtx":"4"
                     },
                     {
                       "name":"Einzelfahrkarte ABO Flex",
-                      "desc":"<ul><li>gültig für eine Person</li><li>nur gültig in Leipzig (Tarifzone 110)</li><li>beliebiges Umsteigen innerhalb des Gültigkeitsbereiches ist möglich</li><li>ist nicht auf andere Personen übertragbar (bitte amtliches Personaldokument mit Lichtbild mitführen)</li><li>Gilt ab Entwertung: 1,0 Std.</li><li>Tarifzone(n)/Preisstufe: Leipzig</li><li>Gilt in der/den Tarifzone(n): 110</li></ul><h2>Besonderheiten</h2><p>Für eine monatliche Grundgebühr von 6,90 EUR erhalten Sie eine UmweltCard (Chipkarte).</p><p>Die UmweltCard (Chipkarte) beinhaltet keine eigenständige Fahrtberechtigung, sondern berechtigt zum Erwerb und zur Nutzung der aufgeführten rabattierten Tickets.</p><p>Die rabattierten Tickets können bargeldlos bei den Leipziger Verkehrsbetrieben (LVB) an stationären und mobilen Automaten sowie in Servicestellen gekauft werden. Bei DB Regio an allen DB-Automatengegen sofortige Zahlung.</p><p>Die Einzelfahrkarte ABO Flex ist auch über die App <a href='https://www.moovme.de/' target='_blank'>MOOVME</a> erhältlich.</p><div><div>Voraussetzung für den bargeldlosen Kauf über MOOVME ist ein Vertragsabschluss für das ABO Flex bei DB Regio oder den Leipziger Verkehrsbetrieben (LVB).</div><div>Die Rechnungsstellung der Grundgebühr erfolgt im Rahmen der monatlichen Abrechnung durch den Vertragspartner (Verkehrsunternehmen).</div><div>Die Abrechnung von Ticketkäufen erfolgt über die App - hier kann zwischen verschiedenen Bezahlverfahren gewählt werden.</div></div>",
-                      "dtl":"<ul><li>gültig für eine Person</li><li>nur gültig in Leipzig (Tarifzone 110)</li><li>beliebiges Umsteigen innerhalb des Gültigkeitsbereiches ist möglich</li><li>ist nicht auf andere Personen übertragbar (bitte amtliches Personaldokument mit Lichtbild mitführen)</li><li>Gilt ab Entwertung: 1,0 Std.</li><li>Tarifzone(n)/Preisstufe: Leipzig</li><li>Gilt in der/den Tarifzone(n): 110</li></ul><h2>Besonderheiten</h2><p>Für eine monatliche Grundgebühr von 6,90 EUR erhalten Sie eine UmweltCard (Chipkarte).</p><p>Die UmweltCard (Chipkarte) beinhaltet keine eigenständige Fahrtberechtigung, sondern berechtigt zum Erwerb und zur Nutzung der aufgeführten rabattierten Tickets.</p><p>Die rabattierten Tickets können bargeldlos bei den Leipziger Verkehrsbetrieben (LVB) an stationären und mobilen Automaten sowie in Servicestellen gekauft werden. Bei DB Regio an allen DB-Automatengegen sofortige Zahlung.</p><p>Die Einzelfahrkarte ABO Flex ist auch über die App <a href='https://www.moovme.de/' target='_blank'>MOOVME</a> erhältlich.</p><div><div>Voraussetzung für den bargeldlosen Kauf über MOOVME ist ein Vertragsabschluss für das ABO Flex bei DB Regio oder den Leipziger Verkehrsbetrieben (LVB).</div><div>Die Rechnungsstellung der Grundgebühr erfolgt im Rahmen der monatlichen Abrechnung durch den Vertragspartner (Verkehrsunternehmen).</div><div>Die Abrechnung von Ticketkäufen erfolgt über die App - hier kann zwischen verschiedenen Bezahlverfahren gewählt werden.</div></div>",
                       "prc":130,
-                      "cur":"EUR"
+                      "cur":"EUR",
+                      "shpCtx":"2016"
                     },
                     {
                       "name":"Einzelfahrkarte",
-                      "desc":"<ul><li>gültig für eine Person</li><li>beliebiges Umsteigen innerhalb des Gültigkeitsbereiches ist möglich</li><li>ist nur entwertet zur Fahrt gültig</li><li>ist nach Fahrtantritt nicht übertragbar</li><li>Gilt ab Entwertung: 1,0 Std.</li><li>Tarifzone(n)/Preisstufe: Leipzig</li><li>Gilt in der/den Tarifzone(n): 110</li></ul><h2>Mitnahme</h2><p>Es ist keine Mitnahme von weiteren Personen möglich.</p><h2>Besonderheiten</h2><p>Eingeschulte Kinder im Alter von 6 bis einschließlich 14 Jahren fahren ermäßigt mit unserer <a title='Einzelfahrkarte Kind' href='https://www.mdv.de/ticket/einzelfahrkarte-kind/' target='_blank'>Einzelfahrkarte Kind</a>.</p><p>Mit dem <a title='ABO Flex' href='https://www.mdv.de/ticket/abo-flex/' target='_blank'>ABO Flex</a> für Leipzig (Tarifzone 110) erhalten Sie unsere Einzelfahrkarte zum Vorzugspreis! Sollten Sie doch mal öfter fahren: nutzen Sie die <a title='4-Fahrtenkarte' href='https://www.mdv.de/ticket/4-fahrtenkarte/' target='_blank'>4-Fahrtenkarte</a>!</p>",
-                      "dtl":"<ul><li>gültig für eine Person</li><li>beliebiges Umsteigen innerhalb des Gültigkeitsbereiches ist möglich</li><li>ist nur entwertet zur Fahrt gültig</li><li>ist nach Fahrtantritt nicht übertragbar</li><li>Gilt ab Entwertung: 1,0 Std.</li><li>Tarifzone(n)/Preisstufe: Leipzig</li><li>Gilt in der/den Tarifzone(n): 110</li></ul><h2>Mitnahme</h2><p>Es ist keine Mitnahme von weiteren Personen möglich.</p><h2>Besonderheiten</h2><p>Eingeschulte Kinder im Alter von 6 bis einschließlich 14 Jahren fahren ermäßigt mit unserer <a title='Einzelfahrkarte Kind' href='https://www.mdv.de/ticket/einzelfahrkarte-kind/' target='_blank'>Einzelfahrkarte Kind</a>.</p><p>Mit dem <a title='ABO Flex' href='https://www.mdv.de/ticket/abo-flex/' target='_blank'>ABO Flex</a> für Leipzig (Tarifzone 110) erhalten Sie unsere Einzelfahrkarte zum Vorzugspreis! Sollten Sie doch mal öfter fahren: nutzen Sie die <a title='4-Fahrtenkarte' href='https://www.mdv.de/ticket/4-fahrtenkarte/' target='_blank'>4-Fahrtenkarte</a>!</p>",
                       "prc":300,
-                      "cur":"EUR"
+                      "cur":"EUR",
+                      "shpCtx":"1"
                     },
                     {
                       "name":"Einzelfahrkarte Kind",
-                      "desc":"<ul><li>gültig für ein eingeschultes Kind von 6 bis 14 Jahren</li><li>beliebiges Umsteigen innerhalb des Gültigkeitsbereiches ist möglich</li><li>ist nur entwertet zur Fahrt gültig</li><li>ist nach Fahrtantritt nicht übertragbar</li><li>Gilt ab Entwertung: 1,0 Std.</li><li>Tarifzone(n)/Preisstufe: Leipzig</li><li>Gilt in der/den Tarifzone(n): 110</li></ul><h2>Mitnahme</h2><p>Es ist keine Mitnahme von weiteren Personen möglich.</p><h2>Besonderheiten</h2><p>Nicht eingeschulte Kinder werden bis einschließlich des 8. Geburtstages unentgeltlich befördert. Die Begleitpersonen von Kindern und Kindergruppen müssen ein Ticket gemäß gültigem Tarif lösen.</p><p>Für die tägliche Fahrt zur Schule gibt es im MDV attraktive Schülerticketangebote.</p>",
-                      "dtl":"<ul><li>gültig für ein eingeschultes Kind von 6 bis 14 Jahren</li><li>beliebiges Umsteigen innerhalb des Gültigkeitsbereiches ist möglich</li><li>ist nur entwertet zur Fahrt gültig</li><li>ist nach Fahrtantritt nicht übertragbar</li><li>Gilt ab Entwertung: 1,0 Std.</li><li>Tarifzone(n)/Preisstufe: Leipzig</li><li>Gilt in der/den Tarifzone(n): 110</li></ul><h2>Mitnahme</h2><p>Es ist keine Mitnahme von weiteren Personen möglich.</p><h2>Besonderheiten</h2><p>Nicht eingeschulte Kinder werden bis einschließlich des 8. Geburtstages unentgeltlich befördert. Die Begleitpersonen von Kindern und Kindergruppen müssen ein Ticket gemäß gültigem Tarif lösen.</p><p>Für die tägliche Fahrt zur Schule gibt es im MDV attraktive Schülerticketangebote.</p>",
                       "prc":120,
-                      "cur":"EUR"
+                      "cur":"EUR",
+                      "shpCtx":"5"
                     },
                     {
                       "name":"4-Fahrten-Karte",
-                      "desc":"<ul><li>gültig für maximal 4 Fahrten</li><li>beliebiges Umsteigen innerhalb des Gültigkeitsbereiches ist möglich</li><li>ist nur entwertet zur Fahrt gültig</li><li>ist nach Fahrtantritt nicht übertragbar</li><li>Gilt ab Entwertung: 1,0 Std.</li><li>Tarifzone(n)/Preisstufe: Leipzig</li><li>Gilt in der/den Tarifzone(n): 110</li></ul><h2>Mitnahme</h2><p>Die Mitnahme von maximal 3 weiteren Personen ist möglich. In diesem Fall ist die entsprechende Anzahl an Abschnitten zu entwerten.</p><h2>Besonderheiten</h2><p>4-Fahrtenkarten werden als zwei Tickets mit jeweils zwei Entwertungsabschnitten oder als ein Ticket mit vier Abschnitten ausgegeben.</p><p>Für eingeschulte Kinder von 6 bis 14 Jahren gibt es unsere <a href='https://www.mdv.de/ticket/4-fahrtenkarte-kind/' target='_blank'>4-Fahrtenkarte Kind</a>.</p>",
-                      "dtl":"<ul><li>gültig für maximal 4 Fahrten</li><li>beliebiges Umsteigen innerhalb des Gültigkeitsbereiches ist möglich</li><li>ist nur entwertet zur Fahrt gültig</li><li>ist nach Fahrtantritt nicht übertragbar</li><li>Gilt ab Entwertung: 1,0 Std.</li><li>Tarifzone(n)/Preisstufe: Leipzig</li><li>Gilt in der/den Tarifzone(n): 110</li></ul><h2>Mitnahme</h2><p>Die Mitnahme von maximal 3 weiteren Personen ist möglich. In diesem Fall ist die entsprechende Anzahl an Abschnitten zu entwerten.</p><h2>Besonderheiten</h2><p>4-Fahrtenkarten werden als zwei Tickets mit jeweils zwei Entwertungsabschnitten oder als ein Ticket mit vier Abschnitten ausgegeben.</p><p>Für eingeschulte Kinder von 6 bis 14 Jahren gibt es unsere <a href='https://www.mdv.de/ticket/4-fahrtenkarte-kind/' target='_blank'>4-Fahrtenkarte Kind</a>.</p>",
                       "prc":1200,
-                      "cur":"EUR"
+                      "cur":"EUR",
+                      "shpCtx":"2"
                     },
                     {
                       "name":"4-Fahrten-Karte Kind",
-                      "desc":"<ul><li>für eingeschulte Kinder von 6 bis 14 Jahren</li><li>gültig für maximal 4 Fahrten</li><li>beliebiges Umsteigen innerhalb des Gültigkeitsbereiches ist möglich</li><li>ist nur entwertet zur Fahrt gültig</li><li>ist nach Fahrtantritt nicht übertragbar</li><li>Gilt ab Entwertung: 1,0 Std.</li><li>Tarifzone(n)/Preisstufe: Leipzig</li><li>Gilt in der/den Tarifzone(n): 110</li></ul><h2>Mitnahme</h2><p>Die Mitnahme von maximal 3 weiteren Kindern ist möglich. In diesem Fall ist die entsprechende Anzahl an Abschnitten zu entwerten.</p><h2>Besonderheiten</h2><p>4-Fahrtenkarten werden als zwei Tickets mit jeweils zwei Entwertungsabschnitten oder als ein Ticket mit vier Abschnitten ausgegeben.</p><p>Die Begleitpersonen von Kindern und Kindergruppen müssen ein Ticket gemäß gültigem Tarif lösen.</p>",
-                      "dtl":"<ul><li>für eingeschulte Kinder von 6 bis 14 Jahren</li><li>gültig für maximal 4 Fahrten</li><li>beliebiges Umsteigen innerhalb des Gültigkeitsbereiches ist möglich</li><li>ist nur entwertet zur Fahrt gültig</li><li>ist nach Fahrtantritt nicht übertragbar</li><li>Gilt ab Entwertung: 1,0 Std.</li><li>Tarifzone(n)/Preisstufe: Leipzig</li><li>Gilt in der/den Tarifzone(n): 110</li></ul><h2>Mitnahme</h2><p>Die Mitnahme von maximal 3 weiteren Kindern ist möglich. In diesem Fall ist die entsprechende Anzahl an Abschnitten zu entwerten.</p><h2>Besonderheiten</h2><p>4-Fahrtenkarten werden als zwei Tickets mit jeweils zwei Entwertungsabschnitten oder als ein Ticket mit vier Abschnitten ausgegeben.</p><p>Die Begleitpersonen von Kindern und Kindergruppen müssen ein Ticket gemäß gültigem Tarif lösen.</p>",
                       "prc":480,
-                      "cur":"EUR"
+                      "cur":"EUR",
+                      "shpCtx":"6"
                     },
                     {
                       "name":"Extrakarte ABO Flex",
-                      "desc":"<ul><li>gültig in der Stadt Leipzig (Tarifzone 110)</li><li>beliebiges Umsteigen innerhalb des Gültigkeitsbereiches ist möglich</li><li>für Hunde und Kleintiere, die nicht in geeigneten Behältnissen wie Handgepäck befördert werden können</li><li>für größere Gegenstände und Gepäckstücke, die nicht leicht tragbar sind oder</li><li>für Fahrräder in Tram und Bus</li><li>ist nicht auf andere Personen übertragbar (bitte amtliches Personaldokument mit Lichtbild mitführen)</li><li>Gilt ab Entwertung: 1,0 Std.</li><li>Tarifzone(n)/Preisstufe: Leipzig</li><li>Gilt in der/den Tarifzone(n): 110</li></ul><h2>Besonderheiten</h2><p>Für eine monatliche Grundgebühr von 6,90 EUR erhalten Sie eine UmweltCard (Chipkarte).<br /> Die UmweltCard (Chipkarte) beinhaltet keine eigenständige Fahrtberechtigung, sondern berechtigt zum Erwerb und zur Nutzung der aufgeführten rabattierten Tickets.<br /> Die rabattierten Tickets können bargeldlos bei den <strong>Leipziger Verkehrsbetrieben</strong> an stationären und mobilen Automaten sowie in Servicestellen gekauft werden. Bei <strong>DB Regio</strong> an allen DB-Automatengegen sofortige Zahlung.</p><p>Die Extrakarte ABO Flex ist auch über die App <a href='https://www.moovme.de/' target='_blank'>MOOVME</a> erhältlich.</p><div><div>Voraussetzung für den bargeldlosen Kauf über MOOVME ist ein Vertragsabschluss für das ABO Flex bei DB Regio oder den Leipziger Verkehrsbetrieben.<br /> Die Rechnungsstellung der Grundgebühr erfolgt im Rahmen der monatlichen Abrechnung durch den Vertragspartner (Verkehrsunternehmen).<br /> Die Abrechnung von Ticketkäufen erfolgt über die App - hier kann zwischen verschiedenen Bezahlverfahren gewählt werden.</div></div>",
-                      "dtl":"<ul><li>gültig in der Stadt Leipzig (Tarifzone 110)</li><li>beliebiges Umsteigen innerhalb des Gültigkeitsbereiches ist möglich</li><li>für Hunde und Kleintiere, die nicht in geeigneten Behältnissen wie Handgepäck befördert werden können</li><li>für größere Gegenstände und Gepäckstücke, die nicht leicht tragbar sind oder</li><li>für Fahrräder in Tram und Bus</li><li>ist nicht auf andere Personen übertragbar (bitte amtliches Personaldokument mit Lichtbild mitführen)</li><li>Gilt ab Entwertung: 1,0 Std.</li><li>Tarifzone(n)/Preisstufe: Leipzig</li><li>Gilt in der/den Tarifzone(n): 110</li></ul><h2>Besonderheiten</h2><p>Für eine monatliche Grundgebühr von 6,90 EUR erhalten Sie eine UmweltCard (Chipkarte).<br /> Die UmweltCard (Chipkarte) beinhaltet keine eigenständige Fahrtberechtigung, sondern berechtigt zum Erwerb und zur Nutzung der aufgeführten rabattierten Tickets.<br /> Die rabattierten Tickets können bargeldlos bei den <strong>Leipziger Verkehrsbetrieben</strong> an stationären und mobilen Automaten sowie in Servicestellen gekauft werden. Bei <strong>DB Regio</strong> an allen DB-Automatengegen sofortige Zahlung.</p><p>Die Extrakarte ABO Flex ist auch über die App <a href='https://www.moovme.de/' target='_blank'>MOOVME</a> erhältlich.</p><div><div>Voraussetzung für den bargeldlosen Kauf über MOOVME ist ein Vertragsabschluss für das ABO Flex bei DB Regio oder den Leipziger Verkehrsbetrieben.<br /> Die Rechnungsstellung der Grundgebühr erfolgt im Rahmen der monatlichen Abrechnung durch den Vertragspartner (Verkehrsunternehmen).<br /> Die Abrechnung von Ticketkäufen erfolgt über die App - hier kann zwischen verschiedenen Bezahlverfahren gewählt werden.</div></div>",
                       "prc":90,
-                      "cur":"EUR"
+                      "cur":"EUR",
+                      "shpCtx":"2018"
                     },
                     {
                       "name":"Extrakarte",
-                      "desc":"<ul><li>für Hunde und Kleintiere, die nicht in geeigneten Behältnissen wie Handgepäck befördert werden können</li><li>für größere Gegenstände und Gepäckstücke, die nicht leicht tragbar sind oder</li><li>für Fahrräder in Tram und Bus im sächsischen und thüringischen MDV-Gebiet sowie in der Stadt Halle (Tarifzone 210)</li><li>beliebiges Umsteigen innerhalb des Gültigkeitsbereiches ist möglich</li><li>ist nur entwertet zur Fahrt gültig</li><li>ist nach Fahrtantritt nicht übertragbar</li><li>Gilt ab Entwertung: 1,0 Std.</li><li>Tarifzone(n)/Preisstufe: Leipzig</li><li>Gilt in der/den Tarifzone(n): 110</li></ul><p>In Halle ist für Tram und Bus auch eine <a title='Fahrradmonatskarte' href='https://www.mdv.de/ticket/fahrradmonatskarte-halle/' target='_blank'>Fahrradmonatskarte</a> für <strong>23,00 Euro</strong> erhältlich!</p>",
-                      "dtl":"<ul><li>für Hunde und Kleintiere, die nicht in geeigneten Behältnissen wie Handgepäck befördert werden können</li><li>für größere Gegenstände und Gepäckstücke, die nicht leicht tragbar sind oder</li><li>für Fahrräder in Tram und Bus im sächsischen und thüringischen MDV-Gebiet sowie in der Stadt Halle (Tarifzone 210)</li><li>beliebiges Umsteigen innerhalb des Gültigkeitsbereiches ist möglich</li><li>ist nur entwertet zur Fahrt gültig</li><li>ist nach Fahrtantritt nicht übertragbar</li><li>Gilt ab Entwertung: 1,0 Std.</li><li>Tarifzone(n)/Preisstufe: Leipzig</li><li>Gilt in der/den Tarifzone(n): 110</li></ul><p>In Halle ist für Tram und Bus auch eine <a title='Fahrradmonatskarte' href='https://www.mdv.de/ticket/fahrradmonatskarte-halle/' target='_blank'>Fahrradmonatskarte</a> für <strong>23,00 Euro</strong> erhältlich!</p>",
                       "prc":200,
-                      "cur":"EUR"
+                      "cur":"EUR",
+                      "shpCtx":"202"
                     },
                     {
                       "name":"24-Stunden-Karte 1 Person",
-                      "desc":"<ul><li>Fahrtantritt ist frei wählbar</li><li>gilt ab Entwertung 24 Stunden oder laut Aufdruck</li><li>für beliebig viele Fahrten und Umstiege innerhalb des gewählten Gültigkeitsbereiches</li><li>ist nur entwertet zur Fahrt gültig</li><li>ist nach Fahrtantritt nicht übertragbar</li><li>Gilt ab Entwertung: 24,0 Std.</li><li>Tarifzone(n)/Preisstufe: Leipzig</li><li>Gilt in der/den Tarifzone(n): 110</li></ul><h2>Besonderheiten</h2><p>24-Stunden-Karten für Erwachsene können für eine bis maximal 5 Personen erworben werden. Maximal eine Person kann durch einen Hund ersetzt werden.</p><p>Eingeschulte Kinder im Alter von 6 bis einschließlich 14 Jahren fahren ermäßigt mit unserer <a href='https://www.mdv.de/ticket/tageskarte-kind/' target='_blank'>24-Stunden-Karte Kind</a>.</p><p>Vergleichen lohnt sich! Unsere 24-Stunden-Karten bieten oft günstigere Preise als mehrere Einzelfahrten.</p>",
-                      "dtl":"<ul><li>Fahrtantritt ist frei wählbar</li><li>gilt ab Entwertung 24 Stunden oder laut Aufdruck</li><li>für beliebig viele Fahrten und Umstiege innerhalb des gewählten Gültigkeitsbereiches</li><li>ist nur entwertet zur Fahrt gültig</li><li>ist nach Fahrtantritt nicht übertragbar</li><li>Gilt ab Entwertung: 24,0 Std.</li><li>Tarifzone(n)/Preisstufe: Leipzig</li><li>Gilt in der/den Tarifzone(n): 110</li></ul><h2>Besonderheiten</h2><p>24-Stunden-Karten für Erwachsene können für eine bis maximal 5 Personen erworben werden. Maximal eine Person kann durch einen Hund ersetzt werden.</p><p>Eingeschulte Kinder im Alter von 6 bis einschließlich 14 Jahren fahren ermäßigt mit unserer <a href='https://www.mdv.de/ticket/tageskarte-kind/' target='_blank'>24-Stunden-Karte Kind</a>.</p><p>Vergleichen lohnt sich! Unsere 24-Stunden-Karten bieten oft günstigere Preise als mehrere Einzelfahrten.</p>",
                       "prc":800,
-                      "cur":"EUR"
+                      "cur":"EUR",
+                      "shpCtx":"7"
                     },
                     {
                       "name":"24-Stunden-Karte 2 Personen",
-                      "desc":"<ul><li>Fahrtantritt ist frei wählbar</li><li>gilt ab Entwertung 24 Stunden oder laut Aufdruck</li><li>für beliebig viele Fahrten und Umstiege innerhalb des gewählten Gültigkeitsbereiches</li><li>ist nur entwertet zur Fahrt gültig</li><li>ist nach Fahrtantritt nicht übertragbar</li><li>Gilt ab Entwertung: 24,0 Std.</li><li>Tarifzone(n)/Preisstufe: Leipzig</li><li>Gilt in der/den Tarifzone(n): 110</li></ul><h2>Besonderheiten</h2><p>24-Stunden-Karten für Erwachsene können für eine bis maximal 5 Personen erworben werden. Maximal eine Person kann durch einen Hund ersetzt werden.</p><p>Eingeschulte Kinder im Alter von 6 bis einschließlich 14 Jahren fahren ermäßigt mit unserer <a href='https://www.mdv.de/ticket/tageskarte-kind/' target='_blank'>24-Stunden-Karte Kind</a>.</p><p>Vergleichen lohnt sich! Unsere 24-Stunden-Karten bieten oft günstigere Preise als mehrere Einzelfahrten.</p>",
-                      "dtl":"<ul><li>Fahrtantritt ist frei wählbar</li><li>gilt ab Entwertung 24 Stunden oder laut Aufdruck</li><li>für beliebig viele Fahrten und Umstiege innerhalb des gewählten Gültigkeitsbereiches</li><li>ist nur entwertet zur Fahrt gültig</li><li>ist nach Fahrtantritt nicht übertragbar</li><li>Gilt ab Entwertung: 24,0 Std.</li><li>Tarifzone(n)/Preisstufe: Leipzig</li><li>Gilt in der/den Tarifzone(n): 110</li></ul><h2>Besonderheiten</h2><p>24-Stunden-Karten für Erwachsene können für eine bis maximal 5 Personen erworben werden. Maximal eine Person kann durch einen Hund ersetzt werden.</p><p>Eingeschulte Kinder im Alter von 6 bis einschließlich 14 Jahren fahren ermäßigt mit unserer <a href='https://www.mdv.de/ticket/tageskarte-kind/' target='_blank'>24-Stunden-Karte Kind</a>.</p><p>Vergleichen lohnt sich! Unsere 24-Stunden-Karten bieten oft günstigere Preise als mehrere Einzelfahrten.</p>",
                       "prc":1200,
-                      "cur":"EUR"
+                      "cur":"EUR",
+                      "shpCtx":"198"
                     },
                     {
                       "name":"24-Stunden-Karte 3 Personen",
-                      "desc":"<ul><li>Fahrtantritt ist frei wählbar</li><li>gilt ab Entwertung 24 Stunden oder laut Aufdruck</li><li>für beliebig viele Fahrten und Umstiege innerhalb des gewählten Gültigkeitsbereiches</li><li>ist nur entwertet zur Fahrt gültig</li><li>ist nach Fahrtantritt nicht übertragbar</li><li>Gilt ab Entwertung: 24,0 Std.</li><li>Tarifzone(n)/Preisstufe: Leipzig</li><li>Gilt in der/den Tarifzone(n): 110</li></ul><h2>Besonderheiten</h2><p>24-Stunden-Karten für Erwachsene können für eine bis maximal 5 Personen erworben werden. Maximal eine Person kann durch einen Hund ersetzt werden.</p><p>Eingeschulte Kinder im Alter von 6 bis einschließlich 14 Jahren fahren ermäßigt mit unserer <a href='https://www.mdv.de/ticket/tageskarte-kind/' target='_blank'>24-Stunden-Karte Kind</a>.</p><p>Vergleichen lohnt sich! Unsere 24-Stunden-Karten bieten oft günstigere Preise als mehrere Einzelfahrten.</p>",
-                      "dtl":"<ul><li>Fahrtantritt ist frei wählbar</li><li>gilt ab Entwertung 24 Stunden oder laut Aufdruck</li><li>für beliebig viele Fahrten und Umstiege innerhalb des gewählten Gültigkeitsbereiches</li><li>ist nur entwertet zur Fahrt gültig</li><li>ist nach Fahrtantritt nicht übertragbar</li><li>Gilt ab Entwertung: 24,0 Std.</li><li>Tarifzone(n)/Preisstufe: Leipzig</li><li>Gilt in der/den Tarifzone(n): 110</li></ul><h2>Besonderheiten</h2><p>24-Stunden-Karten für Erwachsene können für eine bis maximal 5 Personen erworben werden. Maximal eine Person kann durch einen Hund ersetzt werden.</p><p>Eingeschulte Kinder im Alter von 6 bis einschließlich 14 Jahren fahren ermäßigt mit unserer <a href='https://www.mdv.de/ticket/tageskarte-kind/' target='_blank'>24-Stunden-Karte Kind</a>.</p><p>Vergleichen lohnt sich! Unsere 24-Stunden-Karten bieten oft günstigere Preise als mehrere Einzelfahrten.</p>",
                       "prc":1600,
-                      "cur":"EUR"
+                      "cur":"EUR",
+                      "shpCtx":"199"
                     },
                     {
                       "name":"24-Stunden-Karte 4 Personen",
-                      "desc":"<ul><li>Fahrtantritt ist frei wählbar</li><li>gilt ab Entwertung 24 Stunden oder laut Aufdruck</li><li>für beliebig viele Fahrten und Umstiege innerhalb des gewählten Gültigkeitsbereiches</li><li>ist nur entwertet zur Fahrt gültig</li><li>ist nach Fahrtantritt nicht übertragbar</li><li>Gilt ab Entwertung: 24,0 Std.</li><li>Tarifzone(n)/Preisstufe: Leipzig</li><li>Gilt in der/den Tarifzone(n): 110</li></ul><h2>Besonderheiten</h2><p>24-Stunden-Karten für Erwachsene können für eine bis maximal 5 Personen erworben werden. Maximal eine Person kann durch einen Hund ersetzt werden.</p><p>Eingeschulte Kinder im Alter von 6 bis einschließlich 14 Jahren fahren ermäßigt mit unserer <a href='https://www.mdv.de/ticket/tageskarte-kind/' target='_blank'>24-Stunden-Karte Kind</a>.</p><p>Vergleichen lohnt sich! Unsere 24-Stunden-Karten bieten oft günstigere Preise als mehrere Einzelfahrten.</p>",
-                      "dtl":"<ul><li>Fahrtantritt ist frei wählbar</li><li>gilt ab Entwertung 24 Stunden oder laut Aufdruck</li><li>für beliebig viele Fahrten und Umstiege innerhalb des gewählten Gültigkeitsbereiches</li><li>ist nur entwertet zur Fahrt gültig</li><li>ist nach Fahrtantritt nicht übertragbar</li><li>Gilt ab Entwertung: 24,0 Std.</li><li>Tarifzone(n)/Preisstufe: Leipzig</li><li>Gilt in der/den Tarifzone(n): 110</li></ul><h2>Besonderheiten</h2><p>24-Stunden-Karten für Erwachsene können für eine bis maximal 5 Personen erworben werden. Maximal eine Person kann durch einen Hund ersetzt werden.</p><p>Eingeschulte Kinder im Alter von 6 bis einschließlich 14 Jahren fahren ermäßigt mit unserer <a href='https://www.mdv.de/ticket/tageskarte-kind/' target='_blank'>24-Stunden-Karte Kind</a>.</p><p>Vergleichen lohnt sich! Unsere 24-Stunden-Karten bieten oft günstigere Preise als mehrere Einzelfahrten.</p>",
                       "prc":2000,
-                      "cur":"EUR"
+                      "cur":"EUR",
+                      "shpCtx":"200"
                     },
                     {
                       "name":"24-Stunden-Karte 5 Personen",
-                      "desc":"<ul><li>Fahrtantritt ist frei wählbar</li><li>gilt ab Entwertung 24 Stunden oder laut Aufdruck</li><li>für beliebig viele Fahrten und Umstiege innerhalb des gewählten Gültigkeitsbereiches</li><li>ist nur entwertet zur Fahrt gültig</li><li>ist nach Fahrtantritt nicht übertragbar</li><li>Gilt ab Entwertung: 24,0 Std.</li><li>Tarifzone(n)/Preisstufe: Leipzig</li><li>Gilt in der/den Tarifzone(n): 110</li></ul><h2>Besonderheiten</h2><p>24-Stunden-Karten für Erwachsene können für eine bis maximal 5 Personen erworben werden. Maximal eine Person kann durch einen Hund ersetzt werden.</p><p>Eingeschulte Kinder im Alter von 6 bis einschließlich 14 Jahren fahren ermäßigt mit unserer <a href='https://www.mdv.de/ticket/tageskarte-kind/' target='_blank'>24-Stunden-Karte Kind</a>.</p><p>Vergleichen lohnt sich! Unsere 24-Stunden-Karten bieten oft günstigere Preise als mehrere Einzelfahrten.</p>",
-                      "dtl":"<ul><li>Fahrtantritt ist frei wählbar</li><li>gilt ab Entwertung 24 Stunden oder laut Aufdruck</li><li>für beliebig viele Fahrten und Umstiege innerhalb des gewählten Gültigkeitsbereiches</li><li>ist nur entwertet zur Fahrt gültig</li><li>ist nach Fahrtantritt nicht übertragbar</li><li>Gilt ab Entwertung: 24,0 Std.</li><li>Tarifzone(n)/Preisstufe: Leipzig</li><li>Gilt in der/den Tarifzone(n): 110</li></ul><h2>Besonderheiten</h2><p>24-Stunden-Karten für Erwachsene können für eine bis maximal 5 Personen erworben werden. Maximal eine Person kann durch einen Hund ersetzt werden.</p><p>Eingeschulte Kinder im Alter von 6 bis einschließlich 14 Jahren fahren ermäßigt mit unserer <a href='https://www.mdv.de/ticket/tageskarte-kind/' target='_blank'>24-Stunden-Karte Kind</a>.</p><p>Vergleichen lohnt sich! Unsere 24-Stunden-Karten bieten oft günstigere Preise als mehrere Einzelfahrten.</p>",
                       "prc":2400,
-                      "cur":"EUR"
+                      "cur":"EUR",
+                      "shpCtx":"8"
                     },
                     {
                       "name":"24-Stunden-Karte Kind",
-                      "desc":"<ul><li>Fahrtantritt frei wählbar</li><li>für eingeschulte Kinder im Alter von 6 bis 14 Jahren</li><li>gilt ab Entwertung 24 Stunden oder laut Aufdruck</li><li>für beliebig viele Fahrten und Umstiege innerhalb des gewählten Gültigkeitsbereiches</li><li>ist nur entwertet zur Fahrt gültig</li><li>ist nach Fahrtantritt nicht übertragbar</li><li>Gilt ab Entwertung: 24,0 Std.</li><li>Tarifzone(n)/Preisstufe: Leipzig</li><li>Gilt in der/den Tarifzone(n): 110</li></ul><h2>Mitnahme</h2><p>Nicht eingeschulte Kinder werden bis einschließlich des 8. Geburtstages kostenlos befördert.</p><p>Vergleichen lohnt sich! Unsere 24-Stunden-Karten bieten oft günstigere Preise als mehrere Einzelfahrten.</p>",
-                      "dtl":"<ul><li>Fahrtantritt frei wählbar</li><li>für eingeschulte Kinder im Alter von 6 bis 14 Jahren</li><li>gilt ab Entwertung 24 Stunden oder laut Aufdruck</li><li>für beliebig viele Fahrten und Umstiege innerhalb des gewählten Gültigkeitsbereiches</li><li>ist nur entwertet zur Fahrt gültig</li><li>ist nach Fahrtantritt nicht übertragbar</li><li>Gilt ab Entwertung: 24,0 Std.</li><li>Tarifzone(n)/Preisstufe: Leipzig</li><li>Gilt in der/den Tarifzone(n): 110</li></ul><h2>Mitnahme</h2><p>Nicht eingeschulte Kinder werden bis einschließlich des 8. Geburtstages kostenlos befördert.</p><p>Vergleichen lohnt sich! Unsere 24-Stunden-Karten bieten oft günstigere Preise als mehrere Einzelfahrten.</p>",
                       "prc":360,
-                      "cur":"EUR"
+                      "cur":"EUR",
+                      "shpCtx":"15"
                     },
                     {
                       "name":"Wochenkarte",
-                      "desc":"<ul><li>gültig für eine Person</li><li>gilt entsprechend des Datumsaufdrucks an 7 aufeinander folgenden Kalendertagen und ist bis 4 Uhr des 8. Kalendertages gültig</li><li>beliebiges Umsteigen innerhalb des Gültigkeitsbereiches ist möglich</li><li>keine Entwertung nötig (Gültigkeitszeitraum wird beim Kauf automatisch aufgedruckt)</li><li>ist auf andere Personen übertragbar</li><li>Tarifzone(n)/Preisstufe: Leipzig</li><li>Gilt in der/den Tarifzone(n): 110</li></ul><h2>Mitnahme</h2><p>Es ist keine Mitnahme von weiteren Personen möglich.</p><h2>Besonderheiten</h2><p>Fahrten über den angegebenen Gültigkeitsbereich hinaus sind durch den Kauf eines zusätzlichen Tickets (zum Beispiel einer <a href='https://www.mdv.de/ticket/einzelfahrkarte/' target='_blank'>Einzelfahrkarte</a>) möglich.<br /> Achtung: die Entwertung des Tickets muss vor dem Fahrtantritt erfolgen!</p><p>Sie nutzen Ihre Wochenkarte nicht an allen 7 Tagen? Kein Problem  die Wochenkarte ist auch auf andere Personen übertragbar!</p>",
-                      "dtl":"<ul><li>gültig für eine Person</li><li>gilt entsprechend des Datumsaufdrucks an 7 aufeinander folgenden Kalendertagen und ist bis 4 Uhr des 8. Kalendertages gültig</li><li>beliebiges Umsteigen innerhalb des Gültigkeitsbereiches ist möglich</li><li>keine Entwertung nötig (Gültigkeitszeitraum wird beim Kauf automatisch aufgedruckt)</li><li>ist auf andere Personen übertragbar</li><li>Tarifzone(n)/Preisstufe: Leipzig</li><li>Gilt in der/den Tarifzone(n): 110</li></ul><h2>Mitnahme</h2><p>Es ist keine Mitnahme von weiteren Personen möglich.</p><h2>Besonderheiten</h2><p>Fahrten über den angegebenen Gültigkeitsbereich hinaus sind durch den Kauf eines zusätzlichen Tickets (zum Beispiel einer <a href='https://www.mdv.de/ticket/einzelfahrkarte/' target='_blank'>Einzelfahrkarte</a>) möglich.<br /> Achtung: die Entwertung des Tickets muss vor dem Fahrtantritt erfolgen!</p><p>Sie nutzen Ihre Wochenkarte nicht an allen 7 Tagen? Kein Problem  die Wochenkarte ist auch auf andere Personen übertragbar!</p>",
                       "prc":2830,
-                      "cur":"EUR"
+                      "cur":"EUR",
+                      "shpCtx":"14"
                     },
                     {
                       "name":"Wochenkarte Auszubildende",
-                      "desc":"<ul><li>für Schülerschaft und Auszubildende mit entsprechendem Berechtigungsnachweis*</li><li>entsprechend des Datumsaufdrucks an 7 aufeinander folgenden Kalendertagen und bis 4 Uhr des 8. Kalendertages gültig</li><li>beliebiges Umsteigen innerhalb des Gültigkeitsbereiches ist möglich</li><li>keine Entwertung nötig (Gültigkeitszeitraum wird beim Kauf automatisch aufgedruckt)</li><li>ist nicht auf andere Personen übertragbar</li><li>Tarifzone(n)/Preisstufe: Leipzig</li><li>Gilt in der/den Tarifzone(n): 110</li></ul><p>*Als Berechtigungsnachweis gilt eine gültige MDV-Kundenkarte, der Schüler- oder Studierendenausweis oder ein gleichwertiger Nachweis der Bildungseinrichtung.</p><p>Nicht vergessen: Bitte die Nummer des entsprechenden Berechtigungsnachweises oder das Geburtsdatum auf die Wochenkarte übertragen!</p>",
-                      "dtl":"<ul><li>für Schülerschaft und Auszubildende mit entsprechendem Berechtigungsnachweis*</li><li>entsprechend des Datumsaufdrucks an 7 aufeinander folgenden Kalendertagen und bis 4 Uhr des 8. Kalendertages gültig</li><li>beliebiges Umsteigen innerhalb des Gültigkeitsbereiches ist möglich</li><li>keine Entwertung nötig (Gültigkeitszeitraum wird beim Kauf automatisch aufgedruckt)</li><li>ist nicht auf andere Personen übertragbar</li><li>Tarifzone(n)/Preisstufe: Leipzig</li><li>Gilt in der/den Tarifzone(n): 110</li></ul><p>*Als Berechtigungsnachweis gilt eine gültige MDV-Kundenkarte, der Schüler- oder Studierendenausweis oder ein gleichwertiger Nachweis der Bildungseinrichtung.</p><p>Nicht vergessen: Bitte die Nummer des entsprechenden Berechtigungsnachweises oder das Geburtsdatum auf die Wochenkarte übertragen!</p>",
                       "prc":2130,
-                      "cur":"EUR"
+                      "cur":"EUR",
+                      "shpCtx":"18"
                     },
                     {
                       "name":"Monatskarte",
-                      "desc":"<ul><li>gültig für eine Person</li><li>gilt entsprechend des Datumsaufdrucks ab dem 1. Gültigkeitstag bis 4 Uhr des gleichen Kalendertages des Folgemonats</li><li>beliebiges Umsteigen innerhalb des Gültigkeitsbereiches ist möglich</li><li>keine Entwertung nötig (Gültigkeitszeitraum wird beim Kauf automatisch aufgedruckt)</li><li>ist auf andere Personen übertragbar</li><li>Tarifzone(n)/Preisstufe: Leipzig</li><li>Gilt in der/den Tarifzone(n): 110</li></ul><h2>Mitnahme</h2><p>Es ist keine Mitnahme von weiteren Personen möglich.</p><h2>Besonderheiten</h2><p>Fahrten über den angegebenen Gültigkeitsbereich hinaus sind durch den Kauf eines zusätzlichen Tickets (zum Beispiel einer <a href='https://www.mdv.de/ticket/einzelfahrkarte/' target='_blank'>Einzelfahrkarte</a>) möglich. Achtung: die Entwertung des Tickets muss vor dem Fahrtantritt erfolgen!</p>",
-                      "dtl":"<ul><li>gültig für eine Person</li><li>gilt entsprechend des Datumsaufdrucks ab dem 1. Gültigkeitstag bis 4 Uhr des gleichen Kalendertages des Folgemonats</li><li>beliebiges Umsteigen innerhalb des Gültigkeitsbereiches ist möglich</li><li>keine Entwertung nötig (Gültigkeitszeitraum wird beim Kauf automatisch aufgedruckt)</li><li>ist auf andere Personen übertragbar</li><li>Tarifzone(n)/Preisstufe: Leipzig</li><li>Gilt in der/den Tarifzone(n): 110</li></ul><h2>Mitnahme</h2><p>Es ist keine Mitnahme von weiteren Personen möglich.</p><h2>Besonderheiten</h2><p>Fahrten über den angegebenen Gültigkeitsbereich hinaus sind durch den Kauf eines zusätzlichen Tickets (zum Beispiel einer <a href='https://www.mdv.de/ticket/einzelfahrkarte/' target='_blank'>Einzelfahrkarte</a>) möglich. Achtung: die Entwertung des Tickets muss vor dem Fahrtantritt erfolgen!</p>",
                       "prc":8210,
-                      "cur":"EUR"
+                      "cur":"EUR",
+                      "shpCtx":"9"
                     },
                     {
                       "name":"Monatskarte Auszubildende",
-                      "desc":"<ul><li>für Schülerschaft und Auszubildende mit entsprechendem Berechtigungsnachweis*</li><li>entsprechend des Datumsaufdrucks ab dem 1. Gültigkeitstag bis 4 Uhr des gleichen Kalendertages des Folgemonats gültig</li><li>beliebiges Umsteigen innerhalb des Gültigkeitsbereiches ist möglich</li><li>keine Entwertung nötig (Gültigkeitszeitraum wird beim Kauf automatisch aufgedruckt)</li><li>ist nicht auf andere Personen übertragbar</li><li>Tarifzone(n)/Preisstufe: Leipzig</li><li>Gilt in der/den Tarifzone(n): 110</li></ul><p>*Als Berechtigungsnachweis gilt eine gültige MDV-Kundenkarte, der Schüler- oder Studierendenausweis oder ein gleichwertiger Nachweis der Bildungseinrichtung.</p><p>Nicht vergessen: Bitte die Nummer des entsprechenden Berechtigungsnachweises oder das Geburtsdatum auf die Monatskarte übertragen!</p>",
-                      "dtl":"<ul><li>für Schülerschaft und Auszubildende mit entsprechendem Berechtigungsnachweis*</li><li>entsprechend des Datumsaufdrucks ab dem 1. Gültigkeitstag bis 4 Uhr des gleichen Kalendertages des Folgemonats gültig</li><li>beliebiges Umsteigen innerhalb des Gültigkeitsbereiches ist möglich</li><li>keine Entwertung nötig (Gültigkeitszeitraum wird beim Kauf automatisch aufgedruckt)</li><li>ist nicht auf andere Personen übertragbar</li><li>Tarifzone(n)/Preisstufe: Leipzig</li><li>Gilt in der/den Tarifzone(n): 110</li></ul><p>*Als Berechtigungsnachweis gilt eine gültige MDV-Kundenkarte, der Schüler- oder Studierendenausweis oder ein gleichwertiger Nachweis der Bildungseinrichtung.</p><p>Nicht vergessen: Bitte die Nummer des entsprechenden Berechtigungsnachweises oder das Geburtsdatum auf die Monatskarte übertragen!</p>",
                       "prc":6170,
-                      "cur":"EUR"
+                      "cur":"EUR",
+                      "shpCtx":"16"
                     },
                     {
                       "name":"ABO Azubi",
-                      "desc":"<ul><li>gültig für eine Person</li><li>in den gewählten Tarifzonen gültig</li><li>beliebiges Umsteigen innerhalb des Gültigkeitsbereiches ist möglich</li><li>Mindestlaufzeit: 12 aufeinander folgende Kalendermonate</li><li>ist nicht auf andere Personen übertragbar (bitte Berechtigungsnachweis mitführen*)</li><li>Tarifzone(n)/Preisstufe: Leipzig</li><li>Gilt in der/den Tarifzone(n): 110</li></ul><p>*Als Berechtigungsnachweis gilt eine gültige MDV-Kundenkarte, der Schüler- oder Studierendenausweis oder ein gleichwertiger Nachweis der Bildungseinrichtung.</p><h2>Besonderheiten</h2><p>Der Abo-Beginn ist innerhalb des laufenden Monats möglich. Unser ABO Azubi ist auch als <a href='https://www.mdv.de/tickets/jobticket/' target='_blank'>Jobticket</a> erhältlich!</p><h2>In drei einfachen Schritten zum Abo</h2><ol><li><strong>Abo-Antrag herunterladen:</strong><a href='https://www.mdv.de/site/uploads/formular_bestellung_schueler-azubi.pdf' target='_blank'>Download Abo-Antrag</a></li><li><strong>Ausfüllen:</strong> Wähle Deine gewünschten Tarifzonen.</li><li><strong>Abgeben:</strong> Gib Deinen ausgefüllten Abo-Antrag bis zum 10. des Monats beim Verkehrsunternehmen ab oder sende ihn per Post.</li></ol><p>Bei der HAVAG und den Leipziger Verkehrsbetrieben (LVB) kann der Abo-Antrag auch direkt online ausgefüllt werden.</p><p>Es gibt einen zusätzlichen Rabatt von 2,5 Prozent (5 Prozent in Leipzig, Tarifzone 110), wenn Du den Jahresbeitrag auf einmal begleichst.</p>",
-                      "dtl":"<ul><li>gültig für eine Person</li><li>in den gewählten Tarifzonen gültig</li><li>beliebiges Umsteigen innerhalb des Gültigkeitsbereiches ist möglich</li><li>Mindestlaufzeit: 12 aufeinander folgende Kalendermonate</li><li>ist nicht auf andere Personen übertragbar (bitte Berechtigungsnachweis mitführen*)</li><li>Tarifzone(n)/Preisstufe: Leipzig</li><li>Gilt in der/den Tarifzone(n): 110</li></ul><p>*Als Berechtigungsnachweis gilt eine gültige MDV-Kundenkarte, der Schüler- oder Studierendenausweis oder ein gleichwertiger Nachweis der Bildungseinrichtung.</p><h2>Besonderheiten</h2><p>Der Abo-Beginn ist innerhalb des laufenden Monats möglich. Unser ABO Azubi ist auch als <a href='https://www.mdv.de/tickets/jobticket/' target='_blank'>Jobticket</a> erhältlich!</p><h2>In drei einfachen Schritten zum Abo</h2><ol><li><strong>Abo-Antrag herunterladen:</strong><a href='https://www.mdv.de/site/uploads/formular_bestellung_schueler-azubi.pdf' target='_blank'>Download Abo-Antrag</a></li><li><strong>Ausfüllen:</strong> Wähle Deine gewünschten Tarifzonen.</li><li><strong>Abgeben:</strong> Gib Deinen ausgefüllten Abo-Antrag bis zum 10. des Monats beim Verkehrsunternehmen ab oder sende ihn per Post.</li></ol><p>Bei der HAVAG und den Leipziger Verkehrsbetrieben (LVB) kann der Abo-Antrag auch direkt online ausgefüllt werden.</p><p>Es gibt einen zusätzlichen Rabatt von 2,5 Prozent (5 Prozent in Leipzig, Tarifzone 110), wenn Du den Jahresbeitrag auf einmal begleichst.</p>",
                       "prc":3750,
-                      "cur":"EUR"
+                      "cur":"EUR",
+                      "shpCtx":"17"
                     },
                     {
                       "name":"ABO Azubi Plus",
-                      "desc":"<ul><li>gültig für eine Person</li><li>in den gewählten Tarifzonen gültig</li><li>beliebiges Umsteigen innerhalb des Gültigkeitsbereiches ist möglich</li><li>Mindestlaufzeit: 12 aufeinander folgende Kalendermonate</li><li>ist nicht auf andere Personen übertragbar (bitte Berechtigungsnachweis mitführen*)</li><li>Tarifzone(n)/Preisstufe: Leipzig</li><li>Gilt in der/den Tarifzone(n): 110</li></ul><p>*Als Berechtigungsnachweis gilt eine gültige MDV-Kundenkarte, der Schüler- oder Studierendenausweis oder ein gleichwertiger Nachweis der Bildungseinrichtung.</p><h2>Besonderheiten</h2><p><strong>Ideal für Deine Freizeitgestaltung:</strong> mit dem ABO Azubi Plus kannst Du ohne Aufpreis von Mo bis Fr ab 14 Uhr bis 4 Uhr des Folgetages, an Wochenenden und Feiertagen sowie am 24. und 31.12. ganztägig das gesamte MDV-Gebiet erkunden! Unser ABO Azubi Plus ist auch als <a href='https://www.mdv.de/tickets/jobticket/' target='_blank'>Jobticket</a> erhältlich!</p><h2>In drei einfachen Schritten zum Abo</h2><ol><li><strong>Abo-Antrag herunterladen:</strong><a href='https://www.mdv.de/site/uploads/formular_bestellung_schueler-azubi.pdf' target='_blank'>Download Abo-Antrag</a></li><li><strong>Ausfüllen:</strong> Wähle Deine gewünschten Tarifzonen.</li><li><strong>Abgeben:</strong> Gib Deinen ausgefüllten Abo-Antrag bis zum 10. des Monats beim Verkehrsunternehmen ab oder sende ihn per Post.</li></ol><p>Bei der HAVAG und den Leipziger Verkehrsbetrieben (LVB) kann der Abo-Antrag auch direkt online ausgefüllt werden.</p><p><strong>Die 2-Wege-Option:</strong> bei unterschiedlichen Wegen vom Wohnort zum Ausbildungsbetrieb/zur Berufsschule zahlst Du nur den Weg mit der größeren Anzahl von Tarifzonen. Es gibt einen zusätzlichen Rabatt von 2,5 Prozent (5 Prozent in Leipzig, Tarifzone 110), wenn Du den Jahresbeitrag auf einmal begleichst.</p>",
-                      "dtl":"<ul><li>gültig für eine Person</li><li>in den gewählten Tarifzonen gültig</li><li>beliebiges Umsteigen innerhalb des Gültigkeitsbereiches ist möglich</li><li>Mindestlaufzeit: 12 aufeinander folgende Kalendermonate</li><li>ist nicht auf andere Personen übertragbar (bitte Berechtigungsnachweis mitführen*)</li><li>Tarifzone(n)/Preisstufe: Leipzig</li><li>Gilt in der/den Tarifzone(n): 110</li></ul><p>*Als Berechtigungsnachweis gilt eine gültige MDV-Kundenkarte, der Schüler- oder Studierendenausweis oder ein gleichwertiger Nachweis der Bildungseinrichtung.</p><h2>Besonderheiten</h2><p><strong>Ideal für Deine Freizeitgestaltung:</strong> mit dem ABO Azubi Plus kannst Du ohne Aufpreis von Mo bis Fr ab 14 Uhr bis 4 Uhr des Folgetages, an Wochenenden und Feiertagen sowie am 24. und 31.12. ganztägig das gesamte MDV-Gebiet erkunden! Unser ABO Azubi Plus ist auch als <a href='https://www.mdv.de/tickets/jobticket/' target='_blank'>Jobticket</a> erhältlich!</p><h2>In drei einfachen Schritten zum Abo</h2><ol><li><strong>Abo-Antrag herunterladen:</strong><a href='https://www.mdv.de/site/uploads/formular_bestellung_schueler-azubi.pdf' target='_blank'>Download Abo-Antrag</a></li><li><strong>Ausfüllen:</strong> Wähle Deine gewünschten Tarifzonen.</li><li><strong>Abgeben:</strong> Gib Deinen ausgefüllten Abo-Antrag bis zum 10. des Monats beim Verkehrsunternehmen ab oder sende ihn per Post.</li></ol><p>Bei der HAVAG und den Leipziger Verkehrsbetrieben (LVB) kann der Abo-Antrag auch direkt online ausgefüllt werden.</p><p><strong>Die 2-Wege-Option:</strong> bei unterschiedlichen Wegen vom Wohnort zum Ausbildungsbetrieb/zur Berufsschule zahlst Du nur den Weg mit der größeren Anzahl von Tarifzonen. Es gibt einen zusätzlichen Rabatt von 2,5 Prozent (5 Prozent in Leipzig, Tarifzone 110), wenn Du den Jahresbeitrag auf einmal begleichst.</p>",
                       "prc":4850,
-                      "cur":"EUR"
+                      "cur":"EUR",
+                      "shpCtx":"1850"
                     },
                     {
                       "name":"ABO Light",
-                      "desc":"<ul><li>gültig für eine Person</li><li>in den gewählten Tarifzonen gültig</li><li>beliebiges Umsteigen innerhalb des Gültigkeitsbereiches ist möglich</li><li>Mindestlaufzeit: 12 aufeinander folgende Kalendermonate</li><li>ist nicht auf andere Personen übertragbar (bitte amtliches Personaldokument mit Lichtbild mitführen)</li><li>Tarifzone(n)/Preisstufe: Leipzig</li><li>Gilt in der/den Tarifzone(n): 110</li></ul><h2>Besonderheiten</h2><p>Das ABO Light für Halle (Tarifzone 210) bzw. für Leipzig (Tarifzone 110) kann durch einzelne oder kombinierte Bausteine für <strong>Übertragbarkeit, Mitnahme einer erwachsenen Person</strong> oder der <strong>Mitnahme von Kindern</strong> erweitert werden.</p><p>Der Abo-Beginn ist innerhalb des laufenden Monats möglich.</p><h2>In drei einfachen Schritten zum Abo</h2><ol><li><strong>Abo-Antrag herunterladen:</strong><a href='https://www.mdv.de/site/uploads/formular_bestellung_jedermann.pdf' target='_blank'>Download Abo-Antrag</a></li><li><strong>Ausfüllen:</strong> Wählen Sie Ihre gewünschten Tarifzonen und  wenn Sie wollen  die 1. Klasse-Option.</li><li><strong>Abgeben:</strong> Geben Sie Ihren ausgefüllten Abo-Antrag bis zum 10. des Monats beim Verkehrsunternehmen ab oder senden Sie ihn per Post.</li></ol><p>Bei der HAVAG und den Leipziger Verkehrsbetrieben (LVB) kann der Abo-Antrag auch direkt online ausgefüllt werden.</p><p>Es gibt einen zusätzlichen Rabatt von 2,5 Prozent (5 Prozent in Leipzig, Tarifzone 110), wenn Sie den Jahresbeitrag auf einmal begleichen.</p>",
-                      "dtl":"<ul><li>gültig für eine Person</li><li>in den gewählten Tarifzonen gültig</li><li>beliebiges Umsteigen innerhalb des Gültigkeitsbereiches ist möglich</li><li>Mindestlaufzeit: 12 aufeinander folgende Kalendermonate</li><li>ist nicht auf andere Personen übertragbar (bitte amtliches Personaldokument mit Lichtbild mitführen)</li><li>Tarifzone(n)/Preisstufe: Leipzig</li><li>Gilt in der/den Tarifzone(n): 110</li></ul><h2>Besonderheiten</h2><p>Das ABO Light für Halle (Tarifzone 210) bzw. für Leipzig (Tarifzone 110) kann durch einzelne oder kombinierte Bausteine für <strong>Übertragbarkeit, Mitnahme einer erwachsenen Person</strong> oder der <strong>Mitnahme von Kindern</strong> erweitert werden.</p><p>Der Abo-Beginn ist innerhalb des laufenden Monats möglich.</p><h2>In drei einfachen Schritten zum Abo</h2><ol><li><strong>Abo-Antrag herunterladen:</strong><a href='https://www.mdv.de/site/uploads/formular_bestellung_jedermann.pdf' target='_blank'>Download Abo-Antrag</a></li><li><strong>Ausfüllen:</strong> Wählen Sie Ihre gewünschten Tarifzonen und  wenn Sie wollen  die 1. Klasse-Option.</li><li><strong>Abgeben:</strong> Geben Sie Ihren ausgefüllten Abo-Antrag bis zum 10. des Monats beim Verkehrsunternehmen ab oder senden Sie ihn per Post.</li></ol><p>Bei der HAVAG und den Leipziger Verkehrsbetrieben (LVB) kann der Abo-Antrag auch direkt online ausgefüllt werden.</p><p>Es gibt einen zusätzlichen Rabatt von 2,5 Prozent (5 Prozent in Leipzig, Tarifzone 110), wenn Sie den Jahresbeitrag auf einmal begleichen.</p>",
                       "prc":4990,
-                      "cur":"EUR"
+                      "cur":"EUR",
+                      "shpCtx":"1495"
                     },
                     {
                       "name":"ABO Light (10 Uhr)",
-                      "desc":"<ul><li>nur in Leipzig (Tarifzone 110) von Mo bis Fr ab 10 Uhr bis 4 Uhr des Folgetages gültig</li><li>Sa, So und feiertags sowie am 24. und 31.12. ganztägig</li><li>beliebiges Umsteigen innerhalb des Gültigkeitsbereiches ist möglich</li><li>Mindestlaufzeit: 12 aufeinanderfolgende Kalendermonate</li><li>ist nicht auf andere Personen übertragbar (bitte amtliches Personaldokument mit Lichtbild mitführen)</li><li>Tarifzone(n)/Preisstufe: Leipzig</li><li>Gilt in der/den Tarifzone(n): 110</li></ul><h2>Besonderheiten</h2><p>Das ABO Light 10 Uhr kann durch folgende Bausteine (einzeln oder in Kombination) erweitert werden:</p><h3>Übertragbarkeit</h3><ul><li><strong>4,50 EUR / Monat</strong></li><li>das ABO Light 10 Uhr wird zu einem übertragbaren Abo</li></ul><h3>Mitnahme 1 erwachsene Person</h3><ul><li><strong>4,20 EUR / Monat</strong></li><li>Mo bis Fr von 17 Uhr bis 4 Uhr des Folgetages; Sa, So und feiertags sowie am 24. und 31.12. kann ganztägig eine erwachsene Person mitfahren</li><li>die erwachsene Person kann durch maximal einen Hund ersetzt werden</li></ul><h3>Mitnahme 3 Kinder</h3><ul><li><strong>1,30 EUR / Monat</strong></li><li>Mo bis Fr von 17 Uhr bis 4 Uhr des Folgetages; Sa, So und feiertags sowie am 24. und 31.12. können ganztägig drei Kinder (6 bis 14 Jahre) mitfahren</li><li>maximal eine Person kann durch einen Hund ersetzt werden</li></ul><h2>In drei einfachen Schritten zum Abo</h2><ol><li><strong>Abo-Antrag herunterladen:</strong><a href='https://www.mdv.de/site/uploads/formular_bestellung_jedermann.pdf' target='_blank'>Download Abo-Antrag</a></li><li><strong>Ausfüllen:</strong> Wählen Sie Ihre gewünschten Tarifzonen und  wenn Sie wollen  die 1. Klasse-Option.</li><li><strong>Abgeben:</strong> Geben Sie Ihren ausgefüllten Abo-Antrag bis zum 10. des Monats beim Verkehrsunternehmen ab oder senden Sie ihn per Post.</li></ol><p><br /> Bei den Leipziger Verkehrsbetrieben (LVB) kann der Abo-Antrag auch direkt online ausgefüllt werden.</p><p>Es gibt einen zusätzlichen Rabatt von 5 Prozent, wenn Sie den Jahresbeitrag auf einmal begleichen.</p>",
-                      "dtl":"<ul><li>nur in Leipzig (Tarifzone 110) von Mo bis Fr ab 10 Uhr bis 4 Uhr des Folgetages gültig</li><li>Sa, So und feiertags sowie am 24. und 31.12. ganztägig</li><li>beliebiges Umsteigen innerhalb des Gültigkeitsbereiches ist möglich</li><li>Mindestlaufzeit: 12 aufeinanderfolgende Kalendermonate</li><li>ist nicht auf andere Personen übertragbar (bitte amtliches Personaldokument mit Lichtbild mitführen)</li><li>Tarifzone(n)/Preisstufe: Leipzig</li><li>Gilt in der/den Tarifzone(n): 110</li></ul><h2>Besonderheiten</h2><p>Das ABO Light 10 Uhr kann durch folgende Bausteine (einzeln oder in Kombination) erweitert werden:</p><h3>Übertragbarkeit</h3><ul><li><strong>4,50 EUR / Monat</strong></li><li>das ABO Light 10 Uhr wird zu einem übertragbaren Abo</li></ul><h3>Mitnahme 1 erwachsene Person</h3><ul><li><strong>4,20 EUR / Monat</strong></li><li>Mo bis Fr von 17 Uhr bis 4 Uhr des Folgetages; Sa, So und feiertags sowie am 24. und 31.12. kann ganztägig eine erwachsene Person mitfahren</li><li>die erwachsene Person kann durch maximal einen Hund ersetzt werden</li></ul><h3>Mitnahme 3 Kinder</h3><ul><li><strong>1,30 EUR / Monat</strong></li><li>Mo bis Fr von 17 Uhr bis 4 Uhr des Folgetages; Sa, So und feiertags sowie am 24. und 31.12. können ganztägig drei Kinder (6 bis 14 Jahre) mitfahren</li><li>maximal eine Person kann durch einen Hund ersetzt werden</li></ul><h2>In drei einfachen Schritten zum Abo</h2><ol><li><strong>Abo-Antrag herunterladen:</strong><a href='https://www.mdv.de/site/uploads/formular_bestellung_jedermann.pdf' target='_blank'>Download Abo-Antrag</a></li><li><strong>Ausfüllen:</strong> Wählen Sie Ihre gewünschten Tarifzonen und  wenn Sie wollen  die 1. Klasse-Option.</li><li><strong>Abgeben:</strong> Geben Sie Ihren ausgefüllten Abo-Antrag bis zum 10. des Monats beim Verkehrsunternehmen ab oder senden Sie ihn per Post.</li></ol><p><br /> Bei den Leipziger Verkehrsbetrieben (LVB) kann der Abo-Antrag auch direkt online ausgefüllt werden.</p><p>Es gibt einen zusätzlichen Rabatt von 5 Prozent, wenn Sie den Jahresbeitrag auf einmal begleichen.</p>",
                       "prc":4290,
-                      "cur":"EUR"
+                      "cur":"EUR",
+                      "shpCtx":"2317"
                     },
                     {
                       "name":"ABO Basis",
-                      "desc":"<ul><li>in den gewählten Tarifzonen gültig</li><li>beliebiges Umsteigen innerhalb des Gültigkeitsbereiches ist möglich</li><li>Mindestlaufzeit: 12 aufeinander folgende Kalendermonate</li><li>ist auf andere Personen übertragbar</li><li>Tarifzone(n)/Preisstufe: Leipzig</li><li>Gilt in der/den Tarifzone(n): 110</li></ul><h2>Mitnahme</h2><ul><li>Mo bis Fr können drei Kinder (6 bis 14 Jahre) und eine erwachsene Person ab 17 Uhr bis 4 Uhr des Folgetages kostenlos mitfahren</li><li>Sa, So und feiertags sowie am 24. und 31.12. gilt die Mitnahmeregelung ganztägig</li><li>maximal eine Person kann durch einen Hund ersetzt werden</li></ul><h2>Besonderheiten</h2><p>Der Abo-Beginn ist innerhalb des laufenden Monats möglich. Unser ABO Basis ist auch als <a href='https://www.mdv.de/ticket/jobticket/' target='_blank'>Jobticket</a> erhältlich!</p><h2>In drei einfachen Schritten zum Abo</h2><ol><li><strong>Abo-Antrag herunterladen:</strong><a href='https://www.mdv.de/site/uploads/formular_bestellung_jedermann.pdf' target='_blank'>Download Abo-Antrag</a></li><li><strong>Ausfüllen:</strong> Wählen Sie Ihre gewünschten Tarifzonen und  wenn Sie wollen  die 1. Klasse-Option.</li><li><strong>Abgeben:</strong> Geben Sie Ihren ausgefüllten Abo-Antrag bis zum 10. des Monats beim Verkehrsunternehmen ab oder senden Sie ihn per Post.</li></ol><p>Bei der HAVAG und den Leipziger Verkehrsbetrieben (LVB) kann der Abo-Antrag auch direkt online ausgefüllt werden.</p><p>Es gibt einen zusätzlichen Rabatt von 2,5 Prozent (5 Prozent in Leipzig, Tarifzone 110), wenn Sie den Jahresbeitrag auf einmal begleichen.</p>",
-                      "dtl":"<ul><li>in den gewählten Tarifzonen gültig</li><li>beliebiges Umsteigen innerhalb des Gültigkeitsbereiches ist möglich</li><li>Mindestlaufzeit: 12 aufeinander folgende Kalendermonate</li><li>ist auf andere Personen übertragbar</li><li>Tarifzone(n)/Preisstufe: Leipzig</li><li>Gilt in der/den Tarifzone(n): 110</li></ul><h2>Mitnahme</h2><ul><li>Mo bis Fr können drei Kinder (6 bis 14 Jahre) und eine erwachsene Person ab 17 Uhr bis 4 Uhr des Folgetages kostenlos mitfahren</li><li>Sa, So und feiertags sowie am 24. und 31.12. gilt die Mitnahmeregelung ganztägig</li><li>maximal eine Person kann durch einen Hund ersetzt werden</li></ul><h2>Besonderheiten</h2><p>Der Abo-Beginn ist innerhalb des laufenden Monats möglich. Unser ABO Basis ist auch als <a href='https://www.mdv.de/ticket/jobticket/' target='_blank'>Jobticket</a> erhältlich!</p><h2>In drei einfachen Schritten zum Abo</h2><ol><li><strong>Abo-Antrag herunterladen:</strong><a href='https://www.mdv.de/site/uploads/formular_bestellung_jedermann.pdf' target='_blank'>Download Abo-Antrag</a></li><li><strong>Ausfüllen:</strong> Wählen Sie Ihre gewünschten Tarifzonen und  wenn Sie wollen  die 1. Klasse-Option.</li><li><strong>Abgeben:</strong> Geben Sie Ihren ausgefüllten Abo-Antrag bis zum 10. des Monats beim Verkehrsunternehmen ab oder senden Sie ihn per Post.</li></ol><p>Bei der HAVAG und den Leipziger Verkehrsbetrieben (LVB) kann der Abo-Antrag auch direkt online ausgefüllt werden.</p><p>Es gibt einen zusätzlichen Rabatt von 2,5 Prozent (5 Prozent in Leipzig, Tarifzone 110), wenn Sie den Jahresbeitrag auf einmal begleichen.</p>",
                       "prc":5990,
-                      "cur":"EUR"
+                      "cur":"EUR",
+                      "shpCtx":"12"
                     },
                     {
                       "name":"ABO Basis (10 Uhr)",
-                      "desc":"<ul><li>nur in Leipzig (Tarifzone 110) von Mo bis Fr ab 10 Uhr bis 4 Uhr des Folgetages gültig</li><li>Sa, So und feiertags sowie am 24. und 31.12. ganztägig gültig</li><li>beliebiges Umsteigen innerhalb des Gültigkeitsbereiches ist möglich</li><li>Mindestlaufzeit: 12 aufeinander folgende Kalendermonate</li><li>ist auf andere Personen übertragbar</li><li>Tarifzone(n)/Preisstufe: Leipzig</li><li>Gilt in der/den Tarifzone(n): 110</li></ul><h2>Mitnahme</h2><ul><li>MoFr können drei Kinder (6 bis 14 Jahre) und eine erwachsene Person ab 17 Uhr bis 4 Uhr des Folgetages kostenlos mitfahren</li><li>Sa, So und feiertags sowie am 24. und 31.12. gilt die Mitnahmeregelung ganztägig</li><li>maximal eine Person kann durch einen Hund ersetzt werden</li></ul><h2>Besonderheiten</h2><p>Der Abo-Beginn ist innerhalb des laufenden Monats möglich.</p><h2>In drei einfachen Schritten zum Abo</h2><ol><li><strong>Abo-Antrag herunterladen:</strong><a href='https://www.mdv.de/site/uploads/formular_bestellung_jedermann.pdf' target='_blank'>Download Abo-Antrag</a></li><li><strong>Ausfüllen:</strong> Wählen Sie Ihre gewünschten Tarifzonen und  wenn Sie wollen  die 1. Klasse-Option.</li><li><strong>Abgeben:</strong> Geben Sie Ihren ausgefüllten Abo-Antrag bis zum 10. des Monats beim Verkehrsunternehmen ab oder senden Sie ihn per Post.</li></ol><p>Bei den Leipziger Verkehrsbetrieben (LVB) kann der Abo-Antrag auch direkt online ausgefüllt werden.</p><p>Es gibt einen zusätzlichen Rabatt von 5 Prozent, wenn Sie den Jahresbeitrag auf einmal begleichen.</p>",
-                      "dtl":"<ul><li>nur in Leipzig (Tarifzone 110) von Mo bis Fr ab 10 Uhr bis 4 Uhr des Folgetages gültig</li><li>Sa, So und feiertags sowie am 24. und 31.12. ganztägig gültig</li><li>beliebiges Umsteigen innerhalb des Gültigkeitsbereiches ist möglich</li><li>Mindestlaufzeit: 12 aufeinander folgende Kalendermonate</li><li>ist auf andere Personen übertragbar</li><li>Tarifzone(n)/Preisstufe: Leipzig</li><li>Gilt in der/den Tarifzone(n): 110</li></ul><h2>Mitnahme</h2><ul><li>MoFr können drei Kinder (6 bis 14 Jahre) und eine erwachsene Person ab 17 Uhr bis 4 Uhr des Folgetages kostenlos mitfahren</li><li>Sa, So und feiertags sowie am 24. und 31.12. gilt die Mitnahmeregelung ganztägig</li><li>maximal eine Person kann durch einen Hund ersetzt werden</li></ul><h2>Besonderheiten</h2><p>Der Abo-Beginn ist innerhalb des laufenden Monats möglich.</p><h2>In drei einfachen Schritten zum Abo</h2><ol><li><strong>Abo-Antrag herunterladen:</strong><a href='https://www.mdv.de/site/uploads/formular_bestellung_jedermann.pdf' target='_blank'>Download Abo-Antrag</a></li><li><strong>Ausfüllen:</strong> Wählen Sie Ihre gewünschten Tarifzonen und  wenn Sie wollen  die 1. Klasse-Option.</li><li><strong>Abgeben:</strong> Geben Sie Ihren ausgefüllten Abo-Antrag bis zum 10. des Monats beim Verkehrsunternehmen ab oder senden Sie ihn per Post.</li></ol><p>Bei den Leipziger Verkehrsbetrieben (LVB) kann der Abo-Antrag auch direkt online ausgefüllt werden.</p><p>Es gibt einen zusätzlichen Rabatt von 5 Prozent, wenn Sie den Jahresbeitrag auf einmal begleichen.</p>",
                       "prc":5290,
-                      "cur":"EUR"
+                      "cur":"EUR",
+                      "shpCtx":"20"
                     },
                     {
                       "name":"ABO Premium",
-                      "desc":"<ul><li>in den gewählten Tarifzonen gültig</li><li>beliebiges Umsteigen innerhalb des Gültigkeitsbereiches ist möglich</li><li>Mindestlaufzeit: 12 aufeinander folgende Kalendermonate</li><li>ist auf andere Personen übertragbar</li><li>Tarifzone(n)/Preisstufe: Leipzig</li><li>Gilt in der/den Tarifzone(n): 110</li></ul><h2>Mitnahme</h2><ul><li>ganztägige kostenlose Mitnahme von drei Kindern (6 bis 14 Jahre) und maximal eines Hundes möglich</li><li>Mo bis Fr von 17 Uhr bis 4 Uhr des Folgetages ist die kostenlose Mitnahme einer weiteren Person möglich</li><li>Sa, So und feiertags sowie am 24. und 31.12. gilt die Mitnahmeregelung ganztägig</li></ul><h2>Besonderheiten</h2><p>An Wochenenden und Feiertagen sowie am 24. und 31.12. können Sie mit dem ABO Premium im gesamten Verbundgebiet fahren  <strong>auch im <a href='https://www.mdv.de/mdv-nord/' target='_blank'>MDV Nord</a>!</strong> Unser ABO Premium ist auch als <a href='https://www.mdv.de/ticket/jobticket/' target='_blank'>Jobticket</a> erhältlich!</p><h2>In drei einfachen Schritten zum Abo</h2><ol><li><strong>Abo-Antrag herunterladen:</strong><a href='https://www.mdv.de/site/uploads/formular_bestellung_jedermann.pdf' target='_blank'>Download Abo-Antrag</a></li><li><strong>Ausfüllen:</strong> Wählen Sie Ihre gewünschten Tarifzonen und  wenn Sie wollen  die 1. Klasse-Option.</li><li><strong>Abgeben:</strong> Geben Sie Ihren ausgefüllten Abo-Antrag bis zum 10. des Monats beim Verkehrsunternehmen ab oder senden Sie ihn per Post.</li></ol><p>Bei der HAVAG und den Leipziger Verkehrsbetrieben (LVB) kann der Abo-Antrag auch direkt online ausgefüllt werden.</p><p>Es gibt einen zusätzlichen Rabatt von 2,5 Prozent (5 Prozent in Leipzig, Tarifzone 110), wenn Sie den Jahresbeitrag auf einmal begleichen.</p>",
-                      "dtl":"<ul><li>in den gewählten Tarifzonen gültig</li><li>beliebiges Umsteigen innerhalb des Gültigkeitsbereiches ist möglich</li><li>Mindestlaufzeit: 12 aufeinander folgende Kalendermonate</li><li>ist auf andere Personen übertragbar</li><li>Tarifzone(n)/Preisstufe: Leipzig</li><li>Gilt in der/den Tarifzone(n): 110</li></ul><h2>Mitnahme</h2><ul><li>ganztägige kostenlose Mitnahme von drei Kindern (6 bis 14 Jahre) und maximal eines Hundes möglich</li><li>Mo bis Fr von 17 Uhr bis 4 Uhr des Folgetages ist die kostenlose Mitnahme einer weiteren Person möglich</li><li>Sa, So und feiertags sowie am 24. und 31.12. gilt die Mitnahmeregelung ganztägig</li></ul><h2>Besonderheiten</h2><p>An Wochenenden und Feiertagen sowie am 24. und 31.12. können Sie mit dem ABO Premium im gesamten Verbundgebiet fahren  <strong>auch im <a href='https://www.mdv.de/mdv-nord/' target='_blank'>MDV Nord</a>!</strong> Unser ABO Premium ist auch als <a href='https://www.mdv.de/ticket/jobticket/' target='_blank'>Jobticket</a> erhältlich!</p><h2>In drei einfachen Schritten zum Abo</h2><ol><li><strong>Abo-Antrag herunterladen:</strong><a href='https://www.mdv.de/site/uploads/formular_bestellung_jedermann.pdf' target='_blank'>Download Abo-Antrag</a></li><li><strong>Ausfüllen:</strong> Wählen Sie Ihre gewünschten Tarifzonen und  wenn Sie wollen  die 1. Klasse-Option.</li><li><strong>Abgeben:</strong> Geben Sie Ihren ausgefüllten Abo-Antrag bis zum 10. des Monats beim Verkehrsunternehmen ab oder senden Sie ihn per Post.</li></ol><p>Bei der HAVAG und den Leipziger Verkehrsbetrieben (LVB) kann der Abo-Antrag auch direkt online ausgefüllt werden.</p><p>Es gibt einen zusätzlichen Rabatt von 2,5 Prozent (5 Prozent in Leipzig, Tarifzone 110), wenn Sie den Jahresbeitrag auf einmal begleichen.</p>",
                       "prc":6690,
-                      "cur":"EUR"
+                      "cur":"EUR",
+                      "shpCtx":"1500"
                     },
                     {
                       "name":"ABO Senior",
-                      "desc":"<ul><li>gültig für Personen ab dem vollendeten 65. Lebensjahr (bitte amtliches Personaldokument mit Lichtbild mitführen)</li><li>verbundweit gültig - <strong>auch im <a href='https://www.mdv.de/mdv/mdv-nord/' target='_blank'>MDV Nord</a></strong></li><li>beliebiges Umsteigen ist möglich</li><li>Mindestlaufzeit: 12 aufeinander folgende Kalendermonate</li><li>ist nicht auf andere Personen übertragbar</li><li>Tarifzone(n)/Preisstufe: Leipzig</li><li>Gilt in der/den Tarifzone(n): 110</li></ul><h2>Mitnahme</h2><ul><li>ganztägige kostenlose Mitnahme von drei Kindern (6 bis 14 Jahre) möglich</li><li>kostenlose Mitnahme eines Hundes</li><li>ab 17 Uhr Nutzung der 1. Klasse bei Eisenbahnunternehmen (nur für Personen, keine Hunde)</li></ul><h3>Besonderheiten</h3><p>Zu zweit unterwegs sein ist doch viel schöner! Mit unserem ABO Senior Partner sparen Sie fast 40 Prozent! Das ABO Senior Partner kann ausschließlich in Verbindung mit einem bereits bestehenden ABO Senior erworben werden. Die Abbuchung beider Abo-Beträge ist nur über ein Konto möglich.</p><p>Der Abo-Beginn ist innerhalb des laufenden Monats möglich.</p><h2>In drei einfachen Schritten zum Abo</h2><ol><li><strong>Abo-Antrag herunterladen:</strong><a href='https://www.mdv.de/site/uploads/formular_bestellung_senior.pdf' target='_blank'>Download Abo-Antrag</a></li><li><strong>Ausfüllen:</strong> Wählen Sie Ihre gewünschten Tarifzonen und  wenn Sie wollen  die 1. Klasse-Option.</li><li><strong>Abgeben:</strong> Geben Sie Ihren ausgefüllten Abo-Antrag bis zum 10. des Monats beim Verkehrsunternehmen ab oder senden Sie ihn per Post.</li></ol><p>Bei der HAVAG und den Leipziger Verkehrsbetrieben (LVB) kann der Abo-Antrag auch direkt online ausgefüllt werden.</p><p>Es gibt einen zusätzlichen Rabatt von 2,5 Prozent (5 Prozent in Leipzig, Tarifzone 110), wenn Sie den Jahresbeitrag auf einmal begleichen.</p>",
-                      "dtl":"<ul><li>gültig für Personen ab dem vollendeten 65. Lebensjahr (bitte amtliches Personaldokument mit Lichtbild mitführen)</li><li>verbundweit gültig - <strong>auch im <a href='https://www.mdv.de/mdv/mdv-nord/' target='_blank'>MDV Nord</a></strong></li><li>beliebiges Umsteigen ist möglich</li><li>Mindestlaufzeit: 12 aufeinander folgende Kalendermonate</li><li>ist nicht auf andere Personen übertragbar</li><li>Tarifzone(n)/Preisstufe: Leipzig</li><li>Gilt in der/den Tarifzone(n): 110</li></ul><h2>Mitnahme</h2><ul><li>ganztägige kostenlose Mitnahme von drei Kindern (6 bis 14 Jahre) möglich</li><li>kostenlose Mitnahme eines Hundes</li><li>ab 17 Uhr Nutzung der 1. Klasse bei Eisenbahnunternehmen (nur für Personen, keine Hunde)</li></ul><h3>Besonderheiten</h3><p>Zu zweit unterwegs sein ist doch viel schöner! Mit unserem ABO Senior Partner sparen Sie fast 40 Prozent! Das ABO Senior Partner kann ausschließlich in Verbindung mit einem bereits bestehenden ABO Senior erworben werden. Die Abbuchung beider Abo-Beträge ist nur über ein Konto möglich.</p><p>Der Abo-Beginn ist innerhalb des laufenden Monats möglich.</p><h2>In drei einfachen Schritten zum Abo</h2><ol><li><strong>Abo-Antrag herunterladen:</strong><a href='https://www.mdv.de/site/uploads/formular_bestellung_senior.pdf' target='_blank'>Download Abo-Antrag</a></li><li><strong>Ausfüllen:</strong> Wählen Sie Ihre gewünschten Tarifzonen und  wenn Sie wollen  die 1. Klasse-Option.</li><li><strong>Abgeben:</strong> Geben Sie Ihren ausgefüllten Abo-Antrag bis zum 10. des Monats beim Verkehrsunternehmen ab oder senden Sie ihn per Post.</li></ol><p>Bei der HAVAG und den Leipziger Verkehrsbetrieben (LVB) kann der Abo-Antrag auch direkt online ausgefüllt werden.</p><p>Es gibt einen zusätzlichen Rabatt von 2,5 Prozent (5 Prozent in Leipzig, Tarifzone 110), wenn Sie den Jahresbeitrag auf einmal begleichen.</p>",
                       "prc":6450,
-                      "cur":"EUR"
+                      "cur":"EUR",
+                      "shpCtx":"1518"
                     },
                     {
                       "name":"ABO Senior Partner",
-                      "desc":"<ul><li>gültig für Personen ab dem vollendeten 65. Lebensjahr (bitte amtliches Personaldokument mit Lichtbild mitführen)</li><li>verbundweit gültig - <strong>auch im <a href='https://www.mdv.de/mdv/mdv-nord/' target='_blank'>MDV Nord</a></strong></li><li>beliebiges Umsteigen ist möglich</li><li>Mindestlaufzeit: 12 aufeinander folgende Kalendermonate</li><li>ist nicht auf andere Personen übertragbar</li><li>Tarifzone(n)/Preisstufe: Leipzig</li><li>Gilt in der/den Tarifzone(n): 110</li></ul><h2>Mitnahme</h2><ul><li>ganztägige kostenlose Mitnahme von drei Kindern (6 bis 14 Jahre) möglich</li><li>kostenlose Mitnahme eines Hundes</li><li>ab 17 Uhr Nutzung der 1. Klasse bei Eisenbahnunternehmen (nur für Personen, keine Hunde)</li></ul><h3>Besonderheiten</h3><p>Zu zweit unterwegs sein ist doch viel schöner! Mit unserem ABO Senior Partner sparen Sie fast 40 Prozent! Das ABO Senior Partner kann ausschließlich in Verbindung mit einem bereits bestehenden ABO Senior erworben werden. Die Abbuchung beider Abo-Beträge ist nur über ein Konto möglich.</p><p>Der Abo-Beginn ist innerhalb des laufenden Monats möglich.</p><h2>In drei einfachen Schritten zum Abo</h2><ol><li><strong>Abo-Antrag herunterladen:</strong><a href='https://www.mdv.de/site/uploads/formular_bestellung_senior.pdf' target='_blank'>Download Abo-Antrag</a></li><li><strong>Ausfüllen:</strong> Wählen Sie Ihre gewünschten Tarifzonen und  wenn Sie wollen  die 1. Klasse-Option.</li><li><strong>Abgeben:</strong> Geben Sie Ihren ausgefüllten Abo-Antrag bis zum 10. des Monats beim Verkehrsunternehmen ab oder senden Sie ihn per Post.</li></ol><p>Bei der HAVAG und den Leipziger Verkehrsbetrieben (LVB) kann der Abo-Antrag auch direkt online ausgefüllt werden.</p><p>Es gibt einen zusätzlichen Rabatt von 2,5 Prozent (5 Prozent in Leipzig, Tarifzone 110), wenn Sie den Jahresbeitrag auf einmal begleichen.</p>",
-                      "dtl":"<ul><li>gültig für Personen ab dem vollendeten 65. Lebensjahr (bitte amtliches Personaldokument mit Lichtbild mitführen)</li><li>verbundweit gültig - <strong>auch im <a href='https://www.mdv.de/mdv/mdv-nord/' target='_blank'>MDV Nord</a></strong></li><li>beliebiges Umsteigen ist möglich</li><li>Mindestlaufzeit: 12 aufeinander folgende Kalendermonate</li><li>ist nicht auf andere Personen übertragbar</li><li>Tarifzone(n)/Preisstufe: Leipzig</li><li>Gilt in der/den Tarifzone(n): 110</li></ul><h2>Mitnahme</h2><ul><li>ganztägige kostenlose Mitnahme von drei Kindern (6 bis 14 Jahre) möglich</li><li>kostenlose Mitnahme eines Hundes</li><li>ab 17 Uhr Nutzung der 1. Klasse bei Eisenbahnunternehmen (nur für Personen, keine Hunde)</li></ul><h3>Besonderheiten</h3><p>Zu zweit unterwegs sein ist doch viel schöner! Mit unserem ABO Senior Partner sparen Sie fast 40 Prozent! Das ABO Senior Partner kann ausschließlich in Verbindung mit einem bereits bestehenden ABO Senior erworben werden. Die Abbuchung beider Abo-Beträge ist nur über ein Konto möglich.</p><p>Der Abo-Beginn ist innerhalb des laufenden Monats möglich.</p><h2>In drei einfachen Schritten zum Abo</h2><ol><li><strong>Abo-Antrag herunterladen:</strong><a href='https://www.mdv.de/site/uploads/formular_bestellung_senior.pdf' target='_blank'>Download Abo-Antrag</a></li><li><strong>Ausfüllen:</strong> Wählen Sie Ihre gewünschten Tarifzonen und  wenn Sie wollen  die 1. Klasse-Option.</li><li><strong>Abgeben:</strong> Geben Sie Ihren ausgefüllten Abo-Antrag bis zum 10. des Monats beim Verkehrsunternehmen ab oder senden Sie ihn per Post.</li></ol><p>Bei der HAVAG und den Leipziger Verkehrsbetrieben (LVB) kann der Abo-Antrag auch direkt online ausgefüllt werden.</p><p>Es gibt einen zusätzlichen Rabatt von 2,5 Prozent (5 Prozent in Leipzig, Tarifzone 110), wenn Sie den Jahresbeitrag auf einmal begleichen.</p>",
                       "prc":4090,
-                      "cur":"EUR"
+                      "cur":"EUR",
+                      "shpCtx":"1521"
                     },
                     {
                       "name":"Monatskarte LeipzigPass Mobil",
-                      "desc":"<ul><li>gültig in Leipzig (Tarifzone 110)</li><li>gilt entsprechend Datumsaufdruck ab dem 1. Gültigkeitstag bis 4 Uhr des gleichen Kalendertages des Folgemonats</li><li>beliebiges Umsteigen innerhalb des Gültigkeitsbereiches ist möglich</li><li>keine Entwertung nötig (Gültigkeitszeitraum wird beim Kauf automatisch aufgedruckt)</li><li>ist nicht auf andere Personen übertragbar (bitte amtliches Personaldokument mit Lichtbild und gültigen Leipzig-Pass mitführen*)</li><li>Tarifzone(n)/Preisstufe: Leipzig</li><li>Gilt in der/den Tarifzone(n): 110</li></ul><p><span>* Die Nummer des Leipzig-Pass muss vor Fahrtantritt auf die Leipzig-Pass-Mobilcard übertragen werden. Leipzig-Pass-Mobilcard und Leipzig-Pass müssen bei Kontrollen vorgezeigt werden.</span></p><h2>Besonderheiten</h2><p>Alle Inhabenden eines Leipzig-Passes können die Leipzig-Pass-Mobilcard erwerben. Neben dem Verkauf in den <a href='https://www.l.de/verkehrsbetriebe/kundenservice/tipps/ticketkauf' target='_blank'>Mobilitäts- und Servicezentren</a>, bekommen Sie das Sozialticket auch an den Automaten der Leipziger Verkehrsbetriebe an den Haltestellen im Bediengebiet.</p><p>Für Fahrten aus Leipzig (Tarifzone 110) heraus können Sie ein Ticket (zum Beispiel <a href='https://www.mdv.de/ticket/einzelfahrkarte/' target='_blank'>Einzelfahrkarte</a>) in der Preisstufe lösen, die nicht durch die Leipzig-Pass-Mobilcard abgedeckt wird. Die Leipzig-Pass-Mobilcard gibt es auch als Abonnement! Mehr Informationen zum ABO Leipzig-Pass-Mobilcard erhalten Sie unter <a href='https://www.l.de/verkehrsbetriebe/produkte/vielfahrer' target='_blank'>www.l.de</a>.</p>",
-                      "dtl":"<ul><li>gültig in Leipzig (Tarifzone 110)</li><li>gilt entsprechend Datumsaufdruck ab dem 1. Gültigkeitstag bis 4 Uhr des gleichen Kalendertages des Folgemonats</li><li>beliebiges Umsteigen innerhalb des Gültigkeitsbereiches ist möglich</li><li>keine Entwertung nötig (Gültigkeitszeitraum wird beim Kauf automatisch aufgedruckt)</li><li>ist nicht auf andere Personen übertragbar (bitte amtliches Personaldokument mit Lichtbild und gültigen Leipzig-Pass mitführen*)</li><li>Tarifzone(n)/Preisstufe: Leipzig</li><li>Gilt in der/den Tarifzone(n): 110</li></ul><p><span>* Die Nummer des Leipzig-Pass muss vor Fahrtantritt auf die Leipzig-Pass-Mobilcard übertragen werden. Leipzig-Pass-Mobilcard und Leipzig-Pass müssen bei Kontrollen vorgezeigt werden.</span></p><h2>Besonderheiten</h2><p>Alle Inhabenden eines Leipzig-Passes können die Leipzig-Pass-Mobilcard erwerben. Neben dem Verkauf in den <a href='https://www.l.de/verkehrsbetriebe/kundenservice/tipps/ticketkauf' target='_blank'>Mobilitäts- und Servicezentren</a>, bekommen Sie das Sozialticket auch an den Automaten der Leipziger Verkehrsbetriebe an den Haltestellen im Bediengebiet.</p><p>Für Fahrten aus Leipzig (Tarifzone 110) heraus können Sie ein Ticket (zum Beispiel <a href='https://www.mdv.de/ticket/einzelfahrkarte/' target='_blank'>Einzelfahrkarte</a>) in der Preisstufe lösen, die nicht durch die Leipzig-Pass-Mobilcard abgedeckt wird. Die Leipzig-Pass-Mobilcard gibt es auch als Abonnement! Mehr Informationen zum ABO Leipzig-Pass-Mobilcard erhalten Sie unter <a href='https://www.l.de/verkehrsbetriebe/produkte/vielfahrer' target='_blank'>www.l.de</a>.</p>",
                       "prc":3500,
-                      "cur":"EUR"
+                      "cur":"EUR",
+                      "shpCtx":"1014"
                     },
                     {
                       "name":"ABO LeipzigPass Mobil",
-                      "desc":"<ul><li>gültig in Leipzig (Tarifzone 110)</li><li>gilt entsprechend Datumsaufdruck ab dem 1. Gültigkeitstag bis 4 Uhr des gleichen Kalendertages des Folgemonats</li><li>beliebiges Umsteigen innerhalb des Gültigkeitsbereiches ist möglich</li><li>ist nicht auf andere Personen übertragbar (bitte amtliches Personaldokument mit Lichtbild und gültigen Leipzig-Pass mitführen*)</li><li>Tarifzone(n)/Preisstufe: Leipzig</li><li>Gilt in der/den Tarifzone(n): 110</li></ul><p><span>* Die Nummer des Leipzig-Pass muss vor Fahrtantritt auf die Leipzig-Pass-Mobilcard übertragen werden. Leipzig-Pass-Mobilcard und Leipzig-Pass müssen bei Kontrollen vorgezeigt werden.</span></p><h2>Besonderheiten</h2><p>Alle Inhabenden eines Leipzig-Passes können das ABO Leipzig-Pass-Mobilcard erwerben. Sie erhalten das Sozialticket in den <a href='https://www.l.de/verkehrsbetriebe/kundenservice/tipps/ticketkauf' target='_blank'>Mobilitäts- und Servicezentren</a> der Leipziger Verkehrsbetriebe.</p><p>Für Fahrten aus Leipzig (Tarifzone 110) heraus können Sie ein Ticket (zum Beispiel <a href='https://www.mdv.de/ticket/einzelfahrkarte/' target='_blank'>Einzelfahrkarte</a>) in der Preisstufe lösen, die nicht durch das ABO Leipzig-Pass-Mobilcard abgedeckt wird. Mehr Informationen zum ABO Leipzig-Pass-Mobilcard erhalten Sie unter <a href='https://www.l.de/verkehrsbetriebe/produkte/vielfahrer' target='_blank'>www.l.de</a>.</p>",
-                      "dtl":"<ul><li>gültig in Leipzig (Tarifzone 110)</li><li>gilt entsprechend Datumsaufdruck ab dem 1. Gültigkeitstag bis 4 Uhr des gleichen Kalendertages des Folgemonats</li><li>beliebiges Umsteigen innerhalb des Gültigkeitsbereiches ist möglich</li><li>ist nicht auf andere Personen übertragbar (bitte amtliches Personaldokument mit Lichtbild und gültigen Leipzig-Pass mitführen*)</li><li>Tarifzone(n)/Preisstufe: Leipzig</li><li>Gilt in der/den Tarifzone(n): 110</li></ul><p><span>* Die Nummer des Leipzig-Pass muss vor Fahrtantritt auf die Leipzig-Pass-Mobilcard übertragen werden. Leipzig-Pass-Mobilcard und Leipzig-Pass müssen bei Kontrollen vorgezeigt werden.</span></p><h2>Besonderheiten</h2><p>Alle Inhabenden eines Leipzig-Passes können das ABO Leipzig-Pass-Mobilcard erwerben. Sie erhalten das Sozialticket in den <a href='https://www.l.de/verkehrsbetriebe/kundenservice/tipps/ticketkauf' target='_blank'>Mobilitäts- und Servicezentren</a> der Leipziger Verkehrsbetriebe.</p><p>Für Fahrten aus Leipzig (Tarifzone 110) heraus können Sie ein Ticket (zum Beispiel <a href='https://www.mdv.de/ticket/einzelfahrkarte/' target='_blank'>Einzelfahrkarte</a>) in der Preisstufe lösen, die nicht durch das ABO Leipzig-Pass-Mobilcard abgedeckt wird. Mehr Informationen zum ABO Leipzig-Pass-Mobilcard erhalten Sie unter <a href='https://www.l.de/verkehrsbetriebe/produkte/vielfahrer' target='_blank'>www.l.de</a>.</p>",
                       "prc":3202,
-                      "cur":"EUR"
+                      "cur":"EUR",
+                      "shpCtx":"2012"
                     }
                   ]
                 }
@@ -880,12 +804,12 @@
               }
             ],
             "conSubscr":"F",
-            "cksum":"97d527b5_3"
+            "cksum":"0e4ed30a_3"
           }
         ],
-        "fpB":"20210902",
-        "fpE":"20211211",
-        "planrtTS":"1631182424"
+        "fpB":"20211202",
+        "fpE":"20220611",
+        "planrtTS":"1638728726"
       }
     }
   ]

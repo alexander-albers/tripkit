@@ -1,7 +1,7 @@
 {
   "ver":"1.10",
   "lang":"deu",
-  "id":"u2kugka6mq2ghg8x",
+  "id":"x5g86kaq62wr8w4s",
   "svcResL":
   [
     {
@@ -57,6 +57,104 @@
               "pCls":8
             },
             {
+              "lid":"A=1@O=Hamburg Hbf@X=10007924@Y=53552805@U=100@L=8098549@",
+              "type":"S",
+              "name":"Hamburg Hbf",
+              "icoX":5,
+              "extId":"8098549",
+              "state":"F",
+              "crd":
+              {
+                "x":10007924,
+                "y":53552805
+              },
+              "pCls":191
+            },
+            {
+              "lid":"A=1@O=Hamburg-Ohlsdorf@X=10031971@Y=53620871@U=100@L=8004661@",
+              "type":"S",
+              "name":"Hamburg-Ohlsdorf",
+              "icoX":6,
+              "extId":"8004661",
+              "state":"F",
+              "crd":
+              {
+                "x":10031971,
+                "y":53620871
+              },
+              "pCls":184
+            },
+            {
+              "lid":"A=1@O=Hamburg Rübenkamp (City-Nord)@X=10033085@Y=53605967@U=100@L=8005207@",
+              "type":"S",
+              "name":"Hamburg Rübenkamp (City-Nord)",
+              "icoX":6,
+              "extId":"8005207",
+              "state":"F",
+              "crd":
+              {
+                "x":10033085,
+                "y":53605967
+              },
+              "pCls":56
+            },
+            {
+              "lid":"A=1@O=Hamburg Alte Wöhr (Stadtpark)@X=10035414@Y=53597930@U=100@L=8000512@",
+              "type":"S",
+              "name":"Hamburg Alte Wöhr (Stadtpark)",
+              "icoX":6,
+              "extId":"8000512",
+              "state":"F",
+              "crd":
+              {
+                "x":10035414,
+                "y":53597930
+              },
+              "pCls":56
+            },
+            {
+              "lid":"A=1@O=Hamburg-Barmbek@X=10044160@Y=53587458@U=100@L=8000805@",
+              "type":"S",
+              "name":"Hamburg-Barmbek",
+              "icoX":6,
+              "extId":"8000805",
+              "state":"F",
+              "crd":
+              {
+                "x":10044160,
+                "y":53587458
+              },
+              "pCls":184
+            },
+            {
+              "lid":"A=1@O=Hamburg Friedrichsberg@X=10057437@Y=53576329@U=100@L=8002106@",
+              "type":"S",
+              "name":"Hamburg Friedrichsberg",
+              "icoX":6,
+              "extId":"8002106",
+              "state":"F",
+              "crd":
+              {
+                "x":10057437,
+                "y":53576329
+              },
+              "pCls":56
+            },
+            {
+              "lid":"A=1@O=Hamburg Wandsbeker Chaussee@X=10059972@Y=53569731@U=100@L=8006198@",
+              "type":"S",
+              "name":"Hamburg Wandsbeker Chaussee",
+              "icoX":6,
+              "extId":"8006198",
+              "state":"F",
+              "crd":
+              {
+                "x":10059972,
+                "y":53569731
+              },
+              "pCls":184
+            },
+            {
               "lid":"A=1@O=Hamburg Hasselbrook@X=10056125@Y=53564715@U=100@L=8002628@",
               "type":"S",
               "name":"Hamburg Hasselbrook",
@@ -71,206 +169,52 @@
               "pCls":56
             },
             {
-              "lid":"A=1@O=Hamburg-Ohlsdorf@X=10031971@Y=53620871@U=100@L=8004661@",
+              "lid":"A=1@O=Hamburg Landwehr@X=10038020@Y=53561201@U=100@L=8003519@",
               "type":"S",
-              "name":"Hamburg-Ohlsdorf",
-              "icoX":4,
-              "extId":"8004661",
+              "name":"Hamburg Landwehr",
+              "icoX":0,
+              "extId":"8003519",
               "state":"F",
               "crd":
               {
-                "x":10031971,
-                "y":53620871
+                "x":10038020,
+                "y":53561201
+              },
+              "pCls":176
+            },
+            {
+              "lid":"A=1@O=Hamburg Berliner Tor@X=10024626@Y=53552868@U=100@L=8000908@",
+              "type":"S",
+              "name":"Hamburg Berliner Tor",
+              "icoX":6,
+              "extId":"8000908",
+              "state":"F",
+              "crd":
+              {
+                "x":10024626,
+                "y":53552868
               },
               "pCls":184
             },
             {
-              "lid":"A=1@O=Hamburg Rübenkamp (City-Nord)@X=10033085@Y=53605967@U=100@L=8005207@",
+              "lid":"A=1@O=Hamburg Hbf@X=10006909@Y=53552733@U=100@L=8002549@",
               "type":"S",
-              "name":"Hamburg Rübenkamp (City-Nord)",
-              "icoX":4,
-              "extId":"8005207",
+              "name":"Hamburg Hbf",
+              "icoX":5,
+              "extId":"8002549",
               "state":"F",
               "crd":
               {
-                "x":10033085,
-                "y":53605967
+                "x":10006909,
+                "y":53552733
               },
-              "pCls":56
-            },
-            {
-              "lid":"A=1@O=Hamburg Alte Wöhr (Stadtpark)@X=10035414@Y=53597930@U=100@L=8000512@",
-              "type":"S",
-              "name":"Hamburg Alte Wöhr (Stadtpark)",
-              "icoX":4,
-              "extId":"8000512",
-              "state":"F",
-              "crd":
-              {
-                "x":10035414,
-                "y":53597930
-              },
-              "pCls":56
-            },
-            {
-              "lid":"A=1@O=Hamburg-Barmbek@X=10044160@Y=53587458@U=100@L=8000805@",
-              "type":"S",
-              "name":"Hamburg-Barmbek",
-              "icoX":4,
-              "extId":"8000805",
-              "state":"F",
-              "crd":
-              {
-                "x":10044160,
-                "y":53587458
-              },
-              "pCls":184
-            },
-            {
-              "lid":"A=1@O=Hamburg Friedrichsberg@X=10057437@Y=53576329@U=100@L=8002106@",
-              "type":"S",
-              "name":"Hamburg Friedrichsberg",
-              "icoX":4,
-              "extId":"8002106",
-              "state":"F",
-              "crd":
-              {
-                "x":10057437,
-                "y":53576329
-              },
-              "pCls":56
-            },
-            {
-              "lid":"A=1@O=Hamburg Wandsbeker Chaussee@X=10059972@Y=53569731@U=100@L=8006198@",
-              "type":"S",
-              "name":"Hamburg Wandsbeker Chaussee",
-              "icoX":4,
-              "extId":"8006198",
-              "state":"F",
-              "crd":
-              {
-                "x":10059972,
-                "y":53569731
-              },
-              "pCls":184
-            },
-            {
-              "lid":"A=1@O=Bad Oldesloe@X=10382577@Y=53805357@U=100@L=8000023@",
-              "type":"S",
-              "name":"Bad Oldesloe",
-              "icoX":2,
-              "extId":"8000023",
-              "state":"F",
-              "crd":
-              {
-                "x":10382577,
-                "y":53805357
-              },
-              "pCls":552
-            },
-            {
-              "lid":"A=1@O=Hamburg-Wandsbek@X=10077222@Y=53569974@U=100@L=8002560@",
-              "type":"S",
-              "name":"Hamburg-Wandsbek",
-              "icoX":2,
-              "extId":"8002560",
-              "state":"F",
-              "crd":
-              {
-                "x":10077222,
-                "y":53569974
-              },
-              "pCls":40
-            },
-            {
-              "lid":"A=1@O=Hamburg-Tonndorf@X=10123049@Y=53586388@U=100@L=8006197@",
-              "type":"S",
-              "name":"Hamburg-Tonndorf",
-              "icoX":2,
-              "extId":"8006197",
-              "state":"F",
-              "crd":
-              {
-                "x":10123049,
-                "y":53586388
-              },
-              "pCls":40
-            },
-            {
-              "lid":"A=1@O=Hamburg-Rahlstedt@X=10154395@Y=53604861@U=100@L=8002558@",
-              "type":"S",
-              "name":"Hamburg-Rahlstedt",
-              "icoX":2,
-              "extId":"8002558",
-              "state":"F",
-              "crd":
-              {
-                "x":10154395,
-                "y":53604861
-              },
-              "pCls":40
-            },
-            {
-              "lid":"A=1@O=Ahrensburg@X=10236206@Y=53669170@U=100@L=8000446@",
-              "type":"S",
-              "name":"Ahrensburg",
-              "icoX":2,
-              "extId":"8000446",
-              "state":"F",
-              "crd":
-              {
-                "x":10236206,
-                "y":53669170
-              },
-              "pCls":40
-            },
-            {
-              "lid":"A=1@O=Ahrensburg-Gartenholz@X=10251784@Y=53688479@U=100@L=8000480@",
-              "type":"S",
-              "name":"Ahrensburg-Gartenholz",
-              "icoX":2,
-              "extId":"8000480",
-              "state":"F",
-              "crd":
-              {
-                "x":10251784,
-                "y":53688479
-              },
-              "pCls":40
-            },
-            {
-              "lid":"A=1@O=Bargteheide@X=10269106@Y=53728202@U=100@L=8000804@",
-              "type":"S",
-              "name":"Bargteheide",
-              "icoX":2,
-              "extId":"8000804",
-              "state":"F",
-              "crd":
-              {
-                "x":10269106,
-                "y":53728202
-              },
-              "pCls":552
-            },
-            {
-              "lid":"A=1@O=Kupfermühle@X=10326466@Y=53762190@U=100@L=8003478@",
-              "type":"S",
-              "name":"Kupfermühle",
-              "icoX":2,
-              "extId":"8003478",
-              "state":"F",
-              "crd":
-              {
-                "x":10326466,
-                "y":53762190
-              },
-              "pCls":520
+              "pCls":191
             },
             {
               "lid":"A=1@O=Lübeck Hbf@X=10669818@Y=53867544@U=100@L=8000237@",
               "type":"S",
               "name":"Lübeck Hbf",
-              "icoX":8,
+              "icoX":5,
               "extId":"8000237",
               "state":"F",
               "crd":
@@ -294,6 +238,20 @@
               },
               "meta":true,
               "pCls":11
+            },
+            {
+              "lid":"A=1@O=Bad Oldesloe@X=10382577@Y=53805357@U=100@L=8000023@",
+              "type":"S",
+              "name":"Bad Oldesloe",
+              "icoX":2,
+              "extId":"8000023",
+              "state":"F",
+              "crd":
+              {
+                "x":10382577,
+                "y":53805357
+              },
+              "pCls":552
             },
             {
               "lid":"A=1@O=Reinfeld(Holst)@X=10494538@Y=53830427@U=100@L=8005019@",
@@ -350,7 +308,7 @@
               "prodCtx":
               {
                 "name":"      S1",
-                "num":"1397",
+                "num":"1121",
                 "line":"S1",
                 "catOut":"S       ",
                 "catOutS":"s",
@@ -360,21 +318,12 @@
               }
             },
             {
-              "name":"RB81",
-              "number":"RB81",
-              "icoX":2,
-              "cls":8,
-              "oprX":1,
+              "name":"Fußweg",
+              "icoX":8,
+              "cls":0,
               "prodCtx":
               {
-                "name":"    RB81",
-                "num":"11320",
-                "line":"RB81",
-                "catOut":"RB      ",
-                "catOutS":"RB",
-                "catOutL":"Regionalbahn",
-                "catIn":"RB",
-                "catCode":"3"
+                "name":"Fußweg"
               }
             },
             {
@@ -386,25 +335,7 @@
               "prodCtx":
               {
                 "name":"     RE8",
-                "num":"11420",
-                "line":"RE8",
-                "catOut":"RE      ",
-                "catOutS":"RE",
-                "catOutL":"Regional-Express",
-                "catIn":"RE",
-                "catCode":"3"
-              }
-            },
-            {
-              "name":"RE8",
-              "number":"RE8",
-              "icoX":2,
-              "cls":8,
-              "oprX":1,
-              "prodCtx":
-              {
-                "name":"     RE8",
-                "num":"11422",
+                "num":"11432",
                 "line":"RE8",
                 "catOut":"RE      ",
                 "catOutS":"RE",
@@ -422,7 +353,7 @@
               "prodCtx":
               {
                 "name":"    RE80",
-                "num":"11472",
+                "num":"11482",
                 "line":"RE80",
                 "catOut":"RE      ",
                 "catOutS":"RE",
@@ -440,7 +371,7 @@
               "prodCtx":
               {
                 "name":"     RE8",
-                "num":"11424",
+                "num":"11434",
                 "line":"RE8",
                 "catOut":"RE      ",
                 "catOutS":"RE",
@@ -450,16 +381,34 @@
               }
             },
             {
-              "name":"RE80",
-              "number":"RE80",
+              "name":"RE8",
+              "number":"RE8",
               "icoX":2,
               "cls":8,
               "oprX":1,
               "prodCtx":
               {
-                "name":"    RE80",
-                "num":"11474",
-                "line":"RE80",
+                "name":"     RE8",
+                "num":"11436",
+                "line":"RE8",
+                "catOut":"RE      ",
+                "catOutS":"RE",
+                "catOutL":"Regional-Express",
+                "catIn":"RE",
+                "catCode":"3"
+              }
+            },
+            {
+              "name":"RE8",
+              "number":"RE8",
+              "icoX":2,
+              "cls":8,
+              "oprX":1,
+              "prodCtx":
+              {
+                "name":"     RE8",
+                "num":"11438",
+                "line":"RE8",
                 "catOut":"RE      ",
                 "catOutS":"RE",
                 "catOutL":"Regional-Express",
@@ -476,7 +425,7 @@
               "prodCtx":
               {
                 "name":"    RE83",
-                "num":"11823",
+                "num":"11835",
                 "line":"RE83",
                 "catOut":"RE      ",
                 "catOutS":"RE",
@@ -496,145 +445,79 @@
             {
               "name":"DB Regio AG Nord",
               "url":"",
-              "icoX":6
+              "icoX":9
             }
           ],
           "remL":
           [
             {
               "type":"A",
-              "code":"ga",
+              "code":"gu",
               "prio":200,
-              "icoX":5,
+              "icoX":7,
               "txtN":"Pflicht zum Tragen von FFP2-Masken"
+            },
+            {
+              "type":"A",
+              "code":"3G",
+              "prio":205,
+              "icoX":7,
+              "txtN":"Im Zug gilt bundesweit 3G-Regel: ein gültiger Nachweis ist mitzuführen"
             },
             {
               "type":"A",
               "code":"FK",
               "prio":260,
-              "icoX":5,
+              "icoX":7,
               "txtN":"Fahrradmitnahme begrenzt möglich (Hamburg Airport)"
             },
             {
               "type":"A",
               "code":"FK",
               "prio":260,
-              "icoX":5,
-              "txtN":"Fahrradmitnahme begrenzt möglich (Hamburg Hasselbrook)"
+              "icoX":7,
+              "txtN":"Fahrradmitnahme begrenzt möglich (Hamburg Hbf)"
             },
             {
               "type":"A",
               "code":"PF",
               "prio":200,
-              "icoX":5,
+              "icoX":7,
               "txtN":"Maskenpflicht nach gesetzl. Regelung; denken Sie an eine FFP2-Maske"
             },
             {
               "type":"A",
               "code":"FK",
               "prio":260,
-              "icoX":5,
-              "txtN":"Fahrradmitnahme begrenzt möglich (Bad Oldesloe)"
+              "icoX":7,
+              "txtN":"Fahrradmitnahme begrenzt möglich (Lübeck Hbf)"
             },
             {
               "type":"A",
               "code":"EH",
               "prio":560,
-              "icoX":5,
+              "icoX":7,
               "txtN":"Fahrzeuggebundene Einstiegshilfe vorhanden"
             },
             {
               "type":"A",
               "code":"SM",
               "prio":561,
-              "icoX":5,
+              "icoX":7,
               "txtN":"Info <a href=\"http://www.bahn.de/sh-barrierefrei\">www.bahn.de/sh-barrierefrei</a>"
             },
             {
-              "type":"I",
-              "code":"DI",
-              "icoX":5,
-              "txtN":"Streikauswirkungen (Hamburg Hasselbrook)"
-            },
-            {
-              "type":"I",
-              "code":"DI",
-              "icoX":5,
-              "txtN":"Streikauswirkungen (Hamburg-Wandsbek)"
-            },
-            {
-              "type":"I",
-              "code":"DI",
-              "icoX":5,
-              "txtN":"Streikauswirkungen (Hamburg-Tonndorf)"
-            },
-            {
-              "type":"I",
-              "code":"DI",
-              "icoX":5,
-              "txtN":"Streikauswirkungen (Hamburg-Rahlstedt)"
-            },
-            {
-              "type":"I",
-              "code":"DI",
-              "icoX":5,
-              "txtN":"Streikauswirkungen (Ahrensburg)"
-            },
-            {
-              "type":"I",
-              "code":"DI",
-              "icoX":5,
-              "txtN":"Streikauswirkungen (Ahrensburg-Gartenholz)"
-            },
-            {
-              "type":"I",
-              "code":"DI",
-              "icoX":5,
-              "txtN":"Streikauswirkungen (Bargteheide)"
-            },
-            {
-              "type":"I",
-              "code":"DI",
-              "icoX":5,
-              "txtN":"Streikauswirkungen (Kupfermühle)"
-            },
-            {
-              "type":"I",
-              "code":"DI",
-              "icoX":5,
-              "txtN":"Streikauswirkungen (Bad Oldesloe)"
-            },
-            {
               "type":"A",
-              "code":"FK",
-              "prio":260,
-              "icoX":5,
-              "txtN":"Fahrradmitnahme begrenzt möglich (Lübeck Hbf)"
-            },
-            {
-              "type":"I",
-              "code":"DI",
-              "icoX":5,
-              "txtN":"Streikauswirkungen (Reinfeld(Holst))"
-            },
-            {
-              "type":"I",
-              "code":"DI",
-              "icoX":5,
-              "txtN":"Streikauswirkungen (Lübeck Hbf)"
-            },
-            {
-              "type":"A",
-              "code":"db",
+              "code":"da",
               "prio":20,
-              "icoX":5,
+              "icoX":7,
               "txtN":"Halt nur bei Bedarf (Lübeck Flughafen(Bahn))"
             },
             {
               "type":"A",
               "code":"FK",
               "prio":260,
-              "icoX":5,
+              "icoX":7,
               "txtN":"Fahrradmitnahme begrenzt möglich (Lübeck Flughafen(Bahn))"
             }
           ],
@@ -682,6 +565,26 @@
               "res":"STA"
             },
             {
+              "res":"rt_ont"
+            },
+            {
+              "res":"PROD_ICE",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255,
+                "a":255
+              },
+              "bg":
+              {
+                "r":194,
+                "g":10,
+                "b":29,
+                "a":255
+              }
+            },
+            {
               "res":"PROD_REPLACEMENT",
               "fg":
               {
@@ -702,14 +605,7 @@
               "res":"INFO"
             },
             {
-              "res":"RE",
-              "txt":"DB Regio AG Nord"
-            },
-            {
-              "res":"rt_ont"
-            },
-            {
-              "res":"PROD_ICE",
+              "res":"walk",
               "fg":
               {
                 "r":255,
@@ -719,11 +615,15 @@
               },
               "bg":
               {
-                "r":194,
-                "g":10,
-                "b":29,
+                "r":0,
+                "g":0,
+                "b":0,
                 "a":255
               }
+            },
+            {
+              "res":"RE",
+              "txt":"DB Regio AG Nord"
             }
           ]
         },
@@ -731,24 +631,22 @@
         [
           {
             "cid":"DirectConReq",
-            "date":"20210906",
-            "dur":"015500",
-            "chg":3,
+            "date":"20211205",
+            "dur":"014500",
+            "chg":2,
             "sDays":
             {
               "sDaysR":"täglich",
-              "sDaysI":"nicht 12. Sep, 16., 17. Okt",
-              "sDaysB":"FFFFFFE7CFFFBFFFF9F0000F9F3CFFFFFFE7FF9F9F40000000000100001FFC00001FBFFFFFFFE7FFFFFFFFFFFFF0"
+              "sDaysB":"F7FFFFFFFE7CFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF0"
             },
-            "isNotRdbl":true,
-            "badSecRefX":1,
             "dep":
             {
               "locX":0,
               "idx":0,
               "dProdX":0,
+              "dPlatfS":"3",
               "dInR":true,
-              "dTimeS":"132300",
+              "dTimeS":"193300",
               "dProgType":"PROGNOSED"
             },
             "arr":
@@ -758,7 +656,9 @@
               "aPlatfS":"1",
               "aPlatfR":"1",
               "aOutR":true,
-              "aTimeS":"151800"
+              "aTimeS":"211800",
+              "aTimeR":"211800",
+              "aProgType":"PROGNOSED"
             },
             "secL":
             [
@@ -770,24 +670,25 @@
                   "locX":0,
                   "idx":0,
                   "dProdX":0,
+                  "dPlatfS":"3",
                   "dInR":true,
-                  "dTimeS":"132300",
+                  "dTimeS":"193300",
                   "dProgType":"PROGNOSED"
                 },
                 "arr":
                 {
                   "locX":3,
-                  "idx":7,
+                  "idx":10,
                   "aPlatfS":"1",
                   "aOutR":true,
-                  "aTimeS":"134100",
+                  "aTimeS":"195700",
                   "aProgType":"PROGNOSED"
                 },
                 "jny":
                 {
-                  "jid":"1|55910|15|100|6092021",
+                  "jid":"1|41137|45|100|5122021",
                   "prodX":0,
-                  "dirTxt":"Hamburg-Blankenese",
+                  "dirTxt":"Wedel(Holst)",
                   "dirFlg":"2",
                   "status":"P",
                   "isRchbl":true,
@@ -798,7 +699,7 @@
                       "idx":0,
                       "dProdX":0,
                       "dInR":true,
-                      "dTimeS":"132300",
+                      "dTimeS":"193300",
                       "dProgType":"PROGNOSED"
                     },
                     {
@@ -806,67 +707,97 @@
                       "idx":1,
                       "aProdX":0,
                       "aOutR":true,
-                      "aTimeS":"132600",
+                      "aTimeS":"193600",
                       "dProdX":0,
                       "dInR":true,
-                      "dTimeS":"132900"
+                      "dTimeS":"193900"
                     },
                     {
                       "locX":5,
                       "idx":2,
                       "aProdX":0,
                       "aOutR":true,
-                      "aTimeS":"133100",
+                      "aTimeS":"194100",
                       "dProdX":0,
                       "dInR":true,
-                      "dTimeS":"133100"
+                      "dTimeS":"194100"
                     },
                     {
                       "locX":6,
                       "idx":3,
                       "aProdX":0,
                       "aOutR":true,
-                      "aTimeS":"133300",
+                      "aTimeS":"194300",
                       "dProdX":0,
                       "dInR":true,
-                      "dTimeS":"133300"
+                      "dTimeS":"194300"
                     },
                     {
                       "locX":7,
                       "idx":4,
                       "aProdX":0,
                       "aOutR":true,
-                      "aTimeS":"133500",
+                      "aTimeS":"194500",
                       "dProdX":0,
                       "dInR":true,
-                      "dTimeS":"133500"
+                      "dTimeS":"194500"
                     },
                     {
                       "locX":8,
                       "idx":5,
                       "aProdX":0,
                       "aOutR":true,
-                      "aTimeS":"133700",
+                      "aTimeS":"194700",
                       "dProdX":0,
                       "dInR":true,
-                      "dTimeS":"133800"
+                      "dTimeS":"194800"
                     },
                     {
                       "locX":9,
                       "idx":6,
                       "aProdX":0,
                       "aOutR":true,
-                      "aTimeS":"133900",
+                      "aTimeS":"194900",
                       "dProdX":0,
                       "dInR":true,
-                      "dTimeS":"133900"
+                      "dTimeS":"194900"
                     },
                     {
-                      "locX":3,
+                      "locX":10,
                       "idx":7,
                       "aProdX":0,
                       "aOutR":true,
-                      "aTimeS":"134100"
+                      "aTimeS":"195100",
+                      "dProdX":0,
+                      "dInR":true,
+                      "dTimeS":"195100"
+                    },
+                    {
+                      "locX":11,
+                      "idx":8,
+                      "aProdX":0,
+                      "aOutR":true,
+                      "aTimeS":"195200",
+                      "dProdX":0,
+                      "dInR":true,
+                      "dTimeS":"195300"
+                    },
+                    {
+                      "locX":12,
+                      "idx":9,
+                      "aProdX":0,
+                      "aOutR":true,
+                      "aTimeS":"195400",
+                      "dProdX":0,
+                      "dInR":true,
+                      "dTimeS":"195500"
+                    },
+                    {
+                      "locX":3,
+                      "idx":10,
+                      "aProdX":0,
+                      "aOutR":true,
+                      "aTimeS":"195700"
                     }
                   ],
                   "remL":
@@ -876,21 +807,28 @@
                       "fLocX":0,
                       "tLocX":3,
                       "fIdx":0,
-                      "tIdx":7
+                      "tIdx":10
                     },
                     {
                       "remX":1,
+                      "fLocX":0,
+                      "tLocX":3,
+                      "fIdx":0,
+                      "tIdx":10
+                    },
+                    {
+                      "remX":2,
                       "fLocX":0,
                       "tLocX":0,
                       "fIdx":0,
                       "tIdx":0
                     },
                     {
-                      "remX":2,
+                      "remX":3,
                       "fLocX":3,
                       "tLocX":3,
-                      "fIdx":7,
-                      "tIdx":7
+                      "fIdx":10,
+                      "tIdx":10
                     }
                   ],
                   "poly":
@@ -898,8 +836,8 @@
                     "delta":true,
                     "dim":2,
                     "type":"WGS84",
-                    "crdEncYX":"eajfIqla|@vfAg}Cb|A_Ffq@oMl`Auu@pdA_rAfh@yNh^~V",
-                    "crdEncS":"NNNNNNNN",
+                    "crdEncYX":"eajfIqla|@vfAg}Cb|A_Ffq@oMl`Auu@pdA_rAfh@yNh^~V~TdpB`s@trAJlgB",
+                    "crdEncS":"NNNNNNNNNNN",
                     "ppLocRefL":
                     [
                       {
@@ -932,6 +870,18 @@
                       },
                       {
                         "ppIdx":7,
+                        "locX":10
+                      },
+                      {
+                        "ppIdx":8,
+                        "locX":11
+                      },
+                      {
+                        "ppIdx":9,
+                        "locX":12
+                      },
+                      {
+                        "ppIdx":10,
                         "locX":3
                       }
                     ]
@@ -942,243 +892,37 @@
                     "maxC":10,
                     "numC":13
                   },
-                  "ctxRecon":"T$A=1@O=Hamburg Airport@L=8002547@a=128@$A=1@O=Hamburg Hasselbrook@L=8002628@a=128@$202109061323$202109061341$      S1$$1$$$$"
+                  "ctxRecon":"T$A=1@O=Hamburg Airport@L=8002547@a=128@$A=1@O=Hamburg Hbf@L=8098549@a=128@$202112051933$202112051957$      S1$$1$$$$"
                 }
               },
               {
-                "type":"JNY",
-                "icoX":2,
+                "type":"WALK",
+                "icoX":8,
                 "dep":
                 {
                   "locX":3,
-                  "idx":1,
-                  "dProdX":1,
-                  "dInR":false,
-                  "dTimeS":"134700",
-                  "isCncl":true
+                  "dInR":true,
+                  "dTimeS":"195700"
                 },
                 "arr":
                 {
-                  "locX":10,
-                  "idx":9,
-                  "aProdX":1,
-                  "aOutR":false,
-                  "aTimeS":"142400",
-                  "isCncl":true
+                  "locX":13,
+                  "aOutR":true,
+                  "aTimeS":"200200"
                 },
-                "jny":
+                "gis":
                 {
-                  "jid":"1|59746|2|100|6092021",
-                  "prodX":1,
-                  "dirTxt":"Bad Oldesloe",
-                  "dirFlg":"2",
-                  "status":"P",
-                  "isCncl":true,
-                  "isRchbl":false,
-                  "stopL":
-                  [
-                    {
-                      "locX":3,
-                      "idx":1,
-                      "dProdX":1,
-                      "dInR":false,
-                      "dTimeS":"134700",
-                      "isCncl":true
-                    },
-                    {
-                      "locX":11,
-                      "idx":2,
-                      "aProdX":1,
-                      "aOutR":false,
-                      "aTimeS":"134900",
-                      "dProdX":1,
-                      "dInR":false,
-                      "dTimeS":"135000",
-                      "isCncl":true
-                    },
-                    {
-                      "locX":12,
-                      "idx":3,
-                      "aProdX":1,
-                      "aOutR":false,
-                      "aTimeS":"135300",
-                      "dProdX":1,
-                      "dInR":false,
-                      "dTimeS":"135400",
-                      "isCncl":true
-                    },
-                    {
-                      "locX":13,
-                      "idx":4,
-                      "aProdX":1,
-                      "aOutR":false,
-                      "aTimeS":"135700",
-                      "dProdX":1,
-                      "dInR":false,
-                      "dTimeS":"135800",
-                      "isCncl":true
-                    },
-                    {
-                      "locX":14,
-                      "idx":5,
-                      "aProdX":1,
-                      "aOutR":false,
-                      "aTimeS":"140400",
-                      "dProdX":1,
-                      "dInR":false,
-                      "dTimeS":"140500",
-                      "isCncl":true
-                    },
-                    {
-                      "locX":15,
-                      "idx":6,
-                      "aProdX":1,
-                      "aOutR":false,
-                      "aTimeS":"140800",
-                      "dProdX":1,
-                      "dInR":false,
-                      "dTimeS":"140800",
-                      "isCncl":true
-                    },
-                    {
-                      "locX":16,
-                      "idx":7,
-                      "aProdX":1,
-                      "aOutR":false,
-                      "aTimeS":"141200",
-                      "dProdX":1,
-                      "dInR":false,
-                      "dTimeS":"141300",
-                      "isCncl":true
-                    },
-                    {
-                      "locX":17,
-                      "idx":8,
-                      "aProdX":1,
-                      "aOutR":false,
-                      "aTimeS":"141700",
-                      "dProdX":1,
-                      "dInR":false,
-                      "dTimeS":"141700",
-                      "isCncl":true
-                    },
-                    {
-                      "locX":10,
-                      "idx":9,
-                      "aProdX":1,
-                      "aOutR":false,
-                      "aTimeS":"142400",
-                      "isCncl":true
-                    }
-                  ],
-                  "remL":
-                  [
-                    {
-                      "remX":3,
-                      "fLocX":3,
-                      "tLocX":10,
-                      "fIdx":1,
-                      "tIdx":9
-                    },
-                    {
-                      "remX":2,
-                      "fLocX":3,
-                      "tLocX":3,
-                      "fIdx":1,
-                      "tIdx":1
-                    },
-                    {
-                      "remX":4,
-                      "fLocX":10,
-                      "tLocX":10,
-                      "fIdx":9,
-                      "tIdx":9
-                    },
-                    {
-                      "remX":5,
-                      "fLocX":3,
-                      "tLocX":10,
-                      "fIdx":1,
-                      "tIdx":9
-                    },
-                    {
-                      "remX":6,
-                      "fLocX":3,
-                      "tLocX":10,
-                      "fIdx":1,
-                      "tIdx":9
-                    },
-                    {
-                      "remX":7,
-                      "fLocX":3,
-                      "tLocX":3,
-                      "fIdx":1,
-                      "tIdx":1
-                    },
-                    {
-                      "remX":8,
-                      "fLocX":11,
-                      "tLocX":11,
-                      "fIdx":2,
-                      "tIdx":2
-                    },
-                    {
-                      "remX":9,
-                      "fLocX":12,
-                      "tLocX":12,
-                      "fIdx":3,
-                      "tIdx":3
-                    },
-                    {
-                      "remX":10,
-                      "fLocX":13,
-                      "tLocX":13,
-                      "fIdx":4,
-                      "tIdx":4
-                    },
-                    {
-                      "remX":11,
-                      "fLocX":14,
-                      "tLocX":14,
-                      "fIdx":5,
-                      "tIdx":5
-                    },
-                    {
-                      "remX":12,
-                      "fLocX":15,
-                      "tLocX":15,
-                      "fIdx":6,
-                      "tIdx":6
-                    },
-                    {
-                      "remX":13,
-                      "fLocX":16,
-                      "tLocX":16,
-                      "fIdx":7,
-                      "tIdx":7
-                    },
-                    {
-                      "remX":14,
-                      "fLocX":17,
-                      "tLocX":17,
-                      "fIdx":8,
-                      "tIdx":8
-                    },
-                    {
-                      "remX":15,
-                      "fLocX":10,
-                      "tLocX":10,
-                      "fIdx":9,
-                      "tIdx":9
-                    }
-                  ],
+                  "dist":68,
+                  "durS":"000500",
+                  "dirGeo":16,
+                  "ctx":"H|1|W$A=1@O=Hamburg Hbf@L=8098549@a=128@$A=1@O=Hamburg Hbf@L=8002549@a=128@$202112051957$202112052002$$$1$$$$",
                   "poly":
                   {
                     "delta":true,
                     "dim":2,
                     "type":"WGS84",
-                    "crdEncYX":"oz|eIyak|@{_@ybCqeBm}GmrB}bE}pKi~NuwBi`BgwFikBmsEoeJylGu}I",
-                    "crdEncS":"NNNNNNNNN",
+                    "crdEncYX":"apzeIota|@LhE",
+                    "crdEncS":"NN",
                     "ppLocRefL":
                     [
                       {
@@ -1187,45 +931,10 @@
                       },
                       {
                         "ppIdx":1,
-                        "locX":11
-                      },
-                      {
-                        "ppIdx":2,
-                        "locX":12
-                      },
-                      {
-                        "ppIdx":3,
                         "locX":13
-                      },
-                      {
-                        "ppIdx":4,
-                        "locX":14
-                      },
-                      {
-                        "ppIdx":5,
-                        "locX":15
-                      },
-                      {
-                        "ppIdx":6,
-                        "locX":16
-                      },
-                      {
-                        "ppIdx":7,
-                        "locX":17
-                      },
-                      {
-                        "ppIdx":8,
-                        "locX":10
                       }
                     ]
-                  },
-                  "freq":
-                  {
-                    "minC":60,
-                    "maxC":60,
-                    "numC":1
-                  },
-                  "ctxRecon":"T$A=1@O=Hamburg Hasselbrook@L=8002628@a=128@$A=1@O=Bad Oldesloe@L=8000023@a=128@$202109061347$202109061424$    RB81$$1$$$$"
+                  }
                 }
               },
               {
@@ -1233,123 +942,128 @@
                 "icoX":2,
                 "dep":
                 {
-                  "locX":10,
-                  "idx":2,
+                  "locX":13,
+                  "idx":0,
                   "dProdX":2,
-                  "dPlatfS":"7",
-                  "dPlatfR":"7",
+                  "dPlatfS":"6A-C",
+                  "dPlatfR":"6A-C",
                   "dInR":true,
-                  "dTimeS":"143300",
-                  "dTimeR":"143300"
+                  "dTimeS":"200700",
+                  "dTimeR":"200700",
+                  "dProgType":"PROGNOSED"
                 },
                 "arr":
                 {
-                  "locX":18,
-                  "idx":4,
+                  "locX":14,
+                  "idx":3,
                   "aProdX":2,
-                  "aPlatfS":"7",
-                  "aPlatfR":"7",
+                  "aPlatfS":"5",
+                  "aPlatfR":"5",
                   "aOutR":true,
-                  "aTimeS":"145100",
-                  "aTimeR":"145100"
+                  "aTimeS":"205100",
+                  "aTimeR":"205100",
+                  "aProgType":"PROGNOSED"
                 },
                 "jny":
                 {
-                  "jid":"1|100200|0|100|6092021",
+                  "jid":"1|44108|0|100|5122021",
                   "prodX":2,
                   "dirTxt":"Lübeck Hbf",
                   "dirFlg":"2",
                   "status":"P",
-                  "isRedir":true,
                   "isRchbl":true,
                   "stopL":
                   [
                     {
-                      "locX":10,
-                      "idx":2,
+                      "locX":13,
+                      "idx":0,
                       "dProdX":2,
                       "dInR":true,
-                      "dTimeS":"143300",
-                      "dTimeR":"143300"
+                      "dTimeS":"200700",
+                      "dTimeR":"200700",
+                      "dProgType":"PROGNOSED"
                     },
                     {
-                      "locX":20,
+                      "locX":16,
+                      "idx":1,
+                      "aProdX":2,
+                      "aOutR":true,
+                      "aTimeS":"203200",
+                      "aTimeR":"203200",
+                      "aProgType":"PROGNOSED",
+                      "dProdX":2,
+                      "dInR":true,
+                      "dTimeS":"203300",
+                      "dTimeR":"203300",
+                      "dProgType":"PROGNOSED"
+                    },
+                    {
+                      "locX":17,
+                      "idx":2,
+                      "aProdX":2,
+                      "aOutR":true,
+                      "aTimeS":"203800",
+                      "aTimeR":"203800",
+                      "aProgType":"PROGNOSED",
+                      "dProdX":2,
+                      "dInR":true,
+                      "dTimeS":"203900",
+                      "dTimeR":"203900",
+                      "dProgType":"PROGNOSED"
+                    },
+                    {
+                      "locX":14,
                       "idx":3,
                       "aProdX":2,
                       "aOutR":true,
-                      "aTimeS":"143800",
-                      "aTimeR":"143800",
-                      "dProdX":2,
-                      "dInR":true,
-                      "dTimeS":"143900",
-                      "dTimeR":"143900"
-                    },
-                    {
-                      "locX":18,
-                      "idx":4,
-                      "aProdX":2,
-                      "aOutR":true,
-                      "aTimeS":"145100",
-                      "aTimeR":"145100"
+                      "aTimeS":"205100",
+                      "aTimeR":"205100",
+                      "aProgType":"PROGNOSED"
                     }
                   ],
                   "remL":
                   [
                     {
-                      "remX":3,
-                      "fLocX":10,
-                      "tLocX":18,
-                      "fIdx":2,
-                      "tIdx":4
-                    },
-                    {
                       "remX":4,
-                      "fLocX":10,
-                      "tLocX":10,
-                      "fIdx":2,
-                      "tIdx":2
+                      "fLocX":13,
+                      "tLocX":14,
+                      "fIdx":0,
+                      "tIdx":3
                     },
                     {
-                      "remX":16,
-                      "fLocX":18,
-                      "tLocX":18,
-                      "fIdx":4,
-                      "tIdx":4
+                      "remX":1,
+                      "fLocX":13,
+                      "tLocX":14,
+                      "fIdx":0,
+                      "tIdx":3
+                    },
+                    {
+                      "remX":3,
+                      "fLocX":13,
+                      "tLocX":13,
+                      "fIdx":0,
+                      "tIdx":0
                     },
                     {
                       "remX":5,
-                      "fLocX":10,
-                      "tLocX":18,
-                      "fIdx":2,
-                      "tIdx":4
-                    },
-                    {
-                      "remX":6,
-                      "fLocX":10,
-                      "tLocX":18,
-                      "fIdx":2,
-                      "tIdx":4
-                    },
-                    {
-                      "remX":15,
-                      "fLocX":10,
-                      "tLocX":10,
-                      "fIdx":2,
-                      "tIdx":2
-                    },
-                    {
-                      "remX":17,
-                      "fLocX":20,
-                      "tLocX":20,
+                      "fLocX":14,
+                      "tLocX":14,
                       "fIdx":3,
                       "tIdx":3
                     },
                     {
-                      "remX":18,
-                      "fLocX":18,
-                      "tLocX":18,
-                      "fIdx":4,
-                      "tIdx":4
+                      "remX":6,
+                      "fLocX":13,
+                      "tLocX":14,
+                      "fIdx":0,
+                      "tIdx":3
+                    },
+                    {
+                      "remX":7,
+                      "fLocX":13,
+                      "tLocX":14,
+                      "fIdx":0,
+                      "tIdx":3
                     }
                   ],
                   "poly":
@@ -1357,274 +1071,302 @@
                     "delta":true,
                     "dim":2,
                     "type":"WGS84",
-                    "crdEncYX":"ozkgIczj~@u{CwzT_gFofa@",
-                    "crdEncS":"NNN",
+                    "crdEncYX":"sozeIena|@{ip@}jhAu{CwzT_gFofa@",
+                    "crdEncS":"NNNN",
                     "ppLocRefL":
                     [
                       {
                         "ppIdx":0,
-                        "locX":10
-                      },
-                      {
-                        "ppIdx":1,
-                        "locX":20
+                        "locX":13
                       },
                       {
                         "ppIdx":2,
-                        "locX":18
+                        "locX":17
+                      },
+                      {
+                        "ppIdx":3,
+                        "locX":14
                       }
                     ]
                   },
                   "freq":
                   {
-                    "minC":29,
-                    "maxC":60,
+                    "minC":27,
+                    "maxC":78,
                     "numC":4,
                     "jnyL":
                     [
                       {
-                        "jid":"1|60339|0|100|6092021",
+                        "jid":"1|44203|0|100|5122021",
                         "prodX":3,
                         "dirTxt":"Lübeck Hbf",
                         "dirFlg":"2",
                         "stopL":
                         [
                           {
-                            "locX":10,
-                            "idx":1,
+                            "locX":13,
+                            "idx":0,
                             "dProdX":3,
-                            "dTimeS":"153300"
+                            "dTimeS":"203400"
                           },
                           {
-                            "locX":18,
-                            "idx":3,
+                            "locX":14,
+                            "idx":4,
                             "aProdX":3,
-                            "aTimeS":"155100"
+                            "aTimeS":"212200"
                           }
                         ],
                         "remL":
                         [
                           {
-                            "remX":3,
-                            "fLocX":10,
-                            "tLocX":18,
-                            "fIdx":1,
-                            "tIdx":3
-                          },
-                          {
                             "remX":4,
-                            "fLocX":10,
-                            "tLocX":10,
-                            "fIdx":1,
-                            "tIdx":1
+                            "fLocX":13,
+                            "tLocX":14,
+                            "fIdx":0,
+                            "tIdx":4
                           },
                           {
-                            "remX":16,
-                            "fLocX":18,
-                            "tLocX":18,
-                            "fIdx":3,
-                            "tIdx":3
+                            "remX":1,
+                            "fLocX":13,
+                            "tLocX":14,
+                            "fIdx":0,
+                            "tIdx":4
+                          },
+                          {
+                            "remX":3,
+                            "fLocX":13,
+                            "tLocX":13,
+                            "fIdx":0,
+                            "tIdx":0
                           },
                           {
                             "remX":5,
-                            "fLocX":10,
-                            "tLocX":18,
-                            "fIdx":1,
-                            "tIdx":3
+                            "fLocX":14,
+                            "tLocX":14,
+                            "fIdx":4,
+                            "tIdx":4
                           },
                           {
                             "remX":6,
-                            "fLocX":10,
-                            "tLocX":18,
-                            "fIdx":1,
-                            "tIdx":3
+                            "fLocX":13,
+                            "tLocX":14,
+                            "fIdx":0,
+                            "tIdx":4
+                          },
+                          {
+                            "remX":7,
+                            "fLocX":13,
+                            "tLocX":14,
+                            "fIdx":0,
+                            "tIdx":4
                           }
                         ],
-                        "ctxRecon":"T$A=1@O=Bad Oldesloe@L=8000023@a=128@$A=1@O=Lübeck Hbf@L=8000237@a=128@$202109061533$202109061551$     RE8$$1$$$$"
+                        "ctxRecon":"T$A=1@O=Hamburg Hbf@L=8002549@a=128@$A=1@O=Lübeck Hbf@L=8000237@a=128@$202112052034$202112052122$    RE80$$1$$$$"
                       },
                       {
-                        "jid":"1|60487|7|100|6092021",
+                        "jid":"1|44124|0|100|5122021",
                         "prodX":4,
                         "dirTxt":"Lübeck Hbf",
                         "dirFlg":"2",
                         "stopL":
                         [
                           {
-                            "locX":10,
-                            "idx":2,
+                            "locX":13,
+                            "idx":0,
                             "dProdX":4,
-                            "dTimeS":"160400"
+                            "dTimeS":"210700"
                           },
                           {
-                            "locX":18,
-                            "idx":4,
+                            "locX":14,
+                            "idx":3,
                             "aProdX":4,
-                            "aTimeS":"162200"
+                            "aTimeS":"215100"
                           }
                         ],
                         "remL":
                         [
                           {
-                            "remX":3,
-                            "fLocX":10,
-                            "tLocX":18,
-                            "fIdx":2,
-                            "tIdx":4
-                          },
-                          {
                             "remX":4,
-                            "fLocX":10,
-                            "tLocX":10,
-                            "fIdx":2,
-                            "tIdx":2
+                            "fLocX":13,
+                            "tLocX":14,
+                            "fIdx":0,
+                            "tIdx":3
                           },
                           {
-                            "remX":16,
-                            "fLocX":18,
-                            "tLocX":18,
-                            "fIdx":4,
-                            "tIdx":4
+                            "remX":1,
+                            "fLocX":13,
+                            "tLocX":14,
+                            "fIdx":0,
+                            "tIdx":3
+                          },
+                          {
+                            "remX":3,
+                            "fLocX":13,
+                            "tLocX":13,
+                            "fIdx":0,
+                            "tIdx":0
                           },
                           {
                             "remX":5,
-                            "fLocX":10,
-                            "tLocX":18,
-                            "fIdx":2,
-                            "tIdx":4
+                            "fLocX":14,
+                            "tLocX":14,
+                            "fIdx":3,
+                            "tIdx":3
                           },
                           {
                             "remX":6,
-                            "fLocX":10,
-                            "tLocX":18,
-                            "fIdx":2,
-                            "tIdx":4
+                            "fLocX":13,
+                            "tLocX":14,
+                            "fIdx":0,
+                            "tIdx":3
+                          },
+                          {
+                            "remX":7,
+                            "fLocX":13,
+                            "tLocX":14,
+                            "fIdx":0,
+                            "tIdx":3
                           }
                         ],
-                        "ctxRecon":"T$A=1@O=Bad Oldesloe@L=8000023@a=128@$A=1@O=Lübeck Hbf@L=8000237@a=128@$202109061604$202109061622$    RE80$$1$$$$"
+                        "ctxRecon":"T$A=1@O=Hamburg Hbf@L=8002549@a=128@$A=1@O=Lübeck Hbf@L=8000237@a=128@$202112052107$202112052151$     RE8$$1$$$$"
                       },
                       {
-                        "jid":"1|60334|0|100|6092021",
+                        "jid":"1|44123|0|100|5122021",
                         "prodX":5,
                         "dirTxt":"Lübeck Hbf",
                         "dirFlg":"2",
                         "stopL":
                         [
                           {
-                            "locX":10,
-                            "idx":1,
+                            "locX":13,
+                            "idx":0,
                             "dProdX":5,
-                            "dTimeS":"163300"
+                            "dTimeS":"220700"
                           },
                           {
-                            "locX":18,
+                            "locX":14,
                             "idx":3,
                             "aProdX":5,
-                            "aTimeS":"165100"
+                            "aTimeS":"225100"
                           }
                         ],
                         "remL":
                         [
                           {
-                            "remX":3,
-                            "fLocX":10,
-                            "tLocX":18,
-                            "fIdx":1,
+                            "remX":4,
+                            "fLocX":13,
+                            "tLocX":14,
+                            "fIdx":0,
                             "tIdx":3
                           },
                           {
-                            "remX":4,
-                            "fLocX":10,
-                            "tLocX":10,
-                            "fIdx":1,
-                            "tIdx":1
+                            "remX":1,
+                            "fLocX":13,
+                            "tLocX":14,
+                            "fIdx":0,
+                            "tIdx":3
                           },
                           {
-                            "remX":16,
-                            "fLocX":18,
-                            "tLocX":18,
+                            "remX":3,
+                            "fLocX":13,
+                            "tLocX":13,
+                            "fIdx":0,
+                            "tIdx":0
+                          },
+                          {
+                            "remX":5,
+                            "fLocX":14,
+                            "tLocX":14,
                             "fIdx":3,
                             "tIdx":3
                           },
                           {
-                            "remX":5,
-                            "fLocX":10,
-                            "tLocX":18,
-                            "fIdx":1,
+                            "remX":6,
+                            "fLocX":13,
+                            "tLocX":14,
+                            "fIdx":0,
                             "tIdx":3
                           },
                           {
-                            "remX":6,
-                            "fLocX":10,
-                            "tLocX":18,
-                            "fIdx":1,
+                            "remX":7,
+                            "fLocX":13,
+                            "tLocX":14,
+                            "fIdx":0,
                             "tIdx":3
                           }
                         ],
-                        "ctxRecon":"T$A=1@O=Bad Oldesloe@L=8000023@a=128@$A=1@O=Lübeck Hbf@L=8000237@a=128@$202109061633$202109061651$     RE8$$1$$$$"
+                        "ctxRecon":"T$A=1@O=Hamburg Hbf@L=8002549@a=128@$A=1@O=Lübeck Hbf@L=8000237@a=128@$202112052207$202112052251$     RE8$$1$$$$"
                       },
                       {
-                        "jid":"1|60490|0|100|6092021",
+                        "jid":"1|44174|0|100|5122021",
                         "prodX":6,
                         "dirTxt":"Lübeck Hbf",
                         "dirFlg":"2",
                         "stopL":
                         [
                           {
-                            "locX":10,
-                            "idx":2,
+                            "locX":13,
+                            "idx":0,
                             "dProdX":6,
-                            "dTimeS":"170400"
+                            "dTimeS":"232500"
                           },
                           {
-                            "locX":18,
-                            "idx":4,
+                            "locX":14,
+                            "idx":3,
                             "aProdX":6,
-                            "aTimeS":"172200"
+                            "aTimeS":"01000700"
                           }
                         ],
                         "remL":
                         [
                           {
-                            "remX":3,
-                            "fLocX":10,
-                            "tLocX":18,
-                            "fIdx":2,
-                            "tIdx":4
-                          },
-                          {
                             "remX":4,
-                            "fLocX":10,
-                            "tLocX":10,
-                            "fIdx":2,
-                            "tIdx":2
+                            "fLocX":13,
+                            "tLocX":14,
+                            "fIdx":0,
+                            "tIdx":3
                           },
                           {
-                            "remX":16,
-                            "fLocX":18,
-                            "tLocX":18,
-                            "fIdx":4,
-                            "tIdx":4
+                            "remX":1,
+                            "fLocX":13,
+                            "tLocX":14,
+                            "fIdx":0,
+                            "tIdx":3
+                          },
+                          {
+                            "remX":3,
+                            "fLocX":13,
+                            "tLocX":13,
+                            "fIdx":0,
+                            "tIdx":0
                           },
                           {
                             "remX":5,
-                            "fLocX":10,
-                            "tLocX":18,
-                            "fIdx":2,
-                            "tIdx":4
+                            "fLocX":14,
+                            "tLocX":14,
+                            "fIdx":3,
+                            "tIdx":3
                           },
                           {
                             "remX":6,
-                            "fLocX":10,
-                            "tLocX":18,
-                            "fIdx":2,
-                            "tIdx":4
+                            "fLocX":13,
+                            "tLocX":14,
+                            "fIdx":0,
+                            "tIdx":3
+                          },
+                          {
+                            "remX":7,
+                            "fLocX":13,
+                            "tLocX":14,
+                            "fIdx":0,
+                            "tIdx":3
                           }
                         ],
-                        "ctxRecon":"T$A=1@O=Bad Oldesloe@L=8000023@a=128@$A=1@O=Lübeck Hbf@L=8000237@a=128@$202109061704$202109061722$    RE80$$1$$$$"
+                        "ctxRecon":"T$A=1@O=Hamburg Hbf@L=8002549@a=128@$A=1@O=Lübeck Hbf@L=8000237@a=128@$202112052325$202112060007$     RE8$$1$$$$"
                       }
                     ]
                   },
-                  "ctxRecon":"T$A=1@O=Bad Oldesloe@L=8000023@a=128@$A=1@O=Lübeck Hbf@L=8000237@a=128@$202109061433$202109061451$     RE8$$3$$$$"
+                  "ctxRecon":"T$A=1@O=Hamburg Hbf@L=8002549@a=128@$A=1@O=Lübeck Hbf@L=8000237@a=128@$202112052007$202112052051$     RE8$$1$$$$"
                 }
               },
               {
@@ -1632,13 +1374,15 @@
                 "icoX":2,
                 "dep":
                 {
-                  "locX":18,
+                  "locX":14,
                   "idx":0,
                   "dProdX":7,
-                  "dPlatfS":"6",
-                  "dPlatfR":"6",
+                  "dPlatfS":"4",
+                  "dPlatfR":"4",
                   "dInR":true,
-                  "dTimeS":"150900"
+                  "dTimeS":"210900",
+                  "dTimeR":"210900",
+                  "dProgType":"PROGNOSED"
                 },
                 "arr":
                 {
@@ -1648,11 +1392,13 @@
                   "aPlatfS":"1",
                   "aPlatfR":"1",
                   "aOutR":true,
-                  "aTimeS":"151800"
+                  "aTimeS":"211800",
+                  "aTimeR":"211800",
+                  "aProgType":"PROGNOSED"
                 },
                 "jny":
                 {
-                  "jid":"1|60543|2|100|6092021",
+                  "jid":"1|44306|0|100|5122021",
                   "prodX":7,
                   "dirTxt":"Lüneburg",
                   "dirFlg":"1",
@@ -1661,70 +1407,85 @@
                   "stopL":
                   [
                     {
-                      "locX":18,
+                      "locX":14,
                       "idx":0,
                       "dProdX":7,
                       "dInR":true,
-                      "dTimeS":"150900"
+                      "dTimeS":"210900",
+                      "dTimeR":"210900",
+                      "dProgType":"PROGNOSED"
                     },
                     {
-                      "locX":21,
+                      "locX":18,
                       "idx":1,
                       "aProdX":7,
                       "aOutR":true,
-                      "aTimeS":"151400",
+                      "aTimeS":"211400",
+                      "aTimeR":"211400",
+                      "aProgType":"PROGNOSED",
                       "dProdX":7,
                       "dInR":true,
-                      "dTimeS":"151500"
+                      "dTimeS":"211500",
+                      "dTimeR":"211500",
+                      "dProgType":"PROGNOSED"
                     },
                     {
                       "locX":1,
                       "idx":2,
                       "aProdX":7,
                       "aOutR":true,
-                      "aTimeS":"151800"
+                      "aTimeS":"211800",
+                      "aTimeR":"211800",
+                      "aProgType":"PROGNOSED"
                     }
                   ],
                   "remL":
                   [
                     {
-                      "remX":19,
+                      "remX":8,
                       "fLocX":1,
                       "tLocX":1,
                       "fIdx":2,
                       "tIdx":2
                     },
                     {
-                      "remX":3,
-                      "fLocX":18,
+                      "remX":4,
+                      "fLocX":14,
                       "tLocX":1,
                       "fIdx":0,
                       "tIdx":2
                     },
                     {
-                      "remX":16,
-                      "fLocX":18,
-                      "tLocX":18,
-                      "fIdx":0,
-                      "tIdx":0
-                    },
-                    {
-                      "remX":20,
-                      "fLocX":1,
+                      "remX":1,
+                      "fLocX":14,
                       "tLocX":1,
-                      "fIdx":2,
+                      "fIdx":0,
                       "tIdx":2
                     },
                     {
                       "remX":5,
-                      "fLocX":18,
+                      "fLocX":14,
+                      "tLocX":14,
+                      "fIdx":0,
+                      "tIdx":0
+                    },
+                    {
+                      "remX":9,
+                      "fLocX":1,
+                      "tLocX":1,
+                      "fIdx":2,
+                      "tIdx":2
+                    },
+                    {
+                      "remX":6,
+                      "fLocX":14,
                       "tLocX":1,
                       "fIdx":0,
                       "tIdx":2
                     },
                     {
-                      "remX":6,
-                      "fLocX":18,
+                      "remX":7,
+                      "fLocX":14,
                       "tLocX":1,
                       "fIdx":0,
                       "tIdx":2
@@ -1741,11 +1502,11 @@
                     [
                       {
                         "ppIdx":0,
-                        "locX":18
+                        "locX":14
                       },
                       {
                         "ppIdx":1,
-                        "locX":21
+                        "locX":18
                       },
                       {
                         "ppIdx":2,
@@ -1755,15 +1516,15 @@
                   },
                   "freq":
                   {
-                    "minC":60,
-                    "maxC":60,
+                    "minC":57,
+                    "maxC":65,
                     "numC":3
                   },
-                  "ctxRecon":"T$A=1@O=Lübeck Hbf@L=8000237@a=128@$A=1@O=Lübeck Flughafen(Bahn)@L=8003781@a=128@$202109061509$202109061518$    RE83$$1$$$$"
+                  "ctxRecon":"T$A=1@O=Lübeck Hbf@L=8000237@a=128@$A=1@O=Lübeck Flughafen(Bahn)@L=8003781@a=128@$202112052109$202112052118$    RE83$$1$$$$"
                 }
               }
             ],
-            "ctxRecon":"¶HKI¶T$A=1@O=Hamburg Airport@L=8002547@a=128@$A=1@O=Hamburg Hasselbrook@L=8002628@a=128@$202109061323$202109061341$      S1$$1$$$$§T$A=1@O=Hamburg Hasselbrook@L=8002628@a=128@$A=1@O=Bad Oldesloe@L=8000023@a=128@$202109061347$202109061424$    RB81$$1$$$$§T$A=1@O=Bad Oldesloe@L=8000023@a=128@$A=1@O=Lübeck Hbf@L=8000237@a=128@$202109061433$202109061451$     RE8$$3$$$$§T$A=1@O=Lübeck Hbf@L=8000237@a=128@$A=1@O=Lübeck Flughafen(Bahn)@L=8003781@a=128@$202109061509$202109061518$    RE83$$1$$$$",
+            "ctxRecon":"¶HKI¶T$A=1@O=Hamburg Airport@L=8002547@a=128@$A=1@O=Hamburg Hbf@L=8098549@a=128@$202112051933$202112051957$      S1$$1$$$$§W$A=1@O=Hamburg Hbf@L=8098549@a=128@$A=1@O=Hamburg Hbf@L=8002549@a=128@$202112051957$202112052002$$$1$$$$§T$A=1@O=Hamburg Hbf@L=8002549@a=128@$A=1@O=Lübeck Hbf@L=8000237@a=128@$202112052007$202112052051$     RE8$$1$$$$§T$A=1@O=Lübeck Hbf@L=8000237@a=128@$A=1@O=Lübeck Flughafen(Bahn)@L=8003781@a=128@$202112052109$202112052118$    RE83$$1$$$$",
             "trfRes":
             {
               "fareSetL":
@@ -2226,8 +1987,8 @@
             ]
           }
         ],
-        "fpB":"20201213",
-        "fpE":"20211211"
+        "fpB":"20211005",
+        "fpE":"20220731"
       }
     }
   ]

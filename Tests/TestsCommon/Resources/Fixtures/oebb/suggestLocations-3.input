@@ -1,7 +1,7 @@
 {
   "ver":"1.19",
   "lang":"deu",
-  "id":"rqgx3gqek2gkg28x",
+  "id":"dy6sckqa46jmhi4s",
   "err":"OK",
   "svcResL":
   [
@@ -102,7 +102,7 @@
           "locL":
           [
             {
-              "lid":"A=2@O=Wiener Neustadt, Grünangergasse 1@X=16244335@Y=47815754@U=103@L=980199376@B=1@p=1520424776@",
+              "lid":"A=2@O=Wiener Neustadt, Grünangergasse 1@H=1@X=16244335@Y=47815754@U=103@L=980199376@B=1@p=1520424776@",
               "type":"A",
               "name":"Wiener Neustadt, Grünangergasse 1",
               "icoX":0,
@@ -117,11 +117,11 @@
               }
             },
             {
-              "lid":"A=1@O=Wr.Neustadt Grünangergasse@X=16246384@Y=47815520@U=81@L=000394123@B=1@p=1630923242@",
+              "lid":"A=1@O=Wr.Neustadt Grünangergasse@X=16246384@Y=47815520@U=81@L=394123@B=1@p=1638448829@",
               "type":"S",
               "name":"Wr.Neustadt Grünangergasse",
               "icoX":1,
-              "extId":"000394123",
+              "extId":"394123",
               "state":"F",
               "crd":
               {
@@ -136,10 +136,10 @@
 0,
 1
               ],
-              "wt":384
+              "wt":716
             },
             {
-              "lid":"A=2@O=Wiener Neustadt, Grünbeckgasse 1@X=16256848@Y=47815988@U=103@L=980199377@B=1@p=1520424776@",
+              "lid":"A=2@O=Wiener Neustadt, Grünbeckgasse 1@H=1@X=16256848@Y=47815988@U=103@L=980199377@B=1@p=1520424776@",
               "type":"A",
               "name":"Wiener Neustadt, Grünbeckgasse 1",
               "icoX":0,
@@ -154,7 +154,7 @@
               }
             },
             {
-              "lid":"A=2@O=Wiener Neustadt, Hans-Grünseis-Gasse 2@X=16208558@Y=47816707@U=103@L=980199396@B=1@p=1520424776@",
+              "lid":"A=2@O=Wiener Neustadt, Hans-Grünseis-Gasse 2@H=2@X=16208558@Y=47816707@U=103@L=980199396@B=1@p=1520424776@",
               "type":"A",
               "name":"Wiener Neustadt, Hans-Grünseis-Gasse 2",
               "icoX":0,
@@ -169,7 +169,7 @@
               }
             },
             {
-              "lid":"A=2@O=Wiener Neustadt, Grübelgasse 1@X=16245081@Y=47813633@U=103@L=980199375@B=1@p=1520424776@",
+              "lid":"A=2@O=Wiener Neustadt, Grübelgasse 1@H=1@X=16245081@Y=47813633@U=103@L=980199375@B=1@p=1520424776@",
               "type":"A",
               "name":"Wiener Neustadt, Grübelgasse 1",
               "icoX":0,

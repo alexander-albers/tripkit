@@ -67,10 +67,7 @@ class TripKitProviderTestCase: XCTestCase {
             switch result {
             case .success(let departures):
                 os_log("success: %@", log: .testsLogger, type: .default, departures)
-                XCTAssert(!departures.isEmpty, "received empty result")
-                if let first = departures.first {
-                    XCTAssert(!first.departures.isEmpty, "received empty result")
-                }
+                XCTAssert(!departures.flatMap({$0.departures}).isEmpty, "received empty result")
                 
                 saveFixture(name: "queryDepartures-\(index)", input: request.responseData, output: departures)
                 
@@ -105,10 +102,7 @@ class TripKitProviderTestCase: XCTestCase {
             switch result {
             case .success(let departures):
                 os_log("success: %@", log: .testsLogger, type: .default, departures)
-                XCTAssert(!departures.isEmpty, "received empty result")
-                if let first = departures.first {
-                    XCTAssert(!first.departures.isEmpty, "received empty result")
-                }
+                XCTAssert(!departures.flatMap({$0.departures}).isEmpty, "received empty result")
                 
                 saveFixture(name: "queryArrivals-\(index)", input: request.responseData, output: departures)
             case .invalidStation:
@@ -125,10 +119,7 @@ class TripKitProviderTestCase: XCTestCase {
             switch result {
             case .success(let departures):
                 os_log("success: %@", log: .testsLogger, type: .default, departures)
-                XCTAssert(!departures.isEmpty, "received empty result")
-                if let first = departures.first {
-                    XCTAssert(!first.departures.isEmpty, "received empty result")
-                }
+                XCTAssert(!departures.flatMap({$0.departures}).isEmpty, "received empty result")
                 
                 saveFixture(name: "queryDeparturesEquivs-\(index)", input: request.responseData, output: departures)
             case .invalidStation:

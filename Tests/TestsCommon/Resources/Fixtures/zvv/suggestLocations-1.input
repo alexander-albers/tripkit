@@ -2,7 +2,7 @@
   "ver":"1.18",
   "ext":"ZVV.2",
   "lang":"deu",
-  "id":"sawsygxum6wywgwg",
+  "id":"vu6k4mca66gepiwx",
   "err":"OK",
   "svcResL":
   [
@@ -163,7 +163,7 @@
           "locL":
           [
             {
-              "lid":"A=1@O=Hardbrücke@X=8516902@Y=47385440@U=85@L=8503020@B=1@p=1630399423@",
+              "lid":"A=1@O=Hardbrücke@X=8516902@Y=47385440@U=21@L=8503020@B=1@p=1637660952@",
               "type":"S",
               "name":"Hardbrücke",
               "icoX":0,
@@ -185,11 +185,11 @@
 3,
 4
               ],
-              "wt":5453,
+              "wt":5488,
               "isMainMast":true
             },
             {
-              "lid":"A=1@O=Zürich, Bahnhof Hardbrücke@X=8517090@Y=47385198@U=85@L=8591060@B=1@p=1630399423@",
+              "lid":"A=1@O=Zürich, Bahnhof Hardbrücke@X=8517090@Y=47385198@U=22@L=8591060@B=1@p=1638378040@",
               "type":"S",
               "name":"Zürich, Bahnhof Hardbrücke",
               "icoX":0,
@@ -211,11 +211,11 @@
 3,
 4
               ],
-              "wt":2588,
+              "wt":2791,
               "isMainMast":true
             },
             {
-              "lid":"A=1@O=Zürich, Hardturm@X=8504506@Y=47394160@U=85@L=8591178@B=1@p=1630399423@",
+              "lid":"A=1@O=Zürich, Hardturm@X=8504506@Y=47394160@U=22@L=8591178@B=1@p=1638378040@",
               "type":"S",
               "name":"Zürich, Hardturm",
               "icoX":1,
@@ -231,12 +231,13 @@
               "pCls":768,
               "pRefL":
               [
-2
+2,
+4
               ],
-              "wt":4400
+              "wt":4795
             },
             {
-              "lid":"A=1@O=Embrach, Hard@X=8585534@Y=47522679@U=85@L=8573221@B=1@p=1630399423@",
+              "lid":"A=1@O=Embrach, Hard@X=8585534@Y=47522679@U=22@L=8573221@B=1@p=1638378040@",
               "type":"S",
               "name":"Embrach, Hard",
               "icoX":2,
@@ -254,10 +255,10 @@
               [
 3
               ],
-              "wt":922
+              "wt":964
             },
             {
-              "lid":"A=1@O=Zürich, Hardhof@X=8497476@Y=47396353@U=85@L=8591176@B=1@p=1630399423@",
+              "lid":"A=1@O=Zürich, Hardhof@X=8497476@Y=47396353@U=22@L=8591176@B=1@p=1638378040@",
               "type":"S",
               "name":"Zürich, Hardhof",
               "icoX":1,
@@ -275,7 +276,7 @@
               [
 2
               ],
-              "wt":1662
+              "wt":1809
             }
           ]
         }

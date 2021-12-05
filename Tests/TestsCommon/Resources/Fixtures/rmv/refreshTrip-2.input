@@ -2,7 +2,7 @@
   "ver":"1.20",
   "ext":"RMV.1",
   "lang":"deu",
-  "id":"v242wka46q8h8iwg",
+  "id":"iu4w4m8q4226xw8g",
   "err":"OK",
   "svcResL":
   [
@@ -49,7 +49,7 @@
               "lid":"A=1@O=Darmstadt Südbahnhof@X=8637699@Y=49854966@U=80@L=3011320@",
               "type":"S",
               "name":"Darmstadt Südbahnhof",
-              "icoX":5,
+              "icoX":4,
               "extId":"3011320",
               "state":"F",
               "crd":
@@ -94,27 +94,27 @@
               "pCls":64
             },
             {
-              "lid":"A=1@O=Darmstadt-Kranichstein Kesselhutweg@X=8686160@Y=49895894@U=80@L=3008554@",
+              "lid":"A=1@O=Darmstadt Alfred-Messel-Weg@X=8672739@Y=49885907@U=80@L=3024673@",
               "type":"S",
-              "name":"Darmstadt-Kranichstein Kesselhutweg",
+              "name":"Darmstadt Alfred-Messel-Weg",
               "icoX":1,
-              "extId":"3008554",
+              "extId":"3024673",
               "state":"F",
               "crd":
               {
-                "x":8686160,
-                "y":49895894,
+                "x":8672739,
+                "y":49885907,
                 "layerX":0,
                 "crdSysX":0
               },
               "pCls":64
             },
             {
-              "lid":"A=2@O=Darmstadt, Wormser Straße 32@H=32@X=8637663@Y=49856719@U=103@L=990036887@",
+              "lid":"A=2@O=Darmstadt, Wormser Straße 32@H=32@X=8637663@Y=49856719@U=103@L=990037066@",
               "type":"A",
               "name":"Darmstadt, Wormser Straße 32",
               "icoX":0,
-              "extId":"990036887",
+              "extId":"990037066",
               "state":"F",
               "crd":
               {
@@ -145,9 +145,9 @@
               "prodCtx":
               {
                 "name":"Bus H   ",
-                "num":"5186",
+                "num":"5218",
                 "line":"H",
-                "matchId":"1128",
+                "matchId":"100",
                 "catOut":"Bus     ",
                 "catOutS":"1aE",
                 "catOutL":"Niederflurbus",
@@ -166,9 +166,9 @@
               "prodCtx":
               {
                 "name":"Bus H   ",
-                "num":"5278",
+                "num":"5125",
                 "line":"H",
-                "matchId":"1136",
+                "matchId":"101",
                 "catOut":"Bus     ",
                 "catOutS":"1aE",
                 "catOutL":"Niederflurbus",
@@ -187,9 +187,9 @@
               "prodCtx":
               {
                 "name":"Bus H   ",
-                "num":"5185",
+                "num":"5215",
                 "line":"H",
-                "matchId":"1144",
+                "matchId":"102",
                 "catOut":"Bus     ",
                 "catOutS":"1aE",
                 "catOutL":"Niederflurbus",
@@ -208,9 +208,9 @@
               "prodCtx":
               {
                 "name":"Bus H   ",
-                "num":"5277",
+                "num":"5122",
                 "line":"H",
-                "matchId":"1152",
+                "matchId":"103",
                 "catOut":"Bus     ",
                 "catOutS":"1aE",
                 "catOutL":"Niederflurbus",
@@ -229,9 +229,9 @@
               "prodCtx":
               {
                 "name":"Bus H   ",
-                "num":"5184",
+                "num":"5119",
                 "line":"H",
-                "matchId":"1160",
+                "matchId":"104",
                 "catOut":"Bus     ",
                 "catOutS":"1aE",
                 "catOutL":"Niederflurbus",
@@ -250,9 +250,9 @@
               "prodCtx":
               {
                 "name":"Bus H   ",
-                "num":"5276",
+                "num":"5117",
                 "line":"H",
-                "matchId":"1168",
+                "matchId":"105",
                 "catOut":"Bus     ",
                 "catOutS":"1aE",
                 "catOutL":"Niederflurbus",
@@ -318,57 +318,33 @@
           "remL":
           [
             {
-              "type":"A",
-              "code":"text.occup.loc.2nd.11",
-              "icoX":4,
-              "txtN":"Geringe Belegung ab diesem Halt erwartet"
-            },
-            {
-              "type":"A",
-              "code":"text.occup.loc.max.11",
-              "icoX":4,
-              "txtN":"Geringe Belegung"
-            },
-            {
               "type":"R",
               "code":"text.realtime.stop.scheduled.arr.time.changed",
-              "icoX":6,
+              "icoX":5,
               "txtN":"Achtung: Änderung der Fahrplanzeiten möglich"
-            },
-            {
-              "type":"A",
-              "code":"text.occup.jny.2nd.11",
-              "icoX":4,
-              "txtN":"Geringe Belegung im Fahrtverlauf erwartet"
-            },
-            {
-              "type":"A",
-              "code":"text.occup.jny.max.11",
-              "icoX":4,
-              "txtN":"Geringe Belegung"
             }
           ],
           "himL":
           [
             {
-              "hid":"2126922-0",
+              "hid":"2129869",
               "act":true,
-              "head":"S-Bahnen / Regionalbahnen: Einschränkungen durch Streik der GDL bei der Deutschen Bahn",
-              "lead":"Die Gewerkschaft Deutscher Lokomotivführer (GDL) hat ihre Mitglieder zu einem Streik bei dem Personenverkehr der Deutschen Bahn aufgerufen. Es kommt seit dem 02.09. zu massiven Fahrplanabweichungen und Ausfällen bei Fahrten der Deutschen Bahn.",
-              "text":"Die Gewerkschaft Deutscher Lokomotivführer (GDL) hat ihre Mitglieder zu einem Streik bei dem Personenverkehr der Deutschen Bahn aufgerufen. Es kommt seit dem 02.09. zu massiven Fahrplanabweichungen und Ausfällen bei Fahrten der Deutschen Bahn.<br /><br />Folgende Linien sind betroffen:<br />S1, S2, S3, S4, S5, S6, S7, S8, S9, RE2, RE4, RE5, RE14, RE20, RB22, RB23, RE25, RE30, RB34, RB40, RB41, RB48 (von/nach Frankfurt), RB49, RE50, RB51, RE60, RB61, RB67, RB68, RE70.<br /><br />Das Streikende ist für den 07.09. 2:00 Uhr vorgesehen. <br /><br />Sobald uns weitere Informationen vorliegen, finden Sie diese im Artikel<br><a href=\"https://www.rmv.de/c/de/informationen-zum-rmv/der-rmv/rmv-aktuell/streik-gdl-laesst-bahnen-bundesweit-stillstehen\" target=\"_blank\" rel=\"noopener\"> - GDL lässt Bahnen bundesweit stillstehen (Artikel)</a>",
-              "icoX":7,
-              "prio":2,
+              "head":"Pflicht zu \"3G\" in Bussen und Bahnen",
+              "lead":"Gemäß des Infektionsschutzgesetzes gilt bundesweit im Öffentlichen Nahverkehr \"3G-Pflicht\". Das bedeutet: Fahrgäste müssen nachweislich geimpft, genesen oder negativ getestet sein.",
+              "text":"Gemäß des Infektionsschutzgesetzes gilt bundesweit im Öffentlichen Nahverkehr \"3G-Pflicht\". <br>Das bedeutet: Fahrgäste müssen nachweislich geimpft, genesen oder negativ getestet sein.<br>Weitere Informationen entnehmen Sie bitte dem Artikel<br><a href=\"https://www.rmv.de/c/de/informationen-zum-rmv/der-rmv/rmv-aktuell/coronavirus\" target=\"_blank\" rel=\"noopener\">- Corona-Pandemie: Aktuelle Hinweise</a>",
+              "icoX":6,
+              "prio":5,
               "fLocX":5,
               "tLocX":5,
-              "altStart":"",
-              "altEnd":"- vsl. 07.09.2021",
+              "altStart":"24.11.2021",
+              "altEnd":"- bis auf weiteres",
               "prod":65535,
-              "lModDate":"20210903",
-              "lModTime":"045601",
-              "sDate":"20210902",
-              "sTime":"020000",
-              "eDate":"20210907",
-              "eTime":"070000",
+              "lModDate":"20211124",
+              "lModTime":"050049",
+              "sDate":"20211123",
+              "sTime":"000000",
+              "eDate":"20211231",
+              "eTime":"235900",
               "comp":"RMVU",
               "catRefL":
               [
@@ -377,16 +353,12 @@
               "pubChL":
               [
                 {
-                  "name":"timetable",
-                  "fDate":"20210609",
-                  "fTime":"102200",
-                  "tDate":"20210907",
-                  "tTime":"070000"
+                  "name":"TIMETABLE",
+                  "fDate":"20211123",
+                  "fTime":"104600",
+                  "tDate":"20211231",
+                  "tTime":"235900"
                 }
-              ],
-              "regionRefL":
-              [
-                0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17
               ]
             }
           ],
@@ -430,9 +402,6 @@
               "txt":"HEAG mobiBus GmbH + Co. KG"
             },
             {
-              "res":"occup_fig_low"
-            },
-            {
               "res":"PROD_REG",
               "fg":
               {
@@ -454,203 +423,11 @@
               "res":"rt_critical"
             }
           ],
-          "tcocL":
-          [
-            {
-              "c":"SECOND"
-            },
-            {
-              "c":"SECOND"
-            },
-            {
-              "c":"SECOND"
-            },
-            {
-              "c":"SECOND"
-            },
-            {
-              "c":"SECOND"
-            },
-            {
-              "c":"SECOND"
-            },
-            {
-              "c":"SECOND"
-            },
-            {
-              "c":"SECOND"
-            },
-            {
-              "c":"SECOND"
-            },
-            {
-              "c":"SECOND"
-            },
-            {
-              "c":"SECOND"
-            },
-            {
-              "c":"SECOND"
-            },
-            {
-              "c":"SECOND"
-            },
-            {
-              "c":"SECOND"
-            }
-          ],
-          "himMsgRegionL":
-          [
-            {
-              "id":"10",
-              "name":"Main-Taunus-Kreis",
-              "msgRefL":
-              [
-
-              ]
-            },
-            {
-              "id":"9",
-              "name":"Main-Kinzig-Kreis und Hanau",
-              "msgRefL":
-              [
-
-              ]
-            },
-            {
-              "id":"8",
-              "name":"Landkreis Limburg-Weilburg",
-              "msgRefL":
-              [
-
-              ]
-            },
-            {
-              "id":"7",
-              "name":"Lahn-Dill-Kreis und Wetzlar",
-              "msgRefL":
-              [
-
-              ]
-            },
-            {
-              "id":"6",
-              "name":"Hochtaunuskreis und Bad Homburg",
-              "msgRefL":
-              [
-
-              ]
-            },
-            {
-              "id":"5",
-              "name":"Landkreis Groß-Gerau und Rüsselsheim",
-              "msgRefL":
-              [
-
-              ]
-            },
-            {
-              "id":"4",
-              "name":"Landkreis Gießen und Gießen",
-              "msgRefL":
-              [
-
-              ]
-            },
-            {
-              "id":"3",
-              "name":"Landkreis Fulda und Fulda",
-              "msgRefL":
-              [
-
-              ]
-            },
-            {
-              "id":"2",
-              "name":"Frankfurt",
-              "msgRefL":
-              [
-
-              ]
-            },
-            {
-              "id":"1",
-              "name":"Landkreis Darmstadt-Dieburg und Darmstadt",
-              "msgRefL":
-              [
-
-              ]
-            },
-            {
-              "id":"18",
-              "name":"Wiesbaden",
-              "msgRefL":
-              [
-
-              ]
-            },
-            {
-              "id":"17",
-              "name":"Wetteraukreis",
-              "msgRefL":
-              [
-
-              ]
-            },
-            {
-              "id":"16",
-              "name":"Vogelsbergkreis",
-              "msgRefL":
-              [
-
-              ]
-            },
-            {
-              "id":"15",
-              "name":"Rheingau-Taunus-Kreis",
-              "msgRefL":
-              [
-
-              ]
-            },
-            {
-              "id":"14",
-              "name":"Kreis Offenbach und Offenbach",
-              "msgRefL":
-              [
-
-              ]
-            },
-            {
-              "id":"13",
-              "name":"Odenwaldkreis",
-              "msgRefL":
-              [
-
-              ]
-            },
-            {
-              "id":"12",
-              "name":"Landkreis Marburg-Biedenkopf und Marburg",
-              "msgRefL":
-              [
-
-              ]
-            },
-            {
-              "id":"11",
-              "name":"Mainz",
-              "msgRefL":
-              [
-
-              ]
-            }
-          ],
           "himMsgCatL":
           [
             {
-              "id":1,
-              "name":"Betriebsstörung"
+              "id":3,
+              "name":"Zusatzverkehr"
             }
           ],
           "dirL":
@@ -665,26 +442,26 @@
         [
           {
             "cid":"DirectConReq-0",
-            "date":"20210906",
+            "date":"20211205",
             "dur":"000400",
             "chg":0,
             "sDays":
             {
-              "sDaysR":"Mo - Fr",
-              "sDaysB":"4F9F3E7CF9F3E7CF9F3E7CF9F3E7CF9F3E7CF9F3E7CF9F3E"
+              "sDaysR":"täglich",
+              "sDaysB":"FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8"
             },
             "dep":
             {
               "locX":0,
               "dInR":true,
-              "dTimeS":"110800",
+              "dTimeS":"192800",
               "type":"N"
             },
             "arr":
             {
               "locX":6,
               "aOutR":true,
-              "aTimeS":"112800",
+              "aTimeS":"194800",
               "type":"N"
             },
             "secL":
@@ -696,21 +473,21 @@
                 {
                   "locX":0,
                   "dInR":true,
-                  "dTimeS":"110800",
+                  "dTimeS":"192800",
                   "type":"N"
                 },
                 "arr":
                 {
                   "locX":1,
                   "aOutR":true,
-                  "aTimeS":"111900",
+                  "aTimeS":"193900",
                   "type":"N"
                 },
                 "gis":
                 {
-                  "dist":680,
+                  "dist":682,
                   "durS":"001100",
-                  "ctx":"G|1|G@F|A=2@O=Schöfferstraße 2, @X=8640047@Y=49867186@|A=1@O=Darmstadt Holzhofallee@X=8638157@Y=49863883@U=80@L=3024316@|6092021|110800|111900|bf|ft@0@2000@120@1@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§bt@0@2000@120@1@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§tt@0@2000@120@1@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§||",
+                  "ctx":"G|1|G@F|A=2@O=Schöfferstraße 2, @X=8640047@Y=49867186@|A=1@O=Darmstadt Holzhofallee@X=8638157@Y=49863883@U=80@L=3024316@|5122021|192800|193900|bf|ft@0@2000@120@1@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§bt@0@2000@120@1@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§tt@0@2000@120@1@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§||",
                   "getDescr":true,
                   "getPoly":true
                 }
@@ -721,52 +498,28 @@
                 "dep":
                 {
                   "locX":1,
-                  "idx":14,
+                  "idx":12,
                   "dProdX":1,
                   "dInR":true,
-                  "dTimeS":"111900",
-                  "dTimeR":"112000",
+                  "dTimeS":"193900",
+                  "dTimeR":"194000",
                   "dProgType":"PROGNOSED",
-                  "dTrnCmpSX":
-                  {
-                    "tcocX":
-                    [
-0
-                    ]
-                  },
-                  "msgL":
-                  [
-                    {
-                      "type":"REM",
-                      "remX":0,
-                      "tagL":
-                      [
-                        "SUM_LOC_L","RES_LOC_L"
-                      ],
-                      "sort":684195840
-                    },
-                    {
-                      "type":"REM",
-                      "remX":1,
-                      "sort":684195840
-                    }
-                  ],
                   "type":"N"
                 },
                 "arr":
                 {
                   "locX":2,
-                  "idx":17,
+                  "idx":15,
                   "aProdX":1,
                   "aOutR":true,
-                  "aTimeS":"112300",
-                  "aTimeR":"112400",
+                  "aTimeS":"194300",
+                  "aTimeR":"194400",
                   "aProgType":"PROGNOSED",
                   "type":"N"
                 },
                 "jny":
                 {
-                  "jid":"1|268392|0|80|6092021",
+                  "jid":"2|#VN#1#ST#1638543618#PI#0#ZI#313556#TA#0#DA#51221#1S#3024673#1T#1918#LS#3024675#LT#1949#PU#80#RT#3#CA#1aE#ZE#H#ZB#Bus H   #PC#6#FR#3024673#FT#1918#TO#3024675#TT#1949#",
                   "prodX":1,
                   "dirTxt":"Darmstadt Anne-Frank-Straße",
                   "dirFlg":"2",
@@ -777,85 +530,40 @@
                   [
                     {
                       "locX":1,
-                      "idx":14,
+                      "idx":12,
                       "dProdX":1,
                       "dInR":true,
-                      "dTimeS":"111900",
-                      "dTimeR":"112000",
+                      "dTimeS":"193900",
+                      "dTimeR":"194000",
                       "dProgType":"PROGNOSED",
                       "dDirTxt":"Darmstadt Anne-Frank-Straße",
                       "dDirFlg":"2",
-                      "dTrnCmpSX":
-                      {
-                        "tcocX":
-                        [
-1
-                        ]
-                      },
+                      "type":"N"
+                    },
+                    {
+                      "locX":3,
+                      "idx":13,
+                      "aProdX":1,
+                      "aOutR":true,
+                      "aTimeS":"194000",
+                      "aTimeR":"194100",
+                      "aProgType":"PROGNOSED",
+                      "dProdX":1,
+                      "dInR":true,
+                      "dTimeS":"194100",
+                      "dTimeR":"194200",
+                      "dProgType":"PROGNOSED",
                       "msgL":
                       [
                         {
                           "type":"REM",
                           "remX":0,
-                          "tagL":
-                          [
-                            "SUM_LOC_L","RES_LOC_L"
-                          ],
-                          "sort":684195840
-                        },
-                        {
-                          "type":"REM",
-                          "remX":1,
-                          "sort":684195840
-                        }
-                      ],
-                      "type":"N"
-                    },
-                    {
-                      "locX":3,
-                      "idx":15,
-                      "aProdX":1,
-                      "aOutR":true,
-                      "aTimeS":"112000",
-                      "aTimeR":"112100",
-                      "aProgType":"PROGNOSED",
-                      "dProdX":1,
-                      "dInR":true,
-                      "dTimeS":"112100",
-                      "dTimeR":"112200",
-                      "dProgType":"PROGNOSED",
-                      "dTrnCmpSX":
-                      {
-                        "tcocX":
-                        [
-2
-                        ]
-                      },
-                      "msgL":
-                      [
-                        {
-                          "type":"REM",
-                          "remX":2,
                           "tagL":
                           [
                             "RES_LOC_H3"
                           ],
                           "sort":13107200,
                           "persist":false
-                        },
-                        {
-                          "type":"REM",
-                          "remX":0,
-                          "tagL":
-                          [
-                            "SUM_LOC_L","RES_LOC_L"
-                          ],
-                          "sort":684195840
-                        },
-                        {
-                          "type":"REM",
-                          "remX":1,
-                          "sort":684195840
                         }
                       ],
                       "type":"N",
@@ -864,50 +572,26 @@
                     },
                     {
                       "locX":4,
-                      "idx":16,
+                      "idx":14,
                       "aProdX":1,
                       "aOutR":true,
-                      "aTimeS":"112200",
-                      "aTimeR":"112300",
+                      "aTimeS":"194200",
+                      "aTimeR":"194300",
                       "aProgType":"PROGNOSED",
                       "dProdX":1,
                       "dInR":true,
-                      "dTimeS":"112200",
-                      "dTimeR":"112300",
+                      "dTimeS":"194200",
+                      "dTimeR":"194300",
                       "dProgType":"PROGNOSED",
-                      "dTrnCmpSX":
-                      {
-                        "tcocX":
-                        [
-3
-                        ]
-                      },
-                      "msgL":
-                      [
-                        {
-                          "type":"REM",
-                          "remX":0,
-                          "tagL":
-                          [
-                            "SUM_LOC_L","RES_LOC_L"
-                          ],
-                          "sort":684195840
-                        },
-                        {
-                          "type":"REM",
-                          "remX":1,
-                          "sort":684195840
-                        }
-                      ],
                       "type":"N"
                     },
                     {
                       "locX":2,
-                      "idx":17,
+                      "idx":15,
                       "aProdX":1,
                       "aOutR":true,
-                      "aTimeS":"112300",
-                      "aTimeR":"112400",
+                      "aTimeS":"194300",
+                      "aTimeR":"194400",
                       "aProgType":"PROGNOSED",
                       "type":"N"
                     }
@@ -924,157 +608,29 @@
                   "dist":1295,
                   "pos":
                   {
-                    "x":8661538,
-                    "y":49876801,
+                    "x":8657862,
+                    "y":49874940,
                     "layerX":0,
                     "crdSysX":0
                   },
                   "freq":
                   {
-                    "minC":10,
-                    "maxC":10,
-                    "numC":13,
+                    "minC":15,
+                    "maxC":30,
+                    "numC":6,
                     "jnyL":
                     [
                       {
-                        "jid":"1|271858|0|80|6092021",
+                        "jid":"2|#VN#1#ST#1638543618#PI#0#ZI#311815#TA#0#DA#51221#1S#3008554#1T#1929#LS#3024675#LT#2004#PU#80#RT#3#CA#1aE#ZE#H#ZB#Bus H   #PC#6#FR#3008554#FT#1929#TO#3024675#TT#2004#",
                         "prodX":2,
                         "dirTxt":"Darmstadt Anne-Frank-Straße",
                         "dirFlg":"2",
                         "stbStop":
                         {
                           "locX":1,
-                          "idx":12,
-                          "dProdX":2,
-                          "dTimeS":"112900",
-                          "dTrnCmpSX":
-                          {
-                            "tcocX":
-                            [
-4
-                            ]
-                          },
-                          "msgL":
-                          [
-                            {
-                              "type":"REM",
-                              "remX":0,
-                              "tagL":
-                              [
-                                "SUM_LOC_L","RES_LOC_L"
-                              ],
-                              "sort":684195840
-                            },
-                            {
-                              "type":"REM",
-                              "remX":1,
-                              "sort":684195840
-                            }
-                          ],
-                          "type":"N"
-                        },
-                        "stopL":
-                        [
-                          {
-                            "locX":1,
-                            "idx":12,
-                            "dProdX":2,
-                            "dTimeS":"112900",
-                            "dDirTxt":"Darmstadt Anne-Frank-Straße",
-                            "dDirFlg":"2",
-                            "dTrnCmpSX":
-                            {
-                              "tcocX":
-                              [
-5
-                              ]
-                            },
-                            "msgL":
-                            [
-                              {
-                                "type":"REM",
-                                "remX":0,
-                                "tagL":
-                                [
-                                  "SUM_LOC_L","RES_LOC_L"
-                                ],
-                                "sort":684195840
-                              },
-                              {
-                                "type":"REM",
-                                "remX":1,
-                                "sort":684195840
-                              }
-                            ],
-                            "type":"N"
-                          },
-                          {
-                            "locX":2,
-                            "idx":15,
-                            "aProdX":2,
-                            "aTimeS":"113300",
-                            "type":"N"
-                          }
-                        ],
-                        "dist":991,
-                        "ctxRecon":"T$A=1@O=Darmstadt Holzhofallee@L=3024316@a=128@$A=1@O=Darmstadt Südbahnhof@L=3011320@a=128@$202109061129$202109061133$Bus H   $$3$$$$",
-                        "subscr":"F",
-                        "prodL":
-                        [
-                          {
-                            "prodX":2,
-                            "fLocX":1,
-                            "tLocX":2,
-                            "fIdx":12,
-                            "tIdx":15
-                          }
-                        ],
-                        "dirL":
-                        [
-                          {
-                            "dirX":0,
-                            "fLocX":1,
-                            "tLocX":2,
-                            "fIdx":12,
-                            "tIdx":15
-                          }
-                        ]
-                      },
-                      {
-                        "jid":"1|271558|0|80|6092021",
-                        "prodX":3,
-                        "dirTxt":"Darmstadt Anne-Frank-Straße",
-                        "dirFlg":"2",
-                        "stbStop":
-                        {
-                          "locX":1,
                           "idx":14,
-                          "dProdX":3,
-                          "dTimeS":"113900",
-                          "dTrnCmpSX":
-                          {
-                            "tcocX":
-                            [
-6
-                            ]
-                          },
-                          "msgL":
-                          [
-                            {
-                              "type":"REM",
-                              "remX":0,
-                              "tagL":
-                              [
-                                "SUM_LOC_L","RES_LOC_L"
-                              ],
-                              "sort":684195840
-                            },
-                            {
-                              "type":"REM",
-                              "remX":1,
-                              "sort":684195840
-                            }
-                          ],
+                          "dProdX":2,
+                          "dTimeS":"195400",
                           "type":"N"
                         },
                         "stopL":
@@ -1082,51 +638,27 @@
                           {
                             "locX":1,
                             "idx":14,
-                            "dProdX":3,
-                            "dTimeS":"113900",
+                            "dProdX":2,
+                            "dTimeS":"195400",
                             "dDirTxt":"Darmstadt Anne-Frank-Straße",
                             "dDirFlg":"2",
-                            "dTrnCmpSX":
-                            {
-                              "tcocX":
-                              [
-7
-                              ]
-                            },
-                            "msgL":
-                            [
-                              {
-                                "type":"REM",
-                                "remX":0,
-                                "tagL":
-                                [
-                                  "SUM_LOC_L","RES_LOC_L"
-                                ],
-                                "sort":684195840
-                              },
-                              {
-                                "type":"REM",
-                                "remX":1,
-                                "sort":684195840
-                              }
-                            ],
                             "type":"N"
                           },
                           {
                             "locX":2,
                             "idx":17,
-                            "aProdX":3,
-                            "aTimeS":"114300",
+                            "aProdX":2,
+                            "aTimeS":"195800",
                             "type":"N"
                           }
                         ],
                         "dist":991,
-                        "ctxRecon":"T$A=1@O=Darmstadt Holzhofallee@L=3024316@a=128@$A=1@O=Darmstadt Südbahnhof@L=3011320@a=128@$202109061139$202109061143$Bus H   $$3$$$$",
+                        "ctxRecon":"T$A=1@O=Darmstadt Holzhofallee@L=3024316@a=128@$A=1@O=Darmstadt Südbahnhof@L=3011320@a=128@$202112051954$202112051958$Bus H   $$3$$$$",
                         "subscr":"F",
                         "prodL":
                         [
                           {
-                            "prodX":3,
+                            "prodX":2,
                             "fLocX":1,
                             "tLocX":2,
                             "fIdx":14,
@@ -1145,40 +677,16 @@
                         ]
                       },
                       {
-                        "jid":"1|38839|17|80|6092021",
-                        "prodX":4,
+                        "jid":"2|#VN#1#ST#1638543618#PI#0#ZI#311817#TA#0#DA#51221#1S#3024673#1T#1948#LS#3024675#LT#2019#PU#80#RT#3#CA#1aE#ZE#H#ZB#Bus H   #PC#6#FR#3024673#FT#1948#TO#3024675#TT#2019#",
+                        "prodX":3,
                         "dirTxt":"Darmstadt Anne-Frank-Straße",
                         "dirFlg":"2",
                         "stbStop":
                         {
                           "locX":1,
                           "idx":12,
-                          "dProdX":4,
-                          "dTimeS":"114900",
-                          "dTrnCmpSX":
-                          {
-                            "tcocX":
-                            [
-8
-                            ]
-                          },
-                          "msgL":
-                          [
-                            {
-                              "type":"REM",
-                              "remX":0,
-                              "tagL":
-                              [
-                                "SUM_LOC_L","RES_LOC_L"
-                              ],
-                              "sort":684195840
-                            },
-                            {
-                              "type":"REM",
-                              "remX":1,
-                              "sort":684195840
-                            }
-                          ],
+                          "dProdX":3,
+                          "dTimeS":"200900",
                           "type":"N"
                         },
                         "stopL":
@@ -1186,51 +694,27 @@
                           {
                             "locX":1,
                             "idx":12,
-                            "dProdX":4,
-                            "dTimeS":"114900",
+                            "dProdX":3,
+                            "dTimeS":"200900",
                             "dDirTxt":"Darmstadt Anne-Frank-Straße",
                             "dDirFlg":"2",
-                            "dTrnCmpSX":
-                            {
-                              "tcocX":
-                              [
-9
-                              ]
-                            },
-                            "msgL":
-                            [
-                              {
-                                "type":"REM",
-                                "remX":0,
-                                "tagL":
-                                [
-                                  "SUM_LOC_L","RES_LOC_L"
-                                ],
-                                "sort":684195840
-                              },
-                              {
-                                "type":"REM",
-                                "remX":1,
-                                "sort":684195840
-                              }
-                            ],
                             "type":"N"
                           },
                           {
                             "locX":2,
                             "idx":15,
-                            "aProdX":4,
-                            "aTimeS":"115300",
+                            "aProdX":3,
+                            "aTimeS":"201300",
                             "type":"N"
                           }
                         ],
                         "dist":991,
-                        "ctxRecon":"T$A=1@O=Darmstadt Holzhofallee@L=3024316@a=128@$A=1@O=Darmstadt Südbahnhof@L=3011320@a=128@$202109061149$202109061153$Bus H   $$1$$$$",
+                        "ctxRecon":"T$A=1@O=Darmstadt Holzhofallee@L=3024316@a=128@$A=1@O=Darmstadt Südbahnhof@L=3011320@a=128@$202112052009$202112052013$Bus H   $$3$$$$",
                         "subscr":"F",
                         "prodL":
                         [
                           {
-                            "prodX":4,
+                            "prodX":3,
                             "fLocX":1,
                             "tLocX":2,
                             "fIdx":12,
@@ -1249,7 +733,63 @@
                         ]
                       },
                       {
-                        "jid":"1|275216|0|80|6092021",
+                        "jid":"2|#VN#1#ST#1638543618#PI#0#ZI#312161#TA#0#DA#51221#1S#3008554#1T#1959#LS#3024675#LT#2034#PU#80#RT#3#CA#1aE#ZE#H#ZB#Bus H   #PC#6#FR#3008554#FT#1959#TO#3024675#TT#2034#",
+                        "prodX":4,
+                        "dirTxt":"Darmstadt Anne-Frank-Straße",
+                        "dirFlg":"2",
+                        "stbStop":
+                        {
+                          "locX":1,
+                          "idx":14,
+                          "dProdX":4,
+                          "dTimeS":"202400",
+                          "type":"N"
+                        },
+                        "stopL":
+                        [
+                          {
+                            "locX":1,
+                            "idx":14,
+                            "dProdX":4,
+                            "dTimeS":"202400",
+                            "dDirTxt":"Darmstadt Anne-Frank-Straße",
+                            "dDirFlg":"2",
+                            "type":"N"
+                          },
+                          {
+                            "locX":2,
+                            "idx":17,
+                            "aProdX":4,
+                            "aTimeS":"202800",
+                            "type":"N"
+                          }
+                        ],
+                        "dist":991,
+                        "ctxRecon":"T$A=1@O=Darmstadt Holzhofallee@L=3024316@a=128@$A=1@O=Darmstadt Südbahnhof@L=3011320@a=128@$202112052024$202112052028$Bus H   $$3$$$$",
+                        "subscr":"F",
+                        "prodL":
+                        [
+                          {
+                            "prodX":4,
+                            "fLocX":1,
+                            "tLocX":2,
+                            "fIdx":14,
+                            "tIdx":17
+                          }
+                        ],
+                        "dirL":
+                        [
+                          {
+                            "dirX":0,
+                            "fLocX":1,
+                            "tLocX":2,
+                            "fIdx":14,
+                            "tIdx":17
+                          }
+                        ]
+                      },
+                      {
+                        "jid":"2|#VN#1#ST#1638543618#PI#0#ZI#312082#TA#0#DA#51221#1S#3008554#1T#2029#LS#3024675#LT#2104#PU#80#RT#3#CA#1aE#ZE#H#ZB#Bus H   #PC#6#FR#3008554#FT#2029#TO#3024675#TT#2104#",
                         "prodX":5,
                         "dirTxt":"Darmstadt Anne-Frank-Straße",
                         "dirFlg":"2",
@@ -1258,31 +798,7 @@
                           "locX":1,
                           "idx":14,
                           "dProdX":5,
-                          "dTimeS":"115900",
-                          "dTrnCmpSX":
-                          {
-                            "tcocX":
-                            [
-10
-                            ]
-                          },
-                          "msgL":
-                          [
-                            {
-                              "type":"REM",
-                              "remX":0,
-                              "tagL":
-                              [
-                                "SUM_LOC_L","RES_LOC_L"
-                              ],
-                              "sort":684195840
-                            },
-                            {
-                              "type":"REM",
-                              "remX":1,
-                              "sort":684195840
-                            }
-                          ],
+                          "dTimeS":"205400",
                           "type":"N"
                         },
                         "stopL":
@@ -1291,45 +807,21 @@
                             "locX":1,
                             "idx":14,
                             "dProdX":5,
-                            "dTimeS":"115900",
+                            "dTimeS":"205400",
                             "dDirTxt":"Darmstadt Anne-Frank-Straße",
                             "dDirFlg":"2",
-                            "dTrnCmpSX":
-                            {
-                              "tcocX":
-                              [
-11
-                              ]
-                            },
-                            "msgL":
-                            [
-                              {
-                                "type":"REM",
-                                "remX":0,
-                                "tagL":
-                                [
-                                  "SUM_LOC_L","RES_LOC_L"
-                                ],
-                                "sort":684195840
-                              },
-                              {
-                                "type":"REM",
-                                "remX":1,
-                                "sort":684195840
-                              }
-                            ],
                             "type":"N"
                           },
                           {
                             "locX":2,
                             "idx":17,
                             "aProdX":5,
-                            "aTimeS":"120300",
+                            "aTimeS":"205800",
                             "type":"N"
                           }
                         ],
                         "dist":991,
-                        "ctxRecon":"T$A=1@O=Darmstadt Holzhofallee@L=3024316@a=128@$A=1@O=Darmstadt Südbahnhof@L=3011320@a=128@$202109061159$202109061203$Bus H   $$3$$$$",
+                        "ctxRecon":"T$A=1@O=Darmstadt Holzhofallee@L=3024316@a=128@$A=1@O=Darmstadt Südbahnhof@L=3011320@a=128@$202112052054$202112052058$Bus H   $$3$$$$",
                         "subscr":"F",
                         "prodL":
                         [
@@ -1353,87 +845,39 @@
                         ]
                       },
                       {
-                        "jid":"1|271844|0|80|6092021",
+                        "jid":"2|#VN#1#ST#1638543618#PI#0#ZI#312190#TA#0#DA#51221#1S#3008554#1T#2059#LS#3024675#LT#2134#PU#80#RT#3#CA#1aE#ZE#H#ZB#Bus H   #PC#6#FR#3008554#FT#2059#TO#3024675#TT#2134#",
                         "prodX":6,
                         "dirTxt":"Darmstadt Anne-Frank-Straße",
                         "dirFlg":"2",
                         "stbStop":
                         {
                           "locX":1,
-                          "idx":12,
+                          "idx":14,
                           "dProdX":6,
-                          "dTimeS":"120900",
-                          "dTrnCmpSX":
-                          {
-                            "tcocX":
-                            [
-12
-                            ]
-                          },
-                          "msgL":
-                          [
-                            {
-                              "type":"REM",
-                              "remX":0,
-                              "tagL":
-                              [
-                                "SUM_LOC_L","RES_LOC_L"
-                              ],
-                              "sort":684195840
-                            },
-                            {
-                              "type":"REM",
-                              "remX":1,
-                              "sort":684195840
-                            }
-                          ],
+                          "dTimeS":"212400",
                           "type":"N"
                         },
                         "stopL":
                         [
                           {
                             "locX":1,
-                            "idx":12,
+                            "idx":14,
                             "dProdX":6,
-                            "dTimeS":"120900",
+                            "dTimeS":"212400",
                             "dDirTxt":"Darmstadt Anne-Frank-Straße",
                             "dDirFlg":"2",
-                            "dTrnCmpSX":
-                            {
-                              "tcocX":
-                              [
-13
-                              ]
-                            },
-                            "msgL":
-                            [
-                              {
-                                "type":"REM",
-                                "remX":0,
-                                "tagL":
-                                [
-                                  "SUM_LOC_L","RES_LOC_L"
-                                ],
-                                "sort":684195840
-                              },
-                              {
-                                "type":"REM",
-                                "remX":1,
-                                "sort":684195840
-                              }
-                            ],
                             "type":"N"
                           },
                           {
                             "locX":2,
-                            "idx":15,
+                            "idx":17,
                             "aProdX":6,
-                            "aTimeS":"121300",
+                            "aTimeS":"212800",
                             "type":"N"
                           }
                         ],
                         "dist":991,
-                        "ctxRecon":"T$A=1@O=Darmstadt Holzhofallee@L=3024316@a=128@$A=1@O=Darmstadt Südbahnhof@L=3011320@a=128@$202109061209$202109061213$Bus H   $$3$$$$",
+                        "ctxRecon":"T$A=1@O=Darmstadt Holzhofallee@L=3024316@a=128@$A=1@O=Darmstadt Südbahnhof@L=3011320@a=128@$202112052124$202112052128$Bus H   $$3$$$$",
                         "subscr":"F",
                         "prodL":
                         [
@@ -1441,8 +885,8 @@
                             "prodX":6,
                             "fLocX":1,
                             "tLocX":2,
-                            "fIdx":12,
-                            "tIdx":15
+                            "fIdx":14,
+                            "tIdx":17
                           }
                         ],
                         "dirL":
@@ -1451,14 +895,14 @@
                             "dirX":0,
                             "fLocX":1,
                             "tLocX":2,
-                            "fIdx":12,
-                            "tIdx":15
+                            "fIdx":14,
+                            "tIdx":17
                           }
                         ]
                       }
                     ]
                   },
-                  "ctxRecon":"T$A=1@O=Darmstadt Holzhofallee@L=3024316@a=128@$A=1@O=Darmstadt Südbahnhof@L=3011320@a=128@$202109061119$202109061123$Bus H   $$3$$$$",
+                  "ctxRecon":"T$A=1@O=Darmstadt Holzhofallee@L=3024316@a=128@$A=1@O=Darmstadt Südbahnhof@L=3011320@a=128@$202112051939$202112051943$Bus H   $$3$$$$",
                   "msgL":
                   [
                     {
@@ -1470,22 +914,7 @@
                       [
                         "SUM_GLB_HDR_H2","RES_GLB_HDR_H2"
                       ],
-                      "sort":270674872
-                    },
-                    {
-                      "type":"REM",
-                      "remX":3,
-                      "dspl":"U",
-                      "tagL":
-                      [
-                        "SUM_CON_HDR_H3","RES_SEC_HDR_H3"
-                      ],
-                      "sort":684195840
-                    },
-                    {
-                      "type":"REM",
-                      "remX":4,
-                      "sort":684195840
+                      "sort":273991956
                     }
                   ],
                   "subscr":"F",
@@ -1495,8 +924,8 @@
                       "prodX":1,
                       "fLocX":1,
                       "tLocX":2,
-                      "fIdx":14,
-                      "tIdx":17
+                      "fIdx":12,
+                      "tIdx":15
                     }
                   ],
                   "dirL":
@@ -1505,8 +934,8 @@
                       "dirX":0,
                       "fLocX":1,
                       "tLocX":2,
-                      "fIdx":14,
-                      "tIdx":17
+                      "fIdx":12,
+                      "tIdx":15
                     }
                   ]
                 }
@@ -1518,30 +947,30 @@
                 {
                   "locX":2,
                   "dInR":true,
-                  "dTimeS":"112300",
+                  "dTimeS":"194300",
                   "type":"N"
                 },
                 "arr":
                 {
                   "locX":6,
                   "aOutR":true,
-                  "aTimeS":"112800",
+                  "aTimeS":"194800",
                   "type":"N"
                 },
                 "gis":
                 {
                   "dist":298,
                   "durS":"000500",
-                  "ctx":"G|1|G@F|A=1@O=Darmstadt Südbahnhof@X=8637699@Y=49854966@U=80@L=3011320@|A=2@O=Darmstadt, Wormser Straße 32@H=32@X=8637663@Y=49856719@U=103@L=990036887@|6092021|112300|112800|fb|ft@0@2000@120@1@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§bt@0@2000@120@1@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§tt@0@2000@120@1@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§||",
+                  "ctx":"G|1|G@F|A=1@O=Darmstadt Südbahnhof@X=8637699@Y=49854966@U=80@L=3011320@|A=2@O=Darmstadt, Wormser Straße 32@H=32@X=8637663@Y=49856719@U=103@L=990037066@|5122021|194300|194800|fb|ft@0@2000@120@1@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§bt@0@2000@120@1@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§tt@0@2000@120@1@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§||",
                   "getDescr":true,
                   "getPoly":true
                 }
               }
             ],
-            "ctxRecon":"¶HKI¶G@F$A=2@O=Schöfferstraße 2, @X=8640047@Y=49867186@u=0@a=128@$A=1@O=Darmstadt Holzhofallee@L=3024316@a=128@$202109061108$202109061119$$$1$$$$§T$A=1@O=Darmstadt Holzhofallee@L=3024316@a=128@$A=1@O=Darmstadt Südbahnhof@L=3011320@a=128@$202109061119$202109061123$Bus H   $$3$$$$§G@F$A=1@O=Darmstadt Südbahnhof@L=3011320@a=128@$A=2@O=Darmstadt, Wormser Straße 32@H=32@X=8637663@Y=49856719@L=990036887@a=128@$202109061123$202109061128$$$1$$$$¶GP¶ft@0@2000@120@1@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§bt@0@2000@120@1@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§tt@0@2000@120@1@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§",
+            "ctxRecon":"¶HKI¶G@F$A=2@O=Schöfferstraße 2, @X=8640047@Y=49867186@u=0@a=128@$A=1@O=Darmstadt Holzhofallee@L=3024316@a=128@$202112051928$202112051939$$$1$$$$§T$A=1@O=Darmstadt Holzhofallee@L=3024316@a=128@$A=1@O=Darmstadt Südbahnhof@L=3011320@a=128@$202112051939$202112051943$Bus H   $$3$$$$§G@F$A=1@O=Darmstadt Südbahnhof@L=3011320@a=128@$A=2@O=Darmstadt, Wormser Straße 32@H=32@X=8637663@Y=49856719@L=990037066@a=128@$202112051943$202112051948$$$1$$$$¶GP¶ft@0@2000@120@1@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§bt@0@2000@120@1@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§tt@0@2000@120@1@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§",
             "freq":
             {
-              "minC":10
+              "minC":15
             },
             "trfRes":
             {
@@ -1562,448 +991,7 @@
                           "desc":"Erwachsene",
                           "prc":230,
                           "cur":"EUR",
-                          "shpCtx":"{\"RMVTicket\":{\"TextLong\":\"Einzelfahrt Erwachsene\",\"TextMiddle\":\"Einzelfahrt Erwachsene\",\"TextShort\":\"Einzelfahrt Erwachsene\",\"Remark\":\"Regelpreis\",\"ValidFrom\":\"06.09.2021\",\"TariffLevelPrint\":\"1\",\"TariffLevelIntern\":\"5\",\"Price\":\"230\",\"TZCodeStartReq\":\"4001\",\"TZCodeStartRes\":\"4001\",\"TZNameStart\":\"Darmstadt Holzhofallee\",\"ViaId\":\"0\",\"ViaText\":\"ohne Umweg\",\"TZCodeDestReq\":\"4001\",\"TZCodeDestRes\":\"4001\",\"TZNameDest\":\"Darmstadt Südbahnhof\",\"TypeKey\":\"3100\",\"Subvention\":\"0\",\"TariffVersion\":\"40\",\"Kartentyp\":\"KTYP-Einzelfahrkarte\",\"KartentypAnzeigename\":\"Einzelfahrt\",\"KAProduktnummer\":\"10185\",\"KAInfoText\":\"\",\"Verantwortlicher\":\"RMV\",\"Verbuende\":\"RMV\",\"ExportAttribute\":\"ATTR-VTRB-Einzelpreis=Erw.|ATTR-VTRB-replSorten=2100 2300 2700 3700|ATTR-KTYP-billigTr=1\",\"FreigabeId\":\"3980\",\"Freigabe\":\"4001, 4058, 4077, 4079, 4087, 4091, 4092, 4099\"}}"
-                        },
-                        {
-                          "name":"Einzelfahrkarte Regelpreis",
-                          "desc":"Kinder",
-                          "prc":140,
-                          "cur":"EUR",
-                          "shpCtx":"{\"RMVTicket\":{\"TextLong\":\"Einzelfahrt Kinder\",\"TextMiddle\":\"Einzelfahrt Kinder\",\"TextShort\":\"Einzelfahrt Kinder\",\"Remark\":\"Regelpreis\",\"ValidFrom\":\"06.09.2021\",\"TariffLevelPrint\":\"1\",\"TariffLevelIntern\":\"5\",\"Price\":\"140\",\"TZCodeStartReq\":\"4001\",\"TZCodeStartRes\":\"4001\",\"TZNameStart\":\"Darmstadt Holzhofallee\",\"ViaId\":\"0\",\"ViaText\":\"ohne Umweg\",\"TZCodeDestReq\":\"4001\",\"TZCodeDestRes\":\"4001\",\"TZNameDest\":\"Darmstadt Südbahnhof\",\"TypeKey\":\"3300\",\"Subvention\":\"0\",\"TariffVersion\":\"40\",\"Kartentyp\":\"KTYP-Einzelfahrkarte\",\"KartentypAnzeigename\":\"Einzelfahrt\",\"KAProduktnummer\":\"10186\",\"KAInfoText\":\"\",\"Verantwortlicher\":\"RMV\",\"Verbuende\":\"RMV\",\"ExportAttribute\":\"ATTR-VTRB-Einzelpreis=Kind|ATTR-VTRB-replSorten=2200 2500 2800 3800|ATTR-KTYP-billigTr=1\",\"FreigabeId\":\"3980\",\"Freigabe\":\"4001, 4058, 4077, 4079, 4087, 4091, 4092, 4099\"}}"
-                        },
-                        {
-                          "name":"Einzelzuschlag 1. Klasse je Fahrt",
-                          "desc":"Erw. und Kinder",
-                          "prc":150,
-                          "cur":"EUR",
-                          "shpCtx":"{\"RMVTicket\":{\"TextLong\":\"Zuschlag Erwachsene/Kinder\",\"TextMiddle\":\"Zuschlag Erwachsene/Kinder\",\"TextShort\":\"Zuschlag Erw./Kind\",\"Remark\":\"je Fahrt\",\"ValidFrom\":\"06.09.2021\",\"TariffLevelPrint\":\"1\",\"TariffLevelIntern\":\"5\",\"Price\":\"150\",\"TZCodeStartReq\":\"4001\",\"TZCodeStartRes\":\"4001\",\"TZNameStart\":\"Darmstadt Holzhofallee\",\"ViaId\":\"0\",\"ViaText\":\"ohne Umweg\",\"TZCodeDestReq\":\"4001\",\"TZCodeDestRes\":\"4001\",\"TZNameDest\":\"Darmstadt Südbahnhof\",\"TypeKey\":\"4000\",\"Subvention\":\"0\",\"TariffVersion\":\"40\",\"Kartentyp\":\"KTYP-Einzelfahrkarte\",\"KartentypAnzeigename\":\"Einzelfahrt\",\"KAProduktnummer\":\"10189\",\"KAInfoText\":\"\",\"Verantwortlicher\":\"RMV\",\"Verbuende\":\"RMV\",\"ExportAttribute\":\"ATTR-SRTE-KLASSE_1=Ja|ATTR-KTYP-billigTr=1\",\"FreigabeId\":\"3980\",\"Freigabe\":\"4001, 4058, 4077, 4079, 4087, 4091, 4092, 4099\"}}"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "name":"Tageskarten",
-                  "fareL":
-                  [
-                    {
-                      "name":"0",
-                      "desc":"ohne Umweg",
-                      "shpCtx":"",
-                      "ticketL":
-                      [
-                        {
-                          "name":"Tageskarte",
-                          "desc":"Erwachsene",
-                          "prc":450,
-                          "cur":"EUR",
-                          "shpCtx":"{\"RMVTicket\":{\"TextLong\":\"Tageskarte Erwachsene\",\"TextMiddle\":\"Tageskarte Erwachsene\",\"TextShort\":\"Tageskarte Erwachsene\",\"ValidFrom\":\"06.09.2021\",\"TariffLevelPrint\":\"1\",\"TariffLevelIntern\":\"5\",\"Price\":\"450\",\"TZCodeStartReq\":\"4001\",\"TZCodeStartRes\":\"4001\",\"TZNameStart\":\"Darmstadt Holzhofallee\",\"ViaId\":\"0\",\"ViaText\":\"ohne Umweg\",\"TZCodeDestReq\":\"4001\",\"TZCodeDestRes\":\"4001\",\"TZNameDest\":\"Darmstadt Südbahnhof\",\"TypeKey\":\"1800\",\"Subvention\":\"0\",\"TariffVersion\":\"40\",\"Kartentyp\":\"KTYP-Tageskarte\",\"KartentypAnzeigename\":\"Tageskarten\",\"KAProduktnummer\":\"10182\",\"KAInfoText\":\"\",\"Verantwortlicher\":\"RMV\",\"Verbuende\":\"RMV\",\"ExportAttribute\":\"ATTR-VTRB-Ausgabeart=Papier|ATTR-VTRB-Frg=3\",\"FreigabeId\":\"3980\",\"Freigabe\":\"4001, 4058, 4077, 4079, 4087, 4091, 4092, 4099\"}}"
-                        },
-                        {
-                          "name":"Tageskarte",
-                          "desc":"Kinder",
-                          "prc":275,
-                          "cur":"EUR",
-                          "shpCtx":"{\"RMVTicket\":{\"TextLong\":\"Tageskarte Kinder\",\"TextMiddle\":\"Tageskarte Kinder\",\"TextShort\":\"Tageskarte Kinder\",\"ValidFrom\":\"06.09.2021\",\"TariffLevelPrint\":\"1\",\"TariffLevelIntern\":\"5\",\"Price\":\"275\",\"TZCodeStartReq\":\"4001\",\"TZCodeStartRes\":\"4001\",\"TZNameStart\":\"Darmstadt Holzhofallee\",\"ViaId\":\"0\",\"ViaText\":\"ohne Umweg\",\"TZCodeDestReq\":\"4001\",\"TZCodeDestRes\":\"4001\",\"TZNameDest\":\"Darmstadt Südbahnhof\",\"TypeKey\":\"1900\",\"Subvention\":\"0\",\"TariffVersion\":\"40\",\"Kartentyp\":\"KTYP-Tageskarte\",\"KartentypAnzeigename\":\"Tageskarten\",\"KAProduktnummer\":\"10183\",\"KAInfoText\":\"\",\"Verantwortlicher\":\"RMV\",\"Verbuende\":\"RMV\",\"ExportAttribute\":\"ATTR-VTRB-Ausgabeart=Papier|ATTR-VTRB-Frg=3\",\"FreigabeId\":\"3980\",\"Freigabe\":\"4001, 4058, 4077, 4079, 4087, 4091, 4092, 4099\"}}"
-                        },
-                        {
-                          "name":"Gruppentageskarte 5 Personen",
-                          "desc":"Erw. und Kinder",
-                          "prc":780,
-                          "cur":"EUR",
-                          "shpCtx":"{\"RMVTicket\":{\"TextLong\":\"Gruppentageskarte bis zu 5 Personen\",\"TextMiddle\":\"Gruppentageskarte 5 Personen\",\"TextShort\":\"Gruppentageskarte 5 Pers.\",\"ValidFrom\":\"06.09.2021\",\"TariffLevelPrint\":\"1\",\"TariffLevelIntern\":\"5\",\"Price\":\"780\",\"TZCodeStartReq\":\"4001\",\"TZCodeStartRes\":\"4001\",\"TZNameStart\":\"Darmstadt Holzhofallee\",\"ViaId\":\"0\",\"ViaText\":\"ohne Umweg\",\"TZCodeDestReq\":\"4001\",\"TZCodeDestRes\":\"4001\",\"TZNameDest\":\"Darmstadt Südbahnhof\",\"TypeKey\":\"2000\",\"Subvention\":\"0\",\"TariffVersion\":\"40\",\"Kartentyp\":\"KTYP-Tageskarte\",\"KartentypAnzeigename\":\"Tageskarten\",\"KAProduktnummer\":\"10184\",\"KAInfoText\":\"\",\"Verantwortlicher\":\"RMV\",\"Verbuende\":\"RMV\",\"ExportAttribute\":\"ATTR-VTRB-Ausgabeart=Papier|ATTR-VTRB-Frg=3\",\"FreigabeId\":\"3980\",\"Freigabe\":\"4001, 4058, 4077, 4079, 4087, 4091, 4092, 4099\"}}"
-                        },
-                        {
-                          "name":"Hessenticket bis 5 Personen",
-                          "desc":"Erw. und Kinder",
-                          "prc":3600,
-                          "cur":"EUR",
-                          "shpCtx":"{\"RMVTicket\":{\"TextLong\":\"Hessenticket bis zu 5 Personen\",\"TextMiddle\":\"Hessent bis zu 5 Personen\",\"TextShort\":\"Hessent bis 5 Pers.\",\"ValidFrom\":\"06.09.2021\",\"TariffLevelPrint\":\"50\",\"TariffLevelIntern\":\"95\",\"Price\":\"3600\",\"TZCodeStartReq\":\"4001\",\"TZCodeStartRes\":\"9990\",\"TZNameStart\":\"Darmstadt Holzhofallee\",\"ViaId\":\"0\",\"ViaText\":\"ohne Umweg\",\"TZCodeDestReq\":\"4001\",\"TZCodeDestRes\":\"9990\",\"TZNameDest\":\"Darmstadt Südbahnhof\",\"TypeKey\":\"1750\",\"Subvention\":\"0\",\"TariffVersion\":\"40\",\"Kartentyp\":\"KTYP-Tageskarte\",\"KartentypAnzeigename\":\"Tageskarten\",\"KAProduktnummer\":\"10181\",\"KAInfoText\":\"\",\"Verantwortlicher\":\"RMV\",\"Verbuende\":\"RMV\",\"ExportAttribute\":\"ATTR-VTRB-Ausgabeart=Papier|ATTR-VTRB-Frg=2\",\"FreigabeId\":\"12101\",\"Freigabe\":\"$(AlleTG)\"}}"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "name":"Wochenkarten",
-                  "fareL":
-                  [
-                    {
-                      "name":"0",
-                      "desc":"ohne Umweg",
-                      "shpCtx":"",
-                      "ticketL":
-                      [
-                        {
-                          "name":"Wochenkarte",
-                          "desc":"Erwachsene",
-                          "prc":1430,
-                          "cur":"EUR",
-                          "shpCtx":"{\"RMVTicket\":{\"TextLong\":\"Wochenkarte Erwachsene\",\"TextMiddle\":\"Wochenkarte Erwachsene\",\"TextShort\":\"Wochenkarte Erwachsene\",\"ValidFrom\":\"06.09.2021\",\"TariffLevelPrint\":\"1\",\"TariffLevelIntern\":\"5\",\"Price\":\"1430\",\"TZCodeStartReq\":\"4001\",\"TZCodeStartRes\":\"4001\",\"TZNameStart\":\"Darmstadt Holzhofallee\",\"ViaId\":\"0\",\"ViaText\":\"ohne Umweg\",\"TZCodeDestReq\":\"4001\",\"TZCodeDestRes\":\"4001\",\"TZNameDest\":\"Darmstadt Südbahnhof\",\"TypeKey\":\"300\",\"Subvention\":\"0\",\"TariffVersion\":\"40\",\"minVVF\":\"11.09.2021\",\"minNKF\":\"08.09.2021\",\"Kartentyp\":\"KTYP-Wochenkarte\",\"KartentypAnzeigename\":\"Wochenkarten\",\"KAProduktnummer\":\"10107\",\"KAInfoText\":\"\",\"Verantwortlicher\":\"RMV\",\"Verbuende\":\"RMV\",\"ExportAttribute\":\"ATTR-VTRB-Ausgabeart=eTicket_und_Papier_1|ATTR-VTRB-Frg=3|ATTR-VTRB-minNKF=2|ATTR-VTRB-minVVF=5\",\"FreigabeId\":\"3980\",\"Freigabe\":\"4001, 4058, 4077, 4079, 4087, 4091, 4092, 4099\"}}"
-                        },
-                        {
-                          "name":"Wochenkarte",
-                          "desc":"Auszubildende",
-                          "prc":1120,
-                          "cur":"EUR",
-                          "shpCtx":"{\"RMVTicket\":{\"TextLong\":\"Wochenwertmarke Schüler/Azubi\",\"TextMiddle\":\"Wochenwertmarke Schüler\",\"TextShort\":\"Wochen-WM Schüler/Azubi\",\"ValidFrom\":\"06.09.2021\",\"TariffLevelPrint\":\"1\",\"TariffLevelIntern\":\"5\",\"Price\":\"1120\",\"TZCodeStartReq\":\"4001\",\"TZCodeStartRes\":\"4001\",\"TZNameStart\":\"Darmstadt Holzhofallee\",\"ViaId\":\"0\",\"ViaText\":\"ohne Umweg\",\"TZCodeDestReq\":\"4001\",\"TZCodeDestRes\":\"4001\",\"TZNameDest\":\"Darmstadt Südbahnhof\",\"TypeKey\":\"600\",\"Subvention\":\"0\",\"TariffVersion\":\"40\",\"minVVF\":\"11.09.2021\",\"minNKF\":\"08.09.2021\",\"Kartentyp\":\"KTYP-Wochenkarte\",\"KartentypAnzeigename\":\"Wochenkarten\",\"KAProduktnummer\":\"10180\",\"KAInfoText\":\"\",\"Verantwortlicher\":\"RMV\",\"Verbuende\":\"RMV\",\"ExportAttribute\":\"ATTR-SRTE-NACHWEIS-REDUZ=Schueler_Azubi|ATTR-VTRB-Ausgabeart=eTicket_und_Papier_1|ATTR-VTRB-Frg=3|ATTR-VTRB-minNKF=2|ATTR-VTRB-minVVF=5\",\"FreigabeId\":\"3980\",\"Freigabe\":\"4001, 4058, 4077, 4079, 4087, 4091, 4092, 4099\"}}"
-                        },
-                        {
-                          "name":"Zuschlagkarte Woche",
-                          "desc":"Erw. und Kinder",
-                          "prc":640,
-                          "cur":"EUR",
-                          "shpCtx":"{\"RMVTicket\":{\"TextLong\":\"Zuschlagkarte Woche\",\"TextMiddle\":\"Zuschlagkarte Woche\",\"TextShort\":\"Zuschlagkarte Woche\",\"ValidFrom\":\"06.09.2021\",\"TariffLevelPrint\":\"1\",\"TariffLevelIntern\":\"5\",\"Price\":\"640\",\"TZCodeStartReq\":\"4001\",\"TZCodeStartRes\":\"4001\",\"TZNameStart\":\"Darmstadt Holzhofallee\",\"ViaId\":\"0\",\"ViaText\":\"ohne Umweg\",\"TZCodeDestReq\":\"4001\",\"TZCodeDestRes\":\"4001\",\"TZNameDest\":\"Darmstadt Südbahnhof\",\"TypeKey\":\"900\",\"Subvention\":\"0\",\"TariffVersion\":\"40\",\"minVVF\":\"11.09.2021\",\"minNKF\":\"08.09.2021\",\"Kartentyp\":\"KTYP-Wochenkarte\",\"KartentypAnzeigename\":\"Wochenkarten\",\"KAProduktnummer\":\"10108\",\"KAInfoText\":\"\",\"Verantwortlicher\":\"RMV\",\"Verbuende\":\"RMV\",\"ExportAttribute\":\"ATTR-SRTE-KLASSE_1=Ja|ATTR-VTRB-Ausgabeart=eTicket_und_Papier_1|ATTR-VTRB-Frg=3|ATTR-VTRB-minNKF=2|ATTR-VTRB-minVVF=5\",\"FreigabeId\":\"3980\",\"Freigabe\":\"4001, 4058, 4077, 4079, 4087, 4091, 4092, 4099\"}}"
-                        },
-                        {
-                          "name":"Fernverkehrs-Ergänzungskarte Woche",
-                          "desc":"Erwachsene",
-                          "prc":940,
-                          "cur":"EUR",
-                          "shpCtx":"{\"RMVTicket\":{\"TextLong\":\"Fernverkehrs-Ergänzungskarte Woche\",\"TextMiddle\":\"FV-Ergänzungskarte Woche\",\"TextShort\":\"FV-Ergänzung Woche\",\"ValidFrom\":\"06.09.2021\",\"TariffLevelPrint\":\"1\",\"TariffLevelIntern\":\"5\",\"Price\":\"940\",\"TZCodeStartReq\":\"4001\",\"TZCodeStartRes\":\"4001\",\"TZNameStart\":\"Darmstadt Holzhofallee\",\"ViaId\":\"0\",\"ViaText\":\"ohne Umweg\",\"TZCodeDestReq\":\"4001\",\"TZCodeDestRes\":\"4001\",\"TZNameDest\":\"Darmstadt Südbahnhof\",\"TypeKey\":\"5300\",\"Subvention\":\"0\",\"TariffVersion\":\"40\",\"Kartentyp\":\"KTYP-Wochenkarte\",\"KartentypAnzeigename\":\"Wochenkarten\",\"KAProduktnummer\":\"10160\",\"KAInfoText\":\"\",\"Verantwortlicher\":\"RMV\",\"Verbuende\":\"RMV\",\"ExportAttribute\":\"ATTR-VTRB-Frg=3\",\"FreigabeId\":\"3980\",\"Freigabe\":\"4001, 4058, 4077, 4079, 4087, 4091, 4092, 4099\"}}"
-                        },
-                        {
-                          "name":"Fernverkehrs-Ergänzungskarte Woche",
-                          "desc":"Auszubildende",
-                          "prc":730,
-                          "cur":"EUR",
-                          "shpCtx":"{\"RMVTicket\":{\"TextLong\":\"Fernverkehrs-Ergänzungskarte Woche\",\"TextMiddle\":\"FV-Ergänzungskarte Woche\",\"TextShort\":\"FV-Ergänzung Woche\",\"ValidFrom\":\"06.09.2021\",\"TariffLevelPrint\":\"1\",\"TariffLevelIntern\":\"5\",\"Price\":\"730\",\"TZCodeStartReq\":\"4001\",\"TZCodeStartRes\":\"4001\",\"TZNameStart\":\"Darmstadt Holzhofallee\",\"ViaId\":\"0\",\"ViaText\":\"ohne Umweg\",\"TZCodeDestReq\":\"4001\",\"TZCodeDestRes\":\"4001\",\"TZNameDest\":\"Darmstadt Südbahnhof\",\"TypeKey\":\"5600\",\"Subvention\":\"0\",\"TariffVersion\":\"40\",\"Kartentyp\":\"KTYP-Wochenkarte\",\"KartentypAnzeigename\":\"Wochenkarten\",\"KAProduktnummer\":\"10161\",\"KAInfoText\":\"\",\"Verantwortlicher\":\"RMV\",\"Verbuende\":\"RMV\",\"ExportAttribute\":\"ATTR-SRTE-NACHWEIS-REDUZ=Schueler_Azubi|ATTR-VTRB-Frg=3\",\"FreigabeId\":\"3980\",\"Freigabe\":\"4001, 4058, 4077, 4079, 4087, 4091, 4092, 4099\"}}"
-                        },
-                        {
-                          "name":"Fernverkehrs-Ergänzungskarte Zuschlag Woche",
-                          "desc":"Erw. und Kinder",
-                          "prc":420,
-                          "cur":"EUR",
-                          "shpCtx":"{\"RMVTicket\":{\"TextLong\":\"Fernverkehrs-Ergänzungskarte Zuschlag Woche\",\"TextMiddle\":\"FV-Ergänzung Zuschlag Woche\",\"TextShort\":\"FV-Erg Zuschlag Woche\",\"ValidFrom\":\"06.09.2021\",\"TariffLevelPrint\":\"1\",\"TariffLevelIntern\":\"5\",\"Price\":\"420\",\"TZCodeStartReq\":\"4001\",\"TZCodeStartRes\":\"4001\",\"TZNameStart\":\"Darmstadt Holzhofallee\",\"ViaId\":\"0\",\"ViaText\":\"ohne Umweg\",\"TZCodeDestReq\":\"4001\",\"TZCodeDestRes\":\"4001\",\"TZNameDest\":\"Darmstadt Südbahnhof\",\"TypeKey\":\"5900\",\"Subvention\":\"0\",\"TariffVersion\":\"40\",\"Kartentyp\":\"KTYP-Wochenkarte\",\"KartentypAnzeigename\":\"Wochenkarten\",\"KAProduktnummer\":\"10164\",\"KAInfoText\":\"\",\"Verantwortlicher\":\"RMV\",\"Verbuende\":\"RMV\",\"ExportAttribute\":\"ATTR-SRTE-KLASSE_1=Ja|ATTR-VTRB-Frg=3\",\"FreigabeId\":\"3980\",\"Freigabe\":\"4001, 4058, 4077, 4079, 4087, 4091, 4092, 4099\"}}"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "name":"Monatskarten",
-                  "fareL":
-                  [
-                    {
-                      "name":"0",
-                      "desc":"ohne Umweg",
-                      "shpCtx":"",
-                      "ticketL":
-                      [
-                        {
-                          "name":"Monatskarte",
-                          "desc":"Erwachsene",
-                          "prc":4870,
-                          "cur":"EUR",
-                          "shpCtx":"{\"RMVTicket\":{\"TextLong\":\"Monatskarte Erwachsene\",\"TextMiddle\":\"Monatskarte Erwachsene\",\"TextShort\":\"Monatskarte Erwachsene\",\"ValidFrom\":\"06.09.2021\",\"TariffLevelPrint\":\"1\",\"TariffLevelIntern\":\"5\",\"Price\":\"4870\",\"TZCodeStartReq\":\"4001\",\"TZCodeStartRes\":\"4001\",\"TZNameStart\":\"Darmstadt Holzhofallee\",\"ViaId\":\"0\",\"ViaText\":\"ohne Umweg\",\"TZCodeDestReq\":\"4001\",\"TZCodeDestRes\":\"4001\",\"TZNameDest\":\"Darmstadt Südbahnhof\",\"TypeKey\":\"100\",\"Subvention\":\"0\",\"TariffVersion\":\"40\",\"minVVF\":\"11.09.2021\",\"minNKF\":\"08.09.2021\",\"Kartentyp\":\"KTYP-Monatskarte\",\"KartentypAnzeigename\":\"Monatskarten\",\"KAProduktnummer\":\"10104\",\"KAInfoText\":\"\",\"Verantwortlicher\":\"RMV\",\"Verbuende\":\"RMV\",\"ExportAttribute\":\"ATTR-VTRB-Ausgabeart=eTicket_und_Papier_1|ATTR-VTRB-Frg=3|ATTR-VTRB-minNKF=2|ATTR-VTRB-minVVF=5\",\"FreigabeId\":\"3980\",\"Freigabe\":\"4001, 4058, 4077, 4079, 4087, 4091, 4092, 4099\"}}"
-                        },
-                        {
-                          "name":"9-Uhr-Monatskarte",
-                          "desc":"Erwachsene",
-                          "prc":4140,
-                          "cur":"EUR",
-                          "shpCtx":"{\"RMVTicket\":{\"TextLong\":\"9-Uhr-Monatskarte\",\"TextMiddle\":\"9-Uhr-Monatskarte\",\"TextShort\":\"9-Uhr-Monatskarte\",\"ValidFrom\":\"06.09.2021\",\"TariffLevelPrint\":\"1\",\"TariffLevelIntern\":\"5\",\"Price\":\"4140\",\"TZCodeStartReq\":\"4001\",\"TZCodeStartRes\":\"4001\",\"TZNameStart\":\"Darmstadt Holzhofallee\",\"ViaId\":\"0\",\"ViaText\":\"ohne Umweg\",\"TZCodeDestReq\":\"4001\",\"TZCodeDestRes\":\"4001\",\"TZNameDest\":\"Darmstadt Südbahnhof\",\"TypeKey\":\"150\",\"Subvention\":\"0\",\"TariffVersion\":\"40\",\"minVVF\":\"11.09.2021\",\"minNKF\":\"08.09.2021\",\"Kartentyp\":\"KTYP-Monatskarte\",\"KartentypAnzeigename\":\"Monatskarten\",\"KAProduktnummer\":\"10105\",\"KAInfoText\":\"\",\"Verantwortlicher\":\"RMV\",\"Verbuende\":\"RMV\",\"ExportAttribute\":\"ATTR-VTRB-Ausgabeart=eTicket_und_Papier_1|ATTR-VTRB-Frg=3|ATTR-VTRB-minNKF=2|ATTR-VTRB-minVVF=5\",\"FreigabeId\":\"3980\",\"Freigabe\":\"4001, 4058, 4077, 4079, 4087, 4091, 4092, 4099\"}}"
-                        },
-                        {
-                          "name":"65-plus-Monatskarte",
-                          "desc":"Senioren",
-                          "prc":4040,
-                          "cur":"EUR",
-                          "shpCtx":"{\"RMVTicket\":{\"TextLong\":\"65-plus-Monatskarte\",\"TextMiddle\":\"65-plus-Monatskarte\",\"TextShort\":\"65-plus-Monatskarte\",\"ValidFrom\":\"06.09.2021\",\"TariffLevelPrint\":\"1\",\"TariffLevelIntern\":\"5\",\"Price\":\"4040\",\"TZCodeStartReq\":\"4001\",\"TZCodeStartRes\":\"4001\",\"TZNameStart\":\"Darmstadt Holzhofallee\",\"ViaId\":\"0\",\"ViaText\":\"ohne Umweg\",\"TZCodeDestReq\":\"4001\",\"TZCodeDestRes\":\"4001\",\"TZNameDest\":\"Darmstadt Südbahnhof\",\"TypeKey\":\"120\",\"Subvention\":\"0\",\"TariffVersion\":\"40\",\"minVVF\":\"11.09.2021\",\"minNKF\":\"08.09.2021\",\"Kartentyp\":\"KTYP-Monatskarte\",\"KartentypAnzeigename\":\"Monatskarten\",\"KAProduktnummer\":\"10238\",\"KAInfoText\":\"\",\"Verantwortlicher\":\"RMV\",\"Verbuende\":\"RMV\",\"ExportAttribute\":\"ATTR-SRTE-NACHWEIS-REDUZ=65-plus|ATTR-VTRB-Ausgabeart=eTicket|ATTR-VTRB-Frg=3|ATTR-VTRB-minNKF=2|ATTR-VTRB-minVVF=5\",\"FreigabeId\":\"3980\",\"Freigabe\":\"4001, 4058, 4077, 4079, 4087, 4091, 4092, 4099\"}}"
-                        },
-                        {
-                          "name":"Monatskarte",
-                          "desc":"Auszubildende",
-                          "prc":3800,
-                          "cur":"EUR",
-                          "shpCtx":"{\"RMVTicket\":{\"TextLong\":\"Monatswertmarke Schüler/Azubi\",\"TextMiddle\":\"Monats-WM Schüler/Azubi\",\"TextShort\":\"Monats-WM Schüler/Azubi\",\"ValidFrom\":\"06.09.2021\",\"TariffLevelPrint\":\"1\",\"TariffLevelIntern\":\"5\",\"Price\":\"3800\",\"TZCodeStartReq\":\"4001\",\"TZCodeStartRes\":\"4001\",\"TZNameStart\":\"Darmstadt Holzhofallee\",\"ViaId\":\"0\",\"ViaText\":\"ohne Umweg\",\"TZCodeDestReq\":\"4001\",\"TZCodeDestRes\":\"4001\",\"TZNameDest\":\"Darmstadt Südbahnhof\",\"TypeKey\":\"500\",\"Subvention\":\"0\",\"TariffVersion\":\"40\",\"minVVF\":\"11.09.2021\",\"minNKF\":\"08.09.2021\",\"Kartentyp\":\"KTYP-Monatskarte\",\"KartentypAnzeigename\":\"Monatskarten\",\"KAProduktnummer\":\"10147\",\"KAInfoText\":\"\",\"Verantwortlicher\":\"RMV\",\"Verbuende\":\"RMV\",\"ExportAttribute\":\"ATTR-SRTE-NACHWEIS-REDUZ=Schueler_Azubi|ATTR-VTRB-Ausgabeart=eTicket_und_Papier_1|ATTR-VTRB-Frg=3|ATTR-VTRB-minNKF=2|ATTR-VTRB-minVVF=5\",\"FreigabeId\":\"3980\",\"Freigabe\":\"4001, 4058, 4077, 4079, 4087, 4091, 4092, 4099\"}}"
-                        },
-                        {
-                          "name":"Zuschlagkarte Monat",
-                          "desc":"Erw. und Kinder",
-                          "prc":2190,
-                          "cur":"EUR",
-                          "shpCtx":"{\"RMVTicket\":{\"TextLong\":\"Zuschlagkarte Monat\",\"TextMiddle\":\"Zuschlagkarte Monat\",\"TextShort\":\"Zuschlagkarte Monat\",\"ValidFrom\":\"06.09.2021\",\"TariffLevelPrint\":\"1\",\"TariffLevelIntern\":\"5\",\"Price\":\"2190\",\"TZCodeStartReq\":\"4001\",\"TZCodeStartRes\":\"4001\",\"TZNameStart\":\"Darmstadt Holzhofallee\",\"ViaId\":\"0\",\"ViaText\":\"ohne Umweg\",\"TZCodeDestReq\":\"4001\",\"TZCodeDestRes\":\"4001\",\"TZNameDest\":\"Darmstadt Südbahnhof\",\"TypeKey\":\"700\",\"Subvention\":\"0\",\"TariffVersion\":\"40\",\"minVVF\":\"11.09.2021\",\"minNKF\":\"08.09.2021\",\"Kartentyp\":\"KTYP-Monatskarte\",\"KartentypAnzeigename\":\"Monatskarten\",\"KAProduktnummer\":\"10106\",\"KAInfoText\":\"\",\"Verantwortlicher\":\"RMV\",\"Verbuende\":\"RMV\",\"ExportAttribute\":\"ATTR-SRTE-KLASSE_1=Ja|ATTR-VTRB-Ausgabeart=eTicket_und_Papier_1|ATTR-VTRB-Frg=3|ATTR-VTRB-minNKF=2|ATTR-VTRB-minVVF=5\",\"FreigabeId\":\"3980\",\"Freigabe\":\"4001, 4058, 4077, 4079, 4087, 4091, 4092, 4099\"}}"
-                        },
-                        {
-                          "name":"Fernverkehrs-Ergänzungskarte Monat",
-                          "desc":"Erwachsene",
-                          "prc":3210,
-                          "cur":"EUR",
-                          "shpCtx":"{\"RMVTicket\":{\"TextLong\":\"Fernverkehrs-Ergänzungskarte Monat\",\"TextMiddle\":\"FV-Ergänzungskarte Monat\",\"TextShort\":\"FV-Ergänzung Monat\",\"ValidFrom\":\"06.09.2021\",\"TariffLevelPrint\":\"1\",\"TariffLevelIntern\":\"5\",\"Price\":\"3210\",\"TZCodeStartReq\":\"4001\",\"TZCodeStartRes\":\"4001\",\"TZNameStart\":\"Darmstadt Holzhofallee\",\"ViaId\":\"0\",\"ViaText\":\"ohne Umweg\",\"TZCodeDestReq\":\"4001\",\"TZCodeDestRes\":\"4001\",\"TZNameDest\":\"Darmstadt Südbahnhof\",\"TypeKey\":\"5100\",\"Subvention\":\"0\",\"TariffVersion\":\"40\",\"Kartentyp\":\"KTYP-Monatskarte\",\"KartentypAnzeigename\":\"Monatskarten\",\"KAProduktnummer\":\"10159\",\"KAInfoText\":\"\",\"Verantwortlicher\":\"RMV\",\"Verbuende\":\"RMV\",\"ExportAttribute\":\"ATTR-VTRB-Frg=3\",\"FreigabeId\":\"3980\",\"Freigabe\":\"4001, 4058, 4077, 4079, 4087, 4091, 4092, 4099\"}}"
-                        },
-                        {
-                          "name":"Fernverkehrs-Ergänzungskarte Monat",
-                          "desc":"Auszubildende",
-                          "prc":2500,
-                          "cur":"EUR",
-                          "shpCtx":"{\"RMVTicket\":{\"TextLong\":\"Fernverkehrs-Ergänzungskarte Monat\",\"TextMiddle\":\"FV-Ergänzungskarte Monat\",\"TextShort\":\"FV-Ergänzung Monat\",\"ValidFrom\":\"06.09.2021\",\"TariffLevelPrint\":\"1\",\"TariffLevelIntern\":\"5\",\"Price\":\"2500\",\"TZCodeStartReq\":\"4001\",\"TZCodeStartRes\":\"4001\",\"TZNameStart\":\"Darmstadt Holzhofallee\",\"ViaId\":\"0\",\"ViaText\":\"ohne Umweg\",\"TZCodeDestReq\":\"4001\",\"TZCodeDestRes\":\"4001\",\"TZNameDest\":\"Darmstadt Südbahnhof\",\"TypeKey\":\"5500\",\"Subvention\":\"0\",\"TariffVersion\":\"40\",\"Kartentyp\":\"KTYP-Monatskarte\",\"KartentypAnzeigename\":\"Monatskarten\",\"KAProduktnummer\":\"10162\",\"KAInfoText\":\"\",\"Verantwortlicher\":\"RMV\",\"Verbuende\":\"RMV\",\"ExportAttribute\":\"ATTR-SRTE-NACHWEIS-REDUZ=Schueler_Azubi|ATTR-VTRB-Frg=3\",\"FreigabeId\":\"3980\",\"Freigabe\":\"4001, 4058, 4077, 4079, 4087, 4091, 4092, 4099\"}}"
-                        },
-                        {
-                          "name":"Fernverkehrs-Ergänzungskarte Zuschlag Monat",
-                          "desc":"Erw. und Kinder",
-                          "prc":1440,
-                          "cur":"EUR",
-                          "shpCtx":"{\"RMVTicket\":{\"TextLong\":\"Fernverkehrs-Ergänzungskarte Zuschlag Monat\",\"TextMiddle\":\"FV-Ergänzung Zuschlag Monat\",\"TextShort\":\"FV-Erg Zuschlag Monat\",\"ValidFrom\":\"06.09.2021\",\"TariffLevelPrint\":\"1\",\"TariffLevelIntern\":\"5\",\"Price\":\"1440\",\"TZCodeStartReq\":\"4001\",\"TZCodeStartRes\":\"4001\",\"TZNameStart\":\"Darmstadt Holzhofallee\",\"ViaId\":\"0\",\"ViaText\":\"ohne Umweg\",\"TZCodeDestReq\":\"4001\",\"TZCodeDestRes\":\"4001\",\"TZNameDest\":\"Darmstadt Südbahnhof\",\"TypeKey\":\"5700\",\"Subvention\":\"0\",\"TariffVersion\":\"40\",\"Kartentyp\":\"KTYP-Monatskarte\",\"KartentypAnzeigename\":\"Monatskarten\",\"KAProduktnummer\":\"10163\",\"KAInfoText\":\"\",\"Verantwortlicher\":\"RMV\",\"Verbuende\":\"RMV\",\"ExportAttribute\":\"ATTR-SRTE-KLASSE_1=Ja|ATTR-VTRB-Frg=3\",\"FreigabeId\":\"3980\",\"Freigabe\":\"4001, 4058, 4077, 4079, 4087, 4091, 4092, 4099\"}}"
-                        },
-                        {
-                          "name":"9-Uhr-Sozial-Monatskarte Darmstadt nur mit Sozial-Pass",
-                          "desc":"Erwachsene",
-                          "prc":3670,
-                          "cur":"EUR",
-                          "shpCtx":"{\"RMVTicket\":{\"TextLong\":\"9-Uhr-Sozial-Monatskarte Darmstadt\",\"TextMiddle\":\"9-Uhr-Sozial-Monatskarte\",\"TextShort\":\"9-Uhr-Sozial-Monatskarte\",\"Remark\":\"nur mit Sozial-Pass\",\"ValidFrom\":\"06.09.2021\",\"TariffLevelPrint\":\"1\",\"TariffLevelIntern\":\"5\",\"Price\":\"3670\",\"TZCodeStartReq\":\"4001\",\"TZCodeStartRes\":\"4001\",\"TZNameStart\":\"Darmstadt Holzhofallee\",\"ViaId\":\"0\",\"ViaText\":\"ohne Umweg\",\"TZCodeDestReq\":\"4001\",\"TZCodeDestRes\":\"4001\",\"TZNameDest\":\"Darmstadt Südbahnhof\",\"TypeKey\":\"169\",\"Subvention\":\"0\",\"TariffVersion\":\"40\",\"Kartentyp\":\"KTYP-Monatskarte\",\"KartentypAnzeigename\":\"Monatskarten\",\"KAProduktnummer\":\"10643\",\"KAInfoText\":\"\",\"Verantwortlicher\":\"RMV\",\"Verbuende\":\"RMV\",\"ExportAttribute\":\"ATTR-SRTE-NACHWEIS-SOZIAL=Sozialpass_Darmstadt_6180|ATTR-VTRB-Frg=3\",\"FreigabeId\":\"3980\",\"Freigabe\":\"4001, 4058, 4077, 4079, 4087, 4091, 4092, 4099\"}}"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "name":"Jahreskarten",
-                  "fareL":
-                  [
-                    {
-                      "name":"0",
-                      "desc":"ohne Umweg",
-                      "shpCtx":"",
-                      "ticketL":
-                      [
-                        {
-                          "name":"Jahreskarte übertragbar einmalige Zahlung",
-                          "desc":"Erwachsene",
-                          "prc":47750,
-                          "cur":"EUR",
-                          "shpCtx":"{\"RMVTicket\":{\"TextLong\":\"Jahreskarte\",\"TextMiddle\":\"Jahreskarte\",\"TextShort\":\"Jahreskarte\",\"Remark\":\"einmalige Zahlung\",\"ValidFrom\":\"06.09.2021\",\"TariffLevelPrint\":\"1\",\"TariffLevelIntern\":\"5\",\"Price\":\"47750\",\"TZCodeStartReq\":\"4001\",\"TZCodeStartRes\":\"4001\",\"TZNameStart\":\"Darmstadt Holzhofallee\",\"ViaId\":\"0\",\"ViaText\":\"ohne Umweg\",\"TZCodeDestReq\":\"4001\",\"TZCodeDestRes\":\"4001\",\"TZNameDest\":\"Darmstadt Südbahnhof\",\"TypeKey\":\"800\",\"Subvention\":\"0\",\"TariffVersion\":\"40\",\"minVVF\":\"01.10.2021\",\"minNKF\":\"01.10.2021\",\"Kartentyp\":\"KTYP-Jahreskarte\",\"KartentypAnzeigename\":\"Jahreskarten\",\"KAProduktnummer\":\"6657\",\"KAInfoText\":\"\",\"Verantwortlicher\":\"RMV\",\"Verbuende\":\"RMV\",\"ExportAttribute\":\"ATTR-VTRB-Ausgabeart=eTicket_und_Papier_N|ATTR-VTRB-Frg=3|ATTR-VTRB-minNKF=2|ATTR-VTRB-minVVF=5\",\"FreigabeId\":\"3980\",\"Freigabe\":\"4001, 4058, 4077, 4079, 4087, 4091, 4092, 4099\"}}"
-                        },
-                        {
-                          "name":"9-Uhr-Jahreskarte übertragbar einmalige Zahlung",
-                          "desc":"Erwachsene",
-                          "prc":40570,
-                          "cur":"EUR",
-                          "shpCtx":"{\"RMVTicket\":{\"TextLong\":\"9-Uhr-Jahreskarte\",\"TextMiddle\":\"9-Uhr-Jahreskarte\",\"TextShort\":\"9-Uhr-Jahreskarte\",\"Remark\":\"einmalige Zahlung\",\"ValidFrom\":\"06.09.2021\",\"TariffLevelPrint\":\"1\",\"TariffLevelIntern\":\"5\",\"Price\":\"40570\",\"TZCodeStartReq\":\"4001\",\"TZCodeStartRes\":\"4001\",\"TZNameStart\":\"Darmstadt Holzhofallee\",\"ViaId\":\"0\",\"ViaText\":\"ohne Umweg\",\"TZCodeDestReq\":\"4001\",\"TZCodeDestRes\":\"4001\",\"TZNameDest\":\"Darmstadt Südbahnhof\",\"TypeKey\":\"850\",\"Subvention\":\"0\",\"TariffVersion\":\"40\",\"minVVF\":\"01.10.2021\",\"minNKF\":\"01.10.2021\",\"Kartentyp\":\"KTYP-Jahreskarte\",\"KartentypAnzeigename\":\"Jahreskarten\",\"KAProduktnummer\":\"6658\",\"KAInfoText\":\"\",\"Verantwortlicher\":\"RMV\",\"Verbuende\":\"RMV\",\"ExportAttribute\":\"ATTR-VTRB-Ausgabeart=eTicket_und_Papier_N|ATTR-VTRB-Frg=3|ATTR-VTRB-minNKF=2|ATTR-VTRB-minVVF=5\",\"FreigabeId\":\"3980\",\"Freigabe\":\"4001, 4058, 4077, 4079, 4087, 4091, 4092, 4099\"}}"
-                        },
-                        {
-                          "name":"Seniorenticket Hessen einmalige Zahlung",
-                          "desc":"Senioren",
-                          "prc":36500,
-                          "cur":"EUR",
-                          "shpCtx":"{\"RMVTicket\":{\"TextLong\":\"Seniorenticket Hessen\",\"TextMiddle\":\"Seniorenticket Hessen\",\"TextShort\":\"Seniorenticket Hessen\",\"Remark\":\"einmalige Zahlung\",\"ValidFrom\":\"06.09.2021\",\"TariffLevelPrint\":\"50\",\"TariffLevelIntern\":\"95\",\"Price\":\"36500\",\"TZCodeStartReq\":\"4001\",\"TZCodeStartRes\":\"9990\",\"TZNameStart\":\"Darmstadt Holzhofallee\",\"ViaId\":\"0\",\"ViaText\":\"ohne Umweg\",\"TZCodeDestReq\":\"4001\",\"TZCodeDestRes\":\"9990\",\"TZNameDest\":\"Darmstadt Südbahnhof\",\"TypeKey\":\"840\",\"Subvention\":\"0\",\"TariffVersion\":\"40\",\"Kartentyp\":\"KTYP-Jahreskarte\",\"KartentypAnzeigename\":\"Jahreskarten\",\"KAProduktnummer\":\"10903\",\"KAInfoText\":\"\",\"Verantwortlicher\":\"RMV\",\"Verbuende\":\"RMV\",\"ExportAttribute\":\"ATTR-SRTE-NACHWEIS-REDUZ=65-plus|ATTR-VTRB-Ausgabeart=eTicket|ATTR-VTRB-Frg=3|ATTR-VTRB-minNKF=2|ATTR-VTRB-minVVF=5\",\"FreigabeId\":\"20272\",\"Freigabe\":\"$(AlleTG)\"}}"
-                        },
-                        {
-                          "name":"Seniorenticket Hessen Komfort einmalige Zahlung",
-                          "desc":"Senioren",
-                          "prc":62500,
-                          "cur":"EUR",
-                          "shpCtx":"{\"RMVTicket\":{\"TextLong\":\"Seniorenticket Hessen Komfort\",\"TextMiddle\":\"Seniorenticket Hessen Komfort\",\"TextShort\":\"Senioren Hessen Komfort\",\"Remark\":\"einmalige Zahlung\",\"ValidFrom\":\"06.09.2021\",\"TariffLevelPrint\":\"50\",\"TariffLevelIntern\":\"95\",\"Price\":\"62500\",\"TZCodeStartReq\":\"4001\",\"TZCodeStartRes\":\"9990\",\"TZNameStart\":\"Darmstadt Holzhofallee\",\"ViaId\":\"0\",\"ViaText\":\"ohne Umweg\",\"TZCodeDestReq\":\"4001\",\"TZCodeDestRes\":\"9990\",\"TZNameDest\":\"Darmstadt Südbahnhof\",\"TypeKey\":\"841\",\"Subvention\":\"0\",\"TariffVersion\":\"40\",\"Kartentyp\":\"KTYP-Jahreskarte\",\"KartentypAnzeigename\":\"Jahreskarten\",\"KAProduktnummer\":\"10906\",\"KAInfoText\":\"\",\"Verantwortlicher\":\"RMV\",\"Verbuende\":\"RMV\",\"ExportAttribute\":\"ATTR-SRTE-KLASSE_1=Ja|ATTR-SRTE-NACHWEIS-REDUZ=65-plus|ATTR-VTRB-Ausgabeart=eTicket|ATTR-VTRB-Frg=3|ATTR-VTRB-minNKF=2|ATTR-VTRB-minVVF=5\",\"FreigabeId\":\"20272\",\"Freigabe\":\"$(AlleTG)\"}}"
-                        },
-                        {
-                          "name":"Zuschlagkarte Jahr einmalige Zahlung",
-                          "desc":"Erw. und Kinder",
-                          "prc":21460,
-                          "cur":"EUR",
-                          "shpCtx":"{\"RMVTicket\":{\"TextLong\":\"Zuschlagkarte Jahr\",\"TextMiddle\":\"Zuschlagkarte Jahr\",\"TextShort\":\"Zuschlagkarte Jahr\",\"Remark\":\"einmalige Zahlung\",\"ValidFrom\":\"06.09.2021\",\"TariffLevelPrint\":\"1\",\"TariffLevelIntern\":\"5\",\"Price\":\"21460\",\"TZCodeStartReq\":\"4001\",\"TZCodeStartRes\":\"4001\",\"TZNameStart\":\"Darmstadt Holzhofallee\",\"ViaId\":\"0\",\"ViaText\":\"ohne Umweg\",\"TZCodeDestReq\":\"4001\",\"TZCodeDestRes\":\"4001\",\"TZNameDest\":\"Darmstadt Südbahnhof\",\"TypeKey\":\"1200\",\"Subvention\":\"0\",\"TariffVersion\":\"40\",\"minVVF\":\"01.10.2021\",\"minNKF\":\"01.10.2021\",\"Kartentyp\":\"KTYP-Jahreskarte\",\"KartentypAnzeigename\":\"Jahreskarten\",\"KAProduktnummer\":\"6667\",\"KAInfoText\":\"\",\"Verantwortlicher\":\"RMV\",\"Verbuende\":\"RMV\",\"ExportAttribute\":\"ATTR-SRTE-KLASSE_1=Ja|ATTR-VTRB-Ausgabeart=eTicket_und_Papier_N|ATTR-VTRB-Frg=3|ATTR-VTRB-minNKF=2|ATTR-VTRB-minVVF=5\",\"FreigabeId\":\"3980\",\"Freigabe\":\"4001, 4058, 4077, 4079, 4087, 4091, 4092, 4099\"}}"
-                        },
-                        {
-                          "name":"Fernverkehrs-Ergänzungskarte Jahr einmalige Zahlung",
-                          "desc":"Erwachsene",
-                          "prc":31460,
-                          "cur":"EUR",
-                          "shpCtx":"{\"RMVTicket\":{\"TextLong\":\"FV-Ergänzungskarte Jahr\",\"TextMiddle\":\"FV-Ergänzungskarte Jahr\",\"TextShort\":\"FV-Ergänzungskarte Jahr\",\"Remark\":\"einmalige Zahlung\",\"ValidFrom\":\"06.09.2021\",\"TariffLevelPrint\":\"1\",\"TariffLevelIntern\":\"5\",\"Price\":\"31460\",\"TZCodeStartReq\":\"4001\",\"TZCodeStartRes\":\"4001\",\"TZNameStart\":\"Darmstadt Holzhofallee\",\"ViaId\":\"0\",\"ViaText\":\"ohne Umweg\",\"TZCodeDestReq\":\"4001\",\"TZCodeDestRes\":\"4001\",\"TZNameDest\":\"Darmstadt Südbahnhof\",\"TypeKey\":\"5800\",\"Subvention\":\"0\",\"TariffVersion\":\"40\",\"Kartentyp\":\"KTYP-Jahreskarte\",\"KartentypAnzeigename\":\"Jahreskarten\",\"KAProduktnummer\":\"6672\",\"KAInfoText\":\"\",\"Verantwortlicher\":\"RMV\",\"Verbuende\":\"RMV\",\"ExportAttribute\":\"ATTR-VTRB-Frg=3\",\"FreigabeId\":\"3980\",\"Freigabe\":\"4001, 4058, 4077, 4079, 4087, 4091, 4092, 4099\"}}"
-                        },
-                        {
-                          "name":"Schülerticket Hessen einmalige Zahlung",
-                          "desc":"Auszubildende",
-                          "prc":36500,
-                          "cur":"EUR",
-                          "shpCtx":"{\"RMVTicket\":{\"TextLong\":\"Schülerticket Hessen\",\"TextMiddle\":\"Schülerticket Hessen\",\"TextShort\":\"Schülerticket Hessen\",\"Remark\":\"einmalige Zahlung\",\"ValidFrom\":\"06.09.2021\",\"TariffLevelPrint\":\"50\",\"TariffLevelIntern\":\"95\",\"Price\":\"36500\",\"TZCodeStartReq\":\"4001\",\"TZCodeStartRes\":\"9990\",\"TZNameStart\":\"Darmstadt Holzhofallee\",\"ViaId\":\"0\",\"ViaText\":\"ohne Umweg\",\"TZCodeDestReq\":\"4001\",\"TZCodeDestRes\":\"9990\",\"TZNameDest\":\"Darmstadt Südbahnhof\",\"TypeKey\":\"77400\",\"Subvention\":\"0\",\"TariffVersion\":\"40\",\"Kartentyp\":\"KTYP-Jahreskarte\",\"KartentypAnzeigename\":\"Jahreskarten\",\"KAProduktnummer\":\"10547\",\"KAInfoText\":\"\",\"Verantwortlicher\":\"RMV\",\"Verbuende\":\"RMV\",\"ExportAttribute\":\"ATTR-SRTE-NACHWEIS-REDUZ=Schueler_Azubi|ATTR-VTRB-Ausgabeart=eTicket|ATTR-VTRB-Frg=3|ATTR-VTRB-minNKF=2|ATTR-VTRB-minVVF=5\",\"FreigabeId\":\"20272\",\"Freigabe\":\"$(AlleTG)\"}}"
-                        },
-                        {
-                          "name":"Fernverkehrs-Ergänzungskarte Zuschlag Jahr einmalige Zahlung",
-                          "desc":"Erw. und Kinder",
-                          "prc":14110,
-                          "cur":"EUR",
-                          "shpCtx":"{\"RMVTicket\":{\"TextLong\":\"FV-Ergänzung Zuschlag Jahr\",\"TextMiddle\":\"FV-Ergänzung Zuschlag Jahr\",\"TextShort\":\"FV-Erg Zuschlag Jahr\",\"Remark\":\"einmalige Zahlung\",\"ValidFrom\":\"06.09.2021\",\"TariffLevelPrint\":\"1\",\"TariffLevelIntern\":\"5\",\"Price\":\"14110\",\"TZCodeStartReq\":\"4001\",\"TZCodeStartRes\":\"4001\",\"TZNameStart\":\"Darmstadt Holzhofallee\",\"ViaId\":\"0\",\"ViaText\":\"ohne Umweg\",\"TZCodeDestReq\":\"4001\",\"TZCodeDestRes\":\"4001\",\"TZNameDest\":\"Darmstadt Südbahnhof\",\"TypeKey\":\"6200\",\"Subvention\":\"0\",\"TariffVersion\":\"40\",\"Kartentyp\":\"KTYP-Jahreskarte\",\"KartentypAnzeigename\":\"Jahreskarten\",\"KAProduktnummer\":\"6675\",\"KAInfoText\":\"\",\"Verantwortlicher\":\"RMV\",\"Verbuende\":\"RMV\",\"ExportAttribute\":\"ATTR-SRTE-KLASSE_1=Ja|ATTR-VTRB-Frg=3\",\"FreigabeId\":\"3980\",\"Freigabe\":\"4001, 4058, 4077, 4079, 4087, 4091, 4092, 4099\"}}"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "name":"JahresAbos persönlich",
-                  "fareL":
-                  [
-                    {
-                      "name":"0",
-                      "desc":"ohne Umweg",
-                      "shpCtx":"",
-                      "ticketL":
-                      [
-                        {
-                          "name":"Jahreskarte persönlich einmalige Abbuchung",
-                          "desc":"Erwachsene",
-                          "prc":47750,
-                          "cur":"EUR",
-                          "shpCtx":"{\"RMVTicket\":{\"TextLong\":\"Jahreskarte\",\"TextMiddle\":\"Jahreskarte\",\"TextShort\":\"Jahreskarte\",\"Remark\":\"einmalige Abbuchung\",\"ValidFrom\":\"06.09.2021\",\"TariffLevelPrint\":\"1\",\"TariffLevelIntern\":\"5\",\"Price\":\"47750\",\"TZCodeStartReq\":\"4001\",\"TZCodeStartRes\":\"4001\",\"TZNameStart\":\"Darmstadt Holzhofallee\",\"ViaId\":\"0\",\"ViaText\":\"ohne Umweg\",\"TZCodeDestReq\":\"4001\",\"TZCodeDestRes\":\"4001\",\"TZNameDest\":\"Darmstadt Südbahnhof\",\"TypeKey\":\"1400\",\"Subvention\":\"0\",\"TariffVersion\":\"40\",\"minVVF\":\"01.10.2021\",\"minNKF\":\"01.10.2021\",\"Kartentyp\":\"KTYP-Jahresabos_persoenlich\",\"KartentypAnzeigename\":\"JahresAbos persönlich\",\"KAProduktnummer\":\"6664\",\"KAInfoText\":\"\",\"Verantwortlicher\":\"RMV\",\"Verbuende\":\"RMV\",\"ExportAttribute\":\"ATTR-VTRB-Ausgabeart=eTicket|ATTR-VTRB-Frg=3|ATTR-VTRB-minNKF=2|ATTR-VTRB-minVVF=5\",\"FreigabeId\":\"3980\",\"Freigabe\":\"4001, 4058, 4077, 4079, 4087, 4091, 4092, 4099\"}}"
-                        },
-                        {
-                          "name":"Jahreskarte persönlich 12-fache Abbuchung",
-                          "desc":"Erwachsene",
-                          "prc":48720,
-                          "cur":"EUR",
-                          "shpCtx":"{\"RMVTicket\":{\"TextLong\":\"Jahreskarte\",\"TextMiddle\":\"Jahreskarte\",\"TextShort\":\"Jahreskarte\",\"Remark\":\"12-fache Abbuchung\",\"ValidFrom\":\"06.09.2021\",\"TariffLevelPrint\":\"1\",\"TariffLevelIntern\":\"5\",\"Price\":\"48720\",\"TZCodeStartReq\":\"4001\",\"TZCodeStartRes\":\"4001\",\"TZNameStart\":\"Darmstadt Holzhofallee\",\"ViaId\":\"0\",\"ViaText\":\"ohne Umweg\",\"TZCodeDestReq\":\"4001\",\"TZCodeDestRes\":\"4001\",\"TZNameDest\":\"Darmstadt Südbahnhof\",\"TypeKey\":\"220\",\"Subvention\":\"0\",\"TariffVersion\":\"40\",\"minVVF\":\"01.10.2021\",\"minNKF\":\"01.10.2021\",\"Kartentyp\":\"KTYP-Jahresabos_persoenlich\",\"KartentypAnzeigename\":\"JahresAbos persönlich\",\"KAProduktnummer\":\"10752\",\"KAInfoText\":\"\",\"Verantwortlicher\":\"RMV\",\"Verbuende\":\"RMV\",\"ExportAttribute\":\"ATTR-VTRB-Ausgabeart=eTicket|ATTR-VTRB-Frg=3|ATTR-VTRB-minNKF=2|ATTR-VTRB-minVVF=5\",\"FreigabeId\":\"3980\",\"Freigabe\":\"4001, 4058, 4077, 4079, 4087, 4091, 4092, 4099\"}}"
-                        },
-                        {
-                          "name":"9-Uhr-Jahreskarte persönlich einmalige Abbuchung",
-                          "desc":"Erwachsene",
-                          "prc":40570,
-                          "cur":"EUR",
-                          "shpCtx":"{\"RMVTicket\":{\"TextLong\":\"9-Uhr-Jahreskarte\",\"TextMiddle\":\"9-Uhr-Jahreskarte\",\"TextShort\":\"9-Uhr-Jahreskarte\",\"Remark\":\"einmalige Abbuchung\",\"ValidFrom\":\"06.09.2021\",\"TariffLevelPrint\":\"1\",\"TariffLevelIntern\":\"5\",\"Price\":\"40570\",\"TZCodeStartReq\":\"4001\",\"TZCodeStartRes\":\"4001\",\"TZNameStart\":\"Darmstadt Holzhofallee\",\"ViaId\":\"0\",\"ViaText\":\"ohne Umweg\",\"TZCodeDestReq\":\"4001\",\"TZCodeDestRes\":\"4001\",\"TZNameDest\":\"Darmstadt Südbahnhof\",\"TypeKey\":\"1450\",\"Subvention\":\"0\",\"TariffVersion\":\"40\",\"minVVF\":\"01.10.2021\",\"minNKF\":\"01.10.2021\",\"Kartentyp\":\"KTYP-Jahresabos_persoenlich\",\"KartentypAnzeigename\":\"JahresAbos persönlich\",\"KAProduktnummer\":\"6666\",\"KAInfoText\":\"\",\"Verantwortlicher\":\"RMV\",\"Verbuende\":\"RMV\",\"ExportAttribute\":\"ATTR-VTRB-Ausgabeart=eTicket|ATTR-VTRB-Frg=3|ATTR-VTRB-minNKF=2|ATTR-VTRB-minVVF=5\",\"FreigabeId\":\"3980\",\"Freigabe\":\"4001, 4058, 4077, 4079, 4087, 4091, 4092, 4099\"}}"
-                        },
-                        {
-                          "name":"9-Uhr-Jahreskarte persönlich 12-fache Abbuchung",
-                          "desc":"Erwachsene",
-                          "prc":41400,
-                          "cur":"EUR",
-                          "shpCtx":"{\"RMVTicket\":{\"TextLong\":\"9-Uhr-Jahreskarte\",\"TextMiddle\":\"9-Uhr-Jahreskarte\",\"TextShort\":\"9-Uhr-Jahreskarte\",\"Remark\":\"12-fache Abbuchung\",\"ValidFrom\":\"06.09.2021\",\"TariffLevelPrint\":\"1\",\"TariffLevelIntern\":\"5\",\"Price\":\"41400\",\"TZCodeStartReq\":\"4001\",\"TZCodeStartRes\":\"4001\",\"TZNameStart\":\"Darmstadt Holzhofallee\",\"ViaId\":\"0\",\"ViaText\":\"ohne Umweg\",\"TZCodeDestReq\":\"4001\",\"TZCodeDestRes\":\"4001\",\"TZNameDest\":\"Darmstadt Südbahnhof\",\"TypeKey\":\"240\",\"Subvention\":\"0\",\"TariffVersion\":\"40\",\"minVVF\":\"01.10.2021\",\"minNKF\":\"01.10.2021\",\"Kartentyp\":\"KTYP-Jahresabos_persoenlich\",\"KartentypAnzeigename\":\"JahresAbos persönlich\",\"KAProduktnummer\":\"10753\",\"KAInfoText\":\"\",\"Verantwortlicher\":\"RMV\",\"Verbuende\":\"RMV\",\"ExportAttribute\":\"ATTR-VTRB-Ausgabeart=eTicket|ATTR-VTRB-Frg=3|ATTR-VTRB-minNKF=2|ATTR-VTRB-minVVF=5\",\"FreigabeId\":\"3980\",\"Freigabe\":\"4001, 4058, 4077, 4079, 4087, 4091, 4092, 4099\"}}"
-                        },
-                        {
-                          "name":"Seniorenticket Hessen einmalige Abbuchung",
-                          "desc":"Senioren",
-                          "prc":36500,
-                          "cur":"EUR",
-                          "shpCtx":"{\"RMVTicket\":{\"TextLong\":\"Seniorenticket Hessen\",\"TextMiddle\":\"Seniorenticket Hessen\",\"TextShort\":\"Seniorenticket Hessen\",\"Remark\":\"einmalige Abbuchung\",\"ValidFrom\":\"06.09.2021\",\"TariffLevelPrint\":\"50\",\"TariffLevelIntern\":\"95\",\"Price\":\"36500\",\"TZCodeStartReq\":\"4001\",\"TZCodeStartRes\":\"9990\",\"TZNameStart\":\"Darmstadt Holzhofallee\",\"ViaId\":\"0\",\"ViaText\":\"ohne Umweg\",\"TZCodeDestReq\":\"4001\",\"TZCodeDestRes\":\"9990\",\"TZNameDest\":\"Darmstadt Südbahnhof\",\"TypeKey\":\"1440\",\"Subvention\":\"0\",\"TariffVersion\":\"40\",\"minVVF\":\"01.10.2021\",\"minNKF\":\"01.10.2021\",\"Kartentyp\":\"KTYP-Jahresabos_persoenlich\",\"KartentypAnzeigename\":\"JahresAbos persönlich\",\"KAProduktnummer\":\"10904\",\"KAInfoText\":\"\",\"Verantwortlicher\":\"RMV\",\"Verbuende\":\"RMV\",\"ExportAttribute\":\"ATTR-SRTE-NACHWEIS-REDUZ=65-plus|ATTR-VTRB-Ausgabeart=eTicket|ATTR-VTRB-Frg=3|ATTR-VTRB-minNKF=2|ATTR-VTRB-minVVF=5\",\"FreigabeId\":\"20272\",\"Freigabe\":\"$(AlleTG)\"}}"
-                        },
-                        {
-                          "name":"Seniorenticket Hessen 12-fache Abbuchung",
-                          "desc":"Senioren",
-                          "prc":37200,
-                          "cur":"EUR",
-                          "shpCtx":"{\"RMVTicket\":{\"TextLong\":\"Seniorenticket Hessen\",\"TextMiddle\":\"Seniorenticket Hessen\",\"TextShort\":\"Seniorenticket Hessen\",\"Remark\":\"12-fache Abbuchung\",\"ValidFrom\":\"06.09.2021\",\"TariffLevelPrint\":\"50\",\"TariffLevelIntern\":\"95\",\"Price\":\"37200\",\"TZCodeStartReq\":\"4001\",\"TZCodeStartRes\":\"9990\",\"TZNameStart\":\"Darmstadt Holzhofallee\",\"ViaId\":\"0\",\"ViaText\":\"ohne Umweg\",\"TZCodeDestReq\":\"4001\",\"TZCodeDestRes\":\"9990\",\"TZNameDest\":\"Darmstadt Südbahnhof\",\"TypeKey\":\"1340\",\"Subvention\":\"0\",\"TariffVersion\":\"40\",\"minVVF\":\"01.10.2021\",\"minNKF\":\"01.10.2021\",\"Kartentyp\":\"KTYP-Jahresabos_persoenlich\",\"KartentypAnzeigename\":\"JahresAbos persönlich\",\"KAProduktnummer\":\"10905\",\"KAInfoText\":\"\",\"Verantwortlicher\":\"RMV\",\"Verbuende\":\"RMV\",\"ExportAttribute\":\"ATTR-SRTE-NACHWEIS-REDUZ=65-plus|ATTR-VTRB-Ausgabeart=eTicket|ATTR-VTRB-Frg=3|ATTR-VTRB-minNKF=2|ATTR-VTRB-minVVF=5\",\"FreigabeId\":\"20272\",\"Freigabe\":\"$(AlleTG)\"}}"
-                        },
-                        {
-                          "name":"Seniorenticket Hessen Komfort einmalige Abbuchung",
-                          "desc":"Senioren",
-                          "prc":62500,
-                          "cur":"EUR",
-                          "shpCtx":"{\"RMVTicket\":{\"TextLong\":\"Seniorenticket Hessen Komfort\",\"TextMiddle\":\"Seniorenticket Hessen Komfort\",\"TextShort\":\"Senioren Hessen Komfort\",\"Remark\":\"einmalige Abbuchung\",\"ValidFrom\":\"06.09.2021\",\"TariffLevelPrint\":\"50\",\"TariffLevelIntern\":\"95\",\"Price\":\"62500\",\"TZCodeStartReq\":\"4001\",\"TZCodeStartRes\":\"9990\",\"TZNameStart\":\"Darmstadt Holzhofallee\",\"ViaId\":\"0\",\"ViaText\":\"ohne Umweg\",\"TZCodeDestReq\":\"4001\",\"TZCodeDestRes\":\"9990\",\"TZNameDest\":\"Darmstadt Südbahnhof\",\"TypeKey\":\"1441\",\"Subvention\":\"0\",\"TariffVersion\":\"40\",\"minVVF\":\"01.10.2021\",\"minNKF\":\"01.10.2021\",\"Kartentyp\":\"KTYP-Jahresabos_persoenlich\",\"KartentypAnzeigename\":\"JahresAbos persönlich\",\"KAProduktnummer\":\"10907\",\"KAInfoText\":\"\",\"Verantwortlicher\":\"RMV\",\"Verbuende\":\"RMV\",\"ExportAttribute\":\"ATTR-SRTE-KLASSE_1=Ja|ATTR-SRTE-NACHWEIS-REDUZ=65-plus|ATTR-VTRB-Ausgabeart=eTicket|ATTR-VTRB-Frg=3|ATTR-VTRB-minNKF=2|ATTR-VTRB-minVVF=5\",\"FreigabeId\":\"20272\",\"Freigabe\":\"$(AlleTG)\"}}"
-                        },
-                        {
-                          "name":"Seniorenticket Hessen Komfort 12-fache Abbuchung",
-                          "desc":"Senioren",
-                          "prc":63600,
-                          "cur":"EUR",
-                          "shpCtx":"{\"RMVTicket\":{\"TextLong\":\"Seniorenticket Hessen Komfort\",\"TextMiddle\":\"Seniorenticket Hessen Komfort\",\"TextShort\":\"Senioren Hessen Komfort\",\"Remark\":\"12-fache Abbuchung\",\"ValidFrom\":\"06.09.2021\",\"TariffLevelPrint\":\"50\",\"TariffLevelIntern\":\"95\",\"Price\":\"63600\",\"TZCodeStartReq\":\"4001\",\"TZCodeStartRes\":\"9990\",\"TZNameStart\":\"Darmstadt Holzhofallee\",\"ViaId\":\"0\",\"ViaText\":\"ohne Umweg\",\"TZCodeDestReq\":\"4001\",\"TZCodeDestRes\":\"9990\",\"TZNameDest\":\"Darmstadt Südbahnhof\",\"TypeKey\":\"1341\",\"Subvention\":\"0\",\"TariffVersion\":\"40\",\"minVVF\":\"01.10.2021\",\"minNKF\":\"01.10.2021\",\"Kartentyp\":\"KTYP-Jahresabos_persoenlich\",\"KartentypAnzeigename\":\"JahresAbos persönlich\",\"KAProduktnummer\":\"10908\",\"KAInfoText\":\"\",\"Verantwortlicher\":\"RMV\",\"Verbuende\":\"RMV\",\"ExportAttribute\":\"ATTR-SRTE-KLASSE_1=Ja|ATTR-SRTE-NACHWEIS-REDUZ=65-plus|ATTR-VTRB-Ausgabeart=eTicket|ATTR-VTRB-Frg=3|ATTR-VTRB-minNKF=2|ATTR-VTRB-minVVF=5\",\"FreigabeId\":\"20272\",\"Freigabe\":\"$(AlleTG)\"}}"
-                        },
-                        {
-                          "name":"Schülerticket Hessen einmalige Abbuchung",
-                          "desc":"Auszubildende",
-                          "prc":36500,
-                          "cur":"EUR",
-                          "shpCtx":"{\"RMVTicket\":{\"TextLong\":\"Schülerticket Hessen\",\"TextMiddle\":\"Schülerticket Hessen\",\"TextShort\":\"Schülerticket Hessen\",\"Remark\":\"einmalige Abbuchung\",\"ValidFrom\":\"06.09.2021\",\"TariffLevelPrint\":\"50\",\"TariffLevelIntern\":\"95\",\"Price\":\"36500\",\"TZCodeStartReq\":\"4001\",\"TZCodeStartRes\":\"9990\",\"TZNameStart\":\"Darmstadt Holzhofallee\",\"ViaId\":\"0\",\"ViaText\":\"ohne Umweg\",\"TZCodeDestReq\":\"4001\",\"TZCodeDestRes\":\"9990\",\"TZNameDest\":\"Darmstadt Südbahnhof\",\"TypeKey\":\"77401\",\"Subvention\":\"0\",\"TariffVersion\":\"40\",\"minVVF\":\"01.10.2021\",\"minNKF\":\"01.10.2021\",\"Kartentyp\":\"KTYP-Jahresabos_persoenlich\",\"KartentypAnzeigename\":\"JahresAbos persönlich\",\"KAProduktnummer\":\"10548\",\"KAInfoText\":\"\",\"Verantwortlicher\":\"RMV\",\"Verbuende\":\"RMV\",\"ExportAttribute\":\"ATTR-SRTE-NACHWEIS-REDUZ=Schueler_Azubi_Jaka|ATTR-VTRB-Ausgabeart=eTicket|ATTR-VTRB-Frg=3|ATTR-VTRB-minNKF=2|ATTR-VTRB-minVVF=5\",\"FreigabeId\":\"20272\",\"Freigabe\":\"$(AlleTG)\"}}"
-                        },
-                        {
-                          "name":"Schülerticket Hessen 12-fache Abbuchung",
-                          "desc":"Auszubildende",
-                          "prc":37200,
-                          "cur":"EUR",
-                          "shpCtx":"{\"RMVTicket\":{\"TextLong\":\"Schülerticket Hessen\",\"TextMiddle\":\"Schülerticket Hessen\",\"TextShort\":\"Schülerticket Hessen\",\"Remark\":\"12-fache Abbuchung\",\"ValidFrom\":\"06.09.2021\",\"TariffLevelPrint\":\"50\",\"TariffLevelIntern\":\"95\",\"Price\":\"37200\",\"TZCodeStartReq\":\"4001\",\"TZCodeStartRes\":\"9990\",\"TZNameStart\":\"Darmstadt Holzhofallee\",\"ViaId\":\"0\",\"ViaText\":\"ohne Umweg\",\"TZCodeDestReq\":\"4001\",\"TZCodeDestRes\":\"9990\",\"TZNameDest\":\"Darmstadt Südbahnhof\",\"TypeKey\":\"77402\",\"Subvention\":\"0\",\"TariffVersion\":\"40\",\"minVVF\":\"01.10.2021\",\"minNKF\":\"01.10.2021\",\"Kartentyp\":\"KTYP-Jahresabos_persoenlich\",\"KartentypAnzeigename\":\"JahresAbos persönlich\",\"KAProduktnummer\":\"10552\",\"KAInfoText\":\"\",\"Verantwortlicher\":\"RMV\",\"Verbuende\":\"RMV\",\"ExportAttribute\":\"ATTR-SRTE-NACHWEIS-REDUZ=Schueler_Azubi_Jaka|ATTR-VTRB-Ausgabeart=eTicket|ATTR-VTRB-Frg=3|ATTR-VTRB-minNKF=2|ATTR-VTRB-minVVF=5\",\"FreigabeId\":\"20272\",\"Freigabe\":\"$(AlleTG)\"}}"
-                        },
-                        {
-                          "name":"Zuschlagkarte Jahr einmalige Abbuchung",
-                          "desc":"Erw. und Kinder",
-                          "prc":21460,
-                          "cur":"EUR",
-                          "shpCtx":"{\"RMVTicket\":{\"TextLong\":\"Zuschlagkarte Jahr\",\"TextMiddle\":\"Zuschlagkarte Jahr\",\"TextShort\":\"Zuschlagkarte Jahr\",\"Remark\":\"einmalige Abbuchung\",\"ValidFrom\":\"06.09.2021\",\"TariffLevelPrint\":\"1\",\"TariffLevelIntern\":\"5\",\"Price\":\"21460\",\"TZCodeStartReq\":\"4001\",\"TZCodeStartRes\":\"4001\",\"TZNameStart\":\"Darmstadt Holzhofallee\",\"ViaId\":\"0\",\"ViaText\":\"ohne Umweg\",\"TZCodeDestReq\":\"4001\",\"TZCodeDestRes\":\"4001\",\"TZNameDest\":\"Darmstadt Südbahnhof\",\"TypeKey\":\"1101\",\"Subvention\":\"0\",\"TariffVersion\":\"40\",\"minVVF\":\"01.10.2021\",\"minNKF\":\"01.10.2021\",\"Kartentyp\":\"KTYP-Jahresabos_persoenlich\",\"KartentypAnzeigename\":\"JahresAbos persönlich\",\"KAProduktnummer\":\"10066\",\"KAInfoText\":\"\",\"Verantwortlicher\":\"RMV\",\"Verbuende\":\"RMV\",\"ExportAttribute\":\"ATTR-SRTE-KLASSE_1=Ja|ATTR-VTRB-Ausgabeart=eTicket|ATTR-VTRB-Frg=3|ATTR-VTRB-minNKF=2|ATTR-VTRB-minVVF=5\",\"FreigabeId\":\"3980\",\"Freigabe\":\"4001, 4058, 4077, 4079, 4087, 4091, 4092, 4099\"}}"
-                        },
-                        {
-                          "name":"Zuschlagkarte Jahr 12-fache Abbuchung",
-                          "desc":"Erw. und Kinder",
-                          "prc":21900,
-                          "cur":"EUR",
-                          "shpCtx":"{\"RMVTicket\":{\"TextLong\":\"Zuschlagkarte Jahr\",\"TextMiddle\":\"Zuschlagkarte Jahr\",\"TextShort\":\"Zuschlagkarte Jahr\",\"Remark\":\"12-fache Abbuchung\",\"ValidFrom\":\"06.09.2021\",\"TariffLevelPrint\":\"1\",\"TariffLevelIntern\":\"5\",\"Price\":\"21900\",\"TZCodeStartReq\":\"4001\",\"TZCodeStartRes\":\"4001\",\"TZNameStart\":\"Darmstadt Holzhofallee\",\"ViaId\":\"0\",\"ViaText\":\"ohne Umweg\",\"TZCodeDestReq\":\"4001\",\"TZCodeDestRes\":\"4001\",\"TZNameDest\":\"Darmstadt Südbahnhof\",\"TypeKey\":\"1110\",\"Subvention\":\"0\",\"TariffVersion\":\"40\",\"minVVF\":\"01.10.2021\",\"minNKF\":\"01.10.2021\",\"Kartentyp\":\"KTYP-Jahresabos_persoenlich\",\"KartentypAnzeigename\":\"JahresAbos persönlich\",\"KAProduktnummer\":\"10754\",\"KAInfoText\":\"\",\"Verantwortlicher\":\"RMV\",\"Verbuende\":\"RMV\",\"ExportAttribute\":\"ATTR-SRTE-KLASSE_1=Ja|ATTR-VTRB-Ausgabeart=eTicket|ATTR-VTRB-Frg=3|ATTR-VTRB-minNKF=2|ATTR-VTRB-minVVF=5\",\"FreigabeId\":\"3980\",\"Freigabe\":\"4001, 4058, 4077, 4079, 4087, 4091, 4092, 4099\"}}"
-                        },
-                        {
-                          "name":"Fernverkehrs-Ergänzungskarte Jahr einmalige Abbuchung",
-                          "desc":"Erwachsene",
-                          "prc":31460,
-                          "cur":"EUR",
-                          "shpCtx":"{\"RMVTicket\":{\"TextLong\":\"FV-Ergänzungskarte Jahr\",\"TextMiddle\":\"FV-Ergänzungskarte Jahr\",\"TextShort\":\"FV-Ergänzungskarte Jahr\",\"Remark\":\"einmalige Abbuchung\",\"ValidFrom\":\"06.09.2021\",\"TariffLevelPrint\":\"1\",\"TariffLevelIntern\":\"5\",\"Price\":\"31460\",\"TZCodeStartReq\":\"4001\",\"TZCodeStartRes\":\"4001\",\"TZNameStart\":\"Darmstadt Holzhofallee\",\"ViaId\":\"0\",\"ViaText\":\"ohne Umweg\",\"TZCodeDestReq\":\"4001\",\"TZCodeDestRes\":\"4001\",\"TZNameDest\":\"Darmstadt Südbahnhof\",\"TypeKey\":\"6400\",\"Subvention\":\"0\",\"TariffVersion\":\"40\",\"Kartentyp\":\"KTYP-Jahresabos_persoenlich\",\"KartentypAnzeigename\":\"JahresAbos persönlich\",\"KAProduktnummer\":\"10455\",\"KAInfoText\":\"\",\"Verantwortlicher\":\"RMV\",\"Verbuende\":\"RMV\",\"ExportAttribute\":\"ATTR-VTRB-Frg=3\",\"FreigabeId\":\"3980\",\"Freigabe\":\"4001, 4058, 4077, 4079, 4087, 4091, 4092, 4099\"}}"
-                        },
-                        {
-                          "name":"Fernverkehrs-Ergänzungskarte Jahr 12-fache Abbuchung",
-                          "desc":"Erwachsene",
-                          "prc":32100,
-                          "cur":"EUR",
-                          "shpCtx":"{\"RMVTicket\":{\"TextLong\":\"FV-Ergänzungskarte Jahr\",\"TextMiddle\":\"FV-Ergänzungskarte Jahr\",\"TextShort\":\"FV-Ergänzungskarte Jahr\",\"Remark\":\"12-fache Abbuchung\",\"ValidFrom\":\"06.09.2021\",\"TariffLevelPrint\":\"1\",\"TariffLevelIntern\":\"5\",\"Price\":\"32100\",\"TZCodeStartReq\":\"4001\",\"TZCodeStartRes\":\"4001\",\"TZNameStart\":\"Darmstadt Holzhofallee\",\"ViaId\":\"0\",\"ViaText\":\"ohne Umweg\",\"TZCodeDestReq\":\"4001\",\"TZCodeDestRes\":\"4001\",\"TZNameDest\":\"Darmstadt Südbahnhof\",\"TypeKey\":\"6700\",\"Subvention\":\"0\",\"TariffVersion\":\"40\",\"Kartentyp\":\"KTYP-Jahresabos_persoenlich\",\"KartentypAnzeigename\":\"JahresAbos persönlich\",\"KAProduktnummer\":\"10756\",\"KAInfoText\":\"\",\"Verantwortlicher\":\"RMV\",\"Verbuende\":\"RMV\",\"ExportAttribute\":\"ATTR-VTRB-Frg=3\",\"FreigabeId\":\"3980\",\"Freigabe\":\"4001, 4058, 4077, 4079, 4087, 4091, 4092, 4099\"}}"
-                        },
-                        {
-                          "name":"Fernverkehrs-Ergänzungskarte Zuschlag Jahr einmalige Abbuchung",
-                          "desc":"Erw. und Kinder",
-                          "prc":14110,
-                          "cur":"EUR",
-                          "shpCtx":"{\"RMVTicket\":{\"TextLong\":\"FV-Ergänzung Zuschlag Jahr\",\"TextMiddle\":\"FV-Ergänzung Zuschlag Jahr\",\"TextShort\":\"FV-Erg Zuschlag Jahr\",\"Remark\":\"einmalige Abbuchung\",\"ValidFrom\":\"06.09.2021\",\"TariffLevelPrint\":\"1\",\"TariffLevelIntern\":\"5\",\"Price\":\"14110\",\"TZCodeStartReq\":\"4001\",\"TZCodeStartRes\":\"4001\",\"TZNameStart\":\"Darmstadt Holzhofallee\",\"ViaId\":\"0\",\"ViaText\":\"ohne Umweg\",\"TZCodeDestReq\":\"4001\",\"TZCodeDestRes\":\"4001\",\"TZNameDest\":\"Darmstadt Südbahnhof\",\"TypeKey\":\"6600\",\"Subvention\":\"0\",\"TariffVersion\":\"40\",\"Kartentyp\":\"KTYP-Jahresabos_persoenlich\",\"KartentypAnzeigename\":\"JahresAbos persönlich\",\"KAProduktnummer\":\"10457\",\"KAInfoText\":\"\",\"Verantwortlicher\":\"RMV\",\"Verbuende\":\"RMV\",\"ExportAttribute\":\"ATTR-SRTE-KLASSE_1=Ja|ATTR-VTRB-Frg=3\",\"FreigabeId\":\"3980\",\"Freigabe\":\"4001, 4058, 4077, 4079, 4087, 4091, 4092, 4099\"}}"
-                        },
-                        {
-                          "name":"Fernverkehrs-Ergänzungskarte Zuschlag Jahr 12-fache Abbuchung",
-                          "desc":"Erw. und Kinder",
-                          "prc":14400,
-                          "cur":"EUR",
-                          "shpCtx":"{\"RMVTicket\":{\"TextLong\":\"FV-Ergänzung Zuschlag Jahr\",\"TextMiddle\":\"FV-Ergänzung Zuschlag Jahr\",\"TextShort\":\"FV-Erg Zuschlag Jahr\",\"Remark\":\"12-fache Abbuchung\",\"ValidFrom\":\"06.09.2021\",\"TariffLevelPrint\":\"1\",\"TariffLevelIntern\":\"5\",\"Price\":\"14400\",\"TZCodeStartReq\":\"4001\",\"TZCodeStartRes\":\"4001\",\"TZNameStart\":\"Darmstadt Holzhofallee\",\"ViaId\":\"0\",\"ViaText\":\"ohne Umweg\",\"TZCodeDestReq\":\"4001\",\"TZCodeDestRes\":\"4001\",\"TZNameDest\":\"Darmstadt Südbahnhof\",\"TypeKey\":\"6800\",\"Subvention\":\"0\",\"TariffVersion\":\"40\",\"Kartentyp\":\"KTYP-Jahresabos_persoenlich\",\"KartentypAnzeigename\":\"JahresAbos persönlich\",\"KAProduktnummer\":\"10757\",\"KAInfoText\":\"\",\"Verantwortlicher\":\"RMV\",\"Verbuende\":\"RMV\",\"ExportAttribute\":\"ATTR-SRTE-KLASSE_1=Ja|ATTR-VTRB-Frg=3\",\"FreigabeId\":\"3980\",\"Freigabe\":\"4001, 4058, 4077, 4079, 4087, 4091, 4092, 4099\"}}"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "name":"JahresAbos übertragbar",
-                  "fareL":
-                  [
-                    {
-                      "name":"0",
-                      "desc":"ohne Umweg",
-                      "shpCtx":"",
-                      "ticketL":
-                      [
-                        {
-                          "name":"Jahreskarte übertragbar einmalige Abbuchung",
-                          "desc":"Erwachsene",
-                          "prc":47750,
-                          "cur":"EUR",
-                          "shpCtx":"{\"RMVTicket\":{\"TextLong\":\"Jahreskarte\",\"TextMiddle\":\"Jahreskarte\",\"TextShort\":\"Jahreskarte\",\"Remark\":\"einmalige Abbuchung\",\"ValidFrom\":\"06.09.2021\",\"TariffLevelPrint\":\"1\",\"TariffLevelIntern\":\"5\",\"Price\":\"47750\",\"TZCodeStartReq\":\"4001\",\"TZCodeStartRes\":\"4001\",\"TZNameStart\":\"Darmstadt Holzhofallee\",\"ViaId\":\"0\",\"ViaText\":\"ohne Umweg\",\"TZCodeDestReq\":\"4001\",\"TZCodeDestRes\":\"4001\",\"TZNameDest\":\"Darmstadt Südbahnhof\",\"TypeKey\":\"400\",\"Subvention\":\"0\",\"TariffVersion\":\"40\",\"minVVF\":\"01.10.2021\",\"minNKF\":\"01.10.2021\",\"Kartentyp\":\"KTYP-Jahresabos_uebertragbar\",\"KartentypAnzeigename\":\"JahresAbos übertragbar\",\"KAProduktnummer\":\"6663\",\"KAInfoText\":\"\",\"Verantwortlicher\":\"RMV\",\"Verbuende\":\"RMV\",\"ExportAttribute\":\"ATTR-VTRB-Ausgabeart=eTicket_und_Papier_N|ATTR-VTRB-Frg=3|ATTR-VTRB-minNKF=2|ATTR-VTRB-minVVF=5\",\"FreigabeId\":\"3980\",\"Freigabe\":\"4001, 4058, 4077, 4079, 4087, 4091, 4092, 4099\"}}"
-                        },
-                        {
-                          "name":"Jahreskarte übertragbar 12-fache Abbuchung",
-                          "desc":"Erwachsene",
-                          "prc":48720,
-                          "cur":"EUR",
-                          "shpCtx":"{\"RMVTicket\":{\"TextLong\":\"Jahreskarte\",\"TextMiddle\":\"Jahreskarte\",\"TextShort\":\"Jahreskarte\",\"Remark\":\"12-fache Abbuchung\",\"ValidFrom\":\"06.09.2021\",\"TariffLevelPrint\":\"1\",\"TariffLevelIntern\":\"5\",\"Price\":\"48720\",\"TZCodeStartReq\":\"4001\",\"TZCodeStartRes\":\"4001\",\"TZNameStart\":\"Darmstadt Holzhofallee\",\"ViaId\":\"0\",\"ViaText\":\"ohne Umweg\",\"TZCodeDestReq\":\"4001\",\"TZCodeDestRes\":\"4001\",\"TZNameDest\":\"Darmstadt Südbahnhof\",\"TypeKey\":\"230\",\"Subvention\":\"0\",\"TariffVersion\":\"40\",\"minVVF\":\"01.10.2021\",\"minNKF\":\"01.10.2021\",\"Kartentyp\":\"KTYP-Jahresabos_uebertragbar\",\"KartentypAnzeigename\":\"JahresAbos übertragbar\",\"KAProduktnummer\":\"10770\",\"KAInfoText\":\"\",\"Verantwortlicher\":\"RMV\",\"Verbuende\":\"RMV\",\"ExportAttribute\":\"ATTR-VTRB-Ausgabeart=eTicket_und_Papier_N|ATTR-VTRB-Frg=3|ATTR-VTRB-minNKF=2|ATTR-VTRB-minVVF=5\",\"FreigabeId\":\"3980\",\"Freigabe\":\"4001, 4058, 4077, 4079, 4087, 4091, 4092, 4099\"}}"
-                        },
-                        {
-                          "name":"9-Uhr-Jahreskarte übertragbar einmalige Abbuchung",
-                          "desc":"Erwachsene",
-                          "prc":40570,
-                          "cur":"EUR",
-                          "shpCtx":"{\"RMVTicket\":{\"TextLong\":\"9-Uhr-Jahreskarte\",\"TextMiddle\":\"9-Uhr-Jahreskarte\",\"TextShort\":\"9-Uhr-Jahreskarte\",\"Remark\":\"einmalige Abbuchung\",\"ValidFrom\":\"06.09.2021\",\"TariffLevelPrint\":\"1\",\"TariffLevelIntern\":\"5\",\"Price\":\"40570\",\"TZCodeStartReq\":\"4001\",\"TZCodeStartRes\":\"4001\",\"TZNameStart\":\"Darmstadt Holzhofallee\",\"ViaId\":\"0\",\"ViaText\":\"ohne Umweg\",\"TZCodeDestReq\":\"4001\",\"TZCodeDestRes\":\"4001\",\"TZNameDest\":\"Darmstadt Südbahnhof\",\"TypeKey\":\"450\",\"Subvention\":\"0\",\"TariffVersion\":\"40\",\"minVVF\":\"01.10.2021\",\"minNKF\":\"01.10.2021\",\"Kartentyp\":\"KTYP-Jahresabos_uebertragbar\",\"KartentypAnzeigename\":\"JahresAbos übertragbar\",\"KAProduktnummer\":\"6665\",\"KAInfoText\":\"\",\"Verantwortlicher\":\"RMV\",\"Verbuende\":\"RMV\",\"ExportAttribute\":\"ATTR-VTRB-Ausgabeart=eTicket_und_Papier_N|ATTR-VTRB-Frg=3|ATTR-VTRB-minNKF=2|ATTR-VTRB-minVVF=5\",\"FreigabeId\":\"3980\",\"Freigabe\":\"4001, 4058, 4077, 4079, 4087, 4091, 4092, 4099\"}}"
-                        },
-                        {
-                          "name":"9-Uhr-Jahreskarte übertragbar 12-fache Abbuchung",
-                          "desc":"Erwachsene",
-                          "prc":41400,
-                          "cur":"EUR",
-                          "shpCtx":"{\"RMVTicket\":{\"TextLong\":\"9-Uhr-Jahreskarte\",\"TextMiddle\":\"9-Uhr-Jahreskarte\",\"TextShort\":\"9-Uhr-Jahreskarte\",\"Remark\":\"12-fache Abbuchung\",\"ValidFrom\":\"06.09.2021\",\"TariffLevelPrint\":\"1\",\"TariffLevelIntern\":\"5\",\"Price\":\"41400\",\"TZCodeStartReq\":\"4001\",\"TZCodeStartRes\":\"4001\",\"TZNameStart\":\"Darmstadt Holzhofallee\",\"ViaId\":\"0\",\"ViaText\":\"ohne Umweg\",\"TZCodeDestReq\":\"4001\",\"TZCodeDestRes\":\"4001\",\"TZNameDest\":\"Darmstadt Südbahnhof\",\"TypeKey\":\"270\",\"Subvention\":\"0\",\"TariffVersion\":\"40\",\"minVVF\":\"01.10.2021\",\"minNKF\":\"01.10.2021\",\"Kartentyp\":\"KTYP-Jahresabos_uebertragbar\",\"KartentypAnzeigename\":\"JahresAbos übertragbar\",\"KAProduktnummer\":\"10771\",\"KAInfoText\":\"\",\"Verantwortlicher\":\"RMV\",\"Verbuende\":\"RMV\",\"ExportAttribute\":\"ATTR-VTRB-Ausgabeart=eTicket_und_Papier_N|ATTR-VTRB-Frg=3|ATTR-VTRB-minNKF=2|ATTR-VTRB-minVVF=5\",\"FreigabeId\":\"3980\",\"Freigabe\":\"4001, 4058, 4077, 4079, 4087, 4091, 4092, 4099\"}}"
-                        },
-                        {
-                          "name":"Zuschlagkarte Jahr einmalige Abbuchung",
-                          "desc":"Erw. und Kinder",
-                          "prc":21460,
-                          "cur":"EUR",
-                          "shpCtx":"{\"RMVTicket\":{\"TextLong\":\"Zuschlagkarte Jahr\",\"TextMiddle\":\"Zuschlagkarte Jahr\",\"TextShort\":\"Zuschlagkarte Jahr\",\"Remark\":\"einmalige Abbuchung\",\"ValidFrom\":\"06.09.2021\",\"TariffLevelPrint\":\"1\",\"TariffLevelIntern\":\"5\",\"Price\":\"21460\",\"TZCodeStartReq\":\"4001\",\"TZCodeStartRes\":\"4001\",\"TZNameStart\":\"Darmstadt Holzhofallee\",\"ViaId\":\"0\",\"ViaText\":\"ohne Umweg\",\"TZCodeDestReq\":\"4001\",\"TZCodeDestRes\":\"4001\",\"TZNameDest\":\"Darmstadt Südbahnhof\",\"TypeKey\":\"1100\",\"Subvention\":\"0\",\"TariffVersion\":\"40\",\"minVVF\":\"01.10.2021\",\"minNKF\":\"01.10.2021\",\"Kartentyp\":\"KTYP-Jahresabos_uebertragbar\",\"KartentypAnzeigename\":\"JahresAbos übertragbar\",\"KAProduktnummer\":\"6669\",\"KAInfoText\":\"\",\"Verantwortlicher\":\"RMV\",\"Verbuende\":\"RMV\",\"ExportAttribute\":\"ATTR-SRTE-KLASSE_1=Ja|ATTR-VTRB-Ausgabeart=eTicket_und_Papier_N|ATTR-VTRB-Frg=3|ATTR-VTRB-minNKF=2|ATTR-VTRB-minVVF=5\",\"FreigabeId\":\"3980\",\"Freigabe\":\"4001, 4058, 4077, 4079, 4087, 4091, 4092, 4099\"}}"
-                        },
-                        {
-                          "name":"Zuschlagkarte Jahr 12-fache Abbuchung",
-                          "desc":"Erw. und Kinder",
-                          "prc":21900,
-                          "cur":"EUR",
-                          "shpCtx":"{\"RMVTicket\":{\"TextLong\":\"Zuschlagkarte Jahr\",\"TextMiddle\":\"Zuschlagkarte Jahr\",\"TextShort\":\"Zuschlagkarte Jahr\",\"Remark\":\"12-fache Abbuchung\",\"ValidFrom\":\"06.09.2021\",\"TariffLevelPrint\":\"1\",\"TariffLevelIntern\":\"5\",\"Price\":\"21900\",\"TZCodeStartReq\":\"4001\",\"TZCodeStartRes\":\"4001\",\"TZNameStart\":\"Darmstadt Holzhofallee\",\"ViaId\":\"0\",\"ViaText\":\"ohne Umweg\",\"TZCodeDestReq\":\"4001\",\"TZCodeDestRes\":\"4001\",\"TZNameDest\":\"Darmstadt Südbahnhof\",\"TypeKey\":\"1010\",\"Subvention\":\"0\",\"TariffVersion\":\"40\",\"minVVF\":\"01.10.2021\",\"minNKF\":\"01.10.2021\",\"Kartentyp\":\"KTYP-Jahresabos_uebertragbar\",\"KartentypAnzeigename\":\"JahresAbos übertragbar\",\"KAProduktnummer\":\"10758\",\"KAInfoText\":\"\",\"Verantwortlicher\":\"RMV\",\"Verbuende\":\"RMV\",\"ExportAttribute\":\"ATTR-SRTE-KLASSE_1=Ja|ATTR-VTRB-Ausgabeart=eTicket_und_Papier_N|ATTR-VTRB-Frg=3|ATTR-VTRB-minNKF=2|ATTR-VTRB-minVVF=5\",\"FreigabeId\":\"3980\",\"Freigabe\":\"4001, 4058, 4077, 4079, 4087, 4091, 4092, 4099\"}}"
+                          "shpCtx":"{\"RMVTicket\":{\"TextLong\":\"Einzelfahrt Erwachsene\",\"TextMiddle\":\"Einzelfahrt Erwachsene\",\"TextShort\":\"Einzelfahrt Erwachsene\",\"Remark\":\"Regelpreis\",\"ValidFrom\":\"05.12.2021\",\"TariffLevelPrint\":\"1\",\"TariffLevelIntern\":\"5\",\"Price\":\"230\",\"TZCodeStartReq\":\"4001\",\"TZCodeStartRes\":\"4001\",\"TZNameStart\":\"Darmstadt Holzhofallee\",\"ViaId\":\"0\",\"ViaText\":\"ohne Umweg\",\"TZCodeDestReq\":\"4001\",\"TZCodeDestRes\":\"4001\",\"TZNameDest\":\"Darmstadt Südbahnhof\",\"TypeKey\":\"3100\",\"Subvention\":\"0\",\"TariffVersion\":\"40\",\"Kartentyp\":\"KTYP-Einzelfahrkarte\",\"KartentypAnzeigename\":\"Einzelfahrt\",\"KAProduktnummer\":\"10185\",\"KAInfoText\":\"\",\"Verantwortlicher\":\"RMV\",\"Verbuende\":\"RMV\",\"ExportAttribute\":\"ATTR-VTRB-Einzelpreis=Erw.\",\"FreigabeId\":\"3980\",\"Freigabe\":\"4001, 4058, 4077, 4079, 4087, 4091, 4092, 4099\"}}"
                         }
                       ]
                     }
@@ -2018,23 +1006,17 @@
                 "fareSetX":0,
                 "fareX":0,
                 "ticketX":0
-              },
-              {
-                "type":"T",
-                "fareSetX":0,
-                "fareX":0,
-                "ticketX":1
               }
             ],
             "conSubscr":"P",
             "recState":"C",
-            "cksum":"afd87b36_3",
-            "cksumDti":"76de5d36_3"
+            "cksum":"d2c299f9_3",
+            "cksumDti":"76d730bf_3"
           }
         ],
-        "fpB":"20210603",
-        "fpE":"20211211",
-        "planrtTS":"1630919050"
+        "fpB":"20210826",
+        "fpE":"20220630",
+        "planrtTS":"1638728713"
       }
     }
   ]

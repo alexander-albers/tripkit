@@ -1,7 +1,7 @@
 {
   "ver":"1.19",
   "lang":"deu",
-  "id":"aymsbgqsm2wz92wx",
+  "id":"6z4x4kai46jmywck",
   "err":"OK",
   "svcResL":
   [
@@ -92,9 +92,6 @@
                 "g":100,
                 "b":100
               }
-            },
-            {
-              "res":"ADR"
             }
           ]
         },
@@ -105,11 +102,11 @@
           "locL":
           [
             {
-              "lid":"A=1@O=Wien Roßauer Lände (U)@X=16367712@Y=48221617@U=81@L=001390966@B=1@p=1630923242@",
+              "lid":"A=1@O=Wien Roßauer Lände (U)@X=16367712@Y=48221617@U=181@L=1390966@B=1@p=1638449070@",
               "type":"S",
               "name":"Wien Roßauer Lände (U)",
               "icoX":0,
-              "extId":"001390966",
+              "extId":"1390966",
               "state":"F",
               "crd":
               {
@@ -124,7 +121,7 @@
               [
 0
               ],
-              "wt":1822
+              "wt":1570
             },
             {
               "lid":"A=4@O=Wien, SPAR, Roßauer Lände@X=16365006@Y=48226696@U=105@L=970083170@B=1@p=1555424334@",
@@ -142,11 +139,11 @@
               }
             },
             {
-              "lid":"A=1@O=Gainfarn Großauer Straße@X=16190570@Y=47959968@U=81@L=000396059@B=1@p=1630923242@",
+              "lid":"A=1@O=Gainfarn Großauer Straße@X=16190570@Y=47959968@U=181@L=396059@B=1@p=1638449070@",
               "type":"S",
               "name":"Gainfarn Großauer Straße",
               "icoX":2,
-              "extId":"000396059",
+              "extId":"396059",
               "state":"F",
               "crd":
               {
@@ -160,14 +157,14 @@
               [
 1
               ],
-              "wt":81
+              "wt":105
             },
             {
-              "lid":"A=1@O=Großau b.Bad Vöslau Vöslauer Str@X=16170479@Y=47957047@U=81@L=000396038@B=1@p=1630923242@",
+              "lid":"A=1@O=Großau b.Bad Vöslau Vöslauer Str@X=16170479@Y=47957047@U=181@L=396038@B=1@p=1638449070@",
               "type":"S",
               "name":"Großau b.Bad Vöslau Vöslauer Str",
               "icoX":2,
-              "extId":"000396038",
+              "extId":"396038",
               "state":"F",
               "crd":
               {
@@ -181,21 +178,7 @@
               [
 1
               ],
-              "wt":81
-            },
-            {
-              "lid":"A=2@O=Raabs an der Thaya, Großauerstraße@X=15502383@Y=48853307@U=103@b=980130482@B=1@p=1520424776@",
-              "type":"A",
-              "name":"Raabs an der Thaya, Großauerstraße",
-              "icoX":3,
-              "state":"M",
-              "crd":
-              {
-                "x":15502383,
-                "y":48853307,
-                "layerX":0,
-                "crdSysX":0
-              }
+              "wt":105
             }
           ]
         }

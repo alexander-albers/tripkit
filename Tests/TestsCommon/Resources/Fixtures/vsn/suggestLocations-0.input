@@ -1,7 +1,7 @@
 {
   "ver":"1.16",
   "lang":"deu",
-  "id":"2bwshguc66xxgi4k",
+  "id":"fe2kmmx266gm8gwg",
   "svcResL":
   [
     {
@@ -177,10 +177,16 @@
               "id":"standard",
               "index":0,
               "type":"WGS84",
+              "dim":3
+            },
+            {
+              "id":"Goett_62",
+              "index":1,
+              "type":"WGS84",
               "dim":2
             },
             {
-              "id":"G?tti_61",
+              "id":"Wismar_D",
               "index":1,
               "type":"WGS84",
               "dim":2
@@ -225,7 +231,7 @@
           "locL":
           [
             {
-              "lid":"A=1@O=Göttingen Dahlmannstraße@X=9950250@Y=51536281@U=80@L=9033876@B=1@p=1630786923@",
+              "lid":"A=1@O=Göttingen Dahlmannstraße@X=9950250@Y=51536281@U=80@L=9033876@B=1@p=1638652114@",
               "type":"S",
               "name":"Göttingen Dahlmannstraße",
               "icoX":0,
@@ -260,13 +266,13 @@
               [
 0
               ],
-              "wt":1292,
+              "wt":277,
               "isMainMast":true
             },
             {
-              "lid":"A=2@O=Göttingen - Göttingen, Dahlmannstraße@X=9949180@Y=51537657@U=99@b=958068153@B=1@p=1617880347@",
+              "lid":"A=2@O=37073 Göttingen, Dahlmannstraße@X=9949180@Y=51537657@U=99@b=958068153@B=1@p=1617880347@",
               "type":"A",
-              "name":"Göttingen - Göttingen, Dahlmannstraße",
+              "name":"37073 Göttingen, Dahlmannstraße",
               "icoX":1,
               "state":"M",
               "crd":
@@ -278,9 +284,9 @@
               }
             },
             {
-              "lid":"A=2@O=Friedland - Lichtenhagen, Mahlmannstraße@X=10005587@Y=51428986@U=99@b=958104836@B=1@p=1617880347@",
+              "lid":"A=2@O=37133 Friedland, Mahlmannstraße@X=10005587@Y=51428986@U=99@b=958104836@B=1@p=1617880347@",
               "type":"A",
-              "name":"Friedland - Lichtenhagen, Mahlmannstraße",
+              "name":"37133 Friedland, Mahlmannstraße",
               "icoX":1,
               "state":"M",
               "crd":
@@ -292,9 +298,9 @@
               }
             },
             {
-              "lid":"A=2@O=Einbeck - Einbeck, Oehlmannstraße@X=9869967@Y=51829833@U=99@b=958083830@B=1@p=1617880347@",
+              "lid":"A=2@O=37574 Einbeck, Oehlmannstraße@X=9869967@Y=51829833@U=99@b=958083830@B=1@p=1617880347@",
               "type":"A",
-              "name":"Einbeck - Einbeck, Oehlmannstraße",
+              "name":"37574 Einbeck, Oehlmannstraße",
               "icoX":1,
               "state":"M",
               "crd":
@@ -306,20 +312,36 @@
               }
             },
             {
-              "lid":"A=1@O=Wismar Dahlmannstraße@X=11457813@Y=53890233@U=80@L=4900029@B=1@p=1630786923@",
+              "lid":"A=1@O=Wismar Dahlmannstraße@X=11456833@Y=53890925@U=80@L=9300029@B=1@p=1638652114@",
               "type":"S",
               "name":"Wismar Dahlmannstraße",
               "icoX":0,
-              "extId":"4900029",
+              "extId":"9300029",
               "state":"F",
               "crd":
               {
-                "x":11457813,
-                "y":53890233,
+                "x":11456833,
+                "y":53890925,
                 "type":"WGS84",
                 "layerX":0,
                 "crdSysX":0
               },
+              "crdAltL":
+              [
+                {
+                  "x":99999999,
+                  "y":99999999,
+                  "layerX":0,
+                  "crdSysX":0
+                },
+                {
+                  "x":99999999,
+                  "y":99999999,
+                  "layerX":0,
+                  "crdSysX":2
+                }
+              ],
+              "meta":true,
               "pCls":32,
               "pRefL":
               [
@@ -337,7 +359,8 @@
 12,
 13
               ],
-              "wt":1292
+              "wt":1167,
+              "isMainMast":true
             }
           ]
         }

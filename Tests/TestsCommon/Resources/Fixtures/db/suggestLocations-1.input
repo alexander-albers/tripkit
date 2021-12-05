@@ -1,8 +1,8 @@
 {
   "ver":"1.15",
-  "ext":"DB.R18.04.a",
+  "ext":"DB.R20.12.b",
   "lang":"deu",
-  "id":"gimiqkxcmugzywwx",
+  "id":"rh4cmkux462n9w4k",
   "cInfo":
   {
     "code":"OK",
@@ -339,13 +339,173 @@
               }
             },
             {
-              "name":"Bus 203",
-              "nameS":"203",
+              "name":"Bus SEV",
+              "nameS":"SEV",
+              "icoX":6,
+              "cls":8,
+              "prodCtx":
+              {
+                "lineId":"3_080001_SEV!!1498386!!5840667"
+              }
+            },
+            {
+              "name":"S 1",
+              "nameS":"1",
+              "icoX":8,
+              "cls":16,
+              "prodCtx":
+              {
+                "lineId":"4_08_____1"
+              }
+            },
+            {
+              "name":"S 2",
+              "nameS":"2",
+              "icoX":8,
+              "cls":16,
+              "prodCtx":
+              {
+                "lineId":"4_08_____2"
+              }
+            },
+            {
+              "name":"S 25",
+              "nameS":"25",
+              "icoX":8,
+              "cls":16,
+              "prodCtx":
+              {
+                "lineId":"4_08_____25"
+              }
+            },
+            {
+              "name":"S 26",
+              "nameS":"26",
+              "icoX":8,
+              "cls":16,
+              "prodCtx":
+              {
+                "lineId":"4_08_____26"
+              }
+            },
+            {
+              "name":"Bus N8",
+              "nameS":"N8",
               "icoX":6,
               "cls":32,
               "prodCtx":
               {
-                "lineId":"5_webDEL_203"
+                "lineId":"5_vbbBVB_N8"
+              }
+            },
+            {
+              "name":"Bus 120",
+              "nameS":"120",
+              "icoX":6,
+              "cls":32,
+              "prodCtx":
+              {
+                "lineId":"5_vbbBVB_120"
+              }
+            },
+            {
+              "name":"Bus 122",
+              "nameS":"122",
+              "icoX":6,
+              "cls":32,
+              "prodCtx":
+              {
+                "lineId":"5_vbbBVB_122"
+              }
+            },
+            {
+              "name":"Bus 124",
+              "nameS":"124",
+              "icoX":6,
+              "cls":32,
+              "prodCtx":
+              {
+                "lineId":"5_vbbBVB_124"
+              }
+            },
+            {
+              "name":"Bus 220",
+              "nameS":"220",
+              "icoX":6,
+              "cls":32,
+              "prodCtx":
+              {
+                "lineId":"5_vbbBVB_220"
+              }
+            },
+            {
+              "name":"Bus 221",
+              "nameS":"221",
+              "icoX":6,
+              "cls":32,
+              "prodCtx":
+              {
+                "lineId":"5_vbbBVB_221"
+              }
+            },
+            {
+              "name":"Bus M21",
+              "nameS":"M21",
+              "icoX":6,
+              "cls":32,
+              "prodCtx":
+              {
+                "lineId":"5_vbbBVB_M21"
+              }
+            },
+            {
+              "name":"Bus N20",
+              "nameS":"N20",
+              "icoX":6,
+              "cls":32,
+              "prodCtx":
+              {
+                "lineId":"5_vbbBVB_N20"
+              }
+            },
+            {
+              "name":"Bus N24",
+              "nameS":"N24",
+              "icoX":6,
+              "cls":32,
+              "prodCtx":
+              {
+                "lineId":"5_vbbBVB_N24"
+              }
+            },
+            {
+              "name":"Bus X21",
+              "nameS":"X21",
+              "icoX":6,
+              "cls":32,
+              "prodCtx":
+              {
+                "lineId":"5_vbbBVB_X21"
+              }
+            },
+            {
+              "name":"Bus X33",
+              "nameS":"X33",
+              "icoX":6,
+              "cls":32,
+              "prodCtx":
+              {
+                "lineId":"5_vbbBVB_X33"
+              }
+            },
+            {
+              "name":"U 8",
+              "nameS":"8",
+              "icoX":9,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"7_vbbBVU_8"
               }
             }
           ],
@@ -407,6 +567,9 @@
             },
             {
               "res":"S"
+            },
+            {
+              "res":"U"
             }
           ]
         },
@@ -417,7 +580,7 @@
           "locL":
           [
             {
-              "lid":"A=1@O=Hamburg Dammtor@X=9989569@Y=53560751@U=80@L=8002548@B=1@p=1630529292@",
+              "lid":"A=1@O=Hamburg Dammtor@X=9989569@Y=53560751@U=80@L=8002548@B=1@p=1638395739@",
               "type":"S",
               "name":"Hamburg Dammtor",
               "icoX":0,
@@ -460,10 +623,10 @@
 22,
 23
               ],
-              "wt":30145
+              "wt":30980
             },
             {
-              "lid":"A=1@O=Bahnhof Dammtor, Hamburg@X=9990315@Y=53561048@U=80@L=694802@B=1@p=1630529292@",
+              "lid":"A=1@O=Bahnhof Dammtor, Hamburg@X=9990315@Y=53561048@U=80@L=694802@B=1@p=1638395739@",
               "type":"S",
               "name":"Bahnhof Dammtor, Hamburg",
               "icoX":6,
@@ -488,11 +651,11 @@
 22,
 23
               ],
-              "wt":30145,
+              "wt":30980,
               "mMastLocX":0
             },
             {
-              "lid":"A=1@O=Dammtor, Gehrden (Hannover)@X=9600947@Y=52310909@U=80@L=635327@B=1@p=1630529292@",
+              "lid":"A=1@O=Dammtor, Gehrden (Hannover)@X=9600947@Y=52310909@U=81@L=635327@B=1@p=1638389990@",
               "type":"S",
               "name":"Dammtor, Gehrden (Hannover)",
               "icoX":6,
@@ -513,10 +676,10 @@
 25,
 26
               ],
-              "wt":854
+              "wt":953
             },
             {
-              "lid":"A=1@O=Dammtor, Hildesheim@X=9937539@Y=52149139@U=80@L=638620@B=1@p=1630529292@",
+              "lid":"A=1@O=Dammtor, Hildesheim@X=9937539@Y=52149139@U=81@L=638620@B=1@p=1638389990@",
               "type":"S",
               "name":"Dammtor, Hildesheim",
               "icoX":6,
@@ -538,31 +701,47 @@
 29,
 30
               ],
-              "wt":854,
+              "wt":953,
               "isMainMast":true
             },
             {
-              "lid":"A=1@O=Delmenhorst Hasporter Damm@X=8645528@Y=53038595@U=80@L=8070426@B=1@p=1630529292@",
+              "lid":"A=1@O=Berlin-Wittenau (Wilhelmsruher Damm)@X=13334446@Y=52597045@U=81@L=8089096@B=1@p=1638389990@",
               "type":"S",
-              "name":"Delmenhorst Hasporter Damm",
+              "name":"Berlin-Wittenau (Wilhelmsruher Damm)",
               "icoX":6,
-              "extId":"8070426",
+              "extId":"8089096",
               "state":"F",
               "crd":
               {
-                "x":8645304,
-                "y":53028203,
+                "x":13334868,
+                "y":52596784,
                 "z":0,
                 "type":"WGS84",
                 "layerX":0,
                 "crdSysX":0
               },
-              "pCls":32,
+              "pCls":184,
               "pRefL":
               [
-31
+31,
+32,
+33,
+34,
+35,
+36,
+37,
+38,
+39,
+40,
+41,
+42,
+43,
+44,
+45,
+46,
+47
               ],
-              "wt":854
+              "wt":4858
             }
           ]
         }

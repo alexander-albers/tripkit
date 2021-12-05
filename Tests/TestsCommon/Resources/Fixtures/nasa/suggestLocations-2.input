@@ -1,7 +1,7 @@
 {
   "ver":"1.15",
   "lang":"deu",
-  "id":"774chg8m42xzxgck",
+  "id":"936xum8w62g7p28g",
   "svcResL":
   [
     {
@@ -13,7 +13,24 @@
         {
           "locL":
           [
-
+            {
+              "lid":"A=1@O=Leipzig-Möckern@X=12352275@Y=51364435@U=80@L=8012193@i=A×de:14713:8012193@",
+              "type":"S",
+              "name":"Leipzig-Möckern",
+              "icoX":0,
+              "extId":"8012193",
+              "state":"F",
+              "crd":
+              {
+                "x":12352266,
+                "y":51364435,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":88,
+              "entry":true
+            }
           ],
           "prodL":
           [
@@ -52,6 +69,23 @@
           "icoL":
           [
             {
+              "res":"prod_reg",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255,
+                "a":255
+              },
+              "bg":
+              {
+                "r":31,
+                "g":131,
+                "b":50,
+                "a":255
+              }
+            },
+            {
               "res":"prod_tram",
               "fg":
               {
@@ -69,41 +103,7 @@
               }
             },
             {
-              "res":"prod_reg",
-              "fg":
-              {
-                "r":255,
-                "g":255,
-                "b":255,
-                "a":255
-              },
-              "bg":
-              {
-                "r":17,
-                "g":137,
-                "b":56,
-                "a":255
-              }
-            },
-            {
               "res":"ADR"
-            },
-            {
-              "res":"prod_bus",
-              "fg":
-              {
-                "r":255,
-                "g":255,
-                "b":255,
-                "a":255
-              },
-              "bg":
-              {
-                "r":170,
-                "g":85,
-                "b":153,
-                "a":255
-              }
             }
           ]
         },
@@ -114,10 +114,29 @@
           "locL":
           [
             {
-              "lid":"A=1@O=Leipzig, S-Bahnhof Möckern@X=12351170@Y=51365756@U=80@L=12974@B=1@p=1630666846@i=A×de:14713:12974@",
+              "lid":"A=1@O=Leipzig S-Bahnhof Möckern@X=12351880@Y=51365585@U=80@L=8071462@B=1@p=1638614192@",
               "type":"S",
-              "name":"Leipzig, S-Bahnhof Möckern",
+              "name":"Leipzig S-Bahnhof Möckern",
               "icoX":0,
+              "extId":"8071462",
+              "state":"F",
+              "crd":
+              {
+                "x":12351889,
+                "y":51365585,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":88,
+              "wt":6680,
+              "mMastLocX":0
+            },
+            {
+              "lid":"A=1@O=Leipzig, S-Bahnhof Möckern (Tram/Bus)@X=12351170@Y=51365756@U=80@L=12974@B=1@p=1638614192@i=A×de:14713:12974@",
+              "type":"S",
+              "name":"Leipzig, S-Bahnhof Möckern (Tram/Bus)",
+              "icoX":1,
               "extId":"12974",
               "state":"F",
               "crd":
@@ -129,13 +148,13 @@
                 "crdSysX":0
               },
               "pCls":96,
-              "wt":3852
+              "wt":3847
             },
             {
-              "lid":"A=1@O=Leipzig, Bahnhof Möckern@X=12352248@Y=51364426@U=80@L=90242@B=1@p=1630666846@",
+              "lid":"A=1@O=Leipzig, Bahnhof Möckern@X=12352248@Y=51364426@U=80@L=90242@B=1@p=1638614192@",
               "type":"S",
               "name":"Leipzig, Bahnhof Möckern",
-              "icoX":1,
+              "icoX":0,
               "extId":"90242",
               "state":"F",
               "crd":
@@ -148,7 +167,7 @@
               },
               "meta":true,
               "pCls":120,
-              "wt":8107
+              "wt":10525
             },
             {
               "lid":"A=2@O=Möckern, Am Bahnhof@X=11836258@Y=52140959@U=103@b=980863988@B=1@p=1520432662@",
@@ -177,24 +196,6 @@
                 "layerX":0,
                 "crdSysX":0
               }
-            },
-            {
-              "lid":"A=1@O=Möckern, Bahnhofstr.@X=11952076@Y=52142694@U=80@L=6025@B=1@p=1630666846@i=A×de:15086:6025@",
-              "type":"S",
-              "name":"Möckern, Bahnhofstr.",
-              "icoX":3,
-              "extId":"6025",
-              "state":"F",
-              "crd":
-              {
-                "x":11952076,
-                "y":52142694,
-                "type":"WGS84",
-                "layerX":0,
-                "crdSysX":0
-              },
-              "pCls":192,
-              "wt":271
             }
           ]
         }

@@ -1,7 +1,7 @@
 {
   "ver":"1.16",
   "lang":"deu",
-  "id":"s5waxmqm6ig5g2ck",
+  "id":"ir6c6keg42guwgck",
   "svcResL":
   [
     {
@@ -207,7 +207,7 @@
               "prodCtx":
               {
                 "name":"      U2",
-                "num":"1166",
+                "num":"51128",
                 "line":"U2",
                 "lineId":"HHA-U#U2",
                 "matchId":"U2",
@@ -230,7 +230,7 @@
               "prodCtx":
               {
                 "name":"      U2",
-                "num":"1287",
+                "num":"51276",
                 "line":"U2",
                 "lineId":"HHA-U#U2",
                 "matchId":"U2",
@@ -253,7 +253,7 @@
               "prodCtx":
               {
                 "name":"      U2",
-                "num":"1120",
+                "num":"51127",
                 "line":"U2",
                 "lineId":"HHA-U#U2",
                 "matchId":"U2",
@@ -276,7 +276,7 @@
               "prodCtx":
               {
                 "name":"      U2",
-                "num":"1290",
+                "num":"51275",
                 "line":"U2",
                 "lineId":"HHA-U#U2",
                 "matchId":"U2",
@@ -299,7 +299,7 @@
               "prodCtx":
               {
                 "name":"      U2",
-                "num":"1001",
+                "num":"51126",
                 "line":"U2",
                 "lineId":"HHA-U#U2",
                 "matchId":"U2",
@@ -375,42 +375,44 @@
           "remL":
           [
             {
-              "type":"M",
-              "code":"extId",
-              "txtN":"210830009A"
-            },
-            {
-              "type":"M",
-              "code":"lineKeys",
-              "txtN":""
+              "type":"A",
+              "code":"ar",
+              "prio":0,
+              "icoX":3,
+              "txtN":"ACHTUNG: Diese App-Version wird zum 1.1.2022 abgeschaltet. Bitte updaten Sie bis dahin Ihre App!"
             },
             {
               "type":"M",
               "code":"extId",
               "txtN":"210423011B"
+            },
+            {
+              "type":"M",
+              "code":"lineKeys",
+              "txtN":""
             }
           ],
           "himL":
           [
             {
-              "hid":"HIM_ADAPTER_FREETEXT_609074540",
+              "hid":"HIM_ADAPTER_FREETEXT_5121348215",
               "act":true,
               "pub":"",
-              "head":"Streik der Gewerkschaft Deutscher Lokomotivführer",
+              "head":"3G-Regel und Maskenpflicht im hvv",
               "lead":"",
-              "text":"Die GDL bestreikt vom 02. September bis voraussichtlich 06. Septemer den Personennah- und Fernverkehr der Deutschen Bahn. Bitte verschieben Sie Ihre geplante Fahrt mit der DB bzw. informieren Sie sich kurz vor Fahrtantritt unter bahn.de/aktuell über Ihre Verbindung.<br /><br />Die S-Bahn Hamburg versucht, auf den Linien S1, S21 und S3 einen 20-Minuten-Takt anzubieten. Die Verstärker-/linien S11, S2 und S31 entfallen.",
+              "text":"Ab dem 24.11.2021 gilt im hvv die 3G-Regel: Fahrgäste müssen dann geimpft, genesen oder getestet sein. Weiterhin besteht in allen Verkehrsmitteln und Haltestellen die Pflicht zum Tragen einer medizinischen Maske.",
               "tckr":"",
-              "icoX":3,
+              "icoX":4,
               "prio":100,
               "fIdx":0,
               "tIdx":0,
               "prod":65535,
-              "lModDate":"20210906",
-              "lModTime":"074546",
-              "sDate":"20210830",
-              "sTime":"185000",
-              "eDate":"20210907",
-              "eTime":"020000",
+              "lModDate":"20211205",
+              "lModTime":"134834",
+              "sDate":"20211122",
+              "sTime":"000000",
+              "eDate":"20220201",
+              "eTime":"055959",
               "cat":0,
               "pubChL":
               [
@@ -418,68 +420,21 @@
                   "name":"CUSTOM1",
                   "fDate":"20150101",
                   "fTime":"130000",
-                  "tDate":"20210907",
-                  "tTime":"020000",
-                  "uRefL":
-                  [
-0
-                  ]
+                  "tDate":"20220201",
+                  "tTime":"055959"
                 },
                 {
                   "name":"TIMETABLE",
                   "fDate":"20150101",
                   "fTime":"130000",
-                  "tDate":"20210907",
-                  "tTime":"020000"
+                  "tDate":"20220201",
+                  "tTime":"055959"
                 }
               ],
               "rRefL":
               [
-0,
-1
-              ]
-            },
-            {
-              "hid":"HIM_ADAPTER_FREETEXT_6090745170",
-              "act":true,
-              "pub":"",
-              "head":"Kostenloser HVV",
-              "lead":"",
-              "text":"Am 05., 11., 18., 25.09. wird im HVV in den Ringen A-F keine Fahrkarte benötigt.<br />Aktuell besteht in allen Bahnen, Bussen und Fähren des HVV sowie an allen Bahnhöfen und Haltestellen in Hamburg die Pflicht zum Tragen eines medizinischen Mund-Nasen-Schutzes.",
-              "tckr":"",
-              "icoX":3,
-              "prio":100,
-              "fIdx":0,
-              "tIdx":0,
-              "prod":65535,
-              "lModDate":"20210906",
-              "lModTime":"074553",
-              "sDate":"20210702",
-              "sTime":"020000",
-              "eDate":"20211001",
-              "eTime":"075959",
-              "cat":0,
-              "pubChL":
-              [
-                {
-                  "name":"CUSTOM1",
-                  "fDate":"20150101",
-                  "fTime":"130000",
-                  "tDate":"20211001",
-                  "tTime":"075959"
-                },
-                {
-                  "name":"TIMETABLE",
-                  "fDate":"20150101",
-                  "fTime":"130000",
-                  "tDate":"20211001",
-                  "tTime":"075959"
-                }
-              ],
-              "rRefL":
-              [
-2,
-1
+1,
+2
               ]
             }
           ],
@@ -524,14 +479,10 @@
               "txt":"HOCHBAHN - U-Bahn"
             },
             {
-              "res":"rt_warn"
-            }
-          ],
-          "urlL":
-          [
+              "res":"attr_info"
+            },
             {
-              "label":"weitere Informationen auf bahn.de/aktuell",
-              "url":"http://www.bahn.de/aktuell"
+              "res":"rt_warn"
             }
           ]
         },
@@ -539,14 +490,14 @@
         [
           {
             "cid":"C-0",
-            "date":"20210906",
+            "date":"20211205",
             "dur":"000700",
             "chg":0,
             "sDays":
             {
               "sDaysR":"nicht täglich",
-              "sDaysI":"6. Sep bis 11. Dez 2021",
-              "sDaysB":"FFFFFFFFFFFFFFFFFFFFFFFFF8000000000000000000000000000000000000000000000000000000000000000000"
+              "sDaysI":"5. bis 31. Dez 2021",
+              "sDaysB":"FFFFFFFC000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
             },
             "dep":
             {
@@ -554,8 +505,8 @@
               "dPlatfS":"2",
               "dPlatfR":"2",
               "dInR":true,
-              "dTimeS":"094800",
-              "dTimeR":"094800",
+              "dTimeS":"192800",
+              "dTimeR":"192800",
               "dProgType":"PROGNOSED",
               "type":"N"
             },
@@ -565,8 +516,8 @@
               "aPlatfS":"5",
               "aPlatfR":"5",
               "aOutR":true,
-              "aTimeS":"095500",
-              "aTimeR":"095500",
+              "aTimeS":"193500",
+              "aTimeR":"193500",
               "aProgType":"PROGNOSED",
               "type":"N"
             },
@@ -581,8 +532,8 @@
                   "dPlatfS":"2",
                   "dPlatfR":"2",
                   "dInR":true,
-                  "dTimeS":"094800",
-                  "dTimeR":"094800",
+                  "dTimeS":"192800",
+                  "dTimeR":"192800",
                   "dProgType":"PROGNOSED",
                   "type":"N"
                 },
@@ -592,14 +543,14 @@
                   "aPlatfS":"5",
                   "aPlatfR":"5",
                   "aOutR":true,
-                  "aTimeS":"095500",
-                  "aTimeR":"095500",
+                  "aTimeS":"193500",
+                  "aTimeR":"193500",
                   "aProgType":"PROGNOSED",
                   "type":"N"
                 },
                 "jny":
                 {
-                  "jid":"1|29996|3|80|6092021",
+                  "jid":"1|34056|28|80|5122021",
                   "prodX":0,
                   "dirTxt":"Niendorf Nord",
                   "dirFlg":"2",
@@ -611,12 +562,12 @@
                       "locX":0,
                       "idx":10,
                       "aOutR":true,
-                      "aTimeS":"094800",
+                      "aTimeS":"192800",
                       "aProgType":"PROGNOSED",
                       "dProdX":0,
                       "dInR":true,
-                      "dTimeS":"094800",
-                      "dTimeR":"094800",
+                      "dTimeS":"192800",
+                      "dTimeR":"192800",
                       "dProgType":"PROGNOSED",
                       "type":"N"
                     },
@@ -625,13 +576,13 @@
                       "idx":11,
                       "aProdX":0,
                       "aOutR":true,
-                      "aTimeS":"095000",
-                      "aTimeR":"095000",
+                      "aTimeS":"193000",
+                      "aTimeR":"193000",
                       "aProgType":"PROGNOSED",
                       "dProdX":0,
                       "dInR":true,
-                      "dTimeS":"095000",
-                      "dTimeR":"095000",
+                      "dTimeS":"193000",
+                      "dTimeR":"193000",
                       "dProgType":"PROGNOSED",
                       "type":"N"
                     },
@@ -640,13 +591,13 @@
                       "idx":12,
                       "aProdX":0,
                       "aOutR":true,
-                      "aTimeS":"095100",
-                      "aTimeR":"095100",
+                      "aTimeS":"193100",
+                      "aTimeR":"193100",
                       "aProgType":"PROGNOSED",
                       "dProdX":0,
                       "dInR":true,
-                      "dTimeS":"095100",
-                      "dTimeR":"095100",
+                      "dTimeS":"193100",
+                      "dTimeR":"193100",
                       "dProgType":"PROGNOSED",
                       "type":"N"
                     },
@@ -655,13 +606,13 @@
                       "idx":13,
                       "aProdX":0,
                       "aOutR":true,
-                      "aTimeS":"095300",
-                      "aTimeR":"095300",
+                      "aTimeS":"193300",
+                      "aTimeR":"193300",
                       "aProgType":"PROGNOSED",
                       "dProdX":0,
                       "dInR":true,
-                      "dTimeS":"095300",
-                      "dTimeR":"095300",
+                      "dTimeS":"193300",
+                      "dTimeR":"193300",
                       "dProgType":"PROGNOSED",
                       "type":"N"
                     },
@@ -670,11 +621,11 @@
                       "idx":14,
                       "aProdX":0,
                       "aOutR":true,
-                      "aTimeS":"095500",
-                      "aTimeR":"095500",
+                      "aTimeS":"193500",
+                      "aTimeR":"193500",
                       "aProgType":"PROGNOSED",
                       "dInR":true,
-                      "dTimeS":"095500",
+                      "dTimeS":"193500",
                       "dProgType":"PROGNOSED",
                       "type":"N"
                     }
@@ -690,24 +641,26 @@
                   },
                   "freq":
                   {
-                    "minC":5,
-                    "maxC":5,
-                    "numC":25
+                    "minC":10,
+                    "maxC":10,
+                    "numC":13
                   },
-                  "ctxRecon":"T$A=1@O=Hauptbahnhof Nord@L=16277@a=128@$A=1@O=Schlump@L=16441@a=128@$202109060948$202109060955$      U2$$1$",
+                  "ctxRecon":"T$A=1@O=Hauptbahnhof Nord@L=16277@a=128@$A=1@O=Schlump@L=16441@a=128@$202112051928$202112051935$      U2$$1$",
                   "msgL":
                   [
                     {
-                      "type":"HIM",
-                      "himX":0,
+                      "type":"REM",
+                      "remX":0,
+                      "fLocX":0,
+                      "tLocX":2,
                       "tagL":
                       [
-                        "SUM_GLB_HDR_H3","RES_GLB_HDR_H3"
+                        "RES_JNY_DTL_H3"
                       ]
                     },
                     {
                       "type":"HIM",
-                      "himX":1,
+                      "himX":0,
                       "tagL":
                       [
                         "SUM_GLB_HDR_H3","RES_GLB_HDR_H3"
@@ -718,10 +671,10 @@
                 }
               }
             ],
-            "ctxRecon":"T$A=1@O=Hauptbahnhof Nord@L=16277@a=128@$A=1@O=Schlump@L=16441@a=128@$202109060948$202109060955$      U2$$1$",
+            "ctxRecon":"T$A=1@O=Hauptbahnhof Nord@L=16277@a=128@$A=1@O=Schlump@L=16441@a=128@$202112051928$202112051935$      U2$$1$",
             "freq":
             {
-              "minC":5
+              "minC":10
             },
             "trfRes":
             {
@@ -827,7 +780,7 @@
                   ]
                 }
               ],
-              "shpCtx":"{\"common\":{\"FEL\":[{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"Nahbereich\"]},{\"ID\":[\"Einzelkarte\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"Hamburg AB\"]},{\"ID\":[\"Einzelkarte Kind\"]},{\"ID\":[\"A\"]},{\"ID\":[\"B\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"Hamburg AB\"]},{\"ID\":[\"9-Uhr-Tageskarte\"]},{\"ID\":[\"A\"]},{\"ID\":[\"B\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"Hamburg AB\"]},{\"ID\":[\"Ganztageskarte Kind\"]},{\"ID\":[\"A\"]},{\"ID\":[\"B\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"Hamburg AB\"]},{\"ID\":[\"9-Uhr-Gruppenkarte\"]},{\"ID\":[\"A\"]},{\"ID\":[\"B\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"2 Tarifzonen\"]},{\"ID\":[\"Vollzeit-Wochenkarte\"]},{\"ID\":[\"000\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"2 Tarifzonen\"]},{\"ID\":[\"Vollzeit-Monatskarte\"]},{\"ID\":[\"000\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"\"]},{\"ID\":[\"\"]},{\"ID\":[\"000\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"3 Tarifzonen\"]},{\"ID\":[\"Teilzeit-Monatskarte\"]},{\"ID\":[\"000\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"\"]},{\"ID\":[\"\"]},{\"ID\":[\"000\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"Hamburg AB\"]},{\"ID\":[\"Senioren-Karte\"]},{\"ID\":[\"A\"]},{\"ID\":[\"B\"]}]},\"BOG\":{\"BOL\":[{\"P\":\"0\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":0,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":223},\"PRD\":3,\"LVL\":2,\"SV\":{\"OS\":1},\"TV\":{\"BD\":\"20210906\",\"BT\":\"094800\"}},{\"P\":\"1\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":4,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":121},\"PRD\":7,\"LVL\":6,\"SV\":{\"OS\":5,\"VL\":[8,9]},\"TV\":{\"BD\":\"20210906\",\"BT\":\"094800\"}},{\"P\":\"2\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":10,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":623},\"PRD\":13,\"LVL\":12,\"SV\":{\"OS\":11,\"VL\":[14,15]},\"TV\":{\"BD\":\"20210906\",\"BT\":\"094800\"}},{\"P\":\"3\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":16,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":233},\"PRD\":19,\"LVL\":18,\"SV\":{\"OS\":17,\"VL\":[20,21]},\"TV\":{\"BD\":\"20210906\",\"BT\":\"094800\"}},{\"P\":\"4\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":22,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":1181},\"PRD\":25,\"LVL\":24,\"SV\":{\"OS\":23,\"VL\":[26,27]},\"TV\":{\"BD\":\"20210906\",\"BT\":\"094800\"}},{\"P\":\"5\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":28,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":1850},\"PRD\":31,\"LVL\":30,\"SV\":{\"OS\":29,\"VL\":[32]},\"TV\":{\"BD\":\"20210906\",\"BT\":\"094800\"}},{\"P\":\"6\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":33,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":7040},\"PRD\":36,\"LVL\":35,\"SV\":{\"OS\":34,\"VL\":[37]},\"TV\":{\"BD\":\"20210906\",\"BT\":\"094800\"}},{\"P\":\"7\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":38,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":5770},\"PRD\":41,\"LVL\":40,\"SV\":{\"OS\":39,\"VL\":[42]},\"TV\":{\"BD\":\"20210906\",\"BT\":\"094800\"}},{\"P\":\"8\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":43,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":4520},\"PRD\":46,\"LVL\":45,\"SV\":{\"OS\":44,\"VL\":[47]},\"TV\":{\"BD\":\"20210906\",\"BT\":\"094800\"}},{\"P\":\"9\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":48,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":3710},\"PRD\":51,\"LVL\":50,\"SV\":{\"OS\":49,\"VL\":[52]},\"TV\":{\"BD\":\"20210906\",\"BT\":\"094800\"}},{\"P\":\"10\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":53,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":6490},\"PRD\":56,\"LVL\":55,\"SV\":{\"OS\":54,\"VL\":[57,58]},\"TV\":{\"BD\":\"20210906\",\"BT\":\"094800\"}}],\"OPT\":false,\"ALT\":true,\"SEQ\":false}}"
+              "shpCtx":"{\"common\":{\"FEL\":[{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"Nahbereich\"]},{\"ID\":[\"Einzelkarte\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"Hamburg AB\"]},{\"ID\":[\"Einzelkarte Kind\"]},{\"ID\":[\"A\"]},{\"ID\":[\"B\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"Hamburg AB\"]},{\"ID\":[\"9-Uhr-Tageskarte\"]},{\"ID\":[\"A\"]},{\"ID\":[\"B\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"Hamburg AB\"]},{\"ID\":[\"Ganztageskarte Kind\"]},{\"ID\":[\"A\"]},{\"ID\":[\"B\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"Hamburg AB\"]},{\"ID\":[\"9-Uhr-Gruppenkarte\"]},{\"ID\":[\"A\"]},{\"ID\":[\"B\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"2 Tarifzonen\"]},{\"ID\":[\"Vollzeit-Wochenkarte\"]},{\"ID\":[\"000\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"2 Tarifzonen\"]},{\"ID\":[\"Vollzeit-Monatskarte\"]},{\"ID\":[\"000\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"\"]},{\"ID\":[\"\"]},{\"ID\":[\"000\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"3 Tarifzonen\"]},{\"ID\":[\"Teilzeit-Monatskarte\"]},{\"ID\":[\"000\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"\"]},{\"ID\":[\"\"]},{\"ID\":[\"000\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"Hamburg AB\"]},{\"ID\":[\"Senioren-Karte\"]},{\"ID\":[\"A\"]},{\"ID\":[\"B\"]}]},\"BOG\":{\"BOL\":[{\"P\":\"0\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":0,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":223},\"PRD\":3,\"LVL\":2,\"SV\":{\"OS\":1},\"TV\":{\"BD\":\"20211205\",\"BT\":\"192800\"}},{\"P\":\"1\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":4,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":121},\"PRD\":7,\"LVL\":6,\"SV\":{\"OS\":5,\"VL\":[8,9]},\"TV\":{\"BD\":\"20211205\",\"BT\":\"192800\"}},{\"P\":\"2\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":10,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":623},\"PRD\":13,\"LVL\":12,\"SV\":{\"OS\":11,\"VL\":[14,15]},\"TV\":{\"BD\":\"20211205\",\"BT\":\"192800\"}},{\"P\":\"3\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":16,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":233},\"PRD\":19,\"LVL\":18,\"SV\":{\"OS\":17,\"VL\":[20,21]},\"TV\":{\"BD\":\"20211205\",\"BT\":\"192800\"}},{\"P\":\"4\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":22,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":1181},\"PRD\":25,\"LVL\":24,\"SV\":{\"OS\":23,\"VL\":[26,27]},\"TV\":{\"BD\":\"20211205\",\"BT\":\"192800\"}},{\"P\":\"5\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":28,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":1850},\"PRD\":31,\"LVL\":30,\"SV\":{\"OS\":29,\"VL\":[32]},\"TV\":{\"BD\":\"20211205\",\"BT\":\"192800\"}},{\"P\":\"6\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":33,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":7040},\"PRD\":36,\"LVL\":35,\"SV\":{\"OS\":34,\"VL\":[37]},\"TV\":{\"BD\":\"20211205\",\"BT\":\"192800\"}},{\"P\":\"7\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":38,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":5770},\"PRD\":41,\"LVL\":40,\"SV\":{\"OS\":39,\"VL\":[42]},\"TV\":{\"BD\":\"20211205\",\"BT\":\"192800\"}},{\"P\":\"8\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":43,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":4520},\"PRD\":46,\"LVL\":45,\"SV\":{\"OS\":44,\"VL\":[47]},\"TV\":{\"BD\":\"20211205\",\"BT\":\"192800\"}},{\"P\":\"9\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":48,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":3710},\"PRD\":51,\"LVL\":50,\"SV\":{\"OS\":49,\"VL\":[52]},\"TV\":{\"BD\":\"20211205\",\"BT\":\"192800\"}},{\"P\":\"10\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":53,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":6490},\"PRD\":56,\"LVL\":55,\"SV\":{\"OS\":54,\"VL\":[57,58]},\"TV\":{\"BD\":\"20211205\",\"BT\":\"192800\"}}],\"OPT\":false,\"ALT\":true,\"SEQ\":false}}"
             },
             "ovwTrfRefL":
             [
@@ -843,18 +796,18 @@
               }
             ],
             "conSubscr":"U",
-            "cksum":"745ce0af_2"
+            "cksum":"71b963bb_2"
           },
           {
             "cid":"C-1",
-            "date":"20210906",
+            "date":"20211205",
             "dur":"000700",
             "chg":0,
             "sDays":
             {
               "sDaysR":"nicht täglich",
-              "sDaysI":"6. Sep bis 10. Dez 2021 Mo - Fr",
-              "sDaysB":"CF9F3E7CF9F3E7CF9F3E7CF9F0000000000000000000000000000000000000000000000000000000000000000000"
+              "sDaysI":"5. bis 31. Dez 2021",
+              "sDaysB":"FFFFFFFC000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
             },
             "dep":
             {
@@ -862,8 +815,8 @@
               "dPlatfS":"2",
               "dPlatfR":"2",
               "dInR":true,
-              "dTimeS":"095300",
-              "dTimeR":"095300",
+              "dTimeS":"193800",
+              "dTimeR":"193800",
               "dProgType":"PROGNOSED",
               "type":"N"
             },
@@ -873,8 +826,8 @@
               "aPlatfS":"5",
               "aPlatfR":"5",
               "aOutR":true,
-              "aTimeS":"100000",
-              "aTimeR":"100000",
+              "aTimeS":"194500",
+              "aTimeR":"194500",
               "aProgType":"PROGNOSED",
               "type":"N"
             },
@@ -889,8 +842,8 @@
                   "dPlatfS":"2",
                   "dPlatfR":"2",
                   "dInR":true,
-                  "dTimeS":"095300",
-                  "dTimeR":"095300",
+                  "dTimeS":"193800",
+                  "dTimeR":"193800",
                   "dProgType":"PROGNOSED",
                   "type":"N"
                 },
@@ -900,16 +853,16 @@
                   "aPlatfS":"5",
                   "aPlatfR":"5",
                   "aOutR":true,
-                  "aTimeS":"100000",
-                  "aTimeR":"100000",
+                  "aTimeS":"194500",
+                  "aTimeR":"194500",
                   "aProgType":"PROGNOSED",
                   "type":"N"
                 },
                 "jny":
                 {
-                  "jid":"1|30022|8|80|6092021",
+                  "jid":"1|34085|28|80|5122021",
                   "prodX":1,
-                  "dirTxt":"Niendorf Markt",
+                  "dirTxt":"Niendorf Nord",
                   "dirFlg":"2",
                   "status":"P",
                   "isRchbl":true,
@@ -919,12 +872,12 @@
                       "locX":0,
                       "idx":10,
                       "aOutR":true,
-                      "aTimeS":"095300",
+                      "aTimeS":"193800",
                       "aProgType":"PROGNOSED",
                       "dProdX":1,
                       "dInR":true,
-                      "dTimeS":"095300",
-                      "dTimeR":"095300",
+                      "dTimeS":"193800",
+                      "dTimeR":"193800",
                       "dProgType":"PROGNOSED",
                       "type":"N"
                     },
@@ -933,13 +886,13 @@
                       "idx":11,
                       "aProdX":1,
                       "aOutR":true,
-                      "aTimeS":"095500",
-                      "aTimeR":"095500",
+                      "aTimeS":"194000",
+                      "aTimeR":"194000",
                       "aProgType":"PROGNOSED",
                       "dProdX":1,
                       "dInR":true,
-                      "dTimeS":"095500",
-                      "dTimeR":"095500",
+                      "dTimeS":"194000",
+                      "dTimeR":"194000",
                       "dProgType":"PROGNOSED",
                       "type":"N"
                     },
@@ -948,13 +901,13 @@
                       "idx":12,
                       "aProdX":1,
                       "aOutR":true,
-                      "aTimeS":"095600",
-                      "aTimeR":"095600",
+                      "aTimeS":"194100",
+                      "aTimeR":"194100",
                       "aProgType":"PROGNOSED",
                       "dProdX":1,
                       "dInR":true,
-                      "dTimeS":"095600",
-                      "dTimeR":"095600",
+                      "dTimeS":"194100",
+                      "dTimeR":"194100",
                       "dProgType":"PROGNOSED",
                       "type":"N"
                     },
@@ -963,13 +916,13 @@
                       "idx":13,
                       "aProdX":1,
                       "aOutR":true,
-                      "aTimeS":"095800",
-                      "aTimeR":"095800",
+                      "aTimeS":"194300",
+                      "aTimeR":"194300",
                       "aProgType":"PROGNOSED",
                       "dProdX":1,
                       "dInR":true,
-                      "dTimeS":"095800",
-                      "dTimeR":"095800",
+                      "dTimeS":"194300",
+                      "dTimeR":"194300",
                       "dProgType":"PROGNOSED",
                       "type":"N"
                     },
@@ -978,11 +931,11 @@
                       "idx":14,
                       "aProdX":1,
                       "aOutR":true,
-                      "aTimeS":"100000",
-                      "aTimeR":"100000",
+                      "aTimeS":"194500",
+                      "aTimeR":"194500",
                       "aProgType":"PROGNOSED",
                       "dInR":true,
-                      "dTimeS":"100000",
+                      "dTimeS":"194500",
                       "dProgType":"PROGNOSED",
                       "type":"N"
                     }
@@ -998,24 +951,26 @@
                   },
                   "freq":
                   {
-                    "minC":5,
-                    "maxC":5,
-                    "numC":25
+                    "minC":10,
+                    "maxC":10,
+                    "numC":13
                   },
-                  "ctxRecon":"T$A=1@O=Hauptbahnhof Nord@L=16277@a=128@$A=1@O=Schlump@L=16441@a=128@$202109060953$202109061000$      U2$$1$",
+                  "ctxRecon":"T$A=1@O=Hauptbahnhof Nord@L=16277@a=128@$A=1@O=Schlump@L=16441@a=128@$202112051938$202112051945$      U2$$1$",
                   "msgL":
                   [
                     {
-                      "type":"HIM",
-                      "himX":0,
+                      "type":"REM",
+                      "remX":0,
+                      "fLocX":0,
+                      "tLocX":2,
                       "tagL":
                       [
-                        "SUM_GLB_HDR_H3","RES_GLB_HDR_H3"
+                        "RES_JNY_DTL_H3"
                       ]
                     },
                     {
                       "type":"HIM",
-                      "himX":1,
+                      "himX":0,
                       "tagL":
                       [
                         "SUM_GLB_HDR_H3","RES_GLB_HDR_H3"
@@ -1026,10 +981,10 @@
                 }
               }
             ],
-            "ctxRecon":"T$A=1@O=Hauptbahnhof Nord@L=16277@a=128@$A=1@O=Schlump@L=16441@a=128@$202109060953$202109061000$      U2$$1$",
+            "ctxRecon":"T$A=1@O=Hauptbahnhof Nord@L=16277@a=128@$A=1@O=Schlump@L=16441@a=128@$202112051938$202112051945$      U2$$1$",
             "freq":
             {
-              "minC":5
+              "minC":10
             },
             "trfRes":
             {
@@ -1135,7 +1090,7 @@
                   ]
                 }
               ],
-              "shpCtx":"{\"common\":{\"FEL\":[{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"Nahbereich\"]},{\"ID\":[\"Einzelkarte\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"Hamburg AB\"]},{\"ID\":[\"Einzelkarte Kind\"]},{\"ID\":[\"A\"]},{\"ID\":[\"B\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"Hamburg AB\"]},{\"ID\":[\"9-Uhr-Tageskarte\"]},{\"ID\":[\"A\"]},{\"ID\":[\"B\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"Hamburg AB\"]},{\"ID\":[\"Ganztageskarte Kind\"]},{\"ID\":[\"A\"]},{\"ID\":[\"B\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"Hamburg AB\"]},{\"ID\":[\"9-Uhr-Gruppenkarte\"]},{\"ID\":[\"A\"]},{\"ID\":[\"B\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"2 Tarifzonen\"]},{\"ID\":[\"Vollzeit-Wochenkarte\"]},{\"ID\":[\"000\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"2 Tarifzonen\"]},{\"ID\":[\"Vollzeit-Monatskarte\"]},{\"ID\":[\"000\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"\"]},{\"ID\":[\"\"]},{\"ID\":[\"000\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"3 Tarifzonen\"]},{\"ID\":[\"Teilzeit-Monatskarte\"]},{\"ID\":[\"000\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"\"]},{\"ID\":[\"\"]},{\"ID\":[\"000\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"Hamburg AB\"]},{\"ID\":[\"Senioren-Karte\"]},{\"ID\":[\"A\"]},{\"ID\":[\"B\"]}]},\"BOG\":{\"BOL\":[{\"P\":\"0\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":0,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":223},\"PRD\":3,\"LVL\":2,\"SV\":{\"OS\":1},\"TV\":{\"BD\":\"20210906\",\"BT\":\"095300\"}},{\"P\":\"1\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":4,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":121},\"PRD\":7,\"LVL\":6,\"SV\":{\"OS\":5,\"VL\":[8,9]},\"TV\":{\"BD\":\"20210906\",\"BT\":\"095300\"}},{\"P\":\"2\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":10,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":623},\"PRD\":13,\"LVL\":12,\"SV\":{\"OS\":11,\"VL\":[14,15]},\"TV\":{\"BD\":\"20210906\",\"BT\":\"095300\"}},{\"P\":\"3\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":16,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":233},\"PRD\":19,\"LVL\":18,\"SV\":{\"OS\":17,\"VL\":[20,21]},\"TV\":{\"BD\":\"20210906\",\"BT\":\"095300\"}},{\"P\":\"4\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":22,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":1181},\"PRD\":25,\"LVL\":24,\"SV\":{\"OS\":23,\"VL\":[26,27]},\"TV\":{\"BD\":\"20210906\",\"BT\":\"095300\"}},{\"P\":\"5\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":28,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":1850},\"PRD\":31,\"LVL\":30,\"SV\":{\"OS\":29,\"VL\":[32]},\"TV\":{\"BD\":\"20210906\",\"BT\":\"095300\"}},{\"P\":\"6\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":33,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":7040},\"PRD\":36,\"LVL\":35,\"SV\":{\"OS\":34,\"VL\":[37]},\"TV\":{\"BD\":\"20210906\",\"BT\":\"095300\"}},{\"P\":\"7\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":38,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":5770},\"PRD\":41,\"LVL\":40,\"SV\":{\"OS\":39,\"VL\":[42]},\"TV\":{\"BD\":\"20210906\",\"BT\":\"095300\"}},{\"P\":\"8\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":43,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":4520},\"PRD\":46,\"LVL\":45,\"SV\":{\"OS\":44,\"VL\":[47]},\"TV\":{\"BD\":\"20210906\",\"BT\":\"095300\"}},{\"P\":\"9\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":48,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":3710},\"PRD\":51,\"LVL\":50,\"SV\":{\"OS\":49,\"VL\":[52]},\"TV\":{\"BD\":\"20210906\",\"BT\":\"095300\"}},{\"P\":\"10\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":53,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":6490},\"PRD\":56,\"LVL\":55,\"SV\":{\"OS\":54,\"VL\":[57,58]},\"TV\":{\"BD\":\"20210906\",\"BT\":\"095300\"}}],\"OPT\":false,\"ALT\":true,\"SEQ\":false}}"
+              "shpCtx":"{\"common\":{\"FEL\":[{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"Nahbereich\"]},{\"ID\":[\"Einzelkarte\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"Hamburg AB\"]},{\"ID\":[\"Einzelkarte Kind\"]},{\"ID\":[\"A\"]},{\"ID\":[\"B\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"Hamburg AB\"]},{\"ID\":[\"9-Uhr-Tageskarte\"]},{\"ID\":[\"A\"]},{\"ID\":[\"B\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"Hamburg AB\"]},{\"ID\":[\"Ganztageskarte Kind\"]},{\"ID\":[\"A\"]},{\"ID\":[\"B\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"Hamburg AB\"]},{\"ID\":[\"9-Uhr-Gruppenkarte\"]},{\"ID\":[\"A\"]},{\"ID\":[\"B\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"2 Tarifzonen\"]},{\"ID\":[\"Vollzeit-Wochenkarte\"]},{\"ID\":[\"000\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"2 Tarifzonen\"]},{\"ID\":[\"Vollzeit-Monatskarte\"]},{\"ID\":[\"000\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"\"]},{\"ID\":[\"\"]},{\"ID\":[\"000\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"3 Tarifzonen\"]},{\"ID\":[\"Teilzeit-Monatskarte\"]},{\"ID\":[\"000\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"\"]},{\"ID\":[\"\"]},{\"ID\":[\"000\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"Hamburg AB\"]},{\"ID\":[\"Senioren-Karte\"]},{\"ID\":[\"A\"]},{\"ID\":[\"B\"]}]},\"BOG\":{\"BOL\":[{\"P\":\"0\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":0,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":223},\"PRD\":3,\"LVL\":2,\"SV\":{\"OS\":1},\"TV\":{\"BD\":\"20211205\",\"BT\":\"193800\"}},{\"P\":\"1\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":4,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":121},\"PRD\":7,\"LVL\":6,\"SV\":{\"OS\":5,\"VL\":[8,9]},\"TV\":{\"BD\":\"20211205\",\"BT\":\"193800\"}},{\"P\":\"2\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":10,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":623},\"PRD\":13,\"LVL\":12,\"SV\":{\"OS\":11,\"VL\":[14,15]},\"TV\":{\"BD\":\"20211205\",\"BT\":\"193800\"}},{\"P\":\"3\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":16,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":233},\"PRD\":19,\"LVL\":18,\"SV\":{\"OS\":17,\"VL\":[20,21]},\"TV\":{\"BD\":\"20211205\",\"BT\":\"193800\"}},{\"P\":\"4\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":22,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":1181},\"PRD\":25,\"LVL\":24,\"SV\":{\"OS\":23,\"VL\":[26,27]},\"TV\":{\"BD\":\"20211205\",\"BT\":\"193800\"}},{\"P\":\"5\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":28,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":1850},\"PRD\":31,\"LVL\":30,\"SV\":{\"OS\":29,\"VL\":[32]},\"TV\":{\"BD\":\"20211205\",\"BT\":\"193800\"}},{\"P\":\"6\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":33,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":7040},\"PRD\":36,\"LVL\":35,\"SV\":{\"OS\":34,\"VL\":[37]},\"TV\":{\"BD\":\"20211205\",\"BT\":\"193800\"}},{\"P\":\"7\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":38,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":5770},\"PRD\":41,\"LVL\":40,\"SV\":{\"OS\":39,\"VL\":[42]},\"TV\":{\"BD\":\"20211205\",\"BT\":\"193800\"}},{\"P\":\"8\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":43,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":4520},\"PRD\":46,\"LVL\":45,\"SV\":{\"OS\":44,\"VL\":[47]},\"TV\":{\"BD\":\"20211205\",\"BT\":\"193800\"}},{\"P\":\"9\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":48,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":3710},\"PRD\":51,\"LVL\":50,\"SV\":{\"OS\":49,\"VL\":[52]},\"TV\":{\"BD\":\"20211205\",\"BT\":\"193800\"}},{\"P\":\"10\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":53,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":6490},\"PRD\":56,\"LVL\":55,\"SV\":{\"OS\":54,\"VL\":[57,58]},\"TV\":{\"BD\":\"20211205\",\"BT\":\"193800\"}}],\"OPT\":false,\"ALT\":true,\"SEQ\":false}}"
             },
             "ovwTrfRefL":
             [
@@ -1151,18 +1106,18 @@
               }
             ],
             "conSubscr":"U",
-            "cksum":"3beda6eb_2"
+            "cksum":"edef0979_2"
           },
           {
             "cid":"C-2",
-            "date":"20210906",
+            "date":"20211205",
             "dur":"000700",
             "chg":0,
             "sDays":
             {
               "sDaysR":"nicht täglich",
-              "sDaysI":"6. Sep bis 11. Dez 2021",
-              "sDaysB":"FFFFFFFFFFFFFFFFFFFFFFFFF8000000000000000000000000000000000000000000000000000000000000000000"
+              "sDaysI":"5. bis 31. Dez 2021",
+              "sDaysB":"FFFFFFFC000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
             },
             "dep":
             {
@@ -1170,8 +1125,8 @@
               "dPlatfS":"2",
               "dPlatfR":"2",
               "dInR":true,
-              "dTimeS":"095800",
-              "dTimeR":"095800",
+              "dTimeS":"194800",
+              "dTimeR":"194800",
               "dProgType":"PROGNOSED",
               "type":"N"
             },
@@ -1181,8 +1136,8 @@
               "aPlatfS":"5",
               "aPlatfR":"5",
               "aOutR":true,
-              "aTimeS":"100500",
-              "aTimeR":"100500",
+              "aTimeS":"195500",
+              "aTimeR":"195500",
               "aProgType":"PROGNOSED",
               "type":"N"
             },
@@ -1197,8 +1152,8 @@
                   "dPlatfS":"2",
                   "dPlatfR":"2",
                   "dInR":true,
-                  "dTimeS":"095800",
-                  "dTimeR":"095800",
+                  "dTimeS":"194800",
+                  "dTimeR":"194800",
                   "dProgType":"PROGNOSED",
                   "type":"N"
                 },
@@ -1208,14 +1163,14 @@
                   "aPlatfS":"5",
                   "aPlatfR":"5",
                   "aOutR":true,
-                  "aTimeS":"100500",
-                  "aTimeR":"100500",
+                  "aTimeS":"195500",
+                  "aTimeR":"195500",
                   "aProgType":"PROGNOSED",
                   "type":"N"
                 },
                 "jny":
                 {
-                  "jid":"1|29989|1|80|6092021",
+                  "jid":"1|34056|29|80|5122021",
                   "prodX":2,
                   "dirTxt":"Niendorf Nord",
                   "dirFlg":"2",
@@ -1227,12 +1182,12 @@
                       "locX":0,
                       "idx":10,
                       "aOutR":true,
-                      "aTimeS":"095800",
+                      "aTimeS":"194800",
                       "aProgType":"PROGNOSED",
                       "dProdX":2,
                       "dInR":true,
-                      "dTimeS":"095800",
-                      "dTimeR":"095800",
+                      "dTimeS":"194800",
+                      "dTimeR":"194800",
                       "dProgType":"PROGNOSED",
                       "type":"N"
                     },
@@ -1241,13 +1196,13 @@
                       "idx":11,
                       "aProdX":2,
                       "aOutR":true,
-                      "aTimeS":"100000",
-                      "aTimeR":"100000",
+                      "aTimeS":"195000",
+                      "aTimeR":"195000",
                       "aProgType":"PROGNOSED",
                       "dProdX":2,
                       "dInR":true,
-                      "dTimeS":"100000",
-                      "dTimeR":"100000",
+                      "dTimeS":"195000",
+                      "dTimeR":"195000",
                       "dProgType":"PROGNOSED",
                       "type":"N"
                     },
@@ -1256,13 +1211,13 @@
                       "idx":12,
                       "aProdX":2,
                       "aOutR":true,
-                      "aTimeS":"100100",
-                      "aTimeR":"100100",
+                      "aTimeS":"195100",
+                      "aTimeR":"195100",
                       "aProgType":"PROGNOSED",
                       "dProdX":2,
                       "dInR":true,
-                      "dTimeS":"100100",
-                      "dTimeR":"100100",
+                      "dTimeS":"195100",
+                      "dTimeR":"195100",
                       "dProgType":"PROGNOSED",
                       "type":"N"
                     },
@@ -1271,13 +1226,13 @@
                       "idx":13,
                       "aProdX":2,
                       "aOutR":true,
-                      "aTimeS":"100300",
-                      "aTimeR":"100300",
+                      "aTimeS":"195300",
+                      "aTimeR":"195300",
                       "aProgType":"PROGNOSED",
                       "dProdX":2,
                       "dInR":true,
-                      "dTimeS":"100300",
-                      "dTimeR":"100300",
+                      "dTimeS":"195300",
+                      "dTimeR":"195300",
                       "dProgType":"PROGNOSED",
                       "type":"N"
                     },
@@ -1286,11 +1241,11 @@
                       "idx":14,
                       "aProdX":2,
                       "aOutR":true,
-                      "aTimeS":"100500",
-                      "aTimeR":"100500",
+                      "aTimeS":"195500",
+                      "aTimeR":"195500",
                       "aProgType":"PROGNOSED",
                       "dInR":true,
-                      "dTimeS":"100500",
+                      "dTimeS":"195500",
                       "dProgType":"PROGNOSED",
                       "type":"N"
                     }
@@ -1306,24 +1261,26 @@
                   },
                   "freq":
                   {
-                    "minC":5,
-                    "maxC":5,
-                    "numC":25
+                    "minC":10,
+                    "maxC":10,
+                    "numC":13
                   },
-                  "ctxRecon":"T$A=1@O=Hauptbahnhof Nord@L=16277@a=128@$A=1@O=Schlump@L=16441@a=128@$202109060958$202109061005$      U2$$1$",
+                  "ctxRecon":"T$A=1@O=Hauptbahnhof Nord@L=16277@a=128@$A=1@O=Schlump@L=16441@a=128@$202112051948$202112051955$      U2$$1$",
                   "msgL":
                   [
                     {
-                      "type":"HIM",
-                      "himX":0,
+                      "type":"REM",
+                      "remX":0,
+                      "fLocX":0,
+                      "tLocX":2,
                       "tagL":
                       [
-                        "SUM_GLB_HDR_H3","RES_GLB_HDR_H3"
+                        "RES_JNY_DTL_H3"
                       ]
                     },
                     {
                       "type":"HIM",
-                      "himX":1,
+                      "himX":0,
                       "tagL":
                       [
                         "SUM_GLB_HDR_H3","RES_GLB_HDR_H3"
@@ -1334,10 +1291,10 @@
                 }
               }
             ],
-            "ctxRecon":"T$A=1@O=Hauptbahnhof Nord@L=16277@a=128@$A=1@O=Schlump@L=16441@a=128@$202109060958$202109061005$      U2$$1$",
+            "ctxRecon":"T$A=1@O=Hauptbahnhof Nord@L=16277@a=128@$A=1@O=Schlump@L=16441@a=128@$202112051948$202112051955$      U2$$1$",
             "freq":
             {
-              "minC":5
+              "minC":10
             },
             "trfRes":
             {
@@ -1443,7 +1400,7 @@
                   ]
                 }
               ],
-              "shpCtx":"{\"common\":{\"FEL\":[{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"Nahbereich\"]},{\"ID\":[\"Einzelkarte\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"Hamburg AB\"]},{\"ID\":[\"Einzelkarte Kind\"]},{\"ID\":[\"A\"]},{\"ID\":[\"B\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"Hamburg AB\"]},{\"ID\":[\"9-Uhr-Tageskarte\"]},{\"ID\":[\"A\"]},{\"ID\":[\"B\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"Hamburg AB\"]},{\"ID\":[\"Ganztageskarte Kind\"]},{\"ID\":[\"A\"]},{\"ID\":[\"B\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"Hamburg AB\"]},{\"ID\":[\"9-Uhr-Gruppenkarte\"]},{\"ID\":[\"A\"]},{\"ID\":[\"B\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"2 Tarifzonen\"]},{\"ID\":[\"Vollzeit-Wochenkarte\"]},{\"ID\":[\"000\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"2 Tarifzonen\"]},{\"ID\":[\"Vollzeit-Monatskarte\"]},{\"ID\":[\"000\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"\"]},{\"ID\":[\"\"]},{\"ID\":[\"000\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"3 Tarifzonen\"]},{\"ID\":[\"Teilzeit-Monatskarte\"]},{\"ID\":[\"000\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"\"]},{\"ID\":[\"\"]},{\"ID\":[\"000\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"Hamburg AB\"]},{\"ID\":[\"Senioren-Karte\"]},{\"ID\":[\"A\"]},{\"ID\":[\"B\"]}]},\"BOG\":{\"BOL\":[{\"P\":\"0\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":0,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":223},\"PRD\":3,\"LVL\":2,\"SV\":{\"OS\":1},\"TV\":{\"BD\":\"20210906\",\"BT\":\"095800\"}},{\"P\":\"1\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":4,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":121},\"PRD\":7,\"LVL\":6,\"SV\":{\"OS\":5,\"VL\":[8,9]},\"TV\":{\"BD\":\"20210906\",\"BT\":\"095800\"}},{\"P\":\"2\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":10,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":623},\"PRD\":13,\"LVL\":12,\"SV\":{\"OS\":11,\"VL\":[14,15]},\"TV\":{\"BD\":\"20210906\",\"BT\":\"095800\"}},{\"P\":\"3\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":16,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":233},\"PRD\":19,\"LVL\":18,\"SV\":{\"OS\":17,\"VL\":[20,21]},\"TV\":{\"BD\":\"20210906\",\"BT\":\"095800\"}},{\"P\":\"4\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":22,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":1181},\"PRD\":25,\"LVL\":24,\"SV\":{\"OS\":23,\"VL\":[26,27]},\"TV\":{\"BD\":\"20210906\",\"BT\":\"095800\"}},{\"P\":\"5\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":28,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":1850},\"PRD\":31,\"LVL\":30,\"SV\":{\"OS\":29,\"VL\":[32]},\"TV\":{\"BD\":\"20210906\",\"BT\":\"095800\"}},{\"P\":\"6\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":33,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":7040},\"PRD\":36,\"LVL\":35,\"SV\":{\"OS\":34,\"VL\":[37]},\"TV\":{\"BD\":\"20210906\",\"BT\":\"095800\"}},{\"P\":\"7\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":38,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":5770},\"PRD\":41,\"LVL\":40,\"SV\":{\"OS\":39,\"VL\":[42]},\"TV\":{\"BD\":\"20210906\",\"BT\":\"095800\"}},{\"P\":\"8\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":43,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":4520},\"PRD\":46,\"LVL\":45,\"SV\":{\"OS\":44,\"VL\":[47]},\"TV\":{\"BD\":\"20210906\",\"BT\":\"095800\"}},{\"P\":\"9\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":48,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":3710},\"PRD\":51,\"LVL\":50,\"SV\":{\"OS\":49,\"VL\":[52]},\"TV\":{\"BD\":\"20210906\",\"BT\":\"095800\"}},{\"P\":\"10\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":53,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":6490},\"PRD\":56,\"LVL\":55,\"SV\":{\"OS\":54,\"VL\":[57,58]},\"TV\":{\"BD\":\"20210906\",\"BT\":\"095800\"}}],\"OPT\":false,\"ALT\":true,\"SEQ\":false}}"
+              "shpCtx":"{\"common\":{\"FEL\":[{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"Nahbereich\"]},{\"ID\":[\"Einzelkarte\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"Hamburg AB\"]},{\"ID\":[\"Einzelkarte Kind\"]},{\"ID\":[\"A\"]},{\"ID\":[\"B\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"Hamburg AB\"]},{\"ID\":[\"9-Uhr-Tageskarte\"]},{\"ID\":[\"A\"]},{\"ID\":[\"B\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"Hamburg AB\"]},{\"ID\":[\"Ganztageskarte Kind\"]},{\"ID\":[\"A\"]},{\"ID\":[\"B\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"Hamburg AB\"]},{\"ID\":[\"9-Uhr-Gruppenkarte\"]},{\"ID\":[\"A\"]},{\"ID\":[\"B\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"2 Tarifzonen\"]},{\"ID\":[\"Vollzeit-Wochenkarte\"]},{\"ID\":[\"000\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"2 Tarifzonen\"]},{\"ID\":[\"Vollzeit-Monatskarte\"]},{\"ID\":[\"000\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"\"]},{\"ID\":[\"\"]},{\"ID\":[\"000\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"3 Tarifzonen\"]},{\"ID\":[\"Teilzeit-Monatskarte\"]},{\"ID\":[\"000\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"\"]},{\"ID\":[\"\"]},{\"ID\":[\"000\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"Hamburg AB\"]},{\"ID\":[\"Senioren-Karte\"]},{\"ID\":[\"A\"]},{\"ID\":[\"B\"]}]},\"BOG\":{\"BOL\":[{\"P\":\"0\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":0,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":223},\"PRD\":3,\"LVL\":2,\"SV\":{\"OS\":1},\"TV\":{\"BD\":\"20211205\",\"BT\":\"194800\"}},{\"P\":\"1\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":4,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":121},\"PRD\":7,\"LVL\":6,\"SV\":{\"OS\":5,\"VL\":[8,9]},\"TV\":{\"BD\":\"20211205\",\"BT\":\"194800\"}},{\"P\":\"2\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":10,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":623},\"PRD\":13,\"LVL\":12,\"SV\":{\"OS\":11,\"VL\":[14,15]},\"TV\":{\"BD\":\"20211205\",\"BT\":\"194800\"}},{\"P\":\"3\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":16,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":233},\"PRD\":19,\"LVL\":18,\"SV\":{\"OS\":17,\"VL\":[20,21]},\"TV\":{\"BD\":\"20211205\",\"BT\":\"194800\"}},{\"P\":\"4\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":22,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":1181},\"PRD\":25,\"LVL\":24,\"SV\":{\"OS\":23,\"VL\":[26,27]},\"TV\":{\"BD\":\"20211205\",\"BT\":\"194800\"}},{\"P\":\"5\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":28,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":1850},\"PRD\":31,\"LVL\":30,\"SV\":{\"OS\":29,\"VL\":[32]},\"TV\":{\"BD\":\"20211205\",\"BT\":\"194800\"}},{\"P\":\"6\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":33,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":7040},\"PRD\":36,\"LVL\":35,\"SV\":{\"OS\":34,\"VL\":[37]},\"TV\":{\"BD\":\"20211205\",\"BT\":\"194800\"}},{\"P\":\"7\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":38,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":5770},\"PRD\":41,\"LVL\":40,\"SV\":{\"OS\":39,\"VL\":[42]},\"TV\":{\"BD\":\"20211205\",\"BT\":\"194800\"}},{\"P\":\"8\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":43,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":4520},\"PRD\":46,\"LVL\":45,\"SV\":{\"OS\":44,\"VL\":[47]},\"TV\":{\"BD\":\"20211205\",\"BT\":\"194800\"}},{\"P\":\"9\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":48,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":3710},\"PRD\":51,\"LVL\":50,\"SV\":{\"OS\":49,\"VL\":[52]},\"TV\":{\"BD\":\"20211205\",\"BT\":\"194800\"}},{\"P\":\"10\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":53,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":6490},\"PRD\":56,\"LVL\":55,\"SV\":{\"OS\":54,\"VL\":[57,58]},\"TV\":{\"BD\":\"20211205\",\"BT\":\"194800\"}}],\"OPT\":false,\"ALT\":true,\"SEQ\":false}}"
             },
             "ovwTrfRefL":
             [
@@ -1459,18 +1416,18 @@
               }
             ],
             "conSubscr":"U",
-            "cksum":"4a3d1da1_2"
+            "cksum":"d090b8a0_2"
           },
           {
             "cid":"C-3",
-            "date":"20210906",
+            "date":"20211205",
             "dur":"000700",
             "chg":0,
             "sDays":
             {
               "sDaysR":"nicht täglich",
-              "sDaysI":"6. Sep bis 10. Dez 2021 Mo - Fr",
-              "sDaysB":"CF9F3E7CF9F3E7CF9F3E7CF9F0000000000000000000000000000000000000000000000000000000000000000000"
+              "sDaysI":"5. bis 31. Dez 2021",
+              "sDaysB":"FFFFFFFC000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
             },
             "dep":
             {
@@ -1478,8 +1435,8 @@
               "dPlatfS":"2",
               "dPlatfR":"2",
               "dInR":true,
-              "dTimeS":"100300",
-              "dTimeR":"100300",
+              "dTimeS":"195800",
+              "dTimeR":"195800",
               "dProgType":"PROGNOSED",
               "type":"N"
             },
@@ -1489,8 +1446,8 @@
               "aPlatfS":"5",
               "aPlatfR":"5",
               "aOutR":true,
-              "aTimeS":"101000",
-              "aTimeR":"101000",
+              "aTimeS":"200500",
+              "aTimeR":"200500",
               "aProgType":"PROGNOSED",
               "type":"N"
             },
@@ -1505,8 +1462,8 @@
                   "dPlatfS":"2",
                   "dPlatfR":"2",
                   "dInR":true,
-                  "dTimeS":"100300",
-                  "dTimeR":"100300",
+                  "dTimeS":"195800",
+                  "dTimeR":"195800",
                   "dProgType":"PROGNOSED",
                   "type":"N"
                 },
@@ -1516,16 +1473,16 @@
                   "aPlatfS":"5",
                   "aPlatfR":"5",
                   "aOutR":true,
-                  "aTimeS":"101000",
-                  "aTimeR":"101000",
+                  "aTimeS":"200500",
+                  "aTimeR":"200500",
                   "aProgType":"PROGNOSED",
                   "type":"N"
                 },
                 "jny":
                 {
-                  "jid":"1|30024|0|80|6092021",
+                  "jid":"1|34085|29|80|5122021",
                   "prodX":3,
-                  "dirTxt":"Niendorf Markt",
+                  "dirTxt":"Niendorf Nord",
                   "dirFlg":"2",
                   "status":"P",
                   "isRchbl":true,
@@ -1533,72 +1490,72 @@
                   [
                     {
                       "locX":0,
-                      "idx":7,
+                      "idx":10,
                       "aOutR":true,
-                      "aTimeS":"100300",
+                      "aTimeS":"195800",
                       "aProgType":"PROGNOSED",
                       "dProdX":3,
                       "dInR":true,
-                      "dTimeS":"100300",
-                      "dTimeR":"100300",
+                      "dTimeS":"195800",
+                      "dTimeR":"195800",
                       "dProgType":"PROGNOSED",
                       "type":"N"
                     },
                     {
                       "locX":4,
-                      "idx":8,
+                      "idx":11,
                       "aProdX":3,
                       "aOutR":true,
-                      "aTimeS":"100500",
-                      "aTimeR":"100500",
+                      "aTimeS":"200000",
+                      "aTimeR":"200000",
                       "aProgType":"PROGNOSED",
                       "dProdX":3,
                       "dInR":true,
-                      "dTimeS":"100500",
-                      "dTimeR":"100500",
+                      "dTimeS":"200000",
+                      "dTimeR":"200000",
                       "dProgType":"PROGNOSED",
                       "type":"N"
                     },
                     {
                       "locX":6,
-                      "idx":9,
+                      "idx":12,
                       "aProdX":3,
                       "aOutR":true,
-                      "aTimeS":"100600",
-                      "aTimeR":"100600",
+                      "aTimeS":"200100",
+                      "aTimeR":"200100",
                       "aProgType":"PROGNOSED",
                       "dProdX":3,
                       "dInR":true,
-                      "dTimeS":"100600",
-                      "dTimeR":"100600",
+                      "dTimeS":"200100",
+                      "dTimeR":"200100",
                       "dProgType":"PROGNOSED",
                       "type":"N"
                     },
                     {
                       "locX":8,
-                      "idx":10,
+                      "idx":13,
                       "aProdX":3,
                       "aOutR":true,
-                      "aTimeS":"100800",
-                      "aTimeR":"100800",
+                      "aTimeS":"200300",
+                      "aTimeR":"200300",
                       "aProgType":"PROGNOSED",
                       "dProdX":3,
                       "dInR":true,
-                      "dTimeS":"100800",
-                      "dTimeR":"100800",
+                      "dTimeS":"200300",
+                      "dTimeR":"200300",
                       "dProgType":"PROGNOSED",
                       "type":"N"
                     },
                     {
                       "locX":2,
-                      "idx":11,
+                      "idx":14,
                       "aProdX":3,
                       "aOutR":true,
-                      "aTimeS":"101000",
-                      "aTimeR":"101000",
+                      "aTimeS":"200500",
+                      "aTimeR":"200500",
                       "aProgType":"PROGNOSED",
                       "dInR":true,
-                      "dTimeS":"101000",
+                      "dTimeS":"200500",
                       "dProgType":"PROGNOSED",
                       "type":"N"
                     }
@@ -1614,24 +1571,26 @@
                   },
                   "freq":
                   {
-                    "minC":5,
-                    "maxC":5,
-                    "numC":25
+                    "minC":10,
+                    "maxC":10,
+                    "numC":13
                   },
-                  "ctxRecon":"T$A=1@O=Hauptbahnhof Nord@L=16277@a=128@$A=1@O=Schlump@L=16441@a=128@$202109061003$202109061010$      U2$$1$",
+                  "ctxRecon":"T$A=1@O=Hauptbahnhof Nord@L=16277@a=128@$A=1@O=Schlump@L=16441@a=128@$202112051958$202112052005$      U2$$1$",
                   "msgL":
                   [
                     {
-                      "type":"HIM",
-                      "himX":0,
+                      "type":"REM",
+                      "remX":0,
+                      "fLocX":0,
+                      "tLocX":2,
                       "tagL":
                       [
-                        "SUM_GLB_HDR_H3","RES_GLB_HDR_H3"
+                        "RES_JNY_DTL_H3"
                       ]
                     },
                     {
                       "type":"HIM",
-                      "himX":1,
+                      "himX":0,
                       "tagL":
                       [
                         "SUM_GLB_HDR_H3","RES_GLB_HDR_H3"
@@ -1642,10 +1601,10 @@
                 }
               }
             ],
-            "ctxRecon":"T$A=1@O=Hauptbahnhof Nord@L=16277@a=128@$A=1@O=Schlump@L=16441@a=128@$202109061003$202109061010$      U2$$1$",
+            "ctxRecon":"T$A=1@O=Hauptbahnhof Nord@L=16277@a=128@$A=1@O=Schlump@L=16441@a=128@$202112051958$202112052005$      U2$$1$",
             "freq":
             {
-              "minC":5
+              "minC":10
             },
             "trfRes":
             {
@@ -1751,7 +1710,7 @@
                   ]
                 }
               ],
-              "shpCtx":"{\"common\":{\"FEL\":[{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"Nahbereich\"]},{\"ID\":[\"Einzelkarte\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"Hamburg AB\"]},{\"ID\":[\"Einzelkarte Kind\"]},{\"ID\":[\"A\"]},{\"ID\":[\"B\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"Hamburg AB\"]},{\"ID\":[\"9-Uhr-Tageskarte\"]},{\"ID\":[\"A\"]},{\"ID\":[\"B\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"Hamburg AB\"]},{\"ID\":[\"Ganztageskarte Kind\"]},{\"ID\":[\"A\"]},{\"ID\":[\"B\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"Hamburg AB\"]},{\"ID\":[\"9-Uhr-Gruppenkarte\"]},{\"ID\":[\"A\"]},{\"ID\":[\"B\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"2 Tarifzonen\"]},{\"ID\":[\"Vollzeit-Wochenkarte\"]},{\"ID\":[\"000\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"2 Tarifzonen\"]},{\"ID\":[\"Vollzeit-Monatskarte\"]},{\"ID\":[\"000\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"\"]},{\"ID\":[\"\"]},{\"ID\":[\"000\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"3 Tarifzonen\"]},{\"ID\":[\"Teilzeit-Monatskarte\"]},{\"ID\":[\"000\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"\"]},{\"ID\":[\"\"]},{\"ID\":[\"000\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"Hamburg AB\"]},{\"ID\":[\"Senioren-Karte\"]},{\"ID\":[\"A\"]},{\"ID\":[\"B\"]}]},\"BOG\":{\"BOL\":[{\"P\":\"0\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":0,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":223},\"PRD\":3,\"LVL\":2,\"SV\":{\"OS\":1},\"TV\":{\"BD\":\"20210906\",\"BT\":\"100300\"}},{\"P\":\"1\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":4,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":121},\"PRD\":7,\"LVL\":6,\"SV\":{\"OS\":5,\"VL\":[8,9]},\"TV\":{\"BD\":\"20210906\",\"BT\":\"100300\"}},{\"P\":\"2\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":10,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":623},\"PRD\":13,\"LVL\":12,\"SV\":{\"OS\":11,\"VL\":[14,15]},\"TV\":{\"BD\":\"20210906\",\"BT\":\"100300\"}},{\"P\":\"3\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":16,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":233},\"PRD\":19,\"LVL\":18,\"SV\":{\"OS\":17,\"VL\":[20,21]},\"TV\":{\"BD\":\"20210906\",\"BT\":\"100300\"}},{\"P\":\"4\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":22,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":1181},\"PRD\":25,\"LVL\":24,\"SV\":{\"OS\":23,\"VL\":[26,27]},\"TV\":{\"BD\":\"20210906\",\"BT\":\"100300\"}},{\"P\":\"5\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":28,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":1850},\"PRD\":31,\"LVL\":30,\"SV\":{\"OS\":29,\"VL\":[32]},\"TV\":{\"BD\":\"20210906\",\"BT\":\"100300\"}},{\"P\":\"6\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":33,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":7040},\"PRD\":36,\"LVL\":35,\"SV\":{\"OS\":34,\"VL\":[37]},\"TV\":{\"BD\":\"20210906\",\"BT\":\"100300\"}},{\"P\":\"7\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":38,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":5770},\"PRD\":41,\"LVL\":40,\"SV\":{\"OS\":39,\"VL\":[42]},\"TV\":{\"BD\":\"20210906\",\"BT\":\"100300\"}},{\"P\":\"8\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":43,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":4520},\"PRD\":46,\"LVL\":45,\"SV\":{\"OS\":44,\"VL\":[47]},\"TV\":{\"BD\":\"20210906\",\"BT\":\"100300\"}},{\"P\":\"9\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":48,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":3710},\"PRD\":51,\"LVL\":50,\"SV\":{\"OS\":49,\"VL\":[52]},\"TV\":{\"BD\":\"20210906\",\"BT\":\"100300\"}},{\"P\":\"10\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":53,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":6490},\"PRD\":56,\"LVL\":55,\"SV\":{\"OS\":54,\"VL\":[57,58]},\"TV\":{\"BD\":\"20210906\",\"BT\":\"100300\"}}],\"OPT\":false,\"ALT\":true,\"SEQ\":false}}"
+              "shpCtx":"{\"common\":{\"FEL\":[{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"Nahbereich\"]},{\"ID\":[\"Einzelkarte\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"Hamburg AB\"]},{\"ID\":[\"Einzelkarte Kind\"]},{\"ID\":[\"A\"]},{\"ID\":[\"B\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"Hamburg AB\"]},{\"ID\":[\"9-Uhr-Tageskarte\"]},{\"ID\":[\"A\"]},{\"ID\":[\"B\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"Hamburg AB\"]},{\"ID\":[\"Ganztageskarte Kind\"]},{\"ID\":[\"A\"]},{\"ID\":[\"B\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"Hamburg AB\"]},{\"ID\":[\"9-Uhr-Gruppenkarte\"]},{\"ID\":[\"A\"]},{\"ID\":[\"B\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"2 Tarifzonen\"]},{\"ID\":[\"Vollzeit-Wochenkarte\"]},{\"ID\":[\"000\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"2 Tarifzonen\"]},{\"ID\":[\"Vollzeit-Monatskarte\"]},{\"ID\":[\"000\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"\"]},{\"ID\":[\"\"]},{\"ID\":[\"000\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"3 Tarifzonen\"]},{\"ID\":[\"Teilzeit-Monatskarte\"]},{\"ID\":[\"000\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"\"]},{\"ID\":[\"\"]},{\"ID\":[\"000\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"Hamburg AB\"]},{\"ID\":[\"Senioren-Karte\"]},{\"ID\":[\"A\"]},{\"ID\":[\"B\"]}]},\"BOG\":{\"BOL\":[{\"P\":\"0\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":0,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":223},\"PRD\":3,\"LVL\":2,\"SV\":{\"OS\":1},\"TV\":{\"BD\":\"20211205\",\"BT\":\"195800\"}},{\"P\":\"1\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":4,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":121},\"PRD\":7,\"LVL\":6,\"SV\":{\"OS\":5,\"VL\":[8,9]},\"TV\":{\"BD\":\"20211205\",\"BT\":\"195800\"}},{\"P\":\"2\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":10,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":623},\"PRD\":13,\"LVL\":12,\"SV\":{\"OS\":11,\"VL\":[14,15]},\"TV\":{\"BD\":\"20211205\",\"BT\":\"195800\"}},{\"P\":\"3\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":16,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":233},\"PRD\":19,\"LVL\":18,\"SV\":{\"OS\":17,\"VL\":[20,21]},\"TV\":{\"BD\":\"20211205\",\"BT\":\"195800\"}},{\"P\":\"4\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":22,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":1181},\"PRD\":25,\"LVL\":24,\"SV\":{\"OS\":23,\"VL\":[26,27]},\"TV\":{\"BD\":\"20211205\",\"BT\":\"195800\"}},{\"P\":\"5\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":28,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":1850},\"PRD\":31,\"LVL\":30,\"SV\":{\"OS\":29,\"VL\":[32]},\"TV\":{\"BD\":\"20211205\",\"BT\":\"195800\"}},{\"P\":\"6\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":33,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":7040},\"PRD\":36,\"LVL\":35,\"SV\":{\"OS\":34,\"VL\":[37]},\"TV\":{\"BD\":\"20211205\",\"BT\":\"195800\"}},{\"P\":\"7\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":38,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":5770},\"PRD\":41,\"LVL\":40,\"SV\":{\"OS\":39,\"VL\":[42]},\"TV\":{\"BD\":\"20211205\",\"BT\":\"195800\"}},{\"P\":\"8\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":43,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":4520},\"PRD\":46,\"LVL\":45,\"SV\":{\"OS\":44,\"VL\":[47]},\"TV\":{\"BD\":\"20211205\",\"BT\":\"195800\"}},{\"P\":\"9\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":48,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":3710},\"PRD\":51,\"LVL\":50,\"SV\":{\"OS\":49,\"VL\":[52]},\"TV\":{\"BD\":\"20211205\",\"BT\":\"195800\"}},{\"P\":\"10\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":53,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":6490},\"PRD\":56,\"LVL\":55,\"SV\":{\"OS\":54,\"VL\":[57,58]},\"TV\":{\"BD\":\"20211205\",\"BT\":\"195800\"}}],\"OPT\":false,\"ALT\":true,\"SEQ\":false}}"
             },
             "ovwTrfRefL":
             [
@@ -1767,18 +1726,18 @@
               }
             ],
             "conSubscr":"U",
-            "cksum":"c0c29ba4_2"
+            "cksum":"bb0b8d5c_2"
           },
           {
             "cid":"C-4",
-            "date":"20210906",
+            "date":"20211205",
             "dur":"000700",
             "chg":0,
             "sDays":
             {
               "sDaysR":"nicht täglich",
-              "sDaysI":"6. Sep bis 11. Dez 2021",
-              "sDaysB":"FFFFFFFFFFFFFFFFFFFFFFFFF8000000000000000000000000000000000000000000000000000000000000000000"
+              "sDaysI":"5. bis 31. Dez 2021",
+              "sDaysB":"FFFFFFFC000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
             },
             "dep":
             {
@@ -1786,8 +1745,8 @@
               "dPlatfS":"2",
               "dPlatfR":"2",
               "dInR":true,
-              "dTimeS":"100800",
-              "dTimeR":"100800",
+              "dTimeS":"200800",
+              "dTimeR":"200800",
               "dProgType":"PROGNOSED",
               "type":"N"
             },
@@ -1797,8 +1756,8 @@
               "aPlatfS":"5",
               "aPlatfR":"5",
               "aOutR":true,
-              "aTimeS":"101500",
-              "aTimeR":"101500",
+              "aTimeS":"201500",
+              "aTimeR":"201500",
               "aProgType":"PROGNOSED",
               "type":"N"
             },
@@ -1813,8 +1772,8 @@
                   "dPlatfS":"2",
                   "dPlatfR":"2",
                   "dInR":true,
-                  "dTimeS":"100800",
-                  "dTimeR":"100800",
+                  "dTimeS":"200800",
+                  "dTimeR":"200800",
                   "dProgType":"PROGNOSED",
                   "type":"N"
                 },
@@ -1824,14 +1783,14 @@
                   "aPlatfS":"5",
                   "aPlatfR":"5",
                   "aOutR":true,
-                  "aTimeS":"101500",
-                  "aTimeR":"101500",
+                  "aTimeS":"201500",
+                  "aTimeR":"201500",
                   "aProgType":"PROGNOSED",
                   "type":"N"
                 },
                 "jny":
                 {
-                  "jid":"1|29969|0|80|6092021",
+                  "jid":"1|34056|30|80|5122021",
                   "prodX":4,
                   "dirTxt":"Niendorf Nord",
                   "dirFlg":"2",
@@ -1843,12 +1802,12 @@
                       "locX":0,
                       "idx":10,
                       "aOutR":true,
-                      "aTimeS":"100800",
+                      "aTimeS":"200800",
                       "aProgType":"PROGNOSED",
                       "dProdX":4,
                       "dInR":true,
-                      "dTimeS":"100800",
-                      "dTimeR":"100800",
+                      "dTimeS":"200800",
+                      "dTimeR":"200800",
                       "dProgType":"PROGNOSED",
                       "type":"N"
                     },
@@ -1857,13 +1816,13 @@
                       "idx":11,
                       "aProdX":4,
                       "aOutR":true,
-                      "aTimeS":"101000",
-                      "aTimeR":"101000",
+                      "aTimeS":"201000",
+                      "aTimeR":"201000",
                       "aProgType":"PROGNOSED",
                       "dProdX":4,
                       "dInR":true,
-                      "dTimeS":"101000",
-                      "dTimeR":"101000",
+                      "dTimeS":"201000",
+                      "dTimeR":"201000",
                       "dProgType":"PROGNOSED",
                       "type":"N"
                     },
@@ -1872,13 +1831,13 @@
                       "idx":12,
                       "aProdX":4,
                       "aOutR":true,
-                      "aTimeS":"101100",
-                      "aTimeR":"101100",
+                      "aTimeS":"201100",
+                      "aTimeR":"201100",
                       "aProgType":"PROGNOSED",
                       "dProdX":4,
                       "dInR":true,
-                      "dTimeS":"101100",
-                      "dTimeR":"101100",
+                      "dTimeS":"201100",
+                      "dTimeR":"201100",
                       "dProgType":"PROGNOSED",
                       "type":"N"
                     },
@@ -1887,13 +1846,13 @@
                       "idx":13,
                       "aProdX":4,
                       "aOutR":true,
-                      "aTimeS":"101300",
-                      "aTimeR":"101300",
+                      "aTimeS":"201300",
+                      "aTimeR":"201300",
                       "aProgType":"PROGNOSED",
                       "dProdX":4,
                       "dInR":true,
-                      "dTimeS":"101300",
-                      "dTimeR":"101300",
+                      "dTimeS":"201300",
+                      "dTimeR":"201300",
                       "dProgType":"PROGNOSED",
                       "type":"N"
                     },
@@ -1902,11 +1861,11 @@
                       "idx":14,
                       "aProdX":4,
                       "aOutR":true,
-                      "aTimeS":"101500",
-                      "aTimeR":"101500",
+                      "aTimeS":"201500",
+                      "aTimeR":"201500",
                       "aProgType":"PROGNOSED",
                       "dInR":true,
-                      "dTimeS":"101500",
+                      "dTimeS":"201500",
                       "dProgType":"PROGNOSED",
                       "type":"N"
                     }
@@ -1922,24 +1881,26 @@
                   },
                   "freq":
                   {
-                    "minC":5,
-                    "maxC":5,
-                    "numC":25
+                    "minC":10,
+                    "maxC":10,
+                    "numC":13
                   },
-                  "ctxRecon":"T$A=1@O=Hauptbahnhof Nord@L=16277@a=128@$A=1@O=Schlump@L=16441@a=128@$202109061008$202109061015$      U2$$1$",
+                  "ctxRecon":"T$A=1@O=Hauptbahnhof Nord@L=16277@a=128@$A=1@O=Schlump@L=16441@a=128@$202112052008$202112052015$      U2$$1$",
                   "msgL":
                   [
                     {
-                      "type":"HIM",
-                      "himX":0,
+                      "type":"REM",
+                      "remX":0,
+                      "fLocX":0,
+                      "tLocX":2,
                       "tagL":
                       [
-                        "SUM_GLB_HDR_H3","RES_GLB_HDR_H3"
+                        "RES_JNY_DTL_H3"
                       ]
                     },
                     {
                       "type":"HIM",
-                      "himX":1,
+                      "himX":0,
                       "tagL":
                       [
                         "SUM_GLB_HDR_H3","RES_GLB_HDR_H3"
@@ -1950,10 +1911,10 @@
                 }
               }
             ],
-            "ctxRecon":"T$A=1@O=Hauptbahnhof Nord@L=16277@a=128@$A=1@O=Schlump@L=16441@a=128@$202109061008$202109061015$      U2$$1$",
+            "ctxRecon":"T$A=1@O=Hauptbahnhof Nord@L=16277@a=128@$A=1@O=Schlump@L=16441@a=128@$202112052008$202112052015$      U2$$1$",
             "freq":
             {
-              "minC":5
+              "minC":10
             },
             "trfRes":
             {
@@ -2059,7 +2020,7 @@
                   ]
                 }
               ],
-              "shpCtx":"{\"common\":{\"FEL\":[{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"Nahbereich\"]},{\"ID\":[\"Einzelkarte\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"Hamburg AB\"]},{\"ID\":[\"Einzelkarte Kind\"]},{\"ID\":[\"A\"]},{\"ID\":[\"B\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"Hamburg AB\"]},{\"ID\":[\"9-Uhr-Tageskarte\"]},{\"ID\":[\"A\"]},{\"ID\":[\"B\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"Hamburg AB\"]},{\"ID\":[\"Ganztageskarte Kind\"]},{\"ID\":[\"A\"]},{\"ID\":[\"B\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"Hamburg AB\"]},{\"ID\":[\"9-Uhr-Gruppenkarte\"]},{\"ID\":[\"A\"]},{\"ID\":[\"B\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"2 Tarifzonen\"]},{\"ID\":[\"Vollzeit-Wochenkarte\"]},{\"ID\":[\"000\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"2 Tarifzonen\"]},{\"ID\":[\"Vollzeit-Monatskarte\"]},{\"ID\":[\"000\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"\"]},{\"ID\":[\"\"]},{\"ID\":[\"000\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"3 Tarifzonen\"]},{\"ID\":[\"Teilzeit-Monatskarte\"]},{\"ID\":[\"000\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"\"]},{\"ID\":[\"\"]},{\"ID\":[\"000\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"Hamburg AB\"]},{\"ID\":[\"Senioren-Karte\"]},{\"ID\":[\"A\"]},{\"ID\":[\"B\"]}]},\"BOG\":{\"BOL\":[{\"P\":\"0\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":0,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":223},\"PRD\":3,\"LVL\":2,\"SV\":{\"OS\":1},\"TV\":{\"BD\":\"20210906\",\"BT\":\"100800\"}},{\"P\":\"1\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":4,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":121},\"PRD\":7,\"LVL\":6,\"SV\":{\"OS\":5,\"VL\":[8,9]},\"TV\":{\"BD\":\"20210906\",\"BT\":\"100800\"}},{\"P\":\"2\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":10,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":623},\"PRD\":13,\"LVL\":12,\"SV\":{\"OS\":11,\"VL\":[14,15]},\"TV\":{\"BD\":\"20210906\",\"BT\":\"100800\"}},{\"P\":\"3\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":16,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":233},\"PRD\":19,\"LVL\":18,\"SV\":{\"OS\":17,\"VL\":[20,21]},\"TV\":{\"BD\":\"20210906\",\"BT\":\"100800\"}},{\"P\":\"4\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":22,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":1181},\"PRD\":25,\"LVL\":24,\"SV\":{\"OS\":23,\"VL\":[26,27]},\"TV\":{\"BD\":\"20210906\",\"BT\":\"100800\"}},{\"P\":\"5\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":28,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":1850},\"PRD\":31,\"LVL\":30,\"SV\":{\"OS\":29,\"VL\":[32]},\"TV\":{\"BD\":\"20210906\",\"BT\":\"100800\"}},{\"P\":\"6\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":33,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":7040},\"PRD\":36,\"LVL\":35,\"SV\":{\"OS\":34,\"VL\":[37]},\"TV\":{\"BD\":\"20210906\",\"BT\":\"100800\"}},{\"P\":\"7\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":38,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":5770},\"PRD\":41,\"LVL\":40,\"SV\":{\"OS\":39,\"VL\":[42]},\"TV\":{\"BD\":\"20210906\",\"BT\":\"100800\"}},{\"P\":\"8\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":43,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":4520},\"PRD\":46,\"LVL\":45,\"SV\":{\"OS\":44,\"VL\":[47]},\"TV\":{\"BD\":\"20210906\",\"BT\":\"100800\"}},{\"P\":\"9\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":48,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":3710},\"PRD\":51,\"LVL\":50,\"SV\":{\"OS\":49,\"VL\":[52]},\"TV\":{\"BD\":\"20210906\",\"BT\":\"100800\"}},{\"P\":\"10\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":53,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":6490},\"PRD\":56,\"LVL\":55,\"SV\":{\"OS\":54,\"VL\":[57,58]},\"TV\":{\"BD\":\"20210906\",\"BT\":\"100800\"}}],\"OPT\":false,\"ALT\":true,\"SEQ\":false}}"
+              "shpCtx":"{\"common\":{\"FEL\":[{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"Nahbereich\"]},{\"ID\":[\"Einzelkarte\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"Hamburg AB\"]},{\"ID\":[\"Einzelkarte Kind\"]},{\"ID\":[\"A\"]},{\"ID\":[\"B\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"Hamburg AB\"]},{\"ID\":[\"9-Uhr-Tageskarte\"]},{\"ID\":[\"A\"]},{\"ID\":[\"B\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"Hamburg AB\"]},{\"ID\":[\"Ganztageskarte Kind\"]},{\"ID\":[\"A\"]},{\"ID\":[\"B\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"Hamburg AB\"]},{\"ID\":[\"9-Uhr-Gruppenkarte\"]},{\"ID\":[\"A\"]},{\"ID\":[\"B\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"2 Tarifzonen\"]},{\"ID\":[\"Vollzeit-Wochenkarte\"]},{\"ID\":[\"000\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"2 Tarifzonen\"]},{\"ID\":[\"Vollzeit-Monatskarte\"]},{\"ID\":[\"000\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"\"]},{\"ID\":[\"\"]},{\"ID\":[\"000\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"3 Tarifzonen\"]},{\"ID\":[\"Teilzeit-Monatskarte\"]},{\"ID\":[\"000\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"\"]},{\"ID\":[\"\"]},{\"ID\":[\"000\"]},{\"ID\":[\"0\"]},{\"ID\":[\"Master:10905\"],\"ON\":[\"Hauptbahnhof Nord\"]},{\"ID\":[\"Hamburg AB\"]},{\"ID\":[\"Senioren-Karte\"]},{\"ID\":[\"A\"]},{\"ID\":[\"B\"]}]},\"BOG\":{\"BOL\":[{\"P\":\"0\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":0,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":223},\"PRD\":3,\"LVL\":2,\"SV\":{\"OS\":1},\"TV\":{\"BD\":\"20211205\",\"BT\":\"200800\"}},{\"P\":\"1\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":4,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":121},\"PRD\":7,\"LVL\":6,\"SV\":{\"OS\":5,\"VL\":[8,9]},\"TV\":{\"BD\":\"20211205\",\"BT\":\"200800\"}},{\"P\":\"2\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":10,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":623},\"PRD\":13,\"LVL\":12,\"SV\":{\"OS\":11,\"VL\":[14,15]},\"TV\":{\"BD\":\"20211205\",\"BT\":\"200800\"}},{\"P\":\"3\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":16,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":233},\"PRD\":19,\"LVL\":18,\"SV\":{\"OS\":17,\"VL\":[20,21]},\"TV\":{\"BD\":\"20211205\",\"BT\":\"200800\"}},{\"P\":\"4\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":22,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":1181},\"PRD\":25,\"LVL\":24,\"SV\":{\"OS\":23,\"VL\":[26,27]},\"TV\":{\"BD\":\"20211205\",\"BT\":\"200800\"}},{\"P\":\"5\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":28,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":1850},\"PRD\":31,\"LVL\":30,\"SV\":{\"OS\":29,\"VL\":[32]},\"TV\":{\"BD\":\"20211205\",\"BT\":\"200800\"}},{\"P\":\"6\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":33,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":7040},\"PRD\":36,\"LVL\":35,\"SV\":{\"OS\":34,\"VL\":[37]},\"TV\":{\"BD\":\"20211205\",\"BT\":\"200800\"}},{\"P\":\"7\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":38,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":5770},\"PRD\":41,\"LVL\":40,\"SV\":{\"OS\":39,\"VL\":[42]},\"TV\":{\"BD\":\"20211205\",\"BT\":\"200800\"}},{\"P\":\"8\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":43,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":4520},\"PRD\":46,\"LVL\":45,\"SV\":{\"OS\":44,\"VL\":[47]},\"TV\":{\"BD\":\"20211205\",\"BT\":\"200800\"}},{\"P\":\"9\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":48,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":3710},\"PRD\":51,\"LVL\":50,\"SV\":{\"OS\":49,\"VL\":[52]},\"TV\":{\"BD\":\"20211205\",\"BT\":\"200800\"}},{\"P\":\"10\",\"VT\":\"HVV-0\",\"FS\":\"HVV\",\"DV\":53,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":6490},\"PRD\":56,\"LVL\":55,\"SV\":{\"OS\":54,\"VL\":[57,58]},\"TV\":{\"BD\":\"20211205\",\"BT\":\"200800\"}}],\"OPT\":false,\"ALT\":true,\"SEQ\":false}}"
             },
             "ovwTrfRefL":
             [
@@ -2075,14 +2036,14 @@
               }
             ],
             "conSubscr":"U",
-            "cksum":"1766be68_2"
+            "cksum":"8916369c_2"
           }
         ],
-        "outCtxScrB":"1|OB|MT#11#9228#9228#9235#9235#0#0#5#9226#1#-2147483646#0#1#2|PDH#f26c50ecc31c8aa30b297646740d3a01",
-        "outCtxScrF":"1|OF|MT#11#9248#9248#9255#9255#0#0#5#9244#5#-2147483646#0#1#2|PDH#f26c50ecc31c8aa30b297646740d3a01",
-        "fpB":"20210902",
-        "fpE":"20220901",
-        "planrtTS":"1630914380"
+        "outCtxScrB":"1|OB|MT#11#8368#8368#8375#8375#0#0#5#8364#1#-2147483646#0#1#2|PDH#ddeea3d4dfa2eae5b23b448f7456a0be",
+        "outCtxScrF":"1|OF|MT#11#8408#8408#8415#8415#0#0#5#8399#5#-2147483646#0#1#2|PDH#ddeea3d4dfa2eae5b23b448f7456a0be",
+        "fpB":"20211202",
+        "fpE":"20221201",
+        "planrtTS":"1638728675"
       }
     }
   ]

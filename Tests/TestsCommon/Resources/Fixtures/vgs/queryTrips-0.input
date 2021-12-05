@@ -1,7 +1,7 @@
 {
   "ver":"1.21",
   "lang":"deu",
-  "id":"wz48bgu44aagww8x",
+  "id":"zei4ums266g69wwx",
   "err":"OK",
   "svcResL":
   [
@@ -28,77 +28,61 @@
                 "layerX":0,
                 "crdSysX":0
               },
-              "pCls":132
+              "pCls":128
             },
             {
-              "lid":"A=1@O=Ostbahnhof, Saarbrücken@X=7020485@Y=49230593@U=80@L=10700@",
+              "lid":"A=1@O=Ostbahnhof, Saarbrücken@X=7020512@Y=49230575@U=80@L=10700@",
               "type":"S",
               "name":"Ostbahnhof, Saarbrücken",
-              "icoX":1,
+              "icoX":0,
               "extId":"10700",
               "state":"F",
               "crd":
               {
-                "x":7020485,
-                "y":49230593,
+                "x":7020512,
+                "y":49230575,
                 "layerX":0,
                 "crdSysX":0
               },
               "pCls":1224
             },
             {
-              "lid":"A=1@O=Haus der Zukunft, Saarbrücken@X=6997635@Y=49238153@U=80@L=10612@",
-              "type":"S",
-              "name":"Haus der Zukunft, Saarbrücken",
-              "icoX":1,
-              "extId":"10612",
-              "state":"F",
-              "crd":
-              {
-                "x":6997635,
-                "y":49238153,
-                "layerX":0,
-                "crdSysX":0
-              },
-              "pCls":1664
-            },
-            {
-              "lid":"A=1@O=Stadtbad (ehem.), Saarbrücken@X=6995406@Y=49239340@U=80@L=10641@",
-              "type":"S",
-              "name":"Stadtbad (ehem.), Saarbrücken",
-              "icoX":1,
-              "extId":"10641",
-              "state":"F",
-              "crd":
-              {
-                "x":6995406,
-                "y":49239340,
-                "layerX":0,
-                "crdSysX":0
-              },
-              "pCls":128
-            },
-            {
-              "lid":"A=1@O=Johanneskirche, Saarbrücken@X=6996484@Y=49235816@U=80@L=10619@",
+              "lid":"A=1@O=Johanneskirche, Saarbrücken@X=6996295@Y=49236050@U=80@L=10619@",
               "type":"S",
               "name":"Johanneskirche, Saarbrücken",
-              "icoX":5,
+              "icoX":2,
               "extId":"10619",
               "state":"F",
               "crd":
               {
-                "x":6996484,
-                "y":49235816,
+                "x":6996295,
+                "y":49236050,
                 "layerX":0,
                 "crdSysX":0
               },
               "pCls":1728
             },
             {
+              "lid":"A=1@O=Stadtbad (ehem.), Saarbrücken@X=6995235@Y=49239457@U=80@L=10641@",
+              "type":"S",
+              "name":"Stadtbad (ehem.), Saarbrücken",
+              "icoX":0,
+              "extId":"10641",
+              "state":"F",
+              "crd":
+              {
+                "x":6995235,
+                "y":49239457,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":128
+            },
+            {
               "lid":"A=1@O=Kieselhumes, Saarbrücken@X=7017393@Y=49228139@U=80@L=10605@",
               "type":"S",
               "name":"Kieselhumes, Saarbrücken",
-              "icoX":5,
+              "icoX":2,
               "extId":"10605",
               "state":"F",
               "crd":
@@ -108,121 +92,73 @@
                 "layerX":0,
                 "crdSysX":0
               },
-              "pCls":1228
+              "pCls":1224
             },
             {
-              "lid":"A=1@O=Landwehrplatz, Saarbrücken@X=7001159@Y=49233155@U=80@L=10606@",
+              "lid":"A=1@O=Landwehrplatz, Saarbrücken@X=7001078@Y=49233281@U=80@L=10606@",
               "type":"S",
               "name":"Landwehrplatz, Saarbrücken",
-              "icoX":5,
+              "icoX":2,
               "extId":"10606",
               "state":"F",
               "crd":
               {
-                "x":7001159,
-                "y":49233155,
+                "x":7001078,
+                "y":49233281,
                 "layerX":0,
                 "crdSysX":0
               },
               "pCls":1728
             },
             {
-              "lid":"A=1@O=Uhlandstr., Saarbrücken@X=7006849@Y=49231223@U=80@L=10609@",
+              "lid":"A=1@O=Uhlandstr., Saarbrücken@X=7006939@Y=49231250@U=80@L=10609@",
               "type":"S",
               "name":"Uhlandstr., Saarbrücken",
-              "icoX":5,
+              "icoX":2,
               "extId":"10609",
               "state":"F",
               "crd":
               {
-                "x":7006849,
-                "y":49231223,
+                "x":7006939,
+                "y":49231250,
                 "layerX":0,
                 "crdSysX":0
               },
               "pCls":192
             },
             {
-              "lid":"A=1@O=Hellwigstr., Saarbrücken@X=7011694@Y=49229155@U=80@L=10627@",
+              "lid":"A=1@O=Hellwigstr., Saarbrücken@X=7011532@Y=49229182@U=80@L=10627@",
               "type":"S",
               "name":"Hellwigstr., Saarbrücken",
-              "icoX":5,
+              "icoX":2,
               "extId":"10627",
               "state":"F",
               "crd":
               {
-                "x":7011694,
-                "y":49229155,
+                "x":7011532,
+                "y":49229182,
                 "layerX":0,
                 "crdSysX":0
               },
               "pCls":192
-            },
-            {
-              "lid":"A=1@O=Saarbrücken Ost@X=7018786@Y=49230431@U=80@L=8005241@",
-              "type":"S",
-              "name":"Saarbrücken Ost",
-              "icoX":7,
-              "extId":"8005241",
-              "state":"F",
-              "crd":
-              {
-                "x":7018786,
-                "y":49230431,
-                "layerX":0,
-                "crdSysX":0
-              },
-              "pCls":1228
-            },
-            {
-              "lid":"A=1@O=Hauptbahnhof, Saarbrücken@X=6990327@Y=49240122@U=80@L=10600@",
-              "type":"S",
-              "name":"Hauptbahnhof, Saarbrücken",
-              "icoX":0,
-              "extId":"10600",
-              "state":"F",
-              "crd":
-              {
-                "x":6990327,
-                "y":49240122,
-                "layerX":0,
-                "crdSysX":0
-              },
-              "pCls":1743
-            },
-            {
-              "lid":"A=1@O=Saarbrücken Hbf@X=6991019@Y=49241066@U=80@L=8000323@",
-              "type":"S",
-              "name":"Saarbrücken Hbf",
-              "icoX":10,
-              "extId":"8000323",
-              "state":"F",
-              "crd":
-              {
-                "x":6991019,
-                "y":49241066,
-                "layerX":0,
-                "crdSysX":0
-              },
-              "pCls":1743
             }
           ],
           "prodL":
           [
             {
-              "pid":"L::7::Bus::B0664245212::Bus_0664245212_124::*",
-              "name":"Bus 124",
-              "nameS":"124",
-              "number":"124",
-              "icoX":1,
+              "pid":"L::7::Bus::B0664245212::Bus_0664245212_102::*",
+              "name":"Bus 102",
+              "nameS":"102",
+              "number":"102",
+              "icoX":0,
               "cls":128,
               "oprX":0,
               "prodCtx":
               {
-                "name":"Bus  124",
-                "num":"5806",
-                "line":"124",
-                "matchId":"21024",
+                "name":"Bus  102",
+                "num":"4327",
+                "line":"102",
+                "matchId":"15134",
                 "catOut":"Bus     ",
                 "catOutS":"Bus",
                 "catOutL":"Bus",
@@ -233,31 +169,86 @@
               "himIdL":
               [
 "HIM_FREETEXT_116",
-"HIM_FREETEXT_78"
+"HIM_FREETEXT_78",
+"HIM_FREETEXT_259",
+"HIM_FREETEXT_260",
+"HIM_FREETEXT_169"
               ]
             },
             {
+              "pid":"L::6::S::B0664245212::S_0664245212_1::*",
+              "name":"S 1",
+              "nameS":"1",
+              "number":"1",
+              "icoX":2,
+              "cls":64,
+              "oprX":0,
+              "prodCtx":
+              {
+                "name":"S      1",
+                "num":"511",
+                "line":"1",
+                "matchId":"31951",
+                "catOut":"S       ",
+                "catOutS":"Sbs",
+                "catOutL":"Saarbahn",
+                "catIn":"Sbs",
+                "catCode":"6",
+                "admin":"SBSTR_"
+              }
+            },
+            {
               "name":"Fußweg",
-              "icoX":6,
+              "icoX":4,
               "prodCtx":
               {
                 "name":"Fußweg"
               }
             },
             {
+              "pid":"L::7::Bus::B0664245212::Bus_0664245212_102::*",
+              "name":"Bus 102",
+              "nameS":"102",
+              "number":"102",
+              "icoX":0,
+              "cls":128,
+              "oprX":0,
+              "prodCtx":
+              {
+                "name":"Bus  102",
+                "num":"4317",
+                "line":"102",
+                "matchId":"24733",
+                "catOut":"Bus     ",
+                "catOutS":"Bus",
+                "catOutL":"Bus",
+                "catIn":"Bus",
+                "catCode":"7",
+                "admin":"SBBus_"
+              },
+              "himIdL":
+              [
+"HIM_FREETEXT_116",
+"HIM_FREETEXT_78",
+"HIM_FREETEXT_259",
+"HIM_FREETEXT_260",
+"HIM_FREETEXT_169"
+              ]
+            },
+            {
               "pid":"L::6::S::B0664245212::S_0664245212_1::*",
               "name":"S 1",
               "nameS":"1",
               "number":"1",
-              "icoX":5,
+              "icoX":2,
               "cls":64,
               "oprX":0,
               "prodCtx":
               {
                 "name":"S      1",
-                "num":"721",
+                "num":"534",
                 "line":"1",
-                "matchId":"15114",
+                "matchId":"33913",
                 "catOut":"S       ",
                 "catOutS":"Sbs",
                 "catOutL":"Saarbahn",
@@ -267,19 +258,19 @@
               }
             },
             {
-              "pid":"L::7::Bus::B0664245212::Bus_0664245212_124::*",
-              "name":"Bus 124",
-              "nameS":"124",
-              "number":"124",
-              "icoX":1,
+              "pid":"L::7::Bus::B0664245212::Bus_0664245212_102::*",
+              "name":"Bus 102",
+              "nameS":"102",
+              "number":"102",
+              "icoX":0,
               "cls":128,
               "oprX":0,
               "prodCtx":
               {
-                "name":"Bus  124",
-                "num":"5769",
-                "line":"124",
-                "matchId":"14568",
+                "name":"Bus  102",
+                "num":"4315",
+                "line":"102",
+                "matchId":"16755",
                 "catOut":"Bus     ",
                 "catOutS":"Bus",
                 "catOutL":"Bus",
@@ -290,7 +281,10 @@
               "himIdL":
               [
 "HIM_FREETEXT_116",
-"HIM_FREETEXT_78"
+"HIM_FREETEXT_78",
+"HIM_FREETEXT_259",
+"HIM_FREETEXT_260",
+"HIM_FREETEXT_169"
               ]
             },
             {
@@ -298,326 +292,15 @@
               "name":"S 1",
               "nameS":"1",
               "number":"1",
-              "icoX":5,
+              "icoX":2,
               "cls":64,
               "oprX":0,
               "prodCtx":
               {
                 "name":"S      1",
-                "num":"578",
+                "num":"537",
                 "line":"1",
-                "matchId":"3457",
-                "catOut":"S       ",
-                "catOutS":"Sbs",
-                "catOutL":"Saarbahn",
-                "catIn":"Sbs",
-                "catCode":"6",
-                "admin":"SBSTR_"
-              }
-            },
-            {
-              "pid":"L::7::Bus::B0664245212::Bus_0664245212_124::*",
-              "name":"Bus 124",
-              "nameS":"124",
-              "number":"124",
-              "icoX":1,
-              "cls":128,
-              "oprX":0,
-              "prodCtx":
-              {
-                "name":"Bus  124",
-                "num":"5775",
-                "line":"124",
-                "matchId":"25932",
-                "catOut":"Bus     ",
-                "catOutS":"Bus",
-                "catOutL":"Bus",
-                "catIn":"Bus",
-                "catCode":"7",
-                "admin":"SBBus_"
-              },
-              "himIdL":
-              [
-"HIM_FREETEXT_116",
-"HIM_FREETEXT_78"
-              ]
-            },
-            {
-              "pid":"L::3::RB::B1715767794::RB_1715767794_RB71::*",
-              "name":"RB71",
-              "nameS":"RB71",
-              "number":"RB71",
-              "icoX":7,
-              "cls":8,
-              "oprX":1,
-              "prodCtx":
-              {
-                "name":"    RB71",
-                "num":"12577",
-                "line":"RB71",
-                "matchId":"12577",
-                "catOut":"RB      ",
-                "catOutS":"RB",
-                "catOutL":"Regionalbahn",
-                "catIn":"RB",
-                "catCode":"3",
-                "admin":"8015A1"
-              }
-            },
-            {
-              "pid":"L::7::Bus::B3384382765::Bus_3384382765_172::*",
-              "name":"Bus 172",
-              "nameS":"172",
-              "number":"172",
-              "icoX":1,
-              "cls":128,
-              "oprX":2,
-              "prodCtx":
-              {
-                "name":"Bus  172",
-                "num":"578",
-                "line":"172",
-                "matchId":"172030",
-                "catOut":"Bus     ",
-                "catOutS":"Bus",
-                "catOutL":"Bus",
-                "catIn":"Bus",
-                "catCode":"7",
-                "admin":"BarBus"
-              }
-            },
-            {
-              "pid":"L::7::Bus::B0664245212::Bus_0664245212_124::*",
-              "name":"Bus 124",
-              "nameS":"124",
-              "number":"124",
-              "icoX":1,
-              "cls":128,
-              "oprX":0,
-              "prodCtx":
-              {
-                "name":"Bus  124",
-                "num":"5849",
-                "line":"124",
-                "matchId":"14569",
-                "catOut":"Bus     ",
-                "catOutS":"Bus",
-                "catOutL":"Bus",
-                "catIn":"Bus",
-                "catCode":"7",
-                "admin":"SBBus_"
-              },
-              "himIdL":
-              [
-"HIM_FREETEXT_116",
-"HIM_FREETEXT_78"
-              ]
-            },
-            {
-              "pid":"L::7::Bus::B0664245212::Bus_0664245212_124::*",
-              "name":"Bus 124",
-              "nameS":"124",
-              "number":"124",
-              "icoX":1,
-              "cls":128,
-              "oprX":0,
-              "prodCtx":
-              {
-                "name":"Bus  124",
-                "num":"5836",
-                "line":"124",
-                "matchId":"25933",
-                "catOut":"Bus     ",
-                "catOutS":"Bus",
-                "catOutL":"Bus",
-                "catIn":"Bus",
-                "catCode":"7",
-                "admin":"SBBus_"
-              },
-              "himIdL":
-              [
-"HIM_FREETEXT_116",
-"HIM_FREETEXT_78"
-              ]
-            },
-            {
-              "pid":"L::7::Bus::B0664245212::Bus_0664245212_124::*",
-              "name":"Bus 124",
-              "nameS":"124",
-              "number":"124",
-              "icoX":1,
-              "cls":128,
-              "oprX":0,
-              "prodCtx":
-              {
-                "name":"Bus  124",
-                "num":"5837",
-                "line":"124",
-                "matchId":"1648",
-                "catOut":"Bus     ",
-                "catOutS":"Bus",
-                "catOutL":"Bus",
-                "catIn":"Bus",
-                "catCode":"7",
-                "admin":"SBBus_"
-              },
-              "himIdL":
-              [
-"HIM_FREETEXT_116",
-"HIM_FREETEXT_78"
-              ]
-            },
-            {
-              "pid":"L::7::Bus::B0664245212::Bus_0664245212_124::*",
-              "name":"Bus 124",
-              "nameS":"124",
-              "number":"124",
-              "icoX":1,
-              "cls":128,
-              "oprX":0,
-              "prodCtx":
-              {
-                "name":"Bus  124",
-                "num":"5834",
-                "line":"124",
-                "matchId":"21027",
-                "catOut":"Bus     ",
-                "catOutS":"Bus",
-                "catOutL":"Bus",
-                "catIn":"Bus",
-                "catCode":"7",
-                "admin":"SBBus_"
-              },
-              "himIdL":
-              [
-"HIM_FREETEXT_116",
-"HIM_FREETEXT_78"
-              ]
-            },
-            {
-              "pid":"L::7::Bus::B3384382765::Bus_3384382765_172::*",
-              "name":"Bus 172",
-              "nameS":"172",
-              "number":"172",
-              "icoX":1,
-              "cls":128,
-              "oprX":2,
-              "prodCtx":
-              {
-                "name":"Bus  172",
-                "num":"577",
-                "line":"172",
-                "matchId":"172032",
-                "catOut":"Bus     ",
-                "catOutS":"Bus",
-                "catOutL":"Bus",
-                "catIn":"Bus",
-                "catCode":"7",
-                "admin":"BarBus"
-              }
-            },
-            {
-              "pid":"L::3::RB::B1715767794::RB_1715767794_RB71::*",
-              "name":"RB71",
-              "nameS":"RB71",
-              "number":"RB71",
-              "icoX":7,
-              "cls":8,
-              "oprX":1,
-              "prodCtx":
-              {
-                "name":"    RB71",
-                "num":"12579",
-                "line":"RB71",
-                "matchId":"12579",
-                "catOut":"RB      ",
-                "catOutS":"RB",
-                "catOutL":"Regionalbahn",
-                "catIn":"RB",
-                "catCode":"3",
-                "admin":"8015A1"
-              }
-            },
-            {
-              "pid":"L::3::RB::B1715767794::RB_1715767794_RB68::*",
-              "name":"RB68",
-              "nameS":"RB68",
-              "number":"RB68",
-              "icoX":7,
-              "cls":8,
-              "oprX":1,
-              "prodCtx":
-              {
-                "name":"    RB68",
-                "num":"12934",
-                "line":"RB68",
-                "matchId":"12934",
-                "catOut":"RB      ",
-                "catOutS":"RB",
-                "catOutL":"Regionalbahn",
-                "catIn":"RB",
-                "catCode":"3",
-                "admin":"801566"
-              }
-            },
-            {
-              "pid":"L::3::RB::B1715767794::RB_1715767794_RB71::*",
-              "name":"RB71",
-              "nameS":"RB71",
-              "number":"RB71",
-              "icoX":7,
-              "cls":8,
-              "oprX":1,
-              "prodCtx":
-              {
-                "name":"    RB71",
-                "num":"12581",
-                "line":"RB71",
-                "matchId":"12581",
-                "catOut":"RB      ",
-                "catOutS":"RB",
-                "catOutL":"Regionalbahn",
-                "catIn":"RB",
-                "catCode":"3",
-                "admin":"8015A1"
-              }
-            },
-            {
-              "pid":"L::3::RB::B1715767794::RB_1715767794_RB68::*",
-              "name":"RB68",
-              "nameS":"RB68",
-              "number":"RB68",
-              "icoX":7,
-              "cls":8,
-              "oprX":1,
-              "prodCtx":
-              {
-                "name":"    RB68",
-                "num":"12936",
-                "line":"RB68",
-                "matchId":"12936",
-                "catOut":"RB      ",
-                "catOutS":"RB",
-                "catOutL":"Regionalbahn",
-                "catIn":"RB",
-                "catCode":"3",
-                "admin":"801566"
-              }
-            },
-            {
-              "pid":"L::6::S::B0664245212::S_0664245212_1::*",
-              "name":"S 1",
-              "nameS":"1",
-              "number":"1",
-              "icoX":5,
-              "cls":64,
-              "oprX":0,
-              "prodCtx":
-              {
-                "name":"S      1",
-                "num":"734",
-                "line":"1",
-                "matchId":"8754",
+                "matchId":"33505",
                 "catOut":"S       ",
                 "catOutS":"Sbs",
                 "catOutL":"Saarbahn",
@@ -632,7 +315,7 @@
             {
               "delta":true,
               "dim":2,
-              "crdEncYX":"w`pkH{xti@CmNjF}L",
+              "crdEncYX":"w`pkH{xti@[kMhTsE",
               "crdEncS":"NNN",
               "crdEncF":"???",
               "ppLocRefL":
@@ -654,9 +337,9 @@
             {
               "delta":true,
               "dim":2,
-              "crdEncYX":"oyokHgvui@rMfF",
-              "crdEncS":"NN",
-              "crdEncF":"??",
+              "crdEncYX":"ilokH{mui@hP{\\tKsc@|Ku[nEsc@",
+              "crdEncS":"NNNNN",
+              "crdEncF":"?????",
               "ppLocRefL":
               [
                 {
@@ -665,51 +348,33 @@
                 },
                 {
                   "ppIdx":1,
-                  "locX":4
-                }
-              ]
-            },
-            {
-              "delta":true,
-              "dim":2,
-              "crdEncYX":"{jokH_oui@rOg\\`Kqb@|Kg]jEsb@",
-              "crdEncS":"NNNNN",
-              "crdEncF":"?????",
-              "ppLocRefL":
-              [
-                {
-                  "ppIdx":0,
-                  "locX":4
-                },
-                {
-                  "ppIdx":1,
-                  "locX":6
+                  "locX":5
                 },
                 {
                   "ppIdx":2,
-                  "locX":7
+                  "locX":6
                 },
                 {
                   "ppIdx":3,
-                  "locX":8
+                  "locX":7
                 },
                 {
                   "ppIdx":4,
-                  "locX":5
+                  "locX":4
                 }
               ]
             },
             {
               "delta":true,
               "dim":2,
-              "crdEncYX":"{zmkHuqyi@kNkR",
+              "crdEncYX":"{zmkHuqyi@gNoR",
               "crdEncS":"NN",
               "crdEncF":"??",
               "ppLocRefL":
               [
                 {
                   "ppIdx":0,
-                  "locX":5
+                  "locX":4
                 },
                 {
                   "ppIdx":1,
@@ -720,7 +385,7 @@
             {
               "delta":true,
               "dim":2,
-              "crdEncYX":"w`pkH{xti@CmNjF}L",
+              "crdEncYX":"w`pkH{xti@[kMhTsE",
               "crdEncS":"NNN",
               "crdEncF":"???",
               "ppLocRefL":
@@ -742,9 +407,9 @@
             {
               "delta":true,
               "dim":2,
-              "crdEncYX":"oyokHgvui@rMfF",
-              "crdEncS":"NN",
-              "crdEncF":"??",
+              "crdEncYX":"ilokH{mui@hP{\\tKsc@|Ku[nEsc@",
+              "crdEncS":"NNNNN",
+              "crdEncF":"?????",
               "ppLocRefL":
               [
                 {
@@ -753,51 +418,33 @@
                 },
                 {
                   "ppIdx":1,
-                  "locX":4
-                }
-              ]
-            },
-            {
-              "delta":true,
-              "dim":2,
-              "crdEncYX":"{jokH_oui@rOg\\`Kqb@|Kg]jEsb@",
-              "crdEncS":"NNNNN",
-              "crdEncF":"?????",
-              "ppLocRefL":
-              [
-                {
-                  "ppIdx":0,
-                  "locX":4
-                },
-                {
-                  "ppIdx":1,
-                  "locX":6
+                  "locX":5
                 },
                 {
                   "ppIdx":2,
-                  "locX":7
+                  "locX":6
                 },
                 {
                   "ppIdx":3,
-                  "locX":8
+                  "locX":7
                 },
                 {
                   "ppIdx":4,
-                  "locX":5
+                  "locX":4
                 }
               ]
             },
             {
               "delta":true,
               "dim":2,
-              "crdEncYX":"{zmkHuqyi@kNkR",
+              "crdEncYX":"{zmkHuqyi@gNoR",
               "crdEncS":"NN",
               "crdEncF":"??",
               "ppLocRefL":
               [
                 {
                   "ppIdx":0,
-                  "locX":5
+                  "locX":4
                 },
                 {
                   "ppIdx":1,
@@ -808,79 +455,7 @@
             {
               "delta":true,
               "dim":2,
-              "crdEncYX":"w`pkH{xti@CmN",
-              "crdEncS":"NN",
-              "crdEncF":"??",
-              "ppLocRefL":
-              [
-                {
-                  "ppIdx":0,
-                  "locX":0
-                },
-                {
-                  "ppIdx":1,
-                  "locX":3
-                }
-              ]
-            },
-            {
-              "delta":true,
-              "dim":2,
-              "crdEncYX":"{`pkHihui@{Cv^",
-              "crdEncS":"NN",
-              "crdEncF":"??",
-              "ppLocRefL":
-              [
-                {
-                  "ppIdx":0,
-                  "locX":3
-                },
-                {
-                  "ppIdx":1,
-                  "locX":10
-                }
-              ]
-            },
-            {
-              "delta":true,
-              "dim":2,
-              "crdEncYX":"wepkHqhti@}DiC",
-              "crdEncS":"NN",
-              "crdEncF":"??",
-              "ppLocRefL":
-              [
-                {
-                  "ppIdx":0,
-                  "locX":10
-                },
-                {
-                  "ppIdx":1,
-                  "locX":11
-                }
-              ]
-            },
-            {
-              "delta":true,
-              "dim":2,
-              "crdEncYX":"ukpkH{lti@naAqlD",
-              "crdEncS":"NN",
-              "crdEncF":"??",
-              "ppLocRefL":
-              [
-                {
-                  "ppIdx":0,
-                  "locX":11
-                },
-                {
-                  "ppIdx":1,
-                  "locX":9
-                }
-              ]
-            },
-            {
-              "delta":true,
-              "dim":2,
-              "crdEncYX":"w`pkH{xti@CmNjF}L",
+              "crdEncYX":"w`pkH{xti@[kMhTsE",
               "crdEncS":"NNN",
               "crdEncF":"???",
               "ppLocRefL":
@@ -902,9 +477,9 @@
             {
               "delta":true,
               "dim":2,
-              "crdEncYX":"oyokHgvui@rMfF",
-              "crdEncS":"NN",
-              "crdEncF":"??",
+              "crdEncYX":"ilokH{mui@hP{\\tKsc@|Ku[nEsc@",
+              "crdEncS":"NNNNN",
+              "crdEncF":"?????",
               "ppLocRefL":
               [
                 {
@@ -913,51 +488,33 @@
                 },
                 {
                   "ppIdx":1,
-                  "locX":4
-                }
-              ]
-            },
-            {
-              "delta":true,
-              "dim":2,
-              "crdEncYX":"{jokH_oui@rOg\\`Kqb@|Kg]jEsb@",
-              "crdEncS":"NNNNN",
-              "crdEncF":"?????",
-              "ppLocRefL":
-              [
-                {
-                  "ppIdx":0,
-                  "locX":4
-                },
-                {
-                  "ppIdx":1,
-                  "locX":6
+                  "locX":5
                 },
                 {
                   "ppIdx":2,
-                  "locX":7
+                  "locX":6
                 },
                 {
                   "ppIdx":3,
-                  "locX":8
+                  "locX":7
                 },
                 {
                   "ppIdx":4,
-                  "locX":5
+                  "locX":4
                 }
               ]
             },
             {
               "delta":true,
               "dim":2,
-              "crdEncYX":"{zmkHuqyi@kNkR",
+              "crdEncYX":"{zmkHuqyi@gNoR",
               "crdEncS":"NN",
               "crdEncF":"??",
               "ppLocRefL":
               [
                 {
                   "ppIdx":0,
-                  "locX":5
+                  "locX":4
                 },
                 {
                   "ppIdx":1,
@@ -987,15 +544,7 @@
           [
             {
               "name":"Saarbahn GmbH",
-              "icoX":2
-            },
-            {
-              "name":"DB Regio AG Mitte",
-              "icoX":8
-            },
-            {
-              "name":"Baron Reisen GmbH",
-              "icoX":9
+              "icoX":1
             }
           ],
           "remL":
@@ -1005,138 +554,10 @@
               "code":"OPERATOR",
               "icoX":3,
               "txtN":"Betreiber: Saarbahn GmbH"
-            },
-            {
-              "type":"A",
-              "code":"OPERATOR",
-              "icoX":3,
-              "txtN":"Betreiber: Baron Reisen GmbH"
-            },
-            {
-              "type":"A",
-              "code":"PF",
-              "prio":200,
-              "icoX":3,
-              "txtN":"Maskenpflicht nach gesetzl. Regelung; wir empfehlen eine FFP2-Maske"
-            },
-            {
-              "type":"A",
-              "code":"FB",
-              "prio":260,
-              "icoX":3,
-              "txtN":"Fahrradmitnahme begrenzt möglich"
-            },
-            {
-              "type":"A",
-              "code":"EH",
-              "prio":560,
-              "icoX":3,
-              "txtN":"Fahrzeuggebundene Einstiegshilfe vorhanden"
-            },
-            {
-              "type":"A",
-              "code":"KL",
-              "prio":610,
-              "icoX":3,
-              "txtN":"Klimaanlage"
-            },
-            {
-              "type":"A",
-              "code":"OPERATOR",
-              "icoX":3,
-              "txtN":"Betreiber: DB Regio AG Mitte"
-            },
-            {
-              "type":"H",
-              "code":"390",
-              "icoX":3,
-              "txtN":"Start/Ziel mit äquivalenter Haltestelle ersetzt"
-            }
-          ],
-          "himL":
-          [
-            {
-              "hid":"78",
-              "act":true,
-              "head":"Verlegung der Haltestelle Haus der Zukunft B in Richtung Innenstadt",
-              "text":"Wegen eines Gerüsts wird die Haltestelle Haus der Zukunft B in Richtung Innenstadt um etwa 20 Meter bis voraussichtlich Ende Oktober 2021 zurückverlegt. (Haus der Zukunft, Saarbrücken)",
-              "icoX":4,
-              "prio":100,
-              "prod":65535,
-              "lModDate":"20210830",
-              "lModTime":"095110",
-              "sDate":"20210503",
-              "sTime":"020000",
-              "eDate":"20211031",
-              "eTime":"235900",
-              "sDaily":"000000",
-              "eDaily":"235900",
-              "comp":"Stadtwerke Saarbrücken",
-              "catRefL":
-              [
-0
-              ],
-              "pubChL":
-              [
-                {
-                  "name":"TIMETABLE",
-                  "fDate":"20210428",
-                  "fTime":"105600",
-                  "tDate":"20211031",
-                  "tTime":"235900"
-                }
-              ]
-            },
-            {
-              "hid":"116",
-              "act":true,
-              "head":"Linien 102,106,107,109,111,122, verschiedene Schulbusse - Verlegung Haltestelle Haus der Zukunft D",
-              "text":"Wegen Dacharbeiten musste die Haltestelle Haus der Zukunft B in der Richard-Wagner-Straße in Fahrtrichtung Innenstadt in Höhe der Hausnummer 64 verlegt werden. (Haus der Zukunft, Saarbrücken)",
-              "icoX":4,
-              "prio":100,
-              "prod":65535,
-              "lModDate":"20210723",
-              "lModTime":"104748",
-              "sDate":"20210610",
-              "sTime":"010000",
-              "eDate":"20211014",
-              "eTime":"235900",
-              "sDaily":"000000",
-              "eDaily":"235900",
-              "comp":"Stadtwerke Saarbrücken",
-              "catRefL":
-              [
-0
-              ],
-              "pubChL":
-              [
-                {
-                  "name":"TIMETABLE",
-                  "fDate":"20210610",
-                  "fTime":"152000",
-                  "tDate":"20211014",
-                  "tTime":"235900"
-                }
-              ]
             }
           ],
           "icoL":
           [
-            {
-              "res":"prod_ic_bus",
-              "fg":
-              {
-                "r":255,
-                "g":255,
-                "b":255
-              },
-              "bg":
-              {
-                "r":232,
-                "g":66,
-                "b":97
-              }
-            },
             {
               "res":"prod_bus",
               "fg":
@@ -1157,12 +578,6 @@
               "txt":"Saarbahn GmbH"
             },
             {
-              "res":"INFO"
-            },
-            {
-              "res":"HIM0"
-            },
-            {
               "res":"prod_tram",
               "fg":
               {
@@ -1176,6 +591,9 @@
                 "g":135,
                 "b":34
               }
+            },
+            {
+              "res":"INFO"
             },
             {
               "res":"prod_walk",
@@ -1193,82 +611,18 @@
               }
             },
             {
-              "res":"prod_reg",
-              "fg":
-              {
-                "r":255,
-                "g":255,
-                "b":255
-              },
-              "bg":
-              {
-                "r":152,
-                "g":194,
-                "b":28
-              }
-            },
-            {
-              "res":"RE",
-              "txt":"DB Regio AG Mitte"
-            },
-            {
-              "res":"Bar",
-              "txt":"Baron Reisen GmbH"
-            },
-            {
-              "res":"prod_ice",
-              "fg":
-              {
-                "r":255,
-                "g":255,
-                "b":255
-              },
-              "bg":
-              {
-                "r":232,
-                "g":66,
-                "b":97
-              }
-            },
-            {
               "res":"cl_all"
-            }
-          ],
-          "himMsgCatL":
-          [
-            {
-              "id":0
             }
           ],
           "dirL":
           [
             {
-              "txt":"Universität Busterminal",
-              "flg":"B"
-            },
-            {
-              "txt":"Kleinblittersdorf",
-              "flg":"B"
-            },
-            {
-              "txt":"Sarreguemines",
-              "flg":"B"
-            },
-            {
-              "txt":"SB ü Holz-Quiersch.",
-              "flg":"H"
-            },
-            {
-              "txt":"Betriebshof",
+              "txt":"Johanneskirche",
               "flg":"A"
             },
             {
-              "txt":"Homburg(Saar)Hbf",
-              "flg":"0"
-            },
-            {
-              "txt":"Pirmasens Hbf",
-              "flg":"0"
+              "txt":"Brebach",
+              "flg":"B"
             }
           ]
         },
@@ -1276,23 +630,22 @@
         [
           {
             "cid":"C-0",
-            "date":"20210906",
-            "dur":"002300",
+            "date":"20211205",
+            "dur":"002000",
             "chg":1,
             "sDays":
             {
-              "sDaysR":"Mo - Fr",
-              "sDaysI":"nicht 1. Nov",
-              "sDaysB":"7CE1C3E7CF9F3E7CF9F3E7CF9F3C3CF9F3E7CE9F1E74F9F3E7CF9F3E7CF9F3E7CF9F3E7CF9F3E7CF8F3E7CF9F3E0"
+              "sDaysR":"So",
+              "sDaysI":"auch 25. Dez",
+              "sDaysB":"8102040C1020408102041800"
             },
             "dep":
             {
               "locX":0,
-              "idx":6,
+              "idx":23,
               "dProdX":0,
               "dInR":true,
-              "dTimeS":"154700",
-              "dTimeR":"154700",
+              "dTimeS":"195000",
               "dProgType":"PROGNOSED",
               "type":"N"
             },
@@ -1300,81 +653,70 @@
             {
               "locX":1,
               "aOutR":true,
-              "aTimeS":"161000",
+              "aTimeS":"201000",
               "type":"N"
             },
             "secL":
             [
               {
                 "type":"JNY",
-                "icoX":1,
+                "icoX":0,
                 "dep":
                 {
                   "locX":0,
-                  "idx":6,
+                  "idx":23,
                   "dProdX":0,
                   "dInR":true,
-                  "dTimeS":"154700",
-                  "dTimeR":"154700",
+                  "dTimeS":"195000",
                   "dProgType":"PROGNOSED",
                   "type":"N"
                 },
                 "arr":
                 {
                   "locX":2,
-                  "idx":8,
-                  "aPlatfS":"A",
-                  "aPlatfR":"A",
+                  "idx":25,
                   "aOutR":true,
-                  "aTimeS":"155000",
-                  "aTimeR":"155000",
+                  "aTimeS":"195300",
                   "aProgType":"PROGNOSED",
                   "type":"N"
                 },
                 "jny":
                 {
-                  "jid":"1|34628|2|80|6092021",
+                  "jid":"1|22457|10|80|5122021",
                   "prodX":0,
-                  "dirTxt":"Universität Busterminal",
-                  "dirFlg":"B",
+                  "dirTxt":"Johanneskirche",
+                  "dirFlg":"A",
                   "status":"P",
                   "isRchbl":true,
                   "stopL":
                   [
                     {
                       "locX":0,
-                      "idx":6,
+                      "idx":23,
                       "dProdX":0,
                       "dInR":true,
-                      "dTimeS":"154700",
-                      "dTimeR":"154700",
-                      "dProgType":"PROGNOSED",
-                      "dDirTxt":"Universität Busterminal",
-                      "dDirFlg":"B",
+                      "dTimeS":"195000",
+                      "dDirTxt":"Johanneskirche",
+                      "dDirFlg":"A",
                       "type":"N"
                     },
                     {
                       "locX":3,
-                      "idx":7,
+                      "idx":24,
                       "aProdX":0,
                       "aOutR":true,
-                      "aTimeS":"154800",
-                      "aTimeR":"154800",
-                      "aProgType":"PROGNOSED",
+                      "aTimeS":"195100",
                       "dProdX":0,
                       "dInR":true,
-                      "dTimeS":"154800",
-                      "dTimeR":"154800",
-                      "dProgType":"PROGNOSED",
+                      "dTimeS":"195100",
                       "type":"N"
                     },
                     {
                       "locX":2,
-                      "idx":8,
+                      "idx":25,
                       "aProdX":0,
                       "aOutR":true,
-                      "aTimeS":"155000",
-                      "aTimeR":"155000",
+                      "aTimeS":"195300",
                       "aProgType":"PROGNOSED",
                       "type":"N"
                     }
@@ -1390,11 +732,11 @@
                   },
                   "freq":
                   {
-                    "minC":15,
-                    "maxC":15,
-                    "numC":9
+                    "minC":60,
+                    "maxC":60,
+                    "numC":3
                   },
-                  "ctxRecon":"T$A=1@O=HBF SaarLB, Saarbrücken@L=10640@a=128@$A=1@O=Haus der Zukunft, Saarbrücken@L=10612@a=128@$202109061547$202109061550$Bus  124$$1$$$$",
+                  "ctxRecon":"T$A=1@O=HBF SaarLB, Saarbrücken@L=10640@a=128@$A=1@O=Johanneskirche, Saarbrücken@L=10619@a=128@$202112051950$202112051953$Bus  102$$1$$$$",
                   "msgL":
                   [
                     {
@@ -1405,28 +747,6 @@
                         "RES_JNY_DTL_H3"
                       ],
                       "sort":684195840
-                    },
-                    {
-                      "type":"HIM",
-                      "himX":0,
-                      "fLocX":2,
-                      "tLocX":2,
-                      "tagL":
-                      [
-                        "RES_CON_HDR","RES_SEC_HDR_H3","SUM_CON_HDR"
-                      ],
-                      "sort":373440785
-                    },
-                    {
-                      "type":"HIM",
-                      "himX":1,
-                      "fLocX":2,
-                      "tLocX":2,
-                      "tagL":
-                      [
-                        "RES_CON_HDR","RES_SEC_HDR_H3","SUM_CON_HDR"
-                      ],
-                      "sort":373495449
                     }
                   ],
                   "subscr":"F",
@@ -1436,8 +756,8 @@
                       "prodX":0,
                       "fLocX":0,
                       "tLocX":2,
-                      "fIdx":6,
-                      "tIdx":8
+                      "fIdx":23,
+                      "tIdx":25
                     }
                   ],
                   "dirL":
@@ -1446,36 +766,98 @@
                       "dirX":0,
                       "fLocX":0,
                       "tLocX":2,
-                      "fIdx":6,
-                      "tIdx":8
+                      "fIdx":23,
+                      "tIdx":25
                     }
                   ]
                 },
-                "minChg":"000500"
+                "minChg":"000200"
               },
               {
-                "type":"WALK",
-                "icoX":6,
+                "type":"JNY",
+                "icoX":2,
                 "dep":
                 {
                   "locX":2,
+                  "idx":21,
+                  "dProdX":1,
                   "dInR":true,
-                  "dTimeS":"155000",
+                  "dTimeS":"195800",
+                  "dProgType":"PROGNOSED",
                   "type":"N"
                 },
                 "arr":
                 {
                   "locX":4,
+                  "idx":25,
+                  "aProdX":1,
                   "aOutR":true,
-                  "aTimeS":"155500",
+                  "aTimeS":"200400",
+                  "aProgType":"PROGNOSED",
                   "type":"N"
                 },
-                "gis":
+                "jny":
                 {
-                  "dist":273,
-                  "durS":"000500",
-                  "dirGeo":22,
-                  "ctx":"H|1|W$A=1@O=Haus der Zukunft, Saarbrücken@L=10612@a=128@$A=1@O=Johanneskirche, Saarbrücken@L=10619@a=128@$202109061550$202109061555$$$1$$$$",
+                  "jid":"1|22362|0|80|5122021",
+                  "prodX":1,
+                  "dirTxt":"Brebach",
+                  "dirFlg":"B",
+                  "status":"P",
+                  "isRchbl":true,
+                  "stopL":
+                  [
+                    {
+                      "locX":2,
+                      "idx":21,
+                      "dProdX":1,
+                      "dInR":true,
+                      "dTimeS":"195800",
+                      "dDirTxt":"Brebach",
+                      "dDirFlg":"B",
+                      "type":"N"
+                    },
+                    {
+                      "locX":5,
+                      "idx":22,
+                      "aProdX":1,
+                      "aOutR":true,
+                      "aTimeS":"195900",
+                      "dProdX":1,
+                      "dInR":true,
+                      "dTimeS":"195900",
+                      "type":"N"
+                    },
+                    {
+                      "locX":6,
+                      "idx":23,
+                      "aProdX":1,
+                      "aOutR":true,
+                      "aTimeS":"200100",
+                      "dProdX":1,
+                      "dInR":true,
+                      "dTimeS":"200100",
+                      "type":"N"
+                    },
+                    {
+                      "locX":7,
+                      "idx":24,
+                      "aProdX":1,
+                      "aOutR":true,
+                      "aTimeS":"200200",
+                      "dProdX":1,
+                      "dInR":true,
+                      "dTimeS":"200200",
+                      "type":"N"
+                    },
+                    {
+                      "locX":4,
+                      "idx":25,
+                      "aProdX":1,
+                      "aOutR":true,
+                      "aTimeS":"200400",
+                      "type":"N"
+                    }
+                  ],
                   "polyG":
                   {
                     "polyXL":
@@ -1485,130 +867,13 @@
                     "layerX":0,
                     "crdSysX":0
                   },
-                  "gisPrvr":"H",
-                  "getDescr":true,
-                  "getPoly":true
-                }
-              },
-              {
-                "type":"JNY",
-                "icoX":5,
-                "dep":
-                {
-                  "locX":4,
-                  "idx":8,
-                  "dProdX":2,
-                  "dInR":true,
-                  "dTimeS":"155800",
-                  "dTimeR":"155800",
-                  "dProgType":"PROGNOSED",
-                  "type":"N"
-                },
-                "arr":
-                {
-                  "locX":5,
-                  "idx":12,
-                  "aProdX":2,
-                  "aOutR":true,
-                  "aTimeS":"160400",
-                  "aTimeR":"160400",
-                  "aProgType":"PROGNOSED",
-                  "type":"N"
-                },
-                "jny":
-                {
-                  "jid":"1|33722|1|80|6092021",
-                  "prodX":2,
-                  "dirTxt":"Kleinblittersdorf",
-                  "dirFlg":"B",
-                  "status":"P",
-                  "isRchbl":true,
-                  "stopL":
-                  [
-                    {
-                      "locX":4,
-                      "idx":8,
-                      "dProdX":2,
-                      "dInR":true,
-                      "dTimeS":"155800",
-                      "dTimeR":"155800",
-                      "dProgType":"PROGNOSED",
-                      "dDirTxt":"Kleinblittersdorf",
-                      "dDirFlg":"B",
-                      "type":"N"
-                    },
-                    {
-                      "locX":6,
-                      "idx":9,
-                      "aProdX":2,
-                      "aOutR":true,
-                      "aTimeS":"155900",
-                      "aTimeR":"155900",
-                      "aProgType":"PROGNOSED",
-                      "dProdX":2,
-                      "dInR":true,
-                      "dTimeS":"155900",
-                      "dTimeR":"155900",
-                      "dProgType":"PROGNOSED",
-                      "type":"N"
-                    },
-                    {
-                      "locX":7,
-                      "idx":10,
-                      "aProdX":2,
-                      "aOutR":true,
-                      "aTimeS":"160100",
-                      "aTimeR":"160100",
-                      "aProgType":"PROGNOSED",
-                      "dProdX":2,
-                      "dInR":true,
-                      "dTimeS":"160100",
-                      "dTimeR":"160100",
-                      "dProgType":"PROGNOSED",
-                      "type":"N"
-                    },
-                    {
-                      "locX":8,
-                      "idx":11,
-                      "aProdX":2,
-                      "aOutR":true,
-                      "aTimeS":"160200",
-                      "aTimeR":"160200",
-                      "aProgType":"PROGNOSED",
-                      "dProdX":2,
-                      "dInR":true,
-                      "dTimeS":"160200",
-                      "dTimeR":"160200",
-                      "dProgType":"PROGNOSED",
-                      "type":"N"
-                    },
-                    {
-                      "locX":5,
-                      "idx":12,
-                      "aProdX":2,
-                      "aOutR":true,
-                      "aTimeS":"160400",
-                      "aTimeR":"160400",
-                      "aProgType":"PROGNOSED",
-                      "type":"N"
-                    }
-                  ],
-                  "polyG":
-                  {
-                    "polyXL":
-                    [
-                      2
-                    ],
-                    "layerX":0,
-                    "crdSysX":0
-                  },
                   "freq":
                   {
-                    "minC":7,
-                    "maxC":8,
-                    "numC":17
+                    "minC":15,
+                    "maxC":15,
+                    "numC":9
                   },
-                  "ctxRecon":"T$A=1@O=Johanneskirche, Saarbrücken@L=10619@a=128@$A=1@O=Kieselhumes, Saarbrücken@L=10605@a=128@$202109061558$202109061604$S      1$$1$$$$",
+                  "ctxRecon":"T$A=1@O=Johanneskirche, Saarbrücken@L=10619@a=128@$A=1@O=Kieselhumes, Saarbrücken@L=10605@a=128@$202112051958$202112052004$S      1$$1$$$$",
                   "msgL":
                   [
                     {
@@ -1625,21 +890,21 @@
                   "prodL":
                   [
                     {
-                      "prodX":2,
-                      "fLocX":4,
-                      "tLocX":5,
-                      "fIdx":8,
-                      "tIdx":12
+                      "prodX":1,
+                      "fLocX":2,
+                      "tLocX":4,
+                      "fIdx":21,
+                      "tIdx":25
                     }
                   ],
                   "dirL":
                   [
                     {
                       "dirX":1,
-                      "fLocX":4,
-                      "tLocX":5,
-                      "fIdx":8,
-                      "tIdx":12
+                      "fLocX":2,
+                      "tLocX":4,
+                      "fIdx":21,
+                      "tIdx":25
                     }
                   ]
                 },
@@ -1647,32 +912,32 @@
               },
               {
                 "type":"WALK",
-                "icoX":6,
+                "icoX":4,
                 "dep":
                 {
-                  "locX":5,
+                  "locX":4,
                   "dInR":true,
-                  "dTimeS":"160400",
+                  "dTimeS":"200400",
                   "type":"N"
                 },
                 "arr":
                 {
                   "locX":1,
                   "aOutR":true,
-                  "aTimeS":"161000",
+                  "aTimeS":"201000",
                   "type":"N"
                 },
                 "gis":
                 {
-                  "dist":354,
+                  "dist":353,
                   "durS":"000600",
                   "dirGeo":4,
-                  "ctx":"H|1|W$A=1@O=Kieselhumes, Saarbrücken@L=10605@a=128@$A=1@O=Ostbahnhof, Saarbrücken@L=10700@a=128@$202109061604$202109061610$$$1$$$$",
+                  "ctx":"H|1|W$A=1@O=Kieselhumes, Saarbrücken@L=10605@a=128@$A=1@O=Ostbahnhof, Saarbrücken@L=10700@a=128@$202112052004$202112052010$$$1$$$$",
                   "polyG":
                   {
                     "polyXL":
                     [
-                      3
+                      2
                     ],
                     "layerX":0,
                     "crdSysX":0
@@ -1683,10 +948,10 @@
                 }
               }
             ],
-            "ctxRecon":"¶HKI¶T$A=1@O=HBF SaarLB, Saarbrücken@L=10640@a=128@$A=1@O=Haus der Zukunft, Saarbrücken@L=10612@a=128@$202109061547$202109061550$Bus  124$$1$$$$§W$A=1@O=Haus der Zukunft, Saarbrücken@L=10612@a=128@$A=1@O=Johanneskirche, Saarbrücken@L=10619@a=128@$202109061550$202109061555$$$1$$$$§T$A=1@O=Johanneskirche, Saarbrücken@L=10619@a=128@$A=1@O=Kieselhumes, Saarbrücken@L=10605@a=128@$202109061558$202109061604$S      1$$1$$$$§W$A=1@O=Kieselhumes, Saarbrücken@L=10605@a=128@$A=1@O=Ostbahnhof, Saarbrücken@L=10700@a=128@$202109061604$202109061610$$$1$$$$",
+            "ctxRecon":"¶HKI¶T$A=1@O=HBF SaarLB, Saarbrücken@L=10640@a=128@$A=1@O=Johanneskirche, Saarbrücken@L=10619@a=128@$202112051950$202112051953$Bus  102$$1$$$$§T$A=1@O=Johanneskirche, Saarbrücken@L=10619@a=128@$A=1@O=Kieselhumes, Saarbrücken@L=10605@a=128@$202112051958$202112052004$S      1$$1$$$$§W$A=1@O=Kieselhumes, Saarbrücken@L=10605@a=128@$A=1@O=Ostbahnhof, Saarbrücken@L=10700@a=128@$202112052004$202112052010$$$1$$$$",
             "freq":
             {
-              "minC":15
+              "minC":60
             },
             "trfRes":
             {
@@ -1910,14 +1175,14 @@
                       "name":"Jahreskarte (Abo pro Monat)(saarVV Preisstufe 0)",
                       "prc":5425,
                       "cur":"EUR",
-                      "shpCtx":"~0-.25114-1",
+                      "shpCtx":"~0-.25115-1",
                       "buttonText":"Ticket kaufen",
                       "extCont":
                       {
                         "content":
                         {
                           "type":"LIB_TARIFF",
-                          "content":"fjAtLjI1MTE0LTE="
+                          "content":"fjAtLjI1MTE1LTE="
                         }
                       }
                     },
@@ -2156,7 +1421,7 @@
                     {
                       "ID":
                       [
-"2573c5c51835dc0decf239315a71dfab"
+"fbe9368abf0e5432211da81888f37392"
                       ]
                     },
                     {
@@ -2320,7 +1585,7 @@
                       "ON":
                       [
 "Tageskarte 5 Personen",
-"gilt montags bis freitags ab 8:00 Uhr bis Betriebsschluss und samstags, sonn- und feiertags ganztägig"
+""
                       ],
                       "XV":
                       [
@@ -2462,7 +1727,7 @@
                     {
                       "ID":
                       [
-"25114"
+"25115"
                       ],
                       "ON":
                       [
@@ -3094,7 +2359,7 @@
                           "FF":true
                         },
                         {
-                          "P":"~0-.25114-1",
+                          "P":"~0-.25115-1",
                           "VT":"saarVV-1",
                           "FS":"VGS",
                           "DV":36,
@@ -3445,28 +2710,28 @@
             ],
             "conSubscr":"F",
             "recState":"U",
-            "cksum":"3d38fe9e_3",
-            "cksumDti":"74b13132_3"
+            "cksum":"d70b30c7_3",
+            "cksumDti":"1be444b1_3"
           },
           {
             "cid":"C-1",
-            "date":"20210906",
-            "dur":"002300",
+            "date":"20211205",
+            "dur":"002000",
             "chg":1,
             "sDays":
             {
-              "sDaysR":"Mo - Fr",
-              "sDaysI":"nicht 1. Nov",
-              "sDaysB":"7CE1C3E7CF9F3E7CF9F3E7CF9F3C3CF9F3E7CE9F1E74F9F3E7CF9F3E7CF9F3E7CF9F3E7CF9F3E7CF8F3E7CF9F3E0"
+              "sDaysR":"Sa, So",
+              "sDaysI":"auch 31. Dez",
+              "sDaysB":"83060C1C3060C183060C1840"
             },
             "dep":
             {
               "locX":0,
-              "idx":6,
+              "idx":23,
               "dProdX":3,
               "dInR":true,
-              "dTimeS":"160200",
-              "dTimeR":"160200",
+              "dTimeS":"205000",
+              "dTimeR":"205000",
               "dProgType":"PROGNOSED",
               "type":"N"
             },
@@ -3474,82 +2739,235 @@
             {
               "locX":1,
               "aOutR":true,
-              "aTimeS":"162500",
+              "aTimeS":"211000",
               "type":"N"
             },
             "secL":
             [
               {
                 "type":"JNY",
-                "icoX":1,
+                "icoX":0,
                 "dep":
                 {
                   "locX":0,
-                  "idx":6,
+                  "idx":23,
                   "dProdX":3,
                   "dInR":true,
-                  "dTimeS":"160200",
-                  "dTimeR":"160200",
+                  "dTimeS":"205000",
+                  "dTimeR":"205000",
                   "dProgType":"PROGNOSED",
                   "type":"N"
                 },
                 "arr":
                 {
                   "locX":2,
-                  "idx":8,
+                  "idx":25,
                   "aProdX":3,
-                  "aPlatfS":"A",
-                  "aPlatfR":"A",
                   "aOutR":true,
-                  "aTimeS":"160500",
-                  "aTimeR":"160500",
+                  "aTimeS":"205300",
+                  "aTimeR":"205300",
                   "aProgType":"PROGNOSED",
                   "type":"N"
                 },
                 "jny":
                 {
-                  "jid":"1|34626|15|80|6092021",
+                  "jid":"1|22454|0|80|5122021",
                   "prodX":3,
-                  "dirTxt":"Universität Busterminal",
-                  "dirFlg":"B",
+                  "dirTxt":"Johanneskirche",
+                  "dirFlg":"A",
                   "status":"P",
                   "isRchbl":true,
                   "stopL":
                   [
                     {
                       "locX":0,
-                      "idx":6,
+                      "idx":23,
                       "dProdX":3,
                       "dInR":true,
-                      "dTimeS":"160200",
-                      "dTimeR":"160200",
+                      "dTimeS":"205000",
+                      "dTimeR":"205000",
                       "dProgType":"PROGNOSED",
-                      "dDirTxt":"Universität Busterminal",
-                      "dDirFlg":"B",
+                      "dDirTxt":"Johanneskirche",
+                      "dDirFlg":"A",
                       "type":"N"
                     },
                     {
                       "locX":3,
-                      "idx":7,
+                      "idx":24,
                       "aProdX":3,
                       "aOutR":true,
-                      "aTimeS":"160300",
-                      "aTimeR":"160300",
+                      "aTimeS":"205100",
+                      "aTimeR":"205100",
                       "aProgType":"PROGNOSED",
                       "dProdX":3,
                       "dInR":true,
-                      "dTimeS":"160300",
-                      "dTimeR":"160300",
+                      "dTimeS":"205100",
+                      "dTimeR":"205100",
                       "dProgType":"PROGNOSED",
                       "type":"N"
                     },
                     {
                       "locX":2,
-                      "idx":8,
+                      "idx":25,
                       "aProdX":3,
                       "aOutR":true,
-                      "aTimeS":"160500",
-                      "aTimeR":"160500",
+                      "aTimeS":"205300",
+                      "aTimeR":"205300",
+                      "aProgType":"PROGNOSED",
+                      "type":"N"
+                    }
+                  ],
+                  "polyG":
+                  {
+                    "polyXL":
+                    [
+                      3
+                    ],
+                    "layerX":0,
+                    "crdSysX":0
+                  },
+                  "freq":
+                  {
+                    "minC":60,
+                    "maxC":60,
+                    "numC":2
+                  },
+                  "ctxRecon":"T$A=1@O=HBF SaarLB, Saarbrücken@L=10640@a=128@$A=1@O=Johanneskirche, Saarbrücken@L=10619@a=128@$202112052050$202112052053$Bus  102$$1$$$$",
+                  "msgL":
+                  [
+                    {
+                      "type":"REM",
+                      "remX":0,
+                      "tagL":
+                      [
+                        "RES_JNY_DTL_H3"
+                      ],
+                      "sort":684195840
+                    }
+                  ],
+                  "subscr":"F",
+                  "prodL":
+                  [
+                    {
+                      "prodX":3,
+                      "fLocX":0,
+                      "tLocX":2,
+                      "fIdx":23,
+                      "tIdx":25
+                    }
+                  ],
+                  "dirL":
+                  [
+                    {
+                      "dirX":0,
+                      "fLocX":0,
+                      "tLocX":2,
+                      "fIdx":23,
+                      "tIdx":25
+                    }
+                  ]
+                },
+                "minChg":"000200"
+              },
+              {
+                "type":"JNY",
+                "icoX":2,
+                "dep":
+                {
+                  "locX":2,
+                  "idx":21,
+                  "dProdX":4,
+                  "dInR":true,
+                  "dTimeS":"205800",
+                  "dTimeR":"205800",
+                  "dProgType":"PROGNOSED",
+                  "type":"N"
+                },
+                "arr":
+                {
+                  "locX":4,
+                  "idx":25,
+                  "aProdX":4,
+                  "aOutR":true,
+                  "aTimeS":"210400",
+                  "aTimeR":"210400",
+                  "aProgType":"PROGNOSED",
+                  "type":"N"
+                },
+                "jny":
+                {
+                  "jid":"1|22362|1|80|5122021",
+                  "prodX":4,
+                  "dirTxt":"Brebach",
+                  "dirFlg":"B",
+                  "status":"P",
+                  "isRchbl":true,
+                  "stopL":
+                  [
+                    {
+                      "locX":2,
+                      "idx":21,
+                      "dProdX":4,
+                      "dInR":true,
+                      "dTimeS":"205800",
+                      "dTimeR":"205800",
+                      "dProgType":"PROGNOSED",
+                      "dDirTxt":"Brebach",
+                      "dDirFlg":"B",
+                      "type":"N"
+                    },
+                    {
+                      "locX":5,
+                      "idx":22,
+                      "aProdX":4,
+                      "aOutR":true,
+                      "aTimeS":"205900",
+                      "aTimeR":"205900",
+                      "aProgType":"PROGNOSED",
+                      "dProdX":4,
+                      "dInR":true,
+                      "dTimeS":"205900",
+                      "dTimeR":"205900",
+                      "dProgType":"PROGNOSED",
+                      "type":"N"
+                    },
+                    {
+                      "locX":6,
+                      "idx":23,
+                      "aProdX":4,
+                      "aOutR":true,
+                      "aTimeS":"210100",
+                      "aTimeR":"210100",
+                      "aProgType":"PROGNOSED",
+                      "dProdX":4,
+                      "dInR":true,
+                      "dTimeS":"210100",
+                      "dTimeR":"210100",
+                      "dProgType":"PROGNOSED",
+                      "type":"N"
+                    },
+                    {
+                      "locX":7,
+                      "idx":24,
+                      "aProdX":4,
+                      "aOutR":true,
+                      "aTimeS":"210200",
+                      "aTimeR":"210200",
+                      "aProgType":"PROGNOSED",
+                      "dProdX":4,
+                      "dInR":true,
+                      "dTimeS":"210200",
+                      "dTimeR":"210200",
+                      "dProgType":"PROGNOSED",
+                      "type":"N"
+                    },
+                    {
+                      "locX":4,
+                      "idx":25,
+                      "aProdX":4,
+                      "aOutR":true,
+                      "aTimeS":"210400",
+                      "aTimeR":"210400",
                       "aProgType":"PROGNOSED",
                       "type":"N"
                     }
@@ -3569,221 +2987,7 @@
                     "maxC":15,
                     "numC":9
                   },
-                  "ctxRecon":"T$A=1@O=HBF SaarLB, Saarbrücken@L=10640@a=128@$A=1@O=Haus der Zukunft, Saarbrücken@L=10612@a=128@$202109061602$202109061605$Bus  124$$1$$$$",
-                  "msgL":
-                  [
-                    {
-                      "type":"REM",
-                      "remX":0,
-                      "tagL":
-                      [
-                        "RES_JNY_DTL_H3"
-                      ],
-                      "sort":684195840
-                    },
-                    {
-                      "type":"HIM",
-                      "himX":0,
-                      "fLocX":2,
-                      "tLocX":2,
-                      "tagL":
-                      [
-                        "RES_CON_HDR","RES_SEC_HDR_H3","SUM_CON_HDR"
-                      ],
-                      "sort":373440785
-                    },
-                    {
-                      "type":"HIM",
-                      "himX":1,
-                      "fLocX":2,
-                      "tLocX":2,
-                      "tagL":
-                      [
-                        "RES_CON_HDR","RES_SEC_HDR_H3","SUM_CON_HDR"
-                      ],
-                      "sort":373495449
-                    }
-                  ],
-                  "subscr":"F",
-                  "prodL":
-                  [
-                    {
-                      "prodX":3,
-                      "fLocX":0,
-                      "tLocX":2,
-                      "fIdx":6,
-                      "tIdx":8
-                    }
-                  ],
-                  "dirL":
-                  [
-                    {
-                      "dirX":0,
-                      "fLocX":0,
-                      "tLocX":2,
-                      "fIdx":6,
-                      "tIdx":8
-                    }
-                  ]
-                },
-                "minChg":"000500"
-              },
-              {
-                "type":"WALK",
-                "icoX":6,
-                "dep":
-                {
-                  "locX":2,
-                  "dInR":true,
-                  "dTimeS":"160500",
-                  "type":"N"
-                },
-                "arr":
-                {
-                  "locX":4,
-                  "aOutR":true,
-                  "aTimeS":"161000",
-                  "type":"N"
-                },
-                "gis":
-                {
-                  "dist":273,
-                  "durS":"000500",
-                  "dirGeo":22,
-                  "ctx":"H|1|W$A=1@O=Haus der Zukunft, Saarbrücken@L=10612@a=128@$A=1@O=Johanneskirche, Saarbrücken@L=10619@a=128@$202109061605$202109061610$$$1$$$$",
-                  "polyG":
-                  {
-                    "polyXL":
-                    [
-                      5
-                    ],
-                    "layerX":0,
-                    "crdSysX":0
-                  },
-                  "gisPrvr":"H",
-                  "getDescr":true,
-                  "getPoly":true
-                }
-              },
-              {
-                "type":"JNY",
-                "icoX":5,
-                "dep":
-                {
-                  "locX":4,
-                  "idx":8,
-                  "dProdX":4,
-                  "dInR":true,
-                  "dTimeS":"161300",
-                  "dTimeR":"161300",
-                  "dProgType":"PROGNOSED",
-                  "type":"N"
-                },
-                "arr":
-                {
-                  "locX":5,
-                  "idx":12,
-                  "aProdX":4,
-                  "aOutR":true,
-                  "aTimeS":"161900",
-                  "aTimeR":"161900",
-                  "aProgType":"PROGNOSED",
-                  "type":"N"
-                },
-                "jny":
-                {
-                  "jid":"1|33764|0|80|6092021",
-                  "prodX":4,
-                  "dirTxt":"Sarreguemines",
-                  "dirFlg":"B",
-                  "status":"P",
-                  "isRchbl":true,
-                  "stopL":
-                  [
-                    {
-                      "locX":4,
-                      "idx":8,
-                      "dProdX":4,
-                      "dInR":true,
-                      "dTimeS":"161300",
-                      "dTimeR":"161300",
-                      "dProgType":"PROGNOSED",
-                      "dDirTxt":"Sarreguemines",
-                      "dDirFlg":"B",
-                      "type":"N"
-                    },
-                    {
-                      "locX":6,
-                      "idx":9,
-                      "aProdX":4,
-                      "aOutR":true,
-                      "aTimeS":"161400",
-                      "aTimeR":"161400",
-                      "aProgType":"PROGNOSED",
-                      "dProdX":4,
-                      "dInR":true,
-                      "dTimeS":"161400",
-                      "dTimeR":"161400",
-                      "dProgType":"PROGNOSED",
-                      "type":"N"
-                    },
-                    {
-                      "locX":7,
-                      "idx":10,
-                      "aProdX":4,
-                      "aOutR":true,
-                      "aTimeS":"161600",
-                      "aTimeR":"161600",
-                      "aProgType":"PROGNOSED",
-                      "dProdX":4,
-                      "dInR":true,
-                      "dTimeS":"161600",
-                      "dTimeR":"161600",
-                      "dProgType":"PROGNOSED",
-                      "type":"N"
-                    },
-                    {
-                      "locX":8,
-                      "idx":11,
-                      "aProdX":4,
-                      "aOutR":true,
-                      "aTimeS":"161700",
-                      "aTimeR":"161700",
-                      "aProgType":"PROGNOSED",
-                      "dProdX":4,
-                      "dInR":true,
-                      "dTimeS":"161700",
-                      "dTimeR":"161700",
-                      "dProgType":"PROGNOSED",
-                      "type":"N"
-                    },
-                    {
-                      "locX":5,
-                      "idx":12,
-                      "aProdX":4,
-                      "aOutR":true,
-                      "aTimeS":"161900",
-                      "aTimeR":"161900",
-                      "aProgType":"PROGNOSED",
-                      "type":"N"
-                    }
-                  ],
-                  "polyG":
-                  {
-                    "polyXL":
-                    [
-                      6
-                    ],
-                    "layerX":0,
-                    "crdSysX":0
-                  },
-                  "freq":
-                  {
-                    "minC":7,
-                    "maxC":8,
-                    "numC":17
-                  },
-                  "ctxRecon":"T$A=1@O=Johanneskirche, Saarbrücken@L=10619@a=128@$A=1@O=Kieselhumes, Saarbrücken@L=10605@a=128@$202109061613$202109061619$S      1$$1$$$$",
+                  "ctxRecon":"T$A=1@O=Johanneskirche, Saarbrücken@L=10619@a=128@$A=1@O=Kieselhumes, Saarbrücken@L=10605@a=128@$202112052058$202112052104$S      1$$1$$$$",
                   "msgL":
                   [
                     {
@@ -3801,20 +3005,20 @@
                   [
                     {
                       "prodX":4,
-                      "fLocX":4,
-                      "tLocX":5,
-                      "fIdx":8,
-                      "tIdx":12
+                      "fLocX":2,
+                      "tLocX":4,
+                      "fIdx":21,
+                      "tIdx":25
                     }
                   ],
                   "dirL":
                   [
                     {
-                      "dirX":2,
-                      "fLocX":4,
-                      "tLocX":5,
-                      "fIdx":8,
-                      "tIdx":12
+                      "dirX":1,
+                      "fLocX":2,
+                      "tLocX":4,
+                      "fIdx":21,
+                      "tIdx":25
                     }
                   ]
                 },
@@ -3822,32 +3026,32 @@
               },
               {
                 "type":"WALK",
-                "icoX":6,
+                "icoX":4,
                 "dep":
                 {
-                  "locX":5,
+                  "locX":4,
                   "dInR":true,
-                  "dTimeS":"161900",
+                  "dTimeS":"210400",
                   "type":"N"
                 },
                 "arr":
                 {
                   "locX":1,
                   "aOutR":true,
-                  "aTimeS":"162500",
+                  "aTimeS":"211000",
                   "type":"N"
                 },
                 "gis":
                 {
-                  "dist":354,
+                  "dist":353,
                   "durS":"000600",
                   "dirGeo":4,
-                  "ctx":"H|1|W$A=1@O=Kieselhumes, Saarbrücken@L=10605@a=128@$A=1@O=Ostbahnhof, Saarbrücken@L=10700@a=128@$202109061619$202109061625$$$1$$$$",
+                  "ctx":"H|1|W$A=1@O=Kieselhumes, Saarbrücken@L=10605@a=128@$A=1@O=Ostbahnhof, Saarbrücken@L=10700@a=128@$202112052104$202112052110$$$1$$$$",
                   "polyG":
                   {
                     "polyXL":
                     [
-                      7
+                      5
                     ],
                     "layerX":0,
                     "crdSysX":0
@@ -3858,10 +3062,10 @@
                 }
               }
             ],
-            "ctxRecon":"¶HKI¶T$A=1@O=HBF SaarLB, Saarbrücken@L=10640@a=128@$A=1@O=Haus der Zukunft, Saarbrücken@L=10612@a=128@$202109061602$202109061605$Bus  124$$1$$$$§W$A=1@O=Haus der Zukunft, Saarbrücken@L=10612@a=128@$A=1@O=Johanneskirche, Saarbrücken@L=10619@a=128@$202109061605$202109061610$$$1$$$$§T$A=1@O=Johanneskirche, Saarbrücken@L=10619@a=128@$A=1@O=Kieselhumes, Saarbrücken@L=10605@a=128@$202109061613$202109061619$S      1$$1$$$$§W$A=1@O=Kieselhumes, Saarbrücken@L=10605@a=128@$A=1@O=Ostbahnhof, Saarbrücken@L=10700@a=128@$202109061619$202109061625$$$1$$$$",
+            "ctxRecon":"¶HKI¶T$A=1@O=HBF SaarLB, Saarbrücken@L=10640@a=128@$A=1@O=Johanneskirche, Saarbrücken@L=10619@a=128@$202112052050$202112052053$Bus  102$$1$$$$§T$A=1@O=Johanneskirche, Saarbrücken@L=10619@a=128@$A=1@O=Kieselhumes, Saarbrücken@L=10605@a=128@$202112052058$202112052104$S      1$$1$$$$§W$A=1@O=Kieselhumes, Saarbrücken@L=10605@a=128@$A=1@O=Ostbahnhof, Saarbrücken@L=10700@a=128@$202112052104$202112052110$$$1$$$$",
             "freq":
             {
-              "minC":15
+              "minC":60
             },
             "trfRes":
             {
@@ -4085,14 +3289,14 @@
                       "name":"Jahreskarte (Abo pro Monat)(saarVV Preisstufe 0)",
                       "prc":5425,
                       "cur":"EUR",
-                      "shpCtx":"~0-.25114-1",
+                      "shpCtx":"~0-.25115-1",
                       "buttonText":"Ticket kaufen",
                       "extCont":
                       {
                         "content":
                         {
                           "type":"LIB_TARIFF",
-                          "content":"fjAtLjI1MTE0LTE="
+                          "content":"fjAtLjI1MTE1LTE="
                         }
                       }
                     },
@@ -4331,7 +3535,7 @@
                     {
                       "ID":
                       [
-"4276309f660b0d3f0e83e494241e372d"
+"cd3275b1bb79c09bf40dbb4746687bb1"
                       ]
                     },
                     {
@@ -4495,7 +3699,7 @@
                       "ON":
                       [
 "Tageskarte 5 Personen",
-"gilt montags bis freitags ab 8:00 Uhr bis Betriebsschluss und samstags, sonn- und feiertags ganztägig"
+""
                       ],
                       "XV":
                       [
@@ -4637,7 +3841,7 @@
                     {
                       "ID":
                       [
-"25114"
+"25115"
                       ],
                       "ON":
                       [
@@ -5269,7 +4473,7 @@
                           "FF":true
                         },
                         {
-                          "P":"~0-.25114-1",
+                          "P":"~0-.25115-1",
                           "VT":"saarVV-1",
                           "FS":"VGS",
                           "DV":36,
@@ -5620,100 +4824,109 @@
             ],
             "conSubscr":"F",
             "recState":"U",
-            "cksum":"d8cc067b_3",
-            "cksumDti":"55ed0b3c_3"
+            "cksum":"9da5aa25_3",
+            "cksumDti":"3886d035_3"
           },
           {
             "cid":"C-2",
-            "date":"20210906",
-            "dur":"001700",
-            "chg":2,
+            "date":"20211205",
+            "dur":"002000",
+            "chg":1,
             "sDays":
             {
-              "sDaysR":"Mo - Fr",
-              "sDaysI":"nicht 1. Nov",
-              "sDaysB":"00000000000000000000000000000000000000000000000000000000000000000F9F3E7CF9F3E7CF8F3E7CF9F3E0"
+              "sDaysR":"täglich",
+              "sDaysI":"nicht 24. Dez",
+              "sDaysB":"FFFFFFFFFFFFFFFFFFFFDFC0"
             },
             "dep":
             {
               "locX":0,
-              "idx":6,
+              "idx":23,
               "dProdX":5,
               "dInR":true,
-              "dTimeS":"161700",
-              "dTimeR":"161700",
+              "dTimeS":"215000",
+              "dTimeR":"215000",
               "dProgType":"PROGNOSED",
               "type":"N"
             },
             "arr":
             {
-              "locX":9,
-              "idx":26,
-              "aProdX":6,
-              "aPlatfS":"2",
-              "aPlatfR":"2",
+              "locX":1,
               "aOutR":true,
-              "aTimeS":"163400",
-              "aTimeR":"165600",
-              "aProgType":"PROGNOSED",
+              "aTimeS":"221000",
               "type":"N"
             },
             "secL":
             [
               {
                 "type":"JNY",
-                "icoX":1,
+                "icoX":0,
                 "dep":
                 {
                   "locX":0,
-                  "idx":6,
+                  "idx":23,
                   "dProdX":5,
                   "dInR":true,
-                  "dTimeS":"161700",
-                  "dTimeR":"161700",
+                  "dTimeS":"215000",
+                  "dTimeR":"215000",
                   "dProgType":"PROGNOSED",
                   "type":"N"
                 },
                 "arr":
                 {
-                  "locX":3,
-                  "idx":7,
+                  "locX":2,
+                  "idx":25,
                   "aProdX":5,
                   "aOutR":true,
-                  "aTimeS":"161800",
-                  "aTimeR":"161800",
+                  "aTimeS":"215300",
+                  "aTimeR":"215300",
                   "aProgType":"PROGNOSED",
                   "type":"N"
                 },
                 "jny":
                 {
-                  "jid":"1|34628|3|80|6092021",
+                  "jid":"1|22454|1|80|5122021",
                   "prodX":5,
-                  "dirTxt":"Universität Busterminal",
-                  "dirFlg":"B",
+                  "dirTxt":"Johanneskirche",
+                  "dirFlg":"A",
                   "status":"P",
                   "isRchbl":true,
                   "stopL":
                   [
                     {
                       "locX":0,
-                      "idx":6,
+                      "idx":23,
                       "dProdX":5,
                       "dInR":true,
-                      "dTimeS":"161700",
-                      "dTimeR":"161700",
+                      "dTimeS":"215000",
+                      "dTimeR":"215000",
                       "dProgType":"PROGNOSED",
-                      "dDirTxt":"Universität Busterminal",
-                      "dDirFlg":"B",
+                      "dDirTxt":"Johanneskirche",
+                      "dDirFlg":"A",
                       "type":"N"
                     },
                     {
                       "locX":3,
-                      "idx":7,
+                      "idx":24,
                       "aProdX":5,
                       "aOutR":true,
-                      "aTimeS":"161800",
-                      "aTimeR":"161800",
+                      "aTimeS":"215100",
+                      "aTimeR":"215100",
+                      "aProgType":"PROGNOSED",
+                      "dProdX":5,
+                      "dInR":true,
+                      "dTimeS":"215100",
+                      "dTimeR":"215100",
+                      "dProgType":"PROGNOSED",
+                      "type":"N"
+                    },
+                    {
+                      "locX":2,
+                      "idx":25,
+                      "aProdX":5,
+                      "aOutR":true,
+                      "aTimeS":"215300",
+                      "aTimeR":"215300",
                       "aProgType":"PROGNOSED",
                       "type":"N"
                     }
@@ -5722,18 +4935,12 @@
                   {
                     "polyXL":
                     [
-                      8
+                      6
                     ],
                     "layerX":0,
                     "crdSysX":0
                   },
-                  "freq":
-                  {
-                    "minC":15,
-                    "maxC":15,
-                    "numC":9
-                  },
-                  "ctxRecon":"T$A=1@O=HBF SaarLB, Saarbrücken@L=10640@a=128@$A=1@O=Stadtbad (ehem.), Saarbrücken@L=10641@a=128@$202109061617$202109061618$Bus  124$$1$$$$",
+                  "ctxRecon":"T$A=1@O=HBF SaarLB, Saarbrücken@L=10640@a=128@$A=1@O=Johanneskirche, Saarbrücken@L=10619@a=128@$202112052150$202112052153$Bus  102$$1$$$$",
                   "msgL":
                   [
                     {
@@ -5752,9 +4959,9 @@
                     {
                       "prodX":5,
                       "fLocX":0,
-                      "tLocX":3,
-                      "fIdx":6,
-                      "tIdx":7
+                      "tLocX":2,
+                      "fIdx":23,
+                      "tIdx":25
                     }
                   ],
                   "dirL":
@@ -5762,516 +4969,113 @@
                     {
                       "dirX":0,
                       "fLocX":0,
-                      "tLocX":3,
-                      "fIdx":6,
-                      "tIdx":7
+                      "tLocX":2,
+                      "fIdx":23,
+                      "tIdx":25
                     }
                   ]
                 },
-                "minChg":"000300"
+                "minChg":"000200"
               },
               {
                 "type":"JNY",
-                "icoX":1,
+                "icoX":2,
                 "dep":
                 {
-                  "locX":3,
-                  "idx":41,
-                  "dInR":true,
-                  "dTimeS":"162300",
-                  "dTimeR":"162300",
-                  "dProgType":"PROGNOSED",
-                  "type":"N"
-                },
-                "arr":
-                {
-                  "locX":10,
-                  "idx":42,
-                  "aPlatfS":"B",
-                  "aOutR":true,
-                  "aTimeS":"162500",
-                  "aTimeR":"162500",
-                  "aProgType":"PROGNOSED",
-                  "type":"N"
-                },
-                "jny":
-                {
-                  "jid":"1|37563|2|80|6092021",
-                  "prodX":7,
-                  "dirTxt":"SB ü Holz-Quiersch.",
-                  "dirFlg":"H",
-                  "status":"P",
-                  "isRchbl":true,
-                  "stopL":
-                  [
-                    {
-                      "locX":3,
-                      "idx":40,
-                      "dProdX":7,
-                      "dInR":true,
-                      "dTimeS":"162300",
-                      "dTimeR":"162300",
-                      "dProgType":"PROGNOSED",
-                      "dDirTxt":"SB ü Holz-Quiersch.",
-                      "dDirFlg":"H",
-                      "type":"N"
-                    },
-                    {
-                      "locX":10,
-                      "idx":41,
-                      "aProdX":7,
-                      "aOutR":true,
-                      "aTimeS":"162500",
-                      "aTimeR":"162500",
-                      "aProgType":"PROGNOSED",
-                      "type":"N"
-                    }
-                  ],
-                  "polyG":
-                  {
-                    "polyXL":
-                    [
-                      9
-                    ],
-                    "layerX":0,
-                    "crdSysX":0
-                  },
-                  "freq":
-                  {
-                    "minC":5,
-                    "maxC":15,
-                    "numC":11,
-                    "jnyL":
-                    [
-                      {
-                        "jid":"1|34613|14|80|6092021",
-                        "prodX":8,
-                        "dirTxt":"Betriebshof",
-                        "dirFlg":"A",
-                        "stopL":
-                        [
-                          {
-                            "locX":3,
-                            "idx":11,
-                            "dProdX":8,
-                            "dTimeS":"163300",
-                            "dDirTxt":"Betriebshof",
-                            "dDirFlg":"A",
-                            "type":"N"
-                          },
-                          {
-                            "locX":10,
-                            "idx":12,
-                            "aProdX":8,
-                            "aTimeS":"163500",
-                            "type":"N"
-                          }
-                        ],
-                        "ctxRecon":"T$A=1@O=Stadtbad (ehem.), Saarbrücken@L=10641@a=128@$A=1@O=Hauptbahnhof, Saarbrücken@L=10600@a=128@$202109061633$202109061635$Bus  124$$1$$$$",
-                        "msgL":
-                        [
-                          {
-                            "type":"REM",
-                            "remX":0,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL_H3"
-                            ],
-                            "sort":684195840
-                          }
-                        ],
-                        "subscr":"F",
-                        "prodL":
-                        [
-                          {
-                            "prodX":8,
-                            "fLocX":3,
-                            "tLocX":10,
-                            "fIdx":11,
-                            "tIdx":12
-                          }
-                        ],
-                        "dirL":
-                        [
-                          {
-                            "dirX":4,
-                            "fLocX":3,
-                            "tLocX":10,
-                            "fIdx":11,
-                            "tIdx":12
-                          }
-                        ]
-                      },
-                      {
-                        "jid":"1|34616|3|80|6092021",
-                        "prodX":9,
-                        "dirTxt":"Betriebshof",
-                        "dirFlg":"A",
-                        "stopL":
-                        [
-                          {
-                            "locX":3,
-                            "idx":11,
-                            "dProdX":9,
-                            "dTimeS":"164800",
-                            "dDirTxt":"Betriebshof",
-                            "dDirFlg":"A",
-                            "type":"N"
-                          },
-                          {
-                            "locX":10,
-                            "idx":12,
-                            "aProdX":9,
-                            "aTimeS":"165000",
-                            "type":"N"
-                          }
-                        ],
-                        "ctxRecon":"T$A=1@O=Stadtbad (ehem.), Saarbrücken@L=10641@a=128@$A=1@O=Hauptbahnhof, Saarbrücken@L=10600@a=128@$202109061648$202109061650$Bus  124$$1$$$$",
-                        "msgL":
-                        [
-                          {
-                            "type":"REM",
-                            "remX":0,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL_H3"
-                            ],
-                            "sort":684195840
-                          }
-                        ],
-                        "subscr":"F",
-                        "prodL":
-                        [
-                          {
-                            "prodX":9,
-                            "fLocX":3,
-                            "tLocX":10,
-                            "fIdx":11,
-                            "tIdx":12
-                          }
-                        ],
-                        "dirL":
-                        [
-                          {
-                            "dirX":4,
-                            "fLocX":3,
-                            "tLocX":10,
-                            "fIdx":11,
-                            "tIdx":12
-                          }
-                        ]
-                      },
-                      {
-                        "jid":"1|34613|15|80|6092021",
-                        "prodX":10,
-                        "dirTxt":"Betriebshof",
-                        "dirFlg":"A",
-                        "stopL":
-                        [
-                          {
-                            "locX":3,
-                            "idx":11,
-                            "dProdX":10,
-                            "dTimeS":"170300",
-                            "dDirTxt":"Betriebshof",
-                            "dDirFlg":"A",
-                            "type":"N"
-                          },
-                          {
-                            "locX":10,
-                            "idx":12,
-                            "aProdX":10,
-                            "aTimeS":"170500",
-                            "type":"N"
-                          }
-                        ],
-                        "ctxRecon":"T$A=1@O=Stadtbad (ehem.), Saarbrücken@L=10641@a=128@$A=1@O=Hauptbahnhof, Saarbrücken@L=10600@a=128@$202109061703$202109061705$Bus  124$$1$$$$",
-                        "msgL":
-                        [
-                          {
-                            "type":"REM",
-                            "remX":0,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL_H3"
-                            ],
-                            "sort":684195840
-                          }
-                        ],
-                        "subscr":"F",
-                        "prodL":
-                        [
-                          {
-                            "prodX":10,
-                            "fLocX":3,
-                            "tLocX":10,
-                            "fIdx":11,
-                            "tIdx":12
-                          }
-                        ],
-                        "dirL":
-                        [
-                          {
-                            "dirX":4,
-                            "fLocX":3,
-                            "tLocX":10,
-                            "fIdx":11,
-                            "tIdx":12
-                          }
-                        ]
-                      },
-                      {
-                        "jid":"1|34616|4|80|6092021",
-                        "prodX":11,
-                        "dirTxt":"Betriebshof",
-                        "dirFlg":"A",
-                        "stopL":
-                        [
-                          {
-                            "locX":3,
-                            "idx":11,
-                            "dProdX":11,
-                            "dTimeS":"171800",
-                            "dDirTxt":"Betriebshof",
-                            "dDirFlg":"A",
-                            "type":"N"
-                          },
-                          {
-                            "locX":10,
-                            "idx":12,
-                            "aProdX":11,
-                            "aTimeS":"172000",
-                            "type":"N"
-                          }
-                        ],
-                        "ctxRecon":"T$A=1@O=Stadtbad (ehem.), Saarbrücken@L=10641@a=128@$A=1@O=Hauptbahnhof, Saarbrücken@L=10600@a=128@$202109061718$202109061720$Bus  124$$1$$$$",
-                        "msgL":
-                        [
-                          {
-                            "type":"REM",
-                            "remX":0,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL_H3"
-                            ],
-                            "sort":684195840
-                          }
-                        ],
-                        "subscr":"F",
-                        "prodL":
-                        [
-                          {
-                            "prodX":11,
-                            "fLocX":3,
-                            "tLocX":10,
-                            "fIdx":11,
-                            "tIdx":12
-                          }
-                        ],
-                        "dirL":
-                        [
-                          {
-                            "dirX":4,
-                            "fLocX":3,
-                            "tLocX":10,
-                            "fIdx":11,
-                            "tIdx":12
-                          }
-                        ]
-                      },
-                      {
-                        "jid":"1|37563|3|80|6092021",
-                        "prodX":12,
-                        "dirTxt":"SB ü Holz-Quiersch.",
-                        "dirFlg":"H",
-                        "stopL":
-                        [
-                          {
-                            "locX":3,
-                            "idx":40,
-                            "dProdX":12,
-                            "dTimeS":"172300",
-                            "dDirTxt":"SB ü Holz-Quiersch.",
-                            "dDirFlg":"H",
-                            "type":"N"
-                          },
-                          {
-                            "locX":10,
-                            "idx":41,
-                            "aProdX":12,
-                            "aTimeS":"172500",
-                            "type":"N"
-                          }
-                        ],
-                        "ctxRecon":"T$A=1@O=Stadtbad (ehem.), Saarbrücken@L=10641@a=128@$A=1@O=Hauptbahnhof, Saarbrücken@L=10600@a=128@$202109061723$202109061725$Bus  172$$1$$$$",
-                        "msgL":
-                        [
-                          {
-                            "type":"REM",
-                            "remX":1,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL_H3"
-                            ],
-                            "sort":684195840
-                          }
-                        ],
-                        "subscr":"F",
-                        "prodL":
-                        [
-                          {
-                            "prodX":12,
-                            "fLocX":3,
-                            "tLocX":10,
-                            "fIdx":40,
-                            "tIdx":41
-                          }
-                        ],
-                        "dirL":
-                        [
-                          {
-                            "dirX":3,
-                            "fLocX":3,
-                            "tLocX":10,
-                            "fIdx":40,
-                            "tIdx":41
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  "ctxRecon":"T$A=1@O=Stadtbad (ehem.), Saarbrücken@L=10641@a=128@$A=1@O=Hauptbahnhof, Saarbrücken@L=10600@a=128@$202109061623$202109061625$Bus  172$$1$$$$",
-                  "msgL":
-                  [
-                    {
-                      "type":"REM",
-                      "remX":1,
-                      "tagL":
-                      [
-                        "RES_JNY_DTL_H3"
-                      ],
-                      "sort":684195840
-                    }
-                  ],
-                  "subscr":"F",
-                  "prodL":
-                  [
-                    {
-                      "prodX":7,
-                      "fLocX":3,
-                      "tLocX":10,
-                      "fIdx":40,
-                      "tIdx":41
-                    }
-                  ],
-                  "dirL":
-                  [
-                    {
-                      "dirX":3,
-                      "fLocX":3,
-                      "tLocX":10,
-                      "fIdx":40,
-                      "tIdx":41
-                    }
-                  ]
-                },
-                "minChg":"000400"
-              },
-              {
-                "type":"WALK",
-                "icoX":6,
-                "dep":
-                {
-                  "locX":10,
-                  "dInR":true,
-                  "dTimeS":"162500",
-                  "type":"N"
-                },
-                "arr":
-                {
-                  "locX":11,
-                  "aOutR":true,
-                  "aTimeS":"162900",
-                  "type":"N"
-                },
-                "gis":
-                {
-                  "dist":116,
-                  "durS":"000400",
-                  "dirGeo":6,
-                  "ctx":"H|1|W$A=1@O=Hauptbahnhof, Saarbrücken@L=10600@a=128@$A=1@O=Saarbrücken Hbf@L=8000323@a=128@$202109061625$202109061629$$$1$$$$",
-                  "polyG":
-                  {
-                    "polyXL":
-                    [
-                      10
-                    ],
-                    "layerX":0,
-                    "crdSysX":0
-                  },
-                  "gisPrvr":"H",
-                  "getDescr":true,
-                  "getPoly":true
-                }
-              },
-              {
-                "type":"JNY",
-                "icoX":7,
-                "dep":
-                {
-                  "locX":11,
-                  "idx":25,
+                  "locX":2,
+                  "idx":21,
                   "dProdX":6,
-                  "dPlatfS":"5",
-                  "dPlatfR":"5",
                   "dInR":true,
-                  "dTimeS":"163100",
-                  "dTimeR":"165400",
+                  "dTimeS":"215800",
+                  "dTimeR":"215800",
                   "dProgType":"PROGNOSED",
                   "type":"N"
                 },
                 "arr":
                 {
-                  "locX":9,
-                  "idx":26,
+                  "locX":4,
+                  "idx":25,
                   "aProdX":6,
-                  "aPlatfS":"2",
-                  "aPlatfR":"2",
                   "aOutR":true,
-                  "aTimeS":"163400",
-                  "aTimeR":"165600",
+                  "aTimeS":"220400",
+                  "aTimeR":"220400",
                   "aProgType":"PROGNOSED",
                   "type":"N"
                 },
                 "jny":
                 {
-                  "jid":"1|9333|1|80|6092021",
+                  "jid":"1|22362|2|80|5122021",
                   "prodX":6,
-                  "dirTxt":"Homburg(Saar)Hbf",
-                  "dirFlg":"0",
+                  "dirTxt":"Brebach",
+                  "dirFlg":"B",
                   "status":"P",
                   "isRchbl":true,
                   "stopL":
                   [
                     {
-                      "locX":11,
-                      "idx":25,
+                      "locX":2,
+                      "idx":21,
                       "dProdX":6,
                       "dInR":true,
-                      "dTimeS":"163100",
-                      "dTimeR":"165400",
+                      "dTimeS":"215800",
+                      "dTimeR":"215800",
                       "dProgType":"PROGNOSED",
-                      "dDirTxt":"Homburg(Saar)Hbf",
-                      "dDirFlg":"0",
+                      "dDirTxt":"Brebach",
+                      "dDirFlg":"B",
                       "type":"N"
                     },
                     {
-                      "locX":9,
-                      "idx":26,
+                      "locX":5,
+                      "idx":22,
                       "aProdX":6,
                       "aOutR":true,
-                      "aTimeS":"163400",
-                      "aTimeR":"165600",
+                      "aTimeS":"215900",
+                      "aTimeR":"215900",
+                      "aProgType":"PROGNOSED",
+                      "dProdX":6,
+                      "dInR":true,
+                      "dTimeS":"215900",
+                      "dTimeR":"215900",
+                      "dProgType":"PROGNOSED",
+                      "type":"N"
+                    },
+                    {
+                      "locX":6,
+                      "idx":23,
+                      "aProdX":6,
+                      "aOutR":true,
+                      "aTimeS":"220100",
+                      "aTimeR":"220100",
+                      "aProgType":"PROGNOSED",
+                      "dProdX":6,
+                      "dInR":true,
+                      "dTimeS":"220100",
+                      "dTimeR":"220100",
+                      "dProgType":"PROGNOSED",
+                      "type":"N"
+                    },
+                    {
+                      "locX":7,
+                      "idx":24,
+                      "aProdX":6,
+                      "aOutR":true,
+                      "aTimeS":"220200",
+                      "aTimeR":"220200",
+                      "aProgType":"PROGNOSED",
+                      "dProdX":6,
+                      "dInR":true,
+                      "dTimeS":"220200",
+                      "dTimeR":"220200",
+                      "dProgType":"PROGNOSED",
+                      "type":"N"
+                    },
+                    {
+                      "locX":4,
+                      "idx":25,
+                      "aProdX":6,
+                      "aOutR":true,
+                      "aTimeS":"220400",
+                      "aTimeR":"220400",
                       "aProgType":"PROGNOSED",
                       "type":"N"
                     }
@@ -6280,482 +5084,23 @@
                   {
                     "polyXL":
                     [
-                      11
+                      7
                     ],
                     "layerX":0,
                     "crdSysX":0
                   },
                   "freq":
                   {
-                    "minC":24,
-                    "maxC":60,
-                    "numC":4,
-                    "jnyL":
-                    [
-                      {
-                        "jid":"1|9360|0|80|6092021",
-                        "prodX":13,
-                        "dirTxt":"Homburg(Saar)Hbf",
-                        "dirFlg":"0",
-                        "stopL":
-                        [
-                          {
-                            "locX":11,
-                            "idx":25,
-                            "dProdX":13,
-                            "dTimeS":"173100",
-                            "dDirTxt":"Homburg(Saar)Hbf",
-                            "dDirFlg":"0",
-                            "type":"N"
-                          },
-                          {
-                            "locX":9,
-                            "idx":26,
-                            "aProdX":13,
-                            "aTimeS":"173400",
-                            "type":"N"
-                          }
-                        ],
-                        "ctxRecon":"T$A=1@O=Saarbrücken Hbf@L=8000323@a=128@$A=1@O=Saarbrücken Ost@L=8005241@a=128@$202109061731$202109061734$    RB71$$1$$$$",
-                        "msgL":
-                        [
-                          {
-                            "type":"REM",
-                            "remX":2,
-                            "fLocX":11,
-                            "tLocX":9,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ],
-                            "sort":697303040
-                          },
-                          {
-                            "type":"REM",
-                            "remX":3,
-                            "fLocX":11,
-                            "tLocX":9,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ],
-                            "sort":705167360
-                          },
-                          {
-                            "type":"REM",
-                            "remX":4,
-                            "fLocX":11,
-                            "tLocX":9,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ],
-                            "sort":744488960
-                          },
-                          {
-                            "type":"REM",
-                            "remX":5,
-                            "fLocX":11,
-                            "tLocX":9,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ],
-                            "sort":751042560
-                          },
-                          {
-                            "type":"REM",
-                            "remX":6,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL_H3"
-                            ],
-                            "sort":684195840
-                          }
-                        ],
-                        "subscr":"F",
-                        "prodL":
-                        [
-                          {
-                            "prodX":13,
-                            "fLocX":11,
-                            "tLocX":9,
-                            "fIdx":25,
-                            "tIdx":26
-                          }
-                        ],
-                        "dirL":
-                        [
-                          {
-                            "dirX":5,
-                            "fLocX":11,
-                            "tLocX":9,
-                            "fIdx":25,
-                            "tIdx":26
-                          }
-                        ]
-                      },
-                      {
-                        "jid":"1|9673|1|80|6092021",
-                        "prodX":14,
-                        "dirTxt":"Pirmasens Hbf",
-                        "dirFlg":"0",
-                        "stopL":
-                        [
-                          {
-                            "locX":11,
-                            "idx":0,
-                            "dProdX":14,
-                            "dTimeS":"180700",
-                            "dDirTxt":"Pirmasens Hbf",
-                            "dDirFlg":"0",
-                            "type":"N"
-                          },
-                          {
-                            "locX":9,
-                            "idx":1,
-                            "aProdX":14,
-                            "aTimeS":"181000",
-                            "type":"N"
-                          }
-                        ],
-                        "ctxRecon":"T$A=1@O=Saarbrücken Hbf@L=8000323@a=128@$A=1@O=Saarbrücken Ost@L=8005241@a=128@$202109061807$202109061810$    RB68$$1$$$$",
-                        "msgL":
-                        [
-                          {
-                            "type":"REM",
-                            "remX":2,
-                            "fLocX":11,
-                            "tLocX":9,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ],
-                            "sort":697303040
-                          },
-                          {
-                            "type":"REM",
-                            "remX":3,
-                            "fLocX":11,
-                            "tLocX":9,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ],
-                            "sort":705167360
-                          },
-                          {
-                            "type":"REM",
-                            "remX":4,
-                            "fLocX":11,
-                            "tLocX":9,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ],
-                            "sort":744488960
-                          },
-                          {
-                            "type":"REM",
-                            "remX":5,
-                            "fLocX":11,
-                            "tLocX":9,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ],
-                            "sort":751042560
-                          },
-                          {
-                            "type":"REM",
-                            "remX":6,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL_H3"
-                            ],
-                            "sort":684195840
-                          }
-                        ],
-                        "subscr":"F",
-                        "prodL":
-                        [
-                          {
-                            "prodX":14,
-                            "fLocX":11,
-                            "tLocX":9,
-                            "fIdx":0,
-                            "tIdx":1
-                          }
-                        ],
-                        "dirL":
-                        [
-                          {
-                            "dirX":6,
-                            "fLocX":11,
-                            "tLocX":9,
-                            "fIdx":0,
-                            "tIdx":1
-                          }
-                        ]
-                      },
-                      {
-                        "jid":"1|9363|0|80|6092021",
-                        "prodX":15,
-                        "dirTxt":"Homburg(Saar)Hbf",
-                        "dirFlg":"0",
-                        "stopL":
-                        [
-                          {
-                            "locX":11,
-                            "idx":25,
-                            "dProdX":15,
-                            "dTimeS":"183100",
-                            "dDirTxt":"Homburg(Saar)Hbf",
-                            "dDirFlg":"0",
-                            "type":"N"
-                          },
-                          {
-                            "locX":9,
-                            "idx":26,
-                            "aProdX":15,
-                            "aTimeS":"183400",
-                            "type":"N"
-                          }
-                        ],
-                        "ctxRecon":"T$A=1@O=Saarbrücken Hbf@L=8000323@a=128@$A=1@O=Saarbrücken Ost@L=8005241@a=128@$202109061831$202109061834$    RB71$$1$$$$",
-                        "msgL":
-                        [
-                          {
-                            "type":"REM",
-                            "remX":2,
-                            "fLocX":11,
-                            "tLocX":9,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ],
-                            "sort":697303040
-                          },
-                          {
-                            "type":"REM",
-                            "remX":3,
-                            "fLocX":11,
-                            "tLocX":9,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ],
-                            "sort":705167360
-                          },
-                          {
-                            "type":"REM",
-                            "remX":4,
-                            "fLocX":11,
-                            "tLocX":9,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ],
-                            "sort":744488960
-                          },
-                          {
-                            "type":"REM",
-                            "remX":5,
-                            "fLocX":11,
-                            "tLocX":9,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ],
-                            "sort":751042560
-                          },
-                          {
-                            "type":"REM",
-                            "remX":6,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL_H3"
-                            ],
-                            "sort":684195840
-                          }
-                        ],
-                        "subscr":"F",
-                        "prodL":
-                        [
-                          {
-                            "prodX":15,
-                            "fLocX":11,
-                            "tLocX":9,
-                            "fIdx":25,
-                            "tIdx":26
-                          }
-                        ],
-                        "dirL":
-                        [
-                          {
-                            "dirX":5,
-                            "fLocX":11,
-                            "tLocX":9,
-                            "fIdx":25,
-                            "tIdx":26
-                          }
-                        ]
-                      },
-                      {
-                        "jid":"1|9675|0|80|6092021",
-                        "prodX":16,
-                        "dirTxt":"Pirmasens Hbf",
-                        "dirFlg":"0",
-                        "stopL":
-                        [
-                          {
-                            "locX":11,
-                            "idx":0,
-                            "dProdX":16,
-                            "dTimeS":"190700",
-                            "dDirTxt":"Pirmasens Hbf",
-                            "dDirFlg":"0",
-                            "type":"N"
-                          },
-                          {
-                            "locX":9,
-                            "idx":1,
-                            "aProdX":16,
-                            "aTimeS":"191000",
-                            "type":"N"
-                          }
-                        ],
-                        "ctxRecon":"T$A=1@O=Saarbrücken Hbf@L=8000323@a=128@$A=1@O=Saarbrücken Ost@L=8005241@a=128@$202109061907$202109061910$    RB68$$1$$$$",
-                        "msgL":
-                        [
-                          {
-                            "type":"REM",
-                            "remX":2,
-                            "fLocX":11,
-                            "tLocX":9,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ],
-                            "sort":697303040
-                          },
-                          {
-                            "type":"REM",
-                            "remX":3,
-                            "fLocX":11,
-                            "tLocX":9,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ],
-                            "sort":705167360
-                          },
-                          {
-                            "type":"REM",
-                            "remX":4,
-                            "fLocX":11,
-                            "tLocX":9,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ],
-                            "sort":744488960
-                          },
-                          {
-                            "type":"REM",
-                            "remX":5,
-                            "fLocX":11,
-                            "tLocX":9,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ],
-                            "sort":751042560
-                          },
-                          {
-                            "type":"REM",
-                            "remX":6,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL_H3"
-                            ],
-                            "sort":684195840
-                          }
-                        ],
-                        "subscr":"F",
-                        "prodL":
-                        [
-                          {
-                            "prodX":16,
-                            "fLocX":11,
-                            "tLocX":9,
-                            "fIdx":0,
-                            "tIdx":1
-                          }
-                        ],
-                        "dirL":
-                        [
-                          {
-                            "dirX":6,
-                            "fLocX":11,
-                            "tLocX":9,
-                            "fIdx":0,
-                            "tIdx":1
-                          }
-                        ]
-                      }
-                    ]
+                    "minC":15,
+                    "maxC":15,
+                    "numC":9
                   },
-                  "ctxRecon":"T$A=1@O=Saarbrücken Hbf@L=8000323@a=128@$A=1@O=Saarbrücken Ost@L=8005241@a=128@$202109061631$202109061634$    RB71$$1$$$$",
+                  "ctxRecon":"T$A=1@O=Johanneskirche, Saarbrücken@L=10619@a=128@$A=1@O=Kieselhumes, Saarbrücken@L=10605@a=128@$202112052158$202112052204$S      1$$1$$$$",
                   "msgL":
                   [
                     {
                       "type":"REM",
-                      "remX":2,
-                      "fLocX":11,
-                      "tLocX":9,
-                      "tagL":
-                      [
-                        "RES_JNY_DTL"
-                      ],
-                      "sort":697303040
-                    },
-                    {
-                      "type":"REM",
-                      "remX":3,
-                      "fLocX":11,
-                      "tLocX":9,
-                      "tagL":
-                      [
-                        "RES_JNY_DTL"
-                      ],
-                      "sort":705167360
-                    },
-                    {
-                      "type":"REM",
-                      "remX":4,
-                      "fLocX":11,
-                      "tLocX":9,
-                      "tagL":
-                      [
-                        "RES_JNY_DTL"
-                      ],
-                      "sort":744488960
-                    },
-                    {
-                      "type":"REM",
-                      "remX":5,
-                      "fLocX":11,
-                      "tLocX":9,
-                      "tagL":
-                      [
-                        "RES_JNY_DTL"
-                      ],
-                      "sort":751042560
-                    },
-                    {
-                      "type":"REM",
-                      "remX":6,
+                      "remX":0,
                       "tagL":
                       [
                         "RES_JNY_DTL_H3"
@@ -6768,2169 +5113,20 @@
                   [
                     {
                       "prodX":6,
-                      "fLocX":11,
-                      "tLocX":9,
-                      "fIdx":25,
-                      "tIdx":26
-                    }
-                  ],
-                  "dirL":
-                  [
-                    {
-                      "dirX":5,
-                      "fLocX":11,
-                      "tLocX":9,
-                      "fIdx":25,
-                      "tIdx":26
-                    }
-                  ]
-                }
-              }
-            ],
-            "ctxRecon":"¶HKI¶T$A=1@O=HBF SaarLB, Saarbrücken@L=10640@a=128@$A=1@O=Stadtbad (ehem.), Saarbrücken@L=10641@a=128@$202109061617$202109061618$Bus  124$$1$$$$§T$A=1@O=Stadtbad (ehem.), Saarbrücken@L=10641@a=128@$A=1@O=Hauptbahnhof, Saarbrücken@L=10600@a=128@$202109061623$202109061625$Bus  172$$1$$$$§W$A=1@O=Hauptbahnhof, Saarbrücken@L=10600@a=128@$A=1@O=Saarbrücken Hbf@L=8000323@a=128@$202109061625$202109061629$$$1$$$$§T$A=1@O=Saarbrücken Hbf@L=8000323@a=128@$A=1@O=Saarbrücken Ost@L=8005241@a=128@$202109061631$202109061634$    RB71$$1$$$$",
-            "freq":
-            {
-              "minC":24
-            },
-            "trfRes":
-            {
-              "statusCode":"OK",
-              "fareSetL":
-              [
-                {
-                  "fareL":
-                  [
-                    {
-                      "name":"Einzelfahrkarte Erwachsene(saarVV Preisstufe 0)",
-                      "prc":260,
-                      "cur":"EUR",
-                      "shpCtx":"~0-.25001-1",
-                      "buttonText":"Ticket kaufen",
-                      "extCont":
-                      {
-                        "content":
-                        {
-                          "type":"LIB_TARIFF",
-                          "content":"fjAtLjI1MDAxLTE="
-                        }
-                      }
-                    },
-                    {
-                      "name":"Einzelfahrkarte BahnCard(saarVV Preisstufe 0)",
-                      "prc":220,
-                      "cur":"EUR",
-                      "shpCtx":"~0-.25166-1",
-                      "buttonText":"Ticket kaufen",
-                      "extCont":
-                      {
-                        "content":
-                        {
-                          "type":"LIB_TARIFF",
-                          "content":"fjAtLjI1MTY2LTE="
-                        }
-                      }
-                    },
-                    {
-                      "name":"Einzelfahrkarte Kind (6-14 J.)(saarVV Preisstufe 0)",
-                      "prc":200,
-                      "cur":"EUR",
-                      "shpCtx":"~0-.25002-1",
-                      "buttonText":"Ticket kaufen",
-                      "extCont":
-                      {
-                        "content":
-                        {
-                          "type":"LIB_TARIFF",
-                          "content":"fjAtLjI1MDAyLTE="
-                        }
-                      }
-                    },
-                    {
-                      "name":"4er-Karte(saarVV Preisstufe 0)",
-                      "prc":936,
-                      "cur":"EUR",
-                      "shpCtx":"~0-.25259-1",
-                      "buttonText":"Ticket kaufen",
-                      "extCont":
-                      {
-                        "content":
-                        {
-                          "type":"LIB_TARIFF",
-                          "content":"fjAtLjI1MjU5LTE="
-                        }
-                      }
-                    },
-                    {
-                      "name":"Einzelfahrkarte Rad(saarVV Preisstufe 0)",
-                      "prc":200,
-                      "cur":"EUR",
-                      "shpCtx":"~0-.25248-1",
-                      "buttonText":"Ticket kaufen",
-                      "extCont":
-                      {
-                        "content":
-                        {
-                          "type":"LIB_TARIFF",
-                          "content":"fjAtLjI1MjQ4LTE="
-                        }
-                      }
-                    },
-                    {
-                      "name":"Tageskarte 1 Person(saarVV Preisstufe 0)",
-                      "prc":490,
-                      "cur":"EUR",
-                      "shpCtx":"~0-.25111-1",
-                      "buttonText":"Ticket kaufen",
-                      "extCont":
-                      {
-                        "content":
-                        {
-                          "type":"LIB_TARIFF",
-                          "content":"fjAtLjI1MTExLTE="
-                        }
-                      }
-                    },
-                    {
-                      "name":"Tageskarte 2 Personen(saarVV Preisstufe 0)",
-                      "prc":690,
-                      "cur":"EUR",
-                      "shpCtx":"~0-.25249-1",
-                      "buttonText":"Ticket kaufen",
-                      "extCont":
-                      {
-                        "content":
-                        {
-                          "type":"LIB_TARIFF",
-                          "content":"fjAtLjI1MjQ5LTE="
-                        }
-                      }
-                    },
-                    {
-                      "name":"Tageskarte 5 Personen(saarVV Preisstufe 0)",
-                      "prc":990,
-                      "cur":"EUR",
-                      "shpCtx":"~0-.25155-1",
-                      "buttonText":"Ticket kaufen",
-                      "extCont":
-                      {
-                        "content":
-                        {
-                          "type":"LIB_TARIFF",
-                          "content":"fjAtLjI1MTU1LTE="
-                        }
-                      }
-                    },
-                    {
-                      "name":"1. Klasse Zuschlag DB&vlexx  Einzelfahrkarte(saarVV Preisstufe 0)",
-                      "prc":160,
-                      "cur":"EUR",
-                      "shpCtx":"~0-.25199-1",
-                      "buttonText":"Ticket kaufen",
-                      "extCont":
-                      {
-                        "content":
-                        {
-                          "type":"LIB_TARIFF",
-                          "content":"fjAtLjI1MTk5LTE="
-                        }
-                      }
-                    },
-                    {
-                      "name":"Gruppenkarte (ab 10 Pers.) pro Erw. bzw. 2 Kinder (6-14 J.)(saarVV Preisstufe 0)",
-                      "prc":240,
-                      "cur":"EUR",
-                      "shpCtx":"~0-.25156-1",
-                      "buttonText":"Ticket kaufen",
-                      "extCont":
-                      {
-                        "content":
-                        {
-                          "type":"LIB_TARIFF",
-                          "content":"fjAtLjI1MTU2LTE="
-                        }
-                      }
-                    },
-                    {
-                      "name":"Wochenkarte(saarVV Preisstufe 0)",
-                      "prc":2330,
-                      "cur":"EUR",
-                      "shpCtx":"~0-.25153-1",
-                      "buttonText":"Ticket kaufen",
-                      "extCont":
-                      {
-                        "content":
-                        {
-                          "type":"LIB_TARIFF",
-                          "content":"fjAtLjI1MTUzLTE="
-                        }
-                      }
-                    },
-                    {
-                      "name":"Monatskarte(saarVV Preisstufe 0)",
-                      "prc":6510,
-                      "cur":"EUR",
-                      "shpCtx":"~0-.25152-1",
-                      "buttonText":"Ticket kaufen",
-                      "extCont":
-                      {
-                        "content":
-                        {
-                          "type":"LIB_TARIFF",
-                          "content":"fjAtLjI1MTUyLTE="
-                        }
-                      }
-                    },
-                    {
-                      "name":"Wochenkarte Schüler & Azubis(saarVV Preisstufe 0)",
-                      "prc":1740,
-                      "cur":"EUR",
-                      "shpCtx":"~0-.25147-1",
-                      "buttonText":"Ticket kaufen",
-                      "extCont":
-                      {
-                        "content":
-                        {
-                          "type":"LIB_TARIFF",
-                          "content":"fjAtLjI1MTQ3LTE="
-                        }
-                      }
-                    },
-                    {
-                      "name":"Monatskarte Schüler & Azubis(saarVV Preisstufe 0)",
-                      "prc":4900,
-                      "cur":"EUR",
-                      "shpCtx":"~0-.25146-1",
-                      "buttonText":"Ticket kaufen",
-                      "extCont":
-                      {
-                        "content":
-                        {
-                          "type":"LIB_TARIFF",
-                          "content":"fjAtLjI1MTQ2LTE="
-                        }
-                      }
-                    },
-                    {
-                      "name":"Jahreskarte (Abo pro Monat)(saarVV Preisstufe 0)",
-                      "prc":5425,
-                      "cur":"EUR",
-                      "shpCtx":"~0-.25114-1",
-                      "buttonText":"Ticket kaufen",
-                      "extCont":
-                      {
-                        "content":
-                        {
-                          "type":"LIB_TARIFF",
-                          "content":"fjAtLjI1MTE0LTE="
-                        }
-                      }
-                    },
-                    {
-                      "name":"Kreis-Abo Saarbrücken(saarVV Preisstufe 0)",
-                      "prc":8950,
-                      "cur":"EUR",
-                      "shpCtx":"~0-.25277-1",
-                      "buttonText":"Ticket kaufen",
-                      "extCont":
-                      {
-                        "content":
-                        {
-                          "type":"LIB_TARIFF",
-                          "content":"fjAtLjI1Mjc3LTE="
-                        }
-                      }
-                    },
-                    {
-                      "name":"Saarland-Abo(saarVV Preisstufe 0)",
-                      "prc":9900,
-                      "cur":"EUR",
-                      "shpCtx":"~0-.25279-1",
-                      "buttonText":"Ticket kaufen",
-                      "extCont":
-                      {
-                        "content":
-                        {
-                          "type":"LIB_TARIFF",
-                          "content":"fjAtLjI1Mjc5LTE="
-                        }
-                      }
-                    },
-                    {
-                      "name":"9 Uhr-Abo(saarVV Preisstufe 0)",
-                      "prc":3900,
-                      "cur":"EUR",
-                      "shpCtx":"~0-.25250-1",
-                      "buttonText":"Ticket kaufen",
-                      "extCont":
-                      {
-                        "content":
-                        {
-                          "type":"LIB_TARIFF",
-                          "content":"fjAtLjI1MjUwLTE="
-                        }
-                      }
-                    },
-                    {
-                      "name":"Schüler-Abo(saarVV Preisstufe 0)",
-                      "prc":4050,
-                      "cur":"EUR",
-                      "shpCtx":"~0-.25253-1",
-                      "buttonText":"Ticket kaufen",
-                      "extCont":
-                      {
-                        "content":
-                        {
-                          "type":"LIB_TARIFF",
-                          "content":"fjAtLjI1MjUzLTE="
-                        }
-                      }
-                    },
-                    {
-                      "name":"Azubi-Abo(saarVV Preisstufe 0)",
-                      "prc":4050,
-                      "cur":"EUR",
-                      "shpCtx":"~0-.25301-1",
-                      "buttonText":"Ticket kaufen",
-                      "extCont":
-                      {
-                        "content":
-                        {
-                          "type":"LIB_TARIFF",
-                          "content":"fjAtLjI1MzAxLTE="
-                        }
-                      }
-                    },
-                    {
-                      "name":"Ü65-Abo(saarVV Preisstufe 0)",
-                      "prc":5900,
-                      "cur":"EUR",
-                      "shpCtx":"~0-.25303-1",
-                      "buttonText":"Ticket kaufen",
-                      "extCont":
-                      {
-                        "content":
-                        {
-                          "type":"LIB_TARIFF",
-                          "content":"fjAtLjI1MzAzLTE="
-                        }
-                      }
-                    },
-                    {
-                      "name":"1. Klasse Zuschlag DB&vlexx Wochenkarte(saarVV Preisstufe 0)",
-                      "prc":810,
-                      "cur":"EUR",
-                      "shpCtx":"~0-.25195-1",
-                      "buttonText":"Ticket kaufen",
-                      "extCont":
-                      {
-                        "content":
-                        {
-                          "type":"LIB_TARIFF",
-                          "content":"fjAtLjI1MTk1LTE="
-                        }
-                      }
-                    },
-                    {
-                      "name":"1. Klasse Zuschlag DB&vlexx Monatskarte(saarVV Preisstufe 0)",
-                      "prc":2600,
-                      "cur":"EUR",
-                      "shpCtx":"~0-.25196-1",
-                      "buttonText":"Ticket kaufen",
-                      "extCont":
-                      {
-                        "content":
-                        {
-                          "type":"LIB_TARIFF",
-                          "content":"fjAtLjI1MTk2LTE="
-                        }
-                      }
-                    },
-                    {
-                      "name":"1. Klasse Zuschlag DB&vlexx Jahreskarte (Abo pro Monat)(saarVV Preisstufe 0)",
-                      "prc":2170,
-                      "cur":"EUR",
-                      "shpCtx":"~0-.25197-1",
-                      "buttonText":"Ticket kaufen",
-                      "extCont":
-                      {
-                        "content":
-                        {
-                          "type":"LIB_TARIFF",
-                          "content":"fjAtLjI1MTk3LTE="
-                        }
-                      }
-                    },
-                    {
-                      "name":"Monatskarte Fair-Ticket(saarVV Preisstufe 0)",
-                      "prc":2900,
-                      "cur":"EUR",
-                      "shpCtx":"~0-.25252-1",
-                      "buttonText":"Ticket kaufen",
-                      "extCont":
-                      {
-                        "content":
-                        {
-                          "type":"LIB_TARIFF",
-                          "content":"fjAtLjI1MjUyLTE="
-                        }
-                      }
-                    },
-                    {
-                      "name":"Monatskarte Fair-Ticket Plus(saarVV Preisstufe 0)",
-                      "prc":3900,
-                      "cur":"EUR",
-                      "shpCtx":"~0-.25264-1",
-                      "buttonText":"Ticket kaufen",
-                      "extCont":
-                      {
-                        "content":
-                        {
-                          "type":"LIB_TARIFF",
-                          "content":"fjAtLjI1MjY0LTE="
-                        }
-                      }
-                    }
-                  ]
-                }
-              ],
-              "bkgData":
-              {
-                "common":
-                {
-                  "FEL":
-                  [
-                    {
-                      "ID":
-                      [
-"111"
-                      ]
-                    },
-                    {
-                      "ID":
-                      [
-"111"
-                      ]
-                    },
-                    {
-                      "ID":
-                      [
-"8110964"
-                      ]
-                    },
-                    {
-                      "ID":
-                      [
-"kürzester Weg"
-                      ]
-                    },
-                    {
-                      "ID":
-                      [
-"0"
-                      ],
-                      "ON":
-                      [
-"0"
-                      ],
-                      "PN":
-                      [
-"Binnentarif Großwabe Saarbrücken und Völklingen"
-                      ]
-                    },
-                    {
-                      "ID":
-                      [
-"10640"
-                      ],
-                      "ON":
-                      [
-"HBF SaarLB, Saarbrücken"
-                      ]
-                    },
-                    {
-                      "ID":
-                      [
-"8005241"
-                      ],
-                      "ON":
-                      [
-"Saarbrücken Ost"
-                      ]
-                    },
-                    {
-                      "ID":
-                      [
-"eac14d1bfb34b7345818dbc97924a2d5"
-                      ]
-                    },
-                    {
-                      "ID":
-                      [
-"0"
-                      ]
-                    },
-                    {
-                      "ID":
-                      [
-"25001"
-                      ],
-                      "ON":
-                      [
-"Einzelfahrkarte Erwachsene",
-""
-                      ],
-                      "XV":
-                      [
-"0"
-                      ]
-                    },
-                    {
-                      "ID":
-                      [
-"0"
-                      ]
-                    },
-                    {
-                      "ID":
-                      [
-"25166"
-                      ],
-                      "ON":
-                      [
-"Einzelfahrkarte BahnCard",
-""
-                      ],
-                      "XV":
-                      [
-"0"
-                      ]
-                    },
-                    {
-                      "ID":
-                      [
-"0"
-                      ]
-                    },
-                    {
-                      "ID":
-                      [
-"25002"
-                      ],
-                      "ON":
-                      [
-"Einzelfahrkarte Kind (6-14 J.)",
-""
-                      ],
-                      "XV":
-                      [
-"0"
-                      ]
-                    },
-                    {
-                      "ID":
-                      [
-"0"
-                      ]
-                    },
-                    {
-                      "ID":
-                      [
-"25259"
-                      ],
-                      "ON":
-                      [
-"4er-Karte",
-""
-                      ],
-                      "XV":
-                      [
-"0"
-                      ]
-                    },
-                    {
-                      "ID":
-                      [
-"0"
-                      ]
-                    },
-                    {
-                      "ID":
-                      [
-"25248"
-                      ],
-                      "ON":
-                      [
-"Einzelfahrkarte Rad",
-"Fahrradmitnahme vor 9:00 Uhr"
-                      ],
-                      "XV":
-                      [
-"0"
-                      ]
-                    },
-                    {
-                      "ID":
-                      [
-"0"
-                      ]
-                    },
-                    {
-                      "ID":
-                      [
-"25111"
-                      ],
-                      "ON":
-                      [
-"Tageskarte 1 Person",
-""
-                      ],
-                      "XV":
-                      [
-"0"
-                      ]
-                    },
-                    {
-                      "ID":
-                      [
-"0"
-                      ]
-                    },
-                    {
-                      "ID":
-                      [
-"25249"
-                      ],
-                      "ON":
-                      [
-"Tageskarte 2 Personen",
-""
-                      ],
-                      "XV":
-                      [
-"0"
-                      ]
-                    },
-                    {
-                      "ID":
-                      [
-"0"
-                      ]
-                    },
-                    {
-                      "ID":
-                      [
-"25155"
-                      ],
-                      "ON":
-                      [
-"Tageskarte 5 Personen",
-"gilt montags bis freitags ab 8:00 Uhr bis Betriebsschluss und samstags, sonn- und feiertags ganztägig"
-                      ],
-                      "XV":
-                      [
-"0"
-                      ]
-                    },
-                    {
-                      "ID":
-                      [
-"0"
-                      ]
-                    },
-                    {
-                      "ID":
-                      [
-"25199"
-                      ],
-                      "ON":
-                      [
-"1. Klasse Zuschlag DB&vlexx  Einzelfahrkarte",
-""
-                      ],
-                      "XV":
-                      [
-"0"
-                      ]
-                    },
-                    {
-                      "ID":
-                      [
-"0"
-                      ]
-                    },
-                    {
-                      "ID":
-                      [
-"25156"
-                      ],
-                      "ON":
-                      [
-"Gruppenkarte (ab 10 Pers.) pro Erw. bzw. 2 Kinder (6-14 J.)",
-""
-                      ],
-                      "XV":
-                      [
-"0"
-                      ]
-                    },
-                    {
-                      "ID":
-                      [
-"0"
-                      ]
-                    },
-                    {
-                      "ID":
-                      [
-"25153"
-                      ],
-                      "ON":
-                      [
-"Wochenkarte",
-""
-                      ],
-                      "XV":
-                      [
-"0"
-                      ]
-                    },
-                    {
-                      "ID":
-                      [
-"0"
-                      ]
-                    },
-                    {
-                      "ID":
-                      [
-"25152"
-                      ],
-                      "ON":
-                      [
-"Monatskarte",
-""
-                      ],
-                      "XV":
-                      [
-"0"
-                      ]
-                    },
-                    {
-                      "ID":
-                      [
-"0"
-                      ]
-                    },
-                    {
-                      "ID":
-                      [
-"25147"
-                      ],
-                      "ON":
-                      [
-"Wochenkarte Schüler & Azubis",
-""
-                      ],
-                      "XV":
-                      [
-"0"
-                      ]
-                    },
-                    {
-                      "ID":
-                      [
-"0"
-                      ]
-                    },
-                    {
-                      "ID":
-                      [
-"25146"
-                      ],
-                      "ON":
-                      [
-"Monatskarte Schüler & Azubis",
-""
-                      ],
-                      "XV":
-                      [
-"0"
-                      ]
-                    },
-                    {
-                      "ID":
-                      [
-"0"
-                      ]
-                    },
-                    {
-                      "ID":
-                      [
-"25114"
-                      ],
-                      "ON":
-                      [
-"Jahreskarte (Abo pro Monat)",
-""
-                      ],
-                      "XV":
-                      [
-"0"
-                      ]
-                    },
-                    {
-                      "ID":
-                      [
-"0"
-                      ]
-                    },
-                    {
-                      "ID":
-                      [
-"25277"
-                      ],
-                      "ON":
-                      [
-"Kreis-Abo Saarbrücken",
-""
-                      ],
-                      "XV":
-                      [
-"0"
-                      ]
-                    },
-                    {
-                      "ID":
-                      [
-"0"
-                      ]
-                    },
-                    {
-                      "ID":
-                      [
-"25279"
-                      ],
-                      "ON":
-                      [
-"Saarland-Abo",
-""
-                      ],
-                      "XV":
-                      [
-"0"
-                      ]
-                    },
-                    {
-                      "ID":
-                      [
-"0"
-                      ]
-                    },
-                    {
-                      "ID":
-                      [
-"25250"
-                      ],
-                      "ON":
-                      [
-"9 Uhr-Abo",
-""
-                      ],
-                      "XV":
-                      [
-"0"
-                      ]
-                    },
-                    {
-                      "ID":
-                      [
-"0"
-                      ]
-                    },
-                    {
-                      "ID":
-                      [
-"25253"
-                      ],
-                      "ON":
-                      [
-"Schüler-Abo",
-""
-                      ],
-                      "XV":
-                      [
-"0"
-                      ]
-                    },
-                    {
-                      "ID":
-                      [
-"0"
-                      ]
-                    },
-                    {
-                      "ID":
-                      [
-"25301"
-                      ],
-                      "ON":
-                      [
-"Azubi-Abo",
-""
-                      ],
-                      "XV":
-                      [
-"0"
-                      ]
-                    },
-                    {
-                      "ID":
-                      [
-"0"
-                      ]
-                    },
-                    {
-                      "ID":
-                      [
-"25303"
-                      ],
-                      "ON":
-                      [
-"Ü65-Abo",
-""
-                      ],
-                      "XV":
-                      [
-"0"
-                      ]
-                    },
-                    {
-                      "ID":
-                      [
-"0"
-                      ]
-                    },
-                    {
-                      "ID":
-                      [
-"25195"
-                      ],
-                      "ON":
-                      [
-"1. Klasse Zuschlag DB&vlexx Wochenkarte",
-""
-                      ],
-                      "XV":
-                      [
-"0"
-                      ]
-                    },
-                    {
-                      "ID":
-                      [
-"0"
-                      ]
-                    },
-                    {
-                      "ID":
-                      [
-"25196"
-                      ],
-                      "ON":
-                      [
-"1. Klasse Zuschlag DB&vlexx Monatskarte",
-""
-                      ],
-                      "XV":
-                      [
-"0"
-                      ]
-                    },
-                    {
-                      "ID":
-                      [
-"0"
-                      ]
-                    },
-                    {
-                      "ID":
-                      [
-"25197"
-                      ],
-                      "ON":
-                      [
-"1. Klasse Zuschlag DB&vlexx Jahreskarte (Abo pro Monat)",
-""
-                      ],
-                      "XV":
-                      [
-"0"
-                      ]
-                    },
-                    {
-                      "ID":
-                      [
-"0"
-                      ]
-                    },
-                    {
-                      "ID":
-                      [
-"25252"
-                      ],
-                      "ON":
-                      [
-"Monatskarte Fair-Ticket",
-"Gültig ab 9 Uhr"
-                      ],
-                      "XV":
-                      [
-"0"
-                      ]
-                    },
-                    {
-                      "ID":
-                      [
-"0"
-                      ]
-                    },
-                    {
-                      "ID":
-                      [
-"25264"
-                      ],
-                      "ON":
-                      [
-"Monatskarte Fair-Ticket Plus",
-""
-                      ],
-                      "XV":
-                      [
-"0"
-                      ]
-                    }
-                  ]
-                },
-                "BOG":
-                {
-                  "BOGL":
-                  [
-                    {
-                      "P":"~0-",
-                      "BOL":
-                      [
-                        {
-                          "P":"~0-.25001-1",
-                          "VT":"saarVV-1",
-                          "FS":"VGS",
-                          "DV":8,
-                          "PRC":
-                          {
-                            "CUR":"EUR",
-                            "AMT":260
-                          },
-                          "PRD":9,
-                          "LVL":4,
-                          "SV":
-                          {
-                            "OL":0,
-                            "OS":5,
-                            "DL":1,
-                            "DS":6,
-                            "VL":
-                            [
-2,
-3,
-7
-                            ]
-                          },
-                          "FF":true
-                        },
-                        {
-                          "P":"~0-.25166-1",
-                          "VT":"saarVV-1",
-                          "FS":"VGS",
-                          "DV":10,
-                          "PRC":
-                          {
-                            "CUR":"EUR",
-                            "AMT":220
-                          },
-                          "PRD":11,
-                          "LVL":4,
-                          "SV":
-                          {
-                            "OL":0,
-                            "OS":5,
-                            "DL":1,
-                            "DS":6,
-                            "VL":
-                            [
-2,
-3,
-7
-                            ]
-                          },
-                          "FF":true
-                        },
-                        {
-                          "P":"~0-.25002-1",
-                          "VT":"saarVV-1",
-                          "FS":"VGS",
-                          "DV":12,
-                          "PRC":
-                          {
-                            "CUR":"EUR",
-                            "AMT":200
-                          },
-                          "PRD":13,
-                          "LVL":4,
-                          "SV":
-                          {
-                            "OL":0,
-                            "OS":5,
-                            "DL":1,
-                            "DS":6,
-                            "VL":
-                            [
-2,
-3,
-7
-                            ]
-                          },
-                          "FF":true
-                        },
-                        {
-                          "P":"~0-.25259-1",
-                          "VT":"saarVV-1",
-                          "FS":"VGS",
-                          "DV":14,
-                          "PRC":
-                          {
-                            "CUR":"EUR",
-                            "AMT":936
-                          },
-                          "PRD":15,
-                          "LVL":4,
-                          "SV":
-                          {
-                            "OL":0,
-                            "OS":5,
-                            "DL":1,
-                            "DS":6,
-                            "VL":
-                            [
-2,
-3,
-7
-                            ]
-                          },
-                          "FF":true
-                        },
-                        {
-                          "P":"~0-.25248-1",
-                          "VT":"saarVV-1",
-                          "FS":"VGS",
-                          "DV":16,
-                          "PRC":
-                          {
-                            "CUR":"EUR",
-                            "AMT":200
-                          },
-                          "PRD":17,
-                          "LVL":4,
-                          "SV":
-                          {
-                            "OL":0,
-                            "OS":5,
-                            "DL":1,
-                            "DS":6,
-                            "VL":
-                            [
-2,
-3,
-7
-                            ]
-                          },
-                          "FF":true
-                        },
-                        {
-                          "P":"~0-.25111-1",
-                          "VT":"saarVV-1",
-                          "FS":"VGS",
-                          "DV":18,
-                          "PRC":
-                          {
-                            "CUR":"EUR",
-                            "AMT":490
-                          },
-                          "PRD":19,
-                          "LVL":4,
-                          "SV":
-                          {
-                            "OL":0,
-                            "OS":5,
-                            "DL":1,
-                            "DS":6,
-                            "VL":
-                            [
-2,
-3,
-7
-                            ]
-                          },
-                          "FF":true
-                        },
-                        {
-                          "P":"~0-.25249-1",
-                          "VT":"saarVV-1",
-                          "FS":"VGS",
-                          "DV":20,
-                          "PRC":
-                          {
-                            "CUR":"EUR",
-                            "AMT":690
-                          },
-                          "PRD":21,
-                          "LVL":4,
-                          "SV":
-                          {
-                            "OL":0,
-                            "OS":5,
-                            "DL":1,
-                            "DS":6,
-                            "VL":
-                            [
-2,
-3,
-7
-                            ]
-                          },
-                          "FF":true
-                        },
-                        {
-                          "P":"~0-.25155-1",
-                          "VT":"saarVV-1",
-                          "FS":"VGS",
-                          "DV":22,
-                          "PRC":
-                          {
-                            "CUR":"EUR",
-                            "AMT":990
-                          },
-                          "PRD":23,
-                          "LVL":4,
-                          "SV":
-                          {
-                            "OL":0,
-                            "OS":5,
-                            "DL":1,
-                            "DS":6,
-                            "VL":
-                            [
-2,
-3,
-7
-                            ]
-                          },
-                          "FF":true
-                        },
-                        {
-                          "P":"~0-.25199-1",
-                          "VT":"saarVV-1",
-                          "FS":"VGS",
-                          "DV":24,
-                          "PRC":
-                          {
-                            "CUR":"EUR",
-                            "AMT":160
-                          },
-                          "PRD":25,
-                          "LVL":4,
-                          "SV":
-                          {
-                            "OL":0,
-                            "OS":5,
-                            "DL":1,
-                            "DS":6,
-                            "VL":
-                            [
-2,
-3,
-7
-                            ]
-                          },
-                          "FF":true
-                        },
-                        {
-                          "P":"~0-.25156-1",
-                          "VT":"saarVV-1",
-                          "FS":"VGS",
-                          "DV":26,
-                          "PRC":
-                          {
-                            "CUR":"EUR",
-                            "AMT":240
-                          },
-                          "PRD":27,
-                          "LVL":4,
-                          "SV":
-                          {
-                            "OL":0,
-                            "OS":5,
-                            "DL":1,
-                            "DS":6,
-                            "VL":
-                            [
-2,
-3,
-7
-                            ]
-                          },
-                          "FF":true
-                        },
-                        {
-                          "P":"~0-.25153-1",
-                          "VT":"saarVV-1",
-                          "FS":"VGS",
-                          "DV":28,
-                          "PRC":
-                          {
-                            "CUR":"EUR",
-                            "AMT":2330
-                          },
-                          "PRD":29,
-                          "LVL":4,
-                          "SV":
-                          {
-                            "OL":0,
-                            "OS":5,
-                            "DL":1,
-                            "DS":6,
-                            "VL":
-                            [
-2,
-3,
-7
-                            ]
-                          },
-                          "FF":true
-                        },
-                        {
-                          "P":"~0-.25152-1",
-                          "VT":"saarVV-1",
-                          "FS":"VGS",
-                          "DV":30,
-                          "PRC":
-                          {
-                            "CUR":"EUR",
-                            "AMT":6510
-                          },
-                          "PRD":31,
-                          "LVL":4,
-                          "SV":
-                          {
-                            "OL":0,
-                            "OS":5,
-                            "DL":1,
-                            "DS":6,
-                            "VL":
-                            [
-2,
-3,
-7
-                            ]
-                          },
-                          "FF":true
-                        },
-                        {
-                          "P":"~0-.25147-1",
-                          "VT":"saarVV-1",
-                          "FS":"VGS",
-                          "DV":32,
-                          "PRC":
-                          {
-                            "CUR":"EUR",
-                            "AMT":1740
-                          },
-                          "PRD":33,
-                          "LVL":4,
-                          "SV":
-                          {
-                            "OL":0,
-                            "OS":5,
-                            "DL":1,
-                            "DS":6,
-                            "VL":
-                            [
-2,
-3,
-7
-                            ]
-                          },
-                          "FF":true
-                        },
-                        {
-                          "P":"~0-.25146-1",
-                          "VT":"saarVV-1",
-                          "FS":"VGS",
-                          "DV":34,
-                          "PRC":
-                          {
-                            "CUR":"EUR",
-                            "AMT":4900
-                          },
-                          "PRD":35,
-                          "LVL":4,
-                          "SV":
-                          {
-                            "OL":0,
-                            "OS":5,
-                            "DL":1,
-                            "DS":6,
-                            "VL":
-                            [
-2,
-3,
-7
-                            ]
-                          },
-                          "FF":true
-                        },
-                        {
-                          "P":"~0-.25114-1",
-                          "VT":"saarVV-1",
-                          "FS":"VGS",
-                          "DV":36,
-                          "PRC":
-                          {
-                            "CUR":"EUR",
-                            "AMT":5425
-                          },
-                          "PRD":37,
-                          "LVL":4,
-                          "SV":
-                          {
-                            "OL":0,
-                            "OS":5,
-                            "DL":1,
-                            "DS":6,
-                            "VL":
-                            [
-2,
-3,
-7
-                            ]
-                          },
-                          "FF":true
-                        },
-                        {
-                          "P":"~0-.25277-1",
-                          "VT":"saarVV-1",
-                          "FS":"VGS",
-                          "DV":38,
-                          "PRC":
-                          {
-                            "CUR":"EUR",
-                            "AMT":8950
-                          },
-                          "PRD":39,
-                          "LVL":4,
-                          "SV":
-                          {
-                            "OL":0,
-                            "OS":5,
-                            "DL":1,
-                            "DS":6,
-                            "VL":
-                            [
-2,
-3,
-7
-                            ]
-                          },
-                          "FF":true
-                        },
-                        {
-                          "P":"~0-.25279-1",
-                          "VT":"saarVV-1",
-                          "FS":"VGS",
-                          "DV":40,
-                          "PRC":
-                          {
-                            "CUR":"EUR",
-                            "AMT":9900
-                          },
-                          "PRD":41,
-                          "LVL":4,
-                          "SV":
-                          {
-                            "OL":0,
-                            "OS":5,
-                            "DL":1,
-                            "DS":6,
-                            "VL":
-                            [
-2,
-3,
-7
-                            ]
-                          },
-                          "FF":true
-                        },
-                        {
-                          "P":"~0-.25250-1",
-                          "VT":"saarVV-1",
-                          "FS":"VGS",
-                          "DV":42,
-                          "PRC":
-                          {
-                            "CUR":"EUR",
-                            "AMT":3900
-                          },
-                          "PRD":43,
-                          "LVL":4,
-                          "SV":
-                          {
-                            "OL":0,
-                            "OS":5,
-                            "DL":1,
-                            "DS":6,
-                            "VL":
-                            [
-2,
-3,
-7
-                            ]
-                          },
-                          "FF":true
-                        },
-                        {
-                          "P":"~0-.25253-1",
-                          "VT":"saarVV-1",
-                          "FS":"VGS",
-                          "DV":44,
-                          "PRC":
-                          {
-                            "CUR":"EUR",
-                            "AMT":4050
-                          },
-                          "PRD":45,
-                          "LVL":4,
-                          "SV":
-                          {
-                            "OL":0,
-                            "OS":5,
-                            "DL":1,
-                            "DS":6,
-                            "VL":
-                            [
-2,
-3,
-7
-                            ]
-                          },
-                          "FF":true
-                        },
-                        {
-                          "P":"~0-.25301-1",
-                          "VT":"saarVV-1",
-                          "FS":"VGS",
-                          "DV":46,
-                          "PRC":
-                          {
-                            "CUR":"EUR",
-                            "AMT":4050
-                          },
-                          "PRD":47,
-                          "LVL":4,
-                          "SV":
-                          {
-                            "OL":0,
-                            "OS":5,
-                            "DL":1,
-                            "DS":6,
-                            "VL":
-                            [
-2,
-3,
-7
-                            ]
-                          },
-                          "FF":true
-                        },
-                        {
-                          "P":"~0-.25303-1",
-                          "VT":"saarVV-1",
-                          "FS":"VGS",
-                          "DV":48,
-                          "PRC":
-                          {
-                            "CUR":"EUR",
-                            "AMT":5900
-                          },
-                          "PRD":49,
-                          "LVL":4,
-                          "SV":
-                          {
-                            "OL":0,
-                            "OS":5,
-                            "DL":1,
-                            "DS":6,
-                            "VL":
-                            [
-2,
-3,
-7
-                            ]
-                          },
-                          "FF":true
-                        },
-                        {
-                          "P":"~0-.25195-1",
-                          "VT":"saarVV-1",
-                          "FS":"VGS",
-                          "DV":50,
-                          "PRC":
-                          {
-                            "CUR":"EUR",
-                            "AMT":810
-                          },
-                          "PRD":51,
-                          "LVL":4,
-                          "SV":
-                          {
-                            "OL":0,
-                            "OS":5,
-                            "DL":1,
-                            "DS":6,
-                            "VL":
-                            [
-2,
-3,
-7
-                            ]
-                          },
-                          "FF":true
-                        },
-                        {
-                          "P":"~0-.25196-1",
-                          "VT":"saarVV-1",
-                          "FS":"VGS",
-                          "DV":52,
-                          "PRC":
-                          {
-                            "CUR":"EUR",
-                            "AMT":2600
-                          },
-                          "PRD":53,
-                          "LVL":4,
-                          "SV":
-                          {
-                            "OL":0,
-                            "OS":5,
-                            "DL":1,
-                            "DS":6,
-                            "VL":
-                            [
-2,
-3,
-7
-                            ]
-                          },
-                          "FF":true
-                        },
-                        {
-                          "P":"~0-.25197-1",
-                          "VT":"saarVV-1",
-                          "FS":"VGS",
-                          "DV":54,
-                          "PRC":
-                          {
-                            "CUR":"EUR",
-                            "AMT":2170
-                          },
-                          "PRD":55,
-                          "LVL":4,
-                          "SV":
-                          {
-                            "OL":0,
-                            "OS":5,
-                            "DL":1,
-                            "DS":6,
-                            "VL":
-                            [
-2,
-3,
-7
-                            ]
-                          },
-                          "FF":true
-                        },
-                        {
-                          "P":"~0-.25252-1",
-                          "VT":"saarVV-1",
-                          "FS":"VGS",
-                          "DV":56,
-                          "PRC":
-                          {
-                            "CUR":"EUR",
-                            "AMT":2900
-                          },
-                          "PRD":57,
-                          "LVL":4,
-                          "SV":
-                          {
-                            "OL":0,
-                            "OS":5,
-                            "DL":1,
-                            "DS":6,
-                            "VL":
-                            [
-2,
-3,
-7
-                            ]
-                          },
-                          "FF":true
-                        },
-                        {
-                          "P":"~0-.25264-1",
-                          "VT":"saarVV-1",
-                          "FS":"VGS",
-                          "DV":58,
-                          "PRC":
-                          {
-                            "CUR":"EUR",
-                            "AMT":3900
-                          },
-                          "PRD":59,
-                          "LVL":4,
-                          "SV":
-                          {
-                            "OL":0,
-                            "OS":5,
-                            "DL":1,
-                            "DS":6,
-                            "VL":
-                            [
-2,
-3,
-7
-                            ]
-                          },
-                          "FF":true
-                        }
-                      ],
-                      "DESCR":
-                      [
-"0",
-"Matrix gültig ab 01.07.2021"
-                      ],
-                      "OPT":false,
-                      "ALT":true,
-                      "SEQ":false
-                    }
-                  ],
-                  "OPT":false,
-                  "ALT":true,
-                  "SEQ":false
-                },
-                "errCode":0
-              }
-            },
-            "ovwTrfRefL":
-            [
-              {
-                "type":"F",
-                "fareSetX":0,
-                "fareX":0
-              }
-            ],
-            "msgL":
-            [
-              {
-                "type":"REM",
-                "remX":7,
-                "tagL":
-                [
-                  "SUM_CON_HDR_H3","RES_CON_FTR_H3"
-                ],
-                "sort":147324928
-              }
-            ],
-            "conSubscr":"F",
-            "recState":"U",
-            "cksum":"28345941_3",
-            "cksumDti":"a6ff6606_3"
-          },
-          {
-            "cid":"C-3",
-            "date":"20210906",
-            "dur":"002300",
-            "chg":1,
-            "sDays":
-            {
-              "sDaysR":"Mo - Fr",
-              "sDaysI":"nicht 1. Nov",
-              "sDaysB":"7CE1C3E7CF9F3E7CF9F3E7CF9F3C3CF9F3E7CE9F1E74F9F3E7CF9F3E7CF9F3E7CF9F3E7CF9F3E7CF8F3E7CF9F3E0"
-            },
-            "dep":
-            {
-              "locX":0,
-              "idx":6,
-              "dProdX":5,
-              "dInR":true,
-              "dTimeS":"161700",
-              "dTimeR":"161700",
-              "dProgType":"PROGNOSED",
-              "type":"N"
-            },
-            "arr":
-            {
-              "locX":1,
-              "aOutR":true,
-              "aTimeS":"164000",
-              "type":"N"
-            },
-            "secL":
-            [
-              {
-                "type":"JNY",
-                "icoX":1,
-                "dep":
-                {
-                  "locX":0,
-                  "idx":6,
-                  "dProdX":5,
-                  "dInR":true,
-                  "dTimeS":"161700",
-                  "dTimeR":"161700",
-                  "dProgType":"PROGNOSED",
-                  "type":"N"
-                },
-                "arr":
-                {
-                  "locX":2,
-                  "idx":8,
-                  "aProdX":5,
-                  "aPlatfS":"A",
-                  "aPlatfR":"A",
-                  "aOutR":true,
-                  "aTimeS":"162000",
-                  "aTimeR":"162000",
-                  "aProgType":"PROGNOSED",
-                  "type":"N"
-                },
-                "jny":
-                {
-                  "jid":"1|34628|3|80|6092021",
-                  "prodX":5,
-                  "dirTxt":"Universität Busterminal",
-                  "dirFlg":"B",
-                  "status":"P",
-                  "isRchbl":true,
-                  "stopL":
-                  [
-                    {
-                      "locX":0,
-                      "idx":6,
-                      "dProdX":5,
-                      "dInR":true,
-                      "dTimeS":"161700",
-                      "dTimeR":"161700",
-                      "dProgType":"PROGNOSED",
-                      "dDirTxt":"Universität Busterminal",
-                      "dDirFlg":"B",
-                      "type":"N"
-                    },
-                    {
-                      "locX":3,
-                      "idx":7,
-                      "aProdX":5,
-                      "aOutR":true,
-                      "aTimeS":"161800",
-                      "aTimeR":"161800",
-                      "aProgType":"PROGNOSED",
-                      "dProdX":5,
-                      "dInR":true,
-                      "dTimeS":"161800",
-                      "dTimeR":"161800",
-                      "dProgType":"PROGNOSED",
-                      "type":"N"
-                    },
-                    {
-                      "locX":2,
-                      "idx":8,
-                      "aProdX":5,
-                      "aOutR":true,
-                      "aTimeS":"162000",
-                      "aTimeR":"162000",
-                      "aProgType":"PROGNOSED",
-                      "type":"N"
-                    }
-                  ],
-                  "polyG":
-                  {
-                    "polyXL":
-                    [
-                      12
-                    ],
-                    "layerX":0,
-                    "crdSysX":0
-                  },
-                  "freq":
-                  {
-                    "minC":15,
-                    "maxC":15,
-                    "numC":9
-                  },
-                  "ctxRecon":"T$A=1@O=HBF SaarLB, Saarbrücken@L=10640@a=128@$A=1@O=Haus der Zukunft, Saarbrücken@L=10612@a=128@$202109061617$202109061620$Bus  124$$1$$$$",
-                  "msgL":
-                  [
-                    {
-                      "type":"REM",
-                      "remX":0,
-                      "tagL":
-                      [
-                        "RES_JNY_DTL_H3"
-                      ],
-                      "sort":684195840
-                    },
-                    {
-                      "type":"HIM",
-                      "himX":0,
                       "fLocX":2,
-                      "tLocX":2,
-                      "tagL":
-                      [
-                        "RES_CON_HDR","RES_SEC_HDR_H3","SUM_CON_HDR"
-                      ],
-                      "sort":373440785
-                    },
-                    {
-                      "type":"HIM",
-                      "himX":1,
-                      "fLocX":2,
-                      "tLocX":2,
-                      "tagL":
-                      [
-                        "RES_CON_HDR","RES_SEC_HDR_H3","SUM_CON_HDR"
-                      ],
-                      "sort":373495449
-                    }
-                  ],
-                  "subscr":"F",
-                  "prodL":
-                  [
-                    {
-                      "prodX":5,
-                      "fLocX":0,
-                      "tLocX":2,
-                      "fIdx":6,
-                      "tIdx":8
-                    }
-                  ],
-                  "dirL":
-                  [
-                    {
-                      "dirX":0,
-                      "fLocX":0,
-                      "tLocX":2,
-                      "fIdx":6,
-                      "tIdx":8
-                    }
-                  ]
-                },
-                "minChg":"000500"
-              },
-              {
-                "type":"WALK",
-                "icoX":6,
-                "dep":
-                {
-                  "locX":2,
-                  "dInR":true,
-                  "dTimeS":"162000",
-                  "type":"N"
-                },
-                "arr":
-                {
-                  "locX":4,
-                  "aOutR":true,
-                  "aTimeS":"162500",
-                  "type":"N"
-                },
-                "gis":
-                {
-                  "dist":273,
-                  "durS":"000500",
-                  "dirGeo":22,
-                  "ctx":"H|1|W$A=1@O=Haus der Zukunft, Saarbrücken@L=10612@a=128@$A=1@O=Johanneskirche, Saarbrücken@L=10619@a=128@$202109061620$202109061625$$$1$$$$",
-                  "polyG":
-                  {
-                    "polyXL":
-                    [
-                      13
-                    ],
-                    "layerX":0,
-                    "crdSysX":0
-                  },
-                  "gisPrvr":"H",
-                  "getDescr":true,
-                  "getPoly":true
-                }
-              },
-              {
-                "type":"JNY",
-                "icoX":5,
-                "dep":
-                {
-                  "locX":4,
-                  "idx":8,
-                  "dProdX":17,
-                  "dInR":true,
-                  "dTimeS":"162800",
-                  "dTimeR":"162800",
-                  "dProgType":"PROGNOSED",
-                  "type":"N"
-                },
-                "arr":
-                {
-                  "locX":5,
-                  "idx":12,
-                  "aProdX":17,
-                  "aOutR":true,
-                  "aTimeS":"163400",
-                  "aTimeR":"163400",
-                  "aProgType":"PROGNOSED",
-                  "type":"N"
-                },
-                "jny":
-                {
-                  "jid":"1|33722|2|80|6092021",
-                  "prodX":17,
-                  "dirTxt":"Kleinblittersdorf",
-                  "dirFlg":"B",
-                  "status":"P",
-                  "isRchbl":true,
-                  "stopL":
-                  [
-                    {
-                      "locX":4,
-                      "idx":8,
-                      "dProdX":17,
-                      "dInR":true,
-                      "dTimeS":"162800",
-                      "dTimeR":"162800",
-                      "dProgType":"PROGNOSED",
-                      "dDirTxt":"Kleinblittersdorf",
-                      "dDirFlg":"B",
-                      "type":"N"
-                    },
-                    {
-                      "locX":6,
-                      "idx":9,
-                      "aProdX":17,
-                      "aOutR":true,
-                      "aTimeS":"162900",
-                      "aTimeR":"162900",
-                      "aProgType":"PROGNOSED",
-                      "dProdX":17,
-                      "dInR":true,
-                      "dTimeS":"162900",
-                      "dTimeR":"162900",
-                      "dProgType":"PROGNOSED",
-                      "type":"N"
-                    },
-                    {
-                      "locX":7,
-                      "idx":10,
-                      "aProdX":17,
-                      "aOutR":true,
-                      "aTimeS":"163100",
-                      "aTimeR":"163100",
-                      "aProgType":"PROGNOSED",
-                      "dProdX":17,
-                      "dInR":true,
-                      "dTimeS":"163100",
-                      "dTimeR":"163100",
-                      "dProgType":"PROGNOSED",
-                      "type":"N"
-                    },
-                    {
-                      "locX":8,
-                      "idx":11,
-                      "aProdX":17,
-                      "aOutR":true,
-                      "aTimeS":"163200",
-                      "aTimeR":"163200",
-                      "aProgType":"PROGNOSED",
-                      "dProdX":17,
-                      "dInR":true,
-                      "dTimeS":"163200",
-                      "dTimeR":"163200",
-                      "dProgType":"PROGNOSED",
-                      "type":"N"
-                    },
-                    {
-                      "locX":5,
-                      "idx":12,
-                      "aProdX":17,
-                      "aOutR":true,
-                      "aTimeS":"163400",
-                      "aTimeR":"163400",
-                      "aProgType":"PROGNOSED",
-                      "type":"N"
-                    }
-                  ],
-                  "polyG":
-                  {
-                    "polyXL":
-                    [
-                      14
-                    ],
-                    "layerX":0,
-                    "crdSysX":0
-                  },
-                  "freq":
-                  {
-                    "minC":7,
-                    "maxC":8,
-                    "numC":17
-                  },
-                  "ctxRecon":"T$A=1@O=Johanneskirche, Saarbrücken@L=10619@a=128@$A=1@O=Kieselhumes, Saarbrücken@L=10605@a=128@$202109061628$202109061634$S      1$$1$$$$",
-                  "msgL":
-                  [
-                    {
-                      "type":"REM",
-                      "remX":0,
-                      "tagL":
-                      [
-                        "RES_JNY_DTL_H3"
-                      ],
-                      "sort":684195840
-                    }
-                  ],
-                  "subscr":"F",
-                  "prodL":
-                  [
-                    {
-                      "prodX":17,
-                      "fLocX":4,
-                      "tLocX":5,
-                      "fIdx":8,
-                      "tIdx":12
+                      "tLocX":4,
+                      "fIdx":21,
+                      "tIdx":25
                     }
                   ],
                   "dirL":
                   [
                     {
                       "dirX":1,
-                      "fLocX":4,
-                      "tLocX":5,
-                      "fIdx":8,
-                      "tIdx":12
+                      "fLocX":2,
+                      "tLocX":4,
+                      "fIdx":21,
+                      "tIdx":25
                     }
                   ]
                 },
@@ -8938,32 +5134,32 @@
               },
               {
                 "type":"WALK",
-                "icoX":6,
+                "icoX":4,
                 "dep":
                 {
-                  "locX":5,
+                  "locX":4,
                   "dInR":true,
-                  "dTimeS":"163400",
+                  "dTimeS":"220400",
                   "type":"N"
                 },
                 "arr":
                 {
                   "locX":1,
                   "aOutR":true,
-                  "aTimeS":"164000",
+                  "aTimeS":"221000",
                   "type":"N"
                 },
                 "gis":
                 {
-                  "dist":354,
+                  "dist":353,
                   "durS":"000600",
                   "dirGeo":4,
-                  "ctx":"H|1|W$A=1@O=Kieselhumes, Saarbrücken@L=10605@a=128@$A=1@O=Ostbahnhof, Saarbrücken@L=10700@a=128@$202109061634$202109061640$$$1$$$$",
+                  "ctx":"H|1|W$A=1@O=Kieselhumes, Saarbrücken@L=10605@a=128@$A=1@O=Ostbahnhof, Saarbrücken@L=10700@a=128@$202112052204$202112052210$$$1$$$$",
                   "polyG":
                   {
                     "polyXL":
                     [
-                      15
+                      8
                     ],
                     "layerX":0,
                     "crdSysX":0
@@ -8974,7 +5170,7 @@
                 }
               }
             ],
-            "ctxRecon":"¶HKI¶T$A=1@O=HBF SaarLB, Saarbrücken@L=10640@a=128@$A=1@O=Haus der Zukunft, Saarbrücken@L=10612@a=128@$202109061617$202109061620$Bus  124$$1$$$$§W$A=1@O=Haus der Zukunft, Saarbrücken@L=10612@a=128@$A=1@O=Johanneskirche, Saarbrücken@L=10619@a=128@$202109061620$202109061625$$$1$$$$§T$A=1@O=Johanneskirche, Saarbrücken@L=10619@a=128@$A=1@O=Kieselhumes, Saarbrücken@L=10605@a=128@$202109061628$202109061634$S      1$$1$$$$§W$A=1@O=Kieselhumes, Saarbrücken@L=10605@a=128@$A=1@O=Ostbahnhof, Saarbrücken@L=10700@a=128@$202109061634$202109061640$$$1$$$$",
+            "ctxRecon":"¶HKI¶T$A=1@O=HBF SaarLB, Saarbrücken@L=10640@a=128@$A=1@O=Johanneskirche, Saarbrücken@L=10619@a=128@$202112052150$202112052153$Bus  102$$1$$$$§T$A=1@O=Johanneskirche, Saarbrücken@L=10619@a=128@$A=1@O=Kieselhumes, Saarbrücken@L=10605@a=128@$202112052158$202112052204$S      1$$1$$$$§W$A=1@O=Kieselhumes, Saarbrücken@L=10605@a=128@$A=1@O=Ostbahnhof, Saarbrücken@L=10700@a=128@$202112052204$202112052210$$$1$$$$",
             "freq":
             {
               "minC":15
@@ -9201,14 +5397,14 @@
                       "name":"Jahreskarte (Abo pro Monat)(saarVV Preisstufe 0)",
                       "prc":5425,
                       "cur":"EUR",
-                      "shpCtx":"~0-.25114-1",
+                      "shpCtx":"~0-.25115-1",
                       "buttonText":"Ticket kaufen",
                       "extCont":
                       {
                         "content":
                         {
                           "type":"LIB_TARIFF",
-                          "content":"fjAtLjI1MTE0LTE="
+                          "content":"fjAtLjI1MTE1LTE="
                         }
                       }
                     },
@@ -9447,7 +5643,7 @@
                     {
                       "ID":
                       [
-"1eb6ecec3a6255bdcf3677876ff2a10c"
+"03d51a209ec5988e9441e9257b15dfc4"
                       ]
                     },
                     {
@@ -9611,7 +5807,7 @@
                       "ON":
                       [
 "Tageskarte 5 Personen",
-"gilt montags bis freitags ab 8:00 Uhr bis Betriebsschluss und samstags, sonn- und feiertags ganztägig"
+""
                       ],
                       "XV":
                       [
@@ -9753,7 +5949,7 @@
                     {
                       "ID":
                       [
-"25114"
+"25115"
                       ],
                       "ON":
                       [
@@ -10385,7 +6581,7 @@
                           "FF":true
                         },
                         {
-                          "P":"~0-.25114-1",
+                          "P":"~0-.25115-1",
                           "VT":"saarVV-1",
                           "FS":"VGS",
                           "DV":36,
@@ -10736,20 +6932,20 @@
             ],
             "conSubscr":"F",
             "recState":"U",
-            "cksum":"1778f990_3",
-            "cksumDti":"9bf53d8d_3"
+            "cksum":"8417124c_3",
+            "cksumDti":"9c310b99_3"
           }
         ],
-        "outCtxScrB":"2|OB|MT#11#388307#388307#388330#388330#0#0#85#388298#1#-2147483646#0#1#2|PDH#36e54f4f2d30dab582d4387069786247|RD#6092021|RT#153800|US#0",
-        "outCtxScrF":"2|OF|MT#11#388337#388337#388354#388360#0#0#85#388323#4#-2147483646#0#1#2|PDH#36e54f4f2d30dab582d4387069786247|RD#6092021|RT#153800|US#0",
-        "fpB":"20201213",
-        "fpE":"20211211",
-        "planrtTS":"1630935463",
+        "outCtxScrB":"2|OB|MT#11#94790#94790#94810#94810#0#0#5#94765#1#-2147483646#0#1#2|PDH#f8dda62c86d21f30d6df75e9e130f0c4|RD#5122021|RT#192500|US#0",
+        "outCtxScrF":"2|OF|MT#11#94910#94910#94930#94930#0#0#5#94851#3#-2147483646#0#1#2|PDH#f8dda62c86d21f30d6df75e9e130f0c4|RD#5122021|RT#192500|US#0",
+        "fpB":"20211003",
+        "fpE":"20211231",
+        "planrtTS":"1638728698",
         "outConGrpL":
         [
           {
             "name":"Alle Verbindungen",
-            "icoX":11,
+            "icoX":5,
             "grpid":"cl_all",
             "conScoringL":
             [
@@ -10758,31 +6954,24 @@
                 "conScoreL":
                 [
                   {
-                    "score":7528242865672552446,
+                    "score":8819144283473838078,
                     "conRefL":
                     [
 0
                     ]
                   },
                   {
-                    "score":7528176894974885886,
+                    "score":8818880400683171838,
                     "conRefL":
                     [
 1
                     ]
                   },
                   {
-                    "score":7528110924280365053,
+                    "score":8818616517892505598,
                     "conRefL":
                     [
 2
-                    ]
-                  },
-                  {
-                    "score":7528110924277219326,
-                    "conRefL":
-                    [
-3
                     ]
                   }
                 ],
@@ -10793,31 +6982,24 @@
                 "conScoreL":
                 [
                   {
-                    "score":7528141710602797054,
+                    "score":8819056322543615998,
                     "conRefL":
                     [
 0
                     ]
                   },
                   {
-                    "score":7528075739905130494,
+                    "score":8818792439752949758,
                     "conRefL":
                     [
 1
                     ]
                   },
                   {
-                    "score":7527939400466431997,
+                    "score":8818528556962283518,
                     "conRefL":
                     [
 2
-                    ]
-                  },
-                  {
-                    "score":7528009769207463934,
-                    "conRefL":
-                    [
-3
                     ]
                   }
                 ],
@@ -10828,31 +7010,24 @@
                 "conScoreL":
                 [
                   {
-                    "score":9223267381175386110,
+                    "score":9223280729202360318,
                     "conRefL":
                     [
 0
                     ]
                   },
                   {
-                    "score":9223267381167521790,
+                    "score":9223280729170903038,
                     "conRefL":
                     [
 1
                     ]
                   },
                   {
-                    "score":9223293769438724093,
+                    "score":9223280729139445758,
                     "conRefL":
                     [
 2
-                    ]
-                  },
-                  {
-                    "score":9223267381159657470,
-                    "conRefL":
-                    [
-3
                     ]
                   }
                 ],

@@ -1,7 +1,7 @@
 {
   "ver":"1.16",
   "lang":"deu",
-  "id":"au66xmqm6igtpwcs",
+  "id":"vv4cskqi42gipi4k",
   "svcResL":
   [
     {
@@ -30,17 +30,17 @@
             {
               "name":"",
               "icoX":2,
-              "cls":128
-            },
-            {
-              "name":"",
-              "icoX":3,
               "cls":64
             },
             {
               "name":"",
-              "icoX":5,
+              "icoX":4,
               "cls":1
+            },
+            {
+              "name":"",
+              "icoX":5,
+              "cls":128
             }
           ],
           "polyL":
@@ -110,23 +110,6 @@
               }
             },
             {
-              "res":"prod_bus",
-              "fg":
-              {
-                "r":255,
-                "g":255,
-                "b":255,
-                "a":255
-              },
-              "bg":
-              {
-                "r":211,
-                "g":22,
-                "b":29,
-                "a":255
-              }
-            },
-            {
               "res":"prod_gen",
               "fg":
               {
@@ -162,6 +145,23 @@
                 "b":164,
                 "a":255
               }
+            },
+            {
+              "res":"prod_bus",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255,
+                "a":255
+              },
+              "bg":
+              {
+                "r":211,
+                "g":22,
+                "b":29,
+                "a":255
+              }
             }
           ]
         },
@@ -172,10 +172,10 @@
           "locL":
           [
             {
-              "lid":"A=1@O=Hamburg Hbf@X=10007942@Y=53552751@U=80@L=000000090@B=1@p=1630603642@",
+              "lid":"A=1@O=Hamburg Hbf@X=10007942@Y=53552751@U=80@L=000000090@B=1@p=1638459006@",
               "type":"S",
               "name":"Hamburg Hbf",
-              "icoX":4,
+              "icoX":3,
               "extId":"000000090",
               "state":"F",
               "crd":
@@ -186,21 +186,20 @@
                 "layerX":0,
                 "crdSysX":0
               },
-              "pCls":202,
+              "pCls":74,
               "pRefL":
               [
 0,
 1,
-2,
-3
+2
               ],
-              "wt":23494
+              "wt":24020
             },
             {
-              "lid":"A=1@O=Hauptbahnhof@X=10007763@Y=53552499@U=80@L=000107803@B=1@p=1630603642@",
+              "lid":"A=1@O=Hauptbahnhof@X=10007763@Y=53552499@U=80@L=000107803@B=1@p=1638459006@",
               "type":"S",
               "name":"Hauptbahnhof",
-              "icoX":4,
+              "icoX":3,
               "extId":"000107803",
               "state":"F",
               "crd":
@@ -215,19 +214,19 @@
               "pCls":203,
               "pRefL":
               [
-4,
+3,
 0,
 1,
-2,
-3
+4,
+2
               ],
               "wt":32767
             },
             {
-              "lid":"A=1@O=Lübeck Hbf@X=10671274@Y=53868137@U=80@L=000008024@B=1@p=1630603642@",
+              "lid":"A=1@O=Lübeck Hbf@X=10671274@Y=53868137@U=80@L=000008024@B=1@p=1638459006@",
               "type":"S",
               "name":"Lübeck Hbf",
-              "icoX":4,
+              "icoX":3,
               "extId":"000008024",
               "state":"F",
               "crd":
@@ -242,16 +241,39 @@
               "pRefL":
               [
 1,
-2,
-3
+4,
+2
               ],
-              "wt":4979
+              "wt":4683
             },
             {
-              "lid":"A=1@O=Hauptbahnhof Nord@X=10005947@Y=53554090@U=80@L=000000084@B=1@p=1630603642@",
+              "lid":"A=1@O=Bremen Hbf@X=8812934@Y=53083936@U=80@L=000008013@B=1@p=1638459006@",
+              "type":"S",
+              "name":"Bremen Hbf",
+              "icoX":3,
+              "extId":"000008013",
+              "state":"F",
+              "crd":
+              {
+                "x":8812934,
+                "y":53083936,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":72,
+              "pRefL":
+              [
+1,
+2
+              ],
+              "wt":3655
+            },
+            {
+              "lid":"A=1@O=Hauptbahnhof Nord@X=10005947@Y=53554090@U=80@L=000000084@B=1@p=1638459006@",
               "type":"S",
               "name":"Hauptbahnhof Nord",
-              "icoX":4,
+              "icoX":3,
               "extId":"000000084",
               "state":"F",
               "crd":
@@ -265,31 +287,9 @@
               "pCls":1,
               "pRefL":
               [
-4
+3
               ],
-              "wt":8575
-            },
-            {
-              "lid":"A=1@O=Hauptbahnhof Süd@X=10009462@Y=53552014@U=80@L=000000085@B=1@p=1630603642@",
-              "type":"S",
-              "name":"Hauptbahnhof Süd",
-              "icoX":4,
-              "extId":"000000085",
-              "state":"F",
-              "crd":
-              {
-                "x":10009462,
-                "y":53552014,
-                "type":"WGS84",
-                "layerX":0,
-                "crdSysX":0
-              },
-              "pCls":1,
-              "pRefL":
-              [
-4
-              ],
-              "wt":8575
+              "wt":8329
             }
           ]
         }

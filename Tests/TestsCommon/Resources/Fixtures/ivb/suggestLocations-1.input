@@ -2,7 +2,7 @@
   "ver":"1.20",
   "ext":"VAO.7",
   "lang":"deu",
-  "id":"452cbis6m2itgwck",
+  "id":"pv2wums8662apg8x",
   "err":"OK",
   "cInfo":
   {
@@ -54,17 +54,15 @@
           ],
           "remL":
           [
-            {
-              "type":"W",
-              "code":"WW",
-              "txtN":"WEBVIEW",
-              "url":"https://routenplaner.verkehrsauskunft.at/bin/query.exe/dn?tpl=webview_poi&performLocating=128&look_station=960086943&look_nv=get_infotext|yes|get_attributes|yes&look_stationpool=130&L=vs_ivb"
-            }
+
           ],
           "icoL":
           [
             {
               "res":"MH"
+            },
+            {
+              "res":"ADR"
             },
             {
               "res":"prod_regbus",
@@ -81,28 +79,6 @@
                 "g":163,
                 "b":212
               }
-            },
-            {
-              "res":"ADR"
-            },
-            {
-              "res":"prod_regbus",
-              "txtS":"489",
-              "fg":
-              {
-                "r":255,
-                "g":255,
-                "b":255
-              },
-              "bg":
-              {
-                "r":0,
-                "g":163,
-                "b":212
-              }
-            },
-            {
-              "res":"PCAT_ESSEN"
             }
           ]
         },
@@ -113,7 +89,7 @@
           "locL":
           [
             {
-              "lid":"A=1@O=KOCHHOLZ@X=15452035@Y=48269637@U=81@L=900003394@B=1@p=1630889505@i=5aae08d1-6162-40f1-94a8-3cac555c0797@",
+              "lid":"A=1@O=KOCHHOLZ@X=15452035@Y=48269637@U=81@L=900003394@B=1@p=1638666385@i=5aae08d1-6162-40f1-94a8-3cac555c0797@",
               "type":"S",
               "name":"KOCHHOLZ",
               "icoX":0,
@@ -128,13 +104,56 @@
               },
               "meta":true,
               "pCls":64,
-              "wt":2
+              "wt":2,
+              "mapSelectable":true
             },
             {
-              "lid":"A=1@O=Innsbruck Kochstraße@X=11400363@Y=47272851@U=81@L=476640200@B=1@p=1630889505@i=at:47:66402@",
+              "lid":"A=2@O=Kochs Damm, Zetel@X=7878443@Y=53385057@U=104@b=971658595@B=1@p=1636631415@",
+              "type":"A",
+              "name":"Kochs Damm, Zetel",
+              "icoX":1,
+              "state":"F",
+              "crd":
+              {
+                "x":7878443,
+                "y":53385057,
+                "layerX":0,
+                "crdSysX":0
+              }
+            },
+            {
+              "lid":"A=2@O=Kochs, Wiggensbach@X=10236871@Y=47741126@U=104@b=971801681@B=1@p=1636631415@",
+              "type":"A",
+              "name":"Kochs, Wiggensbach",
+              "icoX":1,
+              "state":"F",
+              "crd":
+              {
+                "x":10236871,
+                "y":47741126,
+                "layerX":0,
+                "crdSysX":0
+              }
+            },
+            {
+              "lid":"A=2@O=Kochs Büsche, Melle@X=8421077@Y=52177563@U=104@b=971498706@B=1@p=1636631415@",
+              "type":"A",
+              "name":"Kochs Büsche, Melle",
+              "icoX":1,
+              "state":"F",
+              "crd":
+              {
+                "x":8421077,
+                "y":52177563,
+                "layerX":0,
+                "crdSysX":0
+              }
+            },
+            {
+              "lid":"A=1@O=Innsbruck Kochstraße@X=11400363@Y=47272851@U=81@L=476640200@B=1@p=1638666385@i=at:47:66402@",
               "type":"S",
               "name":"Innsbruck Kochstraße",
-              "icoX":1,
+              "icoX":2,
               "extId":"476640200",
               "state":"F",
               "crd":
@@ -146,72 +165,9 @@
               },
               "meta":true,
               "pCls":192,
-              "wt":225,
-              "isMainMast":true
-            },
-            {
-              "lid":"A=2@O=Kochstraße, 8010 Graz@X=15461887@Y=47055842@U=103@b=980066789@B=1@p=1629871314@",
-              "type":"A",
-              "name":"Kochstraße, 8010 Graz",
-              "icoX":2,
-              "state":"F",
-              "crd":
-              {
-                "x":15461887,
-                "y":47055842,
-                "layerX":0,
-                "crdSysX":0
-              }
-            },
-            {
-              "lid":"A=1@O=Kochholz Abzw. Gerolding@X=15444627@Y=48263723@U=81@L=431689500@B=1@p=1630889505@i=at:43:16895@",
-              "type":"S",
-              "name":"Kochholz Abzw. Gerolding",
-              "icoX":3,
-              "extId":"431689500",
-              "state":"F",
-              "crd":
-              {
-                "x":15444627,
-                "y":48263723,
-                "layerX":0,
-                "crdSysX":0
-              },
-              "meta":true,
-              "pCls":64,
-              "wt":2,
-              "isMainMast":true
-            },
-            {
-              "lid":"A=4@O=Kochstudio heilsam kochen, 4911 Tumeltsham (Essen und Trinken)@X=13497240@Y=48223667@U=130@L=960086943@B=1@p=1630892207@",
-              "type":"P",
-              "name":"Kochstudio heilsam kochen, 4911 Tumeltsham (Essen und Trinken)",
-              "icoX":4,
-              "extId":"960086943",
-              "state":"F",
-              "crd":
-              {
-                "x":13497240,
-                "y":48223667,
-                "layerX":0,
-                "crdSysX":0
-              },
-              "mcpData":
-              {
-                "type":"P",
-                "occupancy":"N",
-                "mcpid":"0",
-                "externalId":"oeamtc_to-10_430005211"
-              },
-              "msgL":
-              [
-                {
-                  "type":"REM",
-                  "remX":0,
-                  "dspl":"U",
-                  "sort":684195840
-                }
-              ]
+              "wt":219,
+              "isMainMast":true,
+              "mapSelectable":true
             }
           ]
         }

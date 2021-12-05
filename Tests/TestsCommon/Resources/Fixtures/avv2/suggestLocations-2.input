@@ -1,7 +1,7 @@
 {
   "ver":"1.18",
   "lang":"deu",
-  "id":"pw6q2ks46qq4p24k",
+  "id":"f8ww6m8g66g7ggwg",
   "err":"OK",
   "svcResL":
   [
@@ -36,6 +36,16 @@
               "prodCtx":
               {
                 "lineId":"de:aac:05334|V-ACGS:aseag"
+              }
+            },
+            {
+              "name":"Netliner",
+              "nameS":"Netliner",
+              "icoX":1,
+              "cls":512,
+              "prodCtx":
+              {
+                "lineId":"de:aac:05334|NET37:aseag"
               }
             },
             {
@@ -79,9 +89,19 @@
               }
             },
             {
+              "name":"Bus 107",
+              "nameS":"107",
+              "icoX":0,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"KVB____107"
+              }
+            },
+            {
               "name":"Tra 7",
               "nameS":"7",
-              "icoX":2,
+              "icoX":3,
               "cls":64,
               "prodCtx":
               {
@@ -136,6 +156,21 @@
               }
             },
             {
+              "res":"AST",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255
+              },
+              "bg":
+              {
+                "r":165,
+                "g":85,
+                "b":149
+              }
+            },
+            {
               "res":"ADR"
             },
             {
@@ -162,7 +197,7 @@
           "locL":
           [
             {
-              "lid":"A=1@O=Gaßmühle@X=6008174@Y=50781646@U=80@L=1576@B=1@p=1630627037@",
+              "lid":"A=1@O=Gaßmühle@X=6008174@Y=50781646@U=80@L=1576@B=1@p=1638608654@",
               "type":"S",
               "name":"Gaßmühle",
               "icoX":0,
@@ -175,19 +210,20 @@
                 "layerX":0,
                 "crdSysX":0
               },
-              "pCls":256,
+              "pCls":768,
               "pRefL":
               [
 0,
-1
+1,
+2
               ],
-              "wt":5
+              "wt":56
             },
             {
               "lid":"A=2@O=Euskirchen - Euenheim, Schloßmühlenstraße@X=6743708@Y=50652013@U=103@b=990058960@B=1@p=1614693982@",
               "type":"A",
               "name":"Euskirchen - Euenheim, Schloßmühlenstraße",
-              "icoX":1,
+              "icoX":2,
               "state":"M",
               "crd":
               {
@@ -201,7 +237,7 @@
               "lid":"A=2@O=Wesela Rhein - Wesel, Alte Roßmühlenstraße@X=6622030@Y=51659272@U=103@b=990186064@B=1@p=1614693982@",
               "type":"A",
               "name":"Wesela Rhein - Wesel, Alte Roßmühlenstraße",
-              "icoX":1,
+              "icoX":2,
               "state":"M",
               "crd":
               {
@@ -212,7 +248,7 @@
               }
             },
             {
-              "lid":"A=1@O=Euskirchen, Euenheim Schlossmühlenstraße@X=6742845@Y=50653037@U=80@L=272344@B=1@p=1630627037@",
+              "lid":"A=1@O=Euskirchen, Euenheim Schlossmühlenstraße@X=6742845@Y=50653037@U=80@L=272344@B=1@p=1638608654@",
               "type":"S",
               "name":"Euskirchen, Euenheim Schlossmühlenstraße",
               "icoX":0,
@@ -228,18 +264,18 @@
               "pCls":128,
               "pRefL":
               [
-2,
 3,
 4,
-5
+5,
+6
               ],
-              "wt":42
+              "wt":37
             },
             {
-              "lid":"A=1@O=Frechen, Mühlengasse@X=6801886@Y=50908196@U=80@L=282410@B=1@p=1630627037@",
+              "lid":"A=1@O=Frechen, Mühlengasse@X=6801886@Y=50908196@U=80@L=282410@B=1@p=1638608654@",
               "type":"S",
               "name":"Frechen, Mühlengasse",
-              "icoX":2,
+              "icoX":0,
               "extId":"282410",
               "state":"F",
               "crd":
@@ -249,12 +285,13 @@
                 "layerX":0,
                 "crdSysX":0
               },
-              "pCls":64,
+              "pCls":192,
               "pRefL":
               [
-6
+7,
+8
               ],
-              "wt":250
+              "wt":418
             }
           ]
         }

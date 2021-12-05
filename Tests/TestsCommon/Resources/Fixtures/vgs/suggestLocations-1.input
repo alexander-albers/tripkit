@@ -1,7 +1,7 @@
 {
   "ver":"1.21",
   "lang":"deu",
-  "id":"tkixyga44aq9hwcs",
+  "id":"yqik4mxg66wix2wg",
   "err":"OK",
   "svcResL":
   [
@@ -219,6 +219,106 @@
               }
             },
             {
+              "name":"Bus N1",
+              "nameS":"N1",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"N1"
+              }
+            },
+            {
+              "name":"Bus N2",
+              "nameS":"N2",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"N2"
+              }
+            },
+            {
+              "name":"Bus N3",
+              "nameS":"N3",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"N3"
+              }
+            },
+            {
+              "name":"Bus N4",
+              "nameS":"N4",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"N4"
+              }
+            },
+            {
+              "name":"Bus N5",
+              "nameS":"N5",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"N5"
+              }
+            },
+            {
+              "name":"Bus N11",
+              "nameS":"N11",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"N11"
+              }
+            },
+            {
+              "name":"Bus N12",
+              "nameS":"N12",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"N12"
+              }
+            },
+            {
+              "name":"Bus N13",
+              "nameS":"N13",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"N13"
+              }
+            },
+            {
+              "name":"Bus N14",
+              "nameS":"N14",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"N14"
+              }
+            },
+            {
+              "name":"Bus N15",
+              "nameS":"N15",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"N15"
+              }
+            },
+            {
               "name":"AST 102",
               "nameS":"102",
               "icoX":2,
@@ -319,13 +419,13 @@
               }
             },
             {
-              "name":"ASTAst_1",
-              "nameS":"Ast_1",
+              "name":"AST 1",
+              "nameS":"1",
               "icoX":2,
               "cls":512,
               "prodCtx":
               {
-                "lineId":"Ast_1"
+                "lineId":"1"
               }
             },
             {
@@ -599,7 +699,7 @@
           "locL":
           [
             {
-              "lid":"A=1@O=Johanneskirche, Saarbrücken@X=6996484@Y=49235816@U=80@L=000010619@B=1@V=11.9,@p=0@",
+              "lid":"A=1@O=Johanneskirche, Saarbrücken@X=6996295@Y=49236050@U=80@L=000010619@B=1@V=11.9,@p=0@",
               "type":"S",
               "name":"Johanneskirche, Saarbrücken",
               "icoX":0,
@@ -607,8 +707,8 @@
               "state":"F",
               "crd":
               {
-                "x":6996484,
-                "y":49235816,
+                "x":6996295,
+                "y":49236050,
                 "layerX":0,
                 "crdSysX":0
               },
@@ -644,12 +744,22 @@
 26,
 27,
 28,
-29
+29,
+30,
+31,
+32,
+33,
+34,
+35,
+36,
+37,
+38,
+39
               ],
-              "wt":1906
+              "wt":1881
             },
             {
-              "lid":"A=1@O=Johannes-Kirchweng-Str., Wadgassen@X=6782361@Y=49266110@U=80@L=000047910@B=1@V=11.9,@p=0@",
+              "lid":"A=1@O=Johannes-Kirchweng-Str., Wadgassen@X=6782154@Y=49266011@U=80@L=000047910@B=1@V=11.9,@p=0@",
               "type":"S",
               "name":"Johannes-Kirchweng-Str., Wadgassen",
               "icoX":2,
@@ -657,20 +767,20 @@
               "state":"F",
               "crd":
               {
-                "x":6782361,
-                "y":49266110,
+                "x":6782154,
+                "y":49266011,
                 "layerX":0,
                 "crdSysX":0
               },
               "pCls":512,
               "pRefL":
               [
-30
+40
               ],
-              "wt":90
+              "wt":77
             },
             {
-              "lid":"A=1@O=Johannes-Gutenberg-Str., Ottweiler@X=7166192@Y=49398799@U=80@L=000033861@B=1@V=11.9,@p=0@",
+              "lid":"A=1@O=Johannes-Gutenberg-Str., Ottweiler@X=7166183@Y=49398925@U=80@L=000033861@B=1@V=11.9,@p=0@",
               "type":"S",
               "name":"Johannes-Gutenberg-Str., Ottweiler",
               "icoX":1,
@@ -678,18 +788,18 @@
               "state":"F",
               "crd":
               {
-                "x":7166192,
-                "y":49398799,
+                "x":7166183,
+                "y":49398925,
                 "layerX":0,
                 "crdSysX":0
               },
               "pCls":1152,
               "pRefL":
               [
-31,
-32
+41,
+42
               ],
-              "wt":23
+              "wt":25
             },
             {
               "lid":"A=1@O=Johannesschule, Hüttersdorf Schmelz@X=6847686@Y=49422019@U=80@L=000045506@B=1@V=11.9,@p=0@",
@@ -708,12 +818,12 @@
               "pCls":128,
               "pRefL":
               [
-33
+43
               ],
-              "wt":17
+              "wt":18
             },
             {
-              "lid":"A=1@O=Johanneum, Homburg@X=7326119@Y=49304089@U=80@L=000050005@B=1@V=11.9,@p=0@",
+              "lid":"A=1@O=Johanneum, Homburg@X=7326155@Y=49304008@U=80@L=000050005@B=1@V=11.9,@p=0@",
               "type":"S",
               "name":"Johanneum, Homburg",
               "icoX":1,
@@ -721,30 +831,30 @@
               "state":"F",
               "crd":
               {
-                "x":7326119,
-                "y":49304089,
+                "x":7326155,
+                "y":49304008,
                 "layerX":0,
                 "crdSysX":0
               },
               "pCls":128,
               "pRefL":
               [
-34,
-35,
-36,
-37,
-38,
-39,
-40,
-41,
-42,
-43,
 44,
 45,
 46,
-47
+47,
+48,
+49,
+50,
+51,
+52,
+53,
+54,
+55,
+56,
+57
               ],
-              "wt":133
+              "wt":135
             }
           ]
         }

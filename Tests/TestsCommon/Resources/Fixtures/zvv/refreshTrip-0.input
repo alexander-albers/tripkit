@@ -2,7 +2,7 @@
   "ver":"1.18",
   "ext":"ZVV.2",
   "lang":"deu",
-  "id":"7n6g9gs6k6g58gwx",
+  "id":"yxm4cmx862ib9w8g",
   "err":"OK",
   "svcResL":
   [
@@ -16,20 +16,20 @@
           "locL":
           [
             {
-              "lid":"A=1@O=Zürich HB@X=8537945@Y=47378492@U=85@L=8503000@",
+              "lid":"A=1@O=Zürich, Bahnhofplatz/HB@X=8539303@Y=47377251@U=21@L=299986@",
               "type":"S",
-              "name":"Zürich HB",
+              "name":"Zürich, Bahnhofplatz/HB",
               "icoX":0,
-              "extId":"8503000",
+              "extId":"299986",
               "state":"F",
               "crd":
               {
-                "x":8537945,
-                "y":47378492,
+                "x":8540426,
+                "y":47376919,
                 "layerX":0,
                 "crdSysX":0
               },
-              "pCls":866,
+              "pCls":832,
               "pRefL":
               [
 0,
@@ -62,49 +62,37 @@
 27,
 28,
 29,
-30,
-31,
-32,
-33,
-34,
-35,
-36,
-37,
-38,
-39,
-40,
-41,
-42,
-43,
-44,
-45,
-46,
-47,
-48,
-49,
-50,
-51,
-52,
-53,
-54,
-55,
-56,
-57,
-58,
-59,
-60,
-61,
-62,
-63,
-64
+30
+              ],
+              "mMastLocX":1
+            },
+            {
+              "lid":"A=1@O=Zürich, Bahnhofplatz/HB@X=8539303@Y=47377251@U=21@L=8587348@",
+              "type":"S",
+              "name":"Zürich, Bahnhofplatz/HB",
+              "icoX":11,
+              "extId":"8587348",
+              "state":"F",
+              "crd":
+              {
+                "x":8539303,
+                "y":47377251,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":832,
+              "pRefL":
+              [
+11,
+21
               ],
               "isMainMast":true
             },
             {
-              "lid":"A=1@O=Zürich, Hegibachplatz@X=8560715@Y=47361772@U=85@L=299908@",
+              "lid":"A=1@O=Zürich, Hegibachplatz@X=8560715@Y=47361772@U=21@L=299908@",
               "type":"S",
               "name":"Zürich, Hegibachplatz",
-              "icoX":2,
+              "icoX":23,
               "extId":"299908",
               "state":"F",
               "crd":
@@ -117,25 +105,26 @@
               "pCls":864,
               "pRefL":
               [
-66,
-67,
-68,
-69,
-70,
-71,
-72,
-73,
-74,
-75,
-76
+32,
+6,
+9,
+33,
+14,
+15,
+34,
+35,
+36,
+37,
+27,
+38
               ],
-              "mMastLocX":2
+              "mMastLocX":3
             },
             {
-              "lid":"A=1@O=Zürich, Hegibachplatz@X=8560715@Y=47361772@U=85@L=8530812@",
+              "lid":"A=1@O=Zürich, Hegibachplatz@X=8560715@Y=47361772@U=21@L=8530812@",
               "type":"S",
               "name":"Zürich, Hegibachplatz",
-              "icoX":14,
+              "icoX":29,
               "extId":"8530812",
               "state":"F",
               "crd":
@@ -149,101 +138,110 @@
               "isMainMast":true
             },
             {
-              "lid":"A=1@O=Zürich Stadelhofen (SBB)@X=8548670@Y=47366707@U=85@L=8503003@",
+              "lid":"A=1@O=Zürich, Central@X=8543968@Y=47376802@U=21@L=299960@",
               "type":"S",
-              "name":"Zürich Stadelhofen (SBB)",
-              "icoX":2,
-              "extId":"8503003",
+              "name":"Zürich, Central",
+              "icoX":0,
+              "extId":"299960",
               "state":"F",
               "crd":
               {
-                "x":8548670,
-                "y":47366707,
+                "x":8544642,
+                "y":47376577,
                 "layerX":0,
                 "crdSysX":0
               },
-              "pCls":866,
-              "pRefL":
-              [
-26,
-27,
-28,
-29,
-30,
-31,
-32,
-33,
-36,
-37,
-38,
-39,
-40,
-41,
-44,
-46,
-47,
-49,
-51,
-56,
-57,
-58,
-59,
-60,
-63,
-64
-              ],
-              "isMainMast":true
-            },
-            {
-              "lid":"A=1@O=Zürich, Bahnhof Stadelhofen@X=8548157@Y=47366284@U=85@L=299617@",
-              "type":"S",
-              "name":"Zürich, Bahnhof Stadelhofen",
-              "icoX":2,
-              "extId":"299617",
-              "state":"F",
-              "crd":
-              {
-                "x":8548130,
-                "y":47366132,
-                "layerX":0,
-                "crdSysX":0
-              },
-              "pCls":866,
-              "pRefL":
-              [
-66,
-83,
-84,
-85,
-67,
-68,
-69,
-76
-              ],
+              "pCls":960,
               "mMastLocX":5
             },
             {
-              "lid":"A=1@O=Zürich, Bahnhof Stadelhofen@X=8548157@Y=47366284@U=85@L=8503059@",
+              "lid":"A=1@O=Zürich, Central@X=8543968@Y=47376802@U=21@L=8588078@",
               "type":"S",
-              "name":"Zürich, Bahnhof Stadelhofen",
-              "icoX":14,
-              "extId":"8503059",
+              "name":"Zürich, Central",
+              "icoX":29,
+              "extId":"8588078",
               "state":"F",
               "crd":
               {
-                "x":8548157,
-                "y":47366284,
+                "x":8543968,
+                "y":47376802,
                 "layerX":0,
                 "crdSysX":0
               },
-              "pCls":864,
+              "pCls":832,
               "isMainMast":true
             },
             {
-              "lid":"A=1@O=Zürich, Kreuzplatz@X=8553946@Y=47365053@U=85@L=299850@",
+              "lid":"A=1@O=Zürich, Neumarkt@X=8547348@Y=47372766@U=21@L=8591287@",
+              "type":"S",
+              "name":"Zürich, Neumarkt",
+              "icoX":1,
+              "extId":"8591287",
+              "state":"F",
+              "crd":
+              {
+                "x":8547456,
+                "y":47372640,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":576
+            },
+            {
+              "lid":"A=1@O=Zürich, Kunsthaus@X=8549146@Y=47370428@U=21@L=299849@",
+              "type":"S",
+              "name":"Zürich, Kunsthaus",
+              "icoX":0,
+              "extId":"299849",
+              "state":"F",
+              "crd":
+              {
+                "x":8548607,
+                "y":47370339,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":576,
+              "mMastLocX":8
+            },
+            {
+              "lid":"A=1@O=Zürich, Kunsthaus@X=8549146@Y=47370428@U=21@L=8591239@",
+              "type":"S",
+              "name":"Zürich, Kunsthaus",
+              "icoX":29,
+              "extId":"8591239",
+              "state":"F",
+              "crd":
+              {
+                "x":8549146,
+                "y":47370428,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":576,
+              "isMainMast":true
+            },
+            {
+              "lid":"A=1@O=Zürich, Sprecherstrasse@X=8552256@Y=47367489@U=21@L=8591375@",
+              "type":"S",
+              "name":"Zürich, Sprecherstrasse",
+              "icoX":14,
+              "extId":"8591375",
+              "state":"F",
+              "crd":
+              {
+                "x":8551843,
+                "y":47367894,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":64
+            },
+            {
+              "lid":"A=1@O=Zürich, Kreuzplatz@X=8553946@Y=47365053@U=21@L=299850@",
               "type":"S",
               "name":"Zürich, Kreuzplatz",
-              "icoX":2,
+              "icoX":23,
               "extId":"299850",
               "state":"F",
               "crd":
@@ -254,13 +252,13 @@
                 "crdSysX":0
               },
               "pCls":864,
-              "mMastLocX":7
+              "mMastLocX":11
             },
             {
-              "lid":"A=1@O=Zürich, Kreuzplatz@X=8553946@Y=47365053@U=85@L=8530813@",
+              "lid":"A=1@O=Zürich, Kreuzplatz@X=8553946@Y=47365053@U=21@L=8530813@",
               "type":"S",
               "name":"Zürich, Kreuzplatz",
-              "icoX":14,
+              "icoX":29,
               "extId":"8530813",
               "state":"F",
               "crd":
@@ -272,996 +270,138 @@
               },
               "pCls":864,
               "isMainMast":true
+            },
+            {
+              "lid":"A=1@O=Zürich, Signaustrasse@X=8557623@Y=47363228@U=21@L=299422@",
+              "type":"S",
+              "name":"Zürich, Signaustrasse",
+              "icoX":6,
+              "extId":"299422",
+              "state":"F",
+              "crd":
+              {
+                "x":8557875,
+                "y":47363012,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":832,
+              "mMastLocX":13
+            },
+            {
+              "lid":"A=1@O=Zürich, Signaustrasse@X=8557623@Y=47363228@U=21@L=8591364@",
+              "type":"S",
+              "name":"Zürich, Signaustrasse",
+              "icoX":29,
+              "extId":"8591364",
+              "state":"F",
+              "crd":
+              {
+                "x":8557623,
+                "y":47363228,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":576,
+              "isMainMast":true
             }
           ],
           "prodL":
           [
             {
-              "name":"EC",
+              "name":"Trm 2",
+              "nameS":"2",
               "icoX":0,
-              "cls":2,
+              "cls":512,
               "prodCtx":
               {
-                "name":"EC      ",
-                "line":"",
-                "catOut":"EC      ",
-                "catOutS":"EC",
-                "catOutL":"EuroCity"
+                "name":"Trm 2",
+                "line":"2",
+                "lineId":"85:3849:002",
+                "catOut":"Trm     ",
+                "catOutS":"T",
+                "catOutL":"Tram"
               }
             },
             {
-              "name":"EXT",
-              "icoX":0,
-              "cls":2,
-              "prodCtx":
-              {
-                "name":"EXT     ",
-                "line":"",
-                "catOut":"EXT     ",
-                "catOutS":"EXT",
-                "catOutL":"Extrazug"
-              }
-            },
-            {
-              "name":"IC",
-              "icoX":0,
-              "cls":2,
-              "prodCtx":
-              {
-                "name":"IC      ",
-                "line":"",
-                "catOut":"IC      ",
-                "catOutS":"IC",
-                "catOutL":"InterCity"
-              }
-            },
-            {
-              "name":"ICE",
-              "icoX":0,
-              "cls":2,
-              "prodCtx":
-              {
-                "name":"ICE     ",
-                "line":"",
-                "catOut":"ICE     ",
-                "catOutS":"ICE",
-                "catOutL":"InterCityExpress"
-              }
-            },
-            {
-              "name":"IR",
-              "icoX":0,
-              "cls":2,
-              "prodCtx":
-              {
-                "name":"IR      ",
-                "line":"",
-                "catOut":"IR      ",
-                "catOutS":"IR",
-                "catOutL":"InterRegio"
-              }
-            },
-            {
-              "name":"NJ",
-              "icoX":0,
-              "cls":2,
-              "prodCtx":
-              {
-                "name":"NJ      ",
-                "line":"",
-                "catOut":"NJ      ",
-                "catOutS":"NJ",
-                "catOutL":"Night Jet"
-              }
-            },
-            {
-              "name":"RE",
+              "name":"Trm 3",
+              "nameS":"3",
               "icoX":1,
-              "cls":2,
+              "cls":512,
               "prodCtx":
               {
-                "name":"RE      ",
-                "line":"",
-                "catOut":"RE      ",
-                "catOutS":"RE",
-                "catOutL":"RegioExpress"
+                "name":"Trm 3",
+                "line":"3",
+                "lineId":"85:3849:003",
+                "catOut":"Trm     ",
+                "catOutS":"T",
+                "catOutL":"Tram"
               }
             },
             {
-              "name":"RJX",
-              "icoX":0,
-              "cls":2,
-              "prodCtx":
-              {
-                "name":"RJX     ",
-                "line":"",
-                "catOut":"RJX     ",
-                "catOutS":"RJX",
-                "catOutL":"Railjet Express"
-              }
-            },
-            {
-              "name":"TGV",
-              "icoX":0,
-              "cls":2,
-              "prodCtx":
-              {
-                "name":"TGV     ",
-                "line":"",
-                "catOut":"TGV     ",
-                "catOutS":"TGV",
-                "catOutL":"Train à grande vit."
-              }
-            },
-            {
-              "name":"IC 1",
-              "icoX":0,
-              "cls":2,
-              "prodCtx":
-              {
-                "name":"IC 1",
-                "line":"",
-                "lineId":"1",
-                "catOut":"IC      ",
-                "catOutS":"IC",
-                "catOutL":"InterCity"
-              }
-            },
-            {
-              "name":"IC 2",
-              "icoX":0,
-              "cls":2,
-              "prodCtx":
-              {
-                "name":"IC 2",
-                "line":"",
-                "lineId":"2",
-                "catOut":"IC      ",
-                "catOutS":"IC",
-                "catOutL":"InterCity"
-              }
-            },
-            {
-              "name":"IC 3",
-              "icoX":0,
-              "cls":2,
-              "prodCtx":
-              {
-                "name":"IC 3",
-                "line":"",
-                "lineId":"3",
-                "catOut":"IC      ",
-                "catOutS":"IC",
-                "catOutL":"InterCity"
-              }
-            },
-            {
-              "name":"IC 4",
-              "icoX":0,
-              "cls":2,
-              "prodCtx":
-              {
-                "name":"IC 4",
-                "line":"",
-                "lineId":"4",
-                "catOut":"IC      ",
-                "catOutS":"IC",
-                "catOutL":"InterCity"
-              }
-            },
-            {
-              "name":"IC 5",
-              "icoX":0,
-              "cls":2,
-              "prodCtx":
-              {
-                "name":"IC 5",
-                "line":"",
-                "lineId":"5",
-                "catOut":"IC      ",
-                "catOutS":"IC",
-                "catOutL":"InterCity"
-              }
-            },
-            {
-              "name":"IC 8",
-              "icoX":0,
-              "cls":2,
-              "prodCtx":
-              {
-                "name":"IC 8",
-                "line":"",
-                "lineId":"8",
-                "catOut":"IC      ",
-                "catOutS":"IC",
-                "catOutL":"InterCity"
-              }
-            },
-            {
-              "name":"IR 13",
-              "icoX":0,
-              "cls":2,
-              "prodCtx":
-              {
-                "name":"IR 13",
-                "line":"",
-                "lineId":"13",
-                "catOut":"IR      ",
-                "catOutS":"IR",
-                "catOutL":"InterRegio"
-              }
-            },
-            {
-              "name":"IR 16",
-              "icoX":0,
-              "cls":2,
-              "prodCtx":
-              {
-                "name":"IR 16",
-                "line":"",
-                "lineId":"16",
-                "catOut":"IR      ",
-                "catOutS":"IR",
-                "catOutL":"InterRegio"
-              }
-            },
-            {
-              "name":"IR 35",
-              "icoX":0,
-              "cls":2,
-              "prodCtx":
-              {
-                "name":"IR 35",
-                "line":"",
-                "lineId":"35",
-                "catOut":"IR      ",
-                "catOutS":"IR",
-                "catOutL":"InterRegio"
-              }
-            },
-            {
-              "name":"IR 36",
-              "icoX":0,
-              "cls":2,
-              "prodCtx":
-              {
-                "name":"IR 36",
-                "line":"",
-                "lineId":"36",
-                "catOut":"IR      ",
-                "catOutS":"IR",
-                "catOutL":"InterRegio"
-              }
-            },
-            {
-              "name":"IR 37",
-              "icoX":0,
-              "cls":2,
-              "prodCtx":
-              {
-                "name":"IR 37",
-                "line":"",
-                "lineId":"37",
-                "catOut":"IR      ",
-                "catOutS":"IR",
-                "catOutL":"InterRegio"
-              }
-            },
-            {
-              "name":"IR 46",
-              "icoX":0,
-              "cls":2,
-              "prodCtx":
-              {
-                "name":"IR 46",
-                "line":"",
-                "lineId":"46",
-                "catOut":"IR      ",
-                "catOutS":"IR",
-                "catOutL":"InterRegio"
-              }
-            },
-            {
-              "name":"IR 70",
-              "icoX":0,
-              "cls":2,
-              "prodCtx":
-              {
-                "name":"IR 70",
-                "line":"",
-                "lineId":"70",
-                "catOut":"IR      ",
-                "catOutS":"IR",
-                "catOutL":"InterRegio"
-              }
-            },
-            {
-              "name":"IR 75",
-              "icoX":0,
-              "cls":2,
-              "prodCtx":
-              {
-                "name":"IR 75",
-                "line":"",
-                "lineId":"75",
-                "catOut":"IR      ",
-                "catOutS":"IR",
-                "catOutL":"InterRegio"
-              }
-            },
-            {
-              "name":"S",
-              "nameS":"S",
+              "name":"Trm 4",
+              "nameS":"4",
               "icoX":2,
-              "cls":32,
+              "cls":512,
               "prodCtx":
               {
-                "name":"S       ",
-                "line":"S       ",
-                "catOut":"S       ",
-                "catOutS":"S_",
-                "catOutL":"S-Bahn"
+                "name":"Trm 4",
+                "line":"4",
+                "lineId":"85:3849:004",
+                "catOut":"Trm     ",
+                "catOutS":"T",
+                "catOutL":"Tram"
               }
             },
             {
-              "name":"S 2",
-              "nameS":"S 2",
-              "icoX":2,
-              "cls":32,
-              "prodCtx":
-              {
-                "name":"S 2",
-                "line":"S 2",
-                "lineId":"2",
-                "catOut":"S       ",
-                "catOutS":"S",
-                "catOutL":"S-Bahn"
-              }
-            },
-            {
-              "name":"S 2",
-              "nameS":"S 2",
-              "icoX":2,
-              "cls":32,
-              "prodCtx":
-              {
-                "name":"S 2",
-                "line":"S 2",
-                "lineId":"85:000490:002",
-                "catOut":"S       ",
-                "catOutS":"S",
-                "catOutL":"S-Bahn"
-              }
-            },
-            {
-              "name":"S 3",
-              "nameS":"S 3",
-              "icoX":2,
-              "cls":32,
-              "prodCtx":
-              {
-                "name":"S 3",
-                "line":"S 3",
-                "lineId":"85:000490:003",
-                "catOut":"S       ",
-                "catOutS":"S",
-                "catOutL":"S-Bahn"
-              }
-            },
-            {
-              "name":"S 3",
-              "nameS":"S 3",
-              "icoX":2,
-              "cls":32,
-              "prodCtx":
-              {
-                "name":"S 3",
-                "line":"S 3",
-                "lineId":"3",
-                "catOut":"S       ",
-                "catOutS":"S",
-                "catOutL":"S-Bahn"
-              }
-            },
-            {
-              "name":"S 5",
-              "nameS":"S 5",
-              "icoX":2,
-              "cls":32,
-              "prodCtx":
-              {
-                "name":"S 5",
-                "line":"S 5",
-                "lineId":"85:000490:005",
-                "catOut":"S       ",
-                "catOutS":"S",
-                "catOutL":"S-Bahn"
-              }
-            },
-            {
-              "name":"S 5",
-              "nameS":"S 5",
-              "icoX":2,
-              "cls":32,
-              "prodCtx":
-              {
-                "name":"S 5",
-                "line":"S 5",
-                "lineId":"5",
-                "catOut":"S       ",
-                "catOutS":"S",
-                "catOutL":"S-Bahn"
-              }
-            },
-            {
-              "name":"S 6",
-              "nameS":"S 6",
-              "icoX":2,
-              "cls":32,
-              "prodCtx":
-              {
-                "name":"S 6",
-                "line":"S 6",
-                "lineId":"85:000490:006",
-                "catOut":"S       ",
-                "catOutS":"S",
-                "catOutL":"S-Bahn"
-              }
-            },
-            {
-              "name":"S 6",
-              "nameS":"S 6",
-              "icoX":2,
-              "cls":32,
-              "prodCtx":
-              {
-                "name":"S 6",
-                "line":"S 6",
-                "lineId":"6",
-                "catOut":"S       ",
-                "catOutS":"S",
-                "catOutL":"S-Bahn"
-              }
-            },
-            {
-              "name":"S 7",
-              "nameS":"S 7",
-              "icoX":2,
-              "cls":32,
-              "prodCtx":
-              {
-                "name":"S 7",
-                "line":"S 7",
-                "lineId":"85:000490:007",
-                "catOut":"S       ",
-                "catOutS":"S",
-                "catOutL":"S-Bahn"
-              }
-            },
-            {
-              "name":"S 7",
-              "nameS":"S 7",
-              "icoX":2,
-              "cls":32,
-              "prodCtx":
-              {
-                "name":"S 7",
-                "line":"S 7",
-                "lineId":"7",
-                "catOut":"S       ",
-                "catOutS":"S",
-                "catOutL":"S-Bahn"
-              }
-            },
-            {
-              "name":"S 8",
-              "nameS":"S 8",
-              "icoX":2,
-              "cls":32,
-              "prodCtx":
-              {
-                "name":"S 8",
-                "line":"S 8",
-                "lineId":"8",
-                "catOut":"S       ",
-                "catOutS":"S",
-                "catOutL":"S-Bahn"
-              }
-            },
-            {
-              "name":"S 8",
-              "nameS":"S 8",
-              "icoX":2,
-              "cls":32,
-              "prodCtx":
-              {
-                "name":"S 8",
-                "line":"S 8",
-                "lineId":"85:000490:008",
-                "catOut":"S       ",
-                "catOutS":"S",
-                "catOutL":"S-Bahn"
-              }
-            },
-            {
-              "name":"S 9",
-              "nameS":"S 9",
-              "icoX":2,
-              "cls":32,
-              "prodCtx":
-              {
-                "name":"S 9",
-                "line":"S 9",
-                "lineId":"9",
-                "catOut":"S       ",
-                "catOutS":"S",
-                "catOutL":"S-Bahn"
-              }
-            },
-            {
-              "name":"S 9",
-              "nameS":"S 9",
-              "icoX":2,
-              "cls":32,
-              "prodCtx":
-              {
-                "name":"S 9",
-                "line":"S 9",
-                "lineId":"85:000490:009",
-                "catOut":"S       ",
-                "catOutS":"S",
-                "catOutL":"S-Bahn"
-              }
-            },
-            {
-              "name":"S 11",
-              "nameS":"S 11",
-              "icoX":2,
-              "cls":32,
-              "prodCtx":
-              {
-                "name":"S 11",
-                "line":"S 11",
-                "lineId":"85:000490:011",
-                "catOut":"S       ",
-                "catOutS":"S",
-                "catOutL":"S-Bahn"
-              }
-            },
-            {
-              "name":"S 11",
-              "nameS":"S 11",
-              "icoX":2,
-              "cls":32,
-              "prodCtx":
-              {
-                "name":"S 11",
-                "line":"S 11",
-                "lineId":"11",
-                "catOut":"S       ",
-                "catOutS":"S",
-                "catOutL":"S-Bahn"
-              }
-            },
-            {
-              "name":"S 12",
-              "nameS":"S 12",
-              "icoX":2,
-              "cls":32,
-              "prodCtx":
-              {
-                "name":"S 12",
-                "line":"S 12",
-                "lineId":"12",
-                "catOut":"S       ",
-                "catOutS":"S",
-                "catOutL":"S-Bahn"
-              }
-            },
-            {
-              "name":"S 12",
-              "nameS":"S 12",
-              "icoX":2,
-              "cls":32,
-              "prodCtx":
-              {
-                "name":"S 12",
-                "line":"S 12",
-                "lineId":"85:000490:012",
-                "catOut":"S       ",
-                "catOutS":"S",
-                "catOutL":"S-Bahn"
-              }
-            },
-            {
-              "name":"S 14",
-              "nameS":"S 14",
-              "icoX":2,
-              "cls":32,
-              "prodCtx":
-              {
-                "name":"S 14",
-                "line":"S 14",
-                "lineId":"14",
-                "catOut":"S       ",
-                "catOutS":"S",
-                "catOutL":"S-Bahn"
-              }
-            },
-            {
-              "name":"S 14",
-              "nameS":"S 14",
-              "icoX":2,
-              "cls":32,
-              "prodCtx":
-              {
-                "name":"S 14",
-                "line":"S 14",
-                "lineId":"85:000490:014",
-                "catOut":"S       ",
-                "catOutS":"S",
-                "catOutL":"S-Bahn"
-              }
-            },
-            {
-              "name":"S 15",
-              "nameS":"S 15",
-              "icoX":2,
-              "cls":32,
-              "prodCtx":
-              {
-                "name":"S 15",
-                "line":"S 15",
-                "lineId":"85:000490:015",
-                "catOut":"S       ",
-                "catOutS":"S",
-                "catOutL":"S-Bahn"
-              }
-            },
-            {
-              "name":"S 15",
-              "nameS":"S 15",
-              "icoX":2,
-              "cls":32,
-              "prodCtx":
-              {
-                "name":"S 15",
-                "line":"S 15",
-                "lineId":"15",
-                "catOut":"S       ",
-                "catOutS":"S",
-                "catOutL":"S-Bahn"
-              }
-            },
-            {
-              "name":"S 16",
-              "nameS":"S 16",
-              "icoX":2,
-              "cls":32,
-              "prodCtx":
-              {
-                "name":"S 16",
-                "line":"S 16",
-                "lineId":"85:000490:016",
-                "catOut":"S       ",
-                "catOutS":"S",
-                "catOutL":"S-Bahn"
-              }
-            },
-            {
-              "name":"S 16",
-              "nameS":"S 16",
-              "icoX":2,
-              "cls":32,
-              "prodCtx":
-              {
-                "name":"S 16",
-                "line":"S 16",
-                "lineId":"16",
-                "catOut":"S       ",
-                "catOutS":"S",
-                "catOutL":"S-Bahn"
-              }
-            },
-            {
-              "name":"S 19",
-              "nameS":"S 19",
-              "icoX":2,
-              "cls":32,
-              "prodCtx":
-              {
-                "name":"S 19",
-                "line":"S 19",
-                "lineId":"85:000490:019",
-                "catOut":"S       ",
-                "catOutS":"S",
-                "catOutL":"S-Bahn"
-              }
-            },
-            {
-              "name":"S 20",
-              "nameS":"S 20",
-              "icoX":2,
-              "cls":32,
-              "prodCtx":
-              {
-                "name":"S 20",
-                "line":"S 20",
-                "lineId":"85:000490:020",
-                "catOut":"S       ",
-                "catOutS":"S",
-                "catOutL":"S-Bahn"
-              }
-            },
-            {
-              "name":"S 21",
-              "nameS":"S 21",
-              "icoX":2,
-              "cls":32,
-              "prodCtx":
-              {
-                "name":"S 21",
-                "line":"S 21",
-                "lineId":"85:000490:021",
-                "catOut":"S       ",
-                "catOutS":"S",
-                "catOutL":"S-Bahn"
-              }
-            },
-            {
-              "name":"S 23",
-              "nameS":"S 23",
-              "icoX":2,
-              "cls":32,
-              "prodCtx":
-              {
-                "name":"S 23",
-                "line":"S 23",
-                "lineId":"85:000490:023",
-                "catOut":"S       ",
-                "catOutS":"S",
-                "catOutL":"S-Bahn"
-              }
-            },
-            {
-              "name":"S 24",
-              "nameS":"S 24",
-              "icoX":2,
-              "cls":32,
-              "prodCtx":
-              {
-                "name":"S 24",
-                "line":"S 24",
-                "lineId":"24",
-                "catOut":"S       ",
-                "catOutS":"S",
-                "catOutL":"S-Bahn"
-              }
-            },
-            {
-              "name":"S 24",
-              "nameS":"S 24",
-              "icoX":2,
-              "cls":32,
-              "prodCtx":
-              {
-                "name":"S 24",
-                "line":"S 24",
-                "lineId":"85:000490:024",
-                "catOut":"S       ",
-                "catOutS":"S",
-                "catOutL":"S-Bahn"
-              }
-            },
-            {
-              "name":"S 25",
-              "nameS":"S 25",
-              "icoX":2,
-              "cls":32,
-              "prodCtx":
-              {
-                "name":"S 25",
-                "line":"S 25",
-                "lineId":"85:000490:025",
-                "catOut":"S       ",
-                "catOutS":"S",
-                "catOutL":"S-Bahn"
-              }
-            },
-            {
-              "name":"S 42",
-              "nameS":"S 42",
-              "icoX":2,
-              "cls":32,
-              "prodCtx":
-              {
-                "name":"S 42",
-                "line":"S 42",
-                "lineId":"85:000490:042",
-                "catOut":"S       ",
-                "catOutS":"S",
-                "catOutL":"S-Bahn"
-              }
-            },
-            {
-              "name":"SN 1",
-              "nameS":"SN 1",
+              "name":"Trm 6",
+              "nameS":"6",
               "icoX":3,
-              "cls":256,
+              "cls":512,
               "prodCtx":
               {
-                "name":"SN 1",
-                "line":"SN 1",
-                "lineId":"85:000490:001",
-                "catOut":"SN      ",
-                "catOutS":"SN",
-                "catOutL":"Nacht-S-Bahn"
+                "name":"Trm 6",
+                "line":"6",
+                "lineId":"85:3849:006",
+                "catOut":"Trm     ",
+                "catOutS":"T",
+                "catOutL":"Tram"
               }
             },
             {
-              "name":"SN 1",
-              "nameS":"SN 1",
-              "icoX":3,
-              "cls":256,
+              "name":"Trm 9",
+              "nameS":"9",
+              "icoX":4,
+              "cls":512,
               "prodCtx":
               {
-                "name":"SN 1",
-                "line":"SN 1",
-                "lineId":"1",
-                "catOut":"SN      ",
-                "catOutS":"SN",
-                "catOutL":"Nacht-S-Bahn"
+                "name":"Trm 9",
+                "line":"9",
+                "lineId":"85:3849:009",
+                "catOut":"Trm     ",
+                "catOutS":"T",
+                "catOutL":"Tram"
               }
             },
             {
-              "name":"SN 5",
-              "nameS":"SN 5",
-              "icoX":3,
-              "cls":256,
+              "name":"Trm 10",
+              "nameS":"10",
+              "icoX":5,
+              "cls":512,
               "prodCtx":
               {
-                "name":"SN 5",
-                "line":"SN 5",
-                "lineId":"85:000490:005",
-                "catOut":"SN      ",
-                "catOutS":"SN",
-                "catOutL":"Nacht-S-Bahn"
-              }
-            },
-            {
-              "name":"SN 6",
-              "nameS":"SN 6",
-              "icoX":3,
-              "cls":256,
-              "prodCtx":
-              {
-                "name":"SN 6",
-                "line":"SN 6",
-                "lineId":"85:000490:006",
-                "catOut":"SN      ",
-                "catOutS":"SN",
-                "catOutL":"Nacht-S-Bahn"
-              }
-            },
-            {
-              "name":"SN 7",
-              "nameS":"SN 7",
-              "icoX":3,
-              "cls":256,
-              "prodCtx":
-              {
-                "name":"SN 7",
-                "line":"SN 7",
-                "lineId":"85:000490:007",
-                "catOut":"SN      ",
-                "catOutS":"SN",
-                "catOutL":"Nacht-S-Bahn"
-              }
-            },
-            {
-              "name":"SN 8",
-              "nameS":"SN 8",
-              "icoX":3,
-              "cls":256,
-              "prodCtx":
-              {
-                "name":"SN 8",
-                "line":"SN 8",
-                "lineId":"85:000490:008",
-                "catOut":"SN      ",
-                "catOutS":"SN",
-                "catOutL":"Nacht-S-Bahn"
-              }
-            },
-            {
-              "name":"SN 8",
-              "nameS":"SN 8",
-              "icoX":3,
-              "cls":256,
-              "prodCtx":
-              {
-                "name":"SN 8",
-                "line":"SN 8",
-                "lineId":"8",
-                "catOut":"SN      ",
-                "catOutS":"SN",
-                "catOutL":"Nacht-S-Bahn"
-              }
-            },
-            {
-              "name":"SN 9",
-              "nameS":"SN 9",
-              "icoX":3,
-              "cls":256,
-              "prodCtx":
-              {
-                "name":"SN 9",
-                "line":"SN 9",
-                "lineId":"85:000490:009",
-                "catOut":"SN      ",
-                "catOutS":"SN",
-                "catOutL":"Nacht-S-Bahn"
-              }
-            },
-            {
-              "name":"SN 9",
-              "nameS":"SN 9",
-              "icoX":3,
-              "cls":256,
-              "prodCtx":
-              {
-                "name":"SN 9",
-                "line":"SN 9",
-                "lineId":"9",
-                "catOut":"SN      ",
-                "catOutS":"SN",
-                "catOutL":"Nacht-S-Bahn"
-              }
-            },
-            {
-              "pid":"L::5::S::B4035148903::85:000490:007::*",
-              "name":"S 7",
-              "nameS":"S 7",
-              "number":"18761",
-              "icoX":2,
-              "cls":32,
-              "prodCtx":
-              {
-                "name":"S      7",
-                "num":"18761",
-                "line":"7",
-                "matchId":"7",
-                "catOut":"S       ",
-                "catOutS":"S",
-                "catOutL":"S-Bahn",
-                "catIn":"S",
-                "catCode":"5",
-                "admin":"000490"
-              },
-              "himIdL":
-              [
-"HIM_FREETEXT_15546"
-              ]
-            },
-            {
-              "name":"S 18",
-              "nameS":"S 18",
-              "icoX":2,
-              "cls":32,
-              "prodCtx":
-              {
-                "name":"S 18",
-                "line":"S 18",
-                "lineId":"85:46:418",
-                "catOut":"S       ",
-                "catOutS":"S",
-                "catOutL":"S-Bahn"
+                "name":"Trm 10",
+                "line":"10",
+                "lineId":"85:3849:010",
+                "catOut":"Trm     ",
+                "catOutS":"T",
+                "catOutL":"Tram"
               }
             },
             {
               "name":"Trm 11",
               "nameS":"11",
-              "icoX":5,
+              "icoX":6,
               "cls":512,
               "prodCtx":
               {
@@ -1274,9 +414,39 @@
               }
             },
             {
+              "name":"Trm 13",
+              "nameS":"13",
+              "icoX":7,
+              "cls":512,
+              "prodCtx":
+              {
+                "name":"Trm 13",
+                "line":"13",
+                "lineId":"85:3849:013",
+                "catOut":"Trm     ",
+                "catOutS":"T",
+                "catOutL":"Tram"
+              }
+            },
+            {
+              "name":"Trm 14",
+              "nameS":"14",
+              "icoX":8,
+              "cls":512,
+              "prodCtx":
+              {
+                "name":"Trm 14",
+                "line":"14",
+                "lineId":"85:3849:014",
+                "catOut":"Trm     ",
+                "catOutS":"T",
+                "catOutL":"Tram"
+              }
+            },
+            {
               "name":"Trm 15",
               "nameS":"15",
-              "icoX":6,
+              "icoX":9,
               "cls":512,
               "prodCtx":
               {
@@ -1289,15 +459,58 @@
               }
             },
             {
-              "name":"Bus 18",
-              "nameS":"18",
-              "icoX":7,
+              "name":"Trm 17",
+              "nameS":"17",
+              "icoX":10,
+              "cls":512,
+              "prodCtx":
+              {
+                "name":"Trm 17",
+                "line":"17",
+                "lineId":"85:3849:017",
+                "catOut":"Trm     ",
+                "catOutS":"T",
+                "catOutL":"Tram"
+              }
+            },
+            {
+              "name":"Bus",
+              "icoX":11,
               "cls":64,
               "prodCtx":
               {
-                "name":"Bus 18",
-                "line":"18",
-                "lineId":"85:46:418",
+                "name":"Bus     ",
+                "line":"",
+                "catOut":"Bus     ",
+                "catOutS":"B",
+                "catOutL":"Bus"
+              }
+            },
+            {
+              "name":"Bus 3",
+              "nameS":"3",
+              "icoX":12,
+              "cls":64,
+              "prodCtx":
+              {
+                "name":"Bus 3",
+                "line":"3",
+                "lineId":"85:3849:003",
+                "catOut":"Bus     ",
+                "catOutS":"B",
+                "catOutL":"Bus"
+              }
+            },
+            {
+              "name":"Bus 6",
+              "nameS":"6",
+              "icoX":13,
+              "cls":64,
+              "prodCtx":
+              {
+                "name":"Bus 6",
+                "line":"6",
+                "lineId":"85:3849:006",
                 "catOut":"Bus     ",
                 "catOutS":"B",
                 "catOutL":"Bus"
@@ -1306,7 +519,7 @@
             {
               "name":"Bus 31",
               "nameS":"31",
-              "icoX":8,
+              "icoX":14,
               "cls":64,
               "prodCtx":
               {
@@ -1321,7 +534,7 @@
             {
               "name":"Bus 33",
               "nameS":"33",
-              "icoX":9,
+              "icoX":15,
               "cls":64,
               "prodCtx":
               {
@@ -1334,9 +547,288 @@
               }
             },
             {
+              "name":"Bus 66",
+              "nameS":"66",
+              "icoX":16,
+              "cls":64,
+              "prodCtx":
+              {
+                "name":"Bus 66",
+                "line":"66",
+                "lineId":"85:849:066",
+                "catOut":"Bus     ",
+                "catOutS":"B",
+                "catOutL":"Bus"
+              }
+            },
+            {
+              "name":"Bus E",
+              "nameS":"E",
+              "icoX":17,
+              "cls":64,
+              "prodCtx":
+              {
+                "name":"Bus E",
+                "line":"E",
+                "lineId":"85:773:433",
+                "catOut":"Bus     ",
+                "catOutS":"B",
+                "catOutL":"Bus"
+              }
+            },
+            {
+              "name":"Bus E",
+              "nameS":"E",
+              "icoX":17,
+              "cls":64,
+              "prodCtx":
+              {
+                "name":"Bus E",
+                "line":"E",
+                "lineId":"85:849:022",
+                "catOut":"Bus     ",
+                "catOutS":"B",
+                "catOutL":"Bus"
+              }
+            },
+            {
+              "name":"Bus N3",
+              "nameS":"N3",
+              "icoX":18,
+              "cls":64,
+              "prodCtx":
+              {
+                "name":"Bus N3",
+                "line":"N3",
+                "lineId":"85:849:393",
+                "catOut":"Bus     ",
+                "catOutS":"B",
+                "catOutL":"Bus"
+              }
+            },
+            {
+              "name":"Bus N10",
+              "nameS":"N10",
+              "icoX":19,
+              "cls":64,
+              "prodCtx":
+              {
+                "name":"Bus N10",
+                "line":"N10",
+                "lineId":"85:849:340",
+                "catOut":"Bus     ",
+                "catOutS":"B",
+                "catOutL":"Bus"
+              }
+            },
+            {
+              "name":"BN",
+              "nameS":"BN",
+              "icoX":20,
+              "cls":256,
+              "prodCtx":
+              {
+                "name":"BN      ",
+                "line":"BN      ",
+                "catOut":"BN      ",
+                "catOutS":"BN",
+                "catOutL":"Nachtbus"
+              }
+            },
+            {
+              "name":"BN N2",
+              "nameS":"BN N2",
+              "icoX":20,
+              "cls":256,
+              "prodCtx":
+              {
+                "name":"BN N2",
+                "line":"BN N2",
+                "lineId":"85:849:392",
+                "catOut":"BN      ",
+                "catOutS":"BN",
+                "catOutL":"Nachtbus"
+              }
+            },
+            {
+              "name":"BN N8",
+              "nameS":"BN N8",
+              "icoX":20,
+              "cls":256,
+              "prodCtx":
+              {
+                "name":"BN N8",
+                "line":"BN N8",
+                "lineId":"85:849:398",
+                "catOut":"BN      ",
+                "catOutS":"BN",
+                "catOutL":"Nachtbus"
+              }
+            },
+            {
+              "name":"N1",
+              "nameS":"N1",
+              "icoX":20,
+              "cls":256,
+              "prodCtx":
+              {
+                "name":"N1",
+                "line":"N1",
+                "lineId":"85:849:391",
+                "catOut":"",
+                "catOutS":"BN",
+                "catOutL":"Nachtbus"
+              }
+            },
+            {
+              "name":"N4",
+              "nameS":"N4",
+              "icoX":20,
+              "cls":256,
+              "prodCtx":
+              {
+                "name":"N4",
+                "line":"N4",
+                "lineId":"85:849:394",
+                "catOut":"",
+                "catOutS":"BN",
+                "catOutL":"Nachtbus"
+              }
+            },
+            {
+              "name":"N6",
+              "nameS":"N6",
+              "icoX":20,
+              "cls":256,
+              "prodCtx":
+              {
+                "name":"N6",
+                "line":"N6",
+                "lineId":"85:849:396",
+                "catOut":"",
+                "catOutS":"BN",
+                "catOutL":"Nachtbus"
+              }
+            },
+            {
+              "name":"N11",
+              "nameS":"N11",
+              "icoX":20,
+              "cls":256,
+              "prodCtx":
+              {
+                "name":"N11",
+                "line":"N11",
+                "lineId":"85:849:341",
+                "catOut":"",
+                "catOutS":"BN",
+                "catOutL":"Nachtbus"
+              }
+            },
+            {
+              "name":"N13",
+              "nameS":"N13",
+              "icoX":20,
+              "cls":256,
+              "prodCtx":
+              {
+                "name":"N13",
+                "line":"N13",
+                "lineId":"85:849:343",
+                "catOut":"",
+                "catOutS":"BN",
+                "catOutL":"Nachtbus"
+              }
+            },
+            {
+              "name":"N14",
+              "nameS":"N14",
+              "icoX":20,
+              "cls":256,
+              "prodCtx":
+              {
+                "name":"N14",
+                "line":"N14",
+                "lineId":"85:849:344",
+                "catOut":"",
+                "catOutS":"BN",
+                "catOutL":"Nachtbus"
+              }
+            },
+            {
+              "name":"N17",
+              "nameS":"N17",
+              "icoX":20,
+              "cls":256,
+              "prodCtx":
+              {
+                "name":"N17",
+                "line":"N17",
+                "lineId":"85:849:347",
+                "catOut":"",
+                "catOutS":"BN",
+                "catOutL":"Nachtbus"
+              }
+            },
+            {
+              "pid":"L::6::Bus::B4035148903::85:849:031::*",
+              "name":"Bus 31",
+              "nameS":"31",
+              "number":"23604",
+              "icoX":22,
+              "cls":64,
+              "prodCtx":
+              {
+                "name":"Bus   31",
+                "num":"23604",
+                "line":"31",
+                "matchId":"31",
+                "catOut":"Bus     ",
+                "catOutS":"B",
+                "catOutL":"Bus",
+                "catIn":"B",
+                "catCode":"6",
+                "admin":"000849"
+              },
+              "himIdL":
+              [
+"HIM_FREETEXT_16027"
+              ]
+            },
+            {
+              "name":"S 18",
+              "nameS":"S 18",
+              "icoX":23,
+              "cls":32,
+              "prodCtx":
+              {
+                "name":"S 18",
+                "line":"S 18",
+                "lineId":"85:46:418",
+                "catOut":"S       ",
+                "catOutS":"S",
+                "catOutL":"S-Bahn"
+              }
+            },
+            {
+              "name":"Bus 18",
+              "nameS":"18",
+              "icoX":24,
+              "cls":64,
+              "prodCtx":
+              {
+                "name":"Bus 18",
+                "line":"18",
+                "lineId":"85:46:418",
+                "catOut":"Bus     ",
+                "catOutS":"B",
+                "catOutL":"Bus"
+              }
+            },
+            {
               "name":"Bus 77",
               "nameS":"77",
-              "icoX":10,
+              "icoX":25,
               "cls":64,
               "prodCtx":
               {
@@ -1351,7 +843,7 @@
             {
               "name":"Bus 701",
               "nameS":"701",
-              "icoX":11,
+              "icoX":26,
               "cls":64,
               "prodCtx":
               {
@@ -1366,7 +858,7 @@
             {
               "name":"Bus 703",
               "nameS":"703",
-              "icoX":12,
+              "icoX":27,
               "cls":64,
               "prodCtx":
               {
@@ -1381,7 +873,7 @@
             {
               "name":"Bus 704",
               "nameS":"704",
-              "icoX":13,
+              "icoX":28,
               "cls":64,
               "prodCtx":
               {
@@ -1396,7 +888,7 @@
             {
               "name":"SN 18",
               "nameS":"SN 18",
-              "icoX":3,
+              "icoX":20,
               "cls":256,
               "prodCtx":
               {
@@ -1409,256 +901,29 @@
               }
             },
             {
-              "pid":"L::5::S::B4035148903::85:000490:007::*",
-              "name":"S 7",
-              "nameS":"S 7",
-              "number":"18761",
-              "icoX":2,
-              "cls":32,
-              "prodCtx":
-              {
-                "name":"S      7",
-                "num":"18761",
-                "line":"7",
-                "lineId":"85:000490:007",
-                "matchId":"7",
-                "catOut":"S       ",
-                "catOutS":"S",
-                "catOutL":"S-Bahn",
-                "catIn":"S",
-                "catCode":"5",
-                "admin":"000490"
-              },
-              "himIdL":
-              [
-"HIM_FREETEXT_15546"
-              ]
-            },
-            {
-              "pid":"L::5::S::B4035148903::85:000490:016::*",
-              "name":"S 16",
-              "nameS":"S 16",
-              "number":"19661",
-              "icoX":2,
-              "cls":32,
-              "prodCtx":
-              {
-                "name":"S     16",
-                "num":"19661",
-                "line":"16",
-                "lineId":"85:000490:016",
-                "matchId":"16",
-                "catOut":"S       ",
-                "catOutS":"S",
-                "catOutL":"S-Bahn",
-                "catIn":"S",
-                "catCode":"5",
-                "admin":"000490"
-              },
-              "himIdL":
-              [
-"HIM_FREETEXT_15546"
-              ]
-            },
-            {
-              "pid":"L::5::S::B4035148903::85:000490:012::*",
-              "name":"S 12",
-              "nameS":"S 12",
-              "number":"19261",
-              "icoX":2,
-              "cls":32,
-              "prodCtx":
-              {
-                "name":"S     12",
-                "num":"19261",
-                "line":"12",
-                "lineId":"85:000490:012",
-                "matchId":"12",
-                "catOut":"S       ",
-                "catOutS":"S",
-                "catOutL":"S-Bahn",
-                "catIn":"S",
-                "catCode":"5",
-                "admin":"000490"
-              },
-              "himIdL":
-              [
-"HIM_FREETEXT_15512",
-"HIM_FREETEXT_15546"
-              ]
-            },
-            {
-              "pid":"L::5::S::B4035148903::85:000490:023::*",
-              "name":"S 23",
-              "nameS":"S 23",
-              "number":"19061",
-              "icoX":2,
-              "cls":32,
-              "prodCtx":
-              {
-                "name":"S     23",
-                "num":"19061",
-                "line":"23",
-                "lineId":"85:000490:023",
-                "matchId":"23",
-                "catOut":"S       ",
-                "catOutS":"S",
-                "catOutL":"S-Bahn",
-                "catIn":"S",
-                "catCode":"5",
-                "admin":"000490"
-              }
-            },
-            {
-              "pid":"L::5::S::B4035148903::85:000490:005::*",
-              "name":"S 5",
-              "nameS":"S 5",
-              "number":"18561",
-              "icoX":2,
-              "cls":32,
-              "prodCtx":
-              {
-                "name":"S      5",
-                "num":"18561",
-                "line":"5",
-                "lineId":"85:000490:005",
-                "matchId":"5",
-                "catOut":"S       ",
-                "catOutS":"S",
-                "catOutL":"S-Bahn",
-                "catIn":"S",
-                "catCode":"5",
-                "admin":"000490"
-              }
-            },
-            {
-              "pid":"L::5::S::B4035148903::85:000490:009::*",
-              "name":"S 9",
-              "nameS":"S 9",
-              "number":"18961",
-              "icoX":2,
-              "cls":32,
-              "prodCtx":
-              {
-                "name":"S      9",
-                "num":"18961",
-                "line":"9",
-                "lineId":"85:000490:009",
-                "matchId":"9",
-                "catOut":"S       ",
-                "catOutS":"S",
-                "catOutL":"S-Bahn",
-                "catIn":"S",
-                "catCode":"5",
-                "admin":"000490"
-              },
-              "himIdL":
-              [
-"HIM_FREETEXT_15546"
-              ]
-            },
-            {
-              "name":"Trm 2",
-              "nameS":"2",
-              "icoX":18,
-              "cls":512,
-              "prodCtx":
-              {
-                "name":"Trm 2",
-                "line":"2",
-                "lineId":"85:3849:002",
-                "catOut":"Trm     ",
-                "catOutS":"T",
-                "catOutL":"Tram"
-              }
-            },
-            {
-              "name":"Trm 5",
-              "nameS":"5",
-              "icoX":19,
-              "cls":512,
-              "prodCtx":
-              {
-                "name":"Trm 5",
-                "line":"5",
-                "lineId":"85:3849:005",
-                "catOut":"Trm     ",
-                "catOutS":"T",
-                "catOutL":"Tram"
-              }
-            },
-            {
-              "name":"Trm 8",
-              "nameS":"8",
-              "icoX":20,
-              "cls":512,
-              "prodCtx":
-              {
-                "name":"Trm 8",
-                "line":"8",
-                "lineId":"85:3849:008",
-                "catOut":"Trm     ",
-                "catOutS":"T",
-                "catOutL":"Tram"
-              }
-            },
-            {
-              "name":"",
-              "icoX":21,
-              "prodCtx":
-              {
-                "name":""
-              }
-            },
-            {
-              "pid":"L::5::S::B4035148903::85:46:418::*",
-              "name":"S 18",
-              "nameS":"S 18",
-              "number":"435",
+              "pid":"L::6::Bus::B4035148903::85:849:031::*",
+              "name":"Bus 31",
+              "nameS":"31",
+              "number":"23604",
               "icoX":22,
-              "cls":32,
+              "cls":64,
               "prodCtx":
               {
-                "name":"S     18",
-                "num":"435",
-                "line":"18",
-                "matchId":"18",
-                "catOut":"S       ",
-                "catOutS":"S",
-                "catOutL":"S-Bahn",
-                "catIn":"S",
-                "catCode":"5",
-                "admin":"000046"
+                "name":"Bus   31",
+                "num":"23604",
+                "line":"31",
+                "lineId":"85:849:031",
+                "matchId":"31",
+                "catOut":"Bus     ",
+                "catOutS":"B",
+                "catOutL":"Bus",
+                "catIn":"B",
+                "catCode":"6",
+                "admin":"000849"
               },
               "himIdL":
               [
-"HIM_FREETEXT_15568"
-              ]
-            },
-            {
-              "pid":"L::5::S::B4035148903::85:46:418::*",
-              "name":"S 18",
-              "nameS":"S 18",
-              "number":"435",
-              "icoX":22,
-              "cls":32,
-              "prodCtx":
-              {
-                "name":"S     18",
-                "num":"435",
-                "line":"18",
-                "lineId":"85:46:418",
-                "matchId":"18",
-                "catOut":"S       ",
-                "catOutS":"S",
-                "catOutL":"S-Bahn",
-                "catIn":"S",
-                "catCode":"5",
-                "admin":"000046"
-              },
-              "himIdL":
-              [
-"HIM_FREETEXT_15568"
+"HIM_FREETEXT_16027"
               ]
             }
           ],
@@ -1667,9 +932,9 @@
             {
               "delta":true,
               "dim":2,
-              "crdEncYX":"qrd`Heqbs@rhA_bA",
-              "crdEncS":"NN",
-              "crdEncF":"??",
+              "crdEncYX":"whd`Hu`cs@?????M?_@Ci@Ag@@i@HuB?k@?m@FaBFy@@I@ILWHKHEJGREVEFIBO?KAGEKWKOGSIGGEICICM?W?M?INe@LI??????j@]~BoA`E{BPKlH{FPMTSLIPKVKB???????ZIjCYVCNIXKtAu@FGDEBGJWF@D@XMn@a@VU??????HIX[Xe@fHiJb@u@`AiBZo@??????jByD^u@HOHKJMRQTSH?J?J@PP|@z@`BxAl@f@FFZkAb@kBb@cBh@}A??????^kAf@kBPq@`@uBLe@Ri@P_@h@cAn@cAxA_C??????HOd@u@Vi@Zq@Zs@n@_BNc@Hc@Hc@Hs@DUHg@Nu@FU????",
+              "crdEncS":"NN??FDGKHBHFCNDGKAHEKFNEGKDCJGANGAALIANN?DDLCEFJCEHENN?HDNCFJEG@KDIJFBNN?DFFLEDCNN?DELAFENAEKDEDDNDEINN??DHFDHNEHDNNC?CEJCGDNBGFBGDANN",
+              "crdEncF":"??????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????",
               "ppLocRefL":
               [
                 {
@@ -1677,48 +942,32 @@
                   "locX":0
                 },
                 {
-                  "ppIdx":1,
-                  "locX":3
-                }
-              ]
-            },
-            {
-              "delta":true,
-              "dim":2,
-              "crdEncYX":"}hb`Hetds@rBjB",
-              "crdEncS":"NN",
-              "crdEncF":"??",
-              "ppLocRefL":
-              [
-                {
-                  "ppIdx":0,
-                  "locX":3
-                },
-                {
-                  "ppIdx":1,
-                  "locX":4
-                }
-              ]
-            },
-            {
-              "delta":true,
-              "dim":2,
-              "crdEncYX":"ieb`Hypds@??????Ua@AGACAG?I?G@GDOPw@BSNw@b@sCBWB[@]FqBBe@Fo@LaANcAr@}CXkAFYbAiD??????^kAf@kBPq@`@uBLe@Ri@P_@h@cAn@cAxA_C??????HOd@u@Vi@Zq@Zs@n@_BNc@Hc@Hc@Hs@DUHg@Nu@FU????",
-              "crdEncS":"NN??JBCF@NCCDHDDMEDCJFNHDJDNN??DHFDHNEHDNNC?CEJCGDNBGFBGDANN",
-              "crdEncF":"????????????????????????????????????????????????????????????",
-              "ppLocRefL":
-              [
-                {
-                  "ppIdx":0,
+                  "ppIdx":38,
                   "locX":4
                 },
                 {
-                  "ppIdx":27,
+                  "ppIdx":52,
                   "locX":6
                 },
                 {
-                  "ppIdx":59,
-                  "locX":1
+                  "ppIdx":70,
+                  "locX":7
+                },
+                {
+                  "ppIdx":80,
+                  "locX":9
+                },
+                {
+                  "ppIdx":101,
+                  "locX":10
+                },
+                {
+                  "ppIdx":114,
+                  "locX":12
+                },
+                {
+                  "ppIdx":133,
+                  "locX":2
                 }
               ]
             }
@@ -1750,89 +999,40 @@
               "type":"A",
               "code":"OM",
               "prio":1,
-              "icoX":16,
+              "icoX":30,
               "txtN":"Maskenpflicht für Reisende ab 12 Jahren"
             },
             {
               "type":"A",
-              "code":"VN",
-              "prio":6,
-              "icoX":16,
-              "txtN":"VELOS: Keine Beförderung möglich"
+              "code":"NF",
+              "prio":100,
+              "icoX":31,
+              "txtN":"Niederflurfahrzeug"
+            },
+            {
+              "type":"A",
+              "code":"NF",
+              "prio":100,
+              "txtN":"Niederflurfahrzeug"
             },
             {
               "type":"A",
               "code":"moreAttr",
-              "icoX":17,
+              "icoX":32,
               "txtN":"Weitere Informationen vorhanden, klappen Sie die Zwischenhalte auf."
-            },
-            {
-              "type":"A",
-              "code":"2 ",
-              "prio":1,
-              "icoX":16,
-              "txtN":"Nur 2. Klasse"
-            },
-            {
-              "type":"A",
-              "code":"NF",
-              "prio":100,
-              "icoX":23,
-              "txtN":"Niederflurfahrzeug"
-            },
-            {
-              "type":"A",
-              "code":"NF",
-              "prio":100,
-              "txtN":"Niederflurfahrzeug"
             },
             {
               "type":"R",
               "code":"text.realtime.connection.notdelayed",
-              "icoX":24,
+              "icoX":33,
               "txtN":"Verbindung pünktlich erwartet."
             }
           ],
           "icoL":
           [
             {
-              "res":"prod_ic",
-              "fg":
-              {
-                "r":255,
-                "g":255,
-                "b":255
-              },
-              "bg":
-              {
-                "r":224,
-                "g":0,
-                "b":0
-              }
-            },
-            {
-              "res":"prod_ic",
-              "fg":
-              {
-                "r":224,
-                "g":0,
-                "b":0
-              },
-              "bg":
-              {
-                "r":255,
-                "g":255,
-                "b":255
-              },
-              "brd":
-              {
-                "r":224,
-                "g":0,
-                "b":0
-              }
-            },
-            {
-              "res":"prod_ic",
+              "res":"prod_tram",
+              "txt":"2",
               "fg":
               {
                 "r":0,
@@ -1853,14 +1053,21 @@
               }
             },
             {
-              "res":"prod_nachtnetz",
+              "res":"prod_tram",
+              "txt":"3",
               "fg":
               {
-                "r":255,
-                "g":241,
+                "r":0,
+                "g":0,
                 "b":0
               },
               "bg":
+              {
+                "r":255,
+                "g":255,
+                "b":255
+              },
+              "brd":
               {
                 "r":0,
                 "g":0,
@@ -1868,17 +1075,140 @@
               }
             },
             {
-              "txt":"+1",
+              "res":"prod_tram",
+              "txt":"4",
               "fg":
               {
-                "r":146,
-                "g":208,
-                "b":80
+                "r":0,
+                "g":0,
+                "b":0
+              },
+              "bg":
+              {
+                "r":255,
+                "g":255,
+                "b":255
+              },
+              "brd":
+              {
+                "r":0,
+                "g":0,
+                "b":0
+              }
+            },
+            {
+              "res":"prod_tram",
+              "txt":"6",
+              "fg":
+              {
+                "r":0,
+                "g":0,
+                "b":0
+              },
+              "bg":
+              {
+                "r":255,
+                "g":255,
+                "b":255
+              },
+              "brd":
+              {
+                "r":0,
+                "g":0,
+                "b":0
+              }
+            },
+            {
+              "res":"prod_tram",
+              "txt":"9",
+              "fg":
+              {
+                "r":0,
+                "g":0,
+                "b":0
+              },
+              "bg":
+              {
+                "r":255,
+                "g":255,
+                "b":255
+              },
+              "brd":
+              {
+                "r":0,
+                "g":0,
+                "b":0
+              }
+            },
+            {
+              "res":"prod_tram",
+              "txt":"10",
+              "fg":
+              {
+                "r":0,
+                "g":0,
+                "b":0
+              },
+              "bg":
+              {
+                "r":255,
+                "g":255,
+                "b":255
+              },
+              "brd":
+              {
+                "r":0,
+                "g":0,
+                "b":0
               }
             },
             {
               "res":"prod_tram",
               "txt":"11",
+              "fg":
+              {
+                "r":0,
+                "g":0,
+                "b":0
+              },
+              "bg":
+              {
+                "r":255,
+                "g":255,
+                "b":255
+              },
+              "brd":
+              {
+                "r":0,
+                "g":0,
+                "b":0
+              }
+            },
+            {
+              "res":"prod_tram",
+              "txt":"13",
+              "fg":
+              {
+                "r":0,
+                "g":0,
+                "b":0
+              },
+              "bg":
+              {
+                "r":255,
+                "g":255,
+                "b":255
+              },
+              "brd":
+              {
+                "r":0,
+                "g":0,
+                "b":0
+              }
+            },
+            {
+              "res":"prod_tram",
+              "txt":"14",
               "fg":
               {
                 "r":0,
@@ -1921,8 +1251,74 @@
               }
             },
             {
+              "res":"prod_tram",
+              "txt":"17",
+              "fg":
+              {
+                "r":0,
+                "g":0,
+                "b":0
+              },
+              "bg":
+              {
+                "r":255,
+                "g":255,
+                "b":255
+              },
+              "brd":
+              {
+                "r":0,
+                "g":0,
+                "b":0
+              }
+            },
+            {
               "res":"prod_bus",
-              "txt":"18",
+              "txt":"",
+              "fg":
+              {
+                "r":0,
+                "g":0,
+                "b":0
+              },
+              "bg":
+              {
+                "r":255,
+                "g":255,
+                "b":255
+              },
+              "brd":
+              {
+                "r":0,
+                "g":0,
+                "b":0
+              }
+            },
+            {
+              "res":"prod_bus",
+              "txt":"3",
+              "fg":
+              {
+                "r":0,
+                "g":0,
+                "b":0
+              },
+              "bg":
+              {
+                "r":255,
+                "g":255,
+                "b":255
+              },
+              "brd":
+              {
+                "r":0,
+                "g":0,
+                "b":0
+              }
+            },
+            {
+              "res":"prod_bus",
+              "txt":"6",
               "fg":
               {
                 "r":0,
@@ -1967,6 +1363,177 @@
             {
               "res":"prod_bus",
               "txt":"33",
+              "fg":
+              {
+                "r":0,
+                "g":0,
+                "b":0
+              },
+              "bg":
+              {
+                "r":255,
+                "g":255,
+                "b":255
+              },
+              "brd":
+              {
+                "r":0,
+                "g":0,
+                "b":0
+              }
+            },
+            {
+              "res":"prod_bus",
+              "txt":"66",
+              "fg":
+              {
+                "r":0,
+                "g":0,
+                "b":0
+              },
+              "bg":
+              {
+                "r":255,
+                "g":255,
+                "b":255
+              },
+              "brd":
+              {
+                "r":0,
+                "g":0,
+                "b":0
+              }
+            },
+            {
+              "res":"prod_bus",
+              "txt":"E",
+              "fg":
+              {
+                "r":0,
+                "g":0,
+                "b":0
+              },
+              "bg":
+              {
+                "r":255,
+                "g":255,
+                "b":255
+              },
+              "brd":
+              {
+                "r":0,
+                "g":0,
+                "b":0
+              }
+            },
+            {
+              "res":"prod_bus",
+              "txt":"N3",
+              "fg":
+              {
+                "r":0,
+                "g":0,
+                "b":0
+              },
+              "bg":
+              {
+                "r":255,
+                "g":255,
+                "b":255
+              },
+              "brd":
+              {
+                "r":0,
+                "g":0,
+                "b":0
+              }
+            },
+            {
+              "res":"prod_bus",
+              "txt":"N10",
+              "fg":
+              {
+                "r":0,
+                "g":0,
+                "b":0
+              },
+              "bg":
+              {
+                "r":255,
+                "g":255,
+                "b":255
+              },
+              "brd":
+              {
+                "r":0,
+                "g":0,
+                "b":0
+              }
+            },
+            {
+              "res":"prod_nachtnetz",
+              "fg":
+              {
+                "r":255,
+                "g":241,
+                "b":0
+              },
+              "bg":
+              {
+                "r":0,
+                "g":0,
+                "b":0
+              }
+            },
+            {
+              "txt":"+0",
+              "fg":
+              {
+                "r":146,
+                "g":208,
+                "b":80
+              }
+            },
+            {
+              "res":"prod_bus",
+              "txt":"31",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255
+              },
+              "bg":
+              {
+                "r":165,
+                "g":162,
+                "b":198
+              }
+            },
+            {
+              "res":"prod_ic",
+              "fg":
+              {
+                "r":0,
+                "g":0,
+                "b":0
+              },
+              "bg":
+              {
+                "r":255,
+                "g":255,
+                "b":255
+              },
+              "brd":
+              {
+                "r":0,
+                "g":0,
+                "b":0
+              }
+            },
+            {
+              "res":"prod_bus",
+              "txt":"18",
               "fg":
               {
                 "r":0,
@@ -2078,118 +1645,13 @@
               "res":"STA"
             },
             {
-              "txt":"+0",
-              "fg":
-              {
-                "r":146,
-                "g":208,
-                "b":80
-              }
-            },
-            {
               "res":"INFO"
             },
             {
-              "res":"attr_info"
-            },
-            {
-              "res":"prod_tram",
-              "txt":"2",
-              "fg":
-              {
-                "r":0,
-                "g":0,
-                "b":0
-              },
-              "bg":
-              {
-                "r":255,
-                "g":255,
-                "b":255
-              },
-              "brd":
-              {
-                "r":0,
-                "g":0,
-                "b":0
-              }
-            },
-            {
-              "res":"prod_tram",
-              "txt":"5",
-              "fg":
-              {
-                "r":0,
-                "g":0,
-                "b":0
-              },
-              "bg":
-              {
-                "r":255,
-                "g":255,
-                "b":255
-              },
-              "brd":
-              {
-                "r":0,
-                "g":0,
-                "b":0
-              }
-            },
-            {
-              "res":"prod_tram",
-              "txt":"8",
-              "fg":
-              {
-                "r":0,
-                "g":0,
-                "b":0
-              },
-              "bg":
-              {
-                "r":255,
-                "g":255,
-                "b":255
-              },
-              "brd":
-              {
-                "r":0,
-                "g":0,
-                "b":0
-              }
-            },
-            {
-              "res":"prod_walk",
-              "fg":
-              {
-                "r":255,
-                "g":255,
-                "b":255
-              },
-              "bg":
-              {
-                "r":244,
-                "g":168,
-                "b":0
-              }
-            },
-            {
-              "res":"prod_ic",
-              "fg":
-              {
-                "r":255,
-                "g":255,
-                "b":255
-              },
-              "bg":
-              {
-                "r":235,
-                "g":60,
-                "b":46
-              }
-            },
-            {
               "res":"attr_wchair"
+            },
+            {
+              "res":"attr_info"
             },
             {
               "res":"rt_punctual"
@@ -2198,26 +1660,8 @@
           "dirL":
           [
             {
-              "txt":"Rapperswil SG"
-            },
-            {
-              "txt":"Herrliberg-Feldmeilen"
-            },
-            {
-              "txt":"Schaffhausen"
-            },
-            {
-              "txt":"Romanshorn"
-            },
-            {
-              "txt":"Pfäffikon SZ"
-            },
-            {
-              "txt":"Uster"
-            },
-            {
-              "txt":"Forch",
-              "flg":"R"
+              "txt":"Zürich, Kienastenwies",
+              "flg":"H"
             }
           ]
         },
@@ -2225,106 +1669,200 @@
         [
           {
             "cid":"DirectConReq",
-            "date":"20210906",
-            "dur":"001000",
-            "chg":1,
+            "date":"20211205",
+            "dur":"000900",
+            "chg":0,
             "sDays":
             {
               "sDaysR":"nicht täglich",
-              "sDaysI":"6. Sep bis 20. Okt 2021",
-              "sDaysB":"FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00000000000000"
+              "sDaysI":"5. Dez 2021",
+              "sDaysB":"811E1C0810204081020408102042C102041811206081020408102040810204081020408102040810204081020400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
             },
             "dep":
             {
               "locX":0,
-              "idx":9,
-              "dProdX":65,
-              "dPlatfS":"Gl. 43/44",
-              "dPlatfR":"Gl. 43/44",
+              "idx":16,
+              "dProdX":31,
               "dInR":true,
-              "dTimeS":"161100",
-              "dTimeR":"161200",
+              "dTimeS":"192800",
+              "dTimeR":"192800",
               "dProgType":"PROGNOSED",
-              "dIconRX":4,
+              "dIconRX":21,
               "type":"N"
             },
             "arr":
             {
-              "locX":1,
-              "idx":2,
+              "locX":2,
+              "idx":23,
               "aOutR":true,
-              "aTimeS":"162100",
-              "aTimeR":"162100",
-              "aProgType":"PROGNOSED",
-              "aIconRX":15,
+              "aTimeS":"193700",
+              "aTimeR":"193700",
+              "aProgType":"CALCULATED",
+              "aIconRX":21,
               "type":"N"
             },
             "secL":
             [
               {
                 "type":"JNY",
-                "icoX":2,
+                "icoX":22,
                 "dep":
                 {
                   "locX":0,
-                  "idx":9,
-                  "dProdX":65,
-                  "dPlatfS":"Gl. 43/44",
-                  "dPlatfR":"Gl. 43/44",
+                  "idx":16,
+                  "dProdX":31,
                   "dInR":true,
-                  "dTimeS":"161100",
-                  "dTimeR":"161200",
+                  "dTimeS":"192800",
+                  "dTimeR":"192800",
                   "dProgType":"PROGNOSED",
-                  "dIconRX":4,
+                  "dIconRX":21,
                   "type":"N"
                 },
                 "arr":
                 {
-                  "locX":3,
-                  "idx":10,
-                  "aPlatfS":"Gl. 2",
-                  "aPlatfR":"Gl. 2",
+                  "locX":2,
+                  "idx":23,
                   "aOutR":true,
-                  "aTimeS":"161400",
-                  "aTimeR":"161400",
-                  "aProgType":"PROGNOSED",
-                  "aIconRX":15,
+                  "aTimeS":"193700",
+                  "aTimeR":"193700",
+                  "aProgType":"CALCULATED",
+                  "aIconRX":21,
                   "type":"N"
                 },
                 "jny":
                 {
-                  "jid":"1|32270|0|85|6092021",
-                  "prodX":77,
-                  "dirTxt":"Rapperswil SG",
+                  "jid":"1|542|54|21|5122021",
+                  "prodX":39,
+                  "dirTxt":"Zürich, Kienastenwies",
+                  "dirFlg":"H",
                   "status":"P",
                   "isRchbl":true,
                   "stopL":
                   [
                     {
                       "locX":0,
-                      "idx":9,
-                      "dProdX":77,
-                      "dPlatfS":"Gl. 43/44",
-                      "dPlatfR":"Gl. 43/44",
+                      "idx":16,
+                      "dProdX":39,
                       "dInR":true,
-                      "dTimeS":"161100",
-                      "dTimeR":"161200",
+                      "dTimeS":"192800",
+                      "dTimeR":"192800",
                       "dProgType":"PROGNOSED",
-                      "dDirTxt":"Rapperswil SG",
-                      "dIconRX":4,
+                      "dDirTxt":"Zürich, Kienastenwies",
+                      "dDirFlg":"H",
+                      "dIconRX":21,
                       "type":"N"
                     },
                     {
-                      "locX":3,
-                      "idx":10,
-                      "aProdX":77,
-                      "aPlatfS":"Gl. 2",
-                      "aPlatfR":"Gl. 2",
+                      "locX":4,
+                      "idx":17,
+                      "aProdX":39,
                       "aOutR":true,
-                      "aTimeS":"161400",
-                      "aTimeR":"161400",
-                      "aProgType":"PROGNOSED",
-                      "aIconRX":15,
+                      "aTimeS":"193000",
+                      "aTimeR":"193000",
+                      "aProgType":"CALCULATED",
+                      "dProdX":39,
+                      "dInR":true,
+                      "dTimeS":"193000",
+                      "dTimeR":"193000",
+                      "dProgType":"CALCULATED",
+                      "aIconRX":21,
+                      "dIconRX":21,
+                      "type":"N"
+                    },
+                    {
+                      "locX":6,
+                      "idx":18,
+                      "aProdX":39,
+                      "aOutR":true,
+                      "aTimeS":"193100",
+                      "aTimeR":"193100",
+                      "aProgType":"CALCULATED",
+                      "dProdX":39,
+                      "dInR":true,
+                      "dTimeS":"193100",
+                      "dTimeR":"193100",
+                      "dProgType":"CALCULATED",
+                      "aIconRX":21,
+                      "dIconRX":21,
+                      "type":"N"
+                    },
+                    {
+                      "locX":7,
+                      "idx":19,
+                      "aProdX":39,
+                      "aOutR":true,
+                      "aTimeS":"193200",
+                      "aTimeR":"193200",
+                      "aProgType":"CALCULATED",
+                      "dProdX":39,
+                      "dInR":true,
+                      "dTimeS":"193200",
+                      "dTimeR":"193200",
+                      "dProgType":"CALCULATED",
+                      "aIconRX":21,
+                      "dIconRX":21,
+                      "type":"N"
+                    },
+                    {
+                      "locX":9,
+                      "idx":20,
+                      "aProdX":39,
+                      "aOutR":true,
+                      "aTimeS":"193300",
+                      "aTimeR":"193300",
+                      "aProgType":"CALCULATED",
+                      "dProdX":39,
+                      "dInR":true,
+                      "dTimeS":"193300",
+                      "dTimeR":"193300",
+                      "dProgType":"CALCULATED",
+                      "aIconRX":21,
+                      "dIconRX":21,
+                      "type":"N"
+                    },
+                    {
+                      "locX":10,
+                      "idx":21,
+                      "aProdX":39,
+                      "aOutR":true,
+                      "aTimeS":"193500",
+                      "aTimeR":"193500",
+                      "aProgType":"CALCULATED",
+                      "dProdX":39,
+                      "dInR":true,
+                      "dTimeS":"193500",
+                      "dTimeR":"193500",
+                      "dProgType":"CALCULATED",
+                      "aIconRX":21,
+                      "dIconRX":21,
+                      "type":"N"
+                    },
+                    {
+                      "locX":12,
+                      "idx":22,
+                      "aProdX":39,
+                      "aOutR":true,
+                      "aTimeS":"193600",
+                      "aTimeR":"193600",
+                      "aProgType":"CALCULATED",
+                      "dProdX":39,
+                      "dInR":true,
+                      "dTimeS":"193600",
+                      "dTimeR":"193600",
+                      "dProgType":"CALCULATED",
+                      "aIconRX":21,
+                      "dIconRX":21,
+                      "type":"N"
+                    },
+                    {
+                      "locX":2,
+                      "idx":23,
+                      "aProdX":39,
+                      "aOutR":true,
+                      "aTimeS":"193700",
+                      "aTimeR":"193700",
+                      "aProgType":"CALCULATED",
+                      "aIconRX":21,
                       "type":"N"
                     }
                   ],
@@ -2339,461 +1877,25 @@
                   },
                   "pos":
                   {
-                    "x":8523967,
-                    "y":47392236,
+                    "x":8536255,
+                    "y":47375921,
                     "layerX":0,
                     "crdSysX":0
                   },
                   "freq":
                   {
-                    "minC":1,
-                    "maxC":8,
-                    "numC":43,
-                    "jnyL":
-                    [
-                      {
-                        "jid":"1|32781|0|85|6092021",
-                        "prodX":78,
-                        "dirTxt":"Herrliberg-Feldmeilen",
-                        "stopL":
-                        [
-                          {
-                            "locX":0,
-                            "idx":3,
-                            "dProdX":78,
-                            "dPlatfS":"Gl. 43/44",
-                            "dTimeS":"161500",
-                            "dDirTxt":"Herrliberg-Feldmeilen",
-                            "type":"N"
-                          },
-                          {
-                            "locX":3,
-                            "idx":4,
-                            "aProdX":78,
-                            "aPlatfS":"Gl. 2",
-                            "aTimeS":"161700",
-                            "type":"N"
-                          }
-                        ],
-                        "pos":
-                        {
-                          "x":8544400,
-                          "y":47411896,
-                          "layerX":0,
-                          "crdSysX":0
-                        },
-                        "ctxRecon":"T$A=1@O=Zürich HB@L=8503000@a=128@$A=1@O=Zürich Stadelhofen (SBB)@L=8503003@a=128@$202109061615$202109061617$S     16$$1$$$$",
-                        "msgL":
-                        [
-                          {
-                            "type":"REM",
-                            "remX":0,
-                            "fLocX":0,
-                            "tLocX":3,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ],
-                            "sort":268566528
-                          },
-                          {
-                            "type":"REM",
-                            "remX":1,
-                            "fLocX":0,
-                            "tLocX":3,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ],
-                            "sort":269221888
-                          },
-                          {
-                            "type":"REM",
-                            "remX":2,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL_H3"
-                            ],
-                            "sort":281542656
-                          }
-                        ],
-                        "subscr":"F",
-                        "prodL":
-                        [
-                          {
-                            "prodX":78,
-                            "fLocX":0,
-                            "tLocX":3,
-                            "fIdx":3,
-                            "tIdx":4
-                          }
-                        ],
-                        "dirL":
-                        [
-                          {
-                            "dirX":1,
-                            "fLocX":0,
-                            "tLocX":3,
-                            "fIdx":3,
-                            "tIdx":4
-                          }
-                        ]
-                      },
-                      {
-                        "jid":"1|32613|0|85|6092021",
-                        "prodX":79,
-                        "dirTxt":"Schaffhausen",
-                        "stopL":
-                        [
-                          {
-                            "locX":0,
-                            "idx":11,
-                            "dProdX":79,
-                            "dPlatfS":"Gl. 43/44",
-                            "dTimeS":"161600",
-                            "dDirTxt":"Schaffhausen",
-                            "type":"N"
-                          },
-                          {
-                            "locX":3,
-                            "idx":12,
-                            "aProdX":79,
-                            "aPlatfS":"Gl. 3",
-                            "aTimeS":"161900",
-                            "type":"N"
-                          }
-                        ],
-                        "pos":
-                        {
-                          "x":8459560,
-                          "y":47397082,
-                          "layerX":0,
-                          "crdSysX":0
-                        },
-                        "ctxRecon":"T$A=1@O=Zürich HB@L=8503000@a=128@$A=1@O=Zürich Stadelhofen (SBB)@L=8503003@a=128@$202109061616$202109061619$S     12$$1$$$$",
-                        "msgL":
-                        [
-                          {
-                            "type":"REM",
-                            "remX":0,
-                            "fLocX":0,
-                            "tLocX":3,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ],
-                            "sort":268566528
-                          },
-                          {
-                            "type":"REM",
-                            "remX":1,
-                            "fLocX":0,
-                            "tLocX":3,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ],
-                            "sort":269221888
-                          },
-                          {
-                            "type":"REM",
-                            "remX":2,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL_H3"
-                            ],
-                            "sort":281542656
-                          }
-                        ],
-                        "subscr":"F",
-                        "prodL":
-                        [
-                          {
-                            "prodX":79,
-                            "fLocX":0,
-                            "tLocX":3,
-                            "fIdx":11,
-                            "tIdx":12
-                          }
-                        ],
-                        "dirL":
-                        [
-                          {
-                            "dirX":2,
-                            "fLocX":0,
-                            "tLocX":3,
-                            "fIdx":11,
-                            "tIdx":12
-                          }
-                        ]
-                      },
-                      {
-                        "jid":"1|32436|0|85|6092021",
-                        "prodX":80,
-                        "dirTxt":"Romanshorn",
-                        "stopL":
-                        [
-                          {
-                            "locX":0,
-                            "idx":0,
-                            "dProdX":80,
-                            "dPlatfS":"Gl. 43/44",
-                            "dTimeS":"162000",
-                            "dDirTxt":"Romanshorn",
-                            "type":"N"
-                          },
-                          {
-                            "locX":3,
-                            "idx":1,
-                            "aProdX":80,
-                            "aPlatfS":"Gl. 3",
-                            "aTimeS":"162300",
-                            "type":"N"
-                          }
-                        ],
-                        "ctxRecon":"T$A=1@O=Zürich HB@L=8503000@a=128@$A=1@O=Zürich Stadelhofen (SBB)@L=8503003@a=128@$202109061620$202109061623$S     23$$1$$$$",
-                        "msgL":
-                        [
-                          {
-                            "type":"REM",
-                            "remX":0,
-                            "fLocX":0,
-                            "tLocX":3,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ],
-                            "sort":268566528
-                          },
-                          {
-                            "type":"REM",
-                            "remX":1,
-                            "fLocX":0,
-                            "tLocX":3,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ],
-                            "sort":269221888
-                          },
-                          {
-                            "type":"REM",
-                            "remX":2,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL_H3"
-                            ],
-                            "sort":281542656
-                          }
-                        ],
-                        "subscr":"F",
-                        "prodL":
-                        [
-                          {
-                            "prodX":80,
-                            "fLocX":0,
-                            "tLocX":3,
-                            "fIdx":0,
-                            "tIdx":1
-                          }
-                        ],
-                        "dirL":
-                        [
-                          {
-                            "dirX":3,
-                            "fLocX":0,
-                            "tLocX":3,
-                            "fIdx":0,
-                            "tIdx":1
-                          }
-                        ]
-                      },
-                      {
-                        "jid":"1|32127|0|85|6092021",
-                        "prodX":81,
-                        "dirTxt":"Pfäffikon SZ",
-                        "stopL":
-                        [
-                          {
-                            "locX":0,
-                            "idx":13,
-                            "dProdX":81,
-                            "dPlatfS":"Gl. 43/44",
-                            "dTimeS":"162400",
-                            "dDirTxt":"Pfäffikon SZ",
-                            "type":"N"
-                          },
-                          {
-                            "locX":3,
-                            "idx":14,
-                            "aProdX":81,
-                            "aPlatfS":"Gl. 3",
-                            "aTimeS":"162600",
-                            "type":"N"
-                          }
-                        ],
-                        "pos":
-                        {
-                          "x":8437626,
-                          "y":47357502,
-                          "layerX":0,
-                          "crdSysX":0
-                        },
-                        "ctxRecon":"T$A=1@O=Zürich HB@L=8503000@a=128@$A=1@O=Zürich Stadelhofen (SBB)@L=8503003@a=128@$202109061624$202109061626$S      5$$1$$$$",
-                        "msgL":
-                        [
-                          {
-                            "type":"REM",
-                            "remX":0,
-                            "fLocX":0,
-                            "tLocX":3,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ],
-                            "sort":268566528
-                          },
-                          {
-                            "type":"REM",
-                            "remX":1,
-                            "fLocX":0,
-                            "tLocX":3,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ],
-                            "sort":269221888
-                          },
-                          {
-                            "type":"REM",
-                            "remX":2,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL_H3"
-                            ],
-                            "sort":281542656
-                          }
-                        ],
-                        "subscr":"F",
-                        "prodL":
-                        [
-                          {
-                            "prodX":81,
-                            "fLocX":0,
-                            "tLocX":3,
-                            "fIdx":13,
-                            "tIdx":14
-                          }
-                        ],
-                        "dirL":
-                        [
-                          {
-                            "dirX":4,
-                            "fLocX":0,
-                            "tLocX":3,
-                            "fIdx":13,
-                            "tIdx":14
-                          }
-                        ]
-                      },
-                      {
-                        "jid":"1|32380|0|85|6092021",
-                        "prodX":82,
-                        "dirTxt":"Uster",
-                        "stopL":
-                        [
-                          {
-                            "locX":0,
-                            "idx":11,
-                            "dProdX":82,
-                            "dPlatfS":"Gl. 43/44",
-                            "dTimeS":"162800",
-                            "dDirTxt":"Uster",
-                            "type":"N"
-                          },
-                          {
-                            "locX":3,
-                            "idx":12,
-                            "aProdX":82,
-                            "aPlatfS":"Gl. 3",
-                            "aTimeS":"163000",
-                            "type":"N"
-                          }
-                        ],
-                        "pos":
-                        {
-                          "x":8510403,
-                          "y":47470263,
-                          "layerX":0,
-                          "crdSysX":0
-                        },
-                        "ctxRecon":"T$A=1@O=Zürich HB@L=8503000@a=128@$A=1@O=Zürich Stadelhofen (SBB)@L=8503003@a=128@$202109061628$202109061630$S      9$$1$$$$",
-                        "msgL":
-                        [
-                          {
-                            "type":"REM",
-                            "remX":0,
-                            "fLocX":0,
-                            "tLocX":3,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ],
-                            "sort":268566528
-                          },
-                          {
-                            "type":"REM",
-                            "remX":1,
-                            "fLocX":0,
-                            "tLocX":3,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ],
-                            "sort":269221888
-                          },
-                          {
-                            "type":"REM",
-                            "remX":2,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL_H3"
-                            ],
-                            "sort":281542656
-                          }
-                        ],
-                        "subscr":"F",
-                        "prodL":
-                        [
-                          {
-                            "prodX":82,
-                            "fLocX":0,
-                            "tLocX":3,
-                            "fIdx":11,
-                            "tIdx":12
-                          }
-                        ],
-                        "dirL":
-                        [
-                          {
-                            "dirX":5,
-                            "fLocX":0,
-                            "tLocX":3,
-                            "fIdx":11,
-                            "tIdx":12
-                          }
-                        ]
-                      }
-                    ]
+                    "minC":10,
+                    "maxC":11,
+                    "numC":12
                   },
-                  "ctxRecon":"T$A=1@O=Zürich HB@L=8503000@a=128@$A=1@O=Zürich Stadelhofen (SBB)@L=8503003@a=128@$202109061611$202109061614$S      7$$1$$$$",
+                  "ctxRecon":"T$A=1@O=Zürich, Bahnhofplatz/HB@L=299986@a=128@$A=1@O=Zürich, Hegibachplatz@L=299908@a=128@$202112051928$202112051937$Bus   31$$1$$$$",
                   "msgL":
                   [
                     {
                       "type":"REM",
                       "remX":0,
                       "fLocX":0,
-                      "tLocX":3,
+                      "tLocX":2,
                       "tagL":
                       [
                         "RES_JNY_DTL"
@@ -2802,18 +1904,18 @@
                     },
                     {
                       "type":"REM",
-                      "remX":1,
+                      "remX":2,
                       "fLocX":0,
-                      "tLocX":3,
+                      "tLocX":2,
                       "tagL":
                       [
-                        "RES_JNY_DTL"
+                        "RES_JNY_DTL_H3"
                       ],
-                      "sort":269221888
+                      "sort":281542656
                     },
                     {
                       "type":"REM",
-                      "remX":2,
+                      "remX":3,
                       "tagL":
                       [
                         "RES_JNY_DTL_H3"
@@ -2825,11 +1927,11 @@
                   "prodL":
                   [
                     {
-                      "prodX":77,
+                      "prodX":39,
                       "fLocX":0,
-                      "tLocX":3,
-                      "fIdx":9,
-                      "tIdx":10
+                      "tLocX":2,
+                      "fIdx":16,
+                      "tIdx":23
                     }
                   ],
                   "dirL":
@@ -2837,225 +1939,24 @@
                     {
                       "dirX":0,
                       "fLocX":0,
-                      "tLocX":3,
-                      "fIdx":9,
-                      "tIdx":10
-                    }
-                  ]
-                },
-                "minChg":"000400"
-              },
-              {
-                "type":"WALK",
-                "icoX":21,
-                "dep":
-                {
-                  "locX":3,
-                  "dInR":true,
-                  "dTimeS":"161400",
-                  "type":"N"
-                },
-                "arr":
-                {
-                  "locX":4,
-                  "aOutR":true,
-                  "aTimeS":"161800",
-                  "type":"N"
-                },
-                "gis":
-                {
-                  "dist":76,
-                  "durS":"000400",
-                  "dirGeo":20,
-                  "ctx":"H|1|W$A=1@O=Zürich Stadelhofen (SBB)@L=8503003@a=128@$A=1@O=Zürich, Bahnhof Stadelhofen@L=299617@a=128@$202109061614$202109061618$$$1$$$$",
-                  "polyG":
-                  {
-                    "polyXL":
-                    [
-                      1
-                    ],
-                    "layerX":0,
-                    "crdSysX":0
-                  },
-                  "gisPrvr":"H",
-                  "getDescr":true,
-                  "getPoly":true
-                }
-              },
-              {
-                "type":"JNY",
-                "icoX":22,
-                "dep":
-                {
-                  "locX":4,
-                  "idx":0,
-                  "dProdX":87,
-                  "dInR":true,
-                  "dTimeS":"161800",
-                  "dTimeR":"161800",
-                  "dProgType":"PROGNOSED",
-                  "dIconRX":15,
-                  "type":"N"
-                },
-                "arr":
-                {
-                  "locX":1,
-                  "idx":2,
-                  "aProdX":87,
-                  "aOutR":true,
-                  "aTimeS":"162100",
-                  "aTimeR":"162100",
-                  "aProgType":"PROGNOSED",
-                  "aIconRX":15,
-                  "type":"N"
-                },
-                "jny":
-                {
-                  "jid":"1|9304|0|85|6092021",
-                  "prodX":88,
-                  "dirTxt":"Forch",
-                  "dirFlg":"R",
-                  "status":"P",
-                  "isRchbl":true,
-                  "stopL":
-                  [
-                    {
-                      "locX":4,
-                      "idx":0,
-                      "dProdX":88,
-                      "dInR":true,
-                      "dTimeS":"161800",
-                      "dTimeR":"161800",
-                      "dProgType":"PROGNOSED",
-                      "dDirTxt":"Forch",
-                      "dDirFlg":"R",
-                      "dIconRX":15,
-                      "type":"N"
-                    },
-                    {
-                      "locX":6,
-                      "idx":1,
-                      "aProdX":88,
-                      "aOutR":true,
-                      "aTimeS":"161900",
-                      "aTimeR":"161900",
-                      "aProgType":"PROGNOSED",
-                      "dProdX":88,
-                      "dInR":true,
-                      "dTimeS":"161900",
-                      "dTimeR":"161900",
-                      "dProgType":"PROGNOSED",
-                      "aIconRX":15,
-                      "dIconRX":15,
-                      "type":"N"
-                    },
-                    {
-                      "locX":1,
-                      "idx":2,
-                      "aProdX":88,
-                      "aOutR":true,
-                      "aTimeS":"162100",
-                      "aTimeR":"162100",
-                      "aProgType":"PROGNOSED",
-                      "aIconRX":15,
-                      "type":"N"
-                    }
-                  ],
-                  "polyG":
-                  {
-                    "polyXL":
-                    [
-                      2
-                    ],
-                    "layerX":0,
-                    "crdSysX":0
-                  },
-                  "freq":
-                  {
-                    "minC":6,
-                    "maxC":9,
-                    "numC":17
-                  },
-                  "ctxRecon":"T$A=1@O=Zürich, Bahnhof Stadelhofen@L=299617@a=128@$A=1@O=Zürich, Hegibachplatz@L=299908@a=128@$202109061618$202109061621$S     18$$1$$$$",
-                  "msgL":
-                  [
-                    {
-                      "type":"REM",
-                      "remX":0,
-                      "fLocX":4,
-                      "tLocX":1,
-                      "tagL":
-                      [
-                        "RES_JNY_DTL"
-                      ],
-                      "sort":268566528
-                    },
-                    {
-                      "type":"REM",
-                      "remX":3,
-                      "fLocX":4,
-                      "tLocX":1,
-                      "tagL":
-                      [
-                        "RES_JNY_DTL"
-                      ],
-                      "sort":268566528
-                    },
-                    {
-                      "type":"REM",
-                      "remX":5,
-                      "fLocX":4,
-                      "tLocX":1,
-                      "tagL":
-                      [
-                        "RES_JNY_DTL_H3"
-                      ],
-                      "sort":281542656
-                    },
-                    {
-                      "type":"REM",
-                      "remX":2,
-                      "tagL":
-                      [
-                        "RES_JNY_DTL_H3"
-                      ],
-                      "sort":281542656
-                    }
-                  ],
-                  "subscr":"F",
-                  "prodL":
-                  [
-                    {
-                      "prodX":88,
-                      "fLocX":4,
-                      "tLocX":1,
-                      "fIdx":0,
-                      "tIdx":2
-                    }
-                  ],
-                  "dirL":
-                  [
-                    {
-                      "dirX":6,
-                      "fLocX":4,
-                      "tLocX":1,
-                      "fIdx":0,
-                      "tIdx":2
+                      "tLocX":2,
+                      "fIdx":16,
+                      "tIdx":23
                     }
                   ]
                 }
               }
             ],
-            "ctxRecon":"¶HKI¶T$A=1@O=Zürich HB@L=8503000@a=128@$A=1@O=Zürich Stadelhofen (SBB)@L=8503003@a=128@$202109061611$202109061614$S      7$$1$$$$§W$A=1@O=Zürich Stadelhofen (SBB)@L=8503003@a=128@$A=1@O=Zürich, Bahnhof Stadelhofen@L=299617@a=128@$202109061614$202109061618$$$1$$$$§T$A=1@O=Zürich, Bahnhof Stadelhofen@L=299617@a=128@$A=1@O=Zürich, Hegibachplatz@L=299908@a=128@$202109061618$202109061621$S     18$$1$$$$",
+            "ctxRecon":"¶HKI¶T$A=1@O=Zürich, Bahnhofplatz/HB@L=299986@a=128@$A=1@O=Zürich, Hegibachplatz@L=299908@a=128@$202112051928$202112051937$Bus   31$$1$$$$",
             "freq":
             {
-              "minC":6
+              "minC":10
             },
             "msgL":
             [
               {
                 "type":"REM",
-                "remX":6,
+                "remX":4,
                 "tagL":
                 [
                   "SUM_CON_HDR_L","RES_CON_HDR_L","SUM_GLB_FTR_H3","RES_GLB_FTR_H3"
@@ -3066,13 +1967,13 @@
             ],
             "conSubscr":"F",
             "recState":"C",
-            "cksum":"384be85c_3",
-            "cksumDti":"0f8710f2_3"
+            "cksum":"9aa1f490_3",
+            "cksumDti":"f1f19997_3"
           }
         ],
         "fpB":"20201213",
-        "fpE":"20211211",
-        "planrtTS":"1630937127"
+        "fpE":"20221210",
+        "planrtTS":"1638728725"
       }
     }
   ]

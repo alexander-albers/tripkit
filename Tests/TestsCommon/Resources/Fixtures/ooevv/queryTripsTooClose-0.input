@@ -1,7 +1,7 @@
 {
   "ver":"1.15",
   "lang":"deu",
-  "id":"esggpie6k225wg8x",
+  "id":"izmcckug46gr9g4s",
   "cInfo":
   {
     "code":"OK",
@@ -12,8 +12,8 @@
   [
     {
       "meth":"TripSearch",
-      "err":"H9220",
-      "errTxt":"HAFAS Kernel: Nearby to the given address stations could not be found.",
+      "err":"FAIL",
+      "errTxt":"HCI Service: request failed",
       "res":
       {
         "common":
@@ -61,9 +61,9 @@
 
           ]
         },
-        "fpB":"20210706",
-        "fpE":"20211211",
-        "planrtTS":"1630938360"
+        "fpB":"20211004",
+        "fpE":"20220531",
+        "planrtTS":"1638728681"
       }
     }
   ]

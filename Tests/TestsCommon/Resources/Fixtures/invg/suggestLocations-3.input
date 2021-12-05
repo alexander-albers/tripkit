@@ -1,7 +1,7 @@
 {
   "ver":"1.16",
   "lang":"deu",
-  "id":"mm6kjgqeka8cpwwx",
+  "id":"d96s4keq42ijygcs",
   "svcResL":
   [
     {
@@ -78,6 +78,21 @@
               }
             },
             {
+              "lid":"A=2@O=Ingolstadt, Kellerhalsstraße 12@X=11373898@Y=48781591@U=103@L=990003693@B=1@p=1607068022@",
+              "type":"A",
+              "name":"Ingolstadt, Kellerhalsstraße 12",
+              "icoX":0,
+              "extId":"990003693",
+              "state":"F",
+              "crd":
+              {
+                "x":11373898,
+                "y":48781591,
+                "layerX":0,
+                "crdSysX":0
+              }
+            },
+            {
               "lid":"A=2@O=Ingolstadt, Schmellerstraße 1@X=11417523@Y=48759388@U=103@L=990004153@B=1@p=1607068022@",
               "type":"A",
               "name":"Ingolstadt, Schmellerstraße 1",
@@ -118,21 +133,6 @@
               {
                 "x":11452167,
                 "y":48742803,
-                "layerX":0,
-                "crdSysX":0
-              }
-            },
-            {
-              "lid":"A=2@O=Ingolstadt, Kellerhalsstraße 12@X=11373898@Y=48781591@U=103@L=990003693@B=1@p=1607068022@",
-              "type":"A",
-              "name":"Ingolstadt, Kellerhalsstraße 12",
-              "icoX":0,
-              "extId":"990003693",
-              "state":"F",
-              "crd":
-              {
-                "x":11373898,
-                "y":48781591,
                 "layerX":0,
                 "crdSysX":0
               }

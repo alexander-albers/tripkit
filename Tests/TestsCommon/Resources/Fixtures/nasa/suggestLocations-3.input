@@ -1,7 +1,7 @@
 {
   "ver":"1.15",
   "lang":"deu",
-  "id":"e7kc3g8k42xz8ics",
+  "id":"y74s6mxg42g7xwwg",
   "svcResL":
   [
     {
@@ -108,21 +108,6 @@
               }
             },
             {
-              "lid":"A=2@O=Leipzig - Stahmeln, Georg-Schumann-Straße 418@X=12307869@Y=51377703@U=103@L=980753095@B=1@p=1520432662@",
-              "type":"A",
-              "name":"Leipzig - Stahmeln, Georg-Schumann-Straße 418",
-              "icoX":0,
-              "extId":"980753095",
-              "state":"F",
-              "crd":
-              {
-                "x":12307869,
-                "y":51377703,
-                "layerX":0,
-                "crdSysX":0
-              }
-            },
-            {
               "lid":"A=2@O=Leipzig - Möckern, Georg-Schumann-Straße 144@X=12354523@Y=51366053@U=103@L=980752314@B=1@p=1520432662@",
               "type":"A",
               "name":"Leipzig - Möckern, Georg-Schumann-Straße 144",
@@ -133,6 +118,21 @@
               {
                 "x":12354523,
                 "y":51366053,
+                "layerX":0,
+                "crdSysX":0
+              }
+            },
+            {
+              "lid":"A=2@O=Leipzig - Stahmeln, Georg-Schumann-Straße 418@X=12307869@Y=51377703@U=103@L=980753095@B=1@p=1520432662@",
+              "type":"A",
+              "name":"Leipzig - Stahmeln, Georg-Schumann-Straße 418",
+              "icoX":0,
+              "extId":"980753095",
+              "state":"F",
+              "crd":
+              {
+                "x":12307869,
+                "y":51377703,
                 "layerX":0,
                 "crdSysX":0
               }

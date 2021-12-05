@@ -2,7 +2,7 @@
   "ver":"1.18",
   "ext":"VAO.13",
   "lang":"deu",
-  "id":"3pksbgskm2ahhg8g",
+  "id":"4f6gumsi6626gg8g",
   "err":"OK",
   "cInfo":
   {
@@ -37,7 +37,7 @@
               "id":"standard",
               "name":"standard",
               "index":0,
-              "annoCnt":384392
+              "annoCnt":0
             }
           ],
           "crdSysL":
@@ -54,12 +54,20 @@
           ],
           "remL":
           [
-
+            {
+              "type":"W",
+              "code":"WW",
+              "txtN":"WEBVIEW",
+              "url":"https://routenplaner.verkehrsauskunft.at/bin/query.exe/dn?tpl=webview_poi&performLocating=128&look_station=960095777&look_nv=get_infotext|yes|get_attributes|yes&look_stationpool=130&L=vs_stv"
+            }
           ],
           "icoL":
           [
             {
               "res":"ADR"
+            },
+            {
+              "res":"PCAT_ESSEN"
             }
           ]
         },
@@ -70,11 +78,11 @@
           "locL":
           [
             {
-              "lid":"A=2@O=Wartingergasse 36, 8010 Graz@X=15434667@Y=47079043@U=103@L=980126982@B=1@p=1629871314@",
+              "lid":"A=2@O=Wartingergasse 36, 8010 Graz@H=36@X=15434667@Y=47079043@U=103@L=980127261@B=1@p=1637147511@",
               "type":"A",
               "name":"Wartingergasse 36, 8010 Graz",
               "icoX":0,
-              "extId":"980126982",
+              "extId":"980127261",
               "state":"F",
               "crd":
               {
@@ -82,14 +90,15 @@
                 "y":47079043,
                 "layerX":0,
                 "crdSysX":0
-              }
+              },
+              "mapSelectable":true
             },
             {
-              "lid":"A=2@O=Angergasse 1, 8010 Graz@X=15439054@Y=47051806@U=103@L=980007704@B=1@p=1629871314@",
+              "lid":"A=2@O=Angergasse 1, 8010 Graz@H=1@X=15439054@Y=47051806@U=103@L=980007742@B=1@p=1637147511@",
               "type":"A",
               "name":"Angergasse 1, 8010 Graz",
               "icoX":0,
-              "extId":"980007704",
+              "extId":"980007742",
               "state":"F",
               "crd":
               {
@@ -97,14 +106,47 @@
                 "y":47051806,
                 "layerX":0,
                 "crdSysX":0
-              }
+              },
+              "mapSelectable":true
             },
             {
-              "lid":"A=2@O=Monsbergergasse 2, 8010 Graz@X=15451324@Y=47057127@U=103@L=980080880@B=1@p=1629871314@",
+              "lid":"A=4@O=Martin Auer - Stubenberggasse, 8010 Graz (Essen und Trinken)@X=15439746@Y=47068328@U=130@L=960095777@B=1@p=1638671434@",
+              "type":"P",
+              "name":"Martin Auer - Stubenberggasse, 8010 Graz (Essen und Trinken)",
+              "icoX":1,
+              "extId":"960095777",
+              "state":"F",
+              "crd":
+              {
+                "x":15439746,
+                "y":47068328,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "mcpData":
+              {
+                "type":"P",
+                "occupancy":"N",
+                "mcpid":"0",
+                "externalId":"oeamtc_to-10_26566454"
+              },
+              "mapSelectable":true,
+              "msgL":
+              [
+                {
+                  "type":"REM",
+                  "remX":0,
+                  "dspl":"U",
+                  "sort":818413568
+                }
+              ]
+            },
+            {
+              "lid":"A=2@O=Monsbergergasse 2, 8010 Graz@H=2@X=15451324@Y=47057127@U=103@L=980081075@B=1@p=1637147511@",
               "type":"A",
               "name":"Monsbergergasse 2, 8010 Graz",
               "icoX":0,
-              "extId":"980080880",
+              "extId":"980081075",
               "state":"F",
               "crd":
               {
@@ -112,14 +154,15 @@
                 "y":47057127,
                 "layerX":0,
                 "crdSysX":0
-              }
+              },
+              "mapSelectable":true
             },
             {
-              "lid":"A=2@O=Nürnbergergasse 2, 8010 Graz@X=15436303@Y=47071007@U=103@L=980085897@B=1@p=1629871314@",
+              "lid":"A=2@O=Nürnbergergasse 2, 8010 Graz@H=2@X=15436303@Y=47071007@U=103@L=980086101@B=1@p=1637147511@",
               "type":"A",
               "name":"Nürnbergergasse 2, 8010 Graz",
               "icoX":0,
-              "extId":"980085897",
+              "extId":"980086101",
               "state":"F",
               "crd":
               {
@@ -127,22 +170,8 @@
                 "y":47071007,
                 "layerX":0,
                 "crdSysX":0
-              }
-            },
-            {
-              "lid":"A=2@O=Scheidtenbergergasse 1, 8010 Graz@X=15431764@Y=47084005@U=103@L=980103307@B=1@p=1629871314@",
-              "type":"A",
-              "name":"Scheidtenbergergasse 1, 8010 Graz",
-              "icoX":0,
-              "extId":"980103307",
-              "state":"F",
-              "crd":
-              {
-                "x":15431764,
-                "y":47084005,
-                "layerX":0,
-                "crdSysX":0
-              }
+              },
+              "mapSelectable":true
             }
           ]
         }

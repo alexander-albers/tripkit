@@ -1,7 +1,7 @@
 {
   "ver":"1.18",
   "lang":"deu",
-  "id":"3i28jick468wyg4k",
+  "id":"3ekkcmxx66gaxi8x",
   "err":"OK",
   "svcResL":
   [
@@ -39,21 +39,6 @@
               "id":"standard",
               "index":0,
               "type":"WGS84"
-            },
-            {
-              "id":"Jena,_53",
-              "index":1,
-              "type":"WGS84"
-            },
-            {
-              "id":"Hildbu_5",
-              "index":1,
-              "type":"WGS84"
-            },
-            {
-              "id":"Gera,_Er",
-              "index":1,
-              "type":"WGS84"
             }
           ],
           "opL":
@@ -64,29 +49,36 @@
           [
             {
               "type":"A",
+              "code":"IS",
+              "prio":350,
+              "icoX":0,
+              "txtN":"Verantwortlicher DINO-Haltestellenbereich"
+            },
+            {
+              "type":"A",
               "code":"PD",
               "prio":0,
-              "icoX":2,
+              "icoX":0,
               "txtN":"Baudenkmäler"
             },
             {
               "type":"A",
               "code":"P_",
               "prio":0,
-              "icoX":2,
+              "icoX":0,
               "txtN":"POI"
             }
           ],
           "icoL":
           [
             {
+              "res":"INFO"
+            },
+            {
               "res":"STA"
             },
             {
               "res":"ADR"
-            },
-            {
-              "res":"INFO"
             },
             {
               "res":"LOC_DENKMAL"
@@ -100,10 +92,10 @@
           "locL":
           [
             {
-              "lid":"A=1@O=Jena, Ernst-Abbe-Platz@X=11581549@Y=50928179@U=80@L=153168@B=1@p=1630919382@",
+              "lid":"A=1@O=Jena, Ernst-Abbe-Platz@X=11581549@Y=50928179@U=80@L=153168@B=1@p=1638574695@",
               "type":"S",
               "name":"Jena, Ernst-Abbe-Platz",
-              "icoX":0,
+              "icoX":1,
               "extId":"153168",
               "state":"F",
               "crd":
@@ -113,31 +105,28 @@
                 "layerX":0,
                 "crdSysX":0
               },
-              "crdAltL":
-              [
-                {
-                  "x":99999999,
-                  "y":99999999,
-                  "layerX":0,
-                  "crdSysX":0
-                },
-                {
-                  "x":99999999,
-                  "y":99999999,
-                  "layerX":0,
-                  "crdSysX":1
-                }
-              ],
               "meta":true,
               "pCls":32,
-              "wt":4295,
-              "isMainMast":true
+              "wt":3667,
+              "isMainMast":true,
+              "msgL":
+              [
+                {
+                  "type":"REM",
+                  "remX":0,
+                  "tagL":
+                  [
+                    "RES_LOC"
+                  ],
+                  "sort":851181568
+                }
+              ]
             },
             {
               "lid":"A=2@O=Jena, Ernst-Abbe-Platz@X=11582124@Y=50928179@U=99@b=980626084@B=1@p=1462862076@",
               "type":"A",
               "name":"Jena, Ernst-Abbe-Platz",
-              "icoX":1,
+              "icoX":2,
               "state":"M",
               "crd":
               {
@@ -166,29 +155,29 @@
               [
                 {
                   "type":"REM",
-                  "remX":0,
-                  "tagL":
-                  [
-                    "RES_LOC"
-                  ],
-                  "sort":402653184
-                },
-                {
-                  "type":"REM",
                   "remX":1,
                   "tagL":
                   [
                     "RES_LOC"
                   ],
-                  "sort":402653184
+                  "sort":536870912
+                },
+                {
+                  "type":"REM",
+                  "remX":2,
+                  "tagL":
+                  [
+                    "RES_LOC"
+                  ],
+                  "sort":536870912
                 }
               ]
             },
             {
-              "lid":"A=1@O=Hildburghausen, Ernst-Thälmann-Platz@X=10738855@Y=50429673@U=80@L=2510007@B=1@p=1630919382@",
+              "lid":"A=1@O=Hildburghausen, Ernst-Thälmann-Platz@X=10738855@Y=50429673@U=80@L=2510007@B=1@p=1638574695@",
               "type":"S",
               "name":"Hildburghausen, Ernst-Thälmann-Platz",
-              "icoX":0,
+              "icoX":1,
               "extId":"2510007",
               "state":"F",
               "crd":
@@ -198,59 +187,51 @@
                 "layerX":0,
                 "crdSysX":0
               },
-              "crdAltL":
-              [
-                {
-                  "x":99999999,
-                  "y":99999999,
-                  "layerX":0,
-                  "crdSysX":0
-                },
-                {
-                  "x":99999999,
-                  "y":99999999,
-                  "layerX":0,
-                  "crdSysX":2
-                }
-              ],
               "meta":true,
               "pCls":256,
-              "wt":15,
-              "isMainMast":true
+              "wt":16,
+              "isMainMast":true,
+              "msgL":
+              [
+                {
+                  "type":"REM",
+                  "remX":0,
+                  "tagL":
+                  [
+                    "RES_LOC"
+                  ],
+                  "sort":851181568
+                }
+              ]
             },
             {
-              "lid":"A=1@O=Gera, Ernst-Abbe-Straße@X=12095166@Y=50900951@U=80@L=152002@B=1@p=1630919382@",
+              "lid":"A=1@O=Eisenach, Ernst-Abbe-Gymnasium@X=10325181@Y=50972595@U=80@L=1700865@B=1@p=1638574695@",
               "type":"S",
-              "name":"Gera, Ernst-Abbe-Straße",
-              "icoX":0,
-              "extId":"152002",
+              "name":"Eisenach, Ernst-Abbe-Gymnasium",
+              "icoX":1,
+              "extId":"1700865",
               "state":"F",
               "crd":
               {
-                "x":12095166,
-                "y":50900951,
+                "x":10325181,
+                "y":50972595,
                 "layerX":0,
                 "crdSysX":0
               },
-              "crdAltL":
+              "pCls":256,
+              "wt":57,
+              "msgL":
               [
                 {
-                  "x":99999999,
-                  "y":99999999,
-                  "layerX":0,
-                  "crdSysX":0
-                },
-                {
-                  "x":99999999,
-                  "y":99999999,
-                  "layerX":0,
-                  "crdSysX":3
+                  "type":"REM",
+                  "remX":0,
+                  "tagL":
+                  [
+                    "RES_LOC"
+                  ],
+                  "sort":851181568
                 }
-              ],
-              "meta":true,
-              "pCls":288,
-              "wt":4311,
-              "isMainMast":true
+              ]
             }
           ]
         }

@@ -1,7 +1,7 @@
 {
   "ver":"1.16",
   "lang":"deu",
-  "id":"hmggjiqu46q5hw8g",
+  "id":"be2w4msg62wfw28x",
   "svcResL":
   [
     {
@@ -24,7 +24,7 @@
               "cls":32,
               "prodCtx":
               {
-                "lineId":"de:VBN-VOS:10:"
+                "lineId":"de:VBN-VOS:10:5"
               }
             },
             {
@@ -74,7 +74,7 @@
               "cls":32,
               "prodCtx":
               {
-                "lineId":"de:VBN-VOS:16:2"
+                "lineId":"de:VBN-VOS:16:1"
               }
             },
             {
@@ -104,7 +104,7 @@
               "cls":32,
               "prodCtx":
               {
-                "lineId":"de:VBN-VOS:151:"
+                "lineId":"de:VBN-VOS:151:1"
               }
             },
             {
@@ -248,16 +248,6 @@
               }
             },
             {
-              "name":"Bus 586",
-              "nameS":"586",
-              "icoX":0,
-              "cls":32,
-              "prodCtx":
-              {
-                "lineId":"VOSBEC_586"
-              }
-            },
-            {
               "name":"Bus 610",
               "nameS":"610",
               "icoX":0,
@@ -305,26 +295,6 @@
               "prodCtx":
               {
                 "lineId":"de:VBN-VOS:N276:"
-              }
-            },
-            {
-              "name":"Bus R15",
-              "nameS":"R15",
-              "icoX":0,
-              "cls":32,
-              "prodCtx":
-              {
-                "lineId":"de:NWL:05566|Bus|R15:RVM"
-              }
-            },
-            {
-              "name":"Bus R16",
-              "nameS":"R16",
-              "icoX":0,
-              "cls":32,
-              "prodCtx":
-              {
-                "lineId":"de:NWL:05566|Bus|R16:RVM"
               }
             },
             {
@@ -414,7 +384,7 @@
               "cls":32,
               "prodCtx":
               {
-                "lineId":"VOSHUM_X584"
+                "lineId":"de:VBN-VOS:584:5"
               }
             },
             {
@@ -434,7 +404,7 @@
               "cls":32,
               "prodCtx":
               {
-                "lineId":"de:VBN-VOS:586:"
+                "lineId":"de:VBN-VOS:586:2"
               }
             },
             {
@@ -487,7 +457,7 @@
               "id":"standard",
               "index":0,
               "type":"WGS84",
-              "dim":3
+              "dim":2
             },
             {
               "id":"Osna_307",
@@ -496,7 +466,7 @@
               "dim":2
             },
             {
-              "id":"Cuxh_100",
+              "id":"Cuxh_101",
               "index":1,
               "type":"WGS84",
               "dim":2
@@ -558,7 +528,7 @@
           "locL":
           [
             {
-              "lid":"A=1@O=Osnabrück Stresemannplatz@X=8054685@Y=52273424@U=80@L=9071765@B=1@p=1630786923@",
+              "lid":"A=1@O=Osnabrück Stresemannplatz@X=8054685@Y=52273424@U=80@L=9071765@B=1@p=1638652114@",
               "type":"S",
               "name":"Osnabrück Stresemannplatz",
               "icoX":0,
@@ -629,16 +599,13 @@
 35,
 36,
 37,
-38,
-39,
-40,
-41
+38
               ],
-              "wt":1292,
+              "wt":1167,
               "isMainMast":true
             },
             {
-              "lid":"A=1@O=Cuxhaven-Döse Stresemannplatz@X=8692749@Y=53867355@U=80@L=9018557@B=1@p=1630786923@",
+              "lid":"A=1@O=Cuxhaven-Döse Stresemannplatz@X=8692749@Y=53867355@U=80@L=9018557@B=1@p=1638652114@",
               "type":"S",
               "name":"Cuxhaven-Döse Stresemannplatz",
               "icoX":0,
@@ -671,9 +638,9 @@
               "pCls":544,
               "pRefL":
               [
-42,
-43,
-44
+39,
+40,
+41
               ],
               "wt":92,
               "isMainMast":true
@@ -707,9 +674,9 @@
               }
             },
             {
-              "lid":"A=2@O=Kiel - Vorstadt, Stresemannplatz@X=10134295@Y=54318155@U=99@b=961004108@B=1@p=1617880347@",
+              "lid":"A=2@O=24103 Kiel, Stresemannplatz@X=10134295@Y=54318155@U=99@b=961004108@B=1@p=1617880347@",
               "type":"A",
-              "name":"Kiel - Vorstadt, Stresemannplatz",
+              "name":"24103 Kiel, Stresemannplatz",
               "icoX":2,
               "state":"M",
               "crd":

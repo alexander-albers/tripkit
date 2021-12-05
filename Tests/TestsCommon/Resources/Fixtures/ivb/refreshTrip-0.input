@@ -2,7 +2,7 @@
   "ver":"1.20",
   "ext":"VAO.7",
   "lang":"deu",
-  "id":"kgkshis6m22zp2ck",
+  "id":"uq646msx46wbyiwg",
   "err":"OK",
   "cInfo":
   {
@@ -94,6 +94,42 @@
               "isMainMast":true
             },
             {
+              "lid":"A=1@O=Innsbruck Rehgasse@X=11362976@Y=47255897@U=81@L=476152201@i=at:47:61522:0:1@",
+              "type":"S",
+              "name":"Innsbruck Rehgasse",
+              "icoX":7,
+              "extId":"476152201",
+              "state":"F",
+              "crd":
+              {
+                "x":11362976,
+                "y":47255897,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":128,
+              "entry":true,
+              "mMastLocX":5
+            },
+            {
+              "lid":"A=1@O=Innsbruck Rehgasse@X=11362967@Y=47255897@U=81@L=476152200@i=at:47:61522@",
+              "type":"S",
+              "name":"Innsbruck Rehgasse",
+              "icoX":8,
+              "extId":"476152200",
+              "state":"F",
+              "crd":
+              {
+                "x":11362967,
+                "y":47255897,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "meta":true,
+              "pCls":128,
+              "isMainMast":true
+            },
+            {
               "lid":"A=1@O=Innsbruck Messe/Zeughaus@X=11404534@Y=47271233@U=81@L=476167900@i=at:47:61679@",
               "type":"S",
               "name":"Innsbruck Messe/Zeughaus",
@@ -115,7 +151,7 @@
           "prodL":
           [
             {
-              "pid":"L::7::::B1506840680::vvt-1-R-P-j21-4::*",
+              "pid":"L::7::::B1506840680::vvt-1-R-P-j21-6::*",
               "name":"Stadtbus R",
               "nameS":"R",
               "number":"R",
@@ -125,7 +161,7 @@
               "prodCtx":
               {
                 "name":"       R",
-                "num":"5319",
+                "num":"8513",
                 "line":"R",
                 "matchId":"30",
                 "catOutS":"t01",
@@ -133,10 +169,14 @@
                 "catIn":"t01",
                 "catCode":"7",
                 "admin":"t1900_"
-              }
+              },
+              "himIdL":
+              [
+"HIM_FREETEXT_153867"
+              ]
             },
             {
-              "pid":"L::7::::B1506840680::vvt-1-R-P-j21-4::*",
+              "pid":"L::7::::B1506840680::vvt-1-R-P-j21-6::*",
               "name":"Stadtbus R",
               "nameS":"R",
               "number":"R",
@@ -146,20 +186,24 @@
               "prodCtx":
               {
                 "name":"       R",
-                "num":"5319",
+                "num":"8513",
                 "line":"R",
-                "lineId":"vvt-1-R-P-j21-4",
+                "lineId":"vvt-1-R-P-j21-6",
                 "matchId":"30",
                 "catOutS":"t01",
                 "catOutL":"Stadtbus",
                 "catIn":"t01",
                 "catCode":"7",
                 "admin":"t1900_"
-              }
+              },
+              "himIdL":
+              [
+"HIM_FREETEXT_153867"
+              ]
             },
             {
               "name":"Fußweg",
-              "icoX":8,
+              "icoX":10,
               "prodCtx":
               {
                 "name":"Fußweg"
@@ -171,9 +215,9 @@
             {
               "delta":true,
               "dim":2,
-              "crdEncYX":"e{o_HgsqdAAP]E{@IEAMCQE{@G{@ImAKMA@YT_DZgFB]BYt@sK@SB_@JaBD@",
-              "crdEncS":"NNBFBCGCDCNEEDEBFCDNN",
-              "crdEncF":"?????????????????????",
+              "crdEncYX":"e{o_HgsqdAAPyAOe@KsE_@pBmZPuCD@",
+              "crdEncS":"NNFGNFNN",
+              "crdEncF":"????????",
               "ppLocRefL":
               [
                 {
@@ -181,7 +225,7 @@
                   "locX":0
                 },
                 {
-                  "ppIdx":20,
+                  "ppIdx":7,
                   "locX":2
                 }
               ]
@@ -193,7 +237,7 @@
               "id":"standard",
               "name":"standard",
               "index":0,
-              "annoCnt":384392
+              "annoCnt":694319
             }
           ],
           "crdSysL":
@@ -229,7 +273,7 @@
             {
               "type":"H",
               "code":"text.connection.eco.co2.decreased.consumption.message",
-              "icoX":10,
+              "icoX":12,
               "txtN":"Im Vergleich zu einer Fahrt mit dem eigenen PKW werden 0,06 kg CO<sub>2</sub> Emissionen eingespart. <a target=\"_blank\" href=\"https://web.verkehrsauskunft.at/co2berechnung/CO2_Berechnung.pdf\">Mehr Informationen</a>"
             }
           ],
@@ -238,16 +282,18 @@
             {
               "hid":"126891",
               "act":true,
-              "head":"Tragen eines Mund-Nasen-Schutzes",
-              "text":"Bitte Tragen Sie in allen öffentlichen Verkehrsmitteln einen geeigneten Mund-Nasen-Schutz und wahren Sie nach Möglichkeit Distanz zu anderen Personen.",
-              "icoX":7,
+              "head":"FFP2-Maskenpflicht",
+              "text":"Bitte tragen Sie in allen öffentlichen Verkehrsmitteln eine FFP2-Maske und wahren Sie nach Möglichkeit Distanz zu anderen Personen.",
+              "icoX":9,
               "prio":100,
+              "fLocX":4,
+              "tLocX":4,
               "prod":65535,
-              "lModDate":"20210630",
-              "lModTime":"210847",
+              "lModDate":"20211126",
+              "lModTime":"093953",
               "sDate":"20210125",
               "sTime":"000000",
-              "eDate":"20211211",
+              "eDate":"20220531",
               "eTime":"235900",
               "comp":"KGÖVV",
               "catRefL":
@@ -258,9 +304,9 @@
               [
                 {
                   "name":"TIMETABLE",
-                  "fDate":"20210630",
-                  "fTime":"210800",
-                  "tDate":"20211211",
+                  "fDate":"20211021",
+                  "fTime":"095900",
+                  "tDate":"20220531",
                   "tTime":"235900",
                   "uRefL":
                   [
@@ -358,6 +404,37 @@
               "res":"INFO"
             },
             {
+              "res":"prod_bus",
+              "txtS":"N3",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255
+              },
+              "bg":
+              {
+                "r":0,
+                "g":163,
+                "b":212
+              }
+            },
+            {
+              "res":"prod_bus",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255
+              },
+              "bg":
+              {
+                "r":0,
+                "g":163,
+                "b":212
+              }
+            },
+            {
               "res":"HIM4"
             },
             {
@@ -386,7 +463,7 @@
           [
             {
               "label":"Fahrgast-Charta - sicher und gesund mit den Öffis ans Ziel",
-              "url":"https://routenplaner.verkehrsauskunft.at/him-upload/1625080040721_Fahrgastcharta_Juli2021.pdf"
+              "url":"https://routenplaner.verkehrsauskunft.at/him-upload/1637915993266_Fahrgastcharta_November021.pdf"
             }
           ],
           "himMsgCatL":
@@ -408,14 +485,14 @@
         [
           {
             "cid":"DirectConReq-0",
-            "date":"20210906",
-            "dur":"000600",
+            "date":"20211205",
+            "dur":"000500",
             "chg":0,
             "sDays":
             {
-              "sDaysR":"Sa",
-              "sDaysI":"auch 6. bis 10. Sep 2021, 27. bis 29. Okt 2021, 2. Nov",
-              "sDaysB":"0BF7EFDFBF7EFDFBF02040810204791020408102"
+              "sDaysR":"So",
+              "sDaysI":"auch 8., 25. Dez, 1., 6. Jan, 18. Apr, 26. Mai",
+              "sDaysB":"02040A182040810244083062408102040810204081020408182040810224"
             },
             "dep":
             {
@@ -423,16 +500,16 @@
               "idx":13,
               "dProdX":0,
               "dInR":true,
-              "dTimeS":"164000",
-              "dTimeR":"164200",
+              "dTimeS":"193300",
+              "dTimeR":"193400",
               "dProgType":"PROGNOSED",
               "type":"N"
             },
             "arr":
             {
-              "locX":4,
+              "locX":6,
               "aOutR":true,
-              "aTimeS":"164600",
+              "aTimeS":"193800",
               "type":"N"
             },
             "secL":
@@ -446,8 +523,8 @@
                   "idx":13,
                   "dProdX":0,
                   "dInR":true,
-                  "dTimeS":"164000",
-                  "dTimeR":"164200",
+                  "dTimeS":"193300",
+                  "dTimeR":"193400",
                   "dProgType":"PROGNOSED",
                   "type":"N"
                 },
@@ -457,14 +534,14 @@
                   "idx":14,
                   "aProdX":0,
                   "aOutR":true,
-                  "aTimeS":"164200",
-                  "aTimeR":"164400",
+                  "aTimeS":"193400",
+                  "aTimeR":"193500",
                   "aProgType":"PROGNOSED",
                   "type":"N"
                 },
                 "jny":
                 {
-                  "jid":"2|#VN#1#ST#1630889505#PI#0#ZI#112744#TA#28#DA#60921#1S#476152201#1T#1620#LS#476420703#LT#1657#PU#81#RT#1#CA#t01#ZE#R#ZB#       R#PC#7#FR#476152201#FT#1620#TO#476420703#TT#1657#",
+                  "jid":"2|#VN#1#ST#1638666385#PI#0#ZI#181988#TA#24#DA#51221#1S#476152201#1T#1916#LS#476420703#LT#1948#PU#81#RT#1#CA#t01#ZE#R#ZB#       R#PC#7#FR#476152201#FT#1916#TO#476420703#TT#1948#",
                   "prodX":1,
                   "dirTxt":"Innsbruck DEZ/EKZ",
                   "dirFlg":"R",
@@ -477,8 +554,8 @@
                       "idx":13,
                       "dProdX":1,
                       "dInR":true,
-                      "dTimeS":"164000",
-                      "dTimeR":"164200",
+                      "dTimeS":"193300",
+                      "dTimeR":"193400",
                       "dProgType":"PROGNOSED",
                       "dDirTxt":"Innsbruck DEZ/EKZ",
                       "dDirFlg":"R",
@@ -489,8 +566,8 @@
                       "idx":14,
                       "aProdX":1,
                       "aOutR":true,
-                      "aTimeS":"164200",
-                      "aTimeR":"164400",
+                      "aTimeS":"193400",
+                      "aTimeR":"193500",
                       "aProgType":"PROGNOSED",
                       "type":"N"
                     }
@@ -506,18 +583,18 @@
                   },
                   "pos":
                   {
-                    "x":11399985,
-                    "y":47262612,
+                    "x":11394789,
+                    "y":47264545,
                     "layerX":0,
                     "crdSysX":0
                   },
                   "freq":
                   {
-                    "minC":10,
-                    "maxC":10,
-                    "numC":13
+                    "minC":15,
+                    "maxC":15,
+                    "numC":9
                   },
-                  "ctxRecon":"T$A=1@O=Innsbruck Kochstraße@L=476640202@a=128@$A=1@O=Innsbruck Bundesbahndirektion@L=476158004@a=128@$202109061640$202109061642$       R$$1$$$$",
+                  "ctxRecon":"T$A=1@O=Innsbruck Kochstraße@L=476640202@a=128@$A=1@O=Innsbruck Bundesbahndirektion@L=476158004@a=128@$202112051933$202112051934$       R$$1$$$$$$",
                   "msgL":
                   [
                     {
@@ -529,7 +606,7 @@
                       [
                         "RES_JNY_DTL_H3"
                       ],
-                      "sort":409206784
+                      "sort":543424512
                     },
                     {
                       "type":"HIM",
@@ -539,7 +616,7 @@
                       [
                         "RES_GLB_HDR_H3","SUM_GLB_HDR_H3"
                       ],
-                      "sort":373527948
+                      "sort":373560317
                     }
                   ],
                   "subscr":"F",
@@ -567,35 +644,35 @@
               },
               {
                 "type":"WALK",
-                "icoX":8,
+                "icoX":10,
                 "dep":
                 {
                   "locX":2,
                   "dInR":true,
-                  "dTimeS":"164200",
+                  "dTimeS":"193400",
                   "type":"N"
                 },
                 "arr":
                 {
-                  "locX":4,
+                  "locX":6,
                   "aOutR":true,
-                  "aTimeS":"164600",
+                  "aTimeS":"193800",
                   "type":"N"
                 },
                 "gis":
                 {
                   "dist":312,
                   "durS":"000400",
-                  "ctx":"C|afe09a97|G|1|G@F|A=1@O=Innsbruck Bundesbahndirektion@X=11405702@Y=47273372@U=81@L=476158004@i=at:47:61580:0:4@|A=1@O=Innsbruck Messe/Zeughaus@X=11404534@Y=47271233@U=81@L=476167900@i=at:47:61679@|6092021|164200|164600|fb|ft@0@2000@120@1@133@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§bt@0@2000@120@1@133@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§tf@$f@$f@$f@$f@$f@$§||",
+                  "ctx":"C|48c8bab8|G|1|G@F|A=1@O=Innsbruck Bundesbahndirektion@X=11405702@Y=47273372@U=81@L=476158004@i=at:47:61580:0:4@|A=1@O=Innsbruck Messe/Zeughaus@X=11404534@Y=47271233@U=81@L=476167900@i=at:47:61679@|5122021|193400|193800|fb|ft@0@2000@120@1@133@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§bt@0@2000@120@1@133@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§tf@$f@$f@$f@$f@$f@$§|||",
                   "getDescr":true,
                   "getPoly":true
                 }
               }
             ],
-            "ctxRecon":"¶HKI¶T$A=1@O=Innsbruck Kochstraße@L=476640202@a=128@$A=1@O=Innsbruck Bundesbahndirektion@L=476158004@a=128@$202109061640$202109061642$       R$$1$$$$§G@F$A=1@O=Innsbruck Bundesbahndirektion@L=476158004@a=128@$A=1@O=Innsbruck Messe/Zeughaus@L=476167900@a=128@$202109061642$202109061646$$$1$$$$¶GP¶ft@0@2000@120@1@133@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§bt@0@2000@120@1@133@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§tf@$f@$f@$f@$f@$f@$§",
+            "ctxRecon":"¶HKI¶T$A=1@O=Innsbruck Kochstraße@L=476640202@a=128@$A=1@O=Innsbruck Bundesbahndirektion@L=476158004@a=128@$202112051933$202112051934$       R$$1$$$$$$§G@F$A=1@O=Innsbruck Bundesbahndirektion@L=476158004@a=128@$A=1@O=Innsbruck Messe/Zeughaus@L=476167900@a=128@$202112051934$202112051938$$$1$$$$$$¶GP¶ft@0@2000@120@1@133@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§bt@0@2000@120@1@133@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§tf@$f@$f@$f@$f@$f@$§¶KI¶H4sIAAAAAAACA+1W247bIBD9lYqHPmUl7GSTTX6lihDB2EbGYAHOVfn3zgCJs6ttu61aqQ+bvMBhYGaYc8xcCDe1443sbTV6siH0uKDzgsyIH0U7gcUKoOEwARTmj1vLd1Hmwh33gbvAdjXZfLsQVR3Jhs6IPALUArZYLZcLWlLARiXI5qWYkYqP0kWzPdejhNF1OyNnJfXPjimWq/UHjtkrnk7Z3kLjFVhdSDgNMlprKzD4LxC74b28jY+dta6KFqdpyHVgIs0uJA4YeFO4eL2iBzv8UweDg/vuQryVAfN+mc+IjTsBLJ6vs7+Eb+8VPksF0HNRlkWxLp9f4WXcgRxSJkgHkerEoxp/kKQUHdpJAxHT2Tt/8NPzI4PSiI61UjVtiGeOvQ8wYzXvgoX7XK8n7Dx60WrekM1TMaG9MpX0IYX7ZmGMESBYay5FKw3GLFkm+gVjyPwpKH2hMahKeThpXq6WK2TXybeqBmCdVoGHkysBxzZZQgTKxEff8J1ktdIBD0Ub2NMrrZWXwiekkX6QDijpZGYoxKtjZHnquPGDBQvRWiUkRlo7a0LkFy6ygTve+9cqMXynwRY8KM9QM4OTXuq4CBmnpWp0PChrmK3x9k85SGVYyjtlmScgWDotsh3v7jmxoJDTRYmetWaQEaYpkwEijldqzCkfuAq3HUCcQUpgdjEH8gmbvQLF4dpQJiTJFzJIm3ES5b6ga+DhYD3jIbhkaWTzMIs6EenAGu74xA6RW8pk1vhODczZMSFghWPJ7qKFGogO8k2xxhojAkYPkLGsH0O6bYpSiiVYfqgE9DdLALz8ZRFuN/7hGjxNRYgpxhrg6D8oQkH/rAxb0N8OviafGvnUyKdGfqwRtX9HIVtsMqAcb18epowKChqRcyTjm5Kx/CjRt3jSIcCNEmxouZfpkczdAXZjr/pSYIep7dR65rcwz+xeuoODbiIjGKqBbqDBjWdjUSWLslitSniwA+9ufQBWAgd8h51gGqW3GxsucwfNHawPN7A+xO0Ry8v4vhvsQEbv757po8dbY4ANG3fdV6eq+HYPjsUXXxomdBbyHQH3DBLcxY3X7xpq6cGyCwAA",
             "freq":
             {
-              "minC":10
+              "minC":15
             },
             "trfRes":
             {
@@ -783,21 +860,7 @@
                     }
                   ]
                 }
-              ],
-              "bkgData":
-              {
-                "common":
-                {
-                  "FEL":
-                  [
-
-                  ]
-                },
-                "BOG":
-                {
-
-                }
-              }
+              ]
             },
             "ovwTrfRefL":
             [
@@ -827,13 +890,13 @@
             },
             "conSubscr":"P",
             "recState":"C",
-            "cksum":"37fdfba2_3",
-            "cksumDti":"076ba60a_3"
+            "cksum":"427c00a4_3",
+            "cksumDti":"4af4edf9_3"
           }
         ],
-        "fpB":"20210706",
-        "fpE":"20211211",
-        "planrtTS":"1630938809"
+        "fpB":"20211004",
+        "fpE":"20220531",
+        "planrtTS":"1638728681"
       }
     }
   ]

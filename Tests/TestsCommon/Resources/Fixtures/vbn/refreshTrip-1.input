@@ -1,7 +1,7 @@
 {
   "ver":"1.18",
   "lang":"deu",
-  "id":"vj6iqmq6kqgxp2wg",
+  "id":"eckxckqi62wr82cs",
   "err":"OK",
   "svcResL":
   [
@@ -29,280 +29,10 @@
               }
             },
             {
-              "lid":"A=1@O=Bremen Daniel-von-Büren-Straße@X=8802633@Y=53084754@U=80@L=686150@",
-              "type":"S",
-              "name":"Bremen Daniel-von-Büren-Straße",
-              "icoX":1,
-              "extId":"686150",
-              "state":"F",
-              "crd":
-              {
-                "x":8802633,
-                "y":53084754,
-                "layerX":0,
-                "crdSysX":0
-              },
-              "crdAltL":
-              [
-                {
-                  "x":99999999,
-                  "y":99999999,
-                  "layerX":0,
-                  "crdSysX":0
-                },
-                {
-                  "x":99999999,
-                  "y":99999999,
-                  "layerX":0,
-                  "crdSysX":1
-                }
-              ],
-              "pCls":288,
-              "entry":true,
-              "mMastLocX":2
-            },
-            {
-              "lid":"A=1@O=Bremen Daniel-von-Büren-Straße@X=8803073@Y=53084907@U=80@L=9013818@",
-              "type":"S",
-              "name":"Bremen Daniel-von-Büren-Straße",
-              "icoX":2,
-              "extId":"9013818",
-              "state":"F",
-              "crd":
-              {
-                "x":8803073,
-                "y":53084907,
-                "layerX":0,
-                "crdSysX":0
-              },
-              "crdAltL":
-              [
-                {
-                  "x":99999999,
-                  "y":99999999,
-                  "layerX":0,
-                  "crdSysX":0
-                },
-                {
-                  "x":99999999,
-                  "y":99999999,
-                  "layerX":0,
-                  "crdSysX":1
-                }
-              ],
-              "meta":true,
-              "pCls":288,
-              "isMainMast":true
-            },
-            {
-              "lid":"A=1@O=Bremen Hauptbahnhof@X=8813752@Y=53081500@U=80@L=625703@",
-              "type":"S",
-              "name":"Bremen Hauptbahnhof",
-              "icoX":1,
-              "extId":"625703",
-              "state":"F",
-              "crd":
-              {
-                "x":8813752,
-                "y":53081500,
-                "layerX":0,
-                "crdSysX":0
-              },
-              "crdAltL":
-              [
-                {
-                  "x":99999999,
-                  "y":99999999,
-                  "layerX":0,
-                  "crdSysX":0
-                },
-                {
-                  "x":99999999,
-                  "y":99999999,
-                  "layerX":0,
-                  "crdSysX":2
-                }
-              ],
-              "pCls":296,
-              "entry":true,
-              "mMastLocX":4,
-              "msgL":
-              [
-                {
-                  "type":"REM",
-                  "remX":0,
-                  "dspl":"U",
-                  "tagL":
-                  [
-                    "RES_LOC_H3"
-                  ],
-                  "sort":684195840
-                }
-              ]
-            },
-            {
-              "lid":"A=1@O=Bremen Hauptbahnhof@X=8813177@Y=53081779@U=80@L=9013925@",
-              "type":"S",
-              "name":"Bremen Hauptbahnhof",
-              "icoX":2,
-              "extId":"9013925",
-              "state":"F",
-              "crd":
-              {
-                "x":8813177,
-                "y":53081779,
-                "layerX":0,
-                "crdSysX":0
-              },
-              "crdAltL":
-              [
-                {
-                  "x":99999999,
-                  "y":99999999,
-                  "layerX":0,
-                  "crdSysX":0
-                },
-                {
-                  "x":99999999,
-                  "y":99999999,
-                  "layerX":0,
-                  "crdSysX":2
-                }
-              ],
-              "meta":true,
-              "pCls":831,
-              "isMainMast":true,
-              "msgL":
-              [
-                {
-                  "type":"REM",
-                  "remX":0,
-                  "dspl":"U",
-                  "tagL":
-                  [
-                    "RES_LOC_H3"
-                  ],
-                  "sort":684195840
-                }
-              ]
-            },
-            {
-              "lid":"A=1@O=Bremen Falkenstraße@X=8806957@Y=53082633@U=80@L=606189@",
-              "type":"S",
-              "name":"Bremen Falkenstraße",
-              "icoX":1,
-              "extId":"606189",
-              "state":"F",
-              "crd":
-              {
-                "x":8806957,
-                "y":53082633,
-                "layerX":0,
-                "crdSysX":0
-              },
-              "crdAltL":
-              [
-                {
-                  "x":99999999,
-                  "y":99999999,
-                  "layerX":0,
-                  "crdSysX":0
-                },
-                {
-                  "x":99999999,
-                  "y":99999999,
-                  "layerX":0,
-                  "crdSysX":3
-                }
-              ],
-              "pCls":288,
-              "entry":true,
-              "mMastLocX":6
-            },
-            {
-              "lid":"A=1@O=Bremen Falkenstraße@X=8806912@Y=53082732@U=80@L=9013858@",
-              "type":"S",
-              "name":"Bremen Falkenstraße",
-              "icoX":2,
-              "extId":"9013858",
-              "state":"F",
-              "crd":
-              {
-                "x":8806912,
-                "y":53082732,
-                "layerX":0,
-                "crdSysX":0
-              },
-              "crdAltL":
-              [
-                {
-                  "x":99999999,
-                  "y":99999999,
-                  "layerX":0,
-                  "crdSysX":0
-                },
-                {
-                  "x":99999999,
-                  "y":99999999,
-                  "layerX":0,
-                  "crdSysX":3
-                }
-              ],
-              "meta":true,
-              "pCls":288,
-              "isMainMast":true
-            },
-            {
-              "lid":"A=1@O=Bremen Hauptbahnhof@X=8813842@Y=53081572@U=80@L=625705@",
-              "type":"S",
-              "name":"Bremen Hauptbahnhof",
-              "icoX":1,
-              "extId":"625705",
-              "state":"F",
-              "crd":
-              {
-                "x":8813842,
-                "y":53081572,
-                "layerX":0,
-                "crdSysX":0
-              },
-              "crdAltL":
-              [
-                {
-                  "x":99999999,
-                  "y":99999999,
-                  "layerX":0,
-                  "crdSysX":0
-                },
-                {
-                  "x":99999999,
-                  "y":99999999,
-                  "layerX":0,
-                  "crdSysX":2
-                }
-              ],
-              "pCls":296,
-              "entry":true,
-              "mMastLocX":4,
-              "msgL":
-              [
-                {
-                  "type":"REM",
-                  "remX":0,
-                  "dspl":"U",
-                  "tagL":
-                  [
-                    "RES_LOC_H3"
-                  ],
-                  "sort":684195840
-                }
-              ]
-            },
-            {
               "lid":"A=1@O=Bremen Hbf@X=8813833@Y=53083478@U=80@L=8000050@",
               "type":"S",
               "name":"Bremen Hbf",
-              "icoX":9,
+              "icoX":2,
               "extId":"8000050",
               "state":"F",
               "crd":
@@ -324,23 +54,23 @@
                   "x":99999999,
                   "y":99999999,
                   "layerX":0,
-                  "crdSysX":4
+                  "crdSysX":1
                 }
               ],
               "pCls":31,
               "entry":true,
-              "mMastLocX":9,
+              "mMastLocX":2,
               "msgL":
               [
                 {
                   "type":"REM",
-                  "remX":3,
+                  "remX":0,
                   "dspl":"U",
                   "tagL":
                   [
                     "RES_LOC_H3"
                   ],
-                  "sort":684195840
+                  "sort":818413568
                 }
               ]
             },
@@ -348,7 +78,7 @@
               "lid":"A=1@O=Bremen Hbf@X=8813833@Y=53083478@U=80@L=9013927@",
               "type":"S",
               "name":"Bremen Hbf",
-              "icoX":2,
+              "icoX":3,
               "extId":"9013927",
               "state":"F",
               "crd":
@@ -370,7 +100,7 @@
                   "x":99999999,
                   "y":99999999,
                   "layerX":0,
-                  "crdSysX":4
+                  "crdSysX":1
                 }
               ],
               "meta":true,
@@ -380,13 +110,13 @@
               [
                 {
                   "type":"REM",
-                  "remX":3,
+                  "remX":0,
                   "dspl":"U",
                   "tagL":
                   [
                     "RES_LOC_H3"
                   ],
-                  "sort":684195840
+                  "sort":818413568
                 }
               ]
             },
@@ -394,7 +124,7 @@
               "lid":"A=1@O=Bremerhaven Hbf@X=8599558@Y=53534916@U=80@L=8000051@",
               "type":"S",
               "name":"Bremerhaven Hbf",
-              "icoX":12,
+              "icoX":8,
               "extId":"8000051",
               "state":"F",
               "crd":
@@ -416,23 +146,23 @@
                   "x":99999999,
                   "y":99999999,
                   "layerX":0,
-                  "crdSysX":5
+                  "crdSysX":2
                 }
               ],
-              "pCls":24,
+              "pCls":26,
               "entry":true,
-              "mMastLocX":11,
+              "mMastLocX":4,
               "msgL":
               [
                 {
                   "type":"REM",
-                  "remX":4,
+                  "remX":1,
                   "dspl":"U",
                   "tagL":
                   [
                     "RES_LOC_H3"
                   ],
-                  "sort":684195840
+                  "sort":818413568
                 }
               ]
             },
@@ -440,7 +170,7 @@
               "lid":"A=1@O=Bremerhaven Hbf@X=8599558@Y=53534916@U=80@L=9014418@",
               "type":"S",
               "name":"Bremerhaven Hbf",
-              "icoX":2,
+              "icoX":3,
               "extId":"9014418",
               "state":"F",
               "crd":
@@ -462,18 +192,18 @@
                   "x":99999999,
                   "y":99999999,
                   "layerX":0,
-                  "crdSysX":5
+                  "crdSysX":2
                 }
               ],
               "meta":true,
-              "pCls":568,
+              "pCls":570,
               "isMainMast":true
             },
             {
               "lid":"A=1@O=Bremen-Burg@X=8704857@Y=53160596@U=80@L=4981156@",
               "type":"S",
               "name":"Bremen-Burg",
-              "icoX":12,
+              "icoX":9,
               "extId":"4981156",
               "state":"F",
               "crd":
@@ -495,23 +225,23 @@
                   "x":99999999,
                   "y":99999999,
                   "layerX":0,
-                  "crdSysX":6
+                  "crdSysX":3
                 }
               ],
               "pCls":24,
               "entry":true,
-              "mMastLocX":13,
+              "mMastLocX":6,
               "msgL":
               [
                 {
                   "type":"REM",
-                  "remX":5,
+                  "remX":2,
                   "dspl":"U",
                   "tagL":
                   [
                     "RES_LOC_H3"
                   ],
-                  "sort":684195840
+                  "sort":818413568
                 }
               ]
             },
@@ -519,7 +249,7 @@
               "lid":"A=1@O=Bremen-Burg@X=8704686@Y=53160605@U=80@L=9013794@",
               "type":"S",
               "name":"Bremen-Burg",
-              "icoX":2,
+              "icoX":3,
               "extId":"9013794",
               "state":"F",
               "crd":
@@ -541,7 +271,7 @@
                   "x":99999999,
                   "y":99999999,
                   "layerX":0,
-                  "crdSysX":6
+                  "crdSysX":3
                 }
               ],
               "meta":true,
@@ -552,7 +282,7 @@
               "lid":"A=1@O=Ritterhude@X=8753893@Y=53183636@U=80@L=8005107@",
               "type":"S",
               "name":"Ritterhude",
-              "icoX":12,
+              "icoX":9,
               "extId":"8005107",
               "state":"F",
               "crd":
@@ -574,23 +304,23 @@
                   "x":99999999,
                   "y":99999999,
                   "layerX":0,
-                  "crdSysX":7
+                  "crdSysX":4
                 }
               ],
               "pCls":24,
               "entry":true,
-              "mMastLocX":15,
+              "mMastLocX":8,
               "msgL":
               [
                 {
                   "type":"REM",
-                  "remX":6,
+                  "remX":3,
                   "dspl":"U",
                   "tagL":
                   [
                     "RES_LOC_H3"
                   ],
-                  "sort":684195840
+                  "sort":818413568
                 }
               ]
             },
@@ -598,7 +328,7 @@
               "lid":"A=1@O=Ritterhude@X=8753893@Y=53183636@U=80@L=9078056@",
               "type":"S",
               "name":"Ritterhude",
-              "icoX":2,
+              "icoX":3,
               "extId":"9078056",
               "state":"F",
               "crd":
@@ -620,7 +350,7 @@
                   "x":99999999,
                   "y":99999999,
                   "layerX":0,
-                  "crdSysX":7
+                  "crdSysX":4
                 }
               ],
               "meta":true,
@@ -631,7 +361,7 @@
               "lid":"A=1@O=Osterholz-Scharmbeck@X=8797464@Y=53222730@U=80@L=8004702@",
               "type":"S",
               "name":"Osterholz-Scharmbeck",
-              "icoX":12,
+              "icoX":8,
               "extId":"8004702",
               "state":"F",
               "crd":
@@ -653,37 +383,37 @@
                   "x":99999999,
                   "y":99999999,
                   "layerX":0,
-                  "crdSysX":8
+                  "crdSysX":5
                 }
               ],
-              "pCls":24,
+              "pCls":26,
               "entry":true,
-              "mMastLocX":17,
+              "mMastLocX":10,
               "msgL":
               [
                 {
                   "type":"REM",
-                  "remX":7,
+                  "remX":4,
                   "dspl":"U",
                   "tagL":
                   [
                     "RES_LOC_H3"
                   ],
-                  "sort":684195840
+                  "sort":818413568
                 }
               ]
             },
             {
-              "lid":"A=1@O=Osterholz-Scharmbeck@X=8797437@Y=53222775@U=80@L=9072058@",
+              "lid":"A=1@O=Osterholz-Scharmbeck@X=8797401@Y=53222748@U=80@L=9072058@",
               "type":"S",
               "name":"Osterholz-Scharmbeck",
-              "icoX":2,
+              "icoX":3,
               "extId":"9072058",
               "state":"F",
               "crd":
               {
-                "x":8797437,
-                "y":53222775,
+                "x":8797401,
+                "y":53222748,
                 "layerX":0,
                 "crdSysX":0
               },
@@ -699,18 +429,18 @@
                   "x":99999999,
                   "y":99999999,
                   "layerX":0,
-                  "crdSysX":8
+                  "crdSysX":5
                 }
               ],
               "meta":true,
-              "pCls":56,
+              "pCls":58,
               "isMainMast":true
             },
             {
               "lid":"A=1@O=Oldenbüttel@X=8810462@Y=53283434@U=80@L=8004668@",
               "type":"S",
               "name":"Oldenbüttel",
-              "icoX":10,
+              "icoX":9,
               "extId":"8004668",
               "state":"F",
               "crd":
@@ -732,23 +462,23 @@
                   "x":99999999,
                   "y":99999999,
                   "layerX":0,
-                  "crdSysX":9
+                  "crdSysX":6
                 }
               ],
-              "pCls":16,
+              "pCls":24,
               "entry":true,
-              "mMastLocX":19,
+              "mMastLocX":12,
               "msgL":
               [
                 {
                   "type":"REM",
-                  "remX":8,
+                  "remX":5,
                   "dspl":"U",
                   "tagL":
                   [
                     "RES_LOC_H3"
                   ],
-                  "sort":684195840
+                  "sort":818413568
                 }
               ]
             },
@@ -756,7 +486,7 @@
               "lid":"A=1@O=Oldenbüttel@X=8810462@Y=53283434@U=80@L=9071069@",
               "type":"S",
               "name":"Oldenbüttel",
-              "icoX":2,
+              "icoX":3,
               "extId":"9071069",
               "state":"F",
               "crd":
@@ -778,18 +508,18 @@
                   "x":99999999,
                   "y":99999999,
                   "layerX":0,
-                  "crdSysX":9
+                  "crdSysX":6
                 }
               ],
               "meta":true,
-              "pCls":48,
+              "pCls":56,
               "isMainMast":true
             },
             {
               "lid":"A=1@O=Lübberstedt@X=8785104@Y=53343356@U=80@L=8003773@",
               "type":"S",
               "name":"Lübberstedt",
-              "icoX":10,
+              "icoX":9,
               "extId":"8003773",
               "state":"F",
               "crd":
@@ -811,23 +541,23 @@
                   "x":99999999,
                   "y":99999999,
                   "layerX":0,
-                  "crdSysX":10
+                  "crdSysX":7
                 }
               ],
-              "pCls":16,
+              "pCls":24,
               "entry":true,
-              "mMastLocX":21,
+              "mMastLocX":14,
               "msgL":
               [
                 {
                   "type":"REM",
-                  "remX":9,
+                  "remX":6,
                   "dspl":"U",
                   "tagL":
                   [
                     "RES_LOC_H3"
                   ],
-                  "sort":684195840
+                  "sort":818413568
                 }
               ]
             },
@@ -835,7 +565,7 @@
               "lid":"A=1@O=Lübberstedt@X=8785104@Y=53343356@U=80@L=9057655@",
               "type":"S",
               "name":"Lübberstedt",
-              "icoX":2,
+              "icoX":3,
               "extId":"9057655",
               "state":"F",
               "crd":
@@ -857,18 +587,18 @@
                   "x":99999999,
                   "y":99999999,
                   "layerX":0,
-                  "crdSysX":10
+                  "crdSysX":7
                 }
               ],
               "meta":true,
-              "pCls":560,
+              "pCls":568,
               "isMainMast":true
             },
             {
               "lid":"A=1@O=Stubben(b Bremerhaven)@X=8780519@Y=53405795@U=80@L=8005763@",
               "type":"S",
               "name":"Stubben(b Bremerhaven)",
-              "icoX":10,
+              "icoX":9,
               "extId":"8005763",
               "state":"F",
               "crd":
@@ -890,23 +620,23 @@
                   "x":99999999,
                   "y":99999999,
                   "layerX":0,
-                  "crdSysX":11
+                  "crdSysX":8
                 }
               ],
-              "pCls":16,
+              "pCls":24,
               "entry":true,
-              "mMastLocX":23,
+              "mMastLocX":16,
               "msgL":
               [
                 {
                   "type":"REM",
-                  "remX":10,
+                  "remX":7,
                   "dspl":"U",
                   "tagL":
                   [
                     "RES_LOC_H3"
                   ],
-                  "sort":684195840
+                  "sort":818413568
                 }
               ]
             },
@@ -914,7 +644,7 @@
               "lid":"A=1@O=Stubben(b Bremerhaven)@X=8780519@Y=53405795@U=80@L=9088621@",
               "type":"S",
               "name":"Stubben(b Bremerhaven)",
-              "icoX":2,
+              "icoX":3,
               "extId":"9088621",
               "state":"F",
               "crd":
@@ -936,18 +666,18 @@
                   "x":99999999,
                   "y":99999999,
                   "layerX":0,
-                  "crdSysX":11
+                  "crdSysX":8
                 }
               ],
               "meta":true,
-              "pCls":560,
+              "pCls":568,
               "isMainMast":true
             },
             {
               "lid":"A=1@O=Lunestedt@X=8735088@Y=53439082@U=80@L=8003799@",
               "type":"S",
               "name":"Lunestedt",
-              "icoX":10,
+              "icoX":6,
               "extId":"8003799",
               "state":"F",
               "crd":
@@ -969,23 +699,23 @@
                   "x":99999999,
                   "y":99999999,
                   "layerX":0,
-                  "crdSysX":12
+                  "crdSysX":9
                 }
               ],
               "pCls":16,
               "entry":true,
-              "mMastLocX":25,
+              "mMastLocX":18,
               "msgL":
               [
                 {
                   "type":"REM",
-                  "remX":11,
+                  "remX":8,
                   "dspl":"U",
                   "tagL":
                   [
                     "RES_LOC_H3"
                   ],
-                  "sort":684195840
+                  "sort":818413568
                 }
               ]
             },
@@ -993,7 +723,7 @@
               "lid":"A=1@O=Lunestedt@X=8735088@Y=53439082@U=80@L=9057131@",
               "type":"S",
               "name":"Lunestedt",
-              "icoX":2,
+              "icoX":3,
               "extId":"9057131",
               "state":"F",
               "crd":
@@ -1015,7 +745,7 @@
                   "x":99999999,
                   "y":99999999,
                   "layerX":0,
-                  "crdSysX":12
+                  "crdSysX":9
                 }
               ],
               "meta":true,
@@ -1026,7 +756,7 @@
               "lid":"A=1@O=Loxstedt@X=8654302@Y=53474652@U=80@L=8003760@",
               "type":"S",
               "name":"Loxstedt",
-              "icoX":10,
+              "icoX":6,
               "extId":"8003760",
               "state":"F",
               "crd":
@@ -1048,23 +778,23 @@
                   "x":99999999,
                   "y":99999999,
                   "layerX":0,
-                  "crdSysX":13
+                  "crdSysX":10
                 }
               ],
               "pCls":16,
               "entry":true,
-              "mMastLocX":27,
+              "mMastLocX":20,
               "msgL":
               [
                 {
                   "type":"REM",
-                  "remX":12,
+                  "remX":9,
                   "dspl":"U",
                   "tagL":
                   [
                     "RES_LOC_H3"
                   ],
-                  "sort":684195840
+                  "sort":818413568
                 }
               ]
             },
@@ -1072,7 +802,7 @@
               "lid":"A=1@O=Loxstedt@X=8654302@Y=53474652@U=80@L=9056855@",
               "type":"S",
               "name":"Loxstedt",
-              "icoX":2,
+              "icoX":3,
               "extId":"9056855",
               "state":"F",
               "crd":
@@ -1094,7 +824,7 @@
                   "x":99999999,
                   "y":99999999,
                   "layerX":0,
-                  "crdSysX":13
+                  "crdSysX":10
                 }
               ],
               "meta":true,
@@ -1105,7 +835,7 @@
               "lid":"A=1@O=Bremerhaven-Wulsdorf@X=8611936@Y=53508596@U=80@L=8001170@",
               "type":"S",
               "name":"Bremerhaven-Wulsdorf",
-              "icoX":12,
+              "icoX":9,
               "extId":"8001170",
               "state":"F",
               "crd":
@@ -1127,23 +857,23 @@
                   "x":99999999,
                   "y":99999999,
                   "layerX":0,
-                  "crdSysX":14
+                  "crdSysX":11
                 }
               ],
               "pCls":24,
               "entry":true,
-              "mMastLocX":29,
+              "mMastLocX":22,
               "msgL":
               [
                 {
                   "type":"REM",
-                  "remX":13,
+                  "remX":10,
                   "dspl":"U",
                   "tagL":
                   [
                     "RES_LOC_H3"
                   ],
-                  "sort":684195840
+                  "sort":818413568
                 }
               ]
             },
@@ -1151,7 +881,7 @@
               "lid":"A=1@O=Bremerhaven-Wulsdorf@X=8611936@Y=53508596@U=80@L=9014517@",
               "type":"S",
               "name":"Bremerhaven-Wulsdorf",
-              "icoX":2,
+              "icoX":3,
               "extId":"9014517",
               "state":"F",
               "crd":
@@ -1173,11 +903,90 @@
                   "x":99999999,
                   "y":99999999,
                   "layerX":0,
-                  "crdSysX":14
+                  "crdSysX":11
                 }
               ],
               "meta":true,
               "pCls":24,
+              "isMainMast":true
+            },
+            {
+              "lid":"A=1@O=Twistringen@X=8644836@Y=52791877@U=80@L=8005929@",
+              "type":"S",
+              "name":"Twistringen",
+              "icoX":9,
+              "extId":"8005929",
+              "state":"F",
+              "crd":
+              {
+                "x":8644836,
+                "y":52791877,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "crdAltL":
+              [
+                {
+                  "x":99999999,
+                  "y":99999999,
+                  "layerX":0,
+                  "crdSysX":0
+                },
+                {
+                  "x":99999999,
+                  "y":99999999,
+                  "layerX":0,
+                  "crdSysX":12
+                }
+              ],
+              "pCls":24,
+              "entry":true,
+              "mMastLocX":24,
+              "msgL":
+              [
+                {
+                  "type":"REM",
+                  "remX":19,
+                  "dspl":"U",
+                  "tagL":
+                  [
+                    "RES_LOC_H3"
+                  ],
+                  "sort":818413568
+                }
+              ]
+            },
+            {
+              "lid":"A=1@O=Twistringen@X=8644836@Y=52791877@U=80@L=9091901@",
+              "type":"S",
+              "name":"Twistringen",
+              "icoX":3,
+              "extId":"9091901",
+              "state":"F",
+              "crd":
+              {
+                "x":8644836,
+                "y":52791877,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "crdAltL":
+              [
+                {
+                  "x":99999999,
+                  "y":99999999,
+                  "layerX":0,
+                  "crdSysX":0
+                },
+                {
+                  "x":99999999,
+                  "y":99999999,
+                  "layerX":0,
+                  "crdSysX":12
+                }
+              ],
+              "meta":true,
+              "pCls":56,
               "isMainMast":true
             },
             {
@@ -1199,186 +1008,26 @@
           [
             {
               "name":"Fußweg",
-              "icoX":3,
+              "icoX":4,
               "prodCtx":
               {
                 "name":"Fußweg"
               }
             },
             {
-              "pid":"L::8::Tram::B3542973073::de:VBN:10:::*",
-              "name":"Tram 10",
-              "nameS":"10",
-              "number":"10",
-              "icoX":1,
-              "cls":256,
+              "pid":"L::4::S::B3929504222::de:VBN:RS2:::*",
+              "name":"RS2",
+              "nameS":"RS2",
+              "number":"RS2",
+              "icoX":6,
+              "cls":16,
               "oprX":0,
               "prodCtx":
               {
-                "name":"Tram 10 ",
-                "num":"11864",
-                "line":"10",
-                "matchId":"4228",
-                "catOut":"Tram    ",
-                "catOutS":"St_",
-                "catOutL":"Straßenbahn",
-                "catIn":"St_",
-                "catCode":"8",
-                "admin":"BSAGTR"
-              }
-            },
-            {
-              "pid":"L::8::Tram::B3542973073::de:VBN:10:::*",
-              "name":"Tram 10",
-              "nameS":"10",
-              "number":"10",
-              "icoX":1,
-              "cls":256,
-              "oprX":1,
-              "prodCtx":
-              {
-                "name":"Tram 10 ",
-                "num":"11864",
-                "line":"10",
-                "lineId":"de:VBN:10:",
-                "matchId":"4228",
-                "catOut":"Tram    ",
-                "catOutS":"St_",
-                "catOutL":"Straßenbahn",
-                "catIn":"St_",
-                "catCode":"8",
-                "admin":"BSAGTR"
-              }
-            },
-            {
-              "pid":"L::8::Tram::B3542973073::de:VBN:10:::*",
-              "name":"Tram 10",
-              "nameS":"10",
-              "number":"10",
-              "icoX":1,
-              "cls":256,
-              "oprX":1,
-              "prodCtx":
-              {
-                "name":"Tram 10 ",
-                "num":"11862",
-                "line":"10",
-                "lineId":"de:VBN:10:",
-                "matchId":"4232",
-                "catOut":"Tram    ",
-                "catOutS":"St_",
-                "catOutL":"Straßenbahn",
-                "catIn":"St_",
-                "catCode":"8",
-                "admin":"BSAGTR"
-              }
-            },
-            {
-              "pid":"L::8::Tram::B3542973073::de:VBN:04011:10E:::*",
-              "name":"Tram 10E",
-              "nameS":"10E",
-              "number":"10E",
-              "icoX":1,
-              "cls":256,
-              "oprX":1,
-              "prodCtx":
-              {
-                "name":"Tram 10E",
-                "num":"12495",
-                "line":"10E",
-                "lineId":"de:VBN:04011:10E:",
-                "matchId":"5105",
-                "catOut":"Tram    ",
-                "catOutS":"St_",
-                "catOutL":"Straßenbahn",
-                "catIn":"St_",
-                "catCode":"8",
-                "admin":"BSAGTR"
-              }
-            },
-            {
-              "pid":"L::8::Tram::B3542973073::de:VBN:10:::*",
-              "name":"Tram 10",
-              "nameS":"10",
-              "number":"10",
-              "icoX":1,
-              "cls":256,
-              "oprX":1,
-              "prodCtx":
-              {
-                "name":"Tram 10 ",
-                "num":"11859",
-                "line":"10",
-                "lineId":"de:VBN:10:",
-                "matchId":"4239",
-                "catOut":"Tram    ",
-                "catOutS":"St_",
-                "catOutL":"Straßenbahn",
-                "catIn":"St_",
-                "catCode":"8",
-                "admin":"BSAGTR"
-              }
-            },
-            {
-              "pid":"L::8::Tram::B3542973073::de:VBN:04011:10E:::*",
-              "name":"Tram 10E",
-              "nameS":"10E",
-              "number":"10E",
-              "icoX":1,
-              "cls":256,
-              "oprX":1,
-              "prodCtx":
-              {
-                "name":"Tram 10E",
-                "num":"12492",
-                "line":"10E",
-                "lineId":"de:VBN:04011:10E:",
-                "matchId":"5110",
-                "catOut":"Tram    ",
-                "catOutS":"St_",
-                "catOutL":"Straßenbahn",
-                "catIn":"St_",
-                "catCode":"8",
-                "admin":"BSAGTR"
-              }
-            },
-            {
-              "pid":"L::8::Tram::B3542973073::de:VBN:10:::*",
-              "name":"Tram 10",
-              "nameS":"10",
-              "number":"10",
-              "icoX":1,
-              "cls":256,
-              "oprX":1,
-              "prodCtx":
-              {
-                "name":"Tram 10 ",
-                "num":"11858",
-                "line":"10",
-                "lineId":"de:VBN:10:",
-                "matchId":"4241",
-                "catOut":"Tram    ",
-                "catOutS":"St_",
-                "catOutL":"Straßenbahn",
-                "catIn":"St_",
-                "catCode":"8",
-                "admin":"BSAGTR"
-              }
-            },
-            {
-              "pid":"L::4::S::B3929504222::de:VBN:RS2:::*",
-              "name":"RS2",
-              "nameS":"RS2",
-              "number":"RS2",
-              "icoX":10,
-              "cls":16,
-              "oprX":2,
-              "prodCtx":
-              {
                 "name":"     RS2",
-                "num":"409",
+                "num":"918",
                 "line":"RS2",
-                "matchId":"83216",
+                "matchId":"83228",
                 "catOut":"S       ",
                 "catOutS":"DPS",
                 "catOutL":"S-Bahn",
@@ -1392,16 +1041,16 @@
               "name":"RS2",
               "nameS":"RS2",
               "number":"RS2",
-              "icoX":10,
+              "icoX":6,
               "cls":16,
-              "oprX":3,
+              "oprX":1,
               "prodCtx":
               {
                 "name":"     RS2",
-                "num":"409",
+                "num":"918",
                 "line":"RS2",
                 "lineId":"de:VBN:RS2:",
-                "matchId":"83216",
+                "matchId":"83228",
                 "catOut":"S       ",
                 "catOutS":"DPS",
                 "catOutL":"S-Bahn",
@@ -1415,16 +1064,16 @@
               "name":"RS2",
               "nameS":"RS2",
               "number":"RS2",
-              "icoX":10,
+              "icoX":6,
               "cls":16,
-              "oprX":3,
+              "oprX":1,
               "prodCtx":
               {
                 "name":"     RS2",
-                "num":"402",
+                "num":"911",
                 "line":"RS2",
                 "lineId":"de:VBN:RS2:",
-                "matchId":"83218",
+                "matchId":"83230",
                 "catOut":"S       ",
                 "catOutS":"DPS",
                 "catOutL":"S-Bahn",
@@ -1438,16 +1087,16 @@
               "name":"RS2",
               "nameS":"RS2",
               "number":"RS2",
-              "icoX":10,
+              "icoX":6,
               "cls":16,
-              "oprX":3,
+              "oprX":1,
               "prodCtx":
               {
                 "name":"     RS2",
-                "num":"408",
+                "num":"427",
                 "line":"RS2",
                 "lineId":"de:VBN:RS2:",
-                "matchId":"83220",
+                "matchId":"83232",
                 "catOut":"S       ",
                 "catOutS":"DPS",
                 "catOutL":"S-Bahn",
@@ -1461,16 +1110,16 @@
               "name":"RS2",
               "nameS":"RS2",
               "number":"RS2",
-              "icoX":10,
+              "icoX":6,
               "cls":16,
-              "oprX":3,
+              "oprX":1,
               "prodCtx":
               {
                 "name":"     RS2",
-                "num":"394",
+                "num":"420",
                 "line":"RS2",
                 "lineId":"de:VBN:RS2:",
-                "matchId":"83244",
+                "matchId":"83234",
                 "catOut":"S       ",
                 "catOutS":"DPS",
                 "catOutL":"S-Bahn",
@@ -1485,46 +1134,6 @@
             {
               "delta":true,
               "dim":2,
-              "crdEncYX":"wb_cImgvt@nF{PzBcFz@aA`@{AGaAsDoHEuAbKiX",
-              "crdEncS":"NNKNLNMNN",
-              "crdEncF":"?????????",
-              "ppLocRefL":
-              [
-                {
-                  "ppIdx":0,
-                  "locX":1
-                },
-                {
-                  "ppIdx":3,
-                  "locX":5
-                },
-                {
-                  "ppIdx":8,
-                  "locX":3
-                }
-              ]
-            },
-            {
-              "delta":true,
-              "dim":2,
-              "crdEncYX":"kn~bI}lxt@kKO",
-              "crdEncS":"NN",
-              "crdEncF":"??",
-              "ppLocRefL":
-              [
-                {
-                  "ppIdx":0,
-                  "locX":3
-                },
-                {
-                  "ppIdx":1,
-                  "locX":8
-                }
-              ]
-            },
-            {
-              "delta":true,
-              "dim":2,
               "crdEncYX":"wz~bImmxt@}CnH_EhOqGbQoJxQcHjKeTdXo\\zd@cHfIug@fc@{M~GcUxFsJjE}i@r]{D~C}GpIqCbFmClGwi@pzA{C|JeId^gB~JiGzo@oAfJ}AhHwDdLs`@|s@}cAzhBsE~EmElCo]vK??wHpB_FNuCa@{BgAwBoB}B}CaCeF{AwGcCua@cJsy@gDaRwIcXyw@yxBmFsL{FwIgDmEmFaFi`Ag{@sOmPsbAamAiHqJ}GwKyVgh@iEeGgSeQwL_J??wd@{^_KyEqM_CueCo]cJ}@_Zu@_mCqCqPCwN~BmaGd{BwqAl]wpDn_AkKtAyL[iyDud@gd@kFkI_@eDP{F~@{KlEqJhHcHtIiG|KsElL_xAtqEqHrYGKFJwGb^oTliA}Gn[wjAzfEuI|YaD|IsGlNmq@jpA}KbO{RxRsfCzfCyFjHcJnNkD~Gah@hlAeJtPyJtRuTzf@aCzC_D`CmHhBeFKoFmBaN}GgFkAoC?of@~HqL~BkIrCqF`A",
               "crdEncS":"NLMNNKLLNNNMNNLNKNLNLNLNLNKNMNNNNLNKNLNNNNNMNMNKMMNKNMMNKNNNNKNLNNNNNNNNNNNKNMNMNMNMKNKKLNKNLNNNNMNKNNNLNLNNNKNLNMKKN",
               "crdEncF":"?????????????????????????????????????????????????????????????????????????????????????????????????????????????????????",
@@ -1532,47 +1141,47 @@
               [
                 {
                   "ppIdx":0,
-                  "locX":8
+                  "locX":1
                 },
                 {
                   "ppIdx":30,
-                  "locX":12
+                  "locX":5
                 },
                 {
                   "ppIdx":46,
-                  "locX":14
+                  "locX":7
                 },
                 {
                   "ppIdx":57,
-                  "locX":16
+                  "locX":9
                 },
                 {
                   "ppIdx":65,
-                  "locX":18
+                  "locX":11
                 },
                 {
                   "ppIdx":69,
-                  "locX":20
+                  "locX":13
                 },
                 {
                   "ppIdx":73,
-                  "locX":22
+                  "locX":15
                 },
                 {
                   "ppIdx":85,
-                  "locX":24
+                  "locX":17
                 },
                 {
                   "ppIdx":96,
-                  "locX":26
+                  "locX":19
                 },
                 {
                   "ppIdx":102,
-                  "locX":28
+                  "locX":21
                 },
                 {
                   "ppIdx":116,
-                  "locX":10
+                  "locX":3
                 }
               ]
             }
@@ -1594,27 +1203,12 @@
               "type":"WGS84"
             },
             {
-              "id":"Brem_157",
-              "index":1,
-              "type":"WGS84"
-            },
-            {
-              "id":"Brem_263",
-              "index":1,
-              "type":"WGS84"
-            },
-            {
-              "id":"Brem_197",
-              "index":1,
-              "type":"WGS84"
-            },
-            {
               "id":"Brem_265",
               "index":1,
               "type":"WGS84"
             },
             {
-              "id":"Brem_731",
+              "id":"Brem_732",
               "index":1,
               "type":"WGS84"
             },
@@ -1639,7 +1233,7 @@
               "type":"WGS84"
             },
             {
-              "id":"L?bberst",
+              "id":"Luebbers",
               "index":1,
               "type":"WGS84"
             },
@@ -1659,7 +1253,12 @@
               "type":"WGS84"
             },
             {
-              "id":"Brem_830",
+              "id":"Brem_831",
+              "index":1,
+              "type":"WGS84"
+            },
+            {
+              "id":"Twistr_4",
               "index":1,
               "type":"WGS84"
             }
@@ -1667,21 +1266,12 @@
           "opL":
           [
             {
-              "name":"Bremer Straßenbahn AG",
-              "icoX":5
-            },
-            {
-              "name":"Bremer Straßenbahn AG",
-              "icoX":5,
-              "id":"326"
+              "name":"NordWestBahn",
+              "icoX":7
             },
             {
               "name":"NordWestBahn",
-              "icoX":11
-            },
-            {
-              "name":"NordWestBahn",
-              "icoX":11,
+              "icoX":7,
               "id":"605"
             }
           ],
@@ -1690,160 +1280,169 @@
             {
               "type":"I",
               "code":"BB",
-              "icoX":6,
-              "txtN":"<a href=\"https://daten.zvbn.de/ssb/steckbrief.php?hstnr=8000050\" target=\"_blank\">Stationsinformation</a>"
-            },
-            {
-              "type":"A",
-              "code":"ao",
-              "prio":898,
-              "icoX":7,
-              "txtN":"VBN - Verkehrsverbund Bremen/Niedersachsen, Info: 0421 59 60 59"
-            },
-            {
-              "type":"A",
-              "code":"da",
-              "prio":899,
-              "icoX":7,
-              "txtN":"Linie der Bremer Straßenbahn AG (BSAG), Info: 0421 59 60 59"
-            },
-            {
-              "type":"I",
-              "code":"BB",
-              "icoX":6,
+              "icoX":1,
               "txtN":"<a href=\"https://daten.zvbn.de/ssb/steckbrief.php?hstnr=8000050&amp;VBN\" target=\"_blank\">Stationsinformation</a>"
             },
             {
               "type":"I",
               "code":"BB",
-              "icoX":6,
+              "icoX":1,
               "txtN":"<a href=\"https://daten.zvbn.de/ssb/steckbrief.php?hstnr=8000051&amp;VBN\" target=\"_blank\">Stationsinformation</a>"
             },
             {
               "type":"I",
               "code":"BB",
-              "icoX":6,
+              "icoX":1,
               "txtN":"<a href=\"https://daten.zvbn.de/ssb/steckbrief.php?hstnr=8001156&amp;VBN\" target=\"_blank\">Stationsinformation</a>"
             },
             {
               "type":"I",
               "code":"BB",
-              "icoX":6,
+              "icoX":1,
               "txtN":"<a href=\"https://daten.zvbn.de/ssb/steckbrief.php?hstnr=8005107&amp;VBN\" target=\"_blank\">Stationsinformation</a>"
             },
             {
               "type":"I",
               "code":"BB",
-              "icoX":6,
+              "icoX":1,
               "txtN":"<a href=\"https://daten.zvbn.de/ssb/steckbrief.php?hstnr=8004702&amp;VBN\" target=\"_blank\">Stationsinformation</a>"
             },
             {
               "type":"I",
               "code":"BB",
-              "icoX":6,
+              "icoX":1,
               "txtN":"<a href=\"https://daten.zvbn.de/ssb/steckbrief.php?hstnr=8004668&amp;VBN\" target=\"_blank\">Stationsinformation</a>"
             },
             {
               "type":"I",
               "code":"BB",
-              "icoX":6,
+              "icoX":1,
               "txtN":"<a href=\"https://daten.zvbn.de/ssb/steckbrief.php?hstnr=8003773&amp;VBN\" target=\"_blank\">Stationsinformation</a>"
             },
             {
               "type":"I",
               "code":"BB",
-              "icoX":6,
+              "icoX":1,
               "txtN":"<a href=\"https://daten.zvbn.de/ssb/steckbrief.php?hstnr=8005763&amp;VBN\" target=\"_blank\">Stationsinformation</a>"
             },
             {
               "type":"I",
               "code":"BB",
-              "icoX":6,
+              "icoX":1,
               "txtN":"<a href=\"https://daten.zvbn.de/ssb/steckbrief.php?hstnr=8003799&amp;VBN\" target=\"_blank\">Stationsinformation</a>"
             },
             {
               "type":"I",
               "code":"BB",
-              "icoX":6,
+              "icoX":1,
               "txtN":"<a href=\"https://daten.zvbn.de/ssb/steckbrief.php?hstnr=8003760&amp;VBN\" target=\"_blank\">Stationsinformation</a>"
             },
             {
               "type":"I",
               "code":"BB",
-              "icoX":6,
+              "icoX":1,
               "txtN":"<a href=\"https://daten.zvbn.de/ssb/steckbrief.php?hstnr=8001170&amp;VBN\" target=\"_blank\">Stationsinformation</a>"
             },
             {
               "type":"A",
               "code":"PF",
               "prio":200,
-              "icoX":7,
+              "icoX":10,
               "txtN":"Maskenpflicht nach gesetzl. Regelung; denken Sie an eine FFP2-Maske"
+            },
+            {
+              "type":"A",
+              "code":"3G",
+              "prio":205,
+              "icoX":10,
+              "txtN":"Im Zug gilt bundesweit 3G-Regel: ein gültiger Nachweis ist mitzuführen"
             },
             {
               "type":"A",
               "code":"FK",
               "prio":260,
-              "icoX":13,
+              "icoX":11,
               "txtN":"Fahrradmitnahme begrenzt möglich (Bremen Hbf)"
             },
             {
               "type":"A",
               "code":"FK",
               "prio":260,
-              "icoX":13,
+              "icoX":11,
               "txtN":"Fahrradmitnahme begrenzt möglich (Bremerhaven Hbf)"
             },
             {
               "type":"A",
               "code":"AO",
               "prio":350,
-              "icoX":7,
+              "icoX":10,
               "txtN":"Konsum alkoholischer Getränke im Zug verboten"
+            },
+            {
+              "type":"A",
+              "code":"jp",
+              "prio":560,
+              "icoX":10,
+              "txtN":"NordWestBahn-Servicetelefon: 0541 2002 4321"
+            },
+            {
+              "type":"A",
+              "code":"am",
+              "prio":898,
+              "icoX":10,
+              "txtN":"VBN - Verkehrsverbund Bremen/Niedersachsen, Info: 0421 59 60 59"
             },
             {
               "type":"A",
               "code":"NW",
               "prio":899,
-              "icoX":7,
-              "txtN":"Linie der NordWestBahn, Info unter 01806 600161"
+              "icoX":10,
+              "txtN":"Linie der NordWestBahn, Info unter 0541 20024321"
+            },
+            {
+              "type":"I",
+              "code":"BB",
+              "icoX":1,
+              "txtN":"<a href=\"https://daten.zvbn.de/ssb/steckbrief.php?hstnr=8005929&amp;VBN\" target=\"_blank\">Stationsinformation</a>"
             },
             {
               "type":"A",
               "code":"JOURNEYNUMBER",
-              "txtN":"Fahrtnummer: 83216"
+              "txtN":"Fahrtnummer: 83228"
             },
             {
               "type":"A",
               "code":"JOURNEYNUMBER",
-              "txtN":"Fahrtnummer: 83218"
+              "txtN":"Fahrtnummer: 83230"
             },
             {
               "type":"A",
               "code":"JOURNEYNUMBER",
-              "txtN":"Fahrtnummer: 83220"
+              "txtN":"Fahrtnummer: 83232"
             },
             {
               "type":"A",
               "code":"JOURNEYNUMBER",
-              "txtN":"Fahrtnummer: 83244"
+              "txtN":"Fahrtnummer: 83234"
             }
           ],
           "himL":
           [
             {
-              "hid":"20944",
+              "hid":"25662",
               "act":true,
               "head":"Corona-Präventionsmaßnahme",
-              "text":"Tragen Sie in Bussen und Bahnen, an Haltestellen und Bahnhöfen medizinische Masken oder FFP2-Masken. Rücksicht nehmen - gut für alle!",
-              "icoX":8,
+              "text":"3G-Regel im ÖPNV (geimpft, genesen oder getestet). Bitte beachten Sie die Maskenpflicht!",
+              "icoX":12,
               "prio":1,
+              "fLocX":23,
+              "tLocX":23,
               "prod":65535,
-              "lModDate":"20210614",
-              "lModTime":"102418",
-              "sDate":"20210424",
+              "lModDate":"20211123",
+              "lModTime":"171447",
+              "sDate":"20211124",
               "sTime":"000000",
-              "eDate":"20211211",
+              "eDate":"20221231",
               "eTime":"235900",
               "comp":"VBN",
               "cat":2,
@@ -1851,9 +1450,9 @@
               [
                 {
                   "name":"TIMETABLE",
-                  "fDate":"20210423",
-                  "fTime":"153800",
-                  "tDate":"20211211",
+                  "fDate":"20211123",
+                  "fTime":"171300",
+                  "tDate":"20221231",
                   "tTime":"235900"
                 }
               ]
@@ -1865,7 +1464,10 @@
               "res":"ADR"
             },
             {
-              "res":"prod_tram",
+              "res":"attr_info"
+            },
+            {
+              "res":"prod_ice",
               "fg":
               {
                 "r":255,
@@ -1874,9 +1476,9 @@
               },
               "bg":
               {
-                "r":227,
-                "g":6,
-                "b":19
+                "r":150,
+                "g":25,
+                "b":29
               }
             },
             {
@@ -1901,34 +1503,6 @@
               "res":"rt_ont"
             },
             {
-              "res":"BSA",
-              "txt":"Bremer Straßenbahn AG"
-            },
-            {
-              "res":"attr_info"
-            },
-            {
-              "res":"INFO"
-            },
-            {
-              "res":"HIM2"
-            },
-            {
-              "res":"prod_ice",
-              "fg":
-              {
-                "r":255,
-                "g":255,
-                "b":255
-              },
-              "bg":
-              {
-                "r":150,
-                "g":25,
-                "b":29
-              }
-            },
-            {
               "res":"prod_comm",
               "fg":
               {
@@ -1948,6 +1522,21 @@
               "txt":"NordWestBahn"
             },
             {
+              "res":"prod_ic",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255
+              },
+              "bg":
+              {
+                "r":239,
+                "g":119,
+                "b":28
+              }
+            },
+            {
               "res":"prod_reg",
               "fg":
               {
@@ -1963,7 +1552,13 @@
               }
             },
             {
+              "res":"INFO"
+            },
+            {
               "res":"attr_bike"
+            },
+            {
+              "res":"HIM2"
             },
             {
               "res":"tariff_vbn"
@@ -1971,14 +1566,6 @@
           ],
           "dirL":
           [
-            {
-              "txt":"Sebaldsbrück",
-              "flg":"1"
-            },
-            {
-              "txt":"Bürgerpark via Hauptbahnhof",
-              "flg":"1"
-            },
             {
               "txt":"Bremerhaven-Lehe",
               "flg":"2"
@@ -1989,128 +1576,247 @@
         [
           {
             "cid":"DirectConReq-0",
-            "date":"20210906",
-            "dur":"010800",
-            "chg":1,
+            "date":"20211205",
+            "dur":"010300",
+            "chg":0,
             "sDays":
             {
-              "sDaysR":"nicht täglich",
-              "sDaysI":"6. Sep bis 14. Okt 2021 Mo - Sa",
-              "sDaysB":"EFDFBF7EFDFBF7EFDFBF7EFDFBC000000000000000"
+              "sDaysR":"täglich",
+              "sDaysB":"FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8"
             },
             "dep":
             {
               "locX":0,
               "dInR":true,
-              "dTimeS":"132200",
+              "dTimeS":"192700",
               "type":"N"
             },
             "arr":
             {
-              "locX":30,
+              "locX":25,
               "aOutR":true,
-              "aTimeS":"143000",
+              "aTimeS":"203000",
               "type":"N"
             },
             "secL":
             [
               {
                 "type":"WALK",
-                "icoX":3,
+                "icoX":4,
                 "dep":
                 {
                   "locX":0,
                   "dInR":true,
-                  "dTimeS":"132200",
+                  "dTimeS":"192700",
                   "type":"N"
                 },
                 "arr":
                 {
                   "locX":1,
                   "aOutR":true,
-                  "aTimeS":"132700",
+                  "aTimeS":"194000",
                   "type":"N"
                 },
                 "gis":
                 {
-                  "dist":330,
-                  "durS":"000500",
-                  "ctx":"G|1|G@F|A=2@O=53.086421, 8.806388@X=8806388@Y=53086421@|A=1@O=Bremen Daniel-von-Büren-Straße@X=8802633@Y=53084754@U=80@L=686150@|6092021|132200|132700|bf|ft@0@2000@120@1@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§bt@0@2000@120@1@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§tt@0@5000@120@1@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§||",
+                  "dist":1032,
+                  "durS":"001300",
+                  "ctx":"G|1|G@F|A=2@O=53.086421, 8.806388@X=8806388@Y=53086421@|A=1@O=Bremen Hbf@X=8813833@Y=53083478@U=80@L=8000050@|5122021|192700|194000|bf|ft@0@2000@120@1@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§bt@0@2000@120@1@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§tt@0@5000@120@1@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§|||",
                   "getDescr":true,
                   "getPoly":true
                 }
               },
               {
                 "type":"JNY",
-                "icoX":1,
+                "icoX":6,
                 "dep":
                 {
                   "locX":1,
-                  "idx":13,
+                  "idx":8,
                   "dProdX":1,
+                  "dPlatfS":"6",
                   "dInR":true,
-                  "dTimeS":"132700",
-                  "dTimeR":"132700",
+                  "dTimeS":"194000",
+                  "dTimeR":"194000",
                   "dProgType":"PROGNOSED",
                   "type":"N"
                 },
                 "arr":
                 {
                   "locX":3,
-                  "idx":15,
+                  "idx":18,
                   "aProdX":1,
-                  "aPlatfS":"C",
-                  "aPlatfR":"C",
+                  "aPlatfS":"5",
                   "aOutR":true,
-                  "aTimeS":"133100",
-                  "aTimeR":"133100",
+                  "aTimeS":"202500",
+                  "aTimeR":"202500",
                   "aProgType":"PROGNOSED",
                   "type":"N"
                 },
                 "jny":
                 {
-                  "jid":"1|19722|1|80|6092021",
+                  "jid":"1|127185|0|80|5122021",
                   "prodX":2,
-                  "dirTxt":"Sebaldsbrück",
-                  "dirFlg":"1",
+                  "dirTxt":"Bremerhaven-Lehe",
+                  "dirFlg":"2",
                   "status":"P",
                   "isRchbl":true,
                   "stopL":
                   [
                     {
                       "locX":1,
-                      "idx":13,
+                      "idx":8,
                       "dProdX":2,
                       "dInR":true,
-                      "dTimeS":"132700",
-                      "dTimeR":"132700",
+                      "dTimeS":"194000",
+                      "dTimeR":"194000",
                       "dProgType":"PROGNOSED",
-                      "dDirTxt":"Sebaldsbrück",
-                      "dDirFlg":"1",
+                      "dDirTxt":"Bremerhaven-Lehe",
+                      "dDirFlg":"2",
                       "type":"N"
                     },
                     {
                       "locX":5,
-                      "idx":14,
+                      "idx":9,
                       "aProdX":2,
                       "aOutR":true,
-                      "aTimeS":"132800",
-                      "aTimeR":"132800",
+                      "aTimeS":"194700",
+                      "aTimeR":"194700",
                       "aProgType":"PROGNOSED",
                       "dProdX":2,
                       "dInR":true,
-                      "dTimeS":"132800",
-                      "dTimeR":"132800",
+                      "dTimeS":"194800",
+                      "dTimeR":"194800",
+                      "dProgType":"PROGNOSED",
+                      "type":"N"
+                    },
+                    {
+                      "locX":7,
+                      "idx":10,
+                      "aProdX":2,
+                      "aOutR":true,
+                      "aTimeS":"195100",
+                      "aTimeR":"195100",
+                      "aProgType":"PROGNOSED",
+                      "dProdX":2,
+                      "dInR":true,
+                      "dTimeS":"195200",
+                      "dTimeR":"195200",
+                      "dProgType":"PROGNOSED",
+                      "type":"N"
+                    },
+                    {
+                      "locX":9,
+                      "idx":11,
+                      "aProdX":2,
+                      "aOutR":true,
+                      "aTimeS":"195500",
+                      "aTimeR":"195500",
+                      "aProgType":"PROGNOSED",
+                      "dProdX":2,
+                      "dInR":true,
+                      "dTimeS":"195600",
+                      "dTimeR":"195600",
+                      "dProgType":"PROGNOSED",
+                      "type":"N"
+                    },
+                    {
+                      "locX":11,
+                      "idx":12,
+                      "aProdX":2,
+                      "aOutR":true,
+                      "aTimeS":"200000",
+                      "aTimeR":"200000",
+                      "aProgType":"PROGNOSED",
+                      "dProdX":2,
+                      "dInR":true,
+                      "dTimeS":"200100",
+                      "dTimeR":"200100",
+                      "dProgType":"PROGNOSED",
+                      "type":"N"
+                    },
+                    {
+                      "locX":13,
+                      "idx":13,
+                      "aProdX":2,
+                      "aOutR":true,
+                      "aTimeS":"200500",
+                      "aTimeR":"200500",
+                      "aProgType":"PROGNOSED",
+                      "dProdX":2,
+                      "dInR":true,
+                      "dTimeS":"200600",
+                      "dTimeR":"200600",
+                      "dProgType":"PROGNOSED",
+                      "type":"N"
+                    },
+                    {
+                      "locX":15,
+                      "idx":14,
+                      "aProdX":2,
+                      "aOutR":true,
+                      "aTimeS":"201000",
+                      "aTimeR":"201000",
+                      "aProgType":"PROGNOSED",
+                      "dProdX":2,
+                      "dInR":true,
+                      "dTimeS":"201000",
+                      "dTimeR":"201000",
+                      "dProgType":"PROGNOSED",
+                      "type":"N"
+                    },
+                    {
+                      "locX":17,
+                      "idx":15,
+                      "aProdX":2,
+                      "aOutR":true,
+                      "aTimeS":"201400",
+                      "aTimeR":"201400",
+                      "aProgType":"PROGNOSED",
+                      "dProdX":2,
+                      "dInR":true,
+                      "dTimeS":"201400",
+                      "dTimeR":"201400",
+                      "dProgType":"PROGNOSED",
+                      "type":"N"
+                    },
+                    {
+                      "locX":19,
+                      "idx":16,
+                      "aProdX":2,
+                      "aOutR":true,
+                      "aTimeS":"201800",
+                      "aTimeR":"201800",
+                      "aProgType":"PROGNOSED",
+                      "dProdX":2,
+                      "dInR":true,
+                      "dTimeS":"201900",
+                      "dTimeR":"201900",
+                      "dProgType":"PROGNOSED",
+                      "type":"N"
+                    },
+                    {
+                      "locX":21,
+                      "idx":17,
+                      "aProdX":2,
+                      "aOutR":true,
+                      "aTimeS":"202200",
+                      "aTimeR":"202200",
+                      "aProgType":"PROGNOSED",
+                      "dProdX":2,
+                      "dInR":true,
+                      "dTimeS":"202200",
+                      "dTimeR":"202200",
                       "dProgType":"PROGNOSED",
                       "type":"N"
                     },
                     {
                       "locX":3,
-                      "idx":15,
+                      "idx":18,
                       "aProdX":2,
                       "aOutR":true,
-                      "aTimeS":"133100",
-                      "aTimeR":"133100",
+                      "aTimeS":"202500",
+                      "aTimeR":"202500",
                       "aProgType":"PROGNOSED",
                       "type":"N"
                     }
@@ -2135,63 +1841,56 @@
                       "crdSysX":1
                     }
                   ],
+                  "pos":
+                  {
+                    "x":8866070,
+                    "y":53074093,
+                    "layerX":0,
+                    "crdSysX":0
+                  },
                   "freq":
                   {
-                    "minC":1,
-                    "maxC":10,
-                    "numC":22,
+                    "minC":60,
+                    "maxC":92,
+                    "numC":3,
                     "jnyL":
                     [
                       {
-                        "jid":"1|19719|1|80|6092021",
+                        "jid":"1|127188|1|80|5122021",
                         "prodX":3,
-                        "dirTxt":"Sebaldsbrück",
-                        "dirFlg":"1",
+                        "dirTxt":"Bremerhaven-Lehe",
+                        "dirFlg":"2",
                         "stopL":
                         [
                           {
                             "locX":1,
-                            "idx":13,
+                            "idx":8,
                             "dProdX":3,
-                            "dTimeS":"133700",
-                            "dDirTxt":"Sebaldsbrück",
-                            "dDirFlg":"1",
+                            "dTimeS":"204000",
+                            "dDirTxt":"Bremerhaven-Lehe",
+                            "dDirFlg":"2",
                             "type":"N"
                           },
                           {
                             "locX":3,
-                            "idx":15,
+                            "idx":18,
                             "aProdX":3,
-                            "aTimeS":"134100",
+                            "aTimeS":"212500",
                             "type":"N"
                           }
                         ],
-                        "ctxRecon":"T$A=1@O=Bremen Daniel-von-Büren-Straße@L=686150@a=128@$A=1@O=Bremen Hauptbahnhof@L=625703@a=128@$202109061337$202109061341$Tram 10 $$1$$$$",
+                        "ctxRecon":"T$A=1@O=Bremen Hbf@L=8000050@a=128@$A=1@O=Bremerhaven Hbf@L=8000051@a=128@$202112052040$202112052125$     RS2$$1$$$$$$",
                         "msgL":
                         [
                           {
                             "type":"REM",
-                            "remX":1,
+                            "remX":21,
                             "dspl":"U",
-                            "fLocX":1,
-                            "tLocX":3,
                             "tagL":
                             [
-                              "RES_JNY_DTL"
+                              "RES_JNY_DTL_H3"
                             ],
-                            "sort":788791296
-                          },
-                          {
-                            "type":"REM",
-                            "remX":2,
-                            "dspl":"U",
-                            "fLocX":1,
-                            "tLocX":3,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ],
-                            "sort":788922368
+                            "sort":818413568
                           }
                         ],
                         "subscr":"F",
@@ -2201,8 +1900,8 @@
                             "prodX":3,
                             "fLocX":1,
                             "tLocX":3,
-                            "fIdx":13,
-                            "tIdx":15
+                            "fIdx":8,
+                            "tIdx":18
                           }
                         ],
                         "dirL":
@@ -2211,61 +1910,47 @@
                             "dirX":0,
                             "fLocX":1,
                             "tLocX":3,
-                            "fIdx":13,
-                            "tIdx":15
+                            "fIdx":8,
+                            "tIdx":18
                           }
                         ]
                       },
                       {
-                        "jid":"1|18976|1|80|6092021",
+                        "jid":"1|127217|1|80|5122021",
                         "prodX":4,
-                        "dirTxt":"Bürgerpark via Hauptbahnhof",
-                        "dirFlg":"1",
+                        "dirTxt":"Bremerhaven-Lehe",
+                        "dirFlg":"2",
                         "stopL":
                         [
                           {
                             "locX":1,
-                            "idx":9,
+                            "idx":8,
                             "dProdX":4,
-                            "dTimeS":"134300",
-                            "dDirTxt":"Bürgerpark via Hauptbahnhof",
-                            "dDirFlg":"1",
+                            "dTimeS":"214000",
+                            "dDirTxt":"Bremerhaven-Lehe",
+                            "dDirFlg":"2",
                             "type":"N"
                           },
                           {
-                            "locX":7,
-                            "idx":11,
+                            "locX":3,
+                            "idx":18,
                             "aProdX":4,
-                            "aTimeS":"134600",
+                            "aTimeS":"222500",
                             "type":"N"
                           }
                         ],
-                        "ctxRecon":"T$A=1@O=Bremen Daniel-von-Büren-Straße@L=686150@a=128@$A=1@O=Bremen Hauptbahnhof@L=625705@a=128@$202109061343$202109061346$Tram 10E$$1$$$$",
+                        "ctxRecon":"T$A=1@O=Bremen Hbf@L=8000050@a=128@$A=1@O=Bremerhaven Hbf@L=8000051@a=128@$202112052140$202112052225$     RS2$$1$$$$$$",
                         "msgL":
                         [
                           {
                             "type":"REM",
-                            "remX":1,
+                            "remX":22,
                             "dspl":"U",
-                            "fLocX":1,
-                            "tLocX":7,
                             "tagL":
                             [
-                              "RES_JNY_DTL"
+                              "RES_JNY_DTL_H3"
                             ],
-                            "sort":788791296
-                          },
-                          {
-                            "type":"REM",
-                            "remX":2,
-                            "dspl":"U",
-                            "fLocX":1,
-                            "tLocX":7,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ],
-                            "sort":788922368
+                            "sort":818413568
                           }
                         ],
                         "subscr":"F",
@@ -2274,72 +1959,58 @@
                           {
                             "prodX":4,
                             "fLocX":1,
-                            "tLocX":7,
-                            "fIdx":9,
-                            "tIdx":11
+                            "tLocX":3,
+                            "fIdx":8,
+                            "tIdx":18
                           }
                         ],
                         "dirL":
                         [
                           {
-                            "dirX":1,
+                            "dirX":0,
                             "fLocX":1,
-                            "tLocX":7,
-                            "fIdx":9,
-                            "tIdx":11
+                            "tLocX":3,
+                            "fIdx":8,
+                            "tIdx":18
                           }
                         ]
                       },
                       {
-                        "jid":"1|19713|1|80|6092021",
+                        "jid":"1|127224|0|80|5122021",
                         "prodX":5,
-                        "dirTxt":"Sebaldsbrück",
-                        "dirFlg":"1",
+                        "dirTxt":"Bremerhaven-Lehe",
+                        "dirFlg":"2",
                         "stopL":
                         [
                           {
                             "locX":1,
-                            "idx":13,
+                            "idx":0,
                             "dProdX":5,
-                            "dTimeS":"134700",
-                            "dDirTxt":"Sebaldsbrück",
-                            "dDirFlg":"1",
+                            "dTimeS":"231200",
+                            "dDirTxt":"Bremerhaven-Lehe",
+                            "dDirFlg":"2",
                             "type":"N"
                           },
                           {
                             "locX":3,
-                            "idx":15,
+                            "idx":10,
                             "aProdX":5,
-                            "aTimeS":"135100",
+                            "aTimeS":"235700",
                             "type":"N"
                           }
                         ],
-                        "ctxRecon":"T$A=1@O=Bremen Daniel-von-Büren-Straße@L=686150@a=128@$A=1@O=Bremen Hauptbahnhof@L=625703@a=128@$202109061347$202109061351$Tram 10 $$1$$$$",
+                        "ctxRecon":"T$A=1@O=Bremen Hbf@L=8000050@a=128@$A=1@O=Bremerhaven Hbf@L=8000051@a=128@$202112052312$202112052357$     RS2$$1$$$$$$",
                         "msgL":
                         [
                           {
                             "type":"REM",
-                            "remX":1,
+                            "remX":23,
                             "dspl":"U",
-                            "fLocX":1,
-                            "tLocX":3,
                             "tagL":
                             [
-                              "RES_JNY_DTL"
+                              "RES_JNY_DTL_H3"
                             ],
-                            "sort":788791296
-                          },
-                          {
-                            "type":"REM",
-                            "remX":2,
-                            "dspl":"U",
-                            "fLocX":1,
-                            "tLocX":3,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ],
-                            "sort":788922368
+                            "sort":818413568
                           }
                         ],
                         "subscr":"F",
@@ -2349,8 +2020,8 @@
                             "prodX":5,
                             "fLocX":1,
                             "tLocX":3,
-                            "fIdx":13,
-                            "tIdx":15
+                            "fIdx":0,
+                            "tIdx":10
                           }
                         ],
                         "dirL":
@@ -2359,167 +2030,19 @@
                             "dirX":0,
                             "fLocX":1,
                             "tLocX":3,
-                            "fIdx":13,
-                            "tIdx":15
-                          }
-                        ]
-                      },
-                      {
-                        "jid":"1|18977|1|80|6092021",
-                        "prodX":6,
-                        "dirTxt":"Bürgerpark via Hauptbahnhof",
-                        "dirFlg":"1",
-                        "stopL":
-                        [
-                          {
-                            "locX":1,
-                            "idx":9,
-                            "dProdX":6,
-                            "dTimeS":"135300",
-                            "dDirTxt":"Bürgerpark via Hauptbahnhof",
-                            "dDirFlg":"1",
-                            "type":"N"
-                          },
-                          {
-                            "locX":7,
-                            "idx":11,
-                            "aProdX":6,
-                            "aTimeS":"135600",
-                            "type":"N"
-                          }
-                        ],
-                        "ctxRecon":"T$A=1@O=Bremen Daniel-von-Büren-Straße@L=686150@a=128@$A=1@O=Bremen Hauptbahnhof@L=625705@a=128@$202109061353$202109061356$Tram 10E$$1$$$$",
-                        "msgL":
-                        [
-                          {
-                            "type":"REM",
-                            "remX":1,
-                            "dspl":"U",
-                            "fLocX":1,
-                            "tLocX":7,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ],
-                            "sort":788791296
-                          },
-                          {
-                            "type":"REM",
-                            "remX":2,
-                            "dspl":"U",
-                            "fLocX":1,
-                            "tLocX":7,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ],
-                            "sort":788922368
-                          }
-                        ],
-                        "subscr":"F",
-                        "prodL":
-                        [
-                          {
-                            "prodX":6,
-                            "fLocX":1,
-                            "tLocX":7,
-                            "fIdx":9,
-                            "tIdx":11
-                          }
-                        ],
-                        "dirL":
-                        [
-                          {
-                            "dirX":1,
-                            "fLocX":1,
-                            "tLocX":7,
-                            "fIdx":9,
-                            "tIdx":11
-                          }
-                        ]
-                      },
-                      {
-                        "jid":"1|19686|1|80|6092021",
-                        "prodX":7,
-                        "dirTxt":"Sebaldsbrück",
-                        "dirFlg":"1",
-                        "stopL":
-                        [
-                          {
-                            "locX":1,
-                            "idx":13,
-                            "dProdX":7,
-                            "dTimeS":"135700",
-                            "dDirTxt":"Sebaldsbrück",
-                            "dDirFlg":"1",
-                            "type":"N"
-                          },
-                          {
-                            "locX":3,
-                            "idx":15,
-                            "aProdX":7,
-                            "aTimeS":"140100",
-                            "type":"N"
-                          }
-                        ],
-                        "ctxRecon":"T$A=1@O=Bremen Daniel-von-Büren-Straße@L=686150@a=128@$A=1@O=Bremen Hauptbahnhof@L=625703@a=128@$202109061357$202109061401$Tram 10 $$1$$$$",
-                        "msgL":
-                        [
-                          {
-                            "type":"REM",
-                            "remX":1,
-                            "dspl":"U",
-                            "fLocX":1,
-                            "tLocX":3,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ],
-                            "sort":788791296
-                          },
-                          {
-                            "type":"REM",
-                            "remX":2,
-                            "dspl":"U",
-                            "fLocX":1,
-                            "tLocX":3,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ],
-                            "sort":788922368
-                          }
-                        ],
-                        "subscr":"F",
-                        "prodL":
-                        [
-                          {
-                            "prodX":7,
-                            "fLocX":1,
-                            "tLocX":3,
-                            "fIdx":13,
-                            "tIdx":15
-                          }
-                        ],
-                        "dirL":
-                        [
-                          {
-                            "dirX":0,
-                            "fLocX":1,
-                            "tLocX":3,
-                            "fIdx":13,
-                            "tIdx":15
+                            "fIdx":0,
+                            "tIdx":10
                           }
                         ]
                       }
                     ]
                   },
-                  "ctxRecon":"T$A=1@O=Bremen Daniel-von-Büren-Straße@L=686150@a=128@$A=1@O=Bremen Hauptbahnhof@L=625703@a=128@$202109061327$202109061331$Tram 10 $$1$$$$",
+                  "ctxRecon":"T$A=1@O=Bremen Hbf@L=8000050@a=128@$A=1@O=Bremerhaven Hbf@L=8000051@a=128@$202112051940$202112052025$     RS2$$1$$$$$$",
                   "msgL":
                   [
                     {
                       "type":"REM",
-                      "remX":1,
+                      "remX":11,
                       "dspl":"U",
                       "fLocX":1,
                       "tLocX":3,
@@ -2527,11 +2050,11 @@
                       [
                         "RES_JNY_DTL"
                       ],
-                      "sort":788791296
+                      "sort":831520768
                     },
                     {
                       "type":"REM",
-                      "remX":2,
+                      "remX":12,
                       "dspl":"U",
                       "fLocX":1,
                       "tLocX":3,
@@ -2539,7 +2062,79 @@
                       [
                         "RES_JNY_DTL"
                       ],
-                      "sort":788922368
+                      "sort":832176128
+                    },
+                    {
+                      "type":"REM",
+                      "remX":13,
+                      "dspl":"U",
+                      "fLocX":1,
+                      "tLocX":1,
+                      "tagL":
+                      [
+                        "RES_JNY_DTL"
+                      ],
+                      "sort":839385088
+                    },
+                    {
+                      "type":"REM",
+                      "remX":14,
+                      "dspl":"U",
+                      "fLocX":3,
+                      "tLocX":3,
+                      "tagL":
+                      [
+                        "RES_JNY_DTL"
+                      ],
+                      "sort":839385088
+                    },
+                    {
+                      "type":"REM",
+                      "remX":15,
+                      "dspl":"U",
+                      "fLocX":1,
+                      "tLocX":3,
+                      "tagL":
+                      [
+                        "RES_JNY_DTL"
+                      ],
+                      "sort":851181568
+                    },
+                    {
+                      "type":"REM",
+                      "remX":16,
+                      "dspl":"U",
+                      "fLocX":1,
+                      "tLocX":3,
+                      "tagL":
+                      [
+                        "RES_JNY_DTL"
+                      ],
+                      "sort":878706688
+                    },
+                    {
+                      "type":"REM",
+                      "remX":17,
+                      "dspl":"U",
+                      "fLocX":1,
+                      "tLocX":3,
+                      "tagL":
+                      [
+                        "RES_JNY_DTL"
+                      ],
+                      "sort":923009024
+                    },
+                    {
+                      "type":"REM",
+                      "remX":18,
+                      "dspl":"U",
+                      "fLocX":1,
+                      "tLocX":3,
+                      "tagL":
+                      [
+                        "RES_JNY_DTL"
+                      ],
+                      "sort":923140096
                     },
                     {
                       "type":"HIM",
@@ -2549,7 +2144,17 @@
                       [
                         "RES_GLB_HDR_H3","SUM_GLB_HDR_H3"
                       ],
-                      "sort":269742608
+                      "sort":269798358
+                    },
+                    {
+                      "type":"REM",
+                      "remX":20,
+                      "dspl":"U",
+                      "tagL":
+                      [
+                        "RES_JNY_DTL_H3"
+                      ],
+                      "sort":818413568
                     }
                   ],
                   "subscr":"F",
@@ -2559,8 +2164,8 @@
                       "prodX":2,
                       "fLocX":1,
                       "tLocX":3,
-                      "fIdx":13,
-                      "tIdx":15
+                      "fIdx":8,
+                      "tIdx":18
                     }
                   ],
                   "dirL":
@@ -2569,838 +2174,43 @@
                       "dirX":0,
                       "fLocX":1,
                       "tLocX":3,
-                      "fIdx":13,
-                      "tIdx":15
+                      "fIdx":8,
+                      "tIdx":18
                     }
                   ]
-                },
-                "minChg":"000700"
+                }
               },
               {
                 "type":"WALK",
-                "icoX":3,
+                "icoX":4,
                 "dep":
                 {
                   "locX":3,
                   "dInR":true,
-                  "dTimeS":"133100",
+                  "dTimeS":"202500",
                   "type":"N"
                 },
                 "arr":
                 {
-                  "locX":8,
+                  "locX":25,
                   "aOutR":true,
-                  "aTimeS":"133800",
-                  "type":"N"
-                },
-                "gis":
-                {
-                  "dist":220,
-                  "durS":"000700",
-                  "dirGeo":8,
-                  "ctx":"H|1|W$A=1@O=Bremen Hauptbahnhof@L=625703@a=128@$A=1@O=Bremen Hbf@L=8000050@a=128@$202109061331$202109061338$$$1$$$$",
-                  "polyG":
-                  {
-                    "polyXL":
-                    [
-                      1
-                    ],
-                    "layerX":0,
-                    "crdSysX":0
-                  },
-                  "polyGAltL":
-                  [
-                    {
-                      "layerX":0,
-                      "crdSysX":0
-                    },
-                    {
-                      "layerX":0,
-                      "crdSysX":2
-                    }
-                  ],
-                  "gisPrvr":"H",
-                  "getDescr":true,
-                  "getPoly":true
-                }
-              },
-              {
-                "type":"JNY",
-                "icoX":10,
-                "dep":
-                {
-                  "locX":8,
-                  "idx":8,
-                  "dProdX":8,
-                  "dPlatfS":"6",
-                  "dInR":true,
-                  "dTimeS":"134000",
-                  "dTimeR":"134000",
-                  "dProgType":"PROGNOSED",
-                  "type":"N"
-                },
-                "arr":
-                {
-                  "locX":10,
-                  "idx":18,
-                  "aProdX":8,
-                  "aPlatfS":"5",
-                  "aOutR":true,
-                  "aTimeS":"142500",
-                  "aTimeR":"142500",
-                  "aProgType":"PROGNOSED",
-                  "type":"N"
-                },
-                "jny":
-                {
-                  "jid":"1|88439|2|80|6092021",
-                  "prodX":9,
-                  "dirTxt":"Bremerhaven-Lehe",
-                  "dirFlg":"2",
-                  "status":"P",
-                  "isRchbl":true,
-                  "stopL":
-                  [
-                    {
-                      "locX":8,
-                      "idx":8,
-                      "dProdX":9,
-                      "dInR":true,
-                      "dTimeS":"134000",
-                      "dTimeR":"134000",
-                      "dProgType":"PROGNOSED",
-                      "dDirTxt":"Bremerhaven-Lehe",
-                      "dDirFlg":"2",
-                      "type":"N"
-                    },
-                    {
-                      "locX":12,
-                      "idx":9,
-                      "aProdX":9,
-                      "aOutR":true,
-                      "aTimeS":"134700",
-                      "aTimeR":"134700",
-                      "aProgType":"PROGNOSED",
-                      "dProdX":9,
-                      "dInR":true,
-                      "dTimeS":"134800",
-                      "dTimeR":"134800",
-                      "dProgType":"PROGNOSED",
-                      "type":"N"
-                    },
-                    {
-                      "locX":14,
-                      "idx":10,
-                      "aProdX":9,
-                      "aOutR":true,
-                      "aTimeS":"135100",
-                      "aTimeR":"135100",
-                      "aProgType":"PROGNOSED",
-                      "dProdX":9,
-                      "dInR":true,
-                      "dTimeS":"135200",
-                      "dTimeR":"135200",
-                      "dProgType":"PROGNOSED",
-                      "type":"N"
-                    },
-                    {
-                      "locX":16,
-                      "idx":11,
-                      "aProdX":9,
-                      "aOutR":true,
-                      "aTimeS":"135500",
-                      "aTimeR":"135500",
-                      "aProgType":"PROGNOSED",
-                      "dProdX":9,
-                      "dInR":true,
-                      "dTimeS":"135600",
-                      "dTimeR":"135600",
-                      "dProgType":"PROGNOSED",
-                      "type":"N"
-                    },
-                    {
-                      "locX":18,
-                      "idx":12,
-                      "aProdX":9,
-                      "aOutR":true,
-                      "aTimeS":"140000",
-                      "aTimeR":"140000",
-                      "aProgType":"PROGNOSED",
-                      "dProdX":9,
-                      "dInR":true,
-                      "dTimeS":"140100",
-                      "dTimeR":"140100",
-                      "dProgType":"PROGNOSED",
-                      "type":"N"
-                    },
-                    {
-                      "locX":20,
-                      "idx":13,
-                      "aProdX":9,
-                      "aOutR":true,
-                      "aTimeS":"140500",
-                      "aTimeR":"140500",
-                      "aProgType":"PROGNOSED",
-                      "dProdX":9,
-                      "dInR":true,
-                      "dTimeS":"140600",
-                      "dTimeR":"140600",
-                      "dProgType":"PROGNOSED",
-                      "type":"N"
-                    },
-                    {
-                      "locX":22,
-                      "idx":14,
-                      "aProdX":9,
-                      "aOutR":true,
-                      "aTimeS":"141000",
-                      "aTimeR":"141000",
-                      "aProgType":"PROGNOSED",
-                      "dProdX":9,
-                      "dInR":true,
-                      "dTimeS":"141000",
-                      "dTimeR":"141000",
-                      "dProgType":"PROGNOSED",
-                      "type":"N"
-                    },
-                    {
-                      "locX":24,
-                      "idx":15,
-                      "aProdX":9,
-                      "aOutR":true,
-                      "aTimeS":"141400",
-                      "aTimeR":"141400",
-                      "aProgType":"PROGNOSED",
-                      "dProdX":9,
-                      "dInR":true,
-                      "dTimeS":"141400",
-                      "dTimeR":"141400",
-                      "dProgType":"PROGNOSED",
-                      "type":"N"
-                    },
-                    {
-                      "locX":26,
-                      "idx":16,
-                      "aProdX":9,
-                      "aOutR":true,
-                      "aTimeS":"141800",
-                      "aTimeR":"141800",
-                      "aProgType":"PROGNOSED",
-                      "dProdX":9,
-                      "dInR":true,
-                      "dTimeS":"141900",
-                      "dTimeR":"141900",
-                      "dProgType":"PROGNOSED",
-                      "type":"N"
-                    },
-                    {
-                      "locX":28,
-                      "idx":17,
-                      "aProdX":9,
-                      "aOutR":true,
-                      "aTimeS":"142200",
-                      "aTimeR":"142200",
-                      "aProgType":"PROGNOSED",
-                      "dProdX":9,
-                      "dInR":true,
-                      "dTimeS":"142200",
-                      "dTimeR":"142200",
-                      "dProgType":"PROGNOSED",
-                      "type":"N"
-                    },
-                    {
-                      "locX":10,
-                      "idx":18,
-                      "aProdX":9,
-                      "aOutR":true,
-                      "aTimeS":"142500",
-                      "aTimeR":"142500",
-                      "aProgType":"PROGNOSED",
-                      "type":"N"
-                    }
-                  ],
-                  "polyG":
-                  {
-                    "polyXL":
-                    [
-                      2
-                    ],
-                    "layerX":0,
-                    "crdSysX":0
-                  },
-                  "polyGAltL":
-                  [
-                    {
-                      "layerX":0,
-                      "crdSysX":0
-                    },
-                    {
-                      "layerX":0,
-                      "crdSysX":4
-                    }
-                  ],
-                  "pos":
-                  {
-                    "x":8809788,
-                    "y":52916162,
-                    "layerX":0,
-                    "crdSysX":0
-                  },
-                  "freq":
-                  {
-                    "minC":30,
-                    "maxC":60,
-                    "numC":3,
-                    "jnyL":
-                    [
-                      {
-                        "jid":"1|88440|0|80|6092021",
-                        "prodX":10,
-                        "dirTxt":"Bremerhaven-Lehe",
-                        "dirFlg":"2",
-                        "stopL":
-                        [
-                          {
-                            "locX":8,
-                            "idx":8,
-                            "dProdX":10,
-                            "dTimeS":"144000",
-                            "dDirTxt":"Bremerhaven-Lehe",
-                            "dDirFlg":"2",
-                            "type":"N"
-                          },
-                          {
-                            "locX":10,
-                            "idx":18,
-                            "aProdX":10,
-                            "aTimeS":"152500",
-                            "type":"N"
-                          }
-                        ],
-                        "ctxRecon":"T$A=1@O=Bremen Hbf@L=8000050@a=128@$A=1@O=Bremerhaven Hbf@L=8000051@a=128@$202109061440$202109061525$     RS2$$1$$$$",
-                        "msgL":
-                        [
-                          {
-                            "type":"REM",
-                            "remX":14,
-                            "dspl":"U",
-                            "fLocX":8,
-                            "tLocX":10,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ],
-                            "sort":697303040
-                          },
-                          {
-                            "type":"REM",
-                            "remX":15,
-                            "dspl":"U",
-                            "fLocX":8,
-                            "tLocX":8,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ],
-                            "sort":705167360
-                          },
-                          {
-                            "type":"REM",
-                            "remX":16,
-                            "dspl":"U",
-                            "fLocX":10,
-                            "tLocX":10,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ],
-                            "sort":705167360
-                          },
-                          {
-                            "type":"REM",
-                            "remX":17,
-                            "dspl":"U",
-                            "fLocX":8,
-                            "tLocX":10,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ],
-                            "sort":716963840
-                          },
-                          {
-                            "type":"REM",
-                            "remX":1,
-                            "dspl":"U",
-                            "fLocX":8,
-                            "tLocX":10,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ],
-                            "sort":788791296
-                          },
-                          {
-                            "type":"REM",
-                            "remX":18,
-                            "dspl":"U",
-                            "fLocX":8,
-                            "tLocX":10,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ],
-                            "sort":788922368
-                          },
-                          {
-                            "type":"REM",
-                            "remX":20,
-                            "dspl":"U",
-                            "tagL":
-                            [
-                              "RES_JNY_DTL_H3"
-                            ],
-                            "sort":684195840
-                          }
-                        ],
-                        "subscr":"F",
-                        "prodL":
-                        [
-                          {
-                            "prodX":10,
-                            "fLocX":8,
-                            "tLocX":10,
-                            "fIdx":8,
-                            "tIdx":18
-                          }
-                        ],
-                        "dirL":
-                        [
-                          {
-                            "dirX":2,
-                            "fLocX":8,
-                            "tLocX":10,
-                            "fIdx":8,
-                            "tIdx":18
-                          }
-                        ]
-                      },
-                      {
-                        "jid":"1|88439|3|80|6092021",
-                        "prodX":11,
-                        "dirTxt":"Bremerhaven-Lehe",
-                        "dirFlg":"2",
-                        "stopL":
-                        [
-                          {
-                            "locX":8,
-                            "idx":8,
-                            "dProdX":11,
-                            "dTimeS":"154000",
-                            "dDirTxt":"Bremerhaven-Lehe",
-                            "dDirFlg":"2",
-                            "type":"N"
-                          },
-                          {
-                            "locX":10,
-                            "idx":18,
-                            "aProdX":11,
-                            "aTimeS":"162500",
-                            "type":"N"
-                          }
-                        ],
-                        "ctxRecon":"T$A=1@O=Bremen Hbf@L=8000050@a=128@$A=1@O=Bremerhaven Hbf@L=8000051@a=128@$202109061540$202109061625$     RS2$$1$$$$",
-                        "msgL":
-                        [
-                          {
-                            "type":"REM",
-                            "remX":14,
-                            "dspl":"U",
-                            "fLocX":8,
-                            "tLocX":10,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ],
-                            "sort":697303040
-                          },
-                          {
-                            "type":"REM",
-                            "remX":15,
-                            "dspl":"U",
-                            "fLocX":8,
-                            "tLocX":8,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ],
-                            "sort":705167360
-                          },
-                          {
-                            "type":"REM",
-                            "remX":16,
-                            "dspl":"U",
-                            "fLocX":10,
-                            "tLocX":10,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ],
-                            "sort":705167360
-                          },
-                          {
-                            "type":"REM",
-                            "remX":17,
-                            "dspl":"U",
-                            "fLocX":8,
-                            "tLocX":10,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ],
-                            "sort":716963840
-                          },
-                          {
-                            "type":"REM",
-                            "remX":1,
-                            "dspl":"U",
-                            "fLocX":8,
-                            "tLocX":10,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ],
-                            "sort":788791296
-                          },
-                          {
-                            "type":"REM",
-                            "remX":18,
-                            "dspl":"U",
-                            "fLocX":8,
-                            "tLocX":10,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ],
-                            "sort":788922368
-                          },
-                          {
-                            "type":"REM",
-                            "remX":21,
-                            "dspl":"U",
-                            "tagL":
-                            [
-                              "RES_JNY_DTL_H3"
-                            ],
-                            "sort":684195840
-                          }
-                        ],
-                        "subscr":"F",
-                        "prodL":
-                        [
-                          {
-                            "prodX":11,
-                            "fLocX":8,
-                            "tLocX":10,
-                            "fIdx":8,
-                            "tIdx":18
-                          }
-                        ],
-                        "dirL":
-                        [
-                          {
-                            "dirX":2,
-                            "fLocX":8,
-                            "tLocX":10,
-                            "fIdx":8,
-                            "tIdx":18
-                          }
-                        ]
-                      },
-                      {
-                        "jid":"1|88448|0|80|6092021",
-                        "prodX":12,
-                        "dirTxt":"Bremerhaven-Lehe",
-                        "dirFlg":"2",
-                        "stopL":
-                        [
-                          {
-                            "locX":8,
-                            "idx":0,
-                            "dProdX":12,
-                            "dTimeS":"161000",
-                            "dDirTxt":"Bremerhaven-Lehe",
-                            "dDirFlg":"2",
-                            "type":"N"
-                          },
-                          {
-                            "locX":10,
-                            "idx":10,
-                            "aProdX":12,
-                            "aTimeS":"165500",
-                            "type":"N"
-                          }
-                        ],
-                        "ctxRecon":"T$A=1@O=Bremen Hbf@L=8000050@a=128@$A=1@O=Bremerhaven Hbf@L=8000051@a=128@$202109061610$202109061655$     RS2$$1$$$$",
-                        "msgL":
-                        [
-                          {
-                            "type":"REM",
-                            "remX":14,
-                            "dspl":"U",
-                            "fLocX":8,
-                            "tLocX":10,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ],
-                            "sort":697303040
-                          },
-                          {
-                            "type":"REM",
-                            "remX":15,
-                            "dspl":"U",
-                            "fLocX":8,
-                            "tLocX":8,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ],
-                            "sort":705167360
-                          },
-                          {
-                            "type":"REM",
-                            "remX":16,
-                            "dspl":"U",
-                            "fLocX":10,
-                            "tLocX":10,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ],
-                            "sort":705167360
-                          },
-                          {
-                            "type":"REM",
-                            "remX":17,
-                            "dspl":"U",
-                            "fLocX":8,
-                            "tLocX":10,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ],
-                            "sort":716963840
-                          },
-                          {
-                            "type":"REM",
-                            "remX":1,
-                            "dspl":"U",
-                            "fLocX":8,
-                            "tLocX":10,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ],
-                            "sort":788791296
-                          },
-                          {
-                            "type":"REM",
-                            "remX":18,
-                            "dspl":"U",
-                            "fLocX":8,
-                            "tLocX":10,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ],
-                            "sort":788922368
-                          },
-                          {
-                            "type":"REM",
-                            "remX":22,
-                            "dspl":"U",
-                            "tagL":
-                            [
-                              "RES_JNY_DTL_H3"
-                            ],
-                            "sort":684195840
-                          }
-                        ],
-                        "subscr":"F",
-                        "prodL":
-                        [
-                          {
-                            "prodX":12,
-                            "fLocX":8,
-                            "tLocX":10,
-                            "fIdx":0,
-                            "tIdx":10
-                          }
-                        ],
-                        "dirL":
-                        [
-                          {
-                            "dirX":2,
-                            "fLocX":8,
-                            "tLocX":10,
-                            "fIdx":0,
-                            "tIdx":10
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  "ctxRecon":"T$A=1@O=Bremen Hbf@L=8000050@a=128@$A=1@O=Bremerhaven Hbf@L=8000051@a=128@$202109061340$202109061425$     RS2$$1$$$$",
-                  "msgL":
-                  [
-                    {
-                      "type":"REM",
-                      "remX":14,
-                      "dspl":"U",
-                      "fLocX":8,
-                      "tLocX":10,
-                      "tagL":
-                      [
-                        "RES_JNY_DTL"
-                      ],
-                      "sort":697303040
-                    },
-                    {
-                      "type":"REM",
-                      "remX":15,
-                      "dspl":"U",
-                      "fLocX":8,
-                      "tLocX":8,
-                      "tagL":
-                      [
-                        "RES_JNY_DTL"
-                      ],
-                      "sort":705167360
-                    },
-                    {
-                      "type":"REM",
-                      "remX":16,
-                      "dspl":"U",
-                      "fLocX":10,
-                      "tLocX":10,
-                      "tagL":
-                      [
-                        "RES_JNY_DTL"
-                      ],
-                      "sort":705167360
-                    },
-                    {
-                      "type":"REM",
-                      "remX":17,
-                      "dspl":"U",
-                      "fLocX":8,
-                      "tLocX":10,
-                      "tagL":
-                      [
-                        "RES_JNY_DTL"
-                      ],
-                      "sort":716963840
-                    },
-                    {
-                      "type":"REM",
-                      "remX":1,
-                      "dspl":"U",
-                      "fLocX":8,
-                      "tLocX":10,
-                      "tagL":
-                      [
-                        "RES_JNY_DTL"
-                      ],
-                      "sort":788791296
-                    },
-                    {
-                      "type":"REM",
-                      "remX":18,
-                      "dspl":"U",
-                      "fLocX":8,
-                      "tLocX":10,
-                      "tagL":
-                      [
-                        "RES_JNY_DTL"
-                      ],
-                      "sort":788922368
-                    },
-                    {
-                      "type":"HIM",
-                      "himX":0,
-                      "fLocX":8,
-                      "tagL":
-                      [
-                        "RES_GLB_HDR_H3","SUM_GLB_HDR_H3"
-                      ],
-                      "sort":269742608
-                    },
-                    {
-                      "type":"REM",
-                      "remX":19,
-                      "dspl":"U",
-                      "tagL":
-                      [
-                        "RES_JNY_DTL_H3"
-                      ],
-                      "sort":684195840
-                    }
-                  ],
-                  "subscr":"F",
-                  "prodL":
-                  [
-                    {
-                      "prodX":9,
-                      "fLocX":8,
-                      "tLocX":10,
-                      "fIdx":8,
-                      "tIdx":18
-                    }
-                  ],
-                  "dirL":
-                  [
-                    {
-                      "dirX":2,
-                      "fLocX":8,
-                      "tLocX":10,
-                      "fIdx":8,
-                      "tIdx":18
-                    }
-                  ]
-                }
-              },
-              {
-                "type":"WALK",
-                "icoX":3,
-                "dep":
-                {
-                  "locX":10,
-                  "dInR":true,
-                  "dTimeS":"142500",
-                  "type":"N"
-                },
-                "arr":
-                {
-                  "locX":30,
-                  "aOutR":true,
-                  "aTimeS":"143000",
+                  "aTimeS":"203000",
                   "type":"N"
                 },
                 "gis":
                 {
                   "dist":317,
                   "durS":"000500",
-                  "ctx":"G|1|G@F|A=1@O=Bremerhaven Hbf@X=8599558@Y=53534916@U=80@L=8000051@|A=2@O=53.534913, 8.596703@X=8596703@Y=53534913@|6092021|142500|143000|fb|ft@0@2000@120@1@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§bt@0@2000@120@1@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§tt@0@5000@120@1@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§||",
+                  "ctx":"G|1|G@F|A=1@O=Bremerhaven Hbf@X=8599558@Y=53534916@U=80@L=8000051@|A=2@O=53.534913, 8.596703@X=8596703@Y=53534913@|5122021|202500|203000|fb|ft@0@2000@120@1@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§bt@0@2000@120@1@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§tt@0@5000@120@1@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§|||",
                   "getDescr":true,
                   "getPoly":true
                 }
               }
             ],
-            "ctxRecon":"¶HKI¶G@F$A=2@O=53.086421, 8.806388@X=8806388@Y=53086421@u=0@a=128@$A=1@O=Bremen Daniel-von-Büren-Straße@L=686150@a=128@$202109061322$202109061327$$$1$$$$§T$A=1@O=Bremen Daniel-von-Büren-Straße@L=686150@a=128@$A=1@O=Bremen Hauptbahnhof@L=625703@a=128@$202109061327$202109061331$Tram 10 $$1$$$$§W$A=1@O=Bremen Hauptbahnhof@L=625703@a=128@$A=1@O=Bremen Hbf@L=8000050@a=128@$202109061331$202109061338$$$1$$$$§T$A=1@O=Bremen Hbf@L=8000050@a=128@$A=1@O=Bremerhaven Hbf@L=8000051@a=128@$202109061340$202109061425$     RS2$$1$$$$§G@F$A=1@O=Bremerhaven Hbf@L=8000051@a=128@$A=2@O=53.534913, 8.596703@X=8596703@Y=53534913@u=0@a=128@$202109061425$202109061430$$$1$$$$¶GP¶ft@0@2000@120@1@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§bt@0@2000@120@1@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§tt@0@5000@120@1@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§¶PC¶eyJyRGF0ZSI6IjIwMjEtMDktMDYiLCJyVGltZSI6IjEzOjIyIiwickRpciI6IkYifQ==",
+            "ctxRecon":"¶HKI¶G@F$A=2@O=53.086421, 8.806388@X=8806388@Y=53086421@u=0@a=128@$A=1@O=Bremen Hbf@L=8000050@a=128@$202112051927$202112051940$$$1$$$$$$§T$A=1@O=Bremen Hbf@L=8000050@a=128@$A=1@O=Bremerhaven Hbf@L=8000051@a=128@$202112051940$202112052025$     RS2$$1$$$$$$§G@F$A=1@O=Bremerhaven Hbf@L=8000051@a=128@$A=2@O=53.534913, 8.596703@X=8596703@Y=53534913@u=0@a=128@$202112052025$202112052030$$$1$$$$$$¶GP¶ft@0@2000@120@1@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§bt@0@2000@120@1@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§tt@0@5000@120@1@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§",
             "freq":
             {
-              "minC":30
+              "minC":60
             },
             "trfRes":
             {
@@ -3502,8 +2312,8 @@
                     }
                   ],
                   "fSecRefX":0,
-                  "tSecRefX":2,
-                  "icoX":14
+                  "tSecRefX":0,
+                  "icoX":13
                 },
                 {
                   "desc":"Verbund: VBN |  Gesamtnetz |  Startzone 100 |  Zielzone 250 |  Preise gültig ab 01.01.2021",
@@ -3513,6 +2323,12 @@
                       "name":"FahrradTagesTicket (Gesamtnetz)",
                       "desc":"(gültig im gesamten VBN-Gebiet)",
                       "prc":395,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"NachtTicket",
+                      "desc":"(gültig von 19.00 bis 03.00 Uhr im gesamten VBN-Gebiet bzw. nach 3.00 Uhr auf den für den VBN-Tarif zugelassenen Nachtlinien)",
+                      "prc":990,
                       "cur":"EUR"
                     },
                     {
@@ -3585,11 +2401,11 @@
                     }
                   ],
                   "fSecRefX":0,
-                  "tSecRefX":2,
-                  "icoX":14
+                  "tSecRefX":0,
+                  "icoX":13
                 }
               ],
-              "shpCtx":"{\"common\":{\"FEL\":[{\"XV\":[\"20210101\",\"0\"]},{\"ID\":[\"100\"]},{\"ID\":[\"250\"]},{\"ID\":[\"1100\"],\"ON\":[\"100\"]},{\"ID\":[\"1101\"],\"ON\":[\"101\"]},{\"ID\":[\"1209\"],\"ON\":[\"209\"]},{\"ID\":[\"1210\"],\"ON\":[\"210\"]},{\"ID\":[\"1220\"],\"ON\":[\"220\"]},{\"ID\":[\"1230\"],\"ON\":[\"230\"]},{\"ID\":[\"1240\"],\"ON\":[\"240\"]},{\"ID\":[\"1250\"],\"ON\":[\"250\"]},{\"ID\":[\"H\"],\"ON\":[\"Preisstufe H\"]},{\"ID\":[\"686150\"],\"ON\":[\"Bremen Daniel-von-Büren-Straße\"]},{\"ID\":[\"0\"]},{\"ID\":[\"20058\"],\"ON\":[\"EinzelTicket Erwachsene\",\"\",\"Das EinzelTicket der Preisstufe H (Gesamtnetz) ist bis zum Erreichen des Zieles am Kauftag (max. bis um 3 Uhr des Folgetages) bei einer Fahrt auf das Fahrtziel hin gültig. Es kann beliebig oft umgestiegen werden. Fahrtunterbrechungen sind innerhalb des Gültigkeitszeitraums zulässig. Kein Umtausch, keine Erstattung, nicht übertragbar.\"],\"PN\":[\"EinzelTicket Erwachsene\"],\"XV\":[\"10\"]},{\"ID\":[\"21108\"],\"ON\":[\"Kinder-EinzelTicket\",\"(von 6 bis unter 15 Jahren)\",\"Das Kinder-EinzelTicket der Preisstufe H (Gesamtnetz) ist für ein Kind (6 bis unter 15 Jahre) bis zum Erreichen des Zieles am Kauftag (max. bis um 3 Uhr des Folgetages) bei einer Fahrt auf das Fahrtziel hin gültig. Es kann beliebig oft umgestiegen werden. Fahrtunterbrechungen sind innerhalb des Gültigkeitszeitraums zulässig. Kein Umtausch, keine Erstattung, nicht übertragbar.\"],\"PN\":[\"Kinder-EinzelTicket\"],\"XV\":[\"25\"]},{\"ID\":[\"26308\"],\"ON\":[\"TagesTicket 1 Person\",\"(Mitnahmemöglichkeit für drei Kinder)\",\"Das TagesTicket gilt ganztägig bis um 3.00 Uhr des Folgetages. Es dürfen 3 Kinder unter 15 Jahren unentgeltlich mitgenommen werden. Kein Umtausch, keine Erstattung, nicht übertragbar.\"],\"PN\":[\"TagesTicket 1 Person\"],\"XV\":[\"59\"]},{\"ID\":[\"26328\"],\"ON\":[\"TagesTicket 2 Personen\",\"(Mitnahmemöglichkeit für drei Kinder)\",\"Das TagesTicket gilt ganztägig bis um 3.00 Uhr des Folgetages. Es dürfen 3 Kinder unter 15 Jahren unentgeltlich mitgenommen werden. Kein Umtausch, keine Erstattung, nicht übertragbar.\"],\"PN\":[\"TagesTicket 2 Personen\"],\"XV\":[\"74\"]},{\"ID\":[\"26348\"],\"ON\":[\"TagesTicket 3 Personen\",\"(Mitnahmemöglichkeit für drei Kinder)\",\"Das TagesTicket gilt ganztägig bis um 3.00 Uhr des Folgetages. Es dürfen 3 Kinder unter 15 Jahren unentgeltlich mitgenommen werden. Kein Umtausch, keine Erstattung, nicht übertragbar.\"],\"PN\":[\"TagesTicket 3 Personen\"],\"XV\":[\"89\"]},{\"ID\":[\"26368\"],\"ON\":[\"TagesTicket 4 Personen\",\"(Mitnahmemöglichkeit für drei Kinder)\",\"Das TagesTicket gilt ganztägig bis um 3.00 Uhr des Folgetages. Es dürfen 3 Kinder unter 15 Jahren unentgeltlich mitgenommen werden. Kein Umtausch, keine Erstattung, nicht übertragbar.\"],\"PN\":[\"TagesTicket 4 Personen\"],\"XV\":[\"104\"]},{\"ID\":[\"26388\"],\"ON\":[\"TagesTicket 5 Personen\",\"(Mitnahmemöglichkeit für drei Kinder)\",\"Das TagesTicket gilt ganztägig bis um 3.00 Uhr des Folgetages. Es dürfen 3 Kinder unter 15 Jahren unentgeltlich mitgenommen werden. Kein Umtausch, keine Erstattung, nicht übertragbar.\"],\"PN\":[\"TagesTicket 5 Personen\"],\"XV\":[\"119\"]},{\"XV\":[\"20210101\",\"0\"]},{\"ID\":[\"100\"]},{\"ID\":[\"250\"]},{\"ID\":[\"1100\"],\"ON\":[\"100\"]},{\"ID\":[\"1101\"],\"ON\":[\"101\"]},{\"ID\":[\"1209\"],\"ON\":[\"209\"]},{\"ID\":[\"1210\"],\"ON\":[\"210\"]},{\"ID\":[\"1220\"],\"ON\":[\"220\"]},{\"ID\":[\"1230\"],\"ON\":[\"230\"]},{\"ID\":[\"1240\"],\"ON\":[\"240\"]},{\"ID\":[\"1250\"],\"ON\":[\"250\"]},{\"ID\":[\"Z\"],\"ON\":[\"Gesamtnetz\"]},{\"ID\":[\"686150\"],\"ON\":[\"Bremen Daniel-von-Büren-Straße\"]},{\"ID\":[\"0\"]},{\"ID\":[\"25011\"],\"ON\":[\"FahrradTagesTicket (Gesamtnetz)\",\"(gültig im gesamten VBN-Gebiet)\",\"Das FahrradTagesTicket gilt im Gesamtnetz ganztägig bis um 3.00 Uhr des Folgetages. Gültig nur in Verbindung mit einem Ticket für die zu befördernde Person. Kein Umtausch, keine Erstattung, nicht übertragbar.\"],\"PN\":[\"FahrradTagesTicket (Gesamtnetz)\"],\"XV\":[\"223\"]},{\"ID\":[\"29875\"],\"ON\":[\"AnschlussTicket Erw.\",\"\",\"Das Anschluss-Ticket gilt für eine Person und ist nur in Verbindung mit einem ZeitTicket (MonatsTicket, MIA(plus), JobTicket, StadtTicket Bremen, Senioren-MonatsTicket DEL, BahnCard 100) gültig, wenn über dessen Geltungsbereich hinausgefahren wird. Die im Rahmen der Mitnahmeregelung mitgenommenen Personen benötigen ebenfalls jeweils ein AnschlussTicket. Ab Kaufzeitpunkt ist das Ticket vier Stunden für Fahrten auf das Fahrtziel hin gültig. Kein Umtausch, keine Erstattung, nicht übertragbar.\"],\"PN\":[\"AnschlussTicket Erw.\"],\"XV\":[\"220\"]},{\"ID\":[\"29876\"],\"ON\":[\"AnschlussTicket Kind,Schüler,Azubi\",\"\",\"Das Anschluss-Ticket Kind, Schüler, Azubi gilt für ein Kind (6 bis unter 15 Jahre), Schüler oder Auszubildenden und ist nur in Verbindung mit einem ZeitTicket (MonatsTicket (Schüler), MIA(plus), MIAjunior, JobTicket (Azubi), StadtTicket Bremen Ki./ Schüler, Schüler-SammelzeitTicket) gültig, wenn über dessen Geltungsbereich hinausgefahren wird. Die im Rahmen der Mitnahmeregelung mitgenommenen Personen benötigen ebenfalls jeweils ein AnschlussTicket. Ab Kaufzeitpunkt ist das Ticket vier Stunden für Fahrten auf das Fahrtziel hin gültig. Kein Umtausch, keine Erstattung, nicht übertragbar.\"],\"PN\":[\"AnschlussTicket Kind,Schüler,Azubi\"],\"XV\":[\"221\"]},{\"ID\":[\"25003\"],\"ON\":[\"1.Kl.-Zuschl. Erw. EinzelTicket\",\"(gültig in Zügen im VBN-Gebiet)\",\"Der 1. Kl.-Zuschlag gilt für eine Fahrt für die Benutzung der 1. Kl. in den Zügen im VBN-Gebiet in Verbindung mit einem gültigen Ticket der 2. Kl. Die im Rahmen der Mitnahmeregelung mitgenommenen Personen benötigen jeweils einen 1. Kl.-Zuschlag. Nicht mit Kombi- und Sondertickets kombinierbar. Kein Umtausch, keine Erstattung, nicht übertragbar.\"],\"PN\":[\"1.Kl.-Zuschl. Erw. EinzelTicket\"],\"XV\":[\"228\"]},{\"ID\":[\"25004\"],\"ON\":[\"1.Kl.-Zuschl. Kind EinzelTicket\",\"(gültig in Zügen im VBN-Gebiet)\",\"Der 1. Kl.-Zuschlag gilt für ein Kind (6 bis unter 15 Jahre) für eine Fahrt für die Benutzung der 1. Kl. in den Zügen im VBN-Gebiet in Verbindung mit einem gültigen Ticket der 2. Kl. Die im Rahmen der Mitnahmeregelung mitgenommenen Personen benötigen jeweils einen 1. Kl.-Zuschlag. Nicht mit Zeit-Tickets für Kinder, SchülerInnen, StudentInnen und Auszubildende, SemesterTicket sowie Kombi- und Sondertickets kombinierbar. Kein Umtausch, keine Erstattung, nicht übertragbar.\"],\"PN\":[\"1.Kl.-Zuschl. Kind EinzelTicket\"],\"XV\":[\"229\"]},{\"ID\":[\"EinzelTicket Erwachsene\"]},{\"ID\":[\"Kinder-EinzelTicket\"]},{\"ID\":[\"TagesTicket 1 Person\"]},{\"ID\":[\"TagesTicket 2 Personen\"]},{\"ID\":[\"TagesTicket 3 Personen\"]},{\"ID\":[\"TagesTicket 4 Personen\"]},{\"ID\":[\"TagesTicket 5 Personen\"]},{\"ID\":[\"FahrradTagesTicket (Gesamtnetz)\"]},{\"ID\":[\"AnschlussTicket Erw.\"]},{\"ID\":[\"AnschlussTicket Kind,Schüler,Azubi\"]},{\"ID\":[\"1.Kl.-Zuschl. Erw. EinzelTicket\"]},{\"ID\":[\"1.Kl.-Zuschl. Kind EinzelTicket\"]}]},\"BOG\":{\"BOGL\":[{\"P\":\"~0-\",\"BOL\":[{\"P\":\"~0-.0-\",\"VT\":\"VBN-1\",\"FS\":\"VBN\",\"DV\":13,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":1330,\"VR\":0},\"PRD\":40,\"FP\":{\"NV\":[{\"N\":\"OKat\",\"V\":\"EinzelTickets\"},{\"N\":\"UKat\",\"V\":\"EinzelTicket\"}]},\"LVL\":14,\"SV\":{\"OL\":1,\"OS\":12,\"DL\":2},\"TV\":{\"BD\":\"20210906\",\"BT\":\"132700\",\"ED\":\"20210907\",\"ET\":\"030000\"},\"FF\":true},{\"P\":\"~0-.1-\",\"VT\":\"VBN-1\",\"FS\":\"VBN\",\"DV\":13,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":640,\"VR\":0},\"PRD\":41,\"FP\":{\"NV\":[{\"N\":\"OKat\",\"V\":\"EinzelTickets\"},{\"N\":\"UKat\",\"V\":\"Kinder-EinzelTicket\"}]},\"LVL\":15,\"SV\":{\"OL\":1,\"OS\":12,\"DL\":2},\"TV\":{\"BD\":\"20210906\",\"BT\":\"132700\",\"ED\":\"20210907\",\"ET\":\"030000\"},\"FF\":true},{\"P\":\"~0-.2-\",\"VT\":\"VBN-1\",\"FS\":\"VBN\",\"DV\":13,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":2300,\"VR\":0},\"PRD\":42,\"FP\":{\"NV\":[{\"N\":\"OKat\",\"V\":\"TagesTickets\"},{\"N\":\"UKat\",\"V\":\"TagesTicket 1 Person\"}]},\"LVL\":16,\"SV\":{\"OL\":1,\"OS\":12,\"DL\":2},\"TV\":{\"BD\":\"20210906\",\"BT\":\"132700\",\"ED\":\"20210907\",\"ET\":\"030000\"},\"FF\":true},{\"P\":\"~0-.3-\",\"VT\":\"VBN-1\",\"FS\":\"VBN\",\"DV\":13,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":2600,\"VR\":0},\"PRD\":43,\"FP\":{\"NV\":[{\"N\":\"OKat\",\"V\":\"TagesTickets\"},{\"N\":\"UKat\",\"V\":\"TagesTicket 2 Personen\"}]},\"LVL\":17,\"SV\":{\"OL\":1,\"OS\":12,\"DL\":2},\"TV\":{\"BD\":\"20210906\",\"BT\":\"132700\",\"ED\":\"20210907\",\"ET\":\"030000\"},\"FF\":true},{\"P\":\"~0-.4-\",\"VT\":\"VBN-1\",\"FS\":\"VBN\",\"DV\":13,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":2900,\"VR\":0},\"PRD\":44,\"FP\":{\"NV\":[{\"N\":\"OKat\",\"V\":\"TagesTickets\"},{\"N\":\"UKat\",\"V\":\"TagesTicket 3 Personen\"}]},\"LVL\":18,\"SV\":{\"OL\":1,\"OS\":12,\"DL\":2},\"TV\":{\"BD\":\"20210906\",\"BT\":\"132700\",\"ED\":\"20210907\",\"ET\":\"030000\"},\"FF\":true},{\"P\":\"~0-.5-\",\"VT\":\"VBN-1\",\"FS\":\"VBN\",\"DV\":13,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":3200,\"VR\":0},\"PRD\":45,\"FP\":{\"NV\":[{\"N\":\"OKat\",\"V\":\"TagesTickets\"},{\"N\":\"UKat\",\"V\":\"TagesTicket 4 Personen\"}]},\"LVL\":19,\"SV\":{\"OL\":1,\"OS\":12,\"DL\":2},\"TV\":{\"BD\":\"20210906\",\"BT\":\"132700\",\"ED\":\"20210907\",\"ET\":\"030000\"},\"FF\":true},{\"P\":\"~0-.6-\",\"VT\":\"VBN-1\",\"FS\":\"VBN\",\"DV\":13,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":3500,\"VR\":0},\"PRD\":46,\"FP\":{\"NV\":[{\"N\":\"OKat\",\"V\":\"TagesTickets\"},{\"N\":\"UKat\",\"V\":\"TagesTicket 5 Personen\"}]},\"LVL\":20,\"SV\":{\"OL\":1,\"OS\":12,\"DL\":2},\"TV\":{\"BD\":\"20210906\",\"BT\":\"132700\",\"ED\":\"20210907\",\"ET\":\"030000\"},\"FF\":true}],\"DESCR\":[\"Preisstufe H\",\"Preise gültig ab 01.01.2021\"],\"OPT\":false,\"ALT\":true,\"SEQ\":false},{\"P\":\"~1-\",\"BOL\":[{\"P\":\"~1-.0-\",\"VT\":\"VBN-1\",\"FS\":\"VBN\",\"DV\":34,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":395,\"VR\":0},\"PRD\":47,\"FP\":{\"NV\":[{\"N\":\"OKat\",\"V\":\"Weitere Tickets\"},{\"N\":\"UKat\",\"V\":\"FahrradTagesTicket (Gesamtnetz)\"}]},\"LVL\":35,\"SV\":{\"OL\":22,\"OS\":33,\"DL\":23},\"TV\":{\"BD\":\"20210906\",\"BT\":\"132700\",\"ED\":\"20210907\",\"ET\":\"030000\"},\"FF\":true},{\"P\":\"~1-.1-\",\"VT\":\"VBN-1\",\"FS\":\"VBN\",\"DV\":34,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":360,\"VR\":0},\"PRD\":48,\"FP\":{\"NV\":[{\"N\":\"OKat\",\"V\":\"Weitere Tickets\"},{\"N\":\"UKat\",\"V\":\"AnschlussTicket Erw.\"}]},\"LVL\":36,\"SV\":{\"OL\":22,\"OS\":33,\"DL\":23},\"TV\":{\"BD\":\"20210906\",\"BT\":\"132700\",\"ED\":\"20210906\",\"ET\":\"172700\",\"VD\":240},\"FF\":true},{\"P\":\"~1-.2-\",\"VT\":\"VBN-1\",\"FS\":\"VBN\",\"DV\":34,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":260,\"VR\":0},\"PRD\":49,\"FP\":{\"NV\":[{\"N\":\"OKat\",\"V\":\"Weitere Tickets\"},{\"N\":\"UKat\",\"V\":\"AnschlussTicket Kind, Schüler, Azubi\"}]},\"LVL\":37,\"SV\":{\"OL\":22,\"OS\":33,\"DL\":23},\"TV\":{\"BD\":\"20210906\",\"BT\":\"132700\",\"ED\":\"20210906\",\"ET\":\"172700\",\"VD\":240},\"FF\":true},{\"P\":\"~1-.3-\",\"VT\":\"VBN-1\",\"FS\":\"VBN\",\"DV\":34,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":260,\"VR\":0},\"PRD\":50,\"FP\":{\"NV\":[{\"N\":\"OKat\",\"V\":\"Weitere Tickets\"},{\"N\":\"UKat\",\"V\":\"1. Kl.-Zuschlag EinzelTicket Erwachsener\"}]},\"LVL\":38,\"SV\":{\"OL\":22,\"OS\":33,\"DL\":23},\"TV\":{\"BD\":\"20210906\",\"BT\":\"132700\",\"ED\":\"20210907\",\"ET\":\"030000\"},\"FF\":true},{\"P\":\"~1-.4-\",\"VT\":\"VBN-1\",\"FS\":\"VBN\",\"DV\":34,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":130,\"VR\":0},\"PRD\":51,\"FP\":{\"NV\":[{\"N\":\"OKat\",\"V\":\"Weitere Tickets\"},{\"N\":\"UKat\",\"V\":\"1. Kl.-Zuschlag EinzelTicket Kind\"}]},\"LVL\":39,\"SV\":{\"OL\":22,\"OS\":33,\"DL\":23},\"TV\":{\"BD\":\"20210906\",\"BT\":\"132700\",\"ED\":\"20210907\",\"ET\":\"030000\"},\"FF\":true}],\"DESCR\":[\"Gesamtnetz\",\"Preise gültig ab 01.01.2021\"],\"OPT\":false,\"ALT\":true,\"SEQ\":false}],\"OPT\":false,\"ALT\":true,\"SEQ\":false},\"errCode\":0,\"errMsg\":\"\"}",
+              "shpCtx":"{\"common\":{\"FEL\":[{\"XV\":[\"20210101\",\"0\"]},{\"ID\":[\"100\"]},{\"ID\":[\"250\"]},{\"ID\":[\"1100\"],\"ON\":[\"100\"]},{\"ID\":[\"1101\"],\"ON\":[\"101\"]},{\"ID\":[\"1209\"],\"ON\":[\"209\"]},{\"ID\":[\"1210\"],\"ON\":[\"210\"]},{\"ID\":[\"1220\"],\"ON\":[\"220\"]},{\"ID\":[\"1230\"],\"ON\":[\"230\"]},{\"ID\":[\"1240\"],\"ON\":[\"240\"]},{\"ID\":[\"1250\"],\"ON\":[\"250\"]},{\"ID\":[\"H\"],\"ON\":[\"Preisstufe H\"]},{\"ID\":[\"8000050\"],\"ON\":[\"Bremen Hbf\"]},{\"ID\":[\"0\"]},{\"ID\":[\"20058\"],\"ON\":[\"EinzelTicket Erwachsene\",\"\",\"Das EinzelTicket der Preisstufe H (Gesamtnetz) ist bis zum Erreichen des Zieles am Kauftag (max. bis um 3 Uhr des Folgetages) bei einer Fahrt auf das Fahrtziel hin gültig. Es kann beliebig oft umgestiegen werden. Fahrtunterbrechungen sind innerhalb des Gültigkeitszeitraums zulässig. Kein Umtausch, keine Erstattung, nicht übertragbar.\"],\"PN\":[\"EinzelTicket Erwachsene\"],\"XV\":[\"10\"]},{\"ID\":[\"EinzelTicket Erwachsene\"]},{\"ID\":[\"21108\"],\"ON\":[\"Kinder-EinzelTicket\",\"(von 6 bis unter 15 Jahren)\",\"Das Kinder-EinzelTicket der Preisstufe H (Gesamtnetz) ist für ein Kind (6 bis unter 15 Jahre) bis zum Erreichen des Zieles am Kauftag (max. bis um 3 Uhr des Folgetages) bei einer Fahrt auf das Fahrtziel hin gültig. Es kann beliebig oft umgestiegen werden. Fahrtunterbrechungen sind innerhalb des Gültigkeitszeitraums zulässig. Kein Umtausch, keine Erstattung, nicht übertragbar.\"],\"PN\":[\"Kinder-EinzelTicket\"],\"XV\":[\"25\"]},{\"ID\":[\"Kinder-EinzelTicket\"]},{\"ID\":[\"26308\"],\"ON\":[\"TagesTicket 1 Person\",\"(Mitnahmemöglichkeit für drei Kinder)\",\"Das TagesTicket gilt ganztägig bis um 3.00 Uhr des Folgetages. Es dürfen 3 Kinder unter 15 Jahren unentgeltlich mitgenommen werden. Kein Umtausch, keine Erstattung, nicht übertragbar.\"],\"PN\":[\"TagesTicket 1 Person\"],\"XV\":[\"59\"]},{\"ID\":[\"TagesTicket 1 Person\"]},{\"ID\":[\"26328\"],\"ON\":[\"TagesTicket 2 Personen\",\"(Mitnahmemöglichkeit für drei Kinder)\",\"Das TagesTicket gilt ganztägig bis um 3.00 Uhr des Folgetages. Es dürfen 3 Kinder unter 15 Jahren unentgeltlich mitgenommen werden. Kein Umtausch, keine Erstattung, nicht übertragbar.\"],\"PN\":[\"TagesTicket 2 Personen\"],\"XV\":[\"74\"]},{\"ID\":[\"TagesTicket 2 Personen\"]},{\"ID\":[\"26348\"],\"ON\":[\"TagesTicket 3 Personen\",\"(Mitnahmemöglichkeit für drei Kinder)\",\"Das TagesTicket gilt ganztägig bis um 3.00 Uhr des Folgetages. Es dürfen 3 Kinder unter 15 Jahren unentgeltlich mitgenommen werden. Kein Umtausch, keine Erstattung, nicht übertragbar.\"],\"PN\":[\"TagesTicket 3 Personen\"],\"XV\":[\"89\"]},{\"ID\":[\"TagesTicket 3 Personen\"]},{\"ID\":[\"26368\"],\"ON\":[\"TagesTicket 4 Personen\",\"(Mitnahmemöglichkeit für drei Kinder)\",\"Das TagesTicket gilt ganztägig bis um 3.00 Uhr des Folgetages. Es dürfen 3 Kinder unter 15 Jahren unentgeltlich mitgenommen werden. Kein Umtausch, keine Erstattung, nicht übertragbar.\"],\"PN\":[\"TagesTicket 4 Personen\"],\"XV\":[\"104\"]},{\"ID\":[\"TagesTicket 4 Personen\"]},{\"ID\":[\"26388\"],\"ON\":[\"TagesTicket 5 Personen\",\"(Mitnahmemöglichkeit für drei Kinder)\",\"Das TagesTicket gilt ganztägig bis um 3.00 Uhr des Folgetages. Es dürfen 3 Kinder unter 15 Jahren unentgeltlich mitgenommen werden. Kein Umtausch, keine Erstattung, nicht übertragbar.\"],\"PN\":[\"TagesTicket 5 Personen\"],\"XV\":[\"119\"]},{\"ID\":[\"TagesTicket 5 Personen\"]},{\"XV\":[\"20210101\",\"0\"]},{\"ID\":[\"100\"]},{\"ID\":[\"250\"]},{\"ID\":[\"1100\"],\"ON\":[\"100\"]},{\"ID\":[\"1101\"],\"ON\":[\"101\"]},{\"ID\":[\"1209\"],\"ON\":[\"209\"]},{\"ID\":[\"1210\"],\"ON\":[\"210\"]},{\"ID\":[\"1220\"],\"ON\":[\"220\"]},{\"ID\":[\"1230\"],\"ON\":[\"230\"]},{\"ID\":[\"1240\"],\"ON\":[\"240\"]},{\"ID\":[\"1250\"],\"ON\":[\"250\"]},{\"ID\":[\"Z\"],\"ON\":[\"Gesamtnetz\"]},{\"ID\":[\"8000050\"],\"ON\":[\"Bremen Hbf\"]},{\"ID\":[\"0\"]},{\"ID\":[\"25011\"],\"ON\":[\"FahrradTagesTicket (Gesamtnetz)\",\"(gültig im gesamten VBN-Gebiet)\",\"Das FahrradTagesTicket gilt im Gesamtnetz ganztägig bis um 3.00 Uhr des Folgetages. Gültig nur in Verbindung mit einem Ticket für die zu befördernde Person. Kein Umtausch, keine Erstattung, nicht übertragbar.\"],\"PN\":[\"FahrradTagesTicket (Gesamtnetz)\"],\"XV\":[\"223\"]},{\"ID\":[\"FahrradTagesTicket (Gesamtnetz)\"]},{\"ID\":[\"29872\"],\"ON\":[\"NachtTicket\",\"(gültig von 19.00 bis 03.00 Uhr im gesamten VBN-Gebiet bzw. nach 3.00 Uhr auf den für den VBN-Tarif zugelassenen Nachtlinien)\",\"Das NachtTicket gilt für eine Person im Gesamtnetz des VBN. Es ist gültig für beliebig viele Fahrten ab 19.00 Uhr bis 3.00 Uhr des Folgetages bzw. nach 3.00 Uhr auf den für den VBN-Tarif zugelassenen Nachtlinien (BSAG-Nacht-, VWG-Nachtexpress- und Nachtschwärmerlinien). Kein Umtausch, keine Erstattung, nicht übertragbar.\"],\"PN\":[\"NachtTicket\"],\"XV\":[\"219\"]},{\"ID\":[\"NachtTicket\"]},{\"ID\":[\"29875\"],\"ON\":[\"AnschlussTicket Erw.\",\"\",\"Das Anschluss-Ticket gilt für eine Person und ist nur in Verbindung mit einem ZeitTicket (MonatsTicket, MIA(plus), JobTicket, StadtTicket Bremen, Senioren-MonatsTicket DEL, BahnCard 100) gültig, wenn über dessen Geltungsbereich hinausgefahren wird. Die im Rahmen der Mitnahmeregelung mitgenommenen Personen benötigen ebenfalls jeweils ein AnschlussTicket. Ab Kaufzeitpunkt ist das Ticket vier Stunden für Fahrten auf das Fahrtziel hin gültig. Kein Umtausch, keine Erstattung, nicht übertragbar.\"],\"PN\":[\"AnschlussTicket Erw.\"],\"XV\":[\"220\"]},{\"ID\":[\"AnschlussTicket Erw.\"]},{\"ID\":[\"29876\"],\"ON\":[\"AnschlussTicket Kind,Schüler,Azubi\",\"\",\"Das Anschluss-Ticket Kind, Schüler, Azubi gilt für ein Kind (6 bis unter 15 Jahre), Schüler oder Auszubildenden und ist nur in Verbindung mit einem ZeitTicket (MonatsTicket (Schüler), MIA(plus), MIAjunior, JobTicket (Azubi), StadtTicket Bremen Ki./ Schüler, Schüler-SammelzeitTicket) gültig, wenn über dessen Geltungsbereich hinausgefahren wird. Die im Rahmen der Mitnahmeregelung mitgenommenen Personen benötigen ebenfalls jeweils ein AnschlussTicket. Ab Kaufzeitpunkt ist das Ticket vier Stunden für Fahrten auf das Fahrtziel hin gültig. Kein Umtausch, keine Erstattung, nicht übertragbar.\"],\"PN\":[\"AnschlussTicket Kind,Schüler,Azubi\"],\"XV\":[\"221\"]},{\"ID\":[\"AnschlussTicket Kind,Schüler,Azubi\"]},{\"ID\":[\"25003\"],\"ON\":[\"1.Kl.-Zuschl. Erw. EinzelTicket\",\"(gültig in Zügen im VBN-Gebiet)\",\"Der 1. Kl.-Zuschlag gilt für eine Fahrt für die Benutzung der 1. Kl. in den Zügen im VBN-Gebiet in Verbindung mit einem gültigen Ticket der 2. Kl. Die im Rahmen der Mitnahmeregelung mitgenommenen Personen benötigen jeweils einen 1. Kl.-Zuschlag. Nicht mit Kombi- und Sondertickets kombinierbar. Kein Umtausch, keine Erstattung, nicht übertragbar.\"],\"PN\":[\"1.Kl.-Zuschl. Erw. EinzelTicket\"],\"XV\":[\"228\"]},{\"ID\":[\"1.Kl.-Zuschl. Erw. EinzelTicket\"]},{\"ID\":[\"25004\"],\"ON\":[\"1.Kl.-Zuschl. Kind EinzelTicket\",\"(gültig in Zügen im VBN-Gebiet)\",\"Der 1. Kl.-Zuschlag gilt für ein Kind (6 bis unter 15 Jahre) für eine Fahrt für die Benutzung der 1. Kl. in den Zügen im VBN-Gebiet in Verbindung mit einem gültigen Ticket der 2. Kl. Die im Rahmen der Mitnahmeregelung mitgenommenen Personen benötigen jeweils einen 1. Kl.-Zuschlag. Nicht mit Zeit-Tickets für Kinder, SchülerInnen, StudentInnen und Auszubildende, SemesterTicket sowie Kombi- und Sondertickets kombinierbar. Kein Umtausch, keine Erstattung, nicht übertragbar.\"],\"PN\":[\"1.Kl.-Zuschl. Kind EinzelTicket\"],\"XV\":[\"229\"]},{\"ID\":[\"1.Kl.-Zuschl. Kind EinzelTicket\"]}]},\"BOG\":{\"BOGL\":[{\"P\":\"~0-\",\"BOL\":[{\"P\":\"~0-.0-\",\"VT\":\"VBN-1\",\"FS\":\"VBN\",\"DV\":13,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":1330,\"VR\":0},\"PRD\":15,\"FP\":{\"NV\":[{\"N\":\"OKat\",\"V\":\"EinzelTickets\"},{\"N\":\"UKat\",\"V\":\"EinzelTicket\"}]},\"LVL\":14,\"SV\":{\"OL\":1,\"OS\":12,\"DL\":2},\"TV\":{\"BD\":\"20211205\",\"BT\":\"194000\",\"ED\":\"20211206\",\"ET\":\"030000\"},\"FF\":true},{\"P\":\"~0-.1-\",\"VT\":\"VBN-1\",\"FS\":\"VBN\",\"DV\":13,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":640,\"VR\":0},\"PRD\":17,\"FP\":{\"NV\":[{\"N\":\"OKat\",\"V\":\"EinzelTickets\"},{\"N\":\"UKat\",\"V\":\"Kinder-EinzelTicket\"}]},\"LVL\":16,\"SV\":{\"OL\":1,\"OS\":12,\"DL\":2},\"TV\":{\"BD\":\"20211205\",\"BT\":\"194000\",\"ED\":\"20211206\",\"ET\":\"030000\"},\"FF\":true},{\"P\":\"~0-.2-\",\"VT\":\"VBN-1\",\"FS\":\"VBN\",\"DV\":13,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":2300,\"VR\":0},\"PRD\":19,\"FP\":{\"NV\":[{\"N\":\"OKat\",\"V\":\"TagesTickets\"},{\"N\":\"UKat\",\"V\":\"TagesTicket 1 Person\"}]},\"LVL\":18,\"SV\":{\"OL\":1,\"OS\":12,\"DL\":2},\"TV\":{\"BD\":\"20211205\",\"BT\":\"194000\",\"ED\":\"20211206\",\"ET\":\"030000\"},\"FF\":true},{\"P\":\"~0-.3-\",\"VT\":\"VBN-1\",\"FS\":\"VBN\",\"DV\":13,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":2600,\"VR\":0},\"PRD\":21,\"FP\":{\"NV\":[{\"N\":\"OKat\",\"V\":\"TagesTickets\"},{\"N\":\"UKat\",\"V\":\"TagesTicket 2 Personen\"}]},\"LVL\":20,\"SV\":{\"OL\":1,\"OS\":12,\"DL\":2},\"TV\":{\"BD\":\"20211205\",\"BT\":\"194000\",\"ED\":\"20211206\",\"ET\":\"030000\"},\"FF\":true},{\"P\":\"~0-.4-\",\"VT\":\"VBN-1\",\"FS\":\"VBN\",\"DV\":13,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":2900,\"VR\":0},\"PRD\":23,\"FP\":{\"NV\":[{\"N\":\"OKat\",\"V\":\"TagesTickets\"},{\"N\":\"UKat\",\"V\":\"TagesTicket 3 Personen\"}]},\"LVL\":22,\"SV\":{\"OL\":1,\"OS\":12,\"DL\":2},\"TV\":{\"BD\":\"20211205\",\"BT\":\"194000\",\"ED\":\"20211206\",\"ET\":\"030000\"},\"FF\":true},{\"P\":\"~0-.5-\",\"VT\":\"VBN-1\",\"FS\":\"VBN\",\"DV\":13,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":3200,\"VR\":0},\"PRD\":25,\"FP\":{\"NV\":[{\"N\":\"OKat\",\"V\":\"TagesTickets\"},{\"N\":\"UKat\",\"V\":\"TagesTicket 4 Personen\"}]},\"LVL\":24,\"SV\":{\"OL\":1,\"OS\":12,\"DL\":2},\"TV\":{\"BD\":\"20211205\",\"BT\":\"194000\",\"ED\":\"20211206\",\"ET\":\"030000\"},\"FF\":true},{\"P\":\"~0-.6-\",\"VT\":\"VBN-1\",\"FS\":\"VBN\",\"DV\":13,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":3500,\"VR\":0},\"PRD\":27,\"FP\":{\"NV\":[{\"N\":\"OKat\",\"V\":\"TagesTickets\"},{\"N\":\"UKat\",\"V\":\"TagesTicket 5 Personen\"}]},\"LVL\":26,\"SV\":{\"OL\":1,\"OS\":12,\"DL\":2},\"TV\":{\"BD\":\"20211205\",\"BT\":\"194000\",\"ED\":\"20211206\",\"ET\":\"030000\"},\"FF\":true}],\"DESCR\":[\"Preisstufe H\",\"Preise gültig ab 01.01.2021\"],\"OPT\":false,\"ALT\":true,\"SEQ\":false},{\"P\":\"~1-\",\"BOL\":[{\"P\":\"~1-.0-\",\"VT\":\"VBN-1\",\"FS\":\"VBN\",\"DV\":41,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":395,\"VR\":0},\"PRD\":43,\"FP\":{\"NV\":[{\"N\":\"OKat\",\"V\":\"Weitere Tickets\"},{\"N\":\"UKat\",\"V\":\"FahrradTagesTicket (Gesamtnetz)\"}]},\"LVL\":42,\"SV\":{\"OL\":29,\"OS\":40,\"DL\":30},\"TV\":{\"BD\":\"20211205\",\"BT\":\"194000\",\"ED\":\"20211206\",\"ET\":\"030000\"},\"FF\":true},{\"P\":\"~1-.1-\",\"VT\":\"VBN-1\",\"FS\":\"VBN\",\"DV\":41,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":990,\"VR\":0},\"PRD\":45,\"FP\":{\"NV\":[{\"N\":\"OKat\",\"V\":\"Weitere Tickets\"},{\"N\":\"UKat\",\"V\":\"NachtTicket\"}]},\"LVL\":44,\"SV\":{\"OL\":29,\"OS\":40,\"DL\":30},\"TV\":{\"BD\":\"20211205\",\"BT\":\"194000\",\"ED\":\"20211206\",\"ET\":\"070000\"},\"FF\":true},{\"P\":\"~1-.2-\",\"VT\":\"VBN-1\",\"FS\":\"VBN\",\"DV\":41,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":360,\"VR\":0},\"PRD\":47,\"FP\":{\"NV\":[{\"N\":\"OKat\",\"V\":\"Weitere Tickets\"},{\"N\":\"UKat\",\"V\":\"AnschlussTicket Erw.\"}]},\"LVL\":46,\"SV\":{\"OL\":29,\"OS\":40,\"DL\":30},\"TV\":{\"BD\":\"20211205\",\"BT\":\"194000\",\"ED\":\"20211205\",\"ET\":\"234000\",\"VD\":240},\"FF\":true},{\"P\":\"~1-.3-\",\"VT\":\"VBN-1\",\"FS\":\"VBN\",\"DV\":41,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":260,\"VR\":0},\"PRD\":49,\"FP\":{\"NV\":[{\"N\":\"OKat\",\"V\":\"Weitere Tickets\"},{\"N\":\"UKat\",\"V\":\"AnschlussTicket Kind, Schüler, Azubi\"}]},\"LVL\":48,\"SV\":{\"OL\":29,\"OS\":40,\"DL\":30},\"TV\":{\"BD\":\"20211205\",\"BT\":\"194000\",\"ED\":\"20211205\",\"ET\":\"234000\",\"VD\":240},\"FF\":true},{\"P\":\"~1-.4-\",\"VT\":\"VBN-1\",\"FS\":\"VBN\",\"DV\":41,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":260,\"VR\":0},\"PRD\":51,\"FP\":{\"NV\":[{\"N\":\"OKat\",\"V\":\"Weitere Tickets\"},{\"N\":\"UKat\",\"V\":\"1. Kl.-Zuschlag EinzelTicket Erwachsener\"}]},\"LVL\":50,\"SV\":{\"OL\":29,\"OS\":40,\"DL\":30},\"TV\":{\"BD\":\"20211205\",\"BT\":\"194000\",\"ED\":\"20211206\",\"ET\":\"030000\"},\"FF\":true},{\"P\":\"~1-.5-\",\"VT\":\"VBN-1\",\"FS\":\"VBN\",\"DV\":41,\"PRC\":{\"CUR\":\"EUR\",\"AMT\":130,\"VR\":0},\"PRD\":53,\"FP\":{\"NV\":[{\"N\":\"OKat\",\"V\":\"Weitere Tickets\"},{\"N\":\"UKat\",\"V\":\"1. Kl.-Zuschlag EinzelTicket Kind\"}]},\"LVL\":52,\"SV\":{\"OL\":29,\"OS\":40,\"DL\":30},\"TV\":{\"BD\":\"20211205\",\"BT\":\"194000\",\"ED\":\"20211206\",\"ET\":\"030000\"},\"FF\":true}],\"DESCR\":[\"Gesamtnetz\",\"Preise gültig ab 01.01.2021\"],\"OPT\":false,\"ALT\":true,\"SEQ\":false}],\"OPT\":false,\"ALT\":true,\"SEQ\":false},\"errCode\":0,\"errMsg\":\"\"}",
               "bkgData":
               {
                 "common":
@@ -3708,11 +2524,11 @@
                     {
                       "ID":
                       [
-"686150"
+"8000050"
                       ],
                       "ON":
                       [
-"Bremen Daniel-von-Büren-Straße"
+"Bremen Hbf"
                       ]
                     },
                     {
@@ -3744,6 +2560,12 @@
                     {
                       "ID":
                       [
+"EinzelTicket Erwachsene"
+                      ]
+                    },
+                    {
+                      "ID":
+                      [
 "21108"
                       ],
                       "ON":
@@ -3759,6 +2581,12 @@
                       "XV":
                       [
 "25"
+                      ]
+                    },
+                    {
+                      "ID":
+                      [
+"Kinder-EinzelTicket"
                       ]
                     },
                     {
@@ -3784,6 +2612,12 @@
                     {
                       "ID":
                       [
+"TagesTicket 1 Person"
+                      ]
+                    },
+                    {
+                      "ID":
+                      [
 "26328"
                       ],
                       "ON":
@@ -3799,6 +2633,12 @@
                       "XV":
                       [
 "74"
+                      ]
+                    },
+                    {
+                      "ID":
+                      [
+"TagesTicket 2 Personen"
                       ]
                     },
                     {
@@ -3824,6 +2664,12 @@
                     {
                       "ID":
                       [
+"TagesTicket 3 Personen"
+                      ]
+                    },
+                    {
+                      "ID":
+                      [
 "26368"
                       ],
                       "ON":
@@ -3844,6 +2690,12 @@
                     {
                       "ID":
                       [
+"TagesTicket 4 Personen"
+                      ]
+                    },
+                    {
+                      "ID":
+                      [
 "26388"
                       ],
                       "ON":
@@ -3859,6 +2711,12 @@
                       "XV":
                       [
 "119"
+                      ]
+                    },
+                    {
+                      "ID":
+                      [
+"TagesTicket 5 Personen"
                       ]
                     },
                     {
@@ -3973,11 +2831,11 @@
                     {
                       "ID":
                       [
-"686150"
+"8000050"
                       ],
                       "ON":
                       [
-"Bremen Daniel-von-Büren-Straße"
+"Bremen Hbf"
                       ]
                     },
                     {
@@ -4009,6 +2867,38 @@
                     {
                       "ID":
                       [
+"FahrradTagesTicket (Gesamtnetz)"
+                      ]
+                    },
+                    {
+                      "ID":
+                      [
+"29872"
+                      ],
+                      "ON":
+                      [
+"NachtTicket",
+"(gültig von 19.00 bis 03.00 Uhr im gesamten VBN-Gebiet bzw. nach 3.00 Uhr auf den für den VBN-Tarif zugelassenen Nachtlinien)",
+"Das NachtTicket gilt für eine Person im Gesamtnetz des VBN. Es ist gültig für beliebig viele Fahrten ab 19.00 Uhr bis 3.00 Uhr des Folgetages bzw. nach 3.00 Uhr auf den für den VBN-Tarif zugelassenen Nachtlinien (BSAG-Nacht-, VWG-Nachtexpress- und Nachtschwärmerlinien). Kein Umtausch, keine Erstattung, nicht übertragbar."
+                      ],
+                      "PN":
+                      [
+"NachtTicket"
+                      ],
+                      "XV":
+                      [
+"219"
+                      ]
+                    },
+                    {
+                      "ID":
+                      [
+"NachtTicket"
+                      ]
+                    },
+                    {
+                      "ID":
+                      [
 "29875"
                       ],
                       "ON":
@@ -4024,6 +2914,12 @@
                       "XV":
                       [
 "220"
+                      ]
+                    },
+                    {
+                      "ID":
+                      [
+"AnschlussTicket Erw."
                       ]
                     },
                     {
@@ -4049,6 +2945,12 @@
                     {
                       "ID":
                       [
+"AnschlussTicket Kind,Schüler,Azubi"
+                      ]
+                    },
+                    {
+                      "ID":
+                      [
 "25003"
                       ],
                       "ON":
@@ -4069,6 +2971,12 @@
                     {
                       "ID":
                       [
+"1.Kl.-Zuschl. Erw. EinzelTicket"
+                      ]
+                    },
+                    {
+                      "ID":
+                      [
 "25004"
                       ],
                       "ON":
@@ -4084,72 +2992,6 @@
                       "XV":
                       [
 "229"
-                      ]
-                    },
-                    {
-                      "ID":
-                      [
-"EinzelTicket Erwachsene"
-                      ]
-                    },
-                    {
-                      "ID":
-                      [
-"Kinder-EinzelTicket"
-                      ]
-                    },
-                    {
-                      "ID":
-                      [
-"TagesTicket 1 Person"
-                      ]
-                    },
-                    {
-                      "ID":
-                      [
-"TagesTicket 2 Personen"
-                      ]
-                    },
-                    {
-                      "ID":
-                      [
-"TagesTicket 3 Personen"
-                      ]
-                    },
-                    {
-                      "ID":
-                      [
-"TagesTicket 4 Personen"
-                      ]
-                    },
-                    {
-                      "ID":
-                      [
-"TagesTicket 5 Personen"
-                      ]
-                    },
-                    {
-                      "ID":
-                      [
-"FahrradTagesTicket (Gesamtnetz)"
-                      ]
-                    },
-                    {
-                      "ID":
-                      [
-"AnschlussTicket Erw."
-                      ]
-                    },
-                    {
-                      "ID":
-                      [
-"AnschlussTicket Kind,Schüler,Azubi"
-                      ]
-                    },
-                    {
-                      "ID":
-                      [
-"1.Kl.-Zuschl. Erw. EinzelTicket"
                       ]
                     },
                     {
@@ -4179,7 +3021,7 @@
                             "AMT":1330,
                             "VR":0
                           },
-                          "PRD":40,
+                          "PRD":15,
                           "FP":
                           {
                             "NV":
@@ -4203,9 +3045,9 @@
                           },
                           "TV":
                           {
-                            "BD":"20210906",
-                            "BT":"132700",
-                            "ED":"20210907",
+                            "BD":"20211205",
+                            "BT":"194000",
+                            "ED":"20211206",
                             "ET":"030000"
                           },
                           "FF":true
@@ -4221,7 +3063,7 @@
                             "AMT":640,
                             "VR":0
                           },
-                          "PRD":41,
+                          "PRD":17,
                           "FP":
                           {
                             "NV":
@@ -4236,7 +3078,7 @@
                               }
                             ]
                           },
-                          "LVL":15,
+                          "LVL":16,
                           "SV":
                           {
                             "OL":1,
@@ -4245,9 +3087,9 @@
                           },
                           "TV":
                           {
-                            "BD":"20210906",
-                            "BT":"132700",
-                            "ED":"20210907",
+                            "BD":"20211205",
+                            "BT":"194000",
+                            "ED":"20211206",
                             "ET":"030000"
                           },
                           "FF":true
@@ -4263,7 +3105,7 @@
                             "AMT":2300,
                             "VR":0
                           },
-                          "PRD":42,
+                          "PRD":19,
                           "FP":
                           {
                             "NV":
@@ -4278,7 +3120,7 @@
                               }
                             ]
                           },
-                          "LVL":16,
+                          "LVL":18,
                           "SV":
                           {
                             "OL":1,
@@ -4287,9 +3129,9 @@
                           },
                           "TV":
                           {
-                            "BD":"20210906",
-                            "BT":"132700",
-                            "ED":"20210907",
+                            "BD":"20211205",
+                            "BT":"194000",
+                            "ED":"20211206",
                             "ET":"030000"
                           },
                           "FF":true
@@ -4305,7 +3147,7 @@
                             "AMT":2600,
                             "VR":0
                           },
-                          "PRD":43,
+                          "PRD":21,
                           "FP":
                           {
                             "NV":
@@ -4320,7 +3162,7 @@
                               }
                             ]
                           },
-                          "LVL":17,
+                          "LVL":20,
                           "SV":
                           {
                             "OL":1,
@@ -4329,9 +3171,9 @@
                           },
                           "TV":
                           {
-                            "BD":"20210906",
-                            "BT":"132700",
-                            "ED":"20210907",
+                            "BD":"20211205",
+                            "BT":"194000",
+                            "ED":"20211206",
                             "ET":"030000"
                           },
                           "FF":true
@@ -4347,7 +3189,7 @@
                             "AMT":2900,
                             "VR":0
                           },
-                          "PRD":44,
+                          "PRD":23,
                           "FP":
                           {
                             "NV":
@@ -4362,7 +3204,7 @@
                               }
                             ]
                           },
-                          "LVL":18,
+                          "LVL":22,
                           "SV":
                           {
                             "OL":1,
@@ -4371,9 +3213,9 @@
                           },
                           "TV":
                           {
-                            "BD":"20210906",
-                            "BT":"132700",
-                            "ED":"20210907",
+                            "BD":"20211205",
+                            "BT":"194000",
+                            "ED":"20211206",
                             "ET":"030000"
                           },
                           "FF":true
@@ -4389,7 +3231,7 @@
                             "AMT":3200,
                             "VR":0
                           },
-                          "PRD":45,
+                          "PRD":25,
                           "FP":
                           {
                             "NV":
@@ -4404,7 +3246,7 @@
                               }
                             ]
                           },
-                          "LVL":19,
+                          "LVL":24,
                           "SV":
                           {
                             "OL":1,
@@ -4413,9 +3255,9 @@
                           },
                           "TV":
                           {
-                            "BD":"20210906",
-                            "BT":"132700",
-                            "ED":"20210907",
+                            "BD":"20211205",
+                            "BT":"194000",
+                            "ED":"20211206",
                             "ET":"030000"
                           },
                           "FF":true
@@ -4431,7 +3273,7 @@
                             "AMT":3500,
                             "VR":0
                           },
-                          "PRD":46,
+                          "PRD":27,
                           "FP":
                           {
                             "NV":
@@ -4446,7 +3288,7 @@
                               }
                             ]
                           },
-                          "LVL":20,
+                          "LVL":26,
                           "SV":
                           {
                             "OL":1,
@@ -4455,9 +3297,9 @@
                           },
                           "TV":
                           {
-                            "BD":"20210906",
-                            "BT":"132700",
-                            "ED":"20210907",
+                            "BD":"20211205",
+                            "BT":"194000",
+                            "ED":"20211206",
                             "ET":"030000"
                           },
                           "FF":true
@@ -4480,14 +3322,14 @@
                           "P":"~1-.0-",
                           "VT":"VBN-1",
                           "FS":"VBN",
-                          "DV":34,
+                          "DV":41,
                           "PRC":
                           {
                             "CUR":"EUR",
                             "AMT":395,
                             "VR":0
                           },
-                          "PRD":47,
+                          "PRD":43,
                           "FP":
                           {
                             "NV":
@@ -4502,18 +3344,18 @@
                               }
                             ]
                           },
-                          "LVL":35,
+                          "LVL":42,
                           "SV":
                           {
-                            "OL":22,
-                            "OS":33,
-                            "DL":23
+                            "OL":29,
+                            "OS":40,
+                            "DL":30
                           },
                           "TV":
                           {
-                            "BD":"20210906",
-                            "BT":"132700",
-                            "ED":"20210907",
+                            "BD":"20211205",
+                            "BT":"194000",
+                            "ED":"20211206",
                             "ET":"030000"
                           },
                           "FF":true
@@ -4522,14 +3364,56 @@
                           "P":"~1-.1-",
                           "VT":"VBN-1",
                           "FS":"VBN",
-                          "DV":34,
+                          "DV":41,
+                          "PRC":
+                          {
+                            "CUR":"EUR",
+                            "AMT":990,
+                            "VR":0
+                          },
+                          "PRD":45,
+                          "FP":
+                          {
+                            "NV":
+                            [
+                              {
+                                "N":"OKat",
+                                "V":"Weitere Tickets"
+                              },
+                              {
+                                "N":"UKat",
+                                "V":"NachtTicket"
+                              }
+                            ]
+                          },
+                          "LVL":44,
+                          "SV":
+                          {
+                            "OL":29,
+                            "OS":40,
+                            "DL":30
+                          },
+                          "TV":
+                          {
+                            "BD":"20211205",
+                            "BT":"194000",
+                            "ED":"20211206",
+                            "ET":"070000"
+                          },
+                          "FF":true
+                        },
+                        {
+                          "P":"~1-.2-",
+                          "VT":"VBN-1",
+                          "FS":"VBN",
+                          "DV":41,
                           "PRC":
                           {
                             "CUR":"EUR",
                             "AMT":360,
                             "VR":0
                           },
-                          "PRD":48,
+                          "PRD":47,
                           "FP":
                           {
                             "NV":
@@ -4544,28 +3428,28 @@
                               }
                             ]
                           },
-                          "LVL":36,
+                          "LVL":46,
                           "SV":
                           {
-                            "OL":22,
-                            "OS":33,
-                            "DL":23
+                            "OL":29,
+                            "OS":40,
+                            "DL":30
                           },
                           "TV":
                           {
-                            "BD":"20210906",
-                            "BT":"132700",
-                            "ED":"20210906",
-                            "ET":"172700",
+                            "BD":"20211205",
+                            "BT":"194000",
+                            "ED":"20211205",
+                            "ET":"234000",
                             "VD":240
                           },
                           "FF":true
                         },
                         {
-                          "P":"~1-.2-",
+                          "P":"~1-.3-",
                           "VT":"VBN-1",
                           "FS":"VBN",
-                          "DV":34,
+                          "DV":41,
                           "PRC":
                           {
                             "CUR":"EUR",
@@ -4587,35 +3471,35 @@
                               }
                             ]
                           },
-                          "LVL":37,
+                          "LVL":48,
                           "SV":
                           {
-                            "OL":22,
-                            "OS":33,
-                            "DL":23
+                            "OL":29,
+                            "OS":40,
+                            "DL":30
                           },
                           "TV":
                           {
-                            "BD":"20210906",
-                            "BT":"132700",
-                            "ED":"20210906",
-                            "ET":"172700",
+                            "BD":"20211205",
+                            "BT":"194000",
+                            "ED":"20211205",
+                            "ET":"234000",
                             "VD":240
                           },
                           "FF":true
                         },
                         {
-                          "P":"~1-.3-",
+                          "P":"~1-.4-",
                           "VT":"VBN-1",
                           "FS":"VBN",
-                          "DV":34,
+                          "DV":41,
                           "PRC":
                           {
                             "CUR":"EUR",
                             "AMT":260,
                             "VR":0
                           },
-                          "PRD":50,
+                          "PRD":51,
                           "FP":
                           {
                             "NV":
@@ -4630,34 +3514,34 @@
                               }
                             ]
                           },
-                          "LVL":38,
+                          "LVL":50,
                           "SV":
                           {
-                            "OL":22,
-                            "OS":33,
-                            "DL":23
+                            "OL":29,
+                            "OS":40,
+                            "DL":30
                           },
                           "TV":
                           {
-                            "BD":"20210906",
-                            "BT":"132700",
-                            "ED":"20210907",
+                            "BD":"20211205",
+                            "BT":"194000",
+                            "ED":"20211206",
                             "ET":"030000"
                           },
                           "FF":true
                         },
                         {
-                          "P":"~1-.4-",
+                          "P":"~1-.5-",
                           "VT":"VBN-1",
                           "FS":"VBN",
-                          "DV":34,
+                          "DV":41,
                           "PRC":
                           {
                             "CUR":"EUR",
                             "AMT":130,
                             "VR":0
                           },
-                          "PRD":51,
+                          "PRD":53,
                           "FP":
                           {
                             "NV":
@@ -4672,18 +3556,18 @@
                               }
                             ]
                           },
-                          "LVL":39,
+                          "LVL":52,
                           "SV":
                           {
-                            "OL":22,
-                            "OS":33,
-                            "DL":23
+                            "OL":29,
+                            "OS":40,
+                            "DL":30
                           },
                           "TV":
                           {
-                            "BD":"20210906",
-                            "BT":"132700",
-                            "ED":"20210907",
+                            "BD":"20211205",
+                            "BT":"194000",
+                            "ED":"20211206",
                             "ET":"030000"
                           },
                           "FF":true
@@ -4743,17 +3627,22 @@
                 "type":"F",
                 "fareSetX":0,
                 "fareX":6
+              },
+              {
+                "type":"F",
+                "fareSetX":1,
+                "fareX":1
               }
             ],
             "conSubscr":"P",
             "recState":"C",
-            "cksum":"4a4edeeb_3",
-            "cksumDti":"c545add8_3"
+            "cksum":"f27c5f03_3",
+            "cksumDti":"7a81f1ec_3"
           }
         ],
         "fpB":"20210701",
-        "fpE":"20211211",
-        "planrtTS":"1630926220"
+        "fpE":"20220630",
+        "planrtTS":"1638728643"
       }
     }
   ]

@@ -1,7 +1,7 @@
 {
   "ver":"1.16",
   "lang":"deu",
-  "id":"8v4grguska89xwwx",
+  "id":"d96sckax42ijwgcs",
   "svcResL":
   [
     {
@@ -446,16 +446,6 @@
               {
                 "lineId":"S9"
               }
-            },
-            {
-              "name":"Bus 441",
-              "nameS":"441",
-              "icoX":0,
-              "cls":1,
-              "prodCtx":
-              {
-                "lineId":"441"
-              }
             }
           ],
           "polyL":
@@ -516,7 +506,7 @@
           "locL":
           [
             {
-              "lid":"A=1@O=Rathausplatz@X=11425263@Y=48762435@U=80@L=000060706@B=1@p=1630927009@",
+              "lid":"A=1@O=Rathausplatz@X=11425263@Y=48762435@U=80@L=000060706@B=1@p=1634295716@",
               "type":"S",
               "name":"Rathausplatz",
               "icoX":0,
@@ -571,7 +561,56 @@
               "wt":32767
             },
             {
-              "lid":"A=1@O=Kösching, Rathaus@X=11499972@Y=48810977@U=80@L=000040999@B=1@p=1630927009@",
+              "lid":"A=1@O=Rathausplatz Ersatz@X=11426557@Y=48762642@U=80@L=000060720@B=1@p=1634295716@",
+              "type":"S",
+              "name":"Rathausplatz Ersatz",
+              "icoX":0,
+              "extId":"000060720",
+              "state":"F",
+              "crd":
+              {
+                "x":11426557,
+                "y":48762642,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":0,
+              "pRefL":
+              [
+0,
+1,
+2,
+3,
+4,
+5,
+6,
+7,
+10,
+11,
+12,
+13,
+14,
+15,
+16,
+19,
+21,
+22,
+23,
+24,
+25,
+26,
+27,
+28,
+29,
+30,
+31,
+32,
+33
+              ]
+            },
+            {
+              "lid":"A=1@O=Kösching, Rathaus@X=11499972@Y=48810977@U=80@L=000040999@B=1@p=1634295716@",
               "type":"S",
               "name":"Kösching, Rathaus",
               "icoX":0,
@@ -597,7 +636,7 @@
               "wt":32767
             },
             {
-              "lid":"A=1@O=Gaimersheim, Rathaus@X=11370339@Y=48808999@U=80@L=000021702@B=1@p=1630927009@",
+              "lid":"A=1@O=Gaimersheim, Rathaus@X=11370339@Y=48808999@U=80@L=000021702@B=1@p=1634295716@",
               "type":"S",
               "name":"Gaimersheim, Rathaus",
               "icoX":0,
@@ -625,16 +664,16 @@
               "wt":32767
             },
             {
-              "lid":"A=1@O=Ingolstadt, Rathausplatz/Schutterstraße@X=11426557@Y=48762642@U=80@L=000060720@B=1@p=1630927009@",
+              "lid":"A=1@O=Ingolstadt, Rathausplatz/Schutterstraße@X=11426144@Y=48762498@U=80@L=000060702@B=1@p=1634295716@",
               "type":"S",
               "name":"Ingolstadt, Rathausplatz/Schutterstraße",
               "icoX":0,
-              "extId":"000060720",
+              "extId":"000060702",
               "state":"F",
               "crd":
               {
-                "x":11426557,
-                "y":48762642,
+                "x":11426144,
+                "y":48762498,
                 "type":"WGS84",
                 "layerX":0,
                 "crdSysX":0
@@ -678,29 +717,6 @@
 33
               ],
               "wt":32767
-            },
-            {
-              "lid":"A=1@O=Karlskron, Rathaus@X=11410143@Y=48678170@U=80@L=000035402@B=1@p=1630927009@",
-              "type":"S",
-              "name":"Karlskron, Rathaus",
-              "icoX":0,
-              "extId":"000035402",
-              "state":"F",
-              "crd":
-              {
-                "x":11410143,
-                "y":48678170,
-                "type":"WGS84",
-                "layerX":0,
-                "crdSysX":0
-              },
-              "pCls":1,
-              "pRefL":
-              [
-43,
-32
-              ],
-              "wt":15774
             }
           ]
         }

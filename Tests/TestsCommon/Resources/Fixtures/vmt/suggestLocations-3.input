@@ -1,7 +1,7 @@
 {
   "ver":"1.18",
   "lang":"deu",
-  "id":"f4g8hi8u428yy2cs",
+  "id":"b2mgumsi62ga9g8g",
   "err":"OK",
   "svcResL":
   [
@@ -39,11 +39,6 @@
               "id":"standard",
               "index":0,
               "type":"WGS84"
-            },
-            {
-              "id":"Jena,_52",
-              "index":1,
-              "type":"WGS84"
             }
           ],
           "opL":
@@ -52,12 +47,21 @@
           ],
           "remL":
           [
-
+            {
+              "type":"A",
+              "code":"IS",
+              "prio":350,
+              "icoX":1,
+              "txtN":"Verantwortlicher DINO-Haltestellenbereich"
+            }
           ],
           "icoL":
           [
             {
               "res":"ADR"
+            },
+            {
+              "res":"INFO"
             },
             {
               "res":"STA"
@@ -71,7 +75,7 @@
           "locL":
           [
             {
-              "lid":"A=2@O=Jena, Holzmarkt 1@X=11585999@Y=50926984@U=99@L=980626200@B=1@p=1462862076@",
+              "lid":"A=2@O=Jena, Holzmarkt 1@H=1@X=11585999@Y=50926984@U=99@L=980626200@B=1@p=1462862076@",
               "type":"A",
               "name":"Jena, Holzmarkt 1",
               "icoX":0,
@@ -86,7 +90,7 @@
               }
             },
             {
-              "lid":"A=2@O=Jena, Holzmarkt 1@X=11585621@Y=50927100@U=99@L=980626200@B=1@p=1462862076@",
+              "lid":"A=2@O=Jena, Holzmarkt 1@H=1@X=11585621@Y=50927100@U=99@L=980626200@B=1@p=1462862076@",
               "type":"A",
               "name":"Jena, Holzmarkt 1",
               "icoX":0,
@@ -101,10 +105,10 @@
               }
             },
             {
-              "lid":"A=1@O=Jena, Stadtzentrum Holzmarkt@X=11585981@Y=50927065@U=80@L=153167@B=1@p=1630919382@",
+              "lid":"A=1@O=Jena, Stadtzentrum Holzmarkt@X=11585981@Y=50927065@U=80@L=153167@B=1@p=1638574695@",
               "type":"S",
               "name":"Jena, Stadtzentrum Holzmarkt",
-              "icoX":1,
+              "icoX":2,
               "extId":"153167",
               "state":"F",
               "crd":
@@ -114,28 +118,25 @@
                 "layerX":0,
                 "crdSysX":0
               },
-              "crdAltL":
-              [
-                {
-                  "x":99999999,
-                  "y":99999999,
-                  "layerX":0,
-                  "crdSysX":0
-                },
-                {
-                  "x":99999999,
-                  "y":99999999,
-                  "layerX":0,
-                  "crdSysX":1
-                }
-              ],
               "meta":true,
               "pCls":288,
-              "wt":4486,
-              "isMainMast":true
+              "wt":3841,
+              "isMainMast":true,
+              "msgL":
+              [
+                {
+                  "type":"REM",
+                  "remX":0,
+                  "tagL":
+                  [
+                    "RES_LOC"
+                  ],
+                  "sort":851181568
+                }
+              ]
             },
             {
-              "lid":"A=2@O=Arnstadt, Holzmarkt 2@X=10947064@Y=50833721@U=99@L=980042838@B=1@p=1462862076@",
+              "lid":"A=2@O=Arnstadt, Holzmarkt 2@H=2@X=10947064@Y=50833721@U=99@L=980042838@B=1@p=1462862076@",
               "type":"A",
               "name":"Arnstadt, Holzmarkt 2",
               "icoX":0,
@@ -150,7 +151,7 @@
               }
             },
             {
-              "lid":"A=2@O=Jena, Holzweg 7@X=11612805@Y=50919792@U=99@L=980626201@B=1@p=1462862076@",
+              "lid":"A=2@O=Jena, Holzweg 7@H=7@X=11612805@Y=50919792@U=99@L=980626201@B=1@p=1462862076@",
               "type":"A",
               "name":"Jena, Holzweg 7",
               "icoX":0,

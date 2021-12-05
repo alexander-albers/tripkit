@@ -2,7 +2,7 @@
   "ver":"1.18",
   "ext":"VAO.6",
   "lang":"deu",
-  "id":"mgmcyiq6k22xw2cs",
+  "id":"z72xkkui66iigg4s",
   "err":"OK",
   "cInfo":
   {
@@ -70,7 +70,7 @@
           "locL":
           [
             {
-              "lid":"A=2@O=Weitmoserstraße, 5020 Salzburg@X=13049461@Y=47809623@U=103@b=980128777@B=1@p=1629871314@",
+              "lid":"A=2@O=Weitmoserstraße, 5020 Salzburg@X=13049461@Y=47809623@U=103@b=980129059@B=1@p=1637147511@",
               "type":"A",
               "name":"Weitmoserstraße, 5020 Salzburg",
               "icoX":0,
@@ -84,7 +84,7 @@
               }
             },
             {
-              "lid":"A=2@O=Moserstraße, 5020 Salzburg@X=13014915@Y=47803511@U=103@b=980081406@B=1@p=1629871314@",
+              "lid":"A=2@O=Moserstraße, 5020 Salzburg@X=13014915@Y=47803511@U=103@b=980081602@B=1@p=1637147511@",
               "type":"A",
               "name":"Moserstraße, 5020 Salzburg",
               "icoX":0,
@@ -98,7 +98,7 @@
               }
             },
             {
-              "lid":"A=2@O=Weiserstraße, 5020 Salzburg@X=13045820@Y=47810361@U=103@b=980128695@B=1@p=1629871314@",
+              "lid":"A=2@O=Weiserstraße, 5020 Salzburg@X=13045820@Y=47810361@U=103@b=980128977@B=1@p=1637147511@",
               "type":"A",
               "name":"Weiserstraße, 5020 Salzburg",
               "icoX":0,
@@ -112,11 +112,11 @@
               }
             },
             {
-              "lid":"A=2@O=Vogelweiderstraße 1, 5020 Salzburg@X=13055268@Y=47806954@U=103@L=980124578@B=1@p=1629871314@",
+              "lid":"A=2@O=Vogelweiderstraße 1, 5020 Salzburg@H=1@X=13055268@Y=47806954@U=103@L=980124852@B=1@p=1637147511@",
               "type":"A",
               "name":"Vogelweiderstraße 1, 5020 Salzburg",
               "icoX":0,
-              "extId":"980124578",
+              "extId":"980124852",
               "state":"F",
               "crd":
               {
@@ -124,14 +124,15 @@
                 "y":47806954,
                 "layerX":0,
                 "crdSysX":0
-              }
+              },
+              "mapSelectable":true
             },
             {
-              "lid":"A=2@O=Weizensteinerstraße 2, 5020 Salzburg@X=13027051@Y=47793326@U=103@L=980128822@B=1@p=1629871314@",
+              "lid":"A=2@O=Weizensteinerstraße 2, 5020 Salzburg@H=2@X=13027051@Y=47793326@U=103@L=980129104@B=1@p=1637147511@",
               "type":"A",
               "name":"Weizensteinerstraße 2, 5020 Salzburg",
               "icoX":0,
-              "extId":"980128822",
+              "extId":"980129104",
               "state":"F",
               "crd":
               {
@@ -139,7 +140,8 @@
                 "y":47793326,
                 "layerX":0,
                 "crdSysX":0
-              }
+              },
+              "mapSelectable":true
             }
           ]
         }

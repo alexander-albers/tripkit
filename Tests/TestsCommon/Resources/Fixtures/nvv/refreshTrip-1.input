@@ -1,7 +1,7 @@
 {
   "ver":"1.15",
   "lang":"deu",
-  "id":"d7m2qma6kixdp24k",
+  "id":"kqw8ekex66gr8w4k",
   "svcResL":
   [
     {
@@ -28,38 +28,21 @@
               }
             },
             {
-              "lid":"A=1@O=Hanau Beethovenplatz@X=8895204@Y=50142891@U=80@L=3013508@",
+              "lid":"A=1@O=Mainz Eintrachthalle@X=8231593@Y=50019702@U=80@L=3029074@",
               "type":"S",
-              "name":"Hanau Beethovenplatz",
+              "name":"Mainz Eintrachthalle",
               "icoX":1,
-              "extId":"3013508",
+              "extId":"3029074",
               "state":"F",
               "crd":
               {
-                "x":8895204,
-                "y":50142891,
+                "x":8231593,
+                "y":50019702,
                 "type":"WGS84",
                 "layerX":0,
                 "crdSysX":0
               },
-              "pCls":576
-            },
-            {
-              "lid":"A=1@O=Mainz An den Dünen@X=8229849@Y=50017419@U=80@L=3029079@",
-              "type":"S",
-              "name":"Mainz An den Dünen",
-              "icoX":1,
-              "extId":"3029079",
-              "state":"F",
-              "crd":
-              {
-                "x":8229849,
-                "y":50017419,
-                "type":"WGS84",
-                "layerX":0,
-                "crdSysX":0
-              },
-              "pCls":64
+              "pCls":192
             },
             {
               "lid":"A=1@O=Mainz Hauptbahnhof@X=8258444@Y=50001436@U=80@L=3006904@",
@@ -79,21 +62,21 @@
               "pCls":239
             },
             {
-              "lid":"A=1@O=Mainz Turmstraße@X=8234209@Y=50014435@U=80@L=3029039@",
+              "lid":"A=1@O=Mainz Alte Waggonfabrik@X=8236321@Y=50017401@U=80@L=3025949@",
               "type":"S",
-              "name":"Mainz Turmstraße",
+              "name":"Mainz Alte Waggonfabrik",
               "icoX":1,
-              "extId":"3029039",
+              "extId":"3025949",
               "state":"F",
               "crd":
               {
-                "x":8234164,
-                "y":50014399,
+                "x":8236321,
+                "y":50017401,
                 "type":"WGS84",
                 "layerX":0,
                 "crdSysX":0
               },
-              "pCls":96
+              "pCls":64
             },
             {
               "lid":"A=1@O=Mainz Zwerchallee@X=8238722@Y=50016277@U=80@L=3029073@",
@@ -164,152 +147,16 @@
               "pCls":96
             },
             {
-              "lid":"A=1@O=Mainz Goetheplatz@X=8254390@Y=50011226@U=80@L=3029068@",
+              "lid":"A=1@O=Mainz Lessingstraße@X=8255379@Y=50005967@U=80@L=3029069@",
               "type":"S",
-              "name":"Mainz Goetheplatz",
+              "name":"Mainz Lessingstraße",
               "icoX":1,
-              "extId":"3029068",
+              "extId":"3029069",
               "state":"F",
               "crd":
               {
-                "x":8254390,
-                "y":50011226,
-                "type":"WGS84",
-                "layerX":0,
-                "crdSysX":0
-              },
-              "pCls":64
-            },
-            {
-              "lid":"A=1@O=Mainz Sömmerringstraße@X=8256538@Y=50012026@U=80@L=3029067@",
-              "type":"S",
-              "name":"Mainz Sömmerringstraße",
-              "icoX":1,
-              "extId":"3029067",
-              "state":"F",
-              "crd":
-              {
-                "x":8256592,
-                "y":50011900,
-                "type":"WGS84",
-                "layerX":0,
-                "crdSysX":0
-              },
-              "pCls":64
-            },
-            {
-              "lid":"A=1@O=Mainz Synagogenplatz@X=8259190@Y=50008502@U=80@L=3029066@",
-              "type":"S",
-              "name":"Mainz Synagogenplatz",
-              "icoX":1,
-              "extId":"3029066",
-              "state":"F",
-              "crd":
-              {
-                "x":8259190,
-                "y":50008502,
-                "type":"WGS84",
-                "layerX":0,
-                "crdSysX":0
-              },
-              "pCls":64
-            },
-            {
-              "lid":"A=1@O=Mainz Kurfürstenstraße@X=8261635@Y=50007342@U=80@L=3029065@",
-              "type":"S",
-              "name":"Mainz Kurfürstenstraße",
-              "icoX":1,
-              "extId":"3029065",
-              "state":"F",
-              "crd":
-              {
-                "x":8261617,
-                "y":50007333,
-                "type":"WGS84",
-                "layerX":0,
-                "crdSysX":0
-              },
-              "pCls":64
-            },
-            {
-              "lid":"A=1@O=Mainz Hindenburgplatz/Architektenkammer@X=8264799@Y=50005823@U=80@L=3018017@",
-              "type":"S",
-              "name":"Mainz Hindenburgplatz/Architektenkammer",
-              "icoX":1,
-              "extId":"3018017",
-              "state":"F",
-              "crd":
-              {
-                "x":8264799,
-                "y":50005823,
-                "type":"WGS84",
-                "layerX":0,
-                "crdSysX":0
-              },
-              "pCls":64
-            },
-            {
-              "lid":"A=1@O=Mainz Bauhofstraße@X=8268826@Y=50004034@U=80@L=3025242@",
-              "type":"S",
-              "name":"Mainz Bauhofstraße",
-              "icoX":1,
-              "extId":"3025242",
-              "state":"F",
-              "crd":
-              {
-                "x":8268826,
-                "y":50004034,
-                "type":"WGS84",
-                "layerX":0,
-                "crdSysX":0
-              },
-              "pCls":64
-            },
-            {
-              "lid":"A=1@O=Mainz Schusterstraße@X=8271146@Y=50001940@U=80@L=3018016@",
-              "type":"S",
-              "name":"Mainz Schusterstraße",
-              "icoX":1,
-              "extId":"3018016",
-              "state":"F",
-              "crd":
-              {
-                "x":8271146,
-                "y":50001940,
-                "type":"WGS84",
-                "layerX":0,
-                "crdSysX":0
-              },
-              "pCls":64
-            },
-            {
-              "lid":"A=1@O=Mainz Höfchen/Listmann@X=8271964@Y=50000178@U=80@L=3029051@",
-              "type":"S",
-              "name":"Mainz Höfchen/Listmann",
-              "icoX":1,
-              "extId":"3029051",
-              "state":"F",
-              "crd":
-              {
-                "x":8271964,
-                "y":50000178,
-                "type":"WGS84",
-                "layerX":0,
-                "crdSysX":0
-              },
-              "pCls":64
-            },
-            {
-              "lid":"A=1@O=Mainz Schillerplatz@X=8267334@Y=49998425@U=80@L=3029052@",
-              "type":"S",
-              "name":"Mainz Schillerplatz",
-              "icoX":1,
-              "extId":"3029052",
-              "state":"F",
-              "crd":
-              {
-                "x":8267325,
-                "y":49998299,
+                "x":8255262,
+                "y":50006003,
                 "type":"WGS84",
                 "layerX":0,
                 "crdSysX":0
@@ -317,232 +164,453 @@
               "pCls":96
             },
             {
-              "lid":"A=1@O=Mainz Münsterplatz@X=8263819@Y=50000268@U=80@L=3025439@",
+              "lid":"A=1@O=Frankfurt (Main) Höchst Bahnhof@X=8542368@Y=50102214@U=80@L=3001008@",
               "type":"S",
-              "name":"Mainz Münsterplatz",
+              "name":"Frankfurt (Main) Höchst Bahnhof",
               "icoX":1,
-              "extId":"3025439",
+              "extId":"3001008",
               "state":"F",
               "crd":
               {
-                "x":8263739,
-                "y":50000349,
+                "x":8542368,
+                "y":50102214,
                 "type":"WGS84",
                 "layerX":0,
                 "crdSysX":0
               },
-              "pCls":96
+              "pCls":588
             },
             {
-              "lid":"A=1@O=Frankfurt (Main) Flughafen Regionalbahnhof@X=8571421@Y=50051201@U=80@L=3002930@",
+              "lid":"A=1@O=Hochheim (Main) Bahnhof@X=8350314@Y=50004277@U=80@L=3006998@",
               "type":"S",
-              "name":"Frankfurt (Main) Flughafen Regionalbahnhof",
+              "name":"Hochheim (Main) Bahnhof",
               "icoX":1,
-              "extId":"3002930",
+              "extId":"3006998",
               "state":"F",
               "crd":
               {
-                "x":8571421,
-                "y":50051201,
+                "x":8350314,
+                "y":50004277,
                 "type":"WGS84",
                 "layerX":0,
                 "crdSysX":0
               },
-              "pCls":79
+              "pCls":588
             },
             {
-              "lid":"A=1@O=Mainz Römisches Theater Bahnhof@X=8278274@Y=49993355@U=80@L=3006902@",
+              "lid":"A=1@O=Frankfurt (Main) Konstablerwache@X=8687850@Y=50114682@U=80@L=3000510@",
               "type":"S",
-              "name":"Mainz Römisches Theater Bahnhof",
+              "name":"Frankfurt (Main) Konstablerwache",
               "icoX":1,
-              "extId":"3006902",
+              "extId":"3000510",
               "state":"F",
               "crd":
               {
-                "x":8278274,
-                "y":49993355,
+                "x":8687850,
+                "y":50114682,
                 "type":"WGS84",
                 "layerX":0,
                 "crdSysX":0
               },
-              "pCls":204
+              "pCls":120
             },
             {
-              "lid":"A=1@O=Mainz-Bischofsheim Bahnhof@X=8358044@Y=49993427@U=80@L=3006999@",
+              "lid":"A=1@O=Frankfurt (Main) Nied Bahnhof@X=8572284@Y=50102062@U=80@L=3000140@",
               "type":"S",
-              "name":"Mainz-Bischofsheim Bahnhof",
+              "name":"Frankfurt (Main) Nied Bahnhof",
               "icoX":1,
-              "extId":"3006999",
+              "extId":"3000140",
               "state":"F",
               "crd":
               {
-                "x":8358044,
-                "y":49993427,
+                "x":8572284,
+                "y":50102062,
                 "type":"WGS84",
                 "layerX":0,
                 "crdSysX":0
               },
-              "pCls":204
+              "pCls":72
             },
             {
-              "lid":"A=1@O=Rüsselsheim Bahnhof@X=8414137@Y=49992016@U=80@L=3004912@",
+              "lid":"A=1@O=Frankfurt (Main) Griesheim Bahnhof@X=8606425@Y=50093980@U=80@L=3000110@",
               "type":"S",
-              "name":"Rüsselsheim Bahnhof",
+              "name":"Frankfurt (Main) Griesheim Bahnhof",
               "icoX":1,
-              "extId":"3004912",
+              "extId":"3000110",
               "state":"F",
               "crd":
               {
-                "x":8414137,
-                "y":49992016,
+                "x":8606425,
+                "y":50093980,
                 "type":"WGS84",
                 "layerX":0,
                 "crdSysX":0
               },
-              "pCls":204
+              "pCls":76
             },
             {
-              "lid":"A=1@O=Frankfurt (Main) Flughafen Fernbahnhof@X=8570217@Y=50053052@U=80@L=3011511@",
+              "lid":"A=1@O=Frankfurt (Main) Hauptbahnhof tief@X=8662500@Y=50107158@U=80@L=3007010@",
               "type":"S",
-              "name":"Frankfurt (Main) Flughafen Fernbahnhof",
+              "name":"Frankfurt (Main) Hauptbahnhof tief",
               "icoX":1,
-              "extId":"3011511",
+              "extId":"3007010",
               "state":"F",
               "crd":
               {
-                "x":8570217,
-                "y":50053052,
+                "x":8662500,
+                "y":50107158,
                 "type":"WGS84",
                 "layerX":0,
                 "crdSysX":0
               },
-              "pCls":79
+              "pCls":127
             },
             {
-              "lid":"A=1@O=Hanau Wilhelmsbad Bahnhof@X=8883113@Y=50144446@U=80@L=3004501@",
+              "lid":"A=1@O=Frankfurt (Main) Taunusanlage@X=8668765@Y=50113478@U=80@L=3000011@",
               "type":"S",
-              "name":"Hanau Wilhelmsbad Bahnhof",
+              "name":"Frankfurt (Main) Taunusanlage",
               "icoX":1,
-              "extId":"3004501",
+              "extId":"3000011",
               "state":"F",
               "crd":
               {
-                "x":8883113,
-                "y":50144446,
+                "x":8668765,
+                "y":50113478,
                 "type":"WGS84",
                 "layerX":0,
                 "crdSysX":0
               },
-              "pCls":708
+              "pCls":72
             },
             {
-              "lid":"A=1@O=Frankfurt (Main) Südbahnhof@X=8686438@Y=50099329@U=80@L=3000912@",
+              "lid":"A=1@O=Frankfurt (Main) Hauptwache@X=8679283@Y=50113963@U=80@L=3000001@",
               "type":"S",
-              "name":"Frankfurt (Main) Südbahnhof",
+              "name":"Frankfurt (Main) Hauptwache",
               "icoX":1,
-              "extId":"3000912",
+              "extId":"3000001",
               "state":"F",
               "crd":
               {
-                "x":8686438,
-                "y":50099329,
+                "x":8679283,
+                "y":50113963,
                 "type":"WGS84",
                 "layerX":0,
                 "crdSysX":0
               },
-              "pCls":255
+              "pCls":88
             },
             {
-              "lid":"A=1@O=Frankfurt (Main) Ostbahnhof@X=8707761@Y=50112723@U=80@L=3000526@",
+              "lid":"A=1@O=Frankfurt (Main) Enkheim@X=8753893@Y=50142558@U=80@L=3001537@",
               "type":"S",
-              "name":"Frankfurt (Main) Ostbahnhof",
+              "name":"Frankfurt (Main) Enkheim",
               "icoX":1,
-              "extId":"3000526",
+              "extId":"3001537",
               "state":"F",
               "crd":
               {
-                "x":8707761,
-                "y":50112723,
+                "x":8753893,
+                "y":50142558,
                 "type":"WGS84",
                 "layerX":0,
                 "crdSysX":0
               },
-              "pCls":244
+              "pCls":80
             },
             {
-              "lid":"A=1@O=Frankfurt (Main) Mainkur Bahnhof@X=8768096@Y=50134477@U=80@L=3002599@",
+              "lid":"A=1@O=Frankfurt (Main) Merianplatz@X=8695257@Y=50120031@U=80@L=3000512@",
               "type":"S",
-              "name":"Frankfurt (Main) Mainkur Bahnhof",
+              "name":"Frankfurt (Main) Merianplatz",
               "icoX":1,
-              "extId":"3002599",
+              "extId":"3000512",
               "state":"F",
               "crd":
               {
-                "x":8768096,
-                "y":50134477,
+                "x":8695257,
+                "y":50120031,
                 "type":"WGS84",
                 "layerX":0,
                 "crdSysX":0
               },
-              "pCls":228
+              "pCls":16
             },
             {
-              "lid":"A=1@O=Maintal-West Bahnhof@X=8804808@Y=50140940@U=80@L=3002504@",
+              "lid":"A=1@O=Frankfurt (Main) Höhenstraße@X=8701486@Y=50123033@U=80@L=3000502@",
               "type":"S",
-              "name":"Maintal-West Bahnhof",
+              "name":"Frankfurt (Main) Höhenstraße",
               "icoX":1,
-              "extId":"3002504",
+              "extId":"3000502",
               "state":"F",
               "crd":
               {
-                "x":8804808,
-                "y":50140940,
+                "x":8701486,
+                "y":50123033,
                 "type":"WGS84",
                 "layerX":0,
                 "crdSysX":0
               },
-              "pCls":196
+              "pCls":80
             },
             {
-              "lid":"A=1@O=Maintal-Ost Bahnhof@X=8836630@Y=50141272@U=80@L=3004599@",
+              "lid":"A=1@O=Frankfurt (Main) Bornheim Mitte@X=8708012@Y=50126341@U=80@L=3001507@",
               "type":"S",
-              "name":"Maintal-Ost Bahnhof",
+              "name":"Frankfurt (Main) Bornheim Mitte",
               "icoX":1,
-              "extId":"3004599",
+              "extId":"3001507",
               "state":"F",
               "crd":
               {
-                "x":8836630,
-                "y":50141272,
+                "x":8708012,
+                "y":50126341,
                 "type":"WGS84",
                 "layerX":0,
                 "crdSysX":0
               },
-              "pCls":708
+              "pCls":112
             },
             {
-              "lid":"A=1@O=Hanau Hochstädter Landstraße@X=8887626@Y=50144239@U=80@L=3013509@",
+              "lid":"A=1@O=Frankfurt (Main) Seckbacher Landstraße@X=8711878@Y=50134504@U=80@L=3001545@",
               "type":"S",
-              "name":"Hanau Hochstädter Landstraße",
+              "name":"Frankfurt (Main) Seckbacher Landstraße",
               "icoX":1,
-              "extId":"3013509",
+              "extId":"3001545",
               "state":"F",
               "crd":
               {
-                "x":8887626,
-                "y":50144239,
+                "x":8711878,
+                "y":50134504,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":80
+            },
+            {
+              "lid":"A=1@O=Frankfurt (Main) Schäfflestraße@X=8734090@Y=50131151@U=80@L=3001525@",
+              "type":"S",
+              "name":"Frankfurt (Main) Schäfflestraße",
+              "icoX":1,
+              "extId":"3001525",
+              "state":"F",
+              "crd":
+              {
+                "x":8734090,
+                "y":50131151,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":80
+            },
+            {
+              "lid":"A=1@O=Frankfurt (Main) Gwinnerstraße@X=8741183@Y=50133659@U=80@L=3001527@",
+              "type":"S",
+              "name":"Frankfurt (Main) Gwinnerstraße",
+              "icoX":1,
+              "extId":"3001527",
+              "state":"F",
+              "crd":
+              {
+                "x":8741183,
+                "y":50133659,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":80
+            },
+            {
+              "lid":"A=1@O=Frankfurt (Main) Kruppstraße@X=8744419@Y=50137902@U=80@L=3001535@",
+              "type":"S",
+              "name":"Frankfurt (Main) Kruppstraße",
+              "icoX":1,
+              "extId":"3001535",
+              "state":"F",
+              "crd":
+              {
+                "x":8744419,
+                "y":50137902,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":80
+            },
+            {
+              "lid":"A=1@O=Frankfurt (Main) Hessen-Center@X=8748967@Y=50140445@U=80@L=3001536@",
+              "type":"S",
+              "name":"Frankfurt (Main) Hessen-Center",
+              "icoX":1,
+              "extId":"3001536",
+              "state":"F",
+              "crd":
+              {
+                "x":8748967,
+                "y":50140445,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":80
+            },
+            {
+              "lid":"A=1@O=Hanau Beethovenplatz@X=8895204@Y=50142891@U=80@L=3013508@",
+              "type":"S",
+              "name":"Hanau Beethovenplatz",
+              "icoX":1,
+              "extId":"3013508",
+              "state":"F",
+              "crd":
+              {
+                "x":8895204,
+                "y":50142891,
                 "type":"WGS84",
                 "layerX":0,
                 "crdSysX":0
               },
               "pCls":576
+            },
+            {
+              "lid":"A=1@O=Frankfurt (Main) Am Hessen-Center@X=8753857@Y=50141111@U=80@L=3001534@",
+              "type":"S",
+              "name":"Frankfurt (Main) Am Hessen-Center",
+              "icoX":1,
+              "extId":"3001534",
+              "state":"F",
+              "crd":
+              {
+                "x":8753857,
+                "y":50141111,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":64
+            },
+            {
+              "lid":"A=1@O=Frankfurt (Main) Birsteiner Straße@X=8763916@Y=50135771@U=80@L=3001561@",
+              "type":"S",
+              "name":"Frankfurt (Main) Birsteiner Straße",
+              "icoX":1,
+              "extId":"3001561",
+              "state":"F",
+              "crd":
+              {
+                "x":8763916,
+                "y":50135771,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":64
+            },
+            {
+              "lid":"A=1@O=Maintal-Dörnigheim Süd@X=8831425@Y=50133596@U=80@L=3004593@",
+              "type":"S",
+              "name":"Maintal-Dörnigheim Süd",
+              "icoX":1,
+              "extId":"3004593",
+              "state":"F",
+              "crd":
+              {
+                "x":8831425,
+                "y":50133596,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":64
+            },
+            {
+              "lid":"A=1@O=Maintal-Dörnigheim Alter Friedhof@X=8836621@Y=50132247@U=80@L=3004590@",
+              "type":"S",
+              "name":"Maintal-Dörnigheim Alter Friedhof",
+              "icoX":1,
+              "extId":"3004590",
+              "state":"F",
+              "crd":
+              {
+                "x":8836621,
+                "y":50132247,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":576
+            },
+            {
+              "lid":"A=1@O=Maintal-Dörnigheim Frankfurter Straße@X=8842743@Y=50132265@U=80@L=3004591@",
+              "type":"S",
+              "name":"Maintal-Dörnigheim Frankfurter Straße",
+              "icoX":1,
+              "extId":"3004591",
+              "state":"F",
+              "crd":
+              {
+                "x":8842743,
+                "y":50132265,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":576
+            },
+            {
+              "lid":"A=1@O=Maintal-Dörnigheim Alter Kesselstädter Weg@X=8847444@Y=50131933@U=80@L=3004592@",
+              "type":"S",
+              "name":"Maintal-Dörnigheim Alter Kesselstädter Weg",
+              "icoX":1,
+              "extId":"3004592",
+              "state":"F",
+              "crd":
+              {
+                "x":8847444,
+                "y":50131933,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":576
+            },
+            {
+              "lid":"A=1@O=Maintal-Dörnigheim Honeywellstraße@X=8864101@Y=50134423@U=80@L=3004595@",
+              "type":"S",
+              "name":"Maintal-Dörnigheim Honeywellstraße",
+              "icoX":1,
+              "extId":"3004595",
+              "state":"F",
+              "crd":
+              {
+                "x":8864101,
+                "y":50134423,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":64
+            },
+            {
+              "lid":"A=1@O=Hanau Otto-Hahn-Schule@X=8893208@Y=50138225@U=80@L=3004510@",
+              "type":"S",
+              "name":"Hanau Otto-Hahn-Schule",
+              "icoX":1,
+              "extId":"3004510",
+              "state":"F",
+              "crd":
+              {
+                "x":8893208,
+                "y":50138225,
+                "type":"WGS84",
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":64
             }
           ],
           "prodL":
           [
             {
               "name":"Fußweg",
-              "icoX":3,
+              "icoX":2,
               "cls":0,
               "prodCtx":
               {
@@ -551,19 +619,19 @@
               }
             },
             {
-              "pid":"L::6::Bus::B1816284573::Bus_1816284573_62::*",
-              "name":"Bus 62",
-              "nameS":"62",
-              "number":"62",
-              "icoX":4,
+              "pid":"L::6::Bus::B1816284573::Bus_1816284573_61::*",
+              "name":"Bus 61",
+              "nameS":"61",
+              "number":"61",
+              "icoX":3,
               "cls":64,
               "oprX":0,
               "prodCtx":
               {
-                "name":"Bus 62  ",
-                "num":"28692",
-                "line":"62",
-                "matchId":"3239",
+                "name":"Bus 61  ",
+                "num":"33928",
+                "line":"61",
+                "matchId":"2451",
                 "catOut":"Bus     ",
                 "catOutS":"1aE",
                 "catOutL":"Niederflurbus",
@@ -573,19 +641,19 @@
               }
             },
             {
-              "pid":"L::6::Bus::B1816284573::Bus_1816284573_62::*",
-              "name":"Bus 62",
-              "nameS":"62",
-              "number":"62",
-              "icoX":4,
+              "pid":"L::6::Bus::B1816284573::Bus_1816284573_60::*",
+              "name":"Bus 60",
+              "nameS":"60",
+              "number":"60",
+              "icoX":3,
               "cls":64,
               "oprX":0,
               "prodCtx":
               {
-                "name":"Bus 62  ",
-                "num":"28837",
-                "line":"62",
-                "matchId":"3246",
+                "name":"Bus 60  ",
+                "num":"33776",
+                "line":"60",
+                "matchId":"2177",
                 "catOut":"Bus     ",
                 "catOutS":"1aE",
                 "catOutL":"Niederflurbus",
@@ -595,19 +663,19 @@
               }
             },
             {
-              "pid":"L::6::Bus::B1816284573::Bus_1816284573_62::*",
-              "name":"Bus 62",
-              "nameS":"62",
-              "number":"62",
-              "icoX":4,
+              "pid":"L::6::Bus::B1816284573::Bus_1816284573_61::*",
+              "name":"Bus 61",
+              "nameS":"61",
+              "number":"61",
+              "icoX":3,
               "cls":64,
               "oprX":0,
               "prodCtx":
               {
-                "name":"Bus 62  ",
-                "num":"28691",
-                "line":"62",
-                "matchId":"3252",
+                "name":"Bus 61  ",
+                "num":"33954",
+                "line":"61",
+                "matchId":"2460",
                 "catOut":"Bus     ",
                 "catOutS":"1aE",
                 "catOutL":"Niederflurbus",
@@ -617,107 +685,85 @@
               }
             },
             {
-              "pid":"L::6::Bus::B1816284573::Bus_1816284573_62::*",
-              "name":"Bus 62",
-              "nameS":"62",
-              "number":"62",
-              "icoX":4,
+              "pid":"L::6::Bus::B0376203688::Bus_0376203688_620::*",
+              "name":"Bus 620",
+              "nameS":"620",
+              "number":"620",
+              "icoX":5,
               "cls":64,
-              "oprX":0,
-              "prodCtx":
-              {
-                "name":"Bus 62  ",
-                "num":"28834",
-                "line":"62",
-                "matchId":"3260",
-                "catOut":"Bus     ",
-                "catOutS":"1aE",
-                "catOutL":"Niederflurbus",
-                "catIn":"1aE",
-                "catCode":"6",
-                "admin":"MVGBUS"
-              }
-            },
-            {
-              "pid":"L::6::Bus::B1816284573::Bus_1816284573_62::*",
-              "name":"Bus 62",
-              "nameS":"62",
-              "number":"62",
-              "icoX":4,
-              "cls":64,
-              "oprX":0,
-              "prodCtx":
-              {
-                "name":"Bus 62  ",
-                "num":"28690",
-                "line":"62",
-                "matchId":"3265",
-                "catOut":"Bus     ",
-                "catOutS":"1aE",
-                "catOutL":"Niederflurbus",
-                "catIn":"1aE",
-                "catCode":"6",
-                "admin":"MVGBUS"
-              }
-            },
-            {
-              "pid":"L::6::Bus::B1816284573::Bus_1816284573_62::*",
-              "name":"Bus 62",
-              "nameS":"62",
-              "number":"62",
-              "icoX":4,
-              "cls":64,
-              "oprX":0,
-              "prodCtx":
-              {
-                "name":"Bus 62  ",
-                "num":"28832",
-                "line":"62",
-                "matchId":"3272",
-                "catOut":"Bus     ",
-                "catOutS":"1aE",
-                "catOutL":"Niederflurbus",
-                "catIn":"1aE",
-                "catCode":"6",
-                "admin":"MVGBUS"
-              }
-            },
-            {
-              "pid":"L::2::RE::B0912566770::RE_0912566770_RE3::*",
-              "name":"RE3",
-              "nameS":"RE3",
-              "number":"RE3",
-              "icoX":6,
-              "cls":4,
               "oprX":1,
               "prodCtx":
               {
-                "name":"     RE3",
-                "num":"318",
-                "line":"RE3",
-                "matchId":"29515",
-                "catOut":"RE      ",
-                "catOutS":"Cn8",
-                "catOutL":"RE",
-                "catIn":"Cn8",
-                "catCode":"2",
-                "admin":"V6RE__"
+                "name":"Bus 620 ",
+                "num":"290",
+                "line":"620",
+                "matchId":"620428",
+                "catOut":"Bus     ",
+                "catOutS":"NFG",
+                "catOutL":"Niederflurbus",
+                "catIn":"NFG",
+                "catCode":"6",
+                "admin":"ORNMBE"
               }
             },
             {
-              "pid":"L::2::RE::B1415454356::RE_1415454356_RE2::*",
-              "name":"RE2",
-              "nameS":"RE2",
-              "number":"RE2",
+              "pid":"L::6::Bus::B1816284573::Bus_1816284573_61::*",
+              "name":"Bus 61",
+              "nameS":"61",
+              "number":"61",
+              "icoX":3,
+              "cls":64,
+              "oprX":0,
+              "prodCtx":
+              {
+                "name":"Bus 61  ",
+                "num":"33953",
+                "line":"61",
+                "matchId":"2464",
+                "catOut":"Bus     ",
+                "catOutS":"1aE",
+                "catOutL":"Niederflurbus",
+                "catIn":"1aE",
+                "catCode":"6",
+                "admin":"MVGBUS"
+              }
+            },
+            {
+              "pid":"L::6::Bus::B1816284573::Bus_1816284573_60::*",
+              "name":"Bus 60",
+              "nameS":"60",
+              "number":"60",
+              "icoX":3,
+              "cls":64,
+              "oprX":0,
+              "prodCtx":
+              {
+                "name":"Bus 60  ",
+                "num":"33774",
+                "line":"60",
+                "matchId":"2185",
+                "catOut":"Bus     ",
+                "catOutS":"1aE",
+                "catOutL":"Niederflurbus",
+                "catIn":"1aE",
+                "catCode":"6",
+                "admin":"MVGBUS"
+              }
+            },
+            {
+              "pid":"L::2::RE::B1415454356::RE_1415454356_RE4::*",
+              "name":"RE4",
+              "nameS":"RE4",
+              "number":"RE4",
               "icoX":9,
               "cls":4,
               "oprX":2,
               "prodCtx":
               {
-                "name":"     RE2",
-                "num":"262",
-                "line":"RE2",
-                "matchId":"4261",
+                "name":"     RE4",
+                "num":"43",
+                "line":"RE4",
+                "matchId":"4480",
                 "catOut":"RE      ",
                 "catOutS":"Fl4",
                 "catOutL":"R-Bahn",
@@ -727,245 +773,377 @@
               }
             },
             {
-              "pid":"L::2::RE::B0912566770::RE_0912566770_RE3::*",
-              "name":"RE3",
-              "nameS":"RE3",
-              "number":"RE3",
-              "icoX":6,
+              "pid":"L::2::RE::B1415454356::RE_1415454356_RE14::*",
+              "name":"RE14",
+              "nameS":"RE14",
+              "number":"RE14",
+              "icoX":9,
               "cls":4,
-              "oprX":1,
+              "oprX":2,
               "prodCtx":
               {
-                "name":"     RE3",
-                "num":"317",
-                "line":"RE3",
-                "matchId":"29519",
+                "name":"    RE14",
+                "num":"1210",
+                "line":"RE14",
+                "matchId":"4498",
                 "catOut":"RE      ",
-                "catOutS":"Cn8",
-                "catOutL":"RE",
-                "catIn":"Cn8",
+                "catOutS":"Fl4",
+                "catOutL":"R-Bahn",
+                "catIn":"Fl4",
                 "catCode":"2",
-                "admin":"V6RE__"
+                "admin":"800640"
               }
             },
             {
-              "pid":"L::2::RE::B0912566770::RE_0912566770_RE3::*",
-              "name":"RE3",
-              "nameS":"RE3",
-              "number":"RE3",
-              "icoX":6,
+              "pid":"L::2::RE::B1415454356::RE_1415454356_RE4::*",
+              "name":"RE4",
+              "nameS":"RE4",
+              "number":"RE4",
+              "icoX":11,
               "cls":4,
-              "oprX":1,
+              "oprX":2,
               "prodCtx":
               {
-                "name":"     RE3",
-                "num":"311",
-                "line":"RE3",
-                "matchId":"29521",
+                "name":"     RE4",
+                "num":"34",
+                "line":"RE4",
+                "matchId":"4482",
                 "catOut":"RE      ",
-                "catOutS":"Cn8",
+                "catOutS":"BSW",
                 "catOutL":"RE",
-                "catIn":"Cn8",
+                "catIn":"BSW",
                 "catCode":"2",
-                "admin":"V6RE__"
+                "admin":"800640"
               }
             },
             {
-              "pid":"L::2::RB::B3433742538::RB_3433742538_RB58::*",
-              "name":"RB58",
-              "nameS":"RB58",
-              "number":"RB58",
-              "icoX":11,
+              "pid":"L::2::RE::B1415454356::RE_1415454356_RE4::*",
+              "name":"RE4",
+              "nameS":"RE4",
+              "number":"RE4",
+              "icoX":9,
               "cls":4,
+              "oprX":2,
+              "prodCtx":
+              {
+                "name":"     RE4",
+                "num":"1297",
+                "line":"RE4",
+                "matchId":"4754",
+                "catOut":"RE      ",
+                "catOutS":"Fl4",
+                "catOutL":"R-Bahn",
+                "catIn":"Fl4",
+                "catCode":"2",
+                "admin":"800640"
+              }
+            },
+            {
+              "pid":"L::3::S::B0785163512::S_0785163512_S2::*",
+              "name":"S2",
+              "nameS":"S2",
+              "number":"S2",
+              "icoX":13,
+              "cls":8,
               "oprX":3,
               "prodCtx":
               {
-                "name":"    RB58",
-                "num":"3035",
-                "line":"RB58",
-                "matchId":"28633",
-                "catOut":"RB      ",
-                "catOutS":"Cn1",
-                "catOutL":"RB",
-                "catIn":"Cn1",
-                "catCode":"2",
-                "admin":"K4RB__"
+                "name":"      S2",
+                "num":"723",
+                "line":"S2",
+                "matchId":"35269",
+                "catOut":"S       ",
+                "catOutS":"SBU",
+                "catOutL":"S-Bahn",
+                "catIn":"SBU",
+                "catCode":"3",
+                "admin":"800528"
               }
             },
             {
-              "pid":"L::2::RB::B3433742538::RB_3433742538_RB58::*",
-              "name":"RB58",
-              "nameS":"RB58",
-              "number":"RB58",
-              "icoX":11,
-              "cls":4,
+              "pid":"L::3::S::B0785163512::S_0785163512_S1::*",
+              "name":"S1",
+              "nameS":"S1",
+              "number":"S1",
+              "icoX":15,
+              "cls":8,
               "oprX":3,
               "prodCtx":
               {
-                "name":"    RB58",
-                "num":"3030",
-                "line":"RB58",
-                "matchId":"28639",
-                "catOut":"RB      ",
-                "catOutS":"Cn1",
-                "catOutL":"RB",
-                "catIn":"Cn1",
-                "catCode":"2",
-                "admin":"K4RB__"
+                "name":"      S1",
+                "num":"343",
+                "line":"S1",
+                "matchId":"35169",
+                "catOut":"S       ",
+                "catOutS":"SB3",
+                "catOutL":"S-Bahn",
+                "catIn":"SB3",
+                "catCode":"3",
+                "admin":"800528"
               }
             },
             {
-              "pid":"L::2::RB::B3433742538::RB_3433742538_RB58::*",
-              "name":"RB58",
-              "nameS":"RB58",
-              "number":"RB58",
-              "icoX":11,
-              "cls":4,
+              "pid":"L::3::S::B0785163512::S_0785163512_S2::*",
+              "name":"S2",
+              "nameS":"S2",
+              "number":"S2",
+              "icoX":13,
+              "cls":8,
               "oprX":3,
               "prodCtx":
               {
-                "name":"    RB58",
-                "num":"3027",
-                "line":"RB58",
-                "matchId":"28643",
-                "catOut":"RB      ",
-                "catOutS":"Cn1",
-                "catOutL":"RB",
-                "catIn":"Cn1",
-                "catCode":"2",
-                "admin":"K4RB__"
+                "name":"      S2",
+                "num":"782",
+                "line":"S2",
+                "matchId":"35271",
+                "catOut":"S       ",
+                "catOutS":"SBU",
+                "catOutL":"S-Bahn",
+                "catIn":"SBU",
+                "catCode":"3",
+                "admin":"800528"
               }
             },
             {
-              "pid":"L::6::Bus::B1375769367::Bus_1375769367_MKK32::*",
-              "name":"BusMKK32",
-              "nameS":"MKK32",
-              "number":"MKK32",
-              "icoX":4,
-              "cls":64,
+              "pid":"L::3::S::B0785163512::S_0785163512_S1::*",
+              "name":"S1",
+              "nameS":"S1",
+              "number":"S1",
+              "icoX":15,
+              "cls":8,
+              "oprX":3,
+              "prodCtx":
+              {
+                "name":"      S1",
+                "num":"341",
+                "line":"S1",
+                "matchId":"35171",
+                "catOut":"S       ",
+                "catOutS":"SB3",
+                "catOutL":"S-Bahn",
+                "catIn":"SB3",
+                "catCode":"3",
+                "admin":"800528"
+              }
+            },
+            {
+              "pid":"L::3::S::B0785163512::S_0785163512_S2::*",
+              "name":"S2",
+              "nameS":"S2",
+              "number":"S2",
+              "icoX":13,
+              "cls":8,
+              "oprX":3,
+              "prodCtx":
+              {
+                "name":"      S2",
+                "num":"721",
+                "line":"S2",
+                "matchId":"35273",
+                "catOut":"S       ",
+                "catOutS":"SBU",
+                "catOutL":"S-Bahn",
+                "catIn":"SBU",
+                "catCode":"3",
+                "admin":"800528"
+              }
+            },
+            {
+              "pid":"L::3::S::B0785163512::S_0785163512_S1::*",
+              "name":"S1",
+              "nameS":"S1",
+              "number":"S1",
+              "icoX":15,
+              "cls":8,
+              "oprX":3,
+              "prodCtx":
+              {
+                "name":"      S1",
+                "num":"339",
+                "line":"S1",
+                "matchId":"35173",
+                "catOut":"S       ",
+                "catOutS":"SB3",
+                "catOutL":"S-Bahn",
+                "catIn":"SB3",
+                "catCode":"3",
+                "admin":"800528"
+              }
+            },
+            {
+              "pid":"L::4::U-Bahn::B3370764234::U-Bahn_3370764234_U4::*",
+              "name":"U4",
+              "nameS":"U4",
+              "number":"U4",
+              "icoX":16,
+              "cls":16,
               "oprX":4,
               "prodCtx":
               {
-                "name":"BusMKK32",
-                "num":"5",
-                "line":"MKK32",
-                "matchId":"28",
-                "catOut":"Bus     ",
-                "catOutS":"1aE",
-                "catOutL":"Niederflurbus",
-                "catIn":"1aE",
-                "catCode":"6",
-                "admin":"RACKLB"
+                "name":"      U4",
+                "num":"8355",
+                "line":"U4",
+                "matchId":"40179",
+                "catOut":"U-Bahn  ",
+                "catOutS":"BU5",
+                "catOutL":"U-Bahn",
+                "catIn":"BU5",
+                "catCode":"4",
+                "admin":"TRAFBU"
               }
             },
             {
-              "pid":"L::6::Bus::B3564053857::Bus_3564053857_9::*",
-              "name":"Bus 9",
-              "nameS":"9",
-              "number":"9",
-              "icoX":4,
+              "pid":"L::4::U-Bahn::B3370764234::U-Bahn_3370764234_U7::*",
+              "name":"U7",
+              "nameS":"U7",
+              "number":"U7",
+              "icoX":16,
+              "cls":16,
+              "oprX":4,
+              "prodCtx":
+              {
+                "name":"      U7",
+                "num":"14163",
+                "line":"U7",
+                "matchId":"70648",
+                "catOut":"U-Bahn  ",
+                "catOutS":"BU5",
+                "catOutL":"U-Bahn",
+                "catIn":"BU5",
+                "catCode":"4",
+                "admin":"TRAFBU"
+              }
+            },
+            {
+              "pid":"L::4::U-Bahn::B3370764234::U-Bahn_3370764234_U7::*",
+              "name":"U7",
+              "nameS":"U7",
+              "number":"U7",
+              "icoX":16,
+              "cls":16,
+              "oprX":4,
+              "prodCtx":
+              {
+                "name":"      U7",
+                "num":"14358",
+                "line":"U7",
+                "matchId":"70653",
+                "catOut":"U-Bahn  ",
+                "catOutS":"BU5",
+                "catOutL":"U-Bahn",
+                "catIn":"BU5",
+                "catCode":"4",
+                "admin":"TRAFBU"
+              }
+            },
+            {
+              "pid":"L::4::U-Bahn::B3370764234::U-Bahn_3370764234_U7::*",
+              "name":"U7",
+              "nameS":"U7",
+              "number":"U7",
+              "icoX":16,
+              "cls":16,
+              "oprX":4,
+              "prodCtx":
+              {
+                "name":"      U7",
+                "num":"14164",
+                "line":"U7",
+                "matchId":"70664",
+                "catOut":"U-Bahn  ",
+                "catOutS":"BU5",
+                "catOutL":"U-Bahn",
+                "catIn":"BU5",
+                "catCode":"4",
+                "admin":"TRAFBU"
+              }
+            },
+            {
+              "pid":"L::4::U-Bahn::B3370764234::U-Bahn_3370764234_U4::*",
+              "name":"U4",
+              "nameS":"U4",
+              "number":"U4",
+              "icoX":16,
+              "cls":16,
+              "oprX":4,
+              "prodCtx":
+              {
+                "name":"      U4",
+                "num":"8357",
+                "line":"U4",
+                "matchId":"40187",
+                "catOut":"U-Bahn  ",
+                "catOutS":"BU5",
+                "catOutL":"U-Bahn",
+                "catIn":"BU5",
+                "catCode":"4",
+                "admin":"TRAFBU"
+              }
+            },
+            {
+              "pid":"L::4::U-Bahn::B3370764234::U-Bahn_3370764234_U7::*",
+              "name":"U7",
+              "nameS":"U7",
+              "number":"U7",
+              "icoX":16,
+              "cls":16,
+              "oprX":4,
+              "prodCtx":
+              {
+                "name":"      U7",
+                "num":"14359",
+                "line":"U7",
+                "matchId":"70675",
+                "catOut":"U-Bahn  ",
+                "catOutS":"BU5",
+                "catOutL":"U-Bahn",
+                "catIn":"BU5",
+                "catCode":"4",
+                "admin":"TRAFBU"
+              }
+            },
+            {
+              "pid":"L::6::Bus::B4125134265::Bus_4125134265_X57::*",
+              "name":"Bus X57",
+              "nameS":"X57",
+              "number":"X57",
+              "icoX":3,
               "cls":64,
               "oprX":5,
               "prodCtx":
               {
-                "name":"Bus 9   ",
-                "num":"3164",
-                "line":"9",
-                "matchId":"9",
+                "name":"Bus X57 ",
+                "num":"1867",
+                "line":"X57",
+                "matchId":"610",
                 "catOut":"Bus     ",
                 "catOutS":"1aE",
                 "catOutL":"Niederflurbus",
                 "catIn":"1aE",
                 "catCode":"6",
-                "admin":"HSBBU_"
+                "admin":"VIABUS"
               }
             },
             {
-              "pid":"L::6::Bus::B1375769367::Bus_1375769367_MKK31::*",
-              "name":"BusMKK31",
-              "nameS":"MKK31",
-              "number":"MKK31",
-              "icoX":4,
-              "cls":64,
-              "oprX":4,
-              "prodCtx":
-              {
-                "name":"BusMKK31",
-                "num":"76",
-                "line":"MKK31",
-                "matchId":"26",
-                "catOut":"Bus     ",
-                "catOutS":"1aE",
-                "catOutL":"Niederflurbus",
-                "catIn":"1aE",
-                "catCode":"6",
-                "admin":"RACKLB"
-              }
-            },
-            {
-              "pid":"L::6::Bus::B3564053857::Bus_3564053857_9::*",
-              "name":"Bus 9",
-              "nameS":"9",
-              "number":"9",
-              "icoX":4,
+              "pid":"L::6::Bus::B4125134265::Bus_4125134265_X57::*",
+              "name":"Bus X57",
+              "nameS":"X57",
+              "number":"X57",
+              "icoX":3,
               "cls":64,
               "oprX":5,
               "prodCtx":
               {
-                "name":"Bus 9   ",
-                "num":"3153",
-                "line":"9",
-                "matchId":"9",
+                "name":"Bus X57 ",
+                "num":"196",
+                "line":"X57",
+                "matchId":"201",
                 "catOut":"Bus     ",
                 "catOutS":"1aE",
                 "catOutL":"Niederflurbus",
                 "catIn":"1aE",
                 "catCode":"6",
-                "admin":"HSBBU_"
-              }
-            },
-            {
-              "pid":"L::6::Bus::B1375769367::Bus_1375769367_MKK32::*",
-              "name":"BusMKK32",
-              "nameS":"MKK32",
-              "number":"MKK32",
-              "icoX":4,
-              "cls":64,
-              "oprX":4,
-              "prodCtx":
-              {
-                "name":"BusMKK32",
-                "num":"43",
-                "line":"MKK32",
-                "matchId":"30",
-                "catOut":"Bus     ",
-                "catOutS":"1aE",
-                "catOutL":"Niederflurbus",
-                "catIn":"1aE",
-                "catCode":"6",
-                "admin":"RACKLB"
-              }
-            },
-            {
-              "pid":"L::6::Bus::B3564053857::Bus_3564053857_9::*",
-              "name":"Bus 9",
-              "nameS":"9",
-              "number":"9",
-              "icoX":4,
-              "cls":64,
-              "oprX":5,
-              "prodCtx":
-              {
-                "name":"Bus 9   ",
-                "num":"3166",
-                "line":"9",
-                "matchId":"9",
-                "catOut":"Bus     ",
-                "catOutS":"1aE",
-                "catOutL":"Niederflurbus",
-                "catIn":"1aE",
-                "catCode":"6",
-                "admin":"HSBBU_"
+                "admin":"VIABUS"
               }
             }
           ],
@@ -995,86 +1173,113 @@
           [
             {
               "name":"Mainzer Verkehrsgesellschaft mbH",
-              "icoX":5
+              "icoX":4
             },
             {
-              "name":"vlexx",
-              "icoX":7
+              "name":"Omnibusverkehr Rhein-Nahe GmbH",
+              "icoX":6
             },
             {
               "name":"SÜWEX",
               "icoX":10
             },
             {
-              "name":"Hessische Landesbahn GmbH",
-              "icoX":12
-            },
-            {
-              "name":"Racktours GmbH + Co. KG",
-              "icoX":13
-            },
-            {
-              "name":"Hanauer Straßenbahn GmbH",
+              "name":"DB Regio AG S-Bahn Rhein-Main",
               "icoX":14
+            },
+            {
+              "name":"Stadtwerke Verkehrsgesellschaft Frankfurt",
+              "icoX":17
+            },
+            {
+              "name":"BRH viabus GmbH",
+              "icoX":18
             }
           ],
           "remL":
           [
             {
               "type":"A",
-              "code":"qp",
+              "code":"PN",
+              "prio":350,
+              "icoX":7,
+              "txtN":"In der Regel - Niederflurbus - ohne Gewähr"
+            },
+            {
+              "type":"A",
+              "code":"dy",
+              "prio":350,
+              "icoX":7,
+              "txtN":"Zug :  Mainz - Bingen und zurück KB 471"
+            },
+            {
+              "type":"R",
+              "code":"text.realtime.stop.dep.platformChange",
+              "icoX":8,
+              "txtN":"Abfahrt heute von  1a/b"
+            },
+            {
+              "type":"A",
+              "code":"sc",
               "prio":200,
-              "icoX":8,
-              "txtN":"Maskenpflicht nach gesetzl. Regelung; wir empfehlen eine FFP2-Maske"
+              "icoX":7,
+              "txtN":"Maskenpflicht nach gesetzl. Regelung; regional gilt FFP2-Maskenpflicht"
             },
             {
               "type":"A",
-              "code":"qz",
-              "prio":560,
-              "icoX":8,
-              "txtN":"Behindertengerechtes Fahrzeug"
-            },
-            {
-              "type":"A",
-              "code":"qx",
-              "prio":605,
-              "icoX":8,
-              "txtN":"Laptop-Steckdosen"
-            },
-            {
-              "type":"A",
-              "code":"qo",
-              "prio":610,
-              "icoX":8,
-              "txtN":"Klimaanlage"
+              "code":"3G",
+              "prio":205,
+              "icoX":7,
+              "txtN":"Im Zug gilt bundesweit 3G-Regel: ein gültiger Nachweis ist mitzuführen"
             },
             {
               "type":"A",
               "code":"RC",
               "prio":320,
-              "icoX":8,
+              "icoX":7,
               "txtN":"Reservierung an DB-Automaten/Reisezentren/vielen DB-Agenturen möglich"
             },
             {
               "type":"A",
               "code":"RO",
               "prio":560,
-              "icoX":8,
+              "icoX":7,
               "txtN":"Rollstuhlstellplatz"
             },
             {
               "type":"A",
-              "code":"qy",
+              "code":"sb",
               "prio":560,
-              "icoX":8,
+              "icoX":7,
               "txtN":"Fahrzeuggebundene Einstiegshilfe vorhanden"
             },
             {
               "type":"A",
-              "code":"NF",
+              "code":"si",
+              "prio":605,
+              "icoX":7,
+              "txtN":"Laptop-Steckdosen"
+            },
+            {
+              "type":"A",
+              "code":"sa",
+              "prio":610,
+              "icoX":7,
+              "txtN":"Klimaanlage"
+            },
+            {
+              "type":"A",
+              "code":"tn",
               "prio":350,
-              "icoX":8,
-              "txtN":"Niederflurbus"
+              "icoX":7,
+              "txtN":"Mobilitätseingeschränkte Fahrgäste wenden sich an die Mobilitätsservice-Zentrale unter Telefonnr. 01806512512 (20 ct/Anruf aus dem Festnetz, Tarif bei Mobilfunk max. 60ct/Anruf). Die MSZ ist Mo-Fr (6-22 Uhr), Sa, So und Feiertags (8-20 Uhr) erreichbar."
+            },
+            {
+              "type":"A",
+              "code":"Ob",
+              "prio":350,
+              "icoX":7,
+              "txtN":"Bus fährt weiter als Linie X64 über Hanau Hbf nach Obertshausen [S1]"
             }
           ],
           "icoL":
@@ -1084,9 +1289,6 @@
             },
             {
               "res":"STA"
-            },
-            {
-              "res":"rt_ont"
             },
             {
               "res":"PROD_WALK",
@@ -1131,7 +1333,7 @@
               "txt":"Mainzer Verkehrsgesellschaft mbH"
             },
             {
-              "res":"Cn8",
+              "res":"NFG",
               "fg":
               {
                 "r":255,
@@ -1141,20 +1343,23 @@
               },
               "bg":
               {
-                "r":86,
-                "g":147,
-                "b":135,
+                "r":117,
+                "g":22,
+                "b":115,
                 "a":255
               },
-              "shp":"R",
+              "shp":"C",
               "sty":"B"
             },
             {
-              "res":"vle",
-              "txt":"vlexx"
+              "res":"ORN",
+              "txt":"Omnibusverkehr Rhein-Nahe GmbH"
             },
             {
               "res":"INFO"
+            },
+            {
+              "res":"rt_platform"
             },
             {
               "res":"Fl4",
@@ -1180,7 +1385,7 @@
               "txt":"SÜWEX"
             },
             {
-              "res":"Cn1",
+              "res":"BSW",
               "fg":
               {
                 "r":255,
@@ -1199,46 +1404,106 @@
               "sty":"B"
             },
             {
-              "res":"HLB",
-              "txt":"Hessische Landesbahn GmbH"
+              "res":"rt_ont"
             },
             {
-              "res":"RAC",
-              "txt":"Racktours GmbH + Co. KG"
+              "res":"SBU",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255,
+                "a":255
+              },
+              "bg":
+              {
+                "r":86,
+                "g":148,
+                "b":140,
+                "a":255
+              },
+              "shp":"C",
+              "sty":"B"
             },
             {
-              "res":"HSB",
-              "txt":"Hanauer Straßenbahn GmbH"
+              "res":"DBR",
+              "txt":"DB Regio AG S-Bahn Rhein-Main"
+            },
+            {
+              "res":"SB3",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255,
+                "a":255
+              },
+              "bg":
+              {
+                "r":86,
+                "g":148,
+                "b":140,
+                "a":255
+              },
+              "shp":"C",
+              "sty":"B"
+            },
+            {
+              "res":"BU5",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255,
+                "a":255
+              },
+              "bg":
+              {
+                "r":68,
+                "g":118,
+                "b":185,
+                "a":255
+              },
+              "shp":"C",
+              "sty":"B"
+            },
+            {
+              "res":"VGF",
+              "txt":"Stadtwerke Verkehrsgesellschaft Frankfurt"
+            },
+            {
+              "res":"VIA",
+              "txt":"BRH viabus GmbH"
             }
           ]
         },
         "outConL":
         [
           {
-            "cid":"DirectConReq",
-            "date":"20210906",
-            "dur":"015200",
-            "chg":3,
+            "cid":"DirectConReq-0",
+            "date":"20211205",
+            "dur":"020000",
+            "chg":4,
             "sDays":
             {
-              "sDaysR":"Mo - Sa",
-              "sDaysI":"nicht 1. Nov",
-              "sDaysB":"001FBF7EFDFBF7EFDFBF7EFDFBF7EFDFBF7EFCFBF7EFDFBF"
+              "sDaysR":"nicht täglich",
+              "sDaysI":"5., 11. Dez",
+              "sDaysB":"3060C183060C182070C183060C1000000000000000000000000000000000000000000000000000"
             },
             "dep":
             {
               "locX":0,
               "dInR":true,
-              "dTimeS":"123500",
+              "dTimeS":"192600",
               "type":"N"
             },
             "arr":
             {
-              "locX":1,
-              "idx":34,
+              "locX":26,
+              "idx":9,
+              "aProdX":23,
               "aOutR":true,
-              "aTimeS":"142900",
-              "aTimeR":"142900",
+              "aTimeS":"213100",
               "aProgType":"PROGNOSED",
               "type":"N"
             },
@@ -1246,61 +1511,489 @@
             [
               {
                 "type":"WALK",
-                "icoX":3,
+                "icoX":2,
                 "dep":
                 {
                   "locX":0,
                   "dInR":true,
-                  "dTimeS":"123500",
+                  "dTimeS":"192600",
                   "type":"N"
                 },
                 "arr":
                 {
-                  "locX":2,
+                  "locX":1,
                   "aOutR":true,
-                  "aTimeS":"123700",
+                  "aTimeS":"193100",
                   "type":"N"
                 },
                 "gis":
                 {
-                  "dist":39,
-                  "durS":"000200",
-                  "ctx":"G|1|G@F|A=2@O=50.017679, 8.229480@X=8229480@Y=50017679@|A=1@O=Mainz An den Dünen@X=8229849@Y=50017419@U=80@L=3029079@|6092021|123500|123700|bf|ft@0@2000@120@1@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§bt@0@2000@120@1@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§tt@0@2000@120@1@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§||"
+                  "dist":357,
+                  "durS":"000500",
+                  "ctx":"G|1|G@F|A=2@O=50.017679, 8.229480@X=8229480@Y=50017679@|A=1@O=Mainz Eintrachthalle@X=8231593@Y=50019702@U=80@L=3029074@|5122021|192600|193100|bf|ft@0@2000@120@1@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§bt@0@2000@120@1@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§tt@0@2000@120@1@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§||"
                 }
               },
               {
                 "type":"JNY",
-                "icoX":4,
+                "icoX":3,
                 "dep":
                 {
-                  "locX":2,
-                  "idx":11,
+                  "locX":1,
+                  "idx":9,
                   "dProdX":1,
                   "dPlatfS":"A",
                   "dPlatfR":"A",
                   "dInR":true,
-                  "dTimeS":"123700",
-                  "dTimeR":"123900",
+                  "dTimeS":"193100",
+                  "dTimeR":"193200",
                   "dProgType":"PROGNOSED",
                   "type":"N"
                 },
                 "arr":
                 {
-                  "locX":3,
-                  "idx":27,
-                  "aPlatfS":"G",
-                  "aPlatfR":"G",
+                  "locX":2,
+                  "idx":16,
+                  "aProdX":1,
+                  "aPlatfS":"C",
+                  "aPlatfR":"C",
                   "aOutR":true,
-                  "aTimeS":"130200",
-                  "aTimeR":"130400",
+                  "aTimeS":"194100",
+                  "aTimeR":"194200",
                   "aProgType":"PROGNOSED",
                   "type":"N"
                 },
                 "jny":
                 {
-                  "jid":"1|30859|12|80|6092021",
+                  "jid":"1|44468|1|80|5122021",
                   "prodX":1,
-                  "dirTxt":"Mainz Friedrich-Ebert-Straße",
+                  "dirTxt":"Mainz Riedweg",
+                  "dirFlg":"2",
+                  "status":"P",
+                  "isRchbl":true,
+                  "stopL":
+                  [
+                    {
+                      "locX":1,
+                      "idx":9,
+                      "dProdX":1,
+                      "dInR":true,
+                      "dTimeS":"193100",
+                      "dTimeR":"193200",
+                      "dProgType":"PROGNOSED",
+                      "dDirTxt":"Mainz Riedweg",
+                      "dDirFlg":"2",
+                      "type":"N"
+                    },
+                    {
+                      "locX":3,
+                      "idx":10,
+                      "aProdX":1,
+                      "aOutR":true,
+                      "aTimeS":"193200",
+                      "aTimeR":"193300",
+                      "aProgType":"PROGNOSED",
+                      "dProdX":1,
+                      "dInR":true,
+                      "dTimeS":"193200",
+                      "dTimeR":"193300",
+                      "dProgType":"PROGNOSED",
+                      "type":"N"
+                    },
+                    {
+                      "locX":4,
+                      "idx":11,
+                      "aProdX":1,
+                      "aOutR":true,
+                      "aTimeS":"193300",
+                      "aTimeR":"193400",
+                      "aProgType":"PROGNOSED",
+                      "dProdX":1,
+                      "dInR":true,
+                      "dTimeS":"193300",
+                      "dTimeR":"193400",
+                      "dProgType":"PROGNOSED",
+                      "type":"N"
+                    },
+                    {
+                      "locX":5,
+                      "idx":12,
+                      "aProdX":1,
+                      "aOutR":true,
+                      "aTimeS":"193400",
+                      "aTimeR":"193500",
+                      "aProgType":"PROGNOSED",
+                      "dProdX":1,
+                      "dInR":true,
+                      "dTimeS":"193400",
+                      "dTimeR":"193500",
+                      "dProgType":"PROGNOSED",
+                      "type":"N"
+                    },
+                    {
+                      "locX":6,
+                      "idx":13,
+                      "aProdX":1,
+                      "aOutR":true,
+                      "aTimeS":"193600",
+                      "aTimeR":"193700",
+                      "aProgType":"PROGNOSED",
+                      "dProdX":1,
+                      "dInR":true,
+                      "dTimeS":"193600",
+                      "dTimeR":"193700",
+                      "dProgType":"PROGNOSED",
+                      "type":"N"
+                    },
+                    {
+                      "locX":7,
+                      "idx":14,
+                      "aProdX":1,
+                      "aOutR":true,
+                      "aTimeS":"193700",
+                      "aTimeR":"193800",
+                      "aProgType":"PROGNOSED",
+                      "dProdX":1,
+                      "dInR":true,
+                      "dTimeS":"193700",
+                      "dTimeR":"193800",
+                      "dProgType":"PROGNOSED",
+                      "type":"N"
+                    },
+                    {
+                      "locX":8,
+                      "idx":15,
+                      "aProdX":1,
+                      "aOutR":true,
+                      "aTimeS":"193900",
+                      "aTimeR":"194000",
+                      "aProgType":"PROGNOSED",
+                      "dProdX":1,
+                      "dInR":true,
+                      "dTimeS":"193900",
+                      "dTimeR":"194000",
+                      "dProgType":"PROGNOSED",
+                      "type":"N"
+                    },
+                    {
+                      "locX":2,
+                      "idx":16,
+                      "aProdX":1,
+                      "aOutR":true,
+                      "aTimeS":"194100",
+                      "aTimeR":"194200",
+                      "aProgType":"PROGNOSED",
+                      "type":"N"
+                    }
+                  ],
+                  "poly":
+                  {
+                    "delta":true,
+                    "dim":2,
+                    "type":"WGS84",
+                    "crdEncYX":"cnhpHmvfq@~AgFjJiUhDsHCs@^eCXL??G{Ff@gF?sK`@_ArAW??rBq@|C}ClBaDfA_EvBoMN^n@Q~DqAtCsC~FyH??nAsAhQsTnHkHr@sAxKoJf@_BfBsBJm@Zv@c@|H",
+                    "crdEncS":"NNNNKMNNNMNMNNNLNLNNKNKNNNNKLNKKNNN",
+                    "crdEncF":"???????????????????????????????????",
+                    "ppLocRefL":
+                    [
+                      {
+                        "ppIdx":0,
+                        "locX":1
+                      },
+                      {
+                        "ppIdx":2,
+                        "locX":3
+                      },
+                      {
+                        "ppIdx":6,
+                        "locX":4
+                      },
+                      {
+                        "ppIdx":12,
+                        "locX":5
+                      },
+                      {
+                        "ppIdx":19,
+                        "locX":6
+                      },
+                      {
+                        "ppIdx":23,
+                        "locX":7
+                      },
+                      {
+                        "ppIdx":26,
+                        "locX":8
+                      },
+                      {
+                        "ppIdx":34,
+                        "locX":2
+                      }
+                    ]
+                  },
+                  "pos":
+                  {
+                    "x":8211197,
+                    "y":50021554,
+                    "layerX":0,
+                    "crdSysX":0
+                  },
+                  "freq":
+                  {
+                    "minC":13,
+                    "maxC":30,
+                    "numC":8,
+                    "jnyL":
+                    [
+                      {
+                        "jid":"1|44095|2|80|5122021",
+                        "prodX":2,
+                        "dirTxt":"Ginsheim-Gustavsburg-Ginsheim Neckarstraße",
+                        "dirFlg":"2",
+                        "stbStop":
+                        {
+                          "locX":1,
+                          "idx":5,
+                          "dProdX":2,
+                          "dTimeS":"194400",
+                          "type":"N"
+                        },
+                        "stopL":
+                        [
+                          {
+                            "locX":1,
+                            "idx":5,
+                            "dProdX":2,
+                            "dTimeS":"194400",
+                            "dDirTxt":"Ginsheim-Gustavsburg-Ginsheim Neckarstraße",
+                            "dDirFlg":"2",
+                            "type":"N"
+                          },
+                          {
+                            "locX":2,
+                            "idx":14,
+                            "aProdX":2,
+                            "aTimeS":"195600",
+                            "type":"N"
+                          }
+                        ],
+                        "ctxRecon":"T$A=1@O=Mainz Eintrachthalle@L=3029074@a=128@$A=1@O=Mainz Hauptbahnhof@L=3006904@a=128@$202112051944$202112051956$Bus 60  $$1$$$$",
+                        "subscr":"F"
+                      },
+                      {
+                        "jid":"1|44444|1|80|5122021",
+                        "prodX":3,
+                        "dirTxt":"Mainz Riedweg",
+                        "dirFlg":"2",
+                        "stbStop":
+                        {
+                          "locX":1,
+                          "idx":6,
+                          "dProdX":3,
+                          "dTimeS":"200100",
+                          "type":"N"
+                        },
+                        "stopL":
+                        [
+                          {
+                            "locX":1,
+                            "idx":6,
+                            "dProdX":3,
+                            "dTimeS":"200100",
+                            "dDirTxt":"Mainz Riedweg",
+                            "dDirFlg":"2",
+                            "type":"N"
+                          },
+                          {
+                            "locX":2,
+                            "idx":13,
+                            "aProdX":3,
+                            "aTimeS":"201100",
+                            "type":"N"
+                          }
+                        ],
+                        "ctxRecon":"T$A=1@O=Mainz Eintrachthalle@L=3029074@a=128@$A=1@O=Mainz Hauptbahnhof@L=3006904@a=128@$202112052001$202112052011$Bus 61  $$1$$$$",
+                        "subscr":"F"
+                      },
+                      {
+                        "jid":"1|27264|0|80|5122021",
+                        "prodX":4,
+                        "dirTxt":"Mainz Hauptbahnhof",
+                        "dirFlg":"2",
+                        "stbStop":
+                        {
+                          "locX":1,
+                          "idx":24,
+                          "dProdX":4,
+                          "dTimeS":"201500",
+                          "type":"N"
+                        },
+                        "stopL":
+                        [
+                          {
+                            "locX":1,
+                            "idx":24,
+                            "dProdX":4,
+                            "dTimeS":"201500",
+                            "dDirTxt":"Mainz Hauptbahnhof",
+                            "dDirFlg":"2",
+                            "type":"N"
+                          },
+                          {
+                            "locX":2,
+                            "idx":28,
+                            "aProdX":4,
+                            "aTimeS":"202600",
+                            "type":"N"
+                          }
+                        ],
+                        "ctxRecon":"T$A=1@O=Mainz Eintrachthalle@L=3029074@a=128@$A=1@O=Mainz Hauptbahnhof@L=3006904@a=128@$202112052015$202112052026$Bus 620 $$1$$$$",
+                        "msgL":
+                        [
+                          {
+                            "type":"REM",
+                            "remX":0,
+                            "fLocX":1,
+                            "tLocX":2,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ]
+                          },
+                          {
+                            "type":"REM",
+                            "remX":1,
+                            "fLocX":1,
+                            "tLocX":2,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ]
+                          }
+                        ],
+                        "subscr":"F"
+                      },
+                      {
+                        "jid":"1|44445|0|80|5122021",
+                        "prodX":5,
+                        "dirTxt":"Mainz Riedweg",
+                        "dirFlg":"2",
+                        "stbStop":
+                        {
+                          "locX":1,
+                          "idx":6,
+                          "dProdX":5,
+                          "dTimeS":"203100",
+                          "type":"N"
+                        },
+                        "stopL":
+                        [
+                          {
+                            "locX":1,
+                            "idx":6,
+                            "dProdX":5,
+                            "dTimeS":"203100",
+                            "dDirTxt":"Mainz Riedweg",
+                            "dDirFlg":"2",
+                            "type":"N"
+                          },
+                          {
+                            "locX":2,
+                            "idx":13,
+                            "aProdX":5,
+                            "aTimeS":"204100",
+                            "type":"N"
+                          }
+                        ],
+                        "ctxRecon":"T$A=1@O=Mainz Eintrachthalle@L=3029074@a=128@$A=1@O=Mainz Hauptbahnhof@L=3006904@a=128@$202112052031$202112052041$Bus 61  $$1$$$$",
+                        "subscr":"F"
+                      },
+                      {
+                        "jid":"1|44096|1|80|5122021",
+                        "prodX":6,
+                        "dirTxt":"Ginsheim-Gustavsburg-Ginsheim Neckarstraße",
+                        "dirFlg":"2",
+                        "stbStop":
+                        {
+                          "locX":1,
+                          "idx":5,
+                          "dProdX":6,
+                          "dTimeS":"204400",
+                          "type":"N"
+                        },
+                        "stopL":
+                        [
+                          {
+                            "locX":1,
+                            "idx":5,
+                            "dProdX":6,
+                            "dTimeS":"204400",
+                            "dDirTxt":"Ginsheim-Gustavsburg-Ginsheim Neckarstraße",
+                            "dDirFlg":"2",
+                            "type":"N"
+                          },
+                          {
+                            "locX":2,
+                            "idx":14,
+                            "aProdX":6,
+                            "aTimeS":"205600",
+                            "type":"N"
+                          }
+                        ],
+                        "ctxRecon":"T$A=1@O=Mainz Eintrachthalle@L=3029074@a=128@$A=1@O=Mainz Hauptbahnhof@L=3006904@a=128@$202112052044$202112052056$Bus 60  $$1$$$$",
+                        "subscr":"F"
+                      }
+                    ]
+                  },
+                  "ctxRecon":"T$A=1@O=Mainz Eintrachthalle@L=3029074@a=128@$A=1@O=Mainz Hauptbahnhof@L=3006904@a=128@$202112051931$202112051941$Bus 61  $$1$$$$",
+                  "subscr":"F"
+                },
+                "minChg":"000400"
+              },
+              {
+                "type":"JNY",
+                "icoX":9,
+                "dep":
+                {
+                  "locX":2,
+                  "idx":9,
+                  "dProdX":7,
+                  "dPlatfS":"1a",
+                  "dPlatfR":"1a/b",
+                  "dPlatfCh":true,
+                  "dInR":true,
+                  "dTimeS":"194900",
+                  "dTimeR":"195200",
+                  "dProgType":"PROGNOSED",
+                  "msgL":
+                  [
+                    {
+                      "type":"REM",
+                      "remX":2,
+                      "tagL":
+                      [
+                        "RES_LOC_H3"
+                      ]
+                    }
+                  ],
+                  "type":"N"
+                },
+                "arr":
+                {
+                  "locX":9,
+                  "idx":11,
+                  "aProdX":7,
+                  "aPlatfS":"1",
+                  "aPlatfR":"1",
+                  "aOutR":true,
+                  "aTimeS":"201300",
+                  "aTimeR":"201500",
+                  "aProgType":"PROGNOSED",
+                  "type":"N"
+                },
+                "jny":
+                {
+                  "jid":"1|190859|0|80|5122021",
+                  "prodX":7,
+                  "dirTxt":"Frankfurt (Main) Höchst Bahnhof",
                   "dirFlg":"2",
                   "status":"P",
                   "isRchbl":true,
@@ -1308,248 +2001,38 @@
                   [
                     {
                       "locX":2,
-                      "idx":11,
-                      "dProdX":1,
+                      "idx":9,
+                      "dProdX":7,
                       "dInR":true,
-                      "dTimeS":"123700",
-                      "dTimeR":"123900",
+                      "dTimeS":"194900",
+                      "dTimeR":"195200",
                       "dProgType":"PROGNOSED",
-                      "dDirTxt":"Mainz Friedrich-Ebert-Straße",
+                      "dDirTxt":"Frankfurt (Main) Höchst Bahnhof",
                       "dDirFlg":"2",
                       "type":"N"
                     },
                     {
-                      "locX":4,
-                      "idx":12,
-                      "aProdX":1,
+                      "locX":10,
+                      "idx":10,
+                      "aProdX":7,
                       "aOutR":true,
-                      "aTimeS":"123800",
-                      "aTimeR":"124000",
+                      "aTimeS":"200100",
+                      "aTimeR":"200300",
                       "aProgType":"PROGNOSED",
-                      "dProdX":1,
+                      "dProdX":7,
                       "dInR":true,
-                      "dTimeS":"123800",
-                      "dTimeR":"124000",
-                      "dProgType":"PROGNOSED",
-                      "type":"N"
-                    },
-                    {
-                      "locX":5,
-                      "idx":13,
-                      "aProdX":1,
-                      "aOutR":true,
-                      "aTimeS":"124000",
-                      "aTimeR":"124200",
-                      "aProgType":"PROGNOSED",
-                      "dProdX":1,
-                      "dInR":true,
-                      "dTimeS":"124000",
-                      "dTimeR":"124200",
-                      "dProgType":"PROGNOSED",
-                      "type":"N"
-                    },
-                    {
-                      "locX":6,
-                      "idx":14,
-                      "aProdX":1,
-                      "aOutR":true,
-                      "aTimeS":"124100",
-                      "aTimeR":"124300",
-                      "aProgType":"PROGNOSED",
-                      "dProdX":1,
-                      "dInR":true,
-                      "dTimeS":"124100",
-                      "dTimeR":"124300",
-                      "dProgType":"PROGNOSED",
-                      "type":"N"
-                    },
-                    {
-                      "locX":7,
-                      "idx":15,
-                      "aProdX":1,
-                      "aOutR":true,
-                      "aTimeS":"124300",
-                      "aTimeR":"124500",
-                      "aProgType":"PROGNOSED",
-                      "dProdX":1,
-                      "dInR":true,
-                      "dTimeS":"124300",
-                      "dTimeR":"124500",
-                      "dProgType":"PROGNOSED",
-                      "type":"N"
-                    },
-                    {
-                      "locX":8,
-                      "idx":16,
-                      "aProdX":1,
-                      "aOutR":true,
-                      "aTimeS":"124400",
-                      "aTimeR":"124600",
-                      "aProgType":"PROGNOSED",
-                      "dProdX":1,
-                      "dInR":true,
-                      "dTimeS":"124400",
-                      "dTimeR":"124600",
+                      "dTimeS":"200100",
+                      "dTimeR":"200300",
                       "dProgType":"PROGNOSED",
                       "type":"N"
                     },
                     {
                       "locX":9,
-                      "idx":17,
-                      "aProdX":1,
+                      "idx":11,
+                      "aProdX":7,
                       "aOutR":true,
-                      "aTimeS":"124500",
-                      "aTimeR":"124700",
-                      "aProgType":"PROGNOSED",
-                      "dProdX":1,
-                      "dInR":true,
-                      "dTimeS":"124500",
-                      "dTimeR":"124700",
-                      "dProgType":"PROGNOSED",
-                      "type":"N"
-                    },
-                    {
-                      "locX":10,
-                      "idx":18,
-                      "aProdX":1,
-                      "aOutR":true,
-                      "aTimeS":"124600",
-                      "aTimeR":"124800",
-                      "aProgType":"PROGNOSED",
-                      "dProdX":1,
-                      "dInR":true,
-                      "dTimeS":"124600",
-                      "dTimeR":"124800",
-                      "dProgType":"PROGNOSED",
-                      "type":"N"
-                    },
-                    {
-                      "locX":11,
-                      "idx":19,
-                      "aProdX":1,
-                      "aOutR":true,
-                      "aTimeS":"124800",
-                      "aTimeR":"125000",
-                      "aProgType":"PROGNOSED",
-                      "dProdX":1,
-                      "dInR":true,
-                      "dTimeS":"124800",
-                      "dTimeR":"125000",
-                      "dProgType":"PROGNOSED",
-                      "type":"N"
-                    },
-                    {
-                      "locX":12,
-                      "idx":20,
-                      "aProdX":1,
-                      "aOutR":true,
-                      "aTimeS":"124900",
-                      "aTimeR":"125100",
-                      "aProgType":"PROGNOSED",
-                      "dProdX":1,
-                      "dInR":true,
-                      "dTimeS":"124900",
-                      "dTimeR":"125100",
-                      "dProgType":"PROGNOSED",
-                      "type":"N"
-                    },
-                    {
-                      "locX":13,
-                      "idx":21,
-                      "aProdX":1,
-                      "aOutR":true,
-                      "aTimeS":"125100",
-                      "aTimeR":"125300",
-                      "aProgType":"PROGNOSED",
-                      "dProdX":1,
-                      "dInR":true,
-                      "dTimeS":"125100",
-                      "dTimeR":"125300",
-                      "dProgType":"PROGNOSED",
-                      "type":"N"
-                    },
-                    {
-                      "locX":14,
-                      "idx":22,
-                      "aProdX":1,
-                      "aOutR":true,
-                      "aTimeS":"125300",
-                      "aTimeR":"125500",
-                      "aProgType":"PROGNOSED",
-                      "dProdX":1,
-                      "dInR":true,
-                      "dTimeS":"125300",
-                      "dTimeR":"125500",
-                      "dProgType":"PROGNOSED",
-                      "type":"N"
-                    },
-                    {
-                      "locX":15,
-                      "idx":23,
-                      "aProdX":1,
-                      "aOutR":true,
-                      "aTimeS":"125400",
-                      "aTimeR":"125600",
-                      "aProgType":"PROGNOSED",
-                      "dProdX":1,
-                      "dInR":true,
-                      "dTimeS":"125400",
-                      "dTimeR":"125600",
-                      "dProgType":"PROGNOSED",
-                      "type":"N"
-                    },
-                    {
-                      "locX":16,
-                      "idx":24,
-                      "aProdX":1,
-                      "aOutR":true,
-                      "aTimeS":"125600",
-                      "aTimeR":"125800",
-                      "aProgType":"PROGNOSED",
-                      "dProdX":1,
-                      "dInR":true,
-                      "dTimeS":"125600",
-                      "dTimeR":"125800",
-                      "dProgType":"PROGNOSED",
-                      "type":"N"
-                    },
-                    {
-                      "locX":17,
-                      "idx":25,
-                      "aProdX":1,
-                      "aOutR":true,
-                      "aTimeS":"125800",
-                      "aTimeR":"130000",
-                      "aProgType":"PROGNOSED",
-                      "dProdX":1,
-                      "dInR":true,
-                      "dTimeS":"125800",
-                      "dTimeR":"130000",
-                      "dProgType":"PROGNOSED",
-                      "type":"N"
-                    },
-                    {
-                      "locX":18,
-                      "idx":26,
-                      "aProdX":1,
-                      "aOutR":true,
-                      "aTimeS":"130000",
-                      "aTimeR":"130200",
-                      "aProgType":"PROGNOSED",
-                      "dProdX":1,
-                      "dInR":true,
-                      "dTimeS":"130000",
-                      "dTimeR":"130200",
-                      "dProgType":"PROGNOSED",
-                      "type":"N"
-                    },
-                    {
-                      "locX":3,
-                      "idx":27,
-                      "aProdX":1,
-                      "aOutR":true,
-                      "aTimeS":"130200",
-                      "aTimeR":"130400",
+                      "aTimeS":"201300",
+                      "aTimeR":"201500",
                       "aProgType":"PROGNOSED",
                       "type":"N"
                     }
@@ -1559,9 +2042,9 @@
                     "delta":true,
                     "dim":2,
                     "type":"WGS84",
-                    "crdEncYX":"{_hpHqkfq@zQ}YiBgC_CuFmBwKi@UEaBNA??G{Ff@gF?sK`@_ArAW??rBq@|C}ClBaDfA_EvBoMN^n@Q~DqAtCsC~FyH??nAsASs@iLoOa@NTl@??Um@Pg@NVsEeG`AsBjH{PrA`CtGOP}@fFeNnCyHr@o@rBsFIY?CZqAxDkMnCgGtAiClIeIlEgB`Ay@J?`AV??r@TrCiBjD~PbBdI}ArAaKfRdCeG`EmHqIfRMp@KdAwDpLMtDZv@c@|H",
-                    "crdEncS":"NNLNNNLNNNMNMNNNLNLNNKNKNNNNNNNNNLNNNNNNNNNLNNNNLNMNKNNNNMNNNNNNNNNKNNNN",
-                    "crdEncF":"????????????????????????????????????????????????????????????????????????",
+                    "crdEncYX":"_|dpHg~kq@??BDoNvMua@xg@cRtV_DvBeHdIuCvAmC\\eE[iDaBgD_EgBaEuEwWyC{Jkn@kyAqE}F|`@{e@dIkHnJsGxIgE~IeD|`@yJtU}E|DoC~BiDxJgSbC_HdAwExAaLPaKYiLkNq}BcAm|@p@i]lJuaC??tAwj@hAwzAn@}MzA{OzFyb@nAeNdAkQVuT_@_XiBsWwBwQiBgL}G_]cGaTyKg[gHqOoGuLiKiPa]mb@gV_ZwnBs_CerDcnEYj@Xk@m{B{nCy]ub@sIaIgIcOyNu_@oHaVmKcb@iCaP]kFCgM??",
+                    "crdEncS":"NNNNKNMNLNMNMNMNNNNLNKNKNMNLNKNNMNNMNNNNLNLNMNNNKNNMNKNNNKNNNNNMNNNMNNLNN",
+                    "crdEncF":"?????????????????????????????????????????????????????????????????????????",
                     "ppLocRefL":
                     [
                       {
@@ -1569,460 +2052,69 @@
                         "locX":2
                       },
                       {
-                        "ppIdx":1,
-                        "locX":4
-                      },
-                      {
-                        "ppIdx":7,
-                        "locX":5
-                      },
-                      {
-                        "ppIdx":13,
-                        "locX":6
-                      },
-                      {
-                        "ppIdx":20,
-                        "locX":7
-                      },
-                      {
-                        "ppIdx":24,
-                        "locX":8
-                      },
-                      {
-                        "ppIdx":30,
-                        "locX":9
-                      },
-                      {
                         "ppIdx":36,
                         "locX":10
                       },
                       {
-                        "ppIdx":40,
-                        "locX":11
-                      },
-                      {
-                        "ppIdx":41,
-                        "locX":12
-                      },
-                      {
-                        "ppIdx":46,
-                        "locX":13
-                      },
-                      {
-                        "ppIdx":49,
-                        "locX":14
-                      },
-                      {
-                        "ppIdx":51,
-                        "locX":15
-                      },
-                      {
-                        "ppIdx":55,
-                        "locX":16
-                      },
-                      {
-                        "ppIdx":61,
-                        "locX":17
-                      },
-                      {
-                        "ppIdx":66,
-                        "locX":18
-                      },
-                      {
-                        "ppIdx":71,
-                        "locX":3
+                        "ppIdx":72,
+                        "locX":9
                       }
                     ]
                   },
                   "pos":
                   {
-                    "x":8223053,
-                    "y":50015855,
+                    "x":8348120,
+                    "y":49662525,
                     "layerX":0,
                     "crdSysX":0
                   },
                   "freq":
                   {
-                    "minC":15,
-                    "maxC":15,
-                    "numC":9,
-                    "jnyL":
-                    [
-                      {
-                        "jid":"1|30820|0|80|6092021",
-                        "prodX":2,
-                        "dirTxt":"Mainz Friedrich-Ebert-Straße",
-                        "dirFlg":"2",
-                        "stbStop":
-                        {
-                          "locX":2,
-                          "idx":7,
-                          "dProdX":2,
-                          "dTimeS":"125200",
-                          "type":"N"
-                        },
-                        "stopL":
-                        [
-                          {
-                            "locX":2,
-                            "idx":7,
-                            "dProdX":2,
-                            "dTimeS":"125200",
-                            "dDirTxt":"Mainz Friedrich-Ebert-Straße",
-                            "dDirFlg":"2",
-                            "type":"N"
-                          },
-                          {
-                            "locX":3,
-                            "idx":23,
-                            "aProdX":2,
-                            "aTimeS":"131700",
-                            "type":"N"
-                          }
-                        ],
-                        "ctxRecon":"T$A=1@O=Mainz An den Dünen@L=3029079@a=128@$A=1@O=Mainz Hauptbahnhof@L=3006904@a=128@$202109061252$202109061317$Bus 62  $$1$$$$",
-                        "subscr":"F"
-                      },
-                      {
-                        "jid":"1|30859|13|80|6092021",
-                        "prodX":3,
-                        "dirTxt":"Mainz Friedrich-Ebert-Straße",
-                        "dirFlg":"2",
-                        "stbStop":
-                        {
-                          "locX":2,
-                          "idx":11,
-                          "dProdX":3,
-                          "dTimeS":"130700",
-                          "type":"N"
-                        },
-                        "stopL":
-                        [
-                          {
-                            "locX":2,
-                            "idx":11,
-                            "dProdX":3,
-                            "dTimeS":"130700",
-                            "dDirTxt":"Mainz Friedrich-Ebert-Straße",
-                            "dDirFlg":"2",
-                            "type":"N"
-                          },
-                          {
-                            "locX":3,
-                            "idx":27,
-                            "aProdX":3,
-                            "aTimeS":"133200",
-                            "type":"N"
-                          }
-                        ],
-                        "ctxRecon":"T$A=1@O=Mainz An den Dünen@L=3029079@a=128@$A=1@O=Mainz Hauptbahnhof@L=3006904@a=128@$202109061307$202109061332$Bus 62  $$1$$$$",
-                        "subscr":"F"
-                      },
-                      {
-                        "jid":"1|30827|0|80|6092021",
-                        "prodX":4,
-                        "dirTxt":"Mainz Friedrich-Ebert-Straße",
-                        "dirFlg":"2",
-                        "stbStop":
-                        {
-                          "locX":2,
-                          "idx":7,
-                          "dProdX":4,
-                          "dTimeS":"132200",
-                          "type":"N"
-                        },
-                        "stopL":
-                        [
-                          {
-                            "locX":2,
-                            "idx":7,
-                            "dProdX":4,
-                            "dTimeS":"132200",
-                            "dDirTxt":"Mainz Friedrich-Ebert-Straße",
-                            "dDirFlg":"2",
-                            "type":"N"
-                          },
-                          {
-                            "locX":3,
-                            "idx":23,
-                            "aProdX":4,
-                            "aTimeS":"134700",
-                            "type":"N"
-                          }
-                        ],
-                        "ctxRecon":"T$A=1@O=Mainz An den Dünen@L=3029079@a=128@$A=1@O=Mainz Hauptbahnhof@L=3006904@a=128@$202109061322$202109061347$Bus 62  $$1$$$$",
-                        "subscr":"F"
-                      },
-                      {
-                        "jid":"1|30859|14|80|6092021",
-                        "prodX":5,
-                        "dirTxt":"Mainz Friedrich-Ebert-Straße",
-                        "dirFlg":"2",
-                        "stbStop":
-                        {
-                          "locX":2,
-                          "idx":11,
-                          "dProdX":5,
-                          "dTimeS":"133700",
-                          "type":"N"
-                        },
-                        "stopL":
-                        [
-                          {
-                            "locX":2,
-                            "idx":11,
-                            "dProdX":5,
-                            "dTimeS":"133700",
-                            "dDirTxt":"Mainz Friedrich-Ebert-Straße",
-                            "dDirFlg":"2",
-                            "type":"N"
-                          },
-                          {
-                            "locX":3,
-                            "idx":27,
-                            "aProdX":5,
-                            "aTimeS":"140200",
-                            "type":"N"
-                          }
-                        ],
-                        "ctxRecon":"T$A=1@O=Mainz An den Dünen@L=3029079@a=128@$A=1@O=Mainz Hauptbahnhof@L=3006904@a=128@$202109061337$202109061402$Bus 62  $$1$$$$",
-                        "subscr":"F"
-                      },
-                      {
-                        "jid":"1|30829|1|80|6092021",
-                        "prodX":6,
-                        "dirTxt":"Mainz Friedrich-Ebert-Straße",
-                        "dirFlg":"2",
-                        "stbStop":
-                        {
-                          "locX":2,
-                          "idx":7,
-                          "dProdX":6,
-                          "dTimeS":"135200",
-                          "type":"N"
-                        },
-                        "stopL":
-                        [
-                          {
-                            "locX":2,
-                            "idx":7,
-                            "dProdX":6,
-                            "dTimeS":"135200",
-                            "dDirTxt":"Mainz Friedrich-Ebert-Straße",
-                            "dDirFlg":"2",
-                            "type":"N"
-                          },
-                          {
-                            "locX":3,
-                            "idx":23,
-                            "aProdX":6,
-                            "aTimeS":"141700",
-                            "type":"N"
-                          }
-                        ],
-                        "ctxRecon":"T$A=1@O=Mainz An den Dünen@L=3029079@a=128@$A=1@O=Mainz Hauptbahnhof@L=3006904@a=128@$202109061352$202109061417$Bus 62  $$1$$$$",
-                        "subscr":"F"
-                      }
-                    ]
-                  },
-                  "ctxRecon":"T$A=1@O=Mainz An den Dünen@L=3029079@a=128@$A=1@O=Mainz Hauptbahnhof@L=3006904@a=128@$202109061237$202109061302$Bus 62  $$1$$$$",
-                  "subscr":"F"
-                },
-                "minChg":"000500"
-              },
-              {
-                "type":"JNY",
-                "icoX":6,
-                "dep":
-                {
-                  "locX":3,
-                  "idx":13,
-                  "dProdX":7,
-                  "dPlatfS":"4a",
-                  "dPlatfR":"4a",
-                  "dInR":true,
-                  "dTimeS":"131000",
-                  "dTimeR":"131000",
-                  "dProgType":"PROGNOSED",
-                  "type":"N"
-                },
-                "arr":
-                {
-                  "locX":19,
-                  "idx":17,
-                  "aProdX":7,
-                  "aPlatfS":"Regio 1",
-                  "aPlatfR":"Regio 1",
-                  "aOutR":true,
-                  "aTimeS":"133400",
-                  "aTimeR":"133400",
-                  "aProgType":"PROGNOSED",
-                  "type":"N"
-                },
-                "jny":
-                {
-                  "jid":"1|120775|0|80|6092021",
-                  "prodX":7,
-                  "dirTxt":"Frankfurt (Main) Hauptbahnhof",
-                  "dirFlg":"1",
-                  "status":"P",
-                  "isRchbl":true,
-                  "stopL":
-                  [
-                    {
-                      "locX":3,
-                      "idx":13,
-                      "dProdX":7,
-                      "dInR":true,
-                      "dTimeS":"131000",
-                      "dTimeR":"131000",
-                      "dProgType":"PROGNOSED",
-                      "dDirTxt":"Frankfurt (Main) Hauptbahnhof",
-                      "dDirFlg":"1",
-                      "type":"N"
-                    },
-                    {
-                      "locX":20,
-                      "idx":14,
-                      "aProdX":7,
-                      "aOutR":true,
-                      "aTimeS":"131300",
-                      "aTimeR":"131300",
-                      "aProgType":"PROGNOSED",
-                      "dProdX":7,
-                      "dInR":true,
-                      "dTimeS":"131400",
-                      "dTimeR":"131400",
-                      "dProgType":"PROGNOSED",
-                      "type":"N"
-                    },
-                    {
-                      "locX":21,
-                      "idx":15,
-                      "aProdX":7,
-                      "aOutR":true,
-                      "aTimeS":"131800",
-                      "aTimeR":"131800",
-                      "aProgType":"PROGNOSED",
-                      "dProdX":7,
-                      "dInR":true,
-                      "dTimeS":"131900",
-                      "dTimeR":"131900",
-                      "dProgType":"PROGNOSED",
-                      "type":"N"
-                    },
-                    {
-                      "locX":22,
-                      "idx":16,
-                      "aProdX":7,
-                      "aOutR":true,
-                      "aTimeS":"132200",
-                      "aTimeR":"132200",
-                      "aProgType":"PROGNOSED",
-                      "dProdX":7,
-                      "dInR":true,
-                      "dTimeS":"132300",
-                      "dTimeR":"132300",
-                      "dProgType":"PROGNOSED",
-                      "type":"N"
-                    },
-                    {
-                      "locX":19,
-                      "idx":17,
-                      "aProdX":7,
-                      "aOutR":true,
-                      "aTimeS":"133400",
-                      "aTimeR":"133400",
-                      "aProgType":"PROGNOSED",
-                      "type":"N"
-                    }
-                  ],
-                  "poly":
-                  {
-                    "delta":true,
-                    "dim":2,
-                    "type":"WGS84",
-                    "crdEncYX":"_|dpHg~kq@??BDpc@c`@vBuCnByEjAiHNeFG}DeAyQFuHvDu[BB??bFg[`GoSv@eEh@qH[mHkNqx@{@{Gc@kHeDqkAk@qTwB}fCa@{b@FaLl@kPhByPzByNlBwI|AuG??`GeTpCiIn`@{|@dDeQxA}PTyPi@qNaAyIiPsdAyC_Q_UaqA??iPqdAqBiJsGiV_KuXwfAq~B}N}YsIcOeJaNo^}c@mjCecD{PeW}H}Nob@a_Ace@idAcC_HyImSyG_MoCqGkBcGyBqKu@oFgA_SEmKL{HXaGt@wErBeIlBqErBoDdBgBvDeD|FuB`E_@xDRfPvDxEHpEi@fEaBrDsCbDaEnAaCzCoJnBcL`@uGDaIoBe^_BuOkCaR",
-                    "crdEncS":"NNNNLNMNKMNNNNNLNNNKNKNMNKNMNLNNNKNNNNNNLNNNNLNNNNNLNNNNMNMKNMKNKNNKNLNLNKNNMNLNLNLNKNMNLNNKN",
-                    "crdEncF":"?????????????????????????????????????????????????????????????????????????????????????????????",
-                    "ppLocRefL":
-                    [
-                      {
-                        "ppIdx":0,
-                        "locX":3
-                      },
-                      {
-                        "ppIdx":12,
-                        "locX":20
-                      },
-                      {
-                        "ppIdx":31,
-                        "locX":21
-                      },
-                      {
-                        "ppIdx":43,
-                        "locX":22
-                      },
-                      {
-                        "ppIdx":92,
-                        "locX":19
-                      }
-                    ]
-                  },
-                  "pos":
-                  {
-                    "x":7866649,
-                    "y":49842300,
-                    "layerX":0,
-                    "crdSysX":0
-                  },
-                  "freq":
-                  {
-                    "minC":49,
-                    "maxC":60,
+                    "minC":60,
+                    "maxC":447,
                     "numC":3,
                     "jnyL":
                     [
                       {
-                        "jid":"1|159799|1|80|6092021",
+                        "jid":"1|190990|0|80|5122021",
                         "prodX":8,
-                        "dirTxt":"Frankfurt (Main) Hauptbahnhof",
-                        "dirFlg":"1",
+                        "dirTxt":"Frankfurt (Main) Höchst Bahnhof",
+                        "dirFlg":"2",
                         "stbStop":
                         {
-                          "locX":3,
-                          "idx":6,
+                          "locX":2,
+                          "idx":4,
                           "dProdX":8,
-                          "dTimeS":"141000",
+                          "dTimeS":"204900",
                           "type":"N"
                         },
                         "stopL":
                         [
                           {
-                            "locX":3,
-                            "idx":6,
+                            "locX":2,
+                            "idx":4,
                             "dProdX":8,
-                            "dTimeS":"141000",
-                            "dDirTxt":"Frankfurt (Main) Hauptbahnhof",
-                            "dDirFlg":"1",
+                            "dTimeS":"204900",
+                            "dDirTxt":"Frankfurt (Main) Höchst Bahnhof",
+                            "dDirFlg":"2",
                             "type":"N"
                           },
                           {
-                            "locX":19,
-                            "idx":10,
+                            "locX":9,
+                            "idx":6,
                             "aProdX":8,
-                            "aTimeS":"143400",
+                            "aTimeS":"211300",
                             "type":"N"
                           }
                         ],
-                        "ctxRecon":"T$A=1@O=Mainz Hauptbahnhof@L=3006904@a=128@$A=1@O=Frankfurt (Main) Flughafen Regionalbahnhof@L=3002930@a=128@$202109061410$202109061434$     RE2$$1$$$$",
+                        "ctxRecon":"T$A=1@O=Mainz Hauptbahnhof@L=3006904@a=128@$A=1@O=Frankfurt (Main) Höchst Bahnhof@L=3001008@a=128@$202112052049$202112052113$    RE14$$1$$$$",
                         "msgL":
                         [
                           {
                             "type":"REM",
-                            "remX":0,
-                            "fLocX":3,
-                            "tLocX":19,
+                            "remX":3,
+                            "fLocX":2,
+                            "tLocX":9,
                             "tagL":
                             [
                               "RES_JNY_DTL"
@@ -2031,8 +2123,8 @@
                           {
                             "type":"REM",
                             "remX":4,
-                            "fLocX":3,
-                            "tLocX":19,
+                            "fLocX":2,
+                            "tLocX":9,
                             "tagL":
                             [
                               "RES_JNY_DTL"
@@ -2041,8 +2133,8 @@
                           {
                             "type":"REM",
                             "remX":5,
-                            "fLocX":3,
-                            "tLocX":19,
+                            "fLocX":2,
+                            "tLocX":9,
                             "tagL":
                             [
                               "RES_JNY_DTL"
@@ -2051,8 +2143,8 @@
                           {
                             "type":"REM",
                             "remX":6,
-                            "fLocX":3,
-                            "tLocX":19,
+                            "fLocX":2,
+                            "tLocX":9,
                             "tagL":
                             [
                               "RES_JNY_DTL"
@@ -2060,9 +2152,9 @@
                           },
                           {
                             "type":"REM",
-                            "remX":2,
-                            "fLocX":3,
-                            "tLocX":19,
+                            "remX":7,
+                            "fLocX":2,
+                            "tLocX":9,
                             "tagL":
                             [
                               "RES_JNY_DTL"
@@ -2070,9 +2162,19 @@
                           },
                           {
                             "type":"REM",
-                            "remX":3,
-                            "fLocX":3,
-                            "tLocX":19,
+                            "remX":8,
+                            "fLocX":2,
+                            "tLocX":9,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ]
+                          },
+                          {
+                            "type":"REM",
+                            "remX":9,
+                            "fLocX":2,
+                            "tLocX":9,
                             "tagL":
                             [
                               "RES_JNY_DTL"
@@ -2082,75 +2184,115 @@
                         "subscr":"F"
                       },
                       {
-                        "jid":"1|120775|1|80|6092021",
+                        "jid":"1|190862|0|80|5122021",
                         "prodX":9,
-                        "dirTxt":"Frankfurt (Main) Hauptbahnhof",
-                        "dirFlg":"1",
+                        "dirTxt":"Frankfurt (Main) Höchst Bahnhof",
+                        "dirFlg":"2",
                         "stbStop":
                         {
-                          "locX":3,
-                          "idx":13,
+                          "locX":2,
+                          "idx":9,
                           "dProdX":9,
-                          "dTimeS":"151000",
+                          "dTimeS":"214900",
                           "type":"N"
                         },
                         "stopL":
                         [
                           {
-                            "locX":3,
-                            "idx":13,
+                            "locX":2,
+                            "idx":9,
                             "dProdX":9,
-                            "dTimeS":"151000",
-                            "dDirTxt":"Frankfurt (Main) Hauptbahnhof",
-                            "dDirFlg":"1",
+                            "dTimeS":"214900",
+                            "dDirTxt":"Frankfurt (Main) Höchst Bahnhof",
+                            "dDirFlg":"2",
                             "type":"N"
                           },
                           {
-                            "locX":19,
-                            "idx":17,
+                            "locX":9,
+                            "idx":11,
                             "aProdX":9,
-                            "aTimeS":"153400",
+                            "aTimeS":"221300",
                             "type":"N"
                           }
                         ],
-                        "ctxRecon":"T$A=1@O=Mainz Hauptbahnhof@L=3006904@a=128@$A=1@O=Frankfurt (Main) Flughafen Regionalbahnhof@L=3002930@a=128@$202109061510$202109061534$     RE3$$1$$$$",
+                        "ctxRecon":"T$A=1@O=Mainz Hauptbahnhof@L=3006904@a=128@$A=1@O=Frankfurt (Main) Höchst Bahnhof@L=3001008@a=128@$202112052149$202112052213$     RE4$$1$$$$",
                         "msgL":
                         [
                           {
                             "type":"REM",
-                            "remX":0,
-                            "fLocX":3,
-                            "tLocX":19,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ]
-                          },
-                          {
-                            "type":"REM",
-                            "remX":1,
-                            "fLocX":3,
-                            "tLocX":19,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ]
-                          },
-                          {
-                            "type":"REM",
-                            "remX":2,
-                            "fLocX":3,
-                            "tLocX":19,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ]
-                          },
-                          {
-                            "type":"REM",
                             "remX":3,
-                            "fLocX":3,
-                            "tLocX":19,
+                            "fLocX":2,
+                            "tLocX":9,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ]
+                          },
+                          {
+                            "type":"REM",
+                            "remX":4,
+                            "fLocX":2,
+                            "tLocX":9,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ]
+                          },
+                          {
+                            "type":"REM",
+                            "remX":5,
+                            "fLocX":2,
+                            "tLocX":9,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ]
+                          },
+                          {
+                            "type":"REM",
+                            "remX":10,
+                            "fLocX":2,
+                            "tLocX":9,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ]
+                          },
+                          {
+                            "type":"REM",
+                            "remX":6,
+                            "fLocX":2,
+                            "tLocX":9,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ]
+                          },
+                          {
+                            "type":"REM",
+                            "remX":7,
+                            "fLocX":2,
+                            "tLocX":9,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ]
+                          },
+                          {
+                            "type":"REM",
+                            "remX":8,
+                            "fLocX":2,
+                            "tLocX":9,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ]
+                          },
+                          {
+                            "type":"REM",
+                            "remX":9,
+                            "fLocX":2,
+                            "tLocX":9,
                             "tagL":
                             [
                               "RES_JNY_DTL"
@@ -2160,75 +2302,105 @@
                         "subscr":"F"
                       },
                       {
-                        "jid":"1|120799|0|80|6092021",
+                        "jid":"1|190903|0|80|5122021",
                         "prodX":10,
-                        "dirTxt":"Frankfurt (Main) Hauptbahnhof",
-                        "dirFlg":"1",
+                        "dirTxt":"Frankfurt (Main) Höchst Bahnhof",
+                        "dirFlg":"2",
                         "stbStop":
                         {
-                          "locX":3,
-                          "idx":13,
+                          "locX":2,
+                          "idx":0,
                           "dProdX":10,
-                          "dTimeS":"155900",
+                          "dTimeS":"01051600",
                           "type":"N"
                         },
                         "stopL":
                         [
                           {
-                            "locX":3,
-                            "idx":13,
+                            "locX":2,
+                            "idx":0,
                             "dProdX":10,
-                            "dTimeS":"155900",
-                            "dDirTxt":"Frankfurt (Main) Hauptbahnhof",
-                            "dDirFlg":"1",
+                            "dTimeS":"01051600",
+                            "dDirTxt":"Frankfurt (Main) Höchst Bahnhof",
+                            "dDirFlg":"2",
                             "type":"N"
                           },
                           {
-                            "locX":19,
-                            "idx":15,
+                            "locX":9,
+                            "idx":2,
                             "aProdX":10,
-                            "aTimeS":"162000",
+                            "aTimeS":"01054300",
                             "type":"N"
                           }
                         ],
-                        "ctxRecon":"T$A=1@O=Mainz Hauptbahnhof@L=3006904@a=128@$A=1@O=Frankfurt (Main) Flughafen Regionalbahnhof@L=3002930@a=128@$202109061559$202109061620$     RE3$$1$$$$",
+                        "ctxRecon":"T$A=1@O=Mainz Hauptbahnhof@L=3006904@a=128@$A=1@O=Frankfurt (Main) Höchst Bahnhof@L=3001008@a=128@$202112050516$202112050543$     RE4$$1$$$$",
                         "msgL":
                         [
                           {
                             "type":"REM",
-                            "remX":0,
-                            "fLocX":3,
-                            "tLocX":19,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ]
-                          },
-                          {
-                            "type":"REM",
-                            "remX":1,
-                            "fLocX":3,
-                            "tLocX":19,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ]
-                          },
-                          {
-                            "type":"REM",
-                            "remX":2,
-                            "fLocX":3,
-                            "tLocX":19,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ]
-                          },
-                          {
-                            "type":"REM",
                             "remX":3,
-                            "fLocX":3,
-                            "tLocX":19,
+                            "fLocX":2,
+                            "tLocX":9,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ]
+                          },
+                          {
+                            "type":"REM",
+                            "remX":4,
+                            "fLocX":2,
+                            "tLocX":9,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ]
+                          },
+                          {
+                            "type":"REM",
+                            "remX":5,
+                            "fLocX":2,
+                            "tLocX":9,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ]
+                          },
+                          {
+                            "type":"REM",
+                            "remX":6,
+                            "fLocX":2,
+                            "tLocX":9,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ]
+                          },
+                          {
+                            "type":"REM",
+                            "remX":7,
+                            "fLocX":2,
+                            "tLocX":9,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ]
+                          },
+                          {
+                            "type":"REM",
+                            "remX":8,
+                            "fLocX":2,
+                            "tLocX":9,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ]
+                          },
+                          {
+                            "type":"REM",
+                            "remX":9,
+                            "fLocX":2,
+                            "tLocX":9,
                             "tagL":
                             [
                               "RES_JNY_DTL"
@@ -2239,390 +2411,74 @@
                       }
                     ]
                   },
-                  "ctxRecon":"T$A=1@O=Mainz Hauptbahnhof@L=3006904@a=128@$A=1@O=Frankfurt (Main) Flughafen Regionalbahnhof@L=3002930@a=128@$202109061310$202109061334$     RE3$$1$$$$",
+                  "ctxRecon":"T$A=1@O=Mainz Hauptbahnhof@L=3006904@a=128@$A=1@O=Frankfurt (Main) Höchst Bahnhof@L=3001008@a=128@$202112051949$202112052013$     RE4$$1$$$$",
                   "msgL":
                   [
-                    {
-                      "type":"REM",
-                      "remX":0,
-                      "fLocX":3,
-                      "tLocX":19,
-                      "tagL":
-                      [
-                        "RES_JNY_DTL"
-                      ]
-                    },
-                    {
-                      "type":"REM",
-                      "remX":1,
-                      "fLocX":3,
-                      "tLocX":19,
-                      "tagL":
-                      [
-                        "RES_JNY_DTL"
-                      ]
-                    },
-                    {
-                      "type":"REM",
-                      "remX":2,
-                      "fLocX":3,
-                      "tLocX":19,
-                      "tagL":
-                      [
-                        "RES_JNY_DTL"
-                      ]
-                    },
                     {
                       "type":"REM",
                       "remX":3,
-                      "fLocX":3,
-                      "tLocX":19,
+                      "fLocX":2,
+                      "tLocX":9,
                       "tagL":
                       [
                         "RES_JNY_DTL"
                       ]
-                    }
-                  ],
-                  "subscr":"F"
-                },
-                "minChg":"001000"
-              },
-              {
-                "type":"WALK",
-                "icoX":3,
-                "dep":
-                {
-                  "locX":19,
-                  "dInR":true,
-                  "dTimeS":"133400",
-                  "type":"N"
-                },
-                "arr":
-                {
-                  "locX":23,
-                  "aOutR":true,
-                  "aTimeS":"134400",
-                  "type":"N"
-                },
-                "gis":
-                {
-                  "dist":223,
-                  "durS":"001000",
-                  "dirGeo":10,
-                  "ctx":"H|1|W$A=1@O=Frankfurt (Main) Flughafen Regionalbahnhof@L=3002930@a=128@$A=1@O=Frankfurt (Main) Flughafen Fernbahnhof@L=3011511@a=128@$202109061334$202109061344$$$1$$$$",
-                  "poly":
-                  {
-                    "delta":true,
-                    "dim":2,
-                    "type":"WGS84",
-                    "crdEncYX":"_snpHkbis@qJnF",
-                    "crdEncS":"NN",
-                    "crdEncF":"??",
-                    "ppLocRefL":
-                    [
-                      {
-                        "ppIdx":0,
-                        "locX":19
-                      },
-                      {
-                        "ppIdx":1,
-                        "locX":23
-                      }
-                    ]
-                  },
-                  "gisPrvr":"H"
-                }
-              },
-              {
-                "type":"JNY",
-                "icoX":11,
-                "dep":
-                {
-                  "locX":23,
-                  "idx":2,
-                  "dProdX":11,
-                  "dPlatfS":"Fern 4",
-                  "dPlatfR":"Fern 4",
-                  "dInR":true,
-                  "dTimeS":"134400",
-                  "dTimeR":"134400",
-                  "dProgType":"PROGNOSED",
-                  "type":"N"
-                },
-                "arr":
-                {
-                  "locX":24,
-                  "idx":8,
-                  "aProdX":11,
-                  "aPlatfS":"2",
-                  "aPlatfR":"2",
-                  "aOutR":true,
-                  "aTimeS":"141600",
-                  "aTimeR":"141600",
-                  "aProgType":"PROGNOSED",
-                  "type":"N"
-                },
-                "jny":
-                {
-                  "jid":"1|223104|0|80|6092021",
-                  "prodX":11,
-                  "dirTxt":"Laufach Bahnhof",
-                  "dirFlg":"2",
-                  "status":"P",
-                  "isRchbl":true,
-                  "stopL":
-                  [
-                    {
-                      "locX":23,
-                      "idx":2,
-                      "dProdX":11,
-                      "dInR":true,
-                      "dTimeS":"134400",
-                      "dTimeR":"134400",
-                      "dProgType":"PROGNOSED",
-                      "dDirTxt":"Laufach Bahnhof",
-                      "dDirFlg":"2",
-                      "type":"N"
                     },
-                    {
-                      "locX":25,
-                      "idx":3,
-                      "aProdX":11,
-                      "aOutR":true,
-                      "aTimeS":"140000",
-                      "aTimeR":"140000",
-                      "aProgType":"PROGNOSED",
-                      "dProdX":11,
-                      "dInR":true,
-                      "dTimeS":"140100",
-                      "dTimeR":"140100",
-                      "dProgType":"PROGNOSED",
-                      "type":"N"
-                    },
-                    {
-                      "locX":26,
-                      "idx":4,
-                      "aProdX":11,
-                      "aOutR":true,
-                      "aTimeS":"140400",
-                      "aTimeR":"140400",
-                      "aProgType":"PROGNOSED",
-                      "dProdX":11,
-                      "dInR":true,
-                      "dTimeS":"140400",
-                      "dTimeR":"140400",
-                      "dProgType":"PROGNOSED",
-                      "type":"N"
-                    },
-                    {
-                      "locX":27,
-                      "idx":5,
-                      "aProdX":11,
-                      "aOutR":true,
-                      "aTimeS":"140700",
-                      "aTimeR":"140700",
-                      "aProgType":"PROGNOSED",
-                      "dProdX":11,
-                      "dInR":true,
-                      "dTimeS":"140800",
-                      "dTimeR":"140800",
-                      "dProgType":"PROGNOSED",
-                      "type":"N"
-                    },
-                    {
-                      "locX":28,
-                      "idx":6,
-                      "aProdX":11,
-                      "aOutR":true,
-                      "aTimeS":"141000",
-                      "aTimeR":"141000",
-                      "aProgType":"PROGNOSED",
-                      "dProdX":11,
-                      "dInR":true,
-                      "dTimeS":"141100",
-                      "dTimeR":"141100",
-                      "dProgType":"PROGNOSED",
-                      "type":"N"
-                    },
-                    {
-                      "locX":29,
-                      "idx":7,
-                      "aProdX":11,
-                      "aOutR":true,
-                      "aTimeS":"141300",
-                      "aTimeR":"141300",
-                      "aProgType":"PROGNOSED",
-                      "dProdX":11,
-                      "dInR":true,
-                      "dTimeS":"141300",
-                      "dTimeR":"141300",
-                      "dProgType":"PROGNOSED",
-                      "type":"N"
-                    },
-                    {
-                      "locX":24,
-                      "idx":8,
-                      "aProdX":11,
-                      "aOutR":true,
-                      "aTimeS":"141600",
-                      "aTimeR":"141600",
-                      "aProgType":"PROGNOSED",
-                      "type":"N"
-                    }
-                  ],
-                  "poly":
-                  {
-                    "delta":true,
-                    "dim":2,
-                    "type":"WGS84",
-                    "crdEncYX":"q~npH{zhs@yAoLuBeXeA_Z@cQnBwz@tBseBeCoTaBaJ_HgToI_Jui@_[gEiFsDwIsIqb@QLPMu@mDq`Ae}E_CkK_BeFsDyI}GgKgHgGkHsDuH_Biq@sA{A_@iB}@oCwCuEiLkIwVUV??TWgJcUiBaGoIeo@eBcQm@qDuAmEqD}DoAk@wSsC}C{@cLmGcC_E??}FqK}AuFahBkdHkTgu@??eTev@qD{QkCyS_BaSc@sLyC{hB??eGk{D??iJelGCqNZgKeB_C",
-                    "crdEncS":"NLNNMNNLNNNNNNNNNNNNKNNNMNLNLNNNNNNLNKKNNNLKNNNNMNNNNNMNLNNNNNNLNN",
-                    "crdEncF":"??????????????????????????????????????????????????????????????????",
-                    "ppLocRefL":
-                    [
-                      {
-                        "ppIdx":0,
-                        "locX":23
-                      },
-                      {
-                        "ppIdx":32,
-                        "locX":25
-                      },
-                      {
-                        "ppIdx":46,
-                        "locX":26
-                      },
-                      {
-                        "ppIdx":51,
-                        "locX":27
-                      },
-                      {
-                        "ppIdx":58,
-                        "locX":28
-                      },
-                      {
-                        "ppIdx":60,
-                        "locX":29
-                      },
-                      {
-                        "ppIdx":65,
-                        "locX":24
-                      }
-                    ]
-                  },
-                  "freq":
-                  {
-                    "minC":60,
-                    "maxC":66,
-                    "numC":2,
-                    "jnyL":
-                    [
-                      {
-                        "jid":"1|223118|0|80|6092021",
-                        "prodX":12,
-                        "dirTxt":"Aschaffenburg Hauptbahnhof",
-                        "dirFlg":"2",
-                        "stbStop":
-                        {
-                          "locX":23,
-                          "idx":2,
-                          "dProdX":12,
-                          "dTimeS":"145000",
-                          "type":"N"
-                        },
-                        "stopL":
-                        [
-                          {
-                            "locX":23,
-                            "idx":2,
-                            "dProdX":12,
-                            "dTimeS":"145000",
-                            "dDirTxt":"Aschaffenburg Hauptbahnhof",
-                            "dDirFlg":"2",
-                            "type":"N"
-                          },
-                          {
-                            "locX":24,
-                            "idx":8,
-                            "aProdX":12,
-                            "aTimeS":"151600",
-                            "type":"N"
-                          }
-                        ],
-                        "ctxRecon":"T$A=1@O=Frankfurt (Main) Flughafen Fernbahnhof@L=3011511@a=128@$A=1@O=Hanau Wilhelmsbad Bahnhof@L=3004501@a=128@$202109061450$202109061516$    RB58$$1$$$$",
-                        "msgL":
-                        [
-                          {
-                            "type":"REM",
-                            "remX":0,
-                            "fLocX":23,
-                            "tLocX":24,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ]
-                          }
-                        ],
-                        "subscr":"F"
-                      },
-                      {
-                        "jid":"1|223118|1|80|6092021",
-                        "prodX":13,
-                        "dirTxt":"Aschaffenburg Hauptbahnhof",
-                        "dirFlg":"2",
-                        "stbStop":
-                        {
-                          "locX":23,
-                          "idx":2,
-                          "dProdX":13,
-                          "dTimeS":"155000",
-                          "type":"N"
-                        },
-                        "stopL":
-                        [
-                          {
-                            "locX":23,
-                            "idx":2,
-                            "dProdX":13,
-                            "dTimeS":"155000",
-                            "dDirTxt":"Aschaffenburg Hauptbahnhof",
-                            "dDirFlg":"2",
-                            "type":"N"
-                          },
-                          {
-                            "locX":24,
-                            "idx":8,
-                            "aProdX":13,
-                            "aTimeS":"161600",
-                            "type":"N"
-                          }
-                        ],
-                        "ctxRecon":"T$A=1@O=Frankfurt (Main) Flughafen Fernbahnhof@L=3011511@a=128@$A=1@O=Hanau Wilhelmsbad Bahnhof@L=3004501@a=128@$202109061550$202109061616$    RB58$$1$$$$",
-                        "msgL":
-                        [
-                          {
-                            "type":"REM",
-                            "remX":0,
-                            "fLocX":23,
-                            "tLocX":24,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ]
-                          }
-                        ],
-                        "subscr":"F"
-                      }
-                    ]
-                  },
-                  "ctxRecon":"T$A=1@O=Frankfurt (Main) Flughafen Fernbahnhof@L=3011511@a=128@$A=1@O=Hanau Wilhelmsbad Bahnhof@L=3004501@a=128@$202109061344$202109061416$    RB58$$1$$$$",
-                  "msgL":
-                  [
                     {
                       "type":"REM",
-                      "remX":0,
-                      "fLocX":23,
-                      "tLocX":24,
+                      "remX":4,
+                      "fLocX":2,
+                      "tLocX":9,
+                      "tagL":
+                      [
+                        "RES_JNY_DTL"
+                      ]
+                    },
+                    {
+                      "type":"REM",
+                      "remX":5,
+                      "fLocX":2,
+                      "tLocX":9,
+                      "tagL":
+                      [
+                        "RES_JNY_DTL"
+                      ]
+                    },
+                    {
+                      "type":"REM",
+                      "remX":6,
+                      "fLocX":2,
+                      "tLocX":9,
+                      "tagL":
+                      [
+                        "RES_JNY_DTL"
+                      ]
+                    },
+                    {
+                      "type":"REM",
+                      "remX":7,
+                      "fLocX":2,
+                      "tLocX":9,
+                      "tagL":
+                      [
+                        "RES_JNY_DTL"
+                      ]
+                    },
+                    {
+                      "type":"REM",
+                      "remX":8,
+                      "fLocX":2,
+                      "tLocX":9,
+                      "tagL":
+                      [
+                        "RES_JNY_DTL"
+                      ]
+                    },
+                    {
+                      "type":"REM",
+                      "remX":9,
+                      "fLocX":2,
+                      "tLocX":9,
                       "tagL":
                       [
                         "RES_JNY_DTL"
@@ -2635,74 +2491,137 @@
               },
               {
                 "type":"JNY",
-                "icoX":4,
+                "icoX":13,
                 "dep":
                 {
-                  "locX":24,
-                  "idx":32,
-                  "dProdX":14,
+                  "locX":9,
+                  "idx":9,
+                  "dProdX":11,
+                  "dPlatfS":"2",
+                  "dPlatfR":"2",
                   "dInR":true,
-                  "dTimeS":"142600",
-                  "dTimeR":"142600",
+                  "dTimeS":"202900",
+                  "dTimeR":"202900",
                   "dProgType":"PROGNOSED",
                   "type":"N"
                 },
                 "arr":
                 {
-                  "locX":1,
-                  "idx":34,
-                  "aProdX":14,
+                  "locX":11,
+                  "idx":15,
+                  "aProdX":11,
+                  "aPlatfS":"2",
+                  "aPlatfR":"2",
                   "aOutR":true,
-                  "aTimeS":"142900",
-                  "aTimeR":"142900",
+                  "aTimeS":"204400",
+                  "aTimeR":"204400",
                   "aProgType":"PROGNOSED",
                   "type":"N"
                 },
                 "jny":
                 {
-                  "jid":"1|252036|6|80|6092021",
-                  "prodX":14,
-                  "dirTxt":"Hanau Freiheitsplatz",
-                  "dirFlg":"2",
+                  "jid":"1|183662|0|80|5122021",
+                  "prodX":11,
+                  "dirTxt":"Dietzenbach Bahnhof",
+                  "dirFlg":"1",
                   "status":"P",
-                  "isRedir":true,
                   "isRchbl":true,
                   "stopL":
                   [
                     {
-                      "locX":24,
-                      "idx":32,
-                      "dProdX":14,
+                      "locX":9,
+                      "idx":9,
+                      "dProdX":11,
                       "dInR":true,
-                      "dTimeS":"142600",
-                      "dTimeR":"142600",
+                      "dTimeS":"202900",
+                      "dTimeR":"202900",
                       "dProgType":"PROGNOSED",
-                      "dDirTxt":"Hanau Freiheitsplatz",
-                      "dDirFlg":"2",
+                      "dDirTxt":"Dietzenbach Bahnhof",
+                      "dDirFlg":"1",
                       "type":"N"
                     },
                     {
-                      "locX":30,
-                      "idx":33,
-                      "aProdX":14,
+                      "locX":12,
+                      "idx":10,
+                      "aProdX":11,
                       "aOutR":true,
-                      "aTimeS":"142700",
-                      "aTimeR":"142700",
+                      "aTimeS":"203100",
+                      "aTimeR":"203100",
                       "aProgType":"PROGNOSED",
-                      "dProdX":14,
+                      "dProdX":11,
                       "dInR":true,
-                      "dTimeS":"142700",
-                      "dTimeR":"142700",
+                      "dTimeS":"203100",
+                      "dTimeR":"203100",
                       "dProgType":"PROGNOSED",
                       "type":"N"
                     },
                     {
-                      "locX":1,
-                      "idx":34,
-                      "aProdX":14,
+                      "locX":13,
+                      "idx":11,
+                      "aProdX":11,
                       "aOutR":true,
-                      "aTimeS":"142900",
-                      "aTimeR":"142900",
+                      "aTimeS":"203400",
+                      "aTimeR":"203400",
+                      "aProgType":"PROGNOSED",
+                      "dProdX":11,
+                      "dInR":true,
+                      "dTimeS":"203400",
+                      "dTimeR":"203400",
+                      "dProgType":"PROGNOSED",
+                      "type":"N"
+                    },
+                    {
+                      "locX":14,
+                      "idx":12,
+                      "aProdX":11,
+                      "aOutR":true,
+                      "aTimeS":"203800",
+                      "aTimeR":"203800",
+                      "aProgType":"PROGNOSED",
+                      "dProdX":11,
+                      "dInR":true,
+                      "dTimeS":"203900",
+                      "dTimeR":"203900",
+                      "dProgType":"PROGNOSED",
+                      "type":"N"
+                    },
+                    {
+                      "locX":15,
+                      "idx":13,
+                      "aProdX":11,
+                      "aOutR":true,
+                      "aTimeS":"204100",
+                      "aTimeR":"204100",
+                      "aProgType":"PROGNOSED",
+                      "dProdX":11,
+                      "dInR":true,
+                      "dTimeS":"204100",
+                      "dTimeR":"204100",
+                      "dProgType":"PROGNOSED",
+                      "type":"N"
+                    },
+                    {
+                      "locX":16,
+                      "idx":14,
+                      "aProdX":11,
+                      "aOutR":true,
+                      "aTimeS":"204200",
+                      "aTimeR":"204200",
+                      "aProgType":"PROGNOSED",
+                      "dProdX":11,
+                      "dInR":true,
+                      "dTimeS":"204300",
+                      "dTimeR":"204300",
+                      "dProgType":"PROGNOSED",
+                      "type":"N"
+                    },
+                    {
+                      "locX":11,
+                      "idx":15,
+                      "aProdX":11,
+                      "aOutR":true,
+                      "aTimeS":"204400",
+                      "aTimeR":"204400",
                       "aProgType":"PROGNOSED",
                       "type":"N"
                     }
@@ -2712,243 +2631,478 @@
                     "delta":true,
                     "dim":2,
                     "type":"WGS84",
-                    "crdEncYX":"yy`qHm~eu@??BaDd@eVbBmUn@uEx@gH`A}@]qAZmC",
-                    "crdEncS":"NNNNKNNNNN",
-                    "crdEncF":"??????????",
+                    "crdEncYX":"{qxpHylcs@??{Ce[y@gUYyWLgHJueA~@iLtDmQ??jLyc@xW{~@|AyG~AgKbBcQb@}M@au@??GaiCMcEYoDsAeI_Ja[o_@_pAK]?{@SmEqBiJmWmx@aBoGSLRMiCqH_DcEwFmDmHaCmC}AyCyCoCyDCL??BMcCkE}@kCq@oDWsF\\yGhBcOr@uOMELD]_KiBmOIiXI?",
+                    "crdEncS":"NNNLNKNNNNLNKNMNNNKNKNNNNNMNNNNNNNLKNKNNNNKNLNLMNNNMNNN",
+                    "crdEncF":"???????????????????????????????????????????????????????",
                     "ppLocRefL":
                     [
                       {
                         "ppIdx":0,
-                        "locX":24
+                        "locX":9
                       },
                       {
-                        "ppIdx":3,
-                        "locX":30
+                        "ppIdx":8,
+                        "locX":12
                       },
                       {
-                        "ppIdx":9,
-                        "locX":1
+                        "ppIdx":16,
+                        "locX":13
+                      },
+                      {
+                        "ppIdx":30,
+                        "locX":14
+                      },
+                      {
+                        "ppIdx":39,
+                        "locX":15
+                      },
+                      {
+                        "ppIdx":49,
+                        "locX":16
+                      },
+                      {
+                        "ppIdx":54,
+                        "locX":11
                       }
                     ]
                   },
                   "freq":
                   {
-                    "minC":6,
-                    "maxC":24,
+                    "minC":10,
+                    "maxC":20,
                     "numC":9,
                     "jnyL":
                     [
                       {
-                        "jid":"1|76781|1|80|6092021",
+                        "jid":"1|183361|6|80|5122021",
+                        "prodX":12,
+                        "dirTxt":"Rödermark-Ober-Roden Bahnhof",
+                        "dirFlg":"1",
+                        "stbStop":
+                        {
+                          "locX":9,
+                          "idx":8,
+                          "dProdX":12,
+                          "dTimeS":"203900",
+                          "type":"N"
+                        },
+                        "stopL":
+                        [
+                          {
+                            "locX":9,
+                            "idx":8,
+                            "dProdX":12,
+                            "dTimeS":"203900",
+                            "dDirTxt":"Rödermark-Ober-Roden Bahnhof",
+                            "dDirFlg":"1",
+                            "type":"N"
+                          },
+                          {
+                            "locX":11,
+                            "idx":14,
+                            "aProdX":12,
+                            "aTimeS":"205400",
+                            "type":"N"
+                          }
+                        ],
+                        "ctxRecon":"T$A=1@O=Frankfurt (Main) Höchst Bahnhof@L=3001008@a=128@$A=1@O=Frankfurt (Main) Konstablerwache@L=3000510@a=128@$202112052039$202112052054$      S1$$1$$$$",
+                        "msgL":
+                        [
+                          {
+                            "type":"REM",
+                            "remX":3,
+                            "fLocX":9,
+                            "tLocX":11,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ]
+                          },
+                          {
+                            "type":"REM",
+                            "remX":4,
+                            "fLocX":9,
+                            "tLocX":11,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ]
+                          },
+                          {
+                            "type":"REM",
+                            "remX":7,
+                            "fLocX":9,
+                            "tLocX":11,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ]
+                          },
+                          {
+                            "type":"REM",
+                            "remX":9,
+                            "fLocX":9,
+                            "tLocX":11,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ]
+                          }
+                        ],
+                        "subscr":"F"
+                      },
+                      {
+                        "jid":"1|183642|14|80|5122021",
+                        "prodX":13,
+                        "dirTxt":"Dietzenbach Bahnhof",
+                        "dirFlg":"1",
+                        "stbStop":
+                        {
+                          "locX":9,
+                          "idx":9,
+                          "dProdX":13,
+                          "dTimeS":"205900",
+                          "type":"N"
+                        },
+                        "stopL":
+                        [
+                          {
+                            "locX":9,
+                            "idx":9,
+                            "dProdX":13,
+                            "dTimeS":"205900",
+                            "dDirTxt":"Dietzenbach Bahnhof",
+                            "dDirFlg":"1",
+                            "type":"N"
+                          },
+                          {
+                            "locX":11,
+                            "idx":15,
+                            "aProdX":13,
+                            "aTimeS":"211400",
+                            "type":"N"
+                          }
+                        ],
+                        "ctxRecon":"T$A=1@O=Frankfurt (Main) Höchst Bahnhof@L=3001008@a=128@$A=1@O=Frankfurt (Main) Konstablerwache@L=3000510@a=128@$202112052059$202112052114$      S2$$1$$$$",
+                        "msgL":
+                        [
+                          {
+                            "type":"REM",
+                            "remX":3,
+                            "fLocX":9,
+                            "tLocX":11,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ]
+                          },
+                          {
+                            "type":"REM",
+                            "remX":4,
+                            "fLocX":9,
+                            "tLocX":11,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ]
+                          },
+                          {
+                            "type":"REM",
+                            "remX":7,
+                            "fLocX":9,
+                            "tLocX":11,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ]
+                          },
+                          {
+                            "type":"REM",
+                            "remX":9,
+                            "fLocX":9,
+                            "tLocX":11,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ]
+                          }
+                        ],
+                        "subscr":"F"
+                      },
+                      {
+                        "jid":"1|183360|2|80|5122021",
+                        "prodX":14,
+                        "dirTxt":"Rödermark-Ober-Roden Bahnhof",
+                        "dirFlg":"1",
+                        "stbStop":
+                        {
+                          "locX":9,
+                          "idx":8,
+                          "dProdX":14,
+                          "dTimeS":"210900",
+                          "type":"N"
+                        },
+                        "stopL":
+                        [
+                          {
+                            "locX":9,
+                            "idx":8,
+                            "dProdX":14,
+                            "dTimeS":"210900",
+                            "dDirTxt":"Rödermark-Ober-Roden Bahnhof",
+                            "dDirFlg":"1",
+                            "type":"N"
+                          },
+                          {
+                            "locX":11,
+                            "idx":14,
+                            "aProdX":14,
+                            "aTimeS":"212400",
+                            "type":"N"
+                          }
+                        ],
+                        "ctxRecon":"T$A=1@O=Frankfurt (Main) Höchst Bahnhof@L=3001008@a=128@$A=1@O=Frankfurt (Main) Konstablerwache@L=3000510@a=128@$202112052109$202112052124$      S1$$1$$$$",
+                        "msgL":
+                        [
+                          {
+                            "type":"REM",
+                            "remX":3,
+                            "fLocX":9,
+                            "tLocX":11,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ]
+                          },
+                          {
+                            "type":"REM",
+                            "remX":4,
+                            "fLocX":9,
+                            "tLocX":11,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ]
+                          },
+                          {
+                            "type":"REM",
+                            "remX":7,
+                            "fLocX":9,
+                            "tLocX":11,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ]
+                          },
+                          {
+                            "type":"REM",
+                            "remX":9,
+                            "fLocX":9,
+                            "tLocX":11,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ]
+                          }
+                        ],
+                        "subscr":"F"
+                      },
+                      {
+                        "jid":"1|183660|7|80|5122021",
                         "prodX":15,
-                        "dirTxt":"Hanau Freiheitsplatz",
-                        "dirFlg":"2",
+                        "dirTxt":"Dietzenbach Bahnhof",
+                        "dirFlg":"1",
                         "stbStop":
                         {
-                          "locX":24,
-                          "idx":6,
+                          "locX":9,
+                          "idx":9,
                           "dProdX":15,
-                          "dTimeS":"143200",
+                          "dTimeS":"212900",
                           "type":"N"
                         },
                         "stopL":
                         [
                           {
-                            "locX":24,
-                            "idx":6,
+                            "locX":9,
+                            "idx":9,
                             "dProdX":15,
-                            "dTimeS":"143200",
-                            "dDirTxt":"Hanau Freiheitsplatz",
-                            "dDirFlg":"2",
+                            "dTimeS":"212900",
+                            "dDirTxt":"Dietzenbach Bahnhof",
+                            "dDirFlg":"1",
                             "type":"N"
                           },
                           {
-                            "locX":1,
-                            "idx":8,
+                            "locX":11,
+                            "idx":15,
                             "aProdX":15,
-                            "aTimeS":"143500",
+                            "aTimeS":"214400",
                             "type":"N"
                           }
                         ],
-                        "ctxRecon":"T$A=1@O=Hanau Wilhelmsbad Bahnhof@L=3004501@a=128@$A=1@O=Hanau Beethovenplatz@L=3013508@a=128@$202109061432$202109061435$Bus 9   $$1$$$$",
+                        "ctxRecon":"T$A=1@O=Frankfurt (Main) Höchst Bahnhof@L=3001008@a=128@$A=1@O=Frankfurt (Main) Konstablerwache@L=3000510@a=128@$202112052129$202112052144$      S2$$1$$$$",
+                        "msgL":
+                        [
+                          {
+                            "type":"REM",
+                            "remX":3,
+                            "fLocX":9,
+                            "tLocX":11,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ]
+                          },
+                          {
+                            "type":"REM",
+                            "remX":4,
+                            "fLocX":9,
+                            "tLocX":11,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ]
+                          },
+                          {
+                            "type":"REM",
+                            "remX":7,
+                            "fLocX":9,
+                            "tLocX":11,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ]
+                          },
+                          {
+                            "type":"REM",
+                            "remX":9,
+                            "fLocX":9,
+                            "tLocX":11,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ]
+                          }
+                        ],
                         "subscr":"F"
                       },
                       {
-                        "jid":"1|255287|8|80|6092021",
+                        "jid":"1|183361|7|80|5122021",
                         "prodX":16,
-                        "dirTxt":"Hanau Freiheitsplatz",
-                        "dirFlg":"2",
+                        "dirTxt":"Rödermark-Ober-Roden Bahnhof",
+                        "dirFlg":"1",
                         "stbStop":
                         {
-                          "locX":24,
-                          "idx":32,
+                          "locX":9,
+                          "idx":8,
                           "dProdX":16,
-                          "dTimeS":"145500",
+                          "dTimeS":"213900",
                           "type":"N"
                         },
                         "stopL":
                         [
                           {
-                            "locX":24,
-                            "idx":32,
+                            "locX":9,
+                            "idx":8,
                             "dProdX":16,
-                            "dTimeS":"145500",
-                            "dDirTxt":"Hanau Freiheitsplatz",
-                            "dDirFlg":"2",
+                            "dTimeS":"213900",
+                            "dDirTxt":"Rödermark-Ober-Roden Bahnhof",
+                            "dDirFlg":"1",
                             "type":"N"
                           },
                           {
-                            "locX":1,
-                            "idx":34,
+                            "locX":11,
+                            "idx":14,
                             "aProdX":16,
-                            "aTimeS":"145800",
+                            "aTimeS":"215400",
                             "type":"N"
                           }
                         ],
-                        "ctxRecon":"T$A=1@O=Hanau Wilhelmsbad Bahnhof@L=3004501@a=128@$A=1@O=Hanau Beethovenplatz@L=3013508@a=128@$202109061455$202109061458$BusMKK31$$3$$$$",
+                        "ctxRecon":"T$A=1@O=Frankfurt (Main) Höchst Bahnhof@L=3001008@a=128@$A=1@O=Frankfurt (Main) Konstablerwache@L=3000510@a=128@$202112052139$202112052154$      S1$$1$$$$",
                         "msgL":
                         [
                           {
                             "type":"REM",
+                            "remX":3,
+                            "fLocX":9,
+                            "tLocX":11,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ]
+                          },
+                          {
+                            "type":"REM",
+                            "remX":4,
+                            "fLocX":9,
+                            "tLocX":11,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ]
+                          },
+                          {
+                            "type":"REM",
                             "remX":7,
-                            "fLocX":24,
-                            "tLocX":1,
+                            "fLocX":9,
+                            "tLocX":11,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ]
+                          },
+                          {
+                            "type":"REM",
+                            "remX":9,
+                            "fLocX":9,
+                            "tLocX":11,
                             "tagL":
                             [
                               "RES_JNY_DTL"
                             ]
                           }
                         ],
-                        "subscr":"F"
-                      },
-                      {
-                        "jid":"1|76783|2|80|6092021",
-                        "prodX":17,
-                        "dirTxt":"Hanau Freiheitsplatz",
-                        "dirFlg":"2",
-                        "stbStop":
-                        {
-                          "locX":24,
-                          "idx":6,
-                          "dProdX":17,
-                          "dTimeS":"150200",
-                          "type":"N"
-                        },
-                        "stopL":
-                        [
-                          {
-                            "locX":24,
-                            "idx":6,
-                            "dProdX":17,
-                            "dTimeS":"150200",
-                            "dDirTxt":"Hanau Freiheitsplatz",
-                            "dDirFlg":"2",
-                            "type":"N"
-                          },
-                          {
-                            "locX":1,
-                            "idx":8,
-                            "aProdX":17,
-                            "aTimeS":"150500",
-                            "type":"N"
-                          }
-                        ],
-                        "ctxRecon":"T$A=1@O=Hanau Wilhelmsbad Bahnhof@L=3004501@a=128@$A=1@O=Hanau Beethovenplatz@L=3013508@a=128@$202109061502$202109061505$Bus 9   $$1$$$$",
-                        "subscr":"F"
-                      },
-                      {
-                        "jid":"1|252036|7|80|6092021",
-                        "prodX":18,
-                        "dirTxt":"Hanau Freiheitsplatz",
-                        "dirFlg":"2",
-                        "stbStop":
-                        {
-                          "locX":24,
-                          "idx":32,
-                          "dProdX":18,
-                          "dTimeS":"152600",
-                          "type":"N"
-                        },
-                        "stopL":
-                        [
-                          {
-                            "locX":24,
-                            "idx":32,
-                            "dProdX":18,
-                            "dTimeS":"152600",
-                            "dDirTxt":"Hanau Freiheitsplatz",
-                            "dDirFlg":"2",
-                            "type":"N"
-                          },
-                          {
-                            "locX":1,
-                            "idx":34,
-                            "aProdX":18,
-                            "aTimeS":"152900",
-                            "type":"N"
-                          }
-                        ],
-                        "ctxRecon":"T$A=1@O=Hanau Wilhelmsbad Bahnhof@L=3004501@a=128@$A=1@O=Hanau Beethovenplatz@L=3013508@a=128@$202109061526$202109061529$BusMKK32$$3$$$$",
-                        "msgL":
-                        [
-                          {
-                            "type":"REM",
-                            "remX":7,
-                            "fLocX":24,
-                            "tLocX":1,
-                            "tagL":
-                            [
-                              "RES_JNY_DTL"
-                            ]
-                          }
-                        ],
-                        "subscr":"F"
-                      },
-                      {
-                        "jid":"1|76781|2|80|6092021",
-                        "prodX":19,
-                        "dirTxt":"Hanau Freiheitsplatz",
-                        "dirFlg":"2",
-                        "stbStop":
-                        {
-                          "locX":24,
-                          "idx":6,
-                          "dProdX":19,
-                          "dTimeS":"153200",
-                          "type":"N"
-                        },
-                        "stopL":
-                        [
-                          {
-                            "locX":24,
-                            "idx":6,
-                            "dProdX":19,
-                            "dTimeS":"153200",
-                            "dDirTxt":"Hanau Freiheitsplatz",
-                            "dDirFlg":"2",
-                            "type":"N"
-                          },
-                          {
-                            "locX":1,
-                            "idx":8,
-                            "aProdX":19,
-                            "aTimeS":"153500",
-                            "type":"N"
-                          }
-                        ],
-                        "ctxRecon":"T$A=1@O=Hanau Wilhelmsbad Bahnhof@L=3004501@a=128@$A=1@O=Hanau Beethovenplatz@L=3013508@a=128@$202109061532$202109061535$Bus 9   $$1$$$$",
                         "subscr":"F"
                       }
                     ]
                   },
-                  "ctxRecon":"T$A=1@O=Hanau Wilhelmsbad Bahnhof@L=3004501@a=128@$A=1@O=Hanau Beethovenplatz@L=3013508@a=128@$202109061426$202109061429$BusMKK32$$3$$$$",
+                  "ctxRecon":"T$A=1@O=Frankfurt (Main) Höchst Bahnhof@L=3001008@a=128@$A=1@O=Frankfurt (Main) Konstablerwache@L=3000510@a=128@$202112052029$202112052044$      S2$$1$$$$",
                   "msgL":
                   [
                     {
                       "type":"REM",
+                      "remX":3,
+                      "fLocX":9,
+                      "tLocX":11,
+                      "tagL":
+                      [
+                        "RES_JNY_DTL"
+                      ]
+                    },
+                    {
+                      "type":"REM",
+                      "remX":4,
+                      "fLocX":9,
+                      "tLocX":11,
+                      "tagL":
+                      [
+                        "RES_JNY_DTL"
+                      ]
+                    },
+                    {
+                      "type":"REM",
                       "remX":7,
-                      "fLocX":24,
-                      "tLocX":1,
+                      "fLocX":9,
+                      "tLocX":11,
+                      "tagL":
+                      [
+                        "RES_JNY_DTL"
+                      ]
+                    },
+                    {
+                      "type":"REM",
+                      "remX":9,
+                      "fLocX":9,
+                      "tLocX":11,
                       "tagL":
                       [
                         "RES_JNY_DTL"
@@ -2956,21 +3110,696 @@
                     }
                   ],
                   "subscr":"F"
+                },
+                "minChg":"000400"
+              },
+              {
+                "type":"JNY",
+                "icoX":16,
+                "dep":
+                {
+                  "locX":11,
+                  "idx":5,
+                  "dProdX":17,
+                  "dInR":true,
+                  "dTimeS":"204900",
+                  "dTimeR":"204900",
+                  "dProgType":"PROGNOSED",
+                  "type":"N"
+                },
+                "arr":
+                {
+                  "locX":17,
+                  "idx":14,
+                  "aProdX":17,
+                  "aOutR":true,
+                  "aTimeS":"210600",
+                  "aTimeR":"210600",
+                  "aProgType":"PROGNOSED",
+                  "type":"N"
+                },
+                "jny":
+                {
+                  "jid":"1|29734|29|80|5122021",
+                  "prodX":17,
+                  "dirTxt":"Frankfurt (Main) Enkheim",
+                  "dirFlg":"1",
+                  "status":"P",
+                  "isRchbl":true,
+                  "stopL":
+                  [
+                    {
+                      "locX":11,
+                      "idx":5,
+                      "dProdX":17,
+                      "dInR":true,
+                      "dTimeS":"204900",
+                      "dTimeR":"204900",
+                      "dProgType":"PROGNOSED",
+                      "dDirTxt":"Frankfurt (Main) Enkheim",
+                      "dDirFlg":"1",
+                      "type":"N"
+                    },
+                    {
+                      "locX":18,
+                      "idx":6,
+                      "aProdX":17,
+                      "aOutR":true,
+                      "aTimeS":"205100",
+                      "aTimeR":"205100",
+                      "aProgType":"PROGNOSED",
+                      "dProdX":17,
+                      "dInR":true,
+                      "dTimeS":"205100",
+                      "dTimeR":"205100",
+                      "dProgType":"PROGNOSED",
+                      "type":"N"
+                    },
+                    {
+                      "locX":19,
+                      "idx":7,
+                      "aProdX":17,
+                      "aOutR":true,
+                      "aTimeS":"205200",
+                      "aTimeR":"205200",
+                      "aProgType":"PROGNOSED",
+                      "dProdX":17,
+                      "dInR":true,
+                      "dTimeS":"205200",
+                      "dTimeR":"205200",
+                      "dProgType":"PROGNOSED",
+                      "type":"N"
+                    },
+                    {
+                      "locX":20,
+                      "idx":8,
+                      "aProdX":17,
+                      "aOutR":true,
+                      "aTimeS":"205300",
+                      "aTimeR":"205300",
+                      "aProgType":"PROGNOSED",
+                      "dProdX":17,
+                      "dInR":true,
+                      "dTimeS":"205300",
+                      "dTimeR":"205300",
+                      "dProgType":"PROGNOSED",
+                      "type":"N"
+                    },
+                    {
+                      "locX":21,
+                      "idx":9,
+                      "aProdX":17,
+                      "aOutR":true,
+                      "aTimeS":"205400",
+                      "aTimeR":"205400",
+                      "aProgType":"PROGNOSED",
+                      "dProdX":17,
+                      "dInR":true,
+                      "dTimeS":"205400",
+                      "dTimeR":"205400",
+                      "dProgType":"PROGNOSED",
+                      "type":"N"
+                    },
+                    {
+                      "locX":22,
+                      "idx":10,
+                      "aProdX":17,
+                      "aOutR":true,
+                      "aTimeS":"210000",
+                      "aTimeR":"210000",
+                      "aProgType":"PROGNOSED",
+                      "dProdX":17,
+                      "dInR":true,
+                      "dTimeS":"210000",
+                      "dTimeR":"210000",
+                      "dProgType":"PROGNOSED",
+                      "type":"N"
+                    },
+                    {
+                      "locX":23,
+                      "idx":11,
+                      "aProdX":17,
+                      "aOutR":true,
+                      "aTimeS":"210200",
+                      "aTimeR":"210200",
+                      "aProgType":"PROGNOSED",
+                      "dProdX":17,
+                      "dInR":true,
+                      "dTimeS":"210200",
+                      "dTimeR":"210200",
+                      "dProgType":"PROGNOSED",
+                      "type":"N"
+                    },
+                    {
+                      "locX":24,
+                      "idx":12,
+                      "aProdX":17,
+                      "aOutR":true,
+                      "aTimeS":"210300",
+                      "aTimeR":"210300",
+                      "aProgType":"PROGNOSED",
+                      "dProdX":17,
+                      "dInR":true,
+                      "dTimeS":"210300",
+                      "dTimeR":"210300",
+                      "dProgType":"PROGNOSED",
+                      "type":"N"
+                    },
+                    {
+                      "locX":25,
+                      "idx":13,
+                      "aProdX":17,
+                      "aOutR":true,
+                      "aTimeS":"210400",
+                      "aTimeR":"210400",
+                      "aProgType":"PROGNOSED",
+                      "dProdX":17,
+                      "dInR":true,
+                      "dTimeS":"210400",
+                      "dTimeR":"210400",
+                      "dProgType":"PROGNOSED",
+                      "type":"N"
+                    },
+                    {
+                      "locX":17,
+                      "idx":14,
+                      "aProdX":17,
+                      "aOutR":true,
+                      "aTimeS":"210600",
+                      "aTimeR":"210600",
+                      "aProgType":"PROGNOSED",
+                      "type":"N"
+                    }
+                  ],
+                  "poly":
+                  {
+                    "delta":true,
+                    "dim":2,
+                    "type":"WGS84",
+                    "crdEncYX":"w_{pHaz_t@oK^gCsAoAcBmAgDyFsY}BuH]oA{Pmc@qNk_@aDkGoCkE{DeE_DeB{F_AiI@oPoEmJwBoAaBiAcD}@_Fi@eIA_JZ}GvBmLvEsK`AsAfQuMxAuAxAkCXaDIkQJw@lAoBE{AQwF??]gTi@eHaBkEw@eA}FiD??mTsNaDsCmDaFoIkT_GgOeDoM",
+                    "crdEncS":"NNLNMMNNNMNLNNMNNNLNLNLNNNLMKNMNKNNNNLNKNNNKNNNMN",
+                    "crdEncF":"?????????????????????????????????????????????????",
+                    "ppLocRefL":
+                    [
+                      {
+                        "ppIdx":0,
+                        "locX":11
+                      },
+                      {
+                        "ppIdx":6,
+                        "locX":18
+                      },
+                      {
+                        "ppIdx":8,
+                        "locX":19
+                      },
+                      {
+                        "ppIdx":10,
+                        "locX":20
+                      },
+                      {
+                        "ppIdx":16,
+                        "locX":21
+                      },
+                      {
+                        "ppIdx":35,
+                        "locX":22
+                      },
+                      {
+                        "ppIdx":41,
+                        "locX":23
+                      },
+                      {
+                        "ppIdx":44,
+                        "locX":24
+                      },
+                      {
+                        "ppIdx":46,
+                        "locX":25
+                      },
+                      {
+                        "ppIdx":48,
+                        "locX":17
+                      }
+                    ]
+                  },
+                  "freq":
+                  {
+                    "minC":4,
+                    "maxC":15,
+                    "numC":12,
+                    "jnyL":
+                    [
+                      {
+                        "jid":"1|30435|1|80|5122021",
+                        "prodX":18,
+                        "dirTxt":"Frankfurt (Main) Enkheim",
+                        "dirFlg":"1",
+                        "stbStop":
+                        {
+                          "locX":11,
+                          "idx":12,
+                          "dProdX":18,
+                          "dTimeS":"205500",
+                          "type":"N"
+                        },
+                        "stopL":
+                        [
+                          {
+                            "locX":11,
+                            "idx":12,
+                            "dProdX":18,
+                            "dTimeS":"205500",
+                            "dDirTxt":"Frankfurt (Main) Enkheim",
+                            "dDirFlg":"1",
+                            "type":"N"
+                          },
+                          {
+                            "locX":17,
+                            "idx":22,
+                            "aProdX":18,
+                            "aTimeS":"210900",
+                            "type":"N"
+                          }
+                        ],
+                        "ctxRecon":"T$A=1@O=Frankfurt (Main) Konstablerwache@L=3000510@a=128@$A=1@O=Frankfurt (Main) Enkheim@L=3001537@a=128@$202112052055$202112052109$      U7$$1$$$$",
+                        "subscr":"F"
+                      },
+                      {
+                        "jid":"1|30452|2|80|5122021",
+                        "prodX":19,
+                        "dirTxt":"Frankfurt (Main) Enkheim",
+                        "dirFlg":"1",
+                        "stbStop":
+                        {
+                          "locX":11,
+                          "idx":12,
+                          "dProdX":19,
+                          "dTimeS":"211000",
+                          "type":"N"
+                        },
+                        "stopL":
+                        [
+                          {
+                            "locX":11,
+                            "idx":12,
+                            "dProdX":19,
+                            "dTimeS":"211000",
+                            "dDirTxt":"Frankfurt (Main) Enkheim",
+                            "dDirFlg":"1",
+                            "type":"N"
+                          },
+                          {
+                            "locX":17,
+                            "idx":22,
+                            "aProdX":19,
+                            "aTimeS":"212400",
+                            "type":"N"
+                          }
+                        ],
+                        "ctxRecon":"T$A=1@O=Frankfurt (Main) Konstablerwache@L=3000510@a=128@$A=1@O=Frankfurt (Main) Enkheim@L=3001537@a=128@$202112052110$202112052124$      U7$$1$$$$",
+                        "subscr":"F"
+                      },
+                      {
+                        "jid":"1|30435|2|80|5122021",
+                        "prodX":20,
+                        "dirTxt":"Frankfurt (Main) Enkheim",
+                        "dirFlg":"1",
+                        "stbStop":
+                        {
+                          "locX":11,
+                          "idx":12,
+                          "dProdX":20,
+                          "dTimeS":"212500",
+                          "type":"N"
+                        },
+                        "stopL":
+                        [
+                          {
+                            "locX":11,
+                            "idx":12,
+                            "dProdX":20,
+                            "dTimeS":"212500",
+                            "dDirTxt":"Frankfurt (Main) Enkheim",
+                            "dDirFlg":"1",
+                            "type":"N"
+                          },
+                          {
+                            "locX":17,
+                            "idx":22,
+                            "aProdX":20,
+                            "aTimeS":"213900",
+                            "type":"N"
+                          }
+                        ],
+                        "ctxRecon":"T$A=1@O=Frankfurt (Main) Konstablerwache@L=3000510@a=128@$A=1@O=Frankfurt (Main) Enkheim@L=3001537@a=128@$202112052125$202112052139$      U7$$1$$$$",
+                        "subscr":"F"
+                      },
+                      {
+                        "jid":"1|29734|31|80|5122021",
+                        "prodX":21,
+                        "dirTxt":"Frankfurt (Main) Enkheim",
+                        "dirFlg":"1",
+                        "stbStop":
+                        {
+                          "locX":11,
+                          "idx":5,
+                          "dProdX":21,
+                          "dTimeS":"212900",
+                          "type":"N"
+                        },
+                        "stopL":
+                        [
+                          {
+                            "locX":11,
+                            "idx":5,
+                            "dProdX":21,
+                            "dTimeS":"212900",
+                            "dDirTxt":"Frankfurt (Main) Enkheim",
+                            "dDirFlg":"1",
+                            "type":"N"
+                          },
+                          {
+                            "locX":17,
+                            "idx":14,
+                            "aProdX":21,
+                            "aTimeS":"214600",
+                            "type":"N"
+                          }
+                        ],
+                        "ctxRecon":"T$A=1@O=Frankfurt (Main) Konstablerwache@L=3000510@a=128@$A=1@O=Frankfurt (Main) Enkheim@L=3001537@a=128@$202112052129$202112052146$      U4$$1$$$$",
+                        "subscr":"F"
+                      },
+                      {
+                        "jid":"1|30452|3|80|5122021",
+                        "prodX":22,
+                        "dirTxt":"Frankfurt (Main) Enkheim",
+                        "dirFlg":"1",
+                        "stbStop":
+                        {
+                          "locX":11,
+                          "idx":12,
+                          "dProdX":22,
+                          "dTimeS":"214000",
+                          "type":"N"
+                        },
+                        "stopL":
+                        [
+                          {
+                            "locX":11,
+                            "idx":12,
+                            "dProdX":22,
+                            "dTimeS":"214000",
+                            "dDirTxt":"Frankfurt (Main) Enkheim",
+                            "dDirFlg":"1",
+                            "type":"N"
+                          },
+                          {
+                            "locX":17,
+                            "idx":22,
+                            "aProdX":22,
+                            "aTimeS":"215400",
+                            "type":"N"
+                          }
+                        ],
+                        "ctxRecon":"T$A=1@O=Frankfurt (Main) Konstablerwache@L=3000510@a=128@$A=1@O=Frankfurt (Main) Enkheim@L=3001537@a=128@$202112052140$202112052154$      U7$$1$$$$",
+                        "subscr":"F"
+                      }
+                    ]
+                  },
+                  "ctxRecon":"T$A=1@O=Frankfurt (Main) Konstablerwache@L=3000510@a=128@$A=1@O=Frankfurt (Main) Enkheim@L=3001537@a=128@$202112052049$202112052106$      U4$$1$$$$",
+                  "subscr":"F"
+                },
+                "minChg":"000500"
+              },
+              {
+                "type":"JNY",
+                "icoX":3,
+                "dep":
+                {
+                  "locX":17,
+                  "idx":0,
+                  "dProdX":23,
+                  "dInR":true,
+                  "dTimeS":"211200",
+                  "dProgType":"PROGNOSED",
+                  "type":"N"
+                },
+                "arr":
+                {
+                  "locX":26,
+                  "idx":9,
+                  "aProdX":23,
+                  "aOutR":true,
+                  "aTimeS":"213100",
+                  "aProgType":"PROGNOSED",
+                  "type":"N"
+                },
+                "jny":
+                {
+                  "jid":"1|312232|0|80|5122021",
+                  "prodX":23,
+                  "dirTxt":"Hanau Freiheitsplatz",
+                  "dirFlg":"2",
+                  "status":"P",
+                  "isRedir":true,
+                  "isRchbl":true,
+                  "stopL":
+                  [
+                    {
+                      "locX":17,
+                      "idx":0,
+                      "dProdX":23,
+                      "dInR":true,
+                      "dTimeS":"211200",
+                      "dProgType":"PROGNOSED",
+                      "dDirTxt":"Hanau Freiheitsplatz",
+                      "dDirFlg":"2",
+                      "type":"N"
+                    },
+                    {
+                      "locX":27,
+                      "idx":1,
+                      "aProdX":23,
+                      "aOutR":true,
+                      "aTimeS":"211300",
+                      "dProdX":23,
+                      "dInR":true,
+                      "dTimeS":"211300",
+                      "type":"N"
+                    },
+                    {
+                      "locX":28,
+                      "idx":2,
+                      "aProdX":23,
+                      "aOutR":true,
+                      "aTimeS":"211500",
+                      "dProdX":23,
+                      "dInR":true,
+                      "dTimeS":"211500",
+                      "type":"N"
+                    },
+                    {
+                      "locX":29,
+                      "idx":3,
+                      "aProdX":23,
+                      "aOutR":true,
+                      "aTimeS":"212100",
+                      "dProdX":23,
+                      "dInR":true,
+                      "dTimeS":"212100",
+                      "type":"N"
+                    },
+                    {
+                      "locX":30,
+                      "idx":4,
+                      "aProdX":23,
+                      "aOutR":true,
+                      "aTimeS":"212200",
+                      "dProdX":23,
+                      "dInR":true,
+                      "dTimeS":"212200",
+                      "type":"N"
+                    },
+                    {
+                      "locX":31,
+                      "idx":5,
+                      "aProdX":23,
+                      "aOutR":true,
+                      "aTimeS":"212300",
+                      "dProdX":23,
+                      "dInR":true,
+                      "dTimeS":"212300",
+                      "type":"N"
+                    },
+                    {
+                      "locX":32,
+                      "idx":6,
+                      "aProdX":23,
+                      "aOutR":true,
+                      "aTimeS":"212400",
+                      "dProdX":23,
+                      "dInR":true,
+                      "dTimeS":"212400",
+                      "type":"N"
+                    },
+                    {
+                      "locX":33,
+                      "idx":7,
+                      "aProdX":23,
+                      "aOutR":true,
+                      "aTimeS":"212600",
+                      "dProdX":23,
+                      "dInR":true,
+                      "dTimeS":"212600",
+                      "type":"N"
+                    },
+                    {
+                      "locX":34,
+                      "idx":8,
+                      "aProdX":23,
+                      "aOutR":true,
+                      "aTimeS":"213000",
+                      "dProdX":23,
+                      "dInR":true,
+                      "dTimeS":"213000",
+                      "type":"N"
+                    },
+                    {
+                      "locX":26,
+                      "idx":9,
+                      "aProdX":23,
+                      "aOutR":true,
+                      "aTimeS":"213100",
+                      "type":"N"
+                    }
+                  ],
+                  "poly":
+                  {
+                    "delta":true,
+                    "dim":2,
+                    "type":"WGS84",
+                    "crdEncYX":"_n`qHyvlt@Kr@z@vDt@i@zD{DtCgCsEgNbBwCd_@se@WqPPcGQgI_AGaAkB@uB~BcDnG`JhFrKXx@HbBPnCpBvAVm@w@}Bc@eAaAyBcFiK}GcLyEuMoBaJeJ}u@_@sM\\cOv@oPhFoj@rBmSl@_FnBiPr@uKhAae@RuNoBiYHuGPcBfFwTxAoFlDsTlGm_@JkIu@_Hd@{QSkItA_RKiHiAaMaEkYy@}Ts@sIkByT[qD}E}k@}E_YaAqDkB`AwABm@eAFgC|AoIb@{GEmMk@mJcAkq@CyA}[sA]qAZmC",
+                    "crdEncS":"NNNNNNNNNKLNMNNNNNKNNNNNNNNNMNNNNMNNNLNNNNNKNMNNNNNNNMNNMNNNNLNLNNLMNMNNNNNN",
+                    "crdEncF":"????????????????????????????????????????????????????????????????????????????",
+                    "ppLocRefL":
+                    [
+                      {
+                        "ppIdx":0,
+                        "locX":17
+                      },
+                      {
+                        "ppIdx":4,
+                        "locX":27
+                      },
+                      {
+                        "ppIdx":8,
+                        "locX":28
+                      },
+                      {
+                        "ppIdx":46,
+                        "locX":29
+                      },
+                      {
+                        "ppIdx":47,
+                        "locX":30
+                      },
+                      {
+                        "ppIdx":50,
+                        "locX":31
+                      },
+                      {
+                        "ppIdx":52,
+                        "locX":32
+                      },
+                      {
+                        "ppIdx":58,
+                        "locX":33
+                      },
+                      {
+                        "ppIdx":71,
+                        "locX":34
+                      },
+                      {
+                        "ppIdx":75,
+                        "locX":26
+                      }
+                    ]
+                  },
+                  "freq":
+                  {
+                    "minC":540,
+                    "maxC":540,
+                    "numC":1,
+                    "jnyL":
+                    [
+                      {
+                        "jid":"1|300660|0|80|5122021",
+                        "prodX":24,
+                        "dirTxt":"Hanau Freiheitsplatz",
+                        "dirFlg":"2",
+                        "stbStop":
+                        {
+                          "locX":17,
+                          "idx":0,
+                          "dProdX":24,
+                          "dTimeS":"01061200",
+                          "type":"N"
+                        },
+                        "stopL":
+                        [
+                          {
+                            "locX":17,
+                            "idx":0,
+                            "dProdX":24,
+                            "dTimeS":"01061200",
+                            "dDirTxt":"Hanau Freiheitsplatz",
+                            "dDirFlg":"2",
+                            "type":"N"
+                          },
+                          {
+                            "locX":26,
+                            "idx":9,
+                            "aProdX":24,
+                            "aTimeS":"01063100",
+                            "type":"N"
+                          }
+                        ],
+                        "ctxRecon":"T$A=1@O=Frankfurt (Main) Enkheim@L=3001537@a=128@$A=1@O=Hanau Beethovenplatz@L=3013508@a=128@$202112050612$202112050631$Bus X57 $$1$$$$",
+                        "msgL":
+                        [
+                          {
+                            "type":"REM",
+                            "remX":11,
+                            "fLocX":17,
+                            "tLocX":26,
+                            "tagL":
+                            [
+                              "RES_JNY_DTL"
+                            ]
+                          }
+                        ],
+                        "subscr":"F"
+                      }
+                    ]
+                  },
+                  "ctxRecon":"T$A=1@O=Frankfurt (Main) Enkheim@L=3001537@a=128@$A=1@O=Hanau Beethovenplatz@L=3013508@a=128@$202112052112$202112052131$Bus X57 $$3$$$$",
+                  "subscr":"F"
                 }
               }
             ],
-            "ctxRecon":"¶HKI¶G@F$A=2@O=50.017679, 8.229480@X=8229480@Y=50017679@u=0@a=128@$A=1@O=Mainz An den Dünen@L=3029079@a=128@$202109061235$202109061237$$$1$$$$§T$A=1@O=Mainz An den Dünen@L=3029079@a=128@$A=1@O=Mainz Hauptbahnhof@L=3006904@a=128@$202109061237$202109061302$Bus 62  $$1$$$$§T$A=1@O=Mainz Hauptbahnhof@L=3006904@a=128@$A=1@O=Frankfurt (Main) Flughafen Regionalbahnhof@L=3002930@a=128@$202109061310$202109061334$     RE3$$1$$$$§W$A=1@O=Frankfurt (Main) Flughafen Regionalbahnhof@L=3002930@a=128@$A=1@O=Frankfurt (Main) Flughafen Fernbahnhof@L=3011511@a=128@$202109061334$202109061344$$$1$$$$§T$A=1@O=Frankfurt (Main) Flughafen Fernbahnhof@L=3011511@a=128@$A=1@O=Hanau Wilhelmsbad Bahnhof@L=3004501@a=128@$202109061344$202109061416$    RB58$$1$$$$§T$A=1@O=Hanau Wilhelmsbad Bahnhof@L=3004501@a=128@$A=1@O=Hanau Beethovenplatz@L=3013508@a=128@$202109061426$202109061429$BusMKK32$$3$$$$¶GP¶ft@0@2000@120@1@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§bt@0@2000@120@1@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§tt@0@2000@120@1@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§",
+            "ctxRecon":"¶HKI¶G@F$A=2@O=50.017679, 8.229480@X=8229480@Y=50017679@u=0@a=128@$A=1@O=Mainz Eintrachthalle@L=3029074@a=128@$202112051926$202112051931$$$1$$$$§T$A=1@O=Mainz Eintrachthalle@L=3029074@a=128@$A=1@O=Mainz Hauptbahnhof@L=3006904@a=128@$202112051931$202112051941$Bus 61  $$1$$$$§T$A=1@O=Mainz Hauptbahnhof@L=3006904@a=128@$A=1@O=Frankfurt (Main) Höchst Bahnhof@L=3001008@a=128@$202112051949$202112052013$     RE4$$1$$$$§T$A=1@O=Frankfurt (Main) Höchst Bahnhof@L=3001008@a=128@$A=1@O=Frankfurt (Main) Konstablerwache@L=3000510@a=128@$202112052029$202112052044$      S2$$1$$$$§T$A=1@O=Frankfurt (Main) Konstablerwache@L=3000510@a=128@$A=1@O=Frankfurt (Main) Enkheim@L=3001537@a=128@$202112052049$202112052106$      U4$$1$$$$§T$A=1@O=Frankfurt (Main) Enkheim@L=3001537@a=128@$A=1@O=Hanau Beethovenplatz@L=3013508@a=128@$202112052112$202112052131$Bus X57 $$3$$$$¶GP¶ft@0@2000@120@1@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§bt@0@2000@120@1@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§tt@0@2000@120@1@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§",
             "freq":
             {
-              "minC":60
+              "minC":540
             },
             "conSubscr":"P",
-            "cksum":"d1e9ef51_3"
+            "cksum":"178a85e7_3"
           }
         ],
-        "fpB":"20210603",
-        "fpE":"20211211",
-        "planrtTS":"1630924588"
+        "fpB":"20210826",
+        "fpE":"20220630",
+        "planrtTS":"1638728499"
       }
     }
   ]
