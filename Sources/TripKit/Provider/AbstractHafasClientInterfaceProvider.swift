@@ -453,7 +453,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
                 destination = Location(type: .any, id: nil, coord: nil, place: nameAndPlace.0, name: nameAndPlace.1)
             }
             let (legMessages, _, departureCancelled) = parseLineAttributesAndMessages(jny: jny, rems: rems, messages: messages)
-            let message = legMessages.map({$0.trimmingCharacters(in: .whitespacesAndNewlines)}).joined(separator: "\n").emptyToNil
+            let message = legMessages.joined(separator: "\n").emptyToNil
             if departureCancelled {
                 continue
             }
@@ -584,10 +584,10 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
                         throw ParseError(reason: "failed to parse departure/arrival stop")
                     }
                     if let departureMessage = departureStop.message {
-                        legMessages.insert(departureMessage)
+                        legMessages.insert(departureMessage, at: 0)
                     }
                     if let arrivalMessage = arrivalStop.message {
-                        legMessages.insert(arrivalMessage)
+                        legMessages.append(arrivalMessage)
                     }
                     
                     var intermediateStops: [Stop] = []
@@ -623,7 +623,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
                         loadFactor = nil
                     }
                     
-                    let message = legMessages.map({$0.trimmingCharacters(in: .whitespacesAndNewlines)}).joined(separator: "\n").emptyToNil
+                    let message = legMessages.joined(separator: "\n").emptyToNil
                     legs.append(PublicLeg(line: line, destination: destination, departure: departureStop, arrival: arrivalStop, intermediateStops: intermediateStops, message: message, path: path, journeyContext: journeyContext, loadFactor: loadFactor))
                 case "WALK", "TRSF", "DEVI":
                     guard
@@ -752,10 +752,10 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         guard let departure = intermediateStops.removeFirst().departure else { throw ParseError(reason: "failed to parse dep stop") }
         guard let arrival = intermediateStops.removeLast().arrival else { throw ParseError(reason: "failed to parse dep stop") }
         if let departureMessage = departure.message {
-            legMessages.insert(departureMessage)
+            legMessages.insert(departureMessage, at: 0)
         }
         if let arrivalMessage = arrival.message {
-            legMessages.insert(arrivalMessage)
+            legMessages.append(arrivalMessage)
         }
         
         if cancelled {
@@ -778,7 +778,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
             loadFactor = nil
         }
         
-        let message = legMessages.map({$0.trimmingCharacters(in: .whitespacesAndNewlines)}).joined(separator: "\n").emptyToNil
+        let message = legMessages.joined(separator: "\n").emptyToNil
         let leg = PublicLeg(line: line, destination: destination, departure: departure, arrival: arrival, intermediateStops: intermediateStops, message: message, path: path, journeyContext: nil, loadFactor: loadFactor)
         let trip = Trip(id: "", from: departure.location, to: arrival.location, legs: [leg], fares: [])
         completion(request, .success(trip: trip, leg: leg))
@@ -920,7 +920,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         let predictedDeparturePosition = parsePosition(dict: dict, platfName: "dPlatfR", pltfName: "dPltfR")
         
         let (legMessages, _, _) = parseLineAttributesAndMessages(jny: dict, rems: rems, messages: messages)
-        let message = legMessages.map({$0.trimmingCharacters(in: .whitespacesAndNewlines)}).joined(separator: "\n").emptyToNil
+        let message = legMessages.joined(separator: "\n").emptyToNil
         
         let wagonSequenceContext: URL?
         if line?.label?.hasPrefix("ICE") ?? false, let number = line?.number, let plannedArrivalTime = plannedArrivalTime {
@@ -1125,9 +1125,9 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         return result
     }
     
-    private func parseLineAttributesAndMessages(jny: [String: Any], rems: [RemAttrib]?, messages: [String]?) -> (legMessages: Set<String>, lineAttrs: [Line.Attr]?, cancelled: Bool) {
+    private func parseLineAttributesAndMessages(jny: [String: Any], rems: [RemAttrib]?, messages: [String]?) -> (legMessages: [String], lineAttrs: [Line.Attr]?, cancelled: Bool) {
         var attrs: [Line.Attr]?
-        var legMessages = Set<String>()
+        var legMessages: [String] = []
         var cancelled = jny["isCncl"] as? Bool ?? false
         if let remL = jny["remL"] as? [Any] ?? jny["msgL"] as? [Any] {
             var result = Set<Line.Attr>()
@@ -1135,7 +1135,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
                 guard let jsonRem = jsonRem as? [String: Any] else { continue }
                 if jsonRem["type"] as? String == "REM", let remX = jsonRem["remX"] as? Int, let rem = rems?[remX] {
                     switch (rem.code ?? "").lowercased() {
-                    case "bf", "rg", "eh":
+                    case "bf", "rg", "eh", "bg":
                         result.insert(.wheelChairAccess)
                     case "fb":
                         result.insert(.bicycleCarriage)
@@ -1151,13 +1151,15 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
                         break
                     case "pf": // Maskenpflicht
                         break
+                    case "3g": // 3G-Regel
+                        break
                     case "operator": // line operator
                         break
                     default:
                         guard let txt = rem.txtN else { continue }
                         switch rem.type ?? "" {
                         case "U", "C", "P":
-                            legMessages.insert(txt)
+                            legMessages.append(txt)
                             cancelled = true
                         case "A", "I":
                             switch txt.lowercased() {
@@ -1170,15 +1172,15 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
                             case "wlan verfügbar":
                                 result.insert(.wifiAvailable)
                             default:
-                                legMessages.insert(txt)
+                                legMessages.append(txt)
                             }
                         default:
-                            legMessages.insert(txt)
+                            legMessages.append(txt)
                         }
                     }
                 } else if jsonRem["type"] as? String == "HIM", let himX = jsonRem["himX"] as? Int {
                     guard himX >= 0 && himX < messages?.count ?? 0, let text = messages?[himX] else { continue }
-                    legMessages.insert(text)
+                    legMessages.append(text)
                 }
             }
             attrs = result.isEmpty ? nil : Array(result)
@@ -1189,11 +1191,13 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
             for him in himL {
                 guard let him = him as? [String: Any], let himX = him["himX"] as? Int else { continue }
                 guard let text = messages?[himX] else { continue }
-                legMessages.insert(text)
+                legMessages.append(text)
             }
         }
+        // please, please continue to wear a mask, even if the app doesn't nag you about it anymore
         legMessages = legMessages.filter({!$0.lowercased().contains("ffp") && !$0.lowercased().contains("maskenpflicht")})
-        return (legMessages, attrs, cancelled)
+        legMessages = legMessages.map({ $0.ensurePunctuation })
+        return (legMessages.uniqued(), attrs, cancelled)
     }
     
     func parseMessageList(himList: [Any]?) throws -> [String]? {
@@ -1207,17 +1211,13 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
             while head.hasPrefix(".") {
                 head = String(head.dropFirst())
             }
-            head = head.trimmingCharacters(in: .whitespacesAndNewlines)
-            if !head.hasSuffix(".") && !head.hasSuffix("!") {
-                head += "."
-            }
+            head = head.ensurePunctuation
             
             if let text = him["lead"] as? String, !text.isEmpty {
-                head += "\n"
-                head += text.trimmingCharacters(in: .whitespacesAndNewlines)
-                if !head.hasSuffix(".") && !head.hasSuffix("!") {
-                    head += "."
+                if !head.isEmpty {
+                    head += "\n"
                 }
+                head += text.ensurePunctuation
             }
             result.append(head)
         }

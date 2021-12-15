@@ -69,6 +69,14 @@ extension String {
         return isEmpty ? nil : self
     }
     
+    var ensurePunctuation: String {
+        var result = self.trimmingCharacters(in: .whitespacesAndNewlines)
+        if !result.hasSuffix(".") && !result.hasSuffix("!") {
+            result += "."
+        }
+        return result
+    }
+    
     func match(pattern: NSRegularExpression) -> MatchResult? {
         let ns = self as NSString
         guard let match = pattern.firstMatch(in: self, options: [], range: NSMakeRange(0, self.length)) else { return nil }
@@ -143,4 +151,11 @@ public func =~(string:String, regex:String) -> Bool {
 
 func |= (left: inout  Bool, right: Bool) {
     left = left || right
+}
+
+extension Sequence where Element: Hashable {
+    func uniqued() -> [Element] {
+        var set = Set<Element>()
+        return filter { set.insert($0).inserted }
+    }
 }
