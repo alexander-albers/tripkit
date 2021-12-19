@@ -1156,7 +1156,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
                     case "operator": // line operator
                         break
                     default:
-                        guard let txt = rem.txtN else { continue }
+                        guard let txt = rem.txtN?.stripHTMLTags() else { continue }
                         switch rem.type ?? "" {
                         case "U", "C", "P":
                             legMessages.append(txt)
