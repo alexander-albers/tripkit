@@ -620,7 +620,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
                         // TODO: support first class
                         loadFactor = tcocXL.compactMap({ loadFactors?[$0] }).first(where: { $0.cls == "SECOND" })?.loadFactor
                     } else {
-                        loadFactor = nil
+                        loadFactor = parseLoadFactorFromRems(jny: jny, rems: rems)
                     }
                     
                     let message = legMessages.joined(separator: "\n").emptyToNil
@@ -775,7 +775,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
             // TODO: support first class
             loadFactor = tcocXL.compactMap({ loadFactors?[$0] }).first(where: { $0.cls == "SECOND" })?.loadFactor
         } else {
-            loadFactor = nil
+            loadFactor = parseLoadFactorFromRems(jny: journey, rems: rems)
         }
         
         let message = legMessages.joined(separator: "\n").emptyToNil
@@ -1135,25 +1135,37 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
                 guard let jsonRem = jsonRem as? [String: Any] else { continue }
                 if jsonRem["type"] as? String == "REM", let remX = jsonRem["remX"] as? Int, let rem = rems?[remX] {
                     switch (rem.code ?? "").lowercased() {
-                    case "bf", "rg", "eh", "bg":
+                    case "bf", "rg", "eh", "bg", "op", "be", "re":
                         result.insert(.wheelChairAccess)
-                    case "fb":
+                    case "fb", "fk", "g ":
                         result.insert(.bicycleCarriage)
                     case "bt", "br":
                         result.insert(.restaurant)
                     case "wv", "wi":
                         result.insert(.wifiAvailable)
-                    case "kl":
+                    case "kl", "rc":
                         result.insert(.airConditioned)
-                    case "ls":
+                    case "ls", "ri":
                         result.insert(.powerSockets)
                     case "ck": // Komfort Check-in
                         break
-                    case "pf": // Maskenpflicht
+                    case "pf", "pb": // Maskenpflicht
                         break
-                    case "3g": // 3G-Regel
+                    case "3g", "co": // 3G-Regel
                         break
-                    case "operator": // line operator
+                    case "operator", "df", "ay", "nw", "kc", "al", "cy": // line operator
+                        break
+                    case "hm": // RB 20: die euregiobahn
+                        break
+                    case "journeynumber": // line number
+                        break
+                    case _ where (rem.code ?? "").lowercased().hasPrefix("text.occup"): // load factor
+                        break
+                    case "text.realtime.journey.missed.connection", "text.realtime.connection.brokentrip":
+                        break
+                    case "bb": // station information
+                        break
+                    case "ao": // no alcoholic drinks allowed
                         break
                     default:
                         guard let txt = rem.txtN?.stripHTMLTags() else { continue }
@@ -1167,7 +1179,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
                                 result.insert(.restaurant)
                             case "fahrradmitnahme begrenzt möglich", "fahrradmitnahme möglich", "fahrradmitnahme reservierungspflichtig":
                                 result.insert(.bicycleCarriage)
-                            case "fahrzeuggebundene einstiegshilfe", "zugang für rollstuhlfahrer":
+                            case "fahrzeuggebundene einstiegshilfe", "zugang für rollstuhlfahrer", "niederflurbus mit rampe", "behindertengerechtes fahrzeug":
                                 result.insert(.wheelChairAccess)
                             case "wlan verfügbar":
                                 result.insert(.wifiAvailable)
@@ -1195,9 +1207,30 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
             }
         }
         // please, please continue to wear a mask, even if the app doesn't nag you about it anymore
-        legMessages = legMessages.filter({!$0.lowercased().contains("ffp") && !$0.lowercased().contains("maskenpflicht")})
+        legMessages = legMessages.filter({!$0.lowercased().contains("ffp") && !$0.lowercased().contains("maskenpflicht") && !$0.lowercased().contains("\"3g-pflicht\"") && !$0.lowercased().contains("corona-präventionsmaßnahme")})
         legMessages = legMessages.map({ $0.ensurePunctuation })
         return (legMessages.uniqued(), attrs, cancelled)
+    }
+    
+    func parseLoadFactorFromRems(jny: [String: Any], rems: [RemAttrib]?) -> LoadFactor? {
+        if let remL = jny["remL"] as? [Any] ?? jny["msgL"] as? [Any] {
+            for jsonRem in remL {
+                guard let jsonRem = jsonRem as? [String: Any] else { continue }
+                if jsonRem["type"] as? String == "REM", let remX = jsonRem["remX"] as? Int, let rem = rems?[remX] {
+                    switch (rem.code ?? "").lowercased() {
+                    case "text.occup.jny.2nd.11":
+                        return .low
+                    case "text.occup.jny.2nd.12":
+                        return .medium
+                    case "text.occup.jny.2nd.13":
+                        return .high
+                    default:
+                        break
+                    }
+                }
+            }
+        }
+        return nil
     }
     
     func parseMessageList(himList: [Any]?) throws -> [String]? {
