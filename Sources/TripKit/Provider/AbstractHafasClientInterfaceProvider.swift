@@ -1181,6 +1181,10 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
                                 result.insert(.bicycleCarriage)
                             case "fahrzeuggebundene einstiegshilfe", "zugang für rollstuhlfahrer", "niederflurbus mit rampe", "behindertengerechtes fahrzeug":
                                 result.insert(.wheelChairAccess)
+                            case _ where txt.lowercased().contains("rollstuhlstellplatz"):
+                                result.insert(.wheelChairAccess)
+                            case _ where txt.lowercased().contains("niederflurfahrzeug"):
+                                result.insert(.wheelChairAccess)
                             case "wlan verfügbar":
                                 result.insert(.wifiAvailable)
                             default:

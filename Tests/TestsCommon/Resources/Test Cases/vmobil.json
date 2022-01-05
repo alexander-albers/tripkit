@@ -1,0 +1,96 @@
+{
+    "suggestLocations": [
+        {
+            "constraint": "Feldkirch",
+            "result": {
+                "id": "A=1@O=Feldkirch Bahnhof@X=9603886@Y=47241128@U=81@L=480081700@B=1@p=1641343143@i=at:48:817@"
+            }
+        },
+        {
+            "constraint": "feldk",
+            "result": {
+                "id": "A=1@O=Feldkirch Bahnhof@X=9603886@Y=47241128@U=81@L=480081700@B=1@p=1641343143@i=at:48:817@"
+            }
+        },
+        {
+            "constraint": "Göfis Kustergasse",
+            "result": {
+                "id": "A=1@O=Göfis Kustergasse@X=9628580@Y=47240750@U=81@L=480101700@B=1@p=1641343143@i=at:48:1017@"
+            }
+        },
+        {
+            "constraint": "6800 Feldkirch, Altenburggasse",
+            "result": {
+                "id": "A=2@O=Altenburggasse, 6800 Feldkirch@X=9616507@Y=47253380@U=103@b=980002733@B=1@p=1637147511@"
+            }
+        }
+    ],
+    "queryNearbyLocationsByCoordinate": [
+        {
+            "__comment": "Feldkirch Bahnhof",
+            "lat": 47241128,
+            "lon": 9603886,
+            "result": {
+                "id": "A=1@O=Feldkirch Bahnhof@l=Feldkirch Bahnhof (A)@X=9603787@Y=47241334@u=24@U=81@L=480081714@i=at:48:817:0:14@"
+            }
+        },
+        {
+            "__comment": "Göfis Kustergasse",
+            "lat": 47240750,
+            "lon": 9628580,
+            "result": {
+                "id": "A=1@O=Göfis Kustergasse@X=9628517@Y=47240777@u=5@U=81@L=480101701@i=at:48:1017:0:1@"
+            }
+        }
+    ],
+    "queryDepartures": [
+        {
+            "__comment": "Feldkirch Bahnhof",
+            "id": "480081700"
+        },
+        {
+            "__comment": "Göfis Kustergasse",
+            "id": "480101700"
+        }
+    ],
+    "queryDeparturesInvalidId": "999999",
+    "queryTrips": [
+        {
+            "__comment": "Feldkirch Bahnhof to Göfis Kustergasse",
+            "from": {
+                "type": "station",
+                "id": "480081700"
+            },
+            "to": {
+                "type": "station",
+                "id": "480101700"
+            }
+        },
+        {
+            "__comment": "Feldkirch Bahnhof to Göfis Kustergasse",
+            "from": {
+                "type": "coord",
+                "lat": 47241128,
+                "lon": 9603886
+            },
+            "to": {
+                "type": "coord",
+                "lat": 47240750,
+                "lon": 9628580
+            }
+        }
+    ],
+    "queryTripsTooClose": [
+        {
+            "__comment": "Feldkirch Bahnhof",
+            "from": {
+                "type": "station",
+                "id": "480081700"
+            },
+            "to": {
+                "type": "station",
+                "id": "480081700"
+            }
+        }
+    ]
+}

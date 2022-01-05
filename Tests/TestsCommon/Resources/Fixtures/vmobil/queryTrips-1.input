@@ -1,0 +1,5191 @@
+{
+  "ver":"1.18",
+  "ext":"VAO.6",
+  "lang":"deu",
+  "id":"u4kcamic6qkfpi8g",
+  "err":"OK",
+  "cInfo":
+  {
+    "code":"OK",
+    "url":"",
+    "msg":""
+  },
+  "svcResL":
+  [
+    {
+      "meth":"TripSearch",
+      "err":"OK",
+      "res":
+      {
+        "common":
+        {
+          "locL":
+          [
+            {
+              "lid":"A=2@O=47.241128, 9.603886@X=9603886@Y=47241128@",
+              "type":"A",
+              "name":"47.241128, 9.603886",
+              "icoX":0,
+              "state":"F",
+              "crd":
+              {
+                "x":9603886,
+                "y":47241128,
+                "layerX":0,
+                "crdSysX":0
+              }
+            },
+            {
+              "lid":"A=1@O=Feldkirch Bahnhof@l=Feldkirch Bahnhof (B)@X=9603716@Y=47241397@U=81@L=480081709@i=at:48:817:0:9@",
+              "type":"S",
+              "name":"Feldkirch Bahnhof",
+              "nameAlt":"Feldkirch Bahnhof (B)",
+              "icoX":1,
+              "extId":"480081709",
+              "state":"F",
+              "crd":
+              {
+                "x":9603716,
+                "y":47241397,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":195,
+              "entry":true,
+              "mMastLocX":2
+            },
+            {
+              "lid":"A=1@O=Feldkirch Bahnhof@X=9603886@Y=47241128@U=81@L=480081700@i=at:48:817@",
+              "type":"S",
+              "name":"Feldkirch Bahnhof",
+              "icoX":2,
+              "extId":"480081700",
+              "state":"F",
+              "crd":
+              {
+                "x":9603886,
+                "y":47241128,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "meta":true,
+              "pCls":195,
+              "isMainMast":true
+            },
+            {
+              "lid":"A=1@O=Feldkirch Katzenturm@l=Feldkirch Katzenturm (A)@X=9596479@Y=47238224@U=81@L=480082203@i=at:48:822:0:3@",
+              "type":"S",
+              "name":"Feldkirch Katzenturm",
+              "nameAlt":"Feldkirch Katzenturm (A)",
+              "icoX":6,
+              "extId":"480082203",
+              "state":"F",
+              "crd":
+              {
+                "x":9596479,
+                "y":47238224,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":192,
+              "entry":true,
+              "mMastLocX":4
+            },
+            {
+              "lid":"A=1@O=Feldkirch Katzenturm@X=9596848@Y=47238530@U=81@L=480082200@i=at:48:822@",
+              "type":"S",
+              "name":"Feldkirch Katzenturm",
+              "icoX":7,
+              "extId":"480082200",
+              "state":"F",
+              "crd":
+              {
+                "x":9596848,
+                "y":47238530,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "meta":true,
+              "pCls":192,
+              "isMainMast":true
+            },
+            {
+              "lid":"A=1@O=Feldkirch Domplatz@X=9598043@Y=47237883@U=81@L=480081901@i=at:48:819:0:1@",
+              "type":"S",
+              "name":"Feldkirch Domplatz",
+              "icoX":8,
+              "extId":"480081901",
+              "state":"F",
+              "crd":
+              {
+                "x":9598043,
+                "y":47237883,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":192,
+              "entry":true,
+              "mMastLocX":6
+            },
+            {
+              "lid":"A=1@O=Feldkirch Domplatz@X=9598016@Y=47237874@U=81@L=480081900@i=at:48:819@",
+              "type":"S",
+              "name":"Feldkirch Domplatz",
+              "icoX":7,
+              "extId":"480081900",
+              "state":"F",
+              "crd":
+              {
+                "x":9598016,
+                "y":47237874,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "meta":true,
+              "pCls":192,
+              "isMainMast":true
+            },
+            {
+              "lid":"A=1@O=Feldkirch Katzenturm@l=Feldkirch Katzenturm (C)@X=9597378@Y=47238772@U=81@L=480082201@i=at:48:822:0:1@",
+              "type":"S",
+              "name":"Feldkirch Katzenturm",
+              "nameAlt":"Feldkirch Katzenturm (C)",
+              "icoX":6,
+              "extId":"480082201",
+              "state":"F",
+              "crd":
+              {
+                "x":9597378,
+                "y":47238772,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":192,
+              "entry":true,
+              "mMastLocX":4
+            },
+            {
+              "lid":"A=1@O=Göfis Kustergasse@X=9628517@Y=47240777@U=81@L=480101701@i=at:48:1017:0:1@",
+              "type":"S",
+              "name":"Göfis Kustergasse",
+              "icoX":8,
+              "extId":"480101701",
+              "state":"F",
+              "crd":
+              {
+                "x":9628517,
+                "y":47240777,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":64,
+              "entry":true,
+              "mMastLocX":9
+            },
+            {
+              "lid":"A=1@O=Göfis Kustergasse@X=9628580@Y=47240750@U=81@L=480101700@i=at:48:1017@",
+              "type":"S",
+              "name":"Göfis Kustergasse",
+              "icoX":7,
+              "extId":"480101700",
+              "state":"F",
+              "crd":
+              {
+                "x":9628580,
+                "y":47240750,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "meta":true,
+              "pCls":64,
+              "isMainMast":true
+            },
+            {
+              "lid":"A=1@O=Feldkirch Rösslepark@X=9599176@Y=47234943@U=81@L=480084401@i=at:48:844:0:1@",
+              "type":"S",
+              "name":"Feldkirch Rösslepark",
+              "icoX":8,
+              "extId":"480084401",
+              "state":"F",
+              "crd":
+              {
+                "x":9599176,
+                "y":47234943,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":192,
+              "entry":true,
+              "mMastLocX":11
+            },
+            {
+              "lid":"A=1@O=Feldkirch Rösslepark@X=9599185@Y=47234826@U=81@L=480084400@i=at:48:844@",
+              "type":"S",
+              "name":"Feldkirch Rösslepark",
+              "icoX":7,
+              "extId":"480084400",
+              "state":"F",
+              "crd":
+              {
+                "x":9599185,
+                "y":47234826,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "meta":true,
+              "pCls":192,
+              "isMainMast":true
+            },
+            {
+              "lid":"A=1@O=Feldkirch Schattenburg@X=9600767@Y=47236534@U=81@L=480084501@i=at:48:845:0:1@",
+              "type":"S",
+              "name":"Feldkirch Schattenburg",
+              "icoX":8,
+              "extId":"480084501",
+              "state":"F",
+              "crd":
+              {
+                "x":9600767,
+                "y":47236534,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":64,
+              "entry":true,
+              "mMastLocX":13
+            },
+            {
+              "lid":"A=1@O=Feldkirch Schattenburg@X=9600587@Y=47236516@U=81@L=480084500@i=at:48:845@",
+              "type":"S",
+              "name":"Feldkirch Schattenburg",
+              "icoX":7,
+              "extId":"480084500",
+              "state":"F",
+              "crd":
+              {
+                "x":9600587,
+                "y":47236516,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "meta":true,
+              "pCls":64,
+              "isMainMast":true
+            },
+            {
+              "lid":"A=1@O=Göfis Gasserplatz@X=9614242@Y=47240867@U=81@L=480198301@i=at:48:1983:0:1@",
+              "type":"S",
+              "name":"Göfis Gasserplatz",
+              "icoX":8,
+              "extId":"480198301",
+              "state":"F",
+              "crd":
+              {
+                "x":9614242,
+                "y":47240867,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":64,
+              "entry":true,
+              "mMastLocX":15
+            },
+            {
+              "lid":"A=1@O=Göfis Gasserplatz@X=9614332@Y=47240885@U=81@L=480198300@i=at:48:1983@",
+              "type":"S",
+              "name":"Göfis Gasserplatz",
+              "icoX":7,
+              "extId":"480198300",
+              "state":"F",
+              "crd":
+              {
+                "x":9614332,
+                "y":47240885,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "meta":true,
+              "pCls":64,
+              "isMainMast":true
+            },
+            {
+              "lid":"A=1@O=Göfis Kapetsch@X=9624175@Y=47241712@U=81@L=480101601@i=at:48:1016:0:1@",
+              "type":"S",
+              "name":"Göfis Kapetsch",
+              "icoX":8,
+              "extId":"480101601",
+              "state":"F",
+              "crd":
+              {
+                "x":9624175,
+                "y":47241712,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":64,
+              "entry":true,
+              "mMastLocX":17
+            },
+            {
+              "lid":"A=1@O=Göfis Kapetsch@X=9624031@Y=47241676@U=81@L=480101600@i=at:48:1016@",
+              "type":"S",
+              "name":"Göfis Kapetsch",
+              "icoX":7,
+              "extId":"480101600",
+              "state":"F",
+              "crd":
+              {
+                "x":9624031,
+                "y":47241676,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "meta":true,
+              "pCls":64,
+              "isMainMast":true
+            },
+            {
+              "lid":"A=2@O=47.240750, 9.628580@X=9628580@Y=47240750@",
+              "type":"A",
+              "name":"47.240750, 9.628580",
+              "icoX":0,
+              "state":"F",
+              "crd":
+              {
+                "x":9628580,
+                "y":47240750,
+                "layerX":0,
+                "crdSysX":0
+              }
+            },
+            {
+              "lid":"A=1@O=Feldkirch Jahnplatz@X=9599203@Y=47237244@U=81@L=480082101@i=at:48:821:0:1@",
+              "type":"S",
+              "name":"Feldkirch Jahnplatz",
+              "icoX":8,
+              "extId":"480082101",
+              "state":"F",
+              "crd":
+              {
+                "x":9599203,
+                "y":47237244,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":64,
+              "entry":true,
+              "mMastLocX":20
+            },
+            {
+              "lid":"A=1@O=Feldkirch Jahnplatz@X=9599248@Y=47237253@U=81@L=480082100@i=at:48:821@",
+              "type":"S",
+              "name":"Feldkirch Jahnplatz",
+              "icoX":7,
+              "extId":"480082100",
+              "state":"F",
+              "crd":
+              {
+                "x":9599248,
+                "y":47237253,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "meta":true,
+              "pCls":64,
+              "isMainMast":true
+            },
+            {
+              "lid":"A=1@O=Feldkirch Bahnhof@X=9604605@Y=47241011@U=81@L=480081706@i=at:48:817:0:6@",
+              "type":"S",
+              "name":"Feldkirch Bahnhof",
+              "icoX":1,
+              "extId":"480081706",
+              "state":"F",
+              "crd":
+              {
+                "x":9604605,
+                "y":47241011,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":195,
+              "entry":true,
+              "mMastLocX":2
+            },
+            {
+              "lid":"A=1@O=Rankweil Bahnhof@X=9637560@Y=47272329@U=81@L=480143602@i=at:48:1436:0:2@",
+              "type":"S",
+              "name":"Rankweil Bahnhof",
+              "icoX":21,
+              "extId":"480143602",
+              "state":"F",
+              "crd":
+              {
+                "x":9637560,
+                "y":47272329,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":67,
+              "entry":true,
+              "mMastLocX":23
+            },
+            {
+              "lid":"A=1@O=Rankweil Bahnhof@X=9637722@Y=47271907@U=81@L=480143600@i=at:48:1436@",
+              "type":"S",
+              "name":"Rankweil Bahnhof",
+              "icoX":2,
+              "extId":"480143600",
+              "state":"F",
+              "crd":
+              {
+                "x":9637722,
+                "y":47271907,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "meta":true,
+              "pCls":67,
+              "isMainMast":true
+            },
+            {
+              "lid":"A=1@O=Feldkirch Amberg Bahnhof@X=9621406@Y=47255358@U=81@L=480084702@i=at:48:847:0:2@",
+              "type":"S",
+              "name":"Feldkirch Amberg Bahnhof",
+              "icoX":23,
+              "extId":"480084702",
+              "state":"F",
+              "crd":
+              {
+                "x":9621406,
+                "y":47255358,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":3,
+              "entry":true,
+              "mMastLocX":25
+            },
+            {
+              "lid":"A=1@O=Feldkirch Amberg Bahnhof@X=9621370@Y=47255349@U=81@L=480084700@i=at:48:847@",
+              "type":"S",
+              "name":"Feldkirch Amberg Bahnhof",
+              "icoX":2,
+              "extId":"480084700",
+              "state":"F",
+              "crd":
+              {
+                "x":9621370,
+                "y":47255349,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "meta":true,
+              "pCls":3,
+              "isMainMast":true
+            },
+            {
+              "lid":"A=1@O=Feldkirch Bahnhof@X=9604507@Y=47241038@U=81@L=480081705@i=at:48:817:0:5@",
+              "type":"S",
+              "name":"Feldkirch Bahnhof",
+              "icoX":1,
+              "extId":"480081705",
+              "state":"F",
+              "crd":
+              {
+                "x":9604507,
+                "y":47241038,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":195,
+              "entry":true,
+              "mMastLocX":2
+            },
+            {
+              "lid":"A=1@O=Rankweil Bahnhof@l=Rankweil Bahnhof (B)@X=9637866@Y=47271529@U=81@L=480143610@i=at:48:1436:0:10@",
+              "type":"S",
+              "name":"Rankweil Bahnhof",
+              "nameAlt":"Rankweil Bahnhof (B)",
+              "icoX":21,
+              "extId":"480143610",
+              "state":"F",
+              "crd":
+              {
+                "x":9637866,
+                "y":47271529,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":67,
+              "entry":true,
+              "mMastLocX":23
+            },
+            {
+              "lid":"A=1@O=Göfis Kustergasse@X=9628643@Y=47240732@U=81@L=480101702@i=at:48:1017:0:2@",
+              "type":"S",
+              "name":"Göfis Kustergasse",
+              "icoX":8,
+              "extId":"480101702",
+              "state":"F",
+              "crd":
+              {
+                "x":9628643,
+                "y":47240732,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":64,
+              "entry":true,
+              "mMastLocX":9
+            },
+            {
+              "lid":"A=1@O=Rankweil LKH@X=9647250@Y=47260850@U=81@L=480006801@i=at:48:68:0:1@",
+              "type":"S",
+              "name":"Rankweil LKH",
+              "icoX":8,
+              "extId":"480006801",
+              "state":"F",
+              "crd":
+              {
+                "x":9647250,
+                "y":47260850,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":64,
+              "entry":true,
+              "mMastLocX":30
+            },
+            {
+              "lid":"A=1@O=Rankweil Landeskrankenhaus@X=9647187@Y=47260976@U=81@L=480006800@i=at:48:68@",
+              "type":"S",
+              "name":"Rankweil Landeskrankenhaus",
+              "icoX":7,
+              "extId":"480006800",
+              "state":"F",
+              "crd":
+              {
+                "x":9647187,
+                "y":47260976,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "meta":true,
+              "pCls":64,
+              "isMainMast":true
+            },
+            {
+              "lid":"A=1@O=Rankweil Marktplatz@l=Rankweil Marktplatz (B)@X=9641875@Y=47270729@U=81@L=480145102@i=at:48:1451:0:2@",
+              "type":"S",
+              "name":"Rankweil Marktplatz",
+              "nameAlt":"Rankweil Marktplatz (B)",
+              "icoX":24,
+              "extId":"480145102",
+              "state":"F",
+              "crd":
+              {
+                "x":9641875,
+                "y":47270729,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":64,
+              "entry":true,
+              "mMastLocX":32
+            },
+            {
+              "lid":"A=1@O=Rankweil Marktplatz@X=9641965@Y=47270720@U=81@L=480145100@i=at:48:1451@",
+              "type":"S",
+              "name":"Rankweil Marktplatz",
+              "icoX":7,
+              "extId":"480145100",
+              "state":"F",
+              "crd":
+              {
+                "x":9641965,
+                "y":47270720,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "meta":true,
+              "pCls":64,
+              "isMainMast":true
+            },
+            {
+              "lid":"A=1@O=Rankweil Letze@X=9643538@Y=47268059@U=81@L=480144902@i=at:48:1449:0:2@",
+              "type":"S",
+              "name":"Rankweil Letze",
+              "icoX":8,
+              "extId":"480144902",
+              "state":"F",
+              "crd":
+              {
+                "x":9643538,
+                "y":47268059,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":64,
+              "entry":true,
+              "mMastLocX":34
+            },
+            {
+              "lid":"A=1@O=Rankweil Letze@X=9643610@Y=47268005@U=81@L=480144900@i=at:48:1449@",
+              "type":"S",
+              "name":"Rankweil Letze",
+              "icoX":7,
+              "extId":"480144900",
+              "state":"F",
+              "crd":
+              {
+                "x":9643610,
+                "y":47268005,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "meta":true,
+              "pCls":64,
+              "isMainMast":true
+            },
+            {
+              "lid":"A=1@O=Göfis Tufers@X=9647421@Y=47249910@U=81@L=480102102@i=at:48:1021:0:2@",
+              "type":"S",
+              "name":"Göfis Tufers",
+              "icoX":8,
+              "extId":"480102102",
+              "state":"F",
+              "crd":
+              {
+                "x":9647421,
+                "y":47249910,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":64,
+              "entry":true,
+              "mMastLocX":36
+            },
+            {
+              "lid":"A=1@O=Göfis Tufers@X=9647385@Y=47249982@U=81@L=480102100@i=at:48:1021@",
+              "type":"S",
+              "name":"Göfis Tufers",
+              "icoX":7,
+              "extId":"480102100",
+              "state":"F",
+              "crd":
+              {
+                "x":9647385,
+                "y":47249982,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "meta":true,
+              "pCls":64,
+              "isMainMast":true
+            },
+            {
+              "lid":"A=1@O=Göfis Pfitz@X=9649075@Y=47245802@U=81@L=480101902@i=at:48:1019:0:2@",
+              "type":"S",
+              "name":"Göfis Pfitz",
+              "icoX":8,
+              "extId":"480101902",
+              "state":"F",
+              "crd":
+              {
+                "x":9649075,
+                "y":47245802,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":64,
+              "entry":true,
+              "mMastLocX":38
+            },
+            {
+              "lid":"A=1@O=Göfis Pfitz@X=9649255@Y=47245829@U=81@L=480101900@i=at:48:1019@",
+              "type":"S",
+              "name":"Göfis Pfitz",
+              "icoX":7,
+              "extId":"480101900",
+              "state":"F",
+              "crd":
+              {
+                "x":9649255,
+                "y":47245829,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "meta":true,
+              "pCls":64,
+              "isMainMast":true
+            },
+            {
+              "lid":"A=1@O=Göfis Agasella@X=9644338@Y=47243923@U=81@L=480101402@i=at:48:1014:0:2@",
+              "type":"S",
+              "name":"Göfis Agasella",
+              "icoX":8,
+              "extId":"480101402",
+              "state":"F",
+              "crd":
+              {
+                "x":9644338,
+                "y":47243923,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":64,
+              "entry":true,
+              "mMastLocX":40
+            },
+            {
+              "lid":"A=1@O=Göfis Agasella@X=9644401@Y=47243932@U=81@L=480101400@i=at:48:1014@",
+              "type":"S",
+              "name":"Göfis Agasella",
+              "icoX":7,
+              "extId":"480101400",
+              "state":"F",
+              "crd":
+              {
+                "x":9644401,
+                "y":47243932,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "meta":true,
+              "pCls":64,
+              "isMainMast":true
+            },
+            {
+              "lid":"A=1@O=Göfis Runggels@X=9641461@Y=47246287@U=81@L=480102002@i=at:48:1020:0:2@",
+              "type":"S",
+              "name":"Göfis Runggels",
+              "icoX":8,
+              "extId":"480102002",
+              "state":"F",
+              "crd":
+              {
+                "x":9641461,
+                "y":47246287,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":64,
+              "entry":true,
+              "mMastLocX":42
+            },
+            {
+              "lid":"A=1@O=Göfis Runggels@X=9641452@Y=47246243@U=81@L=480102000@i=at:48:1020@",
+              "type":"S",
+              "name":"Göfis Runggels",
+              "icoX":7,
+              "extId":"480102000",
+              "state":"F",
+              "crd":
+              {
+                "x":9641452,
+                "y":47246243,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "meta":true,
+              "pCls":64,
+              "isMainMast":true
+            },
+            {
+              "lid":"A=1@O=Göfis Badida@X=9636364@Y=47242494@U=81@L=480101502@i=at:48:1015:0:2@",
+              "type":"S",
+              "name":"Göfis Badida",
+              "icoX":8,
+              "extId":"480101502",
+              "state":"F",
+              "crd":
+              {
+                "x":9636364,
+                "y":47242494,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":64,
+              "entry":true,
+              "mMastLocX":44
+            },
+            {
+              "lid":"A=1@O=Göfis Badida@X=9636328@Y=47242404@U=81@L=480101500@i=at:48:1015@",
+              "type":"S",
+              "name":"Göfis Badida",
+              "icoX":7,
+              "extId":"480101500",
+              "state":"F",
+              "crd":
+              {
+                "x":9636328,
+                "y":47242404,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "meta":true,
+              "pCls":64,
+              "isMainMast":true
+            },
+            {
+              "lid":"A=1@O=Göfis Kirche@X=9632364@Y=47236300@U=81@L=480084002@i=at:48:840:0:2@",
+              "type":"S",
+              "name":"Göfis Kirche",
+              "icoX":8,
+              "extId":"480084002",
+              "state":"F",
+              "crd":
+              {
+                "x":9632364,
+                "y":47236300,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":64,
+              "entry":true,
+              "mMastLocX":46
+            },
+            {
+              "lid":"A=1@O=Göfis Kirche@X=9632373@Y=47236345@U=81@L=480084000@i=at:48:840@",
+              "type":"S",
+              "name":"Göfis Kirche",
+              "icoX":7,
+              "extId":"480084000",
+              "state":"F",
+              "crd":
+              {
+                "x":9632373,
+                "y":47236345,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "meta":true,
+              "pCls":64,
+              "isMainMast":true
+            },
+            {
+              "lid":"A=1@O=Göfis Haldenweg@X=9637839@Y=47238629@U=81@L=480070402@i=at:48:704:0:2@",
+              "type":"S",
+              "name":"Göfis Haldenweg",
+              "icoX":8,
+              "extId":"480070402",
+              "state":"F",
+              "crd":
+              {
+                "x":9637839,
+                "y":47238629,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":64,
+              "entry":true,
+              "mMastLocX":48
+            },
+            {
+              "lid":"A=1@O=Göfis Haldenweg@X=9637821@Y=47238665@U=81@L=480070400@i=at:48:704@",
+              "type":"S",
+              "name":"Göfis Haldenweg",
+              "icoX":7,
+              "extId":"480070400",
+              "state":"F",
+              "crd":
+              {
+                "x":9637821,
+                "y":47238665,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "meta":true,
+              "pCls":64,
+              "isMainMast":true
+            },
+            {
+              "lid":"A=1@O=Göfis Büttels@X=9634459@Y=47233613@U=81@L=480095801@i=at:48:958:0:1@",
+              "type":"S",
+              "name":"Göfis Büttels",
+              "icoX":8,
+              "extId":"480095801",
+              "state":"F",
+              "crd":
+              {
+                "x":9634459,
+                "y":47233613,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":64,
+              "entry":true,
+              "mMastLocX":50
+            },
+            {
+              "lid":"A=1@O=Göfis Büttels@X=9634306@Y=47233595@U=81@L=480095800@i=at:48:958@",
+              "type":"S",
+              "name":"Göfis Büttels",
+              "icoX":7,
+              "extId":"480095800",
+              "state":"F",
+              "crd":
+              {
+                "x":9634306,
+                "y":47233595,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "meta":true,
+              "pCls":64,
+              "isMainMast":true
+            },
+            {
+              "lid":"A=1@O=Göfis Gemeindeamt@X=9630917@Y=47235842@U=81@L=480057801@i=at:48:578:0:1@",
+              "type":"S",
+              "name":"Göfis Gemeindeamt",
+              "icoX":8,
+              "extId":"480057801",
+              "state":"F",
+              "crd":
+              {
+                "x":9630917,
+                "y":47235842,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":64,
+              "entry":true,
+              "mMastLocX":52
+            },
+            {
+              "lid":"A=1@O=Göfis Gemeindeamt@X=9630701@Y=47235914@U=81@L=480057800@i=at:48:578@",
+              "type":"S",
+              "name":"Göfis Gemeindeamt",
+              "icoX":7,
+              "extId":"480057800",
+              "state":"F",
+              "crd":
+              {
+                "x":9630701,
+                "y":47235914,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "meta":true,
+              "pCls":64,
+              "isMainMast":true
+            }
+          ],
+          "prodL":
+          [
+            {
+              "name":"Fußweg",
+              "icoX":3,
+              "prodCtx":
+              {
+                "name":"Fußweg"
+              }
+            },
+            {
+              "pid":"L::7::::B1082938778::vvv-33-4-j22-1::*",
+              "name":"Stadtbus 4",
+              "nameS":"4",
+              "number":"4",
+              "icoX":4,
+              "cls":128,
+              "oprX":0,
+              "prodCtx":
+              {
+                "name":"       4",
+                "num":"1204",
+                "line":"4",
+                "matchId":"vvv-33-4#8",
+                "catOutS":"V01",
+                "catOutL":"Stadtbus",
+                "catIn":"V01",
+                "catCode":"7",
+                "admin":"V4848_"
+              }
+            },
+            {
+              "pid":"L::7::::B1082938778::vvv-33-4-j22-1::*",
+              "name":"Stadtbus 4",
+              "nameS":"4",
+              "number":"4",
+              "icoX":4,
+              "cls":128,
+              "oprX":1,
+              "prodCtx":
+              {
+                "name":"       4",
+                "num":"1204",
+                "line":"4",
+                "lineId":"vvv-33-4-j22-1",
+                "matchId":"vvv-33-4#8",
+                "catOutS":"V01",
+                "catOutL":"Stadtbus",
+                "catIn":"V01",
+                "catCode":"7",
+                "admin":"V4848_"
+              }
+            },
+            {
+              "pid":"L::7::::B1082938778::vvv-33-5-j22-1::*",
+              "name":"Stadtbus 5",
+              "nameS":"5",
+              "number":"5",
+              "icoX":11,
+              "cls":128,
+              "oprX":1,
+              "prodCtx":
+              {
+                "name":"       5",
+                "num":"1510",
+                "line":"5",
+                "lineId":"vvv-33-5-j22-1",
+                "matchId":"vvv-33-5#20",
+                "catOutS":"V01",
+                "catOutL":"Stadtbus",
+                "catIn":"V01",
+                "catCode":"7",
+                "admin":"V4848_"
+              }
+            },
+            {
+              "pid":"L::7::::B1082938778::vvv-33-4-j22-1::*",
+              "name":"Stadtbus 4",
+              "nameS":"4",
+              "number":"4",
+              "icoX":4,
+              "cls":128,
+              "oprX":1,
+              "prodCtx":
+              {
+                "name":"       4",
+                "num":"1244",
+                "line":"4",
+                "lineId":"vvv-33-4-j22-1",
+                "matchId":"vvv-33-4#78",
+                "catOutS":"V01",
+                "catOutL":"Stadtbus",
+                "catIn":"V01",
+                "catCode":"7",
+                "admin":"V4848_"
+              }
+            },
+            {
+              "pid":"L::7::::B1082938778::vvv-33-4-j22-1::*",
+              "name":"Stadtbus 4",
+              "nameS":"4",
+              "number":"4",
+              "icoX":4,
+              "cls":128,
+              "oprX":1,
+              "prodCtx":
+              {
+                "name":"       4",
+                "num":"1224",
+                "line":"4",
+                "lineId":"vvv-33-4-j22-1",
+                "matchId":"vvv-33-4#9",
+                "catOutS":"V01",
+                "catOutL":"Stadtbus",
+                "catIn":"V01",
+                "catCode":"7",
+                "admin":"V4848_"
+              }
+            },
+            {
+              "pid":"L::7::::B1082938778::vvv-33-5-j22-1::*",
+              "name":"Stadtbus 5",
+              "nameS":"5",
+              "number":"5",
+              "icoX":11,
+              "cls":128,
+              "oprX":1,
+              "prodCtx":
+              {
+                "name":"       5",
+                "num":"1511",
+                "line":"5",
+                "lineId":"vvv-33-5-j22-1",
+                "matchId":"vvv-33-5#21",
+                "catOutS":"V01",
+                "catOutL":"Stadtbus",
+                "catIn":"V01",
+                "catCode":"7",
+                "admin":"V4848_"
+              }
+            },
+            {
+              "pid":"L::7::::B1082938778::vvv-33-4-j22-1::*",
+              "name":"Stadtbus 4",
+              "nameS":"4",
+              "number":"4",
+              "icoX":4,
+              "cls":128,
+              "oprX":1,
+              "prodCtx":
+              {
+                "name":"       4",
+                "num":"1202",
+                "line":"4",
+                "lineId":"vvv-33-4-j22-1",
+                "matchId":"vvv-33-4#79",
+                "catOutS":"V01",
+                "catOutL":"Stadtbus",
+                "catIn":"V01",
+                "catCode":"7",
+                "admin":"V4848_"
+              }
+            },
+            {
+              "name":"Übergang",
+              "icoX":13,
+              "prodCtx":
+              {
+                "name":"Übergang"
+              }
+            },
+            {
+              "pid":"L::6::::B3187062188::vvv-15-67-j22-1::*",
+              "name":"Landbus 67",
+              "nameS":"67",
+              "number":"67",
+              "icoX":8,
+              "cls":64,
+              "oprX":2,
+              "prodCtx":
+              {
+                "name":"      67",
+                "num":"320",
+                "line":"67",
+                "matchId":"vvv-15-67#40",
+                "catOutS":"V00",
+                "catOutL":"Landbus",
+                "catIn":"V00",
+                "catCode":"6",
+                "admin":"V1919_"
+              }
+            },
+            {
+              "pid":"L::6::::B3187062188::vvv-15-67-j22-1::*",
+              "name":"Landbus 67",
+              "nameS":"67",
+              "number":"67",
+              "icoX":8,
+              "cls":64,
+              "oprX":3,
+              "prodCtx":
+              {
+                "name":"      67",
+                "num":"320",
+                "line":"67",
+                "lineId":"vvv-15-67-j22-1",
+                "matchId":"vvv-15-67#40",
+                "catOutS":"V00",
+                "catOutL":"Landbus",
+                "catIn":"V00",
+                "catCode":"6",
+                "admin":"V1919_"
+              }
+            },
+            {
+              "pid":"L::6::::B3414163877::vvv-15-67-j22-1::*",
+              "name":"Landbus 67",
+              "nameS":"67",
+              "number":"67",
+              "icoX":8,
+              "cls":64,
+              "oprX":4,
+              "prodCtx":
+              {
+                "name":"      67",
+                "num":"653",
+                "line":"67",
+                "lineId":"vvv-15-67-j22-1",
+                "matchId":"vvv-15-67#41",
+                "catOutS":"V00",
+                "catOutL":"Landbus",
+                "catIn":"V00",
+                "catCode":"6",
+                "admin":"V17GX_"
+              }
+            },
+            {
+              "pid":"L::6::::B3414163877::vvv-15-67-j22-1::*",
+              "name":"Landbus 67",
+              "nameS":"67",
+              "number":"67",
+              "icoX":8,
+              "cls":64,
+              "oprX":4,
+              "prodCtx":
+              {
+                "name":"      67",
+                "num":"656",
+                "line":"67",
+                "lineId":"vvv-15-67-j22-1",
+                "matchId":"vvv-15-67#42",
+                "catOutS":"V00",
+                "catOutL":"Landbus",
+                "catIn":"V00",
+                "catCode":"6",
+                "admin":"V17GX_"
+              }
+            },
+            {
+              "pid":"L::6::::B3414163877::vvv-15-67-j22-1::*",
+              "name":"Landbus 67",
+              "nameS":"67",
+              "number":"67",
+              "icoX":8,
+              "cls":64,
+              "oprX":4,
+              "prodCtx":
+              {
+                "name":"      67",
+                "num":"657",
+                "line":"67",
+                "lineId":"vvv-15-67-j22-1",
+                "matchId":"vvv-15-67#43",
+                "catOutS":"V00",
+                "catOutL":"Landbus",
+                "catIn":"V00",
+                "catCode":"6",
+                "admin":"V17GX_"
+              }
+            },
+            {
+              "pid":"L::0::REX::B3472872807::REX_3472872807::*",
+              "name":"REX 5566",
+              "number":"5566",
+              "icoX":19,
+              "cls":1,
+              "oprX":5,
+              "prodCtx":
+              {
+                "name":"REX 5566",
+                "num":"5566",
+                "line":"xxx",
+                "matchId":"obb-2-402-V#23",
+                "catOut":"REX     ",
+                "catOutS":"REX",
+                "catOutL":"RegionalExpress",
+                "catIn":"REX",
+                "catCode":"0",
+                "admin":"O01AA_"
+              },
+              "himIdL":
+              [
+"HIM_FREETEXT_119790",
+"HIM_FREETEXT_119794",
+"HIM_FREETEXT_119801",
+"HIM_FREETEXT_119802",
+"HIM_FREETEXT_158372",
+"HIM_FREETEXT_158373",
+"HIM_FREETEXT_158374",
+"HIM_FREETEXT_158377",
+"HIM_FREETEXT_159587",
+"HIM_FREETEXT_159588",
+"HIM_FREETEXT_160546",
+"HIM_FREETEXT_160547",
+"HIM_FREETEXT_160548",
+"HIM_FREETEXT_160549",
+"HIM_FREETEXT_161089",
+"HIM_FREETEXT_161094",
+"HIM_FREETEXT_161095",
+"HIM_FREETEXT_161791",
+"HIM_FREETEXT_161794",
+"HIM_FREETEXT_163679",
+"HIM_FREETEXT_163869",
+"HIM_FREETEXT_163870",
+"HIM_FREETEXT_164223",
+"HIM_FREETEXT_164224",
+"HIM_FREETEXT_164829",
+"HIM_FREETEXT_164831",
+"HIM_FREETEXT_164943",
+"HIM_FREETEXT_164944",
+"HIM_FREETEXT_165176",
+"HIM_FREETEXT_165177",
+"HIM_FREETEXT_165690",
+"HIM_FREETEXT_165691",
+"HIM_FREETEXT_165735",
+"HIM_FREETEXT_165749",
+"HIM_FREETEXT_165750",
+"HIM_FREETEXT_165752",
+"HIM_FREETEXT_165753",
+"HIM_FREETEXT_166429",
+"HIM_FREETEXT_166430",
+"HIM_FREETEXT_166431",
+"HIM_FREETEXT_166432",
+"HIM_FREETEXT_166433",
+"HIM_FREETEXT_166434",
+"HIM_FREETEXT_166435",
+"HIM_FREETEXT_166436",
+"HIM_FREETEXT_166437",
+"HIM_FREETEXT_163681",
+"HIM_FREETEXT_166584"
+              ]
+            },
+            {
+              "pid":"L::0::REX::B3472872807::REX_3472872807::*",
+              "name":"REX 5566",
+              "number":"5566",
+              "icoX":19,
+              "cls":1,
+              "oprX":6,
+              "prodCtx":
+              {
+                "name":"REX 5566",
+                "num":"5566",
+                "line":"xxx",
+                "lineId":"obb-2-402-V-j22-1",
+                "matchId":"obb-2-402-V#23",
+                "catOut":"REX     ",
+                "catOutS":"REX",
+                "catOutL":"RegionalExpress",
+                "catIn":"REX",
+                "catCode":"0",
+                "admin":"O01AA_"
+              },
+              "himIdL":
+              [
+"HIM_FREETEXT_119790",
+"HIM_FREETEXT_119794",
+"HIM_FREETEXT_119801",
+"HIM_FREETEXT_119802",
+"HIM_FREETEXT_158372",
+"HIM_FREETEXT_158373",
+"HIM_FREETEXT_158374",
+"HIM_FREETEXT_158377",
+"HIM_FREETEXT_159587",
+"HIM_FREETEXT_159588",
+"HIM_FREETEXT_160546",
+"HIM_FREETEXT_160547",
+"HIM_FREETEXT_160548",
+"HIM_FREETEXT_160549",
+"HIM_FREETEXT_161089",
+"HIM_FREETEXT_161094",
+"HIM_FREETEXT_161095",
+"HIM_FREETEXT_161791",
+"HIM_FREETEXT_161794",
+"HIM_FREETEXT_163679",
+"HIM_FREETEXT_163869",
+"HIM_FREETEXT_163870",
+"HIM_FREETEXT_164223",
+"HIM_FREETEXT_164224",
+"HIM_FREETEXT_164829",
+"HIM_FREETEXT_164831",
+"HIM_FREETEXT_164943",
+"HIM_FREETEXT_164944",
+"HIM_FREETEXT_165176",
+"HIM_FREETEXT_165177",
+"HIM_FREETEXT_165690",
+"HIM_FREETEXT_165691",
+"HIM_FREETEXT_165735",
+"HIM_FREETEXT_165749",
+"HIM_FREETEXT_165750",
+"HIM_FREETEXT_165752",
+"HIM_FREETEXT_165753",
+"HIM_FREETEXT_166429",
+"HIM_FREETEXT_166430",
+"HIM_FREETEXT_166431",
+"HIM_FREETEXT_166432",
+"HIM_FREETEXT_166433",
+"HIM_FREETEXT_166434",
+"HIM_FREETEXT_166435",
+"HIM_FREETEXT_166436",
+"HIM_FREETEXT_166437",
+"HIM_FREETEXT_163681",
+"HIM_FREETEXT_166584"
+              ]
+            },
+            {
+              "pid":"L::0::REX::B3472872807::REX_3472872807::*",
+              "name":"REX 5568",
+              "number":"5568",
+              "icoX":19,
+              "cls":1,
+              "oprX":6,
+              "prodCtx":
+              {
+                "name":"REX 5568",
+                "num":"5568",
+                "line":"xxx",
+                "lineId":"obb-2-402-V-j22-1",
+                "matchId":"obb-2-402-V#71",
+                "catOut":"REX     ",
+                "catOutS":"REX",
+                "catOutL":"RegionalExpress",
+                "catIn":"REX",
+                "catCode":"0",
+                "admin":"O01AA_"
+              },
+              "himIdL":
+              [
+"HIM_FREETEXT_119790",
+"HIM_FREETEXT_119794",
+"HIM_FREETEXT_119801",
+"HIM_FREETEXT_119802",
+"HIM_FREETEXT_158372",
+"HIM_FREETEXT_158373",
+"HIM_FREETEXT_158374",
+"HIM_FREETEXT_158377",
+"HIM_FREETEXT_159587",
+"HIM_FREETEXT_159588",
+"HIM_FREETEXT_160546",
+"HIM_FREETEXT_160547",
+"HIM_FREETEXT_160548",
+"HIM_FREETEXT_160549",
+"HIM_FREETEXT_161089",
+"HIM_FREETEXT_161094",
+"HIM_FREETEXT_161095",
+"HIM_FREETEXT_161791",
+"HIM_FREETEXT_161794",
+"HIM_FREETEXT_163679",
+"HIM_FREETEXT_163869",
+"HIM_FREETEXT_163870",
+"HIM_FREETEXT_164223",
+"HIM_FREETEXT_164224",
+"HIM_FREETEXT_164829",
+"HIM_FREETEXT_164831",
+"HIM_FREETEXT_164943",
+"HIM_FREETEXT_164944",
+"HIM_FREETEXT_165176",
+"HIM_FREETEXT_165177",
+"HIM_FREETEXT_165690",
+"HIM_FREETEXT_165691",
+"HIM_FREETEXT_165735",
+"HIM_FREETEXT_165749",
+"HIM_FREETEXT_165750",
+"HIM_FREETEXT_165752",
+"HIM_FREETEXT_165753",
+"HIM_FREETEXT_166429",
+"HIM_FREETEXT_166430",
+"HIM_FREETEXT_166431",
+"HIM_FREETEXT_166432",
+"HIM_FREETEXT_166433",
+"HIM_FREETEXT_166434",
+"HIM_FREETEXT_166435",
+"HIM_FREETEXT_166436",
+"HIM_FREETEXT_166437",
+"HIM_FREETEXT_163681",
+"HIM_FREETEXT_166584"
+              ]
+            },
+            {
+              "pid":"L::0::IC::B3472872807::IC_3472872807::*",
+              "name":"IC 118",
+              "number":"118",
+              "icoX":21,
+              "cls":1,
+              "oprX":6,
+              "prodCtx":
+              {
+                "name":"IC   118",
+                "num":"118",
+                "line":"xxx",
+                "lineId":"obb-13-A3-j22-1",
+                "matchId":"obb-13-A3#5",
+                "catOut":"IC      ",
+                "catOutS":"IC",
+                "catOutL":"Intercity",
+                "catIn":"IC",
+                "catCode":"0",
+                "admin":"O01AA_"
+              },
+              "himIdL":
+              [
+"HIM_FREETEXT_119774",
+"HIM_FREETEXT_160464",
+"HIM_FREETEXT_160465",
+"HIM_FREETEXT_160588",
+"HIM_FREETEXT_160589",
+"HIM_FREETEXT_160682",
+"HIM_FREETEXT_160684",
+"HIM_FREETEXT_160703",
+"HIM_FREETEXT_160709",
+"HIM_FREETEXT_161114",
+"HIM_FREETEXT_161115",
+"HIM_FREETEXT_162035",
+"HIM_FREETEXT_162065",
+"HIM_FREETEXT_162070",
+"HIM_FREETEXT_162078",
+"HIM_FREETEXT_162863",
+"HIM_FREETEXT_162864",
+"HIM_FREETEXT_162865",
+"HIM_FREETEXT_162866",
+"HIM_FREETEXT_162867",
+"HIM_FREETEXT_163632",
+"HIM_FREETEXT_164216",
+"HIM_FREETEXT_164229",
+"HIM_FREETEXT_165601",
+"HIM_FREETEXT_165602",
+"HIM_FREETEXT_165896",
+"HIM_FREETEXT_165930"
+              ]
+            },
+            {
+              "pid":"L::0::REX::B3472872807::REX_3472872807::*",
+              "name":"REX 5570",
+              "number":"5570",
+              "icoX":19,
+              "cls":1,
+              "oprX":6,
+              "prodCtx":
+              {
+                "name":"REX 5570",
+                "num":"5570",
+                "line":"xxx",
+                "lineId":"obb-2-402-V-j22-1",
+                "matchId":"obb-2-402-V#24",
+                "catOut":"REX     ",
+                "catOutS":"REX",
+                "catOutL":"RegionalExpress",
+                "catIn":"REX",
+                "catCode":"0",
+                "admin":"O01AA_"
+              },
+              "himIdL":
+              [
+"HIM_FREETEXT_119790",
+"HIM_FREETEXT_119794",
+"HIM_FREETEXT_119801",
+"HIM_FREETEXT_119802",
+"HIM_FREETEXT_158372",
+"HIM_FREETEXT_158373",
+"HIM_FREETEXT_158374",
+"HIM_FREETEXT_158377",
+"HIM_FREETEXT_159587",
+"HIM_FREETEXT_159588",
+"HIM_FREETEXT_160546",
+"HIM_FREETEXT_160547",
+"HIM_FREETEXT_160548",
+"HIM_FREETEXT_160549",
+"HIM_FREETEXT_161089",
+"HIM_FREETEXT_161094",
+"HIM_FREETEXT_161095",
+"HIM_FREETEXT_161791",
+"HIM_FREETEXT_161794",
+"HIM_FREETEXT_163679",
+"HIM_FREETEXT_163869",
+"HIM_FREETEXT_163870",
+"HIM_FREETEXT_164223",
+"HIM_FREETEXT_164224",
+"HIM_FREETEXT_164829",
+"HIM_FREETEXT_164831",
+"HIM_FREETEXT_164943",
+"HIM_FREETEXT_164944",
+"HIM_FREETEXT_165176",
+"HIM_FREETEXT_165177",
+"HIM_FREETEXT_165690",
+"HIM_FREETEXT_165691",
+"HIM_FREETEXT_165735",
+"HIM_FREETEXT_165749",
+"HIM_FREETEXT_165750",
+"HIM_FREETEXT_165752",
+"HIM_FREETEXT_165753",
+"HIM_FREETEXT_166429",
+"HIM_FREETEXT_166430",
+"HIM_FREETEXT_166431",
+"HIM_FREETEXT_166432",
+"HIM_FREETEXT_166433",
+"HIM_FREETEXT_166434",
+"HIM_FREETEXT_166435",
+"HIM_FREETEXT_166436",
+"HIM_FREETEXT_166437",
+"HIM_FREETEXT_163681",
+"HIM_FREETEXT_166584"
+              ]
+            },
+            {
+              "pid":"L::0::REX::B3472872807::REX_3472872807::*",
+              "name":"REX 5572",
+              "number":"5572",
+              "icoX":19,
+              "cls":1,
+              "oprX":6,
+              "prodCtx":
+              {
+                "name":"REX 5572",
+                "num":"5572",
+                "line":"xxx",
+                "lineId":"obb-2-402-V-j22-1",
+                "matchId":"obb-2-402-V#73",
+                "catOut":"REX     ",
+                "catOutS":"REX",
+                "catOutL":"RegionalExpress",
+                "catIn":"REX",
+                "catCode":"0",
+                "admin":"O01AA_"
+              },
+              "himIdL":
+              [
+"HIM_FREETEXT_119790",
+"HIM_FREETEXT_119794",
+"HIM_FREETEXT_119801",
+"HIM_FREETEXT_119802",
+"HIM_FREETEXT_158372",
+"HIM_FREETEXT_158373",
+"HIM_FREETEXT_158374",
+"HIM_FREETEXT_158377",
+"HIM_FREETEXT_159587",
+"HIM_FREETEXT_159588",
+"HIM_FREETEXT_160546",
+"HIM_FREETEXT_160547",
+"HIM_FREETEXT_160548",
+"HIM_FREETEXT_160549",
+"HIM_FREETEXT_161089",
+"HIM_FREETEXT_161094",
+"HIM_FREETEXT_161095",
+"HIM_FREETEXT_161791",
+"HIM_FREETEXT_161794",
+"HIM_FREETEXT_163679",
+"HIM_FREETEXT_163869",
+"HIM_FREETEXT_163870",
+"HIM_FREETEXT_164223",
+"HIM_FREETEXT_164224",
+"HIM_FREETEXT_164829",
+"HIM_FREETEXT_164831",
+"HIM_FREETEXT_164943",
+"HIM_FREETEXT_164944",
+"HIM_FREETEXT_165176",
+"HIM_FREETEXT_165177",
+"HIM_FREETEXT_165690",
+"HIM_FREETEXT_165691",
+"HIM_FREETEXT_165735",
+"HIM_FREETEXT_165749",
+"HIM_FREETEXT_165750",
+"HIM_FREETEXT_165752",
+"HIM_FREETEXT_165753",
+"HIM_FREETEXT_166429",
+"HIM_FREETEXT_166430",
+"HIM_FREETEXT_166431",
+"HIM_FREETEXT_166432",
+"HIM_FREETEXT_166433",
+"HIM_FREETEXT_166434",
+"HIM_FREETEXT_166435",
+"HIM_FREETEXT_166436",
+"HIM_FREETEXT_166437",
+"HIM_FREETEXT_163681",
+"HIM_FREETEXT_166584"
+              ]
+            },
+            {
+              "pid":"L::6::::B3187062188::vvv-15-67-j22-1::*",
+              "name":"Landbus 67",
+              "nameS":"67",
+              "number":"67",
+              "icoX":8,
+              "cls":64,
+              "oprX":2,
+              "prodCtx":
+              {
+                "name":"      67",
+                "num":"301",
+                "line":"67",
+                "matchId":"vvv-15-67#11",
+                "catOutS":"V00",
+                "catOutL":"Landbus",
+                "catIn":"V00",
+                "catCode":"6",
+                "admin":"V1919_"
+              }
+            },
+            {
+              "pid":"L::6::::B3187062188::vvv-15-67-j22-1::*",
+              "name":"Landbus 67",
+              "nameS":"67",
+              "number":"67",
+              "icoX":8,
+              "cls":64,
+              "oprX":3,
+              "prodCtx":
+              {
+                "name":"      67",
+                "num":"301",
+                "line":"67",
+                "lineId":"vvv-15-67-j22-1",
+                "matchId":"vvv-15-67#11",
+                "catOutS":"V00",
+                "catOutL":"Landbus",
+                "catIn":"V00",
+                "catCode":"6",
+                "admin":"V1919_"
+              }
+            }
+          ],
+          "polyL":
+          [
+            {
+              "delta":true,
+              "dim":2,
+              "crdEncYX":"wyi_Hgvry@DG`@\\[~@sAnD|FxIn@hAfAtBf@hAr@tAzAdDJJRHZ[jCkBh@tBUH??gAp@MNSZAJ@N^rA`@jA@P_@P??AI",
+              "crdEncS":"NNNFNGMGFFNFMFNMNNIFNFJFNKINN",
+              "crdEncF":"?????????????????????????????",
+              "ppLocRefL":
+              [
+                {
+                  "ppIdx":0,
+                  "locX":1
+                },
+                {
+                  "ppIdx":16,
+                  "locX":5
+                },
+                {
+                  "ppIdx":28,
+                  "locX":3
+                }
+              ]
+            },
+            {
+              "delta":true,
+              "dim":2,
+              "crdEncYX":"}ei_H_iqy@??BHQHA@Us@IWAWk@qBMJ??",
+              "crdEncS":"NNNNNNNNNNN",
+              "crdEncF":"???????????",
+              "ppLocRefL":
+              [
+                {
+                  "ppIdx":0,
+                  "locX":3
+                },
+                {
+                  "ppIdx":10,
+                  "locX":7
+                }
+              ]
+            },
+            {
+              "delta":true,
+              "dim":2,
+              "crdEncYX":"iii_Hsnqy@A?IUEU?o@H[Z[nBwAjAu@`@g@b@[d@UbAW^Er@?|Db@hBB??hAEx@G?MGYQIo@P]DkDIOEOIMSK][m@SYo@k@KYI]?O??ACEYO_@u@w@S[Qk@W{AMa@Q]k@{@cC}C{BsE}@uAiAwAiByC}@}AiAyBy@mBs@oAc@}@e@sAOq@MaACeA?sANuCCyB@s@DWN]l@]LMp@qARi@RkAFu@D}A????ZaI?m@Cc@Ig@cAaFQaBAcA@iAn@cK@gA?uAIqAGg@cAcF{@qD??_@cBCOCgA@]HaA^_GPiAr@uCZcAVYRIj@O?H",
+              "crdEncS":"NNFLINFFIIFNJFMJNNFJNJMGLGNFIGJFMFINNHHJFMHJFMFKKFHNGGHFJNFIMHJFNGLFJGNIFGNNGNFJKHNHJFNFKHNNKFNFFNIGNHJNN",
+              "crdEncF":"?????????????????????????????????????????????????????????????????????????????????????????????????????????",
+              "ppLocRefL":
+              [
+                {
+                  "ppIdx":0,
+                  "locX":7
+                },
+                {
+                  "ppIdx":16,
+                  "locX":10
+                },
+                {
+                  "ppIdx":35,
+                  "locX":12
+                },
+                {
+                  "ppIdx":74,
+                  "locX":14
+                },
+                {
+                  "ppIdx":90,
+                  "locX":16
+                },
+                {
+                  "ppIdx":104,
+                  "locX":8
+                }
+              ]
+            },
+            {
+              "delta":true,
+              "dim":2,
+              "crdEncYX":"y_i_H_zqy@??AGLGTGPGBA@FJ\\BJ\\jABBFDVDl@@HB\\BJ@D?@?P?X@HANEzA_@F@F@??BCD_@BK@C@CH?FA?W??",
+              "crdEncS":"NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN",
+              "crdEncF":"?????????????????????????????????????",
+              "ppLocRefL":
+              [
+                {
+                  "ppIdx":0,
+                  "locX":19
+                },
+                {
+                  "ppIdx":36,
+                  "locX":10
+                }
+              ]
+            },
+            {
+              "delta":true,
+              "dim":2,
+              "crdEncYX":"mqh_H{yqy@?IhAEx@G?MGYQIo@P]DkDIOEOIMSK][m@SYo@k@KYI]?O??ACEYO_@u@w@S[Qk@W{AMa@Q]k@{@cC}C{BsE}@uAiAwAiByC}@}AiAyBy@mBs@oAc@}@e@sAOq@MaACeA?sANuCCyB@s@DWN]l@]LMp@qARi@RkAFu@D}A????ZaI?m@Cc@Ig@cAaFQaBAcA@iAn@cK@gA?uAIqAGg@cAcF{@qD??_@cBCOCgA@]HaA^_GPiAr@uCZcAVYRIj@O?H",
+              "crdEncS":"NNFJNJMGLGNFIGJFMFINNHHJFMHJFMFKKFHNGGHFJNFIMHJFNGLFJGNIFGNNGNFJKHNHJFNFKHNNKFNFFNIGNHJNN",
+              "crdEncF":"?????????????????????????????????????????????????????????????????????????????????????????",
+              "ppLocRefL":
+              [
+                {
+                  "ppIdx":0,
+                  "locX":10
+                },
+                {
+                  "ppIdx":19,
+                  "locX":12
+                },
+                {
+                  "ppIdx":58,
+                  "locX":14
+                },
+                {
+                  "ppIdx":74,
+                  "locX":16
+                },
+                {
+                  "ppIdx":88,
+                  "locX":8
+                }
+              ]
+            },
+            {
+              "delta":true,
+              "dim":2,
+              "crdEncYX":"iwi_Hy{ry@?AeEiEwA_BsAcBcCmDs@y@}@mAe@w@cB_CmD{FqC{EaFcJiC}DwAmBc@i@eAmAeByBu@u@mH_Hq@q@a@]UWiF}EgI}HmBeBCC????{DuD{B{BaAeAiAuAy@mAaAyAgAoBoAqCmBcFaAwCqImWqAiDo@{AwAuCuA{Bs@eAiAwAmBoB{@w@uAcA}@o@}@g@g@WkBy@eBm@kBg@aB[{BUuHQy@?e@@yBP_BRgCd@?G",
+              "crdEncS":"NNFLFGFNGHKGLHFNFGLFFFFFGGFNNHFNFJFNHLFJFNHMFINFJFFNFKFNJFNFIFNN",
+              "crdEncF":"????????????????????????????????????????????????????????????????",
+              "ppLocRefL":
+              [
+                {
+                  "ppIdx":0,
+                  "locX":21
+                },
+                {
+                  "ppIdx":27,
+                  "locX":24
+                },
+                {
+                  "ppIdx":63,
+                  "locX":22
+                }
+              ]
+            },
+            {
+              "delta":true,
+              "dim":2,
+              "crdEncYX":"a{o_Hwiyy@??G@AMWFCYFARGvA]\\IB?B?d@I@?BZ??",
+              "crdEncS":"NNNNNNNNNNNNNNNN",
+              "crdEncF":"????????????????",
+              "ppLocRefL":
+              [
+                {
+                  "ppIdx":0,
+                  "locX":22
+                },
+                {
+                  "ppIdx":15,
+                  "locX":27
+                }
+              ]
+            },
+            {
+              "delta":true,
+              "dim":2,
+              "crdEncYX":"avo_Hukyy@@F_@DICCK?OG?As@v@cEhAcHfA_FFU??Nk@PaA@MAqAFYTJf@H|@Jj@?~@QZANu@L_@NQPK^ChAHX?d@G??TKhA{@HGf@Mh@Aj@P^X`@`@rAdBd@Zd@L\\?p@OzAkAKa@?QJSbAa@h@[t@u@bA}AXWfG_D~@o@tBsBx@i@x@w@DK?SGICA??G@OLB^CNOXeAr@uBrB_An@gG~CYVcA|Au@t@i@ZcA`@KR?PJ`@nBeBrAy@hAa@zBe@pAg@n@]x@m@jAcAzBcCj@c@t@_@n@Iv@Bf@HxJ|BrDv@bCTn@J`Ab@`ClBVLZF|@HzAIh@@vARf@BZCVE~CgAbAg@nBqApAgAl@_ATi@b@qAj@uAj@y@??FIjAkAf@]h@[zBu@fJgCdBm@n@c@ZxA??H`@Pl@d@fAnD~EVd@h@tAPr@RfARxBFTDDILG\\Cp@Bp@JV??DNXf@Vv@@d@CbBE\\EPIJIFe@JmAHq@K_CeAYCODQLm@v@q@nAWdAOnA?V??HjCA`DBLLXNTd@`@tIbF\\TpArAzExG??t@bA|JrOjAfBx@hAZX`@N`BFtA\\r@ZrBnAj@QpB}@`Bm@OY??uA{CiAyAY]qE{CWUS_@M]K_@K{@YuCG_A?a@F}@l@}D??|@}FBONSNOPIT`Bb@hBd@nAd@~@h@x@X\\r@r@z@j@x@d@z@r@t@x@rAdBVX\\Tz@`@nCh@hA`@Gv@??CdAQlAeAtDYt@m@dAYZOLm@ZkBpBg@Z_@JAJKT??ITo@pAuAvCYpAmCpGc@z@[RiBXe@Ak@MuAc@i@WMMQ[c@wAYa@MGWK_@CeB@SBAI",
+              "crdEncS":"NNGNFJINGJHNNFKFINFIGNGNFKFNHFINNGFLHNHKGINHJNNGKNFMHHMHNHHMGJGNNGKJGMINHMHHMFNKGNHMHJGNFJGMINGJFJFNJJFNIGIIFNFHMHNJFFJNNHJFNGKHNNNFILKHNFJIFNHJLINNFINFKHFNFINIKGNGJNJGNNJKFNGJFNJNNIFJHNIIMHNFGMNNKMHLHFNFIGNFKNNMFIFNHMGJFNHFGLGIFNIINNNJMGNFLFJKGJFNNIFJJLJNKHNFNFJJFNGJFNN",
+              "crdEncF":"???????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????",
+              "ppLocRefL":
+              [
+                {
+                  "ppIdx":0,
+                  "locX":27
+                },
+                {
+                  "ppIdx":11,
+                  "locX":31
+                },
+                {
+                  "ppIdx":31,
+                  "locX":33
+                },
+                {
+                  "ppIdx":63,
+                  "locX":29
+                },
+                {
+                  "ppIdx":119,
+                  "locX":35
+                },
+                {
+                  "ppIdx":129,
+                  "locX":37
+                },
+                {
+                  "ppIdx":146,
+                  "locX":39
+                },
+                {
+                  "ppIdx":168,
+                  "locX":41
+                },
+                {
+                  "ppIdx":179,
+                  "locX":43
+                },
+                {
+                  "ppIdx":194,
+                  "locX":45
+                },
+                {
+                  "ppIdx":209,
+                  "locX":47
+                },
+                {
+                  "ppIdx":233,
+                  "locX":49
+                },
+                {
+                  "ppIdx":247,
+                  "locX":51
+                },
+                {
+                  "ppIdx":270,
+                  "locX":28
+                }
+              ]
+            }
+          ],
+          "layerL":
+          [
+            {
+              "id":"standard",
+              "name":"standard",
+              "index":0,
+              "annoCnt":509715
+            }
+          ],
+          "crdSysL":
+          [
+            {
+              "id":"standard",
+              "index":0,
+              "type":"WGS84"
+            }
+          ],
+          "opL":
+          [
+            {
+              "name":"Stadtbus Feldkirch",
+              "icoX":5
+            },
+            {
+              "name":"Stadtbus Feldkirch",
+              "icoX":5,
+              "id":"vvv+48+48"
+            },
+            {
+              "name":"Breuss Reisen",
+              "icoX":15
+            },
+            {
+              "name":"Breuss Reisen",
+              "icoX":15,
+              "id":"vvv+19+19"
+            },
+            {
+              "name":"Loacker Tours",
+              "icoX":16,
+              "street":"Fa. Loacker, Bundesstraße 17 6842 Koblach",
+              "id":"vvv+17+GÖ"
+            },
+            {
+              "name":"OEBB",
+              "icoX":20
+            },
+            {
+              "name":"OEBB",
+              "icoX":20,
+              "street":"ÖBB-MobilitätsCallCenter, Tel.: +43 (0)5 1717",
+              "id":"obb+01+AA"
+            }
+          ],
+          "remL":
+          [
+            {
+              "type":"A",
+              "code":"PDFPATH",
+              "prio":2,
+              "icoX":10,
+              "txtS":"Linienfahrplan",
+              "url":"https://timetables.arge-oevv.at/cgi-scripts/getpdf.pl?subnet=vvv&project=j22&type=ltt&op=33&line=33-4-j22-1"
+            },
+            {
+              "type":"A",
+              "code":"PDFPATH",
+              "prio":2,
+              "icoX":10,
+              "txtS":"Linienfahrplan",
+              "url":"https://timetables.arge-oevv.at/cgi-scripts/getpdf.pl?subnet=vvv&project=j22&type=ltt&op=33&line=33-5-j22-1"
+            },
+            {
+              "type":"A",
+              "code":"PDFPATH",
+              "prio":2,
+              "icoX":10,
+              "txtS":"Linienfahrplan",
+              "url":"https://timetables.arge-oevv.at/cgi-scripts/getpdf.pl?subnet=vvv&project=j22&type=ltt&op=33&line=33-4-j22-1"
+            },
+            {
+              "type":"A",
+              "code":"PDFPATH",
+              "prio":2,
+              "icoX":10,
+              "txtS":"Linienfahrplan",
+              "url":"https://timetables.arge-oevv.at/cgi-scripts/getpdf.pl?subnet=vvv&project=j22&type=ltt&op=33&line=33-4-j22-1"
+            },
+            {
+              "type":"A",
+              "code":"PDFPATH",
+              "prio":2,
+              "icoX":10,
+              "txtS":"Linienfahrplan",
+              "url":"https://timetables.arge-oevv.at/cgi-scripts/getpdf.pl?subnet=vvv&project=j22&type=ltt&op=33&line=33-5-j22-1"
+            },
+            {
+              "type":"A",
+              "code":"PDFPATH",
+              "prio":2,
+              "icoX":10,
+              "txtS":"Linienfahrplan",
+              "url":"https://timetables.arge-oevv.at/cgi-scripts/getpdf.pl?subnet=vvv&project=j22&type=ltt&op=33&line=33-4-j22-1"
+            },
+            {
+              "type":"A",
+              "code":"PDFPATH",
+              "prio":2,
+              "icoX":10,
+              "txtS":"Linienfahrplan",
+              "url":"https://timetables.arge-oevv.at/cgi-scripts/getpdf.pl?subnet=vvv&project=j22&type=ltt&op=15&line=15-67-j22-1"
+            },
+            {
+              "type":"A",
+              "code":"PDFPATH",
+              "prio":2,
+              "icoX":10,
+              "txtS":"Linienfahrplan",
+              "url":"https://timetables.arge-oevv.at/cgi-scripts/getpdf.pl?subnet=vvv&project=j22&type=ltt&op=15&line=15-67-j22-1"
+            },
+            {
+              "type":"A",
+              "code":"PDFPATH",
+              "prio":2,
+              "icoX":10,
+              "txtS":"Linienfahrplan",
+              "url":"https://timetables.arge-oevv.at/cgi-scripts/getpdf.pl?subnet=vvv&project=j22&type=ltt&op=15&line=15-67-j22-1"
+            },
+            {
+              "type":"A",
+              "code":"PDFPATH",
+              "prio":2,
+              "icoX":10,
+              "txtS":"Linienfahrplan",
+              "url":"https://timetables.arge-oevv.at/cgi-scripts/getpdf.pl?subnet=vvv&project=j22&type=ltt&op=15&line=15-67-j22-1"
+            },
+            {
+              "type":"H",
+              "code":"text.connection.eco.co2.decreased.consumption.message",
+              "icoX":18,
+              "txtN":"Im Vergleich zu einer Fahrt mit dem eigenen PKW werden 0,28 kg CO<sub>2</sub> Emissionen eingespart. <a target=\"_blank\" href=\"https://web.verkehrsauskunft.at/co2berechnung/CO2_Berechnung.pdf\">Mehr Informationen</a>"
+            },
+            {
+              "type":"A",
+              "code":"PDFPATH",
+              "prio":2,
+              "icoX":10,
+              "txtS":"Linienfahrplan",
+              "url":"https://timetables.arge-oevv.at/cgi-scripts/getpdf.pl?subnet=vvv&project=j22&type=ltt&op=15&line=15-67-j22-1"
+            },
+            {
+              "type":"A",
+              "code":"PDFPATH",
+              "prio":2,
+              "icoX":10,
+              "txtS":"Linienfahrplan",
+              "url":"https://timetables.arge-oevv.at/cgi-scripts/getpdf.pl?subnet=vvv&project=j22&type=ltt&op=15&line=15-67-j22-1"
+            },
+            {
+              "type":"A",
+              "code":"PDFPATH",
+              "prio":2,
+              "icoX":10,
+              "txtS":"Linienfahrplan",
+              "url":"https://timetables.arge-oevv.at/cgi-scripts/getpdf.pl?subnet=vvv&project=j22&type=ltt&op=15&line=15-67-j22-1"
+            },
+            {
+              "type":"A",
+              "code":"PDFPATH",
+              "prio":2,
+              "icoX":10,
+              "txtS":"Linienfahrplan",
+              "url":"https://timetables.arge-oevv.at/cgi-scripts/getpdf.pl?subnet=vvv&project=j22&type=ltt&op=15&line=15-67-j22-1"
+            },
+            {
+              "type":"H",
+              "code":"text.connection.eco.co2.decreased.consumption.message",
+              "icoX":18,
+              "txtN":"Im Vergleich zu einer Fahrt mit dem eigenen PKW werden 0,36 kg CO<sub>2</sub> Emissionen eingespart. <a target=\"_blank\" href=\"https://web.verkehrsauskunft.at/co2berechnung/CO2_Berechnung.pdf\">Mehr Informationen</a>"
+            },
+            {
+              "type":"A",
+              "code":"n0",
+              "prio":50,
+              "icoX":22,
+              "txtN":"Rollstuhlstellplatz"
+            },
+            {
+              "type":"A",
+              "code":"n0",
+              "prio":50,
+              "icoX":22,
+              "txtN":"Rollstuhlstellplatz - Voranmeldung unter +43 5 1717"
+            },
+            {
+              "type":"A",
+              "code":"n0",
+              "prio":50,
+              "icoX":22,
+              "txtN":"Niederflurfahrzeug"
+            },
+            {
+              "type":"A",
+              "code":"n0",
+              "prio":50,
+              "icoX":22,
+              "txtN":"Zustieg im Nahverkehr (REX, R, CJX, S-Bahn) nur mit gültiger Fahrkarte"
+            },
+            {
+              "type":"A",
+              "code":"n0",
+              "prio":50,
+              "icoX":22,
+              "txtN":"nur 2.Kl."
+            },
+            {
+              "type":"A",
+              "code":"n0",
+              "prio":50,
+              "icoX":22,
+              "txtN":"Fahrradmitnahme begrenzt möglich"
+            },
+            {
+              "type":"A",
+              "code":"n0",
+              "prio":50,
+              "icoX":22,
+              "txtN":"bedingt rollstuhltaugliches WC"
+            },
+            {
+              "type":"A",
+              "code":"PDFPATH",
+              "prio":2,
+              "icoX":10,
+              "txtS":"Linienfahrplan",
+              "url":"https://timetables.arge-oevv.at/cgi-scripts/getpdf.pl?subnet=vvv&project=j22&type=ltt&op=15&line=15-67-j22-1"
+            }
+          ],
+          "himL":
+          [
+            {
+              "hid":"126891",
+              "act":true,
+              "head":"FFP2-Maskenpflicht",
+              "text":"Bitte tragen Sie in allen öffentlichen Verkehrsmitteln eine FFP2-Maske und wahren Sie nach Möglichkeit Distanz zu anderen Personen.",
+              "icoX":9,
+              "prio":100,
+              "fLocX":1,
+              "tLocX":1,
+              "prod":65535,
+              "lModDate":"20211126",
+              "lModTime":"093953",
+              "sDate":"20210125",
+              "sTime":"000000",
+              "eDate":"20220531",
+              "eTime":"235900",
+              "comp":"KGÖVV",
+              "cat":4,
+              "pubChL":
+              [
+                {
+                  "name":"TIMETABLE",
+                  "fDate":"20211021",
+                  "fTime":"095900",
+                  "tDate":"20220531",
+                  "tTime":"235900",
+                  "uRefL":
+                  [
+0
+                  ]
+                }
+              ]
+            },
+            {
+              "hid":"126891",
+              "act":true,
+              "head":"FFP2-Maskenpflicht",
+              "text":"Bitte tragen Sie in allen öffentlichen Verkehrsmitteln eine FFP2-Maske und wahren Sie nach Möglichkeit Distanz zu anderen Personen.",
+              "icoX":9,
+              "prio":100,
+              "fLocX":7,
+              "tLocX":7,
+              "prod":65535,
+              "lModDate":"20211126",
+              "lModTime":"093953",
+              "sDate":"20210125",
+              "sTime":"000000",
+              "eDate":"20220531",
+              "eTime":"235900",
+              "comp":"KGÖVV",
+              "cat":4,
+              "pubChL":
+              [
+                {
+                  "name":"TIMETABLE",
+                  "fDate":"20211021",
+                  "fTime":"095900",
+                  "tDate":"20220531",
+                  "tTime":"235900",
+                  "uRefL":
+                  [
+0
+                  ]
+                }
+              ]
+            },
+            {
+              "hid":"126891",
+              "act":true,
+              "head":"FFP2-Maskenpflicht",
+              "text":"Bitte tragen Sie in allen öffentlichen Verkehrsmitteln eine FFP2-Maske und wahren Sie nach Möglichkeit Distanz zu anderen Personen.",
+              "icoX":9,
+              "prio":100,
+              "fLocX":21,
+              "tLocX":21,
+              "prod":65535,
+              "lModDate":"20211126",
+              "lModTime":"093953",
+              "sDate":"20210125",
+              "sTime":"000000",
+              "eDate":"20220531",
+              "eTime":"235900",
+              "comp":"KGÖVV",
+              "cat":4,
+              "pubChL":
+              [
+                {
+                  "name":"TIMETABLE",
+                  "fDate":"20211021",
+                  "fTime":"095900",
+                  "tDate":"20220531",
+                  "tTime":"235900",
+                  "uRefL":
+                  [
+0
+                  ]
+                }
+              ]
+            },
+            {
+              "hid":"126891",
+              "act":true,
+              "head":"FFP2-Maskenpflicht",
+              "text":"Bitte tragen Sie in allen öffentlichen Verkehrsmitteln eine FFP2-Maske und wahren Sie nach Möglichkeit Distanz zu anderen Personen.",
+              "icoX":9,
+              "prio":100,
+              "fLocX":27,
+              "tLocX":27,
+              "prod":65535,
+              "lModDate":"20211126",
+              "lModTime":"093953",
+              "sDate":"20210125",
+              "sTime":"000000",
+              "eDate":"20220531",
+              "eTime":"235900",
+              "comp":"KGÖVV",
+              "cat":4,
+              "pubChL":
+              [
+                {
+                  "name":"TIMETABLE",
+                  "fDate":"20211021",
+                  "fTime":"095900",
+                  "tDate":"20220531",
+                  "tTime":"235900",
+                  "uRefL":
+                  [
+0
+                  ]
+                }
+              ]
+            }
+          ],
+          "icoL":
+          [
+            {
+              "res":"ADR"
+            },
+            {
+              "res":"prod_ic",
+              "txtS":"EC",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255
+              },
+              "bg":
+              {
+                "r":1,
+                "g":1,
+                "b":1
+              }
+            },
+            {
+              "res":"prod_ic",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255
+              },
+              "bg":
+              {
+                "r":1,
+                "g":1,
+                "b":1
+              }
+            },
+            {
+              "res":"prod_walk",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255
+              },
+              "bg":
+              {
+                "r":60,
+                "g":147,
+                "b":179
+              }
+            },
+            {
+              "res":"prod_bus",
+              "txtS":"4",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255
+              },
+              "bg":
+              {
+                "r":0,
+                "g":121,
+                "b":58
+              }
+            },
+            {
+              "res":"48",
+              "txt":"Stadtbus Feldkirch"
+            },
+            {
+              "res":"prod_regbus",
+              "txtS":"2",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255
+              },
+              "bg":
+              {
+                "r":0,
+                "g":121,
+                "b":58
+              }
+            },
+            {
+              "res":"prod_regbus",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255
+              },
+              "bg":
+              {
+                "r":0,
+                "g":121,
+                "b":58
+              }
+            },
+            {
+              "res":"prod_regbus",
+              "txtS":"67",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255
+              },
+              "bg":
+              {
+                "r":0,
+                "g":121,
+                "b":58
+              }
+            },
+            {
+              "res":"HIM4"
+            },
+            {
+              "res":"REM_PDFFILE"
+            },
+            {
+              "res":"prod_bus",
+              "txtS":"5",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255
+              },
+              "bg":
+              {
+                "r":0,
+                "g":121,
+                "b":58
+              }
+            },
+            {
+              "res":"navi_walk"
+            },
+            {
+              "res":"TRSF",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255
+              },
+              "bg":
+              {
+                "r":87,
+                "g":88,
+                "b":91
+              }
+            },
+            {
+              "res":"rt_ont"
+            },
+            {
+              "res":"19",
+              "txt":"Breuss Reisen"
+            },
+            {
+              "res":"17",
+              "txt":"Loacker Tours"
+            },
+            {
+              "res":"attr_co2_info"
+            },
+            {
+              "res":"attr_co2_alert"
+            },
+            {
+              "res":"prod_ic",
+              "txtS":"REX",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255
+              },
+              "bg":
+              {
+                "r":1,
+                "g":1,
+                "b":1
+              }
+            },
+            {
+              "res":"01",
+              "txt":"OEBB"
+            },
+            {
+              "res":"prod_ic",
+              "txtS":"IC",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255
+              },
+              "bg":
+              {
+                "r":1,
+                "g":1,
+                "b":1
+              }
+            },
+            {
+              "res":"INFO"
+            },
+            {
+              "res":"prod_ic",
+              "txtS":"R",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255
+              },
+              "bg":
+              {
+                "r":1,
+                "g":1,
+                "b":1
+              }
+            },
+            {
+              "res":"prod_regbus",
+              "txtS":"60",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255
+              },
+              "bg":
+              {
+                "r":0,
+                "g":121,
+                "b":58
+              }
+            }
+          ],
+          "urlL":
+          [
+            {
+              "label":"Fahrgast-Charta - sicher und gesund mit den Öffis ans Ziel",
+              "url":"https://routenplaner.verkehrsauskunft.at/him-upload/1637915993266_Fahrgastcharta_November021.pdf"
+            }
+          ],
+          "dirL":
+          [
+            {
+              "txt":"Nofels-Bangs",
+              "flg":"H"
+            },
+            {
+              "txt":"Gisingen",
+              "flg":"H"
+            },
+            {
+              "txt":"Göfis - LKH - Rankweil Bahnhof",
+              "flg":"R"
+            },
+            {
+              "txt":"Lindau-Insel",
+              "flg":"R"
+            },
+            {
+              "txt":"Düsseldorf Hauptbahnhof",
+              "flg":"R"
+            },
+            {
+              "txt":"LKH - Göfis - Feldkirch",
+              "flg":"H"
+            },
+            {
+              "txt":"Feldkirch Busplatz",
+              "flg":"H"
+            }
+          ]
+        },
+        "outConL":
+        [
+          {
+            "cid":"C-0",
+            "date":"20220105",
+            "dur":"001800",
+            "chg":1,
+            "sDays":
+            {
+              "sDaysR":"Mo - Fr",
+              "sDaysI":"nicht 6. Jan, 18. Apr, 26. Mai",
+              "sDaysB":"CF9F3E7CD9F3E7CE9F3E7CF9F3E7CF9F3E7CF9F3E3CF9F3E7CE980"
+            },
+            "dep":
+            {
+              "locX":0,
+              "dInR":true,
+              "dTimeS":"092300",
+              "type":"N"
+            },
+            "arr":
+            {
+              "locX":18,
+              "aOutR":true,
+              "aTimeS":"094100",
+              "type":"N"
+            },
+            "secL":
+            [
+              {
+                "type":"WALK",
+                "icoX":3,
+                "dep":
+                {
+                  "locX":0,
+                  "dInR":true,
+                  "dTimeS":"092300",
+                  "type":"N"
+                },
+                "arr":
+                {
+                  "locX":1,
+                  "aOutR":true,
+                  "aTimeS":"092500",
+                  "type":"N"
+                },
+                "gis":
+                {
+                  "dist":94,
+                  "durS":"000200",
+                  "ctx":"C|c559ac4c|G|1|G@F|A=2@O=47.241128, 9.603886@X=9603886@Y=47241128@|A=1@O=Feldkirch Bahnhof@l=Feldkirch Bahnhof (B)@X=9603716@Y=47241397@U=81@L=480081709@i=at:48:817:0:9@|5012022|92300|92500|bf|ft@0@2000@120@1@133@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§bt@0@2000@120@1@133@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§tf@$f@$f@$f@$f@$f@$§|||",
+                  "getDescr":true,
+                  "getPoly":true
+                }
+              },
+              {
+                "type":"JNY",
+                "icoX":4,
+                "dep":
+                {
+                  "locX":1,
+                  "idx":0,
+                  "dProdX":1,
+                  "dPlatfS":"B",
+                  "dInR":true,
+                  "dTimeS":"092500",
+                  "dTimeR":"092700",
+                  "dProgType":"PROGNOSED",
+                  "type":"N"
+                },
+                "arr":
+                {
+                  "locX":3,
+                  "idx":2,
+                  "aProdX":1,
+                  "aPlatfS":"A",
+                  "aOutR":true,
+                  "aTimeS":"092900",
+                  "aTimeR":"093100",
+                  "aProgType":"PROGNOSED",
+                  "type":"N"
+                },
+                "jny":
+                {
+                  "jid":"2|#VN#1#ST#1641343143#PI#0#ZI#186694#TA#13#DA#50122#1S#480081709#1T#925#LS#480097101#LT#943#PU#81#RT#1#CA#V01#ZE#4#ZB#       4#PC#7#FR#480081709#FT#925#TO#480097101#TT#943#",
+                  "prodX":2,
+                  "dirTxt":"Nofels-Bangs",
+                  "dirFlg":"H",
+                  "status":"P",
+                  "isRchbl":true,
+                  "stopL":
+                  [
+                    {
+                      "locX":1,
+                      "idx":0,
+                      "dProdX":2,
+                      "dInR":true,
+                      "dTimeS":"092500",
+                      "dTimeR":"092700",
+                      "dProgType":"PROGNOSED",
+                      "dDirTxt":"Nofels-Bangs",
+                      "dDirFlg":"H",
+                      "type":"N"
+                    },
+                    {
+                      "locX":5,
+                      "idx":1,
+                      "aProdX":2,
+                      "aOutR":true,
+                      "aTimeS":"092700",
+                      "aTimeR":"092900",
+                      "aProgType":"PROGNOSED",
+                      "dProdX":2,
+                      "dInR":true,
+                      "dTimeS":"092700",
+                      "dTimeR":"092900",
+                      "dProgType":"PROGNOSED",
+                      "type":"N"
+                    },
+                    {
+                      "locX":3,
+                      "idx":2,
+                      "aProdX":2,
+                      "aOutR":true,
+                      "aTimeS":"092900",
+                      "aTimeR":"093100",
+                      "aProgType":"PROGNOSED",
+                      "type":"N"
+                    }
+                  ],
+                  "polyG":
+                  {
+                    "polyXL":
+                    [
+                      0
+                    ],
+                    "layerX":0,
+                    "crdSysX":0
+                  },
+                  "freq":
+                  {
+                    "minC":5,
+                    "maxC":15,
+                    "numC":13,
+                    "jnyL":
+                    [
+                      {
+                        "jid":"2|#VN#1#ST#1641343143#PI#0#ZI#186723#TA#6#DA#50122#1S#480081709#1T#935#LS#480101301#LT#949#PU#81#RT#1#CA#V01#ZE#5#ZB#       5#PC#7#FR#480081709#FT#935#TO#480101301#TT#949#",
+                        "prodX":3,
+                        "dirTxt":"Gisingen",
+                        "dirFlg":"H",
+                        "stopL":
+                        [
+                          {
+                            "locX":1,
+                            "idx":0,
+                            "dProdX":3,
+                            "dTimeS":"093500",
+                            "dDirTxt":"Gisingen",
+                            "dDirFlg":"H",
+                            "type":"N"
+                          },
+                          {
+                            "locX":3,
+                            "idx":2,
+                            "aProdX":3,
+                            "aTimeS":"093900",
+                            "type":"N"
+                          }
+                        ],
+                        "ctxRecon":"T$A=1@O=Feldkirch Bahnhof@L=480081709@a=128@$A=1@O=Feldkirch Katzenturm@L=480082203@a=128@$202201050935$202201050939$       5$$1$$$$$$",
+                        "msgL":
+                        [
+                          {
+                            "type":"REM",
+                            "remX":1,
+                            "tagL":
+                            [
+                              "RES_JNY_H3"
+                            ],
+                            "sort":537133056
+                          }
+                        ],
+                        "subscr":"F",
+                        "prodL":
+                        [
+                          {
+                            "prodX":3,
+                            "fLocX":1,
+                            "tLocX":3,
+                            "fIdx":0,
+                            "tIdx":2
+                          }
+                        ],
+                        "dirL":
+                        [
+                          {
+                            "dirX":1,
+                            "fLocX":1,
+                            "tLocX":3,
+                            "fIdx":0,
+                            "tIdx":2
+                          }
+                        ]
+                      },
+                      {
+                        "jid":"2|#VN#1#ST#1641343143#PI#0#ZI#186694#TA#14#DA#50122#1S#480081709#1T#940#LS#480097101#LT#958#PU#81#RT#1#CA#V01#ZE#4#ZB#       4#PC#7#FR#480081709#FT#940#TO#480097101#TT#958#",
+                        "prodX":4,
+                        "dirTxt":"Nofels-Bangs",
+                        "dirFlg":"H",
+                        "stopL":
+                        [
+                          {
+                            "locX":1,
+                            "idx":0,
+                            "dProdX":4,
+                            "dTimeS":"094000",
+                            "dDirTxt":"Nofels-Bangs",
+                            "dDirFlg":"H",
+                            "type":"N"
+                          },
+                          {
+                            "locX":3,
+                            "idx":2,
+                            "aProdX":4,
+                            "aTimeS":"094400",
+                            "type":"N"
+                          }
+                        ],
+                        "ctxRecon":"T$A=1@O=Feldkirch Bahnhof@L=480081709@a=128@$A=1@O=Feldkirch Katzenturm@L=480082203@a=128@$202201050940$202201050944$       4$$1$$$$$$",
+                        "msgL":
+                        [
+                          {
+                            "type":"REM",
+                            "remX":2,
+                            "tagL":
+                            [
+                              "RES_JNY_H3"
+                            ],
+                            "sort":537133056
+                          }
+                        ],
+                        "subscr":"F",
+                        "prodL":
+                        [
+                          {
+                            "prodX":4,
+                            "fLocX":1,
+                            "tLocX":3,
+                            "fIdx":0,
+                            "tIdx":2
+                          }
+                        ],
+                        "dirL":
+                        [
+                          {
+                            "dirX":0,
+                            "fLocX":1,
+                            "tLocX":3,
+                            "fIdx":0,
+                            "tIdx":2
+                          }
+                        ]
+                      },
+                      {
+                        "jid":"2|#VN#1#ST#1641343143#PI#0#ZI#186694#TA#15#DA#50122#1S#480081709#1T#955#LS#480097101#LT#1013#PU#81#RT#1#CA#V01#ZE#4#ZB#       4#PC#7#FR#480081709#FT#955#TO#480097101#TT#1013#",
+                        "prodX":5,
+                        "dirTxt":"Nofels-Bangs",
+                        "dirFlg":"H",
+                        "stopL":
+                        [
+                          {
+                            "locX":1,
+                            "idx":0,
+                            "dProdX":5,
+                            "dTimeS":"095500",
+                            "dDirTxt":"Nofels-Bangs",
+                            "dDirFlg":"H",
+                            "type":"N"
+                          },
+                          {
+                            "locX":3,
+                            "idx":2,
+                            "aProdX":5,
+                            "aTimeS":"095900",
+                            "type":"N"
+                          }
+                        ],
+                        "ctxRecon":"T$A=1@O=Feldkirch Bahnhof@L=480081709@a=128@$A=1@O=Feldkirch Katzenturm@L=480082203@a=128@$202201050955$202201050959$       4$$1$$$$$$",
+                        "msgL":
+                        [
+                          {
+                            "type":"REM",
+                            "remX":3,
+                            "tagL":
+                            [
+                              "RES_JNY_H3"
+                            ],
+                            "sort":537133056
+                          }
+                        ],
+                        "subscr":"F",
+                        "prodL":
+                        [
+                          {
+                            "prodX":5,
+                            "fLocX":1,
+                            "tLocX":3,
+                            "fIdx":0,
+                            "tIdx":2
+                          }
+                        ],
+                        "dirL":
+                        [
+                          {
+                            "dirX":0,
+                            "fLocX":1,
+                            "tLocX":3,
+                            "fIdx":0,
+                            "tIdx":2
+                          }
+                        ]
+                      },
+                      {
+                        "jid":"2|#VN#1#ST#1641343143#PI#0#ZI#186723#TA#7#DA#50122#1S#480081709#1T#1005#LS#480101301#LT#1019#PU#81#RT#1#CA#V01#ZE#5#ZB#       5#PC#7#FR#480081709#FT#1005#TO#480101301#TT#1019#",
+                        "prodX":6,
+                        "dirTxt":"Gisingen",
+                        "dirFlg":"H",
+                        "stopL":
+                        [
+                          {
+                            "locX":1,
+                            "idx":0,
+                            "dProdX":6,
+                            "dTimeS":"100500",
+                            "dDirTxt":"Gisingen",
+                            "dDirFlg":"H",
+                            "type":"N"
+                          },
+                          {
+                            "locX":3,
+                            "idx":2,
+                            "aProdX":6,
+                            "aTimeS":"100900",
+                            "type":"N"
+                          }
+                        ],
+                        "ctxRecon":"T$A=1@O=Feldkirch Bahnhof@L=480081709@a=128@$A=1@O=Feldkirch Katzenturm@L=480082203@a=128@$202201051005$202201051009$       5$$1$$$$$$",
+                        "msgL":
+                        [
+                          {
+                            "type":"REM",
+                            "remX":4,
+                            "tagL":
+                            [
+                              "RES_JNY_H3"
+                            ],
+                            "sort":537133056
+                          }
+                        ],
+                        "subscr":"F",
+                        "prodL":
+                        [
+                          {
+                            "prodX":6,
+                            "fLocX":1,
+                            "tLocX":3,
+                            "fIdx":0,
+                            "tIdx":2
+                          }
+                        ],
+                        "dirL":
+                        [
+                          {
+                            "dirX":1,
+                            "fLocX":1,
+                            "tLocX":3,
+                            "fIdx":0,
+                            "tIdx":2
+                          }
+                        ]
+                      },
+                      {
+                        "jid":"2|#VN#1#ST#1641343143#PI#0#ZI#186694#TA#16#DA#50122#1S#480081709#1T#1010#LS#480097101#LT#1028#PU#81#RT#1#CA#V01#ZE#4#ZB#       4#PC#7#FR#480081709#FT#1010#TO#480097101#TT#1028#",
+                        "prodX":7,
+                        "dirTxt":"Nofels-Bangs",
+                        "dirFlg":"H",
+                        "stopL":
+                        [
+                          {
+                            "locX":1,
+                            "idx":0,
+                            "dProdX":7,
+                            "dTimeS":"101000",
+                            "dDirTxt":"Nofels-Bangs",
+                            "dDirFlg":"H",
+                            "type":"N"
+                          },
+                          {
+                            "locX":3,
+                            "idx":2,
+                            "aProdX":7,
+                            "aTimeS":"101400",
+                            "type":"N"
+                          }
+                        ],
+                        "ctxRecon":"T$A=1@O=Feldkirch Bahnhof@L=480081709@a=128@$A=1@O=Feldkirch Katzenturm@L=480082203@a=128@$202201051010$202201051014$       4$$1$$$$$$",
+                        "msgL":
+                        [
+                          {
+                            "type":"REM",
+                            "remX":5,
+                            "tagL":
+                            [
+                              "RES_JNY_H3"
+                            ],
+                            "sort":537133056
+                          }
+                        ],
+                        "subscr":"F",
+                        "prodL":
+                        [
+                          {
+                            "prodX":7,
+                            "fLocX":1,
+                            "tLocX":3,
+                            "fIdx":0,
+                            "tIdx":2
+                          }
+                        ],
+                        "dirL":
+                        [
+                          {
+                            "dirX":0,
+                            "fLocX":1,
+                            "tLocX":3,
+                            "fIdx":0,
+                            "tIdx":2
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "ctxRecon":"T$A=1@O=Feldkirch Bahnhof@L=480081709@a=128@$A=1@O=Feldkirch Katzenturm@L=480082203@a=128@$202201050925$202201050929$       4$$1$$$$$$",
+                  "msgL":
+                  [
+                    {
+                      "type":"HIM",
+                      "himX":0,
+                      "dspl":"U",
+                      "fLocX":1,
+                      "tLocX":1,
+                      "tagL":
+                      [
+                        "SUM_GLB_HDR_H3","RES_GLB_HDR_H3"
+                      ],
+                      "sort":373560317
+                    },
+                    {
+                      "type":"REM",
+                      "remX":0,
+                      "tagL":
+                      [
+                        "RES_JNY_H3"
+                      ],
+                      "sort":537133056
+                    }
+                  ],
+                  "subscr":"F",
+                  "prodL":
+                  [
+                    {
+                      "prodX":2,
+                      "fLocX":1,
+                      "tLocX":3,
+                      "fIdx":0,
+                      "tIdx":2
+                    }
+                  ],
+                  "dirL":
+                  [
+                    {
+                      "dirX":0,
+                      "fLocX":1,
+                      "tLocX":3,
+                      "fIdx":0,
+                      "tIdx":2
+                    }
+                  ]
+                },
+                "minChg":"000200"
+              },
+              {
+                "type":"TRSF",
+                "icoX":13,
+                "dep":
+                {
+                  "locX":3,
+                  "dInR":true,
+                  "dTimeS":"092900",
+                  "type":"N"
+                },
+                "arr":
+                {
+                  "locX":7,
+                  "aOutR":true,
+                  "aTimeS":"093100",
+                  "type":"N"
+                },
+                "gis":
+                {
+                  "durS":"000200",
+                  "dirGeo":4,
+                  "segL":
+                  [
+                    {
+                      "manTx":"Fußweg",
+                      "polyS":0,
+                      "polyE":10
+                    }
+                  ],
+                  "polyG":
+                  {
+                    "polyXL":
+                    [
+                      1
+                    ],
+                    "layerX":0,
+                    "crdSysX":0
+                  },
+                  "gisPrvr":"H",
+                  "getDescr":true,
+                  "getPoly":true
+                }
+              },
+              {
+                "type":"JNY",
+                "icoX":8,
+                "dep":
+                {
+                  "locX":7,
+                  "idx":0,
+                  "dProdX":9,
+                  "dPlatfS":"C",
+                  "dInR":true,
+                  "dTimeS":"093300",
+                  "dTimeR":"093300",
+                  "dProgType":"PROGNOSED",
+                  "type":"N"
+                },
+                "arr":
+                {
+                  "locX":8,
+                  "idx":5,
+                  "aProdX":9,
+                  "aOutR":true,
+                  "aTimeS":"094000",
+                  "aTimeR":"094000",
+                  "aProgType":"PROGNOSED",
+                  "type":"N"
+                },
+                "jny":
+                {
+                  "jid":"2|#VN#1#ST#1641343143#PI#0#ZI#184080#TA#0#DA#50122#1S#480082201#1T#933#LS#480143610#LT#959#PU#81#RT#1#CA#V00#ZE#67#ZB#      67#PC#6#FR#480082201#FT#933#TO#480143610#TT#959#",
+                  "prodX":10,
+                  "dirTxt":"Göfis - LKH - Rankweil Bahnhof",
+                  "dirFlg":"R",
+                  "status":"P",
+                  "isRchbl":true,
+                  "stopL":
+                  [
+                    {
+                      "locX":7,
+                      "idx":0,
+                      "dProdX":10,
+                      "dInR":true,
+                      "dTimeS":"093300",
+                      "dTimeR":"093300",
+                      "dProgType":"PROGNOSED",
+                      "dDirTxt":"Göfis - LKH - Rankweil Bahnhof",
+                      "dDirFlg":"R",
+                      "type":"N"
+                    },
+                    {
+                      "locX":10,
+                      "idx":1,
+                      "aProdX":10,
+                      "aOutR":true,
+                      "aTimeS":"093400",
+                      "aTimeR":"093400",
+                      "aProgType":"PROGNOSED",
+                      "dProdX":10,
+                      "dInR":true,
+                      "dTimeS":"093400",
+                      "dTimeR":"093400",
+                      "dProgType":"PROGNOSED",
+                      "type":"N"
+                    },
+                    {
+                      "locX":12,
+                      "idx":2,
+                      "aProdX":10,
+                      "aOutR":true,
+                      "aTimeS":"093600",
+                      "aTimeR":"093600",
+                      "aProgType":"PROGNOSED",
+                      "dProdX":10,
+                      "dInR":true,
+                      "dTimeS":"093600",
+                      "dTimeR":"093600",
+                      "dProgType":"PROGNOSED",
+                      "type":"N"
+                    },
+                    {
+                      "locX":14,
+                      "idx":3,
+                      "aProdX":10,
+                      "aOutR":true,
+                      "aTimeS":"093800",
+                      "aTimeR":"093800",
+                      "aProgType":"PROGNOSED",
+                      "dProdX":10,
+                      "dInR":true,
+                      "dTimeS":"093800",
+                      "dTimeR":"093800",
+                      "dProgType":"PROGNOSED",
+                      "type":"N"
+                    },
+                    {
+                      "locX":16,
+                      "idx":4,
+                      "aProdX":10,
+                      "aOutR":true,
+                      "aTimeS":"093900",
+                      "aTimeR":"093900",
+                      "aProgType":"PROGNOSED",
+                      "dProdX":10,
+                      "dInR":true,
+                      "dTimeS":"093900",
+                      "dTimeR":"093900",
+                      "dProgType":"PROGNOSED",
+                      "type":"N"
+                    },
+                    {
+                      "locX":8,
+                      "idx":5,
+                      "aProdX":10,
+                      "aOutR":true,
+                      "aTimeS":"094000",
+                      "aTimeR":"094000",
+                      "aProgType":"PROGNOSED",
+                      "type":"N"
+                    }
+                  ],
+                  "polyG":
+                  {
+                    "polyXL":
+                    [
+                      2
+                    ],
+                    "layerX":0,
+                    "crdSysX":0
+                  },
+                  "freq":
+                  {
+                    "minC":30,
+                    "maxC":60,
+                    "numC":3,
+                    "jnyL":
+                    [
+                      {
+                        "jid":"2|#VN#1#ST#1641343143#PI#0#ZI#184077#TA#0#DA#50122#1S#480082201#1T#1033#LS#480143610#LT#1059#PU#81#RT#1#CA#V00#ZE#67#ZB#      67#PC#6#FR#480082201#FT#1033#TO#480143610#TT#1059#",
+                        "prodX":11,
+                        "dirTxt":"Göfis - LKH - Rankweil Bahnhof",
+                        "dirFlg":"R",
+                        "stopL":
+                        [
+                          {
+                            "locX":7,
+                            "idx":0,
+                            "dProdX":11,
+                            "dTimeS":"103300",
+                            "dDirTxt":"Göfis - LKH - Rankweil Bahnhof",
+                            "dDirFlg":"R",
+                            "type":"N"
+                          },
+                          {
+                            "locX":8,
+                            "idx":5,
+                            "aProdX":11,
+                            "aTimeS":"104000",
+                            "type":"N"
+                          }
+                        ],
+                        "ctxRecon":"T$A=1@O=Feldkirch Katzenturm@L=480082201@a=128@$A=1@O=Göfis Kustergasse@L=480101701@a=128@$202201051033$202201051040$      67$$1$$$$$$",
+                        "msgL":
+                        [
+                          {
+                            "type":"REM",
+                            "remX":7,
+                            "tagL":
+                            [
+                              "RES_JNY_H3"
+                            ],
+                            "sort":537133056
+                          }
+                        ],
+                        "subscr":"F",
+                        "prodL":
+                        [
+                          {
+                            "prodX":11,
+                            "fLocX":7,
+                            "tLocX":8,
+                            "fIdx":0,
+                            "tIdx":5
+                          }
+                        ],
+                        "dirL":
+                        [
+                          {
+                            "dirX":2,
+                            "fLocX":7,
+                            "tLocX":8,
+                            "fIdx":0,
+                            "tIdx":5
+                          }
+                        ]
+                      },
+                      {
+                        "jid":"2|#VN#1#ST#1641343143#PI#0#ZI#184077#TA#1#DA#50122#1S#480082201#1T#1133#LS#480143610#LT#1159#PU#81#RT#1#CA#V00#ZE#67#ZB#      67#PC#6#FR#480082201#FT#1133#TO#480143610#TT#1159#",
+                        "prodX":12,
+                        "dirTxt":"Göfis - LKH - Rankweil Bahnhof",
+                        "dirFlg":"R",
+                        "stopL":
+                        [
+                          {
+                            "locX":7,
+                            "idx":0,
+                            "dProdX":12,
+                            "dTimeS":"113300",
+                            "dDirTxt":"Göfis - LKH - Rankweil Bahnhof",
+                            "dDirFlg":"R",
+                            "type":"N"
+                          },
+                          {
+                            "locX":8,
+                            "idx":5,
+                            "aProdX":12,
+                            "aTimeS":"114000",
+                            "type":"N"
+                          }
+                        ],
+                        "ctxRecon":"T$A=1@O=Feldkirch Katzenturm@L=480082201@a=128@$A=1@O=Göfis Kustergasse@L=480101701@a=128@$202201051133$202201051140$      67$$1$$$$$$",
+                        "msgL":
+                        [
+                          {
+                            "type":"REM",
+                            "remX":8,
+                            "tagL":
+                            [
+                              "RES_JNY_H3"
+                            ],
+                            "sort":537133056
+                          }
+                        ],
+                        "subscr":"F",
+                        "prodL":
+                        [
+                          {
+                            "prodX":12,
+                            "fLocX":7,
+                            "tLocX":8,
+                            "fIdx":0,
+                            "tIdx":5
+                          }
+                        ],
+                        "dirL":
+                        [
+                          {
+                            "dirX":2,
+                            "fLocX":7,
+                            "tLocX":8,
+                            "fIdx":0,
+                            "tIdx":5
+                          }
+                        ]
+                      },
+                      {
+                        "jid":"2|#VN#1#ST#1641343143#PI#0#ZI#184081#TA#0#DA#50122#1S#480082201#1T#1203#LS#480143610#LT#1229#PU#81#RT#1#CA#V00#ZE#67#ZB#      67#PC#6#FR#480082201#FT#1203#TO#480143610#TT#1229#",
+                        "prodX":13,
+                        "dirTxt":"Göfis - LKH - Rankweil Bahnhof",
+                        "dirFlg":"R",
+                        "stopL":
+                        [
+                          {
+                            "locX":7,
+                            "idx":0,
+                            "dProdX":13,
+                            "dTimeS":"120300",
+                            "dDirTxt":"Göfis - LKH - Rankweil Bahnhof",
+                            "dDirFlg":"R",
+                            "type":"N"
+                          },
+                          {
+                            "locX":8,
+                            "idx":5,
+                            "aProdX":13,
+                            "aTimeS":"121000",
+                            "type":"N"
+                          }
+                        ],
+                        "ctxRecon":"T$A=1@O=Feldkirch Katzenturm@L=480082201@a=128@$A=1@O=Göfis Kustergasse@L=480101701@a=128@$202201051203$202201051210$      67$$1$$$$$$",
+                        "msgL":
+                        [
+                          {
+                            "type":"REM",
+                            "remX":9,
+                            "tagL":
+                            [
+                              "RES_JNY_H3"
+                            ],
+                            "sort":537133056
+                          }
+                        ],
+                        "subscr":"F",
+                        "prodL":
+                        [
+                          {
+                            "prodX":13,
+                            "fLocX":7,
+                            "tLocX":8,
+                            "fIdx":0,
+                            "tIdx":5
+                          }
+                        ],
+                        "dirL":
+                        [
+                          {
+                            "dirX":2,
+                            "fLocX":7,
+                            "tLocX":8,
+                            "fIdx":0,
+                            "tIdx":5
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "ctxRecon":"T$A=1@O=Feldkirch Katzenturm@L=480082201@a=128@$A=1@O=Göfis Kustergasse@L=480101701@a=128@$202201050933$202201050940$      67$$1$$$$$$",
+                  "msgL":
+                  [
+                    {
+                      "type":"HIM",
+                      "himX":1,
+                      "dspl":"U",
+                      "fLocX":7,
+                      "tLocX":7,
+                      "tagL":
+                      [
+                        "SUM_GLB_HDR_H3","RES_GLB_HDR_H3"
+                      ],
+                      "sort":373560317
+                    },
+                    {
+                      "type":"REM",
+                      "remX":6,
+                      "tagL":
+                      [
+                        "RES_JNY_H3"
+                      ],
+                      "sort":537133056
+                    }
+                  ],
+                  "subscr":"F",
+                  "prodL":
+                  [
+                    {
+                      "prodX":10,
+                      "fLocX":7,
+                      "tLocX":8,
+                      "fIdx":0,
+                      "tIdx":5
+                    }
+                  ],
+                  "dirL":
+                  [
+                    {
+                      "dirX":2,
+                      "fLocX":7,
+                      "tLocX":8,
+                      "fIdx":0,
+                      "tIdx":5
+                    }
+                  ]
+                },
+                "minChg":"000100"
+              },
+              {
+                "type":"WALK",
+                "icoX":3,
+                "dep":
+                {
+                  "locX":8,
+                  "dInR":true,
+                  "dTimeS":"094000",
+                  "type":"N"
+                },
+                "arr":
+                {
+                  "locX":18,
+                  "aOutR":true,
+                  "aTimeS":"094100",
+                  "type":"N"
+                },
+                "gis":
+                {
+                  "dist":8,
+                  "durS":"000100",
+                  "ctx":"C|5b25416f|G|1|G@F|A=1@O=Göfis Kustergasse@X=9628517@Y=47240777@U=81@L=480101701@i=at:48:1017:0:1@|A=2@O=47.240750, 9.628580@X=9628580@Y=47240750@|5012022|94000|94100|fb|ft@0@2000@120@1@133@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§bt@0@2000@120@1@133@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§tf@$f@$f@$f@$f@$f@$§|||",
+                  "getDescr":true,
+                  "getPoly":true
+                }
+              }
+            ],
+            "ctxRecon":"¶HKI¶G@F$A=2@O=47.241128, 9.603886@X=9603886@Y=47241128@u=0@a=128@$A=1@O=Feldkirch Bahnhof@L=480081709@a=128@$202201050923$202201050925$$$1$$$$$$§T$A=1@O=Feldkirch Bahnhof@L=480081709@a=128@$A=1@O=Feldkirch Katzenturm@L=480082203@a=128@$202201050925$202201050929$       4$$1$$$$$$§W$A=1@O=Feldkirch Katzenturm@L=480082203@a=128@$A=1@O=Feldkirch Katzenturm@L=480082201@a=128@$202201050929$202201050931$$$1$$$$$$§T$A=1@O=Feldkirch Katzenturm@L=480082201@a=128@$A=1@O=Göfis Kustergasse@L=480101701@a=128@$202201050933$202201050940$      67$$1$$$$$$§G@F$A=1@O=Göfis Kustergasse@L=480101701@a=128@$A=2@O=47.240750, 9.628580@X=9628580@Y=47240750@u=0@a=128@$202201050940$202201050941$$$1$$$$$$¶GP¶ft@0@2000@120@1@133@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§bt@0@2000@120@1@133@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§tf@$f@$f@$f@$f@$f@$§¶KI¶H4sIAAAAAAACA+1WyY7jIBD9lRGHOblb2Fns5FdaESI2tpEdsABnVf59qoA4SatH3TOawxw6uVCvgFpelakL4ao2vBE7XY2WrAk9zuksJQmxY9newSoHaDjcAQry49HsQ5QZN+HWcePYtibrt01CzlL0k7CXfFqHbbwyZH0h7jQIsk4T0usSLoJbFN8BQub5azZP06xIfqxel3RWFEtQHjutTQUH6LKY5auEnCKwyBaLWToD53rHyoBdiF+wPe8liPR6ReN6+Jptmi+ot50Vi4I+2c7Br+Wz7SxPP7U9GMhYB/l6u5CBrIu0AH81KBMCYLq4Jv8I30wcnYUEaEHTLKOrbPaEZ/4EVoFUThjwtPdUpjX+IGBRdrhPKPCYJh/8wc6OHxkQWnasFbJpnb9z3FkHEqt55zSkerW6Y+fRlm3PG7J+Se/oTqpKWBfcfacYvQcI1j0XZSsU+ixYLNUL+lDxURikhhbUO1VJCzfNsnyZJ6TiJ9vKGoBV0G7b+m6qhGubUPMpAZr4aBu+FayWvcNLcQ+c2cm+l1aUNiCNsIMwUMhGxLoGf3vvWRQNV3bQsKNstSwFelobrZwvPVSygRu+s74eZHX0qROKb/tQldIycXRsMMKK3ish4qCqRsOd1IrpGrN/ik5KxULcIcooZJTSu5JteTfFxJzEgk8ztNz3DCLCMEXYgIjhlRxjyAcu3e0EFM4gBHbDDKqq1NEqlDikTYRuwqaHCMJhFEYJfTanqwVs1JZx50zsO9E8SL5PynBhDTk+sYOvLali1dhODszoMSCwC9eChX4GETgoO4g3+Oo5RgQ2PUBKs93oQrYptpKnYPklCugfUgB1+SkJt4x/mYOXOwk+RM8Brv4DElL6dzRsoP+28DX57pHvHvnukd/3iNx/0CEbHDKAjvcvD5NKOgmDyNkX4zvKWHyU6Hs89CHAjSzZ0HIrwiMZpwOc4Z4mS6gOVev78BjfwijpvTAHA9NERNBVBdNAgwfPSmOXzLM0zzN4sB3vbnMAMoELvsX5MazC201xmplANYH14QbWB3/cY1GN77vCCWS0drJMHy3eBgMc2LjpfhpZ+bd7MMy/+EKxso+NPCFgnkGAW3/w+gu1y5uLdAsAAA==",
+            "freq":
+            {
+              "minC":30
+            },
+            "trfRes":
+            {
+              "statusCode":"OK",
+              "fareSetL":
+              [
+                {
+                  "name":"VVV 2 dominos",
+                  "desc":"Befahrene Dominos: 30, 37",
+                  "fareL":
+                  [
+                    {
+                      "name":"Vollpreis - Einzelfahrt",
+                      "prc":220,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Vollpreis - Tageskarte",
+                      "prc":410,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Vollpreis - Wochenkarte",
+                      "prc":1590,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Vollpreis - Monatskarte",
+                      "prc":3200,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Vollpreis - Jahreskarte",
+                      "prc":24300,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Kind - Einzelfahrt",
+                      "prc":110,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Kind - Tageskarte",
+                      "prc":210,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Gruppe (ab 3 Personen) - Einzelfahrt",
+                      "prc":220,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Gruppe (ab 3 Personen) - Tageskarte",
+                      "prc":290,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Vollpreis/Familie - Einzelfahrt",
+                      "prc":220,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Vollpreis/Familie - Tageskarte",
+                      "prc":410,
+                      "cur":"EUR"
+                    }
+                  ]
+                }
+              ]
+            },
+            "ovwTrfRefL":
+            [
+              {
+                "type":"F",
+                "fareSetX":0,
+                "fareX":0
+              },
+              {
+                "type":"F",
+                "fareSetX":0,
+                "fareX":5
+              },
+              {
+                "type":"F",
+                "fareSetX":0,
+                "fareX":7
+              },
+              {
+                "type":"F",
+                "fareSetX":0,
+                "fareX":9
+              }
+            ],
+            "msgL":
+            [
+              {
+                "type":"REM",
+                "remX":10,
+                "dspl":"U",
+                "tagL":
+                [
+                  "RES_CON_FTR_H3"
+                ],
+                "sort":147324928
+              }
+            ],
+            "eco":
+            {
+              "co2":0.224600000000000
+            },
+            "conSubscr":"P",
+            "recState":"U",
+            "cksum":"bab46e50_3",
+            "cksumDti":"5ef8f301_3"
+          },
+          {
+            "cid":"C-1",
+            "date":"20220105",
+            "dur":"001600",
+            "chg":0,
+            "sDays":
+            {
+              "sDaysR":"täglich",
+              "sDaysB":"FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF80"
+            },
+            "dep":
+            {
+              "locX":0,
+              "dInR":true,
+              "dTimeS":"092500",
+              "type":"N"
+            },
+            "arr":
+            {
+              "locX":18,
+              "aOutR":true,
+              "aTimeS":"094100",
+              "type":"N"
+            },
+            "secL":
+            [
+              {
+                "type":"WALK",
+                "icoX":3,
+                "dep":
+                {
+                  "locX":0,
+                  "dInR":true,
+                  "dTimeS":"092500",
+                  "type":"N"
+                },
+                "arr":
+                {
+                  "locX":19,
+                  "aOutR":true,
+                  "aTimeS":"093200",
+                  "type":"N"
+                },
+                "gis":
+                {
+                  "dist":584,
+                  "durS":"000700",
+                  "ctx":"C|18745fe4|G|1|G@F|A=2@O=47.241128, 9.603886@X=9603886@Y=47241128@|A=1@O=Feldkirch Jahnplatz@X=9599203@Y=47237244@U=81@L=480082101@i=at:48:821:0:1@|5012022|92500|93200|bf|ft@0@2000@120@1@133@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§bt@0@2000@120@1@133@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§tf@$f@$f@$f@$f@$f@$§|||",
+                  "getDescr":true,
+                  "getPoly":true
+                }
+              },
+              {
+                "type":"TRSF",
+                "icoX":13,
+                "dep":
+                {
+                  "locX":19,
+                  "dInR":true,
+                  "dTimeS":"093200",
+                  "type":"N"
+                },
+                "arr":
+                {
+                  "locX":10,
+                  "aOutR":true,
+                  "aTimeS":"093400",
+                  "type":"N"
+                },
+                "gis":
+                {
+                  "durS":"000200",
+                  "dirGeo":24,
+                  "segL":
+                  [
+                    {
+                      "manTx":"Fußweg",
+                      "polyS":0,
+                      "polyE":36
+                    }
+                  ],
+                  "polyG":
+                  {
+                    "polyXL":
+                    [
+                      3
+                    ],
+                    "layerX":0,
+                    "crdSysX":0
+                  },
+                  "gisPrvr":"H",
+                  "getDescr":true,
+                  "getPoly":true
+                }
+              },
+              {
+                "type":"JNY",
+                "icoX":8,
+                "dep":
+                {
+                  "locX":10,
+                  "idx":1,
+                  "dProdX":9,
+                  "dInR":true,
+                  "dTimeS":"093400",
+                  "dTimeR":"093400",
+                  "dProgType":"PROGNOSED",
+                  "type":"N"
+                },
+                "arr":
+                {
+                  "locX":8,
+                  "idx":5,
+                  "aProdX":9,
+                  "aOutR":true,
+                  "aTimeS":"094000",
+                  "aTimeR":"094000",
+                  "aProgType":"PROGNOSED",
+                  "type":"N"
+                },
+                "jny":
+                {
+                  "jid":"2|#VN#1#ST#1641343143#PI#0#ZI#184080#TA#0#DA#50122#1S#480082201#1T#933#LS#480143610#LT#959#PU#81#RT#1#CA#V00#ZE#67#ZB#      67#PC#6#FR#480082201#FT#933#TO#480143610#TT#959#",
+                  "prodX":10,
+                  "dirTxt":"Göfis - LKH - Rankweil Bahnhof",
+                  "dirFlg":"R",
+                  "status":"P",
+                  "isRchbl":true,
+                  "stopL":
+                  [
+                    {
+                      "locX":10,
+                      "idx":1,
+                      "dProdX":10,
+                      "dInR":true,
+                      "dTimeS":"093400",
+                      "dTimeR":"093400",
+                      "dProgType":"PROGNOSED",
+                      "dDirTxt":"Göfis - LKH - Rankweil Bahnhof",
+                      "dDirFlg":"R",
+                      "type":"N"
+                    },
+                    {
+                      "locX":12,
+                      "idx":2,
+                      "aProdX":10,
+                      "aOutR":true,
+                      "aTimeS":"093600",
+                      "aTimeR":"093600",
+                      "aProgType":"PROGNOSED",
+                      "dProdX":10,
+                      "dInR":true,
+                      "dTimeS":"093600",
+                      "dTimeR":"093600",
+                      "dProgType":"PROGNOSED",
+                      "type":"N"
+                    },
+                    {
+                      "locX":14,
+                      "idx":3,
+                      "aProdX":10,
+                      "aOutR":true,
+                      "aTimeS":"093800",
+                      "aTimeR":"093800",
+                      "aProgType":"PROGNOSED",
+                      "dProdX":10,
+                      "dInR":true,
+                      "dTimeS":"093800",
+                      "dTimeR":"093800",
+                      "dProgType":"PROGNOSED",
+                      "type":"N"
+                    },
+                    {
+                      "locX":16,
+                      "idx":4,
+                      "aProdX":10,
+                      "aOutR":true,
+                      "aTimeS":"093900",
+                      "aTimeR":"093900",
+                      "aProgType":"PROGNOSED",
+                      "dProdX":10,
+                      "dInR":true,
+                      "dTimeS":"093900",
+                      "dTimeR":"093900",
+                      "dProgType":"PROGNOSED",
+                      "type":"N"
+                    },
+                    {
+                      "locX":8,
+                      "idx":5,
+                      "aProdX":10,
+                      "aOutR":true,
+                      "aTimeS":"094000",
+                      "aTimeR":"094000",
+                      "aProgType":"PROGNOSED",
+                      "type":"N"
+                    }
+                  ],
+                  "polyG":
+                  {
+                    "polyXL":
+                    [
+                      4
+                    ],
+                    "layerX":0,
+                    "crdSysX":0
+                  },
+                  "freq":
+                  {
+                    "minC":30,
+                    "maxC":60,
+                    "numC":3,
+                    "jnyL":
+                    [
+                      {
+                        "jid":"2|#VN#1#ST#1641343143#PI#0#ZI#184077#TA#0#DA#50122#1S#480082201#1T#1033#LS#480143610#LT#1059#PU#81#RT#1#CA#V00#ZE#67#ZB#      67#PC#6#FR#480082201#FT#1033#TO#480143610#TT#1059#",
+                        "prodX":11,
+                        "dirTxt":"Göfis - LKH - Rankweil Bahnhof",
+                        "dirFlg":"R",
+                        "stopL":
+                        [
+                          {
+                            "locX":10,
+                            "idx":1,
+                            "dProdX":11,
+                            "dTimeS":"103400",
+                            "dDirTxt":"Göfis - LKH - Rankweil Bahnhof",
+                            "dDirFlg":"R",
+                            "type":"N"
+                          },
+                          {
+                            "locX":8,
+                            "idx":5,
+                            "aProdX":11,
+                            "aTimeS":"104000",
+                            "type":"N"
+                          }
+                        ],
+                        "ctxRecon":"T$A=1@O=Feldkirch Rösslepark@L=480084401@a=128@$A=1@O=Göfis Kustergasse@L=480101701@a=128@$202201051034$202201051040$      67$$1$$$$$$",
+                        "msgL":
+                        [
+                          {
+                            "type":"REM",
+                            "remX":12,
+                            "tagL":
+                            [
+                              "RES_JNY_H3"
+                            ],
+                            "sort":537133056
+                          }
+                        ],
+                        "subscr":"F",
+                        "prodL":
+                        [
+                          {
+                            "prodX":11,
+                            "fLocX":10,
+                            "tLocX":8,
+                            "fIdx":1,
+                            "tIdx":5
+                          }
+                        ],
+                        "dirL":
+                        [
+                          {
+                            "dirX":2,
+                            "fLocX":10,
+                            "tLocX":8,
+                            "fIdx":1,
+                            "tIdx":5
+                          }
+                        ]
+                      },
+                      {
+                        "jid":"2|#VN#1#ST#1641343143#PI#0#ZI#184077#TA#1#DA#50122#1S#480082201#1T#1133#LS#480143610#LT#1159#PU#81#RT#1#CA#V00#ZE#67#ZB#      67#PC#6#FR#480082201#FT#1133#TO#480143610#TT#1159#",
+                        "prodX":12,
+                        "dirTxt":"Göfis - LKH - Rankweil Bahnhof",
+                        "dirFlg":"R",
+                        "stopL":
+                        [
+                          {
+                            "locX":10,
+                            "idx":1,
+                            "dProdX":12,
+                            "dTimeS":"113400",
+                            "dDirTxt":"Göfis - LKH - Rankweil Bahnhof",
+                            "dDirFlg":"R",
+                            "type":"N"
+                          },
+                          {
+                            "locX":8,
+                            "idx":5,
+                            "aProdX":12,
+                            "aTimeS":"114000",
+                            "type":"N"
+                          }
+                        ],
+                        "ctxRecon":"T$A=1@O=Feldkirch Rösslepark@L=480084401@a=128@$A=1@O=Göfis Kustergasse@L=480101701@a=128@$202201051134$202201051140$      67$$1$$$$$$",
+                        "msgL":
+                        [
+                          {
+                            "type":"REM",
+                            "remX":13,
+                            "tagL":
+                            [
+                              "RES_JNY_H3"
+                            ],
+                            "sort":537133056
+                          }
+                        ],
+                        "subscr":"F",
+                        "prodL":
+                        [
+                          {
+                            "prodX":12,
+                            "fLocX":10,
+                            "tLocX":8,
+                            "fIdx":1,
+                            "tIdx":5
+                          }
+                        ],
+                        "dirL":
+                        [
+                          {
+                            "dirX":2,
+                            "fLocX":10,
+                            "tLocX":8,
+                            "fIdx":1,
+                            "tIdx":5
+                          }
+                        ]
+                      },
+                      {
+                        "jid":"2|#VN#1#ST#1641343143#PI#0#ZI#184081#TA#0#DA#50122#1S#480082201#1T#1203#LS#480143610#LT#1229#PU#81#RT#1#CA#V00#ZE#67#ZB#      67#PC#6#FR#480082201#FT#1203#TO#480143610#TT#1229#",
+                        "prodX":13,
+                        "dirTxt":"Göfis - LKH - Rankweil Bahnhof",
+                        "dirFlg":"R",
+                        "stopL":
+                        [
+                          {
+                            "locX":10,
+                            "idx":1,
+                            "dProdX":13,
+                            "dTimeS":"120400",
+                            "dDirTxt":"Göfis - LKH - Rankweil Bahnhof",
+                            "dDirFlg":"R",
+                            "type":"N"
+                          },
+                          {
+                            "locX":8,
+                            "idx":5,
+                            "aProdX":13,
+                            "aTimeS":"121000",
+                            "type":"N"
+                          }
+                        ],
+                        "ctxRecon":"T$A=1@O=Feldkirch Rösslepark@L=480084401@a=128@$A=1@O=Göfis Kustergasse@L=480101701@a=128@$202201051204$202201051210$      67$$1$$$$$$",
+                        "msgL":
+                        [
+                          {
+                            "type":"REM",
+                            "remX":14,
+                            "tagL":
+                            [
+                              "RES_JNY_H3"
+                            ],
+                            "sort":537133056
+                          }
+                        ],
+                        "subscr":"F",
+                        "prodL":
+                        [
+                          {
+                            "prodX":13,
+                            "fLocX":10,
+                            "tLocX":8,
+                            "fIdx":1,
+                            "tIdx":5
+                          }
+                        ],
+                        "dirL":
+                        [
+                          {
+                            "dirX":2,
+                            "fLocX":10,
+                            "tLocX":8,
+                            "fIdx":1,
+                            "tIdx":5
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "ctxRecon":"T$A=1@O=Feldkirch Rösslepark@L=480084401@a=128@$A=1@O=Göfis Kustergasse@L=480101701@a=128@$202201050934$202201050940$      67$$1$$$$$$",
+                  "msgL":
+                  [
+                    {
+                      "type":"HIM",
+                      "himX":1,
+                      "dspl":"U",
+                      "fLocX":10,
+                      "tagL":
+                      [
+                        "SUM_GLB_HDR_H3","RES_GLB_HDR_H3"
+                      ],
+                      "sort":373560317
+                    },
+                    {
+                      "type":"REM",
+                      "remX":11,
+                      "tagL":
+                      [
+                        "RES_JNY_H3"
+                      ],
+                      "sort":537133056
+                    }
+                  ],
+                  "subscr":"F",
+                  "prodL":
+                  [
+                    {
+                      "prodX":10,
+                      "fLocX":10,
+                      "tLocX":8,
+                      "fIdx":1,
+                      "tIdx":5
+                    }
+                  ],
+                  "dirL":
+                  [
+                    {
+                      "dirX":2,
+                      "fLocX":10,
+                      "tLocX":8,
+                      "fIdx":1,
+                      "tIdx":5
+                    }
+                  ]
+                },
+                "minChg":"000100"
+              },
+              {
+                "type":"WALK",
+                "icoX":3,
+                "dep":
+                {
+                  "locX":8,
+                  "dInR":true,
+                  "dTimeS":"094000",
+                  "type":"N"
+                },
+                "arr":
+                {
+                  "locX":18,
+                  "aOutR":true,
+                  "aTimeS":"094100",
+                  "type":"N"
+                },
+                "gis":
+                {
+                  "dist":8,
+                  "durS":"000100",
+                  "ctx":"C|5b25416f|G|1|G@F|A=1@O=Göfis Kustergasse@X=9628517@Y=47240777@U=81@L=480101701@i=at:48:1017:0:1@|A=2@O=47.240750, 9.628580@X=9628580@Y=47240750@|5012022|94000|94100|fb|ft@0@2000@120@1@133@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§bt@0@2000@120@1@133@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§tf@$f@$f@$f@$f@$f@$§|||",
+                  "getDescr":true,
+                  "getPoly":true
+                }
+              }
+            ],
+            "ctxRecon":"¶HKI¶G@F$A=2@O=47.241128, 9.603886@X=9603886@Y=47241128@u=0@a=128@$A=1@O=Feldkirch Jahnplatz@L=480082101@a=128@$202201050925$202201050932$$$1$$$$$$§W$A=1@O=Feldkirch Jahnplatz@L=480082101@a=128@$A=1@O=Feldkirch Rösslepark@L=480084401@a=128@$202201050932$202201050934$$$1$$$$$$§T$A=1@O=Feldkirch Rösslepark@L=480084401@a=128@$A=1@O=Göfis Kustergasse@L=480101701@a=128@$202201050934$202201050940$      67$$1$$$$$$§G@F$A=1@O=Göfis Kustergasse@L=480101701@a=128@$A=2@O=47.240750, 9.628580@X=9628580@Y=47240750@u=0@a=128@$202201050940$202201050941$$$1$$$$$$¶GP¶ft@0@2000@120@1@133@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§bt@0@2000@120@1@133@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§tf@$f@$f@$f@$f@$f@$§¶KI¶H4sIAAAAAAACA+1WyY7jIBD9lRGHOblb2Fns5FdaESI2tpEdsABnVf59qoA4SatH3TOawxw6uVCvgFpelakL4ao2vBE7XY2WrAk9zuksJQmxY9newSoHaDjcAQry49HsQ5QZN+HWcePYtibrt01CzlL0k7CXfFqHbbwyZH0h7jQIsk4T0usSLoJbFN8BQub5azZP06xIfqxel3RWFEtQHjutTQUH6LKY5auEnCKwyBaLWToD53rHyoBdiF+wPe8liPR6ReN6+Jptmi+ot50Vi4I+2c7Br+Wz7SxPP7U9GMhYB/l6u5CBrIu0AH81KBMCYLq4Jv8I30wcnYUEaEHTLKOrbPaEZ/4EVoFUThjwtPdUpjX+IGBRdrhPKPCYJh/8wc6OHxkQWnasFbJpnb9z3FkHEqt55zSkerW6Y+fRlm3PG7J+Se/oTqpKWBfcfacYvQcI1j0XZSsU+ixYLNUL+lDxURikhhbUO1VJCzfNsnyZJ6TiJ9vKGoBV0G7b+m6qhGubUPMpAZr4aBu+FayWvcNLcQ+c2cm+l1aUNiCNsIMwUMhGxLoGf3vvWRQNV3bQsKNstSwFelobrZwvPVSygRu+s74eZHX0qROKb/tQldIycXRsMMKK3ish4qCqRsOd1IrpGrN/ik5KxULcIcooZJTSu5JteTfFxJzEgk8ztNz3DCLCMEXYgIjhlRxjyAcu3e0EFM4gBHbDDKqq1NEqlDikTYRuwqaHCMJhFEYJfTanqwVs1JZx50zsO9E8SL5PynBhDTk+sYOvLali1dhODszoMSCwC9eChX4GETgoO4g3+Oo5RgQ2PUBKs93oQrYptpKnYPklCugfUgB1+SkJt4x/mYOXOwk+RM8Brv4DElL6dzRsoP+28DX57pHvHvnukd/3iNx/0CEbHDKAjvcvD5NKOgmDyNkX4zvKWHyU6Hs89CHAjSzZ0HIrwiMZpwOc4Z4mS6gOVev78BjfwijpvTAHA9NERNBVBdNAgwfPSmOXzLM0zzN4sB3vbnMAMoELvsX5MazC201xmplANYH14QbWB3/cY1GN77vCCWS0drJMHy3eBgMc2LjpfhpZ+bd7MMy/+EKxso+NPCFgnkGAW3/w+gu1y5uLdAsAAA==",
+            "freq":
+            {
+              "minC":30
+            },
+            "trfRes":
+            {
+              "statusCode":"OK",
+              "fareSetL":
+              [
+                {
+                  "name":"VVV 2 dominos",
+                  "desc":"Befahrene Dominos: 30, 37",
+                  "fareL":
+                  [
+                    {
+                      "name":"Vollpreis - Einzelfahrt",
+                      "prc":220,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Vollpreis - Tageskarte",
+                      "prc":410,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Vollpreis - Wochenkarte",
+                      "prc":1590,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Vollpreis - Monatskarte",
+                      "prc":3200,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Vollpreis - Jahreskarte",
+                      "prc":24300,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Kind - Einzelfahrt",
+                      "prc":110,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Kind - Tageskarte",
+                      "prc":210,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Gruppe (ab 3 Personen) - Einzelfahrt",
+                      "prc":220,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Gruppe (ab 3 Personen) - Tageskarte",
+                      "prc":290,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Vollpreis/Familie - Einzelfahrt",
+                      "prc":220,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Vollpreis/Familie - Tageskarte",
+                      "prc":410,
+                      "cur":"EUR"
+                    }
+                  ]
+                }
+              ]
+            },
+            "ovwTrfRefL":
+            [
+              {
+                "type":"F",
+                "fareSetX":0,
+                "fareX":0
+              },
+              {
+                "type":"F",
+                "fareSetX":0,
+                "fareX":5
+              },
+              {
+                "type":"F",
+                "fareSetX":0,
+                "fareX":7
+              },
+              {
+                "type":"F",
+                "fareSetX":0,
+                "fareX":9
+              }
+            ],
+            "msgL":
+            [
+              {
+                "type":"REM",
+                "remX":15,
+                "dspl":"U",
+                "tagL":
+                [
+                  "RES_CON_FTR_H3"
+                ],
+                "sort":147324928
+              }
+            ],
+            "eco":
+            {
+              "co2":0.145600000000000
+            },
+            "conSubscr":"P",
+            "recState":"U",
+            "cksum":"c44f2f1b_3",
+            "cksumDti":"b26fa706_3"
+          },
+          {
+            "cid":"C-2",
+            "date":"20220105",
+            "dur":"003500",
+            "chg":1,
+            "sDays":
+            {
+              "sDaysR":"täglich",
+              "sDaysB":"FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF80"
+            },
+            "dep":
+            {
+              "locX":0,
+              "dInR":true,
+              "dTimeS":"094500",
+              "type":"N"
+            },
+            "arr":
+            {
+              "locX":18,
+              "aOutR":true,
+              "aTimeS":"102000",
+              "type":"N"
+            },
+            "secL":
+            [
+              {
+                "type":"WALK",
+                "icoX":3,
+                "dep":
+                {
+                  "locX":0,
+                  "dInR":true,
+                  "dTimeS":"094500",
+                  "type":"N"
+                },
+                "arr":
+                {
+                  "locX":21,
+                  "aOutR":true,
+                  "aTimeS":"094700",
+                  "type":"N"
+                },
+                "gis":
+                {
+                  "dist":74,
+                  "durS":"000200",
+                  "ctx":"C|21d3b799|G|1|G@F|A=2@O=47.241128, 9.603886@X=9603886@Y=47241128@|A=1@O=Feldkirch Bahnhof@X=9604605@Y=47241011@U=81@L=480081706@i=at:48:817:0:6@|5012022|94500|94700|bf|ft@0@2000@120@1@133@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§bt@0@2000@120@1@133@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§tf@$f@$f@$f@$f@$f@$§|||",
+                  "getDescr":true,
+                  "getPoly":true
+                }
+              },
+              {
+                "type":"JNY",
+                "icoX":19,
+                "dep":
+                {
+                  "locX":21,
+                  "idx":0,
+                  "dProdX":14,
+                  "dPlatfS":"5A-B",
+                  "dPlatfR":"5A-B",
+                  "dInR":true,
+                  "dTimeS":"094700",
+                  "dTimeR":"094700",
+                  "dProgType":"PROGNOSED",
+                  "type":"N"
+                },
+                "arr":
+                {
+                  "locX":22,
+                  "idx":2,
+                  "aProdX":14,
+                  "aPlatfS":"1",
+                  "aPlatfR":"1",
+                  "aOutR":true,
+                  "aTimeS":"095100",
+                  "aTimeR":"095100",
+                  "aProgType":"PROGNOSED",
+                  "type":"N"
+                },
+                "jny":
+                {
+                  "jid":"2|#VN#1#ST#1641343143#PI#0#ZI#28413#TA#0#DA#50122#1S#480081706#1T#947#LS#108023002#LT#1032#PU#81#RT#1#CA#REX#ZE#5566#ZB#REX 5566#PC#0#FR#480081706#FT#947#TO#108023002#TT#1032#",
+                  "prodX":15,
+                  "dirTxt":"Lindau-Insel",
+                  "dirFlg":"R",
+                  "status":"P",
+                  "isRchbl":true,
+                  "stopL":
+                  [
+                    {
+                      "locX":21,
+                      "idx":0,
+                      "dProdX":15,
+                      "dInR":true,
+                      "dTimeS":"094700",
+                      "dTimeR":"094700",
+                      "dProgType":"PROGNOSED",
+                      "dDirTxt":"Lindau-Insel",
+                      "dDirFlg":"R",
+                      "type":"N"
+                    },
+                    {
+                      "locX":22,
+                      "idx":2,
+                      "aProdX":15,
+                      "aOutR":true,
+                      "aTimeS":"095100",
+                      "aTimeR":"095100",
+                      "aProgType":"PROGNOSED",
+                      "type":"N"
+                    }
+                  ],
+                  "polyG":
+                  {
+                    "polyXL":
+                    [
+                      5
+                    ],
+                    "layerX":0,
+                    "crdSysX":0
+                  },
+                  "freq":
+                  {
+                    "minC":30,
+                    "maxC":58,
+                    "numC":4,
+                    "jnyL":
+                    [
+                      {
+                        "jid":"2|#VN#1#ST#1641343143#PI#0#ZI#28430#TA#2#DA#50122#1S#480013004#1T#1000#LS#108023002#LT#1103#PU#81#RT#1#CA#REX#ZE#5568#ZB#REX 5568#PC#0#FR#480013004#FT#1000#TO#108023002#TT#1103#",
+                        "prodX":16,
+                        "dirTxt":"Lindau-Insel",
+                        "dirFlg":"R",
+                        "stopL":
+                        [
+                          {
+                            "locX":26,
+                            "idx":6,
+                            "dProdX":16,
+                            "dTimeS":"101700",
+                            "dDirTxt":"Lindau-Insel",
+                            "dDirFlg":"R",
+                            "type":"N"
+                          },
+                          {
+                            "locX":22,
+                            "idx":8,
+                            "aProdX":16,
+                            "aTimeS":"102100",
+                            "type":"N"
+                          }
+                        ],
+                        "ctxRecon":"T$A=1@O=Feldkirch Bahnhof@L=480081705@a=128@$A=1@O=Rankweil Bahnhof@L=480143602@a=128@$202201051017$202201051021$REX 5568$$1$$$$$$",
+                        "subscr":"F",
+                        "prodL":
+                        [
+                          {
+                            "prodX":16,
+                            "fLocX":26,
+                            "tLocX":22,
+                            "fIdx":6,
+                            "tIdx":8
+                          }
+                        ],
+                        "dirL":
+                        [
+                          {
+                            "dirX":3,
+                            "fLocX":26,
+                            "tLocX":22,
+                            "fIdx":6,
+                            "tIdx":8
+                          }
+                        ]
+                      },
+                      {
+                        "jid":"2|#VN#1#ST#1641343143#PI#0#ZI#26854#TA#0#DA#50122#1S#470118703#1T#854#LS#480045211#LT#1149#PU#81#RT#1#CA#IC#ZE#118#ZB#IC   118#PC#0#FR#470118703#FT#854#TO#480045211#TT#1149#",
+                        "prodX":17,
+                        "dirTxt":"Düsseldorf Hauptbahnhof",
+                        "dirFlg":"R",
+                        "stopL":
+                        [
+                          {
+                            "locX":26,
+                            "idx":29,
+                            "dProdX":17,
+                            "dTimeS":"111500",
+                            "dDirTxt":"Düsseldorf Hauptbahnhof",
+                            "dDirFlg":"R",
+                            "type":"N"
+                          },
+                          {
+                            "locX":22,
+                            "idx":31,
+                            "aProdX":17,
+                            "aTimeS":"111900",
+                            "type":"N"
+                          }
+                        ],
+                        "pos":
+                        {
+                          "x":10867563,
+                          "y":47239240,
+                          "layerX":0,
+                          "crdSysX":0
+                        },
+                        "ctxRecon":"T$A=1@O=Feldkirch Bahnhof@L=480081705@a=128@$A=1@O=Rankweil Bahnhof@L=480143602@a=128@$202201051115$202201051119$IC   118$$1$$$$$$",
+                        "subscr":"F",
+                        "prodL":
+                        [
+                          {
+                            "prodX":17,
+                            "fLocX":26,
+                            "tLocX":22,
+                            "fIdx":29,
+                            "tIdx":31
+                          }
+                        ],
+                        "dirL":
+                        [
+                          {
+                            "dirX":4,
+                            "fLocX":26,
+                            "tLocX":22,
+                            "fIdx":29,
+                            "tIdx":31
+                          }
+                        ]
+                      },
+                      {
+                        "jid":"2|#VN#1#ST#1641343143#PI#0#ZI#28413#TA#1#DA#50122#1S#480081706#1T#1147#LS#108023002#LT#1232#PU#81#RT#1#CA#REX#ZE#5570#ZB#REX 5570#PC#0#FR#480081706#FT#1147#TO#108023002#TT#1232#",
+                        "prodX":18,
+                        "dirTxt":"Lindau-Insel",
+                        "dirFlg":"R",
+                        "stopL":
+                        [
+                          {
+                            "locX":21,
+                            "idx":0,
+                            "dProdX":18,
+                            "dTimeS":"114700",
+                            "dDirTxt":"Lindau-Insel",
+                            "dDirFlg":"R",
+                            "type":"N"
+                          },
+                          {
+                            "locX":22,
+                            "idx":2,
+                            "aProdX":18,
+                            "aTimeS":"115100",
+                            "type":"N"
+                          }
+                        ],
+                        "ctxRecon":"T$A=1@O=Feldkirch Bahnhof@L=480081706@a=128@$A=1@O=Rankweil Bahnhof@L=480143602@a=128@$202201051147$202201051151$REX 5570$$1$$$$$$",
+                        "subscr":"F",
+                        "prodL":
+                        [
+                          {
+                            "prodX":18,
+                            "fLocX":21,
+                            "tLocX":22,
+                            "fIdx":0,
+                            "tIdx":2
+                          }
+                        ],
+                        "dirL":
+                        [
+                          {
+                            "dirX":3,
+                            "fLocX":21,
+                            "tLocX":22,
+                            "fIdx":0,
+                            "tIdx":2
+                          }
+                        ]
+                      },
+                      {
+                        "jid":"2|#VN#1#ST#1641343143#PI#0#ZI#28430#TA#3#DA#50122#1S#480013004#1T#1200#LS#108023002#LT#1303#PU#81#RT#1#CA#REX#ZE#5572#ZB#REX 5572#PC#0#FR#480013004#FT#1200#TO#108023002#TT#1303#",
+                        "prodX":19,
+                        "dirTxt":"Lindau-Insel",
+                        "dirFlg":"R",
+                        "stopL":
+                        [
+                          {
+                            "locX":26,
+                            "idx":6,
+                            "dProdX":19,
+                            "dTimeS":"121700",
+                            "dDirTxt":"Lindau-Insel",
+                            "dDirFlg":"R",
+                            "type":"N"
+                          },
+                          {
+                            "locX":22,
+                            "idx":8,
+                            "aProdX":19,
+                            "aTimeS":"122100",
+                            "type":"N"
+                          }
+                        ],
+                        "ctxRecon":"T$A=1@O=Feldkirch Bahnhof@L=480081705@a=128@$A=1@O=Rankweil Bahnhof@L=480143602@a=128@$202201051217$202201051221$REX 5572$$1$$$$$$",
+                        "subscr":"F",
+                        "prodL":
+                        [
+                          {
+                            "prodX":19,
+                            "fLocX":26,
+                            "tLocX":22,
+                            "fIdx":6,
+                            "tIdx":8
+                          }
+                        ],
+                        "dirL":
+                        [
+                          {
+                            "dirX":3,
+                            "fLocX":26,
+                            "tLocX":22,
+                            "fIdx":6,
+                            "tIdx":8
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "ctxRecon":"T$A=1@O=Feldkirch Bahnhof@L=480081706@a=128@$A=1@O=Rankweil Bahnhof@L=480143602@a=128@$202201050947$202201050951$REX 5566$$1$$$$$$",
+                  "msgL":
+                  [
+                    {
+                      "type":"REM",
+                      "remX":16,
+                      "dspl":"U",
+                      "fLocX":21,
+                      "tLocX":22,
+                      "tagL":
+                      [
+                        "RES_JNY_DTL"
+                      ],
+                      "sort":543424512
+                    },
+                    {
+                      "type":"REM",
+                      "remX":17,
+                      "dspl":"U",
+                      "fLocX":21,
+                      "tLocX":22,
+                      "tagL":
+                      [
+                        "RES_JNY_DTL"
+                      ],
+                      "sort":543424512
+                    },
+                    {
+                      "type":"REM",
+                      "remX":18,
+                      "dspl":"U",
+                      "fLocX":21,
+                      "tLocX":22,
+                      "tagL":
+                      [
+                        "RES_JNY_DTL"
+                      ],
+                      "sort":543424512
+                    },
+                    {
+                      "type":"REM",
+                      "remX":19,
+                      "dspl":"U",
+                      "fLocX":21,
+                      "tLocX":22,
+                      "tagL":
+                      [
+                        "RES_JNY_DTL"
+                      ],
+                      "sort":543424512
+                    },
+                    {
+                      "type":"REM",
+                      "remX":20,
+                      "dspl":"U",
+                      "fLocX":21,
+                      "tLocX":22,
+                      "tagL":
+                      [
+                        "RES_JNY_DTL"
+                      ],
+                      "sort":543424512
+                    },
+                    {
+                      "type":"REM",
+                      "remX":21,
+                      "dspl":"U",
+                      "fLocX":21,
+                      "tLocX":22,
+                      "tagL":
+                      [
+                        "RES_JNY_DTL"
+                      ],
+                      "sort":543424512
+                    },
+                    {
+                      "type":"REM",
+                      "remX":22,
+                      "dspl":"U",
+                      "fLocX":21,
+                      "tLocX":22,
+                      "tagL":
+                      [
+                        "RES_JNY_DTL"
+                      ],
+                      "sort":543424512
+                    },
+                    {
+                      "type":"HIM",
+                      "himX":2,
+                      "dspl":"U",
+                      "fLocX":21,
+                      "tLocX":21,
+                      "tagL":
+                      [
+                        "SUM_GLB_HDR_H3","RES_GLB_HDR_H3"
+                      ],
+                      "sort":373560317
+                    }
+                  ],
+                  "subscr":"F",
+                  "prodL":
+                  [
+                    {
+                      "prodX":15,
+                      "fLocX":21,
+                      "tLocX":22,
+                      "fIdx":0,
+                      "tIdx":2
+                    }
+                  ],
+                  "dirL":
+                  [
+                    {
+                      "dirX":3,
+                      "fLocX":21,
+                      "tLocX":22,
+                      "fIdx":0,
+                      "tIdx":2
+                    }
+                  ]
+                },
+                "minChg":"000300"
+              },
+              {
+                "type":"TRSF",
+                "icoX":13,
+                "dep":
+                {
+                  "locX":22,
+                  "dInR":true,
+                  "dTimeS":"095100",
+                  "type":"N"
+                },
+                "arr":
+                {
+                  "locX":27,
+                  "aOutR":true,
+                  "aTimeS":"095400",
+                  "type":"N"
+                },
+                "gis":
+                {
+                  "durS":"000300",
+                  "dirGeo":26,
+                  "segL":
+                  [
+                    {
+                      "manTx":"Fußweg",
+                      "polyS":0,
+                      "polyE":15
+                    }
+                  ],
+                  "polyG":
+                  {
+                    "polyXL":
+                    [
+                      6
+                    ],
+                    "layerX":0,
+                    "crdSysX":0
+                  },
+                  "gisPrvr":"H",
+                  "getDescr":true,
+                  "getPoly":true
+                }
+              },
+              {
+                "type":"JNY",
+                "icoX":8,
+                "dep":
+                {
+                  "locX":27,
+                  "idx":0,
+                  "dProdX":20,
+                  "dPlatfS":"B",
+                  "dInR":true,
+                  "dTimeS":"100000",
+                  "dTimeR":"100000",
+                  "dProgType":"PROGNOSED",
+                  "type":"N"
+                },
+                "arr":
+                {
+                  "locX":28,
+                  "idx":13,
+                  "aProdX":20,
+                  "aOutR":true,
+                  "aTimeS":"101900",
+                  "aTimeR":"101900",
+                  "aProgType":"PROGNOSED",
+                  "type":"N"
+                },
+                "jny":
+                {
+                  "jid":"2|#VN#1#ST#1641343143#PI#0#ZI#184038#TA#0#DA#50122#1S#480143610#1T#1000#LS#480081802#LT#1029#PU#81#RT#1#CA#V00#ZE#67#ZB#      67#PC#6#FR#480143610#FT#1000#TO#480081802#TT#1029#",
+                  "prodX":21,
+                  "dirTxt":"LKH - Göfis - Feldkirch",
+                  "dirFlg":"H",
+                  "status":"P",
+                  "isRchbl":true,
+                  "stopL":
+                  [
+                    {
+                      "locX":27,
+                      "idx":0,
+                      "dProdX":21,
+                      "dInR":true,
+                      "dTimeS":"100000",
+                      "dTimeR":"100000",
+                      "dProgType":"PROGNOSED",
+                      "dDirTxt":"LKH - Göfis - Feldkirch",
+                      "dDirFlg":"H",
+                      "type":"N"
+                    },
+                    {
+                      "locX":31,
+                      "idx":1,
+                      "aProdX":21,
+                      "aOutR":true,
+                      "aTimeS":"100100",
+                      "aTimeR":"100100",
+                      "aProgType":"PROGNOSED",
+                      "dProdX":21,
+                      "dInR":true,
+                      "dTimeS":"100100",
+                      "dTimeR":"100100",
+                      "dProgType":"PROGNOSED",
+                      "type":"N"
+                    },
+                    {
+                      "locX":33,
+                      "idx":2,
+                      "aProdX":21,
+                      "aOutR":true,
+                      "aTimeS":"100300",
+                      "aTimeR":"100300",
+                      "aProgType":"PROGNOSED",
+                      "dProdX":21,
+                      "dInR":true,
+                      "dTimeS":"100300",
+                      "dTimeR":"100300",
+                      "dProgType":"PROGNOSED",
+                      "type":"N"
+                    },
+                    {
+                      "locX":29,
+                      "idx":3,
+                      "aProdX":21,
+                      "aOutR":true,
+                      "aTimeS":"100500",
+                      "aTimeR":"100500",
+                      "aProgType":"PROGNOSED",
+                      "dProdX":21,
+                      "dInR":true,
+                      "dTimeS":"100500",
+                      "dTimeR":"100500",
+                      "dProgType":"PROGNOSED",
+                      "dDirTxt":"Feldkirch Busplatz",
+                      "type":"N"
+                    },
+                    {
+                      "locX":35,
+                      "idx":4,
+                      "aProdX":21,
+                      "aOutR":true,
+                      "aTimeS":"100800",
+                      "aTimeR":"100800",
+                      "aProgType":"PROGNOSED",
+                      "dProdX":21,
+                      "dInR":true,
+                      "dTimeS":"100800",
+                      "dTimeR":"100800",
+                      "dProgType":"PROGNOSED",
+                      "type":"N"
+                    },
+                    {
+                      "locX":37,
+                      "idx":5,
+                      "aProdX":21,
+                      "aOutR":true,
+                      "aTimeS":"100900",
+                      "aTimeR":"100900",
+                      "aProgType":"PROGNOSED",
+                      "dProdX":21,
+                      "dInR":true,
+                      "dTimeS":"100900",
+                      "dTimeR":"100900",
+                      "dProgType":"PROGNOSED",
+                      "type":"N"
+                    },
+                    {
+                      "locX":39,
+                      "idx":6,
+                      "aProdX":21,
+                      "aOutR":true,
+                      "aTimeS":"101000",
+                      "aTimeR":"101000",
+                      "aProgType":"PROGNOSED",
+                      "dProdX":21,
+                      "dInR":true,
+                      "dTimeS":"101000",
+                      "dTimeR":"101000",
+                      "dProgType":"PROGNOSED",
+                      "type":"N"
+                    },
+                    {
+                      "locX":41,
+                      "idx":7,
+                      "aProdX":21,
+                      "aOutR":true,
+                      "aTimeS":"101100",
+                      "aTimeR":"101100",
+                      "aProgType":"PROGNOSED",
+                      "dProdX":21,
+                      "dInR":true,
+                      "dTimeS":"101100",
+                      "dTimeR":"101100",
+                      "dProgType":"PROGNOSED",
+                      "type":"N"
+                    },
+                    {
+                      "locX":43,
+                      "idx":8,
+                      "aProdX":21,
+                      "aOutR":true,
+                      "aTimeS":"101200",
+                      "aTimeR":"101200",
+                      "aProgType":"PROGNOSED",
+                      "dProdX":21,
+                      "dInR":true,
+                      "dTimeS":"101200",
+                      "dTimeR":"101200",
+                      "dProgType":"PROGNOSED",
+                      "type":"N"
+                    },
+                    {
+                      "locX":45,
+                      "idx":9,
+                      "aProdX":21,
+                      "aOutR":true,
+                      "aTimeS":"101400",
+                      "aTimeR":"101400",
+                      "aProgType":"PROGNOSED",
+                      "dProdX":21,
+                      "dInR":true,
+                      "dTimeS":"101400",
+                      "dTimeR":"101400",
+                      "dProgType":"PROGNOSED",
+                      "type":"N"
+                    },
+                    {
+                      "locX":47,
+                      "idx":10,
+                      "aProdX":21,
+                      "aOutR":true,
+                      "aTimeS":"101500",
+                      "aTimeR":"101500",
+                      "aProgType":"PROGNOSED",
+                      "dProdX":21,
+                      "dInR":true,
+                      "dTimeS":"101500",
+                      "dTimeR":"101500",
+                      "dProgType":"PROGNOSED",
+                      "type":"N"
+                    },
+                    {
+                      "locX":49,
+                      "idx":11,
+                      "aProdX":21,
+                      "aOutR":true,
+                      "aTimeS":"101600",
+                      "aTimeR":"101600",
+                      "aProgType":"PROGNOSED",
+                      "dProdX":21,
+                      "dInR":true,
+                      "dTimeS":"101600",
+                      "dTimeR":"101600",
+                      "dProgType":"PROGNOSED",
+                      "type":"N"
+                    },
+                    {
+                      "locX":51,
+                      "idx":12,
+                      "aProdX":21,
+                      "aOutR":true,
+                      "aTimeS":"101700",
+                      "aTimeR":"101700",
+                      "aProgType":"PROGNOSED",
+                      "dProdX":21,
+                      "dInR":true,
+                      "dTimeS":"101700",
+                      "dTimeR":"101700",
+                      "dProgType":"PROGNOSED",
+                      "type":"N"
+                    },
+                    {
+                      "locX":28,
+                      "idx":13,
+                      "aProdX":21,
+                      "aOutR":true,
+                      "aTimeS":"101900",
+                      "aTimeR":"101900",
+                      "aProgType":"PROGNOSED",
+                      "type":"N"
+                    }
+                  ],
+                  "polyG":
+                  {
+                    "polyXL":
+                    [
+                      7
+                    ],
+                    "layerX":0,
+                    "crdSysX":0
+                  },
+                  "freq":
+                  {
+                    "minC":60,
+                    "maxC":60,
+                    "numC":3
+                  },
+                  "ctxRecon":"T$A=1@O=Rankweil Bahnhof@L=480143610@a=128@$A=1@O=Göfis Kustergasse@L=480101702@a=128@$202201051000$202201051019$      67$$1$$$$$$",
+                  "msgL":
+                  [
+                    {
+                      "type":"HIM",
+                      "himX":3,
+                      "dspl":"U",
+                      "fLocX":27,
+                      "tLocX":27,
+                      "tagL":
+                      [
+                        "SUM_GLB_HDR_H3","RES_GLB_HDR_H3"
+                      ],
+                      "sort":373560317
+                    },
+                    {
+                      "type":"REM",
+                      "remX":23,
+                      "tagL":
+                      [
+                        "RES_JNY_H3"
+                      ],
+                      "sort":537133056
+                    }
+                  ],
+                  "subscr":"F",
+                  "prodL":
+                  [
+                    {
+                      "prodX":21,
+                      "fLocX":27,
+                      "tLocX":29,
+                      "fIdx":0,
+                      "tIdx":3
+                    },
+                    {
+                      "prodX":21,
+                      "fLocX":29,
+                      "tLocX":28,
+                      "fIdx":3,
+                      "tIdx":13
+                    }
+                  ],
+                  "dirL":
+                  [
+                    {
+                      "dirX":5,
+                      "fLocX":27,
+                      "tLocX":29,
+                      "fIdx":0,
+                      "tIdx":3
+                    },
+                    {
+                      "dirX":6,
+                      "fLocX":29,
+                      "tLocX":28,
+                      "fIdx":3,
+                      "tIdx":13
+                    }
+                  ]
+                },
+                "minChg":"000100"
+              },
+              {
+                "type":"WALK",
+                "icoX":3,
+                "dep":
+                {
+                  "locX":28,
+                  "dInR":true,
+                  "dTimeS":"101900",
+                  "type":"N"
+                },
+                "arr":
+                {
+                  "locX":18,
+                  "aOutR":true,
+                  "aTimeS":"102000",
+                  "type":"N"
+                },
+                "gis":
+                {
+                  "dist":7,
+                  "durS":"000100",
+                  "ctx":"C|d1fff25f|G|1|G@F|A=1@O=Göfis Kustergasse@X=9628643@Y=47240732@U=81@L=480101702@i=at:48:1017:0:2@|A=2@O=47.240750, 9.628580@X=9628580@Y=47240750@|5012022|101900|102000|fb|ft@0@2000@120@1@133@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§bt@0@2000@120@1@133@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§tf@$f@$f@$f@$f@$f@$§|||",
+                  "getDescr":true,
+                  "getPoly":true
+                }
+              }
+            ],
+            "ctxRecon":"¶HKI¶G@F$A=2@O=47.241128, 9.603886@X=9603886@Y=47241128@u=0@a=128@$A=1@O=Feldkirch Bahnhof@L=480081706@a=128@$202201050945$202201050947$$$1$$$$$$§T$A=1@O=Feldkirch Bahnhof@L=480081706@a=128@$A=1@O=Rankweil Bahnhof@L=480143602@a=128@$202201050947$202201050951$REX 5566$$1$$$$$$§W$A=1@O=Rankweil Bahnhof@L=480143602@a=128@$A=1@O=Rankweil Bahnhof@L=480143610@a=128@$202201050951$202201050954$$$1$$$$$$§T$A=1@O=Rankweil Bahnhof@L=480143610@a=128@$A=1@O=Göfis Kustergasse@L=480101702@a=128@$202201051000$202201051019$      67$$1$$$$$$§G@F$A=1@O=Göfis Kustergasse@L=480101702@a=128@$A=2@O=47.240750, 9.628580@X=9628580@Y=47240750@u=0@a=128@$202201051019$202201051020$$$1$$$$$$¶GP¶ft@0@2000@120@1@133@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§bt@0@2000@120@1@133@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§tf@$f@$f@$f@$f@$f@$§¶KI¶H4sIAAAAAAACA+1WyY7jIBD9lRGHOblb2Fns5FdaESI2tpEdsABnVf59qoA4SatH3TOawxw6uVCvgFpelakL4ao2vBE7XY2WrAk9zuksJQmxY9newSoHaDjcAQry49HsQ5QZN+HWcePYtibrt01CzlL0k7CXfFqHbbwyZH0h7jQIsk4T0usSLoJbFN8BQub5azZP06xIfqxel3RWFEtQHjutTQUH6LKY5auEnCKwyBaLWToD53rHyoBdiF+wPe8liPR6ReN6+Jptmi+ot50Vi4I+2c7Br+Wz7SxPP7U9GMhYB/l6u5CBrIu0AH81KBMCYLq4Jv8I30wcnYUEaEHTLKOrbPaEZ/4EVoFUThjwtPdUpjX+IGBRdrhPKPCYJh/8wc6OHxkQWnasFbJpnb9z3FkHEqt55zSkerW6Y+fRlm3PG7J+Se/oTqpKWBfcfacYvQcI1j0XZSsU+ixYLNUL+lDxURikhhbUO1VJCzfNsnyZJ6TiJ9vKGoBV0G7b+m6qhGubUPMpAZr4aBu+FayWvcNLcQ+c2cm+l1aUNiCNsIMwUMhGxLoGf3vvWRQNV3bQsKNstSwFelobrZwvPVSygRu+s74eZHX0qROKb/tQldIycXRsMMKK3ish4qCqRsOd1IrpGrN/ik5KxULcIcooZJTSu5JteTfFxJzEgk8ztNz3DCLCMEXYgIjhlRxjyAcu3e0EFM4gBHbDDKqq1NEqlDikTYRuwqaHCMJhFEYJfTanqwVs1JZx50zsO9E8SL5PynBhDTk+sYOvLali1dhODszoMSCwC9eChX4GETgoO4g3+Oo5RgQ2PUBKs93oQrYptpKnYPklCugfUgB1+SkJt4x/mYOXOwk+RM8Brv4DElL6dzRsoP+28DX57pHvHvnukd/3iNx/0CEbHDKAjvcvD5NKOgmDyNkX4zvKWHyU6Hs89CHAjSzZ0HIrwiMZpwOc4Z4mS6gOVev78BjfwijpvTAHA9NERNBVBdNAgwfPSmOXzLM0zzN4sB3vbnMAMoELvsX5MazC201xmplANYH14QbWB3/cY1GN77vCCWS0drJMHy3eBgMc2LjpfhpZ+bd7MMy/+EKxso+NPCFgnkGAW3/w+gu1y5uLdAsAAA==",
+            "freq":
+            {
+              "minC":60
+            },
+            "trfRes":
+            {
+              "statusCode":"OK",
+              "fareSetL":
+              [
+                {
+                  "name":"VVV 3 dominos",
+                  "desc":"Befahrene Dominos: 30, 32, 37",
+                  "fareL":
+                  [
+                    {
+                      "name":"Vollpreis - Einzelfahrt",
+                      "prc":330,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Vollpreis - Tageskarte",
+                      "prc":580,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Vollpreis - Wochenkarte",
+                      "prc":2010,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Vollpreis - Monatskarte",
+                      "prc":4000,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Vollpreis - Jahreskarte",
+                      "prc":30400,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Kind - Einzelfahrt",
+                      "prc":170,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Kind - Tageskarte",
+                      "prc":290,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Gruppe (ab 3 Personen) - Einzelfahrt",
+                      "prc":330,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Gruppe (ab 3 Personen) - Tageskarte",
+                      "prc":410,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Vollpreis/Familie - Einzelfahrt",
+                      "prc":330,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Vollpreis/Familie - Tageskarte",
+                      "prc":580,
+                      "cur":"EUR"
+                    }
+                  ]
+                }
+              ]
+            },
+            "ovwTrfRefL":
+            [
+              {
+                "type":"F",
+                "fareSetX":0,
+                "fareX":0
+              },
+              {
+                "type":"F",
+                "fareSetX":0,
+                "fareX":5
+              },
+              {
+                "type":"F",
+                "fareSetX":0,
+                "fareX":7
+              },
+              {
+                "type":"F",
+                "fareSetX":0,
+                "fareX":9
+              }
+            ],
+            "eco":
+            {
+              "co2":0.513792000000000
+            },
+            "conSubscr":"P",
+            "recState":"U",
+            "cksum":"70b8c6c1_3",
+            "cksumDti":"a5b7bbac_3"
+          }
+        ],
+        "outCtxScrB":"2|OB|MT#11#92725#92723#92741#92741#0#0#85#92723#1#-2147483646#0#1#2|PDH#b7e605d4e63018b82866c0ba053afd58|RD#5012022|RT#92300|US#1",
+        "outCtxScrF":"2|OF|MT#11#92745#92745#92780#92780#0#0#85#92726#3#-2147483646#0#1#2|PDH#b7e605d4e63018b82866c0ba053afd58|RD#5012022|RT#92300|US#1",
+        "fpB":"20211104",
+        "fpE":"20220531",
+        "planrtTS":"1641370973"
+      }
+    }
+  ]
+}
