@@ -109,7 +109,7 @@ public class AbstractHafasProvider: AbstractNetworkProvider {
             let substring = (position as NSString).substring(with: match.range(at: 1))
             return substring.emptyToNil
         }
-        return position
+        return super.parsePosition(position: position)
     }
 
     func queryTripsBinaryParameters(builder: UrlBuilder, from: Location, via: Location?, to: Location, date: Date, departure: Bool, tripOptions: TripOptions) {

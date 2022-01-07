@@ -1,0 +1,4636 @@
+{
+  "ver":"1.18",
+  "ext":"VAO.6",
+  "lang":"deu",
+  "id":"urgu9m4kkqcqxi4s",
+  "err":"OK",
+  "cInfo":
+  {
+    "code":"OK",
+    "url":"",
+    "msg":""
+  },
+  "svcResL":
+  [
+    {
+      "meth":"TripSearch",
+      "err":"OK",
+      "res":
+      {
+        "common":
+        {
+          "locL":
+          [
+            {
+              "lid":"A=1@O=Innsbruck Sillpark@l=Innsbruck Sillpark (Amraser Straße)@X=11402610@Y=47265983@U=81@L=476158903@i=at:47:61589:0:3@",
+              "type":"S",
+              "name":"Innsbruck Sillpark",
+              "nameAlt":"Innsbruck Sillpark (Amraser Straße)",
+              "icoX":0,
+              "extId":"476158903",
+              "state":"F",
+              "crd":
+              {
+                "x":11402610,
+                "y":47265983,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":208,
+              "entry":true,
+              "mMastLocX":1
+            },
+            {
+              "lid":"A=1@O=Innsbruck Sillpark@X=11402493@Y=47266217@U=81@L=476158900@i=at:47:61589@",
+              "type":"S",
+              "name":"Innsbruck Sillpark",
+              "icoX":1,
+              "extId":"476158900",
+              "state":"F",
+              "crd":
+              {
+                "x":11402493,
+                "y":47266217,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "meta":true,
+              "pCls":208,
+              "isMainMast":true
+            },
+            {
+              "lid":"A=1@O=Innsbruck Hauptbahnhof@l=Innsbruck Hauptbahnhof (G)@X=11400129@Y=47263915@U=81@L=470118724@i=at:47:1187:0:24@",
+              "type":"S",
+              "name":"Innsbruck Hauptbahnhof",
+              "nameAlt":"Innsbruck Hauptbahnhof (G)",
+              "icoX":5,
+              "extId":"470118724",
+              "state":"F",
+              "crd":
+              {
+                "x":11400129,
+                "y":47263915,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":211,
+              "entry":true,
+              "mMastLocX":3
+            },
+            {
+              "lid":"A=1@O=Innsbruck Hauptbahnhof@X=11400273@Y=47263538@U=81@L=470118700@i=at:47:1187@",
+              "type":"S",
+              "name":"Innsbruck Hauptbahnhof",
+              "icoX":6,
+              "extId":"470118700",
+              "state":"F",
+              "crd":
+              {
+                "x":11400273,
+                "y":47263538,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "meta":true,
+              "pCls":211,
+              "isMainMast":true
+            },
+            {
+              "lid":"A=1@O=Innsbruck Amras@l=Innsbruck Amras (B)@X=11425991@Y=47258720@U=81@L=476159802@i=at:47:61598:0:2@",
+              "type":"S",
+              "name":"Innsbruck Amras",
+              "nameAlt":"Innsbruck Amras (B)",
+              "icoX":3,
+              "extId":"476159802",
+              "state":"F",
+              "crd":
+              {
+                "x":11425991,
+                "y":47258720,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":16,
+              "entry":true,
+              "mMastLocX":5
+            },
+            {
+              "lid":"A=1@O=Innsbruck Amras@X=11426000@Y=47258702@U=81@L=476159800@i=at:47:61598@",
+              "type":"S",
+              "name":"Innsbruck Amras",
+              "icoX":1,
+              "extId":"476159800",
+              "state":"F",
+              "crd":
+              {
+                "x":11426000,
+                "y":47258702,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "meta":true,
+              "pCls":16,
+              "isMainMast":true
+            },
+            {
+              "lid":"A=1@O=Innsbruck Hauptbahnhof@X=11401387@Y=47263304@U=81@L=470118733@i=at:47:1187:0:33@",
+              "type":"S",
+              "name":"Innsbruck Hauptbahnhof",
+              "icoX":5,
+              "extId":"470118733",
+              "state":"F",
+              "crd":
+              {
+                "x":11401387,
+                "y":47263304,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":211,
+              "entry":true,
+              "mMastLocX":3
+            },
+            {
+              "lid":"A=1@O=Wörgl Hauptbahnhof@X=12060584@Y=47491432@U=81@L=470117016@i=at:47:1170:0:16@",
+              "type":"S",
+              "name":"Wörgl Hauptbahnhof",
+              "icoX":5,
+              "extId":"470117016",
+              "state":"F",
+              "crd":
+              {
+                "x":12060584,
+                "y":47491432,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":195,
+              "entry":true,
+              "mMastLocX":8
+            },
+            {
+              "lid":"A=1@O=Wörgl Hauptbahnhof@X=12060926@Y=47491244@U=81@L=470117000@i=at:47:1170@",
+              "type":"S",
+              "name":"Wörgl Hauptbahnhof",
+              "icoX":6,
+              "extId":"470117000",
+              "state":"F",
+              "crd":
+              {
+                "x":12060926,
+                "y":47491244,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "meta":true,
+              "pCls":195,
+              "isMainMast":true
+            },
+            {
+              "lid":"A=1@O=Rum Bahnhof@l=Rum Bahnhof (1)@X=11455763@Y=47277965@U=81@L=470118601@i=at:47:1186:0:1@",
+              "type":"S",
+              "name":"Rum Bahnhof",
+              "nameAlt":"Rum Bahnhof (1)",
+              "icoX":6,
+              "extId":"470118601",
+              "state":"F",
+              "crd":
+              {
+                "x":11455763,
+                "y":47277965,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":195,
+              "entry":true,
+              "mMastLocX":10
+            },
+            {
+              "lid":"A=1@O=Rum (Tirol) Bahnhof@X=11455538@Y=47278028@U=81@L=470118600@i=at:47:1186@",
+              "type":"S",
+              "name":"Rum (Tirol) Bahnhof",
+              "icoX":6,
+              "extId":"470118600",
+              "state":"F",
+              "crd":
+              {
+                "x":11455538,
+                "y":47278028,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "meta":true,
+              "pCls":195,
+              "isMainMast":true
+            },
+            {
+              "lid":"A=1@O=Hall-Thaur Bahnhof@X=11474640@Y=47277004@U=81@L=470029401@i=at:47:294:0:1@",
+              "type":"S",
+              "name":"Hall-Thaur Bahnhof",
+              "icoX":14,
+              "extId":"470029401",
+              "state":"F",
+              "crd":
+              {
+                "x":11474640,
+                "y":47277004,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":66,
+              "entry":true,
+              "mMastLocX":12
+            },
+            {
+              "lid":"A=1@O=Hall-Thaur Bahnhof@X=11474649@Y=47277093@U=81@L=470029400@i=at:47:294@",
+              "type":"S",
+              "name":"Hall-Thaur Bahnhof",
+              "icoX":15,
+              "extId":"470029400",
+              "state":"F",
+              "crd":
+              {
+                "x":11474649,
+                "y":47277093,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "meta":true,
+              "pCls":66,
+              "isMainMast":true
+            },
+            {
+              "lid":"A=1@O=Hall in Tirol Bahnhof@X=11501734@Y=47276977@U=81@L=470118405@i=at:47:1184:0:5@",
+              "type":"S",
+              "name":"Hall in Tirol Bahnhof",
+              "icoX":6,
+              "extId":"470118405",
+              "state":"F",
+              "crd":
+              {
+                "x":11501734,
+                "y":47276977,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":195,
+              "entry":true,
+              "mMastLocX":14
+            },
+            {
+              "lid":"A=1@O=Hall in Tirol Bahnhof@X=11501653@Y=47277264@U=81@L=470118400@i=at:47:1184@",
+              "type":"S",
+              "name":"Hall in Tirol Bahnhof",
+              "icoX":6,
+              "extId":"470118400",
+              "state":"F",
+              "crd":
+              {
+                "x":11501653,
+                "y":47277264,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "meta":true,
+              "pCls":195,
+              "isMainMast":true
+            },
+            {
+              "lid":"A=1@O=Kundl Bahnhof@X=11982234@Y=47475953@U=81@L=470117202@i=at:47:1172:0:2@",
+              "type":"S",
+              "name":"Kundl Bahnhof",
+              "icoX":6,
+              "extId":"470117202",
+              "state":"F",
+              "crd":
+              {
+                "x":11982234,
+                "y":47475953,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":67,
+              "entry":true,
+              "mMastLocX":16
+            },
+            {
+              "lid":"A=1@O=Kundl Bahnhof@X=11982279@Y=47475872@U=81@L=470117200@i=at:47:1172@",
+              "type":"S",
+              "name":"Kundl Bahnhof",
+              "icoX":6,
+              "extId":"470117200",
+              "state":"F",
+              "crd":
+              {
+                "x":11982279,
+                "y":47475872,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "meta":true,
+              "pCls":67,
+              "isMainMast":true
+            },
+            {
+              "lid":"A=1@O=Brenner, Bahnhof@l=Brenner, Bahnhof (6)@X=11505572@Y=47002689@U=81@L=230138902@i=it:22021:1389:50:31090@",
+              "type":"S",
+              "name":"Brenner, Bahnhof",
+              "nameAlt":"Brenner, Bahnhof (6)",
+              "icoX":16,
+              "extId":"230138902",
+              "state":"F",
+              "crd":
+              {
+                "x":11505572,
+                "y":47002689,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":67,
+              "mMastLocX":18
+            },
+            {
+              "lid":"A=1@O=Brenner Bahnhof@X=11505069@Y=47002680@U=81@L=230138900@i=it:22021:1389@",
+              "type":"S",
+              "name":"Brenner Bahnhof",
+              "icoX":6,
+              "extId":"230138900",
+              "state":"F",
+              "crd":
+              {
+                "x":11505069,
+                "y":47002680,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "meta":true,
+              "pCls":67,
+              "isMainMast":true
+            },
+            {
+              "lid":"A=1@O=Innsbruck Hauptbahnhof@X=11401297@Y=47263304@U=81@L=470118726@i=at:47:1187:0:26@",
+              "type":"S",
+              "name":"Innsbruck Hauptbahnhof",
+              "icoX":5,
+              "extId":"470118726",
+              "state":"F",
+              "crd":
+              {
+                "x":11401297,
+                "y":47263304,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":211,
+              "entry":true,
+              "mMastLocX":3
+            },
+            {
+              "lid":"A=1@O=Wörgl Hauptbahnhof@X=12060665@Y=47491378@U=81@L=470117015@i=at:47:1170:0:15@",
+              "type":"S",
+              "name":"Wörgl Hauptbahnhof",
+              "icoX":5,
+              "extId":"470117015",
+              "state":"F",
+              "crd":
+              {
+                "x":12060665,
+                "y":47491378,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":195,
+              "entry":true,
+              "mMastLocX":8
+            },
+            {
+              "lid":"A=1@O=Innsbruck Hauptbahnhof@X=11401100@Y=47263322@U=81@L=470118705@i=at:47:1187:0:5@",
+              "type":"S",
+              "name":"Innsbruck Hauptbahnhof",
+              "icoX":5,
+              "extId":"470118705",
+              "state":"F",
+              "crd":
+              {
+                "x":11401100,
+                "y":47263322,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":211,
+              "entry":true,
+              "mMastLocX":3
+            },
+            {
+              "lid":"A=1@O=Innsbruck Hauptbahnhof@X=11401181@Y=47263304@U=81@L=470118708@i=at:47:1187:0:8@",
+              "type":"S",
+              "name":"Innsbruck Hauptbahnhof",
+              "icoX":5,
+              "extId":"470118708",
+              "state":"F",
+              "crd":
+              {
+                "x":11401181,
+                "y":47263304,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":211,
+              "entry":true,
+              "mMastLocX":3
+            },
+            {
+              "lid":"A=1@O=Innsbruck Messe Bahnhof@X=11407158@Y=47272833@U=81@L=470021101@i=at:47:211:0:1@",
+              "type":"S",
+              "name":"Innsbruck Messe Bahnhof",
+              "icoX":6,
+              "extId":"470021101",
+              "state":"F",
+              "crd":
+              {
+                "x":11407158,
+                "y":47272833,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":131,
+              "entry":true,
+              "mMastLocX":24
+            },
+            {
+              "lid":"A=1@O=Innsbruck Messe Bahnhof@X=11407069@Y=47272833@U=81@L=470021100@i=at:47:211@",
+              "type":"S",
+              "name":"Innsbruck Messe Bahnhof",
+              "icoX":6,
+              "extId":"470021100",
+              "state":"F",
+              "crd":
+              {
+                "x":11407069,
+                "y":47272833,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "meta":true,
+              "pCls":131,
+              "isMainMast":true
+            },
+            {
+              "lid":"A=1@O=Schwaz Bahnhof@X=11701537@Y=47349708@U=81@L=470117904@i=at:47:1179:0:4@",
+              "type":"S",
+              "name":"Schwaz Bahnhof",
+              "icoX":6,
+              "extId":"470117904",
+              "state":"F",
+              "crd":
+              {
+                "x":11701537,
+                "y":47349708,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":67,
+              "entry":true,
+              "mMastLocX":26
+            },
+            {
+              "lid":"A=1@O=Schwaz Bahnhof@X=11701726@Y=47349618@U=81@L=470117900@i=at:47:1179@",
+              "type":"S",
+              "name":"Schwaz Bahnhof",
+              "icoX":6,
+              "extId":"470117900",
+              "state":"F",
+              "crd":
+              {
+                "x":11701726,
+                "y":47349618,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "meta":true,
+              "pCls":67,
+              "isMainMast":true
+            },
+            {
+              "lid":"A=1@O=Jenbach Bahnhof@X=11777685@Y=47388182@U=81@L=476132110@i=at:47:61321:0:10@",
+              "type":"S",
+              "name":"Jenbach Bahnhof",
+              "icoX":5,
+              "extId":"476132110",
+              "state":"F",
+              "crd":
+              {
+                "x":11777685,
+                "y":47388182,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":67,
+              "entry":true,
+              "mMastLocX":28
+            },
+            {
+              "lid":"A=1@O=Jenbach (Tirol) Bahnhof@X=11777910@Y=47388488@U=81@L=476132100@i=at:47:61321@",
+              "type":"S",
+              "name":"Jenbach (Tirol) Bahnhof",
+              "icoX":6,
+              "extId":"476132100",
+              "state":"F",
+              "crd":
+              {
+                "x":11777910,
+                "y":47388488,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "meta":true,
+              "pCls":67,
+              "isMainMast":true
+            },
+            {
+              "lid":"A=1@O=Brixlegg Bahnhof@X=11880117@Y=47434791@U=81@L=470117403@i=at:47:1174:0:3@",
+              "type":"S",
+              "name":"Brixlegg Bahnhof",
+              "icoX":5,
+              "extId":"470117403",
+              "state":"F",
+              "crd":
+              {
+                "x":11880117,
+                "y":47434791,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":67,
+              "entry":true,
+              "mMastLocX":30
+            },
+            {
+              "lid":"A=1@O=Brixlegg Bahnhof@X=11880054@Y=47434611@U=81@L=470117400@i=at:47:1174@",
+              "type":"S",
+              "name":"Brixlegg Bahnhof",
+              "icoX":6,
+              "extId":"470117400",
+              "state":"F",
+              "crd":
+              {
+                "x":11880054,
+                "y":47434611,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "meta":true,
+              "pCls":67,
+              "isMainMast":true
+            },
+            {
+              "lid":"A=1@O=Volders-Baumkirchen Bahnhof@l=Volders-Baumkirchen Bahnhof (1)@X=11564488@Y=47296294@U=81@L=470118301@i=at:47:1183:0:1@",
+              "type":"S",
+              "name":"Volders-Baumkirchen Bahnhof",
+              "nameAlt":"Volders-Baumkirchen Bahnhof (1)",
+              "icoX":14,
+              "extId":"470118301",
+              "state":"F",
+              "crd":
+              {
+                "x":11564488,
+                "y":47296294,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":2,
+              "entry":true,
+              "mMastLocX":32
+            },
+            {
+              "lid":"A=1@O=Volders-Baumkirchen Bahnhof@X=11564443@Y=47296330@U=81@L=470118300@i=at:47:1183@",
+              "type":"S",
+              "name":"Volders-Baumkirchen Bahnhof",
+              "icoX":15,
+              "extId":"470118300",
+              "state":"F",
+              "crd":
+              {
+                "x":11564443,
+                "y":47296330,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "meta":true,
+              "pCls":2,
+              "isMainMast":true
+            },
+            {
+              "lid":"A=1@O=Fritzens-Wattens Bahnhof@X=11588857@Y=47302128@U=81@L=470118202@i=at:47:1182:0:2@",
+              "type":"S",
+              "name":"Fritzens-Wattens Bahnhof",
+              "icoX":6,
+              "extId":"470118202",
+              "state":"F",
+              "crd":
+              {
+                "x":11588857,
+                "y":47302128,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":67,
+              "mMastLocX":34
+            },
+            {
+              "lid":"A=1@O=Fritzens-Wattens Bahnhof@X=11588839@Y=47301958@U=81@L=470118200@i=at:47:1182@",
+              "type":"S",
+              "name":"Fritzens-Wattens Bahnhof",
+              "icoX":6,
+              "extId":"470118200",
+              "state":"F",
+              "crd":
+              {
+                "x":11588839,
+                "y":47301958,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "meta":true,
+              "pCls":67,
+              "isMainMast":true
+            },
+            {
+              "lid":"A=1@O=Terfens-Weer Bahnhof@l=Terfens-Weer Bahnhof (1)@X=11634585@Y=47315981@U=81@L=470118102@i=at:47:1181:0:2@",
+              "type":"S",
+              "name":"Terfens-Weer Bahnhof",
+              "nameAlt":"Terfens-Weer Bahnhof (1)",
+              "icoX":14,
+              "extId":"470118102",
+              "state":"F",
+              "crd":
+              {
+                "x":11634585,
+                "y":47315981,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":66,
+              "entry":true,
+              "mMastLocX":36
+            },
+            {
+              "lid":"A=1@O=Terfens-Weer Bahnhof@X=11634612@Y=47315963@U=81@L=470118100@i=at:47:1181@",
+              "type":"S",
+              "name":"Terfens-Weer Bahnhof",
+              "icoX":15,
+              "extId":"470118100",
+              "state":"F",
+              "crd":
+              {
+                "x":11634612,
+                "y":47315963,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "meta":true,
+              "pCls":66,
+              "isMainMast":true
+            },
+            {
+              "lid":"A=1@O=Pill-Vomperbach Bahnhof@l=Pill-Vomperbach Bahnhof (1)@X=11677275@Y=47324017@U=81@L=470118003@i=at:47:1180:0:3@",
+              "type":"S",
+              "name":"Pill-Vomperbach Bahnhof",
+              "nameAlt":"Pill-Vomperbach Bahnhof (1)",
+              "icoX":14,
+              "extId":"470118003",
+              "state":"F",
+              "crd":
+              {
+                "x":11677275,
+                "y":47324017,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":66,
+              "entry":true,
+              "mMastLocX":38
+            },
+            {
+              "lid":"A=1@O=Pill-Vomperbach Bahnhof@X=11677033@Y=47323981@U=81@L=470118000@i=at:47:1180@",
+              "type":"S",
+              "name":"Pill-Vomperbach Bahnhof",
+              "icoX":15,
+              "extId":"470118000",
+              "state":"F",
+              "crd":
+              {
+                "x":11677033,
+                "y":47323981,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "meta":true,
+              "pCls":66,
+              "isMainMast":true
+            },
+            {
+              "lid":"A=1@O=Stans Bahnhof@l=Stans Bahnhof (1)@X=11726231@Y=47365278@U=81@L=470117801@i=at:47:1178:0:1@",
+              "type":"S",
+              "name":"Stans Bahnhof",
+              "nameAlt":"Stans Bahnhof (1)",
+              "icoX":14,
+              "extId":"470117801",
+              "state":"F",
+              "crd":
+              {
+                "x":11726231,
+                "y":47365278,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":2,
+              "entry":true,
+              "mMastLocX":40
+            },
+            {
+              "lid":"A=1@O=Stans (Tirol) Bahnhof@X=11726150@Y=47365377@U=81@L=470117800@i=at:47:1178@",
+              "type":"S",
+              "name":"Stans (Tirol) Bahnhof",
+              "icoX":15,
+              "extId":"470117800",
+              "state":"F",
+              "crd":
+              {
+                "x":11726150,
+                "y":47365377,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "meta":true,
+              "pCls":2,
+              "isMainMast":true
+            },
+            {
+              "lid":"A=1@O=Münster-Wiesing Bahnhof@l=Münster-Wiesing Bahnhof (1)@X=11819781@Y=47403338@U=81@L=470117502@i=at:47:1175:0:2@",
+              "type":"S",
+              "name":"Münster-Wiesing Bahnhof",
+              "nameAlt":"Münster-Wiesing Bahnhof (1)",
+              "icoX":14,
+              "extId":"470117502",
+              "state":"F",
+              "crd":
+              {
+                "x":11819781,
+                "y":47403338,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":2,
+              "entry":true,
+              "mMastLocX":42
+            },
+            {
+              "lid":"A=1@O=Münster-Wiesing Bahnhof@X=11819718@Y=47403356@U=81@L=470117500@i=at:47:1175@",
+              "type":"S",
+              "name":"Münster-Wiesing Bahnhof",
+              "icoX":15,
+              "extId":"470117500",
+              "state":"F",
+              "crd":
+              {
+                "x":11819718,
+                "y":47403356,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "meta":true,
+              "pCls":2,
+              "isMainMast":true
+            },
+            {
+              "lid":"A=1@O=Rattenberg-Kramsach Bahnhof@l=Rattenberg-Kramsach Bahnhof (1)@X=11896037@Y=47439196@U=81@L=470117301@i=at:47:1173:0:1@",
+              "type":"S",
+              "name":"Rattenberg-Kramsach Bahnhof",
+              "nameAlt":"Rattenberg-Kramsach Bahnhof (1)",
+              "icoX":14,
+              "extId":"470117301",
+              "state":"F",
+              "crd":
+              {
+                "x":11896037,
+                "y":47439196,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":2,
+              "entry":true,
+              "mMastLocX":44
+            },
+            {
+              "lid":"A=1@O=Rattenberg-Kramsach Bahnhof@X=11895902@Y=47439169@U=81@L=470117300@i=at:47:1173@",
+              "type":"S",
+              "name":"Rattenberg-Kramsach Bahnhof",
+              "icoX":15,
+              "extId":"470117300",
+              "state":"F",
+              "crd":
+              {
+                "x":11895902,
+                "y":47439169,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "meta":true,
+              "pCls":2,
+              "isMainMast":true
+            }
+          ],
+          "prodL":
+          [
+            {
+              "pid":"L::4::::B1506840680::vvt-3-3-P-j22-1::*",
+              "name":"Tram 3",
+              "nameS":"3",
+              "number":"3",
+              "icoX":3,
+              "cls":16,
+              "oprX":0,
+              "prodCtx":
+              {
+                "name":"       3",
+                "num":"14736",
+                "line":"3",
+                "matchId":"3",
+                "catOutS":"t11",
+                "catOutL":"Tram",
+                "catIn":"t11",
+                "catCode":"4",
+                "admin":"t1900_"
+              }
+            },
+            {
+              "pid":"L::4::::B1506840680::vvt-3-3-P-j22-1::*",
+              "name":"Tram 3",
+              "nameS":"3",
+              "number":"3",
+              "icoX":3,
+              "cls":16,
+              "oprX":1,
+              "prodCtx":
+              {
+                "name":"       3",
+                "num":"14736",
+                "line":"3",
+                "lineId":"vvt-3-3-P-j22-1",
+                "matchId":"3",
+                "catOutS":"t11",
+                "catOutL":"Tram",
+                "catIn":"t11",
+                "catCode":"4",
+                "admin":"t1900_"
+              }
+            },
+            {
+              "pid":"L::4::::B1506840680::vvt-3-5-P-j22-1::*",
+              "name":"Tram 5",
+              "nameS":"5",
+              "number":"5",
+              "icoX":9,
+              "cls":16,
+              "oprX":1,
+              "prodCtx":
+              {
+                "name":"       5",
+                "num":"16231",
+                "line":"5",
+                "lineId":"vvt-3-5-P-j22-1",
+                "matchId":"5",
+                "catOutS":"t11",
+                "catOutL":"Tram",
+                "catIn":"t11",
+                "catCode":"4",
+                "admin":"t1900_"
+              }
+            },
+            {
+              "pid":"L::4::::B1506840680::vvt-3-3-P-j22-1::*",
+              "name":"Tram 3",
+              "nameS":"3",
+              "number":"3",
+              "icoX":3,
+              "cls":16,
+              "oprX":1,
+              "prodCtx":
+              {
+                "name":"       3",
+                "num":"14841",
+                "line":"3",
+                "lineId":"vvt-3-3-P-j22-1",
+                "matchId":"3",
+                "catOutS":"t11",
+                "catOutL":"Tram",
+                "catIn":"t11",
+                "catCode":"4",
+                "admin":"t1900_"
+              }
+            },
+            {
+              "pid":"L::4::::B1506840680::vvt-3-3-P-j22-1::*",
+              "name":"Tram 3",
+              "nameS":"3",
+              "number":"3",
+              "icoX":3,
+              "cls":16,
+              "oprX":1,
+              "prodCtx":
+              {
+                "name":"       3",
+                "num":"14737",
+                "line":"3",
+                "lineId":"vvt-3-3-P-j22-1",
+                "matchId":"3",
+                "catOutS":"t11",
+                "catOutL":"Tram",
+                "catIn":"t11",
+                "catCode":"4",
+                "admin":"t1900_"
+              }
+            },
+            {
+              "pid":"L::4::::B1506840680::vvt-3-5-P-j22-1::*",
+              "name":"Tram 5",
+              "nameS":"5",
+              "number":"5",
+              "icoX":9,
+              "cls":16,
+              "oprX":1,
+              "prodCtx":
+              {
+                "name":"       5",
+                "num":"16232",
+                "line":"5",
+                "lineId":"vvt-3-5-P-j22-1",
+                "matchId":"5",
+                "catOutS":"t11",
+                "catOutL":"Tram",
+                "catIn":"t11",
+                "catCode":"4",
+                "admin":"t1900_"
+              }
+            },
+            {
+              "pid":"L::4::::B1506840680::vvt-3-3-P-j22-1::*",
+              "name":"Tram 3",
+              "nameS":"3",
+              "number":"3",
+              "icoX":3,
+              "cls":16,
+              "oprX":1,
+              "prodCtx":
+              {
+                "name":"       3",
+                "num":"14842",
+                "line":"3",
+                "lineId":"vvt-3-3-P-j22-1",
+                "matchId":"3",
+                "catOutS":"t11",
+                "catOutL":"Tram",
+                "catIn":"t11",
+                "catCode":"4",
+                "admin":"t1900_"
+              }
+            },
+            {
+              "name":"Übergang",
+              "icoX":11,
+              "prodCtx":
+              {
+                "name":"Übergang"
+              }
+            },
+            {
+              "pid":"L::0::RJX::B3472872807::RJX_3472872807::*",
+              "name":"RJX 184",
+              "number":"184",
+              "icoX":12,
+              "cls":1,
+              "oprX":2,
+              "prodCtx":
+              {
+                "name":"RJX  184",
+                "num":"184",
+                "line":"xxx",
+                "matchId":"obb-10-20B-X#21",
+                "catOut":"RJX     ",
+                "catOutS":"RJX",
+                "catOutL":"Railjet Express",
+                "catIn":"RJX",
+                "catCode":"0",
+                "admin":"O01AA_"
+              },
+              "himIdL":
+              [
+"HIM_FREETEXT_119790",
+"HIM_FREETEXT_160464",
+"HIM_FREETEXT_160465",
+"HIM_FREETEXT_160539",
+"HIM_FREETEXT_160541",
+"HIM_FREETEXT_160588",
+"HIM_FREETEXT_160589",
+"HIM_FREETEXT_160703",
+"HIM_FREETEXT_160709",
+"HIM_FREETEXT_161118",
+"HIM_FREETEXT_161119",
+"HIM_FREETEXT_162041",
+"HIM_FREETEXT_162043",
+"HIM_FREETEXT_162081",
+"HIM_FREETEXT_162101",
+"HIM_FREETEXT_162129",
+"HIM_FREETEXT_162133",
+"HIM_FREETEXT_162139",
+"HIM_FREETEXT_162141",
+"HIM_FREETEXT_163158",
+"HIM_FREETEXT_163161",
+"HIM_FREETEXT_163632",
+"HIM_FREETEXT_163656",
+"HIM_FREETEXT_164046",
+"HIM_FREETEXT_164064",
+"HIM_FREETEXT_164601",
+"HIM_FREETEXT_164609",
+"HIM_FREETEXT_165889",
+"HIM_FREETEXT_165890",
+"HIM_FREETEXT_165893",
+"HIM_FREETEXT_165894",
+"HIM_FREETEXT_165895",
+"HIM_FREETEXT_165900",
+"HIM_FREETEXT_165901",
+"HIM_FREETEXT_165904",
+"HIM_FREETEXT_165906",
+"HIM_FREETEXT_165907",
+"HIM_FREETEXT_165908",
+"HIM_FREETEXT_165909",
+"HIM_FREETEXT_165913",
+"HIM_FREETEXT_165914",
+"HIM_FREETEXT_165915",
+"HIM_FREETEXT_165916",
+"HIM_FREETEXT_165923",
+"HIM_FREETEXT_165924",
+"HIM_FREETEXT_165927",
+"HIM_FREETEXT_165928",
+"HIM_FREETEXT_165929",
+"HIM_FREETEXT_165931",
+"HIM_FREETEXT_165936",
+"HIM_FREETEXT_165938",
+"HIM_FREETEXT_165939",
+"HIM_FREETEXT_165942",
+"HIM_FREETEXT_165944",
+"HIM_FREETEXT_165946",
+"HIM_FREETEXT_165950",
+"HIM_FREETEXT_165956",
+"HIM_FREETEXT_165962",
+"HIM_FREETEXT_165969",
+"HIM_FREETEXT_165982",
+"HIM_FREETEXT_165983",
+"HIM_FREETEXT_165984",
+"HIM_FREETEXT_165988",
+"HIM_FREETEXT_165989",
+"HIM_FREETEXT_165990",
+"HIM_FREETEXT_165991",
+"HIM_FREETEXT_165993",
+"HIM_FREETEXT_165995",
+"HIM_FREETEXT_165996",
+"HIM_FREETEXT_165998",
+"HIM_FREETEXT_166003",
+"HIM_FREETEXT_166005",
+"HIM_FREETEXT_166007",
+"HIM_FREETEXT_166008",
+"HIM_FREETEXT_166009",
+"HIM_FREETEXT_166010",
+"HIM_FREETEXT_166011",
+"HIM_FREETEXT_166788"
+              ]
+            },
+            {
+              "pid":"L::0::RJX::B3472872807::RJX_3472872807::*",
+              "name":"RJX 184",
+              "number":"184",
+              "icoX":12,
+              "cls":1,
+              "oprX":3,
+              "prodCtx":
+              {
+                "name":"RJX  184",
+                "num":"184",
+                "line":"xxx",
+                "lineId":"obb-10-20B-X-j22-1",
+                "matchId":"obb-10-20B-X#21",
+                "catOut":"RJX     ",
+                "catOutS":"RJX",
+                "catOutL":"Railjet Express",
+                "catIn":"RJX",
+                "catCode":"0",
+                "admin":"O01AA_"
+              },
+              "himIdL":
+              [
+"HIM_FREETEXT_119790",
+"HIM_FREETEXT_160464",
+"HIM_FREETEXT_160465",
+"HIM_FREETEXT_160539",
+"HIM_FREETEXT_160541",
+"HIM_FREETEXT_160588",
+"HIM_FREETEXT_160589",
+"HIM_FREETEXT_160703",
+"HIM_FREETEXT_160709",
+"HIM_FREETEXT_161118",
+"HIM_FREETEXT_161119",
+"HIM_FREETEXT_162041",
+"HIM_FREETEXT_162043",
+"HIM_FREETEXT_162081",
+"HIM_FREETEXT_162101",
+"HIM_FREETEXT_162129",
+"HIM_FREETEXT_162133",
+"HIM_FREETEXT_162139",
+"HIM_FREETEXT_162141",
+"HIM_FREETEXT_163158",
+"HIM_FREETEXT_163161",
+"HIM_FREETEXT_163632",
+"HIM_FREETEXT_163656",
+"HIM_FREETEXT_164046",
+"HIM_FREETEXT_164064",
+"HIM_FREETEXT_164601",
+"HIM_FREETEXT_164609",
+"HIM_FREETEXT_165889",
+"HIM_FREETEXT_165890",
+"HIM_FREETEXT_165893",
+"HIM_FREETEXT_165894",
+"HIM_FREETEXT_165895",
+"HIM_FREETEXT_165900",
+"HIM_FREETEXT_165901",
+"HIM_FREETEXT_165904",
+"HIM_FREETEXT_165906",
+"HIM_FREETEXT_165907",
+"HIM_FREETEXT_165908",
+"HIM_FREETEXT_165909",
+"HIM_FREETEXT_165913",
+"HIM_FREETEXT_165914",
+"HIM_FREETEXT_165915",
+"HIM_FREETEXT_165916",
+"HIM_FREETEXT_165923",
+"HIM_FREETEXT_165924",
+"HIM_FREETEXT_165927",
+"HIM_FREETEXT_165928",
+"HIM_FREETEXT_165929",
+"HIM_FREETEXT_165931",
+"HIM_FREETEXT_165936",
+"HIM_FREETEXT_165938",
+"HIM_FREETEXT_165939",
+"HIM_FREETEXT_165942",
+"HIM_FREETEXT_165944",
+"HIM_FREETEXT_165946",
+"HIM_FREETEXT_165950",
+"HIM_FREETEXT_165956",
+"HIM_FREETEXT_165962",
+"HIM_FREETEXT_165969",
+"HIM_FREETEXT_165982",
+"HIM_FREETEXT_165983",
+"HIM_FREETEXT_165984",
+"HIM_FREETEXT_165988",
+"HIM_FREETEXT_165989",
+"HIM_FREETEXT_165990",
+"HIM_FREETEXT_165991",
+"HIM_FREETEXT_165993",
+"HIM_FREETEXT_165995",
+"HIM_FREETEXT_165996",
+"HIM_FREETEXT_165998",
+"HIM_FREETEXT_166003",
+"HIM_FREETEXT_166005",
+"HIM_FREETEXT_166007",
+"HIM_FREETEXT_166008",
+"HIM_FREETEXT_166009",
+"HIM_FREETEXT_166010",
+"HIM_FREETEXT_166011",
+"HIM_FREETEXT_166788"
+              ]
+            },
+            {
+              "pid":"L::0::::B3472872807::obb-2-RX2-T-j22-1::*",
+              "name":"REX 2",
+              "number":"REX 2",
+              "icoX":6,
+              "cls":1,
+              "oprX":3,
+              "prodCtx":
+              {
+                "name":"   REX 2",
+                "num":"5309",
+                "line":"REX 2",
+                "lineId":"obb-2-RX2-T-j22-1",
+                "matchId":"obb-2-RX2-T#18",
+                "catOutS":"O00",
+                "catOutL":"Zug",
+                "catIn":"O00",
+                "catCode":"0",
+                "admin":"O01AA_"
+              },
+              "himIdL":
+              [
+"HIM_FREETEXT_157727",
+"HIM_FREETEXT_157730",
+"HIM_FREETEXT_159930",
+"HIM_FREETEXT_160600",
+"HIM_FREETEXT_160601",
+"HIM_FREETEXT_162318",
+"HIM_FREETEXT_162319",
+"HIM_FREETEXT_164020",
+"HIM_FREETEXT_164021"
+              ]
+            },
+            {
+              "pid":"L::0::EC::B3472872807::EC_3472872807::*",
+              "name":"EC 286",
+              "number":"286",
+              "icoX":16,
+              "cls":1,
+              "oprX":3,
+              "prodCtx":
+              {
+                "name":"EC   286",
+                "num":"286",
+                "line":"xxx",
+                "lineId":"obb-13-A1-j22-1",
+                "matchId":"obb-13-A1#5",
+                "catOut":"EC      ",
+                "catOutS":"EC",
+                "catOutL":"Eurocity",
+                "catIn":"EC",
+                "catCode":"0",
+                "admin":"O01AA_"
+              },
+              "himIdL":
+              [
+"HIM_FREETEXT_119777",
+"HIM_FREETEXT_119790",
+"HIM_FREETEXT_119798",
+"HIM_FREETEXT_119806",
+"HIM_FREETEXT_119811",
+"HIM_FREETEXT_158373",
+"HIM_FREETEXT_159909",
+"HIM_FREETEXT_159912",
+"HIM_FREETEXT_160539",
+"HIM_FREETEXT_160541",
+"HIM_FREETEXT_160649",
+"HIM_FREETEXT_160656",
+"HIM_FREETEXT_160703",
+"HIM_FREETEXT_160709",
+"HIM_FREETEXT_161198",
+"HIM_FREETEXT_162095",
+"HIM_FREETEXT_162096",
+"HIM_FREETEXT_162112",
+"HIM_FREETEXT_162126",
+"HIM_FREETEXT_163158",
+"HIM_FREETEXT_163161",
+"HIM_FREETEXT_163632",
+"HIM_FREETEXT_164046",
+"HIM_FREETEXT_164064",
+"HIM_FREETEXT_164216",
+"HIM_FREETEXT_164831",
+"HIM_FREETEXT_165914",
+"HIM_FREETEXT_165919",
+"HIM_FREETEXT_166807",
+"HIM_FREETEXT_166814",
+"HIM_FREETEXT_166816",
+"HIM_FREETEXT_166823"
+              ]
+            },
+            {
+              "pid":"L::0::RJ::B3472872807::RJ_3472872807::*",
+              "name":"RJ 865",
+              "number":"865",
+              "icoX":17,
+              "cls":1,
+              "oprX":3,
+              "prodCtx":
+              {
+                "name":"RJ   865",
+                "num":"865",
+                "line":"xxx",
+                "lineId":"obb-10-A3-j22-1",
+                "matchId":"obb-10-A3#28",
+                "catOut":"RJ      ",
+                "catOutS":"RJ",
+                "catOutL":"Railjet",
+                "catIn":"RJ",
+                "catCode":"0",
+                "admin":"O01AA_"
+              },
+              "himIdL":
+              [
+"HIM_FREETEXT_119811",
+"HIM_FREETEXT_158372",
+"HIM_FREETEXT_158373",
+"HIM_FREETEXT_159912",
+"HIM_FREETEXT_159913",
+"HIM_FREETEXT_160703",
+"HIM_FREETEXT_160709",
+"HIM_FREETEXT_161118",
+"HIM_FREETEXT_161119",
+"HIM_FREETEXT_161177",
+"HIM_FREETEXT_161198",
+"HIM_FREETEXT_162029",
+"HIM_FREETEXT_162037",
+"HIM_FREETEXT_162040",
+"HIM_FREETEXT_162044",
+"HIM_FREETEXT_162066",
+"HIM_FREETEXT_162077",
+"HIM_FREETEXT_162108",
+"HIM_FREETEXT_162115",
+"HIM_FREETEXT_162147",
+"HIM_FREETEXT_162894",
+"HIM_FREETEXT_163158",
+"HIM_FREETEXT_163161",
+"HIM_FREETEXT_163632",
+"HIM_FREETEXT_164046",
+"HIM_FREETEXT_164064",
+"HIM_FREETEXT_164229",
+"HIM_FREETEXT_164595",
+"HIM_FREETEXT_165891",
+"HIM_FREETEXT_165899",
+"HIM_FREETEXT_165902",
+"HIM_FREETEXT_165903",
+"HIM_FREETEXT_165910",
+"HIM_FREETEXT_165914",
+"HIM_FREETEXT_165926",
+"HIM_FREETEXT_165932",
+"HIM_FREETEXT_165937",
+"HIM_FREETEXT_165940",
+"HIM_FREETEXT_165943",
+"HIM_FREETEXT_165945",
+"HIM_FREETEXT_165948",
+"HIM_FREETEXT_165949",
+"HIM_FREETEXT_165952",
+"HIM_FREETEXT_165953",
+"HIM_FREETEXT_165955",
+"HIM_FREETEXT_165957",
+"HIM_FREETEXT_165958",
+"HIM_FREETEXT_165959",
+"HIM_FREETEXT_165960",
+"HIM_FREETEXT_165963",
+"HIM_FREETEXT_165965",
+"HIM_FREETEXT_165967",
+"HIM_FREETEXT_165968",
+"HIM_FREETEXT_165971",
+"HIM_FREETEXT_165976",
+"HIM_FREETEXT_165978",
+"HIM_FREETEXT_165981",
+"HIM_FREETEXT_165987",
+"HIM_FREETEXT_165999",
+"HIM_FREETEXT_166000",
+"HIM_FREETEXT_166013",
+"HIM_FREETEXT_166789",
+"HIM_FREETEXT_166791",
+"HIM_FREETEXT_166792",
+"HIM_FREETEXT_166793",
+"HIM_FREETEXT_166833",
+"HIM_FREETEXT_166785"
+              ]
+            },
+            {
+              "pid":"L::0::::B3472872807::obb-2-RX2-T-j22-1::*",
+              "name":"REX 2",
+              "number":"REX 2",
+              "icoX":6,
+              "cls":1,
+              "oprX":3,
+              "prodCtx":
+              {
+                "name":"   REX 2",
+                "num":"5311",
+                "line":"REX 2",
+                "lineId":"obb-2-RX2-T-j22-1",
+                "matchId":"obb-2-RX2-T#9",
+                "catOutS":"O00",
+                "catOutL":"Zug",
+                "catIn":"O00",
+                "catCode":"0",
+                "admin":"O01AA_"
+              },
+              "himIdL":
+              [
+"HIM_FREETEXT_157727",
+"HIM_FREETEXT_157730",
+"HIM_FREETEXT_159930",
+"HIM_FREETEXT_160600",
+"HIM_FREETEXT_160601",
+"HIM_FREETEXT_162318",
+"HIM_FREETEXT_162319",
+"HIM_FREETEXT_164020",
+"HIM_FREETEXT_164021"
+              ]
+            },
+            {
+              "pid":"L::0::::B3472872807::obb-2-CJ1-T-j22-1::*",
+              "name":"CJX 1",
+              "number":"CJX 1",
+              "icoX":6,
+              "cls":1,
+              "oprX":3,
+              "prodCtx":
+              {
+                "name":"   CJX 1",
+                "num":"6105",
+                "line":"CJX 1",
+                "lineId":"obb-2-CJ1-T-j22-1",
+                "matchId":"obb-2-CJ1-T#6",
+                "catOutS":"O00",
+                "catOutL":"Zug",
+                "catIn":"O00",
+                "catCode":"0",
+                "admin":"O01AA_"
+              },
+              "himIdL":
+              [
+"HIM_FREETEXT_157730",
+"HIM_FREETEXT_159930",
+"HIM_FREETEXT_160600",
+"HIM_FREETEXT_160601"
+              ]
+            },
+            {
+              "name":"Fußweg",
+              "icoX":20,
+              "prodCtx":
+              {
+                "name":"Fußweg"
+              }
+            },
+            {
+              "pid":"L::0::::B3472872807::obb-2-RX2-T-j22-1::*",
+              "name":"REX 2",
+              "number":"REX 2",
+              "icoX":6,
+              "cls":1,
+              "oprX":2,
+              "prodCtx":
+              {
+                "name":"   REX 2",
+                "num":"5309",
+                "line":"REX 2",
+                "matchId":"obb-2-RX2-T#18",
+                "catOutS":"O00",
+                "catOutL":"Zug",
+                "catIn":"O00",
+                "catCode":"0",
+                "admin":"O01AA_"
+              },
+              "himIdL":
+              [
+"HIM_FREETEXT_157727",
+"HIM_FREETEXT_157730",
+"HIM_FREETEXT_159930",
+"HIM_FREETEXT_160600",
+"HIM_FREETEXT_160601",
+"HIM_FREETEXT_162318",
+"HIM_FREETEXT_162319",
+"HIM_FREETEXT_164020",
+"HIM_FREETEXT_164021"
+              ]
+            },
+            {
+              "pid":"L::0::::B3472872807::obb-2-RX2-T-j22-1::*",
+              "name":"REX 2",
+              "number":"REX 2",
+              "icoX":6,
+              "cls":1,
+              "oprX":3,
+              "prodCtx":
+              {
+                "name":"   REX 2",
+                "num":"5313",
+                "line":"REX 2",
+                "lineId":"obb-2-RX2-T-j22-1",
+                "matchId":"obb-2-RX2-T#8",
+                "catOutS":"O00",
+                "catOutL":"Zug",
+                "catIn":"O00",
+                "catCode":"0",
+                "admin":"O01AA_"
+              },
+              "himIdL":
+              [
+"HIM_FREETEXT_157727",
+"HIM_FREETEXT_157730",
+"HIM_FREETEXT_159930",
+"HIM_FREETEXT_160600",
+"HIM_FREETEXT_160601",
+"HIM_FREETEXT_162318",
+"HIM_FREETEXT_162319",
+"HIM_FREETEXT_164020",
+"HIM_FREETEXT_164021"
+              ]
+            }
+          ],
+          "polyL":
+          [
+            {
+              "delta":true,
+              "dim":2,
+              "crdEncYX":"msn_HiardA??o@ZINGRCPIpAEx@@j@FXJLLFfGhATRFRNRxCj@?B",
+              "crdEncS":"NNJFNFFKHNFJLHGMNN",
+              "crdEncF":"??????????????????",
+              "ppLocRefL":
+              [
+                {
+                  "ppIdx":0,
+                  "locX":0
+                },
+                {
+                  "ppIdx":17,
+                  "locX":2
+                }
+              ]
+            },
+            {
+              "delta":true,
+              "dim":2,
+              "annoL":
+              [
+                {
+                  "polyS":17,
+                  "polyE":18,
+                  "msgL":
+                  [
+                    {
+                      "type":"REM",
+                      "remX":1,
+                      "tagL":
+                      [
+                        "RES_SEC_FTR"
+                      ],
+                      "sort":147324928
+                    }
+                  ]
+                }
+              ],
+              "crdEncYX":"ofn_HyqqdA???D??xAVB]Ds@@G?Q@MWEBUBm@Fi@Di@HBH@IAHE??",
+              "crdEncS":"NNNNNNNNNNNNNNNNNNNN",
+              "crdEncF":"????????????????????",
+              "ppLocRefL":
+              [
+                {
+                  "ppIdx":0,
+                  "locX":2
+                },
+                {
+                  "ppIdx":19,
+                  "locX":6
+                }
+              ]
+            },
+            {
+              "delta":true,
+              "dim":2,
+              "crdEncYX":"ubn_HuyqdA?EyE_AgAOcAG{B?}DWcKoB_AWwAk@wA{@gA{@eAeA}A{BcL}QYg@wBiDmM{SeKuPkAmBeBsCc@s@k@oAUo@Qs@UkAKu@KkBCqAB}B^wSVeM?Q@GLeIBkAJ}FFmCz@md@\\gSn@q[h@yZFkCD}Cx@gc@LkF??ZeQ@{@zCu`B??JqGf@{VTqMDmBJyF\\oQb@oT@aAL}FL{JAgFEaBKqCm@cJwAuR?GOiB??ASGq@SoC_@{D}A{S_@_DgCk^y@iKeAeOIgBWeGGgGB}HPyHN}H@_DGeGY{HKgBW{Cm@}FiAgHeBqIgGkX_@_BOo@_@}AcAyDw@gCy@eCgBwEsCkGuJmRqIkPgJqR}KiTqSaa@kIePiFoKgCgGeByE{AaFwAgFe@wBiAoFaAuFw@{FY_Ci@_Gk@cI[gIOgI?kIHoOBoOGgGMiGa@gKWcEe@aGcA_KeAyH}@wFeAsF}AkHoGaYmAoFQ{@aOio@e@uByBaJuAgFcAiDgAiDaB{EcCkGqA}CuAyCsBgEmHkNuBeEgEgJeCgGkAcDiAeDuByG}L{b@}CoK}AaFwCeIu@kBoA{CqBoEsCwFyD_HaCuDcBeCgCkDiB{BmC_D}EaFwCmCsBeB}CaCgEsCyBsA{BoAoEyB}FeCg\\_NgDwA}FkCwF{CgEoCmF{D_EkDwCoCwD_EqDiEmFmHaDcF{CkF{AsCsBiEgDwHaCkGkAeD}A_FeCyI{@oDoAmFyAoHq@wDyAuJ_A{Hc@_Ei@aGYaEs@iMgAqWy@kOO_Cs@eKq@cIs@aIcA_KcB{NcAyHgBwL}BoNwBkLyAoH_BiHiBaH{AeFmD_KqB}EoD{HaG{KqNmWgAoBmMuU_EiHiRk]eB}C{AsCyAsCoC}FeCgGgByE}A_F{AeFgBcHy@qDu@uDcAuFwAwJ_A}H_A_KwBgWK_AGaA_A_K_A}HgAyHo@yDiBkJcBiHkBaHsB{GqD{JmBqEoC_GwBcE{B_Esb@}s@}@}A_@m@}CmFsDeHsBkEmBoEcCkG{BsGkCuIiBcHmAmFiAqFsAqHyAuJqA{JsByP[_CW}BqBwNoAsHyAoHmAoFuCwKcAiDqCmIgBwEgCgGkDoHyAuCmMsUuEsIoDkHkCcG}CaIqCoIgCwI}@mDoAoFw@sDeAsFo@yDwAuJ}@_Im@_Gw@cKg@gIoJ_cBMcCWaEi@cIiAcM_A}HeAyHmBqLkBmJcBiHsAiFwAeF}AaFsCkImAaDcD{HkDqHwCsF{AoCcFaIgD{EiCgDsDiEqCyCoBoB{DqDyOcNiGyFsCuCwEoFmE_GeCqD_BiC}B}DuCsFoC_GiCeGyCeIez@odCs@oBUu@gByEiBwEaBqEuDyKiHkSmUsq@g@{AeFaOs@yB}J}YgA}CuB{G{BoGc@aBa@iA}FiPOg@??O_@sB{Hm@qCe@kCc@{C]qCoAcPQaDa@yFc@{Jk@kIWiGkCqg@QaDiAuTqB_`@gAoSy@iPo@{L[cGKmBm@kLQqDc@eHQoDi@kFGs@_Bm[iAuTa@_H[sGKiB[_EWmCWyCi@wEg@}Du@cE}AkGcBqF}B{FsIkSs@kB}AmDm@eB}@oBoBeFsGoOwAeDBE",
+              "crdEncS":"NNFMGILNHLHNILFFFFGGNFLFHNHKHNFFFFGGGFFFFFFGFNNFINNKFFGGFFFHNIFMHFGNNFGFHIJGHFNJNJFLHNJFNJNIFFFNGKGNJFIKFGINHLHNFKHNFJNJMHGLGNHMHNHLGNFFGGMIFNFJGNFIFLINFILFMIFNFIMJFNFKHNFKHNFIMFGHNIMINGJNINIFMINFKHNHLHNFJFNIIFNGJGNGLHNGLHNIMHNHFFFGGGNGLHNGJMFHNIMGFFJHNGJMHNJMHNFJGGGNHLGNIMJGNIMFFFINHMINHLHNFKFLHNIMGNFJFNJGNHJHHMINHKNHLFNHLGNILHNGKGNFIHMHNJFNGJNHMHHLFFJGMFGHHFJHGFJINNIKGNFKNFIHJGFGFHHFFFGGNFJFLFFFFMFFHNIMJNHGFIGHIFNN",
+              "crdEncF":"????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????",
+              "ppLocRefL":
+              [
+                {
+                  "ppIdx":0,
+                  "locX":6
+                },
+                {
+                  "ppIdx":45,
+                  "locX":9
+                },
+                {
+                  "ppIdx":49,
+                  "locX":11
+                },
+                {
+                  "ppIdx":67,
+                  "locX":13
+                },
+                {
+                  "ppIdx":368,
+                  "locX":15
+                },
+                {
+                  "ppIdx":419,
+                  "locX":7
+                }
+              ]
+            },
+            {
+              "delta":true,
+              "dim":2,
+              "crdEncYX":"ubn_HuyqdA?EyE_AgAOcAG{B?}DWcKoB_AWwAk@wA{@gA{@eAeA}A{BcL}QYg@wBiDmM{SeKuPkAmBeBsCc@s@k@oAUo@Qs@UkAKu@KkBCqAB}B^wSVeM?Q@GLeIBkAJ}FFmCz@md@\\gSn@q[h@yZFkCD}Cx@gc@LkF??ZeQ@{@zCu`B??JqGf@{VTqMDmBJyF\\oQb@oT@aAL}FL{JAgFEaBKqCm@cJwAuR?GOiB??ASGq@SoC_@{D}A{S_@_DgCk^y@iKeAeOIgBWeGGgGB}HPyHN}H@_DGeGY{HKgBW{Cm@}FiAgHeBqIgGkX_@_BOo@_@}AcAyDw@gCy@eCgBwEsCkGuJmRqIkPgJqR}KiTqSaa@kIePiFoKgCgGeByE{AaFwAgFe@wBiAoFaAuFw@{FY_Ci@_Gk@cI[gIOgI?kIHoOBoOGgGMiGa@gKWcEe@aGcA_KeAyH}@wFeAsF}AkHoGaYmAoFQ{@aOio@e@uByBaJuAgFcAiDgAiDaB{EcCkGqA}CuAyCsBgEmHkNuBeEgEgJeCgGkAcDiAeDuByG}L{b@}CoK}AaFwCeIu@kBoA{CqBoEsCwFyD_HaCuDcBeCgCkDiB{BmC_D}EaFwCmCsBeB}CaCgEsCyBsA{BoAoEyB}FeCg\\_NgDwA}FkCwF{CgEoCmF{D_EkDwCoCwD_EqDiEmFmHaDcF{CkF{AsCsBiEgDwHaCkGkAeD}A_FeCyI{@oDoAmFyAoHq@wDyAuJ_A{Hc@_Ei@aGYaEs@iMgAqWy@kOO_Cs@eKq@cIs@aIcA_KcB{NcAyHgBwL}BoNwBkLyAoH_BiHiBaH{AeFmD_KqB}EoD{HaG{KqNmWgAoBmMuU_EiHiRk]eB}C{AsCyAsCoC}FeCgGgByE}A_F{AeFgBcHy@qDu@uDcAuFwAwJ_A}H_A_KwBgWK_AGaA_A_K_A}HgAyHo@yDiBkJcBiHkBaHsB{GqD{JmBqEoC_GwBcE{B_Esb@}s@}@}A_@m@}CmFsDeHsBkEmBoEcCkG{BsGkCuIiBcHmAmFiAqFsAqHyAuJqA{JsByP[_CW}BqBwNoAsHyAoHmAoFuCwKcAiDqCmIgBwEgCgGkDoHyAuCmMsUuEsIoDkHkCcG}CaIqCoIgCwI}@mDoAoFw@sDeAsFo@yDwAuJ}@_Im@_Gw@cKg@gIoJ_cBMcCWaEi@cIiAcM_A}HeAyHmBqLkBmJcBiHsAiFwAeF}AaFsCkImAaDcD{HkDqHwCsF{AoCcFaIgD{EiCgDsDiEqCyCoBoB{DqDyOcNiGyFsCuCwEoFmE_GeCqD_BiC}B}DuCsFoC_GiCeGyCeIez@odCs@oBUu@gByEiBwEaBqEuDyKiHkSmUsq@g@{AeFaOs@yB}J}YgA}CuB{G{BoGc@aBa@iA}FiPOg@??O_@sB{Hm@qCe@kCc@{C]qCoAcPQaDa@yFc@{Jk@kIWiGkCqg@QaDiAuTqB_`@gAoSy@iPo@{L[cGKmBm@kLQqDc@eHQoDi@kFGs@_Bm[iAuTa@_H[sGKiB[_EWmCWyCi@wEg@}Du@cE}AkGcBqF}B{FsIkSs@kB}AmDm@eB}@oBoBeFsGoOwAeDBE",
+              "crdEncS":"NNFMGILNHLHNILFFFFGGNFLFHNHKHNFFFFGGGFFFFFFGFNNFINNKFFGGFFFHNIFMHFGNNFGFHIJGHFNJNJFLHNJFNJNIFFFNGKGNJFIKFGINHLHNFKHNFJNJMHGLGNHMHNHLGNFFGGMIFNFJGNFIFLINFILFMIFNFIMJFNFKHNFKHNFIMFGHNIMINGJNINIFMINFKHNHLHNFJFNIIFNGJGNGLHNGLHNIMHNHFFFGGGNGLHNGJMFHNIMGFFJHNGJMHNJMHNFJGGGNHLGNIMJGNIMFFFINHMINHLHNFKFLHNIMGNFJFNJGNHJHHMINHKNHLFNHLGNILHNGKGNFIHMHNJFNGJNHMHHLFFJGMFGHHFJHGFJINNIKGNFKNFIHJGFGFHHFFFGGNFJFLFFFFMFFHNIMJNHGFIGHIFNN",
+              "crdEncF":"????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????",
+              "ppLocRefL":
+              [
+                {
+                  "ppIdx":0,
+                  "locX":6
+                },
+                {
+                  "ppIdx":45,
+                  "locX":9
+                },
+                {
+                  "ppIdx":49,
+                  "locX":11
+                },
+                {
+                  "ppIdx":67,
+                  "locX":13
+                },
+                {
+                  "ppIdx":368,
+                  "locX":15
+                },
+                {
+                  "ppIdx":419,
+                  "locX":7
+                }
+              ]
+            },
+            {
+              "delta":true,
+              "dim":2,
+              "crdEncYX":"g~o_Hw}rdA?HqSw\\eKuPkAmBeBsCc@s@k@oAUo@Qs@a@aCIyAEcBB}B^wSVeM?Q@GLeIBkAJ}FFmCz@md@\\gSn@q[h@yZFkCD}Cx@gc@LkF??ZeQ@{@zCu`B??JqGf@{VTqMDmBJyF\\oQb@oT@aAL}FL{JAgFEaBKqCm@cJwAuR?GOiB??ASGq@SoC_@{D}A{S_@_DgCk^q@sImA{PSqEM{CGgG?iBBsE\\mODiGGeGY{HKgBW{Cm@}FiAgHgAsFy@sDcBiIiDoOqBiIyAeFy@cC}BaGg@oAkByDiQi]cDkGyMsWc`@yu@??aGkLuBeEcCyFeByE_B_FeBwGyA_Hi@qCe@uCeAkHiAaJ]{De@iIMqEC_BAeID_Db@sU??VoNJuI?eDCqBMgE_@cGUcC_@iDcAsHkAoGuG{XESkDeOeGiXeR}x@sCgLmBqGcByEuKiXk@sAeLgY??oD}IeB}Ec@yAc@{AoAkFw@aEe@uCu@}F_DiYkLyeAIq@s@sHSqEC}C@iBPcGr@_RNmDRmGBiB?}CAu@OsEUyC[wCe@uC_A}DkAqDk@sAeAuBy@uAo@{@??AA_AiAq@s@aB}AaA{@e|A}vA_Q{OoBiByJcJ{O}NqFgFUS??iPeOwTqSoH}G_B_B}CeD}AsB{AwBiByCaAkBqAmCuB}EuAiD{BgGiAsDgAuDqAkFw@aEs@gEa@sC_BgMq@eEa@oB??e@aCaA}Ds@kCeAgDaCyGwAmDmBqEwBqEyDkHyHiNuHgNyB{DeLwSkPeZuByDsAaCOYmD_GyEqHgBaDwKoS_BkDk@wAi@{Ag@{Ay@_Dk@cC[cBa@iCc@mDa@uEQuDKwECgIGwCE_IEgCQeDUsCk@cEoBqKiCuKU{@???GuE{QCQW}@Mm@aG{TsDaOs@wCmDoNu@yCeAkEkAmEk@eBeAsCsBsEkAwBaBeCoBgCuAyA{@{@wHiGwCiC{@}@qAcBeBuCo@oA_A}Bg@yAc@{A_@}A]eBe@uCScBW{CM{CI_Dm@_e@Au@IqESqEMiBe@iEc@wCWmA??q@aDgAwDg@yAuAgD_B}CqWue@S_@{G{L_oBaoDo@mAuFaKq@mAaB{C{AaDiB{Ec@sAcAqDa@cB{@gEi@oD_@_DSuBc@cGuAuT]}Dg@kE_AwFkAkG??uB_LqCcPiJyf@e@mCkDwQu@cE??_Gm[wBmLsA_Hw@qDaBcG{HgU_FwNyAkEgDeJgFiOaAuC[{@{IsWcEiMiBqFyGyRkBqF{W_w@kJwXK]mBsFsCoIiMg_@Oa@yGyRK]iHkSmUsq@g@{AeFaOs@yB}J}YgA}CuB{G{BoGc@aBa@iA}FiPOg@??O_@sB{Hm@qCe@kCc@{C]qCoAcPQaDa@yFc@{Jk@kIWiGkCqg@QaDiAuTqB_`@gAoSy@iPo@{L[cGKmBm@kLQqDc@eHQoDi@kFGs@_Bm[iAuTa@_H[sGKiB[_EWmCWyCi@wEg@}Du@cE}AkGcBqF{A}DuJiUs@kB}AmDm@eB}@oBoBeFqCqGi@yAiAwDYw@y@sBC@",
+              "crdEncS":"NNFGGGNIFMINHKFFFFGGGFFFFFFGFNNFINNKFFGGFFFHNIFMHFGNNFGFHIKFFINIFMHHMJNFIMINGIGNGJNFJFGFNNFLINIMIFNHMINFJMFNNFMFINJFMJNFGFHINIMFFNNKGNFKFNHFHNLINHJFGNFJFNHMINHMHFNNFFGJFHIIIFINNFFGNHLGNFJFMJFNHMFIJFNNFJFNGKGNGFGGGFFGMFHNLIFNGJFNGJNHKHHGMHNJMGNNGFFFHJFFFGMIFNIMHNFJGLGNHMIFNFHLGNGJFFNGLIGNNIFMINGGGIIFJGNJFNFINFKGHNHKNNHJFFINNFGMINFFIIFFIHFIFFGFHHJFFFHHFGHHFJHGFJINNIKGNFKNFIHJGFGFHHFFFGGNFJFLFFFFMFFHNIMJNHGFHGHHKHFJNN",
+              "crdEncF":"??????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????",
+              "ppLocRefL":
+              [
+                {
+                  "ppIdx":0,
+                  "locX":23
+                },
+                {
+                  "ppIdx":29,
+                  "locX":9
+                },
+                {
+                  "ppIdx":33,
+                  "locX":11
+                },
+                {
+                  "ppIdx":51,
+                  "locX":13
+                },
+                {
+                  "ppIdx":88,
+                  "locX":31
+                },
+                {
+                  "ppIdx":107,
+                  "locX":33
+                },
+                {
+                  "ppIdx":129,
+                  "locX":35
+                },
+                {
+                  "ppIdx":162,
+                  "locX":37
+                },
+                {
+                  "ppIdx":175,
+                  "locX":25
+                },
+                {
+                  "ppIdx":198,
+                  "locX":39
+                },
+                {
+                  "ppIdx":242,
+                  "locX":27
+                },
+                {
+                  "ppIdx":287,
+                  "locX":41
+                },
+                {
+                  "ppIdx":316,
+                  "locX":29
+                },
+                {
+                  "ppIdx":323,
+                  "locX":43
+                },
+                {
+                  "ppIdx":363,
+                  "locX":15
+                },
+                {
+                  "ppIdx":417,
+                  "locX":20
+                }
+              ]
+            }
+          ],
+          "layerL":
+          [
+            {
+              "id":"standard",
+              "name":"standard",
+              "index":0,
+              "annoCnt":509620
+            }
+          ],
+          "crdSysL":
+          [
+            {
+              "id":"standard",
+              "index":0,
+              "type":"WGS84"
+            }
+          ],
+          "opL":
+          [
+            {
+              "name":"Innsbrucker Verkehrsbetriebe und Stubaitalbahn GmbH",
+              "icoX":4
+            },
+            {
+              "name":"Innsbrucker Verkehrsbetriebe und Stubaitalbahn GmbH",
+              "icoX":4,
+              "street":"Pastorstraße 5 6010 Innsbruck",
+              "id":"vvt+19+00"
+            },
+            {
+              "name":"OEBB",
+              "icoX":13
+            },
+            {
+              "name":"OEBB",
+              "icoX":13,
+              "street":"ÖBB-MobilitätsCallCenter, Tel.: +43 (0)5 1717",
+              "id":"obb+01+AA"
+            }
+          ],
+          "remL":
+          [
+            {
+              "type":"A",
+              "code":"fb",
+              "prio":50,
+              "icoX":7,
+              "txtN":"Fahrradmitnahme begrenzt möglich"
+            },
+            {
+              "type":"H",
+              "code":"ANNOTATION",
+              "icoX":7,
+              "txtN":"Rolltreppe"
+            },
+            {
+              "type":"A",
+              "code":"n0",
+              "prio":50,
+              "icoX":7,
+              "txtN":"Rollstuhlstellplatz"
+            },
+            {
+              "type":"A",
+              "code":"n0",
+              "prio":50,
+              "icoX":7,
+              "txtN":"Rollstuhlstellplatz - Voranmeldung unter +43 5 1717"
+            },
+            {
+              "type":"A",
+              "code":"n0",
+              "prio":50,
+              "icoX":7,
+              "txtN":"Fahrradmitnahme begrenzt möglich"
+            },
+            {
+              "type":"A",
+              "code":"n0",
+              "prio":50,
+              "icoX":7,
+              "txtN":"Fahrzeuggebundene Einstiegshilfe"
+            },
+            {
+              "type":"A",
+              "code":"n0",
+              "prio":50,
+              "icoX":7,
+              "txtN":"rollstuhltaugliches WC"
+            },
+            {
+              "type":"A",
+              "code":"n0",
+              "prio":50,
+              "icoX":7,
+              "txtN":"WLAN verfügbar"
+            },
+            {
+              "type":"A",
+              "code":"n0",
+              "prio":50,
+              "icoX":7,
+              "txtN":"Bordrestaurant"
+            },
+            {
+              "type":"A",
+              "code":"n0",
+              "prio":50,
+              "icoX":7,
+              "txtN":"Fahrradmitnahme reservierungspflichtig"
+            },
+            {
+              "type":"A",
+              "code":"n0",
+              "prio":50,
+              "icoX":7,
+              "txtN":"Ruhezone"
+            },
+            {
+              "type":"A",
+              "code":"n0",
+              "prio":50,
+              "icoX":7,
+              "txtN":"Familienzone"
+            },
+            {
+              "type":"A",
+              "code":"n0",
+              "prio":50,
+              "icoX":7,
+              "txtN":"Businessabteil"
+            },
+            {
+              "type":"H",
+              "code":"text.connection.eco.co2.decreased.consumption.message",
+              "icoX":19,
+              "txtN":"Im Vergleich zu einer Fahrt mit dem eigenen PKW werden 14,58 kg CO<sub>2</sub> Emissionen eingespart. <a target=\"_blank\" href=\"https://web.verkehrsauskunft.at/co2berechnung/CO2_Berechnung.pdf\">Mehr Informationen</a>"
+            },
+            {
+              "type":"A",
+              "code":"n0",
+              "prio":50,
+              "icoX":7,
+              "txtN":"Niederflurfahrzeug"
+            },
+            {
+              "type":"A",
+              "code":"n0",
+              "prio":50,
+              "icoX":7,
+              "txtN":"Zustieg im Nahverkehr (REX, R, CJX, S-Bahn) nur mit gültiger Fahrkarte"
+            },
+            {
+              "type":"A",
+              "code":"n0",
+              "prio":50,
+              "icoX":7,
+              "txtN":"nur 2.Kl."
+            },
+            {
+              "type":"A",
+              "code":"n0",
+              "prio":50,
+              "icoX":7,
+              "txtN":"bedingt rollstuhltaugliches WC"
+            },
+            {
+              "type":"H",
+              "code":"text.connection.eco.co2.decreased.consumption.message",
+              "icoX":19,
+              "txtN":"Im Vergleich zu einer Fahrt mit dem eigenen PKW werden 14,59 kg CO<sub>2</sub> Emissionen eingespart. <a target=\"_blank\" href=\"https://web.verkehrsauskunft.at/co2berechnung/CO2_Berechnung.pdf\">Mehr Informationen</a>"
+            }
+          ],
+          "himL":
+          [
+            {
+              "hid":"126891",
+              "act":true,
+              "head":"FFP2-Maskenpflicht",
+              "text":"Bitte tragen Sie in allen öffentlichen Verkehrsmitteln eine FFP2-Maske und wahren Sie nach Möglichkeit Distanz zu anderen Personen.",
+              "icoX":8,
+              "prio":100,
+              "fLocX":4,
+              "tLocX":4,
+              "prod":65535,
+              "lModDate":"20211126",
+              "lModTime":"093953",
+              "sDate":"20210125",
+              "sTime":"000000",
+              "eDate":"20220531",
+              "eTime":"235900",
+              "comp":"KGÖVV",
+              "cat":4,
+              "pubChL":
+              [
+                {
+                  "name":"TIMETABLE",
+                  "fDate":"20211021",
+                  "fTime":"095900",
+                  "tDate":"20220531",
+                  "tTime":"235900",
+                  "uRefL":
+                  [
+0
+                  ]
+                }
+              ]
+            },
+            {
+              "hid":"126891",
+              "act":true,
+              "head":"FFP2-Maskenpflicht",
+              "text":"Bitte tragen Sie in allen öffentlichen Verkehrsmitteln eine FFP2-Maske und wahren Sie nach Möglichkeit Distanz zu anderen Personen.",
+              "icoX":8,
+              "prio":100,
+              "fLocX":17,
+              "tLocX":17,
+              "prod":65535,
+              "lModDate":"20211126",
+              "lModTime":"093953",
+              "sDate":"20210125",
+              "sTime":"000000",
+              "eDate":"20220531",
+              "eTime":"235900",
+              "comp":"KGÖVV",
+              "cat":4,
+              "pubChL":
+              [
+                {
+                  "name":"TIMETABLE",
+                  "fDate":"20211021",
+                  "fTime":"095900",
+                  "tDate":"20220531",
+                  "tTime":"235900",
+                  "uRefL":
+                  [
+0
+                  ]
+                }
+              ]
+            }
+          ],
+          "icoL":
+          [
+            {
+              "res":"prod_tram",
+              "txtS":"2",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255
+              },
+              "bg":
+              {
+                "r":160,
+                "g":7,
+                "b":45
+              }
+            },
+            {
+              "res":"prod_tram",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255
+              },
+              "bg":
+              {
+                "r":160,
+                "g":7,
+                "b":45
+              }
+            },
+            {
+              "res":"rt_ont"
+            },
+            {
+              "res":"prod_tram",
+              "txtS":"3",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255
+              },
+              "bg":
+              {
+                "r":160,
+                "g":7,
+                "b":45
+              }
+            },
+            {
+              "res":"19",
+              "txt":"Innsbrucker Verkehrsbetriebe und Stubaitalbahn GmbH"
+            },
+            {
+              "res":"prod_ic",
+              "txtS":"CJX",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255
+              },
+              "bg":
+              {
+                "r":80,
+                "g":80,
+                "b":80
+              }
+            },
+            {
+              "res":"prod_ic",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255
+              },
+              "bg":
+              {
+                "r":80,
+                "g":80,
+                "b":80
+              }
+            },
+            {
+              "res":"INFO"
+            },
+            {
+              "res":"HIM4"
+            },
+            {
+              "res":"prod_tram",
+              "txtS":"5",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255
+              },
+              "bg":
+              {
+                "r":160,
+                "g":7,
+                "b":45
+              }
+            },
+            {
+              "res":"navi_escalator"
+            },
+            {
+              "res":"TRSF",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255
+              },
+              "bg":
+              {
+                "r":142,
+                "g":142,
+                "b":142
+              }
+            },
+            {
+              "res":"prod_ic",
+              "txtS":"RJX",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255
+              },
+              "bg":
+              {
+                "r":80,
+                "g":80,
+                "b":80
+              }
+            },
+            {
+              "res":"01",
+              "txt":"OEBB"
+            },
+            {
+              "res":"prod_comm_t",
+              "txtS":"S4",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255
+              },
+              "bg":
+              {
+                "r":10,
+                "g":155,
+                "b":216
+              }
+            },
+            {
+              "res":"prod_comm_t",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255
+              },
+              "bg":
+              {
+                "r":10,
+                "g":155,
+                "b":216
+              }
+            },
+            {
+              "res":"prod_ic",
+              "txtS":"EC",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255
+              },
+              "bg":
+              {
+                "r":80,
+                "g":80,
+                "b":80
+              }
+            },
+            {
+              "res":"prod_ic",
+              "txtS":"RJ",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255
+              },
+              "bg":
+              {
+                "r":80,
+                "g":80,
+                "b":80
+              }
+            },
+            {
+              "res":"attr_co2_info"
+            },
+            {
+              "res":"attr_co2_alert"
+            },
+            {
+              "res":"prod_walk",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255
+              },
+              "bg":
+              {
+                "r":142,
+                "g":142,
+                "b":142
+              }
+            }
+          ],
+          "urlL":
+          [
+            {
+              "label":"Fahrgast-Charta - sicher und gesund mit den Öffis ans Ziel",
+              "url":"https://routenplaner.verkehrsauskunft.at/him-upload/1637915993266_Fahrgastcharta_November021.pdf"
+            }
+          ],
+          "dirL":
+          [
+            {
+              "txt":"Innsbruck Anichstraße/Rathausgalerie",
+              "flg":"H"
+            },
+            {
+              "txt":"Innsbruck Technik West",
+              "flg":"H"
+            },
+            {
+              "txt":"Wien Hauptbahnhof",
+              "flg":"R"
+            },
+            {
+              "txt":"Wörgl Hbf",
+              "flg":"R"
+            },
+            {
+              "txt":"München Hauptbahnhof",
+              "flg":"R"
+            },
+            {
+              "txt":"Wien Hauptbahnhof",
+              "flg":"H"
+            },
+            {
+              "txt":"Kufstein Bahnhof",
+              "flg":"R"
+            }
+          ]
+        },
+        "outConL":
+        [
+          {
+            "cid":"C-0",
+            "date":"20220107",
+            "dur":"003300",
+            "chg":1,
+            "sDays":
+            {
+              "sDaysR":"Mo - Fr",
+              "sDaysI":"nicht 18. Apr, 26. Mai",
+              "sDaysB":"3E7CF9F367CF1E3A7CF9F3E7CF9F3E7CF9F3E7CF8F3E7CF9F3A6"
+            },
+            "dep":
+            {
+              "locX":0,
+              "idx":8,
+              "dProdX":0,
+              "dPlatfS":"Amraser Straße",
+              "dInR":true,
+              "dTimeS":"100800",
+              "dTimeR":"100800",
+              "dProgType":"PROGNOSED",
+              "type":"N"
+            },
+            "arr":
+            {
+              "locX":7,
+              "idx":12,
+              "aProdX":8,
+              "aPlatfS":"3",
+              "aPlatfR":"3",
+              "aOutR":true,
+              "aTimeS":"104100",
+              "aTimeR":"104100",
+              "aProgType":"PROGNOSED",
+              "type":"N"
+            },
+            "secL":
+            [
+              {
+                "type":"JNY",
+                "icoX":3,
+                "dep":
+                {
+                  "locX":0,
+                  "idx":8,
+                  "dProdX":0,
+                  "dPlatfS":"Amraser Straße",
+                  "dInR":true,
+                  "dTimeS":"100800",
+                  "dTimeR":"100800",
+                  "dProgType":"PROGNOSED",
+                  "type":"N"
+                },
+                "arr":
+                {
+                  "locX":2,
+                  "idx":9,
+                  "aProdX":0,
+                  "aPlatfS":"G",
+                  "aOutR":true,
+                  "aTimeS":"101100",
+                  "aTimeR":"101100",
+                  "aProgType":"PROGNOSED",
+                  "type":"N"
+                },
+                "jny":
+                {
+                  "jid":"2|#VN#1#ST#1641516241#PI#0#ZI#179713#TA#12#DA#70122#1S#476159802#1T#959#LS#476156501#LT#1015#PU#81#RT#1#CA#t11#ZE#3#ZB#       3#PC#4#FR#476159802#FT#959#TO#476156501#TT#1015#",
+                  "prodX":1,
+                  "dirTxt":"Innsbruck Anichstraße/Rathausgalerie",
+                  "dirFlg":"H",
+                  "status":"P",
+                  "isRchbl":true,
+                  "stopL":
+                  [
+                    {
+                      "locX":0,
+                      "idx":8,
+                      "dProdX":1,
+                      "dInR":true,
+                      "dTimeS":"100800",
+                      "dTimeR":"100800",
+                      "dProgType":"PROGNOSED",
+                      "dDirTxt":"Innsbruck Anichstraße/Rathausgalerie",
+                      "dDirFlg":"H",
+                      "type":"N"
+                    },
+                    {
+                      "locX":2,
+                      "idx":9,
+                      "aProdX":1,
+                      "aOutR":true,
+                      "aTimeS":"101100",
+                      "aTimeR":"101100",
+                      "aProgType":"PROGNOSED",
+                      "type":"N"
+                    }
+                  ],
+                  "polyG":
+                  {
+                    "polyXL":
+                    [
+                      0
+                    ],
+                    "layerX":0,
+                    "crdSysX":0
+                  },
+                  "dist":488,
+                  "freq":
+                  {
+                    "minC":2,
+                    "maxC":10,
+                    "numC":21,
+                    "jnyL":
+                    [
+                      {
+                        "jid":"2|#VN#1#ST#1641516241#PI#0#ZI#179841#TA#15#DA#70122#1S#476163305#1T#1000#LS#476167501#LT#1036#PU#81#RT#1#CA#t11#ZE#5#ZB#       5#PC#4#FR#476163305#FT#1000#TO#476167501#TT#1036#",
+                        "prodX":2,
+                        "dirTxt":"Innsbruck Technik West",
+                        "dirFlg":"H",
+                        "stopL":
+                        [
+                          {
+                            "locX":0,
+                            "idx":12,
+                            "dProdX":2,
+                            "dTimeS":"101600",
+                            "dDirTxt":"Innsbruck Technik West",
+                            "dDirFlg":"H",
+                            "type":"N"
+                          },
+                          {
+                            "locX":2,
+                            "idx":13,
+                            "aProdX":2,
+                            "aTimeS":"101900",
+                            "type":"N"
+                          }
+                        ],
+                        "dist":296,
+                        "ctxRecon":"T$A=1@O=Innsbruck Sillpark@L=476158903@a=128@$A=1@O=Innsbruck Hauptbahnhof@L=470118724@a=128@$202201071016$202201071019$       5$$1$$$$$$",
+                        "subscr":"F",
+                        "prodL":
+                        [
+                          {
+                            "prodX":2,
+                            "fLocX":0,
+                            "tLocX":2,
+                            "fIdx":12,
+                            "tIdx":13
+                          }
+                        ],
+                        "dirL":
+                        [
+                          {
+                            "dirX":1,
+                            "fLocX":0,
+                            "tLocX":2,
+                            "fIdx":12,
+                            "tIdx":13
+                          }
+                        ]
+                      },
+                      {
+                        "jid":"2|#VN#1#ST#1641516241#PI#0#ZI#179716#TA#12#DA#70122#1S#476159801#1T#1009#LS#476156501#LT#1025#PU#81#RT#1#CA#t11#ZE#3#ZB#       3#PC#4#FR#476159801#FT#1009#TO#476156501#TT#1025#",
+                        "prodX":3,
+                        "dirTxt":"Innsbruck Anichstraße/Rathausgalerie",
+                        "dirFlg":"H",
+                        "stopL":
+                        [
+                          {
+                            "locX":0,
+                            "idx":8,
+                            "dProdX":3,
+                            "dTimeS":"101800",
+                            "dDirTxt":"Innsbruck Anichstraße/Rathausgalerie",
+                            "dDirFlg":"H",
+                            "type":"N"
+                          },
+                          {
+                            "locX":2,
+                            "idx":9,
+                            "aProdX":3,
+                            "aTimeS":"102100",
+                            "type":"N"
+                          }
+                        ],
+                        "dist":296,
+                        "ctxRecon":"T$A=1@O=Innsbruck Sillpark@L=476158903@a=128@$A=1@O=Innsbruck Hauptbahnhof@L=470118724@a=128@$202201071018$202201071021$       3$$1$$$$$$",
+                        "subscr":"F",
+                        "prodL":
+                        [
+                          {
+                            "prodX":3,
+                            "fLocX":0,
+                            "tLocX":2,
+                            "fIdx":8,
+                            "tIdx":9
+                          }
+                        ],
+                        "dirL":
+                        [
+                          {
+                            "dirX":0,
+                            "fLocX":0,
+                            "tLocX":2,
+                            "fIdx":8,
+                            "tIdx":9
+                          }
+                        ]
+                      },
+                      {
+                        "jid":"2|#VN#1#ST#1641516241#PI#0#ZI#179713#TA#13#DA#70122#1S#476159802#1T#1019#LS#476156501#LT#1035#PU#81#RT#1#CA#t11#ZE#3#ZB#       3#PC#4#FR#476159802#FT#1019#TO#476156501#TT#1035#",
+                        "prodX":4,
+                        "dirTxt":"Innsbruck Anichstraße/Rathausgalerie",
+                        "dirFlg":"H",
+                        "stopL":
+                        [
+                          {
+                            "locX":0,
+                            "idx":8,
+                            "dProdX":4,
+                            "dTimeS":"102800",
+                            "dDirTxt":"Innsbruck Anichstraße/Rathausgalerie",
+                            "dDirFlg":"H",
+                            "type":"N"
+                          },
+                          {
+                            "locX":2,
+                            "idx":9,
+                            "aProdX":4,
+                            "aTimeS":"103100",
+                            "type":"N"
+                          }
+                        ],
+                        "dist":296,
+                        "ctxRecon":"T$A=1@O=Innsbruck Sillpark@L=476158903@a=128@$A=1@O=Innsbruck Hauptbahnhof@L=470118724@a=128@$202201071028$202201071031$       3$$1$$$$$$",
+                        "subscr":"F",
+                        "prodL":
+                        [
+                          {
+                            "prodX":4,
+                            "fLocX":0,
+                            "tLocX":2,
+                            "fIdx":8,
+                            "tIdx":9
+                          }
+                        ],
+                        "dirL":
+                        [
+                          {
+                            "dirX":0,
+                            "fLocX":0,
+                            "tLocX":2,
+                            "fIdx":8,
+                            "tIdx":9
+                          }
+                        ]
+                      },
+                      {
+                        "jid":"2|#VN#1#ST#1641516241#PI#0#ZI#179841#TA#16#DA#70122#1S#476163305#1T#1015#LS#476167501#LT#1051#PU#81#RT#1#CA#t11#ZE#5#ZB#       5#PC#4#FR#476163305#FT#1015#TO#476167501#TT#1051#",
+                        "prodX":5,
+                        "dirTxt":"Innsbruck Technik West",
+                        "dirFlg":"H",
+                        "stopL":
+                        [
+                          {
+                            "locX":0,
+                            "idx":12,
+                            "dProdX":5,
+                            "dTimeS":"103100",
+                            "dDirTxt":"Innsbruck Technik West",
+                            "dDirFlg":"H",
+                            "type":"N"
+                          },
+                          {
+                            "locX":2,
+                            "idx":13,
+                            "aProdX":5,
+                            "aTimeS":"103400",
+                            "type":"N"
+                          }
+                        ],
+                        "dist":296,
+                        "ctxRecon":"T$A=1@O=Innsbruck Sillpark@L=476158903@a=128@$A=1@O=Innsbruck Hauptbahnhof@L=470118724@a=128@$202201071031$202201071034$       5$$1$$$$$$",
+                        "subscr":"F",
+                        "prodL":
+                        [
+                          {
+                            "prodX":5,
+                            "fLocX":0,
+                            "tLocX":2,
+                            "fIdx":12,
+                            "tIdx":13
+                          }
+                        ],
+                        "dirL":
+                        [
+                          {
+                            "dirX":1,
+                            "fLocX":0,
+                            "tLocX":2,
+                            "fIdx":12,
+                            "tIdx":13
+                          }
+                        ]
+                      },
+                      {
+                        "jid":"2|#VN#1#ST#1641516241#PI#0#ZI#179716#TA#13#DA#70122#1S#476159801#1T#1029#LS#476156501#LT#1045#PU#81#RT#1#CA#t11#ZE#3#ZB#       3#PC#4#FR#476159801#FT#1029#TO#476156501#TT#1045#",
+                        "prodX":6,
+                        "dirTxt":"Innsbruck Anichstraße/Rathausgalerie",
+                        "dirFlg":"H",
+                        "stopL":
+                        [
+                          {
+                            "locX":0,
+                            "idx":8,
+                            "dProdX":6,
+                            "dTimeS":"103800",
+                            "dDirTxt":"Innsbruck Anichstraße/Rathausgalerie",
+                            "dDirFlg":"H",
+                            "type":"N"
+                          },
+                          {
+                            "locX":2,
+                            "idx":9,
+                            "aProdX":6,
+                            "aTimeS":"104100",
+                            "type":"N"
+                          }
+                        ],
+                        "dist":296,
+                        "ctxRecon":"T$A=1@O=Innsbruck Sillpark@L=476158903@a=128@$A=1@O=Innsbruck Hauptbahnhof@L=470118724@a=128@$202201071038$202201071041$       3$$1$$$$$$",
+                        "subscr":"F",
+                        "prodL":
+                        [
+                          {
+                            "prodX":6,
+                            "fLocX":0,
+                            "tLocX":2,
+                            "fIdx":8,
+                            "tIdx":9
+                          }
+                        ],
+                        "dirL":
+                        [
+                          {
+                            "dirX":0,
+                            "fLocX":0,
+                            "tLocX":2,
+                            "fIdx":8,
+                            "tIdx":9
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "ctxRecon":"T$A=1@O=Innsbruck Sillpark@L=476158903@a=128@$A=1@O=Innsbruck Hauptbahnhof@L=470118724@a=128@$202201071008$202201071011$       3$$1$$$$$$",
+                  "msgL":
+                  [
+                    {
+                      "type":"REM",
+                      "remX":0,
+                      "fLocX":0,
+                      "tLocX":2,
+                      "tagL":
+                      [
+                        "RES_JNY_DTL_H3"
+                      ],
+                      "sort":543424512
+                    },
+                    {
+                      "type":"HIM",
+                      "himX":0,
+                      "dspl":"U",
+                      "fLocX":0,
+                      "tagL":
+                      [
+                        "SUM_GLB_HDR_H3","RES_GLB_HDR_H3"
+                      ],
+                      "sort":373560317
+                    }
+                  ],
+                  "subscr":"F",
+                  "prodL":
+                  [
+                    {
+                      "prodX":1,
+                      "fLocX":0,
+                      "tLocX":2,
+                      "fIdx":8,
+                      "tIdx":9
+                    }
+                  ],
+                  "dirL":
+                  [
+                    {
+                      "dirX":0,
+                      "fLocX":0,
+                      "tLocX":2,
+                      "fIdx":8,
+                      "tIdx":9
+                    }
+                  ]
+                },
+                "minChg":"000600"
+              },
+              {
+                "type":"TRSF",
+                "icoX":11,
+                "dep":
+                {
+                  "locX":2,
+                  "dInR":true,
+                  "dTimeS":"101100",
+                  "type":"N"
+                },
+                "arr":
+                {
+                  "locX":6,
+                  "aOutR":true,
+                  "aTimeS":"101700",
+                  "type":"N"
+                },
+                "gis":
+                {
+                  "durS":"000600",
+                  "dirGeo":28,
+                  "segL":
+                  [
+                    {
+                      "man":"ON",
+                      "manTx":"Rolltreppe",
+                      "polyS":17,
+                      "polyE":18
+                    }
+                  ],
+                  "polyG":
+                  {
+                    "polyXL":
+                    [
+                      1
+                    ],
+                    "layerX":0,
+                    "crdSysX":0
+                  },
+                  "gisPrvr":"H",
+                  "getDescr":true,
+                  "getPoly":true
+                }
+              },
+              {
+                "type":"JNY",
+                "icoX":12,
+                "dep":
+                {
+                  "locX":6,
+                  "idx":7,
+                  "dProdX":8,
+                  "dPlatfS":"7A-C",
+                  "dPlatfR":"7",
+                  "dInR":true,
+                  "dTimeS":"101700",
+                  "dTimeR":"101700",
+                  "dProgType":"PROGNOSED",
+                  "type":"N"
+                },
+                "arr":
+                {
+                  "locX":7,
+                  "idx":12,
+                  "aProdX":8,
+                  "aPlatfS":"3",
+                  "aPlatfR":"3",
+                  "aOutR":true,
+                  "aTimeS":"104100",
+                  "aTimeR":"104100",
+                  "aProgType":"PROGNOSED",
+                  "type":"N"
+                },
+                "jny":
+                {
+                  "jid":"2|#VN#1#ST#1641516241#PI#0#ZI#24071#TA#0#DA#70122#1S#230138902#1T#920#LS#470218418#LT#1051#PU#81#RT#1#CA#RJX#ZE#184#ZB#RJX  184#PC#0#FR#230138902#FT#920#TO#470218418#TT#1051#",
+                  "prodX":9,
+                  "dirTxt":"Wien Hauptbahnhof",
+                  "dirFlg":"R",
+                  "status":"P",
+                  "isRchbl":true,
+                  "stopL":
+                  [
+                    {
+                      "locX":6,
+                      "idx":7,
+                      "dProdX":9,
+                      "dInR":true,
+                      "dTimeS":"101700",
+                      "dTimeR":"101700",
+                      "dProgType":"PROGNOSED",
+                      "dDirTxt":"Wien Hauptbahnhof",
+                      "dDirFlg":"R",
+                      "type":"N"
+                    },
+                    {
+                      "locX":7,
+                      "idx":12,
+                      "aProdX":9,
+                      "aOutR":true,
+                      "aTimeS":"104100",
+                      "aTimeR":"104100",
+                      "aProgType":"PROGNOSED",
+                      "type":"N"
+                    }
+                  ],
+                  "polyG":
+                  {
+                    "polyXL":
+                    [
+                      2
+                    ],
+                    "layerX":0,
+                    "crdSysX":0
+                  },
+                  "dist":58958,
+                  "pos":
+                  {
+                    "x":11390349,
+                    "y":47217648,
+                    "layerX":0,
+                    "crdSysX":0
+                  },
+                  "freq":
+                  {
+                    "minC":4,
+                    "maxC":37,
+                    "numC":7,
+                    "jnyL":
+                    [
+                      {
+                        "jid":"2|#VN#1#ST#1641516241#PI#0#ZI#193128#TA#0#DA#70122#1S#230138902#1T#933#LS#470115306#LT#1228#PU#81#RT#1#CA#O01#ZE#S3#ZB#      S3#PC#1#FR#230138902#FT#933#TO#470115306#TT#1228#",
+                        "prodX":10,
+                        "dirTxt":"Wörgl Hbf",
+                        "stopL":
+                        [
+                          {
+                            "locX":19,
+                            "idx":7,
+                            "dProdX":10,
+                            "dTimeS":"102100",
+                            "dDirTxt":"Wörgl Hbf",
+                            "dDirFlg":"R",
+                            "type":"N"
+                          },
+                          {
+                            "locX":20,
+                            "idx":23,
+                            "aProdX":10,
+                            "aTimeS":"110700",
+                            "type":"N"
+                          }
+                        ],
+                        "dist":55741,
+                        "pos":
+                        {
+                          "x":11468015,
+                          "y":47093543,
+                          "layerX":0,
+                          "crdSysX":0
+                        },
+                        "ctxRecon":"T$A=1@O=Innsbruck Hauptbahnhof@L=470118726@a=128@$A=1@O=Wörgl Hauptbahnhof@L=470117015@a=128@$202201071021$202201071107$   REX 2$$1$$$$$$",
+                        "subscr":"F",
+                        "prodL":
+                        [
+                          {
+                            "prodX":10,
+                            "fLocX":19,
+                            "tLocX":20,
+                            "fIdx":7,
+                            "tIdx":23
+                          }
+                        ],
+                        "dirL":
+                        [
+                          {
+                            "dirX":3,
+                            "fLocX":19,
+                            "tLocX":20,
+                            "fIdx":7,
+                            "tIdx":23
+                          }
+                        ]
+                      },
+                      {
+                        "jid":"2|#VN#1#ST#1641516241#PI#0#ZI#26658#TA#0#DA#70122#1S#470118733#1T#1040#LS#470218418#LT#1124#PU#81#RT#1#CA#EC#ZE#286#ZB#EC   286#PC#0#FR#470118733#FT#1040#TO#470218418#TT#1124#",
+                        "prodX":11,
+                        "dirTxt":"München Hauptbahnhof",
+                        "dirFlg":"R",
+                        "stopL":
+                        [
+                          {
+                            "locX":6,
+                            "idx":0,
+                            "dProdX":11,
+                            "dTimeS":"104000",
+                            "dDirTxt":"München Hauptbahnhof",
+                            "dDirFlg":"R",
+                            "type":"N"
+                          },
+                          {
+                            "locX":7,
+                            "idx":6,
+                            "aProdX":11,
+                            "aTimeS":"111400",
+                            "type":"N"
+                          }
+                        ],
+                        "dist":55733,
+                        "ctxRecon":"T$A=1@O=Innsbruck Hauptbahnhof@L=470118733@a=128@$A=1@O=Wörgl Hauptbahnhof@L=470117016@a=128@$202201071040$202201071114$EC   286$$1$$$$$$",
+                        "subscr":"F",
+                        "prodL":
+                        [
+                          {
+                            "prodX":11,
+                            "fLocX":6,
+                            "tLocX":7,
+                            "fIdx":0,
+                            "tIdx":6
+                          }
+                        ],
+                        "dirL":
+                        [
+                          {
+                            "dirX":4,
+                            "fLocX":6,
+                            "tLocX":7,
+                            "fIdx":0,
+                            "tIdx":6
+                          }
+                        ]
+                      },
+                      {
+                        "jid":"2|#VN#1#ST#1641516241#PI#0#ZI#24611#TA#0#DA#70122#1S#480045208#1T#840#LS#490134904#LT#1605#PU#81#RT#1#CA#RJ#ZE#865#ZB#RJ   865#PC#0#FR#480045208#FT#840#TO#490134904#TT#1605#",
+                        "prodX":12,
+                        "dirTxt":"Wien Hauptbahnhof",
+                        "dirFlg":"H",
+                        "stopL":
+                        [
+                          {
+                            "locX":21,
+                            "idx":45,
+                            "dProdX":12,
+                            "dTimeS":"111400",
+                            "dDirTxt":"Wien Hauptbahnhof",
+                            "dDirFlg":"H",
+                            "type":"N"
+                          },
+                          {
+                            "locX":7,
+                            "idx":51,
+                            "aProdX":12,
+                            "aTimeS":"114300",
+                            "type":"N"
+                          }
+                        ],
+                        "dist":55751,
+                        "pos":
+                        {
+                          "x":10075568,
+                          "y":47132718,
+                          "layerX":0,
+                          "crdSysX":0
+                        },
+                        "ctxRecon":"T$A=1@O=Innsbruck Hauptbahnhof@L=470118705@a=128@$A=1@O=Wörgl Hauptbahnhof@L=470117016@a=128@$202201071114$202201071143$RJ   865$$1$$$$$$",
+                        "subscr":"F",
+                        "prodL":
+                        [
+                          {
+                            "prodX":12,
+                            "fLocX":21,
+                            "tLocX":7,
+                            "fIdx":45,
+                            "tIdx":51
+                          }
+                        ],
+                        "dirL":
+                        [
+                          {
+                            "dirX":5,
+                            "fLocX":21,
+                            "tLocX":7,
+                            "fIdx":45,
+                            "tIdx":51
+                          }
+                        ]
+                      },
+                      {
+                        "jid":"2|#VN#1#ST#1641516241#PI#0#ZI#193127#TA#1#DA#70122#1S#230138902#1T#1033#LS#470115306#LT#1328#PU#81#RT#1#CA#O01#ZE#S3#ZB#      S3#PC#1#FR#230138902#FT#1033#TO#470115306#TT#1328#",
+                        "prodX":13,
+                        "dirTxt":"Wörgl Hbf",
+                        "stopL":
+                        [
+                          {
+                            "locX":22,
+                            "idx":7,
+                            "dProdX":13,
+                            "dTimeS":"112000",
+                            "dDirTxt":"Wörgl Hbf",
+                            "dDirFlg":"R",
+                            "type":"N"
+                          },
+                          {
+                            "locX":20,
+                            "idx":23,
+                            "aProdX":13,
+                            "aTimeS":"120600",
+                            "type":"N"
+                          }
+                        ],
+                        "dist":55749,
+                        "ctxRecon":"T$A=1@O=Innsbruck Hauptbahnhof@L=470118708@a=128@$A=1@O=Wörgl Hauptbahnhof@L=470117015@a=128@$202201071120$202201071206$   REX 2$$1$$$$$$",
+                        "subscr":"F",
+                        "prodL":
+                        [
+                          {
+                            "prodX":13,
+                            "fLocX":22,
+                            "tLocX":20,
+                            "fIdx":7,
+                            "tIdx":23
+                          }
+                        ],
+                        "dirL":
+                        [
+                          {
+                            "dirX":3,
+                            "fLocX":22,
+                            "tLocX":20,
+                            "fIdx":7,
+                            "tIdx":23
+                          }
+                        ]
+                      },
+                      {
+                        "jid":"2|#VN#1#ST#1641516241#PI#0#ZI#28575#TA#1#DA#70122#1S#470118733#1T#1140#LS#470218411#LT#1226#PU#81#RT#1#CA#O00#ZE#CJX 1#ZB#   CJX 1#PC#0#FR#470118733#FT#1140#TO#470218411#TT#1226#",
+                        "prodX":14,
+                        "dirTxt":"Kufstein Bahnhof",
+                        "dirFlg":"R",
+                        "stopL":
+                        [
+                          {
+                            "locX":6,
+                            "idx":0,
+                            "dProdX":14,
+                            "dTimeS":"114000",
+                            "dDirTxt":"Kufstein Bahnhof",
+                            "dDirFlg":"R",
+                            "type":"N"
+                          },
+                          {
+                            "locX":7,
+                            "idx":10,
+                            "aProdX":14,
+                            "aTimeS":"121300",
+                            "type":"N"
+                          }
+                        ],
+                        "dist":55733,
+                        "ctxRecon":"T$A=1@O=Innsbruck Hauptbahnhof@L=470118733@a=128@$A=1@O=Wörgl Hauptbahnhof@L=470117016@a=128@$202201071140$202201071213$   CJX 1$$1$$$$$$",
+                        "subscr":"F",
+                        "prodL":
+                        [
+                          {
+                            "prodX":14,
+                            "fLocX":6,
+                            "tLocX":7,
+                            "fIdx":0,
+                            "tIdx":10
+                          }
+                        ],
+                        "dirL":
+                        [
+                          {
+                            "dirX":6,
+                            "fLocX":6,
+                            "tLocX":7,
+                            "fIdx":0,
+                            "tIdx":10
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "ctxRecon":"T$A=1@O=Innsbruck Hauptbahnhof@L=470118733@a=128@$A=1@O=Wörgl Hauptbahnhof@L=470117016@a=128@$202201071017$202201071041$RJX  184$$1$$$$$$",
+                  "msgL":
+                  [
+                    {
+                      "type":"REM",
+                      "remX":2,
+                      "dspl":"U",
+                      "fLocX":6,
+                      "tLocX":7,
+                      "tagL":
+                      [
+                        "RES_JNY_DTL"
+                      ],
+                      "sort":543424512
+                    },
+                    {
+                      "type":"REM",
+                      "remX":3,
+                      "dspl":"U",
+                      "fLocX":6,
+                      "tLocX":7,
+                      "tagL":
+                      [
+                        "RES_JNY_DTL"
+                      ],
+                      "sort":543424512
+                    },
+                    {
+                      "type":"REM",
+                      "remX":4,
+                      "dspl":"U",
+                      "fLocX":6,
+                      "tLocX":7,
+                      "tagL":
+                      [
+                        "RES_JNY_DTL"
+                      ],
+                      "sort":543424512
+                    },
+                    {
+                      "type":"REM",
+                      "remX":5,
+                      "dspl":"U",
+                      "fLocX":6,
+                      "tLocX":7,
+                      "tagL":
+                      [
+                        "RES_JNY_DTL"
+                      ],
+                      "sort":543424512
+                    },
+                    {
+                      "type":"REM",
+                      "remX":6,
+                      "dspl":"U",
+                      "fLocX":6,
+                      "tLocX":7,
+                      "tagL":
+                      [
+                        "RES_JNY_DTL"
+                      ],
+                      "sort":543424512
+                    },
+                    {
+                      "type":"REM",
+                      "remX":7,
+                      "dspl":"U",
+                      "fLocX":6,
+                      "tLocX":7,
+                      "tagL":
+                      [
+                        "RES_JNY_DTL"
+                      ],
+                      "sort":543424512
+                    },
+                    {
+                      "type":"REM",
+                      "remX":8,
+                      "dspl":"U",
+                      "fLocX":6,
+                      "tLocX":7,
+                      "tagL":
+                      [
+                        "RES_JNY_DTL"
+                      ],
+                      "sort":543424512
+                    },
+                    {
+                      "type":"REM",
+                      "remX":9,
+                      "dspl":"U",
+                      "fLocX":6,
+                      "tLocX":7,
+                      "tagL":
+                      [
+                        "RES_JNY_DTL"
+                      ],
+                      "sort":543424512
+                    },
+                    {
+                      "type":"REM",
+                      "remX":10,
+                      "dspl":"U",
+                      "fLocX":6,
+                      "tLocX":7,
+                      "tagL":
+                      [
+                        "RES_JNY_DTL"
+                      ],
+                      "sort":543424512
+                    },
+                    {
+                      "type":"REM",
+                      "remX":11,
+                      "dspl":"U",
+                      "fLocX":6,
+                      "tLocX":7,
+                      "tagL":
+                      [
+                        "RES_JNY_DTL"
+                      ],
+                      "sort":543424512
+                    },
+                    {
+                      "type":"REM",
+                      "remX":12,
+                      "dspl":"U",
+                      "fLocX":6,
+                      "tLocX":7,
+                      "tagL":
+                      [
+                        "RES_JNY_DTL"
+                      ],
+                      "sort":543424512
+                    },
+                    {
+                      "type":"HIM",
+                      "himX":1,
+                      "dspl":"U",
+                      "fLocX":6,
+                      "tagL":
+                      [
+                        "SUM_GLB_HDR_H3","RES_GLB_HDR_H3"
+                      ],
+                      "sort":373560317
+                    }
+                  ],
+                  "subscr":"F",
+                  "prodL":
+                  [
+                    {
+                      "prodX":9,
+                      "fLocX":6,
+                      "tLocX":7,
+                      "fIdx":7,
+                      "tIdx":12
+                    }
+                  ],
+                  "dirL":
+                  [
+                    {
+                      "dirX":2,
+                      "fLocX":6,
+                      "tLocX":7,
+                      "fIdx":7,
+                      "tIdx":12
+                    }
+                  ]
+                }
+              }
+            ],
+            "ctxRecon":"¶HKI¶T$A=1@O=Innsbruck Sillpark@L=476158903@a=128@$A=1@O=Innsbruck Hauptbahnhof@L=470118724@a=128@$202201071008$202201071011$       3$$1$$$$$$§W$A=1@O=Innsbruck Hauptbahnhof@L=470118724@a=128@$A=1@O=Innsbruck Hauptbahnhof@L=470118733@a=128@$202201071011$202201071017$$$1$$$$$$§T$A=1@O=Innsbruck Hauptbahnhof@L=470118733@a=128@$A=1@O=Wörgl Hauptbahnhof@L=470117016@a=128@$202201071017$202201071041$RJX  184$$1$$$$$$¶KI¶H4sIAAAAAAACA+1W247bIBD9lYqHPmUl7GQ3m/xKFSGCsY1sgwU4V+XfOwPYzkbbdlu1Uh82eYHDwMww55i5Eq5LyyvZmWJwZEvoaUWXGVkQN4h6BrM1QP1xBijM77fm76LM+gl3nlvP9iXZfrsSVZzIli6IPAFUA7Zav2TPrxsK2KAE2b5mC1LwQdpgduDtIGF02y3IRcn2J8fQLFvTDxxzUDyeshtD4wVYXYk/9zJYt0Zg8F8gds07OY5PjTG2CBbnechbz0ScXUkYMPCmcPF2Qw+m/6cOegv33fhwKz3m/bpcEBN2Apg93xZ/Cd9NFb5IBRBceJ7TzTN9g+dhB3JIaS8tRNpGHpX4gySlaNBOaoiYLt75g5+OnxiURjSslqqqfThz6JyHGSt54w3c52YzY5fBibrlFdk+ZTPaKV1I52O4DwtDiADBsuVS1FJjzJIlol8xhsSfjNJXGoIqlIOTlvn6ZY3sOrtalQBs4irwcHYl4NgqSYhAmfjgKr6XrFStx0PRBvZ0qm2Vk8JFpJKulxYoaWViKMTbhsjS1HLtegMWojZKSIy0tEb7wC9cZD23vHNvVaL5vgVb8KAcQ830VjrZhkXIOC4Vg+VeGc1Mibd/TkEqzWLeMcs0yYPUxkW2582UE/MKOZ3l6LltGWSEacpogIjlhRpSykeu/LgDiNNLCczOlkA+YZJXoDhcG8qERPlCBnEzToLcV0BEMDSOce9ttNSyupsFnYh4YAl3fGbHwC2lE2tco3pmzRARsMKxZJNooQaigXxjrKHGiIDRHaQN6wYfb5uilEIJXj5UAvqbJQBe/rII441/uAZPcxFCiqEGOPoPipDRPyvDDvS3h6/Jp0Y+NfKpkR9rRB3eUcgOmwwox+PLw5RWXkEjcglkfCgZS48SfcSjDgGulGB9zZ2Mj2TqDrAbe9OXAjt0aebWM72FaWYO0h4tdBMJwVA1dAMVbrxogypZ5dl6ncOD7Xkz9gFYCRzwPXaCcRTf7tDNTKCewPI4guUxbA9YWsb3XWMHMjg3eab3HsfGABs2bpuvVhXh7e4tCy++1Ey0ScgTAu4ZJLgPG2/fAfDX0ReyCwAA",
+            "freq":
+            {
+              "minC":4
+            },
+            "trfRes":
+            {
+              "statusCode":"OK",
+              "fareSetL":
+              [
+                {
+                  "name":"VVT 12 Zonen",
+                  "desc":"",
+                  "fareL":
+                  [
+                    {
+                      "name":"Einzel-Ticket ",
+                      "prc":1580,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Einzel-Ticket Family",
+                      "prc":1580,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Einzel-Ticket Jugend, Family-Light, Spezial",
+                      "prc":1010,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Einzel-Ticket Kind",
+                      "prc":790,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Einzel-Ticket SeniorIn",
+                      "prc":1010,
+                      "cur":"EUR"
+                    }
+                  ]
+                },
+                {
+                  "name":"VVT Tirol",
+                  "desc":"",
+                  "fareL":
+                  [
+                    {
+                      "name":"Jahres-Ticket ",
+                      "prc":50940,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Monats-Ticket Land ",
+                      "prc":10190,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Wochen-Ticket Land ",
+                      "prc":4590,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Tages-Ticket 2Plus (nur Nahverkehr) ",
+                      "prc":3470,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Tages-Ticket Bike (nur Linie 110 und 210) ",
+                      "prc":500,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Jahres-Ticket Spezial ",
+                      "prc":26000,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Semester-Ticket Land ",
+                      "prc":18720,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Jahres-Ticket SeniorIn",
+                      "prc":26000,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Jahres-Ticket SeniorIn (ab 75)",
+                      "prc":13000,
+                      "cur":"EUR"
+                    }
+                  ]
+                }
+              ]
+            },
+            "ovwTrfRefL":
+            [
+              {
+                "type":"F",
+                "fareSetX":0,
+                "fareX":0
+              }
+            ],
+            "msgL":
+            [
+              {
+                "type":"REM",
+                "remX":13,
+                "dspl":"U",
+                "tagL":
+                [
+                  "RES_CON_FTR_H3"
+                ],
+                "sort":147324928
+              }
+            ],
+            "eco":
+            {
+              "co2":0.474104000000000
+            },
+            "conSubscr":"F",
+            "recState":"U",
+            "cksum":"bc6495f6_3",
+            "cksumDti":"59a52c33_3"
+          },
+          {
+            "cid":"C-1",
+            "date":"20220107",
+            "dur":"003200",
+            "chg":0,
+            "sDays":
+            {
+              "sDaysR":"täglich",
+              "sDaysB":"FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE"
+            },
+            "dep":
+            {
+              "locX":1,
+              "dInR":true,
+              "dTimeS":"100900",
+              "type":"N"
+            },
+            "arr":
+            {
+              "locX":7,
+              "idx":12,
+              "aProdX":8,
+              "aPlatfS":"3",
+              "aPlatfR":"3",
+              "aOutR":true,
+              "aTimeS":"104100",
+              "aTimeR":"104100",
+              "aProgType":"PROGNOSED",
+              "type":"N"
+            },
+            "secL":
+            [
+              {
+                "type":"WALK",
+                "icoX":20,
+                "dep":
+                {
+                  "locX":1,
+                  "dInR":true,
+                  "dTimeS":"100900",
+                  "type":"N"
+                },
+                "arr":
+                {
+                  "locX":6,
+                  "aOutR":true,
+                  "aTimeS":"101700",
+                  "type":"N"
+                },
+                "gis":
+                {
+                  "dist":568,
+                  "durS":"000800",
+                  "ctx":"C|9877c6d8|G|1|G@F|A=1@O=Innsbruck Sillpark@X=11402493@Y=47266217@U=81@L=476158900@i=at:47:61589@|A=1@O=Innsbruck Hauptbahnhof@X=11401387@Y=47263304@U=81@L=470118733@i=at:47:1187:0:33@|7012022|100900|101700|bf|ft@0@2000@120@1@133@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§bt@0@2000@120@1@133@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§tf@$f@$f@$f@$f@$f@$§|||",
+                  "getDescr":true,
+                  "getPoly":true
+                }
+              },
+              {
+                "type":"JNY",
+                "icoX":12,
+                "dep":
+                {
+                  "locX":6,
+                  "idx":7,
+                  "dProdX":8,
+                  "dPlatfS":"7A-C",
+                  "dPlatfR":"7",
+                  "dInR":true,
+                  "dTimeS":"101700",
+                  "dTimeR":"101700",
+                  "dProgType":"PROGNOSED",
+                  "type":"N"
+                },
+                "arr":
+                {
+                  "locX":7,
+                  "idx":12,
+                  "aProdX":8,
+                  "aPlatfS":"3",
+                  "aPlatfR":"3",
+                  "aOutR":true,
+                  "aTimeS":"104100",
+                  "aTimeR":"104100",
+                  "aProgType":"PROGNOSED",
+                  "type":"N"
+                },
+                "jny":
+                {
+                  "jid":"2|#VN#1#ST#1641516241#PI#0#ZI#24071#TA#0#DA#70122#1S#230138902#1T#920#LS#470218418#LT#1051#PU#81#RT#1#CA#RJX#ZE#184#ZB#RJX  184#PC#0#FR#230138902#FT#920#TO#470218418#TT#1051#",
+                  "prodX":9,
+                  "dirTxt":"Wien Hauptbahnhof",
+                  "dirFlg":"R",
+                  "status":"P",
+                  "isRchbl":true,
+                  "stopL":
+                  [
+                    {
+                      "locX":6,
+                      "idx":7,
+                      "dProdX":9,
+                      "dInR":true,
+                      "dTimeS":"101700",
+                      "dTimeR":"101700",
+                      "dProgType":"PROGNOSED",
+                      "dDirTxt":"Wien Hauptbahnhof",
+                      "dDirFlg":"R",
+                      "type":"N"
+                    },
+                    {
+                      "locX":7,
+                      "idx":12,
+                      "aProdX":9,
+                      "aOutR":true,
+                      "aTimeS":"104100",
+                      "aTimeR":"104100",
+                      "aProgType":"PROGNOSED",
+                      "type":"N"
+                    }
+                  ],
+                  "polyG":
+                  {
+                    "polyXL":
+                    [
+                      3
+                    ],
+                    "layerX":0,
+                    "crdSysX":0
+                  },
+                  "dist":58958,
+                  "pos":
+                  {
+                    "x":11390349,
+                    "y":47217648,
+                    "layerX":0,
+                    "crdSysX":0
+                  },
+                  "freq":
+                  {
+                    "minC":4,
+                    "maxC":37,
+                    "numC":7,
+                    "jnyL":
+                    [
+                      {
+                        "jid":"2|#VN#1#ST#1641516241#PI#0#ZI#193128#TA#0#DA#70122#1S#230138902#1T#933#LS#470115306#LT#1228#PU#81#RT#1#CA#O01#ZE#S3#ZB#      S3#PC#1#FR#230138902#FT#933#TO#470115306#TT#1228#",
+                        "prodX":10,
+                        "dirTxt":"Wörgl Hbf",
+                        "stopL":
+                        [
+                          {
+                            "locX":19,
+                            "idx":7,
+                            "dProdX":10,
+                            "dTimeS":"102100",
+                            "dDirTxt":"Wörgl Hbf",
+                            "dDirFlg":"R",
+                            "type":"N"
+                          },
+                          {
+                            "locX":20,
+                            "idx":23,
+                            "aProdX":10,
+                            "aTimeS":"110700",
+                            "type":"N"
+                          }
+                        ],
+                        "dist":55741,
+                        "pos":
+                        {
+                          "x":11468015,
+                          "y":47093543,
+                          "layerX":0,
+                          "crdSysX":0
+                        },
+                        "ctxRecon":"T$A=1@O=Innsbruck Hauptbahnhof@L=470118726@a=128@$A=1@O=Wörgl Hauptbahnhof@L=470117015@a=128@$202201071021$202201071107$   REX 2$$1$$$$$$",
+                        "subscr":"F",
+                        "prodL":
+                        [
+                          {
+                            "prodX":10,
+                            "fLocX":19,
+                            "tLocX":20,
+                            "fIdx":7,
+                            "tIdx":23
+                          }
+                        ],
+                        "dirL":
+                        [
+                          {
+                            "dirX":3,
+                            "fLocX":19,
+                            "tLocX":20,
+                            "fIdx":7,
+                            "tIdx":23
+                          }
+                        ]
+                      },
+                      {
+                        "jid":"2|#VN#1#ST#1641516241#PI#0#ZI#26658#TA#0#DA#70122#1S#470118733#1T#1040#LS#470218418#LT#1124#PU#81#RT#1#CA#EC#ZE#286#ZB#EC   286#PC#0#FR#470118733#FT#1040#TO#470218418#TT#1124#",
+                        "prodX":11,
+                        "dirTxt":"München Hauptbahnhof",
+                        "dirFlg":"R",
+                        "stopL":
+                        [
+                          {
+                            "locX":6,
+                            "idx":0,
+                            "dProdX":11,
+                            "dTimeS":"104000",
+                            "dDirTxt":"München Hauptbahnhof",
+                            "dDirFlg":"R",
+                            "type":"N"
+                          },
+                          {
+                            "locX":7,
+                            "idx":6,
+                            "aProdX":11,
+                            "aTimeS":"111400",
+                            "type":"N"
+                          }
+                        ],
+                        "dist":55733,
+                        "ctxRecon":"T$A=1@O=Innsbruck Hauptbahnhof@L=470118733@a=128@$A=1@O=Wörgl Hauptbahnhof@L=470117016@a=128@$202201071040$202201071114$EC   286$$1$$$$$$",
+                        "subscr":"F",
+                        "prodL":
+                        [
+                          {
+                            "prodX":11,
+                            "fLocX":6,
+                            "tLocX":7,
+                            "fIdx":0,
+                            "tIdx":6
+                          }
+                        ],
+                        "dirL":
+                        [
+                          {
+                            "dirX":4,
+                            "fLocX":6,
+                            "tLocX":7,
+                            "fIdx":0,
+                            "tIdx":6
+                          }
+                        ]
+                      },
+                      {
+                        "jid":"2|#VN#1#ST#1641516241#PI#0#ZI#24611#TA#0#DA#70122#1S#480045208#1T#840#LS#490134904#LT#1605#PU#81#RT#1#CA#RJ#ZE#865#ZB#RJ   865#PC#0#FR#480045208#FT#840#TO#490134904#TT#1605#",
+                        "prodX":12,
+                        "dirTxt":"Wien Hauptbahnhof",
+                        "dirFlg":"H",
+                        "stopL":
+                        [
+                          {
+                            "locX":21,
+                            "idx":45,
+                            "dProdX":12,
+                            "dTimeS":"111400",
+                            "dDirTxt":"Wien Hauptbahnhof",
+                            "dDirFlg":"H",
+                            "type":"N"
+                          },
+                          {
+                            "locX":7,
+                            "idx":51,
+                            "aProdX":12,
+                            "aTimeS":"114300",
+                            "type":"N"
+                          }
+                        ],
+                        "dist":55751,
+                        "pos":
+                        {
+                          "x":10075568,
+                          "y":47132718,
+                          "layerX":0,
+                          "crdSysX":0
+                        },
+                        "ctxRecon":"T$A=1@O=Innsbruck Hauptbahnhof@L=470118705@a=128@$A=1@O=Wörgl Hauptbahnhof@L=470117016@a=128@$202201071114$202201071143$RJ   865$$1$$$$$$",
+                        "subscr":"F",
+                        "prodL":
+                        [
+                          {
+                            "prodX":12,
+                            "fLocX":21,
+                            "tLocX":7,
+                            "fIdx":45,
+                            "tIdx":51
+                          }
+                        ],
+                        "dirL":
+                        [
+                          {
+                            "dirX":5,
+                            "fLocX":21,
+                            "tLocX":7,
+                            "fIdx":45,
+                            "tIdx":51
+                          }
+                        ]
+                      },
+                      {
+                        "jid":"2|#VN#1#ST#1641516241#PI#0#ZI#193127#TA#1#DA#70122#1S#230138902#1T#1033#LS#470115306#LT#1328#PU#81#RT#1#CA#O01#ZE#S3#ZB#      S3#PC#1#FR#230138902#FT#1033#TO#470115306#TT#1328#",
+                        "prodX":13,
+                        "dirTxt":"Wörgl Hbf",
+                        "stopL":
+                        [
+                          {
+                            "locX":22,
+                            "idx":7,
+                            "dProdX":13,
+                            "dTimeS":"112000",
+                            "dDirTxt":"Wörgl Hbf",
+                            "dDirFlg":"R",
+                            "type":"N"
+                          },
+                          {
+                            "locX":20,
+                            "idx":23,
+                            "aProdX":13,
+                            "aTimeS":"120600",
+                            "type":"N"
+                          }
+                        ],
+                        "dist":55749,
+                        "ctxRecon":"T$A=1@O=Innsbruck Hauptbahnhof@L=470118708@a=128@$A=1@O=Wörgl Hauptbahnhof@L=470117015@a=128@$202201071120$202201071206$   REX 2$$1$$$$$$",
+                        "subscr":"F",
+                        "prodL":
+                        [
+                          {
+                            "prodX":13,
+                            "fLocX":22,
+                            "tLocX":20,
+                            "fIdx":7,
+                            "tIdx":23
+                          }
+                        ],
+                        "dirL":
+                        [
+                          {
+                            "dirX":3,
+                            "fLocX":22,
+                            "tLocX":20,
+                            "fIdx":7,
+                            "tIdx":23
+                          }
+                        ]
+                      },
+                      {
+                        "jid":"2|#VN#1#ST#1641516241#PI#0#ZI#28575#TA#1#DA#70122#1S#470118733#1T#1140#LS#470218411#LT#1226#PU#81#RT#1#CA#O00#ZE#CJX 1#ZB#   CJX 1#PC#0#FR#470118733#FT#1140#TO#470218411#TT#1226#",
+                        "prodX":14,
+                        "dirTxt":"Kufstein Bahnhof",
+                        "dirFlg":"R",
+                        "stopL":
+                        [
+                          {
+                            "locX":6,
+                            "idx":0,
+                            "dProdX":14,
+                            "dTimeS":"114000",
+                            "dDirTxt":"Kufstein Bahnhof",
+                            "dDirFlg":"R",
+                            "type":"N"
+                          },
+                          {
+                            "locX":7,
+                            "idx":10,
+                            "aProdX":14,
+                            "aTimeS":"121300",
+                            "type":"N"
+                          }
+                        ],
+                        "dist":55733,
+                        "ctxRecon":"T$A=1@O=Innsbruck Hauptbahnhof@L=470118733@a=128@$A=1@O=Wörgl Hauptbahnhof@L=470117016@a=128@$202201071140$202201071213$   CJX 1$$1$$$$$$",
+                        "subscr":"F",
+                        "prodL":
+                        [
+                          {
+                            "prodX":14,
+                            "fLocX":6,
+                            "tLocX":7,
+                            "fIdx":0,
+                            "tIdx":10
+                          }
+                        ],
+                        "dirL":
+                        [
+                          {
+                            "dirX":6,
+                            "fLocX":6,
+                            "tLocX":7,
+                            "fIdx":0,
+                            "tIdx":10
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "ctxRecon":"T$A=1@O=Innsbruck Hauptbahnhof@L=470118733@a=128@$A=1@O=Wörgl Hauptbahnhof@L=470117016@a=128@$202201071017$202201071041$RJX  184$$1$$$$$$",
+                  "msgL":
+                  [
+                    {
+                      "type":"REM",
+                      "remX":2,
+                      "dspl":"U",
+                      "fLocX":6,
+                      "tLocX":7,
+                      "tagL":
+                      [
+                        "RES_JNY_DTL"
+                      ],
+                      "sort":543424512
+                    },
+                    {
+                      "type":"REM",
+                      "remX":3,
+                      "dspl":"U",
+                      "fLocX":6,
+                      "tLocX":7,
+                      "tagL":
+                      [
+                        "RES_JNY_DTL"
+                      ],
+                      "sort":543424512
+                    },
+                    {
+                      "type":"REM",
+                      "remX":4,
+                      "dspl":"U",
+                      "fLocX":6,
+                      "tLocX":7,
+                      "tagL":
+                      [
+                        "RES_JNY_DTL"
+                      ],
+                      "sort":543424512
+                    },
+                    {
+                      "type":"REM",
+                      "remX":5,
+                      "dspl":"U",
+                      "fLocX":6,
+                      "tLocX":7,
+                      "tagL":
+                      [
+                        "RES_JNY_DTL"
+                      ],
+                      "sort":543424512
+                    },
+                    {
+                      "type":"REM",
+                      "remX":6,
+                      "dspl":"U",
+                      "fLocX":6,
+                      "tLocX":7,
+                      "tagL":
+                      [
+                        "RES_JNY_DTL"
+                      ],
+                      "sort":543424512
+                    },
+                    {
+                      "type":"REM",
+                      "remX":7,
+                      "dspl":"U",
+                      "fLocX":6,
+                      "tLocX":7,
+                      "tagL":
+                      [
+                        "RES_JNY_DTL"
+                      ],
+                      "sort":543424512
+                    },
+                    {
+                      "type":"REM",
+                      "remX":8,
+                      "dspl":"U",
+                      "fLocX":6,
+                      "tLocX":7,
+                      "tagL":
+                      [
+                        "RES_JNY_DTL"
+                      ],
+                      "sort":543424512
+                    },
+                    {
+                      "type":"REM",
+                      "remX":9,
+                      "dspl":"U",
+                      "fLocX":6,
+                      "tLocX":7,
+                      "tagL":
+                      [
+                        "RES_JNY_DTL"
+                      ],
+                      "sort":543424512
+                    },
+                    {
+                      "type":"REM",
+                      "remX":10,
+                      "dspl":"U",
+                      "fLocX":6,
+                      "tLocX":7,
+                      "tagL":
+                      [
+                        "RES_JNY_DTL"
+                      ],
+                      "sort":543424512
+                    },
+                    {
+                      "type":"REM",
+                      "remX":11,
+                      "dspl":"U",
+                      "fLocX":6,
+                      "tLocX":7,
+                      "tagL":
+                      [
+                        "RES_JNY_DTL"
+                      ],
+                      "sort":543424512
+                    },
+                    {
+                      "type":"REM",
+                      "remX":12,
+                      "dspl":"U",
+                      "fLocX":6,
+                      "tLocX":7,
+                      "tagL":
+                      [
+                        "RES_JNY_DTL"
+                      ],
+                      "sort":543424512
+                    },
+                    {
+                      "type":"HIM",
+                      "himX":1,
+                      "dspl":"U",
+                      "fLocX":6,
+                      "tagL":
+                      [
+                        "SUM_GLB_HDR_H3","RES_GLB_HDR_H3"
+                      ],
+                      "sort":373560317
+                    }
+                  ],
+                  "subscr":"F",
+                  "prodL":
+                  [
+                    {
+                      "prodX":9,
+                      "fLocX":6,
+                      "tLocX":7,
+                      "fIdx":7,
+                      "tIdx":12
+                    }
+                  ],
+                  "dirL":
+                  [
+                    {
+                      "dirX":2,
+                      "fLocX":6,
+                      "tLocX":7,
+                      "fIdx":7,
+                      "tIdx":12
+                    }
+                  ]
+                }
+              }
+            ],
+            "ctxRecon":"¶HKI¶G@F$A=1@O=Innsbruck Sillpark@L=476158900@a=128@$A=1@O=Innsbruck Hauptbahnhof@L=470118733@a=128@$202201071009$202201071017$$$1$$$$$$§T$A=1@O=Innsbruck Hauptbahnhof@L=470118733@a=128@$A=1@O=Wörgl Hauptbahnhof@L=470117016@a=128@$202201071017$202201071041$RJX  184$$1$$$$$$¶GP¶ft@0@2000@120@1@133@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§bt@0@2000@120@1@133@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§tf@$f@$f@$f@$f@$f@$§¶KI¶H4sIAAAAAAACA+1W247bIBD9lYqHPmUl7GQ3m/xKFSGCsY1sgwU4V+XfOwPYzkbbdlu1Uh82eYHDwMww55i5Eq5LyyvZmWJwZEvoaUWXGVkQN4h6BrM1QP1xBijM77fm76LM+gl3nlvP9iXZfrsSVZzIli6IPAFUA7Zav2TPrxsK2KAE2b5mC1LwQdpgduDtIGF02y3IRcn2J8fQLFvTDxxzUDyeshtD4wVYXYk/9zJYt0Zg8F8gds07OY5PjTG2CBbnechbz0ScXUkYMPCmcPF2Qw+m/6cOegv33fhwKz3m/bpcEBN2Apg93xZ/Cd9NFb5IBRBceJ7TzTN9g+dhB3JIaS8tRNpGHpX4gySlaNBOaoiYLt75g5+OnxiURjSslqqqfThz6JyHGSt54w3c52YzY5fBibrlFdk+ZTPaKV1I52O4DwtDiADBsuVS1FJjzJIlol8xhsSfjNJXGoIqlIOTlvn6ZY3sOrtalQBs4irwcHYl4NgqSYhAmfjgKr6XrFStx0PRBvZ0qm2Vk8JFpJKulxYoaWViKMTbhsjS1HLtegMWojZKSIy0tEb7wC9cZD23vHNvVaL5vgVb8KAcQ830VjrZhkXIOC4Vg+VeGc1Mibd/TkEqzWLeMcs0yYPUxkW2582UE/MKOZ3l6LltGWSEacpogIjlhRpSykeu/LgDiNNLCczOlkA+YZJXoDhcG8qERPlCBnEzToLcV0BEMDSOce9ttNSyupsFnYh4YAl3fGbHwC2lE2tco3pmzRARsMKxZJNooQaigXxjrKHGiIDRHaQN6wYfb5uilEIJXj5UAvqbJQBe/rII441/uAZPcxFCiqEGOPoPipDRPyvDDvS3h6/Jp0Y+NfKpkR9rRB3eUcgOmwwox+PLw5RWXkEjcglkfCgZS48SfcSjDgGulGB9zZ2Mj2TqDrAbe9OXAjt0aebWM72FaWYO0h4tdBMJwVA1dAMVbrxogypZ5dl6ncOD7Xkz9gFYCRzwPXaCcRTf7tDNTKCewPI4guUxbA9YWsb3XWMHMjg3eab3HsfGABs2bpuvVhXh7e4tCy++1Ey0ScgTAu4ZJLgPG2/fAfDX0ReyCwAA",
+            "freq":
+            {
+              "minC":4
+            },
+            "trfRes":
+            {
+              "statusCode":"OK",
+              "fareSetL":
+              [
+                {
+                  "name":"VVT 12 Zonen",
+                  "desc":"",
+                  "fareL":
+                  [
+                    {
+                      "name":"Einzel-Ticket ",
+                      "prc":1580,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Einzel-Ticket Family",
+                      "prc":1580,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Einzel-Ticket Jugend, Family-Light, Spezial",
+                      "prc":1010,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Einzel-Ticket Kind",
+                      "prc":790,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Einzel-Ticket SeniorIn",
+                      "prc":1010,
+                      "cur":"EUR"
+                    }
+                  ]
+                },
+                {
+                  "name":"VVT Tirol",
+                  "desc":"",
+                  "fareL":
+                  [
+                    {
+                      "name":"Jahres-Ticket ",
+                      "prc":50940,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Monats-Ticket Land ",
+                      "prc":10190,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Wochen-Ticket Land ",
+                      "prc":4590,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Tages-Ticket 2Plus (nur Nahverkehr) ",
+                      "prc":3470,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Tages-Ticket Bike (nur Linie 110 und 210) ",
+                      "prc":500,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Jahres-Ticket Spezial ",
+                      "prc":26000,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Semester-Ticket Land ",
+                      "prc":18720,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Jahres-Ticket SeniorIn",
+                      "prc":26000,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Jahres-Ticket SeniorIn (ab 75)",
+                      "prc":13000,
+                      "cur":"EUR"
+                    }
+                  ]
+                }
+              ]
+            },
+            "ovwTrfRefL":
+            [
+              {
+                "type":"F",
+                "fareSetX":0,
+                "fareX":0
+              }
+            ],
+            "msgL":
+            [
+              {
+                "type":"REM",
+                "remX":13,
+                "dspl":"U",
+                "tagL":
+                [
+                  "RES_CON_FTR_H3"
+                ],
+                "sort":147324928
+              }
+            ],
+            "eco":
+            {
+              "co2":0.471664000000000
+            },
+            "conSubscr":"P",
+            "recState":"U",
+            "cksum":"1d5165dd_3",
+            "cksumDti":"6f0ba3cf_3"
+          },
+          {
+            "cid":"C-2",
+            "date":"20220107",
+            "dur":"005300",
+            "chg":0,
+            "sDays":
+            {
+              "sDaysR":"Mo - Fr",
+              "sDaysI":"nicht 18. Apr, 26. Mai",
+              "sDaysB":"0000000007CF9F3A7CF9F3E7CF9F3E7CF9F3E7CF8F3E7CF9F3A6"
+            },
+            "dep":
+            {
+              "locX":1,
+              "dInR":true,
+              "dTimeS":"101400",
+              "type":"N"
+            },
+            "arr":
+            {
+              "locX":20,
+              "idx":23,
+              "aProdX":16,
+              "aPlatfS":"2",
+              "aPlatfR":"2",
+              "aOutR":true,
+              "aTimeS":"110700",
+              "aProgType":"PROGNOSED",
+              "type":"N"
+            },
+            "secL":
+            [
+              {
+                "type":"WALK",
+                "icoX":20,
+                "dep":
+                {
+                  "locX":1,
+                  "dInR":true,
+                  "dTimeS":"101400",
+                  "type":"N"
+                },
+                "arr":
+                {
+                  "locX":23,
+                  "aOutR":true,
+                  "aTimeS":"102400",
+                  "type":"N"
+                },
+                "gis":
+                {
+                  "dist":944,
+                  "durS":"001000",
+                  "ctx":"C|52e78bda|G|1|G@F|A=1@O=Innsbruck Sillpark@X=11402493@Y=47266217@U=81@L=476158900@i=at:47:61589@|A=1@O=Innsbruck Messe Bahnhof@X=11407158@Y=47272833@U=81@L=470021101@i=at:47:211:0:1@|7012022|101400|102400|bf|ft@0@2000@120@1@133@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§bt@0@2000@120@1@133@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§tf@$f@$f@$f@$f@$f@$§|||",
+                  "getDescr":true,
+                  "getPoly":true
+                }
+              },
+              {
+                "type":"JNY",
+                "icoX":6,
+                "dep":
+                {
+                  "locX":23,
+                  "idx":8,
+                  "dProdX":16,
+                  "dPlatfS":"1",
+                  "dPlatfR":"1",
+                  "dInR":true,
+                  "dTimeS":"102400",
+                  "dProgType":"PROGNOSED",
+                  "type":"N"
+                },
+                "arr":
+                {
+                  "locX":20,
+                  "idx":23,
+                  "aProdX":16,
+                  "aPlatfS":"2",
+                  "aPlatfR":"2",
+                  "aOutR":true,
+                  "aTimeS":"110700",
+                  "aProgType":"PROGNOSED",
+                  "type":"N"
+                },
+                "jny":
+                {
+                  "jid":"2|#VN#1#ST#1641516241#PI#0#ZI#193128#TA#0#DA#70122#1S#230138902#1T#933#LS#470115306#LT#1228#PU#81#RT#1#CA#O01#ZE#S3#ZB#      S3#PC#1#FR#230138902#FT#933#TO#470115306#TT#1228#",
+                  "prodX":10,
+                  "dirTxt":"Wörgl Hbf",
+                  "dirFlg":"R",
+                  "status":"P",
+                  "isRchbl":true,
+                  "stopL":
+                  [
+                    {
+                      "locX":23,
+                      "idx":8,
+                      "dProdX":10,
+                      "dInR":true,
+                      "dTimeS":"102400",
+                      "dDirTxt":"Wörgl Hbf",
+                      "dDirFlg":"R",
+                      "type":"N"
+                    },
+                    {
+                      "locX":9,
+                      "idx":9,
+                      "aProdX":10,
+                      "aOutR":true,
+                      "aTimeS":"102600",
+                      "dProdX":10,
+                      "dInR":true,
+                      "dTimeS":"102700",
+                      "type":"N"
+                    },
+                    {
+                      "locX":13,
+                      "idx":11,
+                      "aProdX":10,
+                      "aOutR":true,
+                      "aTimeS":"103000",
+                      "dProdX":10,
+                      "dInR":true,
+                      "dTimeS":"103100",
+                      "type":"N"
+                    },
+                    {
+                      "locX":25,
+                      "idx":16,
+                      "aProdX":10,
+                      "aOutR":true,
+                      "aTimeS":"104100",
+                      "dProdX":10,
+                      "dInR":true,
+                      "dTimeS":"104200",
+                      "type":"N"
+                    },
+                    {
+                      "locX":27,
+                      "idx":18,
+                      "aProdX":10,
+                      "aOutR":true,
+                      "aTimeS":"104700",
+                      "dProdX":10,
+                      "dInR":true,
+                      "dTimeS":"104800",
+                      "type":"N"
+                    },
+                    {
+                      "locX":29,
+                      "idx":20,
+                      "aProdX":10,
+                      "aOutR":true,
+                      "aTimeS":"105400",
+                      "dProdX":10,
+                      "dInR":true,
+                      "dTimeS":"105500",
+                      "type":"N"
+                    },
+                    {
+                      "locX":15,
+                      "idx":22,
+                      "aProdX":10,
+                      "aOutR":true,
+                      "aTimeS":"110100",
+                      "dProdX":10,
+                      "dInR":true,
+                      "dTimeS":"110100",
+                      "type":"N"
+                    },
+                    {
+                      "locX":20,
+                      "idx":23,
+                      "aProdX":10,
+                      "aOutR":true,
+                      "aTimeS":"110700",
+                      "aProgType":"PROGNOSED",
+                      "type":"N"
+                    }
+                  ],
+                  "polyG":
+                  {
+                    "polyXL":
+                    [
+                      4
+                    ],
+                    "layerX":0,
+                    "crdSysX":0
+                  },
+                  "dist":57903,
+                  "pos":
+                  {
+                    "x":11468015,
+                    "y":47093543,
+                    "layerX":0,
+                    "crdSysX":0
+                  },
+                  "freq":
+                  {
+                    "minC":20,
+                    "maxC":59,
+                    "numC":3,
+                    "jnyL":
+                    [
+                      {
+                        "jid":"2|#VN#1#ST#1641516241#PI#0#ZI#193127#TA#1#DA#70122#1S#230138902#1T#1033#LS#470115306#LT#1328#PU#81#RT#1#CA#O01#ZE#S3#ZB#      S3#PC#1#FR#230138902#FT#1033#TO#470115306#TT#1328#",
+                        "prodX":13,
+                        "dirTxt":"Wörgl Hbf",
+                        "dirFlg":"R",
+                        "stopL":
+                        [
+                          {
+                            "locX":23,
+                            "idx":8,
+                            "dProdX":13,
+                            "dTimeS":"112300",
+                            "dDirTxt":"Wörgl Hbf",
+                            "dDirFlg":"R",
+                            "type":"N"
+                          },
+                          {
+                            "locX":20,
+                            "idx":23,
+                            "aProdX":13,
+                            "aTimeS":"120600",
+                            "type":"N"
+                          }
+                        ],
+                        "dist":54868,
+                        "ctxRecon":"T$A=1@O=Innsbruck Messe Bahnhof@L=470021101@a=128@$A=1@O=Wörgl Hauptbahnhof@L=470117015@a=128@$202201071123$202201071206$   REX 2$$1$$$$$$",
+                        "subscr":"F",
+                        "prodL":
+                        [
+                          {
+                            "prodX":13,
+                            "fLocX":23,
+                            "tLocX":20,
+                            "fIdx":8,
+                            "tIdx":23
+                          }
+                        ],
+                        "dirL":
+                        [
+                          {
+                            "dirX":3,
+                            "fLocX":23,
+                            "tLocX":20,
+                            "fIdx":8,
+                            "tIdx":23
+                          }
+                        ]
+                      },
+                      {
+                        "jid":"2|#VN#1#ST#1641516241#PI#0#ZI#28575#TA#1#DA#70122#1S#470118733#1T#1140#LS#470218411#LT#1226#PU#81#RT#1#CA#O00#ZE#CJX 1#ZB#   CJX 1#PC#0#FR#470118733#FT#1140#TO#470218411#TT#1226#",
+                        "prodX":14,
+                        "dirTxt":"Kufstein Bahnhof",
+                        "dirFlg":"R",
+                        "stopL":
+                        [
+                          {
+                            "locX":23,
+                            "idx":1,
+                            "dProdX":14,
+                            "dTimeS":"114300",
+                            "dDirTxt":"Kufstein Bahnhof",
+                            "dDirFlg":"R",
+                            "type":"N"
+                          },
+                          {
+                            "locX":7,
+                            "idx":10,
+                            "aProdX":14,
+                            "aTimeS":"121300",
+                            "type":"N"
+                          }
+                        ],
+                        "dist":54865,
+                        "ctxRecon":"T$A=1@O=Innsbruck Messe Bahnhof@L=470021101@a=128@$A=1@O=Wörgl Hauptbahnhof@L=470117016@a=128@$202201071143$202201071213$   CJX 1$$1$$$$$$",
+                        "subscr":"F",
+                        "prodL":
+                        [
+                          {
+                            "prodX":14,
+                            "fLocX":23,
+                            "tLocX":7,
+                            "fIdx":1,
+                            "tIdx":10
+                          }
+                        ],
+                        "dirL":
+                        [
+                          {
+                            "dirX":6,
+                            "fLocX":23,
+                            "tLocX":7,
+                            "fIdx":1,
+                            "tIdx":10
+                          }
+                        ]
+                      },
+                      {
+                        "jid":"2|#VN#1#ST#1641516241#PI#0#ZI#193130#TA#0#DA#70122#1S#230138902#1T#1133#LS#455400103#LT#1446#PU#81#RT#1#CA#O01#ZE#S3#ZB#      S3#PC#1#FR#230138902#FT#1133#TO#455400103#TT#1446#",
+                        "prodX":17,
+                        "dirTxt":"Wörgl Hbf",
+                        "dirFlg":"R",
+                        "stopL":
+                        [
+                          {
+                            "locX":23,
+                            "idx":8,
+                            "dProdX":17,
+                            "dTimeS":"122800",
+                            "dDirTxt":"Wörgl Hbf",
+                            "dDirFlg":"R",
+                            "type":"N"
+                          },
+                          {
+                            "locX":20,
+                            "idx":23,
+                            "aProdX":17,
+                            "aTimeS":"131100",
+                            "type":"N"
+                          }
+                        ],
+                        "dist":54868,
+                        "ctxRecon":"T$A=1@O=Innsbruck Messe Bahnhof@L=470021101@a=128@$A=1@O=Wörgl Hauptbahnhof@L=470117015@a=128@$202201071228$202201071311$   REX 2$$1$$$$$$",
+                        "subscr":"F",
+                        "prodL":
+                        [
+                          {
+                            "prodX":17,
+                            "fLocX":23,
+                            "tLocX":20,
+                            "fIdx":8,
+                            "tIdx":23
+                          }
+                        ],
+                        "dirL":
+                        [
+                          {
+                            "dirX":3,
+                            "fLocX":23,
+                            "tLocX":20,
+                            "fIdx":8,
+                            "tIdx":23
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "ctxRecon":"T$A=1@O=Innsbruck Messe Bahnhof@L=470021101@a=128@$A=1@O=Wörgl Hauptbahnhof@L=470117015@a=128@$202201071024$202201071107$   REX 2$$1$$$$$$",
+                  "msgL":
+                  [
+                    {
+                      "type":"REM",
+                      "remX":2,
+                      "dspl":"U",
+                      "fLocX":23,
+                      "tLocX":20,
+                      "tagL":
+                      [
+                        "RES_JNY_DTL"
+                      ],
+                      "sort":543424512
+                    },
+                    {
+                      "type":"REM",
+                      "remX":3,
+                      "dspl":"U",
+                      "fLocX":23,
+                      "tLocX":20,
+                      "tagL":
+                      [
+                        "RES_JNY_DTL"
+                      ],
+                      "sort":543424512
+                    },
+                    {
+                      "type":"REM",
+                      "remX":14,
+                      "dspl":"U",
+                      "fLocX":23,
+                      "tLocX":20,
+                      "tagL":
+                      [
+                        "RES_JNY_DTL"
+                      ],
+                      "sort":543424512
+                    },
+                    {
+                      "type":"REM",
+                      "remX":15,
+                      "dspl":"U",
+                      "fLocX":23,
+                      "tLocX":20,
+                      "tagL":
+                      [
+                        "RES_JNY_DTL"
+                      ],
+                      "sort":543424512
+                    },
+                    {
+                      "type":"REM",
+                      "remX":16,
+                      "dspl":"U",
+                      "fLocX":23,
+                      "tLocX":20,
+                      "tagL":
+                      [
+                        "RES_JNY_DTL"
+                      ],
+                      "sort":543424512
+                    },
+                    {
+                      "type":"REM",
+                      "remX":4,
+                      "dspl":"U",
+                      "fLocX":23,
+                      "tLocX":20,
+                      "tagL":
+                      [
+                        "RES_JNY_DTL"
+                      ],
+                      "sort":543424512
+                    },
+                    {
+                      "type":"REM",
+                      "remX":17,
+                      "dspl":"U",
+                      "fLocX":23,
+                      "tLocX":20,
+                      "tagL":
+                      [
+                        "RES_JNY_DTL"
+                      ],
+                      "sort":543424512
+                    },
+                    {
+                      "type":"HIM",
+                      "himX":1,
+                      "dspl":"U",
+                      "fLocX":23,
+                      "tagL":
+                      [
+                        "SUM_GLB_HDR_H3","RES_GLB_HDR_H3"
+                      ],
+                      "sort":373560317
+                    }
+                  ],
+                  "subscr":"F",
+                  "prodL":
+                  [
+                    {
+                      "prodX":10,
+                      "fLocX":23,
+                      "tLocX":20,
+                      "fIdx":8,
+                      "tIdx":23
+                    }
+                  ],
+                  "dirL":
+                  [
+                    {
+                      "dirX":3,
+                      "fLocX":23,
+                      "tLocX":20,
+                      "fIdx":8,
+                      "tIdx":23
+                    }
+                  ]
+                }
+              }
+            ],
+            "ctxRecon":"¶HKI¶G@F$A=1@O=Innsbruck Sillpark@L=476158900@a=128@$A=1@O=Innsbruck Messe Bahnhof@L=470021101@a=128@$202201071014$202201071024$$$1$$$$$$§T$A=1@O=Innsbruck Messe Bahnhof@L=470021101@a=128@$A=1@O=Wörgl Hauptbahnhof@L=470117015@a=128@$202201071024$202201071107$   REX 2$$1$$$$$$¶GP¶ft@0@2000@120@1@133@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§bt@0@2000@120@1@133@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§tf@$f@$f@$f@$f@$f@$§¶KI¶H4sIAAAAAAACA+1W247bIBD9lYqHPmUl7GQ3m/xKFSGCsY1sgwU4V+XfOwPYzkbbdlu1Uh82eYHDwMww55i5Eq5LyyvZmWJwZEvoaUWXGVkQN4h6BrM1QP1xBijM77fm76LM+gl3nlvP9iXZfrsSVZzIli6IPAFUA7Zav2TPrxsK2KAE2b5mC1LwQdpgduDtIGF02y3IRcn2J8fQLFvTDxxzUDyeshtD4wVYXYk/9zJYt0Zg8F8gds07OY5PjTG2CBbnechbz0ScXUkYMPCmcPF2Qw+m/6cOegv33fhwKz3m/bpcEBN2Apg93xZ/Cd9NFb5IBRBceJ7TzTN9g+dhB3JIaS8tRNpGHpX4gySlaNBOaoiYLt75g5+OnxiURjSslqqqfThz6JyHGSt54w3c52YzY5fBibrlFdk+ZTPaKV1I52O4DwtDiADBsuVS1FJjzJIlol8xhsSfjNJXGoIqlIOTlvn6ZY3sOrtalQBs4irwcHYl4NgqSYhAmfjgKr6XrFStx0PRBvZ0qm2Vk8JFpJKulxYoaWViKMTbhsjS1HLtegMWojZKSIy0tEb7wC9cZD23vHNvVaL5vgVb8KAcQ830VjrZhkXIOC4Vg+VeGc1Mibd/TkEqzWLeMcs0yYPUxkW2582UE/MKOZ3l6LltGWSEacpogIjlhRpSykeu/LgDiNNLCczOlkA+YZJXoDhcG8qERPlCBnEzToLcV0BEMDSOce9ttNSyupsFnYh4YAl3fGbHwC2lE2tco3pmzRARsMKxZJNooQaigXxjrKHGiIDRHaQN6wYfb5uilEIJXj5UAvqbJQBe/rII441/uAZPcxFCiqEGOPoPipDRPyvDDvS3h6/Jp0Y+NfKpkR9rRB3eUcgOmwwox+PLw5RWXkEjcglkfCgZS48SfcSjDgGulGB9zZ2Mj2TqDrAbe9OXAjt0aebWM72FaWYO0h4tdBMJwVA1dAMVbrxogypZ5dl6ncOD7Xkz9gFYCRzwPXaCcRTf7tDNTKCewPI4guUxbA9YWsb3XWMHMjg3eab3HsfGABs2bpuvVhXh7e4tCy++1Ey0ScgTAu4ZJLgPG2/fAfDX0ReyCwAA",
+            "freq":
+            {
+              "minC":20
+            },
+            "trfRes":
+            {
+              "statusCode":"OK",
+              "fareSetL":
+              [
+                {
+                  "name":"VVT 12 Zonen",
+                  "desc":"",
+                  "fareL":
+                  [
+                    {
+                      "name":"Einzel-Ticket ",
+                      "prc":1580,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Einzel-Ticket Family",
+                      "prc":1580,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Einzel-Ticket Jugend, Family-Light, Spezial",
+                      "prc":1010,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Einzel-Ticket Kind",
+                      "prc":790,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Einzel-Ticket SeniorIn",
+                      "prc":1010,
+                      "cur":"EUR"
+                    }
+                  ]
+                },
+                {
+                  "name":"VVT Tirol",
+                  "desc":"",
+                  "fareL":
+                  [
+                    {
+                      "name":"Jahres-Ticket ",
+                      "prc":50940,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Monats-Ticket Land ",
+                      "prc":10190,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Wochen-Ticket Land ",
+                      "prc":4590,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Tages-Ticket 2Plus (nur Nahverkehr) ",
+                      "prc":3470,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Tages-Ticket Bike (nur Linie 110 und 210) ",
+                      "prc":500,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Jahres-Ticket Spezial ",
+                      "prc":26000,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Semester-Ticket Land ",
+                      "prc":18720,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Jahres-Ticket SeniorIn",
+                      "prc":26000,
+                      "cur":"EUR"
+                    },
+                    {
+                      "name":"Jahres-Ticket SeniorIn (ab 75)",
+                      "prc":13000,
+                      "cur":"EUR"
+                    }
+                  ]
+                }
+              ]
+            },
+            "ovwTrfRefL":
+            [
+              {
+                "type":"F",
+                "fareSetX":0,
+                "fareX":0
+              }
+            ],
+            "msgL":
+            [
+              {
+                "type":"REM",
+                "remX":18,
+                "dspl":"U",
+                "tagL":
+                [
+                  "RES_CON_FTR_H3"
+                ],
+                "sort":147324928
+              }
+            ],
+            "eco":
+            {
+              "co2":0.463224000000000
+            },
+            "conSubscr":"P",
+            "recState":"U",
+            "cksum":"5677ede7_3",
+            "cksumDti":"1c247860_3"
+          }
+        ],
+        "outCtxScrB":"2|OB|MT#11#92769#92768#92801#92801#0#0#85#92750#1#-2147483646#0#1#2|PDH#1bdd2706053fafb61e5491d00c3c5f71|RD#7012022|RT#95000|US#1",
+        "outCtxScrF":"2|OF|MT#11#92774#92774#92827#92827#0#0#165#92770#3#-2147483646#0#1#2|PDH#1bdd2706053fafb61e5491d00c3c5f71|RD#7012022|RT#95000|US#1",
+        "fpB":"20211106",
+        "fpE":"20220531",
+        "planrtTS":"1641545411"
+      }
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+    "suggestLocations": [
+        {
+            "constraint": "Sillpark",
+            "result": {
+                "id": "A=1@O=Innsbruck Sillpark@X=11402493@Y=47266217@U=81@L=476158900@B=1@p=1641516241@i=at:47:61589@"
+            }
+        },
+        {
+            "constraint": "sillpa",
+            "result": {
+                "id": "A=1@O=Innsbruck Sillpark@X=11402493@Y=47266217@U=81@L=476158900@B=1@p=1641516241@i=at:47:61589@"
+            }
+        },
+        {
+            "constraint": "Wörgl Hauptbahnhof",
+            "result": {
+                "id": "A=1@O=Wörgl Hauptbahnhof@X=12060926@Y=47491244@U=81@L=470117000@B=1@p=1641516241@i=at:47:1170@"
+            }
+        },
+        {
+            "constraint": "Innsbruck, Museumstraße 10",
+            "result": {
+                "id": "A=2@O=Museumstraße 10 Hauptgebäude, 6020 Innsbruck@H=10 Hauptgebäude@X=11395931@Y=47267062@U=103@L=980082095@B=1@p=1641288263@"
+            }
+        }
+    ],
+    "queryNearbyLocationsByCoordinate": [
+        {
+            "__comment": "Sillpark",
+            "lat": 47266217,
+            "lon": 11402493,
+            "result": {
+                "id": "A=1@O=Innsbruck Sillpark@l=Innsbruck Sillpark (Amraser Straße)@X=11402610@Y=47265983@u=27@U=81@L=476158903@i=at:47:61589:0:3@"
+            }
+        },
+        {
+            "__comment": "Wörgl Hauptbahnhof",
+            "lat": 47491244,
+            "lon": 12060926,
+            "result": {
+                "id": "A=1@O=Wörgl Hauptbahnhof@X=12060791@Y=47491324@u=13@U=81@L=470117008@i=at:47:1170:0:8@"
+            }
+        }
+    ],
+    "queryDepartures": [
+        {
+            "__comment": "Sillpark",
+            "id": "476158900"
+        },
+        {
+            "__comment": "Wörgl Hauptbahnhof",
+            "id": "470117000"
+        }
+    ],
+    "queryDeparturesInvalidId": "999999",
+    "queryTrips": [
+        {
+            "__comment": "Sillpark to Wörgl Hauptbahnhof",
+            "from": {
+                "type": "station",
+                "id": "476158900"
+            },
+            "to": {
+                "type": "station",
+                "id": "470117000"
+            }
+        },
+        {
+            "__comment": "Sillpark to Wörgl Hauptbahnhof",
+            "from": {
+                "type": "coord",
+                "lat": 47266217,
+                "lon": 11402493
+            },
+            "to": {
+                "type": "coord",
+                "lat": 47491244,
+                "lon": 12060926
+            }
+        }
+    ],
+    "queryTripsTooClose": [
+        {
+            "__comment": "Sillpark",
+            "from": {
+                "type": "station",
+                "id": "476158900"
+            },
+            "to": {
+                "type": "station",
+                "id": "476158900"
+            }
+        }
+    ]
+}
