@@ -1,0 +1,157 @@
+{
+  "ver":"1.18",
+  "ext":"VAO.9",
+  "lang":"deu",
+  "id":"w62kegws68kv8i4k",
+  "err":"OK",
+  "cInfo":
+  {
+    "code":"OK",
+    "url":"",
+    "msg":""
+  },
+  "svcResL":
+  [
+    {
+      "meth":"LocMatch",
+      "err":"OK",
+      "res":
+      {
+        "common":
+        {
+          "locL":
+          [
+
+          ],
+          "prodL":
+          [
+
+          ],
+          "polyL":
+          [
+
+          ],
+          "layerL":
+          [
+            {
+              "id":"standard",
+              "name":"standard",
+              "index":0,
+              "annoCnt":0
+            }
+          ],
+          "crdSysL":
+          [
+            {
+              "id":"standard",
+              "index":0,
+              "type":"WGS84"
+            }
+          ],
+          "opL":
+          [
+
+          ],
+          "remL":
+          [
+
+          ],
+          "icoL":
+          [
+            {
+              "res":"ADR"
+            }
+          ]
+        },
+        "match":
+        {
+          "field":"S",
+          "state":"L",
+          "locL":
+          [
+            {
+              "lid":"A=2@O=Stadiongasse 11, 1010 Wien@H=11@X=16355486@Y=48209068@U=103@L=980114159@B=1@p=1641288263@",
+              "type":"A",
+              "name":"Stadiongasse 11, 1010 Wien",
+              "icoX":0,
+              "extId":"980114159",
+              "state":"F",
+              "crd":
+              {
+                "x":16355486,
+                "y":48209068,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "mapSelectable":true
+            },
+            {
+              "lid":"A=2@O=Stadiongasse 11, 7350 Oberpullendorf@H=11@X=16502181@Y=47499936@U=103@L=980114163@B=1@p=1641288263@",
+              "type":"A",
+              "name":"Stadiongasse 11, 7350 Oberpullendorf",
+              "icoX":0,
+              "extId":"980114163",
+              "state":"F",
+              "crd":
+              {
+                "x":16502181,
+                "y":47499936,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "mapSelectable":true
+            },
+            {
+              "lid":"A=2@O=Stadiongasse 11, 8793 Trofaiach@H=11@X=15012678@Y=47434126@U=103@L=980114164@B=1@p=1641288263@",
+              "type":"A",
+              "name":"Stadiongasse 11, 8793 Trofaiach",
+              "icoX":0,
+              "extId":"980114164",
+              "state":"F",
+              "crd":
+              {
+                "x":15012678,
+                "y":47434126,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "mapSelectable":true
+            },
+            {
+              "lid":"A=2@O=Stadiongasse 14, 7000 Eisenstadt@H=14@X=16525940@Y=47852502@U=103@L=980114162@B=1@p=1641288263@",
+              "type":"A",
+              "name":"Stadiongasse 14, 7000 Eisenstadt",
+              "icoX":0,
+              "extId":"980114162",
+              "state":"F",
+              "crd":
+              {
+                "x":16525940,
+                "y":47852502,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "mapSelectable":true
+            },
+            {
+              "lid":"A=2@O=Stadiongasse 5, 2603 Felixdorf@H=5@X=16245665@Y=47883155@U=103@L=980114161@B=1@p=1641288263@",
+              "type":"A",
+              "name":"Stadiongasse 5, 2603 Felixdorf",
+              "icoX":0,
+              "extId":"980114161",
+              "state":"F",
+              "crd":
+              {
+                "x":16245665,
+                "y":47883155,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "mapSelectable":true
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
