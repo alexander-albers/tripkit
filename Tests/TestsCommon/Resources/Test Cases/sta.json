@@ -1,0 +1,96 @@
+{
+    "suggestLocations": [
+        {
+            "constraint": "Meran Bahnhof",
+            "result": {
+                "id": "66000210"
+            }
+        },
+        {
+            "constraint": "mer",
+            "result": {
+                "id": "66000210"
+            }
+        },
+        {
+            "constraint": "Töll",
+            "result": {
+                "id": "66000205"
+            }
+        },
+        {
+            "constraint": "Bozen, Kapuzinergasse 2",
+            "result": {
+                "id": "streetID:301:2:22021008:1:Kapuzinergasse:Bozen:Kapuzinergasse::Kapuzinergasse:39100:ANY:DIVA_SINGLEHOUSE:680502:348053:APBV:apb:0"
+            }
+        }
+    ],
+    "queryNearbyLocationsByCoordinate": [
+        {
+            "__comment": "Meran Bahnhof",
+            "lat": 46673984,
+            "lon": 11147729,
+            "result": {
+                "id": "66000210"
+            }
+        },
+        {
+            "__comment": "Töll",
+            "lat": 46673147,
+            "lon": 11081868,
+            "result": {
+                "id": "66000205"
+            }
+        }
+    ],
+    "queryDepartures": [
+        {
+            "__comment": "Meran Bahnhof",
+            "id": "66000210"
+        },
+        {
+            "__comment": "Töll",
+            "id": "66000205"
+        }
+    ],
+    "queryDeparturesInvalidId": "999999",
+    "queryTrips": [
+        {
+            "__comment": "Meran Bahnhof to Töll",
+            "from": {
+                "type": "station",
+                "id": "66000210"
+            },
+            "to": {
+                "type": "station",
+                "id": "66000205"
+            }
+        },
+        {
+            "__comment": "Meran Bahnhof to Töll",
+            "from": {
+                "type": "coord",
+                "lat": 46673984,
+                "lon": 11147729
+            },
+            "to": {
+                "type": "coord",
+                "lat": 46673147,
+                "lon": 11081868
+            }
+        }
+    ],
+    "queryTripsTooClose": [
+        {
+            "__comment": "Meran Bahnhof",
+            "from": {
+                "type": "station",
+                "id": "66000210"
+            },
+            "to": {
+                "type": "station",
+                "id": "66000210"
+            }
+        }
+    ]
+}
