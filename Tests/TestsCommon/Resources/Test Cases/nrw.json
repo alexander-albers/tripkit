@@ -1,0 +1,96 @@
+{
+    "suggestLocations": [
+        {
+            "constraint": "Aachen Hbf",
+            "result": {
+                "id": "A=1@O=Aachen Hbf@X=6091495@Y=50767803@U=81@L=8000001@B=1@p=1641485943@"
+            }
+        },
+        {
+            "constraint": "aachen",
+            "result": {
+                "id": "A=1@O=Aachen Hbf@X=6091495@Y=50767803@U=81@L=8000001@B=1@p=1641485943@"
+            }
+        },
+        {
+            "constraint": "Düsseldorf Hbf",
+            "result": {
+                "id": "A=1@O=Düsseldorf Hbf@X=6794317@Y=51219960@U=81@L=8000085@B=1@p=1641485943@"
+            }
+        },
+        {
+            "constraint": "Düsseldorf, Steinstraße 10",
+            "result": {
+                "id": "A=2@O=Düsseldorf - Stadtmitte, Steinstraße 10@X=6780258@Y=51223025@U=103@L=980310237@B=1@p=1557736659@"
+            }
+        }
+    ],
+    "queryNearbyLocationsByCoordinate": [
+        {
+            "__comment": "Aachen Hbf",
+            "lat": 50767803,
+            "lon": 6091495,
+            "result": {
+                "id": "A=1@O=Aachen Hbf@X=6091495@Y=50767803@U=81@L=8000001@B=1@p=1641485943@"
+            }
+        },
+        {
+            "__comment": "Düsseldorf Hbf",
+            "lat": 51219960,
+            "lon": 6794317,
+            "result": {
+                "id": "A=1@O=Düsseldorf Hbf@X=6794317@Y=51219960@U=81@L=8000085@B=1@p=1641485943@"
+            }
+        }
+    ],
+    "queryDepartures": [
+        {
+            "__comment": "Aachen Hbf",
+            "id": "A=1@O=Aachen Hbf@X=6091495@Y=50767803@U=81@L=8000001@B=1@p=1641485943@"
+        },
+        {
+            "__comment": "Düsseldorf Hbf",
+            "id": "A=1@O=Düsseldorf Hbf@X=6794317@Y=51219960@U=81@L=8000085@B=1@p=1641485943@"
+        }
+    ],
+    "queryDeparturesInvalidId": "999999",
+    "queryTrips": [
+        {
+            "__comment": "Aachen Hbf to Düsseldorf Hbf",
+            "from": {
+                "type": "station",
+                "id": "A=1@O=Aachen Hbf@X=6091495@Y=50767803@U=81@L=8000001@B=1@p=1641485943@"
+            },
+            "to": {
+                "type": "station",
+                "id": "A=1@O=Düsseldorf Hbf@X=6794317@Y=51219960@U=81@L=8000085@B=1@p=1641485943@"
+            }
+        },
+        {
+            "__comment": "Aachen Hbf to Düsseldorf Hbf",
+            "from": {
+                "type": "coord",
+                "lat": 50767803,
+                "lon": 6091495
+            },
+            "to": {
+                "type": "coord",
+                "lat": 51219960,
+                "lon": 6794317
+            }
+        }
+    ],
+    "queryTripsTooClose": [
+        {
+            "__comment": "Aachen Hbf",
+            "from": {
+                "type": "station",
+                "id": "A=1@O=Aachen Hbf@X=6091495@Y=50767803@U=81@L=8000001@B=1@p=1641485943@"
+            },
+            "to": {
+                "type": "station",
+                "id": "A=1@O=Aachen Hbf@X=6091495@Y=50767803@U=81@L=8000001@B=1@p=1641485943@"
+            }
+        }
+    ]
+}

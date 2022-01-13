@@ -1,0 +1,151 @@
+{
+  "ver":"1.24",
+  "ext":"DB.R19.04.a",
+  "lang":"deu",
+  "id":"qv66sk4e6xseyick",
+  "err":"OK",
+  "svcResL":
+  [
+    {
+      "meth":"LocMatch",
+      "err":"OK",
+      "res":
+      {
+        "common":
+        {
+          "locL":
+          [
+
+          ],
+          "prodL":
+          [
+
+          ],
+          "polyL":
+          [
+
+          ],
+          "layerL":
+          [
+            {
+              "id":"standard",
+              "name":"standard",
+              "index":0,
+              "annoCnt":0
+            }
+          ],
+          "crdSysL":
+          [
+            {
+              "id":"standard",
+              "index":0,
+              "type":"WGS84"
+            }
+          ],
+          "opL":
+          [
+
+          ],
+          "remL":
+          [
+
+          ],
+          "icoL":
+          [
+            {
+              "res":"ADR"
+            }
+          ]
+        },
+        "match":
+        {
+          "field":"S",
+          "state":"L",
+          "locL":
+          [
+            {
+              "lid":"A=2@O=Düsseldorf - Stadtmitte, Steinstraße 10@X=6780258@Y=51223025@U=103@L=980310237@B=1@p=1557736659@",
+              "type":"A",
+              "name":"Düsseldorf - Stadtmitte, Steinstraße 10",
+              "icoX":0,
+              "extId":"980310237",
+              "state":"F",
+              "crd":
+              {
+                "x":6780258,
+                "y":51223025,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "wt":9182
+            },
+            {
+              "lid":"A=2@O=Düsseldorf - Benrath, Steinkribbenstraße 10@X=6856891@Y=51162843@U=103@L=980308173@B=1@p=1557736659@",
+              "type":"A",
+              "name":"Düsseldorf - Benrath, Steinkribbenstraße 10",
+              "icoX":0,
+              "extId":"980308173",
+              "state":"F",
+              "crd":
+              {
+                "x":6856891,
+                "y":51162843,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "wt":662
+            },
+            {
+              "lid":"A=2@O=Düsseldorf - Holthausen, Einsteinstraße 10@X=6822938@Y=51175284@U=103@L=980309340@B=1@p=1557736659@",
+              "type":"A",
+              "name":"Düsseldorf - Holthausen, Einsteinstraße 10",
+              "icoX":0,
+              "extId":"980309340",
+              "state":"F",
+              "crd":
+              {
+                "x":6822938,
+                "y":51175284,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "wt":237
+            },
+            {
+              "lid":"A=2@O=Düsseldorf - Benrath, Steinhauerstraße 10@X=6883355@Y=51162402@U=103@L=980308172@B=1@p=1557736659@",
+              "type":"A",
+              "name":"Düsseldorf - Benrath, Steinhauerstraße 10",
+              "icoX":0,
+              "extId":"980308172",
+              "state":"F",
+              "crd":
+              {
+                "x":6883355,
+                "y":51162402,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "wt":3544
+            },
+            {
+              "lid":"A=2@O=Düsseldorf - Eller, Frankensteiner Straße 10@X=6837132@Y=51208094@U=103@L=980308532@B=1@p=1557736659@",
+              "type":"A",
+              "name":"Düsseldorf - Eller, Frankensteiner Straße 10",
+              "icoX":0,
+              "extId":"980308532",
+              "state":"F",
+              "crd":
+              {
+                "x":6837132,
+                "y":51208094,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "wt":1271
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

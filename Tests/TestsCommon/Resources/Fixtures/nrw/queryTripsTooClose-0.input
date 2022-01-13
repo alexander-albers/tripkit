@@ -1,0 +1,16 @@
+{
+  "ver":"1.24",
+  "ext":"DB.R19.04.a",
+  "lang":"deu",
+  "id":"erk2ekk64xseg2ck",
+  "err":"OK",
+  "svcResL":
+  [
+    {
+      "meth":"TripSearch",
+      "err":"H9380",
+      "errTxt":"HAFAS Kernel: Departure/Arrival/Intermediate or equivalent stations defined more than once.",
+      "errTxtOut":"Gleiche/äquivalente Haltestelle für Start, Ziel oder Via"
+    }
+  ]
+}

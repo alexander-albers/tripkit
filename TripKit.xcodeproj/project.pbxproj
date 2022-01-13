@@ -427,6 +427,16 @@
 		FA87BA3B20B5B476004F1199 /* OoevvProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA87BA3A20B5B476004F1199 /* OoevvProvider.swift */; };
 		FA87BA3C20B5B476004F1199 /* OoevvProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA87BA3A20B5B476004F1199 /* OoevvProvider.swift */; };
 		FA895A5B1E90FF30002FBA7A /* VrsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA895A5A1E90FF30002FBA7A /* VrsProvider.swift */; };
+		FA8B58742789E6F7006CB35A /* NrwProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8B58732789E6F7006CB35A /* NrwProvider.swift */; };
+		FA8B58752789E6F7006CB35A /* NrwProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8B58732789E6F7006CB35A /* NrwProvider.swift */; };
+		FA8B58762789E6F7006CB35A /* NrwProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8B58732789E6F7006CB35A /* NrwProvider.swift */; };
+		FA8B58772789E6F7006CB35A /* NrwProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8B58732789E6F7006CB35A /* NrwProvider.swift */; };
+		FA8B5879278A1075006CB35A /* NrwProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8B5878278A1075006CB35A /* NrwProviderTests.swift */; };
+		FA8B587A278A1075006CB35A /* NrwProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8B5878278A1075006CB35A /* NrwProviderTests.swift */; };
+		FA8B587B278A1075006CB35A /* NrwProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8B5878278A1075006CB35A /* NrwProviderTests.swift */; };
+		FA8B587D278A1099006CB35A /* NrwProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8B587C278A1099006CB35A /* NrwProviderTests.swift */; };
+		FA8B587E278A1099006CB35A /* NrwProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8B587C278A1099006CB35A /* NrwProviderTests.swift */; };
+		FA8B587F278A1099006CB35A /* NrwProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8B587C278A1099006CB35A /* NrwProviderTests.swift */; };
 		FA8FE64C22741E11003CE4B4 /* secrets.json in Resources */ = {isa = PBXBuildFile; fileRef = FA7058572271B3D80070D2C9 /* secrets.json */; };
 		FA8FE64D22741E11003CE4B4 /* secrets.json in Resources */ = {isa = PBXBuildFile; fileRef = FA7058572271B3D80070D2C9 /* secrets.json */; };
 		FA9172B0217A767100535768 /* VosProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9172AF217A767100535768 /* VosProvider.swift */; };
@@ -1004,6 +1014,9 @@
 		FA85A9BB1F895D5D005C6691 /* VgsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VgsProvider.swift; sourceTree = "<group>"; };
 		FA87BA3A20B5B476004F1199 /* OoevvProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OoevvProvider.swift; sourceTree = "<group>"; };
 		FA895A5A1E90FF30002FBA7A /* VrsProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VrsProvider.swift; sourceTree = "<group>"; };
+		FA8B58732789E6F7006CB35A /* NrwProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NrwProvider.swift; sourceTree = "<group>"; };
+		FA8B5878278A1075006CB35A /* NrwProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NrwProviderTests.swift; sourceTree = "<group>"; };
+		FA8B587C278A1099006CB35A /* NrwProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NrwProviderTests.swift; sourceTree = "<group>"; };
 		FA8F313C1E85A41C00E6CE9B /* LineStyleTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineStyleTests.swift; sourceTree = "<group>"; };
 		FA9172AF217A767100535768 /* VosProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VosProvider.swift; sourceTree = "<group>"; };
 		FA9D377A2266476000CED39F /* Logging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
@@ -1269,6 +1282,7 @@
 				FAC5903126E7508800E8EAF3 /* MvgProviderTests.swift */,
 				FAC5902826E7508500E8EAF3 /* MvvProviderTests.swift */,
 				FAC5902C26E7508600E8EAF3 /* NasaProviderTests.swift */,
+				FA8B587C278A1099006CB35A /* NrwProviderTests.swift */,
 				FAC5903226E7508800E8EAF3 /* NvbwProviderTests.swift */,
 				FAC5903026E7508700E8EAF3 /* NvvProviderTests.swift */,
 				FAC5903426E7508900E8EAF3 /* OebbProviderTests.swift */,
@@ -1480,6 +1494,7 @@
 				FA895A5A1E90FF30002FBA7A /* VrsProvider.swift */,
 				FABFCC1F1E8FE1E600905D5E /* MvgProvider.swift */,
 				FABFCC231E8FE37D00905D5E /* VrnProvider.swift */,
+				FA8B58732789E6F7006CB35A /* NrwProvider.swift */,
 				FABFCC271E8FEBB900905D5E /* VvsProvider.swift */,
 				FABFCC291E8FECD200905D5E /* DingProvider.swift */,
 				FAB754391E3FD3F300C343F2 /* KvvProvider.swift */,
@@ -1574,6 +1589,7 @@
 				FA1C09FE275D1AC000AA66C3 /* MvgProviderTests.swift */,
 				FA1C0A00275D1AC000AA66C3 /* MvvProviderTests.swift */,
 				FA1C0A1D275D1AC100AA66C3 /* NasaProviderTests.swift */,
+				FA8B5878278A1075006CB35A /* NrwProviderTests.swift */,
 				FA1C0A03275D1AC100AA66C3 /* NvbwProviderTests.swift */,
 				FA1C0A17275D1AC100AA66C3 /* NvvProviderTests.swift */,
 				FA1C0A1E275D1AC100AA66C3 /* OebbProviderTests.swift */,
@@ -2261,6 +2277,7 @@
 				FA5CD24524FBB29000B4990A /* VosProvider.swift in Sources */,
 				FA5CD23224FBB29000B4990A /* HvvProvider.swift in Sources */,
 				FA5CD24624FBB29000B4990A /* VmtProvider.swift in Sources */,
+				FA8B58762789E6F7006CB35A /* NrwProvider.swift in Sources */,
 				FAD1D51E274E1CEB009FFA52 /* StopEvent.swift in Sources */,
 				FA5CD24224FBB29000B4990A /* VmsProvider.swift in Sources */,
 				FA5CD24D24FBB29000B4990A /* KvvProvider.swift in Sources */,
@@ -2361,6 +2378,7 @@
 				FA5CD27A24FBB29000B4990A /* VosProvider.swift in Sources */,
 				FA5CD26724FBB29000B4990A /* HvvProvider.swift in Sources */,
 				FA5CD27B24FBB29000B4990A /* VmtProvider.swift in Sources */,
+				FA8B58772789E6F7006CB35A /* NrwProvider.swift in Sources */,
 				FAD1D51F274E1CEB009FFA52 /* StopEvent.swift in Sources */,
 				FA5CD27724FBB29000B4990A /* VmsProvider.swift in Sources */,
 				FA5CD28224FBB29000B4990A /* KvvProvider.swift in Sources */,
@@ -2386,6 +2404,7 @@
 				FA1C0A3D275D1AC200AA66C3 /* TripKitTestCase.swift in Sources */,
 				FA1C0AAF275D1AC200AA66C3 /* DbProviderTests.swift in Sources */,
 				FA1C0A46275D1AC200AA66C3 /* RtProviderTests.swift in Sources */,
+				FA8B587B278A1075006CB35A /* NrwProviderTests.swift in Sources */,
 				FA1C0A82275D1AC200AA66C3 /* VrrProviderTests.swift in Sources */,
 				FA0B5706278848B4003E5A65 /* VorProviderTests.swift in Sources */,
 				FA1C0A61275D1AC200AA66C3 /* VmtProviderTests.swift in Sources */,
@@ -2443,6 +2462,7 @@
 				FA1C0A3C275D1AC200AA66C3 /* TripKitTestCase.swift in Sources */,
 				FA1C0AAE275D1AC200AA66C3 /* DbProviderTests.swift in Sources */,
 				FA1C0A45275D1AC200AA66C3 /* RtProviderTests.swift in Sources */,
+				FA8B587A278A1075006CB35A /* NrwProviderTests.swift in Sources */,
 				FA1C0A81275D1AC200AA66C3 /* VrrProviderTests.swift in Sources */,
 				FA0B5705278848B4003E5A65 /* VorProviderTests.swift in Sources */,
 				FA1C0A60275D1AC200AA66C3 /* VmtProviderTests.swift in Sources */,
@@ -2575,6 +2595,7 @@
 				FA4F58181E8BD1D800EA392F /* GvhProvider.swift in Sources */,
 				FA780E341E9008E1004E2281 /* RtProvider.swift in Sources */,
 				FA2454CA1E86B05600445AD5 /* ParserUtils.swift in Sources */,
+				FA8B58742789E6F7006CB35A /* NrwProvider.swift in Sources */,
 				FAD1D51C274E1CEB009FFA52 /* StopEvent.swift in Sources */,
 				FABF2FB51EA1E0FE0002DE55 /* SessionExpiredError.swift in Sources */,
 				FAA0A297213705030098EFED /* MockKvvProvider.swift in Sources */,
@@ -2600,6 +2621,7 @@
 				FA1C0A3B275D1AC200AA66C3 /* TripKitTestCase.swift in Sources */,
 				FA1C0AAD275D1AC200AA66C3 /* DbProviderTests.swift in Sources */,
 				FA1C0A44275D1AC200AA66C3 /* RtProviderTests.swift in Sources */,
+				FA8B5879278A1075006CB35A /* NrwProviderTests.swift in Sources */,
 				FA1C0A80275D1AC200AA66C3 /* VrrProviderTests.swift in Sources */,
 				FA0B5704278848B4003E5A65 /* VorProviderTests.swift in Sources */,
 				FA1C0A5F275D1AC200AA66C3 /* VmtProviderTests.swift in Sources */,
@@ -2666,6 +2688,7 @@
 				FAC5909426E7509800E8EAF3 /* VbnProviderTests.swift in Sources */,
 				FAC590A926E7509800E8EAF3 /* VblProviderTests.swift in Sources */,
 				FAC5908B26E7509800E8EAF3 /* VvvProviderTests.swift in Sources */,
+				FA8B587D278A1099006CB35A /* NrwProviderTests.swift in Sources */,
 				FAC5909A26E7509800E8EAF3 /* VagfrProviderTests.swift in Sources */,
 				FAC5905026E7508900E8EAF3 /* MvgProviderTests.swift in Sources */,
 				FAC5905626E7508900E8EAF3 /* StvProviderTests.swift in Sources */,
@@ -2726,6 +2749,7 @@
 				FAC5909626E7509800E8EAF3 /* VbnProviderTests.swift in Sources */,
 				FAC590AB26E7509800E8EAF3 /* VblProviderTests.swift in Sources */,
 				FAC5908D26E7509800E8EAF3 /* VvvProviderTests.swift in Sources */,
+				FA8B587F278A1099006CB35A /* NrwProviderTests.swift in Sources */,
 				FAC5909C26E7509800E8EAF3 /* VagfrProviderTests.swift in Sources */,
 				FAC5905226E7508900E8EAF3 /* MvgProviderTests.swift in Sources */,
 				FAC5905826E7508900E8EAF3 /* StvProviderTests.swift in Sources */,
@@ -2786,6 +2810,7 @@
 				FAC5909526E7509800E8EAF3 /* VbnProviderTests.swift in Sources */,
 				FAC590AA26E7509800E8EAF3 /* VblProviderTests.swift in Sources */,
 				FAC5908C26E7509800E8EAF3 /* VvvProviderTests.swift in Sources */,
+				FA8B587E278A1099006CB35A /* NrwProviderTests.swift in Sources */,
 				FAC5909B26E7509800E8EAF3 /* VagfrProviderTests.swift in Sources */,
 				FAC5905126E7508900E8EAF3 /* MvgProviderTests.swift in Sources */,
 				FAC5905726E7508900E8EAF3 /* StvProviderTests.swift in Sources */,
@@ -2936,6 +2961,7 @@
 				FAFF18C31FA50B9500A8ED69 /* GvhProvider.swift in Sources */,
 				FAFF18C41FA50B9500A8ED69 /* RtProvider.swift in Sources */,
 				FAFF18C51FA50B9500A8ED69 /* ParserUtils.swift in Sources */,
+				FA8B58752789E6F7006CB35A /* NrwProvider.swift in Sources */,
 				FAD1D51D274E1CEB009FFA52 /* StopEvent.swift in Sources */,
 				FAFF18C61FA50B9500A8ED69 /* SessionExpiredError.swift in Sources */,
 				FA4E0EDF214C0BE100D94D19 /* MockKvvProvider.swift in Sources */,

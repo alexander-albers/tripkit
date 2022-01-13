@@ -1157,7 +1157,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
                         break
                     case "hm": // RB 20: die euregiobahn
                         break
-                    case "journeynumber": // line number
+                    case "journeynumber", "pname": // line number
                         break
                     case _ where (rem.code ?? "").lowercased().hasPrefix("text.occup"): // load factor
                         break
