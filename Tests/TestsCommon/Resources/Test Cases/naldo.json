@@ -1,0 +1,96 @@
+{
+    "suggestLocations": [
+        {
+            "constraint": "Reutlingen",
+            "result": {
+                "id": "8022006"
+            }
+        },
+        {
+            "constraint": "hbf",
+            "result": {
+                "id": "9001008"
+            }
+        },
+        {
+            "constraint": "Tübingen",
+            "result": {
+                "id": "8011000"
+            }
+        },
+        {
+            "constraint": "Reutlingen, Karlstraße 40",
+            "result": {
+                "id": "streetID:1500000109:40:8415061:-1:Karlstraße:Reutlingen:Karlstraße::Karlstraße:72764:ANY:DIVA_SINGLEHOUSE:1025828:5809887:MRCV:B_W"
+            }
+        }
+    ],
+    "queryNearbyLocationsByCoordinate": [
+        {
+            "__comment": "Reutlingen Hbf",
+            "lat": 48496429,
+            "lon": 9209510,
+            "result": {
+                "id": "8022006"
+            }
+        },
+        {
+            "__comment": "Tübingen Hbf",
+            "lat": 48516147,
+            "lon": 9055575,
+            "result": {
+                "id": "8011000"
+            }
+        }
+    ],
+    "queryDepartures": [
+        {
+            "__comment": "Reutlingen Hbf",
+            "id": "8022006"
+        },
+        {
+            "__comment": "Tübingen Hbf",
+            "id": "8011000"
+        }
+    ],
+    "queryDeparturesInvalidId": "999999",
+    "queryTrips": [
+        {
+            "__comment": "Reutlingen Hbf to Tübingen Hbf",
+            "from": {
+                "type": "station",
+                "id": "8022006"
+            },
+            "to": {
+                "type": "station",
+                "id": "8011000"
+            }
+        },
+        {
+            "__comment": "Reutlingen Hbf to Tübingen Hbf",
+            "from": {
+                "type": "coord",
+                "lat": 48496429,
+                "lon": 9209510
+            },
+            "to": {
+                "type": "coord",
+                "lat": 48516147,
+                "lon": 9055575
+            }
+        }
+    ],
+    "queryTripsTooClose": [
+        {
+            "__comment": "Reutlingen Hbf",
+            "from": {
+                "type": "station",
+                "id": "8022006"
+            },
+            "to": {
+                "type": "station",
+                "id": "8022006"
+            }
+        }
+    ]
+}
