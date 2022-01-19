@@ -465,7 +465,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
                 journeyContext = nil
             }
             let wagonSequenceContext: URL?
-            if line.label?.hasPrefix("ICE") ?? false, let number = line.number {
+            if line.label?.hasPrefix("ICE") ?? false, let number = line.number, predictedTime != nil {
                 wagonSequenceContext = getWagonSequenceUrl(number: number, plannedTime: plannedTime)
             } else {
                 wagonSequenceContext = nil
