@@ -2,7 +2,7 @@
   "ver":"1.18",
   "ext":"ZVV.2",
   "lang":"deu",
-  "id":"m26kmmca66gexiwg",
+  "id":"bu44ugx2mcsrgw4k",
   "err":"OK",
   "svcResL":
   [
@@ -164,7 +164,7 @@
           "locL":
           [
             {
-              "lid":"A=1@O=Zürich, Hegibachplatz@X=8560715@Y=47361772@U=21@L=8530812@B=1@p=1637660952@",
+              "lid":"A=1@O=Zürich, Hegibachplatz@X=8560715@Y=47361772@U=85@L=8530812@B=1@p=1642006212@",
               "type":"S",
               "name":"Zürich, Hegibachplatz",
               "icoX":0,
@@ -185,7 +185,7 @@
 2,
 3
               ],
-              "wt":8407,
+              "wt":7609,
               "isMainMast":true
             },
             {
@@ -218,7 +218,7 @@
               }
             },
             {
-              "lid":"A=1@O=Zürich, Stampfenbachplatz@X=8542764@Y=47380290@U=22@L=8591379@B=1@p=1638378040@",
+              "lid":"A=1@O=Zürich, Stampfenbachplatz@X=8542764@Y=47380290@U=85@L=8591379@B=1@p=1642006212@",
               "type":"S",
               "name":"Zürich, Stampfenbachplatz",
               "icoX":1,
@@ -237,11 +237,11 @@
 1,
 2
               ],
-              "wt":5727,
+              "wt":5586,
               "isMainMast":true
             },
             {
-              "lid":"A=1@O=Thalwil, Mühlebachplatz@X=8564895@Y=47291260@U=22@L=8573166@B=1@p=1638378040@",
+              "lid":"A=1@O=Thalwil, Mühlebachplatz@X=8564895@Y=47291260@U=85@L=8573166@B=1@p=1642006212@",
               "type":"S",
               "name":"Thalwil, Mühlebachplatz",
               "icoX":2,
@@ -257,9 +257,10 @@
               "pCls":320,
               "pRefL":
               [
-2
+2,
+3
               ],
-              "wt":982,
+              "wt":911,
               "isMainMast":true
             }
           ]

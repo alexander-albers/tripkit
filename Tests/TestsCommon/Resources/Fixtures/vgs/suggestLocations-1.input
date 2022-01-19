@@ -1,7 +1,7 @@
 {
   "ver":"1.21",
   "lang":"deu",
-  "id":"yqik4mxg66wix2wg",
+  "id":"822s4gcamcca9i8g",
   "err":"OK",
   "svcResL":
   [
@@ -199,6 +199,16 @@
               }
             },
             {
+              "name":"Bus 166",
+              "nameS":"166",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"166"
+              }
+            },
+            {
               "name":"Bus 172",
               "nameS":"172",
               "icoX":1,
@@ -219,106 +229,6 @@
               }
             },
             {
-              "name":"Bus N1",
-              "nameS":"N1",
-              "icoX":1,
-              "cls":128,
-              "prodCtx":
-              {
-                "lineId":"N1"
-              }
-            },
-            {
-              "name":"Bus N2",
-              "nameS":"N2",
-              "icoX":1,
-              "cls":128,
-              "prodCtx":
-              {
-                "lineId":"N2"
-              }
-            },
-            {
-              "name":"Bus N3",
-              "nameS":"N3",
-              "icoX":1,
-              "cls":128,
-              "prodCtx":
-              {
-                "lineId":"N3"
-              }
-            },
-            {
-              "name":"Bus N4",
-              "nameS":"N4",
-              "icoX":1,
-              "cls":128,
-              "prodCtx":
-              {
-                "lineId":"N4"
-              }
-            },
-            {
-              "name":"Bus N5",
-              "nameS":"N5",
-              "icoX":1,
-              "cls":128,
-              "prodCtx":
-              {
-                "lineId":"N5"
-              }
-            },
-            {
-              "name":"Bus N11",
-              "nameS":"N11",
-              "icoX":1,
-              "cls":128,
-              "prodCtx":
-              {
-                "lineId":"N11"
-              }
-            },
-            {
-              "name":"Bus N12",
-              "nameS":"N12",
-              "icoX":1,
-              "cls":128,
-              "prodCtx":
-              {
-                "lineId":"N12"
-              }
-            },
-            {
-              "name":"Bus N13",
-              "nameS":"N13",
-              "icoX":1,
-              "cls":128,
-              "prodCtx":
-              {
-                "lineId":"N13"
-              }
-            },
-            {
-              "name":"Bus N14",
-              "nameS":"N14",
-              "icoX":1,
-              "cls":128,
-              "prodCtx":
-              {
-                "lineId":"N14"
-              }
-            },
-            {
-              "name":"Bus N15",
-              "nameS":"N15",
-              "icoX":1,
-              "cls":128,
-              "prodCtx":
-              {
-                "lineId":"N15"
-              }
-            },
-            {
               "name":"AST 102",
               "nameS":"102",
               "icoX":2,
@@ -326,6 +236,16 @@
               "prodCtx":
               {
                 "lineId":"102"
+              }
+            },
+            {
+              "name":"AST 107",
+              "nameS":"107",
+              "icoX":2,
+              "cls":512,
+              "prodCtx":
+              {
+                "lineId":"107"
               }
             },
             {
@@ -409,6 +329,16 @@
               }
             },
             {
+              "name":"Bus 836",
+              "nameS":"836",
+              "icoX":3,
+              "cls":1024,
+              "prodCtx":
+              {
+                "lineId":"836"
+              }
+            },
+            {
               "name":"Bus 838",
               "nameS":"838",
               "icoX":3,
@@ -416,16 +346,6 @@
               "prodCtx":
               {
                 "lineId":"838"
-              }
-            },
-            {
-              "name":"AST 1",
-              "nameS":"1",
-              "icoX":2,
-              "cls":512,
-              "prodCtx":
-              {
-                "lineId":"1"
               }
             },
             {
@@ -446,6 +366,16 @@
               "prodCtx":
               {
                 "lineId":"756"
+              }
+            },
+            {
+              "name":"AST 1",
+              "nameS":"1",
+              "icoX":2,
+              "cls":512,
+              "prodCtx":
+              {
+                "lineId":"1"
               }
             },
             {
@@ -699,11 +629,11 @@
           "locL":
           [
             {
-              "lid":"A=1@O=Johanneskirche, Saarbrücken@X=6996295@Y=49236050@U=80@L=000010619@B=1@V=11.9,@p=0@",
+              "lid":"A=1@O=Johanneskirche, Saarbrücken@X=6996295@Y=49236050@U=80@L=10619@B=1@p=1642512423@",
               "type":"S",
               "name":"Johanneskirche, Saarbrücken",
               "icoX":0,
-              "extId":"000010619",
+              "extId":"10619",
               "state":"F",
               "crd":
               {
@@ -747,44 +677,16 @@
 29,
 30,
 31,
-32,
-33,
-34,
-35,
-36,
-37,
-38,
-39
+32
               ],
-              "wt":1881
+              "wt":1806
             },
             {
-              "lid":"A=1@O=Johannes-Kirchweng-Str., Wadgassen@X=6782154@Y=49266011@U=80@L=000047910@B=1@V=11.9,@p=0@",
-              "type":"S",
-              "name":"Johannes-Kirchweng-Str., Wadgassen",
-              "icoX":2,
-              "extId":"000047910",
-              "state":"F",
-              "crd":
-              {
-                "x":6782154,
-                "y":49266011,
-                "layerX":0,
-                "crdSysX":0
-              },
-              "pCls":512,
-              "pRefL":
-              [
-40
-              ],
-              "wt":77
-            },
-            {
-              "lid":"A=1@O=Johannes-Gutenberg-Str., Ottweiler@X=7166183@Y=49398925@U=80@L=000033861@B=1@V=11.9,@p=0@",
+              "lid":"A=1@O=Johannes-Gutenberg-Str., Ottweiler@X=7166183@Y=49398925@U=80@L=33861@B=1@p=1642512423@",
               "type":"S",
               "name":"Johannes-Gutenberg-Str., Ottweiler",
               "icoX":1,
-              "extId":"000033861",
+              "extId":"33861",
               "state":"F",
               "crd":
               {
@@ -796,17 +698,38 @@
               "pCls":1152,
               "pRefL":
               [
-41,
-42
+33,
+34
               ],
-              "wt":25
+              "wt":122
             },
             {
-              "lid":"A=1@O=Johannesschule, Hüttersdorf Schmelz@X=6847686@Y=49422019@U=80@L=000045506@B=1@V=11.9,@p=0@",
+              "lid":"A=1@O=Johannes-Kirchweng-Str., Wadgassen@X=6782154@Y=49266011@U=80@L=47910@B=1@p=1642512423@",
+              "type":"S",
+              "name":"Johannes-Kirchweng-Str., Wadgassen",
+              "icoX":2,
+              "extId":"47910",
+              "state":"F",
+              "crd":
+              {
+                "x":6782154,
+                "y":49266011,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":512,
+              "pRefL":
+              [
+35
+              ],
+              "wt":86
+            },
+            {
+              "lid":"A=1@O=Johannesschule, Hüttersdorf Schmelz@X=6847686@Y=49422019@U=80@L=45506@B=1@p=1642512423@",
               "type":"S",
               "name":"Johannesschule, Hüttersdorf Schmelz",
               "icoX":1,
-              "extId":"000045506",
+              "extId":"45506",
               "state":"F",
               "crd":
               {
@@ -818,16 +741,16 @@
               "pCls":128,
               "pRefL":
               [
-43
+36
               ],
-              "wt":18
+              "wt":15
             },
             {
-              "lid":"A=1@O=Johanneum, Homburg@X=7326155@Y=49304008@U=80@L=000050005@B=1@V=11.9,@p=0@",
+              "lid":"A=1@O=Johanneum, Homburg@X=7326155@Y=49304008@U=80@L=50005@B=1@p=1642512423@",
               "type":"S",
               "name":"Johanneum, Homburg",
               "icoX":1,
-              "extId":"000050005",
+              "extId":"50005",
               "state":"F",
               "crd":
               {
@@ -839,22 +762,22 @@
               "pCls":128,
               "pRefL":
               [
+37,
+38,
+39,
+40,
+41,
+42,
+43,
 44,
 45,
 46,
 47,
 48,
 49,
-50,
-51,
-52,
-53,
-54,
-55,
-56,
-57
+50
               ],
-              "wt":135
+              "wt":116
             }
           ]
         }

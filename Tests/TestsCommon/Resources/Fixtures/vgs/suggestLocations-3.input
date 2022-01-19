@@ -1,7 +1,7 @@
 {
   "ver":"1.21",
   "lang":"deu",
-  "id":"yqikkm8i66wq8wwx",
+  "id":"82issgc8mccaxgwx",
   "err":"OK",
   "svcResL":
   [
@@ -63,7 +63,7 @@
           "locL":
           [
             {
-              "lid":"A=2@O=Saarbrücken - Sankt Johann, Reichsstraße 5@X=6990776@Y=49238818@U=98@L=991085982@B=1@V=11.9,@p=1473941494@",
+              "lid":"A=2@O=Saarbrücken - Sankt Johann, Reichsstraße 5@H=5@X=6990776@Y=49238818@U=98@L=991085982@B=1@p=1473941494@",
               "type":"A",
               "name":"Saarbrücken - Sankt Johann, Reichsstraße 5",
               "icoX":0,
@@ -78,22 +78,7 @@
               }
             },
             {
-              "lid":"A=2@O=Saarbrücken - Sankt Johann, Bleichstraße 4@X=6998192@Y=49231339@U=98@L=991085902@B=1@V=11.9,@p=1473941494@",
-              "type":"A",
-              "name":"Saarbrücken - Sankt Johann, Bleichstraße 4",
-              "icoX":0,
-              "extId":"991085902",
-              "state":"F",
-              "crd":
-              {
-                "x":6998192,
-                "y":49231339,
-                "layerX":0,
-                "crdSysX":0
-              }
-            },
-            {
-              "lid":"A=2@O=Saarbrücken - Sankt Johann, Egon-Reinert-Straße 5@X=7004422@Y=49232328@U=98@L=991085915@B=1@V=11.9,@p=1473941494@",
+              "lid":"A=2@O=Saarbrücken - Sankt Johann, Egon-Reinert-Straße 5@H=5@X=7004422@Y=49232328@U=98@L=991085915@B=1@p=1473941494@",
               "type":"A",
               "name":"Saarbrücken - Sankt Johann, Egon-Reinert-Straße 5",
               "icoX":0,
@@ -108,7 +93,22 @@
               }
             },
             {
-              "lid":"A=2@O=Saarbrücken - Sankt Johann, Faktoreistraße 4@X=6989536@Y=49238063@U=98@L=991085917@B=1@V=11.9,@p=1473941494@",
+              "lid":"A=2@O=Saarbrücken - Sankt Johann, Bleichstraße 4@H=4@X=6998192@Y=49231339@U=98@L=991085902@B=1@p=1473941494@",
+              "type":"A",
+              "name":"Saarbrücken - Sankt Johann, Bleichstraße 4",
+              "icoX":0,
+              "extId":"991085902",
+              "state":"F",
+              "crd":
+              {
+                "x":6998192,
+                "y":49231339,
+                "layerX":0,
+                "crdSysX":0
+              }
+            },
+            {
+              "lid":"A=2@O=Saarbrücken - Sankt Johann, Faktoreistraße 4@H=4@X=6989536@Y=49238063@U=98@L=991085917@B=1@p=1473941494@",
               "type":"A",
               "name":"Saarbrücken - Sankt Johann, Faktoreistraße 4",
               "icoX":0,
@@ -123,7 +123,7 @@
               }
             },
             {
-              "lid":"A=2@O=Saarbrücken - Sankt Johann, Johannisstraße 5@X=6997239@Y=49235780@U=98@L=991085942@B=1@V=11.9,@p=1473941494@",
+              "lid":"A=2@O=Saarbrücken - Sankt Johann, Johannisstraße 5@H=5@X=6997239@Y=49235780@U=98@L=991085942@B=1@p=1473941494@",
               "type":"A",
               "name":"Saarbrücken - Sankt Johann, Johannisstraße 5",
               "icoX":0,

@@ -2,7 +2,7 @@
   "ver":"1.18",
   "ext":"ZVV.2",
   "lang":"deu",
-  "id":"6imgemsa66ge92wg",
+  "id":"bu44eg82mcsrhw4s",
   "err":"OK",
   "svcResL":
   [
@@ -19,11 +19,6 @@
           ],
           "prodL":
           [
-            {
-              "name":"",
-              "icoX":0,
-              "cls":2
-            },
             {
               "name":"",
               "icoX":0,
@@ -169,33 +164,7 @@
           "locL":
           [
             {
-              "lid":"A=1@O=Hardbrücke@X=8516902@Y=47385440@U=21@L=8503020@B=1@p=1637660952@",
-              "type":"S",
-              "name":"Hardbrücke",
-              "icoX":0,
-              "extId":"8503020",
-              "state":"F",
-              "crd":
-              {
-                "x":8516902,
-                "y":47385440,
-                "layerX":0,
-                "crdSysX":0
-              },
-              "pCls":866,
-              "pRefL":
-              [
-0,
-1,
-2,
-3,
-4
-              ],
-              "wt":5488,
-              "isMainMast":true
-            },
-            {
-              "lid":"A=1@O=Zürich, Bahnhof Hardbrücke@X=8517090@Y=47385198@U=22@L=8591060@B=1@p=1638378040@",
+              "lid":"A=1@O=Zürich, Bahnhof Hardbrücke@X=8517090@Y=47385198@U=85@L=8591060@B=1@p=1642006212@",
               "type":"S",
               "name":"Zürich, Bahnhof Hardbrücke",
               "icoX":0,
@@ -208,16 +177,40 @@
                 "layerX":0,
                 "crdSysX":0
               },
-              "pCls":866,
+              "pCls":864,
               "pRefL":
               [
 0,
 1,
 2,
-3,
-4
+3
               ],
-              "wt":2791,
+              "wt":2818,
+              "isMainMast":true
+            },
+            {
+              "lid":"A=1@O=Hardbrücke@X=8516902@Y=47385440@U=85@L=8503020@B=1@p=1642006212@",
+              "type":"S",
+              "name":"Hardbrücke",
+              "icoX":0,
+              "extId":"8503020",
+              "state":"F",
+              "crd":
+              {
+                "x":8516902,
+                "y":47385440,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":864,
+              "pRefL":
+              [
+0,
+1,
+2,
+3
+              ],
+              "wt":4814,
               "isMainMast":true
             },
             {
@@ -250,7 +243,7 @@
               }
             },
             {
-              "lid":"A=1@O=Winterthur, Wylandbrücke@X=8721146@Y=47495432@U=22@L=8591016@B=1@p=1638378040@",
+              "lid":"A=1@O=Winterthur, Wylandbrücke@X=8721146@Y=47495432@U=85@L=8591016@B=1@p=1642006212@",
               "type":"S",
               "name":"Winterthur, Wylandbrücke",
               "icoX":2,
@@ -263,12 +256,12 @@
                 "layerX":0,
                 "crdSysX":0
               },
-              "pCls":320,
+              "pCls":64,
               "pRefL":
               [
-3
+2
               ],
-              "wt":957
+              "wt":886
             }
           ]
         }

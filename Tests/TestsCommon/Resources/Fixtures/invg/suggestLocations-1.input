@@ -1,7 +1,7 @@
 {
   "ver":"1.16",
   "lang":"deu",
-  "id":"d96sckax42ijwgcs",
+  "id":"edg4cisak8mn9gck",
   "svcResL":
   [
     {
@@ -135,6 +135,16 @@
               "prodCtx":
               {
                 "lineId":"31"
+              }
+            },
+            {
+              "name":"Bus 40",
+              "nameS":"40",
+              "icoX":0,
+              "cls":1,
+              "prodCtx":
+              {
+                "lineId":"40"
               }
             },
             {
@@ -358,16 +368,6 @@
               }
             },
             {
-              "name":"Bus 40",
-              "nameS":"40",
-              "icoX":0,
-              "cls":1,
-              "prodCtx":
-              {
-                "lineId":"40"
-              }
-            },
-            {
               "name":"Bus 9230",
               "nameS":"9230",
               "icoX":0,
@@ -506,11 +506,11 @@
           "locL":
           [
             {
-              "lid":"A=1@O=Rathausplatz@X=11425263@Y=48762435@U=80@L=000060706@B=1@p=1634295716@",
+              "lid":"A=1@O=Rathausplatz@X=11425263@Y=48762435@U=80@L=60706@B=1@p=1641907772@",
               "type":"S",
               "name":"Rathausplatz",
               "icoX":0,
-              "extId":"000060706",
+              "extId":"60706",
               "state":"F",
               "crd":
               {
@@ -556,16 +556,17 @@
 30,
 31,
 32,
-33
+33,
+34
               ],
               "wt":32767
             },
             {
-              "lid":"A=1@O=Rathausplatz Ersatz@X=11426557@Y=48762642@U=80@L=000060720@B=1@p=1634295716@",
+              "lid":"A=1@O=Rathausplatz Ersatz@X=11426557@Y=48762642@U=80@L=60720@B=1@p=1641907772@",
               "type":"S",
               "name":"Rathausplatz Ersatz",
               "icoX":0,
-              "extId":"000060720",
+              "extId":"60720",
               "state":"F",
               "crd":
               {
@@ -575,7 +576,7 @@
                 "layerX":0,
                 "crdSysX":0
               },
-              "pCls":0,
+              "pCls":1,
               "pRefL":
               [
 0,
@@ -588,13 +589,12 @@
 7,
 10,
 11,
-12,
 13,
 14,
 15,
 16,
-19,
-21,
+17,
+20,
 22,
 23,
 24,
@@ -606,15 +606,16 @@
 30,
 31,
 32,
-33
+33,
+34
               ]
             },
             {
-              "lid":"A=1@O=Kösching, Rathaus@X=11499972@Y=48810977@U=80@L=000040999@B=1@p=1634295716@",
+              "lid":"A=1@O=Kösching, Rathaus@X=11499972@Y=48810977@U=80@L=40999@B=1@p=1641907772@",
               "type":"S",
               "name":"Kösching, Rathaus",
               "icoX":0,
-              "extId":"000040999",
+              "extId":"40999",
               "state":"F",
               "crd":
               {
@@ -627,8 +628,8 @@
               "pCls":1,
               "pRefL":
               [
-34,
-18,
+12,
+19,
 35,
 36,
 37
@@ -636,11 +637,11 @@
               "wt":32767
             },
             {
-              "lid":"A=1@O=Gaimersheim, Rathaus@X=11370339@Y=48808999@U=80@L=000021702@B=1@p=1634295716@",
+              "lid":"A=1@O=Gaimersheim, Rathaus@X=11370339@Y=48808999@U=80@L=21702@B=1@p=1641907772@",
               "type":"S",
               "name":"Gaimersheim, Rathaus",
               "icoX":0,
-              "extId":"000021702",
+              "extId":"21702",
               "state":"F",
               "crd":
               {
@@ -656,7 +657,7 @@
 38,
 39,
 40,
-19,
+20,
 35,
 41,
 42
@@ -664,11 +665,11 @@
               "wt":32767
             },
             {
-              "lid":"A=1@O=Ingolstadt, Rathausplatz/Schutterstraße@X=11426144@Y=48762498@U=80@L=000060702@B=1@p=1634295716@",
+              "lid":"A=1@O=Ingolstadt, Rathausplatz/Schutterstraße@X=11426144@Y=48762498@U=80@L=60702@B=1@p=1641907772@",
               "type":"S",
               "name":"Ingolstadt, Rathausplatz/Schutterstraße",
               "icoX":0,
-              "extId":"000060702",
+              "extId":"60702",
               "state":"F",
               "crd":
               {
@@ -714,7 +715,8 @@
 30,
 31,
 32,
-33
+33,
+34
               ],
               "wt":32767
             }

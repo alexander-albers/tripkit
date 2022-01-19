@@ -1,7 +1,7 @@
 {
   "ver":"1.21",
   "lang":"deu",
-  "id":"6tigsmxg46wi828g",
+  "id":"wigs6gcqmccapgwx",
   "err":"OK",
   "svcResL":
   [
@@ -136,16 +136,6 @@
               "prodCtx":
               {
                 "lineId":"466"
-              }
-            },
-            {
-              "name":"Bus N5",
-              "nameS":"N5",
-              "icoX":0,
-              "cls":128,
-              "prodCtx":
-              {
-                "lineId":"N5"
               }
             },
             {
@@ -319,6 +309,16 @@
               }
             },
             {
+              "name":"Bus 146",
+              "nameS":"146",
+              "icoX":0,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"146"
+              }
+            },
+            {
               "name":"Bus 150",
               "nameS":"150",
               "icoX":0,
@@ -386,26 +386,6 @@
               "prodCtx":
               {
                 "lineId":"666"
-              }
-            },
-            {
-              "name":"Bus N1",
-              "nameS":"N1",
-              "icoX":0,
-              "cls":128,
-              "prodCtx":
-              {
-                "lineId":"N1"
-              }
-            },
-            {
-              "name":"Bus N15",
-              "nameS":"N15",
-              "icoX":0,
-              "cls":128,
-              "prodCtx":
-              {
-                "lineId":"N15"
               }
             },
             {
@@ -497,6 +477,106 @@
               {
                 "lineId":"835"
               }
+            },
+            {
+              "name":"Bus 102",
+              "nameS":"102",
+              "icoX":0,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"102"
+              }
+            },
+            {
+              "name":"Bus 151",
+              "nameS":"151",
+              "icoX":0,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"151"
+              }
+            },
+            {
+              "name":"Bus 181",
+              "nameS":"181",
+              "icoX":0,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"181"
+              }
+            },
+            {
+              "name":"Bus 813",
+              "nameS":"813",
+              "icoX":1,
+              "cls":1024,
+              "prodCtx":
+              {
+                "lineId":"813"
+              }
+            },
+            {
+              "name":"Bus 840",
+              "nameS":"840",
+              "icoX":1,
+              "cls":1024,
+              "prodCtx":
+              {
+                "lineId":"840"
+              }
+            },
+            {
+              "name":"Bus 890",
+              "nameS":"890",
+              "icoX":1,
+              "cls":1024,
+              "prodCtx":
+              {
+                "lineId":"890"
+              }
+            },
+            {
+              "name":"Bus 231",
+              "nameS":"231",
+              "icoX":0,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"231"
+              }
+            },
+            {
+              "name":"Bus 232",
+              "nameS":"232",
+              "icoX":0,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"232"
+              }
+            },
+            {
+              "name":"Bus 234",
+              "nameS":"234",
+              "icoX":0,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"234"
+              }
+            },
+            {
+              "name":"AST 224",
+              "nameS":"224",
+              "icoX":2,
+              "cls":512,
+              "prodCtx":
+              {
+                "lineId":"224"
+              }
             }
           ],
           "polyL":
@@ -574,12 +654,6 @@
                 "g":203,
                 "b":20
               }
-            },
-            {
-              "res":"POI"
-            },
-            {
-              "res":"ADR"
             }
           ]
         },
@@ -590,11 +664,11 @@
           "locL":
           [
             {
-              "lid":"A=1@O=Alte Saarbrücke, Saarlouis@X=6747357@Y=49317807@U=80@L=000040039@B=1@V=11.9,@p=0@",
+              "lid":"A=1@O=Alte Saarbrücke, Saarlouis@X=6747357@Y=49317807@U=80@L=40039@B=1@p=1642512423@",
               "type":"S",
               "name":"Alte Saarbrücke, Saarlouis",
               "icoX":0,
-              "extId":"000040039",
+              "extId":"40039",
               "state":"F",
               "crd":
               {
@@ -631,17 +705,16 @@
 22,
 23,
 24,
-25,
-26
+25
               ],
-              "wt":372
+              "wt":354
             },
             {
-              "lid":"A=1@O=ALTE KIRCHE/GEMEINDEZENTRUM, Saarbrücken@X=6995873@Y=49231528@U=80@L=000010616@B=1@V=11.9,@p=0@",
+              "lid":"A=1@O=ALTE KIRCHE/GEMEINDEZENTRUM, Saarbrücken@X=6995873@Y=49231528@U=80@L=10616@B=1@p=1642512423@",
               "type":"S",
               "name":"ALTE KIRCHE/GEMEINDEZENTRUM, Saarbrücken",
               "icoX":0,
-              "extId":"000010616",
+              "extId":"10616",
               "state":"F",
               "crd":
               {
@@ -653,6 +726,7 @@
               "pCls":1664,
               "pRefL":
               [
+26,
 27,
 28,
 29,
@@ -667,47 +741,16 @@
 38,
 39,
 40,
-41,
-42,
-43
+41
               ],
-              "wt":363
+              "wt":344
             },
             {
-              "lid":"A=4@O=Saarbrücken, Alte Brücke@X=6994381@Y=49231798@U=99@L=009000615@B=1@V=11.9,@p=1637077201@",
-              "type":"P",
-              "name":"Saarbrücken, Alte Brücke",
-              "icoX":3,
-              "extId":"009000615",
-              "state":"F",
-              "crd":
-              {
-                "x":6994381,
-                "y":49231798,
-                "layerX":0,
-                "crdSysX":0
-              }
-            },
-            {
-              "lid":"A=2@O=Kaiserslautern, Alte Brücke@X=7747317@Y=49445741@U=98@b=990626905@B=1@V=11.9,@p=1473941494@",
-              "type":"A",
-              "name":"Kaiserslautern, Alte Brücke",
-              "icoX":4,
-              "state":"M",
-              "crd":
-              {
-                "x":7747317,
-                "y":49445741,
-                "layerX":0,
-                "crdSysX":0
-              }
-            },
-            {
-              "lid":"A=1@O=Alter Mühlenweg, Bischmisheim Saarbrücken@X=7062780@Y=49217127@U=80@L=000013301@B=1@V=11.9,@p=0@",
+              "lid":"A=1@O=Alter Mühlenweg, Bischmisheim Saarbrücken@X=7062780@Y=49217127@U=80@L=13301@B=1@p=1642512423@",
               "type":"S",
               "name":"Alter Mühlenweg, Bischmisheim Saarbrücken",
               "icoX":0,
-              "extId":"000013301",
+              "extId":"13301",
               "state":"F",
               "crd":
               {
@@ -719,13 +762,63 @@
               "pCls":1152,
               "pRefL":
               [
-44,
+42,
 31,
-45,
-46,
-47
+43,
+44,
+45
               ],
-              "wt":357
+              "wt":340
+            },
+            {
+              "lid":"A=1@O=Altgasse, Altenkessel Saarbrücken@X=6910170@Y=49261471@U=80@L=12010@B=1@p=1642512423@",
+              "type":"S",
+              "name":"Altgasse, Altenkessel Saarbrücken",
+              "icoX":0,
+              "extId":"12010",
+              "state":"F",
+              "crd":
+              {
+                "x":6910170,
+                "y":49261471,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":1152,
+              "pRefL":
+              [
+46,
+47,
+48,
+49,
+50,
+51
+              ],
+              "wt":331
+            },
+            {
+              "lid":"A=1@O=Altes Denkmal, Oberauerbach Zweibrücken@X=7415642@Y=49270029@U=80@L=70041@B=1@p=1642512423@",
+              "type":"S",
+              "name":"Altes Denkmal, Oberauerbach Zweibrücken",
+              "icoX":0,
+              "extId":"70041",
+              "state":"F",
+              "crd":
+              {
+                "x":7415642,
+                "y":49270029,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":640,
+              "pRefL":
+              [
+52,
+53,
+54,
+55
+              ],
+              "wt":138
             }
           ]
         }

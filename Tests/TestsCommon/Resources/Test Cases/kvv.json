@@ -3,7 +3,7 @@
         {
             "constraint": "Marktplatz Karlsruhe",
             "result": {
-                "id": "7000001"
+                "id": "7001011"
             }
         },
         {
@@ -15,7 +15,7 @@
         {
             "constraint": "Händelstraße",
             "result": {
-                "id": "poiID:1000176440:8212000:-1:Händelstraße:Karlsruhe:Händelstraße:ANY:POI:931608:5723073:MRCV:B_W"
+                "id": "poiID:1000177474:8212000:-1:Händelstraße:Karlsruhe:Händelstraße:ANY:POI:931608:5723073:MRCV:B_W"
             }
         },
         {
@@ -31,7 +31,7 @@
             "lat": 49009526,
             "lon": 8404914,
             "result": {
-                "id": "7000001"
+                "id": "7001011"
             }
         },
         {
@@ -39,18 +39,18 @@
             "lat": 49009393,
             "lon": 8408866,
             "result": {
-                "id": "7000002"
+                "id": "7001002"
             }
         }
     ],
     "queryDepartures": [
         {
             "__comment": "Karlsruhe Marktplatz",
-            "id": "7000001"
+            "id": "7001011"
         },
         {
             "__comment": "Karlsruhe Kronenplatz (Kaiserstr.)",
-            "id": "7000002"
+            "id": "7001002"
         }
     ],
     "queryDeparturesInvalidId": "999999",
@@ -59,11 +59,11 @@
             "__comment": "Karlsruhe Marktplatz to Karlsruhe Kronenplatz (Kaiserstr.)",
             "from": {
                 "type": "station",
-                "id": "7000001"
+                "id": "7001011"
             },
             "to": {
                 "type": "station",
-                "id": "7000002"
+                "id": "7001002"
             }
         },
         {
@@ -85,11 +85,11 @@
             "__comment": "Karlsruhe Marktplatz",
             "from": {
                 "type": "station",
-                "id": "7000001"
+                "id": "7001011"
             },
             "to": {
                 "type": "station",
-                "id": "7000001"
+                "id": "7001011"
             }
         }
     ]

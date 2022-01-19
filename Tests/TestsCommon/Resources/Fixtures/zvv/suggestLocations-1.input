@@ -2,7 +2,7 @@
   "ver":"1.18",
   "ext":"ZVV.2",
   "lang":"deu",
-  "id":"vu6k4mca66gepiwx",
+  "id":"8qmwcgxwmcsjgics",
   "err":"OK",
   "svcResL":
   [
@@ -22,11 +22,6 @@
             {
               "name":"",
               "icoX":0,
-              "cls":2
-            },
-            {
-              "name":"",
-              "icoX":0,
               "cls":32
             },
             {
@@ -43,6 +38,11 @@
               "name":"",
               "icoX":3,
               "cls":256
+            },
+            {
+              "name":"",
+              "icoX":0,
+              "cls":2
             }
           ],
           "polyL":
@@ -153,6 +153,9 @@
                 "g":0,
                 "b":0
               }
+            },
+            {
+              "res":"POI"
             }
           ]
         },
@@ -163,33 +166,7 @@
           "locL":
           [
             {
-              "lid":"A=1@O=Hardbrücke@X=8516902@Y=47385440@U=21@L=8503020@B=1@p=1637660952@",
-              "type":"S",
-              "name":"Hardbrücke",
-              "icoX":0,
-              "extId":"8503020",
-              "state":"F",
-              "crd":
-              {
-                "x":8516902,
-                "y":47385440,
-                "layerX":0,
-                "crdSysX":0
-              },
-              "pCls":866,
-              "pRefL":
-              [
-0,
-1,
-2,
-3,
-4
-              ],
-              "wt":5488,
-              "isMainMast":true
-            },
-            {
-              "lid":"A=1@O=Zürich, Bahnhof Hardbrücke@X=8517090@Y=47385198@U=22@L=8591060@B=1@p=1638378040@",
+              "lid":"A=1@O=Zürich, Bahnhof Hardbrücke@X=8517090@Y=47385198@U=85@L=8591060@B=1@p=1642006212@",
               "type":"S",
               "name":"Zürich, Bahnhof Hardbrücke",
               "icoX":0,
@@ -202,81 +179,102 @@
                 "layerX":0,
                 "crdSysX":0
               },
-              "pCls":866,
+              "pCls":864,
               "pRefL":
               [
 0,
 1,
 2,
-3,
-4
+3
               ],
-              "wt":2791,
+              "wt":2818,
               "isMainMast":true
             },
             {
-              "lid":"A=1@O=Zürich, Hardturm@X=8504506@Y=47394160@U=22@L=8591178@B=1@p=1638378040@",
+              "lid":"A=1@O=Dinhard, Bahnhof/Welsikon@X=8752500@Y=47553746@U=85@L=8576298@B=1@p=1642006212@",
               "type":"S",
-              "name":"Zürich, Hardturm",
-              "icoX":1,
-              "extId":"8591178",
+              "name":"Dinhard, Bahnhof/Welsikon",
+              "icoX":0,
+              "extId":"8576298",
               "state":"F",
               "crd":
               {
-                "x":8504443,
-                "y":47394196,
+                "x":8752500,
+                "y":47553719,
                 "layerX":0,
                 "crdSysX":0
               },
-              "pCls":768,
+              "pCls":352,
               "pRefL":
               [
+0,
 2,
-4
-              ],
-              "wt":4795
-            },
-            {
-              "lid":"A=1@O=Embrach, Hard@X=8585534@Y=47522679@U=22@L=8573221@B=1@p=1638378040@",
-              "type":"S",
-              "name":"Embrach, Hard",
-              "icoX":2,
-              "extId":"8573221",
-              "state":"F",
-              "crd":
-              {
-                "x":8585480,
-                "y":47522688,
-                "layerX":0,
-                "crdSysX":0
-              },
-              "pCls":320,
-              "pRefL":
-              [
 3
               ],
-              "wt":964
+              "wt":266,
+              "isMainMast":true
             },
             {
-              "lid":"A=1@O=Zürich, Hardhof@X=8497476@Y=47396353@U=22@L=8591176@B=1@p=1638378040@",
-              "type":"S",
-              "name":"Zürich, Hardhof",
-              "icoX":1,
-              "extId":"8591176",
+              "lid":"A=4@O=Zürich Mobility Hardbrücke Bahnhof / Geroldstrasse@X=8518610@Y=47385845@U=105@L=980001357@B=1@p=1606147949@",
+              "type":"P",
+              "name":"Zürich Mobility Hardbrücke Bahnhof / Geroldstrasse",
+              "icoX":4,
+              "extId":"980001357",
               "state":"F",
               "crd":
               {
-                "x":8497710,
-                "y":47396219,
+                "x":8518610,
+                "y":47385845,
+                "layerX":0,
+                "crdSysX":0
+              }
+            },
+            {
+              "lid":"A=1@O=Murrhardt, Bahnhof@X=9576973@Y=48982752@U=85@L=1106420@B=1@p=1642006212@",
+              "type":"S",
+              "name":"Murrhardt, Bahnhof",
+              "icoX":0,
+              "extId":"1106420",
+              "state":"F",
+              "crd":
+              {
+                "x":9576973,
+                "y":48982752,
+                "z":0,
                 "layerX":0,
                 "crdSysX":0
               },
-              "pCls":512,
+              "pCls":2,
               "pRefL":
               [
-2
+4
+              ]
+            },
+            {
+              "lid":"A=1@O=Zürich, Bahnhof Enge@X=8531572@Y=47364118@U=85@L=8591058@B=1@p=1642006212@",
+              "type":"S",
+              "name":"Zürich, Bahnhof Enge",
+              "icoX":0,
+              "extId":"8591058",
+              "state":"F",
+              "crd":
+              {
+                "x":8531572,
+                "y":47364118,
+                "layerX":0,
+                "crdSysX":0
+              },
+              "pCls":866,
+              "pRefL":
+              [
+4,
+0,
+1,
+2,
+3
               ],
-              "wt":1809
+              "wt":4723,
+              "isMainMast":true
             }
           ]
         }

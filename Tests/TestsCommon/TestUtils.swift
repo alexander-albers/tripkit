@@ -66,6 +66,7 @@ public func compareLocationIds(_ expected: String?, _ response: String?) -> Bool
     expected = expected.replacingOccurrences(of: "X=\\d+@", with: "", options: .regularExpression)
     expected = expected.replacingOccurrences(of: "Y=\\d+@", with: "", options: .regularExpression)
     expected = expected.replacingOccurrences(of: "i=\\d+@", with: "", options: .regularExpression)
+    expected = expected.replacingOccurrences(of: "b=\\d+@", with: "", options: .regularExpression)
     
     response = response.replacingOccurrences(of: "p=\\d+@", with: "", options: .regularExpression)
     response = response.replacingOccurrences(of: "u=\\d+@", with: "", options: .regularExpression)
@@ -75,6 +76,7 @@ public func compareLocationIds(_ expected: String?, _ response: String?) -> Bool
     response = response.replacingOccurrences(of: "X=\\d+@", with: "", options: .regularExpression)
     response = response.replacingOccurrences(of: "Y=\\d+@", with: "", options: .regularExpression)
     response = response.replacingOccurrences(of: "i=\\d+@", with: "", options: .regularExpression)
+    response = response.replacingOccurrences(of: "b=\\d+@", with: "", options: .regularExpression)
     
     return expected == response
 }

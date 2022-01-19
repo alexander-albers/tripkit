@@ -2,7 +2,7 @@
   "ver":"1.18",
   "ext":"ZVV.2",
   "lang":"deu",
-  "id":"65mkums846ge82wg",
+  "id":"6nmwkgxwmcsjhics",
   "err":"OK",
   "svcResL":
   [
@@ -19,16 +19,7 @@
           ],
           "prodL":
           [
-            {
-              "name":"",
-              "icoX":1,
-              "cls":64
-            },
-            {
-              "name":"",
-              "icoX":2,
-              "cls":256
-            }
+
           ],
           "polyL":
           [
@@ -63,42 +54,6 @@
           [
             {
               "res":"ADR"
-            },
-            {
-              "res":"prod_bus",
-              "fg":
-              {
-                "r":0,
-                "g":0,
-                "b":0
-              },
-              "bg":
-              {
-                "r":255,
-                "g":255,
-                "b":255
-              },
-              "brd":
-              {
-                "r":0,
-                "g":0,
-                "b":0
-              }
-            },
-            {
-              "res":"prod_nachtnetz",
-              "fg":
-              {
-                "r":255,
-                "g":241,
-                "b":0
-              },
-              "bg":
-              {
-                "r":0,
-                "g":0,
-                "b":0
-              }
             }
           ]
         },
@@ -109,7 +64,7 @@
           "locL":
           [
             {
-              "lid":"A=2@O=Zürich, Ausstellungsstrasse 88@X=8534323@Y=47383876@U=103@L=990111655@B=1@p=1603104823@",
+              "lid":"A=2@O=Zürich, Ausstellungsstrasse 88@H=88@X=8534323@Y=47383876@U=103@L=990111655@B=1@p=1603104823@",
               "type":"A",
               "name":"Zürich, Ausstellungsstrasse 88",
               "icoX":0,
@@ -124,7 +79,7 @@
               }
             },
             {
-              "lid":"A=2@O=Zürich, Hoffnungsstrasse 7@X=8535024@Y=47340935@U=103@L=990090728@B=1@p=1603104823@",
+              "lid":"A=2@O=Zürich, Hoffnungsstrasse 7@H=7@X=8535024@Y=47340935@U=103@L=990090728@B=1@p=1603104823@",
               "type":"A",
               "name":"Zürich, Hoffnungsstrasse 7",
               "icoX":0,
@@ -139,7 +94,7 @@
               }
             },
             {
-              "lid":"A=2@O=Zürich, Zehntenhausstrasse 90@X=8509207@Y=47424211@U=103@L=990144433@B=1@p=1603104823@",
+              "lid":"A=2@O=Zürich, Zehntenhausstrasse 90@H=90@X=8509207@Y=47424211@U=103@L=990144433@B=1@p=1603104823@",
               "type":"A",
               "name":"Zürich, Zehntenhausstrasse 90",
               "icoX":0,
@@ -154,38 +109,31 @@
               }
             },
             {
-              "lid":"A=1@O=Zürich, Ausserdorfstrasse@X=8548562@Y=47424508@U=22@L=8591048@B=1@p=1638378040@",
-              "type":"S",
-              "name":"Zürich, Ausserdorfstrasse",
-              "icoX":1,
-              "extId":"8591048",
+              "lid":"A=2@O=Zürich, Waisenhausstrasse 15@H=15@X=8540444@Y=47376604@U=103@L=990127578@B=1@p=1603104823@",
+              "type":"A",
+              "name":"Zürich, Waisenhausstrasse 15",
+              "icoX":0,
+              "extId":"990127578",
               "state":"F",
               "crd":
               {
-                "x":8548562,
-                "y":47424597,
+                "x":8540444,
+                "y":47376604,
                 "layerX":0,
                 "crdSysX":0
-              },
-              "pCls":320,
-              "pRefL":
-              [
-0,
-1
-              ],
-              "wt":982
+              }
             },
             {
-              "lid":"A=2@O=Zürich, Ausserdorfstrasse 49@X=8544094@Y=47425182@U=103@L=990093234@B=1@p=1603104823@",
+              "lid":"A=2@O=Zürich, Pfarrhausstrasse 27@H=27@X=8484397@Y=47387139@U=103@L=990141587@B=1@p=1603104823@",
               "type":"A",
-              "name":"Zürich, Ausserdorfstrasse 49",
+              "name":"Zürich, Pfarrhausstrasse 27",
               "icoX":0,
-              "extId":"990093234",
+              "extId":"990141587",
               "state":"F",
               "crd":
               {
-                "x":8544094,
-                "y":47425182,
+                "x":8484397,
+                "y":47387139,
                 "layerX":0,
                 "crdSysX":0
               }

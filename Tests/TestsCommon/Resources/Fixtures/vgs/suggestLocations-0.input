@@ -1,7 +1,7 @@
 {
   "ver":"1.21",
   "lang":"deu",
-  "id":"yqikcm8g66wq9wwx",
+  "id":"nhwxcgcxmcca8i8g",
   "err":"OK",
   "svcResL":
   [
@@ -199,6 +199,16 @@
               }
             },
             {
+              "name":"Bus 166",
+              "nameS":"166",
+              "icoX":1,
+              "cls":128,
+              "prodCtx":
+              {
+                "lineId":"166"
+              }
+            },
+            {
               "name":"Bus 172",
               "nameS":"172",
               "icoX":1,
@@ -219,106 +229,6 @@
               }
             },
             {
-              "name":"Bus N1",
-              "nameS":"N1",
-              "icoX":1,
-              "cls":128,
-              "prodCtx":
-              {
-                "lineId":"N1"
-              }
-            },
-            {
-              "name":"Bus N2",
-              "nameS":"N2",
-              "icoX":1,
-              "cls":128,
-              "prodCtx":
-              {
-                "lineId":"N2"
-              }
-            },
-            {
-              "name":"Bus N3",
-              "nameS":"N3",
-              "icoX":1,
-              "cls":128,
-              "prodCtx":
-              {
-                "lineId":"N3"
-              }
-            },
-            {
-              "name":"Bus N4",
-              "nameS":"N4",
-              "icoX":1,
-              "cls":128,
-              "prodCtx":
-              {
-                "lineId":"N4"
-              }
-            },
-            {
-              "name":"Bus N5",
-              "nameS":"N5",
-              "icoX":1,
-              "cls":128,
-              "prodCtx":
-              {
-                "lineId":"N5"
-              }
-            },
-            {
-              "name":"Bus N11",
-              "nameS":"N11",
-              "icoX":1,
-              "cls":128,
-              "prodCtx":
-              {
-                "lineId":"N11"
-              }
-            },
-            {
-              "name":"Bus N12",
-              "nameS":"N12",
-              "icoX":1,
-              "cls":128,
-              "prodCtx":
-              {
-                "lineId":"N12"
-              }
-            },
-            {
-              "name":"Bus N13",
-              "nameS":"N13",
-              "icoX":1,
-              "cls":128,
-              "prodCtx":
-              {
-                "lineId":"N13"
-              }
-            },
-            {
-              "name":"Bus N14",
-              "nameS":"N14",
-              "icoX":1,
-              "cls":128,
-              "prodCtx":
-              {
-                "lineId":"N14"
-              }
-            },
-            {
-              "name":"Bus N15",
-              "nameS":"N15",
-              "icoX":1,
-              "cls":128,
-              "prodCtx":
-              {
-                "lineId":"N15"
-              }
-            },
-            {
               "name":"AST 102",
               "nameS":"102",
               "icoX":2,
@@ -326,6 +236,16 @@
               "prodCtx":
               {
                 "lineId":"102"
+              }
+            },
+            {
+              "name":"AST 107",
+              "nameS":"107",
+              "icoX":2,
+              "cls":512,
+              "prodCtx":
+              {
+                "lineId":"107"
               }
             },
             {
@@ -406,6 +326,16 @@
               "prodCtx":
               {
                 "lineId":"834"
+              }
+            },
+            {
+              "name":"Bus 836",
+              "nameS":"836",
+              "icoX":3,
+              "cls":1024,
+              "prodCtx":
+              {
+                "lineId":"836"
               }
             },
             {
@@ -555,11 +485,11 @@
           "locL":
           [
             {
-              "lid":"A=1@O=Johanneskirche, Saarbrücken@X=6996295@Y=49236050@U=80@L=000010619@B=1@V=11.9,@p=1638485432@",
+              "lid":"A=1@O=Johanneskirche, Saarbrücken@X=6996295@Y=49236050@U=80@L=10619@B=1@p=1642512423@",
               "type":"S",
               "name":"Johanneskirche, Saarbrücken",
               "icoX":0,
-              "extId":"000010619",
+              "extId":"10619",
               "state":"F",
               "crd":
               {
@@ -603,23 +533,16 @@
 29,
 30,
 31,
-32,
-33,
-34,
-35,
-36,
-37,
-38,
-39
+32
               ],
-              "wt":1881
+              "wt":1806
             },
             {
-              "lid":"A=1@O=Johannes-Kirchweng-Str., Wadgassen@X=6782154@Y=49266011@U=80@L=000047910@B=1@V=11.9,@p=1638485432@",
+              "lid":"A=1@O=Johannes-Kirchweng-Str., Wadgassen@X=6782154@Y=49266011@U=80@L=47910@B=1@p=1642512423@",
               "type":"S",
               "name":"Johannes-Kirchweng-Str., Wadgassen",
               "icoX":2,
-              "extId":"000047910",
+              "extId":"47910",
               "state":"F",
               "crd":
               {
@@ -631,12 +554,12 @@
               "pCls":512,
               "pRefL":
               [
-40
+33
               ],
-              "wt":77
+              "wt":86
             },
             {
-              "lid":"A=2@O=Neunkirchen, Johannesstraße@X=7181437@Y=49344379@U=98@b=990894228@B=1@V=11.9,@p=1473941494@",
+              "lid":"A=2@O=Neunkirchen, Johannesstraße@X=7181437@Y=49344379@U=98@b=990894228@B=1@p=1473941494@",
               "type":"A",
               "name":"Neunkirchen, Johannesstraße",
               "icoX":4,
@@ -650,11 +573,11 @@
               }
             },
             {
-              "lid":"A=1@O=Johanna-Kirchner-Haus, Saarbrücken Malstatt@X=6969121@Y=49250082@U=80@L=000010507@B=1@V=11.9,@p=1638485432@",
+              "lid":"A=1@O=Johanna-Kirchner-Haus, Saarbrücken Malstatt@X=6969121@Y=49250082@U=80@L=10507@B=1@p=1642512423@",
               "type":"S",
               "name":"Johanna-Kirchner-Haus, Saarbrücken Malstatt",
               "icoX":1,
-              "extId":"000010507",
+              "extId":"10507",
               "state":"F",
               "crd":
               {
@@ -667,17 +590,17 @@
               "pRefL":
               [
 15,
-41,
-42
+34,
+35
               ],
-              "wt":347
+              "wt":331
             },
             {
-              "lid":"A=4@O=Weiskirchen, Schinderhannes (Restaurant)@X=6822129@Y=49555392@U=99@L=009001090@B=1@V=11.9,@p=1637077201@",
+              "lid":"A=4@O=Weiskirchen, Schinderhannes (Restaurant)@X=6822129@Y=49555392@U=99@L=9001090@B=1@p=1637077201@",
               "type":"P",
               "name":"Weiskirchen, Schinderhannes (Restaurant)",
               "icoX":5,
-              "extId":"009001090",
+              "extId":"9001090",
               "state":"F",
               "crd":
               {

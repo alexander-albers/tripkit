@@ -20,7 +20,7 @@ jobs:
           SECRETS_PASSPHRASE: ${{ secrets.SECRETS_PASSPHRASE }}
       - name: Test
         run: |
-          xcodebuild -scheme "TripKitTests macOS" -resultBundlePath LiveTestResults test
+          xcodebuild -scheme "TripKitTests macOS" -resultBundlePath LiveTestResults -test-iterations 3 -retry-tests-on-failure test
       - uses: kishikawakatsumi/xcresulttool@v1.3.0
         with:
           path: LiveTestResults.xcresult
