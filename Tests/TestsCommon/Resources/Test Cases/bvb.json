@@ -1,0 +1,96 @@
+{
+    "suggestLocations": [
+        {
+            "constraint": "Musik-Akademie",
+            "result": {
+                "id": "51000095"
+            }
+        },
+        {
+            "constraint": "synag",
+            "result": {
+                "id": "51000376"
+            }
+        },
+        {
+            "constraint": "Hüningerstrasse",
+            "result": {
+                "id": "51000061"
+            }
+        },
+        {
+            "constraint": "Basel, Maulbeerstrasse 3",
+            "result": {
+                "id": "streetID:1500000523::23005701:2:Maulbeerstrasse (Basel):Basel:Maulbeerstrasse (Basel)::Maulbeerstrasse (Basel): 4058:ANY:DIVA_STREET:846174:5964861:MRCV:B_W:0"
+            }
+        }
+    ],
+    "queryNearbyLocationsByCoordinate": [
+        {
+            "__comment": "Musik-Akademie",
+            "lat": 47555524,
+            "lon": 7587027,
+            "result": {
+                "id": "51000095"
+            }
+        },
+        {
+            "__comment": "Hüningerstrasse",
+            "lat": 47572842,
+            "lon": 7576112,
+            "result": {
+                "id": "51000061"
+            }
+        }
+    ],
+    "queryDepartures": [
+        {
+            "__comment": "Musik-Akademie",
+            "id": "51000095"
+        },
+        {
+            "__comment": "Hüningerstrasse",
+            "id": "51000061"
+        }
+    ],
+    "queryDeparturesInvalidId": "999999",
+    "queryTrips": [
+        {
+            "__comment": "Musik-Akademie to Hüningerstrasse",
+            "from": {
+                "type": "station",
+                "id": "51000095"
+            },
+            "to": {
+                "type": "station",
+                "id": "51000061"
+            }
+        },
+        {
+            "__comment": "Musik-Akademie to Hüningerstrasse",
+            "from": {
+                "type": "coord",
+                "lat": 47555524,
+                "lon": 7587027
+            },
+            "to": {
+                "type": "coord",
+                "lat": 47572842,
+                "lon": 7576112
+            }
+        }
+    ],
+    "queryTripsTooClose": [
+        {
+            "__comment": "Musik-Akademie",
+            "from": {
+                "type": "station",
+                "id": "51000095"
+            },
+            "to": {
+                "type": "station",
+                "id": "51000095"
+            }
+        }
+    ]
+}
