@@ -34,6 +34,10 @@ public class HttpClient: NSObject {
             urlRequest.httpBody = payload.data(using: .utf8) // TODO: don't hardcode encoding
         }
         
+        for (header, value) in httpRequest.headers ?? [:] {
+            urlRequest.setValue(value, forHTTPHeaderField: header)
+        }
+        
         if let payload = httpRequest.postPayload {
             os_log("making http request to %{public}@: %{public}@", log: .requestLogger, type: .default, url.absoluteString, payload.replacingOccurrences(of: "\"auth\":\\s*(\\{[^}]*\\})", with: "\"auth\":<private>", options: .regularExpression))
         } else {
@@ -133,6 +137,7 @@ public class HttpRequest {
     public var postPayload: String?
     public var contentType: String?
     public var userAgent: String?
+    public var headers: [String: String]?
     /// the response to this request
     public var responseData: Data?
     
@@ -152,6 +157,11 @@ public class HttpRequest {
     
     public func setUserAgent(_ userAgent: String?) -> Self {
         self.userAgent = userAgent
+        return self
+    }
+    
+    public func setHeaders(_ headers: [String: String]?) -> Self {
+        self.headers = headers
         return self
     }
     

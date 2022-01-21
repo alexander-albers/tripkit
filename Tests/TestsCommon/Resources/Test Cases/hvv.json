@@ -3,25 +3,25 @@
         {
             "constraint": "Hauptbahnhof",
             "result": {
-                "id": "A=1@O=Hamburg Hbf@X=10007942@Y=53552751@U=80@L=000000090@B=1@p=1630603642@"
+                "id": "Master:9910950"
             }
         },
         {
             "constraint": "hbf",
             "result": {
-                "id": "A=1@O=Hamburg Hbf@X=10007942@Y=53552751@U=80@L=000000090@B=1@p=1630603642@"
+                "id": "Master:9910950"
             }
         },
         {
             "constraint": "Gänsemarkt (Oper)",
             "result": {
-                "id": "A=1@O=Gänsemarkt (Oper)@X=9986036@Y=53555600@U=80@L=000000158@B=1@p=1630603642@"
+                "id": "Master:11910"
             }
         },
         {
             "constraint": "Bogenstraße 29, Hamburg",
             "result": {
-                "id": "A=2@O=Hamburg, Bogenstraße 29@X=9975096@Y=53573102@U=99@L=970027899@B=1@p=1629446462@"
+                "id": "28006"
             }
         }
     ],
@@ -31,7 +31,7 @@
             "lat": 53552924,
             "lon": 10004416,
             "result": {
-                "id": "A=1@O=Hauptbahnhof Nord@X=10005947@Y=53554090@u=0@U=80@L=84@"
+                "id": "Master:9910950"
             }
         },
         {
@@ -39,18 +39,18 @@
             "lat": 53567591,
             "lon": 9967937,
             "result": {
-                "id": "A=1@O=Schlump@X=9970125@Y=53567583@u=0@U=80@L=6618@"
+                "id": "Master:84903"
             }
         }
     ],
     "queryDepartures": [
         {
             "__comment": "Hamburg Hauptbahnhof",
-            "id": "84"
+            "id": "Master:10950"
         },
         {
             "__comment": "Hamburg Schlump",
-            "id": "6618"
+            "id": "Master:84903"
         }
     ],
     "queryDeparturesInvalidId": "999999",
@@ -59,11 +59,11 @@
             "__comment": "Hamburg Hauptbahnhof to Hamburg Schlump",
             "from": {
                 "type": "station",
-                "id": "84"
+                "id": "Master:9910950"
             },
             "to": {
                 "type": "station",
-                "id": "6618"
+                "id": "Master:84903"
             }
         },
         {
@@ -81,16 +81,5 @@
         }
     ],
     "queryTripsTooClose": [
-        {
-            "__comment": "Hamburg Hauptbahnhof",
-            "from": {
-                "type": "station",
-                "id": "84"
-            },
-            "to": {
-                "type": "station",
-                "id": "84"
-            }
-        }
     ]
 }

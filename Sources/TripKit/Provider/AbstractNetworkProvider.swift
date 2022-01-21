@@ -180,6 +180,14 @@ public class AbstractNetworkProvider: NetworkProvider {
         return position
     }
     
+    func encodeJson(dict: [String: Any], requestUrlEncoding: String.Encoding) -> String? {
+        do {
+            return String(data: try JSONSerialization.data(withJSONObject: dict, options: []), encoding: requestUrlEncoding)
+        } catch {
+            return nil
+        }
+    }
+    
 }
 
 public class QueryTripsContext: NSObject, NSSecureCoding {

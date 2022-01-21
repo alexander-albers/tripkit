@@ -1485,14 +1485,6 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         return path
     }
     
-    func encodeJson(dict: [String: Any]) -> String? {
-        do {
-            return String(data: try JSONSerialization.data(withJSONObject: dict, options: []), encoding: requestUrlEncoding)
-        } catch {
-            return nil
-        }
-    }
-    
     public class Context: QueryTripsContext {
         
         public override var canQueryEarlier: Bool { return earlierContext != nil }

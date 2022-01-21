@@ -1,16 +1,41 @@
 import Foundation
+import os.log
+import SwiftyJSON
 
-public class HvvProvider: AbstractHafasClientInterfaceProvider {
+public class HvvProvider: AbstractNetworkProvider {
     
-    static let API_BASE = "https://hvv-app.hafas.de/bin/"
-    static let PRODUCTS_MAP: [Product?] = [.subway, .suburbanTrain, .suburbanTrain, .regionalTrain, .regionalTrain, .ferry, .highSpeedTrain, .bus, .bus, .highSpeedTrain, .onDemand]
+    static let API_BASE = "https://gti.geofox.de/gti/public/"
+    static let VERSION = 47
+    let authHeaders: [String: Any]
     
-    public init(apiAuthorization: [String: Any], requestVerification: AbstractHafasClientInterfaceProvider.RequestVerification) {
-        super.init(networkId: .HVV, apiBase: HvvProvider.API_BASE, productsMap: HvvProvider.PRODUCTS_MAP)
-        self.apiAuthorization = apiAuthorization
-        self.requestVerification = requestVerification
-        apiVersion = "1.16"
-        apiClient = ["id": "HVV"]
+    lazy var dateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.timeZone = timeZone
+        formatter.dateFormat = "dd.MM.yyyy"
+        return formatter
+    }()
+    lazy var timeFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.timeZone = timeZone
+        formatter.dateFormat = "HH:mm"
+        return formatter
+    }()
+    lazy var dateTimeFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.timeZone = timeZone
+        formatter.dateFormat = "dd.MM.yyyy HH:mm"
+        return formatter
+    }()
+    lazy var isoDateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.timeZone = timeZone
+        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+        return formatter
+    }()
+    
+    public init(apiAuthorization: [String: Any]) {
+        self.authHeaders = apiAuthorization
+        super.init(networkId: .HVV)
         
         styles = [
             "UU1": LineStyle(shape: .rect, backgroundColor: LineStyle.rgb(0, 103, 165), foregroundColor: LineStyle.white),
@@ -63,28 +88,844 @@ public class HvvProvider: AbstractHafasClientInterfaceProvider {
         ]
     }
     
-    override func split(stationName: String?) -> (String?, String?) {
-        guard let stationName = stationName else { return super.split(stationName: nil) }
-        if let m = stationName.match(pattern: P_SPLIT_NAME_FIRST_COMMA) {
-            return (m[0], m[1])
+    public override func suggestLocations(constraint: String, types: [LocationType]?, maxLocations: Int, completion: @escaping (HttpRequest, SuggestLocationsResult) -> Void) -> AsyncRequest {
+        let request = encodeJson(dict: [
+            "version": HvvProvider.VERSION,
+            "theName": ["name": constraint],
+            "maxList": maxLocations
+        ], requestUrlEncoding: .utf8)
+        let urlBuilder = UrlBuilder(path: HvvProvider.API_BASE + "checkName", encoding: .utf8)
+        
+        let httpRequest = HttpRequest(urlBuilder: urlBuilder).setPostPayload(request).setHeaders(getAuthHeaders(request))
+        return HttpClient.get(httpRequest: httpRequest) { result in
+            switch result {
+            case .success((_, let data)):
+                httpRequest.responseData = data
+                do {
+                    try self.suggestLocationsParsing(request: httpRequest, constraint: constraint, types: types, maxLocations: maxLocations, completion: completion)
+                } catch let err as ParseError {
+                    os_log("suggestLocations parse error: %{public}@", log: .requestLogger, type: .error, err.reason)
+                    completion(httpRequest, .failure(err))
+                } catch let err {
+                    os_log("suggestLocations handle response error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
+                    completion(httpRequest, .failure(err))
+                }
+            case .failure(let err):
+                os_log("suggestLocations network error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
+                completion(httpRequest, .failure(err))
+            }
         }
-        return super.split(stationName: stationName)
     }
     
-    override func split(poi: String?) -> (String?, String?) {
-        guard let poi = poi else { return super.split(poi: nil) }
-        if let m = poi.match(pattern: P_SPLIT_NAME_FIRST_COMMA) {
-            return (m[0], m[1])
+    override func suggestLocationsParsing(request: HttpRequest, constraint: String, types: [LocationType]?, maxLocations: Int, completion: @escaping (HttpRequest, SuggestLocationsResult) -> Void) throws {
+        let json = try getResponse(from: request)
+        let returnCode = json["returnCode"].stringValue
+        guard returnCode == "OK" else {
+            throw ParseError(reason: "invalid return code \(returnCode)")
         }
-        return super.split(poi: poi)
+        var locations: [SuggestedLocation] = []
+        for (_, location) in json["results"] {
+            guard let location = parseLocation(json: location) else { throw ParseError(reason: "failed to parse location") }
+            if let types = types, !types.contains(location.type) && !types.contains(.any) { continue }
+            locations.append(SuggestedLocation(location: location, priority: 0))
+        }
+        completion(request, .success(locations: locations))
     }
     
-    override func split(address: String?) -> (String?, String?) {
-        guard let address = address else { return super.split(address: nil) }
-        if let m = address.match(pattern: P_SPLIT_NAME_FIRST_COMMA) {
-            return (m[0], m[1])
+    public override func queryNearbyLocations(location: Location, types: [LocationType]?, maxDistance: Int, maxLocations: Int, completion: @escaping (HttpRequest, NearbyLocationsResult) -> Void) -> AsyncRequest {
+        var name = jsonLocation(location: location)
+        if location.id == nil {
+            // no id provided -> search for other stations
+            name["type"] = "STATION"
         }
-        return super.split(address: address)
+        let request = encodeJson(dict: [
+            "version": HvvProvider.VERSION,
+            "theName": name,
+            "maxList": maxLocations,
+            "maxDistance": maxDistance
+        ], requestUrlEncoding: .utf8)
+        let urlBuilder = UrlBuilder(path: HvvProvider.API_BASE + "checkName", encoding: .utf8)
+        
+        let httpRequest = HttpRequest(urlBuilder: urlBuilder).setPostPayload(request).setHeaders(getAuthHeaders(request))
+        return HttpClient.get(httpRequest: httpRequest) { result in
+            switch result {
+            case .success((_, let data)):
+                httpRequest.responseData = data
+                do {
+                    try self.queryNearbyLocationsByCoordinateParsing(request: httpRequest, location: location, types: types, maxDistance: maxDistance, maxLocations: maxLocations, completion: completion)
+                } catch let err as ParseError {
+                    os_log("queryNearbyLocations parse error: %{public}@", log: .requestLogger, type: .error, err.reason)
+                    completion(httpRequest, .failure(err))
+                } catch let err {
+                    os_log("queryNearbyLocations handle response error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
+                    completion(httpRequest, .failure(err))
+                }
+            case .failure(let err):
+                os_log("queryNearbyLocations network error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
+                completion(httpRequest, .failure(err))
+            }
+        }
+    }
+    
+    override func queryNearbyLocationsByCoordinateParsing(request: HttpRequest, location: Location, types: [LocationType]?, maxDistance: Int, maxLocations: Int, completion: @escaping (HttpRequest, NearbyLocationsResult) -> Void) throws {
+        try suggestLocationsParsing(request: request, constraint: location.getUniqueShortName(), types: types, maxLocations: 0) { _, result in
+            switch result {
+            case .success(let locations):
+                completion(request, .success(locations: locations.map { $0.location }))
+            case .failure(let error):
+                completion(request, .failure(error))
+            }
+        }
+    }
+    
+    public override func queryDepartures(stationId: String, departures: Bool, time: Date?, maxDepartures: Int, equivs: Bool, completion: @escaping (HttpRequest, QueryDeparturesResult) -> Void) -> AsyncRequest {
+        let request = encodeJson(dict: [
+            "version": HvvProvider.VERSION,
+            "station": jsonLocation(location: Location(id: stationId)),
+            "maxList": maxDepartures,
+            "time": jsonDate(date: time ?? Date()),
+            "allStationsInChangingNode": equivs,
+            "maxTimeOffset": 720 // maximum 12 hours in advance
+        ], requestUrlEncoding: .utf8)
+        let urlBuilder = UrlBuilder(path: HvvProvider.API_BASE + "departureList", encoding: .utf8)
+        
+        let httpRequest = HttpRequest(urlBuilder: urlBuilder).setPostPayload(request).setHeaders(getAuthHeaders(request))
+        return HttpClient.get(httpRequest: httpRequest) { result in
+            switch result {
+            case .success((_, let data)):
+                httpRequest.responseData = data
+                do {
+                    try self.queryDeparturesParsing(request: httpRequest, stationId: stationId, departures: departures, time: time, maxDepartures: maxDepartures, equivs: equivs, completion: completion)
+                } catch let err as ParseError {
+                    os_log("queryDepartures parse error: %{public}@", log: .requestLogger, type: .error, err.reason)
+                    completion(httpRequest, .failure(err))
+                } catch let err {
+                    os_log("queryDepartures handle response error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
+                    completion(httpRequest, .failure(err))
+                }
+            case .failure(let err):
+                os_log("queryDepartures network error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
+                completion(httpRequest, .failure(err))
+            }
+        }
+    }
+    
+    override func queryDeparturesParsing(request: HttpRequest, stationId: String, departures: Bool, time: Date?, maxDepartures: Int, equivs: Bool, completion: @escaping (HttpRequest, QueryDeparturesResult) -> Void) throws {
+        let json = try getResponse(from: request)
+        let returnCode = json["returnCode"].stringValue
+        guard returnCode == "OK" else {
+            if returnCode == "ERROR_TEXT" && json["errorDevInfo"].stringValue.hasPrefix("0 Please provide a station object with a valid id") {
+                completion(request, .invalidStation)
+                return
+            }
+            throw ParseError(reason: "invalid return code \(returnCode)")
+        }
+        
+        let startDate = try parseDate(date: json["time"])
+        var stationDepartures: [StationDepartures] = []
+        for (_, departure) in json["departures"] {
+            if departure["cancelled"].boolValue {
+                continue
+            }
+            
+            let station = departure["station"].exists() ? parseLocation(json: departure["station"]) : nil
+            let line = parseLineAndDestination(json: departure["line"], directionType: json["direction"].int)
+            let timeOffset = departure["timeOffset"].intValue  // minutes
+            let delay = departure["delay"].int
+            
+            let plannedTime = startDate.addingTimeInterval(TimeInterval(timeOffset * 60))
+            let predictedTime: Date?
+            if let delay = delay {
+                predictedTime = plannedTime.addingTimeInterval(TimeInterval(delay * 60))
+            } else {
+                predictedTime = nil
+            }
+            let plannedPlatform = parsePosition(position: departure["platform"].string)
+            let predictedPlatform = parsePosition(position: departure["realtimePlatform"].string)
+            let message = parseAttributes(attributes: departure["attributes"])
+            let journeyContext: HvvJourneyContext?
+            if let lineId = line.line.id, let serviceId = departure["serviceId"].int {
+                journeyContext = HvvJourneyContext(lineKey: lineId, serviceId: serviceId, station: station ?? Location(id: stationId), stationTime: plannedTime, line: line.line)
+            } else {
+                journeyContext = nil
+            }
+            
+            let dep = Departure(plannedTime: plannedTime, predictedTime: predictedTime, line: line.line, position: predictedPlatform, plannedPosition: plannedPlatform, destination: line.destination, capacity: nil, message: message, journeyContext: journeyContext, wagonSequenceContext: nil)
+            
+            let stationDeparture: StationDepartures
+            if let first = stationDepartures.first(where: { station == nil || $0.stopLocation == station }) {
+                stationDeparture = first
+            } else {
+                stationDeparture = StationDepartures(stopLocation: station ?? Location(id: stationId), departures: [], lines: [])
+                stationDepartures.append(stationDeparture)
+            }
+            stationDeparture.departures.append(dep)
+        }
+        completion(request, .success(departures: stationDepartures))
+    }
+    
+    public override func queryJourneyDetail(context: QueryJourneyDetailContext, completion: @escaping (HttpRequest, QueryJourneyDetailResult) -> Void) -> AsyncRequest {
+        guard let context = context as? HvvJourneyContext else {
+            completion(HttpRequest(urlBuilder: UrlBuilder()), .invalidId)
+            return AsyncRequest(task: nil)
+        }
+        
+        let request = encodeJson(dict: [
+            "version": HvvProvider.VERSION,
+            "lineKey": context.lineKey,
+            "serviceId": context.serviceId,
+            "station": jsonLocation(location: context.station),
+            "showPath": true,
+            "segments": "ALL",
+            "time": jsonIsoDate(date: context.stationTime)
+        ], requestUrlEncoding: .utf8)
+        let urlBuilder = UrlBuilder(path: HvvProvider.API_BASE + "departureCourse", encoding: .utf8)
+        
+        let httpRequest = HttpRequest(urlBuilder: urlBuilder).setPostPayload(request).setHeaders(getAuthHeaders(request))
+        return HttpClient.get(httpRequest: httpRequest) { result in
+            switch result {
+            case .success((_, let data)):
+                httpRequest.responseData = data
+                do {
+                    try self.queryJourneyDetailParsing(request: httpRequest, context: context, completion: completion)
+                } catch let err as ParseError {
+                    os_log("queryJourneyDetail parse error: %{public}@", log: .requestLogger, type: .error, err.reason)
+                    completion(httpRequest, .failure(err))
+                } catch let err {
+                    os_log("queryJourneyDetail handle response error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
+                    completion(httpRequest, .failure(err))
+                }
+            case .failure(let err):
+                os_log("queryJourneyDetail network error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
+                completion(httpRequest, .failure(err))
+            }
+        }
+    }
+    
+    override func queryJourneyDetailParsing(request: HttpRequest, context: QueryJourneyDetailContext, completion: @escaping (HttpRequest, QueryJourneyDetailResult) -> Void) throws {
+        guard let context = context as? HvvJourneyContext else {
+            completion(request, .invalidId)
+            return
+        }
+        let json = try getResponse(from: request)
+        let returnCode = json["returnCode"].stringValue
+        guard returnCode == "OK" else {
+            throw ParseError(reason: "invalid return code \(returnCode)")
+        }
+        
+        let courseElements = json["courseElements"].arrayValue
+        let departure = try parseCourseElem(json: courseElements[0], prefix: "from")
+        let arrival = try parseCourseElem(json: courseElements[courseElements.count - 1], prefix: "to")
+        var stops: [Stop] = []
+        for index in 0..<courseElements.count-1 {
+            let dep = try parseCourseElem(json: courseElements[index], prefix: "to")
+            let arr = try parseCourseElem(json: courseElements[index+1], prefix: "from")
+            stops.append(Stop(location: dep.location, departure: dep, arrival: arr, message: nil, wagonSequenceContext: nil))
+        }
+        
+        var path: [LocationPoint] = []
+        for index in 0..<courseElements.count {
+            var track = parsePath(json: courseElements[index]["path"])
+            if index != 0 {
+                // remove overlap
+                track.removeFirst()
+            }
+            path.append(contentsOf: track)
+        }
+        
+        let leg = PublicLeg(line: context.line, destination: arrival.location, departure: departure, arrival: arrival, intermediateStops: stops, message: nil, path: path, journeyContext: context, loadFactor: nil)
+        let trip = Trip(id: "", from: departure.location, to: arrival.location, legs: [leg], fares: [], refreshContext: nil)
+        completion(request, .success(trip: trip, leg: leg))
+    }
+    
+    public override func queryTrips(from: Location, via: Location?, to: Location, date: Date, departure: Bool, tripOptions: TripOptions, completion: @escaping (HttpRequest, QueryTripsResult) -> Void) -> AsyncRequest {
+        return doQueryTrips(from: from, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions, previousContext: nil, later: false, completion: completion)
+    }
+    
+    public override func queryMoreTrips(context: QueryTripsContext, later: Bool, completion: @escaping (HttpRequest, QueryTripsResult) -> Void) -> AsyncRequest {
+        guard let context = context as? Context else {
+            completion(HttpRequest(urlBuilder: UrlBuilder()), .sessionExpired)
+            return AsyncRequest(task: nil)
+        }
+        return doQueryTrips(from: context.from, via: context.via, to: context.to, date: context.date, departure: context.departure, tripOptions: context.tripOptions, previousContext: context, later: later, completion: completion)
+    }
+    
+    public override func refreshTrip(context: RefreshTripContext, completion: @escaping (HttpRequest, QueryTripsResult) -> Void) -> AsyncRequest {
+        // unsupported
+        return AsyncRequest(task: nil)
+    }
+    
+    private func doQueryTrips(from: Location, via: Location?, to: Location, date: Date, departure: Bool, tripOptions: TripOptions, previousContext: Context?, later: Bool, completion: @escaping (HttpRequest, QueryTripsResult) -> Void) -> AsyncRequest {
+        let desiredTypes = jsonDesiredTypes(products: tripOptions.products)
+        let handycap: Int
+        switch tripOptions.accessibility ?? .neutral {
+        case .barrierFree: handycap = 5
+        case .limited: handycap = 3
+        case .neutral:
+            switch tripOptions.walkSpeed ?? .normal {
+            case .fast: handycap = -1
+            case .slow: handycap = 1
+            case .normal: handycap = 0
+            }
+        }
+        let timeIsDeparture = previousContext != nil ? later : departure
+        var requestDict = [
+            "version": HvvProvider.VERSION,
+            "start": jsonLocation(location: from),
+            "dest": jsonLocation(location: to),
+            "time": jsonDate(date: date),
+            "timeIsDeparture": timeIsDeparture,
+            "tariffDetails": true,
+            "intermediateStops": true,
+            "realtime": "REALTIME",
+            "returnContSearchData": true,
+            "numberOfSchedules": 6,
+            "schedulesBefore": timeIsDeparture ? 0 : 6,
+            "schedulesAfter": timeIsDeparture ? 6 : 0,
+            "penalties": [
+                ["name": "desiredType", "value": desiredTypes != nil ? "\(desiredTypes!):10000" : "train:0"],
+                ["name": "changeEvent", "value": tripOptions.optimize == .leastChanges ? 8 : 4],
+                ["name": "walker", "value": tripOptions.optimize == .leastWalking ? 3 : 1],
+                ["name": "anyHandicap", "value": handycap]
+            ],
+            "tariffInfoSelector": [
+                "tariff": "HVV",
+                "tariffRegions": false,
+                "kinds": [1, 2]  // Einzelfahrkarte Erwachsener & Kind
+            ]
+        ] as [String : Any]
+        if let via = via {
+            requestDict["via"] = jsonLocation(location: via)
+        }
+        if let previousContext = previousContext {
+            requestDict["contSearchByServiceId"] = later ? previousContext.laterContext : previousContext.earlierContext
+        }
+        let request = encodeJson(dict: requestDict, requestUrlEncoding: .utf8)
+        let urlBuilder = UrlBuilder(path: HvvProvider.API_BASE + "getRoute", encoding: .utf8)
+        
+        let httpRequest = HttpRequest(urlBuilder: urlBuilder).setPostPayload(request).setHeaders(getAuthHeaders(request))
+        return HttpClient.get(httpRequest: httpRequest) { result in
+            switch result {
+            case .success((_, let data)):
+                httpRequest.responseData = data
+                do {
+                    try self.queryTripsParsing(request: httpRequest, from: from, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions, previousContext: previousContext, later: later, completion: completion)
+                } catch let err as ParseError {
+                    os_log("queryTrips parse error: %{public}@", log: .requestLogger, type: .error, err.reason)
+                    completion(httpRequest, .failure(err))
+                } catch let err {
+                    os_log("queryTrips handle response error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
+                    completion(httpRequest, .failure(err))
+                }
+            case .failure(let err):
+                os_log("queryTrips network error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
+                completion(httpRequest, .failure(err))
+            }
+        }
+    }
+    
+    override func queryTripsParsing(request: HttpRequest, from: Location, via: Location?, to: Location, date: Date, departure: Bool, tripOptions: TripOptions, previousContext: QueryTripsContext?, later: Bool, completion: @escaping (HttpRequest, QueryTripsResult) -> Void) throws {
+        let json = try getResponse(from: request)
+        let returnCode = json["returnCode"].stringValue
+        let errorDevInfo = json["errorDevInfo"].stringValue
+        switch returnCode {
+        case "OK": break
+        case "ERROR_ROUTE":
+            completion(request, .noTrips)
+            return
+        case "ERROR_CN_TOO_MANY":
+            completion(request, .ambiguous(ambiguousFrom: [], ambiguousVia: [], ambiguousTo: []))
+            return
+        default:
+            if errorDevInfo.lowercased().contains("kein ergebnis gefunden für haltestelle") || errorDevInfo.lowercased().contains("not listed as HVV station") {
+                if let fromName = from.name, errorDevInfo.contains(fromName) {
+                    completion(request, .unknownFrom)
+                } else if let toName = to.name, errorDevInfo.contains(toName) {
+                    completion(request, .unknownTo)
+                } else if let viaName = via?.name, errorDevInfo.contains(viaName) {
+                    completion(request, .unknownVia)
+                } else {
+                    completion(request, .noTrips)
+                }
+                return
+            } else if errorDevInfo.lowercased().contains("ausserhalb der fahrplangültigkeit") {
+                completion(request, .invalidDate)
+                return
+            } else if errorDevInfo == "-212 keine Lösung für die gewünschten Start- und Zielpunkte gefunden" {
+                completion(request, .noTrips)
+                return
+            }
+            throw ParseError(reason: "invalid return code \(returnCode): \(errorDevInfo)")
+        }
+        
+        var trips: [Trip] = []
+        let schedules: [JSON]
+        if json["realtimeSchedules"].exists() {
+            schedules = json["realtimeSchedules"].arrayValue
+        } else if json["schedules"].exists() {
+            schedules = json["schedules"].arrayValue
+        } else {
+            schedules = []
+        }
+        if schedules.isEmpty {
+            completion(request, .noTrips)
+            return
+        }
+        for schedule in schedules {
+            trips.append(try parseTrip(json: schedule))
+        }
+        var laterContext = schedules.last?["contSearchAfter"].dictionaryObject
+        if !later, let previousContext = previousContext as? Context, previousContext.canQueryLater {
+            laterContext = previousContext.laterContext
+        }
+        var earlierContext = schedules.first?["contSearchBefore"].dictionaryObject
+        if later, let previousContext = previousContext as? Context, previousContext.canQueryEarlier {
+            earlierContext = previousContext.earlierContext
+        }
+        let context = Context(from: from, via: via, to: to, date: date, departure: departure, laterContext: laterContext, earlierContext: earlierContext, tripOptions: tripOptions)
+        completion(request, .success(context: context, from: from, via: via, to: to, trips: trips, messages: []))
+    }
+    
+    // MARK: parsing utils
+    
+    private func getResponse(from request: HttpRequest) throws -> JSON {
+        guard let data = request.responseData, let json = try? JSON(data: data) else {
+            throw ParseError(reason: "failed to get data")
+        }
+        return json
+    }
+    
+    private func parseLocation(json: JSON) -> Location? {
+        let type: LocationType
+        switch json["type"].stringValue {
+        case "STATION":     type = .station
+        case "POI":         type = .poi
+        case "ADDRESS":     type = .address
+        case "COORDINATE":  type = .coord
+        default:            type = .any
+        }
+        let id = json["id"].string
+        let name = json["name"].string
+        let place = json["city"].string
+        let coord: LocationPoint?
+        if let x = json["coordinate"]["x"].double, let y = json["coordinate"]["y"].double {
+            coord = LocationPoint(lat: Int(y * 1e6), lon: Int(x * 1e6))
+        } else {
+            coord = nil
+        }
+        return Location(type: type, id: id, coord: coord, place: place, name: name)
+    }
+    
+    private func jsonLocation(location: Location) -> [String: Any] {
+        let type: String
+        switch location.type {
+        case .station:      type = "STATION"
+        case .poi:          type = "POI"
+        case .address:      type = "ADDRESS"
+        case .coord:        type = "COORDINATE"
+        default:            type = "UNKNOWN"
+        }
+        
+        var result: [String: Any] = [:]
+        if let id = location.id {
+            result["id"] = id
+        }
+        result["type"] = type
+        if let name = location.name {
+            result["name"] = name
+        }
+        if let place = location.place {
+            result["city"] = place
+        }
+        if let c = location.coord {
+            result["coordinate"] = ["x": Double(c.lon) / 1e6, "y": Double(c.lat) / 1e6]
+        }
+        return result
+    }
+    
+    private func parseDate(date: JSON) throws -> Date {
+        let dateString = date["date"].stringValue
+        let timeString = date["time"].stringValue
+        
+        guard let result = dateTimeFormatter.date(from: "\(dateString) \(timeString)") else {
+            throw ParseError(reason: "failed to parse date \(dateString) \(timeString)")
+        }
+        return result
+    }
+    
+    private func parseIsoDate(date: JSON) throws -> Date {
+        guard let result = isoDateFormatter.date(from: date.stringValue) else {
+            throw ParseError(reason: "failed to parse date \(date.stringValue)")
+        }
+        return result
+    }
+    
+    private func jsonDate(date: Date) -> [String: String] {
+        return [
+            "date": dateFormatter.string(from: date),
+            "time": timeFormatter.string(from: date)
+        ]
+    }
+    
+    private func jsonIsoDate(date: Date) -> String {
+        return isoDateFormatter.string(from: date)
+    }
+    
+    private func parseLineAndDestination(json: JSON, directionType: Int?) -> ServingLine {
+        let id = json["id"].string
+        let name = json["name"].string
+        let direction = json["direction"].string
+        let directionId = json["directionId"].string
+        let product = parseLineProduct(type: json["type"]["shortInfo"].stringValue)
+        let network = json["carrierNameShort"].string
+        
+        let dir: Line.Direction?
+        switch directionType ?? 0 {
+        case 1: dir = .outward
+        case 6: dir = .return
+        default: dir = nil
+        }
+        let line = Line(id: id, network: network, product: product, label: name, name: name, number: nil, vehicleNumber: nil, style: lineStyle(network: network, product: product, label: name), attr: nil, message: nil, direction: dir)
+        let destination: Location?
+        if let direction = direction {
+            destination = Location(type: .station, id: directionId, coord: nil, place: nil, name: direction)
+        } else {
+            destination = nil
+        }
+        return ServingLine(line: line, destination: destination)
+    }
+    
+    private func parseLineProduct(type: String) -> Product? {
+        switch type {
+        case "ICE", "IC":
+            return .highSpeedTrain
+        case "RB", "RE":
+            return .regionalTrain
+        case "Bus", "XpressBus", "Schnellbus", "Nachtbus":
+            return .bus
+        case "S", "A":
+            return .suburbanTrain
+        case "U":
+            return .subway
+        case "Schiff":
+            return .ferry
+        default:
+            return nil
+        }
+    }
+    
+    private func parseTrip(json: JSON) throws -> Trip {
+        guard
+            let from = parseLocation(json: json["start"]),
+            let to = parseLocation(json: json["dest"])
+        else {
+            throw ParseError(reason: "failed to parse from/to")
+        }
+        var legs: [Leg] = []
+        for (_, jsonLeg) in json["scheduleElements"] {
+            if let leg = try parseLeg(json: jsonLeg) {
+                legs.append(leg)
+            }
+        }
+        let fares = parseFares(json: json["tariffInfos"])
+        return Trip(id: "", from: from, to: to, legs: legs, fares: fares, refreshContext: nil)
+    }
+    
+    private func parseLeg(json: JSON) throws -> Leg? {
+        guard
+            let departure = try parseStop(json: json["from"]).departure,
+            let arrival = try parseStop(json: json["to"]).arrival
+        else {
+            throw ParseError(reason: "failed to parse leg from/to")
+        }
+        let path = parsePath(json: json["path"])
+        let serviceType = json["line"]["type"]["simpleType"].stringValue
+        switch serviceType {
+        case "FOOTPATH":
+            // Individual leg
+            return IndividualLeg(type: .WALK, departureTime: departure.time, departure: departure.location, arrival: arrival.location, arrivalTime: arrival.time, distance: 0, path: path)
+        case "BICYCLE":
+            return IndividualLeg(type: .BIKE, departureTime: departure.time, departure: departure.location, arrival: arrival.location, arrivalTime: arrival.time, distance: 0, path: path)
+        case "CHANGE", "CHANGE_SAME_PLATFORM":
+            if departure.time == arrival.time {
+                return nil
+            }
+            return IndividualLeg(type: .TRANSFER, departureTime: departure.time, departure: departure.location, arrival: arrival.location, arrivalTime: arrival.time, distance: 0, path: path)
+        case "BUS", "TRAIN", "SHIP":
+            // Public leg
+            let servingLine = parseLineAndDestination(json: json["line"], directionType: nil)
+            var stops: [Stop] = []
+            for (_, jsonStop) in json["intermediateStops"] {
+                stops.append(try parseStop(json: jsonStop))
+            }
+            if json["cancelled"].boolValue {
+                departure.cancelled = true
+                arrival.cancelled = true
+                stops.forEach { $0.departure?.cancelled = true; $0.arrival?.cancelled = true }
+            }
+            let message = parseAttributes(attributes: json["attributes"])
+            let context: HvvJourneyContext?
+            if let lineId = servingLine.line.id, let serviceId = json["serviceId"].int {
+                context = HvvJourneyContext(lineKey: lineId, serviceId: serviceId, station: departure.location, stationTime: departure.plannedTime, line: servingLine.line)
+            } else {
+                context = nil
+            }
+            return PublicLeg(line: servingLine.line, destination: servingLine.destination, departure: departure, arrival: arrival, intermediateStops: stops, message: message, path: path, journeyContext: context, loadFactor: nil)
+        default:
+            throw ParseError(reason: "unknown service type \(serviceType)")
+        }
+    }
+    
+    private func parseStop(json: JSON) throws -> Stop {
+        guard let location = parseLocation(json: json) else { throw ParseError(reason: "stop location could not be parsed") }
+        let departure: StopEvent?
+        if let plannedTime = try? parseDate(date: json["depTime"]) {
+            let predictedTime: Date?
+            if let delay = json["depDelay"].int {
+                predictedTime = plannedTime.addingTimeInterval(TimeInterval(delay))
+            } else {
+                predictedTime = nil
+            }
+            let plannedPlatform = parsePosition(position: json["platform"].string)
+            let predictedPlatform = parsePosition(position: json["realtimePlatform"].string)
+            departure = StopEvent(location: location, plannedTime: plannedTime, predictedTime: predictedTime, plannedPlatform: plannedPlatform, predictedPlatform: predictedPlatform, cancelled: json["cancelled"].boolValue)
+        } else {
+            departure = nil
+        }
+        let arrival: StopEvent?
+        if let plannedTime = try? parseDate(date: json["arrTime"]) {
+            let predictedTime: Date?
+            if let delay = json["arrDelay"].int {
+                predictedTime = plannedTime.addingTimeInterval(TimeInterval(delay))
+            } else {
+                predictedTime = nil
+            }
+            let plannedPlatform = parsePosition(position: json["platform"].string)
+            let predictedPlatform = parsePosition(position: json["realtimePlatform"].string)
+            arrival = StopEvent(location: location, plannedTime: plannedTime, predictedTime: predictedTime, plannedPlatform: plannedPlatform, predictedPlatform: predictedPlatform, cancelled: json["cancelled"].boolValue)
+        } else {
+            arrival = nil
+        }
+        let message = parseAttributes(attributes: json["attributes"])
+        return Stop(location: location, departure: departure, arrival: arrival, message: message, wagonSequenceContext: nil)
+    }
+    
+    private func parsePath(json: JSON) -> [LocationPoint] {
+        var result: [LocationPoint] = []
+        for (_, coord) in json["track"] {
+            result.append(LocationPoint(lat: Int(coord["y"].doubleValue * 1e6), lon: Int(coord["x"].doubleValue * 1e6)))
+        }
+        return result
+    }
+    
+    private func parseFares(json: JSON) -> [Fare] {
+        var result: [Fare] = []
+        for ticket in json.arrayValue.flatMap({ $0["ticketInfos"].arrayValue }) {
+            let kind = ticket["tariffKindID"].intValue
+            let currency = ticket["currency"].string ?? "EUR"
+            guard let price = ticket["basePrice"].float, price > 0 else { continue }
+            switch kind {
+            case 1: result.append(Fare(name: nil, type: .adult, currency: currency, fare: price, unitsName: nil, units: nil))
+            case 2: result.append(Fare(name: nil, type: .child, currency: currency, fare: price, unitsName: nil, units: nil))
+            default: break
+            }
+        }
+        return result
+    }
+    
+    let P_POSITION: NSRegularExpression = try! NSRegularExpression(pattern: "^Gleis\\s*(.*?)\\s*(?:\\(.*\\))?$", options: .caseInsensitive)
+    
+    override func parsePosition(position: String?) -> String? {
+        if let m = position?.match(pattern: P_POSITION) {
+            return (m[0])
+        }
+        return super.parsePosition(position: position)
+    }
+    
+    private func parseAttributes(attributes: JSON) -> String? {
+        var messages: [String] = []
+        for (_, attribute) in attributes {
+            if let title = attribute["title"].string {
+                messages.append(title)
+            } else if let value = attribute["value"].string {
+                messages.append(value)
+            }
+        }
+        // please, please continue to wear a mask, even if the app doesn't nag you about it anymore
+        messages = messages.filter({!$0.lowercased().contains("ffp") && !$0.lowercased().contains("maskenpflicht") && !$0.lowercased().contains("3g-pflicht") && !$0.lowercased().contains("3g-regel")})
+        messages = messages.map({ $0.ensurePunctuation })
+        return messages.uniqued().joined(separator: "\n").emptyToNil
+    }
+    
+    private func parseCourseElem(json: JSON, prefix: String) throws -> StopEvent {
+        guard let location = parseLocation(json: json["\(prefix)Station"]) else { throw ParseError(reason: "failed to parse course elem") }
+        let plannedTime = try parseIsoDate(date: json["\(prefix == "from" ? "dep" : "arr")Time"])
+        let predictedTime: Date?
+        if let delay = json["\(prefix == "from" ? "dep" : "arr")Delay"].int {
+            predictedTime = plannedTime.addingTimeInterval(TimeInterval(delay))
+        } else {
+            predictedTime = nil
+        }
+        let plannedPlatform = parsePosition(position: json["\(prefix)Platform"].string)
+        let predictedPlatform = parsePosition(position: json["\(prefix)RealtimePlatform"].string)
+        let cancelled = json["\(prefix)Cancelled"].boolValue
+        
+        return StopEvent(location: location, plannedTime: plannedTime, predictedTime: predictedTime, plannedPlatform: plannedPlatform, predictedPlatform: predictedPlatform, cancelled: cancelled)
+    }
+    
+    private func jsonDesiredTypes(products: [Product]?) -> String? {
+        var result: [String] = []
+        for product in Set(Product.allCases).subtracting(products ?? Product.allCases) {
+            switch product {
+            case .highSpeedTrain: result.append("fasttrain&extrafasttrain")
+            case .regionalTrain: result.append("r")
+            case .suburbanTrain: result.append("s")
+            case .subway: result.append("u")
+            case .tram: continue
+            case .bus: result.append("bus")
+            case .onDemand: result.append("callable")
+            case .ferry: result.append("ship")
+            case .cablecar: continue
+            }
+        }
+        return result.joined(separator: ",").emptyToNil
+    }
+    
+    private func getAuthHeaders(_ request: String?) -> [String: String]? {
+        guard var headers = self.authHeaders as? [String: String] else { return nil }
+        guard let input = request, let key = headers["geofox-auth-signature"] else { return nil }
+        
+        func hmacSha1(input: String, key: String) -> String {
+            let data = Data(input.utf8)
+            let keyData = Data(key.utf8)
+            let hash = data.withUnsafeBytes { (bytes: UnsafeRawBufferPointer) -> [UInt8] in
+                return keyData.withUnsafeBytes { (keyBytes: UnsafeRawBufferPointer) -> [UInt8] in
+                    var hash = [UInt8](repeating: 0, count: Int(CC_SHA1_DIGEST_LENGTH))
+                    CCHmac(CCHmacAlgorithm(kCCHmacAlgSHA1), keyBytes.baseAddress, key.count, bytes.baseAddress, data.count, &hash)
+                    return hash
+                }
+            }
+            return Data(hash).base64EncodedString()
+        }
+        
+        headers["geofox-auth-signature"] = hmacSha1(input: input, key: key)
+        return headers
+    }
+    
+    public class Context: QueryTripsContext {
+        
+        public override var canQueryEarlier: Bool { return earlierContext != nil }
+        public override var canQueryLater: Bool { return laterContext != nil }
+        
+        public let from: Location
+        public let via: Location?
+        public let to: Location
+        public let date: Date
+        public let departure: Bool
+        public let laterContext: [String: Any]?
+        public let earlierContext: [String: Any]?
+        public let tripOptions: TripOptions
+        
+        init(from: Location, via: Location?, to: Location, date: Date, departure: Bool, laterContext: [String: Any]?, earlierContext: [String: Any]?, tripOptions: TripOptions) {
+            self.from = from
+            self.via = via
+            self.to = to
+            self.date = date
+            self.departure = departure
+            self.laterContext = laterContext
+            self.earlierContext = earlierContext
+            self.tripOptions = tripOptions
+            super.init()
+        }
+        
+        public required convenience init?(coder aDecoder: NSCoder) {
+            guard
+                let from = aDecoder.decodeObject(of: Location.self, forKey: PropertyKey.from),
+                let to = aDecoder.decodeObject(of: Location.self, forKey: PropertyKey.to),
+                let date = aDecoder.decodeObject(of: NSDate.self, forKey: PropertyKey.date) as Date?,
+                let tripOptions = aDecoder.decodeObject(of: TripOptions.self, forKey: PropertyKey.tripOptions)
+                else {
+                    return nil
+            }
+            let departure = aDecoder.decodeBool(forKey: PropertyKey.departure)
+            let via = aDecoder.decodeObject(of: Location.self, forKey: PropertyKey.via)
+            let laterContext = aDecoder.decodeObject(of: [NSDictionary.self, NSString.self, NSNumber.self], forKey: PropertyKey.laterContext) as? [String: Any]
+            let earlierContext = aDecoder.decodeObject(of: [NSDictionary.self, NSString.self, NSNumber.self], forKey: PropertyKey.earlierContext) as? [String: Any]
+            
+            self.init(from: from, via: via, to: to, date: date, departure: departure, laterContext: laterContext, earlierContext: earlierContext, tripOptions: tripOptions)
+        }
+        
+        public override func encode(with aCoder: NSCoder) {
+            aCoder.encode(from, forKey: PropertyKey.from)
+            aCoder.encode(via, forKey: PropertyKey.via)
+            aCoder.encode(to, forKey: PropertyKey.to)
+            aCoder.encode(date, forKey: PropertyKey.date)
+            aCoder.encode(departure, forKey: PropertyKey.departure)
+            aCoder.encode(earlierContext, forKey: PropertyKey.earlierContext)
+            aCoder.encode(laterContext, forKey: PropertyKey.laterContext)
+            aCoder.encode(tripOptions, forKey: PropertyKey.tripOptions)
+        }
+        
+        struct PropertyKey {
+            static let from = "from"
+            static let via = "via"
+            static let to = "to"
+            static let date = "date"
+            static let departure = "dep"
+            static let laterContext = "laterContext"
+            static let earlierContext = "earlierContext"
+            static let tripOptions = "tripOptions"
+        }
+        
     }
     
 }
+
+public class HvvJourneyContext: QueryJourneyDetailContext {
+    
+    public override class var supportsSecureCoding: Bool { return true }
+    
+    public let lineKey: String
+    public let serviceId: Int
+    public let station: Location
+    public let stationTime: Date
+    public let line: Line
+    
+    public init(lineKey: String, serviceId: Int, station: Location, stationTime: Date, line: Line) {
+        self.lineKey = lineKey
+        self.serviceId = serviceId
+        self.station = station
+        self.stationTime = stationTime
+        self.line = line
+        super.init()
+    }
+    
+    required convenience init?(coder aDecoder: NSCoder) {
+        guard
+            let lineKey = aDecoder.decodeObject(of: NSString.self, forKey: PropertyKey.lineKey) as String?,
+            let station = aDecoder.decodeObject(of: Location.self, forKey: PropertyKey.station),
+            let stationTime = aDecoder.decodeObject(of: NSDate.self, forKey: PropertyKey.stationTime) as Date?,
+            let line = aDecoder.decodeObject(of: Line.self, forKey: PropertyKey.line)
+        else { return nil }
+        let serviceId = aDecoder.decodeInteger(forKey: PropertyKey.serviceId)
+        self.init(lineKey: lineKey, serviceId: serviceId, station: station, stationTime: stationTime, line: line)
+    }
+    
+    public override func encode(with aCoder: NSCoder) {
+        aCoder.encode(lineKey, forKey: PropertyKey.lineKey)
+        aCoder.encode(serviceId, forKey: PropertyKey.serviceId)
+        aCoder.encode(station, forKey: PropertyKey.station)
+        aCoder.encode(stationTime, forKey: PropertyKey.stationTime)
+        aCoder.encode(line, forKey: PropertyKey.line)
+    }
+    
+    struct PropertyKey {
+        static let lineKey = "lineKey"
+        static let serviceId = "serviceId"
+        static let station = "station"
+        static let stationTime = "stationTime"
+        static let line = "line"
+    }
+}
+
+

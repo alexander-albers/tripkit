@@ -218,5 +218,9 @@ public class AbstractHafasProvider: AbstractNetworkProvider {
         }
     }
     
+    func encodeJson(dict: [String : Any]) -> String? {
+        return encodeJson(dict: dict, requestUrlEncoding: requestUrlEncoding)
+    }
+    
 }
 
