@@ -355,6 +355,10 @@ public class HvvProvider: AbstractNetworkProvider {
         return AsyncRequest(task: nil)
     }
     
+    override func refreshTripParsing(request: HttpRequest, context: RefreshTripContext, completion: @escaping (HttpRequest, QueryTripsResult) -> Void) throws {
+        // does not apply
+    }
+    
     private func doQueryTrips(from: Location, via: Location?, to: Location, date: Date, departure: Bool, tripOptions: TripOptions, previousContext: Context?, later: Bool, completion: @escaping (HttpRequest, QueryTripsResult) -> Void) -> AsyncRequest {
         let desiredTypes = jsonDesiredTypes(products: tripOptions.products)
         let handycap: Int
