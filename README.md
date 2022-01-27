@@ -94,10 +94,10 @@ More api methods can be found in [NetworkProvider.swift](https://github.com/alex
 
 ## Using providers that require secrets
 
-For some providers a secret like an API key is required to use their API. You need to request the secrets directly from the provider or use the same ones that are used by the official apps. For Navitia based providers, you can [request a secret here](http://www.navitia.io/register).
+For some providers a secret like an API key is required to use their API. You need to request the secrets directly from the provider or use the same ones that are used by the official apps.
 
 For unit testing, you need to specify all required secrets in a secrets.json file. A template can be found [here](Sources/TripKit/Resources/secrets.json.template).
 
 ## Contributing and future plans
 
-Feel free to add further network providers to the project, as long as they don't overlap with already existing ones and don't require too much maintenance or a server to be used. Since this project is based on the public-transport-enabler, my intention is to have this project as close to it as possible. I'd like to add support for navitia providers in the future, as well as possibly the KVB (Köln), VVO (native) and VVR (Rügen). Also, a more Swift-like approach to network providers using some kind of protocol oriented design would be nice to have.
+Feel free to add further transit providers to the project, as long as they don't overlap with already existing ones and don't require too much maintenance or a server to be used. Since this project is based on the public-transport-enabler, my intention is to have this project as close to it as possible. For now, I'd like to stick to transit providers in German-speaking countries, but a further expansion to other countries is imaginable for the future. 
