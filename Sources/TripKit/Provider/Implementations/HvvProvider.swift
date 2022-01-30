@@ -1,6 +1,7 @@
 import Foundation
 import os.log
 import SwiftyJSON
+import CommonCrypto
 
 public class HvvProvider: AbstractNetworkProvider {
     
