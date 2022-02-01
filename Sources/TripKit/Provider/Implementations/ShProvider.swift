@@ -9,7 +9,7 @@ public class ShProvider: AbstractHafasClientInterfaceProvider {
         super.init(networkId: .SH, apiBase: ShProvider.API_BASE, productsMap: ShProvider.PRODUCTS_MAP)
         self.apiAuthorization = apiAuthorization
         apiVersion = "1.10"
-        apiClient = ["id": "NAHSH"]
+        apiClient = ["id": "NAHSH", "type": "WEB"]
         
         styles = [
             "RRE6": LineStyle(shape: .rect, backgroundColor: LineStyle.rgb(3, 150, 81), foregroundColor: LineStyle.white),
