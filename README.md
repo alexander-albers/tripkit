@@ -9,6 +9,26 @@ This library is currently used by the [ÖPNV Navigator app](http://navigatorapp.
 [![Static tests](https://github.com/alexander-albers/tripkit/actions/workflows/test-static.yml/badge.svg)](https://github.com/alexander-albers/tripkit/actions/workflows/test-static.yml)
 [![Provider tests](https://github.com/alexander-albers/tripkit/actions/workflows/test-providers.yml/badge.svg)](https://github.com/alexander-albers/tripkit/actions/workflows/test-providers.yml)
 
+## Integration
+
+Use the Swift Package Manager to install TripKit into your project. If you have a Package.swift file, add the following entry to your dependencies:
+
+```swift
+import PackageDescription
+
+let package = Package(
+    name: "YOUR_PROJECT_NAME",
+    dependencies: [
+        // Insert the following line into your Swift package dependencies.
+        .package(url: "https://github.com/alexander-albers/tripkit.git", .branch("main")),
+    ],
+)
+```
+
+If you are using a regular Xcode project, you can select "File" -> "Add Packages…" from the menu bar and paste the url of this git repository.
+
+The tagged commits of this repository correspond to the released versions of the [ÖPNV Navigator app](http://navigatorapp.net) and have no other meaning. I try to avoid code-breaking changes between releases as far as possible, but since this project is still under active development there is not guarantee that some minor things might break. 
+
 ## Example Usage
 
 ### Create a new instance of a network provider:
