@@ -518,12 +518,6 @@
 		FAC58F7226E74EA000E8EAF3 /* Test Cases in Resources */ = {isa = PBXBuildFile; fileRef = FAC58F7126E74EA000E8EAF3 /* Test Cases */; };
 		FAC58F7326E74EA000E8EAF3 /* Test Cases in Resources */ = {isa = PBXBuildFile; fileRef = FAC58F7126E74EA000E8EAF3 /* Test Cases */; };
 		FAC58F7426E74EA000E8EAF3 /* Test Cases in Resources */ = {isa = PBXBuildFile; fileRef = FAC58F7126E74EA000E8EAF3 /* Test Cases */; };
-		FAC58F8826E74FAC00E8EAF3 /* Info-iOS.plist in Resources */ = {isa = PBXBuildFile; fileRef = FAC58F8426E74FAB00E8EAF3 /* Info-iOS.plist */; };
-		FAC58F8926E74FAC00E8EAF3 /* Info-iOS.plist in Resources */ = {isa = PBXBuildFile; fileRef = FAC58F8426E74FAB00E8EAF3 /* Info-iOS.plist */; };
-		FAC58F8A26E74FAC00E8EAF3 /* Info-tvOS.plist in Resources */ = {isa = PBXBuildFile; fileRef = FAC58F8526E74FAB00E8EAF3 /* Info-tvOS.plist */; };
-		FAC58F8C26E74FAC00E8EAF3 /* Info-tvOS.plist in Resources */ = {isa = PBXBuildFile; fileRef = FAC58F8526E74FAB00E8EAF3 /* Info-tvOS.plist */; };
-		FAC58F8D26E74FAC00E8EAF3 /* Info-macOS.plist in Resources */ = {isa = PBXBuildFile; fileRef = FAC58F8626E74FAC00E8EAF3 /* Info-macOS.plist */; };
-		FAC58F8E26E74FAC00E8EAF3 /* Info-macOS.plist in Resources */ = {isa = PBXBuildFile; fileRef = FAC58F8626E74FAC00E8EAF3 /* Info-macOS.plist */; };
 		FAC5900426E7507D00E8EAF3 /* HvvProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC58FF826E7507B00E8EAF3 /* HvvProviderTests.swift */; };
 		FAC5900526E7507D00E8EAF3 /* HvvProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC58FF826E7507B00E8EAF3 /* HvvProviderTests.swift */; };
 		FAC5900626E7507D00E8EAF3 /* HvvProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC58FF826E7507B00E8EAF3 /* HvvProviderTests.swift */; };
@@ -1081,9 +1075,6 @@
 		FABFCC2D1E8FED9000905D5E /* VagfrProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VagfrProvider.swift; sourceTree = "<group>"; };
 		FAC58F3D26E74D9C00E8EAF3 /* Fixtures */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fixtures; sourceTree = "<group>"; };
 		FAC58F7126E74EA000E8EAF3 /* Test Cases */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Test Cases"; sourceTree = "<group>"; };
-		FAC58F8426E74FAB00E8EAF3 /* Info-iOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-iOS.plist"; sourceTree = "<group>"; };
-		FAC58F8526E74FAB00E8EAF3 /* Info-tvOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-tvOS.plist"; sourceTree = "<group>"; };
-		FAC58F8626E74FAC00E8EAF3 /* Info-macOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-macOS.plist"; sourceTree = "<group>"; };
 		FAC58FF826E7507B00E8EAF3 /* HvvProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HvvProviderTests.swift; sourceTree = "<group>"; };
 		FAC58FF926E7507B00E8EAF3 /* InvgProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvgProviderTests.swift; sourceTree = "<group>"; };
 		FAC58FFA26E7507B00E8EAF3 /* IvbProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IvbProviderTests.swift; sourceTree = "<group>"; };
@@ -1378,16 +1369,6 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		FA5CD33B24FBBA8800B4990A /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				FAC58F8426E74FAB00E8EAF3 /* Info-iOS.plist */,
-				FAC58F8626E74FAC00E8EAF3 /* Info-macOS.plist */,
-				FAC58F8526E74FAB00E8EAF3 /* Info-tvOS.plist */,
-			);
-			path = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		FA85135226E37CC4004B6DD4 /* Request */ = {
 			isa = PBXGroup;
 			children = (
@@ -1547,6 +1528,7 @@
 				FA5CD1CD24FBAFFF00B4990A /* Package.swift */,
 				FA87AB0B24FBDEA300534505 /* Sources */,
 				FA87AB0C24FBDEAE00534505 /* Tests */,
+				FA5CD33724FBB5A300B4990A /* Supporting Files */,
 				FACB83C41E3FD0CE00AC5F1F /* Products */,
 				FAB754471E3FDC7C00C343F2 /* Frameworks */,
 			);
@@ -1585,7 +1567,6 @@
 				FA7572B01E673498009B41EF /* ParseError.swift */,
 				FABF2FB41EA1E0FE0002DE55 /* SessionExpiredError.swift */,
 				FA4C7F3726EB4C3600BFD671 /* Resources */,
-				FA5CD33724FBB5A300B4990A /* Supporting Files */,
 			);
 			path = TripKit;
 			sourceTree = "<group>";
@@ -1645,7 +1626,6 @@
 				FA1C0A14275D1AC100AA66C3 /* VvvProviderTests.swift */,
 				FA1C0A15275D1AC100AA66C3 /* WienProviderTests.swift */,
 				FA1C09FC275D1AC000AA66C3 /* ZvvProviderTests.swift */,
-				FA5CD33B24FBBA8800B4990A /* Supporting Files */,
 			);
 			path = TripKitTests;
 			sourceTree = "<group>";
@@ -2115,8 +2095,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAC58F8C26E74FAC00E8EAF3 /* Info-tvOS.plist in Resources */,
-				FAC58F8926E74FAC00E8EAF3 /* Info-iOS.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2124,8 +2102,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAC58F8E26E74FAC00E8EAF3 /* Info-macOS.plist in Resources */,
-				FAC58F8826E74FAC00E8EAF3 /* Info-iOS.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2142,8 +2118,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAC58F8D26E74FAC00E8EAF3 /* Info-macOS.plist in Resources */,
-				FAC58F8A26E74FAC00E8EAF3 /* Info-tvOS.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3103,7 +3077,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = "Sources/TripKit/Supporting Files/Info-tvOS.plist";
+				INFOPLIST_FILE = "Supporting Files/Info-tvOS.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -3138,7 +3112,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = "Sources/TripKit/Supporting Files/Info-tvOS.plist";
+				INFOPLIST_FILE = "Supporting Files/Info-tvOS.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -3173,7 +3147,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = "Sources/TripKit/Supporting Files/Info-macOS.plist";
+				INFOPLIST_FILE = "Supporting Files/Info-macOS.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -3208,7 +3182,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = "Sources/TripKit/Supporting Files/Info-macOS.plist";
+				INFOPLIST_FILE = "Supporting Files/Info-macOS.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -3239,7 +3213,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = "Tests/TripKitTests/Supporting Files/Info-macOS.plist";
+				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -3270,7 +3244,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = "Tests/TripKitTests/Supporting Files/Info-macOS.plist";
+				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -3298,7 +3272,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = "Tests/TripKitTests/Supporting Files/Info-tvOS.plist";
+				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -3329,7 +3303,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = "Tests/TripKitTests/Supporting Files/Info-tvOS.plist";
+				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -3477,7 +3451,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Sources/TripKit/Supporting Files/Info-iOS.plist";
+				INFOPLIST_FILE = "Supporting Files/Info-iOS.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -3511,7 +3485,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Sources/TripKit/Supporting Files/Info-iOS.plist";
+				INFOPLIST_FILE = "Supporting Files/Info-iOS.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -3538,7 +3512,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = "Tests/TripKitTests/Supporting Files/Info-iOS.plist";
+				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -3560,7 +3534,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = "Tests/TripKitTests/Supporting Files/Info-iOS.plist";
+				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -4004,7 +3978,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Sources/TripKit/Supporting Files/Info-watchOS.plist";
+				INFOPLIST_FILE = "Supporting Files/Info-watchOS.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -4037,7 +4011,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Sources/TripKit/Supporting Files/Info-watchOS.plist";
+				INFOPLIST_FILE = "Supporting Files/Info-watchOS.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = (
