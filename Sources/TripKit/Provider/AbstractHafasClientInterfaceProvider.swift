@@ -200,7 +200,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
     
     func jsonTripSearchIdentify(location: Location, completion: @escaping (HttpRequest, [Location]) -> Void) -> AsyncRequest {
         if let name = location.name {
-            return suggestLocations(constraint: [location.place, name].compactMap({$0}).joined(separator: " "), types: [.station], maxLocations: 10) { (request, result) in
+            return suggestLocations(constraint: [location.place, name].compactMap({$0}).joined(separator: " "), types: LocationType.ALL, maxLocations: 10) { (request, result) in
                 switch result {
                 case .success(let locations):
                     completion(request, locations.map({$0.location}))
