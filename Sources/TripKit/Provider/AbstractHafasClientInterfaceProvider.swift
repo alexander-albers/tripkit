@@ -332,10 +332,8 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
     // MARK: NetworkProvider responses
     
     override func suggestLocationsParsing(request: HttpRequest, constraint: String, types: [LocationType]?, maxLocations: Int, completion: @escaping (HttpRequest, SuggestLocationsResult) -> Void) throws {
-        guard let json = try request.responseData?.toJson() as? [String: Any], json["err"] == nil || json["err"] as? String == "OK", let svcResL = json["svcResL"] as? [Any], svcResL.count == 1, let svcRes = svcResL[0] as? [String: Any], let meth = svcRes["meth"] as? String, meth == "LocMatch", let error = svcRes["err"] as? String else {
-            throw ParseError(reason: "could not parse json")
-        }
-        if error != "OK" {
+        let svcRes = try validateResponse(with: request.responseData, requiredMethod: "LocMatch")
+        if let error = svcRes["err"] as? String, error != "OK" {
             throw ParseError(reason: "\(error): \(svcRes["errTxt"] as? String ?? "")")
         }
         guard let res = svcRes["res"] as? [String: Any], let match = res["match"] as? [String: Any], let locList = match["locL"] as? [Any] else {
@@ -349,10 +347,8 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
     
     override func queryNearbyLocationsByCoordinateParsing(request: HttpRequest, location: Location, types: [LocationType]?, maxDistance: Int, maxLocations: Int, completion: @escaping (HttpRequest, NearbyLocationsResult) -> Void) throws {
         let types = types ?? [.station]
-        guard let json = try request.responseData?.toJson() as? [String: Any], json["err"] == nil || json["err"] as? String == "OK", let svcResL = json["svcResL"] as? [Any], svcResL.count == 1, let svcRes = svcResL[0] as? [String: Any], let meth = svcRes["meth"] as? String, meth == "LocGeoPos", let error = svcRes["err"] as? String else {
-            throw ParseError(reason: "could not parse json")
-        }
-        if error != "OK" {
+        let svcRes = try validateResponse(with: request.responseData, requiredMethod: "LocGeoPos")
+        if let error = svcRes["err"] as? String, error != "OK" {
             throw ParseError(reason: "\(error): \(svcRes["errTxt"] as? String ?? "")")
         }
         guard let res = svcRes["res"] as? [String: Any] else {
@@ -369,10 +365,8 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
     }
     
     override func queryDeparturesParsing(request: HttpRequest, stationId: String, departures: Bool, time: Date?, maxDepartures: Int, equivs: Bool, completion: @escaping (HttpRequest, QueryDeparturesResult) -> Void) throws {
-        guard let json = try request.responseData?.toJson() as? [String: Any], json["err"] == nil || json["err"] as? String == "OK", let svcResL = json["svcResL"] as? [Any], svcResL.count == 1, let svcRes = svcResL[0] as? [String: Any], let meth = svcRes["meth"] as? String, meth == "StationBoard", let err = svcRes["err"] as? String else {
-            throw ParseError(reason: "could not parse json")
-        }
-        if err != "OK" {
+        let svcRes = try validateResponse(with: request.responseData, requiredMethod: "StationBoard")
+        if let err = svcRes["err"] as? String, err != "OK" {
             let errTxt = svcRes["errTxt"] as? String ?? ""
             os_log("Received hafas error %{public}@: %{public}@", log: .requestLogger, type: .error, err, errTxt)
             if err == "LOCATION" {
@@ -487,10 +481,8 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
     }
     
     override func queryTripsParsing(request: HttpRequest, from: Location, via: Location?, to: Location, date: Date, departure: Bool, tripOptions: TripOptions, previousContext: QueryTripsContext?, later: Bool, completion: @escaping (HttpRequest, QueryTripsResult) -> Void) throws {
-        guard let json = try request.responseData?.toJson() as? [String: Any], json["err"] == nil || json["err"] as? String == "OK", let svcResL = json["svcResL"] as? [Any], svcResL.count == 1, let svcRes = svcResL[0] as? [String: Any], let meth = svcRes["meth"] as? String, meth == "TripSearch" || meth == "Reconstruction", let err = svcRes["err"] as? String else {
-            throw ParseError(reason: "could not parse json")
-        }
-        if err != "OK" {
+        let svcRes = try validateResponse(with: request.responseData, requiredMethod: "TripSearch", "Reconstruction")
+        if let err = svcRes["err"] as? String, err != "OK" {
             let errTxt = svcRes["errTxt"] as? String ?? ""
             os_log("Hafas error %{public}@: %{public}@", log: .requestLogger, type: .error, err, errTxt)
             if err == "H890" { // No connections found.
@@ -685,10 +677,8 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
     }
     
     override func queryJourneyDetailParsing(request: HttpRequest, context: QueryJourneyDetailContext, completion: @escaping (HttpRequest, QueryJourneyDetailResult) -> Void) throws {
-        guard let json = try request.responseData?.toJson() as? [String: Any], json["err"] == nil || json["err"] as? String == "OK", let svcResL = json["svcResL"] as? [Any], svcResL.count == 1, let svcRes = svcResL[0] as? [String: Any], let meth = svcRes["meth"] as? String, meth == "JourneyDetails", let error = svcRes["err"] as? String else {
-            throw ParseError(reason: "could not parse json")
-        }
-        if error != "OK" {
+        let svcRes = try validateResponse(with: request.responseData, requiredMethod: "JourneyDetails")
+        if let error = svcRes["err"] as? String, error != "OK" {
             let errTxt = svcRes["errTxt"] as? String ?? ""
             os_log("Hafas error %{public}@: %{public}@", log: .requestLogger, type: .error, error, errTxt)
             if error == "LOCATION" {
@@ -878,6 +868,28 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
     }
     
     // MARK: Response parse methods
+    
+    private func validateResponse(with data: Data?, requiredMethod: String...) throws -> [String: Any] {
+        guard let json = try data?.toJson() as? [String: Any] else {
+            throw ParseError(reason: "failed to parse json from data")
+        }
+        if let err = json["err"] as? String, err != "OK" {
+            if let errTxt = json["errTxt"] as? String {
+                throw ParseError(reason: "received error: \(err) \(errTxt)")
+            } else {
+                throw ParseError(reason: "received error: \(err)")
+            }
+        }
+        
+        guard let svcResL = json["svcResL"] as? [Any], svcResL.count == 1, let svcRes = svcResL[0] as? [String: Any], let meth = svcRes["meth"] as? String else {
+            throw ParseError(reason: "failed to parse svc result")
+        }
+        guard requiredMethod.contains(meth) else {
+            throw ParseError(reason: "received illegal method response: got \(meth), expected \(requiredMethod)")
+        }
+        
+        return svcRes
+    }
     
     private func processIndividualLeg(legs: inout [Leg], type: IndividualLeg.`Type`, departureStop: StopEvent, arrivalStop: StopEvent, distance: Int, path: [LocationPoint]) {
         var path = path
