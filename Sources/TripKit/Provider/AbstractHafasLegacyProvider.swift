@@ -39,32 +39,22 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider {
         jsonGetStopParameters(builder: urlBuilder, constraint: constraint)
         
         let httpRequest = HttpRequest(urlBuilder: urlBuilder)
-        return HttpClient.get(httpRequest: httpRequest) { result in
-            switch result {
-            case .success((_, let data)):
-                do {
-                    let string = String(data: data, encoding: self.jsonGetStopsEncoding)!
-                    
-                    if let match = self.P_AJAX_GET_STOPS_JSON.firstMatch(in: string, options: [], range: NSMakeRange(0, string.count)) {
-                        let substring = (string as NSString).substring(with: match.range(at: 1))
-                        
-                        let encodedData = substring.data(using: .utf8, allowLossyConversion: true)
-                        httpRequest.responseData = encodedData
-                        try self.suggestLocationsParsing(request: httpRequest, constraint: constraint, types: types, maxLocations: maxLocations, completion: completion)
-                    } else {
-                        throw ParseError(reason: "illegal match")
-                    }
-                } catch let err as ParseError {
-                    os_log("suggestLocations parse error: %{public}@", log: .requestLogger, type: .error, err.reason)
-                    completion(httpRequest, .failure(err))
-                } catch let err {
-                    os_log("suggestLocations handle response error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
-                    completion(httpRequest, .failure(err))
-                }
-            case .failure(let err):
-                os_log("suggestLocations network error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
-                completion(httpRequest, .failure(err))
+        return makeRequest(httpRequest) {
+            guard let data = httpRequest.responseData, let string = String(data: data, encoding: self.jsonGetStopsEncoding) else {
+                throw ParseError(reason: "failed to parse data")
             }
+            
+            if let match = self.P_AJAX_GET_STOPS_JSON.firstMatch(in: string, options: [], range: NSMakeRange(0, string.count)) {
+                let substring = (string as NSString).substring(with: match.range(at: 1))
+                
+                let encodedData = substring.data(using: .utf8, allowLossyConversion: true)
+                httpRequest.responseData = encodedData
+                try self.suggestLocationsParsing(request: httpRequest, constraint: constraint, types: types, maxLocations: maxLocations, completion: completion)
+            } else {
+                throw ParseError(reason: "illegal match")
+            }
+        } errorHandler: { err in
+            completion(httpRequest, .failure(err))
         }
     }
     
@@ -99,31 +89,20 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider {
     
     func jsonNearbyLocations(url: UrlBuilder, location: Location, types: [LocationType]?, maxDistance: Int, maxLocations: Int, completion: @escaping (HttpRequest, NearbyLocationsResult) -> Void) -> AsyncRequest {
         let httpRequest = HttpRequest(urlBuilder: url)
-        return HttpClient.get(httpRequest: httpRequest) { result in
-            switch result {
-            case .success((_, let _data)):
-                do {
-                    let string = String(data: _data, encoding: self.jsonNearbyLocationsEncoding)
-                    guard
-                        let data = string?
-                            .replacingOccurrences(of: "\\'", with: "'")
-                            .data(using: self.jsonNearbyLocationsEncoding)
-                    else {
-                        throw ParseError(reason: "failed to parse response")
-                    }
-                    httpRequest.responseData = data
-                    try self.queryNearbyLocationsByCoordinateParsing(request: httpRequest, location: location, types: types, maxDistance: maxDistance, maxLocations: maxLocations, completion: completion)
-                } catch let err as ParseError {
-                    os_log("nearbyLocations parse error: %{public}@", log: .requestLogger, type: .error, err.reason)
-                    completion(httpRequest, .failure(err))
-                } catch let err {
-                    os_log("nearbyLocations handle response error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
-                    completion(httpRequest, .failure(err))
-                }
-            case .failure(let err):
-                os_log("nearbyLocations network error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
-                completion(httpRequest, .failure(err))
+        return makeRequest(httpRequest) {
+            guard let data = httpRequest.responseData else { throw ParseError(reason: "failed to parse response") }
+            let string = String(data: data, encoding: self.jsonNearbyLocationsEncoding)
+            guard
+                let data = string?
+                    .replacingOccurrences(of: "\\'", with: "'")
+                    .data(using: self.jsonNearbyLocationsEncoding)
+            else {
+                throw ParseError(reason: "failed to parse response")
             }
+            httpRequest.responseData = data
+            try self.queryNearbyLocationsByCoordinateParsing(request: httpRequest, location: location, types: types, maxDistance: maxDistance, maxLocations: maxLocations, completion: completion)
+        } errorHandler: { err in
+            completion(httpRequest, .failure(err))
         }
     }
     
@@ -132,22 +111,10 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider {
         xmlNearbyStationsParameters(builder: urlBuilder, id: id)
         
         let httpRequest = HttpRequest(urlBuilder: urlBuilder)
-        return HttpClient.get(httpRequest: httpRequest) { result in
-            switch result {
-            case .success((_, let data)):
-                do {
-                    try self.handleXmlNearbyLocations(httpRequest: httpRequest, response: data, completion: completion)
-                } catch let err as ParseError {
-                    os_log("nearbyStations parse error: %{public}@", log: .requestLogger, type: .error, err.reason)
-                    completion(httpRequest, .failure(err))
-                } catch let err {
-                    os_log("nearbyStations handle response error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
-                    completion(httpRequest, .failure(err))
-                }
-            case .failure(let err):
-                os_log("nearbyStations network error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
-                completion(httpRequest, .failure(err))
-            }
+        return makeRequest(httpRequest) {
+            try self.handleXmlNearbyLocations(httpRequest: httpRequest, completion: completion)
+        } errorHandler: { err in
+            completion(httpRequest, .failure(err))
         }
     }
 
@@ -156,23 +123,10 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider {
         xmlStationBoardParameters(builder: urlBuilder, stationId: stationId, departures: departures, time: time, maxDepartures: maxDepartures, equivs: equivs, styleSheet: "vs_java3")
         
         let httpRequest = HttpRequest(urlBuilder: urlBuilder)
-        return HttpClient.get(httpRequest: httpRequest) { result in
-            switch result {
-            case .success((_, let data)):
-                httpRequest.responseData = data
-                do {
-                    try self.queryDeparturesParsing(request: httpRequest, stationId: stationId, departures: departures, time: time, maxDepartures: maxDepartures, equivs: equivs, completion: completion)
-                } catch let err as ParseError {
-                    os_log("queryDepartures parse error: %{public}@", log: .requestLogger, type: .error, err.reason)
-                    completion(httpRequest, .failure(err))
-                } catch let err {
-                    os_log("queryDepartures handle response error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
-                    completion(httpRequest, .failure(err))
-                }
-            case .failure(let err):
-                os_log("queryDepartures network error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
-                completion(httpRequest, .failure(err))
-            }
+        return makeRequest(httpRequest) {
+            try self.queryDeparturesParsing(request: httpRequest, stationId: stationId, departures: departures, time: time, maxDepartures: maxDepartures, equivs: equivs, completion: completion)
+        } errorHandler: { err in
+            completion(httpRequest, .failure(err))
         }
     }
     
@@ -237,29 +191,20 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider {
         queryTripsBinaryParameters(builder: urlBuilder, from: from, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions)
         
         let httpRequest = HttpRequest(urlBuilder: urlBuilder)
-        return HttpClient.get(httpRequest: httpRequest) { result in
-            switch result {
-            case .success((_, let data)):
-                do {
-                    let uncompressedData: Data
-                    if data.isGzipped {
-                        uncompressedData = try data.gunzipped()
-                    } else {
-                        uncompressedData = data
-                    }
-                    httpRequest.responseData = uncompressedData
-                    try self.queryTripsParsing(request: httpRequest, from: from, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions, previousContext: nil, later: false, completion: completion)
-                } catch is SessionExpiredError {
-                    completion(httpRequest, .sessionExpired)
-                } catch let err as ParseError {
-                    os_log("queryTrips parse error: %{public}@", log: .requestLogger, type: .error, err.reason)
-                    completion(httpRequest, .failure(err))
-                } catch let err {
-                    os_log("queryTrips handle response error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
-                    completion(httpRequest, .failure(err))
-                }
-            case .failure(let err):
-                os_log("queryTrips network error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
+        return makeRequest(httpRequest) {
+            guard let data = httpRequest.responseData else { throw ParseError(reason: "failed to parse data") }
+            let uncompressedData: Data
+            if data.isGzipped {
+                uncompressedData = try data.gunzipped()
+            } else {
+                uncompressedData = data
+            }
+            httpRequest.responseData = uncompressedData
+            try self.queryTripsParsing(request: httpRequest, from: from, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions, previousContext: nil, later: false, completion: completion)
+        } errorHandler: { err in
+            if err is SessionExpiredError {
+                completion(httpRequest, .sessionExpired)
+            } else {
                 completion(httpRequest, .failure(err))
             }
         }
@@ -274,27 +219,20 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider {
         queryMoreTripsBinaryParameters(builder: urlBuilder, context: context, later: later)
         
         let httpRequest = HttpRequest(urlBuilder: urlBuilder)
-        return HttpClient.get(httpRequest: httpRequest) { result in
-            switch result {
-            case .success((_, let data)):
-                do {
-                    let uncompressedData: Data
-                    if data.isGzipped {
-                        uncompressedData = try data.gunzipped()
-                    } else {
-                        uncompressedData = data
-                    }
-                    httpRequest.responseData = uncompressedData
-                    try self._queryTripsParsing(request: httpRequest, from: nil, via: nil, to: nil, previousContext: context, later: later, completion: completion)
-                } catch let err as ParseError {
-                    os_log("queryMoreTrips parse error: %{public}@", log: .requestLogger, type: .error, err.reason)
-                    completion(httpRequest, .failure(err))
-                } catch let err {
-                    os_log("queryMoreTrips handle response error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
-                    completion(httpRequest, .failure(err))
-                }
-            case .failure(let err):
-                os_log("queryMoreTrips network error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
+        return makeRequest(httpRequest) {
+            guard let data = httpRequest.responseData else { throw ParseError(reason: "failed to parse data") }
+            let uncompressedData: Data
+            if data.isGzipped {
+                uncompressedData = try data.gunzipped()
+            } else {
+                uncompressedData = data
+            }
+            httpRequest.responseData = uncompressedData
+            try self._queryTripsParsing(request: httpRequest, from: nil, via: nil, to: nil, previousContext: context, later: later, completion: completion)
+        } errorHandler: { err in
+            if err is SessionExpiredError {
+                completion(httpRequest, .sessionExpired)
+            } else {
                 completion(httpRequest, .failure(err))
             }
         }
@@ -309,29 +247,18 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider {
         refreshTripBinaryParameters(builder: urlBuilder, context: context)
         
         let httpRequest = HttpRequest(urlBuilder: urlBuilder)
-        return HttpClient.get(httpRequest: httpRequest) { result in
-            switch result {
-            case .success((_, let data)):
-                do {
-                    let uncompressedData: Data
-                    if data.isGzipped {
-                        uncompressedData = try data.gunzipped()
-                    } else {
-                        uncompressedData = data
-                    }
-                    httpRequest.responseData = uncompressedData
-                    try self.refreshTripParsing(request: httpRequest, context: context, completion: completion)
-                } catch let err as ParseError {
-                    os_log("refreshTrip parse error: %{public}@", log: .requestLogger, type: .error, err.reason)
-                    completion(httpRequest, .failure(err))
-                } catch let err {
-                    os_log("refreshTrip handle response error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
-                    completion(httpRequest, .failure(err))
-                }
-            case .failure(let err):
-                os_log("refreshTrip network error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
-                completion(httpRequest, .failure(err))
+        return makeRequest(httpRequest) {
+            guard let data = httpRequest.responseData else { throw ParseError(reason: "failed to parse data") }
+            let uncompressedData: Data
+            if data.isGzipped {
+                uncompressedData = try data.gunzipped()
+            } else {
+                uncompressedData = data
             }
+            httpRequest.responseData = uncompressedData
+            try self.refreshTripParsing(request: httpRequest, context: context, completion: completion)
+        } errorHandler: { err in
+            completion(httpRequest, .failure(err))
         }
     }
     
@@ -480,8 +407,8 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider {
         completion(request, .success(locations: locations))
     }
     
-    func handleXmlNearbyLocations(httpRequest: HttpRequest, response: Data?, completion: @escaping (HttpRequest, NearbyLocationsResult) -> Void) throws {
-        guard let data = response else {
+    func handleXmlNearbyLocations(httpRequest: HttpRequest, completion: @escaping (HttpRequest, NearbyLocationsResult) -> Void) throws {
+        guard let data = httpRequest.responseData else {
             throw ParseError(reason: "failed to get data")
         }
         var body = String(data: data, encoding: .isoLatin1)!

@@ -101,23 +101,10 @@ public class HvvProvider: AbstractNetworkProvider {
         let urlBuilder = UrlBuilder(path: HvvProvider.API_BASE + "checkName", encoding: .utf8)
         
         let httpRequest = HttpRequest(urlBuilder: urlBuilder).setPostPayload(request).setHeaders(getAuthHeaders(request))
-        return HttpClient.get(httpRequest: httpRequest) { result in
-            switch result {
-            case .success((_, let data)):
-                httpRequest.responseData = data
-                do {
-                    try self.suggestLocationsParsing(request: httpRequest, constraint: constraint, types: types, maxLocations: maxLocations, completion: completion)
-                } catch let err as ParseError {
-                    os_log("suggestLocations parse error: %{public}@", log: .requestLogger, type: .error, err.reason)
-                    completion(httpRequest, .failure(err))
-                } catch let err {
-                    os_log("suggestLocations handle response error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
-                    completion(httpRequest, .failure(err))
-                }
-            case .failure(let err):
-                os_log("suggestLocations network error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
-                completion(httpRequest, .failure(err))
-            }
+        return makeRequest(httpRequest) {
+            try self.suggestLocationsParsing(request: httpRequest, constraint: constraint, types: types, maxLocations: maxLocations, completion: completion)
+        } errorHandler: { err in
+            completion(httpRequest, .failure(err))
         }
     }
     
@@ -151,23 +138,10 @@ public class HvvProvider: AbstractNetworkProvider {
         let urlBuilder = UrlBuilder(path: HvvProvider.API_BASE + "checkName", encoding: .utf8)
         
         let httpRequest = HttpRequest(urlBuilder: urlBuilder).setPostPayload(request).setHeaders(getAuthHeaders(request))
-        return HttpClient.get(httpRequest: httpRequest) { result in
-            switch result {
-            case .success((_, let data)):
-                httpRequest.responseData = data
-                do {
-                    try self.queryNearbyLocationsByCoordinateParsing(request: httpRequest, location: location, types: types, maxDistance: maxDistance, maxLocations: maxLocations, completion: completion)
-                } catch let err as ParseError {
-                    os_log("queryNearbyLocations parse error: %{public}@", log: .requestLogger, type: .error, err.reason)
-                    completion(httpRequest, .failure(err))
-                } catch let err {
-                    os_log("queryNearbyLocations handle response error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
-                    completion(httpRequest, .failure(err))
-                }
-            case .failure(let err):
-                os_log("queryNearbyLocations network error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
-                completion(httpRequest, .failure(err))
-            }
+        return makeRequest(httpRequest) {
+            try self.queryNearbyLocationsByCoordinateParsing(request: httpRequest, location: location, types: types, maxDistance: maxDistance, maxLocations: maxLocations, completion: completion)
+        } errorHandler: { err in
+            completion(httpRequest, .failure(err))
         }
     }
     
@@ -194,23 +168,10 @@ public class HvvProvider: AbstractNetworkProvider {
         let urlBuilder = UrlBuilder(path: HvvProvider.API_BASE + "departureList", encoding: .utf8)
         
         let httpRequest = HttpRequest(urlBuilder: urlBuilder).setPostPayload(request).setHeaders(getAuthHeaders(request))
-        return HttpClient.get(httpRequest: httpRequest) { result in
-            switch result {
-            case .success((_, let data)):
-                httpRequest.responseData = data
-                do {
-                    try self.queryDeparturesParsing(request: httpRequest, stationId: stationId, departures: departures, time: time, maxDepartures: maxDepartures, equivs: equivs, completion: completion)
-                } catch let err as ParseError {
-                    os_log("queryDepartures parse error: %{public}@", log: .requestLogger, type: .error, err.reason)
-                    completion(httpRequest, .failure(err))
-                } catch let err {
-                    os_log("queryDepartures handle response error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
-                    completion(httpRequest, .failure(err))
-                }
-            case .failure(let err):
-                os_log("queryDepartures network error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
-                completion(httpRequest, .failure(err))
-            }
+        return makeRequest(httpRequest) {
+            try self.queryDeparturesParsing(request: httpRequest, stationId: stationId, departures: departures, time: time, maxDepartures: maxDepartures, equivs: equivs, completion: completion)
+        } errorHandler: { err in
+            completion(httpRequest, .failure(err))
         }
     }
     
@@ -286,23 +247,10 @@ public class HvvProvider: AbstractNetworkProvider {
         let urlBuilder = UrlBuilder(path: HvvProvider.API_BASE + "departureCourse", encoding: .utf8)
         
         let httpRequest = HttpRequest(urlBuilder: urlBuilder).setPostPayload(request).setHeaders(getAuthHeaders(request))
-        return HttpClient.get(httpRequest: httpRequest) { result in
-            switch result {
-            case .success((_, let data)):
-                httpRequest.responseData = data
-                do {
-                    try self.queryJourneyDetailParsing(request: httpRequest, context: context, completion: completion)
-                } catch let err as ParseError {
-                    os_log("queryJourneyDetail parse error: %{public}@", log: .requestLogger, type: .error, err.reason)
-                    completion(httpRequest, .failure(err))
-                } catch let err {
-                    os_log("queryJourneyDetail handle response error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
-                    completion(httpRequest, .failure(err))
-                }
-            case .failure(let err):
-                os_log("queryJourneyDetail network error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
-                completion(httpRequest, .failure(err))
-            }
+        return makeRequest(httpRequest) {
+            try self.queryJourneyDetailParsing(request: httpRequest, context: context, completion: completion)
+        } errorHandler: { err in
+            completion(httpRequest, .failure(err))
         }
     }
     
@@ -412,23 +360,10 @@ public class HvvProvider: AbstractNetworkProvider {
         let urlBuilder = UrlBuilder(path: HvvProvider.API_BASE + "getRoute", encoding: .utf8)
         
         let httpRequest = HttpRequest(urlBuilder: urlBuilder).setPostPayload(request).setHeaders(getAuthHeaders(request))
-        return HttpClient.get(httpRequest: httpRequest) { result in
-            switch result {
-            case .success((_, let data)):
-                httpRequest.responseData = data
-                do {
-                    try self.queryTripsParsing(request: httpRequest, from: from, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions, previousContext: previousContext, later: later, completion: completion)
-                } catch let err as ParseError {
-                    os_log("queryTrips parse error: %{public}@", log: .requestLogger, type: .error, err.reason)
-                    completion(httpRequest, .failure(err))
-                } catch let err {
-                    os_log("queryTrips handle response error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
-                    completion(httpRequest, .failure(err))
-                }
-            case .failure(let err):
-                os_log("queryTrips network error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
-                completion(httpRequest, .failure(err))
-            }
+        return makeRequest(httpRequest) {
+            try self.queryTripsParsing(request: httpRequest, from: from, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions, previousContext: previousContext, later: later, completion: completion)
+        } errorHandler: { err in
+            completion(httpRequest, .failure(err))
         }
     }
     

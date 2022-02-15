@@ -1,4 +1,5 @@
 import Foundation
+import os.log
 
 public class AbstractNetworkProvider: NetworkProvider {
     
@@ -74,6 +75,27 @@ public class AbstractNetworkProvider: NetworkProvider {
     }
     
     // MARK: Utility methods
+    
+    func makeRequest(_ httpRequest: HttpRequest, parseHandler: @escaping () throws -> Void, errorHandler: @escaping (Error) -> Void, caller: String = #function) -> AsyncRequest {
+        return HttpClient.get(httpRequest: httpRequest) { result in
+            switch result {
+            case .success((_, let data)):
+                httpRequest.responseData = data
+                do {
+                    try parseHandler()
+                } catch let err as ParseError {
+                    os_log("%{public}@ parse error: %{public}@", log: .requestLogger, type: .error, caller, err.reason)
+                    errorHandler(err)
+                } catch let err {
+                    os_log("%{public}@ handle response error: %{public}@", log: .requestLogger, type: .error, caller, (err as NSError).description)
+                    errorHandler(err)
+                }
+            case .failure(let err):
+                os_log("%{public}@ network error: %{public}@", log: .requestLogger, type: .error, caller, (err as NSError).description)
+                errorHandler(err)
+            }
+        }
+    }
     
     func lineStyle(network: String?, product: Product?, label: String?) -> LineStyle {
         var style: LineStyle?

@@ -216,23 +216,10 @@ public class VrsProvider: AbstractNetworkProvider {
         }
         
         let httpRequest = HttpRequest(urlBuilder: urlBuilder)
-        return HttpClient.get(httpRequest: httpRequest) { result in
-            switch result {
-            case .success((_, let data)):
-                httpRequest.responseData = data
-                do {
-                    try self.queryNearbyLocationsByCoordinateParsing(request: httpRequest, location: location, types: types, maxDistance: maxDistance, maxLocations: maxLocations, completion: completion)
-                } catch let err as ParseError {
-                    os_log("nearbyLocations parse error: %{public}@", log: .requestLogger, type: .error, err.reason)
-                    completion(httpRequest, .failure(err))
-                } catch let err {
-                    os_log("nearbyLocations handle response error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
-                    completion(httpRequest, .failure(err))
-                }
-            case .failure(let err):
-                os_log("nearbyLocations network error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
-                completion(httpRequest, .failure(err))
-            }
+        return makeRequest(httpRequest) {
+            try self.queryNearbyLocationsByCoordinateParsing(request: httpRequest, location: location, types: types, maxDistance: maxDistance, maxLocations: maxLocations, completion: completion)
+        } errorHandler: { err in
+            completion(httpRequest, .failure(err))
         }
     }
     
@@ -294,23 +281,10 @@ public class VrsProvider: AbstractNetworkProvider {
         // TODO: support for arrivals (possible?)
         
         let httpRequest = HttpRequest(urlBuilder: urlBuilder)
-        return HttpClient.get(httpRequest: httpRequest) { result in
-            switch result {
-            case .success((_, let data)):
-                httpRequest.responseData = data
-                do {
-                    try self.queryDeparturesParsing(request: httpRequest, stationId: stationId, departures: departures, time: time, maxDepartures: maxDepartures, equivs: equivs, completion: completion)
-                } catch let err as ParseError {
-                    os_log("queryDepartures parse error: %{public}@", log: .requestLogger, type: .error, err.reason)
-                    completion(httpRequest, .failure(err))
-                } catch let err {
-                    os_log("queryDepartures handle response error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
-                    completion(httpRequest, .failure(err))
-                }
-            case .failure(let err):
-                os_log("queryDepartures network error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
-                completion(httpRequest, .failure(err))
-            }
+        return makeRequest(httpRequest) {
+            try self.queryDeparturesParsing(request: httpRequest, stationId: stationId, departures: departures, time: time, maxDepartures: maxDepartures, equivs: equivs, completion: completion)
+        } errorHandler: { err in
+            completion(httpRequest, .failure(err))
         }
     }
     
@@ -418,22 +392,10 @@ public class VrsProvider: AbstractNetworkProvider {
         urlBuilder.addParameter(key: "i", value: stationId)
         
         let httpRequest = HttpRequest(urlBuilder: urlBuilder)
-        let _ = HttpClient.get(httpRequest: httpRequest) { result in
-            switch result {
-            case .success((_, let data)):
-                do {
-                    try self.handleQueryLinesResponse(response: data, completion: completion)
-                } catch let err as ParseError {
-                    os_log("resolveLines parse error: %{public}@", log: .requestLogger, type: .error, err.reason)
-                    completion([])
-                } catch let err {
-                    os_log("resolveLines handle response error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
-                    completion([])
-                }
-            case .failure(let err):
-                os_log("resolveLines network error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
-                completion([])
-            }
+        _ = makeRequest(httpRequest) {
+            try self.handleQueryLinesResponse(response: httpRequest.responseData, completion: completion)
+        } errorHandler: { err in
+            completion([])
         }
     }
     
@@ -474,23 +436,10 @@ public class VrsProvider: AbstractNetworkProvider {
         urlBuilder.addParameter(key: "q", value: constraint) // points of interest count
         
         let httpRequest = HttpRequest(urlBuilder: urlBuilder)
-        return HttpClient.get(httpRequest: httpRequest) { result in
-            switch result {
-            case .success((_, let data)):
-                httpRequest.responseData = data
-                do {
-                    try self.suggestLocationsParsing(request: httpRequest, constraint: constraint, types: types, maxLocations: maxLocations, completion: completion)
-                } catch let err as ParseError {
-                    os_log("suggestLocations parse error: %{public}@", log: .requestLogger, type: .error, err.reason)
-                    completion(httpRequest, .failure(err))
-                } catch let err {
-                    os_log("suggestLocations handle response error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
-                    completion(httpRequest, .failure(err))
-                }
-            case .failure(let err):
-                os_log("suggestLocations network error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
-                completion(httpRequest, .failure(err))
-            }
+        return makeRequest(httpRequest) {
+            try self.suggestLocationsParsing(request: httpRequest, constraint: constraint, types: types, maxLocations: maxLocations, completion: completion)
+        } errorHandler: { err in
+            completion(httpRequest, .failure(err))
         }
     }
     
@@ -623,25 +572,10 @@ public class VrsProvider: AbstractNetworkProvider {
         urlBuilder.addParameter(key: "o", value: "vp")
         
         let httpRequest = HttpRequest(urlBuilder: urlBuilder)
-        return HttpClient.get(httpRequest: httpRequest) { result in
-            switch result {
-            case .success((_, let data)):
-                httpRequest.responseData = data
-                do {
-                    try self.queryTripsParsing(request: httpRequest, from: from, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions, previousContext: context, later: false, completion: completion)
-                } catch is SessionExpiredError {
-                    completion(httpRequest, .sessionExpired)
-                } catch let err as ParseError {
-                    os_log("queryTrips parse error: %{public}@", log: .requestLogger, type: .error, err.reason)
-                    completion(httpRequest, .failure(err))
-                } catch let err {
-                    os_log("queryTrips handle response error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
-                    completion(httpRequest, .failure(err))
-                }
-            case .failure(let err):
-                os_log("queryTrips network error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
-                completion(httpRequest, .failure(err))
-            }
+        return makeRequest(httpRequest) {
+            try self.queryTripsParsing(request: httpRequest, from: from, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions, previousContext: context, later: false, completion: completion)
+        } errorHandler: { err in
+            completion(httpRequest, .failure(err))
         }
     }
     

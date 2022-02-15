@@ -52,23 +52,10 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         requestVerification.appendParameters(to: urlBuilder, requestString: request)
         
         let httpRequest = HttpRequest(urlBuilder: urlBuilder).setPostPayload(request).setUserAgent(userAgent)
-        return HttpClient.get(httpRequest: httpRequest) { result in
-            switch result {
-            case .success((_, let data)):
-                httpRequest.responseData = data
-                do {
-                    try self.suggestLocationsParsing(request: httpRequest, constraint: constraint, types: types, maxLocations: maxLocations, completion: completion)
-                } catch let err as ParseError {
-                    os_log("suggestLocations parse error: %{public}@", log: .requestLogger, type: .error, err.reason)
-                    completion(httpRequest, .failure(err))
-                } catch let err {
-                    os_log("suggestLocations handle response error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
-                    completion(httpRequest, .failure(err))
-                }
-            case .failure(let err):
-                os_log("suggestLocations network error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
-                completion(httpRequest, .failure(err))
-            }
+        return makeRequest(httpRequest) {
+            try self.suggestLocationsParsing(request: httpRequest, constraint: constraint, types: types, maxLocations: maxLocations, completion: completion)
+        } errorHandler: { err in
+            completion(httpRequest, .failure(err))
         }
     }
     
@@ -100,23 +87,10 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         requestVerification.appendParameters(to: urlBuilder, requestString: request)
         
         let httpRequest = HttpRequest(urlBuilder: urlBuilder).setPostPayload(request).setUserAgent(userAgent)
-        return HttpClient.get(httpRequest: httpRequest) { result in
-            switch result {
-            case .success((_, let data)):
-                httpRequest.responseData = data
-                do {
-                    try self.queryNearbyLocationsByCoordinateParsing(request: httpRequest, location: Location(lat: lat, lon: lon), types: types, maxDistance: maxDistance, maxLocations: maxLocations, completion: completion)
-                } catch let err as ParseError {
-                    os_log("nearbyStations parse error: %{public}@", log: .requestLogger, type: .error, err.reason)
-                    completion(httpRequest, .failure(err))
-                } catch let err {
-                    os_log("nearbyStations handle response error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
-                    completion(httpRequest, .failure(err))
-                }
-            case .failure(let err):
-                os_log("nearbyStations network error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
-                completion(httpRequest, .failure(err))
-            }
+        return makeRequest(httpRequest) {
+            try self.queryNearbyLocationsByCoordinateParsing(request: httpRequest, location: Location(lat: lat, lon: lon), types: types, maxDistance: maxDistance, maxLocations: maxLocations, completion: completion)
+        } errorHandler: { err in
+            completion(httpRequest, .failure(err))
         }
     }
     
@@ -142,23 +116,10 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         requestVerification.appendParameters(to: urlBuilder, requestString: request)
         
         let httpRequest = HttpRequest(urlBuilder: urlBuilder).setPostPayload(request).setUserAgent(userAgent)
-        return HttpClient.get(httpRequest: httpRequest) { result in
-            switch result {
-            case .success((_, let data)):
-                httpRequest.responseData = data
-                do {
-                    try self.queryDeparturesParsing(request: httpRequest, stationId: stationId, departures: departures, time: time, maxDepartures: maxDepartures, equivs: equivs, completion: completion)
-                } catch let err as ParseError {
-                    os_log("queryDepartures parse error: %{public}@", log: .requestLogger, type: .error, err.reason)
-                    completion(httpRequest, .failure(err))
-                } catch let err {
-                    os_log("queryDepartures handle response error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
-                    completion(httpRequest, .failure(err))
-                }
-            case .failure(let err):
-                os_log("queryDepartures network error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
-                completion(httpRequest, .failure(err))
-            }
+        return makeRequest(httpRequest) {
+            try self.queryDeparturesParsing(request: httpRequest, stationId: stationId, departures: departures, time: time, maxDepartures: maxDepartures, equivs: equivs, completion: completion)
+        } errorHandler: { err in
+            completion(httpRequest, .failure(err))
         }
     }
     
@@ -238,23 +199,10 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         requestVerification.appendParameters(to: urlBuilder, requestString: request)
         
         let httpRequest = HttpRequest(urlBuilder: urlBuilder).setPostPayload(request).setUserAgent(userAgent)
-        return HttpClient.get(httpRequest: httpRequest) { result in
-            switch result {
-            case .success((_, let data)):
-                httpRequest.responseData = data
-                do {
-                    try self.queryTripsParsing(request: httpRequest, from: from, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions, previousContext: previousContext, later: later, completion: completion)
-                } catch let err as ParseError {
-                    os_log("queryTrips parse error: %{public}@", log: .requestLogger, type: .error, err.reason)
-                    completion(httpRequest, .failure(err))
-                } catch let err {
-                    os_log("queryTrips handle response error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
-                    completion(httpRequest, .failure(err))
-                }
-            case .failure(let err):
-                os_log("queryTrips network error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
-                completion(httpRequest, .failure(err))
-            }
+        return makeRequest(httpRequest) {
+            try self.queryTripsParsing(request: httpRequest, from: from, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions, previousContext: previousContext, later: later, completion: completion)
+        } errorHandler: { err in
+            completion(httpRequest, .failure(err))
         }
     }
     
@@ -274,23 +222,10 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         requestVerification.appendParameters(to: urlBuilder, requestString: request)
         
         let httpRequest = HttpRequest(urlBuilder: urlBuilder).setPostPayload(request).setUserAgent(userAgent)
-        return HttpClient.get(httpRequest: httpRequest) { result in
-            switch result {
-            case .success((_, let data)):
-                httpRequest.responseData = data
-                do {
-                    try self.refreshTripParsing(request: httpRequest, context: context, completion: completion)
-                } catch let err as ParseError {
-                    os_log("refreshTrip parse error: %{public}@", log: .requestLogger, type: .error, err.reason)
-                    completion(httpRequest, .failure(err))
-                } catch let err {
-                    os_log("refreshTrip handle response error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
-                    completion(httpRequest, .failure(err))
-                }
-            case .failure(let err):
-                os_log("refreshTrip network error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
-                completion(httpRequest, .failure(err))
-            }
+        return makeRequest(httpRequest) {
+            try self.refreshTripParsing(request: httpRequest, context: context, completion: completion)
+        } errorHandler: { err in
+            completion(httpRequest, .failure(err))
         }
     }
     
@@ -309,23 +244,10 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         requestVerification.appendParameters(to: urlBuilder, requestString: request)
         
         let httpRequest = HttpRequest(urlBuilder: urlBuilder).setPostPayload(request).setUserAgent(userAgent)
-        return HttpClient.get(httpRequest: httpRequest) { result in
-            switch result {
-            case .success((_, let data)):
-                httpRequest.responseData = data
-                do {
-                    try self.queryJourneyDetailParsing(request: httpRequest, context: context, completion: completion)
-                } catch let err as ParseError {
-                    os_log("queryJourneyDetail parse error: %{public}@", log: .requestLogger, type: .error, err.reason)
-                    completion(httpRequest, .failure(err))
-                } catch let err {
-                    os_log("queryJourneyDetail handle response error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
-                    completion(httpRequest, .failure(err))
-                }
-            case .failure(let err):
-                os_log("queryJourneyDetail network error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
-                completion(httpRequest, .failure(err))
-            }
+        return makeRequest(httpRequest) {
+            try self.queryJourneyDetailParsing(request: httpRequest, context: context, completion: completion)
+        } errorHandler: { err in
+            completion(httpRequest, .failure(err))
         }
     }
     

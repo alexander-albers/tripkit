@@ -79,23 +79,10 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
         stopFinderRequestParameters(builder: urlBuilder, constraint: constraint, types: types, maxLocations: maxLocations, outputFormat: "JSON")
         
         let httpRequest = HttpRequest(urlBuilder: urlBuilder)
-        return HttpClient.get(httpRequest: httpRequest) { result in
-            switch result {
-            case .success((_, let data)):
-                httpRequest.responseData = data
-                do {
-                    try self.suggestLocationsParsing(request: httpRequest, constraint: constraint, types: types, maxLocations: maxLocations, completion: completion)
-                } catch let err as ParseError {
-                    os_log("suggestLocations parse error: %{public}@", log: .requestLogger, type: .error, err.reason)
-                    completion(httpRequest, .failure(err))
-                } catch let err {
-                    os_log("suggestLocations handle response error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
-                    completion(httpRequest, .failure(err))
-                }
-            case .failure(let err):
-                os_log("suggestLocations network error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
-                completion(httpRequest, .failure(err))
-            }
+        return makeRequest(httpRequest) {
+            try self.suggestLocationsParsing(request: httpRequest, constraint: constraint, types: types, maxLocations: maxLocations, completion: completion)
+        } errorHandler: { err in
+            completion(httpRequest, .failure(err))
         }
     }
     
@@ -115,22 +102,10 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
         nearbyStationsRequestParameters(builder: urlBuilder, stationId: stationId, maxLocations: maxLocations)
         
         let httpRequest = HttpRequest(urlBuilder: urlBuilder)
-        return HttpClient.getXml(httpRequest: httpRequest) { result in
-            switch result {
-            case .success(let xml):
-                do {
-                    try self.handleNearbyStationsRequest(httpRequest: httpRequest, xml: xml, maxLocations: maxLocations, completion: completion)
-                } catch let err as ParseError {
-                    os_log("nearbyStations parse error: %{public}@", log: .requestLogger, type: .error, err.reason)
-                    completion(httpRequest, .failure(err))
-                } catch let err {
-                    os_log("nearbyStations handle response error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
-                    completion(httpRequest, .failure(err))
-                }
-            case .failure(let err):
-                os_log("nearbyStations network error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
-                completion(httpRequest, .failure(err))
-            }
+        return makeRequest(httpRequest) {
+            try self.handleNearbyStationsRequest(httpRequest: httpRequest, maxLocations: maxLocations, completion: completion)
+        } errorHandler: { err in
+            completion(httpRequest, .failure(err))
         }
     }
     
@@ -139,23 +114,10 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
         coordRequestParameters(builder: urlBuilder, types: types, lat: lat, lon: lon, maxDistance: maxDistance, maxLocations: maxLocations)
         
         let httpRequest = HttpRequest(urlBuilder: urlBuilder)
-        return HttpClient.get(httpRequest: httpRequest) { result in
-            switch result {
-            case .success((_, let data)):
-                httpRequest.responseData = data
-                do {
-                    try self.queryNearbyLocationsByCoordinateParsing(request: httpRequest, location: Location(lat: lat, lon: lon), types: types, maxDistance: maxDistance, maxLocations: maxLocations, completion: completion)
-                } catch let err as ParseError {
-                    os_log("coordRequest parse error: %{public}@", log: .requestLogger, type: .error, err.reason)
-                    completion(httpRequest, .failure(err))
-                } catch let err {
-                    os_log("coordRequest handle response error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
-                    completion(httpRequest, .failure(err))
-                }
-            case .failure(let err):
-                os_log("coordRequest network error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
-                completion(httpRequest, .failure(err))
-            }
+        return makeRequest(httpRequest) {
+            try self.queryNearbyLocationsByCoordinateParsing(request: httpRequest, location: Location(lat: lat, lon: lon), types: types, maxDistance: maxDistance, maxLocations: maxLocations, completion: completion)
+        } errorHandler: { err in
+            completion(httpRequest, .failure(err))
         }
     }
     
@@ -164,25 +126,10 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
         queryTripsParameters(builder: urlBuilder, from: from, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions)
         
         let httpRequest = HttpRequest(urlBuilder: urlBuilder)
-        return HttpClient.get(httpRequest: httpRequest) { result in
-            switch result {
-            case .success((_, let data)):
-                httpRequest.responseData = data
-                do {
-                    try self.queryTripsParsing(request: httpRequest, from: from, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions, previousContext: nil, later: false, completion: completion)
-                } catch is SessionExpiredError {
-                    completion(httpRequest, .sessionExpired)
-                } catch let err as ParseError {
-                    os_log("queryTrips parse error: %{public}@", log: .requestLogger, type: .error, err.reason)
-                    completion(httpRequest, .failure(err))
-                } catch let err {
-                    os_log("queryTrips handle response error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
-                    completion(httpRequest, .failure(err))
-                }
-            case .failure(let err):
-                os_log("queryTrips network error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
-                completion(httpRequest, .failure(err))
-            }
+        return makeRequest(httpRequest) {
+            try self.queryTripsParsing(request: httpRequest, from: from, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions, previousContext: nil, later: false, completion: completion)
+        } errorHandler: { err in
+            completion(httpRequest, .failure(err))
         }
     }
     
@@ -202,34 +149,10 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
         urlBuilder.addParameter(key: "command", value: later ? "tripNext" : "tripPrev")
         
         let httpRequest = HttpRequest(urlBuilder: urlBuilder)
-        return HttpClient.get(httpRequest: httpRequest) { result in
-            switch result {
-            case .success((_, let data)):
-                httpRequest.responseData = data
-                do {
-                    try self._queryTripsParsing(request: httpRequest, previousContext: context, later: later, completion: completion)
-                } catch is SessionExpiredError {
-                    completion(httpRequest, .sessionExpired)
-                } catch let err as ParseError {
-                    os_log("queryMoreTrips parse error: %{public}@", log: .requestLogger, type: .error, err.reason)
-                    completion(httpRequest, .failure(err))
-                } catch let err {
-                    os_log("queryMoreTrips handle response error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
-                    completion(httpRequest, .failure(err))
-                }
-            case .failure(let err):
-                os_log("queryMoreTrips network error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
-                switch err {
-                case .invalidStatusCode(let code):
-                    if code == 404 {
-                        completion(httpRequest, .sessionExpired)
-                    } else {
-                        completion(httpRequest, .failure(err))
-                    }
-                default:
-                    completion(httpRequest, .failure(err))
-                }
-            }
+        return makeRequest(httpRequest) {
+            try self._queryTripsParsing(request: httpRequest, previousContext: context, later: later, completion: completion)
+        } errorHandler: { err in
+            self.checkSessionExpired(httpRequest: httpRequest, err: err, completion: completion)
         }
     }
     
@@ -247,34 +170,10 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
         urlBuilder.addParameter(key: "command", value: "tripCoordSeq:\(context.routeIndex)")
         
         let httpRequest = HttpRequest(urlBuilder: urlBuilder)
-        return HttpClient.get(httpRequest: httpRequest) { result in
-            switch result {
-            case .success((_, let data)):
-                httpRequest.responseData = data
-                do {
-                    try self.refreshTripParsing(request: httpRequest, context: context, completion: completion)
-                } catch is SessionExpiredError {
-                    completion(httpRequest, .sessionExpired)
-                } catch let err as ParseError {
-                    os_log("refreshTrip parse error: %{public}@", log: .requestLogger, type: .error, err.reason)
-                    completion(httpRequest, .failure(err))
-                } catch let err {
-                    os_log("refreshTrip handle response error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
-                    completion(httpRequest, .failure(err))
-                }
-            case .failure(let err):
-                os_log("refreshTrip network error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
-                switch err {
-                case .invalidStatusCode(let code):
-                    if code == 404 {
-                        completion(httpRequest, .sessionExpired)
-                    } else {
-                        completion(httpRequest, .failure(err))
-                    }
-                default:
-                    completion(httpRequest, .failure(err))
-                }
-            }
+        return makeRequest(httpRequest) {
+            try self.refreshTripParsing(request: httpRequest, context: context, completion: completion)
+        } errorHandler: { err in
+            self.checkSessionExpired(httpRequest: httpRequest, err: err, completion: completion)
         }
     }
     
@@ -283,23 +182,10 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
         queryDeparturesParameters(builder: urlBuilder, stationId: stationId, departures: departures, time: time, maxDepartures: maxDepartures, equivs: equivs)
         
         let httpRequest = HttpRequest(urlBuilder: urlBuilder)
-        return HttpClient.get(httpRequest: httpRequest) { result in
-            switch result {
-            case .success((_, let data)):
-                httpRequest.responseData = data
-                do {
-                    try self.queryDeparturesParsing(request: httpRequest, stationId: stationId, departures: departures, time: time, maxDepartures: maxDepartures, equivs: equivs, completion: completion)
-                } catch let err as ParseError {
-                    os_log("queryDepartures parse error: %{public}@", log: .requestLogger, type: .error, err.reason)
-                    completion(httpRequest, .failure(err))
-                } catch let err {
-                    os_log("queryDepartures handle response error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
-                    completion(httpRequest, .failure(err))
-                }
-            case .failure(let err):
-                os_log("queryDepartures network error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
-                completion(httpRequest, .failure(err))
-            }
+        return makeRequest(httpRequest) {
+            try self.queryDeparturesParsing(request: httpRequest, stationId: stationId, departures: departures, time: time, maxDepartures: maxDepartures, equivs: equivs, completion: completion)
+        } errorHandler: { err in
+            completion(httpRequest, .failure(err))
         }
     }
     
@@ -320,23 +206,10 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
         urlBuilder.addParameter(key: "tStOTType", value: "all")
         
         let httpRequest = HttpRequest(urlBuilder: urlBuilder)
-        return HttpClient.get(httpRequest: httpRequest) { result in
-            switch result {
-            case .success((_, let data)):
-                httpRequest.responseData = data
-                do {
-                    try self.queryJourneyDetailParsing(request: httpRequest, context: context, completion: completion)
-                } catch let err as ParseError {
-                    os_log("journeyDetail parse error: %{public}@", log: .requestLogger, type: .error, err.reason)
-                    completion(httpRequest, .failure(err))
-                } catch let err {
-                    os_log("journeyDetail handle response error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
-                    completion(httpRequest, .failure(err))
-                }
-            case .failure(let err):
-                os_log("journeyDetail network error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
-                completion(httpRequest, .failure(err))
-            }
+        return makeRequest(httpRequest) {
+            try self.queryJourneyDetailParsing(request: httpRequest, context: context, completion: completion)
+        } errorHandler: { err in
+            completion(httpRequest, .failure(err))
         }
     }
     
@@ -347,23 +220,10 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
         stopFinderRequestParameters(builder: urlBuilder, constraint: constraint, types: types, maxLocations: maxLocations, outputFormat: "XML")
         
         let httpRequest = HttpRequest(urlBuilder: urlBuilder)
-        return HttpClient.get(httpRequest: httpRequest) { result in
-            switch result {
-            case .success((_, let data)):
-                httpRequest.responseData = data
-                do {
-                    try self.suggestLocationsParsingMobile(request: httpRequest, completion: completion)
-                } catch let err as ParseError {
-                    os_log("mobileStopfinder parse error: %{public}@", log: .requestLogger, type: .error, err.reason)
-                    completion(httpRequest, .failure(err))
-                } catch let err {
-                    os_log("mobileStopfinder handle response error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
-                    completion(httpRequest, .failure(err))
-                }
-            case .failure(let err):
-                os_log("mobileStopfinder network error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
-                completion(httpRequest, .failure(err))
-            }
+        return makeRequest(httpRequest) {
+            try self.suggestLocationsParsingMobile(request: httpRequest, completion: completion)
+        } errorHandler: { err in
+            completion(httpRequest, .failure(err))
         }
     }
     
@@ -372,23 +232,10 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
         coordRequestParameters(builder: urlBuilder, types: types, lat: lat, lon: lon, maxDistance: maxDistance, maxLocations: maxLocations)
         
         let httpRequest = HttpRequest(urlBuilder: urlBuilder)
-        return HttpClient.get(httpRequest: httpRequest) { result in
-            switch result {
-            case .success((_, let data)):
-                httpRequest.responseData = data
-                do {
-                    try self.queryNearbyLocationsByCoordinateParsingMobile(request: httpRequest, completion: completion)
-                } catch let err as ParseError {
-                    os_log("mobileCoord parse error: %{public}@", log: .requestLogger, type: .error, err.reason)
-                    completion(httpRequest, .failure(err))
-                } catch let err {
-                    os_log("mobileCoord handle response error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
-                    completion(httpRequest, .failure(err))
-                }
-            case .failure(let err):
-                os_log("mobileCoord network error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
-                completion(httpRequest, .failure(err))
-            }
+        return makeRequest(httpRequest) {
+            try self.queryNearbyLocationsByCoordinateParsingMobile(request: httpRequest, completion: completion)
+        } errorHandler: { err in
+            completion(httpRequest, .failure(err))
         }
     }
     
@@ -397,23 +244,10 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
         queryTripsParameters(builder: urlBuilder, from: from, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions)
         
         let httpRequest = HttpRequest(urlBuilder: urlBuilder)
-        return HttpClient.get(httpRequest: httpRequest) { result in
-            switch result {
-            case .success((_, let data)):
-                httpRequest.responseData = data
-                do {
-                    try self.queryTripsParsingMobile(request: httpRequest, from: from, via: via, to: to, previousContext: nil, later: false, completion: completion)
-                } catch let err as ParseError {
-                    os_log("mobileTripRequest parse error: %{public}@", log: .requestLogger, type: .error, err.reason)
-                    completion(httpRequest, .failure(err))
-                } catch let err {
-                    os_log("mobileTripRequest handle response error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
-                    completion(httpRequest, .failure(err))
-                }
-            case .failure(let err):
-                os_log("mobileTripRequest network error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
-                completion(httpRequest, .failure(err))
-            }
+        return makeRequest(httpRequest) {
+            try self.queryTripsParsingMobile(request: httpRequest, from: from, via: via, to: to, previousContext: nil, later: false, completion: completion)
+        } errorHandler: { err in
+            completion(httpRequest, .failure(err))
         }
     }
     
@@ -432,34 +266,10 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
         urlBuilder.addParameter(key: "command", value: later ? "tripNext" : "tripPrev")
         
         let httpRequest = HttpRequest(urlBuilder: urlBuilder)
-        return HttpClient.get(httpRequest: httpRequest) { result in
-            switch result {
-            case .success((_, let data)):
-                httpRequest.responseData = data
-                do {
-                    try self.queryTripsParsingMobile(request: httpRequest, from: nil, via: nil, to: nil, previousContext: context, later: later, completion: completion)
-                } catch is SessionExpiredError {
-                    completion(httpRequest, .sessionExpired)
-                } catch let err as ParseError {
-                    os_log("queryMoreTripsMobile parse error: %{public}@", log: .requestLogger, type: .error, err.reason)
-                    completion(httpRequest, .failure(err))
-                } catch let err {
-                    os_log("queryMoreTripsMobile handle response error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
-                    completion(httpRequest, .failure(err))
-                }
-            case .failure(let err):
-                os_log("queryMoreTripsMobile network error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
-                switch err {
-                case .invalidStatusCode(let code):
-                    if code == 404 {
-                        completion(httpRequest, .sessionExpired)
-                    } else {
-                        completion(httpRequest, .failure(err))
-                    }
-                default:
-                    completion(httpRequest, .failure(err))
-                }
-            }
+        return makeRequest(httpRequest) {
+            try self.queryTripsParsingMobile(request: httpRequest, from: nil, via: nil, to: nil, previousContext: context, later: later, completion: completion)
+        } errorHandler: { err in
+            self.checkSessionExpired(httpRequest: httpRequest, err: err, completion: completion)
         }
     }
     
@@ -477,34 +287,10 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
         urlBuilder.addParameter(key: "command", value: "tripCoordSeq:\(context.routeIndex)")
         
         let httpRequest = HttpRequest(urlBuilder: urlBuilder)
-        return HttpClient.get(httpRequest: httpRequest) { result in
-            switch result {
-            case .success((_, let data)):
-                httpRequest.responseData = data
-                do {
-                    try self.refreshTripParsingMobile(request: httpRequest, context: context, completion: completion)
-                } catch is SessionExpiredError {
-                    completion(httpRequest, .sessionExpired)
-                } catch let err as ParseError {
-                    os_log("refreshTripMobile parse error: %{public}@", log: .requestLogger, type: .error, err.reason)
-                    completion(httpRequest, .failure(err))
-                } catch let err {
-                    os_log("refreshTripMobile handle response error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
-                    completion(httpRequest, .failure(err))
-                }
-            case .failure(let err):
-                os_log("refreshTripMobile network error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
-                switch err {
-                case .invalidStatusCode(let code):
-                    if code == 404 {
-                        completion(httpRequest, .sessionExpired)
-                    } else {
-                        completion(httpRequest, .failure(err))
-                    }
-                default:
-                    completion(httpRequest, .failure(err))
-                }
-            }
+        return makeRequest(httpRequest) {
+            try self.refreshTripParsingMobile(request: httpRequest, context: context, completion: completion)
+        } errorHandler: { err in
+            self.checkSessionExpired(httpRequest: httpRequest, err: err, completion: completion)
         }
     }
     
@@ -513,23 +299,10 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
         queryDeparturesParameters(builder: urlBuilder, stationId: stationId, departures: departures, time: time, maxDepartures: maxDepartures, equivs: equivs)
         
         let httpRequest = HttpRequest(urlBuilder: urlBuilder)
-        return HttpClient.get(httpRequest: httpRequest) { result in
-            switch result {
-            case .success((_, let data)):
-                httpRequest.responseData = data
-                do {
-                    try self.queryDeparturesParsingMobile(request: httpRequest, stationId: stationId, departures: departures, time: time, maxDepartures: maxDepartures, equivs: equivs, completion: completion)
-                } catch let err as ParseError {
-                    os_log("queryDeparturesMobile parse error: %{public}@", log: .requestLogger, type: .error, err.reason)
-                    completion(httpRequest, .failure(err))
-                } catch let err {
-                    os_log("queryDeparturesMobile handle response error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
-                    completion(httpRequest, .failure(err))
-                }
-            case .failure(let err):
-                os_log("queryDeparturesMobile network error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
-                completion(httpRequest, .failure(err))
-            }
+        return makeRequest(httpRequest) {
+            try self.queryDeparturesParsingMobile(request: httpRequest, stationId: stationId, departures: departures, time: time, maxDepartures: maxDepartures, equivs: equivs, completion: completion)
+        } errorHandler: { err in
+            completion(httpRequest, .failure(err))
         }
     }
     
@@ -550,23 +323,10 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
         urlBuilder.addParameter(key: "tStOTType", value: "all")
         
         let httpRequest = HttpRequest(urlBuilder: urlBuilder)
-        return HttpClient.get(httpRequest: httpRequest) { result in
-            switch result {
-            case .success((_, let data)):
-                httpRequest.responseData = data
-                do {
-                    try self.queryJourneyDetailParsingMobile(request: httpRequest, context: context, completion: completion)
-                } catch let err as ParseError {
-                    os_log("journeyDetailMobile parse error: %{public}@", log: .requestLogger, type: .error, err.reason)
-                    completion(httpRequest, .failure(err))
-                } catch let err {
-                    os_log("journeyDetailMobile handle response error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
-                    completion(httpRequest, .failure(err))
-                }
-            case .failure(let err):
-                os_log("journeyDetailMobile network error: %{public}@", log: .requestLogger, type: .error, String(describing: err))
-                completion(httpRequest, .failure(err))
-            }
+        return makeRequest(httpRequest) {
+            try self.queryJourneyDetailParsingMobile(request: httpRequest, context: context, completion: completion)
+        } errorHandler: { err in
+            completion(httpRequest, .failure(err))
         }
     }
     
@@ -671,7 +431,9 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
         completion(request, .success(locations: locations))
     }
     
-    func handleNearbyStationsRequest(httpRequest: HttpRequest, xml: XMLIndexer, maxLocations: Int, completion: @escaping (HttpRequest, NearbyLocationsResult) -> Void) throws {
+    func handleNearbyStationsRequest(httpRequest: HttpRequest, maxLocations: Int, completion: @escaping (HttpRequest, NearbyLocationsResult) -> Void) throws {
+        guard let data = httpRequest.responseData else { throw ParseError(reason: "failed to parse data") }
+        let xml = SWXMLHash.parse(data)
         let request = xml["itdRequest"]["itdDepartureMonitorRequest"]
         
         var ownStation: Location?
@@ -1663,6 +1425,20 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
     }
     
     // MARK: Response parse methods
+    
+    private func checkSessionExpired(httpRequest: HttpRequest, err: Error, completion: (HttpRequest, QueryTripsResult) -> Void) {
+        if let err = err as? HttpError {
+            switch err {
+            case .invalidStatusCode(let code):
+                if code == 404 {
+                    completion(httpRequest, .sessionExpired)
+                    return
+                }
+            default: break
+            }
+        }
+        completion(httpRequest, .failure(err))
+    }
     
     func processItdOdv(odv: XMLIndexer, expectedUsage: String, callback: (_ nameState: String?, _ location: Location, _ matchQuality: Int) -> Void) throws -> String {
         guard let usage = odv.element?.attribute(by: "usage")?.text, usage == expectedUsage else {
