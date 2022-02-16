@@ -8,7 +8,7 @@ public class StvProvider: AbstractHafasClientInterfaceProvider {
     public init(apiAuthorization: [String: Any]) {
         super.init(networkId: .STV, apiBase: StvProvider.API_BASE, productsMap: StvProvider.PRODUCTS_MAP)
         self.apiAuthorization = apiAuthorization
-        apiVersion = "1.18"
+        apiVersion = "1.52"
         apiClient = ["id": "VAO", "type": "WEB", "name": "webapp", "l": "vs_stv"]
         extVersion = "VAO.13"
     }

@@ -21,9 +21,9 @@ public class DbProvider: AbstractHafasClientInterfaceProvider {
         super.init(networkId: .DB, apiBase: DbProvider.API_BASE, productsMap: DbProvider.PRODUCTS_MAP)
         self.apiAuthorization = apiAuthorization
         self.requestVerification = requestVerification
-        apiVersion = "1.15"
-        apiClient = ["id": "DB", "v": "18040000", "type": "IPH", "name": "DB Navigator"]
-        extVersion = "DB.R20.12.b"
+        apiVersion = "1.46"
+        apiClient = ["id": "DB", "type": "IPH", "name": "DB Navigator", "v": "20100000"]
+        extVersion = "DB.R21.12.a"
         format.dateFormat = "yyyyMMddHHmm"
         configJson = ["rtMode": "HYBRID"]
     }

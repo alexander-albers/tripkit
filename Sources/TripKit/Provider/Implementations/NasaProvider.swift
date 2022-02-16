@@ -8,8 +8,8 @@ public class NasaProvider: AbstractHafasClientInterfaceProvider {
     public init(apiAuthorization: [String: Any]) {
         super.init(networkId: .NASA, apiBase: NasaProvider.API_BASE, productsMap: NasaProvider.PRODUCTS_MAP)
         self.apiAuthorization = apiAuthorization
-        apiVersion = "1.15"
-        apiClient = ["id": "NASA"]
+        apiVersion = "1.48"
+        apiClient = ["id": "NASA", "type": "WEB", "name": "webapp"]
         
         styles = [
             "RRE1": LineStyle(shape: .rect, backgroundColor: LineStyle.rgb(197, 53, 63), foregroundColor: LineStyle.white),

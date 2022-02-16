@@ -8,7 +8,7 @@ public class InvgProvider: AbstractHafasClientInterfaceProvider {
     public init(apiAuthorization: [String: Any]) {
         super.init(networkId: .INVG, apiBase: InvgProvider.API_BASE, productsMap: InvgProvider.PRODUCTS_MAP)
         self.apiAuthorization = apiAuthorization
-        apiVersion = "1.16"
+        apiVersion = "1.52"
         apiClient = ["id": "INVG", "type": "WEB", "name": "webapp"]
         
         styles = [

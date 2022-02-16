@@ -8,8 +8,8 @@ public class OebbProvider: AbstractHafasClientInterfaceProvider {
     public init(apiAuthorization: [String: Any]) {
         super.init(networkId: .OEBB, apiBase: OebbProvider.API_BASE, productsMap: OebbProvider.PRODUCTS_MAP)
         self.apiAuthorization = apiAuthorization
-        apiClient = ["id": "OEBB", "v": "6020300", "type": "IPH", "name": "oebbADHOC"]
-        apiVersion = "1.19"
+        apiVersion = "1.54"
+        apiClient = ["id": "OEBB", "type": "IPH", "name": "oebbADHOC", "v": "6020300"]
     }
     
     static let PLACES = ["Wien", "Graz", "Linz/Donau", "Salzburg", "Innsbruck"]

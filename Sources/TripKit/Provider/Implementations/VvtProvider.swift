@@ -9,7 +9,7 @@ public class VvtProvider: AbstractHafasClientInterfaceProvider {
     public init(apiAuthorization: [String: Any]) {
         super.init(networkId: .VVT, apiBase: VvtProvider.API_BASE, productsMap: VvtProvider.PRODUCTS_MAP)
         self.apiAuthorization = apiAuthorization
-        apiVersion = "1.18"
+        apiVersion = "1.52"
         apiClient = ["id": "VAO", "type": "WEB", "name": "webapp", "l": "vs_vvt"]
         extVersion = "VAO.6"
         

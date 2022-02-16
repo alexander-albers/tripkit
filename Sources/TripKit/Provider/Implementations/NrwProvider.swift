@@ -8,8 +8,8 @@ public class NrwProvider: AbstractHafasClientInterfaceProvider {
     public init(apiAuthorization: [String: Any]) {
         super.init(networkId: .NRW, apiBase: NrwProvider.API_BASE, productsMap: NrwProvider.PRODUCTS_MAP)
         self.apiAuthorization = apiAuthorization
-        apiVersion = "1.24"
-        apiClient = ["id": "DB-REGIO-NRW", "type": "IPH"]
+        apiVersion = "1.46"
+        apiClient = ["id": "DB-REGIO-NRW", "type": "WEB", "name": "webapp"]
         extVersion = "DB.R19.04.a"
         
         styles = [

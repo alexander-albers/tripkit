@@ -8,7 +8,7 @@ public class VosProvider: AbstractHafasClientInterfaceProvider {
     public init(apiAuthorization: [String: Any]) {
         super.init(networkId: .VOS, apiBase: VosProvider.API_BASE, productsMap: VosProvider.PRODUCTS_MAP)
         self.apiAuthorization = apiAuthorization
-        apiVersion = "1.44"
+        apiVersion = "1.52"
         apiClient = ["id": "SWO", "type": "WEB", "name": "webapp"]
     }
     

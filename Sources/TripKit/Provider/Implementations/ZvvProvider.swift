@@ -8,7 +8,7 @@ public class ZvvProvider: AbstractHafasClientInterfaceProvider {
     public init(apiAuthorization: [String: Any]) {
         super.init(networkId: .ZVV, apiBase: ZvvProvider.API_BASE, productsMap: ZvvProvider.PRODUCTS_MAP)
         self.apiAuthorization = apiAuthorization
-        apiVersion = "1.18"
+        apiVersion = "1.54"
         apiClient = ["id": "ZVV", "type": "WEB", "name": "webapp"]
         extVersion = "ZVV.2"
         

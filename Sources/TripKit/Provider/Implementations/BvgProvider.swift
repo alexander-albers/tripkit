@@ -8,8 +8,8 @@ public class BvgProvider: AbstractHafasClientInterfaceProvider {
     public init(apiAuthorization: [String: Any]) {
         super.init(networkId: .BVG, apiBase: BvgProvider.API_BASE, productsMap: BvgProvider.PRODUCTS_MAP)
         self.apiAuthorization = apiAuthorization
-        apiVersion = "1.24"
-        apiClient = ["id": "BVG", "type": "IPH"]
+        apiVersion = "1.45"
+        apiClient = ["id": "BVG", "type": "WEB", "name": "webapp"]
         extVersion = "BVG.1"
         jnyFilterIncludes = [
             // See issue #26. When removed, no routes between Hermsdorf and Bundestag can be found, for example.

@@ -8,7 +8,7 @@ public class VmtProvider: AbstractHafasClientInterfaceProvider {
     public init(apiAuthorization: [String: Any]) {
         super.init(networkId: .VMT, apiBase: VmtProvider.API_BASE, productsMap: VmtProvider.PRODUCTS_MAP)
         self.apiAuthorization = apiAuthorization
-        apiVersion = "1.18"
+        apiVersion = "1.54"
         apiClient = ["name": "VMT", "type": "WEB"]
     }
     

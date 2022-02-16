@@ -9,7 +9,7 @@ public class RmvProvider: AbstractHafasClientInterfaceProvider {
     public init(apiAuthorization: [String: Any]) {
         super.init(networkId: .RMV, apiBase: RmvProvider.API_BASE, productsMap: RmvProvider.PRODUCTS_MAP)
         self.apiAuthorization = apiAuthorization
-        apiVersion = "1.20"
+        apiVersion = "1.50"
         apiClient = ["id": "RMV", "type": "WEB", "name": "webapp", "l": "vs_webapp"]
         extVersion = "RMV.1"
         jnyFilterIncludes = [["type": "GROUP", "mode": "INC", "value": "GROUP_PT"]] // when removed, we get invalid legs with type Bike and Kiss. When added to other providers, we don't get any results at all...

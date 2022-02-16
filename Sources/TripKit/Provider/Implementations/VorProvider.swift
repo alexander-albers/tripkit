@@ -9,7 +9,7 @@ public class VorProvider: AbstractHafasClientInterfaceProvider {
     public init(apiAuthorization: [String: Any]) {
         super.init(networkId: .VOR, apiBase: VorProvider.API_BASE, productsMap: VorProvider.PRODUCTS_MAP)
         self.apiAuthorization = apiAuthorization
-        apiVersion = "1.18"
+        apiVersion = "1.52"
         apiClient = ["id": "VAO", "type": "WEB", "name": "webapp", "l": "vs_anachb"]
         extVersion = "VAO.9"
         

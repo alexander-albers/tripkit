@@ -9,10 +9,8 @@ public class GvhProvider: AbstractHafasClientInterfaceProvider {
         super.init(networkId: .GVH, apiBase: GvhProvider.API_BASE, productsMap: GvhProvider.PRODUCTS_MAP)
         self.mgateEndpoint = GvhProvider.API_BASE
         self.apiAuthorization = apiAuthorization
-        apiVersion = "1.19"
-        apiClient = [
-            "id": "HAFAS", "type": "WEB", "name": "webapp"
-        ]
+        apiVersion = "1.53"
+        apiClient = ["id": "HAFAS", "type": "WEB", "name": "webapp"]
         
         styles = [
             // Hannover

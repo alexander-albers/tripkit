@@ -9,8 +9,8 @@ public class VgsProvider: AbstractHafasClientInterfaceProvider {
         super.init(networkId: .VGS, apiBase: VgsProvider.API_BASE, productsMap: VgsProvider.PRODUCTS_MAP)
         self.apiAuthorization = apiAuthorization
         self.requestVerification = .rnd
-        apiVersion = "1.21"
-        apiClient = ["id": "ZPS-SAAR", "type": "AND"]
+        apiVersion = "1.54"
+        apiClient = ["id": "ZPS-SAAR", "type": "WEB", "name": "webapp"]
     }
     
     override func split(stationName: String?) -> (String?, String?) {

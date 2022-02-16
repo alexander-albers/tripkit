@@ -9,7 +9,7 @@ public class VbbProvider: AbstractHafasClientInterfaceProvider {
         super.init(networkId: .VBB, apiBase: VbbProvider.API_BASE, productsMap: VbbProvider.PRODUCTS_MAP)
         requestUrlEncoding = .utf8
         self.apiAuthorization = apiAuthorization
-        apiVersion = "1.16"
+        apiVersion = "1.45"
         apiClient = ["id": "VBB", "type": "WEB", "name": "webapp"]
         
         styles = [

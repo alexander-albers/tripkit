@@ -8,7 +8,7 @@ public class IvbProvider: AbstractHafasClientInterfaceProvider {
     public init(apiAuthorization: [String: Any]) {
         super.init(networkId: .IVB, apiBase: IvbProvider.API_BASE, productsMap: IvbProvider.PRODUCTS_MAP)
         self.apiAuthorization = apiAuthorization
-        apiVersion = "1.20"
+        apiVersion = "1.52"
         apiClient = ["id": "VAO", "l": "vs_ivb", "type": "WEB", "name": "webapp"]
         extVersion = "VAO.7"
         styles = [

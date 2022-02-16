@@ -8,7 +8,7 @@ public class OoevvProvider: AbstractHafasClientInterfaceProvider {
     public init(apiAuthorization: [String: Any]) {
         super.init(networkId: .OOEVV, apiBase: OoevvProvider.API_BASE, productsMap: OoevvProvider.PRODUCTS_MAP)
         self.apiAuthorization = apiAuthorization
-        apiVersion = "1.15"
+        apiVersion = "1.52"
         apiClient = ["id": "VAO", "type": "WEB", "name": "webapp", "l": "vs_ooevv"]
     }
     

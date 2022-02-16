@@ -8,7 +8,7 @@ public class NvvProvider: AbstractHafasClientInterfaceProvider {
     public init(apiAuthorization: [String: Any]) {
         super.init(networkId: .NVV, apiBase: NvvProvider.API_BASE, productsMap: NvvProvider.PRODUCTS_MAP)
         self.apiAuthorization = apiAuthorization
-        apiVersion = "1.15"
+        apiVersion = "1.50"
         apiClient = ["id": "NVV", "type": "WEB", "name": "webapp"]
         
         styles = [

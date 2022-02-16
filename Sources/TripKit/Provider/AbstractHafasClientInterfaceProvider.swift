@@ -304,9 +304,10 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
             }
             return
         }
-        guard let res = svcRes["res"] as? [String: Any], let common = res["common"] as? [String: Any], let locList = common["locL"] as? [Any], let opList = common["opL"] as? [Any], let prodList = common["prodL"] as? [Any] else {
+        guard let res = svcRes["res"] as? [String: Any], let common = res["common"] as? [String: Any], let locList = common["locL"] as? [Any], let prodList = common["prodL"] as? [Any] else {
             throw ParseError(reason: "could not parse lists")
         }
+        let opList = common["opL"] as? [Any]
         if locList.isEmpty {
             // for example GVH: returns no locations when id is invalid
             completion(request, .invalidStation)
@@ -440,9 +441,10 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
             }
             return
         }
-        guard let res = svcRes["res"] as? [String: Any], let common = res["common"] as? [String: Any], let locList = common["locL"] as? [Any], let opList = common["opL"] as? [Any], let prodList = common["prodL"] as? [Any] else {
+        guard let res = svcRes["res"] as? [String: Any], let common = res["common"] as? [String: Any], let locList = common["locL"] as? [Any], let prodList = common["prodL"] as? [Any] else {
             throw ParseError(reason: "could not parse lists")
         }
+        let opList = common["opL"] as? [Any]
         let remList = common["remL"] as? [Any]
         let himList = common["himL"] as? [Any]
         let polyList = common["polyL"] as? [Any]
@@ -615,10 +617,10 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
             completion(request, .invalidId)
             return
         }
-        guard let res = svcRes["res"] as? [String: Any], let common = res["common"] as? [String: Any], let locList = common["locL"] as? [Any], let opList = common["opL"] as? [Any], let prodList = common["prodL"] as? [Any] else {
+        guard let res = svcRes["res"] as? [String: Any], let common = res["common"] as? [String: Any], let locList = common["locL"] as? [Any], let prodList = common["prodL"] as? [Any] else {
             throw ParseError(reason: "could not parse lists")
         }
-        
+        let opList = common["opL"] as? [Any]
         let locations = try parseLocList(locList: locList)
         let operators = try parseOpList(opList: opList)
         let lines = try parseProdList(prodList: prodList, operators: operators)
@@ -990,6 +992,10 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
                 id = nil
                 placeAndName = (nil, nil)
                 products = nil
+            case "LM":
+                // ignore this location type
+                // seems to be a variation of an existing station
+                continue
             default:
                 throw ParseError(reason: "unknown loc type \(type)")
             }
@@ -1014,7 +1020,11 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         return locations
     }
     
-    func parseOpList(opList: [Any]) throws -> [String] {
+    func parseOpList(opList: [Any]?) throws -> [String]? {
+        guard let opList = opList else {
+            return nil
+        }
+
         var operators: [String] = []
         for op in opList {
             guard let op = op as? [String: Any], let name = op["name"] as? String else { throw ParseError(reason: "could not parse operator") }
@@ -1023,14 +1033,14 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         return operators
     }
     
-    func parseProdList(prodList: [Any], operators: [String]) throws -> [Line] {
+    func parseProdList(prodList: [Any], operators: [String]?) throws -> [Line] {
         var lines: [Line] = []
         for prod in prodList {
             guard let prod = prod as? [String: Any] else { throw ParseError(reason: "could not parse line") }
             let name = prod["addName"] as? String ?? prod["name"] as? String
             let nameS = prod["nameS"] as? String
             let oprIndex = prod["oprX"] as? Int ?? -1
-            let op = oprIndex == -1 ? nil : operators[oprIndex]
+            let op = oprIndex == -1 ? nil : operators?[oprIndex]
             let cls = prod["cls"] as? Int ?? -1
             let product = cls == -1 ? nil : try intToProduct(productInt: cls)
             let number = prod["number"] as? String
@@ -1087,9 +1097,11 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
                         break
                     case "3g", "co": // 3G-Regel
                         break
-                    case "operator", "df", "ay", "nw", "kc", "al", "cy": // line operator
+                    case "operator", "df", "ay", "nw", "kc", "al", "cy", "am", "da": // line operator
                         break
                     case "hm": // RB 20: die euregiobahn
+                        break
+                    case "jw": // NordWestBahn-Servicetelefon
                         break
                     case "journeynumber", "pname": // line number
                         break

@@ -8,7 +8,7 @@ public class VmobilProvider: AbstractHafasClientInterfaceProvider {
     public init(apiAuthorization: [String: Any]) {
         super.init(networkId: .VMOBIL, apiBase: VmobilProvider.API_BASE, productsMap: VmobilProvider.PRODUCTS_MAP)
         self.apiAuthorization = apiAuthorization
-        apiVersion = "1.18"
+        apiVersion = "1.52"
         apiClient = ["id": "VAO", "type": "WEB", "name": "webapp", "l": "vs_vvv"]
         extVersion = "VAO.6"
     }

@@ -8,7 +8,7 @@ public class VsnProvider: AbstractHafasClientInterfaceProvider {
     public init(apiAuthorization: [String: Any]) {
         super.init(networkId: .VSN, apiBase: VsnProvider.API_BASE, productsMap: VsnProvider.PRODUCTS_MAP)
         self.apiAuthorization = apiAuthorization
-        apiVersion = "1.16"
+        apiVersion = "1.52"
         apiClient = ["id": "VSN", "type": "WEB", "name": "webapp"]
         
         styles = [
