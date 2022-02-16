@@ -9,7 +9,7 @@ class InvgProviderTests: TripKitProviderTestCase, TripKitProviderTestsDelegate {
     var networkId: NetworkId { return .INVG }
     
     func initProvider(from authorizationData: AuthorizationData) -> NetworkProvider {
-        return InvgProvider(apiAuthorization: authorizationData.hciAuthorization, requestVerification: authorizationData.hciRequestVerification)
+        return InvgProvider(apiAuthorization: authorizationData.hciAuthorization)
     }
     
 }

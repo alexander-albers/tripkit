@@ -5,12 +5,11 @@ public class NvvProvider: AbstractHafasClientInterfaceProvider {
     static let API_BASE = "https://auskunft.nvv.de/auskunft/bin/jp/"
     static let PRODUCTS_MAP: [Product?] = [.highSpeedTrain, .highSpeedTrain, .regionalTrain, .suburbanTrain, .subway, .tram, .bus, .bus, .ferry, .onDemand, .regionalTrain, .regionalTrain]
     
-    public init(apiAuthorization: [String: Any], requestVerification: AbstractHafasClientInterfaceProvider.RequestVerification) {
+    public init(apiAuthorization: [String: Any]) {
         super.init(networkId: .NVV, apiBase: NvvProvider.API_BASE, productsMap: NvvProvider.PRODUCTS_MAP)
         self.apiAuthorization = apiAuthorization
-        self.requestVerification = requestVerification
         apiVersion = "1.15"
-        apiClient = ["id": "NVV"]
+        apiClient = ["id": "NVV", "type": "WEB", "name": "webapp"]
         
         styles = [
             "R": LineStyle(shape: .rect, backgroundColor: LineStyle.rgb(3, 144, 139), foregroundColor: LineStyle.white),

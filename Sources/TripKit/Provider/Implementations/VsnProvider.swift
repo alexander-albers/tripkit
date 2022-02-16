@@ -5,12 +5,11 @@ public class VsnProvider: AbstractHafasClientInterfaceProvider {
     static let API_BASE = "https://fahrplaner.vsninfo.de/hafas/"
     static let PRODUCTS_MAP: [Product?] = [.highSpeedTrain, .highSpeedTrain, .regionalTrain, .regionalTrain, .suburbanTrain, .bus, .ferry, .subway, .tram, .onDemand]
     
-    public init(apiAuthorization: [String: Any], requestVerification: AbstractHafasClientInterfaceProvider.RequestVerification) {
+    public init(apiAuthorization: [String: Any]) {
         super.init(networkId: .VSN, apiBase: VsnProvider.API_BASE, productsMap: VsnProvider.PRODUCTS_MAP)
         self.apiAuthorization = apiAuthorization
-        self.requestVerification = requestVerification
         apiVersion = "1.16"
-        apiClient = ["id": "VSN"]
+        apiClient = ["id": "VSN", "type": "WEB", "name": "webapp"]
         
         styles = [
             "B11": LineStyle(shape: .rounded, backgroundColor: LineStyle.white, foregroundColor: LineStyle.rgb(231, 155, 55), borderColor: LineStyle.rgb(231, 155, 55)),

@@ -5,14 +5,12 @@ public class ZvvProvider: AbstractHafasClientInterfaceProvider {
     static let API_BASE = "https://online.fahrplan.zvv.ch/bin/"
     static let PRODUCTS_MAP: [Product?] = [.highSpeedTrain, .highSpeedTrain, .regionalTrain, .regionalTrain, .ferry, .suburbanTrain, .bus, .cablecar, .subway, .tram]
     
-    public init(apiAuthorization: [String: Any], requestVerification: AbstractHafasClientInterfaceProvider.RequestVerification) {
+    public init(apiAuthorization: [String: Any]) {
         super.init(networkId: .ZVV, apiBase: ZvvProvider.API_BASE, productsMap: ZvvProvider.PRODUCTS_MAP)
         self.apiAuthorization = apiAuthorization
-        self.requestVerification = requestVerification
         apiVersion = "1.18"
-        apiClient = ["id": "ZVV", "v": "4000300", "type": "IPH", "name": "zvvPROD-STORE"]
+        apiClient = ["id": "ZVV", "type": "WEB", "name": "webapp"]
         extVersion = "ZVV.2"
-        userAgent = "zvvPROD-STORE/4.0.3 (iPhone; ; Scale/3.00)" // required
         
         styles = [
             // S-Bahn

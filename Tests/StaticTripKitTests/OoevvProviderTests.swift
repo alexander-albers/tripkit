@@ -9,7 +9,7 @@ class OoevvProviderTests: TripKitProviderTestCase, TripKitProviderTestsDelegate 
     var networkId: NetworkId { return .OOEVV }
     
     func initProvider(from authorizationData: AuthorizationData) -> NetworkProvider {
-        return OoevvProvider(apiAuthorization: authorizationData.hciAuthorization, requestVerification: authorizationData.hciRequestVerification)
+        return OoevvProvider(apiAuthorization: authorizationData.hciAuthorization)
     }
     
 }

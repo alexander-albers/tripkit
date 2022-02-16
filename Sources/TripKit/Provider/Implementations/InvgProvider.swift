@@ -5,12 +5,11 @@ public class InvgProvider: AbstractHafasClientInterfaceProvider {
     static let API_BASE = "https://fpa.invg.de/bin/"
     static let PRODUCTS_MAP: [Product?] = [.bus, .highSpeedTrain, .regionalTrain, .regionalTrain, .suburbanTrain, .bus, .ferry, .subway, .tram, .onDemand]
     
-    public init(apiAuthorization: [String: Any], requestVerification: AbstractHafasClientInterfaceProvider.RequestVerification) {
+    public init(apiAuthorization: [String: Any]) {
         super.init(networkId: .INVG, apiBase: InvgProvider.API_BASE, productsMap: InvgProvider.PRODUCTS_MAP)
         self.apiAuthorization = apiAuthorization
-        self.requestVerification = requestVerification
         apiVersion = "1.16"
-        apiClient = ["id": "INVG"]
+        apiClient = ["id": "INVG", "type": "WEB", "name": "webapp"]
         
         styles = [
             "B10": LineStyle(backgroundColor: LineStyle.parseColor("#DA2510"), foregroundColor: LineStyle.white),

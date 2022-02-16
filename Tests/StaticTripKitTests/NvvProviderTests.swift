@@ -9,7 +9,7 @@ class NvvProviderTests: TripKitProviderTestCase, TripKitProviderTestsDelegate {
     var networkId: NetworkId { return .NVV }
     
     func initProvider(from authorizationData: AuthorizationData) -> NetworkProvider {
-        return NvvProvider(apiAuthorization: authorizationData.hciAuthorization, requestVerification: authorizationData.hciRequestVerification)
+        return NvvProvider(apiAuthorization: authorizationData.hciAuthorization)
     }
     
 }

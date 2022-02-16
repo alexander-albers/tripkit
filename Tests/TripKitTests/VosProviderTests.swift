@@ -9,7 +9,7 @@ class VosProviderTests: TripKitProviderTestCase, TripKitProviderTestsDelegate {
     var networkId: NetworkId { return .VOS }
     
     func initProvider(from authorizationData: AuthorizationData) -> NetworkProvider {
-        return VosProvider(apiAuthorization: authorizationData.hciAuthorization, requestVerification: authorizationData.hciRequestVerification)
+        return VosProvider(apiAuthorization: authorizationData.hciAuthorization)
     }
     
 }

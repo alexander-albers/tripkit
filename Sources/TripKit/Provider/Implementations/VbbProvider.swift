@@ -5,13 +5,12 @@ public class VbbProvider: AbstractHafasClientInterfaceProvider {
     static let API_BASE = "https://fahrinfo.vbb.de/bin/"
     static let PRODUCTS_MAP: [Product?] = [.suburbanTrain, .subway, .tram, .bus, .ferry, .highSpeedTrain, .regionalTrain, .onDemand, nil, nil]
 
-    public init(apiAuthorization: [String: Any], requestVerification: AbstractHafasClientInterfaceProvider.RequestVerification) {
+    public init(apiAuthorization: [String: Any]) {
         super.init(networkId: .VBB, apiBase: VbbProvider.API_BASE, productsMap: VbbProvider.PRODUCTS_MAP)
         requestUrlEncoding = .utf8
         self.apiAuthorization = apiAuthorization
-        self.requestVerification = requestVerification
         apiVersion = "1.16"
-        apiClient = ["id": "VBB"]
+        apiClient = ["id": "VBB", "type": "WEB", "name": "webapp"]
         
         styles = [
             "SS1": LineStyle(backgroundColor: LineStyle.rgb(221, 77, 174), foregroundColor: LineStyle.white),

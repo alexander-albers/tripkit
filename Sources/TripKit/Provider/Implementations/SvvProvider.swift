@@ -2,15 +2,14 @@ import Foundation
 
 public class SvvProvider: AbstractHafasClientInterfaceProvider {
     
-    static let API_BASE = "https://app.verkehrsauskunft.at/bin/"
+    static let API_BASE = "https://fahrplan.salzburg-verkehr.at/bin/"
     static let PRODUCTS_MAP: [Product?] = [.highSpeedTrain, .suburbanTrain, .subway, nil, .tram, .regionalTrain, .bus, .bus, .tram, .ferry, .onDemand, .bus, .regionalTrain, nil, nil, nil]
     
-    public init(apiAuthorization: [String: Any], requestVerification: AbstractHafasClientInterfaceProvider.RequestVerification) {
+    public init(apiAuthorization: [String: Any]) {
         super.init(networkId: .SVV, apiBase: SvvProvider.API_BASE, productsMap: SvvProvider.PRODUCTS_MAP)
         self.apiAuthorization = apiAuthorization
-        self.requestVerification = requestVerification
         apiVersion = "1.18"
-        apiClient = ["id": "VAO", "l": "vs_svv", "type": "IPH", "name": "svvPROD-APPSTORE"]
+        apiClient = ["id": "VAO", "type": "WEB", "name": "webapp", "l": "vs_svv"]
         extVersion = "VAO.6"
         
         styles = [

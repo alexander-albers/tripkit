@@ -9,7 +9,7 @@ class VbbProviderTests: TripKitProviderTestCase, TripKitProviderTestsDelegate {
     var networkId: NetworkId { return .VBB }
     
     func initProvider(from authorizationData: AuthorizationData) -> NetworkProvider {
-        return VbbProvider(apiAuthorization: authorizationData.hciAuthorization, requestVerification: authorizationData.hciRequestVerification)
+        return VbbProvider(apiAuthorization: authorizationData.hciAuthorization)
     }
     
 }
