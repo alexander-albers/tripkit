@@ -587,6 +587,8 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
             let context: HafasClientInterfaceRefreshTripContext?
             if let ctxRecon = outCon["ctxRecon"] as? String {
                 context = HafasClientInterfaceRefreshTripContext(contextRecon: ctxRecon, from: from, to: to)
+            } else if let recon = outCon["recon"] as? [String: Any], let ctx = recon["ctx"] as? String {
+                context = HafasClientInterfaceRefreshTripContext(contextRecon: ctx, from: from, to: to)
             } else {
                 context = nil
             }
