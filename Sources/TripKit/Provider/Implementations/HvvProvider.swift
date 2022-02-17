@@ -93,11 +93,14 @@ public class HvvProvider: AbstractNetworkProvider {
     }
     
     public override func suggestLocations(constraint: String, types: [LocationType]?, maxLocations: Int, completion: @escaping (HttpRequest, SuggestLocationsResult) -> Void) -> AsyncRequest {
-        let request = encodeJson(dict: [
+        var dict: [String: Any] = [
             "version": HvvProvider.VERSION,
-            "theName": ["name": constraint],
-            "maxList": maxLocations
-        ], requestUrlEncoding: .utf8)
+            "theName": ["name": constraint]
+        ]
+        if maxLocations > 0 {
+            dict["maxList"] = maxLocations
+        }
+        let request = encodeJson(dict: dict, requestUrlEncoding: .utf8)
         let urlBuilder = UrlBuilder(path: HvvProvider.API_BASE + "checkName", encoding: .utf8)
         
         let httpRequest = HttpRequest(urlBuilder: urlBuilder).setPostPayload(request).setHeaders(getAuthHeaders(request))
@@ -129,12 +132,17 @@ public class HvvProvider: AbstractNetworkProvider {
             // no id provided -> search for other stations
             name["type"] = "STATION"
         }
-        let request = encodeJson(dict: [
+        var dict: [String: Any] = [
             "version": HvvProvider.VERSION,
-            "theName": name,
-            "maxList": maxLocations,
-            "maxDistance": maxDistance
-        ], requestUrlEncoding: .utf8)
+            "theName": name
+        ]
+        if maxLocations > 0 {
+            dict["maxList"] = maxLocations
+        }
+        if maxDistance > 0 {
+            dict["maxDistance"] = maxDistance
+        }
+        let request = encodeJson(dict: dict, requestUrlEncoding: .utf8)
         let urlBuilder = UrlBuilder(path: HvvProvider.API_BASE + "checkName", encoding: .utf8)
         
         let httpRequest = HttpRequest(urlBuilder: urlBuilder).setPostPayload(request).setHeaders(getAuthHeaders(request))
@@ -157,14 +165,19 @@ public class HvvProvider: AbstractNetworkProvider {
     }
     
     public override func queryDepartures(stationId: String, departures: Bool, time: Date?, maxDepartures: Int, equivs: Bool, completion: @escaping (HttpRequest, QueryDeparturesResult) -> Void) -> AsyncRequest {
-        let request = encodeJson(dict: [
+        var dict: [String: Any] = [
             "version": HvvProvider.VERSION,
             "station": jsonLocation(location: Location(id: stationId)),
-            "maxList": maxDepartures,
-            "time": jsonDate(date: time ?? Date()),
             "allStationsInChangingNode": equivs,
             "maxTimeOffset": 720 // maximum 12 hours in advance
-        ], requestUrlEncoding: .utf8)
+        ]
+        if maxDepartures > 0 {
+            dict["maxList"] = maxDepartures
+        }
+        if let time = time {
+            dict["time"] = jsonDate(date: time)
+        }
+        let request = encodeJson(dict: dict, requestUrlEncoding: .utf8)
         let urlBuilder = UrlBuilder(path: HvvProvider.API_BASE + "departureList", encoding: .utf8)
         
         let httpRequest = HttpRequest(urlBuilder: urlBuilder).setPostPayload(request).setHeaders(getAuthHeaders(request))
@@ -325,7 +338,7 @@ public class HvvProvider: AbstractNetworkProvider {
             }
         }
         let timeIsDeparture = previousContext != nil ? later : departure
-        var requestDict = [
+        var requestDict: [String : Any] = [
             "version": HvvProvider.VERSION,
             "start": jsonLocation(location: from),
             "dest": jsonLocation(location: to),
@@ -349,7 +362,7 @@ public class HvvProvider: AbstractNetworkProvider {
                 "tariffRegions": false,
                 "kinds": [1, 2]  // Einzelfahrkarte Erwachsener & Kind
             ]
-        ] as [String : Any]
+        ]
         if let via = via {
             requestDict["via"] = jsonLocation(location: via)
         }
