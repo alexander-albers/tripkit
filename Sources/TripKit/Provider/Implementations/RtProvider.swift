@@ -1,5 +1,6 @@
 import Foundation
 
+/// RailTeam (EU)
 public class RtProvider: AbstractHafasLegacyProvider {
     
     static let API_BASE = "http://railteam.hafas.eu/bin/"

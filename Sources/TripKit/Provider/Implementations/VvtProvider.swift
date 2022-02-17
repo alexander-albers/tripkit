@@ -1,6 +1,6 @@
 import Foundation
 
-// Verkehrsverbund Tirol
+/// Verkehrsverbund Tirol (AT)
 public class VvtProvider: AbstractHafasClientInterfaceProvider {
     
     static let API_BASE = "https://smartride.vvt.at/bin/"

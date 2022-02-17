@@ -1,5 +1,6 @@
 import Foundation
 
+/// Verkehrsverbund Mittelsachsen (DE)
 public class VmsProvider: AbstractEfaProvider {
     
     static let API_BASE = "https://efa.vms.de/VMSSL3/"

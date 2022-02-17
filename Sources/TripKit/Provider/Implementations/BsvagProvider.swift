@@ -1,5 +1,6 @@
 import Foundation
 
+/// Braunschweiger Verkehrs-GmbH (DE)
 public class BsvagProvider: AbstractEfaProvider {
     
     static let API_BASE = "https://bsvg.efa.de/bsvagstd/"

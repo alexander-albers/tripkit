@@ -1,5 +1,6 @@
 import Foundation
 
+/// Aachener Verkehrsverbund (DE)
 public class AvvAachenProvider: AbstractHafasClientInterfaceProvider {
     
     static let API_BASE = "https://auskunft.avv.de/bin/"
@@ -9,7 +10,7 @@ public class AvvAachenProvider: AbstractHafasClientInterfaceProvider {
         super.init(networkId: .AVV2, apiBase: AvvAachenProvider.API_BASE, productsMap: AvvAachenProvider.PRODUCTS_MAP)
         self.apiAuthorization = apiAuthorization
         apiVersion = "1.48"
-        apiClient = ["id": "AVV_AACHEN","type": "WEB", "name": "webapp", "l": "vs_avv"]
+        apiClient = ["id": "AVV_AACHEN", "type": "WEB", "name": "webapp", "l": "vs_avv"]
     }
     
     override func split(stationName: String?) -> (String?, String?) {

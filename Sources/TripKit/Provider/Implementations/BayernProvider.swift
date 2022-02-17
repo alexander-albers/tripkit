@@ -1,5 +1,6 @@
 import Foundation
 
+/// Bavaria (DE)
 public class BayernProvider: AbstractEfaProvider {
     
     static let API_BASE = "https://mobile.defas-fgi.de/beg/"

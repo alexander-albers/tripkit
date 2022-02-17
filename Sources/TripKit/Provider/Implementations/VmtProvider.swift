@@ -1,5 +1,6 @@
 import Foundation
 
+/// Verkehrsverbund Mittelthüringen (DE)
 public class VmtProvider: AbstractHafasClientInterfaceProvider {
     
     static let API_BASE = "https://vmt.hafas.de/bin/"

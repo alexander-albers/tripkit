@@ -1,5 +1,6 @@
 import Foundation
 
+/// Nordhessischer Verkehrsverbund (DE)
 public class NvvProvider: AbstractHafasClientInterfaceProvider {
     
     static let API_BASE = "https://auskunft.nvv.de/auskunft/bin/jp/"

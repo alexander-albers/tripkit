@@ -1,5 +1,6 @@
 import Foundation
 
+/// Steirischer Verkehrsverbund (AT)
 public class StvProvider: AbstractHafasClientInterfaceProvider {
     
     static let API_BASE = "https://verkehrsauskunft.verbundlinie.at/bin/"

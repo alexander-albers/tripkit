@@ -1,5 +1,6 @@
 import Foundation
 
+/// Züricher Verkehrsverbund (CH)
 public class ZvvProvider: AbstractHafasClientInterfaceProvider {
     
     static let API_BASE = "https://online.fahrplan.zvv.ch/bin/"

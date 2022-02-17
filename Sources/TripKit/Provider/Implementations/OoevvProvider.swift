@@ -1,5 +1,6 @@
 import Foundation
 
+/// Oberösterreichischer Verkehrsverbund (AT)
 public class OoevvProvider: AbstractHafasClientInterfaceProvider {
     
     static let API_BASE = "https://verkehrsauskunft.ooevv.at/bin/"

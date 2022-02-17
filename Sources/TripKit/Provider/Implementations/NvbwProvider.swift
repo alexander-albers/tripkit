@@ -1,5 +1,6 @@
 import Foundation
 
+/// Nahverkehrsgesellschaft Baden-Württemberg (DE)
 public class NvbwProvider: AbstractEfaProvider {
     
     static let API_BASE = "https://www.efa-bw.de/nvbw3L/"

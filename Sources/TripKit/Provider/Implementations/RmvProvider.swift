@@ -1,5 +1,6 @@
 import Foundation
 
+/// Rhein-Main-Verkehrsverbund (DE)
 public class RmvProvider: AbstractHafasClientInterfaceProvider {
     
     static let API_BASE = "https://www.rmv.de/auskunft/bin/jp/"

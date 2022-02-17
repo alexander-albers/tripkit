@@ -1,5 +1,6 @@
 import Foundation
 
+/// Verkehrsverbund Oberelbe (DE)
 public class VvoProvider: AbstractEfaProvider {
     
     static let API_BASE = "http://efa.vvo-online.de:8080/std3/"

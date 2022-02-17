@@ -1,5 +1,6 @@
 import Foundation
 
+/// Linz AG (AT)
 public class LinzProvider: AbstractEfaProvider {
     
     static let API_BASE = "https://www.linzag.at/linz2/"

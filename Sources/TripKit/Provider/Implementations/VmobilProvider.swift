@@ -1,5 +1,6 @@
 import Foundation
 
+/// Vorarlberger Verkehrsverbund (AT)
 public class VmobilProvider: AbstractHafasClientInterfaceProvider {
     
     static let API_BASE = "https://fahrplan.vmobil.at/bin/"

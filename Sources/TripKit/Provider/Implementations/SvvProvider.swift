@@ -1,5 +1,6 @@
 import Foundation
 
+/// Salzburger Verkehrsverbund (AT)
 public class SvvProvider: AbstractHafasClientInterfaceProvider {
     
     static let API_BASE = "https://fahrplan.salzburg-verkehr.at/bin/"

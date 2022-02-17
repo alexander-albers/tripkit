@@ -1,5 +1,6 @@
 import Foundation
 
+/// Saarländischer Verkehrsverbund (DE)
 public class VgsProvider: AbstractHafasClientInterfaceProvider {
     
     static let API_BASE = "https://saarfahrplan.de/bin/"

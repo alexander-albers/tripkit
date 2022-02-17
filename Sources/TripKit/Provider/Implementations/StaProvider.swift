@@ -1,6 +1,6 @@
 import Foundation
 
-// SÜDTIROLER TRANSPORTSTRUKTUREN AG
+/// Sudtiroler Transportstrukturen AG (IT)
 public class StaProvider: AbstractEfaProvider {
     
     static let API_BASE = "https://efa.sta.bz.it/app/"

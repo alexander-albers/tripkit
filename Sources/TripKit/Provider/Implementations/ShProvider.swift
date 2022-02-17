@@ -1,5 +1,6 @@
 import Foundation
 
+/// Nahverkehrsverbund Schleswig-Holstein (DE)
 public class ShProvider: AbstractHafasClientInterfaceProvider {
     
     static let API_BASE = "https://nah.sh.hafas.de/bin/"

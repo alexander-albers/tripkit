@@ -1,5 +1,6 @@
 import Foundation
 
+/// Nahverkehrsservice Sachsen-Anhalt (DE)
 public class NasaProvider: AbstractHafasClientInterfaceProvider {
     
     static let API_BASE = "https://reiseauskunft.insa.de/bin/"

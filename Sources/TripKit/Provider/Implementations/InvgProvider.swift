@@ -1,5 +1,6 @@
 import Foundation
 
+/// Ingolstädter Verkehrsgesellschaft (DE)
 public class InvgProvider: AbstractHafasClientInterfaceProvider {
     
     static let API_BASE = "https://fpa.invg.de/bin/"

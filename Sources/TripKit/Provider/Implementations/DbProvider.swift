@@ -1,5 +1,6 @@
 import Foundation
 
+/// Deutsche Bahn (DE)
 public class DbProvider: AbstractHafasClientInterfaceProvider {
     
     static let API_BASE = "https://reiseauskunft.bahn.de/bin/"

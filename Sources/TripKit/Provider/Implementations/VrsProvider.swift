@@ -2,6 +2,7 @@ import Foundation
 import os.log
 import SwiftyJSON
 
+/// Verkehrsverbund Rhein-Sieg (DE)
 public class VrsProvider: AbstractNetworkProvider {
     
     static let API_BASE = "https://ekapapp.vrs.de/index.php"

@@ -1,8 +1,8 @@
 import Foundation
 
+/// Westfalenfahrplan/MVG/moBiel (DE)
 public class MvgProvider: AbstractEfaProvider {
     
-    // Westfalenfahrplan, MVG, MoBiel, ...
     static let API_BASE = "https://westfalenfahrplan.de/std3/"
     
     public init() {

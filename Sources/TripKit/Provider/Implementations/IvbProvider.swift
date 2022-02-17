@@ -1,5 +1,6 @@
 import Foundation
 
+/// Innsbrucker Verkehrsbetriebe (AT)
 public class IvbProvider: AbstractHafasClientInterfaceProvider {
     
     static let API_BASE = "https://fahrplan.ivb.at/bin/"

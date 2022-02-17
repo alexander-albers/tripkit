@@ -1,5 +1,6 @@
 import Foundation
 
+/// Verkehrsverbund Rhein-Neckar (DE)
 public class VrnProvider: AbstractEfaProvider {
     
     static let API_BASE = "https://www.vrn.de/mngvrn/"

@@ -1,5 +1,6 @@
 import Foundation
 
+/// Karlsruher Verkehrsverbund (DE)
 public class KvvProvider: AbstractEfaProvider {
     
     static let API_BASE = "https://projekte.kvv-efa.de/sl3/"

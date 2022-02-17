@@ -1,5 +1,6 @@
 import Foundation
 
+/// Verkehrsverbund Berlin-Brandenburg (DE)
 public class VbbProvider: AbstractHafasClientInterfaceProvider {
     
     static let API_BASE = "https://fahrinfo.vbb.de/bin/"

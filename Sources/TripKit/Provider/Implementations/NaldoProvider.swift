@@ -1,5 +1,6 @@
 import Foundation
 
+/// Verkehrsverbund Neckar-Alb-Donau (DE)
 public class NaldoProvider: AbstractEfaProvider {
     
     static let API_BASE = "https://efa2.naldo.de/naldo/"

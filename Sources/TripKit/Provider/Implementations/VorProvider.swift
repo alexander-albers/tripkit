@@ -1,6 +1,6 @@
 import Foundation
 
-// Verkehrsverbund Ost-Region (Lower Austria and Burgenland, Austria)
+// Verkehrsverbund Ost-Region (Lower Austria and Burgenland, AT)
 public class VorProvider: AbstractHafasClientInterfaceProvider {
     
     static let API_BASE = "https://anachb.vor.at/bin/"

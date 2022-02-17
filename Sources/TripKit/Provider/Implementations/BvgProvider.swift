@@ -1,5 +1,6 @@
 import Foundation
 
+/// Berliner Verkehrsbetriebe (DE)
 public class BvgProvider: AbstractHafasClientInterfaceProvider {
     
     static let API_BASE = "https://bvg-apps.hafas.de/bin/"

@@ -207,10 +207,6 @@
 		FA4C4BBA27BD0C35008A6231 /* HCIVersionChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4C4BAA27BCED0A008A6231 /* HCIVersionChecker.swift */; };
 		FA4C4BBB27BD0C36008A6231 /* HCIVersionChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4C4BAA27BCED0A008A6231 /* HCIVersionChecker.swift */; };
 		FA4C4BBC27BD0C37008A6231 /* HCIVersionChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4C4BAA27BCED0A008A6231 /* HCIVersionChecker.swift */; };
-		FA4C4BBD27BD2334008A6231 /* NetworkProvider+Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA17ADA427A2E8BF006305B1 /* NetworkProvider+Async.swift */; };
-		FA4C4BBE27BD2336008A6231 /* NetworkProvider+Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA17ADA427A2E8BF006305B1 /* NetworkProvider+Async.swift */; };
-		FA4C4BBF27BD2336008A6231 /* NetworkProvider+Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA17ADA427A2E8BF006305B1 /* NetworkProvider+Async.swift */; };
-		FA4C4BC027BD2337008A6231 /* NetworkProvider+Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA17ADA427A2E8BF006305B1 /* NetworkProvider+Async.swift */; };
 		FA4C7F2E26EB3AA700BFD671 /* vrs-client-certificate.pfx in Resources */ = {isa = PBXBuildFile; fileRef = FA4C7F2D26EB3AA700BFD671 /* vrs-client-certificate.pfx */; };
 		FA4C7F2F26EB3AA700BFD671 /* vrs-client-certificate.pfx in Resources */ = {isa = PBXBuildFile; fileRef = FA4C7F2D26EB3AA700BFD671 /* vrs-client-certificate.pfx */; };
 		FA4C7F3026EB3AA700BFD671 /* vrs-client-certificate.pfx in Resources */ = {isa = PBXBuildFile; fileRef = FA4C7F2D26EB3AA700BFD671 /* vrs-client-certificate.pfx */; };
@@ -684,6 +680,10 @@
 		FAE6E70F26E6ACC2007E975A /* LineStyleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8F313C1E85A41C00E6CE9B /* LineStyleTests.swift */; };
 		FAE6E71126E6ACC2007E975A /* UrlEncodingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA1839F0E561F0397EB1F1 /* UrlEncodingTests.swift */; };
 		FAE6E74A26E6B467007E975A /* TestsCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAE6E71D26E6B40E007E975A /* TestsCommon.framework */; };
+		FAEAFDE027BE98BE00EE16EB /* NetworkProvider+Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA17ADA427A2E8BF006305B1 /* NetworkProvider+Async.swift */; };
+		FAEAFDE127BE98C000EE16EB /* NetworkProvider+Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA17ADA427A2E8BF006305B1 /* NetworkProvider+Async.swift */; };
+		FAEAFDE227BE98C000EE16EB /* NetworkProvider+Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA17ADA427A2E8BF006305B1 /* NetworkProvider+Async.swift */; };
+		FAEAFDE327BE98C200EE16EB /* NetworkProvider+Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA17ADA427A2E8BF006305B1 /* NetworkProvider+Async.swift */; };
 		FAF2B36E21BFF80C006439C5 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF2B36D21BFF80C006439C5 /* Security.framework */; };
 		FAF9955B200E3E1D008D8582 /* QueryJourneyDetailResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF9955A200E3E1D008D8582 /* QueryJourneyDetailResult.swift */; };
 		FAF99563200E4532008D8582 /* QueryJourneyDetailResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF9955A200E3E1D008D8582 /* QueryJourneyDetailResult.swift */; };
@@ -1470,57 +1470,7 @@
 		FAC2E8792267023E009F95F5 /* Implementations */ = {
 			isa = PBXGroup;
 			children = (
-				FA17EBEC1E758087001ECA09 /* DbProvider.swift */,
-				FAAE9E181E81579500BD45DC /* BvgProvider.swift */,
-				FA3CD4351E831A1B00A25793 /* VbbProvider.swift */,
-				FA37CD7E1FFC0AE000B5D93D /* HvvProvider.swift */,
-				FA2454C51E86A2A500445AD5 /* BayernProvider.swift */,
-				FA04C6C51E872F9E004535BA /* AvvAugsburgProvider.swift */,
-				FACD98811E87AF170019BE80 /* MvvProvider.swift */,
-				FA7A3D221F0B6A500041BC51 /* RmvProvider.swift */,
-				FACFBBC71F850EE600679CD4 /* AvvAachenProvider.swift */,
-				FACD98851E87E8530019BE80 /* VgnProvider.swift */,
-				FA4B56F7219735FE003CD7CF /* InvgProvider.swift */,
-				FACD98891E87F0D40019BE80 /* VvmProvider.swift */,
-				FACD988D1E881A190019BE80 /* NvvProvider.swift */,
-				FA4F58131E8BCA6800EA392F /* VmvProvider.swift */,
-				FA4F58191E8BD30500EA392F /* ShProvider.swift */,
-				FA4F58171E8BD1D800EA392F /* GvhProvider.swift */,
-				FA6015D31E8C1C1C0069B224 /* BsvagProvider.swift */,
-				FA6015D51E8C1D270069B224 /* VbnProvider.swift */,
-				FA6015D71E8C214D0069B224 /* VvoProvider.swift */,
-				FABFCC0D1E8F9E5700905D5E /* VmsProvider.swift */,
-				FABFCC0F1E8FA02100905D5E /* NasaProvider.swift */,
-				FA65AC6A21CBDB5C007FE1E4 /* VsnProvider.swift */,
-				FA9172AF217A767100535768 /* VosProvider.swift */,
-				FABFCC151E8FB7F900905D5E /* VmtProvider.swift */,
-				FABFCC171E8FBB0000905D5E /* VrrProvider.swift */,
-				FA895A5A1E90FF30002FBA7A /* VrsProvider.swift */,
-				FABFCC1F1E8FE1E600905D5E /* MvgProvider.swift */,
-				FABFCC231E8FE37D00905D5E /* VrnProvider.swift */,
-				FA8B58732789E6F7006CB35A /* NrwProvider.swift */,
-				FABFCC271E8FEBB900905D5E /* VvsProvider.swift */,
-				FAB15DBE2798647C00E6A4CB /* NaldoProvider.swift */,
-				FABFCC291E8FECD200905D5E /* DingProvider.swift */,
-				FAB754391E3FD3F300C343F2 /* KvvProvider.swift */,
-				FABFCC2D1E8FED9000905D5E /* VagfrProvider.swift */,
-				FA780E2F1E90019E004E2281 /* NvbwProvider.swift */,
-				FA780E311E900720004E2281 /* VvvProvider.swift */,
-				FA85A9BB1F895D5D005C6691 /* VgsProvider.swift */,
-				FA780E331E9008E1004E2281 /* RtProvider.swift */,
-				FA4371231F62AE4D00F53B82 /* ZvvProvider.swift */,
-				FA7CAA3E2799561800BE5147 /* BvbProvider.swift */,
-				FA43712B1F63005200F53B82 /* OebbProvider.swift */,
-				FA0B56FE27883FD8003E5A65 /* VorProvider.swift */,
-				FA43712D1F63031F00F53B82 /* WienProvider.swift */,
-				FA87BA3A20B5B476004F1199 /* OoevvProvider.swift */,
-				FA43712F1F63045000F53B82 /* LinzProvider.swift */,
-				FA4371311F6304F500F53B82 /* IvbProvider.swift */,
-				FAB267DB21839F1D00F8C5F5 /* SvvProvider.swift */,
-				FA0B56F127883061003E5A65 /* VvtProvider.swift */,
-				FA4371331F63052700F53B82 /* StvProvider.swift */,
-				FAFD552A2785847400D6F149 /* VmobilProvider.swift */,
-				FA48B03427874FDB00186DBD /* StaProvider.swift */,
+				FAEAFDDC27BE95C200EE16EB /* Europe */,
 			);
 			path = Implementations;
 			sourceTree = "<group>";
@@ -1652,6 +1602,96 @@
 				FAB18AED276DE1F800AF9983 /* HTMLTagParser.swift */,
 			);
 			path = Util;
+			sourceTree = "<group>";
+		};
+		FAEAFDDB27BE959500EE16EB /* Germany */ = {
+			isa = PBXGroup;
+			children = (
+				FA17EBEC1E758087001ECA09 /* DbProvider.swift */,
+				FAAE9E181E81579500BD45DC /* BvgProvider.swift */,
+				FA37CD7E1FFC0AE000B5D93D /* HvvProvider.swift */,
+				FACD98811E87AF170019BE80 /* MvvProvider.swift */,
+				FA895A5A1E90FF30002FBA7A /* VrsProvider.swift */,
+				FA7A3D221F0B6A500041BC51 /* RmvProvider.swift */,
+				FABFCC271E8FEBB900905D5E /* VvsProvider.swift */,
+				FA4F58171E8BD1D800EA392F /* GvhProvider.swift */,
+				FACD98851E87E8530019BE80 /* VgnProvider.swift */,
+				FAB754391E3FD3F300C343F2 /* KvvProvider.swift */,
+				FA04C6C51E872F9E004535BA /* AvvAugsburgProvider.swift */,
+				FACFBBC71F850EE600679CD4 /* AvvAachenProvider.swift */,
+				FA6015D31E8C1C1C0069B224 /* BsvagProvider.swift */,
+				FABFCC2D1E8FED9000905D5E /* VagfrProvider.swift */,
+				FA9172AF217A767100535768 /* VosProvider.swift */,
+				FA4B56F7219735FE003CD7CF /* InvgProvider.swift */,
+				FABFCC291E8FECD200905D5E /* DingProvider.swift */,
+				FA780E2F1E90019E004E2281 /* NvbwProvider.swift */,
+				FA2454C51E86A2A500445AD5 /* BayernProvider.swift */,
+				FA3CD4351E831A1B00A25793 /* VbbProvider.swift */,
+				FACD988D1E881A190019BE80 /* NvvProvider.swift */,
+				FACD98891E87F0D40019BE80 /* VvmProvider.swift */,
+				FA4F58131E8BCA6800EA392F /* VmvProvider.swift */,
+				FABFCC0D1E8F9E5700905D5E /* VmsProvider.swift */,
+				FAB15DBE2798647C00E6A4CB /* NaldoProvider.swift */,
+				FA6015D51E8C1D270069B224 /* VbnProvider.swift */,
+				FABFCC171E8FBB0000905D5E /* VrrProvider.swift */,
+				FA8B58732789E6F7006CB35A /* NrwProvider.swift */,
+				FABFCC231E8FE37D00905D5E /* VrnProvider.swift */,
+				FA85A9BB1F895D5D005C6691 /* VgsProvider.swift */,
+				FA6015D71E8C214D0069B224 /* VvoProvider.swift */,
+				FABFCC0F1E8FA02100905D5E /* NasaProvider.swift */,
+				FA4F58191E8BD30500EA392F /* ShProvider.swift */,
+				FA65AC6A21CBDB5C007FE1E4 /* VsnProvider.swift */,
+				FABFCC151E8FB7F900905D5E /* VmtProvider.swift */,
+				FA780E311E900720004E2281 /* VvvProvider.swift */,
+				FABFCC1F1E8FE1E600905D5E /* MvgProvider.swift */,
+			);
+			name = Germany;
+			sourceTree = "<group>";
+		};
+		FAEAFDDC27BE95C200EE16EB /* Europe */ = {
+			isa = PBXGroup;
+			children = (
+				FAEAFDDF27BE95ED00EE16EB /* Austria */,
+				FAEAFDDB27BE959500EE16EB /* Germany */,
+				FAEAFDDE27BE95E600EE16EB /* Italy */,
+				FAEAFDDD27BE95D800EE16EB /* Switzerland */,
+				FA780E331E9008E1004E2281 /* RtProvider.swift */,
+			);
+			name = Europe;
+			sourceTree = "<group>";
+		};
+		FAEAFDDD27BE95D800EE16EB /* Switzerland */ = {
+			isa = PBXGroup;
+			children = (
+				FA4371231F62AE4D00F53B82 /* ZvvProvider.swift */,
+				FA7CAA3E2799561800BE5147 /* BvbProvider.swift */,
+			);
+			name = Switzerland;
+			sourceTree = "<group>";
+		};
+		FAEAFDDE27BE95E600EE16EB /* Italy */ = {
+			isa = PBXGroup;
+			children = (
+				FA48B03427874FDB00186DBD /* StaProvider.swift */,
+			);
+			name = Italy;
+			sourceTree = "<group>";
+		};
+		FAEAFDDF27BE95ED00EE16EB /* Austria */ = {
+			isa = PBXGroup;
+			children = (
+				FA43712B1F63005200F53B82 /* OebbProvider.swift */,
+				FA0B56FE27883FD8003E5A65 /* VorProvider.swift */,
+				FA43712D1F63031F00F53B82 /* WienProvider.swift */,
+				FA87BA3A20B5B476004F1199 /* OoevvProvider.swift */,
+				FA43712F1F63045000F53B82 /* LinzProvider.swift */,
+				FA4371311F6304F500F53B82 /* IvbProvider.swift */,
+				FAB267DB21839F1D00F8C5F5 /* SvvProvider.swift */,
+				FA0B56F127883061003E5A65 /* VvtProvider.swift */,
+				FA4371331F63052700F53B82 /* StvProvider.swift */,
+				FAFD552A2785847400D6F149 /* VmobilProvider.swift */,
+			);
+			name = Austria;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -2274,7 +2314,7 @@
 				FA5CD2AC24FBB29D00B4990A /* Fare.swift in Sources */,
 				FA5CD25D24FBB29000B4990A /* MockKvvProvider.swift in Sources */,
 				FA5CD23C24FBB29000B4990A /* VmvProvider.swift in Sources */,
-				FA4C4BBF27BD2336008A6231 /* NetworkProvider+Async.swift in Sources */,
+				FAEAFDE227BE98C000EE16EB /* NetworkProvider+Async.swift in Sources */,
 				FA0B570127883FD8003E5A65 /* VorProvider.swift in Sources */,
 				FA5CD25824FBB29000B4990A /* OoevvProvider.swift in Sources */,
 				FA5CD24524FBB29000B4990A /* VosProvider.swift in Sources */,
@@ -2377,7 +2417,7 @@
 				FA5CD2BC24FBB29D00B4990A /* Fare.swift in Sources */,
 				FA5CD29224FBB29000B4990A /* MockKvvProvider.swift in Sources */,
 				FA5CD27124FBB29000B4990A /* VmvProvider.swift in Sources */,
-				FA4C4BC027BD2337008A6231 /* NetworkProvider+Async.swift in Sources */,
+				FAEAFDE327BE98C200EE16EB /* NetworkProvider+Async.swift in Sources */,
 				FA0B570227883FD8003E5A65 /* VorProvider.swift in Sources */,
 				FA5CD28D24FBB29000B4990A /* OoevvProvider.swift in Sources */,
 				FA5CD27A24FBB29000B4990A /* VosProvider.swift in Sources */,
@@ -2600,7 +2640,7 @@
 				FAB267DC21839F1D00F8C5F5 /* SvvProvider.swift in Sources */,
 				FACFBBC81F850EE600679CD4 /* AvvAachenProvider.swift in Sources */,
 				FA4F58141E8BCA6800EA392F /* VmvProvider.swift in Sources */,
-				FA4C4BBD27BD2334008A6231 /* NetworkProvider+Async.swift in Sources */,
+				FAEAFDE027BE98BE00EE16EB /* NetworkProvider+Async.swift in Sources */,
 				FA0B56FF27883FD8003E5A65 /* VorProvider.swift in Sources */,
 				FA43712C1F63005200F53B82 /* OebbProvider.swift in Sources */,
 				FA4F58181E8BD1D800EA392F /* GvhProvider.swift in Sources */,
@@ -2973,7 +3013,7 @@
 				FAB267DD21839F1D00F8C5F5 /* SvvProvider.swift in Sources */,
 				FAFF18C01FA50B9500A8ED69 /* AvvAachenProvider.swift in Sources */,
 				FAFF18C11FA50B9500A8ED69 /* VmvProvider.swift in Sources */,
-				FA4C4BBE27BD2336008A6231 /* NetworkProvider+Async.swift in Sources */,
+				FAEAFDE127BE98C000EE16EB /* NetworkProvider+Async.swift in Sources */,
 				FA0B570027883FD8003E5A65 /* VorProvider.swift in Sources */,
 				FAFF18C21FA50B9500A8ED69 /* OebbProvider.swift in Sources */,
 				FAFF18C31FA50B9500A8ED69 /* GvhProvider.swift in Sources */,

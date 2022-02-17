@@ -1,5 +1,6 @@
 import Foundation
 
+/// Verkehrsgemeinschaft Osnabrück (DE)
 public class VosProvider: AbstractHafasClientInterfaceProvider {
     
     static let API_BASE = "https://fahrplan.vos.info/bin/"

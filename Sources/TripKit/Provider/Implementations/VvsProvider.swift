@@ -1,5 +1,6 @@
 import Foundation
 
+/// Verkehrs- und Tarifverbund Stuttgart (DE)
 public class VvsProvider: AbstractEfaProvider {
     
     static let API_BASE = "https://www2.vvs.de/vvs/"

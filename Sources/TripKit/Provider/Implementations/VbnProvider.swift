@@ -1,5 +1,6 @@
 import Foundation
 
+/// Verkehrsverbund Bremen/Niedersachsen (DE)
 public class VbnProvider: AbstractHafasClientInterfaceProvider {
     
     static let API_BASE = "https://fahrplaner.vbn.de/hafas/"

@@ -1,5 +1,6 @@
 import Foundation
 
+/// Verkehrsverbund Mainfranken (DE)
 public class VvmProvider: AbstractEfaProvider {
     
     static let API_BASE = "https://mobile.defas-fgi.de/vvmapp/"

@@ -1,5 +1,6 @@
 import Foundation
 
+/// Nordrhein-Westfalen (DE)
 public class NrwProvider: AbstractHafasClientInterfaceProvider {
     
     static let API_BASE = "https://nrw.hafas.de/bin/"

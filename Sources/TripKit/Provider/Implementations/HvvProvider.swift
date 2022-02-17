@@ -3,6 +3,7 @@ import os.log
 import SwiftyJSON
 import CommonCrypto
 
+/// Hamburger Verkehrsverbund (DE)
 public class HvvProvider: AbstractNetworkProvider {
     
     static let API_BASE = "https://gti.geofox.de/gti/public/"

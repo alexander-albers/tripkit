@@ -1,5 +1,6 @@
 import Foundation
 
+/// Großraum-Verkehr Hannover (DE)
 public class GvhProvider: AbstractHafasClientInterfaceProvider {
     
     static let API_BASE = "https://gvh.hafas.de/hamm"

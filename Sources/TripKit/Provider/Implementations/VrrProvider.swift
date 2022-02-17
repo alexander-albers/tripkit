@@ -1,5 +1,6 @@
 import Foundation
 
+/// Verkehrsverbund Rhein-Ruhr (DE)
 public class VrrProvider: AbstractEfaProvider {
     
     static let API_BASE = "https://efa.vrr.de/standard/"

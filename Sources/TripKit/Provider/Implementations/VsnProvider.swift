@@ -1,5 +1,6 @@
 import Foundation
 
+/// Verkehrsverbund Süd-Niedersachsen (DE)
 public class VsnProvider: AbstractHafasClientInterfaceProvider {
     
     static let API_BASE = "https://fahrplaner.vsninfo.de/hafas/"
