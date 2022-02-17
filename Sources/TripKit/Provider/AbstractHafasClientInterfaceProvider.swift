@@ -3,7 +3,7 @@ import os.log
 
 public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
     
-    override public var supportedQueryTraits: Set<QueryTrait> { [.maxChanges, .minChangeTime, .maxFootpathDist] }
+    public override var supportedQueryTraits: Set<QueryTrait> { [.maxChanges, .minChangeTime, .maxFootpathDist] }
     
     var mgateEndpoint: String
     var apiVersion: String?
@@ -794,7 +794,14 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
     }
     
     func wrapJsonApiRequest(meth: String, req: [String: Any], formatted: Bool) -> String? {
-        var dict = ["auth": apiAuthorization ?? "", "client": apiClient ?? "", "ver": apiVersion ?? "", "lang": "de", "svcReqL": [["cfg": configJson, "meth": meth, "req": req]], "formatted": formatted]
+        var dict = [
+            "auth": apiAuthorization ?? "",
+            "client": apiClient ?? "",
+            "ver": apiVersion ?? "",
+            "lang": queryLanguage ?? defaultLanguage,
+            "svcReqL": [["cfg": configJson, "meth": meth, "req": req]],
+            "formatted": formatted
+        ]
         if let extVersion = extVersion {
             dict["ext"] = extVersion
         }

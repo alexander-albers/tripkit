@@ -6,6 +6,8 @@ public class VorProvider: AbstractHafasClientInterfaceProvider {
     static let API_BASE = "https://anachb.vor.at/bin/"
     static let PRODUCTS_MAP: [Product?] = [.highSpeedTrain, .suburbanTrain, .subway, nil, .tram, .regionalTrain, .bus, .bus, .tram, .ferry, .onDemand, .bus, .regionalTrain, nil, nil, nil]
     
+    public override var supportedLanguages: Set<String> { ["de", "en"] }
+    
     public init(apiAuthorization: [String: Any]) {
         super.init(networkId: .VOR, apiBase: VorProvider.API_BASE, productsMap: VorProvider.PRODUCTS_MAP)
         self.apiAuthorization = apiAuthorization

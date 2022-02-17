@@ -6,6 +6,8 @@ public class NvvProvider: AbstractHafasClientInterfaceProvider {
     static let API_BASE = "https://auskunft.nvv.de/auskunft/bin/jp/"
     static let PRODUCTS_MAP: [Product?] = [.highSpeedTrain, .highSpeedTrain, .regionalTrain, .suburbanTrain, .subway, .tram, .bus, .bus, .ferry, .onDemand, .regionalTrain, .regionalTrain]
     
+    public override var supportedLanguages: Set<String> { ["de"] }
+    
     public init(apiAuthorization: [String: Any]) {
         super.init(networkId: .NVV, apiBase: NvvProvider.API_BASE, productsMap: NvvProvider.PRODUCTS_MAP)
         self.apiAuthorization = apiAuthorization

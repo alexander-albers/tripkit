@@ -9,6 +9,8 @@ public class KvvProvider: AbstractEfaProvider {
     static let STOPFINDER_ENDPOINT = "XML_STOPFINDER_REQUEST"
     static let COORD_ENDPOINT = "XML_COORD_REQUEST"
     
+    public override var supportedLanguages: Set<String> { ["de", "en"] }
+    
     public init() {
         super.init(networkId: .KVV, apiBase: KvvProvider.API_BASE, departureMonitorEndpoint: KvvProvider.DEPARTURE_MONITOR_ENDPOINT, tripEndpoint: KvvProvider.TRIP_ENDPOINT, stopFinderEndpoint: KvvProvider.STOPFINDER_ENDPOINT, coordEndpoint: KvvProvider.COORD_ENDPOINT, tripStopTimesEndpoint: nil)
         

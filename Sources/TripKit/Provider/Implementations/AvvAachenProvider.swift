@@ -6,6 +6,8 @@ public class AvvAachenProvider: AbstractHafasClientInterfaceProvider {
     static let API_BASE = "https://auskunft.avv.de/bin/"
     static let PRODUCTS_MAP: [Product?] = [.regionalTrain, .highSpeedTrain, .highSpeedTrain, .bus, .suburbanTrain, .subway, .tram, .bus, .bus, .onDemand, .ferry]
     
+    public override var supportedLanguages: Set<String> { ["de"] }
+    
     public init(apiAuthorization: [String: Any]) {
         super.init(networkId: .AVV2, apiBase: AvvAachenProvider.API_BASE, productsMap: AvvAachenProvider.PRODUCTS_MAP)
         self.apiAuthorization = apiAuthorization

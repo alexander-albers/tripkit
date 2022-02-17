@@ -7,6 +7,8 @@ public class RmvProvider: AbstractHafasClientInterfaceProvider {
     
     static let PRODUCTS_MAP: [Product?] = [.highSpeedTrain, .highSpeedTrain, .regionalTrain, .suburbanTrain, .subway, .tram, .bus, .bus, .ferry, .onDemand, .tram, nil, nil]
     
+    public override var supportedLanguages: Set<String> { ["de", "en"] }
+    
     public init(apiAuthorization: [String: Any]) {
         super.init(networkId: .RMV, apiBase: RmvProvider.API_BASE, productsMap: RmvProvider.PRODUCTS_MAP)
         self.apiAuthorization = apiAuthorization

@@ -6,6 +6,8 @@ public class NasaProvider: AbstractHafasClientInterfaceProvider {
     static let API_BASE = "https://reiseauskunft.insa.de/bin/"
     static let PRODUCTS_MAP: [Product?] = [.highSpeedTrain, .highSpeedTrain, .regionalTrain, .regionalTrain, .suburbanTrain, .tram, .bus, .onDemand]
     
+    public override var supportedLanguages: Set<String> { ["de", "en"] }
+    
     public init(apiAuthorization: [String: Any]) {
         super.init(networkId: .NASA, apiBase: NasaProvider.API_BASE, productsMap: NasaProvider.PRODUCTS_MAP)
         self.apiAuthorization = apiAuthorization

@@ -6,6 +6,8 @@ public class VmobilProvider: AbstractHafasClientInterfaceProvider {
     static let API_BASE = "https://fahrplan.vmobil.at/bin/"
     static let PRODUCTS_MAP: [Product?] = [.highSpeedTrain, .suburbanTrain, .subway, nil, .tram, .regionalTrain, .bus, .bus, .tram, .ferry, .onDemand, .bus, .regionalTrain, nil, nil, nil]
     
+    public override var supportedLanguages: Set<String> { ["de"] }
+    
     public init(apiAuthorization: [String: Any]) {
         super.init(networkId: .VMOBIL, apiBase: VmobilProvider.API_BASE, productsMap: VmobilProvider.PRODUCTS_MAP)
         self.apiAuthorization = apiAuthorization

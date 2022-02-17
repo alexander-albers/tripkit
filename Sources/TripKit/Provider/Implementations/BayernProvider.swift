@@ -8,6 +8,8 @@ public class BayernProvider: AbstractEfaProvider {
     static let TRIP_ENDPOINT = "XML_TRIP_REQUEST2"
     static let STOP_FINDER_ENDPOINT = "XML_STOPFINDER_REQUEST"
     
+    public override var supportedLanguages: Set<String> { ["de", "en"] }
+    
     public init() {
         super.init(networkId: .BAYERN, apiBase: BayernProvider.API_BASE, departureMonitorEndpoint: BayernProvider.DEPARTURE_MONITOR_ENDPOINT, tripEndpoint: BayernProvider.TRIP_ENDPOINT, stopFinderEndpoint: BayernProvider.STOP_FINDER_ENDPOINT, coordEndpoint: nil, tripStopTimesEndpoint: nil)
         

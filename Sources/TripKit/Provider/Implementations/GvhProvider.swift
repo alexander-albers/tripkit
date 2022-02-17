@@ -5,6 +5,8 @@ public class GvhProvider: AbstractHafasClientInterfaceProvider {
     
     static let API_BASE = "https://gvh.hafas.de/hamm"
     static let PRODUCTS_MAP: [Product?] = [.highSpeedTrain, .highSpeedTrain, .highSpeedTrain, .regionalTrain, .suburbanTrain, .bus, nil, nil, .subway, .onDemand]
+    
+    public override var supportedLanguages: Set<String> { ["de"] }
 
     public init(apiAuthorization: [String: Any]) {
         super.init(networkId: .GVH, apiBase: GvhProvider.API_BASE, productsMap: GvhProvider.PRODUCTS_MAP)

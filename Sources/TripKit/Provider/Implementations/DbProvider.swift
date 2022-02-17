@@ -18,6 +18,8 @@ public class DbProvider: AbstractHafasClientInterfaceProvider {
         nil, nil, nil, nil]
     let format = DateFormatter()
     
+    public override var supportedLanguages: Set<String> { ["de", "en", "fr", "es", "it", "nl", "da", "pl", "cs"] }
+    
     public init(apiAuthorization: [String: Any], requestVerification: AbstractHafasClientInterfaceProvider.RequestVerification) {
         super.init(networkId: .DB, apiBase: DbProvider.API_BASE, productsMap: DbProvider.PRODUCTS_MAP)
         self.apiAuthorization = apiAuthorization

@@ -11,6 +11,8 @@ public class HvvProvider: AbstractNetworkProvider {
     static let VERSION = 47
     let authHeaders: [String: Any]
     
+    public override var supportedLanguages: Set<String> { ["de", "en"] }
+    
     lazy var dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.timeZone = timeZone
@@ -97,6 +99,7 @@ public class HvvProvider: AbstractNetworkProvider {
     public override func suggestLocations(constraint: String, types: [LocationType]?, maxLocations: Int, completion: @escaping (HttpRequest, SuggestLocationsResult) -> Void) -> AsyncRequest {
         var dict: [String: Any] = [
             "version": HvvProvider.VERSION,
+            "language": queryLanguage ?? defaultLanguage,
             "theName": ["name": constraint]
         ]
         if maxLocations > 0 {
@@ -136,6 +139,7 @@ public class HvvProvider: AbstractNetworkProvider {
         }
         var dict: [String: Any] = [
             "version": HvvProvider.VERSION,
+            "language": queryLanguage ?? defaultLanguage,
             "theName": name
         ]
         if maxLocations > 0 {
@@ -169,6 +173,7 @@ public class HvvProvider: AbstractNetworkProvider {
     public override func queryDepartures(stationId: String, departures: Bool, time: Date?, maxDepartures: Int, equivs: Bool, completion: @escaping (HttpRequest, QueryDeparturesResult) -> Void) -> AsyncRequest {
         var dict: [String: Any] = [
             "version": HvvProvider.VERSION,
+            "language": queryLanguage ?? defaultLanguage,
             "station": jsonLocation(location: Location(id: stationId)),
             "allStationsInChangingNode": equivs,
             "maxTimeOffset": 720 // maximum 12 hours in advance
@@ -252,6 +257,7 @@ public class HvvProvider: AbstractNetworkProvider {
         
         let request = encodeJson(dict: [
             "version": HvvProvider.VERSION,
+            "language": queryLanguage ?? defaultLanguage,
             "lineKey": context.lineKey,
             "serviceId": context.serviceId,
             "station": jsonLocation(location: context.station),
@@ -342,6 +348,7 @@ public class HvvProvider: AbstractNetworkProvider {
         let timeIsDeparture = previousContext != nil ? later : departure
         var requestDict: [String : Any] = [
             "version": HvvProvider.VERSION,
+            "language": queryLanguage ?? defaultLanguage,
             "start": jsonLocation(location: from),
             "dest": jsonLocation(location: to),
             "time": jsonDate(date: date),

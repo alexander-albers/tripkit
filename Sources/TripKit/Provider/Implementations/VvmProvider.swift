@@ -8,6 +8,8 @@ public class VvmProvider: AbstractEfaProvider {
     static let TRIP_ENDPOINT = "XML_TRIP_REQUEST2"
     static let STOP_FINDER_ENDPOINT = "XML_STOPFINDER_REQUEST"
     
+    public override var supportedLanguages: Set<String> { ["de"] }
+    
     public init() {
         super.init(networkId: .VVM, apiBase: VvmProvider.API_BASE, departureMonitorEndpoint: VvmProvider.DEPARTURE_MONITOR_ENDPOINT, tripEndpoint: VvmProvider.TRIP_ENDPOINT, stopFinderEndpoint: VvmProvider.STOP_FINDER_ENDPOINT, coordEndpoint: nil, tripStopTimesEndpoint: nil)
         

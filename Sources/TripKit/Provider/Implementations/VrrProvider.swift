@@ -5,6 +5,8 @@ public class VrrProvider: AbstractEfaProvider {
     
     static let API_BASE = "https://efa.vrr.de/standard/"
     
+    public override var supportedLanguages: Set<String> { ["de", "en"] }
+    
     public init() {
         super.init(networkId: .VRR, apiBase: VrrProvider.API_BASE)
         includeRegionId = false

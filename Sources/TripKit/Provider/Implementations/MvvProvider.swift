@@ -5,6 +5,8 @@ public class MvvProvider: AbstractEfaProvider {
     
     static let API_BASE = "https://efa.mvv-muenchen.de/ng/"
     
+    public override var supportedLanguages: Set<String> { ["de", "en"] }
+    
     public init() {
         super.init(networkId: .MVV, apiBase: MvvProvider.API_BASE)
         

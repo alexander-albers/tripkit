@@ -5,6 +5,8 @@ public class NaldoProvider: AbstractEfaProvider {
     
     static let API_BASE = "https://efa2.naldo.de/naldo/"
     
+    public override var supportedLanguages: Set<String> { ["de", "en"] }
+    
     public init() {
         super.init(networkId: .NALDO, apiBase: NaldoProvider.API_BASE)
         includeRegionId = false

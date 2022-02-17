@@ -6,6 +6,8 @@ public class VgsProvider: AbstractHafasClientInterfaceProvider {
     static let API_BASE = "https://saarfahrplan.de/bin/"
     static let PRODUCTS_MAP: [Product?] = [.highSpeedTrain, .highSpeedTrain, .highSpeedTrain, .regionalTrain, .suburbanTrain, .subway, .tram, .bus, .cablecar, .onDemand, .bus]
     
+    public override var supportedLanguages: Set<String> { ["de", "en", "fr"] }
+    
     public init(apiAuthorization: [String: Any]) {
         super.init(networkId: .VGS, apiBase: VgsProvider.API_BASE, productsMap: VgsProvider.PRODUCTS_MAP)
         self.apiAuthorization = apiAuthorization

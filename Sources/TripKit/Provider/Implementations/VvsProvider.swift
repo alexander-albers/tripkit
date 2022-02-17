@@ -5,6 +5,8 @@ public class VvsProvider: AbstractEfaProvider {
     
     static let API_BASE = "https://www2.vvs.de/vvs/"
     
+    public override var supportedLanguages: Set<String> { ["de", "en"] }
+    
     public init() {
         super.init(networkId: .VVS, apiBase: VvsProvider.API_BASE)
         includeRegionId = false

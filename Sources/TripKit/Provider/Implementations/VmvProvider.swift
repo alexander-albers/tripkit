@@ -5,6 +5,8 @@ public class VmvProvider: AbstractEfaProvider {
     
     static let API_BASE = "https://fahrplanauskunft-mv.de/vmv3/"
     
+    public override var supportedLanguages: Set<String> { ["de", "en"] }
+    
     public init() {
         super.init(networkId: .VMV, apiBase: VmvProvider.API_BASE)
         useRouteIndexAsTripId = false

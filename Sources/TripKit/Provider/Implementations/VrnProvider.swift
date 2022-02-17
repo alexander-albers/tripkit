@@ -5,6 +5,8 @@ public class VrnProvider: AbstractEfaProvider {
     
     static let API_BASE = "https://www.vrn.de/mngvrn/"
     
+    public override var supportedLanguages: Set<String> { ["de", "en"] }
+    
     public init() {
         super.init(networkId: .VRN, apiBase: VrnProvider.API_BASE)
         includeRegionId = false

@@ -6,6 +6,8 @@ public class VosProvider: AbstractHafasClientInterfaceProvider {
     static let API_BASE = "https://fahrplan.vos.info/bin/"
     static let PRODUCTS_MAP: [Product?] = [.highSpeedTrain, .highSpeedTrain, .highSpeedTrain, .regionalTrain, .suburbanTrain, .bus, .ferry, .subway, .tram, nil, nil, nil, .highSpeedTrain]
     
+    public override var supportedLanguages: Set<String> { ["de"] }
+    
     public init(apiAuthorization: [String: Any]) {
         super.init(networkId: .VOS, apiBase: VosProvider.API_BASE, productsMap: VosProvider.PRODUCTS_MAP)
         self.apiAuthorization = apiAuthorization

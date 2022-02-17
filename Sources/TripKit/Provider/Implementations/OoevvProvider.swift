@@ -6,6 +6,8 @@ public class OoevvProvider: AbstractHafasClientInterfaceProvider {
     static let API_BASE = "https://verkehrsauskunft.ooevv.at/bin/"
     static let PRODUCTS_MAP: [Product?] = [.highSpeedTrain, .suburbanTrain, .subway, nil, .tram, .regionalTrain, .bus, .bus, .tram, .ferry, .onDemand, .bus, .regionalTrain, nil, nil, nil]
     
+    public override var supportedLanguages: Set<String> { ["de", "en"] }
+    
     public init(apiAuthorization: [String: Any]) {
         super.init(networkId: .OOEVV, apiBase: OoevvProvider.API_BASE, productsMap: OoevvProvider.PRODUCTS_MAP)
         self.apiAuthorization = apiAuthorization

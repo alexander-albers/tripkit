@@ -3,7 +3,9 @@ import Foundation
 /// Freiburger Verkehrs AG (DE)
 public class VagfrProvider: AbstractEfaProvider {
     
-    static let API_BASE = "https://efa-bw.de/vagfr/"
+    static let API_BASE = "https://efa.vagfr.de/vagfr3/"
+    
+    public override var supportedLanguages: Set<String> { ["de"] }
     
     public init() {
         super.init(networkId: .VAGFR, apiBase: VagfrProvider.API_BASE)

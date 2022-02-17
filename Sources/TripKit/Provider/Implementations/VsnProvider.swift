@@ -6,6 +6,8 @@ public class VsnProvider: AbstractHafasClientInterfaceProvider {
     static let API_BASE = "https://fahrplaner.vsninfo.de/hafas/"
     static let PRODUCTS_MAP: [Product?] = [.highSpeedTrain, .highSpeedTrain, .regionalTrain, .regionalTrain, .suburbanTrain, .bus, .ferry, .subway, .tram, .onDemand]
     
+    public override var supportedLanguages: Set<String> { ["de"] }
+    
     public init(apiAuthorization: [String: Any]) {
         super.init(networkId: .VSN, apiBase: VsnProvider.API_BASE, productsMap: VsnProvider.PRODUCTS_MAP)
         self.apiAuthorization = apiAuthorization

@@ -6,6 +6,8 @@ public class NvbwProvider: AbstractEfaProvider {
     static let API_BASE = "https://www.efa-bw.de/nvbw3L/"
     static let DESKTOP_TRIP_ENDPOINT = "https://www.efa-bw.de/nvbw/XSLT_TRIP_REQUEST2"
     
+    public override var supportedLanguages: Set<String> { ["de", "en"] }
+    
     public init() {
         super.init(networkId: .NVBW, apiBase: NvbwProvider.API_BASE)
         requestUrlEncoding = .isoLatin1

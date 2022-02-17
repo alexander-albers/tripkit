@@ -6,6 +6,8 @@ public class ShProvider: AbstractHafasClientInterfaceProvider {
     static let API_BASE = "https://nah.sh.hafas.de/bin/"
     static let PRODUCTS_MAP: [Product?] = [.highSpeedTrain, .highSpeedTrain, .highSpeedTrain, .regionalTrain, .suburbanTrain, .bus, .ferry, .subway, .tram, .onDemand]
     
+    public override var supportedLanguages: Set<String> { ["de"] }
+    
     public init(apiAuthorization: [String: Any]) {
         super.init(networkId: .SH, apiBase: ShProvider.API_BASE, productsMap: ShProvider.PRODUCTS_MAP)
         self.apiAuthorization = apiAuthorization

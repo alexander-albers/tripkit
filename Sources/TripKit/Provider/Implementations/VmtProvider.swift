@@ -6,6 +6,8 @@ public class VmtProvider: AbstractHafasClientInterfaceProvider {
     static let API_BASE = "https://vmt.hafas.de/bin/"
     static let PRODUCTS_MAP: [Product?] = [.highSpeedTrain, .highSpeedTrain, .highSpeedTrain, .regionalTrain, .suburbanTrain, .tram, .ferry, .bus, .bus, nil]
     
+    public override var supportedLanguages: Set<String> { ["de"] }
+    
     public init(apiAuthorization: [String: Any]) {
         super.init(networkId: .VMT, apiBase: VmtProvider.API_BASE, productsMap: VmtProvider.PRODUCTS_MAP)
         self.apiAuthorization = apiAuthorization

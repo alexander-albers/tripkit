@@ -6,6 +6,8 @@ public class VbbProvider: AbstractHafasClientInterfaceProvider {
     static let API_BASE = "https://fahrinfo.vbb.de/bin/"
     static let PRODUCTS_MAP: [Product?] = [.suburbanTrain, .subway, .tram, .bus, .ferry, .highSpeedTrain, .regionalTrain, .onDemand, nil, nil]
 
+    public override var supportedLanguages: Set<String> { ["de", "en"] }
+    
     public init(apiAuthorization: [String: Any]) {
         super.init(networkId: .VBB, apiBase: VbbProvider.API_BASE, productsMap: VbbProvider.PRODUCTS_MAP)
         requestUrlEncoding = .utf8

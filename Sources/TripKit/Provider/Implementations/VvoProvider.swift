@@ -7,6 +7,8 @@ public class VvoProvider: AbstractEfaProvider {
     static let STOPFINDER_ENDPOINT = "XSLT_STOPFINDER_REQUEST"
     static let COORD_ENDPOINT = "XSLT_COORD_REQUEST"
     
+    public override var supportedLanguages: Set<String> { ["de"] }
+    
     public init() {
         super.init(networkId: .VVO, apiBase: VvoProvider.API_BASE, departureMonitorEndpoint: nil, tripEndpoint: nil, stopFinderEndpoint: VvoProvider.STOPFINDER_ENDPOINT, coordEndpoint: VvoProvider.COORD_ENDPOINT, tripStopTimesEndpoint: nil)
     }

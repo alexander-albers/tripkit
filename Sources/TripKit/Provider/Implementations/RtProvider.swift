@@ -6,8 +6,10 @@ public class RtProvider: AbstractHafasLegacyProvider {
     static let API_BASE = "http://railteam.hafas.eu/bin/"
     static let PRODUCTS_MAP: [Product?] = [.highSpeedTrain, .highSpeedTrain, .highSpeedTrain, .regionalTrain, .suburbanTrain, .bus, .ferry, .subway, .tram, .onDemand]
     
+    public override var supportedLanguages: Set<String> { ["de", "en", "fr", "nl"] }
+    
     public init() {
-        super.init(networkId: .RT, apiBase: RtProvider.API_BASE, apiLanguage: "dn", productsMap: RtProvider.PRODUCTS_MAP)
+        super.init(networkId: .RT, apiBase: RtProvider.API_BASE, productsMap: RtProvider.PRODUCTS_MAP)
         
         stationBoardHasStationTable = false
     }

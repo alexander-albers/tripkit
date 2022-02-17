@@ -6,6 +6,8 @@ public class InvgProvider: AbstractHafasClientInterfaceProvider {
     static let API_BASE = "https://fpa.invg.de/bin/"
     static let PRODUCTS_MAP: [Product?] = [.bus, .highSpeedTrain, .regionalTrain, .regionalTrain, .suburbanTrain, .bus, .ferry, .subway, .tram, .onDemand]
     
+    public override var supportedLanguages: Set<String> { ["de", "en", "fr", "it"] }
+    
     public init(apiAuthorization: [String: Any]) {
         super.init(networkId: .INVG, apiBase: InvgProvider.API_BASE, productsMap: InvgProvider.PRODUCTS_MAP)
         self.apiAuthorization = apiAuthorization

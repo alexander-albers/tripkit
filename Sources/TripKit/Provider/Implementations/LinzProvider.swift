@@ -5,6 +5,8 @@ public class LinzProvider: AbstractEfaProvider {
     
     static let API_BASE = "https://www.linzag.at/linz2/"
     
+    public override var supportedLanguages: Set<String> { ["de", "en"] }
+    
     public init() {
         super.init(networkId: .LINZ, apiBase: LinzProvider.API_BASE)
         useRouteIndexAsTripId = false

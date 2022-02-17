@@ -7,6 +7,8 @@ public class VgnProvider: AbstractEfaProvider {
     static let DEPARTURE_MONITOR_ENDPOINT = "XML_DM_REQUEST"
     static let TRIP_ENDPOINT = "XML_TRIP_REQUEST2"
     
+    public override var supportedLanguages: Set<String> { ["de"] }
+    
     public init() {
         super.init(networkId: .VGN, apiBase: VgnProvider.API_BASE, departureMonitorEndpoint: VgnProvider.DEPARTURE_MONITOR_ENDPOINT, tripEndpoint: VgnProvider.TRIP_ENDPOINT, stopFinderEndpoint: nil, coordEndpoint: nil, tripStopTimesEndpoint: nil)
         styles = [

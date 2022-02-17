@@ -19,6 +19,8 @@ public class VrsProvider: AbstractNetworkProvider {
     ]
     static let P_NRW_TARIF = try! NSRegularExpression(pattern: "([\\d]+,\\d\\d)")
     
+    public override var supportedLanguages: Set<String> { ["de"] }
+    
     var baseEndpoint: String
     var baseCacheEndpoint: String
     

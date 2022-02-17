@@ -6,6 +6,8 @@ public class NrwProvider: AbstractHafasClientInterfaceProvider {
     static let API_BASE = "https://nrw.hafas.de/bin/"
     static let PRODUCTS_MAP: [Product?] = [.highSpeedTrain, .highSpeedTrain, .highSpeedTrain, .regionalTrain, .suburbanTrain, .bus, nil, .subway, .tram, .onDemand, nil, nil, nil]
     
+    public override var supportedLanguages: Set<String> { ["de"] }
+    
     public init(apiAuthorization: [String: Any]) {
         super.init(networkId: .NRW, apiBase: NrwProvider.API_BASE, productsMap: NrwProvider.PRODUCTS_MAP)
         self.apiAuthorization = apiAuthorization

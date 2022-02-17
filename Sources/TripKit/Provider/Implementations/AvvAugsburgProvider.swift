@@ -5,6 +5,8 @@ public class AvvAugsburgProvider: AbstractEfaProvider {
     
     static let API_BASE = "https://efa.avv-augsburg.de/avv2/"
     
+    public override var supportedLanguages: Set<String> { ["de", "en"] }
+    
     public init() {
         super.init(networkId: .AVV, apiBase: AvvAugsburgProvider.API_BASE)
         

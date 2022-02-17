@@ -6,6 +6,8 @@ public class IvbProvider: AbstractHafasClientInterfaceProvider {
     static let API_BASE = "https://fahrplan.ivb.at/bin/"
     static let PRODUCTS_MAP: [Product?] = [.highSpeedTrain, .suburbanTrain, .subway, nil, .tram, .regionalTrain, .bus, .bus, .tram, .ferry, .onDemand, .bus, .regionalTrain, nil, nil, nil]
     
+    public override var supportedLanguages: Set<String> { ["de"] }
+    
     public init(apiAuthorization: [String: Any]) {
         super.init(networkId: .IVB, apiBase: IvbProvider.API_BASE, productsMap: IvbProvider.PRODUCTS_MAP)
         self.apiAuthorization = apiAuthorization

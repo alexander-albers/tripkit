@@ -5,6 +5,8 @@ public class MvgProvider: AbstractEfaProvider {
     
     static let API_BASE = "https://westfalenfahrplan.de/std3/"
     
+    public override var supportedLanguages: Set<String> { ["de", "en"] }
+    
     public init() {
         super.init(networkId: .MVG, apiBase: MvgProvider.API_BASE)
         

@@ -6,6 +6,8 @@ public class StvProvider: AbstractHafasClientInterfaceProvider {
     static let API_BASE = "https://verkehrsauskunft.verbundlinie.at/bin/"
     static let PRODUCTS_MAP: [Product?] = [.regionalTrain, .suburbanTrain, .subway, nil, .tram, .bus, .bus, .bus, .cablecar, .ferry, .onDemand, nil, nil]
     
+    public override var supportedLanguages: Set<String> { ["de", "en"] }
+    
     public init(apiAuthorization: [String: Any]) {
         super.init(networkId: .STV, apiBase: StvProvider.API_BASE, productsMap: StvProvider.PRODUCTS_MAP)
         self.apiAuthorization = apiAuthorization

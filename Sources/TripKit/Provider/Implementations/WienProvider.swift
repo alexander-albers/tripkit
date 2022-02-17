@@ -5,6 +5,8 @@ public class WienProvider: AbstractEfaProvider {
     
     static let API_BASE = "https://www.wienerlinien.at/ogd_routing/"
     
+    public override var supportedLanguages: Set<String> { ["de", "en"] }
+    
     public init() {
         super.init(networkId: .WIEN, apiBase: WienProvider.API_BASE)
         includeRegionId = false

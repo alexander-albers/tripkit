@@ -12,7 +12,6 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
     let stopFinderEndpoint: String
     let coordEndpoint: String
     let tripStopTimesEndpoint: String
-    var language = "de"
     
     static let DEFAULT_DEPARTURE_MONITOR_ENDPOINT = "XSLT_DM_REQUEST"
     static let DEFAULT_TRIP_ENDPOINT = "XSLT_TRIP_REQUEST2"
@@ -162,7 +161,7 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
             return AsyncRequest(task: nil)
         }
         let urlBuilder = UrlBuilder(path: tripEndpoint, encoding: requestUrlEncoding)
-        urlBuilder.addParameter(key: "language", value: "de")
+        urlBuilder.addParameter(key: "language", value: queryLanguage ?? defaultLanguage)
         urlBuilder.addParameter(key: "outputFormat", value: "XML")
         urlBuilder.addParameter(key: "coordOutputFormat", value: "WGS84")
         urlBuilder.addParameter(key: "sessionID", value: context.sessionId)
@@ -279,7 +278,7 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
             return AsyncRequest(task: nil)
         }
         let urlBuilder = UrlBuilder(path: tripEndpoint, encoding: requestUrlEncoding)
-        urlBuilder.addParameter(key: "language", value: "de")
+        urlBuilder.addParameter(key: "language", value: queryLanguage ?? defaultLanguage)
         urlBuilder.addParameter(key: "outputFormat", value: "XML")
         urlBuilder.addParameter(key: "coordOutputFormat", value: "WGS84")
         urlBuilder.addParameter(key: "sessionID", value: context.sessionId)
@@ -1395,7 +1394,7 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
         if let outputFormat = outputFormat {
             builder.addParameter(key: "outputFormat", value: outputFormat)
         }
-        builder.addParameter(key: "language", value: language)
+        builder.addParameter(key: "language", value: queryLanguage ?? defaultLanguage)
         builder.addParameter(key: "stateless", value: 1)
         builder.addParameter(key: "coordOutputFormat", value: "WGS84")
     }

@@ -5,6 +5,8 @@ public class BvgProvider: AbstractHafasClientInterfaceProvider {
     
     static let API_BASE = "https://bvg-apps.hafas.de/bin/"
     static let PRODUCTS_MAP: [Product?] = [.suburbanTrain, .subway, .tram, .bus, .ferry, .highSpeedTrain, .regionalTrain, .onDemand, nil, nil]
+
+    public override var supportedLanguages: Set<String> { ["de", "en"] }
     
     public init(apiAuthorization: [String: Any]) {
         super.init(networkId: .BVG, apiBase: BvgProvider.API_BASE, productsMap: BvgProvider.PRODUCTS_MAP)

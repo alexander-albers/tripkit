@@ -7,12 +7,21 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider {
     
     override public var supportedQueryTraits: Set<QueryTrait> { return [.minChangeTime] }
     
+    let languageCodeMap = [
+        "de": "dn",
+        "nl": "nn",
+        "pl": "pn",
+        "en": "en",
+        "it": "in",
+        "fr": "fn",
+        "da": "mn",
+        "es": "hn"
+    ]
     var stationBoardEndpoint: String
     var getStopEndpoint: String
     var queryEndpoint: String
-    var mgateEndpoint: String
     
-    var apiLanguage: String
+    var apiLanguage: String {  languageCodeMap[queryLanguage ?? defaultLanguage]! }
     var stationBoardHasStationTable: Bool = true
     var stationBoardHasLocation: Bool = false
     var jsonGetStopsUseWeight: Bool = true
@@ -20,12 +29,10 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider {
     var jsonGetStopsEncoding: String.Encoding = .isoLatin1
     var jsonNearbyLocationsEncoding: String.Encoding = .isoLatin1
     
-    init(networkId: NetworkId, apiBase: String, apiLanguage: String, productsMap: [Product?]) {
-        self.stationBoardEndpoint = apiBase + "stboard.exe/" + apiLanguage
-        self.getStopEndpoint = apiBase + "ajax-getstop.exe/" + apiLanguage
-        self.queryEndpoint = apiBase + "query.exe/" + apiLanguage
-        self.mgateEndpoint = apiBase + "mgate.exe"
-        self.apiLanguage = apiLanguage
+    init(networkId: NetworkId, apiBase: String, productsMap: [Product?]) {
+        self.stationBoardEndpoint = apiBase + "stboard.exe/"
+        self.getStopEndpoint = apiBase + "ajax-getstop.exe/"
+        self.queryEndpoint = apiBase + "query.exe/"
         super.init(networkId: networkId, productsMap: productsMap)
     }
     
@@ -35,7 +42,7 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider {
     let P_AJAX_GET_STOPS_ID = try! NSRegularExpression(pattern: ".*?@L=0*(\\d+)@.*?", options: .caseInsensitive)
     
     override public func suggestLocations(constraint: String, types: [LocationType]?, maxLocations: Int, completion: @escaping (HttpRequest, SuggestLocationsResult) -> Void) -> AsyncRequest {
-        let urlBuilder = UrlBuilder(path: getStopEndpoint, encoding: requestUrlEncoding)
+        let urlBuilder = UrlBuilder(path: getStopEndpoint + apiLanguage, encoding: requestUrlEncoding)
         jsonGetStopParameters(builder: urlBuilder, constraint: constraint)
         
         let httpRequest = HttpRequest(urlBuilder: urlBuilder)
@@ -72,12 +79,12 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider {
     func nearbyLocationsBy(lat: Int, lon: Int, types: [LocationType]?, maxDistance: Int, maxLocations: Int, completion: @escaping (HttpRequest, NearbyLocationsResult) -> Void) -> AsyncRequest {
         let types = types ?? [.station]
         if types.contains(.station) {
-            let urlBuilder = UrlBuilder(path: queryEndpoint + "y", encoding: requestUrlEncoding)
+            let urlBuilder = UrlBuilder(path: queryEndpoint + apiLanguage + "y", encoding: requestUrlEncoding)
             jsonNearbyStationParameters(builder: urlBuilder, lat: lat, lon: lon, maxDistance: maxDistance, maxLocations: maxLocations)
             
             return jsonNearbyLocations(url: urlBuilder, location: Location(lat: lat, lon: lon), types: types, maxDistance: maxDistance, maxLocations: maxLocations, completion: completion)
         } else if types.contains(.poi) {
-            let urlBuilder = UrlBuilder(path: queryEndpoint + "y", encoding: requestUrlEncoding)
+            let urlBuilder = UrlBuilder(path: queryEndpoint + apiLanguage + "y", encoding: requestUrlEncoding)
             jsonNearbyPOIsParameters(builder: urlBuilder, lat: lat, lon: lon, maxDistance: maxDistance, maxLocations: maxLocations)
             
             return jsonNearbyLocations(url: urlBuilder, location: Location(lat: lat, lon: lon), types: types, maxDistance: maxDistance, maxLocations: maxLocations, completion: completion)
@@ -107,7 +114,7 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider {
     }
     
     func nearbyStationsBy(id: String, maxDistance: Int, completion: @escaping (HttpRequest, NearbyLocationsResult) -> Void) -> AsyncRequest {
-        let urlBuilder = UrlBuilder(path: stationBoardEndpoint, encoding: requestUrlEncoding)
+        let urlBuilder = UrlBuilder(path: stationBoardEndpoint + apiLanguage, encoding: requestUrlEncoding)
         xmlNearbyStationsParameters(builder: urlBuilder, id: id)
         
         let httpRequest = HttpRequest(urlBuilder: urlBuilder)
@@ -119,7 +126,7 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider {
     }
 
     override public func queryDepartures(stationId: String, departures: Bool, time: Date?, maxDepartures: Int, equivs: Bool, completion: @escaping (HttpRequest, QueryDeparturesResult) -> Void) -> AsyncRequest {
-        let urlBuilder = UrlBuilder(path: stationBoardEndpoint, encoding: requestUrlEncoding)
+        let urlBuilder = UrlBuilder(path: stationBoardEndpoint + apiLanguage, encoding: requestUrlEncoding)
         xmlStationBoardParameters(builder: urlBuilder, stationId: stationId, departures: departures, time: time, maxDepartures: maxDepartures, equivs: equivs, styleSheet: "vs_java3")
         
         let httpRequest = HttpRequest(urlBuilder: urlBuilder)
@@ -187,7 +194,7 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider {
     }
     
     func doQueryBinary(from: Location, via: Location?, to: Location, date: Date, departure: Bool, tripOptions: TripOptions, completion: @escaping (HttpRequest, QueryTripsResult) -> Void) -> AsyncRequest {
-        let urlBuilder = UrlBuilder(path: queryEndpoint, encoding: requestUrlEncoding)
+        let urlBuilder = UrlBuilder(path: queryEndpoint + apiLanguage, encoding: requestUrlEncoding)
         queryTripsBinaryParameters(builder: urlBuilder, from: from, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions)
         
         let httpRequest = HttpRequest(urlBuilder: urlBuilder)
@@ -215,7 +222,7 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider {
             completion(HttpRequest(urlBuilder: UrlBuilder()), .sessionExpired)
             return AsyncRequest(task: nil)
         }
-        let urlBuilder = UrlBuilder(path: queryEndpoint, encoding: requestUrlEncoding)
+        let urlBuilder = UrlBuilder(path: queryEndpoint + apiLanguage, encoding: requestUrlEncoding)
         queryMoreTripsBinaryParameters(builder: urlBuilder, context: context, later: later)
         
         let httpRequest = HttpRequest(urlBuilder: urlBuilder)
@@ -243,7 +250,7 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider {
             completion(HttpRequest(urlBuilder: UrlBuilder()), .sessionExpired)
             return AsyncRequest(task: nil)
         }
-        let urlBuilder = UrlBuilder(path: queryEndpoint, encoding: requestUrlEncoding)
+        let urlBuilder = UrlBuilder(path: queryEndpoint + apiLanguage, encoding: requestUrlEncoding)
         refreshTripBinaryParameters(builder: urlBuilder, context: context)
         
         let httpRequest = HttpRequest(urlBuilder: urlBuilder)

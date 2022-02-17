@@ -5,6 +5,8 @@ public class StaProvider: AbstractEfaProvider {
     
     static let API_BASE = "https://efa.sta.bz.it/app/"
     
+    public override var supportedLanguages: Set<String> { ["de", "en", "it", "ld1", "ld2"] }
+    
     public init() {
         super.init(networkId: .STA, apiBase: StaProvider.API_BASE)
         

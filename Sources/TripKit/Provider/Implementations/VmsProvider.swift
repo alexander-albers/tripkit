@@ -5,6 +5,8 @@ public class VmsProvider: AbstractEfaProvider {
     
     static let API_BASE = "https://efa.vms.de/VMSSL3/"
     
+    public override var supportedLanguages: Set<String> { ["de", "en"] }
+    
     public init() {
         super.init(networkId: .VMS, apiBase: VmsProvider.API_BASE)
         useLineRestriction = false

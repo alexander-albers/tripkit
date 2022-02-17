@@ -5,6 +5,8 @@ public class BsvagProvider: AbstractEfaProvider {
     
     static let API_BASE = "https://bsvg.efa.de/bsvagstd/"
     
+    public override var supportedLanguages: Set<String> { ["de", "en", "tr"] }
+    
     public init() {
         super.init(networkId: .BSVAG, apiBase: BsvagProvider.API_BASE)
         useRouteIndexAsTripId = false

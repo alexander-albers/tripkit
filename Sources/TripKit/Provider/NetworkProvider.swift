@@ -2,11 +2,21 @@ import Foundation
 
 public protocol NetworkProvider {
     
+    /// Enum of this network provider.
     var id: NetworkId { get }
+    /// Set of supported trip options.
     var supportedQueryTraits: Set<QueryTrait> { get }
+    /// Set of supported language codes.
+    var supportedLanguages: Set<String> { get }
+    /// Language code that will be used if no other language has been specified. This value either corresponds``Locale.current.languageCode`` (i.e. to the device language) or to a language from ``supportedLanguages`` if the device language is not supported by the network provider.
+    var defaultLanguage: String { get }
+    /// Overrides the language code that should be queried in requests. If the language code is not supported, the ``defaultLanguage`` will be used instead.
+    var queryLanguage: String? { get set }
     
-    var styles: [String: LineStyle] { get set }
-    var timeZone: TimeZone { get set }
+    /// Map of line label to line style (used when parsing a line from a provider response).
+    var styles: [String: LineStyle] { get }
+    /// Time zone of this network provider.
+    var timeZone: TimeZone { get }
     
     /**
     Meant for auto-completion of location names.

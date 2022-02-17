@@ -5,6 +5,30 @@ public class AbstractNetworkProvider: NetworkProvider {
     
     public let id: NetworkId
     public var supportedQueryTraits: Set<QueryTrait> { return [] }
+    public var supportedLanguages: Set<String> { [] }
+    public var defaultLanguage: String {
+        // First, check whether the current locale is supported
+        if let currentLocale = Locale.current.languageCode, supportedLanguages.contains(currentLocale) {
+            return currentLocale
+        } else if supportedLanguages.contains("en") {
+            // Fallback to en, if it is supported
+            return "en"
+        } else if let first = supportedLanguages.first {
+            // Fallback to any other supported language
+            return first
+        } else {
+            // Fallback to en
+            return "en"
+        }
+    }
+    public var queryLanguage: String? {
+        didSet(newValue) {
+            // ensure language code is supported
+            if let newValue = newValue, !supportedLanguages.contains(newValue) {
+                queryLanguage = nil
+            }
+        }
+    }
     
     public var styles: [String: LineStyle] = [:]
     var numTripsRequested = 6
