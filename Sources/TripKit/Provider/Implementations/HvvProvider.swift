@@ -154,7 +154,7 @@ public class HvvProvider: AbstractNetworkProvider {
     }
     
     override func queryNearbyLocationsByCoordinateParsing(request: HttpRequest, location: Location, types: [LocationType]?, maxDistance: Int, maxLocations: Int, completion: @escaping (HttpRequest, NearbyLocationsResult) -> Void) throws {
-        try suggestLocationsParsing(request: request, constraint: location.getUniqueShortName(), types: types, maxLocations: 0) { _, result in
+        try suggestLocationsParsing(request: request, constraint: location.getUniqueShortName(), types: types ?? [.station], maxLocations: 0) { _, result in
             switch result {
             case .success(let locations):
                 completion(request, .success(locations: locations.map { $0.location }))

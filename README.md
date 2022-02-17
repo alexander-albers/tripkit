@@ -38,7 +38,7 @@ let provider: NetworkProvider = KvvProvider() // Karlsruher Verkehrsverbund
 
 ### Find locations for a given keyword:
 ```swift
-let (request, result) = await provider.suggestLocations(constraint: "Marktplatz", types: [.station], maxLocations: 10)
+let (request, result) = await provider.suggestLocations(constraint: "Marktplatz")
 switch result {
 case .success(let locations):
     for suggestedLocation in locations {
@@ -51,7 +51,7 @@ case .failure(let error):
 
 ### Query departures from Marktplatz (id=7000001):
 ```swift
-let (request, result) = await provider.queryDepartures(stationId: "7000001", time: Date(), maxDepartures: 10, equivs: false)
+let (request, result) = await provider.queryDepartures(stationId: "7000001")
 switch result {
 case .success(let departures):
     for departure in departures.flatMap { $0.departures } {
@@ -69,30 +69,14 @@ case .failure(let error):
 
 ### Query trips between Marktplatz (7000001) and Kronenplatz (7000002):
 ```swift
-let (request, result) = await provider.queryTrips(from: Location(id: "7000001"), via: nil, to: Location(id: "7000002"), date: Date(), departure: true, tripOptions: TripOptions())
+let (request, result) = await provider.queryTrips(from: Location(id: "7000001"), via: nil, to: Location(id: "7000002"))
 switch result {
 case .success(let context, let from, let via, let to, let trips, let messages):
     for trip in trips {
         print(trip.id)
     }
-case .noTrips:
+default:
     print("no trips could be found")
-case .sessionExpired: // can only occur when querying for more trips
-    print("your session has expired")
-case .ambiguous(let ambiguousFrom, let ambiguousVia, let ambiguousTo):
-    print("from, via or to location could not be identified (probably because no stop id has been provided)")
-case .invalidDate:
-    print("invalid date")
-case .tooClose:
-    print("from and to location are too close nearby")
-case .unknownFrom:
-    print("unknown from location")
-case .unknownVia:
-    print("unknown via location")
-case .unknownTo:
-    print("unknown to location")
-case .failure(let error):
-    print(error)
 }
 ```
 

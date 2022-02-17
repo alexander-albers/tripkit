@@ -76,7 +76,17 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         } else {
             ring["maxDist"] = 5000
         }
-        var req: [String: Any] = ["ring": ring, "getPOIs": types?.contains(.poi) ?? false, "getStops": types?.contains(.station) ?? true]
+        var req: [String: Any] = ["ring": ring]
+        if let types = types, types.contains(.poi) || types.contains(.any) {
+            req["getPOIs"] = true
+        } else {
+            req["getPOIs"] = false
+        }
+        if let types = types {
+            req["getStops"] = types.contains(.station) || types.contains(.any)
+        } else {
+            req["getStops"] = true
+        }
         if maxLocations > 0 {
             req["maxLoc"] = maxLocations
         } else {
@@ -161,7 +171,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
     
     func jsonTripSearchIdentify(location: Location, completion: @escaping (HttpRequest, [Location]) -> Void) -> AsyncRequest {
         if let name = location.name {
-            return suggestLocations(constraint: [location.place, name].compactMap({$0}).joined(separator: " "), types: LocationType.ALL, maxLocations: 10) { (request, result) in
+            return suggestLocations(constraint: [location.place, name].compactMap({$0}).joined(separator: " "), types: [.any], maxLocations: 10) { (request, result) in
                 switch result {
                 case .success(let locations):
                     completion(request, locations.map({$0.location}))
@@ -170,7 +180,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
                 }
             }
         } else if let coord = location.coord {
-            return jsonLocGeoPos(types: LocationType.ALL, lat: coord.lat, lon: coord.lon, maxDistance: 0, maxLocations: 0) { (request, result) in
+            return jsonLocGeoPos(types: [.any], lat: coord.lat, lon: coord.lon, maxDistance: 0, maxLocations: 0) { (request, result) in
                 switch result {
                 case .success(let locations):
                     completion(request, locations)

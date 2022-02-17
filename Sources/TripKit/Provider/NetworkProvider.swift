@@ -11,9 +11,9 @@ public protocol NetworkProvider {
     /**
     Meant for auto-completion of location names.
 
-    - Parameter constraint: input by user
-    - Parameter types: types of locations to find, or nil if provider default should be used
-    - Parameter maxLocations: maximum number of locations, or 0
+    - Parameter constraint: input by user.
+    - Parameter types: types of locations to find, or `nil` if provider default should be used.
+    - Parameter maxLocations: maximum number of locations, or `0` for default value.
     - Parameter completion: location suggestions.
 
     - Returns: A reference to a cancellable http request.
@@ -23,10 +23,10 @@ public protocol NetworkProvider {
     /**
     Find locations near to given location. At least one of lat/lon pair or station id must be present in that location.
  
-    - Parameter types: types of locations to find, or nil if only stops should be found
-    - Parameter location: location to determine nearby stations
-    - Parameter maxDistance: maximum distance in meters, or 0
-    - Parameter maxLocations: maximum number of locations, or 0
+    - Parameter types: types of locations to find, or nil if only stops should be found.
+    - Parameter location: location to determine nearby stations.
+    - Parameter maxDistance: maximum distance in meters, or `0` for default value.
+    - Parameter maxLocations: maximum number of locations, or `0` for default value.
     - Parameter completion: nearby stations.
 
     - Returns: A reference to a cancellable http request.
@@ -92,10 +92,10 @@ public protocol NetworkProvider {
     /**
     Get departures at a given station.
  
-    - Parameter stationId: id of the station. TODO: replace with location object
+    - Parameter stationId: id of the station.
     - Parameter departures: true for departures, false for arrivals.
-    - Parameter time: desired time for departing, or nil for the provider default.
-    - Parameter maxDepartures: maximum number of departures to get or 0.
+    - Parameter time: desired time for departing, or `nil` for the provider default.
+    - Parameter maxDepartures: maximum number of departures to get or `0`.
     - Parameter equivs: also query equivalent stations?
     - Parameter completion: object containing the departures.
  

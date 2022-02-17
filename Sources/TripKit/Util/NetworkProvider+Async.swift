@@ -6,13 +6,13 @@ public extension NetworkProvider {
     Meant for auto-completion of location names.
 
     - Parameter constraint: input by user
-    - Parameter types: types of locations to find, or nil if provider default should be used
-    - Parameter maxLocations: maximum number of locations, or 0
+    - Parameter types: types of locations to find. Use `nil` for provider default and `.any` for all location types
+    - Parameter maxLocations: maximum number of locations, or `0` for default value
     - Parameter completion: location suggestions.
 
     - Returns: A reference to a cancellable http request.
      */
-    func suggestLocations(constraint: String, types: [LocationType]?, maxLocations: Int) async -> (HttpRequest, SuggestLocationsResult) {
+    func suggestLocations(constraint: String, types: [LocationType]? = nil, maxLocations: Int = 0) async -> (HttpRequest, SuggestLocationsResult) {
         return await withCheckedContinuation { continuation in
             suggestLocations(constraint: constraint, types: types, maxLocations: maxLocations) { request, result in
                 continuation.resume(with: .success((request, result)))
@@ -23,15 +23,15 @@ public extension NetworkProvider {
     /**
     Find locations near to given location. At least one of lat/lon pair or station id must be present in that location.
  
-    - Parameter types: types of locations to find, or nil if only stops should be found
-    - Parameter location: location to determine nearby stations
-    - Parameter maxDistance: maximum distance in meters, or 0
-    - Parameter maxLocations: maximum number of locations, or 0
+    - Parameter types: types of locations to find, or `nil` if only stops should be found.
+    - Parameter location: location to determine nearby stations.
+    - Parameter maxDistance: maximum distance in meters, or `0` for default value.
+    - Parameter maxLocations: maximum number of locations, or `0` for default value.
     - Parameter completion: nearby stations.
 
     - Returns: A reference to a cancellable http request.
      */
-    func queryNearbyLocations(location: Location, types: [LocationType]?, maxDistance: Int, maxLocations: Int) async -> (HttpRequest, NearbyLocationsResult) {
+    func queryNearbyLocations(location: Location, types: [LocationType]? = nil, maxDistance: Int = 0, maxLocations: Int = 0) async -> (HttpRequest, NearbyLocationsResult) {
         return await withCheckedContinuation { continuation in
             queryNearbyLocations(location: location, types: types, maxDistance: maxDistance, maxLocations: maxLocations) { request, result in
                 continuation.resume(with: .success((request, result)))
@@ -52,7 +52,7 @@ public extension NetworkProvider {
     
        - Returns: A reference to a cancellable http request.
     */
-    func queryTrips(from: Location, via: Location?, to: Location, date: Date, departure: Bool, tripOptions: TripOptions) async -> (HttpRequest, QueryTripsResult) {
+    func queryTrips(from: Location, via: Location?, to: Location, date: Date = Date(), departure: Bool = true, tripOptions: TripOptions = TripOptions()) async -> (HttpRequest, QueryTripsResult) {
         return await withCheckedContinuation { continuation in
             queryTrips(from: from, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions) { request, result in
                 continuation.resume(with: .success((request, result)))
@@ -96,16 +96,16 @@ public extension NetworkProvider {
     /**
     Get departures at a given station.
  
-    - Parameter stationId: id of the station. TODO: replace with location object
+    - Parameter stationId: id of the station.
     - Parameter departures: true for departures, false for arrivals.
-    - Parameter time: desired time for departing, or nil for the provider default.
-    - Parameter maxDepartures: maximum number of departures to get or 0.
+    - Parameter time: desired time for departing, or `nil` for the provider default.
+    - Parameter maxDepartures: maximum number of departures to get or `0`.
     - Parameter equivs: also query equivalent stations?
     - Parameter completion: object containing the departures.
  
     - Returns: A reference to a cancellable http request.
      */
-    func queryDepartures(stationId: String, departures: Bool, time: Date?, maxDepartures: Int, equivs: Bool) async -> (HttpRequest, QueryDeparturesResult) {
+    func queryDepartures(stationId: String, departures: Bool = true, time: Date? = nil, maxDepartures: Int = 0, equivs: Bool = false) async -> (HttpRequest, QueryDeparturesResult) {
         return await withCheckedContinuation { continuation in
             queryDepartures(stationId: stationId, departures: departures, time: time, maxDepartures: maxDepartures, equivs: equivs) { request, result in
                 continuation.resume(with: .success((request, result)))
