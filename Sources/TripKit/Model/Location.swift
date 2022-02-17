@@ -287,7 +287,6 @@ public enum LocationType: Int {
     /** Location represents a just a plain coordinate, e.g. acquired by GPS. */
     coord
     
-    public static let ALL: [LocationType] = [.any, .station, .poi, .address, .coord]
     private static let stringValues: [LocationType: String] = [.any: "any", .station: "station", .poi: "poi", .address: "address", .coord: "coord"]
     
     public var stringValue: String {
