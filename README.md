@@ -94,7 +94,7 @@ case .failure(let error):
 }
 ```
 
-More api methods can be found in [NetworkProvider.swift](https://github.com/alexander-albers/tripkit/blob/master/Sources/TripKit/NetworkProvider.swift).
+More api methods can be found in [NetworkProvider.swift](Sources/TripKit/Provider/NetworkProvider.swift).
 
 ## Using providers that require secrets
 
