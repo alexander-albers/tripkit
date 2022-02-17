@@ -6,6 +6,7 @@ import CommonCrypto
 /// Hamburger Verkehrsverbund (DE)
 public class HvvProvider: AbstractNetworkProvider {
     
+    /// Documentation: https://gti.geofox.de/html/GTIHandbuch_p.html
     static let API_BASE = "https://gti.geofox.de/gti/public/"
     static let VERSION = 47
     let authHeaders: [String: Any]
