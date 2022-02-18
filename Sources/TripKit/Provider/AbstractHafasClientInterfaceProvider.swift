@@ -1534,11 +1534,11 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
             guard let requestString = requestString else { return }
             switch self {
             case .checksum(let salt):
-                urlBuilder.addParameter(key: "checksum", value: (requestString + salt).md5)
+                urlBuilder.addParameter(key: "checksum", value: (requestString + salt).md5.hex)
             case .micMac(let salt):
-                let requestHash = requestString.md5
+                let requestHash = requestString.md5.hex
                 urlBuilder.addParameter(key: "mic", value: requestHash)
-                urlBuilder.addParameter(key: "mac", value: (requestHash + salt).md5)
+                urlBuilder.addParameter(key: "mac", value: (requestHash + salt).md5.hex)
             case .rnd:
                 urlBuilder.addParameter(key: "rnd", value: Date().timeIntervalSince1970)
             case .none:

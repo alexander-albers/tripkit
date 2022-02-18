@@ -1,5 +1,6 @@
 import Foundation
 import os.log
+import SwiftyJSON
 
 public class AbstractNetworkProvider: NetworkProvider {
     
@@ -119,6 +120,13 @@ public class AbstractNetworkProvider: NetworkProvider {
                 errorHandler(err)
             }
         }
+    }
+    
+    func getResponse(from request: HttpRequest) throws -> JSON {
+        guard let data = request.responseData, let json = try? JSON(data: data) else {
+            throw ParseError(reason: "failed to get data")
+        }
+        return json
     }
     
     func lineStyle(network: String?, product: Product?, label: String?) -> LineStyle {
