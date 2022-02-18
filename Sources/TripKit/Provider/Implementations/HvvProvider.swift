@@ -1,7 +1,6 @@
 import Foundation
 import os.log
 import SwiftyJSON
-import CommonCrypto
 
 /// Hamburger Verkehrsverbund (DE)
 public class HvvProvider: AbstractNetworkProvider {
@@ -124,7 +123,7 @@ public class HvvProvider: AbstractNetworkProvider {
         }
         var locations: [SuggestedLocation] = []
         for (_, location) in json["results"] {
-            guard let location = parseLocation(json: location) else { throw ParseError(reason: "failed to parse location") }
+            guard let location = parseLocation(json: location) else { continue }
             if let types = types, !types.contains(location.type) && !types.contains(.any) { continue }
             locations.append(SuggestedLocation(location: location, priority: 0))
         }
@@ -160,7 +159,7 @@ public class HvvProvider: AbstractNetworkProvider {
     }
     
     override func queryNearbyLocationsByCoordinateParsing(request: HttpRequest, location: Location, types: [LocationType]?, maxDistance: Int, maxLocations: Int, completion: @escaping (HttpRequest, NearbyLocationsResult) -> Void) throws {
-        try suggestLocationsParsing(request: request, constraint: location.getUniqueShortName(), types: types ?? [.station], maxLocations: 0) { _, result in
+        try suggestLocationsParsing(request: request, constraint: location.getUniqueShortName(), types: types ?? [.station], maxLocations: maxLocations) { _, result in
             switch result {
             case .success(let locations):
                 completion(request, .success(locations: locations.map { $0.location }))
@@ -452,13 +451,6 @@ public class HvvProvider: AbstractNetworkProvider {
     }
     
     // MARK: parsing utils
-    
-    private func getResponse(from request: HttpRequest) throws -> JSON {
-        guard let data = request.responseData, let json = try? JSON(data: data) else {
-            throw ParseError(reason: "failed to get data")
-        }
-        return json
-    }
     
     private func parseLocation(json: JSON) -> Location? {
         let type: LocationType
@@ -760,20 +752,7 @@ public class HvvProvider: AbstractNetworkProvider {
         guard var headers = self.authHeaders as? [String: String] else { return nil }
         guard let input = request, let key = headers["geofox-auth-signature"] else { return nil }
         
-        func hmacSha1(input: String, key: String) -> String {
-            let data = Data(input.utf8)
-            let keyData = Data(key.utf8)
-            let hash = data.withUnsafeBytes { (bytes: UnsafeRawBufferPointer) -> [UInt8] in
-                return keyData.withUnsafeBytes { (keyBytes: UnsafeRawBufferPointer) -> [UInt8] in
-                    var hash = [UInt8](repeating: 0, count: Int(CC_SHA1_DIGEST_LENGTH))
-                    CCHmac(CCHmacAlgorithm(kCCHmacAlgSHA1), keyBytes.baseAddress, key.count, bytes.baseAddress, data.count, &hash)
-                    return hash
-                }
-            }
-            return Data(hash).base64EncodedString()
-        }
-        
-        headers["geofox-auth-signature"] = hmacSha1(input: input, key: key)
+        headers["geofox-auth-signature"] = input.hmacSha1(key: key).base64
         return headers
     }
     
