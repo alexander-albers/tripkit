@@ -176,8 +176,8 @@
 		FA2C85C625F13BBE003880FB /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2C85C225F13BBE003880FB /* Bundle.swift */; };
 		FA30BFFA217A7B17008EA42D /* VosProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9172AF217A767100535768 /* VosProvider.swift */; };
 		FA37CD7F1FFC0AE000B5D93D /* HvvProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37CD7E1FFC0AE000B5D93D /* HvvProvider.swift */; };
-		FA37CD881FFC0D2500B5D93D /* MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37CD871FFC0D2500B5D93D /* MD5.swift */; };
-		FA37CD891FFC0EB600B5D93D /* MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37CD871FFC0D2500B5D93D /* MD5.swift */; };
+		FA37CD881FFC0D2500B5D93D /* CryptoUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37CD871FFC0D2500B5D93D /* CryptoUtils.swift */; };
+		FA37CD891FFC0EB600B5D93D /* CryptoUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37CD871FFC0D2500B5D93D /* CryptoUtils.swift */; };
 		FA37CD8A1FFC10D500B5D93D /* HvvProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37CD7E1FFC0AE000B5D93D /* HvvProvider.swift */; };
 		FA3CD4361E831A1B00A25793 /* VbbProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3CD4351E831A1B00A25793 /* VbbProvider.swift */; };
 		FA4371241F62AE4D00F53B82 /* ZvvProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4371231F62AE4D00F53B82 /* ZvvProvider.swift */; };
@@ -380,7 +380,7 @@
 		FA5CD2BF24FBB2A900B4990A /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB7543F1E3FD49D00C343F2 /* HttpClient.swift */; };
 		FA5CD2C024FBB2A900B4990A /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9D377A2266476000CED39F /* Logging.swift */; };
 		FA5CD2C124FBB2A900B4990A /* ParserUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2454C91E86B05600445AD5 /* ParserUtils.swift */; };
-		FA5CD2C224FBB2A900B4990A /* MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37CD871FFC0D2500B5D93D /* MD5.swift */; };
+		FA5CD2C224FBB2A900B4990A /* CryptoUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37CD871FFC0D2500B5D93D /* CryptoUtils.swift */; };
 		FA5CD2C324FBB2A900B4990A /* AuthorizationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7058502271B01C0070D2C9 /* AuthorizationData.swift */; };
 		FA5CD2C424FBB2A900B4990A /* SecretsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA70585F227205D30070D2C9 /* SecretsLoader.swift */; };
 		FA5CD2C524FBB2A900B4990A /* TripKit.h in Headers */ = {isa = PBXBuildFile; fileRef = FACB83C61E3FD0CE00AC5F1F /* TripKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -393,7 +393,7 @@
 		FA5CD2CC24FBB2AA00B4990A /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB7543F1E3FD49D00C343F2 /* HttpClient.swift */; };
 		FA5CD2CD24FBB2AA00B4990A /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9D377A2266476000CED39F /* Logging.swift */; };
 		FA5CD2CE24FBB2AA00B4990A /* ParserUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2454C91E86B05600445AD5 /* ParserUtils.swift */; };
-		FA5CD2CF24FBB2AA00B4990A /* MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37CD871FFC0D2500B5D93D /* MD5.swift */; };
+		FA5CD2CF24FBB2AA00B4990A /* CryptoUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37CD871FFC0D2500B5D93D /* CryptoUtils.swift */; };
 		FA5CD2D024FBB2AA00B4990A /* AuthorizationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7058502271B01C0070D2C9 /* AuthorizationData.swift */; };
 		FA5CD2D124FBB2AA00B4990A /* SecretsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA70585F227205D30070D2C9 /* SecretsLoader.swift */; };
 		FA5CD2D224FBB2AA00B4990A /* TripKit.h in Headers */ = {isa = PBXBuildFile; fileRef = FACB83C61E3FD0CE00AC5F1F /* TripKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -978,7 +978,7 @@
 		FA2454C91E86B05600445AD5 /* ParserUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParserUtils.swift; sourceTree = "<group>"; };
 		FA2C85C225F13BBE003880FB /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
 		FA37CD7E1FFC0AE000B5D93D /* HvvProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HvvProvider.swift; sourceTree = "<group>"; };
-		FA37CD871FFC0D2500B5D93D /* MD5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MD5.swift; sourceTree = "<group>"; };
+		FA37CD871FFC0D2500B5D93D /* CryptoUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoUtils.swift; sourceTree = "<group>"; };
 		FA3CD4351E831A1B00A25793 /* VbbProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VbbProvider.swift; sourceTree = "<group>"; };
 		FA4371231F62AE4D00F53B82 /* ZvvProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZvvProvider.swift; sourceTree = "<group>"; };
 		FA43712B1F63005200F53B82 /* OebbProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OebbProvider.swift; sourceTree = "<group>"; };
@@ -1594,7 +1594,7 @@
 				FAB7543F1E3FD49D00C343F2 /* HttpClient.swift */,
 				FA9D377A2266476000CED39F /* Logging.swift */,
 				FA2454C91E86B05600445AD5 /* ParserUtils.swift */,
-				FA37CD871FFC0D2500B5D93D /* MD5.swift */,
+				FA37CD871FFC0D2500B5D93D /* CryptoUtils.swift */,
 				FA7058502271B01C0070D2C9 /* AuthorizationData.swift */,
 				FA70585F227205D30070D2C9 /* SecretsLoader.swift */,
 				FA2C85C225F13BBE003880FB /* Bundle.swift */,
@@ -2262,7 +2262,7 @@
 				FA2C85C525F13BBE003880FB /* Bundle.swift in Sources */,
 				FA5CD2C124FBB2A900B4990A /* ParserUtils.swift in Sources */,
 				FA5CD23624FBB29000B4990A /* RmvProvider.swift in Sources */,
-				FA5CD2C224FBB2A900B4990A /* MD5.swift in Sources */,
+				FA5CD2C224FBB2A900B4990A /* CryptoUtils.swift in Sources */,
 				FA5CD2BD24FBB2A900B4990A /* AsyncRequest.swift in Sources */,
 				FA5CD29F24FBB29C00B4990A /* ServingLine.swift in Sources */,
 				FA5CD2A624FBB29C00B4990A /* Location.swift in Sources */,
@@ -2365,7 +2365,7 @@
 				FA2C85C625F13BBE003880FB /* Bundle.swift in Sources */,
 				FA5CD2CE24FBB2AA00B4990A /* ParserUtils.swift in Sources */,
 				FA5CD26B24FBB29000B4990A /* RmvProvider.swift in Sources */,
-				FA5CD2CF24FBB2AA00B4990A /* MD5.swift in Sources */,
+				FA5CD2CF24FBB2AA00B4990A /* CryptoUtils.swift in Sources */,
 				FA5CD2CA24FBB2AA00B4990A /* AsyncRequest.swift in Sources */,
 				FA5CD2AF24FBB29D00B4990A /* ServingLine.swift in Sources */,
 				FA5CD2B624FBB29D00B4990A /* Location.swift in Sources */,
@@ -2577,7 +2577,7 @@
 				FA17EBE91E757FF3001ECA09 /* AbstractHafasLegacyProvider.swift in Sources */,
 				FA7A3D231F0B6A500041BC51 /* RmvProvider.swift in Sources */,
 				FA17EBED1E758087001ECA09 /* DbProvider.swift in Sources */,
-				FA37CD881FFC0D2500B5D93D /* MD5.swift in Sources */,
+				FA37CD881FFC0D2500B5D93D /* CryptoUtils.swift in Sources */,
 				FAB7543B1E3FD3F300C343F2 /* AbstractEfaProvider.swift in Sources */,
 				FACD98861E87E8530019BE80 /* VgnProvider.swift in Sources */,
 				FAB754291E3FD3E500C343F2 /* Line.swift in Sources */,
@@ -2951,7 +2951,7 @@
 				FAFF188F1FA50B9500A8ED69 /* RmvProvider.swift in Sources */,
 				FAFF18901FA50B9500A8ED69 /* DbProvider.swift in Sources */,
 				FAFF18911FA50B9500A8ED69 /* AbstractEfaProvider.swift in Sources */,
-				FA37CD891FFC0EB600B5D93D /* MD5.swift in Sources */,
+				FA37CD891FFC0EB600B5D93D /* CryptoUtils.swift in Sources */,
 				FAFF18921FA50B9500A8ED69 /* VgnProvider.swift in Sources */,
 				FAFF18931FA50B9500A8ED69 /* Line.swift in Sources */,
 				FAFF18941FA50B9500A8ED69 /* Style.swift in Sources */,
