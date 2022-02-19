@@ -1,0 +1,77 @@
+{
+    "suggestLocations": [
+        {
+            "constraint": "Basel SBB",
+            "result": {
+                "id": "8500010"
+            }
+        },
+        {
+            "constraint": "base",
+            "result": {
+                "id": "8500010"
+            }
+        },
+        {
+            "constraint": "Zürich HB",
+            "result": {
+                "id": "8503000"
+            }
+        }
+    ],
+    "queryNearbyLocationsByCoordinate": [
+        {
+            "__comment": "Basel SBB",
+            "lat": 47.548284,
+            "lon": 7.59031,
+            "result": {
+                "id": "8500010"
+            }
+        },
+        {
+            "__comment": "Zürich HB",
+            "lat": 47.377556,
+            "lon": 8.541741,
+            "result": {
+                "id": "8503000"
+            }
+        }
+    ],
+    "queryDepartures": [
+        {
+            "__comment": "Basel SBB",
+            "id": "8500010"
+        },
+        {
+            "__comment": "Zürich HB",
+            "id": "8503000"
+        }
+    ],
+    "queryDeparturesInvalidId": "999999",
+    "queryTrips": [
+        {
+            "__comment": "Basel SBB to Zürich HB",
+            "from": {
+                "type": "station",
+                "id": "8500010"
+            },
+            "to": {
+                "type": "station",
+                "id": "8503000"
+            }
+        }
+    ],
+    "queryTripsTooClose": [
+        {
+            "__comment": "Basel SBB",
+            "from": {
+                "type": "station",
+                "id": "8500010"
+            },
+            "to": {
+                "type": "station",
+                "id": "8500010"
+            }
+        }
+    ]
+}
