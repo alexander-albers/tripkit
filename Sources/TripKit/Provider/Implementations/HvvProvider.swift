@@ -16,6 +16,7 @@ public class HvvProvider: AbstractNetworkProvider {
         let formatter = DateFormatter()
         formatter.timeZone = timeZone
         formatter.dateFormat = "dd.MM.yyyy"
+        formatter.locale = Locale(identifier: "en_US_POSIX")
         return formatter
     }()
     lazy var timeFormatter: DateFormatter = {
