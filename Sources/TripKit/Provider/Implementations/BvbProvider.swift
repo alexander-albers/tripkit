@@ -1,7 +1,7 @@
 import Foundation
 
 /// Basler Verkehrs-Betriebe (CH)
-public class BvbProvider: AbstractEfaProvider {
+public class BvbProvider: AbstractEfaWebProvider {
     
     static let API_BASE = "https://www.efa-bw.de/bvb3/"
     

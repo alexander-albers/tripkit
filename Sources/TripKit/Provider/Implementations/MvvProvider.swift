@@ -1,7 +1,7 @@
 import Foundation
 
 /// Münchener Verkehrs- und Tarifverbund (DE)
-public class MvvProvider: AbstractEfaProvider {
+public class MvvProvider: AbstractEfaWebProvider {
     
     static let API_BASE = "https://efa.mvv-muenchen.de/ng/"
     

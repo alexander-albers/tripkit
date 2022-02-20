@@ -1,7 +1,7 @@
 import Foundation
 
 /// Verkehrsverbund Vogtland (DE)
-public class VvvProvider: AbstractEfaProvider {
+public class VvvProvider: AbstractEfaWebProvider {
     
     static let API_BASE = "https://vogtlandauskunft.de/vvv2/"
     

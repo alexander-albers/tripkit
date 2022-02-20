@@ -1,7 +1,7 @@
 import Foundation
 
 /// Karlsruher Verkehrsverbund (DE)
-public class KvvProvider: AbstractEfaProvider {
+public class KvvProvider: AbstractEfaWebProvider {
     
     static let API_BASE = "https://projekte.kvv-efa.de/sl3/"
     static let DEPARTURE_MONITOR_ENDPOINT = "XSLT_DM_REQUEST"

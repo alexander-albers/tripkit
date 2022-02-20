@@ -1,7 +1,7 @@
 import Foundation
 
 /// Donau-Iller-Nahverkehrsverbund (DE)
-public class DingProvider: AbstractEfaProvider {
+public class DingProvider: AbstractEfaWebProvider {
     
     static let API_BASE = "https://www.ding.eu/ding3/"
     

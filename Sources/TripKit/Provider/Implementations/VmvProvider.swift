@@ -1,7 +1,7 @@
 import Foundation
 
 /// Verkehrsgesellschaft Mecklenburg-Vorpommern (DE)
-public class VmvProvider: AbstractEfaProvider {
+public class VmvProvider: AbstractEfaWebProvider {
     
     static let API_BASE = "https://fahrplanauskunft-mv.de/vmv3/"
     

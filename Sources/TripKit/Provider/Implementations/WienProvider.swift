@@ -1,7 +1,7 @@
 import Foundation
 
 /// Wiener Linien (AT)
-public class WienProvider: AbstractEfaProvider {
+public class WienProvider: AbstractEfaWebProvider {
     
     static let API_BASE = "https://www.wienerlinien.at/ogd_routing/"
     

@@ -1,7 +1,7 @@
 import Foundation
 
 /// Augsburger Verkehrs- und Tarifverbund (DE)
-public class AvvAugsburgProvider: AbstractEfaProvider {
+public class AvvAugsburgProvider: AbstractEfaWebProvider {
     
     static let API_BASE = "https://efa.avv-augsburg.de/avv2/"
     

@@ -1,7 +1,7 @@
 import Foundation
 
 /// Verkehrsverbund Großraum Nürnberg (DE)
-public class VgnProvider: AbstractEfaProvider {
+public class VgnProvider: AbstractEfaWebProvider {
     
     static let API_BASE = "https://vgn.defas-fgi.de/vgnExt/"
     static let DEPARTURE_MONITOR_ENDPOINT = "XML_DM_REQUEST"

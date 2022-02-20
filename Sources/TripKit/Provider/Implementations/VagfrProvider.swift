@@ -1,7 +1,7 @@
 import Foundation
 
 /// Freiburger Verkehrs AG (DE)
-public class VagfrProvider: AbstractEfaProvider {
+public class VagfrProvider: AbstractEfaWebProvider {
     
     static let API_BASE = "https://efa.vagfr.de/vagfr3/"
     

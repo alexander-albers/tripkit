@@ -1,6 +1,6 @@
 import Foundation
 
-public class MockKvvProvider: AbstractEfaProvider {
+public class MockKvvProvider: AbstractEfaWebProvider {
     
     static let API_BASE = "https://projekte.kvv-efa.de/sl3/"
     static let DEPARTURE_MONITOR_ENDPOINT = "XSLT_DM_REQUEST"
