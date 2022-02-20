@@ -16,11 +16,11 @@ open class SuggestedLocation: NSObject, NSSecureCoding {
     
     public required convenience init?(coder: NSCoder) {
         guard
-            let location = coder.decodeObject(of: Location.self, forKey: PropertyKey.locationKey),
-            let priority = coder.decodeObject(of: NSNumber.self, forKey: PropertyKey.priorityKey) as? Int
+            let location = coder.decodeObject(of: Location.self, forKey: PropertyKey.locationKey)
         else {
             return nil
         }
+        let priority = coder.decodeInteger(forKey: PropertyKey.priorityKey)
         self.init(location: location, priority: priority)
     }
     

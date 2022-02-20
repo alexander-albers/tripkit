@@ -70,7 +70,8 @@ public class Line: NSObject, NSSecureCoding {
         }
         let message = aDecoder.decodeObject(of: NSString.self, forKey: PropertyKey.message) as String?
         let direction: Direction?
-        if aDecoder.containsValue(forKey: PropertyKey.message), let dir = aDecoder.decodeObject(of: NSNumber.self, forKey: PropertyKey.direction) as? Int {
+        if aDecoder.containsValue(forKey: PropertyKey.direction) {
+            let dir = aDecoder.decodeInteger(forKey: PropertyKey.direction)
             direction = Direction(rawValue: dir)
         } else {
             direction = nil
