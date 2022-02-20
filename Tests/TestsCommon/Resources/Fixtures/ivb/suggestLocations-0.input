@@ -1,14 +1,30 @@
 {
-  "ver":"1.20",
+  "ver":"1.52",
   "ext":"VAO.7",
   "lang":"deu",
-  "id":"8jm4kiqak84epgcs",
+  "id":"4ngs3iw42k8hp4wx",
   "err":"OK",
   "cInfo":
   {
     "code":"OK",
     "url":"",
     "msg":""
+  },
+  "graph":
+  {
+    "id":"standard",
+    "index":0
+  },
+  "subGraph":
+  {
+    "id":"global",
+    "index":0
+  },
+  "view":
+  {
+    "id":"standard",
+    "index":0,
+    "type":"WGS84"
   },
   "svcResL":
   [
@@ -19,47 +35,23 @@
       {
         "common":
         {
-          "locL":
-          [
-
-          ],
-          "prodL":
-          [
-
-          ],
-          "polyL":
-          [
-
-          ],
-          "layerL":
+          "txtInstL":
           [
             {
-              "id":"standard",
-              "name":"standard",
-              "index":0,
-              "annoCnt":0
-            }
-          ],
-          "crdSysL":
-          [
+              "id":"street",
+              "type":"NONE",
+              "mode":"ADD"
+            },
             {
-              "id":"standard",
-              "index":0,
-              "type":"WGS84"
+              "id":"city",
+              "type":"NONE",
+              "mode":"ADD"
             }
-          ],
-          "opL":
-          [
-
-          ],
-          "remL":
-          [
-
           ],
           "icoL":
           [
             {
-              "res":"ADR"
+              "res":"loc_addr"
             },
             {
               "res":"prod_regbus",
@@ -75,7 +67,8 @@
                 "r":0,
                 "g":163,
                 "b":212
-              }
+              },
+              "zIdx":1000
             }
           ]
         },
@@ -89,34 +82,70 @@
               "lid":"A=2@O=Kochstrasse, Selm@X=7484554@Y=51696164@U=104@b=971932699@B=1@p=1636631415@",
               "type":"A",
               "name":"Kochstrasse, Selm",
+              "nameFormatted":
+              {
+                "text":"Kochstrasse, Selm",
+                "textInstructionIntervalL":
+                [
+                  {
+                    "startIndex":0,
+                    "endIndex":11,
+                    "textInstructionX":0
+                  },
+                  {
+                    "startIndex":11,
+                    "endIndex":17,
+                    "textInstructionX":1
+                  }
+                ]
+              },
               "icoX":0,
               "state":"F",
               "crd":
               {
                 "x":7484554,
-                "y":51696164,
-                "layerX":0,
-                "crdSysX":0
-              }
+                "y":51696164
+              },
+              "mapDtlCntStyX":-1
             },
             {
               "lid":"A=2@O=Kochstrasse, Zürich@X=8514600@Y=47378402@U=104@b=970989777@B=1@p=1636631415@",
               "type":"A",
               "name":"Kochstrasse, Zürich",
+              "nameFormatted":
+              {
+                "text":"Kochstrasse, Zürich",
+                "textInstructionIntervalL":
+                [
+                  {
+                    "startIndex":0,
+                    "endIndex":11,
+                    "textInstructionX":0
+                  },
+                  {
+                    "startIndex":11,
+                    "endIndex":19,
+                    "textInstructionX":1
+                  }
+                ]
+              },
               "icoX":0,
               "state":"F",
               "crd":
               {
                 "x":8514600,
-                "y":47378402,
-                "layerX":0,
-                "crdSysX":0
-              }
+                "y":47378402
+              },
+              "mapDtlCntStyX":-1
             },
             {
-              "lid":"A=1@O=Innsbruck Kochstraße@X=11400363@Y=47272851@U=81@L=476640200@B=1@p=1642551485@i=at:47:66402@",
+              "lid":"A=1@O=Innsbruck Kochstraße@X=11400363@Y=47272851@U=81@L=476640200@B=1@p=1645315177@i=A×at:47:66402@",
               "type":"S",
               "name":"Innsbruck Kochstraße",
+              "nameFormatted":
+              {
+                "text":"Innsbruck Kochstraße"
+              },
               "icoX":1,
               "extId":"476640200",
               "state":"F",
@@ -124,42 +153,84 @@
               {
                 "x":11400363,
                 "y":47272851,
-                "layerX":0,
-                "crdSysX":0
+                "floor":0
               },
               "meta":true,
               "pCls":192,
-              "wt":215,
+              "wt":216,
               "isMainMast":true,
-              "mapSelectable":true
+              "isSelectable":true,
+              "isRoutable":true,
+              "globalIdL":
+              [
+                {
+                  "id":"at:47:66402",
+                  "type":"A"
+                }
+              ],
+              "TZOffset":60,
+              "chgTime":"000000",
+              "mapDtlCntStyX":-1
             },
             {
-              "lid":"A=2@O=Kochstraße, 8010 Graz@X=15461887@Y=47055842@U=103@b=980067013@B=1@p=1641288263@",
+              "lid":"A=2@O=Kochstraße, 8010 Graz@X=15461887@Y=47055842@U=103@b=980067087@B=1@p=1644831106@",
               "type":"A",
               "name":"Kochstraße, 8010 Graz",
+              "nameFormatted":
+              {
+                "text":"Kochstraße, 8010 Graz",
+                "textInstructionIntervalL":
+                [
+                  {
+                    "startIndex":0,
+                    "endIndex":10,
+                    "textInstructionX":0
+                  },
+                  {
+                    "startIndex":10,
+                    "endIndex":21,
+                    "textInstructionX":1
+                  }
+                ]
+              },
               "icoX":0,
               "state":"F",
               "crd":
               {
                 "x":15461887,
-                "y":47055842,
-                "layerX":0,
-                "crdSysX":0
-              }
+                "y":47055842
+              },
+              "mapDtlCntStyX":-1
             },
             {
-              "lid":"A=2@O=Kochstraße, 4820 Bad Ischl@X=13627341@Y=47708288@U=103@b=980067011@B=1@p=1641288263@",
+              "lid":"A=2@O=Kochstraße, 4820 Bad Ischl@X=13627341@Y=47708288@U=103@b=980067085@B=1@p=1644831106@",
               "type":"A",
               "name":"Kochstraße, 4820 Bad Ischl",
+              "nameFormatted":
+              {
+                "text":"Kochstraße, 4820 Bad Ischl",
+                "textInstructionIntervalL":
+                [
+                  {
+                    "startIndex":0,
+                    "endIndex":10,
+                    "textInstructionX":0
+                  },
+                  {
+                    "startIndex":10,
+                    "endIndex":26,
+                    "textInstructionX":1
+                  }
+                ]
+              },
               "icoX":0,
               "state":"F",
               "crd":
               {
                 "x":13627341,
-                "y":47708288,
-                "layerX":0,
-                "crdSysX":0
-              }
+                "y":47708288
+              },
+              "mapDtlCntStyX":-1
             }
           ]
         }

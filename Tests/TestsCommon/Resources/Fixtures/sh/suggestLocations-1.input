@@ -1,7 +1,24 @@
 {
-  "ver":"1.10",
+  "ver":"1.44",
   "lang":"deu",
-  "id":"ecw8ckax662n8ick",
+  "id":"zgi8yi4ewgqtpmwx",
+  "err":"OK",
+  "graph":
+  {
+    "id":"standard",
+    "index":0
+  },
+  "subGraph":
+  {
+    "id":"global",
+    "index":0
+  },
+  "view":
+  {
+    "id":"standard",
+    "index":0,
+    "type":"WGS84"
+  },
   "svcResL":
   [
     {
@@ -11,10 +28,6 @@
       {
         "common":
         {
-          "locL":
-          [
-
-          ],
           "prodL":
           [
             {
@@ -23,16 +36,7 @@
               "cls":32,
               "prodCtx":
               {
-
-              }
-            },
-            {
-              "name":"Bus 173",
-              "icoX":0,
-              "cls":32,
-              "prodCtx":
-              {
-
+                "lineId":"172"
               }
             },
             {
@@ -41,16 +45,16 @@
               "cls":128,
               "prodCtx":
               {
-
+                "lineId":"U3"
               }
             },
             {
-              "name":"AST 27",
+              "name":"AST 33",
               "icoX":2,
               "cls":512,
               "prodCtx":
               {
-
+                "lineId":"33"
               }
             },
             {
@@ -59,7 +63,7 @@
               "cls":32,
               "prodCtx":
               {
-
+                "lineId":"647"
               }
             },
             {
@@ -68,17 +72,9 @@
               "cls":32,
               "prodCtx":
               {
-
+                "lineId":"4148"
               }
             }
-          ],
-          "opL":
-          [
-
-          ],
-          "remL":
-          [
-
           ],
           "icoL":
           [
@@ -88,15 +84,13 @@
               {
                 "r":255,
                 "g":255,
-                "b":255,
-                "a":255
+                "b":255
               },
               "bg":
               {
                 "r":255,
                 "g":120,
-                "b":0,
-                "a":255
+                "b":0
               }
             },
             {
@@ -105,15 +99,13 @@
               {
                 "r":255,
                 "g":255,
-                "b":255,
-                "a":255
+                "b":255
               },
               "bg":
               {
                 "r":8,
                 "g":59,
-                "b":207,
-                "a":255
+                "b":207
               }
             },
             {
@@ -122,19 +114,17 @@
               {
                 "r":255,
                 "g":255,
-                "b":255,
-                "a":255
+                "b":255
               },
               "bg":
               {
                 "r":71,
                 "g":71,
-                "b":70,
-                "a":255
+                "b":70
               }
             },
             {
-              "res":"POI"
+              "res":"loc_poi"
             }
           ]
         },
@@ -145,28 +135,34 @@
           "locL":
           [
             {
-              "lid":"A=1@O=Hamburg Uhlandstraße@X=10024402@Y=53564931@U=100@L=704413@B=1@p=1638650938@",
+              "lid":"A=1@O=Hamburg Uhlandstraße@X=10026775@Y=53564652@U=100@L=702891@B=1@p=1645299976@",
               "type":"S",
               "name":"Hamburg Uhlandstraße",
               "icoX":0,
-              "extId":"704413",
+              "extId":"702891",
               "state":"F",
               "crd":
               {
-                "x":10024402,
-                "y":53564931
+                "x":10026775,
+                "y":53564652,
+                "floor":0
               },
               "pCls":160,
               "pRefL":
               [
 0,
-1,
-2
+1
               ],
-              "wt":1429
+              "wt":2895,
+              "gidL":
+              [
+"A×de:02000:10900"
+              ],
+              "TZOffset":60,
+              "chgTime":"000200"
             },
             {
-              "lid":"A=1@O=Düring Uhlandstraße@X=8664837@Y=53457762@U=100@L=9022354@B=1@p=1638650938@",
+              "lid":"A=1@O=Düring Uhlandstraße@X=8664837@Y=53457762@U=100@L=9022354@B=1@p=1645299976@",
               "type":"S",
               "name":"Düring Uhlandstraße",
               "icoX":2,
@@ -175,18 +171,26 @@
               "crd":
               {
                 "x":8664837,
-                "y":53457762
+                "y":53457762,
+                "floor":0
               },
               "meta":true,
               "pCls":512,
               "pRefL":
               [
-3
+2
               ],
-              "wt":59
+              "wt":72,
+              "isMainMast":true,
+              "gidL":
+              [
+"A×de:03352:22354"
+              ],
+              "TZOffset":60,
+              "chgTime":"000200"
             },
             {
-              "lid":"A=1@O=Hittfeld Uhlandstraße@X=9995331@Y=53384464@U=100@L=2834803@B=1@p=1638650938@",
+              "lid":"A=1@O=Hittfeld Uhlandstraße@X=9995331@Y=53384464@U=100@L=2834803@B=1@p=1645299976@",
               "type":"S",
               "name":"Hittfeld Uhlandstraße",
               "icoX":0,
@@ -195,15 +199,22 @@
               "crd":
               {
                 "x":9995331,
-                "y":53384464
+                "y":53384464,
+                "floor":0
               },
               "pCls":32,
               "pRefL":
               [
-4,
-5
+3,
+4
               ],
-              "wt":971
+              "wt":1325,
+              "gidL":
+              [
+"A×de:03353:43059"
+              ],
+              "TZOffset":60,
+              "chgTime":"000200"
             },
             {
               "lid":"A=4@O=Hansestadt Hamburg, Uhland-Lodge (Hotel)@X=10029571@Y=53565039@U=104@L=970032190@B=1@p=1566899482@",
@@ -215,7 +226,8 @@
               "crd":
               {
                 "x":10029571,
-                "y":53565039
+                "y":53565039,
+                "floor":0
               }
             },
             {
@@ -228,7 +240,8 @@
               "crd":
               {
                 "x":10688534,
-                "y":53854608
+                "y":53854608,
+                "floor":0
               }
             }
           ]

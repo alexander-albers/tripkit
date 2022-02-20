@@ -1,14 +1,30 @@
 {
-  "ver":"1.18",
+  "ver":"1.52",
   "ext":"VAO.9",
   "lang":"deu",
-  "id":"i9ig4gwe48knpgcs",
+  "id":"3egxri66wk8yg68g",
   "err":"OK",
   "cInfo":
   {
     "code":"OK",
     "url":"",
     "msg":""
+  },
+  "graph":
+  {
+    "id":"standard",
+    "index":0
+  },
+  "subGraph":
+  {
+    "id":"global",
+    "index":0
+  },
+  "view":
+  {
+    "id":"standard",
+    "index":0,
+    "type":"WGS84"
   },
   "svcResL":
   [
@@ -19,43 +35,6 @@
       {
         "common":
         {
-          "locL":
-          [
-
-          ],
-          "prodL":
-          [
-
-          ],
-          "polyL":
-          [
-
-          ],
-          "layerL":
-          [
-            {
-              "id":"standard",
-              "name":"standard",
-              "index":0,
-              "annoCnt":0
-            }
-          ],
-          "crdSysL":
-          [
-            {
-              "id":"standard",
-              "index":0,
-              "type":"WGS84"
-            }
-          ],
-          "opL":
-          [
-
-          ],
-          "remL":
-          [
-
-          ],
           "icoL":
           [
             {
@@ -71,7 +50,8 @@
                 "r":0,
                 "g":0,
                 "b":0
-              }
+              },
+              "zIdx":1000
             },
             {
               "res":"prod_tram",
@@ -87,7 +67,8 @@
                 "r":226,
                 "g":0,
                 "b":26
-              }
+              },
+              "zIdx":1000
             },
             {
               "res":"prod_regbus",
@@ -103,7 +84,8 @@
                 "r":0,
                 "g":109,
                 "b":43
-              }
+              },
+              "zIdx":1000
             }
           ]
         },
@@ -114,9 +96,13 @@
           "locL":
           [
             {
-              "lid":"A=1@O=Wien Hauptbahnhof@X=16376413@Y=48185184@U=81@L=490134900@B=1@p=1641516241@i=at:49:1349@",
+              "lid":"A=1@O=Wien Hauptbahnhof@X=16376413@Y=48185184@U=81@L=490134900@B=1@p=1645315177@i=A×at:49:1349@",
               "type":"S",
               "name":"Wien Hauptbahnhof",
+              "nameFormatted":
+              {
+                "text":"Wien Hauptbahnhof"
+              },
               "icoX":0,
               "extId":"490134900",
               "state":"F",
@@ -124,17 +110,33 @@
               {
                 "x":16376413,
                 "y":48185184,
-                "layerX":0,
-                "crdSysX":0
+                "floor":0
               },
+              "meta":true,
               "pCls":2263,
-              "wt":32714,
-              "mapSelectable":true
+              "wt":32689,
+              "isMainMast":true,
+              "isSelectable":true,
+              "isRoutable":true,
+              "globalIdL":
+              [
+                {
+                  "id":"at:49:1349",
+                  "type":"A"
+                }
+              ],
+              "TZOffset":60,
+              "chgTime":"000000",
+              "mapDtlCntStyX":-1
             },
             {
-              "lid":"A=1@O=Wien Hauptbahnhof Ost@X=16380494@Y=48184357@U=81@L=490090500@B=1@p=1641516241@i=at:49:905@",
+              "lid":"A=1@O=Wien Hauptbahnhof Ost@X=16380494@Y=48184357@U=81@L=490090500@B=1@p=1645315177@i=A×at:49:905@",
               "type":"S",
               "name":"Wien Hauptbahnhof Ost",
+              "nameFormatted":
+              {
+                "text":"Wien Hauptbahnhof Ost"
+              },
               "icoX":1,
               "extId":"490090500",
               "state":"F",
@@ -142,19 +144,33 @@
               {
                 "x":16380494,
                 "y":48184357,
-                "layerX":0,
-                "crdSysX":0
+                "floor":0
               },
               "meta":true,
               "pCls":16,
-              "wt":702,
+              "wt":748,
               "isMainMast":true,
-              "mapSelectable":true
+              "isSelectable":true,
+              "isRoutable":true,
+              "globalIdL":
+              [
+                {
+                  "id":"at:49:905",
+                  "type":"A"
+                }
+              ],
+              "TZOffset":60,
+              "chgTime":"000000",
+              "mapDtlCntStyX":-1
             },
             {
-              "lid":"A=1@O=Wien Hauptbahnhof Süd@X=16375478@Y=48184465@U=81@L=490135800@B=1@p=1641516241@i=at:49:1358@",
+              "lid":"A=1@O=Wien Hauptbahnhof Süd@X=16375478@Y=48184465@U=81@L=490135800@B=1@p=1645315177@i=A×at:49:1358@",
               "type":"S",
               "name":"Wien Hauptbahnhof Süd",
+              "nameFormatted":
+              {
+                "text":"Wien Hauptbahnhof Süd"
+              },
               "icoX":2,
               "extId":"490135800",
               "state":"F",
@@ -162,19 +178,33 @@
               {
                 "x":16375478,
                 "y":48184465,
-                "layerX":0,
-                "crdSysX":0
+                "floor":0
               },
               "meta":true,
               "pCls":192,
-              "wt":95,
+              "wt":88,
               "isMainMast":true,
-              "mapSelectable":true
+              "isSelectable":true,
+              "isRoutable":true,
+              "globalIdL":
+              [
+                {
+                  "id":"at:49:1358",
+                  "type":"A"
+                }
+              ],
+              "TZOffset":60,
+              "chgTime":"000000",
+              "mapDtlCntStyX":-1
             },
             {
-              "lid":"A=1@O=Wien Hauptbahnhof Autoreisezug@X=16391839@Y=48177444@U=81@L=490135000@B=1@p=1641516241@i=at:49:1350@",
+              "lid":"A=1@O=Wien Hauptbahnhof Autoreisezug@X=16391839@Y=48177444@U=81@L=490135000@B=1@p=1645315177@i=A×at:49:1350@",
               "type":"S",
               "name":"Wien Hauptbahnhof Autoreisezug",
+              "nameFormatted":
+              {
+                "text":"Wien Hauptbahnhof Autoreisezug"
+              },
               "icoX":0,
               "extId":"490135000",
               "state":"F",
@@ -182,19 +212,33 @@
               {
                 "x":16391839,
                 "y":48177444,
-                "layerX":0,
-                "crdSysX":0
+                "floor":0
               },
               "meta":true,
               "pCls":1,
-              "wt":290,
+              "wt":244,
               "isMainMast":true,
-              "mapSelectable":true
+              "isSelectable":true,
+              "isRoutable":true,
+              "globalIdL":
+              [
+                {
+                  "id":"at:49:1350",
+                  "type":"A"
+                }
+              ],
+              "TZOffset":60,
+              "chgTime":"000000",
+              "mapDtlCntStyX":-1
             },
             {
-              "lid":"A=1@O=Wiener Neustadt Hauptbahnhof@X=16233620@Y=47811304@U=81@L=430521000@B=1@p=1641516241@i=at:43:5210@",
+              "lid":"A=1@O=Wiener Neustadt Hauptbahnhof@X=16233620@Y=47811304@U=81@L=430521000@B=1@p=1645315177@i=A×at:43:5210@",
               "type":"S",
               "name":"Wiener Neustadt Hauptbahnhof",
+              "nameFormatted":
+              {
+                "text":"Wiener Neustadt Hauptbahnhof"
+              },
               "icoX":0,
               "extId":"430521000",
               "state":"F",
@@ -202,14 +246,24 @@
               {
                 "x":16233620,
                 "y":47811304,
-                "layerX":0,
-                "crdSysX":0
+                "floor":0
               },
               "meta":true,
               "pCls":1219,
-              "wt":9686,
+              "wt":9558,
               "isMainMast":true,
-              "mapSelectable":true
+              "isSelectable":true,
+              "isRoutable":true,
+              "globalIdL":
+              [
+                {
+                  "id":"at:43:5210",
+                  "type":"A"
+                }
+              ],
+              "TZOffset":60,
+              "chgTime":"000000",
+              "mapDtlCntStyX":-1
             }
           ]
         }

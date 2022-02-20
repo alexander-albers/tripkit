@@ -1,7 +1,24 @@
 {
-  "ver":"1.10",
+  "ver":"1.44",
   "lang":"deu",
-  "id":"xii84kai62wv8w4s",
+  "id":"v5g8yikc2gqtxkwx",
+  "err":"OK",
+  "graph":
+  {
+    "id":"standard",
+    "index":0
+  },
+  "subGraph":
+  {
+    "id":"global",
+    "index":0
+  },
+  "view":
+  {
+    "id":"standard",
+    "index":0,
+    "type":"WGS84"
+  },
   "svcResL":
   [
     {
@@ -11,26 +28,10 @@
       {
         "common":
         {
-          "locL":
-          [
-
-          ],
-          "prodL":
-          [
-
-          ],
-          "opL":
-          [
-
-          ],
-          "remL":
-          [
-
-          ],
           "icoL":
           [
             {
-              "res":"ADR"
+              "res":"loc_addr"
             }
           ]
         },

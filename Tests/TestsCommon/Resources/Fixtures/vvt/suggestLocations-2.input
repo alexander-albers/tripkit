@@ -1,14 +1,30 @@
 {
-  "ver":"1.18",
+  "ver":"1.52",
   "ext":"VAO.6",
   "lang":"deu",
-  "id":"xs6qrmg6kqcr8i4s",
+  "id":"zmgsbim4wkxygm8x",
   "err":"OK",
   "cInfo":
   {
     "code":"OK",
     "url":"",
     "msg":""
+  },
+  "graph":
+  {
+    "id":"standard",
+    "index":0
+  },
+  "subGraph":
+  {
+    "id":"global",
+    "index":0
+  },
+  "view":
+  {
+    "id":"standard",
+    "index":0,
+    "type":"WGS84"
   },
   "svcResL":
   [
@@ -22,9 +38,13 @@
           "locL":
           [
             {
-              "lid":"A=1@O=Klagenfurt Hbf@X=14313137@Y=46616207@U=81@L=420364200@i=at:42:3642@",
+              "lid":"A=1@O=Klagenfurt Hbf@X=14313137@Y=46616207@U=81@L=420364200@i=A×at:42:3642@",
               "type":"S",
               "name":"Klagenfurt Hbf",
+              "nameFormatted":
+              {
+                "text":"Klagenfurt Hbf"
+              },
               "icoX":0,
               "extId":"420364200",
               "state":"F",
@@ -32,18 +52,32 @@
               {
                 "x":14313137,
                 "y":46616207,
-                "layerX":0,
-                "crdSysX":0
+                "floor":0
               },
               "meta":true,
               "pCls":227,
               "isMainMast":true,
-              "mapSelectable":true
+              "isSelectable":true,
+              "isRoutable":true,
+              "globalIdL":
+              [
+                {
+                  "id":"at:42:3642",
+                  "type":"A"
+                }
+              ],
+              "TZOffset":60,
+              "chgTime":"000000",
+              "mapDtlCntStyX":-1
             },
             {
-              "lid":"A=1@O=Klagenfurt Ostbahnhof@X=14321821@Y=46621753@U=81@L=420364100@i=at:42:3641@",
+              "lid":"A=1@O=Klagenfurt Ostbahnhof@X=14321821@Y=46621753@U=81@L=420364100@i=A×at:42:3641@",
               "type":"S",
               "name":"Klagenfurt Ostbahnhof",
+              "nameFormatted":
+              {
+                "text":"Klagenfurt Ostbahnhof"
+              },
               "icoX":0,
               "extId":"420364100",
               "state":"F",
@@ -51,43 +85,24 @@
               {
                 "x":14321821,
                 "y":46621753,
-                "layerX":0,
-                "crdSysX":0
+                "floor":0
               },
               "meta":true,
               "pCls":131,
               "isMainMast":true,
-              "mapSelectable":true
+              "isSelectable":true,
+              "isRoutable":true,
+              "globalIdL":
+              [
+                {
+                  "id":"at:42:3641",
+                  "type":"A"
+                }
+              ],
+              "TZOffset":60,
+              "chgTime":"000000",
+              "mapDtlCntStyX":-1
             }
-          ],
-          "prodL":
-          [
-
-          ],
-          "polyL":
-          [
-
-          ],
-          "layerL":
-          [
-            {
-              "id":"standard",
-              "name":"standard",
-              "index":0,
-              "annoCnt":0
-            }
-          ],
-          "crdSysL":
-          [
-            {
-              "id":"standard",
-              "index":0,
-              "type":"WGS84"
-            }
-          ],
-          "opL":
-          [
-
           ],
           "remL":
           [
@@ -102,13 +117,13 @@
               "type":"W",
               "code":"WW",
               "txtN":"WEBVIEW",
-              "url":"https://routenplaner.verkehrsauskunft.at/bin/query.exe/dn?tpl=webview_poi&performLocating=128&look_station=990000393&look_nv=get_infotext|yes|get_attributes|yes&look_stationpool=81&L=vs_vvt"
+              "url":"https://routenplaner.verkehrsauskunft.at/bin/query.exe/dn?tpl=webview_poi&performLocating=128&look_station=990000404&look_nv=get_infotext|yes|get_attributes|yes&look_stationpool=81&L=vs_vvt"
             },
             {
               "type":"W",
               "code":"WW",
               "txtN":"WEBVIEW",
-              "url":"https://routenplaner.verkehrsauskunft.at/bin/query.exe/dn?tpl=webview_poi&performLocating=128&look_station=990000396&look_nv=get_infotext|yes|get_attributes|yes&look_stationpool=81&L=vs_vvt"
+              "url":"https://routenplaner.verkehrsauskunft.at/bin/query.exe/dn?tpl=webview_poi&performLocating=128&look_station=990000407&look_nv=get_infotext|yes|get_attributes|yes&look_stationpool=81&L=vs_vvt"
             }
           ],
           "icoL":
@@ -126,7 +141,8 @@
                 "r":80,
                 "g":80,
                 "b":80
-              }
+              },
+              "zIdx":1000
             },
             {
               "res":"loc_attr_pr"
@@ -143,9 +159,13 @@
           "locL":
           [
             {
-              "lid":"A=1@O=Wörgl Hauptbahnhof@X=12060926@Y=47491244@U=81@L=470117000@B=1@p=1641516241@i=at:47:1170@",
+              "lid":"A=1@O=Wörgl Hauptbahnhof@X=12060926@Y=47491244@U=81@L=470117000@B=1@p=1645315177@i=A×at:47:1170@",
               "type":"S",
               "name":"Wörgl Hauptbahnhof",
+              "nameFormatted":
+              {
+                "text":"Wörgl Hauptbahnhof"
+              },
               "icoX":0,
               "extId":"470117000",
               "state":"F",
@@ -153,38 +173,53 @@
               {
                 "x":12060926,
                 "y":47491244,
-                "layerX":0,
-                "crdSysX":0
+                "floor":0
               },
               "meta":true,
               "pCls":195,
-              "wt":9591,
+              "wt":9483,
               "isMainMast":true,
-              "mapSelectable":true
+              "isSelectable":true,
+              "isRoutable":true,
+              "globalIdL":
+              [
+                {
+                  "id":"at:47:1170",
+                  "type":"A"
+                }
+              ],
+              "TZOffset":60,
+              "chgTime":"000000",
+              "mapDtlCntStyX":-1
             },
             {
-              "lid":"A=1@O=P+R Klagenfurt Hauptbahnhof, Klagenfurt am Wörthersee@X=14311762@Y=46614804@U=81@L=990000393@B=1@p=1641516241@",
+              "lid":"A=1@O=P+R Klagenfurt Hauptbahnhof, Klagenfurt am Wörthersee@X=14311762@Y=46614804@U=81@L=990000404@B=1@p=1645315177@",
               "type":"S",
               "name":"P+R Klagenfurt Hauptbahnhof, Klagenfurt am Wörthersee",
+              "nameFormatted":
+              {
+                "text":"P+R Klagenfurt Hauptbahnhof, Klagenfurt am Wörthersee"
+              },
               "icoX":2,
-              "extId":"990000393",
+              "extId":"990000404",
               "state":"F",
               "crd":
               {
                 "x":14311762,
                 "y":46614804,
-                "layerX":0,
-                "crdSysX":0
+                "floor":0
               },
               "pCls":227,
-              "wt":9641,
-              "mapSelectable":true,
+              "wt":9537,
+              "isSelectable":true,
+              "isRoutable":true,
               "mMastLocX":0,
               "msgL":
               [
                 {
                   "type":"REM",
                   "remX":0,
+                  "sty":"I",
                   "dspl":"U",
                   "tagL":
                   [
@@ -195,34 +230,47 @@
                 {
                   "type":"REM",
                   "remX":1,
+                  "sty":"I",
                   "dspl":"U",
+                  "tagL":
+                  [
+                    "RES_LOC_WEB","RES_LOC_FLY_WEB"
+                  ],
                   "sort":818413568
                 }
-              ]
+              ],
+              "TZOffset":60,
+              "chgTime":"000000",
+              "mapDtlCntStyX":-1
             },
             {
-              "lid":"A=1@O=P+R Klagenfurt Hauptbahnhof-Ostbf, Klagenfurt am Wörthersee@X=14321794@Y=46621079@U=81@L=990000396@B=1@p=1641516241@",
+              "lid":"A=1@O=P+R Klagenfurt Hauptbahnhof-Ostbf, Klagenfurt am Wörthersee@X=14321794@Y=46621079@U=81@L=990000407@B=1@p=1645315177@",
               "type":"S",
               "name":"P+R Klagenfurt Hauptbahnhof-Ostbf, Klagenfurt am Wörthersee",
+              "nameFormatted":
+              {
+                "text":"P+R Klagenfurt Hauptbahnhof-Ostbf, Klagenfurt am Wörthersee"
+              },
               "icoX":2,
-              "extId":"990000396",
+              "extId":"990000407",
               "state":"F",
               "crd":
               {
                 "x":14321794,
                 "y":46621079,
-                "layerX":0,
-                "crdSysX":0
+                "floor":0
               },
               "pCls":131,
-              "wt":2330,
-              "mapSelectable":true,
+              "wt":2233,
+              "isSelectable":true,
+              "isRoutable":true,
               "mMastLocX":1,
               "msgL":
               [
                 {
                   "type":"REM",
                   "remX":0,
+                  "sty":"I",
                   "dspl":"U",
                   "tagL":
                   [
@@ -233,15 +281,27 @@
                 {
                   "type":"REM",
                   "remX":2,
+                  "sty":"I",
                   "dspl":"U",
+                  "tagL":
+                  [
+                    "RES_LOC_WEB","RES_LOC_FLY_WEB"
+                  ],
                   "sort":818413568
                 }
-              ]
+              ],
+              "TZOffset":60,
+              "chgTime":"000000",
+              "mapDtlCntStyX":-1
             },
             {
-              "lid":"A=1@O=Wörgler Boden Bahnhof@X=12108982@Y=47486668@U=81@L=470116900@B=1@p=1641516241@i=at:47:1169@",
+              "lid":"A=1@O=Wörgler Boden Bahnhof@X=12108982@Y=47486668@U=81@L=470116900@B=1@p=1645315177@i=A×at:47:1169@",
               "type":"S",
               "name":"Wörgler Boden Bahnhof",
+              "nameFormatted":
+              {
+                "text":"Wörgler Boden Bahnhof"
+              },
               "icoX":0,
               "extId":"470116900",
               "state":"F",
@@ -249,19 +309,33 @@
               {
                 "x":12108982,
                 "y":47486668,
-                "layerX":0,
-                "crdSysX":0
+                "floor":0
               },
               "meta":true,
               "pCls":195,
-              "wt":2362,
+              "wt":2264,
               "isMainMast":true,
-              "mapSelectable":true
+              "isSelectable":true,
+              "isRoutable":true,
+              "globalIdL":
+              [
+                {
+                  "id":"at:47:1169",
+                  "type":"A"
+                }
+              ],
+              "TZOffset":60,
+              "chgTime":"000000",
+              "mapDtlCntStyX":-1
             },
             {
-              "lid":"A=1@O=Vienna Hauptbahnhof@X=16376413@Y=48185184@U=81@L=490134900@B=1@p=1641516241@i=at:49:1349@",
+              "lid":"A=1@O=Vienna Hauptbahnhof@X=16376413@Y=48185184@U=81@L=490134900@B=1@p=1645315177@i=A×at:49:1349@",
               "type":"S",
               "name":"Vienna Hauptbahnhof",
+              "nameFormatted":
+              {
+                "text":"Vienna Hauptbahnhof"
+              },
               "icoX":0,
               "extId":"490134900",
               "state":"F",
@@ -269,12 +343,24 @@
               {
                 "x":16376413,
                 "y":48185184,
-                "layerX":0,
-                "crdSysX":0
+                "floor":0
               },
+              "meta":true,
               "pCls":2263,
-              "wt":32714,
-              "mapSelectable":true
+              "wt":32689,
+              "isMainMast":true,
+              "isSelectable":true,
+              "isRoutable":true,
+              "globalIdL":
+              [
+                {
+                  "id":"at:49:1349",
+                  "type":"A"
+                }
+              ],
+              "TZOffset":60,
+              "chgTime":"000000",
+              "mapDtlCntStyX":-1
             }
           ]
         }

@@ -1,12 +1,29 @@
 {
-  "ver":"1.15",
+  "ver":"1.52",
   "lang":"deu",
-  "id":"qwmcske266ir8i4s",
+  "id":"gi28hige2kxty48g",
+  "err":"OK",
   "cInfo":
   {
     "code":"OK",
     "url":"",
     "msg":""
+  },
+  "graph":
+  {
+    "id":"standard",
+    "index":0
+  },
+  "subGraph":
+  {
+    "id":"global",
+    "index":0
+  },
+  "view":
+  {
+    "id":"standard",
+    "index":0,
+    "type":"WGS84"
   },
   "svcResL":
   [
@@ -17,48 +34,28 @@
       {
         "common":
         {
-          "locL":
-          [
-
-          ],
-          "prodL":
-          [
-
-          ],
-          "polyL":
-          [
-
-          ],
-          "layerL":
+          "txtInstL":
           [
             {
-              "id":"standard",
-              "name":"standard",
-              "index":0,
-              "annoCnt":0
-            }
-          ],
-          "crdSysL":
-          [
+              "id":"street",
+              "type":"NONE",
+              "mode":"ADD"
+            },
             {
-              "id":"standard",
-              "index":0,
-              "type":"WGS84",
-              "dim":2
+              "id":"city",
+              "type":"NONE",
+              "mode":"ADD"
+            },
+            {
+              "id":"housenumber",
+              "type":"NONE",
+              "mode":"ADD"
             }
-          ],
-          "opL":
-          [
-
-          ],
-          "remL":
-          [
-
           ],
           "icoL":
           [
             {
-              "res":"ADR"
+              "res":"loc_addr"
             }
           ]
         },
@@ -69,76 +66,170 @@
           "locL":
           [
             {
-              "lid":"A=2@O=Mutterstraße, 6800 Feldkirch@X=9602071@Y=47243447@U=103@b=980082094@B=1@p=1637147511@",
+              "lid":"A=2@O=Mutterstraße, 6800 Feldkirch@X=9602071@Y=47243447@U=103@b=980082258@B=1@p=1644831106@",
               "type":"A",
               "name":"Mutterstraße, 6800 Feldkirch",
+              "nameFormatted":
+              {
+                "text":"Mutterstraße, 6800 Feldkirch",
+                "textInstructionIntervalL":
+                [
+                  {
+                    "startIndex":0,
+                    "endIndex":12,
+                    "textInstructionX":0
+                  },
+                  {
+                    "startIndex":12,
+                    "endIndex":28,
+                    "textInstructionX":1
+                  }
+                ]
+              },
               "icoX":0,
               "state":"F",
               "crd":
               {
                 "x":9602071,
-                "y":47243447,
-                "layerX":0,
-                "crdSysX":0
-              }
+                "y":47243447
+              },
+              "mapDtlCntStyX":-1
             },
             {
-              "lid":"A=2@O=Untersteinstraße, 6800 Feldkirch@X=9582762@Y=47242979@U=103@b=980123658@B=1@p=1637147511@",
+              "lid":"A=2@O=Untersteinstraße, 6800 Feldkirch@X=9582762@Y=47242979@U=103@b=980123880@B=1@p=1644831106@",
               "type":"A",
               "name":"Untersteinstraße, 6800 Feldkirch",
+              "nameFormatted":
+              {
+                "text":"Untersteinstraße, 6800 Feldkirch",
+                "textInstructionIntervalL":
+                [
+                  {
+                    "startIndex":0,
+                    "endIndex":16,
+                    "textInstructionX":0
+                  },
+                  {
+                    "startIndex":16,
+                    "endIndex":32,
+                    "textInstructionX":1
+                  }
+                ]
+              },
               "icoX":0,
               "state":"F",
               "crd":
               {
                 "x":9582762,
-                "y":47242979,
-                "layerX":0,
-                "crdSysX":0
-              }
+                "y":47242979
+              },
+              "mapDtlCntStyX":-1
             },
             {
-              "lid":"A=2@O=Klosterstraße, 6800 Feldkirch@X=9618970@Y=47261290@U=103@b=980066633@B=1@p=1637147511@",
+              "lid":"A=2@O=Klosterstraße, 6800 Feldkirch@X=9618970@Y=47261290@U=103@b=980066757@B=1@p=1644831106@",
               "type":"A",
               "name":"Klosterstraße, 6800 Feldkirch",
+              "nameFormatted":
+              {
+                "text":"Klosterstraße, 6800 Feldkirch",
+                "textInstructionIntervalL":
+                [
+                  {
+                    "startIndex":0,
+                    "endIndex":13,
+                    "textInstructionX":0
+                  },
+                  {
+                    "startIndex":13,
+                    "endIndex":29,
+                    "textInstructionX":1
+                  }
+                ]
+              },
               "icoX":0,
               "state":"F",
               "crd":
               {
                 "x":9618970,
-                "y":47261290,
-                "layerX":0,
-                "crdSysX":0
-              }
+                "y":47261290
+              },
+              "mapDtlCntStyX":-1
             },
             {
-              "lid":"A=2@O=Bissingerstraße 1, 6800 Feldkirch@H=1@X=9620094@Y=47261317@U=103@L=980016457@B=1@p=1637147511@",
+              "lid":"A=2@O=Bissingerstraße 1, 6800 Feldkirch@H=1@X=9620094@Y=47261317@U=103@L=980016493@B=1@p=1644831106@",
               "type":"A",
               "name":"Bissingerstraße 1, 6800 Feldkirch",
+              "nameFormatted":
+              {
+                "text":"Bissingerstraße 1, 6800 Feldkirch",
+                "textInstructionIntervalL":
+                [
+                  {
+                    "startIndex":0,
+                    "endIndex":15,
+                    "textInstructionX":0
+                  },
+                  {
+                    "startIndex":17,
+                    "endIndex":33,
+                    "textInstructionX":1
+                  },
+                  {
+                    "startIndex":15,
+                    "endIndex":17,
+                    "textInstructionX":2
+                  }
+                ]
+              },
               "icoX":0,
-              "extId":"980016457",
+              "extId":"980016493",
               "state":"F",
               "crd":
               {
                 "x":9620094,
-                "y":47261317,
-                "layerX":0,
-                "crdSysX":0
-              }
+                "y":47261317
+              },
+              "isSelectable":true,
+              "isRoutable":true,
+              "mapDtlCntStyX":-1
             },
             {
-              "lid":"A=2@O=Bissingerstraße 1a, 6800 Feldkirch@H=1a@X=9620058@Y=47261344@U=103@L=980016457@B=1@p=1637147511@",
+              "lid":"A=2@O=Bissingerstraße 1a, 6800 Feldkirch@H=1a@X=9620058@Y=47261344@U=103@L=980016493@B=1@p=1644831106@",
               "type":"A",
               "name":"Bissingerstraße 1a, 6800 Feldkirch",
+              "nameFormatted":
+              {
+                "text":"Bissingerstraße 1a, 6800 Feldkirch",
+                "textInstructionIntervalL":
+                [
+                  {
+                    "startIndex":0,
+                    "endIndex":15,
+                    "textInstructionX":0
+                  },
+                  {
+                    "startIndex":18,
+                    "endIndex":34,
+                    "textInstructionX":1
+                  },
+                  {
+                    "startIndex":15,
+                    "endIndex":18,
+                    "textInstructionX":2
+                  }
+                ]
+              },
               "icoX":0,
-              "extId":"980016457",
+              "extId":"980016493",
               "state":"F",
               "crd":
               {
                 "x":9620058,
-                "y":47261344,
-                "layerX":0,
-                "crdSysX":0
-              }
+                "y":47261344
+              },
+              "isSelectable":true,
+              "isRoutable":true,
+              "mapDtlCntStyX":-1
             }
           ]
         }

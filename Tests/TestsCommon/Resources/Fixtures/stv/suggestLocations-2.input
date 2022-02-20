@@ -1,14 +1,30 @@
 {
-  "ver":"1.18",
+  "ver":"1.52",
   "ext":"VAO.13",
   "lang":"deu",
-  "id":"te2s6i82k8sbpg4s",
+  "id":"i9kgri2mwk8wym8g",
   "err":"OK",
   "cInfo":
   {
     "code":"OK",
     "url":"",
     "msg":""
+  },
+  "graph":
+  {
+    "id":"standard",
+    "index":0
+  },
+  "subGraph":
+  {
+    "id":"global",
+    "index":0
+  },
+  "view":
+  {
+    "id":"standard",
+    "index":0,
+    "type":"WGS84"
   },
   "svcResL":
   [
@@ -19,50 +35,32 @@
       {
         "common":
         {
-          "locL":
-          [
-
-          ],
-          "prodL":
-          [
-
-          ],
-          "polyL":
-          [
-
-          ],
-          "layerL":
+          "txtInstL":
           [
             {
-              "id":"standard",
-              "name":"standard",
-              "index":0,
-              "annoCnt":0
-            }
-          ],
-          "crdSysL":
-          [
+              "id":"street",
+              "type":"NONE",
+              "mode":"ADD"
+            },
             {
-              "id":"standard",
-              "index":0,
-              "type":"WGS84"
+              "id":"city",
+              "type":"NONE",
+              "mode":"ADD"
+            },
+            {
+              "id":"housenumber",
+              "type":"NONE",
+              "mode":"ADD"
             }
-          ],
-          "opL":
-          [
-
-          ],
-          "remL":
-          [
-
           ],
           "icoL":
           [
             {
-              "res":"prod_station"
+              "res":"prod_station",
+              "zIdx":1000
             },
             {
-              "res":"ADR"
+              "res":"loc_addr"
             }
           ]
         },
@@ -73,9 +71,13 @@
           "locL":
           [
             {
-              "lid":"A=1@O=Graz Keplerbrücke@X=15434551@Y=47077623@U=81@L=460406800@B=1@p=1642551485@i=at:46:4068@",
+              "lid":"A=1@O=Graz Keplerbrücke@X=15434551@Y=47077623@U=81@L=460406800@B=1@p=1645315177@i=A×at:46:4068@",
               "type":"S",
               "name":"Graz Keplerbrücke",
+              "nameFormatted":
+              {
+                "text":"Graz Keplerbrücke"
+              },
               "icoX":0,
               "extId":"460406800",
               "state":"F",
@@ -83,35 +85,71 @@
               {
                 "x":15434551,
                 "y":47077623,
-                "layerX":0,
-                "crdSysX":0
+                "floor":0
               },
               "meta":true,
               "pCls":144,
-              "wt":1294,
+              "wt":1304,
               "isMainMast":true,
-              "mapSelectable":true
+              "isSelectable":true,
+              "isRoutable":true,
+              "globalIdL":
+              [
+                {
+                  "id":"at:46:4068",
+                  "type":"A"
+                }
+              ],
+              "TZOffset":60,
+              "chgTime":"000000",
+              "mapDtlCntStyX":-1
             },
             {
               "lid":"A=2@O=Keplerstraße 11, Saarbrücken@H=11@X=6985445@Y=49234414@U=104@L=971966760@B=1@p=1636631415@",
               "type":"A",
               "name":"Keplerstraße 11, Saarbrücken",
+              "nameFormatted":
+              {
+                "text":"Keplerstraße 11, Saarbrücken",
+                "textInstructionIntervalL":
+                [
+                  {
+                    "startIndex":0,
+                    "endIndex":12,
+                    "textInstructionX":0
+                  },
+                  {
+                    "startIndex":15,
+                    "endIndex":28,
+                    "textInstructionX":1
+                  },
+                  {
+                    "startIndex":12,
+                    "endIndex":15,
+                    "textInstructionX":2
+                  }
+                ]
+              },
               "icoX":1,
               "extId":"971966760",
               "state":"F",
               "crd":
               {
                 "x":6985445,
-                "y":49234414,
-                "layerX":0,
-                "crdSysX":0
+                "y":49234414
               },
-              "mapSelectable":true
+              "isSelectable":true,
+              "isRoutable":true,
+              "mapDtlCntStyX":-1
             },
             {
-              "lid":"A=1@O=Dölsach Sattlerbrücke@X=12837855@Y=46825529@U=81@L=476803600@B=1@p=1642551485@i=at:47:68036@",
+              "lid":"A=1@O=Dölsach Sattlerbrücke@X=12837855@Y=46825529@U=81@L=476803600@B=1@p=1645315177@i=A×at:47:68036@",
               "type":"S",
               "name":"Dölsach Sattlerbrücke",
+              "nameFormatted":
+              {
+                "text":"Dölsach Sattlerbrücke"
+              },
               "icoX":0,
               "extId":"476803600",
               "state":"F",
@@ -119,19 +157,33 @@
               {
                 "x":12837855,
                 "y":46825529,
-                "layerX":0,
-                "crdSysX":0
+                "floor":0
               },
               "meta":true,
               "pCls":64,
               "wt":10,
               "isMainMast":true,
-              "mapSelectable":true
+              "isSelectable":true,
+              "isRoutable":true,
+              "globalIdL":
+              [
+                {
+                  "id":"at:47:68036",
+                  "type":"A"
+                }
+              ],
+              "TZOffset":60,
+              "chgTime":"000000",
+              "mapDtlCntStyX":-1
             },
             {
-              "lid":"A=1@O=Eisbach Pichlerbrücke@X=15281051@Y=47102775@U=81@L=460056800@B=1@p=1642551485@i=at:46:568@",
+              "lid":"A=1@O=Eisbach Pichlerbrücke@X=15281051@Y=47102775@U=81@L=460056800@B=1@p=1645315177@i=A×at:46:568@",
               "type":"S",
               "name":"Eisbach Pichlerbrücke",
+              "nameFormatted":
+              {
+                "text":"Eisbach Pichlerbrücke"
+              },
               "icoX":0,
               "extId":"460056800",
               "state":"F",
@@ -139,19 +191,33 @@
               {
                 "x":15281051,
                 "y":47102775,
-                "layerX":0,
-                "crdSysX":0
+                "floor":0
               },
               "meta":true,
               "pCls":64,
               "wt":10,
               "isMainMast":true,
-              "mapSelectable":true
+              "isSelectable":true,
+              "isRoutable":true,
+              "globalIdL":
+              [
+                {
+                  "id":"at:46:568",
+                  "type":"A"
+                }
+              ],
+              "TZOffset":60,
+              "chgTime":"000000",
+              "mapDtlCntStyX":-1
             },
             {
-              "lid":"A=1@O=Wildalpen Kollerbrücke@X=14988632@Y=47661634@U=81@L=460656800@B=1@p=1642551485@i=at:46:6568@",
+              "lid":"A=1@O=Wildalpen Kollerbrücke@X=14988632@Y=47661634@U=81@L=460656800@B=1@p=1645315177@i=A×at:46:6568@",
               "type":"S",
               "name":"Wildalpen Kollerbrücke",
+              "nameFormatted":
+              {
+                "text":"Wildalpen Kollerbrücke"
+              },
               "icoX":0,
               "extId":"460656800",
               "state":"F",
@@ -159,14 +225,24 @@
               {
                 "x":14988632,
                 "y":47661634,
-                "layerX":0,
-                "crdSysX":0
+                "floor":0
               },
               "meta":true,
               "pCls":1024,
               "wt":9,
               "isMainMast":true,
-              "mapSelectable":true
+              "isSelectable":true,
+              "isRoutable":true,
+              "globalIdL":
+              [
+                {
+                  "id":"at:46:6568",
+                  "type":"A"
+                }
+              ],
+              "TZOffset":60,
+              "chgTime":"000000",
+              "mapDtlCntStyX":-1
             }
           ]
         }

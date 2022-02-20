@@ -1,14 +1,30 @@
 {
-  "ver":"1.18",
+  "ver":"1.52",
   "ext":"VAO.13",
   "lang":"deu",
-  "id":"6w2seicgk8saxg4s",
+  "id":"6tkgjiikwk8wwm8x",
   "err":"OK",
   "cInfo":
   {
     "code":"OK",
     "url":"",
     "msg":""
+  },
+  "graph":
+  {
+    "id":"standard",
+    "index":0
+  },
+  "subGraph":
+  {
+    "id":"global",
+    "index":0
+  },
+  "view":
+  {
+    "id":"standard",
+    "index":0,
+    "type":"WGS84"
   },
   "svcResL":
   [
@@ -19,39 +35,6 @@
       {
         "common":
         {
-          "locL":
-          [
-
-          ],
-          "prodL":
-          [
-
-          ],
-          "polyL":
-          [
-
-          ],
-          "layerL":
-          [
-            {
-              "id":"standard",
-              "name":"standard",
-              "index":0,
-              "annoCnt":511252
-            }
-          ],
-          "crdSysL":
-          [
-            {
-              "id":"standard",
-              "index":0,
-              "type":"WGS84"
-            }
-          ],
-          "opL":
-          [
-
-          ],
           "remL":
           [
             {
@@ -73,19 +56,31 @@
               "url":"https://routenplaner.verkehrsauskunft.at/bin/query.exe/dn?tpl=webview_poi&performLocating=128&look_station=960075592&look_nv=get_infotext|yes|get_attributes|yes&look_stationpool=130&L=vs_stv"
             }
           ],
+          "txtInstL":
+          [
+            {
+              "id":"city",
+              "type":"NONE",
+              "mode":"ADD"
+            }
+          ],
           "icoL":
           [
             {
-              "res":"prod_station"
+              "res":"prod_station",
+              "zIdx":1000
             },
             {
-              "res":"PCAT_APOTHEKE"
+              "res":"PCAT_APOTHEKE",
+              "zIdx":900
             },
             {
-              "res":"PCAT_ESSEN"
+              "res":"PCAT_ESSEN",
+              "zIdx":900
             },
             {
-              "res":"PCAT_SEHENWUERDIGKEIT"
+              "res":"PCAT_SEHENWUERDIGKEIT",
+              "zIdx":900
             }
           ]
         },
@@ -96,9 +91,13 @@
           "locL":
           [
             {
-              "lid":"A=1@O=Graz Babenbergerstraße@X=15420500@Y=47073569@U=81@L=460314900@B=1@p=1642551485@i=at:46:3149@",
+              "lid":"A=1@O=Graz Babenbergerstraße@X=15420500@Y=47073569@U=81@L=460314900@B=1@p=1645315177@i=A×at:46:3149@",
               "type":"S",
               "name":"Graz Babenbergerstraße",
+              "nameFormatted":
+              {
+                "text":"Graz Babenbergerstraße"
+              },
               "icoX":0,
               "extId":"460314900",
               "state":"F",
@@ -106,19 +105,33 @@
               {
                 "x":15420500,
                 "y":47073569,
-                "layerX":0,
-                "crdSysX":0
+                "floor":0
               },
               "meta":true,
               "pCls":128,
-              "wt":185,
+              "wt":186,
               "isMainMast":true,
-              "mapSelectable":true
+              "isSelectable":true,
+              "isRoutable":true,
+              "globalIdL":
+              [
+                {
+                  "id":"at:46:3149",
+                  "type":"A"
+                }
+              ],
+              "TZOffset":60,
+              "chgTime":"000000",
+              "mapDtlCntStyX":-1
             },
             {
-              "lid":"A=1@O=Mödling Babenbergergasse@X=16284022@Y=48083929@U=81@L=430424200@B=1@p=1642551485@i=at:43:4242@",
+              "lid":"A=1@O=Mödling Babenbergergasse@X=16284022@Y=48083929@U=81@L=430424200@B=1@p=1645315177@i=A×at:43:4242@",
               "type":"S",
               "name":"Mödling Babenbergergasse",
+              "nameFormatted":
+              {
+                "text":"Mödling Babenbergergasse"
+              },
               "icoX":0,
               "extId":"430424200",
               "state":"F",
@@ -126,19 +139,41 @@
               {
                 "x":16284022,
                 "y":48083929,
-                "layerX":0,
-                "crdSysX":0
+                "floor":0
               },
               "meta":true,
               "pCls":128,
               "wt":9,
               "isMainMast":true,
-              "mapSelectable":true
+              "isSelectable":true,
+              "isRoutable":true,
+              "globalIdL":
+              [
+                {
+                  "id":"at:43:4242",
+                  "type":"A"
+                }
+              ],
+              "TZOffset":60,
+              "chgTime":"000000",
+              "mapDtlCntStyX":-1
             },
             {
-              "lid":"A=4@O=Babenberger-Apotheke, 1070 Wien (Apotheke)@X=16359783@Y=48201499@U=130@L=960058444@B=1@p=1642554850@",
+              "lid":"A=4@O=Babenberger-Apotheke, 1070 Wien (Apotheke)@X=16359783@Y=48201499@U=130@L=960058444@B=1@p=1645318911@",
               "type":"P",
               "name":"Babenberger-Apotheke, 1070 Wien (Apotheke)",
+              "nameFormatted":
+              {
+                "text":"Babenberger-Apotheke, 1070 Wien (Apotheke)",
+                "textInstructionIntervalL":
+                [
+                  {
+                    "startIndex":20,
+                    "endIndex":42,
+                    "textInstructionX":0
+                  }
+                ]
+              },
               "icoX":1,
               "extId":"960058444",
               "state":"F",
@@ -146,8 +181,7 @@
               {
                 "x":16359783,
                 "y":48201499,
-                "layerX":0,
-                "crdSysX":0
+                "floor":0
               },
               "mcpData":
               {
@@ -156,21 +190,40 @@
                 "mcpid":"0",
                 "externalId":"oeamtc_ap-34_109-138"
               },
-              "mapSelectable":true,
+              "isSelectable":true,
+              "isRoutable":true,
               "msgL":
               [
                 {
                   "type":"REM",
                   "remX":0,
+                  "sty":"I",
                   "dspl":"U",
+                  "tagL":
+                  [
+                    "RES_LOC_WEB","RES_LOC_FLY_WEB"
+                  ],
                   "sort":818413568
                 }
-              ]
+              ],
+              "mapDtlCntStyX":-1
             },
             {
-              "lid":"A=4@O=Babenberger Passage, 1010 Wien (Essen und Trinken)@X=16363837@Y=48203908@U=130@L=960167075@B=1@p=1642554850@",
+              "lid":"A=4@O=Babenberger Passage, 1010 Wien (Essen und Trinken)@X=16363837@Y=48203908@U=130@L=960167075@B=1@p=1645318911@",
               "type":"P",
               "name":"Babenberger Passage, 1010 Wien (Essen und Trinken)",
+              "nameFormatted":
+              {
+                "text":"Babenberger Passage, 1010 Wien (Essen und Trinken)",
+                "textInstructionIntervalL":
+                [
+                  {
+                    "startIndex":19,
+                    "endIndex":50,
+                    "textInstructionX":0
+                  }
+                ]
+              },
               "icoX":2,
               "extId":"960167075",
               "state":"F",
@@ -178,8 +231,7 @@
               {
                 "x":16363837,
                 "y":48203908,
-                "layerX":0,
-                "crdSysX":0
+                "floor":0
               },
               "mcpData":
               {
@@ -188,21 +240,40 @@
                 "mcpid":"0",
                 "externalId":"oeamtc_to-10_841a0cd1202df3fd96461adc09a8ebca"
               },
-              "mapSelectable":true,
+              "isSelectable":true,
+              "isRoutable":true,
               "msgL":
               [
                 {
                   "type":"REM",
                   "remX":1,
+                  "sty":"I",
                   "dspl":"U",
+                  "tagL":
+                  [
+                    "RES_LOC_WEB","RES_LOC_FLY_WEB"
+                  ],
                   "sort":818413568
                 }
-              ]
+              ],
+              "mapDtlCntStyX":-1
             },
             {
-              "lid":"A=4@O=Babenberger-Ruine, 3571 Gars am Kamp (Sehenswürdigkeit)@X=15653006@Y=48594076@U=130@L=960075592@B=1@p=1642554850@",
+              "lid":"A=4@O=Babenberger-Ruine, 3571 Gars am Kamp (Sehenswürdigkeit)@X=15653006@Y=48594076@U=130@L=960075592@B=1@p=1645318911@",
               "type":"P",
               "name":"Babenberger-Ruine, 3571 Gars am Kamp (Sehenswürdigkeit)",
+              "nameFormatted":
+              {
+                "text":"Babenberger-Ruine, 3571 Gars am Kamp (Sehenswürdigkeit)",
+                "textInstructionIntervalL":
+                [
+                  {
+                    "startIndex":17,
+                    "endIndex":55,
+                    "textInstructionX":0
+                  }
+                ]
+              },
               "icoX":3,
               "extId":"960075592",
               "state":"F",
@@ -210,8 +281,7 @@
               {
                 "x":15653006,
                 "y":48594076,
-                "layerX":0,
-                "crdSysX":0
+                "floor":0
               },
               "mcpData":
               {
@@ -220,16 +290,23 @@
                 "mcpid":"0",
                 "externalId":"oeamtc_tf-608825641"
               },
-              "mapSelectable":true,
+              "isSelectable":true,
+              "isRoutable":true,
               "msgL":
               [
                 {
                   "type":"REM",
                   "remX":2,
+                  "sty":"I",
                   "dspl":"U",
+                  "tagL":
+                  [
+                    "RES_LOC_WEB","RES_LOC_FLY_WEB"
+                  ],
                   "sort":818413568
                 }
-              ]
+              ],
+              "mapDtlCntStyX":-1
             }
           ]
         }

@@ -1,14 +1,30 @@
 {
-  "ver":"1.18",
+  "ver":"1.52",
   "ext":"VAO.6",
   "lang":"deu",
-  "id":"z72xkkui66iigg4s",
+  "id":"35m4pime2k8cxk8x",
   "err":"OK",
   "cInfo":
   {
     "code":"OK",
     "url":"",
     "msg":""
+  },
+  "graph":
+  {
+    "id":"standard",
+    "index":0
+  },
+  "subGraph":
+  {
+    "id":"global",
+    "index":0
+  },
+  "view":
+  {
+    "id":"standard",
+    "index":0,
+    "type":"WGS84"
   },
   "svcResL":
   [
@@ -19,47 +35,28 @@
       {
         "common":
         {
-          "locL":
-          [
-
-          ],
-          "prodL":
-          [
-
-          ],
-          "polyL":
-          [
-
-          ],
-          "layerL":
+          "txtInstL":
           [
             {
-              "id":"standard",
-              "name":"standard",
-              "index":0,
-              "annoCnt":0
-            }
-          ],
-          "crdSysL":
-          [
+              "id":"street",
+              "type":"NONE",
+              "mode":"ADD"
+            },
             {
-              "id":"standard",
-              "index":0,
-              "type":"WGS84"
+              "id":"city",
+              "type":"NONE",
+              "mode":"ADD"
+            },
+            {
+              "id":"housenumber",
+              "type":"NONE",
+              "mode":"ADD"
             }
-          ],
-          "opL":
-          [
-
-          ],
-          "remL":
-          [
-
           ],
           "icoL":
           [
             {
-              "res":"ADR"
+              "res":"loc_addr"
             }
           ]
         },
@@ -70,78 +67,170 @@
           "locL":
           [
             {
-              "lid":"A=2@O=Weitmoserstraße, 5020 Salzburg@X=13049461@Y=47809623@U=103@b=980129059@B=1@p=1637147511@",
+              "lid":"A=2@O=Weitmoserstraße, 5020 Salzburg@X=13049461@Y=47809623@U=103@b=980129293@B=1@p=1644831106@",
               "type":"A",
               "name":"Weitmoserstraße, 5020 Salzburg",
+              "nameFormatted":
+              {
+                "text":"Weitmoserstraße, 5020 Salzburg",
+                "textInstructionIntervalL":
+                [
+                  {
+                    "startIndex":0,
+                    "endIndex":15,
+                    "textInstructionX":0
+                  },
+                  {
+                    "startIndex":15,
+                    "endIndex":30,
+                    "textInstructionX":1
+                  }
+                ]
+              },
               "icoX":0,
               "state":"F",
               "crd":
               {
                 "x":13049461,
-                "y":47809623,
-                "layerX":0,
-                "crdSysX":0
-              }
+                "y":47809623
+              },
+              "mapDtlCntStyX":-1
             },
             {
-              "lid":"A=2@O=Moserstraße, 5020 Salzburg@X=13014915@Y=47803511@U=103@b=980081602@B=1@p=1637147511@",
+              "lid":"A=2@O=Moserstraße, 5020 Salzburg@X=13014915@Y=47803511@U=103@b=980081760@B=1@p=1644831106@",
               "type":"A",
               "name":"Moserstraße, 5020 Salzburg",
+              "nameFormatted":
+              {
+                "text":"Moserstraße, 5020 Salzburg",
+                "textInstructionIntervalL":
+                [
+                  {
+                    "startIndex":0,
+                    "endIndex":11,
+                    "textInstructionX":0
+                  },
+                  {
+                    "startIndex":11,
+                    "endIndex":26,
+                    "textInstructionX":1
+                  }
+                ]
+              },
               "icoX":0,
               "state":"F",
               "crd":
               {
                 "x":13014915,
-                "y":47803511,
-                "layerX":0,
-                "crdSysX":0
-              }
+                "y":47803511
+              },
+              "mapDtlCntStyX":-1
             },
             {
-              "lid":"A=2@O=Weiserstraße, 5020 Salzburg@X=13045820@Y=47810361@U=103@b=980128977@B=1@p=1637147511@",
+              "lid":"A=2@O=Weiserstraße, 5020 Salzburg@X=13045487@Y=47809740@U=103@b=980129212@B=1@p=1644831106@",
               "type":"A",
               "name":"Weiserstraße, 5020 Salzburg",
+              "nameFormatted":
+              {
+                "text":"Weiserstraße, 5020 Salzburg",
+                "textInstructionIntervalL":
+                [
+                  {
+                    "startIndex":0,
+                    "endIndex":12,
+                    "textInstructionX":0
+                  },
+                  {
+                    "startIndex":12,
+                    "endIndex":27,
+                    "textInstructionX":1
+                  }
+                ]
+              },
               "icoX":0,
               "state":"F",
               "crd":
               {
-                "x":13045820,
-                "y":47810361,
-                "layerX":0,
-                "crdSysX":0
-              }
+                "x":13045487,
+                "y":47809740
+              },
+              "mapDtlCntStyX":-1
             },
             {
-              "lid":"A=2@O=Vogelweiderstraße 1, 5020 Salzburg@H=1@X=13055268@Y=47806954@U=103@L=980124852@B=1@p=1637147511@",
+              "lid":"A=2@O=Vogelweiderstraße 1, 5020 Salzburg@H=1@X=13055268@Y=47806954@U=103@L=980125075@B=1@p=1644831106@",
               "type":"A",
               "name":"Vogelweiderstraße 1, 5020 Salzburg",
+              "nameFormatted":
+              {
+                "text":"Vogelweiderstraße 1, 5020 Salzburg",
+                "textInstructionIntervalL":
+                [
+                  {
+                    "startIndex":0,
+                    "endIndex":17,
+                    "textInstructionX":0
+                  },
+                  {
+                    "startIndex":19,
+                    "endIndex":34,
+                    "textInstructionX":1
+                  },
+                  {
+                    "startIndex":17,
+                    "endIndex":19,
+                    "textInstructionX":2
+                  }
+                ]
+              },
               "icoX":0,
-              "extId":"980124852",
+              "extId":"980125075",
               "state":"F",
               "crd":
               {
                 "x":13055268,
-                "y":47806954,
-                "layerX":0,
-                "crdSysX":0
+                "y":47806954
               },
-              "mapSelectable":true
+              "isSelectable":true,
+              "isRoutable":true,
+              "mapDtlCntStyX":-1
             },
             {
-              "lid":"A=2@O=Weizensteinerstraße 2, 5020 Salzburg@H=2@X=13027051@Y=47793326@U=103@L=980129104@B=1@p=1637147511@",
+              "lid":"A=2@O=Weizensteinerstraße 2, 5020 Salzburg@H=2@X=13027051@Y=47793326@U=103@L=980129338@B=1@p=1644831106@",
               "type":"A",
               "name":"Weizensteinerstraße 2, 5020 Salzburg",
+              "nameFormatted":
+              {
+                "text":"Weizensteinerstraße 2, 5020 Salzburg",
+                "textInstructionIntervalL":
+                [
+                  {
+                    "startIndex":0,
+                    "endIndex":19,
+                    "textInstructionX":0
+                  },
+                  {
+                    "startIndex":21,
+                    "endIndex":36,
+                    "textInstructionX":1
+                  },
+                  {
+                    "startIndex":19,
+                    "endIndex":21,
+                    "textInstructionX":2
+                  }
+                ]
+              },
               "icoX":0,
-              "extId":"980129104",
+              "extId":"980129338",
               "state":"F",
               "crd":
               {
                 "x":13027051,
-                "y":47793326,
-                "layerX":0,
-                "crdSysX":0
+                "y":47793326
               },
-              "mapSelectable":true
+              "isSelectable":true,
+              "isRoutable":true,
+              "mapDtlCntStyX":-1
             }
           ]
         }

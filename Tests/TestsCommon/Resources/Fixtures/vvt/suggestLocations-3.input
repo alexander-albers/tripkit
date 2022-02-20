@@ -1,14 +1,30 @@
 {
-  "ver":"1.18",
+  "ver":"1.52",
   "ext":"VAO.6",
   "lang":"deu",
-  "id":"6gkqbmgkmqcj82cs",
+  "id":"zmgcbimewkx9gkwg",
   "err":"OK",
   "cInfo":
   {
     "code":"OK",
     "url":"",
     "msg":""
+  },
+  "graph":
+  {
+    "id":"standard",
+    "index":0
+  },
+  "subGraph":
+  {
+    "id":"global",
+    "index":0
+  },
+  "view":
+  {
+    "id":"standard",
+    "index":0,
+    "type":"WGS84"
   },
   "svcResL":
   [
@@ -19,39 +35,6 @@
       {
         "common":
         {
-          "locL":
-          [
-
-          ],
-          "prodL":
-          [
-
-          ],
-          "polyL":
-          [
-
-          ],
-          "layerL":
-          [
-            {
-              "id":"standard",
-              "name":"standard",
-              "index":0,
-              "annoCnt":0
-            }
-          ],
-          "crdSysL":
-          [
-            {
-              "id":"standard",
-              "index":0,
-              "type":"WGS84"
-            }
-          ],
-          "opL":
-          [
-
-          ],
           "remL":
           [
             {
@@ -67,10 +50,28 @@
               "url":"https://routenplaner.verkehrsauskunft.at/bin/query.exe/dn?tpl=webview_poi&performLocating=128&look_station=960145062&look_nv=get_infotext|yes|get_attributes|yes&look_stationpool=130&L=vs_vvt"
             }
           ],
+          "txtInstL":
+          [
+            {
+              "id":"street",
+              "type":"NONE",
+              "mode":"ADD"
+            },
+            {
+              "id":"city",
+              "type":"NONE",
+              "mode":"ADD"
+            },
+            {
+              "id":"housenumber",
+              "type":"NONE",
+              "mode":"ADD"
+            }
+          ],
           "icoL":
           [
             {
-              "res":"ADR"
+              "res":"loc_addr"
             },
             {
               "res":"prod_tram",
@@ -86,10 +87,12 @@
                 "r":160,
                 "g":7,
                 "b":45
-              }
+              },
+              "zIdx":1000
             },
             {
-              "res":"PCAT_E_TANKEN"
+              "res":"PCAT_E_TANKEN",
+              "zIdx":900
             }
           ]
         },
@@ -100,41 +103,89 @@
           "locL":
           [
             {
-              "lid":"A=2@O=Museumstraße 10 Hauptgebäude, 6020 Innsbruck@H=10 Hauptgebäude@X=11395931@Y=47267062@U=103@L=980082095@B=1@p=1641288263@",
+              "lid":"A=2@O=Museumstraße 10 Hauptgebäude, 6020 Innsbruck@H=10 Hauptgebäude@X=11395931@Y=47267062@U=103@L=980082194@B=1@p=1644831106@",
               "type":"A",
               "name":"Museumstraße 10 Hauptgebäude, 6020 Innsbruck",
+              "nameFormatted":
+              {
+                "text":"Museumstraße 10 Hauptgebäude, 6020 Innsbruck",
+                "textInstructionIntervalL":
+                [
+                  {
+                    "startIndex":0,
+                    "endIndex":12,
+                    "textInstructionX":0
+                  },
+                  {
+                    "startIndex":28,
+                    "endIndex":44,
+                    "textInstructionX":1
+                  },
+                  {
+                    "startIndex":12,
+                    "endIndex":28,
+                    "textInstructionX":2
+                  }
+                ]
+              },
               "icoX":0,
-              "extId":"980082095",
+              "extId":"980082194",
               "state":"F",
               "crd":
               {
                 "x":11395931,
-                "y":47267062,
-                "layerX":0,
-                "crdSysX":0
+                "y":47267062
               },
-              "mapSelectable":true
+              "isSelectable":true,
+              "isRoutable":true,
+              "mapDtlCntStyX":-1
             },
             {
-              "lid":"A=2@O=Museumstraße 10 Stöcklgebäude, 6020 Innsbruck@H=10 Stöcklgebäude@X=11395823@Y=47266945@U=103@L=980082095@B=1@p=1641288263@",
+              "lid":"A=2@O=Museumstraße 10 Stöcklgebäude, 6020 Innsbruck@H=10 Stöcklgebäude@X=11395823@Y=47266945@U=103@L=980082194@B=1@p=1644831106@",
               "type":"A",
               "name":"Museumstraße 10 Stöcklgebäude, 6020 Innsbruck",
+              "nameFormatted":
+              {
+                "text":"Museumstraße 10 Stöcklgebäude, 6020 Innsbruck",
+                "textInstructionIntervalL":
+                [
+                  {
+                    "startIndex":0,
+                    "endIndex":12,
+                    "textInstructionX":0
+                  },
+                  {
+                    "startIndex":29,
+                    "endIndex":45,
+                    "textInstructionX":1
+                  },
+                  {
+                    "startIndex":12,
+                    "endIndex":29,
+                    "textInstructionX":2
+                  }
+                ]
+              },
               "icoX":0,
-              "extId":"980082095",
+              "extId":"980082194",
               "state":"F",
               "crd":
               {
                 "x":11395823,
-                "y":47266945,
-                "layerX":0,
-                "crdSysX":0
+                "y":47266945
               },
-              "mapSelectable":true
+              "isSelectable":true,
+              "isRoutable":true,
+              "mapDtlCntStyX":-1
             },
             {
-              "lid":"A=1@O=Innsbruck Museumstraße@X=11395383@Y=47267268@U=81@L=476155800@B=1@p=1641516241@i=at:47:61558@",
+              "lid":"A=1@O=Innsbruck Museumstraße@X=11395383@Y=47267268@U=81@L=476155800@B=1@p=1645315177@i=A×at:47:61558@",
               "type":"S",
               "name":"Innsbruck Museumstraße",
+              "nameFormatted":
+              {
+                "text":"Innsbruck Museumstraße"
+              },
               "icoX":1,
               "extId":"476155800",
               "state":"F",
@@ -142,19 +193,41 @@
               {
                 "x":11395383,
                 "y":47267268,
-                "layerX":0,
-                "crdSysX":0
+                "floor":0
               },
               "meta":true,
               "pCls":208,
-              "wt":2403,
+              "wt":2306,
               "isMainMast":true,
-              "mapSelectable":true
+              "isSelectable":true,
+              "isRoutable":true,
+              "globalIdL":
+              [
+                {
+                  "id":"at:47:61558",
+                  "type":"A"
+                }
+              ],
+              "TZOffset":60,
+              "chgTime":"000000",
+              "mapDtlCntStyX":-1
             },
             {
-              "lid":"A=4@O=IKB_Sillpark-Tiefgarage_1 Museumstraße 38, 6020 Innsbruck@X=11404561@Y=47266073@U=130@L=960145061@B=1@p=1641520250@",
+              "lid":"A=4@O=IKB_Sillpark-Tiefgarage_1 Museumstraße 38, 6020 Innsbruck@X=11404561@Y=47266073@U=130@L=960145061@B=1@p=1645318911@",
               "type":"P",
               "name":"IKB_Sillpark-Tiefgarage_1 Museumstraße 38, 6020 Innsbruck",
+              "nameFormatted":
+              {
+                "text":"IKB_Sillpark-Tiefgarage_1 Museumstraße 38, 6020 Innsbruck",
+                "textInstructionIntervalL":
+                [
+                  {
+                    "startIndex":41,
+                    "endIndex":57,
+                    "textInstructionX":1
+                  }
+                ]
+              },
               "icoX":2,
               "extId":"960145061",
               "state":"F",
@@ -162,8 +235,7 @@
               {
                 "x":11404561,
                 "y":47266073,
-                "layerX":0,
-                "crdSysX":0
+                "floor":0
               },
               "mcpData":
               {
@@ -172,21 +244,40 @@
                 "mcpid":"0",
                 "externalId":"IKB_Sillpark-Tiefgarage_1_E0000069"
               },
-              "mapSelectable":true,
+              "isSelectable":true,
+              "isRoutable":true,
               "msgL":
               [
                 {
                   "type":"REM",
                   "remX":0,
+                  "sty":"I",
                   "dspl":"U",
+                  "tagL":
+                  [
+                    "RES_LOC_WEB","RES_LOC_FLY_WEB"
+                  ],
                   "sort":818413568
                 }
-              ]
+              ],
+              "mapDtlCntStyX":-1
             },
             {
-              "lid":"A=4@O=IKB_Sillpark-Tiefgarage_2 Museumstraße 38, 6020 Innsbruck@X=11404300@Y=47266100@U=130@L=960145062@B=1@p=1641520250@",
+              "lid":"A=4@O=IKB_Sillpark-Tiefgarage_2 Museumstraße 38, 6020 Innsbruck@X=11404300@Y=47266100@U=130@L=960145062@B=1@p=1645318911@",
               "type":"P",
               "name":"IKB_Sillpark-Tiefgarage_2 Museumstraße 38, 6020 Innsbruck",
+              "nameFormatted":
+              {
+                "text":"IKB_Sillpark-Tiefgarage_2 Museumstraße 38, 6020 Innsbruck",
+                "textInstructionIntervalL":
+                [
+                  {
+                    "startIndex":41,
+                    "endIndex":57,
+                    "textInstructionX":1
+                  }
+                ]
+              },
               "icoX":2,
               "extId":"960145062",
               "state":"F",
@@ -194,8 +285,7 @@
               {
                 "x":11404300,
                 "y":47266100,
-                "layerX":0,
-                "crdSysX":0
+                "floor":0
               },
               "mcpData":
               {
@@ -204,16 +294,23 @@
                 "mcpid":"0",
                 "externalId":"IKB_Sillpark-Tiefgarage_2_E0000070"
               },
-              "mapSelectable":true,
+              "isSelectable":true,
+              "isRoutable":true,
               "msgL":
               [
                 {
                   "type":"REM",
                   "remX":1,
+                  "sty":"I",
                   "dspl":"U",
+                  "tagL":
+                  [
+                    "RES_LOC_WEB","RES_LOC_FLY_WEB"
+                  ],
                   "sort":818413568
                 }
-              ]
+              ],
+              "mapDtlCntStyX":-1
             }
           ]
         }

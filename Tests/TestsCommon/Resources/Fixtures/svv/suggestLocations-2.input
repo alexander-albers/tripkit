@@ -1,14 +1,30 @@
 {
-  "ver":"1.18",
+  "ver":"1.52",
   "ext":"VAO.6",
   "lang":"deu",
-  "id":"z728kkex66iqhick",
+  "id":"4p4wbimewk8cx4wx",
   "err":"OK",
   "cInfo":
   {
     "code":"OK",
     "url":"",
     "msg":""
+  },
+  "graph":
+  {
+    "id":"standard",
+    "index":0
+  },
+  "subGraph":
+  {
+    "id":"global",
+    "index":0
+  },
+  "view":
+  {
+    "id":"standard",
+    "index":0,
+    "type":"WGS84"
   },
   "svcResL":
   [
@@ -19,52 +35,27 @@
       {
         "common":
         {
-          "locL":
-          [
-
-          ],
-          "prodL":
-          [
-
-          ],
-          "polyL":
-          [
-
-          ],
-          "layerL":
-          [
-            {
-              "id":"standard",
-              "name":"standard",
-              "index":0,
-              "annoCnt":0
-            }
-          ],
-          "crdSysL":
-          [
-            {
-              "id":"standard",
-              "index":0,
-              "type":"WGS84"
-            }
-          ],
-          "opL":
-          [
-
-          ],
           "remL":
           [
             {
               "type":"W",
               "code":"WW",
               "txtN":"WEBVIEW",
-              "url":"https://app.verkehrsauskunft.at/bin/query.exe/dn?tpl=webview_poi&performLocating=128&look_station=960075453&look_nv=get_infotext|yes|get_attributes|yes&look_stationpool=130&L=vs_svv"
+              "url":"https://routenplaner.verkehrsauskunft.at/bin/query.exe/dn?tpl=webview_poi&performLocating=128&look_station=960075453&look_nv=get_infotext|yes|get_attributes|yes&look_stationpool=130&L=vs_svv"
+            }
+          ],
+          "txtInstL":
+          [
+            {
+              "id":"city",
+              "type":"NONE",
+              "mode":"ADD"
             }
           ],
           "icoL":
           [
             {
-              "res":"prod_ic_bus",
+              "res":"prod_regbus",
               "txtS":"120",
               "fg":
               {
@@ -77,7 +68,8 @@
                 "r":120,
                 "g":0,
                 "b":140
-              }
+              },
+              "zIdx":1000
             },
             {
               "res":"prod_bus",
@@ -90,13 +82,14 @@
               },
               "bg":
               {
-                "r":120,
+                "r":229,
                 "g":0,
-                "b":140
-              }
+                "b":81
+              },
+              "zIdx":1000
             },
             {
-              "res":"prod_ic_bus",
+              "res":"prod_regbus",
               "txtS":"470",
               "fg":
               {
@@ -109,10 +102,11 @@
                 "r":120,
                 "g":0,
                 "b":140
-              }
+              },
+              "zIdx":1000
             },
             {
-              "res":"prod_ic_bus",
+              "res":"prod_regbus",
               "txtS":"8",
               "fg":
               {
@@ -125,10 +119,12 @@
                 "r":120,
                 "g":0,
                 "b":140
-              }
+              },
+              "zIdx":1000
             },
             {
-              "res":"PCAT_SEHENWUERDIGKEIT"
+              "res":"PCAT_SEHENWUERDIGKEIT",
+              "zIdx":900
             }
           ]
         },
@@ -139,9 +135,13 @@
           "locL":
           [
             {
-              "lid":"A=1@O=Salzburg Justizgebäude@X=13053632@Y=47797110@U=81@L=455002100@B=1@p=1638666385@i=at:45:50021@",
+              "lid":"A=1@O=Salzburg Justizgebäude@X=13053632@Y=47797110@U=81@L=455002100@B=1@p=1645315177@i=A×at:45:50021@",
               "type":"S",
               "name":"Salzburg Justizgebäude",
+              "nameFormatted":
+              {
+                "text":"Salzburg Justizgebäude"
+              },
               "icoX":0,
               "extId":"455002100",
               "state":"F",
@@ -149,19 +149,33 @@
               {
                 "x":13053632,
                 "y":47797110,
-                "layerX":0,
-                "crdSysX":0
+                "floor":0
               },
               "meta":true,
               "pCls":1216,
-              "wt":309,
+              "wt":226,
               "isMainMast":true,
-              "mapSelectable":true
+              "isSelectable":true,
+              "isRoutable":true,
+              "globalIdL":
+              [
+                {
+                  "id":"at:45:50021",
+                  "type":"A"
+                }
+              ],
+              "TZOffset":60,
+              "chgTime":"000000",
+              "mapDtlCntStyX":-1
             },
             {
-              "lid":"A=1@O=Wien Schloss Neugebäude@X=16447869@Y=48161021@U=81@L=490200600@B=1@p=1638666385@i=at:49:2006@",
+              "lid":"A=1@O=Wien Schloss Neugebäude@X=16447869@Y=48161021@U=81@L=490200600@B=1@p=1645315177@i=A×at:49:2006@",
               "type":"S",
               "name":"Wien Schloss Neugebäude",
+              "nameFormatted":
+              {
+                "text":"Wien Schloss Neugebäude"
+              },
               "icoX":1,
               "extId":"490200600",
               "state":"F",
@@ -169,19 +183,33 @@
               {
                 "x":16447869,
                 "y":48161021,
-                "layerX":0,
-                "crdSysX":0
+                "floor":0
               },
               "meta":true,
               "pCls":2176,
-              "wt":200,
+              "wt":197,
               "isMainMast":true,
-              "mapSelectable":true
+              "isSelectable":true,
+              "isRoutable":true,
+              "globalIdL":
+              [
+                {
+                  "id":"at:49:2006",
+                  "type":"A"
+                }
+              ],
+              "TZOffset":60,
+              "chgTime":"000000",
+              "mapDtlCntStyX":-1
             },
             {
-              "lid":"A=1@O=St. Pölten Neugebäudeplatz@X=15630731@Y=48204717@U=81@L=431240000@B=1@p=1638666385@i=at:43:12400@",
+              "lid":"A=1@O=St. Pölten Neugebäudeplatz@X=15630731@Y=48204717@U=81@L=431240000@B=1@p=1645315177@i=A×at:43:12400@",
               "type":"S",
               "name":"St. Pölten Neugebäudeplatz",
+              "nameFormatted":
+              {
+                "text":"St. Pölten Neugebäudeplatz"
+              },
               "icoX":2,
               "extId":"431240000",
               "state":"F",
@@ -189,19 +217,33 @@
               {
                 "x":15630731,
                 "y":48204717,
-                "layerX":0,
-                "crdSysX":0
+                "floor":0
               },
               "meta":true,
               "pCls":192,
-              "wt":219,
+              "wt":216,
               "isMainMast":true,
-              "mapSelectable":true
+              "isSelectable":true,
+              "isRoutable":true,
+              "globalIdL":
+              [
+                {
+                  "id":"at:43:12400",
+                  "type":"A"
+                }
+              ],
+              "TZOffset":60,
+              "chgTime":"000000",
+              "mapDtlCntStyX":-1
             },
             {
-              "lid":"A=1@O=Steyr Amtsgebäude Reithoffer@X=14412010@Y=48030812@U=81@L=444719500@B=1@p=1638666385@i=at:44:47195@",
+              "lid":"A=1@O=Steyr Amtsgebäude Reithoffer@X=14412010@Y=48030812@U=81@L=444719500@B=1@p=1645315177@i=A×at:44:47195@",
               "type":"S",
               "name":"Steyr Amtsgebäude Reithoffer",
+              "nameFormatted":
+              {
+                "text":"Steyr Amtsgebäude Reithoffer"
+              },
               "icoX":3,
               "extId":"444719500",
               "state":"F",
@@ -209,19 +251,41 @@
               {
                 "x":14412010,
                 "y":48030812,
-                "layerX":0,
-                "crdSysX":0
+                "floor":0
               },
               "meta":true,
               "pCls":64,
               "wt":10,
               "isMainMast":true,
-              "mapSelectable":true
+              "isSelectable":true,
+              "isRoutable":true,
+              "globalIdL":
+              [
+                {
+                  "id":"at:44:47195",
+                  "type":"A"
+                }
+              ],
+              "TZOffset":60,
+              "chgTime":"000000",
+              "mapDtlCntStyX":-1
             },
             {
-              "lid":"A=4@O=Neues Institutsgebäude, 1090 Wien (Sehenswürdigkeit)@X=16357698@Y=48214264@U=130@L=960075453@B=1@p=1638671434@",
+              "lid":"A=4@O=Neues Institutsgebäude, 1090 Wien (Sehenswürdigkeit)@X=16357698@Y=48214264@U=130@L=960075453@B=1@p=1645318911@",
               "type":"P",
               "name":"Neues Institutsgebäude, 1090 Wien (Sehenswürdigkeit)",
+              "nameFormatted":
+              {
+                "text":"Neues Institutsgebäude, 1090 Wien (Sehenswürdigkeit)",
+                "textInstructionIntervalL":
+                [
+                  {
+                    "startIndex":22,
+                    "endIndex":52,
+                    "textInstructionX":0
+                  }
+                ]
+              },
               "icoX":4,
               "extId":"960075453",
               "state":"F",
@@ -229,8 +293,7 @@
               {
                 "x":16357698,
                 "y":48214264,
-                "layerX":0,
-                "crdSysX":0
+                "floor":0
               },
               "mcpData":
               {
@@ -239,16 +302,23 @@
                 "mcpid":"0",
                 "externalId":"oeamtc_tf-608780719"
               },
-              "mapSelectable":true,
+              "isSelectable":true,
+              "isRoutable":true,
               "msgL":
               [
                 {
                   "type":"REM",
                   "remX":0,
+                  "sty":"I",
                   "dspl":"U",
+                  "tagL":
+                  [
+                    "RES_LOC_WEB","RES_LOC_FLY_WEB"
+                  ],
                   "sort":818413568
                 }
-              ]
+              ],
+              "mapDtlCntStyX":-1
             }
           ]
         }

@@ -1,14 +1,30 @@
 {
-  "ver":"1.18",
+  "ver":"1.52",
   "ext":"VAO.9",
   "lang":"deu",
-  "id":"46gg6ggu68kn82ck",
+  "id":"j3ws9i6mwk8yw6wx",
   "err":"OK",
   "cInfo":
   {
     "code":"OK",
     "url":"",
     "msg":""
+  },
+  "graph":
+  {
+    "id":"standard",
+    "index":0
+  },
+  "subGraph":
+  {
+    "id":"global",
+    "index":0
+  },
+  "view":
+  {
+    "id":"standard",
+    "index":0,
+    "type":"WGS84"
   },
   "svcResL":
   [
@@ -19,43 +35,6 @@
       {
         "common":
         {
-          "locL":
-          [
-
-          ],
-          "prodL":
-          [
-
-          ],
-          "polyL":
-          [
-
-          ],
-          "layerL":
-          [
-            {
-              "id":"standard",
-              "name":"standard",
-              "index":0,
-              "annoCnt":0
-            }
-          ],
-          "crdSysL":
-          [
-            {
-              "id":"standard",
-              "index":0,
-              "type":"WGS84"
-            }
-          ],
-          "opL":
-          [
-
-          ],
-          "remL":
-          [
-
-          ],
           "icoL":
           [
             {
@@ -71,7 +50,8 @@
                 "r":0,
                 "g":0,
                 "b":0
-              }
+              },
+              "zIdx":1000
             },
             {
               "res":"prod_regbus",
@@ -87,11 +67,11 @@
                 "r":0,
                 "g":109,
                 "b":43
-              }
+              },
+              "zIdx":1000
             },
             {
-              "res":"prod_bus",
-              "txtS":"2",
+              "res":"prod_sev",
               "fg":
               {
                 "r":255,
@@ -101,9 +81,10 @@
               "bg":
               {
                 "r":0,
-                "g":109,
-                "b":43
-              }
+                "g":121,
+                "b":58
+              },
+              "zIdx":1000
             }
           ]
         },
@@ -114,9 +95,13 @@
           "locL":
           [
             {
-              "lid":"A=1@O=Villach Hbf@X=13848575@Y=46618238@U=81@L=420365400@B=1@p=1641516241@i=at:42:3654@",
+              "lid":"A=1@O=Villach Hbf@X=13848575@Y=46618238@U=81@L=420365400@B=1@p=1645315177@i=A×at:42:3654@",
               "type":"S",
               "name":"Villach Hbf",
+              "nameFormatted":
+              {
+                "text":"Villach Hbf"
+              },
               "icoX":0,
               "extId":"420365400",
               "state":"F",
@@ -124,19 +109,33 @@
               {
                 "x":13848575,
                 "y":46618238,
-                "layerX":0,
-                "crdSysX":0
+                "floor":0
               },
               "meta":true,
               "pCls":99,
-              "wt":9400,
+              "wt":9351,
               "isMainMast":true,
-              "mapSelectable":true
+              "isSelectable":true,
+              "isRoutable":true,
+              "globalIdL":
+              [
+                {
+                  "id":"at:42:3654",
+                  "type":"A"
+                }
+              ],
+              "TZOffset":60,
+              "chgTime":"000000",
+              "mapDtlCntStyX":-1
             },
             {
-              "lid":"A=1@O=Klagenfurt Hbf@X=14313137@Y=46616207@U=81@L=420364200@B=1@p=1641516241@i=at:42:3642@",
+              "lid":"A=1@O=Klagenfurt Hbf@X=14313137@Y=46616207@U=81@L=420364200@B=1@p=1645315177@i=A×at:42:3642@",
               "type":"S",
               "name":"Klagenfurt Hbf",
+              "nameFormatted":
+              {
+                "text":"Klagenfurt Hbf"
+              },
               "icoX":0,
               "extId":"420364200",
               "state":"F",
@@ -144,19 +143,33 @@
               {
                 "x":14313137,
                 "y":46616207,
-                "layerX":0,
-                "crdSysX":0
+                "floor":0
               },
               "meta":true,
               "pCls":227,
-              "wt":9644,
+              "wt":9560,
               "isMainMast":true,
-              "mapSelectable":true
+              "isSelectable":true,
+              "isRoutable":true,
+              "globalIdL":
+              [
+                {
+                  "id":"at:42:3642",
+                  "type":"A"
+                }
+              ],
+              "TZOffset":60,
+              "chgTime":"000000",
+              "mapDtlCntStyX":-1
             },
             {
-              "lid":"A=1@O=Wien Hauptbahnhof@X=16376413@Y=48185184@U=81@L=490134900@B=1@p=1641516241@i=at:49:1349@",
+              "lid":"A=1@O=Wien Hauptbahnhof@X=16376413@Y=48185184@U=81@L=490134900@B=1@p=1645315177@i=A×at:49:1349@",
               "type":"S",
               "name":"Wien Hauptbahnhof",
+              "nameFormatted":
+              {
+                "text":"Wien Hauptbahnhof"
+              },
               "icoX":0,
               "extId":"490134900",
               "state":"F",
@@ -164,17 +177,33 @@
               {
                 "x":16376413,
                 "y":48185184,
-                "layerX":0,
-                "crdSysX":0
+                "floor":0
               },
+              "meta":true,
               "pCls":2263,
-              "wt":32714,
-              "mapSelectable":true
+              "wt":32689,
+              "isMainMast":true,
+              "isSelectable":true,
+              "isRoutable":true,
+              "globalIdL":
+              [
+                {
+                  "id":"at:49:1349",
+                  "type":"A"
+                }
+              ],
+              "TZOffset":60,
+              "chgTime":"000000",
+              "mapDtlCntStyX":-1
             },
             {
-              "lid":"A=1@O=Villach Hbf (P+R Lind)@X=13845977@Y=46619569@U=81@L=420725200@B=1@p=1641516241@i=at:42:7252@",
+              "lid":"A=1@O=Villach Hbf (P+R Lind)@X=13845977@Y=46619569@U=81@L=420725200@B=1@p=1645315177@i=A×at:42:7252@",
               "type":"S",
               "name":"Villach Hbf (P+R Lind)",
+              "nameFormatted":
+              {
+                "text":"Villach Hbf (P+R Lind)"
+              },
               "icoX":1,
               "extId":"420725200",
               "state":"F",
@@ -182,34 +211,58 @@
               {
                 "x":13845977,
                 "y":46619569,
-                "layerX":0,
-                "crdSysX":0
+                "floor":0
               },
               "meta":true,
               "pCls":64,
-              "wt":31,
+              "wt":30,
               "isMainMast":true,
-              "mapSelectable":true
+              "isSelectable":true,
+              "isRoutable":true,
+              "globalIdL":
+              [
+                {
+                  "id":"at:42:7252",
+                  "type":"A"
+                }
+              ],
+              "TZOffset":60,
+              "chgTime":"000000",
+              "mapDtlCntStyX":-1
             },
             {
-              "lid":"A=1@O=St. Pölten Hbf./Kremser Landstr.@X=15624834@Y=48209293@U=81@L=430496800@B=1@p=1641516241@i=at:43:4968@",
+              "lid":"A=1@O=Wels (OÖ) Hbf (Busterminal)@X=14027487@Y=48165057@U=81@L=444204600@B=1@p=1645315177@i=A×at:44:42046@",
               "type":"S",
-              "name":"St. Pölten Hbf./Kremser Landstr.",
+              "name":"Wels (OÖ) Hbf (Busterminal)",
+              "nameFormatted":
+              {
+                "text":"Wels (OÖ) Hbf (Busterminal)"
+              },
               "icoX":2,
-              "extId":"430496800",
+              "extId":"444204600",
               "state":"F",
               "crd":
               {
-                "x":15624834,
-                "y":48209293,
-                "layerX":0,
-                "crdSysX":0
+                "x":14027487,
+                "y":48165057,
+                "floor":0
               },
               "meta":true,
-              "pCls":128,
-              "wt":195,
+              "pCls":65,
+              "wt":275,
               "isMainMast":true,
-              "mapSelectable":true
+              "isSelectable":true,
+              "isRoutable":true,
+              "globalIdL":
+              [
+                {
+                  "id":"at:44:42046",
+                  "type":"A"
+                }
+              ],
+              "TZOffset":60,
+              "chgTime":"000000",
+              "mapDtlCntStyX":-1
             }
           ]
         }

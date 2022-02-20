@@ -1,14 +1,30 @@
 {
-  "ver":"1.20",
+  "ver":"1.52",
   "ext":"VAO.7",
   "lang":"deu",
-  "id":"8jmk4ia2k846pwcs",
+  "id":"4nwcbi4e2k8p968g",
   "err":"OK",
   "cInfo":
   {
     "code":"OK",
     "url":"",
     "msg":""
+  },
+  "graph":
+  {
+    "id":"standard",
+    "index":0
+  },
+  "subGraph":
+  {
+    "id":"global",
+    "index":0
+  },
+  "view":
+  {
+    "id":"standard",
+    "index":0,
+    "type":"WGS84"
   },
   "svcResL":
   [
@@ -19,42 +35,18 @@
       {
         "common":
         {
-          "locL":
-          [
-
-          ],
-          "prodL":
-          [
-
-          ],
-          "polyL":
-          [
-
-          ],
-          "layerL":
+          "txtInstL":
           [
             {
-              "id":"standard",
-              "name":"standard",
-              "index":0,
-              "annoCnt":511252
-            }
-          ],
-          "crdSysL":
-          [
+              "id":"street",
+              "type":"NONE",
+              "mode":"ADD"
+            },
             {
-              "id":"standard",
-              "index":0,
-              "type":"WGS84"
+              "id":"city",
+              "type":"NONE",
+              "mode":"ADD"
             }
-          ],
-          "opL":
-          [
-
-          ],
-          "remL":
-          [
-
           ],
           "icoL":
           [
@@ -62,7 +54,7 @@
               "res":"MH"
             },
             {
-              "res":"ADR"
+              "res":"loc_addr"
             },
             {
               "res":"prod_regbus",
@@ -78,7 +70,8 @@
                 "r":0,
                 "g":163,
                 "b":212
-              }
+              },
+              "zIdx":1000
             }
           ]
         },
@@ -89,9 +82,13 @@
           "locL":
           [
             {
-              "lid":"A=1@O=KOCHHOLZ@X=15452035@Y=48269637@U=81@L=900003373@B=1@p=1642551485@i=5aae08d1-6162-40f1-94a8-3cac555c0797@",
+              "lid":"A=1@O=KOCHHOLZ@X=15452035@Y=48269637@U=81@L=900003373@B=1@p=1645315177@i=A×5aae08d1-6162-40f1-94a8-3cac555c0797@",
               "type":"S",
               "name":"KOCHHOLZ",
+              "nameFormatted":
+              {
+                "text":"KOCHHOLZ"
+              },
               "icoX":0,
               "extId":"900003373",
               "state":"F",
@@ -99,60 +96,122 @@
               {
                 "x":15452035,
                 "y":48269637,
-                "layerX":0,
-                "crdSysX":0
+                "floor":0
               },
               "meta":true,
               "pCls":64,
               "wt":2,
-              "mapSelectable":true
+              "isSelectable":true,
+              "isRoutable":true,
+              "globalIdL":
+              [
+                {
+                  "id":"5aae08d1-6162-40f1-94a8-3cac555c0797",
+                  "type":"A"
+                }
+              ],
+              "TZOffset":60,
+              "chgTime":"000000",
+              "mapDtlCntStyX":-1
             },
             {
               "lid":"A=2@O=Kochs Damm, Zetel@X=7878443@Y=53385057@U=104@b=971658595@B=1@p=1636631415@",
               "type":"A",
               "name":"Kochs Damm, Zetel",
+              "nameFormatted":
+              {
+                "text":"Kochs Damm, Zetel",
+                "textInstructionIntervalL":
+                [
+                  {
+                    "startIndex":0,
+                    "endIndex":10,
+                    "textInstructionX":0
+                  },
+                  {
+                    "startIndex":10,
+                    "endIndex":17,
+                    "textInstructionX":1
+                  }
+                ]
+              },
               "icoX":1,
               "state":"F",
               "crd":
               {
                 "x":7878443,
-                "y":53385057,
-                "layerX":0,
-                "crdSysX":0
-              }
+                "y":53385057
+              },
+              "mapDtlCntStyX":-1
             },
             {
               "lid":"A=2@O=Kochs, Wiggensbach@X=10236871@Y=47741126@U=104@b=971801681@B=1@p=1636631415@",
               "type":"A",
               "name":"Kochs, Wiggensbach",
+              "nameFormatted":
+              {
+                "text":"Kochs, Wiggensbach",
+                "textInstructionIntervalL":
+                [
+                  {
+                    "startIndex":0,
+                    "endIndex":5,
+                    "textInstructionX":0
+                  },
+                  {
+                    "startIndex":5,
+                    "endIndex":18,
+                    "textInstructionX":1
+                  }
+                ]
+              },
               "icoX":1,
               "state":"F",
               "crd":
               {
                 "x":10236871,
-                "y":47741126,
-                "layerX":0,
-                "crdSysX":0
-              }
+                "y":47741126
+              },
+              "mapDtlCntStyX":-1
             },
             {
               "lid":"A=2@O=Kochs Büsche, Melle@X=8421077@Y=52177563@U=104@b=971498706@B=1@p=1636631415@",
               "type":"A",
               "name":"Kochs Büsche, Melle",
+              "nameFormatted":
+              {
+                "text":"Kochs Büsche, Melle",
+                "textInstructionIntervalL":
+                [
+                  {
+                    "startIndex":0,
+                    "endIndex":12,
+                    "textInstructionX":0
+                  },
+                  {
+                    "startIndex":12,
+                    "endIndex":19,
+                    "textInstructionX":1
+                  }
+                ]
+              },
               "icoX":1,
               "state":"F",
               "crd":
               {
                 "x":8421077,
-                "y":52177563,
-                "layerX":0,
-                "crdSysX":0
-              }
+                "y":52177563
+              },
+              "mapDtlCntStyX":-1
             },
             {
-              "lid":"A=1@O=Innsbruck Kochstraße@X=11400363@Y=47272851@U=81@L=476640200@B=1@p=1642551485@i=at:47:66402@",
+              "lid":"A=1@O=Innsbruck Kochstraße@X=11400363@Y=47272851@U=81@L=476640200@B=1@p=1645315177@i=A×at:47:66402@",
               "type":"S",
               "name":"Innsbruck Kochstraße",
+              "nameFormatted":
+              {
+                "text":"Innsbruck Kochstraße"
+              },
               "icoX":2,
               "extId":"476640200",
               "state":"F",
@@ -160,14 +219,24 @@
               {
                 "x":11400363,
                 "y":47272851,
-                "layerX":0,
-                "crdSysX":0
+                "floor":0
               },
               "meta":true,
               "pCls":192,
-              "wt":215,
+              "wt":216,
               "isMainMast":true,
-              "mapSelectable":true
+              "isSelectable":true,
+              "isRoutable":true,
+              "globalIdL":
+              [
+                {
+                  "id":"at:47:66402",
+                  "type":"A"
+                }
+              ],
+              "TZOffset":60,
+              "chgTime":"000000",
+              "mapDtlCntStyX":-1
             }
           ]
         }

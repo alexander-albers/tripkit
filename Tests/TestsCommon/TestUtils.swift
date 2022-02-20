@@ -58,25 +58,23 @@ public func compareLocationIds(_ expected: String?, _ response: String?) -> Bool
     guard var expected = expected, var response = response else {
         return false
     }
-    expected = expected.replacingOccurrences(of: "p=\\d+@", with: "", options: .regularExpression)
-    expected = expected.replacingOccurrences(of: "u=\\d+@", with: "", options: .regularExpression)
-    expected = expected.replacingOccurrences(of: "U=\\d+@", with: "", options: .regularExpression)
-    expected = expected.replacingOccurrences(of: "H=\\d+@", with: "", options: .regularExpression)
-    expected = expected.replacingOccurrences(of: "B=\\d+@", with: "", options: .regularExpression)
-    expected = expected.replacingOccurrences(of: "X=\\d+@", with: "", options: .regularExpression)
-    expected = expected.replacingOccurrences(of: "Y=\\d+@", with: "", options: .regularExpression)
-    expected = expected.replacingOccurrences(of: "i=\\d+@", with: "", options: .regularExpression)
-    expected = expected.replacingOccurrences(of: "b=\\d+@", with: "", options: .regularExpression)
     
-    response = response.replacingOccurrences(of: "p=\\d+@", with: "", options: .regularExpression)
-    response = response.replacingOccurrences(of: "u=\\d+@", with: "", options: .regularExpression)
-    response = response.replacingOccurrences(of: "U=\\d+@", with: "", options: .regularExpression)
-    response = response.replacingOccurrences(of: "H=\\d+@", with: "", options: .regularExpression)
-    response = response.replacingOccurrences(of: "B=\\d+@", with: "", options: .regularExpression)
-    response = response.replacingOccurrences(of: "X=\\d+@", with: "", options: .regularExpression)
-    response = response.replacingOccurrences(of: "Y=\\d+@", with: "", options: .regularExpression)
-    response = response.replacingOccurrences(of: "i=\\d+@", with: "", options: .regularExpression)
-    response = response.replacingOccurrences(of: "b=\\d+@", with: "", options: .regularExpression)
+    expected = extractLocationId(id: expected)
+    response = extractLocationId(id: response)
     
     return expected == response
+}
+
+
+fileprivate let P_HAFAS_ID = try! NSRegularExpression(pattern: ".*?@(?:L|b)=([^@]+).*@", options: [])
+fileprivate let P_EFA_ID = try! NSRegularExpression(pattern: "streetID:([^:]*:[^:]*:[^:]*:[^:]*):.*", options: [])
+
+func extractLocationId(id: String) -> String {
+    if let matches = id.match(pattern: P_HAFAS_ID), let res = matches[0] {
+        return res
+    } else if let matches = id.match(pattern: P_EFA_ID), let res = matches[0] {
+        return res
+    } else {
+        return id
+    }
 }

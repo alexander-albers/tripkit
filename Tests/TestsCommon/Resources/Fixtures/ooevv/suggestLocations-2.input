@@ -1,12 +1,29 @@
 {
-  "ver":"1.15",
+  "ver":"1.52",
   "lang":"deu",
-  "id":"u4k8mkew66ir8i4s",
+  "id":"xtwcriks2kxsw48g",
+  "err":"OK",
   "cInfo":
   {
     "code":"OK",
     "url":"",
     "msg":""
+  },
+  "graph":
+  {
+    "id":"standard",
+    "index":0
+  },
+  "subGraph":
+  {
+    "id":"global",
+    "index":0
+  },
+  "view":
+  {
+    "id":"standard",
+    "index":0,
+    "type":"WGS84"
   },
   "svcResL":
   [
@@ -17,49 +34,6 @@
       {
         "common":
         {
-          "locL":
-          [
-
-          ],
-          "prodL":
-          [
-
-          ],
-          "polyL":
-          [
-
-          ],
-          "layerL":
-          [
-            {
-              "id":"standard",
-              "name":"standard",
-              "index":0,
-              "annoCnt":0
-            }
-          ],
-          "crdSysL":
-          [
-            {
-              "id":"standard",
-              "index":0,
-              "type":"WGS84",
-              "dim":2
-            }
-          ],
-          "opL":
-          [
-
-          ],
-          "remL":
-          [
-            {
-              "type":"W",
-              "code":"WW",
-              "txtN":"WEBVIEW",
-              "url":"https://app.verkehrsauskunft.at/bin/query.exe/dn?tpl=webview_poi&performLocating=128&look_station=960152321&look_nv=get_infotext|yes|get_attributes|yes&look_stationpool=130&L=vs_ooevv"
-            }
-          ],
           "icoL":
           [
             {
@@ -69,16 +43,15 @@
               {
                 "r":255,
                 "g":255,
-                "b":255,
-                "a":255
+                "b":255
               },
               "bg":
               {
                 "r":27,
                 "g":117,
-                "b":188,
-                "a":255
-              }
+                "b":188
+              },
+              "zIdx":1000
             },
             {
               "res":"prod_tram",
@@ -87,16 +60,15 @@
               {
                 "r":255,
                 "g":255,
-                "b":255,
-                "a":255
+                "b":255
               },
               "bg":
               {
                 "r":237,
                 "g":28,
-                "b":36,
-                "a":255
-              }
+                "b":36
+              },
+              "zIdx":1000
             },
             {
               "res":"prod_tram",
@@ -105,16 +77,15 @@
               {
                 "r":255,
                 "g":255,
-                "b":255,
-                "a":255
+                "b":255
               },
               "bg":
               {
                 "r":237,
                 "g":28,
-                "b":36,
-                "a":255
-              }
+                "b":36
+              },
+              "zIdx":1000
             },
             {
               "res":"prod_bus",
@@ -123,19 +94,32 @@
               {
                 "r":255,
                 "g":255,
-                "b":255,
-                "a":255
+                "b":255
               },
               "bg":
               {
                 "r":0,
                 "g":121,
-                "b":58,
-                "a":255
-              }
+                "b":58
+              },
+              "zIdx":1000
             },
             {
-              "res":"PCAT_E_TANKEN"
+              "res":"prod_bus",
+              "txtS":"59A",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255
+              },
+              "bg":
+              {
+                "r":0,
+                "g":121,
+                "b":58
+              },
+              "zIdx":1000
             }
           ]
         },
@@ -146,9 +130,13 @@
           "locL":
           [
             {
-              "lid":"A=1@O=Wien Schönbrunn@X=16319476@Y=48185903@U=81@L=490121100@B=1@p=1638666385@i=at:49:1211@",
+              "lid":"A=1@O=Wien Schönbrunn@X=16319476@Y=48185903@U=81@L=490121100@B=1@p=1645315177@i=A×at:49:1211@",
               "type":"S",
               "name":"Wien Schönbrunn",
+              "nameFormatted":
+              {
+                "text":"Wien Schönbrunn"
+              },
               "icoX":0,
               "extId":"490121100",
               "state":"F",
@@ -156,19 +144,33 @@
               {
                 "x":16319476,
                 "y":48185903,
-                "type":"WGS84",
-                "layerX":0,
-                "crdSysX":0
+                "floor":0
               },
               "meta":true,
               "pCls":2180,
-              "wt":9905,
-              "isMainMast":true
+              "wt":10036,
+              "isMainMast":true,
+              "isSelectable":true,
+              "isRoutable":true,
+              "globalIdL":
+              [
+                {
+                  "id":"at:49:1211",
+                  "type":"A"
+                }
+              ],
+              "TZOffset":60,
+              "chgTime":"000000",
+              "mapDtlCntStyX":-1
             },
             {
-              "lid":"A=1@O=Wien Schloss Schönbrunn@X=16313237@Y=48188123@U=81@L=490117600@B=1@p=1638666385@i=at:49:1176@",
+              "lid":"A=1@O=Wien Schloss Schönbrunn@X=16313237@Y=48188123@U=81@L=490117600@B=1@p=1645315177@i=A×at:49:1176@",
               "type":"S",
               "name":"Wien Schloss Schönbrunn",
+              "nameFormatted":
+              {
+                "text":"Wien Schloss Schönbrunn"
+              },
               "icoX":1,
               "extId":"490117600",
               "state":"F",
@@ -176,19 +178,33 @@
               {
                 "x":16313237,
                 "y":48188123,
-                "type":"WGS84",
-                "layerX":0,
-                "crdSysX":0
+                "floor":0
               },
               "meta":true,
               "pCls":2192,
-              "wt":2484,
-              "isMainMast":true
+              "wt":2310,
+              "isMainMast":true,
+              "isSelectable":true,
+              "isRoutable":true,
+              "globalIdL":
+              [
+                {
+                  "id":"at:49:1176",
+                  "type":"A"
+                }
+              ],
+              "TZOffset":60,
+              "chgTime":"000000",
+              "mapDtlCntStyX":-1
             },
             {
-              "lid":"A=1@O=Wien Schönbrunner Allee@X=16325157@Y=48135977@U=81@L=490075900@B=1@p=1638666385@i=at:49:759@",
+              "lid":"A=1@O=Wien Schönbrunner Allee@X=16325157@Y=48135977@U=81@L=490075900@B=1@p=1645315177@i=A×at:49:759@",
               "type":"S",
               "name":"Wien Schönbrunner Allee",
+              "nameFormatted":
+              {
+                "text":"Wien Schönbrunner Allee"
+              },
               "icoX":2,
               "extId":"490075900",
               "state":"F",
@@ -196,19 +212,33 @@
               {
                 "x":16325157,
                 "y":48135977,
-                "type":"WGS84",
-                "layerX":0,
-                "crdSysX":0
+                "floor":0
               },
               "meta":true,
               "pCls":16,
-              "wt":717,
-              "isMainMast":true
+              "wt":748,
+              "isMainMast":true,
+              "isSelectable":true,
+              "isRoutable":true,
+              "globalIdL":
+              [
+                {
+                  "id":"at:49:759",
+                  "type":"A"
+                }
+              ],
+              "TZOffset":60,
+              "chgTime":"000000",
+              "mapDtlCntStyX":-1
             },
             {
-              "lid":"A=1@O=Wien Margaretenpl./Schönbrunner Str.@X=16356457@Y=48192070@U=81@L=490082900@B=1@p=1638666385@i=at:49:829@",
+              "lid":"A=1@O=Wien Margaretenplatz/Schönbrunner Straße@X=16356457@Y=48192070@U=81@L=490082900@B=1@p=1645315177@i=A×at:49:829@",
               "type":"S",
-              "name":"Wien Margaretenpl./Schönbrunner Str.",
+              "name":"Wien Margaretenplatz/Schönbrunner Straße",
+              "nameFormatted":
+              {
+                "text":"Wien Margaretenplatz/Schönbrunner Straße"
+              },
               "icoX":3,
               "extId":"490082900",
               "state":"F",
@@ -216,44 +246,58 @@
               {
                 "x":16356457,
                 "y":48192070,
-                "type":"WGS84",
-                "layerX":0,
-                "crdSysX":0
+                "floor":0
               },
               "meta":true,
               "pCls":2176,
-              "wt":196,
-              "isMainMast":true
+              "wt":192,
+              "isMainMast":true,
+              "isSelectable":true,
+              "isRoutable":true,
+              "globalIdL":
+              [
+                {
+                  "id":"at:49:829",
+                  "type":"A"
+                }
+              ],
+              "TZOffset":60,
+              "chgTime":"000000",
+              "mapDtlCntStyX":-1
             },
             {
-              "lid":"A=4@O=Wien Energie GmbH (VNA) Schönbrunner Straße vor 25, 1050 Wien@X=16359046@Y=48193742@U=130@L=960152321@B=1@p=1638671434@",
-              "type":"P",
-              "name":"Wien Energie GmbH (VNA) Schönbrunner Straße vor 25, 1050 Wien",
+              "lid":"A=1@O=Wien Schönbrunner Straße/Kettenbrückengasse@X=16360988@Y=48194937@U=81@L=490051700@B=1@p=1645315177@i=A×at:49:517@",
+              "type":"S",
+              "name":"Wien Schönbrunner Straße/Kettenbrückengasse",
+              "nameFormatted":
+              {
+                "text":"Wien Schönbrunner Straße/Kettenbrückengasse"
+              },
               "icoX":4,
-              "extId":"960152321",
+              "extId":"490051700",
               "state":"F",
               "crd":
               {
-                "x":16359046,
-                "y":48193742,
-                "type":"WGS84",
-                "layerX":0,
-                "crdSysX":0
+                "x":16360988,
+                "y":48194937,
+                "floor":0
               },
-              "mcpData":
-              {
-                "type":"P",
-                "occupancy":"N",
-                "mcpid":"0"
-              },
-              "msgL":
+              "meta":true,
+              "pCls":2176,
+              "wt":63,
+              "isMainMast":true,
+              "isSelectable":true,
+              "isRoutable":true,
+              "globalIdL":
               [
                 {
-                  "type":"REM",
-                  "remX":0,
-                  "dspl":"U"
+                  "id":"at:49:517",
+                  "type":"A"
                 }
-              ]
+              ],
+              "TZOffset":60,
+              "chgTime":"000000",
+              "mapDtlCntStyX":-1
             }
           ]
         }

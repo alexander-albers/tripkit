@@ -1,14 +1,30 @@
 {
-  "ver":"1.18",
+  "ver":"1.52",
   "ext":"VAO.6",
   "lang":"deu",
-  "id":"h9wkqmmk4q4ig2wx",
+  "id":"atgk3i642kxy96wx",
   "err":"OK",
   "cInfo":
   {
     "code":"OK",
     "url":"",
     "msg":""
+  },
+  "graph":
+  {
+    "id":"standard",
+    "index":0
+  },
+  "subGraph":
+  {
+    "id":"global",
+    "index":0
+  },
+  "view":
+  {
+    "id":"standard",
+    "index":0,
+    "type":"WGS84"
   },
   "svcResL":
   [
@@ -19,43 +35,6 @@
       {
         "common":
         {
-          "locL":
-          [
-
-          ],
-          "prodL":
-          [
-
-          ],
-          "polyL":
-          [
-
-          ],
-          "layerL":
-          [
-            {
-              "id":"standard",
-              "name":"standard",
-              "index":0,
-              "annoCnt":0
-            }
-          ],
-          "crdSysL":
-          [
-            {
-              "id":"standard",
-              "index":0,
-              "type":"WGS84"
-            }
-          ],
-          "opL":
-          [
-
-          ],
-          "remL":
-          [
-
-          ],
           "icoL":
           [
             {
@@ -74,7 +53,8 @@
                 "r":1,
                 "g":1,
                 "b":1
-              }
+              },
+              "zIdx":1000
             },
             {
               "res":"prod_regbus",
@@ -90,7 +70,8 @@
                 "r":0,
                 "g":121,
                 "b":58
-              }
+              },
+              "zIdx":1000
             },
             {
               "res":"prod_regbus",
@@ -106,7 +87,8 @@
                 "r":0,
                 "g":121,
                 "b":58
-              }
+              },
+              "zIdx":1000
             }
           ]
         },
@@ -117,28 +99,46 @@
           "locL":
           [
             {
-              "lid":"A=1@O=FELDKIRCH@X=9596228@Y=47238350@U=81@L=900006727@B=1@p=1641343143@i=aba4c4cf-4f16-4d1c-b72b-5279952437e6@",
+              "lid":"A=1@O=FELDKIRCH@X=9596228@Y=47238350@U=81@L=900006726@B=1@p=1645315177@i=A×aba4c4cf-4f16-4d1c-b72b-5279952437e6@",
               "type":"S",
               "name":"FELDKIRCH",
+              "nameFormatted":
+              {
+                "text":"FELDKIRCH"
+              },
               "icoX":0,
-              "extId":"900006727",
+              "extId":"900006726",
               "state":"F",
               "crd":
               {
                 "x":9596228,
                 "y":47238350,
-                "layerX":0,
-                "crdSysX":0
+                "floor":0
               },
               "meta":true,
               "pCls":195,
-              "wt":9508,
-              "mapSelectable":true
+              "wt":9483,
+              "isSelectable":true,
+              "isRoutable":true,
+              "globalIdL":
+              [
+                {
+                  "id":"aba4c4cf-4f16-4d1c-b72b-5279952437e6",
+                  "type":"A"
+                }
+              ],
+              "TZOffset":60,
+              "chgTime":"000000",
+              "mapDtlCntStyX":-1
             },
             {
-              "lid":"A=1@O=Feldkirch Bahnhof@X=9603886@Y=47241128@U=81@L=480081700@B=1@p=1641343143@i=at:48:817@",
+              "lid":"A=1@O=Feldkirch Bahnhof@X=9603886@Y=47241128@U=81@L=480081700@B=1@p=1645315177@i=A×at:48:817@",
               "type":"S",
               "name":"Feldkirch Bahnhof",
+              "nameFormatted":
+              {
+                "text":"Feldkirch Bahnhof"
+              },
               "icoX":1,
               "extId":"480081700",
               "state":"F",
@@ -146,19 +146,33 @@
               {
                 "x":9603886,
                 "y":47241128,
-                "layerX":0,
-                "crdSysX":0
+                "floor":0
               },
               "meta":true,
               "pCls":195,
-              "wt":9508,
+              "wt":9483,
               "isMainMast":true,
-              "mapSelectable":true
+              "isSelectable":true,
+              "isRoutable":true,
+              "globalIdL":
+              [
+                {
+                  "id":"at:48:817",
+                  "type":"A"
+                }
+              ],
+              "TZOffset":60,
+              "chgTime":"000000",
+              "mapDtlCntStyX":-1
             },
             {
-              "lid":"A=1@O=Feldkirch Hub@X=9557538@Y=47227069@U=81@L=480029700@B=1@p=1641343143@i=at:48:297@",
+              "lid":"A=1@O=Feldkirch Hub@X=9557538@Y=47227069@U=81@L=480029700@B=1@p=1645315177@i=A×at:48:297@",
               "type":"S",
               "name":"Feldkirch Hub",
+              "nameFormatted":
+              {
+                "text":"Feldkirch Hub"
+              },
               "icoX":2,
               "extId":"480029700",
               "state":"F",
@@ -166,19 +180,33 @@
               {
                 "x":9557538,
                 "y":47227069,
-                "layerX":0,
-                "crdSysX":0
+                "floor":0
               },
               "meta":true,
               "pCls":192,
-              "wt":66,
+              "wt":59,
               "isMainMast":true,
-              "mapSelectable":true
+              "isSelectable":true,
+              "isRoutable":true,
+              "globalIdL":
+              [
+                {
+                  "id":"at:48:297",
+                  "type":"A"
+                }
+              ],
+              "TZOffset":60,
+              "chgTime":"000000",
+              "mapDtlCntStyX":-1
             },
             {
-              "lid":"A=1@O=Feldkirch Kapf@X=9590510@Y=47241316@U=81@L=480098700@B=1@p=1641343143@i=at:48:987@",
+              "lid":"A=1@O=Feldkirch Kapf@X=9590510@Y=47241316@U=81@L=480098700@B=1@p=1645315177@i=A×at:48:987@",
               "type":"S",
               "name":"Feldkirch Kapf",
+              "nameFormatted":
+              {
+                "text":"Feldkirch Kapf"
+              },
               "icoX":3,
               "extId":"480098700",
               "state":"F",
@@ -186,19 +214,33 @@
               {
                 "x":9590510,
                 "y":47241316,
-                "layerX":0,
-                "crdSysX":0
+                "floor":0
               },
               "meta":true,
               "pCls":192,
-              "wt":207,
+              "wt":68,
               "isMainMast":true,
-              "mapSelectable":true
+              "isSelectable":true,
+              "isRoutable":true,
+              "globalIdL":
+              [
+                {
+                  "id":"at:48:987",
+                  "type":"A"
+                }
+              ],
+              "TZOffset":60,
+              "chgTime":"000000",
+              "mapDtlCntStyX":-1
             },
             {
-              "lid":"A=1@O=FELDKIRCHEN BEI GRAZ@X=15442794@Y=47012954@U=81@L=900000041@B=1@p=1641343143@i=d5b82ff1-15e2-4ba2-a6ec-f2784a151f49@",
+              "lid":"A=1@O=FELDKIRCHEN BEI GRAZ@X=15442794@Y=47012954@U=81@L=900000041@B=1@p=1645315177@i=A×d5b82ff1-15e2-4ba2-a6ec-f2784a151f49@",
               "type":"S",
               "name":"FELDKIRCHEN BEI GRAZ",
+              "nameFormatted":
+              {
+                "text":"FELDKIRCHEN BEI GRAZ"
+              },
               "icoX":0,
               "extId":"900000041",
               "state":"F",
@@ -206,13 +248,23 @@
               {
                 "x":15442794,
                 "y":47012954,
-                "layerX":0,
-                "crdSysX":0
+                "floor":0
               },
               "meta":true,
               "pCls":194,
-              "wt":3633,
-              "mapSelectable":true
+              "wt":3821,
+              "isSelectable":true,
+              "isRoutable":true,
+              "globalIdL":
+              [
+                {
+                  "id":"d5b82ff1-15e2-4ba2-a6ec-f2784a151f49",
+                  "type":"A"
+                }
+              ],
+              "TZOffset":60,
+              "chgTime":"000000",
+              "mapDtlCntStyX":-1
             }
           ]
         }

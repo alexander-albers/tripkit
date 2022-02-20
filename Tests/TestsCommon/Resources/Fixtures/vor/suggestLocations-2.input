@@ -1,14 +1,30 @@
 {
-  "ver":"1.18",
+  "ver":"1.52",
   "ext":"VAO.9",
   "lang":"deu",
-  "id":"46wgeggu68kv8wcs",
+  "id":"5c2c9i2swk8cwk8x",
   "err":"OK",
   "cInfo":
   {
     "code":"OK",
     "url":"",
     "msg":""
+  },
+  "graph":
+  {
+    "id":"standard",
+    "index":0
+  },
+  "subGraph":
+  {
+    "id":"global",
+    "index":0
+  },
+  "view":
+  {
+    "id":"standard",
+    "index":0,
+    "type":"WGS84"
   },
   "svcResL":
   [
@@ -22,9 +38,13 @@
           "locL":
           [
             {
-              "lid":"A=1@O=Wien Hütteldorf@X=16261073@Y=48197391@U=81@L=490056000@i=at:49:560@",
+              "lid":"A=1@O=Wien Hütteldorf@X=16261073@Y=48197391@U=81@L=490056000@i=A×at:49:560@",
               "type":"S",
               "name":"Wien Hütteldorf",
+              "nameFormatted":
+              {
+                "text":"Wien Hütteldorf"
+              },
               "icoX":0,
               "extId":"490056000",
               "state":"F",
@@ -32,43 +52,24 @@
               {
                 "x":16261073,
                 "y":48197391,
-                "layerX":0,
-                "crdSysX":0
+                "floor":0
               },
               "meta":true,
               "pCls":2247,
               "isMainMast":true,
-              "mapSelectable":true
+              "isSelectable":true,
+              "isRoutable":true,
+              "globalIdL":
+              [
+                {
+                  "id":"at:49:560",
+                  "type":"A"
+                }
+              ],
+              "TZOffset":60,
+              "chgTime":"000000",
+              "mapDtlCntStyX":-1
             }
-          ],
-          "prodL":
-          [
-
-          ],
-          "polyL":
-          [
-
-          ],
-          "layerL":
-          [
-            {
-              "id":"standard",
-              "name":"standard",
-              "index":0,
-              "annoCnt":0
-            }
-          ],
-          "crdSysL":
-          [
-            {
-              "id":"standard",
-              "index":0,
-              "type":"WGS84"
-            }
-          ],
-          "opL":
-          [
-
           ],
           "remL":
           [
@@ -83,7 +84,7 @@
               "type":"W",
               "code":"WW",
               "txtN":"WEBVIEW",
-              "url":"https://routenplaner.verkehrsauskunft.at/bin/query.exe/dn?tpl=webview_poi&performLocating=128&look_station=990000900&look_nv=get_infotext|yes|get_attributes|yes&look_stationpool=81&L=vs_anachb"
+              "url":"https://routenplaner.verkehrsauskunft.at/bin/query.exe/dn?tpl=webview_poi&performLocating=128&look_station=990000911&look_nv=get_infotext|yes|get_attributes|yes&look_stationpool=81&L=vs_anachb"
             }
           ],
           "icoL":
@@ -101,7 +102,8 @@
                 "r":0,
                 "g":0,
                 "b":0
-              }
+              },
+              "zIdx":1000
             },
             {
               "res":"MH"
@@ -120,7 +122,8 @@
                 "r":0,
                 "g":109,
                 "b":43
-              }
+              },
+              "zIdx":1000
             },
             {
               "res":"prod_sub_t",
@@ -136,7 +139,8 @@
                 "r":14,
                 "g":113,
                 "b":180
-              }
+              },
+              "zIdx":1000
             },
             {
               "res":"loc_attr_pr"
@@ -153,9 +157,13 @@
           "locL":
           [
             {
-              "lid":"A=1@O=Wien Hütteldorf@X=16261073@Y=48197391@U=81@L=490056000@B=1@p=1641516241@i=at:49:560@",
+              "lid":"A=1@O=Wien Hütteldorf@X=16261073@Y=48197391@U=81@L=490056000@B=1@p=1645315177@i=A×at:49:560@",
               "type":"S",
               "name":"Wien Hütteldorf",
+              "nameFormatted":
+              {
+                "text":"Wien Hütteldorf"
+              },
               "icoX":0,
               "extId":"490056000",
               "state":"F",
@@ -163,19 +171,33 @@
               {
                 "x":16261073,
                 "y":48197391,
-                "layerX":0,
-                "crdSysX":0
+                "floor":0
               },
               "meta":true,
               "pCls":2247,
-              "wt":30509,
+              "wt":30571,
               "isMainMast":true,
-              "mapSelectable":true
+              "isSelectable":true,
+              "isRoutable":true,
+              "globalIdL":
+              [
+                {
+                  "id":"at:49:560",
+                  "type":"A"
+                }
+              ],
+              "TZOffset":60,
+              "chgTime":"000000",
+              "mapDtlCntStyX":-1
             },
             {
-              "lid":"A=1@O=HÜTTELDORF/TRASDORF@X=15862878@Y=48304561@U=81@L=900004277@B=1@p=1641516241@i=dfd77908-6fe3-4bf9-a5b3-8d4e93b35b2f@",
+              "lid":"A=1@O=HÜTTELDORF/TRASDORF@X=15862878@Y=48304561@U=81@L=900004277@B=1@p=1645315177@i=A×dfd77908-6fe3-4bf9-a5b3-8d4e93b35b2f@",
               "type":"S",
               "name":"HÜTTELDORF/TRASDORF",
+              "nameFormatted":
+              {
+                "text":"HÜTTELDORF/TRASDORF"
+              },
               "icoX":1,
               "extId":"900004277",
               "state":"F",
@@ -183,18 +205,32 @@
               {
                 "x":15862878,
                 "y":48304561,
-                "layerX":0,
-                "crdSysX":0
+                "floor":0
               },
               "meta":true,
               "pCls":64,
-              "wt":11,
-              "mapSelectable":true
+              "wt":10,
+              "isSelectable":true,
+              "isRoutable":true,
+              "globalIdL":
+              [
+                {
+                  "id":"dfd77908-6fe3-4bf9-a5b3-8d4e93b35b2f",
+                  "type":"A"
+                }
+              ],
+              "TZOffset":60,
+              "chgTime":"000000",
+              "mapDtlCntStyX":-1
             },
             {
-              "lid":"A=1@O=Hütteldorf/Trasdorf Ortsmitte@X=15862716@Y=48304516@U=81@L=430379300@B=1@p=1641516241@i=at:43:3793@",
+              "lid":"A=1@O=Hütteldorf/Trasdorf Ortsmitte@X=15862716@Y=48304516@U=81@L=430379300@B=1@p=1645315177@i=A×at:43:3793@",
               "type":"S",
               "name":"Hütteldorf/Trasdorf Ortsmitte",
+              "nameFormatted":
+              {
+                "text":"Hütteldorf/Trasdorf Ortsmitte"
+              },
               "icoX":2,
               "extId":"430379300",
               "state":"F",
@@ -202,19 +238,33 @@
               {
                 "x":15862716,
                 "y":48304516,
-                "layerX":0,
-                "crdSysX":0
+                "floor":0
               },
               "meta":true,
               "pCls":64,
-              "wt":11,
+              "wt":10,
               "isMainMast":true,
-              "mapSelectable":true
+              "isSelectable":true,
+              "isRoutable":true,
+              "globalIdL":
+              [
+                {
+                  "id":"at:43:3793",
+                  "type":"A"
+                }
+              ],
+              "TZOffset":60,
+              "chgTime":"000000",
+              "mapDtlCntStyX":-1
             },
             {
-              "lid":"A=1@O=Wien Hütteldorfer Straße@X=16312212@Y=48199126@U=81@L=490103500@B=1@p=1641516241@i=at:49:1035@",
+              "lid":"A=1@O=Wien Hütteldorfer Straße@X=16312212@Y=48199126@U=81@L=490103500@B=1@p=1645315177@i=A×at:49:1035@",
               "type":"S",
               "name":"Wien Hütteldorfer Straße",
+              "nameFormatted":
+              {
+                "text":"Wien Hütteldorfer Straße"
+              },
               "icoX":3,
               "extId":"490103500",
               "state":"F",
@@ -222,38 +272,53 @@
               {
                 "x":16312212,
                 "y":48199126,
-                "layerX":0,
-                "crdSysX":0
+                "floor":0
               },
               "meta":true,
               "pCls":2068,
-              "wt":23122,
+              "wt":23206,
               "isMainMast":true,
-              "mapSelectable":true
+              "isSelectable":true,
+              "isRoutable":true,
+              "globalIdL":
+              [
+                {
+                  "id":"at:49:1035",
+                  "type":"A"
+                }
+              ],
+              "TZOffset":60,
+              "chgTime":"000000",
+              "mapDtlCntStyX":-1
             },
             {
-              "lid":"A=1@O=P+R Hütteldorf, Wien@X=16264030@Y=48195602@U=81@L=990000900@B=1@p=1641516241@",
+              "lid":"A=1@O=P+R Hütteldorf, Wien@X=16264030@Y=48195602@U=81@L=990000911@B=1@p=1645315177@",
               "type":"S",
               "name":"P+R Hütteldorf, Wien",
+              "nameFormatted":
+              {
+                "text":"P+R Hütteldorf, Wien"
+              },
               "icoX":5,
-              "extId":"990000900",
+              "extId":"990000911",
               "state":"F",
               "crd":
               {
                 "x":16264030,
                 "y":48195602,
-                "layerX":0,
-                "crdSysX":0
+                "floor":0
               },
               "pCls":2247,
-              "wt":19265,
-              "mapSelectable":true,
+              "wt":19349,
+              "isSelectable":true,
+              "isRoutable":true,
               "mMastLocX":0,
               "msgL":
               [
                 {
                   "type":"REM",
                   "remX":0,
+                  "sty":"I",
                   "dspl":"U",
                   "tagL":
                   [
@@ -264,10 +329,18 @@
                 {
                   "type":"REM",
                   "remX":1,
+                  "sty":"I",
                   "dspl":"U",
+                  "tagL":
+                  [
+                    "RES_LOC_WEB","RES_LOC_FLY_WEB"
+                  ],
                   "sort":818413568
                 }
-              ]
+              ],
+              "TZOffset":60,
+              "chgTime":"000000",
+              "mapDtlCntStyX":-1
             }
           ]
         }

@@ -1,14 +1,30 @@
 {
-  "ver":"1.18",
+  "ver":"1.52",
   "ext":"VAO.6",
   "lang":"deu",
-  "id":"3qikammk6q4iywwg",
+  "id":"p7gkrim62kxyx4wg",
   "err":"OK",
   "cInfo":
   {
     "code":"OK",
     "url":"",
     "msg":""
+  },
+  "graph":
+  {
+    "id":"standard",
+    "index":0
+  },
+  "subGraph":
+  {
+    "id":"global",
+    "index":0
+  },
+  "view":
+  {
+    "id":"standard",
+    "index":0,
+    "type":"WGS84"
   },
   "svcResL":
   [
@@ -19,42 +35,23 @@
       {
         "common":
         {
-          "locL":
-          [
-
-          ],
-          "prodL":
-          [
-
-          ],
-          "polyL":
-          [
-
-          ],
-          "layerL":
+          "txtInstL":
           [
             {
-              "id":"standard",
-              "name":"standard",
-              "index":0,
-              "annoCnt":509715
-            }
-          ],
-          "crdSysL":
-          [
+              "id":"street",
+              "type":"NONE",
+              "mode":"ADD"
+            },
             {
-              "id":"standard",
-              "index":0,
-              "type":"WGS84"
+              "id":"city",
+              "type":"NONE",
+              "mode":"ADD"
+            },
+            {
+              "id":"housenumber",
+              "type":"NONE",
+              "mode":"ADD"
             }
-          ],
-          "opL":
-          [
-
-          ],
-          "remL":
-          [
-
           ],
           "icoL":
           [
@@ -72,10 +69,11 @@
                 "r":0,
                 "g":121,
                 "b":58
-              }
+              },
+              "zIdx":1000
             },
             {
-              "res":"ADR"
+              "res":"loc_addr"
             },
             {
               "res":"prod_bus",
@@ -91,7 +89,8 @@
                 "r":0,
                 "g":121,
                 "b":58
-              }
+              },
+              "zIdx":1000
             }
           ]
         },
@@ -102,9 +101,13 @@
           "locL":
           [
             {
-              "lid":"A=1@O=Göfis Kustergasse@X=9628580@Y=47240750@U=81@L=480101700@B=1@p=1641343143@i=at:48:1017@",
+              "lid":"A=1@O=Göfis Kustergasse@X=9628580@Y=47240750@U=81@L=480101700@B=1@p=1645315177@i=A×at:48:1017@",
               "type":"S",
               "name":"Göfis Kustergasse",
+              "nameFormatted":
+              {
+                "text":"Göfis Kustergasse"
+              },
               "icoX":0,
               "extId":"480101700",
               "state":"F",
@@ -112,51 +115,109 @@
               {
                 "x":9628580,
                 "y":47240750,
-                "layerX":0,
-                "crdSysX":0
+                "floor":0
               },
               "meta":true,
               "pCls":64,
-              "wt":31,
+              "wt":30,
               "isMainMast":true,
-              "mapSelectable":true
+              "isSelectable":true,
+              "isRoutable":true,
+              "globalIdL":
+              [
+                {
+                  "id":"at:48:1017",
+                  "type":"A"
+                }
+              ],
+              "TZOffset":60,
+              "chgTime":"000000",
+              "mapDtlCntStyX":-1
             },
             {
-              "lid":"A=2@O=Kustergasse 1a, 6811 Göfis@H=1a@X=9628885@Y=47240732@U=103@L=980069895@B=1@p=1637147511@",
+              "lid":"A=2@O=Kustergasse 1a, 6811 Göfis@H=1a@X=9628885@Y=47240732@U=103@L=980070028@B=1@p=1644831106@",
               "type":"A",
               "name":"Kustergasse 1a, 6811 Göfis",
+              "nameFormatted":
+              {
+                "text":"Kustergasse 1a, 6811 Göfis",
+                "textInstructionIntervalL":
+                [
+                  {
+                    "startIndex":0,
+                    "endIndex":11,
+                    "textInstructionX":0
+                  },
+                  {
+                    "startIndex":14,
+                    "endIndex":26,
+                    "textInstructionX":1
+                  },
+                  {
+                    "startIndex":11,
+                    "endIndex":14,
+                    "textInstructionX":2
+                  }
+                ]
+              },
               "icoX":1,
-              "extId":"980069895",
+              "extId":"980070028",
               "state":"F",
               "crd":
               {
                 "x":9628885,
-                "y":47240732,
-                "layerX":0,
-                "crdSysX":0
+                "y":47240732
               },
-              "mapSelectable":true
+              "isSelectable":true,
+              "isRoutable":true,
+              "mapDtlCntStyX":-1
             },
             {
               "lid":"A=2@O=Kustergasse 3, Eggenwil@H=3@X=8340992@Y=47370860@U=104@L=970881150@B=1@p=1636631415@",
               "type":"A",
               "name":"Kustergasse 3, Eggenwil",
+              "nameFormatted":
+              {
+                "text":"Kustergasse 3, Eggenwil",
+                "textInstructionIntervalL":
+                [
+                  {
+                    "startIndex":0,
+                    "endIndex":11,
+                    "textInstructionX":0
+                  },
+                  {
+                    "startIndex":13,
+                    "endIndex":23,
+                    "textInstructionX":1
+                  },
+                  {
+                    "startIndex":11,
+                    "endIndex":13,
+                    "textInstructionX":2
+                  }
+                ]
+              },
               "icoX":1,
               "extId":"970881150",
               "state":"F",
               "crd":
               {
                 "x":8340992,
-                "y":47370860,
-                "layerX":0,
-                "crdSysX":0
+                "y":47370860
               },
-              "mapSelectable":true
+              "isSelectable":true,
+              "isRoutable":true,
+              "mapDtlCntStyX":-1
             },
             {
-              "lid":"A=1@O=Göfis Gasserplatz@X=9614332@Y=47240885@U=81@L=480198300@B=1@p=1641343143@i=at:48:1983@",
+              "lid":"A=1@O=Göfis Gasserplatz@X=9614332@Y=47240885@U=81@L=480198300@B=1@p=1645315177@i=A×at:48:1983@",
               "type":"S",
               "name":"Göfis Gasserplatz",
+              "nameFormatted":
+              {
+                "text":"Göfis Gasserplatz"
+              },
               "icoX":0,
               "extId":"480198300",
               "state":"F",
@@ -164,19 +225,33 @@
               {
                 "x":9614332,
                 "y":47240885,
-                "layerX":0,
-                "crdSysX":0
+                "floor":0
               },
               "meta":true,
               "pCls":64,
-              "wt":31,
+              "wt":30,
               "isMainMast":true,
-              "mapSelectable":true
+              "isSelectable":true,
+              "isRoutable":true,
+              "globalIdL":
+              [
+                {
+                  "id":"at:48:1983",
+                  "type":"A"
+                }
+              ],
+              "TZOffset":60,
+              "chgTime":"000000",
+              "mapDtlCntStyX":-1
             },
             {
-              "lid":"A=1@O=Wien Armbrustergasse@X=16355540@Y=48253915@U=81@L=490008000@B=1@p=1641343143@i=at:49:80@",
+              "lid":"A=1@O=Wien Armbrustergasse@X=16355540@Y=48253915@U=81@L=490008000@B=1@p=1645315177@i=A×at:49:80@",
               "type":"S",
               "name":"Wien Armbrustergasse",
+              "nameFormatted":
+              {
+                "text":"Wien Armbrustergasse"
+              },
               "icoX":2,
               "extId":"490008000",
               "state":"F",
@@ -184,14 +259,24 @@
               {
                 "x":16355540,
                 "y":48253915,
-                "layerX":0,
-                "crdSysX":0
+                "floor":0
               },
               "meta":true,
               "pCls":128,
-              "wt":196,
+              "wt":186,
               "isMainMast":true,
-              "mapSelectable":true
+              "isSelectable":true,
+              "isRoutable":true,
+              "globalIdL":
+              [
+                {
+                  "id":"at:49:80",
+                  "type":"A"
+                }
+              ],
+              "TZOffset":60,
+              "chgTime":"000000",
+              "mapDtlCntStyX":-1
             }
           ]
         }

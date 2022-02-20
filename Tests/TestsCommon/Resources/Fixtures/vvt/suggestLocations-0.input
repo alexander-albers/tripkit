@@ -1,14 +1,30 @@
 {
-  "ver":"1.18",
+  "ver":"1.52",
   "ext":"VAO.6",
   "lang":"deu",
-  "id":"n6kqbm4mkqcixg4k",
+  "id":"8kwx3i26wkxyykwg",
   "err":"OK",
   "cInfo":
   {
     "code":"OK",
     "url":"",
     "msg":""
+  },
+  "graph":
+  {
+    "id":"standard",
+    "index":0
+  },
+  "subGraph":
+  {
+    "id":"global",
+    "index":0
+  },
+  "view":
+  {
+    "id":"standard",
+    "index":0,
+    "type":"WGS84"
   },
   "svcResL":
   [
@@ -19,39 +35,6 @@
       {
         "common":
         {
-          "locL":
-          [
-
-          ],
-          "prodL":
-          [
-
-          ],
-          "polyL":
-          [
-
-          ],
-          "layerL":
-          [
-            {
-              "id":"standard",
-              "name":"standard",
-              "index":0,
-              "annoCnt":0
-            }
-          ],
-          "crdSysL":
-          [
-            {
-              "id":"standard",
-              "index":0,
-              "type":"WGS84"
-            }
-          ],
-          "opL":
-          [
-
-          ],
           "remL":
           [
             {
@@ -79,6 +62,14 @@
               "url":"https://routenplaner.verkehrsauskunft.at/bin/query.exe/dn?tpl=webview_poi&performLocating=128&look_station=960145061&look_nv=get_infotext|yes|get_attributes|yes&look_stationpool=130&L=vs_vvt"
             }
           ],
+          "txtInstL":
+          [
+            {
+              "id":"city",
+              "type":"NONE",
+              "mode":"ADD"
+            }
+          ],
           "icoL":
           [
             {
@@ -95,19 +86,24 @@
                 "r":160,
                 "g":7,
                 "b":45
-              }
+              },
+              "zIdx":1000
             },
             {
-              "res":"PCAT_NEXTBIKE"
+              "res":"PCAT_NEXTBIKE",
+              "zIdx":900
             },
             {
-              "res":"PCAT_PARKGARAGE"
+              "res":"PCAT_PARKGARAGE",
+              "zIdx":900
             },
             {
-              "res":"PCAT_EINKAUFEN"
+              "res":"PCAT_EINKAUFEN",
+              "zIdx":900
             },
             {
-              "res":"PCAT_E_TANKEN"
+              "res":"PCAT_E_TANKEN",
+              "zIdx":900
             }
           ]
         },
@@ -118,9 +114,13 @@
           "locL":
           [
             {
-              "lid":"A=1@O=Innsbruck Sillpark@X=11402493@Y=47266217@U=81@L=476158900@B=1@p=1641516241@i=at:47:61589@",
+              "lid":"A=1@O=Innsbruck Sillpark@X=11402493@Y=47266217@U=81@L=476158900@B=1@p=1645315177@i=A×at:47:61589@",
               "type":"S",
               "name":"Innsbruck Sillpark",
+              "nameFormatted":
+              {
+                "text":"Innsbruck Sillpark"
+              },
               "icoX":0,
               "extId":"476158900",
               "state":"F",
@@ -128,19 +128,41 @@
               {
                 "x":11402493,
                 "y":47266217,
-                "layerX":0,
-                "crdSysX":0
+                "floor":0
               },
               "meta":true,
               "pCls":208,
-              "wt":2403,
+              "wt":2306,
               "isMainMast":true,
-              "mapSelectable":true
+              "isSelectable":true,
+              "isRoutable":true,
+              "globalIdL":
+              [
+                {
+                  "id":"at:47:61589",
+                  "type":"A"
+                }
+              ],
+              "TZOffset":60,
+              "chgTime":"000000",
+              "mapDtlCntStyX":-1
             },
             {
-              "lid":"A=4@O=Sillpark, Innsbruck@X=11403014@Y=47266100@U=130@L=960014755@B=1@p=1641520250@",
+              "lid":"A=4@O=Sillpark, Innsbruck@X=11403014@Y=47266100@U=130@L=960014755@B=1@p=1645318911@",
               "type":"P",
               "name":"Sillpark, Innsbruck",
+              "nameFormatted":
+              {
+                "text":"Sillpark, Innsbruck",
+                "textInstructionIntervalL":
+                [
+                  {
+                    "startIndex":8,
+                    "endIndex":19,
+                    "textInstructionX":0
+                  }
+                ]
+              },
               "icoX":1,
               "extId":"960014755",
               "state":"F",
@@ -148,8 +170,7 @@
               {
                 "x":11403014,
                 "y":47266100,
-                "layerX":0,
-                "crdSysX":0
+                "floor":0
               },
               "mcpData":
               {
@@ -158,21 +179,40 @@
                 "mcpid":"0",
                 "externalId":"ITSVR_203981"
               },
-              "mapSelectable":true,
+              "isSelectable":true,
+              "isRoutable":true,
               "msgL":
               [
                 {
                   "type":"REM",
                   "remX":0,
+                  "sty":"I",
                   "dspl":"U",
+                  "tagL":
+                  [
+                    "RES_LOC_WEB","RES_LOC_FLY_WEB"
+                  ],
                   "sort":818413568
                 }
-              ]
+              ],
+              "mapDtlCntStyX":-1
             },
             {
-              "lid":"A=4@O=Sillpark, 6020 Innsbruck@X=11404102@Y=47265902@U=130@L=960001953@B=1@p=1641520250@",
+              "lid":"A=4@O=Sillpark, 6020 Innsbruck@X=11404102@Y=47265902@U=130@L=960001953@B=1@p=1645318911@",
               "type":"P",
               "name":"Sillpark, 6020 Innsbruck",
+              "nameFormatted":
+              {
+                "text":"Sillpark, 6020 Innsbruck",
+                "textInstructionIntervalL":
+                [
+                  {
+                    "startIndex":8,
+                    "endIndex":24,
+                    "textInstructionX":0
+                  }
+                ]
+              },
               "icoX":2,
               "extId":"960001953",
               "state":"F",
@@ -180,8 +220,7 @@
               {
                 "x":11404102,
                 "y":47265902,
-                "layerX":0,
-                "crdSysX":0
+                "floor":0
               },
               "mcpData":
               {
@@ -190,21 +229,40 @@
                 "mcpid":"0",
                 "externalId":"oeamtc_pg-005B38E05E8864"
               },
-              "mapSelectable":true,
+              "isSelectable":true,
+              "isRoutable":true,
               "msgL":
               [
                 {
                   "type":"REM",
                   "remX":1,
+                  "sty":"I",
                   "dspl":"U",
+                  "tagL":
+                  [
+                    "RES_LOC_WEB","RES_LOC_FLY_WEB"
+                  ],
                   "sort":818413568
                 }
-              ]
+              ],
+              "mapDtlCntStyX":-1
             },
             {
-              "lid":"A=4@O=SILLPARK, 6020 Innsbruck (Einkaufen)@X=11402628@Y=47266306@U=130@L=960063766@B=1@p=1641520250@",
+              "lid":"A=4@O=SILLPARK, 6020 Innsbruck (Einkaufen)@X=11402628@Y=47266306@U=130@L=960063766@B=1@p=1645318911@",
               "type":"P",
               "name":"SILLPARK, 6020 Innsbruck (Einkaufen)",
+              "nameFormatted":
+              {
+                "text":"SILLPARK, 6020 Innsbruck (Einkaufen)",
+                "textInstructionIntervalL":
+                [
+                  {
+                    "startIndex":8,
+                    "endIndex":36,
+                    "textInstructionX":0
+                  }
+                ]
+              },
               "icoX":3,
               "extId":"960063766",
               "state":"F",
@@ -212,8 +270,7 @@
               {
                 "x":11402628,
                 "y":47266306,
-                "layerX":0,
-                "crdSysX":0
+                "floor":0
               },
               "mcpData":
               {
@@ -222,21 +279,40 @@
                 "mcpid":"0",
                 "externalId":"oeamtc_ek-608639238"
               },
-              "mapSelectable":true,
+              "isSelectable":true,
+              "isRoutable":true,
               "msgL":
               [
                 {
                   "type":"REM",
                   "remX":2,
+                  "sty":"I",
                   "dspl":"U",
+                  "tagL":
+                  [
+                    "RES_LOC_WEB","RES_LOC_FLY_WEB"
+                  ],
                   "sort":818413568
                 }
-              ]
+              ],
+              "mapDtlCntStyX":-1
             },
             {
-              "lid":"A=4@O=IKB_Sillpark-Tiefgarage_1 Museumstraße 38, 6020 Innsbruck@X=11404561@Y=47266073@U=130@L=960145061@B=1@p=1641520250@",
+              "lid":"A=4@O=IKB_Sillpark-Tiefgarage_1 Museumstraße 38, 6020 Innsbruck@X=11404561@Y=47266073@U=130@L=960145061@B=1@p=1645318911@",
               "type":"P",
               "name":"IKB_Sillpark-Tiefgarage_1 Museumstraße 38, 6020 Innsbruck",
+              "nameFormatted":
+              {
+                "text":"IKB_Sillpark-Tiefgarage_1 Museumstraße 38, 6020 Innsbruck",
+                "textInstructionIntervalL":
+                [
+                  {
+                    "startIndex":41,
+                    "endIndex":57,
+                    "textInstructionX":0
+                  }
+                ]
+              },
               "icoX":4,
               "extId":"960145061",
               "state":"F",
@@ -244,8 +320,7 @@
               {
                 "x":11404561,
                 "y":47266073,
-                "layerX":0,
-                "crdSysX":0
+                "floor":0
               },
               "mcpData":
               {
@@ -254,16 +329,23 @@
                 "mcpid":"0",
                 "externalId":"IKB_Sillpark-Tiefgarage_1_E0000069"
               },
-              "mapSelectable":true,
+              "isSelectable":true,
+              "isRoutable":true,
               "msgL":
               [
                 {
                   "type":"REM",
                   "remX":3,
+                  "sty":"I",
                   "dspl":"U",
+                  "tagL":
+                  [
+                    "RES_LOC_WEB","RES_LOC_FLY_WEB"
+                  ],
                   "sort":818413568
                 }
-              ]
+              ],
+              "mapDtlCntStyX":-1
             }
           ]
         }

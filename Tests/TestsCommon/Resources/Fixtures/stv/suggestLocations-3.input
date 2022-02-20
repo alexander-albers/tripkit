@@ -1,14 +1,30 @@
 {
-  "ver":"1.18",
+  "ver":"1.52",
   "ext":"VAO.13",
   "lang":"deu",
-  "id":"qw2x6ixgk8sbpwck",
+  "id":"dt643iis2k88yk8g",
   "err":"OK",
   "cInfo":
   {
     "code":"OK",
     "url":"",
     "msg":""
+  },
+  "graph":
+  {
+    "id":"standard",
+    "index":0
+  },
+  "subGraph":
+  {
+    "id":"global",
+    "index":0
+  },
+  "view":
+  {
+    "id":"standard",
+    "index":0,
+    "type":"WGS84"
   },
   "svcResL":
   [
@@ -19,39 +35,6 @@
       {
         "common":
         {
-          "locL":
-          [
-
-          ],
-          "prodL":
-          [
-
-          ],
-          "polyL":
-          [
-
-          ],
-          "layerL":
-          [
-            {
-              "id":"standard",
-              "name":"standard",
-              "index":0,
-              "annoCnt":0
-            }
-          ],
-          "crdSysL":
-          [
-            {
-              "id":"standard",
-              "index":0,
-              "type":"WGS84"
-            }
-          ],
-          "opL":
-          [
-
-          ],
           "remL":
           [
             {
@@ -61,13 +44,32 @@
               "url":"https://routenplaner.verkehrsauskunft.at/bin/query.exe/dn?tpl=webview_poi&performLocating=128&look_station=960095777&look_nv=get_infotext|yes|get_attributes|yes&look_stationpool=130&L=vs_stv"
             }
           ],
+          "txtInstL":
+          [
+            {
+              "id":"street",
+              "type":"NONE",
+              "mode":"ADD"
+            },
+            {
+              "id":"city",
+              "type":"NONE",
+              "mode":"ADD"
+            },
+            {
+              "id":"housenumber",
+              "type":"NONE",
+              "mode":"ADD"
+            }
+          ],
           "icoL":
           [
             {
-              "res":"ADR"
+              "res":"loc_addr"
             },
             {
-              "res":"PCAT_ESSEN"
+              "res":"PCAT_ESSEN",
+              "zIdx":900
             }
           ]
         },
@@ -78,41 +80,97 @@
           "locL":
           [
             {
-              "lid":"A=2@O=Wartingergasse 36, 8010 Graz@H=36@X=15434667@Y=47079043@U=103@L=980127355@B=1@p=1641288263@",
+              "lid":"A=2@O=Wartingergasse 36, 8010 Graz@H=36@X=15434667@Y=47079043@U=103@L=980127493@B=1@p=1644831106@",
               "type":"A",
               "name":"Wartingergasse 36, 8010 Graz",
+              "nameFormatted":
+              {
+                "text":"Wartingergasse 36, 8010 Graz",
+                "textInstructionIntervalL":
+                [
+                  {
+                    "startIndex":0,
+                    "endIndex":14,
+                    "textInstructionX":0
+                  },
+                  {
+                    "startIndex":17,
+                    "endIndex":28,
+                    "textInstructionX":1
+                  },
+                  {
+                    "startIndex":14,
+                    "endIndex":17,
+                    "textInstructionX":2
+                  }
+                ]
+              },
               "icoX":0,
-              "extId":"980127355",
+              "extId":"980127493",
               "state":"F",
               "crd":
               {
                 "x":15434667,
-                "y":47079043,
-                "layerX":0,
-                "crdSysX":0
+                "y":47079043
               },
-              "mapSelectable":true
+              "isSelectable":true,
+              "isRoutable":true,
+              "mapDtlCntStyX":-1
             },
             {
-              "lid":"A=2@O=Angergasse 1, 8010 Graz@H=1@X=15439054@Y=47051806@U=103@L=980007751@B=1@p=1641288263@",
+              "lid":"A=2@O=Angergasse 1, 8010 Graz@H=1@X=15439054@Y=47051806@U=103@L=980007760@B=1@p=1644831106@",
               "type":"A",
               "name":"Angergasse 1, 8010 Graz",
+              "nameFormatted":
+              {
+                "text":"Angergasse 1, 8010 Graz",
+                "textInstructionIntervalL":
+                [
+                  {
+                    "startIndex":0,
+                    "endIndex":10,
+                    "textInstructionX":0
+                  },
+                  {
+                    "startIndex":12,
+                    "endIndex":23,
+                    "textInstructionX":1
+                  },
+                  {
+                    "startIndex":10,
+                    "endIndex":12,
+                    "textInstructionX":2
+                  }
+                ]
+              },
               "icoX":0,
-              "extId":"980007751",
+              "extId":"980007760",
               "state":"F",
               "crd":
               {
                 "x":15439054,
-                "y":47051806,
-                "layerX":0,
-                "crdSysX":0
+                "y":47051806
               },
-              "mapSelectable":true
+              "isSelectable":true,
+              "isRoutable":true,
+              "mapDtlCntStyX":-1
             },
             {
-              "lid":"A=4@O=Martin Auer - Stubenberggasse, 8010 Graz (Essen und Trinken)@X=15439746@Y=47068328@U=130@L=960095777@B=1@p=1642554850@",
+              "lid":"A=4@O=Martin Auer - Stubenberggasse, 8010 Graz (Essen und Trinken)@X=15439746@Y=47068328@U=130@L=960095777@B=1@p=1645318911@",
               "type":"P",
               "name":"Martin Auer - Stubenberggasse, 8010 Graz (Essen und Trinken)",
+              "nameFormatted":
+              {
+                "text":"Martin Auer - Stubenberggasse, 8010 Graz (Essen und Trinken)",
+                "textInstructionIntervalL":
+                [
+                  {
+                    "startIndex":29,
+                    "endIndex":60,
+                    "textInstructionX":1
+                  }
+                ]
+              },
               "icoX":1,
               "extId":"960095777",
               "state":"F",
@@ -120,8 +178,7 @@
               {
                 "x":15439746,
                 "y":47068328,
-                "layerX":0,
-                "crdSysX":0
+                "floor":0
               },
               "mcpData":
               {
@@ -130,48 +187,99 @@
                 "mcpid":"0",
                 "externalId":"oeamtc_to-10_26566454"
               },
-              "mapSelectable":true,
+              "isSelectable":true,
+              "isRoutable":true,
               "msgL":
               [
                 {
                   "type":"REM",
                   "remX":0,
+                  "sty":"I",
                   "dspl":"U",
+                  "tagL":
+                  [
+                    "RES_LOC_WEB","RES_LOC_FLY_WEB"
+                  ],
                   "sort":818413568
                 }
-              ]
+              ],
+              "mapDtlCntStyX":-1
             },
             {
-              "lid":"A=2@O=Monsbergergasse 2, 8010 Graz@H=2@X=15451324@Y=47057127@U=103@L=980081137@B=1@p=1641288263@",
+              "lid":"A=2@O=Monsbergergasse 2, 8010 Graz@H=2@X=15451324@Y=47057127@U=103@L=980081232@B=1@p=1644831106@",
               "type":"A",
               "name":"Monsbergergasse 2, 8010 Graz",
+              "nameFormatted":
+              {
+                "text":"Monsbergergasse 2, 8010 Graz",
+                "textInstructionIntervalL":
+                [
+                  {
+                    "startIndex":0,
+                    "endIndex":15,
+                    "textInstructionX":0
+                  },
+                  {
+                    "startIndex":17,
+                    "endIndex":28,
+                    "textInstructionX":1
+                  },
+                  {
+                    "startIndex":15,
+                    "endIndex":17,
+                    "textInstructionX":2
+                  }
+                ]
+              },
               "icoX":0,
-              "extId":"980081137",
+              "extId":"980081232",
               "state":"F",
               "crd":
               {
                 "x":15451324,
-                "y":47057127,
-                "layerX":0,
-                "crdSysX":0
+                "y":47057127
               },
-              "mapSelectable":true
+              "isSelectable":true,
+              "isRoutable":true,
+              "mapDtlCntStyX":-1
             },
             {
-              "lid":"A=2@O=Nürnbergergasse 2, 8010 Graz@H=2@X=15436303@Y=47071007@U=103@L=980086169@B=1@p=1641288263@",
+              "lid":"A=2@O=Nürnbergergasse 2, 8010 Graz@H=2@X=15436303@Y=47071007@U=103@L=980086271@B=1@p=1644831106@",
               "type":"A",
               "name":"Nürnbergergasse 2, 8010 Graz",
+              "nameFormatted":
+              {
+                "text":"Nürnbergergasse 2, 8010 Graz",
+                "textInstructionIntervalL":
+                [
+                  {
+                    "startIndex":0,
+                    "endIndex":15,
+                    "textInstructionX":0
+                  },
+                  {
+                    "startIndex":17,
+                    "endIndex":28,
+                    "textInstructionX":1
+                  },
+                  {
+                    "startIndex":15,
+                    "endIndex":17,
+                    "textInstructionX":2
+                  }
+                ]
+              },
               "icoX":0,
-              "extId":"980086169",
+              "extId":"980086271",
               "state":"F",
               "crd":
               {
                 "x":15436303,
-                "y":47071007,
-                "layerX":0,
-                "crdSysX":0
+                "y":47071007
               },
-              "mapSelectable":true
+              "isSelectable":true,
+              "isRoutable":true,
+              "mapDtlCntStyX":-1
             }
           ]
         }

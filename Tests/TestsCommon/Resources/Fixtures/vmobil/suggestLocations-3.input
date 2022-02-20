@@ -1,14 +1,30 @@
 {
-  "ver":"1.18",
+  "ver":"1.52",
   "ext":"VAO.6",
   "lang":"deu",
-  "id":"nkwgxmm64q4ihwwg",
+  "id":"yyiwhi6ewkx9p6wg",
   "err":"OK",
   "cInfo":
   {
     "code":"OK",
     "url":"",
     "msg":""
+  },
+  "graph":
+  {
+    "id":"standard",
+    "index":0
+  },
+  "subGraph":
+  {
+    "id":"global",
+    "index":0
+  },
+  "view":
+  {
+    "id":"standard",
+    "index":0,
+    "type":"WGS84"
   },
   "svcResL":
   [
@@ -19,39 +35,6 @@
       {
         "common":
         {
-          "locL":
-          [
-
-          ],
-          "prodL":
-          [
-
-          ],
-          "polyL":
-          [
-
-          ],
-          "layerL":
-          [
-            {
-              "id":"standard",
-              "name":"standard",
-              "index":0,
-              "annoCnt":0
-            }
-          ],
-          "crdSysL":
-          [
-            {
-              "id":"standard",
-              "index":0,
-              "type":"WGS84"
-            }
-          ],
-          "opL":
-          [
-
-          ],
           "remL":
           [
             {
@@ -61,13 +44,32 @@
               "url":"https://routenplaner.verkehrsauskunft.at/bin/query.exe/dn?tpl=webview_poi&performLocating=128&look_station=960146345&look_nv=get_infotext|yes|get_attributes|yes&look_stationpool=130&L=vs_vvv"
             }
           ],
+          "txtInstL":
+          [
+            {
+              "id":"street",
+              "type":"NONE",
+              "mode":"ADD"
+            },
+            {
+              "id":"city",
+              "type":"NONE",
+              "mode":"ADD"
+            },
+            {
+              "id":"housenumber",
+              "type":"NONE",
+              "mode":"ADD"
+            }
+          ],
           "icoL":
           [
             {
-              "res":"ADR"
+              "res":"loc_addr"
             },
             {
-              "res":"PCAT_E_TANKEN"
+              "res":"PCAT_E_TANKEN",
+              "zIdx":900
             }
           ]
         },
@@ -78,55 +80,127 @@
           "locL":
           [
             {
-              "lid":"A=2@O=Altenburggasse, 6800 Feldkirch@X=9616507@Y=47253380@U=103@b=980002733@B=1@p=1637147511@",
+              "lid":"A=2@O=Altenburggasse, 6800 Feldkirch@X=9616507@Y=47253380@U=103@b=980002738@B=1@p=1644831106@",
               "type":"A",
               "name":"Altenburggasse, 6800 Feldkirch",
+              "nameFormatted":
+              {
+                "text":"Altenburggasse, 6800 Feldkirch",
+                "textInstructionIntervalL":
+                [
+                  {
+                    "startIndex":0,
+                    "endIndex":14,
+                    "textInstructionX":0
+                  },
+                  {
+                    "startIndex":14,
+                    "endIndex":30,
+                    "textInstructionX":1
+                  }
+                ]
+              },
               "icoX":0,
               "state":"F",
               "crd":
               {
                 "x":9616507,
-                "y":47253380,
-                "layerX":0,
-                "crdSysX":0
-              }
+                "y":47253380
+              },
+              "mapDtlCntStyX":-1
             },
             {
-              "lid":"A=2@O=Burggasse 1, 6800 Feldkirch@H=1@X=9599688@Y=47236426@U=103@L=980020284@B=1@p=1637147511@",
+              "lid":"A=2@O=Burggasse 1, 6800 Feldkirch@H=1@X=9599688@Y=47236426@U=103@L=980020329@B=1@p=1644831106@",
               "type":"A",
               "name":"Burggasse 1, 6800 Feldkirch",
+              "nameFormatted":
+              {
+                "text":"Burggasse 1, 6800 Feldkirch",
+                "textInstructionIntervalL":
+                [
+                  {
+                    "startIndex":0,
+                    "endIndex":9,
+                    "textInstructionX":0
+                  },
+                  {
+                    "startIndex":11,
+                    "endIndex":27,
+                    "textInstructionX":1
+                  },
+                  {
+                    "startIndex":9,
+                    "endIndex":11,
+                    "textInstructionX":2
+                  }
+                ]
+              },
               "icoX":0,
-              "extId":"980020284",
+              "extId":"980020329",
               "state":"F",
               "crd":
               {
                 "x":9599688,
-                "y":47236426,
-                "layerX":0,
-                "crdSysX":0
+                "y":47236426
               },
-              "mapSelectable":true
+              "isSelectable":true,
+              "isRoutable":true,
+              "mapDtlCntStyX":-1
             },
             {
-              "lid":"A=2@O=Blasenberggasse 1, 6800 Feldkirch@H=1@X=9587841@Y=47234332@U=103@L=980016520@B=1@p=1637147511@",
+              "lid":"A=2@O=Blasenberggasse 1, 6800 Feldkirch@H=1@X=9587841@Y=47234332@U=103@L=980016556@B=1@p=1644831106@",
               "type":"A",
               "name":"Blasenberggasse 1, 6800 Feldkirch",
+              "nameFormatted":
+              {
+                "text":"Blasenberggasse 1, 6800 Feldkirch",
+                "textInstructionIntervalL":
+                [
+                  {
+                    "startIndex":0,
+                    "endIndex":15,
+                    "textInstructionX":0
+                  },
+                  {
+                    "startIndex":17,
+                    "endIndex":33,
+                    "textInstructionX":1
+                  },
+                  {
+                    "startIndex":15,
+                    "endIndex":17,
+                    "textInstructionX":2
+                  }
+                ]
+              },
               "icoX":0,
-              "extId":"980016520",
+              "extId":"980016556",
               "state":"F",
               "crd":
               {
                 "x":9587841,
-                "y":47234332,
-                "layerX":0,
-                "crdSysX":0
+                "y":47234332
               },
-              "mapSelectable":true
+              "isSelectable":true,
+              "isRoutable":true,
+              "mapDtlCntStyX":-1
             },
             {
-              "lid":"A=4@O=Vorarlberger Kraftwerke AG Blasenberggasse 3, 6800 Feldkirch@X=9586870@Y=47234727@U=130@L=960146345@B=1@p=1641347148@",
+              "lid":"A=4@O=Vorarlberger Kraftwerke AG Blasenberggasse 3, 6800 Feldkirch@X=9586870@Y=47234727@U=130@L=960146345@B=1@p=1645318911@",
               "type":"P",
               "name":"Vorarlberger Kraftwerke AG Blasenberggasse 3, 6800 Feldkirch",
+              "nameFormatted":
+              {
+                "text":"Vorarlberger Kraftwerke AG Blasenberggasse 3, 6800 Feldkirch",
+                "textInstructionIntervalL":
+                [
+                  {
+                    "startIndex":44,
+                    "endIndex":60,
+                    "textInstructionX":1
+                  }
+                ]
+              },
               "icoX":1,
               "extId":"960146345",
               "state":"F",
@@ -134,8 +208,7 @@
               {
                 "x":9586870,
                 "y":47234727,
-                "layerX":0,
-                "crdSysX":0
+                "floor":0
               },
               "mcpData":
               {
@@ -144,32 +217,61 @@
                 "mcpid":"0",
                 "externalId":"Vorarlberger Kraftwerke AG_ETF71727"
               },
-              "mapSelectable":true,
+              "isSelectable":true,
+              "isRoutable":true,
               "msgL":
               [
                 {
                   "type":"REM",
                   "remX":0,
+                  "sty":"I",
                   "dspl":"U",
+                  "tagL":
+                  [
+                    "RES_LOC_WEB","RES_LOC_FLY_WEB"
+                  ],
                   "sort":818413568
                 }
-              ]
+              ],
+              "mapDtlCntStyX":-1
             },
             {
-              "lid":"A=2@O=Waltergasse 1, 6800 Feldkirch@H=1@X=9613406@Y=47250099@U=103@L=980127086@B=1@p=1637147511@",
+              "lid":"A=2@O=Waltergasse 1, 6800 Feldkirch@H=1@X=9613406@Y=47250099@U=103@L=980127318@B=1@p=1644831106@",
               "type":"A",
               "name":"Waltergasse 1, 6800 Feldkirch",
+              "nameFormatted":
+              {
+                "text":"Waltergasse 1, 6800 Feldkirch",
+                "textInstructionIntervalL":
+                [
+                  {
+                    "startIndex":0,
+                    "endIndex":11,
+                    "textInstructionX":0
+                  },
+                  {
+                    "startIndex":13,
+                    "endIndex":29,
+                    "textInstructionX":1
+                  },
+                  {
+                    "startIndex":11,
+                    "endIndex":13,
+                    "textInstructionX":2
+                  }
+                ]
+              },
               "icoX":0,
-              "extId":"980127086",
+              "extId":"980127318",
               "state":"F",
               "crd":
               {
                 "x":9613406,
-                "y":47250099,
-                "layerX":0,
-                "crdSysX":0
+                "y":47250099
               },
-              "mapSelectable":true
+              "isSelectable":true,
+              "isRoutable":true,
+              "mapDtlCntStyX":-1
             }
           ]
         }
