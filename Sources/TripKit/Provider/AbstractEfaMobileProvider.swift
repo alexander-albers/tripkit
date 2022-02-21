@@ -231,6 +231,23 @@ public class AbstractEfaMobileProvider: AbstractEfaProvider {
         guard let data = request.responseData else { throw ParseError(reason: "no response") }
         let xml = SWXMLHash.parse(data)
         let response = xml["efa"]
+        
+        for err in response["ers"]["err"].all {
+            if err["tx"].element?.text == "stop invalid" {
+                switch err["u"].element?.text ?? "" {
+                case "origin":
+                    completion(request, .unknownFrom)
+                case "via":
+                    completion(request, .unknownVia)
+                case "destination":
+                    completion(request, .unknownTo)
+                default:
+                    completion(request, .noTrips)
+                }
+                return
+            }
+        }
+        
         let requestId = response["pas"]["pa"].all.first(where: {$0["n"].element?.text == "requestID"})?["v"].element?.text
         let sessionId = response["pas"]["pa"].all.first(where: {$0["n"].element?.text == "sessionID"})?["v"].element?.text
         
