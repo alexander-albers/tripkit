@@ -910,9 +910,8 @@ public class VrsProvider: AbstractNetworkProvider {
     
     func parseDateTime(from dateTimeString: String) -> Date? {
         let dateFormat = ISO8601DateFormatter()
-        guard let date = dateFormat.date(from: dateTimeString) else { return nil }
-        let timeInterval = floor(date.timeIntervalSinceReferenceDate / 60.0) * 60.0
-        return Date(timeIntervalSinceReferenceDate: timeInterval)
+        dateFormat.timeZone = timeZone
+        return dateFormat.date(from: dateTimeString)
     }
     
     private func parsePlannedPredictedTime(from json: [String : Any], type: String) throws -> (plannedDate: Date, predictedDate: Date?) {
