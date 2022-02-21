@@ -10,6 +10,7 @@ public class VrnProvider: AbstractEfaWebProvider {
     public init() {
         super.init(networkId: .VRN, apiBase: VrnProvider.API_BASE)
         includeRegionId = false
+        useStatelessTripContexts = true
         
         styles = [
             // Straßen- und Stadtbahn Mannheim-Ludwigshafen rnv

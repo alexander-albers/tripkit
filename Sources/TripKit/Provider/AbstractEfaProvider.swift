@@ -40,6 +40,7 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
     var needsSpEncId: Bool = false
     var useLineRestriction: Bool = true
     var useProxFootSearch: Bool = true
+    var useStatelessTripContexts = false
     
     init(networkId: NetworkId, departureMonitorEndpoint: String, tripEndpoint: String, stopFinderEndpoint: String, coordEndpoint: String, tripStopTimesEndpoint: String) {
         self.departureMonitorEndpoint = departureMonitorEndpoint
@@ -928,6 +929,91 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
             static let queryLaterContextRequest = "laterRequest"
         }
         
+    }
+    
+    /// MVV, VRN and others use load balancing. Therefore, stateful API functionality only works
+    /// correctly if we coincidentally hit the same server again. The session ID cookie does include
+    /// the server ID that the session was created on, but apparently the load balancer does not
+    /// respect this.
+    ///
+    /// See: https://github.com/schildbach/public-transport-enabler/commit/72ef473998cbf8d808fcf013759e9fe655ae3eef
+    public class StatelessContext: QueryTripsContext {
+        
+        public override var canQueryEarlier: Bool { return true }
+        public override var canQueryLater: Bool { return true }
+        
+        public let from: Location
+        public let via: Location?
+        public let to: Location
+        public let tripOptions: TripOptions
+        public let lastDepartureTime: Date
+        public let firstArrivalTime: Date
+        
+        public convenience init?(from: Location, via: Location?, to: Location, tripOptions: TripOptions, trips: [Trip], previousContext: QueryTripsContext?) {
+            guard trips.count > 1 else { return nil }
+            let firstTrip = trips[0]
+            var lastTrip = trips[trips.count - 1]
+            // if the last included trip is a walking route, use the previous one
+            let lastTripIsIndividual = lastTrip.legs.count == 1 && lastTrip.legs[0] is IndividualLeg
+            if lastTripIsIndividual, trips.count > 1 {
+                lastTrip = trips[trips.count - 2]
+            }
+            
+            var lastDepartureTime = lastTrip.departureTime.addingTimeInterval(60)
+            var firstArrivalTime = firstTrip.arrivalTime.addingTimeInterval(-60)
+            if let context = previousContext as? StatelessContext {
+                if context.firstArrivalTime < firstArrivalTime {
+                    firstArrivalTime = context.firstArrivalTime
+                }
+                if context.lastDepartureTime > lastDepartureTime {
+                    lastDepartureTime = context.lastDepartureTime
+                }
+            }
+            
+            self.init(from: from, via: via, to: to, tripOptions: tripOptions, lastDepartureTime: lastDepartureTime, firstArrivalTime: firstArrivalTime)
+        }
+        
+        public init?(from: Location, via: Location?, to: Location, tripOptions: TripOptions, lastDepartureTime: Date, firstArrivalTime: Date) {
+            self.from = from
+            self.via = via
+            self.to = to
+            self.tripOptions = tripOptions
+            self.lastDepartureTime = lastDepartureTime
+            self.firstArrivalTime = firstArrivalTime
+            super.init()
+        }
+        
+        public required convenience init?(coder aDecoder: NSCoder) {
+            guard
+                let from = aDecoder.decodeObject(of: Location.self, forKey: PropertyKey.from),
+                let to = aDecoder.decodeObject(of: Location.self, forKey: PropertyKey.to),
+                let tripOptions = aDecoder.decodeObject(of: TripOptions.self, forKey: PropertyKey.tripOptions),
+                let lastDepartureTime = aDecoder.decodeObject(of: NSDate.self, forKey: PropertyKey.lastDepartureTime) as Date?,
+                let firstArrivalTime = aDecoder.decodeObject(of: NSDate.self, forKey: PropertyKey.firstArrivalTime) as Date?
+            else {
+                return nil
+            }
+            let via = aDecoder.decodeObject(of: Location.self, forKey: PropertyKey.via)
+            self.init(from: from, via: via, to: to, tripOptions: tripOptions, lastDepartureTime: lastDepartureTime, firstArrivalTime: firstArrivalTime)
+        }
+        
+        public override func encode(with aCoder: NSCoder) {
+            aCoder.encode(from, forKey: PropertyKey.from)
+            aCoder.encode(via, forKey: PropertyKey.via)
+            aCoder.encode(to, forKey: PropertyKey.to)
+            aCoder.encode(tripOptions, forKey: PropertyKey.tripOptions)
+            aCoder.encode(lastDepartureTime, forKey: PropertyKey.lastDepartureTime)
+            aCoder.encode(firstArrivalTime, forKey: PropertyKey.firstArrivalTime)
+        }
+        
+        struct PropertyKey {
+            static let from = "from"
+            static let via = "via"
+            static let to = "to"
+            static let tripOptions = "tripOptions"
+            static let lastDepartureTime = "lastDepartureTime"
+            static let firstArrivalTime = "firstArrivalTime"
+        }
     }
     
     fileprivate struct ServingLineState {

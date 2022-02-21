@@ -45,31 +45,47 @@ public class AbstractEfaMobileProvider: AbstractEfaProvider {
         
         let httpRequest = HttpRequest(urlBuilder: urlBuilder)
         return makeRequest(httpRequest) {
-            try self._queryTripsParsing(request: httpRequest, from: from, via: via, to: to, previousContext: nil, later: false, completion: completion)
+            try self.queryTripsParsing(request: httpRequest, from: from, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions, previousContext: nil, later: false, completion: completion)
         } errorHandler: { err in
             completion(httpRequest, .failure(err))
         }
     }
     
     public override func queryMoreTrips(context: QueryTripsContext, later: Bool, completion: @escaping (HttpRequest, QueryTripsResult) -> Void) -> AsyncRequest {
-        guard let context = context as? Context else {
+        if let context = context as? Context {
+            let urlBuilder = UrlBuilder(path: tripEndpoint, encoding: requestUrlEncoding)
+            if later {
+                commandLink(builder: urlBuilder, sessionId: context.queryLaterContext.sessionId, requestId: context.queryLaterContext.requestId)
+            } else {
+                commandLink(builder: urlBuilder, sessionId: context.queryEarlierContext.sessionId, requestId: context.queryEarlierContext.requestId)
+            }
+            appendCommonRequestParameters(builder: urlBuilder, outputFormat: "XML")
+            urlBuilder.addParameter(key: "command", value: later ? "tripNext" : "tripPrev")
+            
+            let httpRequest = HttpRequest(urlBuilder: urlBuilder)
+            return makeRequest(httpRequest) {
+                try self._queryTripsParsing(request: httpRequest, from: nil, via: nil, to: nil, date: Date(), departure: true, tripOptions: TripOptions(), previousContext: context, later: later, completion: completion)
+            } errorHandler: { err in
+                self.checkSessionExpired(httpRequest: httpRequest, err: err, completion: completion)
+            }
+        } else if let context = context as? StatelessContext {
+            let refDate = later ? context.lastDepartureTime : context.firstArrivalTime
+            
+            let urlBuilder = UrlBuilder(path: tripEndpoint, encoding: requestUrlEncoding)
+            queryTripsParameters(builder: urlBuilder, from: context.from, via: context.via, to: context.to, date: refDate, departure: later, tripOptions: context.tripOptions)
+            // ensure that the first displayed trip is after the given departure time /
+            // last displayed trip is before the given arrival time
+            urlBuilder.addParameter(key: "calcOneDirection", value: 1)
+            
+            let httpRequest = HttpRequest(urlBuilder: urlBuilder)
+            return makeRequest(httpRequest) {
+                try self.queryTripsParsing(request: httpRequest, from: context.from, via: context.via, to: context.to, date: refDate, departure: later, tripOptions: context.tripOptions, previousContext: context, later: later, completion: completion)
+            } errorHandler: { err in
+                completion(httpRequest, .failure(err))
+            }
+        } else {
             completion(HttpRequest(urlBuilder: UrlBuilder()), .sessionExpired)
             return AsyncRequest(task: nil)
-        }
-        let urlBuilder = UrlBuilder(path: tripEndpoint, encoding: requestUrlEncoding)
-        if later {
-            commandLink(builder: urlBuilder, sessionId: context.queryLaterContext.sessionId, requestId: context.queryLaterContext.requestId)
-        } else {
-            commandLink(builder: urlBuilder, sessionId: context.queryEarlierContext.sessionId, requestId: context.queryEarlierContext.requestId)
-        }
-        appendCommonRequestParameters(builder: urlBuilder, outputFormat: "XML")
-        urlBuilder.addParameter(key: "command", value: later ? "tripNext" : "tripPrev")
-        
-        let httpRequest = HttpRequest(urlBuilder: urlBuilder)
-        return makeRequest(httpRequest) {
-            try self._queryTripsParsing(request: httpRequest, from: nil, via: nil, to: nil, previousContext: context, later: later, completion: completion)
-        } errorHandler: { err in
-            self.checkSessionExpired(httpRequest: httpRequest, err: err, completion: completion)
         }
     }
     
@@ -220,14 +236,14 @@ public class AbstractEfaMobileProvider: AbstractEfaProvider {
     }
     
     override func refreshTripParsing(request: HttpRequest, context: RefreshTripContext, completion: @escaping (HttpRequest, QueryTripsResult) -> Void) throws {
-        try _queryTripsParsing(request: request, from: nil, via: nil, to: nil, previousContext: nil, later: false, completion: completion)
+        try _queryTripsParsing(request: request, from: nil, via: nil, to: nil, date: Date(), departure: true, tripOptions: TripOptions(), previousContext: nil, later: false, completion: completion)
     }
     
     override func queryTripsParsing(request: HttpRequest, from: Location, via: Location?, to: Location, date: Date, departure: Bool, tripOptions: TripOptions, previousContext: QueryTripsContext?, later: Bool, completion: @escaping (HttpRequest, QueryTripsResult) -> Void) throws {
-        try _queryTripsParsing(request: request, from: from, via: via, to: to, previousContext: previousContext, later: later, completion: completion)
+        try _queryTripsParsing(request: request, from: from, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions, previousContext: previousContext, later: later, completion: completion)
     }
     
-    func _queryTripsParsing(request: HttpRequest, from: Location?, via: Location?, to: Location?, previousContext: QueryTripsContext?, later: Bool, completion: @escaping (HttpRequest, QueryTripsResult) -> Void) throws {
+    func _queryTripsParsing(request: HttpRequest, from: Location?, via: Location?, to: Location?, date: Date, departure: Bool, tripOptions: TripOptions, previousContext: QueryTripsContext?, later: Bool, completion: @escaping (HttpRequest, QueryTripsResult) -> Void) throws {
         guard let data = request.responseData else { throw ParseError(reason: "no response") }
         let xml = SWXMLHash.parse(data)
         let response = xml["efa"]
@@ -423,8 +439,10 @@ public class AbstractEfaMobileProvider: AbstractEfaProvider {
             }
         }
         if trips.count > 0 {
-            let context: Context?
-            if let sessionId = sessionId, let requestId = requestId {
+            let context: QueryTripsContext?
+            if useStatelessTripContexts, let from = from, let to = to {
+                context = StatelessContext(from: from, via: via, to: to, tripOptions: tripOptions, trips: trips, previousContext: previousContext)
+            } else if let sessionId = sessionId, let requestId = requestId {
                 if let previousContext = previousContext as? Context {
                     context = Context(queryEarlierContext: later ? previousContext.queryEarlierContext : (sessionId: sessionId, requestId: requestId), queryLaterContext: !later ? previousContext.queryLaterContext : (sessionId: sessionId, requestId: requestId))
                 } else {

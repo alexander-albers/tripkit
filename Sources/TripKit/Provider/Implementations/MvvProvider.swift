@@ -11,6 +11,7 @@ public class MvvProvider: AbstractEfaWebProvider {
         super.init(networkId: .MVV, apiBase: MvvProvider.API_BASE)
         
         includeRegionId = false
+        useStatelessTripContexts = true
         styles = [
             "R": LineStyle(shape: .rect, backgroundColor: LineStyle.parseColor("#36397f"), foregroundColor: LineStyle.white),
             "B": LineStyle(shape: .rect, backgroundColor: LineStyle.parseColor("#005262"), foregroundColor: LineStyle.white),
@@ -56,7 +57,6 @@ public class MvvProvider: AbstractEfaWebProvider {
             "UU7": LineStyle(shape: .rect, backgroundColor: LineStyle.parseColor("#52822f"), backgroundColor2: LineStyle.parseColor("#c20831"), foregroundColor: LineStyle.white, borderColor: 0),
             "UU8": LineStyle(shape: .rect, backgroundColor: LineStyle.parseColor("#c20831"), backgroundColor2: LineStyle.parseColor("#ec6726"), foregroundColor: LineStyle.white, borderColor: 0)
         ]
-        numTripsRequested = 12
     }
     
     override func parseLine(id: String?, network: String?, mot: String?, symbol: String?, name: String?, longName: String?, trainType: String?, trainNum: String?, trainName: String?) -> Line {

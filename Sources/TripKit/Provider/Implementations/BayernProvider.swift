@@ -13,7 +13,6 @@ public class BayernProvider: AbstractEfaMobileProvider {
     public init() {
         super.init(networkId: .BAYERN, apiBase: BayernProvider.API_BASE, departureMonitorEndpoint: BayernProvider.DEPARTURE_MONITOR_ENDPOINT, tripEndpoint: BayernProvider.TRIP_ENDPOINT, stopFinderEndpoint: BayernProvider.STOP_FINDER_ENDPOINT, coordEndpoint: nil, tripStopTimesEndpoint: nil)
         
-        numTripsRequested = 12
         includeRegionId = false
         useProxFootSearch = false
     }
@@ -53,7 +52,9 @@ public class BayernProvider: AbstractEfaMobileProvider {
             }
         } else if mot == "5" {
             if let name = name, name.hasPrefix("Stadtbus Linie ") { // Lindau
-                return super.parseLine(id: id, network: network, mot: mot, symbol: symbol, name: name.substring(to: 15), longName: longName, trainType: trainType, trainNum: trainNum, trainName: trainName)
+                return super.parseLine(id: id, network: network, mot: mot, symbol: symbol, name: name.substring(from: "Stadtbus Linie ".count), longName: longName, trainType: trainType, trainNum: trainNum, trainName: trainName)
+            } else if let name = name, name.hasPrefix("Linie ") { // Passau
+                return super.parseLine(id: id, network: network, mot: mot, symbol: symbol, name: name.substring(from: "Linie ".count), longName: longName, trainType: trainType, trainNum: trainNum, trainName: trainName)
             } else {
                 return super.parseLine(id: id, network: network, mot: mot, symbol: symbol, name: name, longName: longName, trainType: trainType, trainNum: trainNum, trainName: trainName)
             }
