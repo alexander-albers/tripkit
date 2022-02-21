@@ -72,7 +72,7 @@ public class HttpClient: NSObject {
         return get(httpRequest: httpRequest) { result in
             switch result {
             case .success((_, let data)):
-                let xml = SWXMLHash.parse(data)
+                let xml = XMLHash.parse(data)
                 completion(.success(xml))
             case .failure(let error):
                 completion(.failure(error))

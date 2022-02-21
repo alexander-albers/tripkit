@@ -235,7 +235,7 @@ public class AbstractEfaWebProvider: AbstractEfaProvider {
     
     override func queryNearbyLocationsByCoordinateParsing(request: HttpRequest, location: Location, types: [LocationType]?, maxDistance: Int, maxLocations: Int, completion: @escaping (HttpRequest, NearbyLocationsResult) -> Void) throws {
         guard let data = request.responseData else { throw ParseError(reason: "no response") }
-        let xml = SWXMLHash.parse(data)
+        let xml = XMLHash.parse(data)
         let response = xml["itdRequest"]["itdCoordInfoRequest"]["itdCoordInfo"]["coordInfoItemList"]
         
         var locations: [Location] = []
@@ -265,7 +265,7 @@ public class AbstractEfaWebProvider: AbstractEfaProvider {
     
     func handleNearbyStationsRequest(httpRequest: HttpRequest, maxLocations: Int, completion: @escaping (HttpRequest, NearbyLocationsResult) -> Void) throws {
         guard let data = httpRequest.responseData else { throw ParseError(reason: "failed to parse data") }
-        let xml = SWXMLHash.parse(data)
+        let xml = XMLHash.parse(data)
         let request = xml["itdRequest"]["itdDepartureMonitorRequest"]
         
         var ownStation: Location?
@@ -306,7 +306,7 @@ public class AbstractEfaWebProvider: AbstractEfaProvider {
     
     func _queryTripsParsing(request: HttpRequest, from: Location?, via: Location?, to: Location?, date: Date, departure: Bool, tripOptions: TripOptions, previousContext: QueryTripsContext?, later: Bool, completion: @escaping (HttpRequest, QueryTripsResult) -> Void) throws {
         guard let data = request.responseData else { throw ParseError(reason: "no response") }
-        let xml = SWXMLHash.parse(data)
+        let xml = XMLHash.parse(data)
         var response = xml["itdRequest"]["itdTripRequest"]
         if response.all.isEmpty {
             response = xml["itdRequest"]
@@ -544,7 +544,7 @@ public class AbstractEfaWebProvider: AbstractEfaProvider {
     
     override func queryDeparturesParsing(request: HttpRequest, stationId: String, departures: Bool, time: Date?, maxDepartures: Int, equivs: Bool, completion: @escaping (HttpRequest, QueryDeparturesResult) -> Void) throws {
         guard let data = request.responseData else { throw ParseError(reason: "no response") }
-        let xml = SWXMLHash.parse(data)
+        let xml = XMLHash.parse(data)
         let response = xml["itdRequest"]["itdDepartureMonitorRequest"]
         
         var result: [StationDepartures] = []
@@ -601,7 +601,7 @@ public class AbstractEfaWebProvider: AbstractEfaProvider {
     
     override func queryJourneyDetailParsing(request: HttpRequest, context: QueryJourneyDetailContext, completion: @escaping (HttpRequest, QueryJourneyDetailResult) -> Void) throws {
         guard let data = request.responseData, let line = (context as? EfaJourneyContext)?.line else { throw ParseError(reason: "no response") }
-        let xml = SWXMLHash.parse(data)
+        let xml = XMLHash.parse(data)
         let response = xml["itdRequest"]["itdStopSeqCoordRequest"]["stopSeq"]
         var stops: [Stop] = []
         for point in response["itdPoint"].all {

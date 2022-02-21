@@ -150,7 +150,7 @@ public class AbstractEfaMobileProvider: AbstractEfaProvider {
     
     override func suggestLocationsParsing(request: HttpRequest, constraint: String, types: [LocationType]?, maxLocations: Int, completion: @escaping (HttpRequest, SuggestLocationsResult) -> Void) throws {
         guard let data = request.responseData else { throw ParseError(reason: "no response") }
-        let xml = SWXMLHash.parse(data)
+        let xml = XMLHash.parse(data)
         var locations: [SuggestedLocation] = []
         for elem in xml["efa"]["sf"]["p"].all {
             guard let name = normalizeLocationName(name: elem["n"].element?.text), let ty = elem["ty"].element?.text else {
@@ -196,7 +196,7 @@ public class AbstractEfaMobileProvider: AbstractEfaProvider {
     
     override func queryNearbyLocationsByCoordinateParsing(request: HttpRequest, location: Location, types: [LocationType]?, maxDistance: Int, maxLocations: Int, completion: @escaping (HttpRequest, NearbyLocationsResult) -> Void) throws {
         guard let data = request.responseData else { throw ParseError(reason: "no response") }
-        let xml = SWXMLHash.parse(data)
+        let xml = XMLHash.parse(data)
         let response = xml["efa"]["ci"]
         
         var locations: [Location] = []
@@ -245,7 +245,7 @@ public class AbstractEfaMobileProvider: AbstractEfaProvider {
     
     func _queryTripsParsing(request: HttpRequest, from: Location?, via: Location?, to: Location?, date: Date, departure: Bool, tripOptions: TripOptions, previousContext: QueryTripsContext?, later: Bool, completion: @escaping (HttpRequest, QueryTripsResult) -> Void) throws {
         guard let data = request.responseData else { throw ParseError(reason: "no response") }
-        let xml = SWXMLHash.parse(data)
+        let xml = XMLHash.parse(data)
         let response = xml["efa"]
         
         for err in response["ers"]["err"].all {
@@ -459,7 +459,7 @@ public class AbstractEfaMobileProvider: AbstractEfaProvider {
     
     override func queryDeparturesParsing(request: HttpRequest, stationId: String, departures: Bool, time: Date?, maxDepartures: Int, equivs: Bool, completion: @escaping (HttpRequest, QueryDeparturesResult) -> Void) throws {
         guard let data = request.responseData else { throw ParseError(reason: "no response") }
-        let xml = SWXMLHash.parse(data)
+        let xml = XMLHash.parse(data)
         if let error = xml["efa"]["ers"]["err"].element, let mod = error.attribute(by: "mod")?.text, let co = error.attribute(by: "co")?.text {
             throw ParseError(reason: "Efa error: " + mod + " " + co)
         }
@@ -499,7 +499,7 @@ public class AbstractEfaMobileProvider: AbstractEfaProvider {
     
     override func queryJourneyDetailParsing(request: HttpRequest, context: QueryJourneyDetailContext, completion: @escaping (HttpRequest, QueryJourneyDetailResult) -> Void) throws {
         guard let data = request.responseData, let line = (context as? EfaJourneyContext)?.line else { throw ParseError(reason: "no response") }
-        let xml = SWXMLHash.parse(data)
+        let xml = XMLHash.parse(data)
         let response = xml["efa"]["stopSeqCoords"]
         var stops: [Stop] = []
         let format = DateFormatter()

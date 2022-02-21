@@ -434,7 +434,7 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider {
         body = body.replacingOccurrences(of: " <> ", with: " &#x2194; ")
         
         let newData = body.data(using: .utf8) // swift xml parser apparently requires utf8
-        let xml = SWXMLHash.parse(newData!)
+        let xml = XMLHash.parse(newData!)
         if let errorCode = xml["Err"].element?.attribute(by: "code")?.text, let errorText = xml["Err"].element?.attribute(by: "text")?.text {
             if errorCode == "H730" {
                 completion(httpRequest, .invalidId)
@@ -487,7 +487,7 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider {
         body = body.replacingOccurrences(of: " <> ", with: " &#x2194; ")
         
         let newData = body.data(using: .utf8)
-        let xml = SWXMLHash.parse(newData!)
+        let xml = XMLHash.parse(newData!)
         if let errorCode = xml["StationTable"]["Err"].element?.attribute(by: "code")?.text, let errorText = xml["StationTable"]["Err"].element?.attribute(by: "text")?.text {
             if errorCode == "H730" {
                 completion(request, .invalidStation)
