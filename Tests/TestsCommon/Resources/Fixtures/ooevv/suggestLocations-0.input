@@ -1,12 +1,29 @@
 {
-  "ver":"1.15",
+  "ver":"1.52",
   "lang":"deu",
-  "id":"kx6cukaq46ij9i4s",
+  "id":"3iicbikuwkxsg48x",
+  "err":"OK",
   "cInfo":
   {
     "code":"OK",
     "url":"",
     "msg":""
+  },
+  "graph":
+  {
+    "id":"standard",
+    "index":0
+  },
+  "subGraph":
+  {
+    "id":"global",
+    "index":0
+  },
+  "view":
+  {
+    "id":"standard",
+    "index":0,
+    "type":"WGS84"
   },
   "svcResL":
   [
@@ -17,43 +34,18 @@
       {
         "common":
         {
-          "locL":
-          [
-
-          ],
-          "prodL":
-          [
-
-          ],
-          "polyL":
-          [
-
-          ],
-          "layerL":
+          "txtInstL":
           [
             {
-              "id":"standard",
-              "name":"standard",
-              "index":0,
-              "annoCnt":0
-            }
-          ],
-          "crdSysL":
-          [
+              "id":"street",
+              "type":"NONE",
+              "mode":"ADD"
+            },
             {
-              "id":"standard",
-              "index":0,
-              "type":"WGS84",
-              "dim":2
+              "id":"city",
+              "type":"NONE",
+              "mode":"ADD"
             }
-          ],
-          "opL":
-          [
-
-          ],
-          "remL":
-          [
-
           ],
           "icoL":
           [
@@ -64,19 +56,18 @@
               {
                 "r":255,
                 "g":255,
-                "b":255,
-                "a":255
+                "b":255
               },
               "bg":
               {
                 "r":0,
                 "g":121,
-                "b":58,
-                "a":255
-              }
+                "b":58
+              },
+              "zIdx":1000
             },
             {
-              "res":"ADR"
+              "res":"loc_addr"
             }
           ]
         },
@@ -87,9 +78,13 @@
           "locL":
           [
             {
-              "lid":"A=1@O=Salzburg Merianstraße@X=13050279@Y=47811556@U=81@L=455084400@B=1@p=1638666385@i=at:45:50844@",
+              "lid":"A=1@O=Salzburg Merianstraße@X=13050279@Y=47811556@U=81@L=455084400@B=1@p=1645315177@i=A×at:45:50844@",
               "type":"S",
               "name":"Salzburg Merianstraße",
+              "nameFormatted":
+              {
+                "text":"Salzburg Merianstraße"
+              },
               "icoX":0,
               "extId":"455084400",
               "state":"F",
@@ -97,33 +92,63 @@
               {
                 "x":13050279,
                 "y":47811556,
-                "type":"WGS84",
-                "layerX":0,
-                "crdSysX":0
+                "floor":0
               },
               "meta":true,
               "pCls":128,
-              "wt":55,
-              "isMainMast":true
+              "wt":57,
+              "isMainMast":true,
+              "isSelectable":true,
+              "isRoutable":true,
+              "globalIdL":
+              [
+                {
+                  "id":"at:45:50844",
+                  "type":"A"
+                }
+              ],
+              "TZOffset":60,
+              "chgTime":"000000",
+              "mapDtlCntStyX":-1
             },
             {
-              "lid":"A=2@O=Merianstraße, 5020 Salzburg@X=13054306@Y=47811322@U=103@b=980079479@B=1@p=1637147511@",
+              "lid":"A=2@O=Merianstraße, 5020 Salzburg@X=13054306@Y=47811322@U=103@b=980079631@B=1@p=1644831106@",
               "type":"A",
               "name":"Merianstraße, 5020 Salzburg",
+              "nameFormatted":
+              {
+                "text":"Merianstraße, 5020 Salzburg",
+                "textInstructionIntervalL":
+                [
+                  {
+                    "startIndex":0,
+                    "endIndex":12,
+                    "textInstructionX":0
+                  },
+                  {
+                    "startIndex":12,
+                    "endIndex":27,
+                    "textInstructionX":1
+                  }
+                ]
+              },
               "icoX":1,
               "state":"F",
               "crd":
               {
                 "x":13054306,
-                "y":47811322,
-                "layerX":0,
-                "crdSysX":0
-              }
+                "y":47811322
+              },
+              "mapDtlCntStyX":-1
             },
             {
-              "lid":"A=1@O=Salzburg Gorianstraße@X=13029496@Y=47794189@U=81@L=455085200@B=1@p=1638666385@i=at:45:50852@",
+              "lid":"A=1@O=Salzburg Gorianstraße@X=13029496@Y=47794189@U=81@L=455085200@B=1@p=1645315177@i=A×at:45:50852@",
               "type":"S",
               "name":"Salzburg Gorianstraße",
+              "nameFormatted":
+              {
+                "text":"Salzburg Gorianstraße"
+              },
               "icoX":0,
               "extId":"455085200",
               "state":"F",
@@ -131,19 +156,33 @@
               {
                 "x":13029496,
                 "y":47794189,
-                "type":"WGS84",
-                "layerX":0,
-                "crdSysX":0
+                "floor":0
               },
               "meta":true,
               "pCls":1152,
-              "wt":191,
-              "isMainMast":true
+              "wt":189,
+              "isMainMast":true,
+              "isSelectable":true,
+              "isRoutable":true,
+              "globalIdL":
+              [
+                {
+                  "id":"at:45:50852",
+                  "type":"A"
+                }
+              ],
+              "TZOffset":60,
+              "chgTime":"000000",
+              "mapDtlCntStyX":-1
             },
             {
-              "lid":"A=1@O=Salzburg Firmianstraße@X=13025963@Y=47784687@U=81@L=455069600@B=1@p=1638666385@i=at:45:50696@",
+              "lid":"A=1@O=Salzburg Firmianstraße@X=13025963@Y=47784687@U=81@L=455069600@B=1@p=1645315177@i=A×at:45:50696@",
               "type":"S",
               "name":"Salzburg Firmianstraße",
+              "nameFormatted":
+              {
+                "text":"Salzburg Firmianstraße"
+              },
               "icoX":0,
               "extId":"455069600",
               "state":"F",
@@ -151,28 +190,54 @@
               {
                 "x":13025963,
                 "y":47784687,
-                "type":"WGS84",
-                "layerX":0,
-                "crdSysX":0
+                "floor":0
               },
               "meta":true,
               "pCls":1152,
-              "wt":191,
-              "isMainMast":true
+              "wt":189,
+              "isMainMast":true,
+              "isSelectable":true,
+              "isRoutable":true,
+              "globalIdL":
+              [
+                {
+                  "id":"at:45:50696",
+                  "type":"A"
+                }
+              ],
+              "TZOffset":60,
+              "chgTime":"000000",
+              "mapDtlCntStyX":-1
             },
             {
-              "lid":"A=2@O=Gorianstraße, 5020 Salzburg@X=13029217@Y=47794036@U=103@b=980041796@B=1@p=1637147511@",
+              "lid":"A=2@O=Gorianstraße, 5020 Salzburg@X=13029217@Y=47794036@U=103@b=980041884@B=1@p=1644831106@",
               "type":"A",
               "name":"Gorianstraße, 5020 Salzburg",
+              "nameFormatted":
+              {
+                "text":"Gorianstraße, 5020 Salzburg",
+                "textInstructionIntervalL":
+                [
+                  {
+                    "startIndex":0,
+                    "endIndex":12,
+                    "textInstructionX":0
+                  },
+                  {
+                    "startIndex":12,
+                    "endIndex":27,
+                    "textInstructionX":1
+                  }
+                ]
+              },
               "icoX":1,
               "state":"F",
               "crd":
               {
                 "x":13029217,
-                "y":47794036,
-                "layerX":0,
-                "crdSysX":0
-              }
+                "y":47794036
+              },
+              "mapDtlCntStyX":-1
             }
           ]
         }

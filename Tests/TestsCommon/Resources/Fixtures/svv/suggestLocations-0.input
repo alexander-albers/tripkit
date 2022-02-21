@@ -1,14 +1,30 @@
 {
-  "ver":"1.18",
+  "ver":"1.52",
   "ext":"VAO.6",
   "lang":"deu",
-  "id":"pc2xekqx66iigwck",
+  "id":"4pkwji6ewk8cxmwg",
   "err":"OK",
   "cInfo":
   {
     "code":"OK",
     "url":"",
     "msg":""
+  },
+  "graph":
+  {
+    "id":"standard",
+    "index":0
+  },
+  "subGraph":
+  {
+    "id":"global",
+    "index":0
+  },
+  "view":
+  {
+    "id":"standard",
+    "index":0,
+    "type":"WGS84"
   },
   "svcResL":
   [
@@ -19,47 +35,23 @@
       {
         "common":
         {
-          "locL":
-          [
-
-          ],
-          "prodL":
-          [
-
-          ],
-          "polyL":
-          [
-
-          ],
-          "layerL":
+          "txtInstL":
           [
             {
-              "id":"standard",
-              "name":"standard",
-              "index":0,
-              "annoCnt":0
-            }
-          ],
-          "crdSysL":
-          [
+              "id":"street",
+              "type":"NONE",
+              "mode":"ADD"
+            },
             {
-              "id":"standard",
-              "index":0,
-              "type":"WGS84"
+              "id":"city",
+              "type":"NONE",
+              "mode":"ADD"
             }
-          ],
-          "opL":
-          [
-
-          ],
-          "remL":
-          [
-
           ],
           "icoL":
           [
             {
-              "res":"prod_ic_bus",
+              "res":"prod_regbus",
               "txtS":"120",
               "fg":
               {
@@ -72,10 +64,11 @@
                 "r":120,
                 "g":0,
                 "b":140
-              }
+              },
+              "zIdx":1000
             },
             {
-              "res":"ADR"
+              "res":"loc_addr"
             }
           ]
         },
@@ -86,9 +79,13 @@
           "locL":
           [
             {
-              "lid":"A=1@O=Salzburg Akademiestraße@X=13059223@Y=47794000@U=81@L=455002200@B=1@p=1638666385@i=at:45:50022@",
+              "lid":"A=1@O=Salzburg Akademiestraße@X=13059223@Y=47794000@U=81@L=455002200@B=1@p=1645315177@i=A×at:45:50022@",
               "type":"S",
               "name":"Salzburg Akademiestraße",
+              "nameFormatted":
+              {
+                "text":"Salzburg Akademiestraße"
+              },
               "icoX":0,
               "extId":"455002200",
               "state":"F",
@@ -96,70 +93,144 @@
               {
                 "x":13059223,
                 "y":47794000,
-                "layerX":0,
-                "crdSysX":0
+                "floor":0
               },
               "meta":true,
               "pCls":1216,
-              "wt":221,
+              "wt":220,
               "isMainMast":true,
-              "mapSelectable":true
+              "isSelectable":true,
+              "isRoutable":true,
+              "globalIdL":
+              [
+                {
+                  "id":"at:45:50022",
+                  "type":"A"
+                }
+              ],
+              "TZOffset":60,
+              "chgTime":"000000",
+              "mapDtlCntStyX":-1
             },
             {
-              "lid":"A=2@O=Akademiestraße, 1010 Wien@X=16372206@Y=48202955@U=103@b=980001440@B=1@p=1637147511@",
+              "lid":"A=2@O=Akademiestraße, 1010 Wien@X=16372206@Y=48202955@U=103@b=980001445@B=1@p=1644831106@",
               "type":"A",
               "name":"Akademiestraße, 1010 Wien",
+              "nameFormatted":
+              {
+                "text":"Akademiestraße, 1010 Wien",
+                "textInstructionIntervalL":
+                [
+                  {
+                    "startIndex":0,
+                    "endIndex":14,
+                    "textInstructionX":0
+                  },
+                  {
+                    "startIndex":14,
+                    "endIndex":25,
+                    "textInstructionX":1
+                  }
+                ]
+              },
               "icoX":1,
               "state":"F",
               "crd":
               {
                 "x":16372206,
-                "y":48202955,
-                "layerX":0,
-                "crdSysX":0
-              }
+                "y":48202955
+              },
+              "mapDtlCntStyX":-1
             },
             {
-              "lid":"A=2@O=Akademiestraße, 5020 Salzburg@X=13058989@Y=47792778@U=103@b=980001444@B=1@p=1637147511@",
+              "lid":"A=2@O=Akademiestraße, 5020 Salzburg@X=13058989@Y=47792778@U=103@b=980001449@B=1@p=1644831106@",
               "type":"A",
               "name":"Akademiestraße, 5020 Salzburg",
+              "nameFormatted":
+              {
+                "text":"Akademiestraße, 5020 Salzburg",
+                "textInstructionIntervalL":
+                [
+                  {
+                    "startIndex":0,
+                    "endIndex":14,
+                    "textInstructionX":0
+                  },
+                  {
+                    "startIndex":14,
+                    "endIndex":29,
+                    "textInstructionX":1
+                  }
+                ]
+              },
               "icoX":1,
               "state":"F",
               "crd":
               {
                 "x":13058989,
-                "y":47792778,
-                "layerX":0,
-                "crdSysX":0
-              }
+                "y":47792778
+              },
+              "mapDtlCntStyX":-1
             },
             {
-              "lid":"A=2@O=Akademiestraße, 3040 Neulengbach@X=15912058@Y=48197220@U=103@b=980001442@B=1@p=1637147511@",
+              "lid":"A=2@O=Akademiestraße, 3040 Neulengbach@X=15912058@Y=48197220@U=103@b=980001447@B=1@p=1644831106@",
               "type":"A",
               "name":"Akademiestraße, 3040 Neulengbach",
+              "nameFormatted":
+              {
+                "text":"Akademiestraße, 3040 Neulengbach",
+                "textInstructionIntervalL":
+                [
+                  {
+                    "startIndex":0,
+                    "endIndex":14,
+                    "textInstructionX":0
+                  },
+                  {
+                    "startIndex":14,
+                    "endIndex":32,
+                    "textInstructionX":1
+                  }
+                ]
+              },
               "icoX":1,
               "state":"F",
               "crd":
               {
                 "x":15912058,
-                "y":48197220,
-                "layerX":0,
-                "crdSysX":0
-              }
+                "y":48197220
+              },
+              "mapDtlCntStyX":-1
             },
             {
-              "lid":"A=2@O=Akademiestraße, 2514 Traiskirchen@X=16281065@Y=48017589@U=103@b=980001441@B=1@p=1637147511@",
+              "lid":"A=2@O=Akademiestraße, 2514 Traiskirchen@X=16281065@Y=48017589@U=103@b=980001446@B=1@p=1644831106@",
               "type":"A",
               "name":"Akademiestraße, 2514 Traiskirchen",
+              "nameFormatted":
+              {
+                "text":"Akademiestraße, 2514 Traiskirchen",
+                "textInstructionIntervalL":
+                [
+                  {
+                    "startIndex":0,
+                    "endIndex":14,
+                    "textInstructionX":0
+                  },
+                  {
+                    "startIndex":14,
+                    "endIndex":33,
+                    "textInstructionX":1
+                  }
+                ]
+              },
               "icoX":1,
               "state":"F",
               "crd":
               {
                 "x":16281065,
-                "y":48017589,
-                "layerX":0,
-                "crdSysX":0
-              }
+                "y":48017589
+              },
+              "mapDtlCntStyX":-1
             }
           ]
         }
