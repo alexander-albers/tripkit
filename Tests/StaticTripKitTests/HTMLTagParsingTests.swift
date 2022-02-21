@@ -39,7 +39,7 @@ class HTMLFormatDecodingTests: XCTestCase {
     
     func testRealText() {
         let xml = """
-        Betrifft die Linien: 2, 3, 4, 6, 8, N4<br /><br />Umleitungen (in beiden Richtungen)<br />von Donnerstag, 1.8.2019 ca. 7:00 Uhr<br />bis Montag, 5.8.2019 abends<br /><br />
+        Betrifft die Linien: 2, 3, 4, 6, 8, N4<br /><br />Umleitungen (in beiden Richtungen)<br />von Donnerstag, 1.8.2019 ca. 7:00 Uhr<br />bis Montag, 5.8.2019 abends
         """
         
         let expected = """
@@ -48,8 +48,6 @@ class HTMLFormatDecodingTests: XCTestCase {
         Umleitungen (in beiden Richtungen)
         von Donnerstag, 1.8.2019 ca. 7:00 Uhr
         bis Montag, 5.8.2019 abends
-        
-        
         """
         
         let formatted = xml.stripHTMLTags()
