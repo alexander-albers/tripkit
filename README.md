@@ -49,9 +49,22 @@ case .failure(let error):
 }
 ```
 
-### Query departures from Marktplatz (id=7000001):
+### Find locations near a coordinate (Marktplatz):
 ```swift
-let (request, result) = await provider.queryDepartures(stationId: "7000001")
+let (request, result) = await provider.queryNearbyLocations(location: Location(lat: 49009656, lon: 8402383))
+switch result {
+case .success(let locations):
+    for location in locations {
+        print(location.getUniqueShortName())
+    }
+case .failure(let error):
+    print(error)
+}
+```
+
+### Query departures from Marktplatz (id=7001003):
+```swift
+let (request, result) = await provider.queryDepartures(stationId: "7001003")
 switch result {
 case .success(let departures):
     for departure in departures.flatMap { $0.departures } {
@@ -67,9 +80,9 @@ case .failure(let error):
 }
 ```
 
-### Query trips between Marktplatz (7000001) and Kronenplatz (7000002):
+### Query trips between Marktplatz (7001003) and Kronenplatz (7001002):
 ```swift
-let (request, result) = await provider.queryTrips(from: Location(id: "7000001"), via: nil, to: Location(id: "7000002"))
+let (request, result) = await provider.queryTrips(from: Location(id: "7001003"), via: nil, to: Location(id: "7001002"))
 switch result {
 case .success(let context, let from, let via, let to, let trips, let messages):
     for trip in trips {
@@ -94,7 +107,7 @@ case .failure(let error):
 }
 ```
 
-More api methods can be found in [NetworkProvider.swift](Sources/TripKit/Provider/NetworkProvider.swift).
+More api methods can be found in [NetworkProvider.swift](Sources/TripKit/Provider/NetworkProvider.swift) and [NetworkProvider+Async.swift](Sources/TripKit/Provider/NetworkProvider+Async.swift).
 
 ## Using providers that require secrets
 

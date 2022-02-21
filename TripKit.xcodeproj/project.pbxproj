@@ -1425,6 +1425,7 @@
 			isa = PBXGroup;
 			children = (
 				FAB7543A1E3FD3F300C343F2 /* NetworkProvider.swift */,
+				FA17ADA427A2E8BF006305B1 /* NetworkProvider+Async.swift */,
 				FAB754381E3FD3F300C343F2 /* AbstractNetworkProvider.swift */,
 				FAB754371E3FD3F300C343F2 /* AbstractEfaProvider.swift */,
 				FAA90D0427C250370005E044 /* AbstractEfaWebProvider.swift */,
@@ -1601,7 +1602,6 @@
 			isa = PBXGroup;
 			children = (
 				FA1C85771E437D73002BFE6E /* AsyncRequest.swift */,
-				FA17ADA427A2E8BF006305B1 /* NetworkProvider+Async.swift */,
 				FA11F6E420496C7100B66359 /* UrlBuilder.swift */,
 				FAB7543F1E3FD49D00C343F2 /* HttpClient.swift */,
 				FA9D377A2266476000CED39F /* Logging.swift */,
