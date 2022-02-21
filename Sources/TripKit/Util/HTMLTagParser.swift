@@ -13,19 +13,21 @@ extension String {
     /// - Returns: the stripped string or the original string in case of an unexpected parse error.
     func stripHTMLTags() -> String {
         // Embed in own tag, since text may not include start and end tags
-        let xml = "<TRIPKIT>\(self)</TRIPKIT>"
+        let xml = "<TRIPKIT>\(self.replacingOccurrences(of: "<br>", with: "<br/>"))</TRIPKIT>"
         // Convert text to data
         guard let data = xml.data(using: .utf8) else { return self }
         // Start parsing
         let parser = XMLParser(data: data)
-        let delegate = ParserDelegate()
+        let delegate = ParserDelegate(xml: xml)
         parser.delegate = delegate
         _ = parser.parse()
-        return delegate.result.emptyToNil ?? self
+        return delegate.result.trimmingCharacters(in: .whitespacesAndNewlines).emptyToNil ?? self
     }
 }
 
 class ParserDelegate: NSObject, XMLParserDelegate {
+    let xml: String
+    
     var result: String = ""
     var tabStop = 0
     
@@ -35,7 +37,10 @@ class ParserDelegate: NSObject, XMLParserDelegate {
     
     var shouldStripWhitespaces = false
     
-    override init() {}
+    init(xml: String) {
+        self.xml = xml
+        super.init()
+    }
     
     func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String] = [:]) {
         // DEBUG
