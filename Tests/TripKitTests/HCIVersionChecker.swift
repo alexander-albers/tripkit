@@ -22,9 +22,9 @@ class HCIVersionChecker: XCTestCase {
             InvgProvider(apiAuthorization: secrets[.INVG]!.hciAuthorization),
             NvvProvider(apiAuthorization: secrets[.NVV]!.hciAuthorization),
             ShProvider(apiAuthorization: secrets[.SH]!.hciAuthorization),
-            GvhProvider(apiAuthorization: secrets[.GVH]!.hciAuthorization), // 1.53
+            GvhProvider(apiAuthorization: secrets[.GVH]!.hciAuthorization),
             VbnProvider(apiAuthorization: secrets[.VBN]!.hciAuthorization),
-            NasaProvider(apiAuthorization: secrets[.NASA]!.hciAuthorization), // 1.48
+            NasaProvider(apiAuthorization: secrets[.NASA]!.hciAuthorization),
             VsnProvider(apiAuthorization: secrets[.VSN]!.hciAuthorization),
             VosProvider(apiAuthorization: secrets[.VOS]!.hciAuthorization),
             VmtProvider(apiAuthorization: secrets[.VMT]!.hciAuthorization),
@@ -44,7 +44,18 @@ class HCIVersionChecker: XCTestCase {
         for provider in providers {
             let urlBuilder = UrlBuilder(path: provider.mgateEndpoint, encoding: .utf8)
 
-            let dict: [String : Any] = ["auth": provider.apiAuthorization ?? "", "client": provider.apiClient ?? "", "ver": "1.99", "lang": "de", "svcReqL": []]
+            let dict: [String : Any] = [
+                "auth": provider.apiAuthorization ?? "",
+                "client": provider.apiClient ?? "",
+                "ver": "1.21",
+                "lang": "de",
+                "svcReqL": [[
+                    "meth": "ServerInfo",
+                    "req": [
+                        "getVersionInfo": true
+                    ]
+                ]]
+            ]
             let request = provider.encodeJson(dict: dict, requestUrlEncoding: .utf8)
             provider.requestVerification.appendParameters(to: urlBuilder, requestString: request)
 
@@ -58,9 +69,9 @@ class HCIVersionChecker: XCTestCase {
             switch result {
             case .success(let json):
                 let errString = json["err"].stringValue
-                XCTAssertEqual(errString, "VERSION")
+                XCTAssertEqual(errString, "OK")
                 
-                let version = json["ver"].stringValue
+                let version = json["svcResL"][0]["res"]["hciVersion"].stringValue
                 XCTAssertFalse(version.isEmpty)
                 os_log("%@: latest supported version is %@", provider.id.rawValue, version)
             case .failure(let error):
