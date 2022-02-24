@@ -117,7 +117,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
             "stbLoc": locJson,
             "maxJny": maxDepartures != 0 ? maxDepartures : 50
         ]
-        if let apiVersion = apiVersion, apiVersion.compare("1.19", options: .numeric) == .orderedAscending {
+        if let apiVersion = apiVersion, apiVersion.isSmallerVersionThan("1.19") {
             req["stbFltrEquiv"] = !equivs
             req["getPasslist"] = false
         }
@@ -222,7 +222,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
             return AsyncRequest(task: nil)
         }
         var req: [String: Any] = ["trfReq": ["jnyCl": 2, "cType": "PK", "tvlrProf": [["type": "E"]]], "getPolyline": true, "getPasslist": true]
-        if let apiVersion = apiVersion, apiVersion.compare("1.24", options: .numeric) == .orderedAscending {
+        if let apiVersion = apiVersion, apiVersion.isSmallerVersionThan("1.24") {
             req["ctxRecon"] = context.contextRecon
         } else {
             req["outReconL"] = [["ctx": context.contextRecon]]

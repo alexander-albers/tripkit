@@ -113,6 +113,10 @@ extension String {
         return result
     }
     
+    func isSmallerVersionThan(_ other: String) -> Bool {
+        return self.compare(other, options: .numeric) == .orderedAscending
+    }
+    
 }
 
 class MatchResult {
