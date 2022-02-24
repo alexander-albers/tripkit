@@ -271,7 +271,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         guard let res = svcRes["res"] as? [String: Any], let match = res["match"] as? [String: Any], let locList = match["locL"] as? [Any] else {
             throw ParseError(reason: "could not parse loc list")
         }
-        let locations = try parseLocList(locList: locList)
+        let locations = try parseLocList(locList: locList, throwErrors: false)
         let suggestedLocations = locations.map({SuggestedLocation(location: $0, priority: 0)})
         
         completion(request, .success(locations: suggestedLocations))
@@ -288,7 +288,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         }
         let locations: [Location]
         if let locList = res["locL"] as? [Any] {
-            locations = try parseLocList(locList: locList).filter({types.contains($0.type)})
+            locations = try parseLocList(locList: locList, throwErrors: false).filter({types.contains($0.type)})
         } else {
             locations = []
         }
@@ -985,14 +985,26 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
     
     let P_LOCATION_ID_COORDS = try! NSRegularExpression(pattern: ".*@X=(\\d+)@Y=(\\d+)@.*")
     
-    func parseLocList(locList: [Any]) throws -> [Location] {
+    func parseLocList(locList: [Any], throwErrors: Bool = true) throws -> [Location] {
         var locations: [Location] = []
         
         for locElem in locList {
-            guard let locElem = locElem as? [String: Any] else { throw ParseError(reason: "could not parse loc elem") }
+            guard let locElem = locElem as? [String: Any] else {
+                if throwErrors {
+                    throw ParseError(reason: "could not parse loc elem")
+                } else {
+                    continue
+                }
+            }
             // currently, DB receives some illegal locations without any associated type
             // ignore these locations instead of throwing an error
-            guard let type = locElem["type"] as? String else { continue }
+            guard let type = locElem["type"] as? String else {
+                if throwErrors {
+                    throw ParseError(reason: "failed to parse loc type")
+                } else {
+                    continue
+                }
+            }
             
             let locationType: LocationType
             let id: String?
@@ -1027,12 +1039,12 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
                 id = nil
                 placeAndName = (nil, nil)
                 products = nil
-            case "LM":
-                // ignore this location type
-                // seems to be a variation of an existing station
-                continue
             default:
-                throw ParseError(reason: "unknown loc type \(type)")
+                if throwErrors {
+                    throw ParseError(reason: "unknown loc type \(type)")
+                } else {
+                    continue
+                }
             }
             
             let location: Location?
@@ -1047,7 +1059,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
             }
             if let location = location {
                 locations.append(location)
-            } else {
+            } else if throwErrors {
                 throw ParseError(reason: "could not parse location")
             }
         }
