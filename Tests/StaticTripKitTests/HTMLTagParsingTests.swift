@@ -74,5 +74,24 @@ class HTMLFormatDecodingTests: XCTestCase {
         print(formatted)
         XCTAssert(formatted == "Important: Please wear a mask.")
     }
+    
+    func testXMLTags() {
+        let xml = """
+        One & two
+        One &amp; two
+        One &lt; two
+        """
+        
+        let expected = """
+        One & two
+        One & two
+        One < two
+        """
+        
+        let formatted = xml.stripHTMLTags()
+        print(formatted)
+        print(expected)
+        XCTAssert(formatted == expected)
+    }
 
 }

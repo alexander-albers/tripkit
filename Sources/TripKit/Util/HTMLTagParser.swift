@@ -14,7 +14,7 @@ extension String {
     func stripHTMLTags() -> String {
         let escapedString = self
             .replacingOccurrences(of: "<br>", with: "<br/>")
-            .replacingOccurrences(of: "&", with: "&amp;")
+            .replacingOccurrences(of: "&(?!(#[0-9]{2,4}|[A-z]{2,6});)", with: "&amp;", options: .regularExpression, range: nil)
         // Embed in own tag, since text may not include start and end tags
         let xml = "<TRIPKIT>\(escapedString)</TRIPKIT>"
         // Convert text to data
