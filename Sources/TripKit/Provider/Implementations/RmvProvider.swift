@@ -144,9 +144,9 @@ public class RmvProvider: AbstractHafasClientInterfaceProvider {
         
         for place in RmvProvider.places {
             if stationName.hasPrefix(place + " - ") {
-                return (place, stationName.substring(from: place.length + 3))
+                return (place, stationName.substring(from: place.count + 3))
             } else if stationName.hasPrefix(place + " ") || stationName.hasPrefix(place + "-") {
-                return (place, stationName.substring(from: place.length + 1))
+                return (place, stationName.substring(from: place.count + 1))
             }
         }
         

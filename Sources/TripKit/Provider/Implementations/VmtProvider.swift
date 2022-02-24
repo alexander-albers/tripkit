@@ -20,13 +20,13 @@ public class VmtProvider: AbstractHafasClientInterfaceProvider {
     override func split(stationName: String?) -> (String?, String?) {
         guard var stationName = stationName else { return super.split(stationName: nil) }
         if stationName.hasSuffix(" [Zug]") {
-            stationName = stationName.substring(to: stationName.length - 6)
+            stationName = stationName.substring(to: stationName.count - 6)
         }
         for place in ShProvider.PLACES {
             if stationName.hasPrefix(place + ", ") {
-                return (place, stationName.substring(from: place.length + 2))
+                return (place, stationName.substring(from: place.count + 2))
             } else if stationName.hasPrefix(place + " ") || stationName.hasPrefix(place + "-") {
-                return (place, stationName.substring(from: place.length + 1))
+                return (place, stationName.substring(from: place.count + 1))
             }
         }
         return super.split(stationName: stationName)

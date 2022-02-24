@@ -41,16 +41,12 @@ public func string(from timeInterval: TimeInterval) -> String {
 
 extension String {
     
-    public var length: Int {
-        return count
-    }
-    
     subscript (i: Int) -> String {
         return self[i ..< i + 1]
     }
     
     func substring(from: Int) -> String {
-        return self[min(from, length) ..< length]
+        return self[min(from, count) ..< count]
     }
     
     func substring(to: Int) -> String {
@@ -58,8 +54,8 @@ extension String {
     }
     
     subscript (r: Range<Int>) -> String {
-        let range = Range(uncheckedBounds: (lower: max(0, min(length, r.lowerBound)),
-                                            upper: min(length, max(0, r.upperBound))))
+        let range = Range(uncheckedBounds: (lower: max(0, min(count, r.lowerBound)),
+                                            upper: min(count, max(0, r.upperBound))))
         let start = index(startIndex, offsetBy: range.lowerBound)
         let end = index(start, offsetBy: range.upperBound - range.lowerBound)
         return String(self[start ..< end])
@@ -79,7 +75,7 @@ extension String {
     
     func match(pattern: NSRegularExpression) -> MatchResult? {
         let ns = self as NSString
-        guard let match = pattern.firstMatch(in: self, options: [], range: NSMakeRange(0, self.length)) else { return nil }
+        guard let match = pattern.firstMatch(in: self, options: [], range: NSMakeRange(0, self.count)) else { return nil }
         var matches: [String?] = []
         if match.numberOfRanges <= 1 {
             return MatchResult(matches: matches)
@@ -98,7 +94,7 @@ extension String {
     func matches(pattern: NSRegularExpression) -> [MatchResult] {
         var result: [MatchResult] = []
         let ns = self as NSString
-        for match in pattern.matches(in: self, options: [], range: NSMakeRange(0, self.length)) {
+        for match in pattern.matches(in: self, options: [], range: NSMakeRange(0, self.count)) {
             var matches: [String?] = []
             if match.numberOfRanges <= 1 {
                 result.append(MatchResult(matches: matches))

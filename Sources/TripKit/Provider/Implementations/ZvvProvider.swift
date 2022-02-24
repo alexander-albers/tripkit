@@ -78,10 +78,10 @@ public class ZvvProvider: AbstractHafasClientInterfaceProvider {
         
         for op in ZvvProvider.OPERATORS {
             if stationName.hasSuffix(" " + op) {
-                stationName = stationName.substring(to: stationName.length - op.length - 1)
+                stationName = stationName.substring(to: stationName.count - op.count - 1)
                 break
             } else if stationName.hasSuffix(" (\(op)") {
-                stationName = stationName.substring(to: stationName.length - op.length - 3)
+                stationName = stationName.substring(to: stationName.count - op.count - 3)
                 break
             }
         }
@@ -92,7 +92,7 @@ public class ZvvProvider: AbstractHafasClientInterfaceProvider {
         
         for place in ZvvProvider.PLACES {
             if stationName.hasPrefix(place + " ") || stationName.hasPrefix(place + ",") {
-                return (place, stationName.substring(from: place.length + 1))
+                return (place, stationName.substring(from: place.count + 1))
             }
         }
         

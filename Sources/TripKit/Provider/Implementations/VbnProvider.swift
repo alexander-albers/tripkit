@@ -223,7 +223,7 @@ public class VbnProvider: AbstractHafasClientInterfaceProvider {
         guard let stationName = stationName else { return super.split(stationName: nil) }
         for place in ShProvider.PLACES {
             if stationName.hasPrefix(place + " ") || stationName.hasPrefix(place + "-") {
-                return (place, stationName.substring(from: place.length + 1))
+                return (place, stationName.substring(from: place.count + 1))
             }
         }
         return super.split(stationName: stationName)

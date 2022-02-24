@@ -683,7 +683,7 @@ public class VrsProvider: AbstractNetworkProvider {
                 var message = ""
                 for info in segment["info"] as? [Any] ?? [] {
                     guard let info = info as? [String: Any], let text = info["text"] as? String else { continue }
-                    if message.length > 0 {
+                    if message.count > 0 {
                         message += ", "
                     }
                     message += text
@@ -861,7 +861,7 @@ public class VrsProvider: AbstractNetworkProvider {
         var result = ""
         for product in products {
             guard let productStr = generateProduct(from: product) else { continue }
-            if result.length > 0 {
+            if result.count > 0 {
                 result += ","
             }
             result += productStr
@@ -901,7 +901,7 @@ public class VrsProvider: AbstractNetworkProvider {
             return .suburbanTrain
         } else if number.hasPrefix("U") {
             return .subway
-        } else if number.length <= 2 && !number.hasPrefix("N") {
+        } else if number.count <= 2 && !number.hasPrefix("N") {
             return .tram
         } else {
             return .bus

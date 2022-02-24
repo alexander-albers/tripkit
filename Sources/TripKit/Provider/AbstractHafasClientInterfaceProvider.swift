@@ -625,7 +625,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
                 throw ParseError(reason: "Unknown Hafas error \(error): \(errTxt)")
             }
             return
-        } else if apiVersion == "1.10", let svcResJson = encodeJson(dict: svcRes), svcResJson.length == 170 {
+        } else if apiVersion == "1.10", let svcResJson = encodeJson(dict: svcRes), svcResJson.count == 170 {
             completion(request, .invalidId)
             return
         }

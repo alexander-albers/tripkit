@@ -359,7 +359,7 @@ public class AbstractEfaMobileProvider: AbstractEfaProvider {
                                 parseIsoTime(from: intermediateParts[3], dateComponents: &dateComponents)
                                 predictedTime = gregorianCalendar.date(from: dateComponents)
                                 
-                                if intermediateParts.count > 5 && intermediateParts[5].length > 0 {
+                                if intermediateParts.count > 5 && intermediateParts[5].count > 0 {
                                     if let delay = Int(intermediateParts[5]) {
                                         predictedTime = predictedTime?.addingTimeInterval(Double(delay) * 60.0)
                                     }
@@ -607,7 +607,7 @@ public class AbstractEfaMobileProvider: AbstractEfaProvider {
             if let productName = productName, productNu == nil {
                 symbol = productName
             } else if let productName = productName, let productNu = productNu, productNu.hasSuffix(" " + productName) {
-                symbol = String(productNu[..<productNu.index(productNu.startIndex, offsetBy: productNu.length - productName.length - 1)])
+                symbol = String(productNu[..<productNu.index(productNu.startIndex, offsetBy: productNu.count - productName.count - 1)])
             } else {
                 symbol = productNu!
             }
