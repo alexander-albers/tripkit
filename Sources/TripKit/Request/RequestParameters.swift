@@ -1,19 +1,120 @@
 import Foundation
 
+/// How the trip should be optimized.
 public enum Optimize: Int {
-    case leastDuration, leastChanges, leastWalking
+    /// Find trips with least total duration.
+    case leastDuration
+    /// Find trips with least number of transitions.
+    case leastChanges
+    /// Find trips with least walking distance.
+    case leastWalking
 }
 
+/// Walk speed for footpaths.
 public enum WalkSpeed: Int {
     case slow, normal, fast
 }
 
+/// Accessibility options
 public enum Accessibility: Int {
-    case neutral, limited, barrierFree
+    /// No accessibility restrictions.
+    case neutral
+    /// Some restrictions apply, like avoiding staircases.
+    case limited
+    /// Only request completely barrier free trips.
+    case barrierFree
 }
 
+/// Additional trip options
 public enum Option: Int {
     case bike
+}
+
+/// Settings for requesting different tariff information.
+public class TariffProfile: NSObject, NSSecureCoding {
+    public static var supportsSecureCoding: Bool = true
+    
+    /// 1 for first-class, 2 for second-class
+    public var tariffClass: Int
+    /// Type of the traveler, depending on his/her age.
+    public var travelerType: TravelerType?
+    public var tariffReduction: TariffReduction?
+    
+    public init(tariffClass: Int, travelerType: TravelerType?, tariffReduction: TariffReduction?) {
+        self.tariffClass = tariffClass
+        self.travelerType = travelerType
+        self.tariffReduction = tariffReduction
+    }
+    
+    public required convenience init?(coder: NSCoder) {
+        let tariffClass = coder.decodeInteger(forKey: PropertyKey.tariffClass)
+        let travelerType = coder.containsValue(forKey: PropertyKey.travelerType) ? TravelerType(rawValue: coder.decodeInteger(forKey: PropertyKey.travelerType)) : nil
+        let tariffReduction = coder.decodeObject(of: TariffReduction.self, forKey: PropertyKey.tariffReduction)
+        self.init(tariffClass: tariffClass, travelerType: travelerType, tariffReduction: tariffReduction)
+    }
+    
+    public func encode(with coder: NSCoder) {
+        coder.encode(tariffClass, forKey: PropertyKey.tariffClass)
+        if let travelerType = travelerType {
+            coder.encode(travelerType.rawValue, forKey: PropertyKey.travelerType)
+        }
+        coder.encode(tariffReduction, forKey: PropertyKey.tariffReduction)
+    }
+    
+    struct PropertyKey {
+        static let tariffClass = "tariffClass"
+        static let travelerType = "travelerType"
+        static let tariffReduction = "tariffReduction"
+    }
+}
+
+/// Type of the traveler, depending on his/her age.
+public enum TravelerType: Int {
+    /// Default
+    case adult
+    /// For example passengers aged 15-26 years old (DB).
+    case youngAdult
+    /// For example passengers aged 6-14 years old (DB).
+    case child
+    /// For example passengers aged 0-5 years old (DB).
+    case youngChild
+}
+
+/// Object which reduces the displayed tariff rate, like for example a loyalty card.
+public class TariffReduction: NSObject, NSSecureCoding {
+    public static var supportsSecureCoding: Bool = true
+    
+    /// User-readable title.
+    public let title: String
+    /// 1 for first-class, 2 for second-class.
+    public let tariffClass: Int?
+    /// A uniquely identifiable code.
+    public let code: Int
+    
+    init(title: String, tariffClass: Int?, code: Int) {
+        self.title = title
+        self.tariffClass = tariffClass
+        self.code = code
+    }
+    
+    public required convenience init?(coder: NSCoder) {
+        guard let title = coder.decodeObject(of: NSString.self, forKey: PropertyKey.title) as String? else { return nil }
+        let tariffClass = coder.containsValue(forKey: PropertyKey.tariffClass) ? coder.decodeInteger(forKey: PropertyKey.tariffClass) : nil
+        let code = coder.decodeInteger(forKey: "code")
+        self.init(title: title, tariffClass: tariffClass, code: code)
+    }
+    
+    public func encode(with coder: NSCoder) {
+        coder.encode(title, forKey: PropertyKey.title)
+        coder.encode(tariffClass, forKey: PropertyKey.tariffClass)
+        coder.encode(code, forKey: PropertyKey.code)
+    }
+    
+    struct PropertyKey {
+        static let title = "title"
+        static let tariffClass = "tariffClass"
+        static let code = "code"
+    }
 }
 
 public class TripOptions: NSObject, NSSecureCoding {
@@ -29,8 +130,9 @@ public class TripOptions: NSObject, NSSecureCoding {
     public var minChangeTime: Int? // in minutes
     public var maxFootpathTime: Int? // in minutes
     public var maxFootpathDist: Int? // in meters
+    public var tariffProfile: TariffProfile?
     
-    public init(products: [Product]? = nil, optimize: Optimize? = nil, walkSpeed: WalkSpeed? = nil, accessibility: Accessibility? = nil, options: [Option]? = nil, maxChanges: Int? = nil, minChangeTime: Int? = nil, maxFootpathTime: Int? = nil, maxFootpathDist: Int? = nil) {
+    public init(products: [Product]? = nil, optimize: Optimize? = nil, walkSpeed: WalkSpeed? = nil, accessibility: Accessibility? = nil, options: [Option]? = nil, maxChanges: Int? = nil, minChangeTime: Int? = nil, maxFootpathTime: Int? = nil, maxFootpathDist: Int? = nil, tariffProfile: TariffProfile? = nil) {
         self.products = products
         self.optimize = optimize
         self.accessibility = accessibility
@@ -39,6 +141,7 @@ public class TripOptions: NSObject, NSSecureCoding {
         self.minChangeTime = minChangeTime
         self.maxFootpathTime = maxFootpathTime
         self.maxFootpathDist = maxFootpathDist
+        self.tariffProfile = tariffProfile
     }
     
     public required convenience init?(coder aDecoder: NSCoder) {
@@ -53,7 +156,8 @@ public class TripOptions: NSObject, NSSecureCoding {
         let minChangeTime = aDecoder.decodeObject(of: NSNumber.self, forKey: PropertyKey.minChangeTime) as? Int
         let maxFootpathTime = aDecoder.decodeObject(of: NSNumber.self, forKey: PropertyKey.maxFootpathTime) as? Int
         let maxFootpathDist = aDecoder.decodeObject(of: NSNumber.self, forKey: PropertyKey.maxFootpathDist) as? Int
-        self.init(products: products, optimize: optimize, walkSpeed: walkSpeed, accessibility: accessibility, options: options, maxChanges: maxChanges, minChangeTime: minChangeTime, maxFootpathTime: maxFootpathTime, maxFootpathDist: maxFootpathDist)
+        let tariffProfile = aDecoder.decodeObject(of: TariffProfile.self, forKey: PropertyKey.tariffProfile)
+        self.init(products: products, optimize: optimize, walkSpeed: walkSpeed, accessibility: accessibility, options: options, maxChanges: maxChanges, minChangeTime: minChangeTime, maxFootpathTime: maxFootpathTime, maxFootpathDist: maxFootpathDist, tariffProfile: tariffProfile)
     }
     
     public func encode(with aCoder: NSCoder) {
@@ -68,6 +172,7 @@ public class TripOptions: NSObject, NSSecureCoding {
         aCoder.encode(minChangeTime, forKey: PropertyKey.minChangeTime)
         aCoder.encode(maxFootpathTime, forKey: PropertyKey.maxFootpathTime)
         aCoder.encode(maxFootpathDist, forKey: PropertyKey.maxFootpathDist)
+        aCoder.encode(tariffProfile, forKey: PropertyKey.tariffProfile)
     }
     
     struct PropertyKey {
@@ -80,9 +185,10 @@ public class TripOptions: NSObject, NSSecureCoding {
         static let minChangeTime = "minChangeTime"
         static let maxFootpathTime = "maxFootpathTime"
         static let maxFootpathDist = "maxFootpathDist"
+        static let tariffProfile = "tariffProfile"
     }
 }
 
 public enum QueryTrait: Int {
-    case maxChanges, minChangeTime, maxFootpathTime, maxFootpathDist
+    case maxChanges, minChangeTime, maxFootpathTime, maxFootpathDist, tariffClass, tariffTravelerType, tariffReductions
 }

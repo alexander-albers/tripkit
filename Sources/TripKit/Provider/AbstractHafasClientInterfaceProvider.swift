@@ -3,7 +3,7 @@ import os.log
 
 public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
     
-    public override var supportedQueryTraits: Set<QueryTrait> { [.maxChanges, .minChangeTime, .maxFootpathDist] }
+    public override var supportedQueryTraits: Set<QueryTrait> { [.maxChanges, .minChangeTime, .maxFootpathDist, .tariffClass] }
     
     var mgateEndpoint: String
     var apiVersion: String?
@@ -543,8 +543,8 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
                     
                     let loadFactor: LoadFactor?
                     if let dTrnCmpSX = jny["dTrnCmpSX"] as? [String: Any], let tcocXL = dTrnCmpSX["tcocX"] as? [Int] {
-                        // TODO: support first class
-                        loadFactor = tcocXL.compactMap({ loadFactors?[$0] }).first(where: { $0.cls == "SECOND" })?.loadFactor
+                        let className = tripOptions.tariffProfile?.tariffClass == 1 ? "FIRST" : "SECOND"
+                        loadFactor = tcocXL.compactMap({ loadFactors?[$0] }).first(where: { $0.cls == className })?.loadFactor
                     } else {
                         loadFactor = parseLoadFactorFromRems(jny: jny, rems: rems)
                     }
@@ -752,14 +752,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
             ],
             "getPolyline": true,
             "getPasslist": true,
-            "extChgTime": -1,
-            "trfReq": [
-                "jnyCl": 2,
-                "cType": "PK",
-                "tvlrProf": [[
-                    "type": "E"
-                    ]]
-            ]
+            "extChgTime": -1
         ]
         if let via = via {
             req["viaLocL"] = [["loc": jsonLocation(from: via)]]
@@ -792,7 +785,30 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         if let minChangeTime = tripOptions.minChangeTime {
             req["minChgTime"] = minChangeTime
         }
+        var tvlrProf: [String: Any] = [:]
+        if supportedQueryTraits.contains(.tariffTravelerType) {
+            tvlrProf["type"] = getTravelerTypeCode(from: tripOptions.tariffProfile?.travelerType)
+        } else {
+            tvlrProf["type"] = "E"
+        }
+        if supportedQueryTraits.contains(.tariffReductions), let code = tripOptions.tariffProfile?.tariffReduction?.code {
+            tvlrProf["redtnCard"] = code
+        }
+        req["trfReq"] = [
+            "jnyCl": tripOptions.tariffProfile?.tariffClass ?? 2,
+            "cType": "PK",
+            "tvlrProf": [tvlrProf]
+        ]
         return req
+    }
+    
+    private func getTravelerTypeCode(from travelerType: TravelerType?) -> String {
+        switch travelerType ?? .adult {
+        case .adult: return "E"
+        case .youngAdult: return "Y"
+        case .child: return "K"
+        case .youngChild: return "B"
+        }
     }
     
     func wrapJsonApiRequest(meth: String, req: [String: Any], formatted: Bool) -> String? {
@@ -1307,9 +1323,12 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
     }
     
     private func parseFare(jsonFare: [String: Any]) -> Fare? {
-        guard
-            let price = jsonFare["prc"] as? Int, price > 0
-        else {
+        let price: Int
+        if let prc = jsonFare["prc"] as? Int, prc > 0 {
+            price = prc
+        } else if let prc = jsonFare["price"] as? [String: Any], let amount = prc["amount"] as? Int, amount > 0 {
+            price = amount
+        } else {
             return nil
         }
         let desc = jsonFare["desc"] as? String

@@ -19,6 +19,26 @@ public class DbProvider: AbstractHafasClientInterfaceProvider {
     let format = DateFormatter()
     
     public override var supportedLanguages: Set<String> { ["de", "en", "fr", "es", "it", "nl", "da", "pl", "cs"] }
+    public override var supportedQueryTraits: Set<QueryTrait> { Set(Array(super.supportedQueryTraits) + [.tariffTravelerType, .tariffReductions]) }
+    /// See https://reiseauskunft.bahn.de/addons/fachkonfig-utf8.cfg
+    public override var tariffReductionTypes: [TariffReduction] {
+        [
+            TariffReduction(title: "Keine Ermäßigung", tariffClass: nil, code: 0),
+            TariffReduction(title: "BahnCard 25 1. Kl.", tariffClass: 1, code: 1),
+            TariffReduction(title: "BahnCard 25 2. Kl.", tariffClass: 2, code: 2),
+            TariffReduction(title: "BahnCard 50 1. Kl.", tariffClass: 1, code: 3),
+            TariffReduction(title: "BahnCard 50 2. Kl.", tariffClass: 2, code: 4),
+            TariffReduction(title: "BahnCard 100 1. Kl.", tariffClass: 1, code: 16),
+            TariffReduction(title: "BahnCard 100 2. Kl.", tariffClass: 2, code: 17),
+            TariffReduction(title: "SH-Card", tariffClass: nil, code: 14),
+            TariffReduction(title: "AT - VORTEILScard", tariffClass: nil, code: 9),
+            TariffReduction(title: "CH - General-Abonnement", tariffClass: nil, code: 15),
+            TariffReduction(title: "CH - HalbtaxAbo", tariffClass: nil, code: 10),
+            TariffReduction(title: "CH - HalbtaxAbo (ohne RAILPLUS)", tariffClass: nil, code: 11),
+            TariffReduction(title: "NL - 40%", tariffClass: nil, code: 12),
+            TariffReduction(title: "NL - 40% (ohne RAILPLUS)", tariffClass: nil, code: 13),
+        ]
+    }
     
     public init(apiAuthorization: [String: Any], requestVerification: AbstractHafasClientInterfaceProvider.RequestVerification) {
         super.init(networkId: .DB, apiBase: DbProvider.API_BASE, productsMap: DbProvider.PRODUCTS_MAP)

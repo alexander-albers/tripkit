@@ -6,6 +6,8 @@ public protocol NetworkProvider {
     var id: NetworkId { get }
     /// Set of supported trip options.
     var supportedQueryTraits: Set<QueryTrait> { get }
+    /// Objects which reduce the displayed tariff rate, like for example a loyalty cards.
+    var tariffReductionTypes: [TariffReduction] { get }
     /// Set of supported language codes.
     var supportedLanguages: Set<String> { get }
     /// Language code that will be used if no other language has been specified. This value either corresponds``Locale.current.languageCode`` (i.e. to the device language) or to a language from ``supportedLanguages`` if the device language is not supported by the network provider.

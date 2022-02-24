@@ -6,6 +6,7 @@ public class AbstractNetworkProvider: NetworkProvider {
     
     public let id: NetworkId
     public var supportedQueryTraits: Set<QueryTrait> { return [] }
+    public var tariffReductionTypes: [TariffReduction] { return [] }
     public var supportedLanguages: Set<String> { [] }
     public var defaultLanguage: String {
         // First, check whether the current locale is supported
