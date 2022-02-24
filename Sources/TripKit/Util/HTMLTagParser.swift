@@ -12,8 +12,11 @@ extension String {
     ///
     /// - Returns: the stripped string or the original string in case of an unexpected parse error.
     func stripHTMLTags() -> String {
+        let escapedString = self
+            .replacingOccurrences(of: "<br>", with: "<br/>")
+            .replacingOccurrences(of: "&", with: "&amp;")
         // Embed in own tag, since text may not include start and end tags
-        let xml = "<TRIPKIT>\(self.replacingOccurrences(of: "<br>", with: "<br/>"))</TRIPKIT>"
+        let xml = "<TRIPKIT>\(escapedString)</TRIPKIT>"
         // Convert text to data
         guard let data = xml.data(using: .utf8) else { return self }
         // Start parsing
