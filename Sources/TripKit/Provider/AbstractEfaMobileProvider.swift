@@ -396,9 +396,9 @@ public class AbstractEfaMobileProvider: AbstractEfaProvider {
                 }
                 let addTime: TimeInterval = !legs.isEmpty ? max(0, -departure.minTime.timeIntervalSince(legs.last!.maxTime)) : 0
                 if lineDestination.line === Line.FOOTWAY {
-                    legs.append(IndividualLeg(type: .WALK, departureTime: departure.minTime.addingTimeInterval(addTime), departure: departure.location, arrival: arrival.location, arrivalTime: arrival.maxTime.addingTimeInterval(addTime), distance: 0, path: path))
+                    legs.append(IndividualLeg(type: .walk, departureTime: departure.minTime.addingTimeInterval(addTime), departure: departure.location, arrival: arrival.location, arrivalTime: arrival.maxTime.addingTimeInterval(addTime), distance: 0, path: path))
                 } else if lineDestination.line === Line.TRANSFER {
-                    legs.append(IndividualLeg(type: .TRANSFER, departureTime: departure.minTime.addingTimeInterval(addTime), departure: departure.location, arrival: arrival.location, arrivalTime: arrival.maxTime.addingTimeInterval(addTime), distance: 0, path: path))
+                    legs.append(IndividualLeg(type: .transfer, departureTime: departure.minTime.addingTimeInterval(addTime), departure: departure.location, arrival: arrival.location, arrivalTime: arrival.maxTime.addingTimeInterval(addTime), distance: 0, path: path))
                 } else if lineDestination.line === Line.DO_NOT_CHANGE {
                     if let last = legs.last as? PublicLeg {
                         var lastMessage = "Nicht umsteigen, Weiterfahrt im selben Fahrzeug möglich."

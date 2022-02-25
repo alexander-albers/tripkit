@@ -1043,16 +1043,16 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider {
                         let individualType: IndividualLeg.`Type`
                         if let routingType = routingType {
                             if routingType == "FOOT" {
-                                individualType = .WALK
+                                individualType = .walk
                             } else if routingType == "BIKE" {
-                                individualType = .BIKE
+                                individualType = .bike
                             } else if routingType == "CAR" || routingType == "P+R" {
-                                individualType = .CAR
+                                individualType = .car
                             } else {
                                 throw ParseError(reason: "unknown routing type \(routingType)")
                             }
                         } else {
-                            individualType = type == 1 ? .WALK : .TRANSFER
+                            individualType = type == 1 ? .walk : .transfer
                         }
                         
                         let departureTime = Date(timeIntervalSince1970: predictedDepartureTime != 0 ? predictedDepartureTime : plannedDepartureTime)

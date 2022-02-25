@@ -601,14 +601,14 @@ public class HvvProvider: AbstractNetworkProvider {
         switch serviceType {
         case "FOOTPATH":
             // Individual leg
-            return IndividualLeg(type: .WALK, departureTime: departure.time, departure: departure.location, arrival: arrival.location, arrivalTime: arrival.time, distance: 0, path: path)
+            return IndividualLeg(type: .walk, departureTime: departure.time, departure: departure.location, arrival: arrival.location, arrivalTime: arrival.time, distance: 0, path: path)
         case "BICYCLE":
-            return IndividualLeg(type: .BIKE, departureTime: departure.time, departure: departure.location, arrival: arrival.location, arrivalTime: arrival.time, distance: 0, path: path)
+            return IndividualLeg(type: .bike, departureTime: departure.time, departure: departure.location, arrival: arrival.location, arrivalTime: arrival.time, distance: 0, path: path)
         case "CHANGE", "CHANGE_SAME_PLATFORM":
             if departure.time == arrival.time {
                 return nil
             }
-            return IndividualLeg(type: .TRANSFER, departureTime: departure.time, departure: departure.location, arrival: arrival.location, arrivalTime: arrival.time, distance: 0, path: path)
+            return IndividualLeg(type: .transfer, departureTime: departure.time, departure: departure.location, arrival: arrival.location, arrivalTime: arrival.time, distance: 0, path: path)
         case "BUS", "TRAIN", "SHIP":
             // Public leg
             let servingLine = parseLineAndDestination(json: json["line"], directionType: nil)

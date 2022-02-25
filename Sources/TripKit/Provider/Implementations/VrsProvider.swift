@@ -708,7 +708,7 @@ public class VrsProvider: AbstractNetworkProvider {
                 if type == "walk" {
                     let distance = segment["distance"] as? Int ?? 0
                     let addTime: TimeInterval = !legs.isEmpty ? max(0, -departurePlanned.timeIntervalSince(legs.last!.maxTime)) : 0
-                    legs.append(IndividualLeg(type: .WALK, departureTime: departurePlanned.addingTimeInterval(addTime), departure: segmentOrigin, arrival: segmentDestination, arrivalTime: arrivalPlanned.addingTimeInterval(addTime), distance: distance, path: points))
+                    legs.append(IndividualLeg(type: .walk, departureTime: departurePlanned.addingTimeInterval(addTime), departure: segmentOrigin, arrival: segmentDestination, arrivalTime: arrivalPlanned.addingTimeInterval(addTime), distance: distance, path: points))
                 } else if type == "publicTransport" {
                     let directionLoc: Location?
                     guard let lineObject = segment["line"] as? [String: Any] else {

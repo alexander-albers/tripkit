@@ -502,7 +502,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
                     let gis = sec["gis"]
                     let distance = gis["distance"].intValue
                     let path = parsePath(encodedPolyList: encodedPolyList, jny: gis)
-                    processIndividualLeg(legs: &legs, type: .WALK, departureStop: departureStop, arrivalStop: arrivalStop, distance: distance, path: path)
+                    processIndividualLeg(legs: &legs, type: .walk, departureStop: departureStop, arrivalStop: arrivalStop, distance: distance, path: path)
                 case "KISS":
                     let gis = sec["gis"]
                     let distance = gis["distance"].intValue
@@ -514,7 +514,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
                         let line = Line(id: nil, network: nil, product: .onDemand, label: providerName, name: providerName, number: nil, vehicleNumber: nil, style: lineStyle(network: nil, product: .onDemand, label: providerName), attr: nil, message: nil, direction: nil)
                         legs.append(PublicLeg(line: line, destination: arrivalStop.location, departure: departureStop, arrival: arrivalStop, intermediateStops: [], message: nil, path: path, journeyContext: nil, loadFactor: nil))
                     } else {
-                        processIndividualLeg(legs: &legs, type: .WALK, departureStop: departureStop, arrivalStop: arrivalStop, distance: distance, path: path)
+                        processIndividualLeg(legs: &legs, type: .walk, departureStop: departureStop, arrivalStop: arrivalStop, distance: distance, path: path)
                     }
                 default:
                     throw ParseError(reason: "could not parse outcon sec type \(sec["type"].stringValue)")

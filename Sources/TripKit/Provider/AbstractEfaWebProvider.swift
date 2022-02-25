@@ -459,11 +459,11 @@ public class AbstractEfaWebProvider: AbstractEfaProvider {
                 } else if meansOfTransportType == 98 && meansOfTransportProductName == "gesicherter Anschluss" {
                     // ignore
                 } else if meansOfTransportType == 99 && meansOfTransportProductName == "Fussweg" {
-                    processIndividualLeg(partialRoute, &legs, .WALK, departureTime, departureLocation, arrivalTime, arrivalLocation)
+                    processIndividualLeg(partialRoute, &legs, .walk, departureTime, departureLocation, arrivalTime, arrivalLocation)
                 } else if meansOfTransportType == 100 && (meansOfTransportProductName == nil || meansOfTransportProductName == "Fussweg") {
-                    processIndividualLeg(partialRoute, &legs, .WALK, departureTime, departureLocation, arrivalTime, arrivalLocation)
+                    processIndividualLeg(partialRoute, &legs, .walk, departureTime, departureLocation, arrivalTime, arrivalLocation)
                 } else if meansOfTransportType == 105 && meansOfTransportProductName == "Taxi" {
-                    processIndividualLeg(partialRoute, &legs, .CAR, departureTime, departureLocation, arrivalTime, arrivalLocation)
+                    processIndividualLeg(partialRoute, &legs, .car, departureTime, departureLocation, arrivalTime, arrivalLocation)
                 } else {
                     throw ParseError(reason: "unknown means of transport: \(meansOfTransportType) \(meansOfTransportProductName ?? "")")
                 }

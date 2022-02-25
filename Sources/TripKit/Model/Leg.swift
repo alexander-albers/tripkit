@@ -231,7 +231,7 @@ public class IndividualLeg: NSObject, Leg, NSSecureCoding {
     }
     
     public enum `Type`: Int {
-        case WALK, BIKE, CAR, TRANSFER
+        case walk, bike, car, transfer
     }
     
     struct PropertyKey {
