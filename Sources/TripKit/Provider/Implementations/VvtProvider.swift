@@ -74,11 +74,11 @@ public class VvtProvider: AbstractHafasClientInterfaceProvider {
         return super.split(address: address)
     }
     
-    override func newLine(network: String?, product: Product?, name: String?, shortName: String?, number: String?, vehicleNumber: String?) -> Line {
+    override func newLine(id: String?, network: String?, product: Product?, name: String?, shortName: String?, number: String?, vehicleNumber: String?) -> Line {
         if product == .tram && name == "HBB" {
-            return Line(id: nil, network: network, product: .cablecar, label: name, name: "Hungerburgbahn", number: number, vehicleNumber: vehicleNumber, style: lineStyle(network: network, product: .cablecar, label: name), attr: [], message: nil)
+            return Line(id: id, network: network, product: .cablecar, label: name, name: "Hungerburgbahn", number: number, vehicleNumber: vehicleNumber, style: lineStyle(network: network, product: .cablecar, label: name), attr: [], message: nil)
         } else {
-            return super.newLine(network: network, product: product, name: name, shortName: shortName, number: number, vehicleNumber: vehicleNumber)
+            return super.newLine(id: id, network: network, product: product, name: name, shortName: shortName, number: number, vehicleNumber: vehicleNumber)
         }
     }
     

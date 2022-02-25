@@ -27,7 +27,7 @@ public class Stop: NSObject, NSSecureCoding {
     public let message: String?
     /// URL for querying the wagon sequence of a train.
     /// See `DbProvider.getWagonSequenceUrl()`
-    public let wagonSequenceContext: URL?
+    public var wagonSequenceContext: URL?
     
     /// Returns the earliest time of the stop, either departure or arrival.
     public var minTime: Date? {

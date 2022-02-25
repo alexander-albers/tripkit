@@ -1,5 +1,6 @@
 import Foundation
 import os.log
+import SwiftyJSON
 
 public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
     
@@ -23,6 +24,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
     // MARK: NetworkProvider implementations – Requests
     
     override public func suggestLocations(constraint: String, types: [LocationType]?, maxLocations: Int, completion: @escaping (HttpRequest, SuggestLocationsResult) -> Void) -> AsyncRequest {
+        // TODO: extract parameters to method
         var type: String
         if let types = types, !types.isEmpty {
             if types.contains(.any) || [.station, .poi, .address].allSatisfy(types.contains) {
@@ -265,12 +267,11 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
     
     override func suggestLocationsParsing(request: HttpRequest, constraint: String, types: [LocationType]?, maxLocations: Int, completion: @escaping (HttpRequest, SuggestLocationsResult) -> Void) throws {
         let svcRes = try validateResponse(with: request.responseData, requiredMethod: "LocMatch")
-        if let error = svcRes["err"] as? String, error != "OK" {
-            throw ParseError(reason: "\(error): \(svcRes["errTxt"] as? String ?? "")")
+        if let error = svcRes["err"].string, error != "OK" {
+            throw ParseError(reason: svcRes["errTxt"].string ?? error)
         }
-        guard let res = svcRes["res"] as? [String: Any], let match = res["match"] as? [String: Any], let locList = match["locL"] as? [Any] else {
-            throw ParseError(reason: "could not parse loc list")
-        }
+        
+        let locList = svcRes["res", "match", "locL"]
         let locations = try parseLocList(locList: locList, throwErrors: false)
         let suggestedLocations = locations.map({SuggestedLocation(location: $0, priority: 0)})
         
@@ -280,45 +281,34 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
     override func queryNearbyLocationsByCoordinateParsing(request: HttpRequest, location: Location, types: [LocationType]?, maxDistance: Int, maxLocations: Int, completion: @escaping (HttpRequest, NearbyLocationsResult) -> Void) throws {
         let types = types ?? [.station]
         let svcRes = try validateResponse(with: request.responseData, requiredMethod: "LocGeoPos")
-        if let error = svcRes["err"] as? String, error != "OK" {
-            throw ParseError(reason: "\(error): \(svcRes["errTxt"] as? String ?? "")")
+        if let error = svcRes["err"].string, error != "OK" {
+            throw ParseError(reason: svcRes["errTxt"].string ?? error)
         }
-        guard let res = svcRes["res"] as? [String: Any] else {
-            throw ParseError(reason: "could not parse loc list")
-        }
-        let locations: [Location]
-        if let locList = res["locL"] as? [Any] {
-            locations = try parseLocList(locList: locList, throwErrors: false).filter({types.contains($0.type)})
-        } else {
-            locations = []
-        }
+        
+        let locList = svcRes["res", "locL"]
+        let locations = try parseLocList(locList: locList, throwErrors: false).filter({types.contains($0.type)})
         
         completion(request, .success(locations: locations))
     }
     
     override func queryDeparturesParsing(request: HttpRequest, stationId: String, departures: Bool, time: Date?, maxDepartures: Int, equivs: Bool, completion: @escaping (HttpRequest, QueryDeparturesResult) -> Void) throws {
         let svcRes = try validateResponse(with: request.responseData, requiredMethod: "StationBoard")
-        if let err = svcRes["err"] as? String, err != "OK" {
-            let errTxt = svcRes["errTxt"] as? String ?? ""
-            os_log("Received hafas error %{public}@: %{public}@", log: .requestLogger, type: .error, err, errTxt)
-            if err == "LOCATION" {
+        if let error = svcRes["err"].string, error != "OK" {
+            if error == "LOCATION" {
                 completion(request, .invalidStation)
-            } else if err == "FAIL" && errTxt == "HCI Service: request failed" {
-                throw ParseError(reason: "request failed")
-            } else if err == "PROBLEMS" && errTxt == "HCI Service: problems during service execution" {
-                throw ParseError(reason: "problems during service execution")
-            } else if err == "CGI_READ_FAILED" {
-                throw ParseError(reason: "cgi read failed")
+                return
             } else {
-                throw ParseError(reason: "unknown hafas error \(err): \(errTxt)")
+                throw ParseError(reason: svcRes["errTxt"].string ?? error)
             }
-            return
         }
-        guard let res = svcRes["res"] as? [String: Any], let common = res["common"] as? [String: Any], let locList = common["locL"] as? [Any], let prodList = common["prodL"] as? [Any] else {
-            throw ParseError(reason: "could not parse lists")
-        }
-        let opList = common["opL"] as? [Any]
-        if locList.isEmpty {
+        
+        let common = svcRes["res", "common"]
+        let locList = common["locL"]
+        let prodList = common["prodL"]
+        let opList = common["opL"]
+        let remList = common["remL"]
+        let himList = common["himL"]
+        if locList.arrayValue.isEmpty {
             // for example GVH: returns no locations when id is invalid
             completion(request, .invalidStation)
             return
@@ -327,50 +317,53 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         let locations = try parseLocList(locList: locList)
         let operators = try parseOpList(opList: opList)
         let lines = try parseProdList(prodList: prodList, operators: operators)
-        let remList = common["remL"] as? [Any]
         let rems = try parseRemList(remList: remList)
-        let himList = common["himL"] as? [Any]
         let messages = try parseMessageList(himList: himList)
         
         var result: [StationDepartures] = []
-        for jny in res["jnyL"] as? [Any] ?? [] {
-            guard let jny = jny as? [String: Any], let stbStop = jny["stbStop"] as? [String: Any], let dateString = jny["date"] as? String, let lineIndex = (departures ? stbStop["dProdX"] : stbStop["aProdX"]) as? Int, let jnyDirTxt = jny["dirTxt"] as? String else { throw ParseError(reason: "could not parse jny") }
-            
-            if let reachable = jny["isRchbl"] as? Bool, !reachable {
+        for jny in svcRes["res", "jnyL"].arrayValue {
+            let stbStop = jny["stbStop"]
+            if let reachable = jny["isRchbl"].bool, !reachable {
                 continue
             }
-            if let cancelled = jny["dCncl"] as? Bool, cancelled {
+            if let cancelled = jny["dCncl"].bool, cancelled {
                 continue
             }
             
-            var dateComponents = DateComponents()
-            dateComponents.timeZone = timeZone
-            var calendar = Calendar(identifier: .gregorian)
-            calendar.timeZone = timeZone
-            parseIsoDate(from: dateString, dateComponents: &dateComponents)
-            guard let baseDate = calendar.date(from: dateComponents) else { throw ParseError(reason: "could not parse base date") }
+            // Parse platform
+            let position = parsePosition(json: stbStop, platfName: departures ? "dPlatfR" : "aPlatfR", pltfName: departures ? "dPltfR" : "aPltfR")
+            let plannedPosition = parsePosition(json: stbStop, platfName: departures ? "dPlatfS" : "aPlatfS", pltfName: departures ? "dPltfS" : "aPltfS")
             
-            guard let plannedTime = try parseJsonTime(baseDate: baseDate, dateString: (departures ? stbStop["dTimeS"] : stbStop["aTimeS"]) as? String) else { continue }
-            let predictedTime = try parseJsonTime(baseDate: baseDate, dateString: (departures ? stbStop["dTimeR"] : stbStop["aTimeR"]) as? String)
+            // Parse departure/arrival times
+            let baseDate = try parseBaseDate(from: jny["date"].stringValue)
+            guard let plannedTime = try parseJsonTime(baseDate: baseDate, dateString: (departures ? stbStop["dTimeS"] : stbStop["aTimeS"]).string) else { continue }
+            let predictedTime = try parseJsonTime(baseDate: baseDate, dateString: (departures ? stbStop["dTimeR"] : stbStop["aTimeR"]).string)
             
-            let line = lines[lineIndex]
+            // Parse line
+            guard let line = lines[safe: (departures ? stbStop["dProdX"] : stbStop["aProdX"]).int] else {
+                throw ParseError(reason: "could not parse line")
+            }
             
+            // Parse location
             let location: Location
             if equivs {
-                guard let locationIndex = stbStop["locX"] as? Int else { throw ParseError(reason: "could not parse location index") }
-                location = locations[locationIndex]
+                guard let loc = locations[safe: stbStop["locX"].int], loc.type == .station else {
+                    throw ParseError(reason: "could not parse location")
+                }
+                location = loc
             } else {
-                location = Location(type: .station, id: stationId)!
+                location = Location(id: stationId)
             }
             
-            let position = parsePosition(dict: stbStop, platfName: departures ? "dPlatfR" : "aPlatfR", pltfName: departures ? "dPltfR" : "aPltfR")
-            let plannedPosition = parsePosition(dict: stbStop, platfName: departures ? "dPlatfS" : "aPlatfS", pltfName: departures ? "dPltfS" : "aPltfS")
-            
+            // Parse destination
+            let jnyDirTxt = jny["dirTxt"].string
             let destination: Location?
-            if let stopL = jny["stopL"] as? [Any] {
-                guard let lastIndex = (stopL.last as? [String: Any])?["locX"] as? Int, let name = (locList[lastIndex] as? [String: Any])?["name"] as? String else { throw ParseError(reason: "could not parse stop destination list") }
-                if jnyDirTxt == name {
-                    destination = locations[lastIndex]
+            if let stopL = jny["stopL"].array {
+                guard let lastIndex = stopL.last?["locX"].int, let name = locList[lastIndex, "name"].string else {
+                    throw ParseError(reason: "could not parse stop destination list")
+                }
+                if jnyDirTxt == name, let dest = locations[safe: lastIndex] {
+                    destination = dest
                 } else {
                     let nameAndPlace = split(stationName: stripLineFromDestination(line: line, destinationName: jnyDirTxt))
                     destination = Location(type: .any, id: nil, coord: nil, place: nameAndPlace.0, name: nameAndPlace.1)
@@ -379,14 +372,17 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
                 let nameAndPlace = split(stationName: stripLineFromDestination(line: line, destinationName: jnyDirTxt))
                 destination = Location(type: .any, id: nil, coord: nil, place: nameAndPlace.0, name: nameAndPlace.1)
             }
+            
+            // Parse remarks
             let (legMessages, _, departureCancelled) = parseLineAttributesAndMessages(jny: jny, rems: rems, messages: messages)
             let message = legMessages.joined(separator: "\n").emptyToNil
             if departureCancelled {
                 continue
             }
             
+            // Parse journey and wagon sequence context
             let journeyContext: HafasClientInterfaceJourneyContext?
-            if let id = jny["jid"] as? String {
+            if let id = jny["jid"].string {
                 journeyContext = HafasClientInterfaceJourneyContext(journeyId: id)
             } else {
                 journeyContext = nil
@@ -397,6 +393,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
             } else {
                 wagonSequenceContext = nil
             }
+            
             let departure = Departure(plannedTime: plannedTime, predictedTime: predictedTime, line: line, position: position, plannedPosition: plannedPosition, destination: destination, capacity: nil, message: message, journeyContext: journeyContext, wagonSequenceContext: wagonSequenceContext)
             
             var stationDepartures = result.first(where: {$0.stopLocation.id == location.id})
@@ -415,50 +412,52 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
     
     override func queryTripsParsing(request: HttpRequest, from: Location, via: Location?, to: Location, date: Date, departure: Bool, tripOptions: TripOptions, previousContext: QueryTripsContext?, later: Bool, completion: @escaping (HttpRequest, QueryTripsResult) -> Void) throws {
         let svcRes = try validateResponse(with: request.responseData, requiredMethod: "TripSearch", "Reconstruction")
-        if let err = svcRes["err"] as? String, err != "OK" {
-            let errTxt = svcRes["errTxt"] as? String ?? ""
-            os_log("Hafas error %{public}@: %{public}@", log: .requestLogger, type: .error, err, errTxt)
-            if err == "H890" { // No connections found.
+        if let err = svcRes["err"].string, err != "OK" {
+            let errTxt = svcRes["errTxt"].string
+            os_log("Hafas error %{public}@", log: .requestLogger, type: .error, errTxt ?? err)
+            switch err {
+            case "H890": // No connections found.
                 completion(request, .noTrips)
-            } else if err == "H891" { // No route found (try entering an intermediate station).
+            case "H891": // No route found (try entering an intermediate station).
                 completion(request, .noTrips)
-            } else if err == "H892" { // HAFAS Kernel: Request too complex (try entering less intermediate stations).
+            case "H892": // HAFAS Kernel: Request too complex (try entering less intermediate stations).
                 completion(request, .noTrips)
-            } else if err == "H895" { // Departure/Arrival are too near.
+            case "H895": // Departure/Arrival are too near.
                 completion(request, .tooClose)
-            } else if err == "H9220" { // Nearby to the given address stations could not be found.
+            case "H9220": // Nearby to the given address stations could not be found.
                 completion(request, .noTrips)
-            } else if err == "H886" { // HAFAS Kernel: No connections found within the requested time interval.
+            case "H886": // HAFAS Kernel: No connections found within the requested time interval.
                 throw ParseError(reason: "No connections found within the requested time interval.")
-            } else if err == "H887" { // HAFAS Kernel: Kernel computation time limit reached.
+            case "H887": // HAFAS Kernel: Kernel computation time limit reached.
                 throw ParseError(reason: "Kernel computation time limit reached.")
-            } else if err == "H9240" { // HAFAS Kernel: Internal error.
+            case "H9240": // HAFAS Kernel: Internal error.
                 throw ParseError(reason: "Internal error.")
-            } else if err == "H9360" { // Date outside of the timetable period.
+            case "H9360": // Date outside of the timetable period.
                 completion(request, .invalidDate)
-            } else if err == "H9380" { // Departure/Arrival/Intermediate or equivalent stations def'd more than once
+            case "H9380": // Departure/Arrival/Intermediate or equivalent stations def'd more than once
                 completion(request, .tooClose)
-            } else if err == "FAIL" && errTxt == "HCI Service: request failed" {
+            case "FAIL" where errTxt == "HCI Service: request failed":
                 throw ParseError(reason: "request failed")
-            } else if err == "LOCATION" && errTxt == "HCI Service: location missing or invalid" {
+            case "LOCATION" where errTxt == "HCI Service: location missing or invalid":
                 completion(request, .ambiguous(ambiguousFrom: [], ambiguousVia: [], ambiguousTo: []))
-            } else if err == "PROBLEMS" && errTxt == "HCI Service: problems during service execution" {
+            case "PROBLEMS" where errTxt == "HCI Service: problems during service execution":
                 throw ParseError(reason: "problems during service execution")
-            } else if err == "CGI_READ_FAILED" {
+            case "CGI_READ_FAILED":
                 throw ParseError(reason: "cgi read failed")
-            } else {
-                throw ParseError(reason: "unknown hafas error \(err): \(errTxt)")
+            default:
+                throw ParseError(reason: "unknown hafas error \(errTxt ?? err)")
             }
             return
         }
-        guard let res = svcRes["res"] as? [String: Any], let common = res["common"] as? [String: Any], let locList = common["locL"] as? [Any], let prodList = common["prodL"] as? [Any] else {
-            throw ParseError(reason: "could not parse lists")
-        }
-        let opList = common["opL"] as? [Any]
-        let remList = common["remL"] as? [Any]
-        let himList = common["himL"] as? [Any]
-        let polyList = common["polyL"] as? [Any]
-        let loadFactorList = common["tcocL"] as? [Any]
+        
+        let common = svcRes["res", "common"]
+        let locList = common["locL"]
+        let prodList = common["prodL"]
+        let opList = common["opL"]
+        let remList = common["remL"]
+        let himList = common["himL"]
+        let polyList = common["polyL"]
+        let loadFactorList = common["tcocL"]
         
         let locations = try parseLocList(locList: locList)
         let operators = try parseOpList(opList: opList)
@@ -467,7 +466,8 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         let messages = try parseMessageList(himList: himList)
         let encodedPolyList = try parsePolyList(polyL: polyList)
         let loadFactors = try parseLoadFactorList(tcocL: loadFactorList)
-        let outConL = res["outConL"] as? [Any] ?? []
+        
+        let outConL = svcRes["res", "outConL"].arrayValue
         if outConL.isEmpty {
             completion(request, .noTrips)
             return
@@ -475,119 +475,57 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         
         var trips: [Trip] = []
         for outCon in outConL {
-            guard let outCon = outCon as? [String: Any], let depIndex = (outCon["dep"] as? [String: Any])?["locX"] as? Int, let arrIndex = (outCon["arr"] as? [String: Any])?["locX"] as? Int, let dateString = outCon["date"] as? String else { throw ParseError(reason: "could not parse outcon") }
-            let from = locations[depIndex]
-            let to = locations[arrIndex]
+            // Parse trip from/to
+            guard let from = locations[safe: outCon["dep", "locX"].int] else { throw ParseError(reason: "could not parse trip from") }
+            guard let to   = locations[safe: outCon["arr", "locX"].int] else { throw ParseError(reason: "could not parse trip to") }
             
-            var dateComponents = DateComponents()
-            dateComponents.timeZone = timeZone
-            var calendar = Calendar(identifier: .gregorian)
-            calendar.timeZone = timeZone
-            parseIsoDate(from: dateString, dateComponents: &dateComponents)
-            guard let baseDate = calendar.date(from: dateComponents) else { throw ParseError(reason: "failed to parse outcon base date") }
+            let baseDate = try parseBaseDate(from: outCon["date"].stringValue)
             
             var legs: [Leg] = []
-//            var tripCancelled: Bool = false
-            for sec in outCon["secL"] as? [Any] ?? [] {
-                guard let sec = sec as? [String: Any], let dep = sec["dep"] as? [String: Any], let arr = sec["arr"] as? [String: Any] else { throw ParseError(reason: "could not parse outcon sec") }
+            for sec in outCon["secL"].arrayValue {
+                // Parse leg from/to
+                guard let departureStop = try parseStop(json: sec["dep"], locations: locations, rems: rems, messages: messages, baseDate: baseDate)?.departure else {
+                    throw ParseError(reason: "failed to parse departure stop")
+                }
+                guard let arrivalStop = try parseStop(json: sec["arr"], locations: locations, rems: rems, messages: messages, baseDate: baseDate)?.arrival else {
+                    throw ParseError(reason: "failed to parse arrival stop")
+                }
                 
-                switch sec["type"] as? String ?? "" {
+                switch sec["type"].stringValue {
                 case "JNY", "TETA":
-                    guard let jny = sec["jny"] as? [String: Any], let prodX = jny["prodX"] as? Int else { throw ParseError(reason: "failed to parse outcon jny") }
-                    let stopL = jny["stopL"] as? [Any]
-                    var (legMessages, attrs, cancelled) = parseLineAttributesAndMessages(jny: jny, rems: rems, messages: messages)
+                    let jny = sec["jny"]
                     
-                    let l = lines[prodX]
-                    let line = Line(id: l.id, network: l.network, product: l.product, label: l.label, name: l.name, number: l.number, vehicleNumber: l.vehicleNumber, style: l.style, attr: attrs, message: l.message)
-                    let dirTxt = jny["dirTxt"] as? String
-                    let nameAndPlace = split(stationName: stripLineFromDestination(line: line, destinationName: dirTxt))
-                    let destination: Location? = dirTxt == nil ? nil : Location(type: .any, id: nil, coord: nil, place: nameAndPlace.0, name: nameAndPlace.1)
+                    let leg = try processPublicLeg(jny: jny, baseDate: baseDate, locations: locations, lines: lines, rems: rems, messages: messages, encodedPolyList: encodedPolyList, loadFactors: loadFactors, departureStop: departureStop, arrivalStop: arrivalStop, tariffClass: tripOptions.tariffProfile?.tariffClass)
                     
-                    guard
-                        let departureStop = try parseStop(dict: dep, locations: locations, rems: rems, messages: messages, baseDate: baseDate, line: line)?.departure,
-                        let arrivalStop = try parseStop(dict: arr, locations: locations, rems: rems, messages: messages, baseDate: baseDate, line: line)?.arrival
-                    else {
-                        throw ParseError(reason: "failed to parse departure/arrival stop")
-                    }
-                    if let departureMessage = departureStop.message {
-                        legMessages.insert(departureMessage, at: 0)
-                    }
-                    if let arrivalMessage = arrivalStop.message {
-                        legMessages.append(arrivalMessage)
-                    }
-                    
-                    var intermediateStops: [Stop] = []
-                    for stop in stopL ?? [] {
-                        guard let stop = stop as? [String: Any] else { throw ParseError(reason: "failed to parse jny stop") }
-                        if let border = stop["border"] as? Bool, border { continue } // hide borders from intermediate stops
-                        guard let intermediateStop = try parseStop(dict: stop, locations: locations, rems: rems, messages: messages, baseDate: baseDate, line: line) else { continue }
-                        intermediateStops.append(intermediateStop)
-                    }
-                    if intermediateStops.count >= 2 {
-                        intermediateStops.removeFirst()
-                        intermediateStops.removeLast()
-                    }
-                    
-                    let path = parsePath(encodedPolyList: encodedPolyList, jny: jny)
-                    
-                    if cancelled {
-                        intermediateStops.forEach({$0.departure?.cancelled = true; $0.arrival?.cancelled = true})
-                    }
-                    
-                    let journeyContext: HafasClientInterfaceJourneyContext?
-                    if let id = jny["jid"] as? String {
-                        journeyContext = HafasClientInterfaceJourneyContext(journeyId: id)
-                    } else {
-                        journeyContext = nil
-                    }
-                    
-                    let loadFactor: LoadFactor?
-                    if let dTrnCmpSX = jny["dTrnCmpSX"] as? [String: Any], let tcocXL = dTrnCmpSX["tcocX"] as? [Int] {
-                        let className = tripOptions.tariffProfile?.tariffClass == 1 ? "FIRST" : "SECOND"
-                        loadFactor = tcocXL.compactMap({ loadFactors?[$0] }).first(where: { $0.cls == className })?.loadFactor
-                    } else {
-                        loadFactor = parseLoadFactorFromRems(jny: jny, rems: rems)
-                    }
-                    
-                    let message = legMessages.joined(separator: "\n").emptyToNil
-                    legs.append(PublicLeg(line: line, destination: destination, departure: departureStop, arrival: arrivalStop, intermediateStops: intermediateStops, message: message, path: path, journeyContext: journeyContext, loadFactor: loadFactor))
+                    legs.append(leg)
                 case "WALK", "TRSF", "DEVI":
-                    guard
-                        let departureStop = try parseStop(dict: dep, locations: locations, rems: rems, messages: messages, baseDate: baseDate, line: nil)?.departure,
-                        let arrivalStop = try parseStop(dict: arr, locations: locations, rems: rems, messages: messages, baseDate: baseDate, line: nil)?.arrival
-                    else {
-                        throw ParseError(reason: "failed to parse departure/arrival stop")
-                    }
-                    let gis = sec["gis"] as? [String: Any]
-                    let distance = gis?["distance"] as? Int ?? 0
+                    let gis = sec["gis"]
+                    let distance = gis["distance"].intValue
                     let path = parsePath(encodedPolyList: encodedPolyList, jny: gis)
                     processIndividualLeg(legs: &legs, type: .WALK, departureStop: departureStop, arrivalStop: arrivalStop, distance: distance, path: path)
                 case "KISS":
-                    guard
-                        let departureStop = try parseStop(dict: dep, locations: locations, rems: rems, messages: messages, baseDate: baseDate, line: nil)?.departure,
-                        let arrivalStop = try parseStop(dict: arr, locations: locations, rems: rems, messages: messages, baseDate: baseDate, line: nil)?.arrival
-                    else {
-                        throw ParseError(reason: "failed to parse departure/arrival stop")
-                    }
-                    let gis = sec["gis"] as? [String: Any]
+                    let gis = sec["gis"]
+                    let distance = gis["distance"].intValue
                     let path = parsePath(encodedPolyList: encodedPolyList, jny: gis)
-                    let distance = gis?["distance"] as? Int ?? 0
-                    if let mcp = dep["mcp"] as? [String: Any], let mcpData = mcp["mcpData"] as? [String: Any], let provider = mcpData["provider"] as? String, let providerName = mcpData["providerName"] as? String, provider == "berlkoenig" {
+                    
+                    // handle BerlKönig (BVG)
+                    let mcpData = sec["dep", "mcp", "mcpData"]
+                    if let provider = mcpData["provider"].string, let providerName = mcpData["providerName"].string, provider == "berlkoenig" {
                         let line = Line(id: nil, network: nil, product: .onDemand, label: providerName, name: providerName, number: nil, vehicleNumber: nil, style: lineStyle(network: nil, product: .onDemand, label: providerName), attr: nil, message: nil, direction: nil)
                         legs.append(PublicLeg(line: line, destination: arrivalStop.location, departure: departureStop, arrival: arrivalStop, intermediateStops: [], message: nil, path: path, journeyContext: nil, loadFactor: nil))
                     } else {
                         processIndividualLeg(legs: &legs, type: .WALK, departureStop: departureStop, arrivalStop: arrivalStop, distance: distance, path: path)
                     }
                 default:
-                    throw ParseError(reason: "could not parse outcon sec type \(sec["type"] as? String ?? "")")
+                    throw ParseError(reason: "could not parse outcon sec type \(sec["type"].stringValue)")
                 }
             }
             
             let fares = try parseFares(outCon: outCon)
             let context: HafasClientInterfaceRefreshTripContext?
-            if let ctxRecon = outCon["ctxRecon"] as? String {
+            if let ctxRecon = outCon["ctxRecon"].string {
                 context = HafasClientInterfaceRefreshTripContext(contextRecon: ctxRecon, from: from, to: to)
-            } else if let recon = outCon["recon"] as? [String: Any], let ctx = recon["ctx"] as? String {
+            } else if let ctx = outCon["recon", "ctx"].string {
                 context = HafasClientInterfaceRefreshTripContext(contextRecon: ctx, from: from, to: to)
             } else {
                 context = nil
@@ -598,9 +536,9 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         }
         let context: Context
         if let previousContext = previousContext as? Context {
-            context = Context(from: from, via: via, to: to, date: date, departure: departure, laterContext: later ? res["outCtxScrF"] as? String : previousContext.laterContext, earlierContext: !later ? res["outCtxScrB"] as? String : previousContext.earlierContext, tripOptions: tripOptions)
+            context = Context(from: from, via: via, to: to, date: date, departure: departure, laterContext: later ? svcRes["res", "outCtxScrF"].string : previousContext.laterContext, earlierContext: !later ? svcRes["res", "outCtxScrB"].string : previousContext.earlierContext, tripOptions: tripOptions)
         } else {
-            context = Context(from: from, via: via, to: to, date: date, departure: departure, laterContext: res["outCtxScrF"] as? String, earlierContext: res["outCtxScrB"] as? String, tripOptions: tripOptions)
+            context = Context(from: from, via: via, to: to, date: date, departure: departure, laterContext: svcRes["res", "outCtxScrF"].string, earlierContext: svcRes["res", "outCtxScrB"].string, tripOptions: tripOptions)
         }
         completion(request, .success(context: context, from: from, via: via, to: to, trips: trips, messages: []))
     }
@@ -614,99 +552,38 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
     
     override func queryJourneyDetailParsing(request: HttpRequest, context: QueryJourneyDetailContext, completion: @escaping (HttpRequest, QueryJourneyDetailResult) -> Void) throws {
         let svcRes = try validateResponse(with: request.responseData, requiredMethod: "JourneyDetails")
-        if let error = svcRes["err"] as? String, error != "OK" {
-            let errTxt = svcRes["errTxt"] as? String ?? ""
-            os_log("Hafas error %{public}@: %{public}@", log: .requestLogger, type: .error, error, errTxt)
+        if let error = svcRes["err"].string, error != "OK" {
             if error == "LOCATION" {
                 completion(request, .invalidId)
-            } else if error == "FAIL" || error == "CGI_READ_FAILED" {
-                throw ParseError(reason: "cgi read failed")
             } else {
-                throw ParseError(reason: "Unknown Hafas error \(error): \(errTxt)")
+                throw ParseError(reason: svcRes["errTxt"].string ?? error)
             }
-            return
-        } else if apiVersion == "1.10", let svcResJson = encodeJson(dict: svcRes), svcResJson.count == 170 {
-            completion(request, .invalidId)
-            return
         }
-        guard let res = svcRes["res"] as? [String: Any], let common = res["common"] as? [String: Any], let locList = common["locL"] as? [Any], let prodList = common["prodL"] as? [Any] else {
-            throw ParseError(reason: "could not parse lists")
-        }
-        let opList = common["opL"] as? [Any]
+        let res = svcRes["res"]
+        let common = res["common"]
+        let locList = common["locL"]
+        let prodList = common["prodL"]
+        let opList = common["opL"]
+        let remList = common["remL"]
+        let himList = common["himL"]
+        let polyList = common["polyL"]
+        let loadFactorList = common["tcocL"]
+        
         let locations = try parseLocList(locList: locList)
         let operators = try parseOpList(opList: opList)
         let lines = try parseProdList(prodList: prodList, operators: operators)
-        let remList = common["remL"] as? [Any]
         let rems = try parseRemList(remList: remList)
-        let himList = common["himL"] as? [Any]
         let messages = try parseMessageList(himList: himList)
-        let polyList = common["polyL"] as? [Any]
         let encodedPolyList = try parsePolyList(polyL: polyList)
-        let loadFactorList = common["tcocL"] as? [Any]
         let loadFactors = try parseLoadFactorList(tcocL: loadFactorList)
         
-        guard let journey = res["journey"] as? [String: Any], let baseDateString = journey["date"] as? String else {
-            throw ParseError(reason: "could not parse journey stop list")
-        }
-        let stopL = journey["stopL"] as? [Any]
+        let journey = res["journey"]
         
-        let path = parsePath(encodedPolyList: encodedPolyList, jny: journey)
+        let baseDate = try parseBaseDate(from: journey["date"].stringValue)
         
-        var dateComponents = DateComponents()
-        dateComponents.timeZone = timeZone
-        var calendar = Calendar(identifier: .gregorian)
-        calendar.timeZone = timeZone
-        parseIsoDate(from: baseDateString, dateComponents: &dateComponents)
-        guard let baseDate = calendar.date(from: dateComponents) else { throw ParseError(reason: "failed to parse base date") }
+        let leg = try processPublicLeg(jny: journey, baseDate: baseDate, locations: locations, lines: lines, rems: rems, messages: messages, encodedPolyList: encodedPolyList, loadFactors: loadFactors, departureStop: nil, arrivalStop: nil, tariffClass: nil)
         
-        guard let prodX = journey["prodX"] as? Int, prodX >= 0 && prodX < lines.count else { throw ParseError(reason: "failed to parse line") }
-        let l = lines[prodX]
-        
-        var (legMessages, attrs, cancelled) = parseLineAttributesAndMessages(jny: journey, rems: rems, messages: messages)
-        
-        let line = Line(id: l.id, network: l.network, product: l.product, label: l.label, name: l.name, vehicleNumber: l.vehicleNumber, style: l.style, attr: attrs, message: l.message)
-        
-        var intermediateStops: [Stop] = []
-        for stop in stopL ?? [] {
-            guard let stop = stop as? [String: Any] else { throw ParseError(reason: "failed to parse stop") }
-            if let border = stop["border"] as? Bool, border { continue } // hide borders from intermediate stops
-            guard let s = try parseStop(dict: stop, locations: locations, rems: rems, messages: messages, baseDate: baseDate, line: line) else { throw ParseError(reason: "failed to parse stop") }
-            intermediateStops.append(s)
-        }
-        
-        guard intermediateStops.count >= 2 else { throw ParseError(reason: "failed to parse arr/dep stop") }
-        guard let departure = intermediateStops.removeFirst().departure else { throw ParseError(reason: "failed to parse dep stop") }
-        guard let arrival = intermediateStops.removeLast().arrival else { throw ParseError(reason: "failed to parse dep stop") }
-        if let departureMessage = departure.message {
-            legMessages.insert(departureMessage, at: 0)
-        }
-        if let arrivalMessage = arrival.message {
-            legMessages.append(arrivalMessage)
-        }
-        
-        if cancelled {
-            intermediateStops.forEach({$0.departure?.cancelled = true; $0.arrival?.cancelled = true})
-        }
-        
-        let destination: Location?
-        if let dirTxt = journey["dirTxt"] as? String {
-            let nameAndPlace = split(stationName: stripLineFromDestination(line: line, destinationName: dirTxt))
-            destination = Location(type: .any, id: nil, coord: nil, place: nameAndPlace.0, name: nameAndPlace.1)
-        } else {
-            destination = arrival.location
-        }
-        
-        let loadFactor: LoadFactor?
-        if let dTrnCmpSX = journey["dTrnCmpSX"] as? [String: Any], let tcocXL = dTrnCmpSX["tcocX"] as? [Int] {
-            // TODO: support first class
-            loadFactor = tcocXL.compactMap({ loadFactors?[$0] }).first(where: { $0.cls == "SECOND" })?.loadFactor
-        } else {
-            loadFactor = parseLoadFactorFromRems(jny: journey, rems: rems)
-        }
-        
-        let message = legMessages.joined(separator: "\n").emptyToNil
-        let leg = PublicLeg(line: line, destination: destination, departure: departure, arrival: arrival, intermediateStops: intermediateStops, message: message, path: path, journeyContext: nil, loadFactor: loadFactor)
-        let trip = Trip(id: "", from: departure.location, to: arrival.location, legs: [leg], fares: [])
+        let trip = Trip(id: "", from: leg.departure, to: leg.arrival, legs: [leg], fares: [])
         completion(request, .success(trip: trip, leg: leg))
     }
     
@@ -828,26 +705,100 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
     
     // MARK: Response parse methods
     
-    private func validateResponse(with data: Data?, requiredMethod: String...) throws -> [String: Any] {
-        guard let json = try data?.toJson() as? [String: Any] else {
+    /// Parses a JSON object from a Data object and validates the api method.
+    ///
+    /// - Parameter data: Data containing the JSON string.
+    /// - Parameter requiredMethod: Var-array with possible method names to validate against.
+    /// - Throws: ParseError: if the json data could not be parsed or a wrong api-method has been returned.
+    /// - Returns: A JSON object.
+    private func validateResponse(with data: Data?, requiredMethod: String...) throws -> JSON {
+        guard let data = data else {
             throw ParseError(reason: "failed to parse json from data")
         }
-        if let err = json["err"] as? String, err != "OK" {
-            if let errTxt = json["errTxt"] as? String {
-                throw ParseError(reason: "received error: \(err) \(errTxt)")
-            } else {
-                throw ParseError(reason: "received error: \(err)")
-            }
-        }
-        
-        guard let svcResL = json["svcResL"] as? [Any], svcResL.count == 1, let svcRes = svcResL[0] as? [String: Any], let meth = svcRes["meth"] as? String else {
-            throw ParseError(reason: "failed to parse svc result")
-        }
+        let json = try JSON(data: data)
+        let svcRes = json["svcResL", 0]
+        let meth = svcRes["meth"].stringValue
         guard requiredMethod.contains(meth) else {
             throw ParseError(reason: "received illegal method response: got \(meth), expected \(requiredMethod)")
         }
         
         return svcRes
+    }
+    
+    private func processPublicLeg(jny: JSON, baseDate: Date, locations: [Location], lines: [Line], rems: [RemAttrib]?, messages: [String]?, encodedPolyList: [String]?, loadFactors: [(cls: String, loadFactor: LoadFactor?)]?, departureStop: StopEvent?, arrivalStop: StopEvent?, tariffClass: Int?) throws -> PublicLeg {
+        var departureStop = departureStop
+        var arrivalStop = arrivalStop
+        // Parse remarks and messages
+        var (legMessages, attrs, cancelled) = parseLineAttributesAndMessages(jny: jny, rems: rems, messages: messages)
+        
+        // Parse line
+        guard let l = lines[safe: jny["prodX"].int] else { throw ParseError(reason: "failed to parse leg line") }
+        let line = Line(id: l.id, network: l.network, product: l.product, label: l.label, name: l.name, number: l.number, vehicleNumber: l.vehicleNumber, style: l.style, attr: attrs, message: l.message)
+        
+        // Parse line destination
+        let dirTxt = jny["dirTxt"].string
+        let nameAndPlace = split(stationName: stripLineFromDestination(line: line, destinationName: dirTxt))
+        let destination: Location? = dirTxt == nil ? nil : Location(type: .any, id: nil, coord: nil, place: nameAndPlace.0, name: nameAndPlace.1)
+        
+        // Parse intermediate stops
+        var intermediateStops: [Stop] = []
+        for stop in jny["stopL"].arrayValue {
+            if stop["border"].boolValue { continue } // hide borders from intermediate stops
+            guard let intermediateStop = try parseStop(json: stop, locations: locations, rems: rems, messages: messages, baseDate: baseDate) else { continue }
+            parseWagonSequenceUrl(stop: intermediateStop, line: line)
+            intermediateStops.append(intermediateStop)
+        }
+        if cancelled {
+            intermediateStops.forEach({$0.departure?.cancelled = true; $0.arrival?.cancelled = true})
+        }
+        
+        // Remove first and last stop of intermediates
+        if intermediateStops.count >= 2 {
+            let dep = intermediateStops.removeFirst()
+            if departureStop == nil {
+                departureStop = dep.departure
+            }
+            let arr = intermediateStops.removeLast()
+            if arrivalStop == nil {
+                arrivalStop = arr.arrival
+            }
+        }
+        guard let departureStop = departureStop, let arrivalStop = arrivalStop else {
+            throw ParseError(reason: "failed to parse leg departure/arrival")
+        }
+        parseWagonSequenceUrl(stopEvent: departureStop, line: line)
+        parseWagonSequenceUrl(stopEvent: arrivalStop, line: line)
+        
+        // Insert messages of departure and arrival stop
+        if let departureMessage = departureStop.message {
+            legMessages.insert(departureMessage, at: 0)
+        }
+        if let arrivalMessage = arrivalStop.message {
+            legMessages.append(arrivalMessage)
+        }
+        let message = legMessages.joined(separator: "\n").emptyToNil
+        
+        // Parse coord-path
+        let path = parsePath(encodedPolyList: encodedPolyList, jny: jny)
+        
+        // Parse journey context
+        let journeyContext: HafasClientInterfaceJourneyContext?
+        if let id = jny["jid"].string {
+            journeyContext = HafasClientInterfaceJourneyContext(journeyId: id)
+        } else {
+            journeyContext = nil
+        }
+        
+        // Parse load factor
+        let loadFactor: LoadFactor?
+        if let tcocXL = jny["dTrnCmpSX", "tcocX"].array {
+            let className = tariffClass == 1 ? "FIRST" : "SECOND"
+            loadFactor = tcocXL.compactMap({ loadFactors?[safe: $0.int] }).first(where: { $0.cls == className })?.loadFactor
+        } else {
+            loadFactor = parseLoadFactorFromRems(jny: jny, rems: rems)
+        }
+        
+        return PublicLeg(line: line, destination: destination, departure: departureStop, arrival: arrivalStop, intermediateStops: intermediateStops, message: message, path: path, journeyContext: journeyContext, loadFactor: loadFactor)
     }
     
     private func processIndividualLeg(legs: inout [Leg], type: IndividualLeg.`Type`, departureStop: StopEvent, arrivalStop: StopEvent, distance: Int, path: [LocationPoint]) {
@@ -864,43 +815,33 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         }
     }
     
-    func parsePosition(dict: [String: Any], platfName: String, pltfName: String) -> String? {
-        if let pltfDic = dict[pltfName] as? [String: Any], let pltf = pltfDic["txt"] as? String, !pltf.isEmpty {
+    func parsePosition(json: JSON, platfName: String, pltfName: String) -> String? {
+        if let pltf = json[pltfName, "txt"].string, !pltf.isEmpty {
             return pltf
-        } else if let platf = dict[platfName] as? String, !platf.isEmpty {
+        } else if let platf = json[platfName].string, !platf.isEmpty {
             return normalize(position: platf)
         } else {
             return nil
         }
     }
     
-    func parseStop(dict: [String: Any], locations: [Location], rems: [RemAttrib]?, messages: [String]?, baseDate: Date, line: Line?) throws -> Stop? {
-        guard let locationIndex = dict["locX"] as? Int else { throw ParseError(reason: "failed to get stop index") }
-        let location = locations[locationIndex]
+    func parseStop(json: JSON, locations: [Location], rems: [RemAttrib]?, messages: [String]?, baseDate: Date) throws -> Stop? {
+        guard let location = locations[safe: json["locX"].int] else { throw ParseError(reason: "failed to get stop location") }
         
-        let arrivalCancelled = dict["isCncl"] as? Bool ?? dict["aCncl"] as? Bool ?? false
-        let plannedArrivalTime = try parseJsonTime(baseDate: baseDate, dateString: dict["aTimeS"] as? String)
-        let predictedArrivalTime = try parseJsonTime(baseDate: baseDate, dateString: dict["aTimeR"] as? String)
-        let plannedArrivalPosition = parsePosition(dict: dict, platfName: "aPlatfS", pltfName: "aPltfS")
-        let predictedArrivalPosition = parsePosition(dict: dict, platfName: "aPlatfR", pltfName: "aPltfR")
+        let arrivalCancelled = json["isCncl"].bool ?? json["aCncl"].bool ?? false
+        let plannedArrivalTime = try parseJsonTime(baseDate: baseDate, dateString: json["aTimeS"].string)
+        let predictedArrivalTime = try parseJsonTime(baseDate: baseDate, dateString: json["aTimeR"].string)
+        let plannedArrivalPosition = parsePosition(json: json, platfName: "aPlatfS", pltfName: "aPltfS")
+        let predictedArrivalPosition = parsePosition(json: json, platfName: "aPlatfR", pltfName: "aPltfR")
         
-        let departureCancelled = dict["isCncl"] as? Bool ?? dict["dCncl"] as? Bool ?? false
-        let plannedDepartureTime = try parseJsonTime(baseDate: baseDate, dateString: dict["dTimeS"] as? String)
-        let predictedDepartureTime = try parseJsonTime(baseDate: baseDate, dateString: dict["dTimeR"] as? String)
-        let plannedDeparturePosition = parsePosition(dict: dict, platfName: "dPlatfS", pltfName: "dPltfS")
-        let predictedDeparturePosition = parsePosition(dict: dict, platfName: "dPlatfR", pltfName: "dPltfR")
+        let departureCancelled = json["isCncl"].bool ?? json["dCncl"].bool ?? false
+        let plannedDepartureTime = try parseJsonTime(baseDate: baseDate, dateString: json["dTimeS"].string)
+        let predictedDepartureTime = try parseJsonTime(baseDate: baseDate, dateString: json["dTimeR"].string)
+        let plannedDeparturePosition = parsePosition(json: json, platfName: "dPlatfS", pltfName: "dPltfS")
+        let predictedDeparturePosition = parsePosition(json: json, platfName: "dPlatfR", pltfName: "dPltfR")
         
-        let (legMessages, _, _) = parseLineAttributesAndMessages(jny: dict, rems: rems, messages: messages)
+        let (legMessages, _, _) = parseLineAttributesAndMessages(jny: json, rems: rems, messages: messages)
         let message = legMessages.joined(separator: "\n").emptyToNil
-        
-        let wagonSequenceContext: URL?
-        if line?.label?.hasPrefix("ICE") ?? false, let number = line?.number, let plannedArrivalTime = plannedArrivalTime {
-            wagonSequenceContext = getWagonSequenceUrl(number: number, plannedTime: plannedArrivalTime)
-        } else if line?.label?.hasPrefix("ICE") ?? false, let number = line?.number, let plannedDepartureTime = plannedDepartureTime {
-            wagonSequenceContext = getWagonSequenceUrl(number: number, plannedTime: plannedDepartureTime)
-        } else {
-            wagonSequenceContext = nil
-        }
         
         let departure: StopEvent?
         if let plannedDepartureTime = plannedDepartureTime {
@@ -916,7 +857,29 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
             arrival = nil
         }
         
-        return Stop(location: location, departure: departure, arrival: arrival, message: message, wagonSequenceContext: wagonSequenceContext)
+        return Stop(location: location, departure: departure, arrival: arrival, message: message, wagonSequenceContext: nil)
+    }
+    
+    private func parseWagonSequenceUrl(stop: Stop, line: Line?) {
+        let wagonSequenceContext: URL?
+        if line?.label?.hasPrefix("ICE") ?? false, let number = line?.number, let plannedTime = stop.arrival?.plannedTime ?? stop.departure?.plannedTime {
+            wagonSequenceContext = getWagonSequenceUrl(number: number, plannedTime: plannedTime)
+        } else {
+            wagonSequenceContext = nil
+        }
+        stop.wagonSequenceContext = wagonSequenceContext
+        stop.departure?.wagonSequenceContext = wagonSequenceContext
+        stop.arrival?.wagonSequenceContext = wagonSequenceContext
+    }
+    
+    private func parseWagonSequenceUrl(stopEvent: StopEvent, line: Line?) {
+        let wagonSequenceContext: URL?
+        if line?.label?.hasPrefix("ICE") ?? false, let number = line?.number {
+            wagonSequenceContext = getWagonSequenceUrl(number: number, plannedTime: stopEvent.plannedTime)
+        } else {
+            wagonSequenceContext = nil
+        }
+        stopEvent.wagonSequenceContext = wagonSequenceContext
     }
     
     func getWagonSequenceUrl(number: String, plannedTime: Date) -> URL? {
@@ -983,55 +946,49 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         }
     }
     
+    private func parseBaseDate(from string: String) throws -> Date {
+        var dateComponents = DateComponents()
+        dateComponents.timeZone = timeZone
+        var calendar = Calendar(identifier: .gregorian)
+        calendar.timeZone = timeZone
+        parseIsoDate(from: string, dateComponents: &dateComponents)
+        guard let baseDate = calendar.date(from: dateComponents) else { throw ParseError(reason: "failed to parse base date") }
+        return baseDate
+    }
+    
     let P_LOCATION_ID_COORDS = try! NSRegularExpression(pattern: ".*@X=(\\d+)@Y=(\\d+)@.*")
     
-    func parseLocList(locList: [Any], throwErrors: Bool = true) throws -> [Location] {
+    func parseLocList(locList: JSON, throwErrors: Bool = true) throws -> [Location] {
         var locations: [Location] = []
         
-        for locElem in locList {
-            guard let locElem = locElem as? [String: Any] else {
-                if throwErrors {
-                    throw ParseError(reason: "could not parse loc elem")
-                } else {
-                    continue
-                }
-            }
-            // currently, DB receives some illegal locations without any associated type
-            // ignore these locations instead of throwing an error
-            guard let type = locElem["type"] as? String else {
-                if throwErrors {
-                    throw ParseError(reason: "failed to parse loc type")
-                } else {
-                    continue
-                }
-            }
-            
+        for locElem in locList.arrayValue {
             let locationType: LocationType
             let id: String?
             let placeAndName: (String?, String?)
             let products: [Product]?
+            let type = locElem["type"].stringValue
             switch type {
             case "S":
                 locationType = .station
-                if let lid = locElem["lid"] as? String, lid.hasSuffix("@") {
+                if let lid = locElem["lid"].string, lid.hasSuffix("@") {
                     id = normalize(stationId: lid)
                 } else {
-                    id = normalize(stationId: locElem["extId"] as? String)
+                    id = normalize(stationId: locElem["extId"].string)
                 }
-                placeAndName = split(stationName: locElem["name"] as? String)
-                let pCls = locElem["pCls"] as? Int ?? -1
+                placeAndName = split(stationName: locElem["name"].string)
+                let pCls = locElem["pCls"].int ?? -1
                 products = pCls == -1 ? nil : self.products(from: pCls)
                 break
             case "P":
                 locationType = .poi
-                id = locElem["lid"] as? String
-                placeAndName = split(poi: locElem["name"] as? String)
+                id = locElem["lid"].string
+                placeAndName = split(poi: locElem["name"].string)
                 products = nil
                 break
             case "A":
                 locationType = .address
-                id = locElem["lid"] as? String
-                placeAndName = split(address: locElem["name"] as? String)
+                id = locElem["lid"].string
+                placeAndName = split(address: locElem["name"].string)
                 products = nil
                 break
             case "C":
@@ -1040,6 +997,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
                 placeAndName = (nil, nil)
                 products = nil
             default:
+                // currently, DB receives some illegal locations without any associated type
                 if throwErrors {
                     throw ParseError(reason: "unknown loc type \(type)")
                 } else {
@@ -1048,10 +1006,10 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
             }
             
             let location: Location?
-            if let crd = locElem["crd"] as? [String: Any], let lat = crd["y"] as? Int, let lon = crd["x"] as? Int {
+            if let lat = locElem["crd", "y"].int, let lon = locElem["crd", "x"].int {
                 location = Location(type: locationType, id: id, coord: LocationPoint(lat: lat, lon: lon), place: placeAndName.0, name: placeAndName.1, products: products)
             } else {
-                if let lid = locElem["lid"] as? String, let match = lid.match(pattern: P_LOCATION_ID_COORDS), let x = Int(match[0] ?? ""), let y = Int(match[1] ?? "") {
+                if let lid = locElem["lid"].string, let match = lid.match(pattern: P_LOCATION_ID_COORDS), let x = Int(match[0] ?? ""), let y = Int(match[1] ?? "") {
                     location = Location(type: locationType, id: id, coord: LocationPoint(lat: y, lon: x), place: placeAndName.0, name: placeAndName.1, products: products)
                 } else {
                     location = Location(type: locationType, id: id, coord: nil, place: placeAndName.0, name: placeAndName.1, products: products)
@@ -1067,64 +1025,58 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         return locations
     }
     
-    func parseOpList(opList: [Any]?) throws -> [String]? {
-        guard let opList = opList else {
-            return nil
-        }
-
+    func parseOpList(opList: JSON) throws -> [String]? {
+        guard let opList = opList.array else { return nil }
         var operators: [String] = []
         for op in opList {
-            guard let op = op as? [String: Any], let name = op["name"] as? String else { throw ParseError(reason: "could not parse operator") }
+            guard let name = op["name"].string else { throw ParseError(reason: "could not parse operator") }
             operators.append(name)
         }
         return operators
     }
     
-    func parseProdList(prodList: [Any], operators: [String]?) throws -> [Line] {
+    func parseProdList(prodList: JSON, operators: [String]?) throws -> [Line] {
         var lines: [Line] = []
-        for prod in prodList {
-            guard let prod = prod as? [String: Any] else { throw ParseError(reason: "could not parse line") }
-            let name = prod["addName"] as? String ?? prod["name"] as? String
-            let nameS = prod["nameS"] as? String
-            let oprIndex = prod["oprX"] as? Int ?? -1
-            let op = oprIndex == -1 ? nil : operators?[oprIndex]
-            let cls = prod["cls"] as? Int ?? -1
+        for prod in prodList.arrayValue {
+            let name = (prod["addName"].string ?? prod["name"].string)?.emptyToNil
+            let nameS = prod["nameS"].string
+            let number = prod["number"].string
+            let oprIndex = prod["oprX"].int ?? -1
+            let op = oprIndex == -1 ? nil : operators?[safe: oprIndex]
+            let cls = prod["cls"].int ?? -1
             let product = cls == -1 ? nil : try intToProduct(productInt: cls)
-            let number = prod["number"] as? String
+            let id = prod["prodCtx", "lineId"].string
 
-            let prodCtx = prod["prodCtx"] as? [String: Any]
-            var vehicleNumber = prodCtx?["num"] as? String
+            var vehicleNumber = prod["prodCtx", "num"].string
             if number != nil && vehicleNumber == number {
-                vehicleNumber = nil;
+                vehicleNumber = nil
             }
 
-            lines.append(newLine(network: op, product: product, name: name, shortName: nameS, number: number, vehicleNumber: vehicleNumber))
+            lines.append(newLine(id: id, network: op, product: product, name: name, shortName: nameS, number: number, vehicleNumber: vehicleNumber))
         }
         return lines
     }
     
-    func parseRemList(remList: [Any]?) throws -> [RemAttrib]? {
-        guard let remList = remList, !remList.isEmpty else { return nil }
+    func parseRemList(remList: JSON) throws -> [RemAttrib]? {
+        guard let remList = remList.array, !remList.isEmpty else { return nil }
         var result: [RemAttrib] = []
         for rem in remList {
-            let rem = rem as? [String: Any]
-            let type = rem?["type"] as? String
-            let code = rem?["code"] as? String
-            let txtN = rem?["txtN"] as? String
+            let type = rem["type"].string
+            let code = rem["code"].string
+            let txtN = rem["txtN"].string
             result.append(RemAttrib(type: type, code: code, txtN: txtN))
         }
         return result
     }
     
-    private func parseLineAttributesAndMessages(jny: [String: Any], rems: [RemAttrib]?, messages: [String]?) -> (legMessages: [String], lineAttrs: [Line.Attr]?, cancelled: Bool) {
+    private func parseLineAttributesAndMessages(jny: JSON, rems: [RemAttrib]?, messages: [String]?) -> (legMessages: [String], lineAttrs: [Line.Attr]?, cancelled: Bool) {
         var attrs: [Line.Attr]?
         var legMessages: [String] = []
-        var cancelled = jny["isCncl"] as? Bool ?? false
-        if let remL = jny["remL"] as? [Any] ?? jny["msgL"] as? [Any] {
+        var cancelled = jny["isCncl"].boolValue
+        if let remL = jny["remL"].array ?? jny["msgL"].array {
             var result = Set<Line.Attr>()
             for jsonRem in remL {
-                guard let jsonRem = jsonRem as? [String: Any] else { continue }
-                if jsonRem["type"] as? String == "REM", let remX = jsonRem["remX"] as? Int, let rem = rems?[remX] {
+                if jsonRem["type"].string == "REM", let remX = jsonRem["remX"].int, let rem = rems?[safe: remX] {
                     switch (rem.code ?? "").lowercased() {
                     case "bf", "rg", "eh", "bg", "op", "be", "re":
                         result.insert(.wheelChairAccess)
@@ -1187,8 +1139,8 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
                             legMessages.append(txt)
                         }
                     }
-                } else if jsonRem["type"] as? String == "HIM", let himX = jsonRem["himX"] as? Int {
-                    guard himX >= 0 && himX < messages?.count ?? 0, let text = messages?[himX] else { continue }
+                } else if jsonRem["type"].string == "HIM", let himX = jsonRem["himX"].int {
+                    guard let text = messages?[safe: himX] else { continue }
                     legMessages.append(text)
                 }
             }
@@ -1196,12 +1148,10 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         } else {
             attrs = nil
         }
-        if let himL = jny["himL"] as? [Any] {
-            for him in himL {
-                guard let him = him as? [String: Any], let himX = him["himX"] as? Int else { continue }
-                guard let text = messages?[himX] else { continue }
-                legMessages.append(text)
-            }
+        for him in jny["himL"].arrayValue {
+            guard let himX = him["himX"].int else { continue }
+            guard let text = messages?[safe: himX] else { continue }
+            legMessages.append(text)
         }
         // please, please continue to wear a mask, even if the app doesn't nag you about it anymore
         legMessages = legMessages.filter({!$0.lowercased().contains("ffp") && !$0.lowercased().contains("maskenpflicht") && !$0.lowercased().contains("\"3g-pflicht\"") && !$0.lowercased().contains("corona-präventionsmaßnahme")})
@@ -1209,11 +1159,10 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         return (legMessages.uniqued(), attrs, cancelled)
     }
     
-    func parseLoadFactorFromRems(jny: [String: Any], rems: [RemAttrib]?) -> LoadFactor? {
-        if let remL = jny["remL"] as? [Any] ?? jny["msgL"] as? [Any] {
+    func parseLoadFactorFromRems(jny: JSON, rems: [RemAttrib]?) -> LoadFactor? {
+        if let remL = jny["remL"].array ?? jny["msgL"].array {
             for jsonRem in remL {
-                guard let jsonRem = jsonRem as? [String: Any] else { continue }
-                if jsonRem["type"] as? String == "REM", let remX = jsonRem["remX"] as? Int, let rem = rems?[remX] {
+                if jsonRem["type"].string == "REM", let remX = jsonRem["remX"].int, let rem = rems?[safe: remX] {
                     switch (rem.code ?? "").lowercased() {
                     case "text.occup.jny.2nd.11":
                         return .low
@@ -1230,11 +1179,11 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         return nil
     }
     
-    func parseMessageList(himList: [Any]?) throws -> [String]? {
-        guard let himList = himList, !himList.isEmpty else { return nil }
+    func parseMessageList(himList: JSON) throws -> [String]? {
+        guard !himList.arrayValue.isEmpty else { return nil }
         var result: [String] = []
-        for him in himList {
-            guard let him = him as? [String: Any], var head = him["head"] as? String ?? him["text"] as? String else {
+        for him in himList.arrayValue {
+            guard var head = him["head"].string ?? him["text"].string else {
                 result.append("")
                 continue
             }
@@ -1243,7 +1192,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
             }
             head = head.ensurePunctuation
             
-            if let text = him["lead"] as? String, !text.isEmpty {
+            if let text = him["lead"].string, !text.isEmpty {
                 if !head.isEmpty {
                     head += "\n"
                 }
@@ -1254,34 +1203,34 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         return result
     }
     
-    private func parsePolyList(polyL: [Any]?) throws -> [String]? {
-        guard let polyL = polyL as? [[String: Any]] else { return nil }
+    private func parsePolyList(polyL: JSON) throws -> [String]? {
+        guard let polyL = polyL.array else { return nil }
         var result: [String] = []
         for poly in polyL {
-            guard let coords = poly["crdEncYX"] as? String else { throw ParseError(reason: "failed to parse poly list") }
+            guard let coords = poly["crdEncYX"].string else { throw ParseError(reason: "failed to parse poly list") }
             result.append(coords)
         }
         return result
     }
     
-    private func parseLoadFactorList(tcocL: [Any]?) throws -> [(cls: String, loadFactor: LoadFactor?)]? {
-        guard let tcocL = tcocL as? [[String: Any]] else {
+    private func parseLoadFactorList(tcocL: JSON) throws -> [(cls: String, loadFactor: LoadFactor?)]? {
+        guard let tcocL = tcocL.array else {
             return nil
         }
         var result: [(String, LoadFactor?)] = []
         for tcoc in tcocL {
-            guard let cls = tcoc["c"] as? String else { throw ParseError(reason: "failed to parse load factor") }
-            let loadFactor = LoadFactor(rawValue: tcoc["r"] as? Int ?? 0)
+            guard let cls = tcoc["c"].string else { throw ParseError(reason: "failed to parse load factor") }
+            let loadFactor = LoadFactor(rawValue: tcoc["r"].intValue)
             result.append((cls, loadFactor))
         }
         return result
     }
     
-    private func parsePath(encodedPolyList: [String]?, jny: [String: Any]?) -> [LocationPoint] {
+    private func parsePath(encodedPolyList: [String]?, jny: JSON) -> [LocationPoint] {
         let path: [LocationPoint]
-        if let coords = (jny?["poly"] as? [String: Any])?["crdEncYX"] as? String, let polyline = try? decodePolyline(from: coords) {
+        if let coords = jny["poly", "crdEncYX"].string, let polyline = try? decodePolyline(from: coords) {
             path = polyline
-        } else if let polyG = jny?["polyG"] as? [String: Any], let polyXL = polyG["polyXL"] as? [Int], let polyX = polyXL.first, let polyline = try? decodePolyline(from: encodedPolyList?[polyX]) {
+        } else if let polyX = jny["polyG", "polyXL", 0].int, let polyline = try? decodePolyline(from: encodedPolyList?[safe: polyX]) {
             path = polyline
         } else {
             path = []
@@ -1289,34 +1238,34 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         return path
     }
     
-    private func parseFares(outCon: [String: Any]) throws -> [Fare] {
+    private func parseFares(outCon: JSON) throws -> [Fare] {
         var fares: [Fare] = []
         
-        guard let trfRes = outCon["trfRes"] as? [String: Any], let fareSetList = trfRes["fareSetL"] as? [[String: Any]] else { return fares }
+        let fareSetList = outCon["trfRes"]["fareSetL"].arrayValue
+        let ovwTrfRefList = outCon["ovwTrfRefL"].arrayValue
         
-        let ovwTrfRefList = outCon["ovwTrfRefL"] as? [[String: Any]] ?? []
         // iterate over all fare sets, fares and tickets
         // if ovwTrfRefList is not empty, only try add fares from this list, else add all fares
         for (fareSetX, jsonFareSet) in fareSetList.enumerated() {
             guard ovwTrfRefList.isEmpty || ovwTrfRefList.contains(where: { ovwTrfRef in
-                return (ovwTrfRef["fareSetX"] == nil || ovwTrfRef["fareSetX"] as? Int == fareSetX)
+                return (!ovwTrfRef["fareSetX"].exists() || ovwTrfRef["fareSetX"].int == fareSetX)
             }) else { continue }
             
-            guard let fareList = jsonFareSet["fareL"] as? [[String: Any]] else { continue }
+            let fareList = jsonFareSet["fareL"].arrayValue
             for (fareX, jsonFare) in fareList.enumerated() {
                 guard ovwTrfRefList.isEmpty || ovwTrfRefList.contains(where: { ovwTrfRef in
-                    return (ovwTrfRef["fareSetX"] == nil || ovwTrfRef["fareSetX"] as? Int == fareSetX)
-                        && (ovwTrfRef["fareX"] == nil || ovwTrfRef["fareX"] as? Int == fareX)
+                    return (!ovwTrfRef["fareSetX"].exists() || ovwTrfRef["fareSetX"].int == fareSetX)
+                        && (!ovwTrfRef["fareX"   ].exists() || ovwTrfRef["fareX"   ].int == fareX)
                 }) else { continue }
                 
-                let fareName = jsonFare["name"] as? String ?? jsonFare["desc"] as? String
+                let fareName = jsonFare["name"].string ?? jsonFare["desc"].string
                 
-                if let ticketList = jsonFare["ticketL"] as? [[String: Any]] {
+                if let ticketList = jsonFare["ticketL"].array {
                     for (ticketX, jsonTicket) in ticketList.enumerated() {
                         guard ovwTrfRefList.isEmpty || ovwTrfRefList.contains(where: { ovwTrfRef in
-                            return (ovwTrfRef["fareSetX"] == nil || ovwTrfRef["fareSetX"] as? Int == fareSetX)
-                                && (ovwTrfRef["fareX"] == nil || ovwTrfRef["fareX"] as? Int == fareX)
-                                && (ovwTrfRef["ticketX"] == nil || ovwTrfRef["ticketX"] as? Int == ticketX)
+                            return (!ovwTrfRef["fareSetX"].exists() || ovwTrfRef["fareSetX"].int == fareSetX)
+                                && (!ovwTrfRef["fareX"   ].exists() || ovwTrfRef["fareX"   ].int == fareX)
+                                && (!ovwTrfRef["ticketX" ].exists() || ovwTrfRef["ticketX" ].int == ticketX)
                         }) else { continue }
                         
                         if let fare = parseTicket(fareName: fareName, jsonTicket: jsonTicket), !hideFare(fare) {
@@ -1334,33 +1283,36 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         return fares
     }
     
-    private func parseFare(jsonFare: [String: Any]) -> Fare? {
+    private func parseFare(jsonFare: JSON) -> Fare? {
         let price: Int
-        if let prc = jsonFare["prc"] as? Int, prc > 0 {
+        if let prc = jsonFare["prc"].int, prc > 0 {
             price = prc
-        } else if let prc = jsonFare["price"] as? [String: Any], let amount = prc["amount"] as? Int, amount > 0 {
+        } else if let amount = jsonFare["price", "amount"].int, amount > 0 {
             price = amount
         } else {
             return nil
         }
-        let desc = jsonFare["desc"] as? String
-        let fareName = jsonFare["name"] as? String ?? desc
-        let currency = jsonFare["cur"] as? String ?? "EUR"
+        let desc = jsonFare["desc"].string
+        let fareName = jsonFare["name"].string ?? desc
+        let currency = jsonFare["cur"].string ?? "EUR"
         let name = parse(fareName: fareName, ticketName: nil)
         let fareType = normalize(fareType: fareName ?? "") ?? normalize(fareType: desc ?? "") ?? .adult
         return Fare(name: name.emptyToNil, type: fareType, currency: currency, fare: Float(price) / Float(100), unitsName: nil, units: nil)
     }
     
-    private func parseTicket(fareName: String?, jsonTicket: [String: Any]) -> Fare? {
-        guard
-            let price = jsonTicket["prc"] as? Int, price > 0
-        else {
+    private func parseTicket(fareName: String?, jsonTicket: JSON) -> Fare? {
+        let price: Int
+        if let prc = jsonTicket["prc"].int, prc > 0 {
+            price = prc
+        } else if let amount = jsonTicket["price", "amount"].int, amount > 0 {
+            price = amount
+        } else {
             return nil
         }
-        let ticketName = jsonTicket["name"] as? String
-        let currency = jsonTicket["cur"] as? String ?? "EUR"
+        let ticketName = jsonTicket["name"].string
+        let currency = jsonTicket["cur"].string ?? "EUR"
         let name = parse(fareName: fareName, ticketName: ticketName)
-        let fareType = normalize(fareType: fareName ?? "") ?? normalize(fareType: ticketName ?? "") ?? normalize(fareType: jsonTicket["desc"] as? String ?? "") ?? .adult
+        let fareType = normalize(fareType: fareName ?? "") ?? normalize(fareType: ticketName ?? "") ?? normalize(fareType: jsonTicket["desc"].stringValue) ?? .adult
         return Fare(name: name.emptyToNil, type: fareType, currency: currency, fare: Float(price) / Float(100), unitsName: nil, units: nil)
     }
     
@@ -1416,7 +1368,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         }
     }
     
-    func newLine(network: String?, product: Product?, name: String?, shortName: String?, number: String?, vehicleNumber: String?) -> Line {
+    func newLine(id: String?, network: String?, product: Product?, name: String?, shortName: String?, number: String?, vehicleNumber: String?) -> Line {
         let longName: String?
         if let name = name {
             longName = name + (number != nil && !name.hasSuffix(number!) ? "(\(number!))" : "")
@@ -1435,13 +1387,13 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
             } else {
                 label = name
             }
-            return Line(id: nil, network: network, product: product, label: label, name: longName, number: number, style: lineStyle(network: network, product: product, label: label), attr: nil, message: nil)
+            return Line(id: id, network: network, product: product, label: label, name: longName, number: number, style: lineStyle(network: network, product: product, label: label), attr: nil, message: nil)
         } else {
             var label = name ?? shortName ?? number
             if label?.contains("Zug-Nr.") ?? false, let shortName = shortName, name?.contains(shortName) ?? false {
                 label = shortName
             }
-            return Line(id: nil, network: network, product: product, label: label?.replacingOccurrences(of: " ", with: ""), name: longName, number: number, vehicleNumber: vehicleNumber, style: lineStyle(network: network, product: product, label: name), attr: nil, message: nil)
+            return Line(id: id, network: network, product: product, label: label?.replacingOccurrences(of: " ", with: ""), name: longName, number: number, vehicleNumber: vehicleNumber, style: lineStyle(network: network, product: product, label: name), attr: nil, message: nil)
         }
     }
     

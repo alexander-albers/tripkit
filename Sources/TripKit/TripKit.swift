@@ -159,3 +159,12 @@ extension Sequence where Element: Hashable {
         return filter { set.insert($0).inserted }
     }
 }
+
+extension Collection {
+
+    /// Returns the element at the specified index if it is within bounds, otherwise nil.
+    subscript(safe index: Index?) -> Element? {
+        guard let index = index else { return nil }
+        return indices.contains(index) ? self[index] : nil
+    }
+}

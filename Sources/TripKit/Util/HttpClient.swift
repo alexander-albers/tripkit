@@ -169,7 +169,7 @@ public class HttpRequest {
 
 extension Data {
     
-    func toJson(encoding: String.Encoding = .utf8) throws -> Any? {
+    func encodedData(encoding: String.Encoding) -> Data? {
         let encodedData: Data?
         if encoding == .utf8 {
             encodedData = self
@@ -177,7 +177,11 @@ extension Data {
             let string = String(data: self, encoding: encoding)
             encodedData = string?.data(using: .utf8, allowLossyConversion: true)
         }
-        if let encodedData = encodedData {
+        return encodedData
+    }
+    
+    func toJson(encoding: String.Encoding = .utf8) throws -> Any? {
+        if let encodedData = encodedData(encoding: encoding) {
             return try JSONSerialization.jsonObject(with: encodedData, options: .allowFragments)
         } else {
             return nil

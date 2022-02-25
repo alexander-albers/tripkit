@@ -2,6 +2,7 @@ import Foundation
 import os.log
 import Gzip
 import SWXMLHash
+import SwiftyJSON
 
 public class AbstractHafasLegacyProvider: AbstractHafasProvider {
     
@@ -328,20 +329,32 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider {
     // MARK: NetworkProvider responses
     
     override func suggestLocationsParsing(request: HttpRequest, constraint: String, types: [LocationType]?, maxLocations: Int, completion: @escaping (HttpRequest, SuggestLocationsResult) -> Void) throws {
-        guard let data = request.responseData else { throw ParseError(reason: "no response") }
-        var locations: [SuggestedLocation] = []
-        guard let json = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [String: Any], let suggestions = json["suggestions"] as? [Any] else {
-            throw ParseError(reason: "suggestions not found")
+        guard let data = request.responseData?.encodedData(encoding: self.jsonNearbyLocationsEncoding) else {
+            throw ParseError(reason: "no response")
         }
-        for (index, suggestion) in suggestions.enumerated() {
-            guard let suggestion = suggestion as? [String: Any] else { continue }
-            guard let type = Int(suggestion["type"] as? String ?? ""), let value = suggestion["value"] as? String, let lat = Int(suggestion["ycoord"] as? String ?? ""), let lon = Int(suggestion["xcoord"] as? String ?? ""), let id = suggestion["id"] as? String else {
-                os_log("%{public}@: failed to parse suggestions", log: .requestLogger, type: .error, #function)
+        let json = try JSON(data: data, options: .allowFragments)
+        if let error = json["error"].string, error != "0" {
+            throw ParseError(reason: "received hafas error code \(error)")
+        }
+        
+        var locations: [SuggestedLocation] = []
+        for (index, suggestion) in json["suggestions"].arrayValue.enumerated() {
+            guard let type = Int(suggestion["type"].stringValue) else {
                 continue
             }
-            let weight = jsonGetStopsUseWeight ? Int(suggestion["weight"] as? String ?? "") ?? -index : -index
+            let id = suggestion["id"].string
+            let value = suggestion["value"].string
+            
+            let coord: LocationPoint?
+            if let lat = Int(suggestion["ycoord"].stringValue), let lon = Int(suggestion["xcoord"].stringValue) {
+                coord = LocationPoint(lat: lat, lon: lon)
+            } else {
+                coord = nil
+            }
+            
+            let weight = jsonGetStopsUseWeight ? Int(suggestion["weight"].stringValue) ?? -index : -index
             let localId: String?
-            if let match = self.P_AJAX_GET_STOPS_ID.firstMatch(in: id, options: [], range: NSMakeRange(0, id.count)) {
+            if let id = id, let match = self.P_AJAX_GET_STOPS_ID.firstMatch(in: id, options: [], range: NSMakeRange(0, id.count)) {
                 localId = (id as NSString).substring(with: match.range(at: 1))
             } else {
                 localId = nil
@@ -350,16 +363,16 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider {
             let location: Location?
             if type == 1 {
                 let placeAndName = split(stationName: value)
-                location = Location(type: .station, id: localId, coord: LocationPoint(lat: lat, lon: lon), place: placeAndName.0, name: placeAndName.1)
+                location = Location(type: .station, id: localId, coord: coord, place: placeAndName.0, name: placeAndName.1)
             } else if type == 2 {
                 let placeAndName = split(address: value)
-                location = Location(type: .address, id: localId, coord: LocationPoint(lat: lat, lon: lon), place: placeAndName.0, name: placeAndName.1)
+                location = Location(type: .address, id: localId, coord: coord, place: placeAndName.0, name: placeAndName.1)
             } else if type == 4 {
                 let placeAndName = split(poi: value)
-                location = Location(type: .poi, id: localId, coord: LocationPoint(lat: lat, lon: lon), place: placeAndName.0, name: placeAndName.1)
+                location = Location(type: .poi, id: localId, coord: coord, place: placeAndName.0, name: placeAndName.1)
             } else if type == 128 {
                 let placeAndName = split(address: value)
-                location = Location(type: .address, id: localId, coord: LocationPoint(lat: lat, lon: lon), place: placeAndName.0, name: placeAndName.1)
+                location = Location(type: .address, id: localId, coord: coord, place: placeAndName.0, name: placeAndName.1)
             } else {
                 location = nil
             }
@@ -371,44 +384,50 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider {
     }
     
     override func queryNearbyLocationsByCoordinateParsing(request: HttpRequest, location: Location, types: [LocationType]?, maxDistance: Int, maxLocations: Int, completion: @escaping (HttpRequest, NearbyLocationsResult) -> Void) throws {
-        guard let json = try request.responseData?.toJson(encoding: self.jsonNearbyLocationsEncoding) as? [String: Any], let error = json["error"] as? String else {
-            throw ParseError(reason: "could not parse json")
+        guard let data = request.responseData?.encodedData(encoding: self.jsonNearbyLocationsEncoding) else {
+            throw ParseError(reason: "no response")
         }
-        if error != "0" {
+        let json = try JSON(data: data)
+        if let error = json["error"].string, error != "0" {
             throw ParseError(reason: "received hafas error code \(error)")
         }
         var locations: [Location] = []
-        if let stops = json["stops"] as? [Any] {
-            for stop in stops {
-                guard let stop = stop as? [String: Any], let id = stop["extId"] as? String, let urlname = (stop["urlname"] as? String), let lat = Int(stop["y"] as? String ?? ""), let lon = Int(stop["x"] as? String ?? "") else {
-                    throw ParseError(reason: "failed to parse stop")
-                }
-                let name = urlname.decodeUrl(using: jsonNearbyLocationsEncoding) ?? urlname
-                let prodclass = Int(stop["prodclass"] as? String ?? "") ?? -1
-                let stopWeight = Int(stop["stopweight"] as? String ?? "") ?? -1
-                
-                if stopWeight != 0 {
-                    let placeAndName = split(stationName: name)
-                    let products = prodclass != -1 ? self.products(from: prodclass) : nil
-                    let location = Location(type: .station, id: id, coord: LocationPoint(lat: lat, lon: lon), place: placeAndName.0, name: placeAndName.1, products: products)
-                    if let location = location {
-                        locations.append(location)
-                    }
-                }
+        for stop in json["stops"].arrayValue {
+            let id = stop["extId"].string
+            let urlname = stop["urlname"].string
+            
+            let coord: LocationPoint?
+            if let lat = Int(stop["y"].stringValue), let lon = Int(stop["x"].stringValue) {
+                coord = LocationPoint(lat: lat, lon: lon)
+            } else {
+                coord = nil
             }
+            
+            let name = urlname?.decodeUrl(using: jsonNearbyLocationsEncoding) ?? urlname
+            let prodclass = Int(stop["prodclass"].stringValue) ?? -1
+            let stopWeight = Int(stop["stopweight"].stringValue) ?? -1
+            
+            guard stopWeight != 0 else { continue }
+            let placeAndName = split(stationName: name)
+            let products = prodclass != -1 ? self.products(from: prodclass) : nil
+            
+            guard let location = Location(type: .station, id: id, coord: coord, place: placeAndName.0, name: placeAndName.1, products: products) else { continue }
+            locations.append(location)
         }
-        if let pois = json["pois"] as? [Any] {
-            for poi in pois {
-                guard let poi = poi as? [String: Any], let id = poi["extId"] as? String, let urlname = (poi["urlname"] as? String)?.removingPercentEncoding, let lat = Int(poi["y"] as? String ?? ""), let lon = Int(poi["x"] as? String ?? "") else {
-                    throw ParseError(reason: "failed to parse stop")
-                }
-                
-                let placeAndName = split(stationName: urlname)
-                let location = Location(type: .poi, id: id, coord: LocationPoint(lat: lat, lon: lon), place: placeAndName.0, name: placeAndName.1)
-                if let location = location {
-                    locations.append(location)
-                }
+        for poi in json["pois"].arrayValue {
+            let id = poi["extId"].string
+            let urlname = poi["urlname"].string
+            
+            let coord: LocationPoint?
+            if let lat = Int(poi["y"].stringValue), let lon = Int(poi["x"].stringValue) {
+                coord = LocationPoint(lat: lat, lon: lon)
+            } else {
+                coord = nil
             }
+            
+            let placeAndName = split(stationName: urlname)
+            guard let location = Location(type: .poi, id: id, coord: coord, place: placeAndName.0, name: placeAndName.1) else { continue }
+            locations.append(location)
         }
         
         completion(request, .success(locations: locations))

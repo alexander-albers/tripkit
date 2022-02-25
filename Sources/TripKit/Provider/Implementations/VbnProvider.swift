@@ -237,13 +237,13 @@ public class VbnProvider: AbstractHafasClientInterfaceProvider {
         return super.split(address: address)
     }
     
-    override func newLine(network: String?, product: Product?, name: String?, shortName: String?, number: String?, vehicleNumber: String?) -> Line {
-        let line = super.newLine(network: network, product: product, name: name, shortName: shortName, number: number, vehicleNumber: vehicleNumber)
+    override func newLine(id: String?, network: String?, product: Product?, name: String?, shortName: String?, number: String?, vehicleNumber: String?) -> Line {
+        let line = super.newLine(id: id, network: network, product: product, name: name, shortName: shortName, number: number, vehicleNumber: vehicleNumber)
         
         if line.product == .bus && "57" == line.label {
-            return Line(id: nil, network: line.network, product: line.product, label: line.label, name: line.name, style: line.style, attr: [.serviceReplacement, .circleClockwise], message: line.message)
+            return Line(id: id, network: line.network, product: line.product, label: line.label, name: line.name, style: line.style, attr: [.serviceReplacement, .circleClockwise], message: line.message)
         } else if line.product == .bus && "58" == line.label {
-            return Line(id: nil, network: line.network, product: line.product, label: line.label, name: line.name, style: line.style, attr: [.serviceReplacement, .circleAnticlockwise], message: line.message)
+            return Line(id: id, network: line.network, product: line.product, label: line.label, name: line.name, style: line.style, attr: [.serviceReplacement, .circleAnticlockwise], message: line.message)
         } else {
             return line
         }
