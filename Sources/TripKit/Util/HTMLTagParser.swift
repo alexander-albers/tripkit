@@ -13,6 +13,7 @@ extension String {
     /// - Returns: the stripped string or the original string in case of an unexpected parse error.
     func stripHTMLTags() -> String {
         let escapedString = self
+            .stringByDecodingHTMLEntities
             .replacingOccurrences(of: "<br>", with: "<br/>")
             .replacingOccurrences(of: "&(?!(#[0-9]{2,4}|[A-z]{2,6});)", with: "&amp;", options: .regularExpression, range: nil)
         // Embed in own tag, since text may not include start and end tags

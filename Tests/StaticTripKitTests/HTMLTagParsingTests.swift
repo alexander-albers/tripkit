@@ -33,8 +33,7 @@ class HTMLFormatDecodingTests: XCTestCase {
         """
         
         let formatted = xml.stripHTMLTags()
-        print(formatted)
-        XCTAssert(formatted == expected)
+        XCTAssertEqual(formatted, expected)
     }
     
     func testRealText() {
@@ -51,9 +50,7 @@ class HTMLFormatDecodingTests: XCTestCase {
         """
         
         let formatted = xml.stripHTMLTags()
-        print(formatted)
-        print(expected)
-        XCTAssert(formatted == expected)
+        XCTAssertEqual(formatted, expected)
     }
     
     func testPlainText() {
@@ -63,7 +60,7 @@ class HTMLFormatDecodingTests: XCTestCase {
         
         Third line.
         """
-        print(xml.stripHTMLTags() == xml)
+        XCTAssertEqual(xml.stripHTMLTags(), xml)
     }
     
     func testIgnoredTags() {
@@ -71,8 +68,7 @@ class HTMLFormatDecodingTests: XCTestCase {
         <b>Important:</b> Please wear a mask.
         """
         let formatted = xml.stripHTMLTags()
-        print(formatted)
-        XCTAssert(formatted == "Important: Please wear a mask.")
+        XCTAssertEqual(formatted, "Important: Please wear a mask.")
     }
     
     func testXMLTags() {
@@ -89,9 +85,30 @@ class HTMLFormatDecodingTests: XCTestCase {
         """
         
         let formatted = xml.stripHTMLTags()
-        print(formatted)
-        print(expected)
-        XCTAssert(formatted == expected)
+        XCTAssertEqual(formatted, expected)
+    }
+    
+    func testSpecialCharacters() {
+        let xml = """
+        Coronama&szlig;nahmen
+        Coronamaßnahmen
+        
+        Sch&#246;n
+        Sch&ouml;n
+        Schön
+        """
+        
+        let expected = """
+        Coronamaßnahmen
+        Coronamaßnahmen
+        
+        Schön
+        Schön
+        Schön
+        """
+        
+        let formatted = xml.stripHTMLTags()
+        XCTAssertEqual(formatted, expected)
     }
 
 }

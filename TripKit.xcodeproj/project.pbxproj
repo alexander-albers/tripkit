@@ -170,6 +170,10 @@
 		FA1C85781E437D73002BFE6E /* AsyncRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1C85771E437D73002BFE6E /* AsyncRequest.swift */; };
 		FA2454C61E86A2A500445AD5 /* BayernProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2454C51E86A2A500445AD5 /* BayernProvider.swift */; };
 		FA2454CA1E86B05600445AD5 /* ParserUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2454C91E86B05600445AD5 /* ParserUtils.swift */; };
+		FA24DD6B27C8C82500321599 /* HTMLEntityDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA24DD6A27C8C82500321599 /* HTMLEntityDecoder.swift */; };
+		FA24DD6C27C8C82500321599 /* HTMLEntityDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA24DD6A27C8C82500321599 /* HTMLEntityDecoder.swift */; };
+		FA24DD6D27C8C82500321599 /* HTMLEntityDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA24DD6A27C8C82500321599 /* HTMLEntityDecoder.swift */; };
+		FA24DD6E27C8C82500321599 /* HTMLEntityDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA24DD6A27C8C82500321599 /* HTMLEntityDecoder.swift */; };
 		FA2C85C325F13BBE003880FB /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2C85C225F13BBE003880FB /* Bundle.swift */; };
 		FA2C85C425F13BBE003880FB /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2C85C225F13BBE003880FB /* Bundle.swift */; };
 		FA2C85C525F13BBE003880FB /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2C85C225F13BBE003880FB /* Bundle.swift */; };
@@ -984,6 +988,7 @@
 		FA1C85771E437D73002BFE6E /* AsyncRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncRequest.swift; sourceTree = "<group>"; };
 		FA2454C51E86A2A500445AD5 /* BayernProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BayernProvider.swift; sourceTree = "<group>"; };
 		FA2454C91E86B05600445AD5 /* ParserUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParserUtils.swift; sourceTree = "<group>"; };
+		FA24DD6A27C8C82500321599 /* HTMLEntityDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTMLEntityDecoder.swift; sourceTree = "<group>"; };
 		FA2C85C225F13BBE003880FB /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
 		FA37CD7E1FFC0AE000B5D93D /* HvvProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HvvProvider.swift; sourceTree = "<group>"; };
 		FA37CD871FFC0D2500B5D93D /* CryptoUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoUtils.swift; sourceTree = "<group>"; };
@@ -1612,6 +1617,7 @@
 				FA2C85C225F13BBE003880FB /* Bundle.swift */,
 				FA4C7F3226EB44BD00BFD671 /* IdentityUtils.swift */,
 				FAB18AED276DE1F800AF9983 /* HTMLTagParser.swift */,
+				FA24DD6A27C8C82500321599 /* HTMLEntityDecoder.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -2250,6 +2256,7 @@
 				FA5CD24E24FBB29000B4990A /* VagfrProvider.swift in Sources */,
 				FA5CD24124FBB29000B4990A /* VvoProvider.swift in Sources */,
 				FA5CD2C824FBB2A900B4990A /* SessionExpiredError.swift in Sources */,
+				FA24DD6D27C8C82500321599 /* HTMLEntityDecoder.swift in Sources */,
 				FA5CD24C24FBB29000B4990A /* DingProvider.swift in Sources */,
 				FA5CD22C24FBB29000B4990A /* AbstractHafasProvider.swift in Sources */,
 				FA5CD2C724FBB2A900B4990A /* ParseError.swift in Sources */,
@@ -2355,6 +2362,7 @@
 				FA5CD28324FBB29000B4990A /* VagfrProvider.swift in Sources */,
 				FA5CD27624FBB29000B4990A /* VvoProvider.swift in Sources */,
 				FA5CD2D524FBB2AA00B4990A /* SessionExpiredError.swift in Sources */,
+				FA24DD6E27C8C82500321599 /* HTMLEntityDecoder.swift in Sources */,
 				FA5CD28124FBB29000B4990A /* DingProvider.swift in Sources */,
 				FA5CD26124FBB29000B4990A /* AbstractHafasProvider.swift in Sources */,
 				FA5CD2D424FBB2AA00B4990A /* ParseError.swift in Sources */,
@@ -2580,6 +2588,7 @@
 				FABFCC101E8FA02100905D5E /* NasaProvider.swift in Sources */,
 				FAB754301E3FD3E500C343F2 /* QueryTripsResult.swift in Sources */,
 				FA47CC121E8A6E7800F95B0F /* AbstractHafasClientInterfaceProvider.swift in Sources */,
+				FA24DD6B27C8C82500321599 /* HTMLEntityDecoder.swift in Sources */,
 				FA7572B11E673498009B41EF /* ParseError.swift in Sources */,
 				FA11F6E520496C7100B66359 /* UrlBuilder.swift in Sources */,
 				FAB7543C1E3FD3F300C343F2 /* AbstractNetworkProvider.swift in Sources */,
@@ -2955,6 +2964,7 @@
 				FAFF18821FA50B9500A8ED69 /* NasaProvider.swift in Sources */,
 				FAFF18831FA50B9500A8ED69 /* QueryTripsResult.swift in Sources */,
 				FAFF18841FA50B9500A8ED69 /* AbstractHafasClientInterfaceProvider.swift in Sources */,
+				FA24DD6C27C8C82500321599 /* HTMLEntityDecoder.swift in Sources */,
 				FAFF18851FA50B9500A8ED69 /* ParseError.swift in Sources */,
 				FA11F6E620496C7200B66359 /* UrlBuilder.swift in Sources */,
 				FAFF18861FA50B9500A8ED69 /* AbstractNetworkProvider.swift in Sources */,
