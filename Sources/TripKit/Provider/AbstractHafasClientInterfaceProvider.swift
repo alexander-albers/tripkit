@@ -490,31 +490,29 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
                 guard let arrivalStop = try parseStop(json: sec["arr"], locations: locations, rems: rems, messages: messages, baseDate: baseDate)?.arrival else {
                     throw ParseError(reason: "failed to parse arrival stop")
                 }
+                let gis = sec["gis"]
+                let distance = gis["distance"].intValue
+                let path = parsePath(encodedPolyList: encodedPolyList, jny: gis)
                 
                 switch sec["type"].stringValue {
                 case "JNY", "TETA":
-                    let jny = sec["jny"]
-                    
-                    let leg = try processPublicLeg(jny: jny, baseDate: baseDate, locations: locations, lines: lines, rems: rems, messages: messages, encodedPolyList: encodedPolyList, loadFactors: loadFactors, departureStop: departureStop, arrivalStop: arrivalStop, tariffClass: tripOptions.tariffProfile?.tariffClass)
+                    let leg = try processPublicLeg(jny: sec["jny"], baseDate: baseDate, locations: locations, lines: lines, rems: rems, messages: messages, encodedPolyList: encodedPolyList, loadFactors: loadFactors, departureStop: departureStop, arrivalStop: arrivalStop, tariffClass: tripOptions.tariffProfile?.tariffClass)
                     
                     legs.append(leg)
                 case "WALK", "TRSF", "DEVI":
-                    let gis = sec["gis"]
-                    let distance = gis["distance"].intValue
-                    let path = parsePath(encodedPolyList: encodedPolyList, jny: gis)
                     processIndividualLeg(legs: &legs, type: .walk, departureStop: departureStop, arrivalStop: arrivalStop, distance: distance, path: path)
-                case "KISS":
-                    let gis = sec["gis"]
-                    let distance = gis["distance"].intValue
-                    let path = parsePath(encodedPolyList: encodedPolyList, jny: gis)
-                    
+                case "BIKE":
+                    processIndividualLeg(legs: &legs, type: .bike, departureStop: departureStop, arrivalStop: arrivalStop, distance: distance, path: path)
+                case "TAXI":
+                    processIndividualLeg(legs: &legs, type: .car, departureStop: departureStop, arrivalStop: arrivalStop, distance: distance, path: path)
+                case "KISS", "PARK":
                     // handle BerlKönig (BVG)
                     let mcpData = sec["dep", "mcp", "mcpData"]
                     if let provider = mcpData["provider"].string, let providerName = mcpData["providerName"].string, provider == "berlkoenig" {
                         let line = Line(id: nil, network: nil, product: .onDemand, label: providerName, name: providerName, number: nil, vehicleNumber: nil, style: lineStyle(network: nil, product: .onDemand, label: providerName), attr: nil, message: nil, direction: nil)
                         legs.append(PublicLeg(line: line, destination: arrivalStop.location, departure: departureStop, arrival: arrivalStop, intermediateStops: [], message: nil, path: path, journeyContext: nil, loadFactor: nil))
                     } else {
-                        processIndividualLeg(legs: &legs, type: .walk, departureStop: departureStop, arrivalStop: arrivalStop, distance: distance, path: path)
+                        processIndividualLeg(legs: &legs, type: .car, departureStop: departureStop, arrivalStop: arrivalStop, distance: distance, path: path)
                     }
                 default:
                     throw ParseError(reason: "could not parse outcon sec type \(sec["type"].stringValue)")
