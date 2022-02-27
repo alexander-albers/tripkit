@@ -647,6 +647,8 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider {
         try _queryTripsParsing(request: request, from: nil, via: nil, to: nil, previousContext: nil, later: false, completion: completion)
     }
     
+    /// Binary protocol documentation located here:
+    /// https://docs.google.com/spreadsheets/d/1Qzm4fbjp3uH7xQPmXIlzYFMQxI7R3cdcWwHe7svYsR0
     func _queryTripsParsing(request: HttpRequest, from: Location?, via: Location?, to: Location?, previousContext: QueryTripsContext?, later: Bool, completion: @escaping (HttpRequest, QueryTripsResult) -> Void) throws {
         guard let data = request.responseData else { throw ParseError(reason: "no response") }
         let reader = Reader(data: data)
