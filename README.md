@@ -118,3 +118,12 @@ For unit testing, you need to specify all required secrets in a secrets.json fil
 ## Contributing and future plans
 
 Feel free to add further transit providers to the project, as long as they don't overlap with already existing ones and don't require too much maintenance or a server to be used. Since this project is based on the public-transport-enabler, my intention is to have this project as close to it as possible. For now, I'd like to stick to transit providers in German-speaking countries, but a further expansion to other countries is imaginable for the future. 
+
+## Related Projects
+
+- [`public-transport-enabler`](https://github.com/schildbach/public-transport-enabler) – Java equivalent; Used by [Öffi](https://play.google.com/store/apps/details?id=de.schildbach.oeffi) & [Transportr](https://transportr.app).
+- [`hafas-client`](https://github.com/public-transport/hafas-client) – JavaScript equivalent for HAFAS public transport APIs.
+- [`kpublictransport`](https://github.com/KDE/kpublictransport) – C++ equivalent; Used by [KDE Itinerary](https://apps.kde.org/itinerary/).
+- [`pyhafas`](https://github.com/n0emis/pyhafas) – Python equivalent.
+- [`*.transport.rest`](https://transport.rest/) – Public APIs wrapping some HAFAS endpoints.
+- [`BahnhofsAbfahrten`](https://github.com/marudor/BahnhofsAbfahrten) a.k.a. [`marudor.de`](https://marudor.de/) – A very detailed public transport website for Germany. Uses HAFAS underneath, [has an API](https://docs.marudor.de).
