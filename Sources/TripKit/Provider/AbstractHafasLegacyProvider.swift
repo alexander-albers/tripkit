@@ -329,7 +329,7 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider {
     // MARK: NetworkProvider responses
     
     override func suggestLocationsParsing(request: HttpRequest, constraint: String, types: [LocationType]?, maxLocations: Int, completion: @escaping (HttpRequest, SuggestLocationsResult) -> Void) throws {
-        guard let data = request.responseData?.encodedData(encoding: self.jsonNearbyLocationsEncoding) else {
+        guard let data = request.responseData else {
             throw ParseError(reason: "no response")
         }
         let json = try JSON(data: data, options: .allowFragments)
