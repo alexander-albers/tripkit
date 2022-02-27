@@ -518,7 +518,9 @@ public class AbstractEfaWebProvider: AbstractEfaProvider {
                 context = nil
             }
             
-            let trip = Trip(id: id, from: from, to: to, legs: legs, fares: fares, refreshContext: context)
+            let duration = parseDuration(from: route.element?.attribute(by: "publicDuration")?.text)
+            
+            let trip = Trip(id: id, from: from, to: to, legs: legs, duration: duration, fares: fares, refreshContext: context)
             trips.append(trip)
         }
         if trips.count == 0 {
@@ -641,7 +643,7 @@ public class AbstractEfaWebProvider: AbstractEfaProvider {
         }
         let path = processItdPathCoordinates(xml["itdRequest"]["itdStopSeqCoordRequest"]["itdPathCoordinates"]) ?? []
         let leg = PublicLeg(line: line, destination: arrivalStop.location, departure: departureStop, arrival: arrivalStop, intermediateStops: stops, message: nil, path: path, journeyContext: nil, loadFactor: nil)
-        let trip = Trip(id: "", from: departureStop.location, to: arrivalStop.location, legs: [leg], fares: [])
+        let trip = Trip(id: "", from: departureStop.location, to: arrivalStop.location, legs: [leg], duration: 0, fares: [])
         completion(request, .success(trip: trip, leg: leg))
     }
     

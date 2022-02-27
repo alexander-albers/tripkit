@@ -307,7 +307,7 @@ public class HvvProvider: AbstractNetworkProvider {
         }
         
         let leg = PublicLeg(line: context.line, destination: arrival.location, departure: departure, arrival: arrival, intermediateStops: stops, message: nil, path: path, journeyContext: context, loadFactor: nil)
-        let trip = Trip(id: "", from: departure.location, to: arrival.location, legs: [leg], fares: [], refreshContext: nil)
+        let trip = Trip(id: "", from: departure.location, to: arrival.location, legs: [leg], duration: 0, fares: [], refreshContext: nil)
         completion(request, .success(trip: trip, leg: leg))
     }
     
@@ -585,8 +585,9 @@ public class HvvProvider: AbstractNetworkProvider {
                 legs.append(leg)
             }
         }
+        let duration = json["time"].doubleValue * 60
         let fares = parseFares(json: json["tariffInfos"])
-        return Trip(id: "", from: from, to: to, legs: legs, fares: fares, refreshContext: nil)
+        return Trip(id: "", from: from, to: to, legs: legs, duration: duration, fares: fares, refreshContext: nil)
     }
     
     private func parseLeg(json: JSON) throws -> Leg? {

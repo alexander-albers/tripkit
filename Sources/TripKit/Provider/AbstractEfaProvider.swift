@@ -382,6 +382,16 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
         }
     }
     
+    func parseDuration(from durationString: String?) -> TimeInterval {
+        guard let components = durationString?.components(separatedBy: ":"), components.count == 2 else {
+            return 0
+        }
+        var result: TimeInterval = 0
+        result += (Double(components[0]) ?? 0) * 60 * 60 // hours
+        result += (Double(components[1]) ?? 0) * 60 // minutes
+        return result
+    }
+    
     // MARK: Line styles
     
     func parseLine(id: String?, network: String?, mot: String?, symbol: String?, name: String?, longName: String?, trainType: String?, trainNum: String?, trainName: String?) -> Line {

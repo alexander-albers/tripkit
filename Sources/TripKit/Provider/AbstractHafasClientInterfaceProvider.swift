@@ -528,8 +528,9 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
             } else {
                 context = nil
             }
+            let duration = try parseJsonTime(baseDate: baseDate, dateString: outCon["dur"].string)?.timeIntervalSince(baseDate) ?? 0
             
-            let trip = Trip(id: "", from: from, to: to, legs: legs, fares: fares, refreshContext: context)
+            let trip = Trip(id: "", from: from, to: to, legs: legs, duration: duration, fares: fares, refreshContext: context)
             trips.append(trip)
         }
         let context: Context
@@ -578,10 +579,11 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         let journey = res["journey"]
         
         let baseDate = try parseBaseDate(from: journey["date"].stringValue)
+        let duration = try parseJsonTime(baseDate: baseDate, dateString: journey["dur"].string)?.timeIntervalSince(baseDate) ?? 0
         
         let leg = try processPublicLeg(jny: journey, baseDate: baseDate, locations: locations, lines: lines, rems: rems, messages: messages, encodedPolyList: encodedPolyList, loadFactors: loadFactors, departureStop: nil, arrivalStop: nil, tariffClass: nil)
         
-        let trip = Trip(id: "", from: leg.departure, to: leg.arrival, legs: [leg], fares: [])
+        let trip = Trip(id: "", from: leg.departure, to: leg.arrival, legs: [leg], duration: duration, fares: [])
         completion(request, .success(trip: trip, leg: leg))
     }
     

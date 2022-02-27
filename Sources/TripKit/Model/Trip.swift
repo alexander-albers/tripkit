@@ -28,6 +28,9 @@ public class Trip: NSObject, NSSecureCoding {
     /// Context for refreshing the trip. See `NetworkProvider.refreshTrip`
     public var refreshContext: RefreshTripContext?
     
+    /// Total duration of this trip (in seconds).
+    public let duration: TimeInterval
+    
     /// Predicted departure time of the first leg, if available, otherwise the planned time.
     ///
     /// See ``NetworkProvider/timeZone`` for a discussion about how to correctly handle time zones.
@@ -86,12 +89,17 @@ public class Trip: NSObject, NSSecureCoding {
         legs.compactMap({ $0 as? PublicLeg }).contains(where: { $0.isCancelled })
     }
     
-    public init(id: String, from: Location, to: Location, legs: [Leg], fares: [Fare], refreshContext: RefreshTripContext? = nil) {
+    public init(id: String, from: Location, to: Location, legs: [Leg], duration: TimeInterval, fares: [Fare], refreshContext: RefreshTripContext? = nil) {
         assert(!legs.isEmpty, "Legs cannot be empty")
         self._id = id
         self.from = from
         self.to = to
         self.legs = legs
+        if duration == 0 {
+            self.duration = legs[legs.count - 1].arrivalTime.timeIntervalSince(legs[0].departureTime)
+        } else {
+            self.duration = duration
+        }
         self.fares = fares
         self.refreshContext = refreshContext
     }
@@ -107,8 +115,9 @@ public class Trip: NSObject, NSSecureCoding {
             os_log("failed to decode trip", log: .default, type: .error)
             return nil
         }
+        let duration = aDecoder.decodeDouble(forKey: PropertyKey.duration)
         let refreshContext = aDecoder.decodeObject(of: RefreshTripContext.self, forKey: PropertyKey.refreshContext)
-        self.init(id: id, from: from, to: to, legs: legs, fares: fares, refreshContext: refreshContext)
+        self.init(id: id, from: from, to: to, legs: legs, duration: duration, fares: fares, refreshContext: refreshContext)
     }
     
     public func encode(with aCoder: NSCoder) {
@@ -116,6 +125,7 @@ public class Trip: NSObject, NSSecureCoding {
         aCoder.encode(from, forKey: PropertyKey.from)
         aCoder.encode(to, forKey: PropertyKey.to)
         aCoder.encode(legs, forKey: PropertyKey.legs)
+        aCoder.encode(duration, forKey: PropertyKey.duration)
         aCoder.encode(fares, forKey: PropertyKey.fares)
         if let refreshContext = refreshContext {
             aCoder.encode(refreshContext, forKey: PropertyKey.refreshContext)
@@ -159,6 +169,7 @@ public class Trip: NSObject, NSSecureCoding {
         static let from = "from"
         static let to = "to"
         static let legs = "legs"
+        static let duration = "duration"
         static let fares = "fares"
         static let refreshContext = "refreshContext"
         

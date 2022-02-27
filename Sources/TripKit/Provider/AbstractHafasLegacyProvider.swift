@@ -825,7 +825,7 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider {
             let legsOffset = reader.readIntReverse()
             let numLegs = reader.readShortReverse()
             let _ = reader.readShortReverse() // num changes
-            reader.skipBytes(2)
+            let duration = try parseTime(reader: reader, baseDate: 0, dayOffset: 0)
             
             reader.reset()
             reader.skipBytes(serviceDaysTablePtr + serviceDaysTableOffset)
@@ -1110,7 +1110,7 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider {
                     legs.append(leg)
                 }
                 let context: HafasLegacyRefreshTripContext? = nil
-                let trip = Trip(id: "", from: resDeparture, to: resArrival, legs: legs, fares: [], refreshContext: context)
+                let trip = Trip(id: "", from: resDeparture, to: resArrival, legs: legs, duration: duration, fares: [], refreshContext: context)
                 if realtimeStatus == 2 { // Verbindung fällt aus
                     for leg in trip.legs {
                         guard let leg = leg as? PublicLeg else { continue }
@@ -1231,12 +1231,13 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider {
         }
         var calendar = Calendar(identifier: .gregorian)
         calendar.timeZone = timeZone
-        var components = calendar.dateComponents([.minute, .hour, .day, .month, .year], from: Date(timeIntervalSince1970: baseDate))
-        components.minute = minutes
-        components.hour = hours
-        let newDate = calendar.date(byAdding: .day, value: dayOffset, to: calendar.date(from: components)!)
         
-        return newDate!.timeIntervalSince1970
+        var result = Date(timeIntervalSince1970: baseDate)
+        result = calendar.date(byAdding: .day, value: dayOffset, to: result)!
+        result = calendar.date(byAdding: .hour, value: hours, to: result)!
+        result = calendar.date(byAdding: .minute, value: minutes, to: result)!
+        
+        return result.timeIntervalSince1970
     }
     
     let P_CATEGORY_FROM_NAME = try! NSRegularExpression(pattern: "([A-Za-zßÄÅäáàâåéèêíìîÖöóòôÜüúùûØ]+).*", options: .caseInsensitive)

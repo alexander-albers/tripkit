@@ -429,10 +429,11 @@ public class AbstractEfaMobileProvider: AbstractEfaProvider {
                 }
                 break
             }
+            let duration = parseDuration(from: tp["d"].element?.text)
             
             let context: EfaRefreshTripContext? = nil
             if let firstDepartureLocation = firstDepartureLocation, let lastArrivalLocation = lastArrivalLocation {
-                let trip = Trip(id: tripId, from: firstDepartureLocation, to: lastArrivalLocation, legs: legs, fares: fares, refreshContext: context)
+                let trip = Trip(id: tripId, from: firstDepartureLocation, to: lastArrivalLocation, legs: legs, duration: duration, fares: fares, refreshContext: context)
                 trips.append(trip)
             } else {
                 throw ParseError(reason: "failed to parse trip from/to")
@@ -541,7 +542,7 @@ public class AbstractEfaMobileProvider: AbstractEfaProvider {
             path = []
         }
         let leg = PublicLeg(line: line, destination: arrivalStop.location, departure: departureStop, arrival: arrivalStop, intermediateStops: stops, message: nil, path: path, journeyContext: nil, loadFactor: nil)
-        let trip = Trip(id: "", from: departureStop.location, to: arrivalStop.location, legs: [leg], fares: [])
+        let trip = Trip(id: "", from: departureStop.location, to: arrivalStop.location, legs: [leg], duration: 0, fares: [])
         completion(request, .success(trip: trip, leg: leg))
     }
     

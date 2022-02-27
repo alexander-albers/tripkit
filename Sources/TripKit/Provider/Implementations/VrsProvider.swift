@@ -733,10 +733,11 @@ public class VrsProvider: AbstractNetworkProvider {
                     throw ParseError(reason: "illegal segment type \(type)")
                 }
             }
+            let duration = (route["duration"] as? Double ?? 0) * 60
             let fares = parseFare(costs: route["costs"] as? [String: Any])
             
             if let tripOrigin = tripOrigin, let tripDestination = tripDestination {
-                trips.append(Trip(id: "", from: tripOrigin, to: tripDestination, legs: legs, fares: fares))
+                trips.append(Trip(id: "", from: tripOrigin, to: tripDestination, legs: legs, duration: duration, fares: fares))
             } else {
                 throw ParseError(reason: "failed to parse trip origin/destination")
             }
