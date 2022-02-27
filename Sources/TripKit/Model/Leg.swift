@@ -12,22 +12,34 @@ public protocol Leg {
     var path: [LocationPoint] { get }
     
     /// Predicted departure time, if available, otherwise the planned time.
+    ///
+    /// See ``NetworkProvider/timeZone`` for a discussion about how to correctly handle time zones.
     var departureTime: Date { get }
+    
     /// Predicted departure time, if available, otherwise the planned time.
+    /// See ``NetworkProvider/timeZone`` for a discussion about how to correctly handle time zones.
     var arrivalTime: Date { get }
     
     /// Returns always the planned departure time.
+    ///
+    /// See ``NetworkProvider/timeZone`` for a discussion about how to correctly handle time zones.
     var plannedDepartureTime: Date { get }
     /// Returns always the planned arrival time.
+    ///
+    /// See ``NetworkProvider/timeZone`` for a discussion about how to correctly handle time zones.
     var plannedArrivalTime: Date { get }
     
     /// Returns the earliest departure time.
     ///
     /// This may be either the predicted or the planned time, depending on what is smaller.
+    /// 
+    /// See ``NetworkProvider/timeZone`` for a discussion about how to correctly handle time zones.
     var minTime: Date { get }
     /// Returns the latest arrival time.
     ///
     /// This may be either the predicted or the planned time, depending on what is marger.
+    ///
+    /// See ``NetworkProvider/timeZone`` for a discussion about how to correctly handle time zones.
     var maxTime: Date { get }
 }
 

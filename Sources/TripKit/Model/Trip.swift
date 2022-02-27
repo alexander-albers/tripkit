@@ -29,13 +29,21 @@ public class Trip: NSObject, NSSecureCoding {
     public var refreshContext: RefreshTripContext?
     
     /// Predicted departure time of the first leg, if available, otherwise the planned time.
+    ///
+    /// See ``NetworkProvider/timeZone`` for a discussion about how to correctly handle time zones.
     public var departureTime: Date { legs[0].departureTime }
     /// Predicted arrival time of the last leg, if available, otherwise the planned time.
+    ///
+    /// See ``NetworkProvider/timeZone`` for a discussion about how to correctly handle time zones.
     public var arrivalTime: Date { legs[legs.count - 1].arrivalTime }
     
     /// Returns always the planned departure time of the first leg.
+    ///
+    /// See ``NetworkProvider/timeZone`` for a discussion about how to correctly handle time zones.
     public var plannedDepartureTime: Date { legs[0].plannedDepartureTime }
     /// Returns always the planned arrival time of the first leg.
+    ///
+    /// See ``NetworkProvider/timeZone`` for a discussion about how to correctly handle time zones.
     public var plannedArrivalTime: Date { legs[legs.count - 1].plannedArrivalTime }
     
     /// Returns true if there is realtime departure information.

@@ -4,8 +4,12 @@ public class StopEvent: NSObject {
     /// Information about the station of the stop.
     public let location: Location
     /// Scheduled time of arrival or departure.
+    ///
+    /// See ``NetworkProvider/timeZone`` for a discussion about how to correctly handle time zones.
     public let plannedTime: Date
     /// Actual, prognosed time of arrival or departure.
+    ///
+    /// See ``NetworkProvider/timeZone`` for a discussion about how to correctly handle time zones.
     public let predictedTime: Date?
     /// Scheduled arrival/departure platform of a station.
     public let plannedPlatform: String?

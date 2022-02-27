@@ -18,6 +18,12 @@ public protocol NetworkProvider {
     /// Map of line label to line style (used when parsing a line from a provider response).
     var styles: [String: LineStyle] { get }
     /// Time zone of this network provider.
+    ///
+    /// All `Date` objects need to be used with respect to this time zone of the network provider but must refer to the local time. This can be quite confusing, so here's an example:
+    ///
+    /// Say, you are currently in London and you want to find trips from London (GMT) to Paris (GMT+1). Let's further say that this timeZone object returns GMT+1 (i.e. the time zone of the network provider is Europe/Paris GMT+1). If you want to request trips departing at 15:00 o'clock GMT from London, the request `Date` object must be set to 15:00 *GMT+1*.
+    ///
+    /// This convention also applies to all response dates. Let's further say that you found a trip that arrives at 17:00 London time, or 18:00 local time in Paris. The `Date` object that will be returned will be 18:00 GMT+1 and *not* 17:00 GMT, even if you are currently still in London. The departure time (15:00 GMT) will also be in GMT+1 but in London local time, i.e. 15:00 *GMT+1*.
     var timeZone: TimeZone { get }
     
     /**
@@ -51,7 +57,7 @@ public protocol NetworkProvider {
     - Parameter from: location to route from.
     - Parameter via: location to route via, may be nil.
     - Parameter to: location to route to.
-    - Parameter date: desired date for departing.
+    - Parameter date: desired date for departing. See ``NetworkProvider/timeZone`` for a discussion about how to correctly handle time zones.
     - Parameter departure: date is departure date? true for departure, false for arrival.
     - Parameter products: products to take into account, or nil for the provider default.
     - Parameter optimize: optimize trip for one aspect, e.g. duration, or nil for the provider default.
@@ -71,7 +77,7 @@ public protocol NetworkProvider {
        - Parameter from: location to route from.
        - Parameter via: location to route via, may be nil.
        - Parameter to: location to route to.
-       - Parameter date: desired date for departing.
+       - Parameter date: desired date for departing. See ``NetworkProvider/timeZone`` for a discussion about how to correctly handle time zones.
        - Parameter departure: date is departure date? true for departure, false for arrival.
        - Parameter tripOptions: additional options.
        - Parameter completion: result object that can contain alternatives to clear up ambiguousnesses, or contains possible trips.
@@ -106,7 +112,7 @@ public protocol NetworkProvider {
  
     - Parameter stationId: id of the station.
     - Parameter departures: true for departures, false for arrivals.
-    - Parameter time: desired time for departing, or `nil` for the provider default.
+    - Parameter time: desired time for departing, or `nil` for the provider default. See ``NetworkProvider/timeZone`` for a discussion about how to correctly handle time zones.
     - Parameter maxDepartures: maximum number of departures to get or `0`.
     - Parameter equivs: also query equivalent stations?
     - Parameter completion: object containing the departures.

@@ -45,7 +45,7 @@ public extension NetworkProvider {
        - Parameter from: location to route from.
        - Parameter via: location to route via, may be nil.
        - Parameter to: location to route to.
-       - Parameter date: desired date for departing.
+       - Parameter date: desired date for departing. See ``NetworkProvider/timeZone`` for a discussion about how to correctly handle time zones.
        - Parameter departure: date is departure date? true for departure, false for arrival.
        - Parameter tripOptions: additional options.
        - Parameter completion: result object that can contain alternatives to clear up ambiguousnesses, or contains possible trips.
@@ -98,7 +98,7 @@ public extension NetworkProvider {
  
     - Parameter stationId: id of the station.
     - Parameter departures: true for departures, false for arrivals.
-    - Parameter time: desired time for departing, or `nil` for the provider default.
+    - Parameter time: desired time for departing, or `nil` for the provider default. See ``NetworkProvider/timeZone`` for a discussion about how to correctly handle time zones.
     - Parameter maxDepartures: maximum number of departures to get or `0`.
     - Parameter equivs: also query equivalent stations?
     - Parameter completion: object containing the departures.
