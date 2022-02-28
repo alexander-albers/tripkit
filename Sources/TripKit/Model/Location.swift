@@ -4,7 +4,7 @@ import os.log
 
 public class Location: NSObject, NSSecureCoding {
     
-    private static let NON_UNIQUE_NAMES =  ["Hauptbahnhof", "Hbf", "Hbf.", "HB", "Bahnhof", "Bf", "Bf.", "Bhf", "Bhf.", "Busbahnhof", "Südbahnhof", "ZOB", "Schiffstation", "Schiffst.", "Zentrum", "Markt", "Dorf", "Kirche", "Nord", "Ost", "Süd", "West", "Airport", "Flughafen", "Talstation"]
+    private static let NON_UNIQUE_NAMES =  ["Hauptbahnhof", "Hbf", "Hbf.", "HB", "Bahnhof", "Bf", "Bf.", "Bhf", "Bhf.", "Busbahnhof", "Omnibusbahnhof", "Südbahnhof", "ZOB", "Schiffstation", "Schiffst.", "Zentrum", "Markt", "Dorf", "Kirche", "Nord", "Ost", "Süd", "West", "Airport", "Flughafen", "Talstation", "Bus", "Flixbus"]
     
     public static var supportsSecureCoding: Bool = true
     

@@ -479,6 +479,10 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
                     return Line(id: id, network: network, product: .highSpeedTrain, label: "LCM" + trainNum)
                 } else if "Locomore" == longName {
                     return Line(id: id, network: network, product: .highSpeedTrain, label: "LOC" + trainNum)
+                } else if "NJ" == trainType {
+                    return Line(id: id, network: network, product: .highSpeedTrain, label: "NJ" + trainNum)
+                } else if "FLX" == trainType && trainName == "FlixTrain" {
+                    return Line(id: id, network: network, product: .highSpeedTrain, label: "FLX" + trainNum)
                     
                 } else if "IR" == trainType || "Interregio" == trainName || "InterRegio" == trainName {
                     return Line(id: id, network: network, product: .regionalTrain, label: "IR" + trainNum)
@@ -859,6 +863,8 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
             } else if mot == "5" || mot == "6" || mot == "7" {
                 if name == "Schienenersatzverkehr" {
                     return Line(id: id, network: network, product: .bus, label: "SEV")
+                } else if longName?.hasPrefix("Flixbus") ?? false || trainName == "Flixbus" {
+                    return Line(id: id, network: network, product: .bus, label: "FLX\(name ?? "")")
                 } else {
                     return Line(id: id, network: network, product: .bus, label: name)
                 }

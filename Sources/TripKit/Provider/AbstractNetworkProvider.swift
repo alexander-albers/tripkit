@@ -184,7 +184,12 @@ public class AbstractNetworkProvider: NetworkProvider {
             case .tram:
                 return LineStyle(shape: .rect, backgroundColor: LineStyle.parseColor("#cc0000"), backgroundColor2: 0, foregroundColor: LineStyle.white, borderColor: 0)
             case .bus:
-                return LineStyle(shape: .rounded, backgroundColor: LineStyle.parseColor("#993399"), backgroundColor2: 0, foregroundColor: LineStyle.white, borderColor: 0)
+                if label?.starts(with: "FLX") ?? false {
+                    // Flixmobility
+                    return LineStyle(shape: .rounded, backgroundColor: LineStyle.parseColor("#6fd000"), backgroundColor2: 0, foregroundColor: LineStyle.white, borderColor: 0)
+                } else {
+                    return LineStyle(shape: .rounded, backgroundColor: LineStyle.parseColor("#993399"), backgroundColor2: 0, foregroundColor: LineStyle.white, borderColor: 0)
+                }
             case .ferry:
                 return LineStyle(shape: .circle, backgroundColor: LineStyle.blue, backgroundColor2: 0, foregroundColor: LineStyle.white, borderColor: 0)
             default:
