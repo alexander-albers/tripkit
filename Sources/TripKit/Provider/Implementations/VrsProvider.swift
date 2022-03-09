@@ -543,19 +543,31 @@ public class VrsProvider: AbstractNetworkProvider {
             return AsyncRequest(task: nil)
         }
         
-        return doQueryTrips(from: from, via: via, to: to, fromString: fromString!, viaString: viaString, toString: toString!, date: date, departure: departure, tripOptions: tripOptions, context: context, completion: completion)
+        return doQueryTrips(from: from, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions, context: context, completion: completion)
     }
     
-    private func doQueryTrips(from: Location, via: Location?, to: Location, fromString: String, viaString: String?, toString: String, date: Date, departure: Bool, tripOptions: TripOptions, context: Context?, completion: @escaping (HttpRequest, QueryTripsResult) -> Void) -> AsyncRequest {
+    private func doQueryTrips(from: Location, via: Location?, to: Location, date: Date, departure: Bool, tripOptions: TripOptions, context: Context?, completion: @escaping (HttpRequest, QueryTripsResult) -> Void) -> AsyncRequest {
         let urlBuilder = UrlBuilder(path: baseEndpoint, encoding: .utf8)
 
-        urlBuilder.addParameter(key: "eID", value: "tx_vrsinfo_ass2_router")
-        urlBuilder.addParameter(key: "f", value: fromString)
-        urlBuilder.addParameter(key: "t", value: toString)
-        if let viaString = viaString {
-            urlBuilder.addParameter(key: "v", value: viaString)
-        }
+        appendQueryTripsParameters(urlBuilder: urlBuilder, from: from, via: via, to: to, tripOptions: tripOptions)
         urlBuilder.addParameter(key: departure ? "d" : "a", value: formatDate(from: date))
+        
+        let httpRequest = HttpRequest(urlBuilder: urlBuilder)
+        return makeRequest(httpRequest) {
+            try self.queryTripsParsing(request: httpRequest, from: from, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions, previousContext: context, later: false, completion: completion)
+        } errorHandler: { err in
+            completion(httpRequest, .failure(err))
+        }
+    }
+    
+    private func appendQueryTripsParameters(urlBuilder: UrlBuilder, from: Location, via: Location?, to: Location, tripOptions: TripOptions) {
+        urlBuilder.addParameter(key: "eID", value: "tx_vrsinfo_ass2_router")
+        appendLocationParameters(to: urlBuilder, location: from, type: "f")
+        appendLocationParameters(to: urlBuilder, location: to, type: "t")
+        if let via = via {
+            appendLocationParameters(to: urlBuilder, location: via, type: "v")
+        }
+        
         urlBuilder.addParameter(key: "s", value: "t")
         if tripOptions.products ?? [] != Product.allCases, let productString = generateProducts(from: tripOptions.products) {
             urlBuilder.addParameter(key: "p", value: productString)
@@ -566,13 +578,6 @@ public class VrsProvider: AbstractNetworkProvider {
         // d = ??
         // a = demand estimation / load factors
         urlBuilder.addParameter(key: "o", value: "vpwda")
-        
-        let httpRequest = HttpRequest(urlBuilder: urlBuilder)
-        return makeRequest(httpRequest) {
-            try self.queryTripsParsing(request: httpRequest, from: from, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions, previousContext: context, later: false, completion: completion)
-        } errorHandler: { err in
-            completion(httpRequest, .failure(err))
-        }
     }
     
     override func queryTripsParsing(request: HttpRequest, from: Location, via: Location?, to: Location, date: Date, departure: Bool, tripOptions: TripOptions, previousContext: QueryTripsContext?, later: Bool, completion: @escaping (HttpRequest, QueryTripsResult) -> Void) throws {
@@ -741,11 +746,18 @@ public class VrsProvider: AbstractNetworkProvider {
             let duration = (route["duration"] as? Double ?? 0) * 60
             let fares = parseFare(costs: route["costs"] as? [String: Any])
             
-            if let tripOrigin = tripOrigin, let tripDestination = tripDestination {
-                trips.append(Trip(id: "", from: tripOrigin, to: tripDestination, legs: legs, duration: duration, fares: fares))
-            } else {
+            guard let tripOrigin = tripOrigin, let tripDestination = tripDestination else {
                 throw ParseError(reason: "failed to parse trip origin/destination")
             }
+            
+            let tripId = route["id"] as? String ?? ""
+            let refreshContext: RefreshTripContext?
+            if !tripId.isEmpty {
+                refreshContext = VrsRefreshTripContext(tripId: tripId, time: legs[0].plannedDepartureTime, from: tripOrigin, via: via, to: tripDestination, tripOptions: tripOptions)
+            } else {
+                refreshContext = nil
+            }
+            trips.append(Trip(id: tripId, from: tripOrigin, to: tripDestination, legs: legs, duration: duration, fares: fares, refreshContext: refreshContext))
         }
         
         context.from = from
@@ -772,12 +784,32 @@ public class VrsProvider: AbstractNetworkProvider {
     }
     
     public override func refreshTrip(context: RefreshTripContext, completion: @escaping (HttpRequest, QueryTripsResult) -> Void) -> AsyncRequest {
-        completion(HttpRequest(urlBuilder: UrlBuilder()), .sessionExpired)
-        return AsyncRequest(task: nil)
+        guard let context = context as? VrsRefreshTripContext else {
+            completion(HttpRequest(urlBuilder: UrlBuilder()), .sessionExpired)
+            return AsyncRequest(task: nil)
+        }
+        
+        let urlBuilder = UrlBuilder(path: baseEndpoint, encoding: .utf8)
+
+        appendQueryTripsParameters(urlBuilder: urlBuilder, from: context.from, via: context.via, to: context.to, tripOptions: context.tripOptions)
+        urlBuilder.addParameter(key: "d", value: formatDate(from: context.time))
+        urlBuilder.addParameter(key: "ti", value: context.tripId)
+        
+        let httpRequest = HttpRequest(urlBuilder: urlBuilder)
+        return makeRequest(httpRequest) {
+            try self.refreshTripParsing(request: httpRequest, context: context, completion: completion)
+        } errorHandler: { err in
+            completion(httpRequest, .failure(err))
+        }
     }
     
     override func refreshTripParsing(request: HttpRequest, context: RefreshTripContext, completion: @escaping (HttpRequest, QueryTripsResult) -> Void) throws {
-        // does not apply
+        guard let context = context as? VrsRefreshTripContext else {
+            completion(HttpRequest(urlBuilder: UrlBuilder()), .sessionExpired)
+            return
+        }
+        
+        try queryTripsParsing(request: request, from: context.from, via: context.via, to: context.to, date: Date(), departure: true, tripOptions: context.tripOptions, previousContext: nil, later: false, completion: completion)
     }
     
     public override func queryJourneyDetail(context: QueryJourneyDetailContext, completion: @escaping (HttpRequest, QueryJourneyDetailResult) -> Void) -> AsyncRequest {
@@ -854,6 +886,21 @@ public class VrsProvider: AbstractNetworkProvider {
             return String(format: "%f,%f", Double(coord.lat) / 1e6, Double(coord.lon) / 1e6)
         } else {
             return nil
+        }
+    }
+    
+    func appendLocationParameters(to urlBuilder: UrlBuilder, location: Location, type: String) {
+        if let id = generateLocation(location: location) {
+            urlBuilder.addParameter(key: type, value: id)
+        }
+        if let coord = location.coord {
+            urlBuilder.addParameter(key: "\(type)c", value: String(format: "%f,%f", Double(coord.lat) / 1e6, Double(coord.lon) / 1e6))
+        }
+        if let name = location.name {
+            urlBuilder.addParameter(key: "\(type)t", value: name.replacingOccurrences(of: " ", with: "+"))
+        }
+        if let place = location.place {
+            urlBuilder.addParameter(key: "\(type)s", value: place.replacingOccurrences(of: " ", with: "+"))
         }
     }
     
@@ -1161,6 +1208,60 @@ public class VrsProvider: AbstractNetworkProvider {
     
 }
 
+public class VrsRefreshTripContext: RefreshTripContext {
+    
+    public override class var supportsSecureCoding: Bool { return true }
+    
+    let tripId: String
+    let time: Date
+    let from: Location
+    let via: Location?
+    let to: Location
+    let tripOptions: TripOptions
+    
+    init(tripId: String, time: Date, from: Location, via: Location?, to: Location, tripOptions: TripOptions) {
+        self.tripId = tripId
+        self.time = time
+        self.from = from
+        self.via = via
+        self.to = to
+        self.tripOptions = tripOptions
+        super.init()
+    }
+    
+    public required convenience init?(coder aDecoder: NSCoder) {
+        guard
+            let tripId = aDecoder.decodeObject(of: NSString.self, forKey: PropertyKey.tripId) as String?,
+            let time = aDecoder.decodeObject(of: NSDate.self, forKey: PropertyKey.time) as Date?,
+            let from = aDecoder.decodeObject(of: Location.self, forKey: PropertyKey.from),
+            let to = aDecoder.decodeObject(of: Location.self, forKey: PropertyKey.to),
+            let tripOptions = aDecoder.decodeObject(of: TripOptions.self, forKey: PropertyKey.tripOptions)
+        else {
+            return nil
+        }
+        let via = aDecoder.decodeObject(of: Location.self, forKey: PropertyKey.via)
+        self.init(tripId: tripId, time: time, from: from, via: via, to: to, tripOptions: tripOptions)
+    }
+    
+    public override func encode(with aCoder: NSCoder) {
+        aCoder.encode(tripId, forKey: PropertyKey.tripId)
+        aCoder.encode(time, forKey: PropertyKey.time)
+        aCoder.encode(from, forKey: PropertyKey.from)
+        aCoder.encode(via, forKey: PropertyKey.via)
+        aCoder.encode(to, forKey: PropertyKey.to)
+        aCoder.encode(tripOptions, forKey: PropertyKey.tripOptions)
+    }
+    
+    struct PropertyKey {
+        static let tripId = "tripId"
+        static let time = "time"
+        static let from = "from"
+        static let via = "via"
+        static let to = "to"
+        static let tripOptions = "tripOptions"
+    }
+}
+
 public class VrsJourneyContext: QueryJourneyDetailContext {
     
     public override class var supportsSecureCoding: Bool { return true }
@@ -1183,7 +1284,14 @@ public class VrsJourneyContext: QueryJourneyDetailContext {
     }
     
     required convenience init?(coder aDecoder: NSCoder) {
-        guard let from = aDecoder.decodeObject(of: Location.self, forKey: PropertyKey.from), let to = aDecoder.decodeObject(of: Location.self, forKey: PropertyKey.to), let time = aDecoder.decodeObject(of: NSDate.self, forKey: PropertyKey.time) as Date?, let plannedTime = aDecoder.decodeObject(of: NSDate.self, forKey: PropertyKey.plannedTime) as Date? else { return nil }
+        guard
+            let from = aDecoder.decodeObject(of: Location.self, forKey: PropertyKey.from),
+            let to = aDecoder.decodeObject(of: Location.self, forKey: PropertyKey.to),
+            let time = aDecoder.decodeObject(of: NSDate.self, forKey: PropertyKey.time) as Date?,
+            let plannedTime = aDecoder.decodeObject(of: NSDate.self, forKey: PropertyKey.plannedTime) as Date?
+        else {
+            return nil
+        }
         let product = Product(rawValue: aDecoder.decodeObject(of: NSString.self, forKey: PropertyKey.product) as String? ?? "")
         let line = aDecoder.decodeObject(of: Line.self, forKey: PropertyKey.line)
         
