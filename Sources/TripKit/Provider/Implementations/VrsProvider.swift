@@ -320,19 +320,7 @@ public class VrsProvider: AbstractNetworkProvider {
             var lines: [ServingLine] = []
             for event in events {
                 guard let event = event as? [String: Any] else { throw ParseError(reason: "failed to parse event") }
-                var plannedTime: Date? = nil
-                var predictedTime: Date? = nil
-                if let departureScheduled = event["departureScheduled"] as? String {
-                    plannedTime = parseDateTime(from: departureScheduled)
-                    if let departure = event["departure"] as? String {
-                        predictedTime = parseDateTime(from: departure)
-                    }
-                } else if let departure = event["departure"] as? String {
-                    plannedTime = parseDateTime(from: departure)
-                }
-                guard let plannedTime = plannedTime else {
-                    continue
-                }
+                let (plannedTime, predictedTime) = try parsePlannedPredictedTime(from: event, type: "departure")
                 
                 guard let lineObject = event["line"] as? [String: Any] else { throw ParseError(reason: "failed to parse line") }
                 let line = try parseLine(from: lineObject)
@@ -926,8 +914,14 @@ public class VrsProvider: AbstractNetworkProvider {
         } else if let departure = json[type] as? String {
             plannedDate = parseDateTime(from: departure)
         }
-        guard let plannedDate = plannedDate else {
+        guard var plannedDate = plannedDate else {
             throw ParseError(reason: "failed to parse \(type) time")
+        }
+        // Workaround for Illegal delay times (1440 min) around midnight
+        // See https://github.com/alexander-albers/tripkit/issues/4
+        let oneDay: TimeInterval = 1440 * 60
+        if let predictedDate = predictedDate, predictedDate.timeIntervalSince(plannedDate) >= oneDay {
+            plannedDate = plannedDate.addingTimeInterval(oneDay)
         }
         return (plannedDate, predictedDate)
     }
