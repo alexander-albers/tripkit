@@ -560,7 +560,12 @@ public class VrsProvider: AbstractNetworkProvider {
         if tripOptions.products ?? [] != Product.allCases, let productString = generateProducts(from: tripOptions.products) {
             urlBuilder.addParameter(key: "p", value: productString)
         }
-        urlBuilder.addParameter(key: "o", value: "vp")
+        // v = include vias / intermediate stops in public legs
+        // p = include polygon / coordinate sequence path
+        // w = ??
+        // d = ??
+        // a = demand estimation / load factors
+        urlBuilder.addParameter(key: "o", value: "vpwda")
         
         let httpRequest = HttpRequest(urlBuilder: urlBuilder)
         return makeRequest(httpRequest) {
@@ -716,7 +721,19 @@ public class VrsProvider: AbstractNetworkProvider {
                     } else {
                         journeyContext = nil
                     }
-                    legs.append(PublicLeg(line: line, destination: directionLoc, departure: departure, arrival: arrival, intermediateStops: intermediateStops, message: message.emptyToNil, path: points, journeyContext: journeyContext, loadFactor: nil))
+                    let loadFactor: LoadFactor?
+                    if let highestDemandEstimated = segment["highestDemandEstimated"] as? Int {
+                        switch highestDemandEstimated {
+                        case 0: loadFactor = .low
+                        case 1: loadFactor = .medium
+                        case 2: loadFactor = .high
+                        case 3: loadFactor = .exceptional
+                        default: loadFactor = nil
+                        }
+                    } else {
+                        loadFactor = nil
+                    }
+                    legs.append(PublicLeg(line: line, destination: directionLoc, departure: departure, arrival: arrival, intermediateStops: intermediateStops, message: message.emptyToNil, path: points, journeyContext: journeyContext, loadFactor: loadFactor))
                 } else {
                     throw ParseError(reason: "illegal segment type \(type)")
                 }
