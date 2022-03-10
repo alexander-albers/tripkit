@@ -1859,9 +1859,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FACB83D71E3FD0CE00AC5F1F /* Build configuration list for PBXNativeTarget "TripKit iOS" */;
 			buildPhases = (
+				FACB83C01E3FD0CE00AC5F1F /* Headers */,
 				FACB83BE1E3FD0CE00AC5F1F /* Sources */,
 				FACB83BF1E3FD0CE00AC5F1F /* Frameworks */,
-				FACB83C01E3FD0CE00AC5F1F /* Headers */,
 				FACB83C11E3FD0CE00AC5F1F /* Resources */,
 			);
 			buildRules = (
@@ -2018,9 +2018,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FAFF18CE1FA50B9500A8ED69 /* Build configuration list for PBXNativeTarget "TripKit watchOS" */;
 			buildPhases = (
+				FAFF18CB1FA50B9500A8ED69 /* Headers */,
 				FAFF187C1FA50B9500A8ED69 /* Sources */,
 				FAFF18C91FA50B9500A8ED69 /* Frameworks */,
-				FAFF18CB1FA50B9500A8ED69 /* Headers */,
 				FAFF18CD1FA50B9500A8ED69 /* Resources */,
 			);
 			buildRules = (
