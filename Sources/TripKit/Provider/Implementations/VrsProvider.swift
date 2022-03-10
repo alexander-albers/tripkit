@@ -549,8 +549,7 @@ public class VrsProvider: AbstractNetworkProvider {
     private func doQueryTrips(from: Location, via: Location?, to: Location, date: Date, departure: Bool, tripOptions: TripOptions, context: Context?, completion: @escaping (HttpRequest, QueryTripsResult) -> Void) -> AsyncRequest {
         let urlBuilder = UrlBuilder(path: baseEndpoint, encoding: .utf8)
 
-        appendQueryTripsParameters(urlBuilder: urlBuilder, from: from, via: via, to: to, tripOptions: tripOptions)
-        urlBuilder.addParameter(key: departure ? "d" : "a", value: formatDate(from: date))
+        appendQueryTripsParameters(urlBuilder: urlBuilder, from: from, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions)
         
         let httpRequest = HttpRequest(urlBuilder: urlBuilder)
         return makeRequest(httpRequest) {
@@ -560,13 +559,14 @@ public class VrsProvider: AbstractNetworkProvider {
         }
     }
     
-    private func appendQueryTripsParameters(urlBuilder: UrlBuilder, from: Location, via: Location?, to: Location, tripOptions: TripOptions) {
+    private func appendQueryTripsParameters(urlBuilder: UrlBuilder, from: Location, via: Location?, to: Location, date: Date, departure: Bool, tripOptions: TripOptions) {
         urlBuilder.addParameter(key: "eID", value: "tx_vrsinfo_ass2_router")
         appendLocationParameters(to: urlBuilder, location: from, type: "f")
         appendLocationParameters(to: urlBuilder, location: to, type: "t")
         if let via = via {
             appendLocationParameters(to: urlBuilder, location: via, type: "v")
         }
+        urlBuilder.addParameter(key: departure ? "d" : "a", value: formatDate(from: date))
         
         urlBuilder.addParameter(key: "s", value: "t")
         if tripOptions.products ?? [] != Product.allCases, let productString = generateProducts(from: tripOptions.products) {
@@ -753,7 +753,7 @@ public class VrsProvider: AbstractNetworkProvider {
             let tripId = route["id"] as? String ?? ""
             let refreshContext: RefreshTripContext?
             if !tripId.isEmpty {
-                refreshContext = VrsRefreshTripContext(tripId: tripId, time: legs[0].plannedDepartureTime, from: tripOrigin, via: via, to: tripDestination, tripOptions: tripOptions)
+                refreshContext = VrsRefreshTripContext(tripId: tripId, from: from, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions)
             } else {
                 refreshContext = nil
             }
@@ -791,8 +791,7 @@ public class VrsProvider: AbstractNetworkProvider {
         
         let urlBuilder = UrlBuilder(path: baseEndpoint, encoding: .utf8)
 
-        appendQueryTripsParameters(urlBuilder: urlBuilder, from: context.from, via: context.via, to: context.to, tripOptions: context.tripOptions)
-        urlBuilder.addParameter(key: "d", value: formatDate(from: context.time))
+        appendQueryTripsParameters(urlBuilder: urlBuilder, from: context.from, via: context.via, to: context.to, date: context.date, departure: context.departure, tripOptions: context.tripOptions)
         urlBuilder.addParameter(key: "ti", value: context.tripId)
         
         let httpRequest = HttpRequest(urlBuilder: urlBuilder)
@@ -1213,18 +1212,20 @@ public class VrsRefreshTripContext: RefreshTripContext {
     public override class var supportsSecureCoding: Bool { return true }
     
     let tripId: String
-    let time: Date
     let from: Location
     let via: Location?
     let to: Location
+    let date: Date
+    let departure: Bool
     let tripOptions: TripOptions
     
-    init(tripId: String, time: Date, from: Location, via: Location?, to: Location, tripOptions: TripOptions) {
+    init(tripId: String, from: Location, via: Location?, to: Location, date: Date, departure: Bool, tripOptions: TripOptions) {
         self.tripId = tripId
-        self.time = time
         self.from = from
         self.via = via
         self.to = to
+        self.date = date
+        self.departure = departure
         self.tripOptions = tripOptions
         super.init()
     }
@@ -1232,32 +1233,35 @@ public class VrsRefreshTripContext: RefreshTripContext {
     public required convenience init?(coder aDecoder: NSCoder) {
         guard
             let tripId = aDecoder.decodeObject(of: NSString.self, forKey: PropertyKey.tripId) as String?,
-            let time = aDecoder.decodeObject(of: NSDate.self, forKey: PropertyKey.time) as Date?,
             let from = aDecoder.decodeObject(of: Location.self, forKey: PropertyKey.from),
             let to = aDecoder.decodeObject(of: Location.self, forKey: PropertyKey.to),
+            let date = aDecoder.decodeObject(of: NSDate.self, forKey: PropertyKey.date) as Date?,
             let tripOptions = aDecoder.decodeObject(of: TripOptions.self, forKey: PropertyKey.tripOptions)
         else {
             return nil
         }
         let via = aDecoder.decodeObject(of: Location.self, forKey: PropertyKey.via)
-        self.init(tripId: tripId, time: time, from: from, via: via, to: to, tripOptions: tripOptions)
+        let departure = aDecoder.decodeBool(forKey: PropertyKey.departure)
+        self.init(tripId: tripId, from: from, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions)
     }
     
     public override func encode(with aCoder: NSCoder) {
         aCoder.encode(tripId, forKey: PropertyKey.tripId)
-        aCoder.encode(time, forKey: PropertyKey.time)
         aCoder.encode(from, forKey: PropertyKey.from)
         aCoder.encode(via, forKey: PropertyKey.via)
         aCoder.encode(to, forKey: PropertyKey.to)
+        aCoder.encode(date, forKey: PropertyKey.date)
+        aCoder.encode(departure, forKey: PropertyKey.departure)
         aCoder.encode(tripOptions, forKey: PropertyKey.tripOptions)
     }
     
     struct PropertyKey {
         static let tripId = "tripId"
-        static let time = "time"
         static let from = "from"
         static let via = "via"
         static let to = "to"
+        static let date = "date"
+        static let departure = "departure"
         static let tripOptions = "tripOptions"
     }
 }

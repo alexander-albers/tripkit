@@ -156,14 +156,16 @@ class TripKitProviderTestCase: XCTestCase {
                 os_log("success: %@, context=%@, messages=%@", log: .testsLogger, type: .default, trips, String(describing: context), messages)
                 XCTAssert(!trips.isEmpty, "received empty result")
                 if delegate.supportsQueryMoreTrips {
-                    XCTAssert(context != nil, "context == nil")
+                    XCTAssertNotNil(context, "context == nil")
                 }
                 queryMoreContext = context
                 
                 saveFixture(name: "queryTrips-\(index)", input: request.responseData, output: trips)
                 
-                if let first = trips.first, let context = first.refreshContext, delegate.supportsRefreshTrip {
-                    let (request, result) = syncRefreshTrip(context: context)
+                if let first = trips.first, delegate.supportsRefreshTrip {
+                    let context = first.refreshContext
+                    XCTAssertNotNil(context, "refresh context == nil")
+                    let (request, result) = syncRefreshTrip(context: context!)
                     switch result {
                     case .success(let context, _, _, _, let trips, let messages):
                         os_log("success: %@, context=%@, messages=%@", log: .testsLogger, type: .default, trips, String(describing: context), messages)
@@ -188,7 +190,7 @@ class TripKitProviderTestCase: XCTestCase {
             case .success(let context, _, _, _, let trips, let messages):
                 os_log("success: %@, context=%@, messages=%@", log: .testsLogger, type: .default, trips, String(describing: context), messages)
                 XCTAssert(!trips.isEmpty, "received empty result")
-                XCTAssert(context != nil, "context == nil")
+                XCTAssertNotNil(context, "context == nil")
                 queryMoreContext = context
             case .failure(let error):
                 XCTFail("received an error: \(error)")
@@ -203,7 +205,7 @@ class TripKitProviderTestCase: XCTestCase {
             case .success(let context, _, _, _, let trips, let messages):
                 os_log("success: %@, context=%@, messages=%@", log: .testsLogger, type: .default, trips, String(describing: context), messages)
                 XCTAssert(!trips.isEmpty, "received empty result")
-                XCTAssert(context != nil, "context == nil")
+                XCTAssertNotNil(context, "context == nil")
             case .failure(let error):
                 XCTFail("received an error: \(error)")
             default:
