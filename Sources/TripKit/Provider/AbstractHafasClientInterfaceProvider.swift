@@ -1435,6 +1435,8 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
     
     public class Context: QueryTripsContext {
         
+        public override class var supportsSecureCoding: Bool { return true }
+        
         public override var canQueryEarlier: Bool { return earlierContext != nil }
         public override var canQueryLater: Bool { return laterContext != nil }
         

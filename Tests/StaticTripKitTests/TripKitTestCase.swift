@@ -215,10 +215,12 @@ class TripKitProviderTestCase: XCTestCase {
     }
     
     func testRefreshTrip() {
-        for (index, testCase):(String, JSON) in settings["queryTrips"] {
+        for (index, _):(String, JSON) in settings["queryTrips"] {
             guard let (request, expected):(HttpRequest, [Trip]) = loadFixtureArray(name: "refreshTrip-\(index)") else { continue }
+            guard let contextData = try? loadFile(with: "refreshTrip-\(index)", withExtension: "context") else { continue }
+            guard let context = try? NSKeyedUnarchiver.unarchivedObject(ofClass: RefreshTripContext.self, from: contextData) else { continue }
             do {
-                try provider.refreshTripParsing(request: request, context: HafasClientInterfaceRefreshTripContext(contextRecon: "", from: parseTestCaseLocation(testCase["from"]), to: parseTestCaseLocation(testCase["to"])), completion: { _, result in
+                try provider.refreshTripParsing(request: request, context: context, completion: { _, result in
                     switch result {
                     case .success(let context, _, _, _, let trips, let messages):
                         os_log("success: %@, context=%@, messages=%@", log: .testsLogger, type: .default, trips, String(describing: context), messages)
@@ -261,18 +263,18 @@ class TripKitProviderTestCase: XCTestCase {
     
     // MARK: utility methods
     
+    private func loadFile(with name: String, withExtension: String) throws -> Data? {
+        guard let file = TestUtils.bundle.url(forResource: name, withExtension: withExtension, subdirectory: "Fixtures/\(provider.id.rawValue.lowercased())") else {
+            os_log("Failed to load fixture %@ %@", log: .testsLogger, type: .error, withExtension, provider.id.rawValue.lowercased() + "/" + name)
+            return nil
+        }
+        return try Data(contentsOf: file)
+    }
+    
     func loadFixtureArray<T: AnyObject>(name: String) -> (request: HttpRequest, expected: [T])? {
         do {
-            guard let inputFile = TestUtils.bundle.url(forResource: name, withExtension: "input", subdirectory: "Fixtures/\(provider.id.rawValue.lowercased())") else {
-                os_log("Failed to load fixture input %@", log: .testsLogger, type: .error, provider.id.rawValue.lowercased() + "/" + name)
-                return nil
-            }
-            guard let outputFile = TestUtils.bundle.url(forResource: name, withExtension: "output", subdirectory: "Fixtures/\(provider.id.rawValue.lowercased())") else {
-                os_log("Failed to load fixture output %@", log: .testsLogger, type: .error, provider.id.rawValue.lowercased() + "/" + name)
-                return nil
-            }
-            let input = try Data(contentsOf: inputFile)
-            let outputData = try Data(contentsOf: outputFile)
+            guard let input = try loadFile(with: name, withExtension: "input") else { return nil }
+            guard let outputData = try loadFile(with: name, withExtension: "output") else { return nil }
             guard let output = try NSKeyedUnarchiver.unarchivedObject(ofClasses: [NSArray.self, T.self], from: outputData) as? [T] else {
                 os_log("Failed to unarchive fixture output %@", log: .testsLogger, type: .error, provider.id.rawValue.lowercased() + "/" + name)
                 return nil
@@ -289,16 +291,8 @@ class TripKitProviderTestCase: XCTestCase {
     
     func loadFixture<T: AnyObject>(name: String) -> (request: HttpRequest, expected: T)? {
         do {
-            guard let inputFile = TestUtils.bundle.url(forResource: name, withExtension: "input", subdirectory: "Fixtures/\(provider.id.rawValue.lowercased())") else {
-                os_log("Failed to load fixture input %@", log: .testsLogger, type: .error, provider.id.rawValue.lowercased() + "/" + name)
-                return nil
-            }
-            guard let outputFile = TestUtils.bundle.url(forResource: name, withExtension: "output", subdirectory: "Fixtures/\(provider.id.rawValue.lowercased())") else {
-                os_log("Failed to load fixture output %@", log: .testsLogger, type: .error, provider.id.rawValue.lowercased() + "/" + name)
-                return nil
-            }
-            let input = try Data(contentsOf: inputFile)
-            let outputData = try Data(contentsOf: outputFile)
+            guard let input = try loadFile(with: name, withExtension: "input") else { return nil }
+            guard let outputData = try loadFile(with: name, withExtension: "output") else { return nil }
             guard let output = try NSKeyedUnarchiver.unarchivedObject(ofClasses: [NSArray.self, T.self], from: outputData) as? T else {
                 os_log("Failed to unarchive fixture output %@", log: .testsLogger, type: .error, provider.id.rawValue.lowercased() + "/" + name)
                 return nil

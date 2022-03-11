@@ -1121,6 +1121,8 @@ public class VrsProvider: AbstractNetworkProvider {
     
     public class Context: QueryTripsContext {
         
+        public override class var supportsSecureCoding: Bool { return true }
+        
         public override var canQueryLater: Bool { return queryLater }
         public override var canQueryEarlier: Bool { return queryEarlier }
         

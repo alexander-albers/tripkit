@@ -252,7 +252,7 @@ public class AbstractNetworkProvider: NetworkProvider {
 
 public class QueryTripsContext: NSObject, NSSecureCoding {
     
-    public static var supportsSecureCoding: Bool { return true }
+    public class var supportsSecureCoding: Bool { return true }
     
     public var canQueryEarlier: Bool { return false }
     

@@ -163,15 +163,21 @@ class TripKitProviderTestCase: XCTestCase {
                 saveFixture(name: "queryTrips-\(index)", input: request.responseData, output: trips)
                 
                 if let first = trips.first, delegate.supportsRefreshTrip {
-                    let context = first.refreshContext
+                    let refreshContext = first.refreshContext
                     XCTAssertNotNil(context, "refresh context == nil")
-                    let (request, result) = syncRefreshTrip(context: context!)
+                    let (request, result) = syncRefreshTrip(context: refreshContext!)
                     switch result {
                     case .success(let context, _, _, _, let trips, let messages):
                         os_log("success: %@, context=%@, messages=%@", log: .testsLogger, type: .default, trips, String(describing: context), messages)
                         XCTAssert(!trips.isEmpty, "received empty result")
                         
                         saveFixture(name: "refreshTrip-\(index)", input: request.responseData, output: trips)
+                        do {
+                            let outData = try NSKeyedArchiver.archivedData(withRootObject: refreshContext!, requiringSecureCoding: true)
+                            try writeFile(with: "refreshTrip-\(index)", withExtension: "context", data: outData)
+                        } catch let error as NSError {
+                            os_log("Failed to save fixture %@: %@", log: .testsLogger, type: .error, "refreshTrip-\(index)", error.description)
+                        }
                     case .failure(let error):
                         XCTFail("received an error: \(error)")
                     default:
@@ -369,27 +375,31 @@ class TripKitProviderTestCase: XCTestCase {
     }
     
     func saveFixture(name: String, input: Data?, output: Any?) {
-        guard let _ = ProcessInfo.processInfo.environment["SAVE_FIXTURES"] else {
-            return
-        }
         guard let input = input else {
             XCTAssert(false, "No result fetched!")
             return
         }
-        let file = URL(fileURLWithPath: #file)
-        let fixturesUrl = file.deletingLastPathComponent().deletingLastPathComponent().appendingPathComponent("TestsCommon/Resources/Fixtures/\(provider.id.rawValue.lowercased())")
         do {
-            if !FileManager.default.fileExists(atPath: fixturesUrl.path) {
-                try FileManager.default.createDirectory(atPath: fixturesUrl.path, withIntermediateDirectories: false, attributes: nil)
-            }
-            try input.write(to: fixturesUrl.appendingPathComponent(name).appendingPathExtension("input"))
+            try writeFile(with: name, withExtension: "input", data: input)
             if let output = output {
                 let outData = try NSKeyedArchiver.archivedData(withRootObject: output, requiringSecureCoding: true)
-                try outData.write(to: fixturesUrl.appendingPathComponent(name).appendingPathExtension("output"))
+                try writeFile(with: name, withExtension: "output", data: outData)
             }
         } catch let error as NSError {
             os_log("Failed to save fixture %@: %@", log: .testsLogger, type: .error, name, error.description)
         }
+    }
+    
+    private func writeFile(with name: String, withExtension: String, data: Data) throws {
+        guard let _ = ProcessInfo.processInfo.environment["SAVE_FIXTURES"] else {
+            return
+        }
+        let file = URL(fileURLWithPath: #file)
+        let fixturesUrl = file.deletingLastPathComponent().deletingLastPathComponent().appendingPathComponent("TestsCommon/Resources/Fixtures/\(provider.id.rawValue.lowercased())")
+        if !FileManager.default.fileExists(atPath: fixturesUrl.path) {
+            try FileManager.default.createDirectory(atPath: fixturesUrl.path, withIntermediateDirectories: false, attributes: nil)
+        }
+        try data.write(to: fixturesUrl.appendingPathComponent(name).appendingPathExtension(withExtension))
     }
     
     func parseTestCaseLocation(_ json: JSON) -> Location {

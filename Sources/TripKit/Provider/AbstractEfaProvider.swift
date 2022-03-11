@@ -907,6 +907,8 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
     
     public class Context: QueryTripsContext {
         
+        public override class var supportsSecureCoding: Bool { return true }
+        
         public override var canQueryEarlier: Bool { return true }
         public override var canQueryLater: Bool { return true }
         
@@ -954,6 +956,8 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
     ///
     /// See: https://github.com/schildbach/public-transport-enabler/commit/72ef473998cbf8d808fcf013759e9fe655ae3eef
     public class StatelessContext: QueryTripsContext {
+        
+        public override class var supportsSecureCoding: Bool { return true }
         
         public override var canQueryEarlier: Bool { return true }
         public override var canQueryLater: Bool { return true }

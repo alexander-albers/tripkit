@@ -1922,6 +1922,8 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider {
     
     public class QueryTripsBinaryContext: QueryTripsContext {
         
+        public override class var supportsSecureCoding: Bool { return true }
+        
         public override var canQueryEarlier: Bool { return canQueryMore }
         public override var canQueryLater: Bool { return canQueryMore }
         
