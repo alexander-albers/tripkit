@@ -340,9 +340,18 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
             let predictedTime = try parseJsonTime(baseDate: baseDate, dateString: (departures ? stbStop["dTimeR"] : stbStop["aTimeR"]).string)
             
             // Parse line
-            guard let line = lines[safe: (departures ? stbStop["dProdX"] : stbStop["aProdX"]).int] else {
+            guard var line = lines[safe: (departures ? stbStop["dProdX"] : stbStop["aProdX"]).int] else {
                 throw ParseError(reason: "could not parse line")
             }
+            
+            // Line direction
+            let direction: Line.Direction?
+            switch jny["dirFlg"].stringValue {
+            case "1": direction = .return
+            case "2": direction = .outward
+            default: direction = nil
+            }
+            line = Line(id: line.id, network: line.network, product: line.product, label: line.label, name: line.name, number: line.number, vehicleNumber: line.vehicleNumber, style: line.style, attr: line.attr, message: line.message, direction: direction)
             
             // Parse location
             let location: Location
@@ -733,7 +742,14 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         
         // Parse line
         guard let l = lines[safe: jny["prodX"].int] else { throw ParseError(reason: "failed to parse leg line") }
-        let line = Line(id: l.id, network: l.network, product: l.product, label: l.label, name: l.name, number: l.number, vehicleNumber: l.vehicleNumber, style: l.style, attr: attrs, message: l.message)
+        // Line direction
+        let direction: Line.Direction?
+        switch jny["dirFlg"].stringValue {
+        case "1": direction = .return
+        case "2": direction = .outward
+        default: direction = nil
+        }
+        let line = Line(id: l.id, network: l.network, product: l.product, label: l.label, name: l.name, number: l.number, vehicleNumber: l.vehicleNumber, style: l.style, attr: attrs, message: l.message, direction: direction)
         
         // Parse line destination
         let dirTxt = jny["dirTxt"].string
