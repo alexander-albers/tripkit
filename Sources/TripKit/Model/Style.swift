@@ -104,29 +104,29 @@ public extension UIColor {
     
     var argb: UInt32 {
         guard let components = self.cgColor.components else { return 0 }
-        let red, green, blue, alpha: Int
+        let red, green, blue, alpha: UInt32
         if components.count == 2 {
-            red = Int(components[0] * 255.0)
-            green = Int(components[0] * 255.0)
-            blue = Int(components[0] * 255.0)
-            alpha = Int(components[1] * 255.0)
+            red = UInt32(Double(components[0]) * 255.0)
+            green = UInt32(Double(components[0]) * 255.0)
+            blue = UInt32(Double(components[0]) * 255.0)
+            alpha = UInt32(Double(components[1]) * 255.0)
         } else if components.count == 4 {
-            red = Int(components[0] * 255.0)
-            green = Int(components[1] * 255.0)
-            blue = Int(components[2] * 255.0)
-            alpha = Int(components[3] * 255.0)
+            red = UInt32(Double(components[0]) * 255.0)
+            green = UInt32(Double(components[1]) * 255.0)
+            blue = UInt32(Double(components[2]) * 255.0)
+            alpha = UInt32(Double(components[3]) * 255.0)
         } else {
             return 0
         }
-        return UInt32((alpha << 24) + (red << 16) + (green << 8) + blue)
+        return (alpha << 24) + (red << 16) + (green << 8) + blue
     }
     
     convenience init(argb: UInt32) {
         self.init(
-            red: CGFloat(Double((argb >> 16) & 0xff) / 255.0),
-            green: CGFloat(Double((argb >> 8) & 0xff) / 255.0),
-            blue: CGFloat(Double(argb & 0xff) / 255.0),
-            alpha: CGFloat(Double((argb >> 24) & 0xff) / 255.0)
+            red: CGFloat((argb >> 16) & UInt32(0xff)) / CGFloat(0xff),
+            green: CGFloat((argb >> 8) & UInt32(0xff)) / CGFloat(0xff),
+            blue: CGFloat(argb & UInt32(0xff)) / CGFloat(0xff),
+            alpha: CGFloat((argb >> 24) & UInt32(0xff)) / CGFloat(0xff)
         )
     }
     

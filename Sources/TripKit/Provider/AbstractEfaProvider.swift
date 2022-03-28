@@ -413,6 +413,12 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
             }
         } else {
             let mot = mot!
+            let symbolName: String?
+            if let symbol = symbol, !symbol.isEmpty {
+                symbolName = symbol
+            } else {
+                symbolName = name
+            }
             if mot == "0" {
                 let trainNum = trainNum ?? ""
                 let trainName = trainName ?? ""
@@ -420,84 +426,84 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
                 let symbol = symbol ?? ""
                 
                 if ("EC" == trainType || "EuroCity" == trainName || "Eurocity" == trainName) && trainNum != "" {
-                    return Line(id: id, network: network, product: .highSpeedTrain, label: "EC" + trainNum)
+                    return Line(id: id, network: network, product: .highSpeedTrain, label: "EC\(trainNum)")
                 } else if ("EN" == trainType || "EuroNight" == trainName) && trainNum != "" {
-                    return Line(id: id, network: network, product: .highSpeedTrain, label: "EN" + trainNum)
+                    return Line(id: id, network: network, product: .highSpeedTrain, label: "EN\(trainNum)")
                 } else if ("IC" == trainType || "IC" == trainName || "InterCity" == trainName) && trainNum != "" {
-                    return Line(id: id, network: network, product: .highSpeedTrain, label: "IC" + trainNum)
+                    return Line(id: id, network: network, product: .highSpeedTrain, label: "IC\(trainNum)")
                 } else if ("ICE" == trainType || "ICE" == trainName || "Intercity-Express" == trainName) && trainNum != "" {
-                    return Line(id: id, network: network, product: .highSpeedTrain, label: "ICE" + trainNum)
+                    return Line(id: id, network: network, product: .highSpeedTrain, label: "ICE\(trainNum)")
                 } else if ("ICN" == trainType || "InterCityNight" == trainName) && trainNum != "" {
-                    return Line(id: id, network: network, product: .highSpeedTrain, label: "ICN" + trainNum)
+                    return Line(id: id, network: network, product: .highSpeedTrain, label: "ICN\(trainNum)")
                 } else if ("X" == trainType || "InterConnex" == trainName) && trainNum != "" {
-                    return Line(id: id, network: network, product: .highSpeedTrain, label: "X" + trainNum)
+                    return Line(id: id, network: network, product: .highSpeedTrain, label: "X\(trainNum)")
                 } else if ("CNL" == trainType || "CityNightLine" == trainName) && trainNum != "" {
-                    return Line(id: id, network: network, product: .highSpeedTrain, label: "CNL" + trainNum)
+                    return Line(id: id, network: network, product: .highSpeedTrain, label: "CNL\(trainNum)")
                 } else if ("THA" == trainType || "Thalys" == trainName) && trainNum != "" {
-                    return Line(id: id, network: network, product: .highSpeedTrain, label: "THA" + trainNum)
+                    return Line(id: id, network: network, product: .highSpeedTrain, label: "THA\(trainNum)")
                 } else if "RHI" == trainType && trainNum != "" {
-                    return Line(id: id, network: network, product: .highSpeedTrain, label: "RHI" + trainNum)
+                    return Line(id: id, network: network, product: .highSpeedTrain, label: "RHI\(trainNum)")
                 } else if ("TGV" == trainType || "TGV" == trainName) && trainNum != "" {
-                    return Line(id: id, network: network, product: .highSpeedTrain, label: "TGV" + trainNum)
+                    return Line(id: id, network: network, product: .highSpeedTrain, label: "TGV\(trainNum)")
                 } else if "TGD" == trainType && trainNum != "" {
-                    return Line(id: id, network: network, product: .highSpeedTrain, label: "TGD" + trainNum)
+                    return Line(id: id, network: network, product: .highSpeedTrain, label: "TGD\(trainNum)")
                 } else if "INZ" == trainType && trainNum != "" {
-                    return Line(id: id, network: network, product: .highSpeedTrain, label: "INZ" + trainNum)
+                    return Line(id: id, network: network, product: .highSpeedTrain, label: "INZ\(trainNum)")
                 } else if ("RJ" == trainType || "railjet" == trainName) { // railjet
-                    return Line(id: id, network: network, product: .highSpeedTrain, label: "RJ" + trainNum)
+                    return Line(id: id, network: network, product: .highSpeedTrain, label: "RJ\(trainNum)")
                 } else if ("RJX" == trainType || "railjet xpress" == trainName) { // railjet
-                    return Line(id: id, network: network, product: .highSpeedTrain, label: "RJX" + trainNum)
+                    return Line(id: id, network: network, product: .highSpeedTrain, label: "RJX\(trainNum)")
                 } else if ("WB" == trainType || "WESTbahn" == trainName) && trainNum != "" {
-                    return Line(id: id, network: network, product: .highSpeedTrain, label: "WB" + trainNum)
+                    return Line(id: id, network: network, product: .highSpeedTrain, label: "WB\(trainNum)")
                 } else if ("HKX" == trainType || "Hamburg-Köln-Express" == trainName) && trainNum != "" {
-                    return Line(id: id, network: network, product: .highSpeedTrain, label: "HKX" + trainNum)
+                    return Line(id: id, network: network, product: .highSpeedTrain, label: "HKX\(trainNum)")
                 } else if "INT" == trainType && trainNum != "" { // SVV, VAGFR
-                    return Line(id: id, network: network, product: .highSpeedTrain, label: "INT" + trainNum)
+                    return Line(id: id, network: network, product: .highSpeedTrain, label: "INT\(trainNum)")
                 } else if ("SC" == trainType || "SC Pendolino" == trainName) && trainNum != "" { // SuperCity
-                    return Line(id: id, network: network, product: .highSpeedTrain, label: "SC" + trainNum)
+                    return Line(id: id, network: network, product: .highSpeedTrain, label: "SC\(trainNum)")
                 } else if "ECB" == trainType && trainNum != "" { // EC, Verona-München
-                    return Line(id: id, network: network, product: .highSpeedTrain, label: "ECB" + trainNum)
+                    return Line(id: id, network: network, product: .highSpeedTrain, label: "ECB\(trainNum)")
                 } else if "ES" == trainType && trainNum != "" { // Eurostar Italia
-                    return Line(id: id, network: network, product: .highSpeedTrain, label: "ES" + trainNum)
+                    return Line(id: id, network: network, product: .highSpeedTrain, label: "ES\(trainNum)")
                 } else if ("EST" == trainType || "EUROSTAR" == trainName) && trainNum != "" {
-                    return Line(id: id, network: network, product: .highSpeedTrain, label: "EST" + trainNum)
+                    return Line(id: id, network: network, product: .highSpeedTrain, label: "EST\(trainNum)")
                 } else if "EIC" == trainType && trainNum != "" { // Ekspres InterCity, Polen
-                    return Line(id: id, network: network, product: .highSpeedTrain, label: "EIC" + trainNum)
+                    return Line(id: id, network: network, product: .highSpeedTrain, label: "EIC\(trainNum)")
                 } else if "MT" == trainType && "Schnee-Express" == trainName && trainNum != "" {
-                    return Line(id: id, network: network, product: .highSpeedTrain, label: "MT" + trainNum)
+                    return Line(id: id, network: network, product: .highSpeedTrain, label: "MT\(trainNum)")
                 } else if ("TLK" == trainType || "Tanie Linie Kolejowe" == trainName) && trainNum != "" {
-                    return Line(id: id, network: network, product: .highSpeedTrain, label: "TLK" + trainNum)
+                    return Line(id: id, network: network, product: .highSpeedTrain, label: "TLK\(trainNum)")
                 } else if "DNZ" == trainType && trainNum != "" { // Nacht-Schnellzug
-                    return Line(id: id, network: network, product: .highSpeedTrain, label: "DNZ" + trainNum)
+                    return Line(id: id, network: network, product: .highSpeedTrain, label: "DNZ\(trainNum)")
                 } else if "AVE" == trainType && trainNum != "" { // klimatisierter Hochgeschwindigkeitszug
-                    return Line(id: id, network: network, product: .highSpeedTrain, label: "DNZ" + trainNum)
+                    return Line(id: id, network: network, product: .highSpeedTrain, label: "DNZ\(trainNum)")
                 } else if "ARC" == trainType && trainNum != "" { // Arco/Alvia/Avant (Renfe), Spanien
-                    return Line(id: id, network: network, product: .highSpeedTrain, label: "ARC" + trainNum)
+                    return Line(id: id, network: network, product: .highSpeedTrain, label: "ARC\(trainNum)")
                 } else if "HOT" == trainType && trainNum != "" { // Spanien, Nacht
-                    return Line(id: id, network: network, product: .highSpeedTrain, label: "HOT" + trainNum)
+                    return Line(id: id, network: network, product: .highSpeedTrain, label: "HOT\(trainNum)")
                 } else if "LCM" == trainType && "Locomore" == trainName && trainNum != "" {
-                    return Line(id: id, network: network, product: .highSpeedTrain, label: "LCM" + trainNum)
+                    return Line(id: id, network: network, product: .highSpeedTrain, label: "LCM\(trainNum)")
                 } else if "Locomore" == longName {
-                    return Line(id: id, network: network, product: .highSpeedTrain, label: "LOC" + trainNum)
+                    return Line(id: id, network: network, product: .highSpeedTrain, label: "LOC\(trainNum)")
                 } else if "NJ" == trainType {
-                    return Line(id: id, network: network, product: .highSpeedTrain, label: "NJ" + trainNum)
+                    return Line(id: id, network: network, product: .highSpeedTrain, label: "NJ\(trainNum)")
                 } else if "FLX" == trainType && trainName == "FlixTrain" {
-                    return Line(id: id, network: network, product: .highSpeedTrain, label: "FLX" + trainNum)
+                    return Line(id: id, network: network, product: .highSpeedTrain, label: "FLX\(trainNum)")
                     
                 } else if "IR" == trainType || "Interregio" == trainName || "InterRegio" == trainName {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "IR" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "IR\(trainNum)")
                 } else if "IRE" == trainType || "Interregio-Express" == trainName {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "IRE" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "IRE\(trainNum)")
                 } else if "InterRegioExpress" == trainName {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "IRE" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "IRE\(trainNum)")
                 } else if "RE" == trainType || "Regional-Express" == trainName {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "RE" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "RE\(trainNum)")
                 } else if trainType == "" && trainNum != "" && (trainNum =~ "RE ?\\d+") {
                     return Line(id: id, network: network, product: .regionalTrain, label: trainNum)
                 } else if "RE6a" == trainNum && trainType == "" && trainName == "" {
                     return Line(id: id, network: network, product: .regionalTrain, label: trainNum)
                 } else if "RE3 / RB30" == trainNum && trainType == "" && trainName == "" {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "RE3/RB30");
+                    return Line(id: id, network: network, product: .regionalTrain, label: "RE3/RB30")
                 } else if "Regionalexpress" == trainName {
                     return Line(id: id, network: network, product: .regionalTrain, label: symbol)
                 } else if "R-Bahn" == trainName {
@@ -511,9 +517,9 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
                 } else if "RE-Bahn" == trainName {
                     return Line(id: id, network: network, product: .regionalTrain, label: symbol)
                 } else if "REX" == trainType { // RegionalExpress, Österreich
-                    return Line(id: id, network: network, product: .regionalTrain, label: "REX" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "REX\(trainNum)")
                 } else if ("RB" == trainType || "Regionalbahn" == trainName) && trainNum != "" {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "RB" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "RB\(trainNum)")
                 } else if trainType == "" && trainNum != "" && (trainNum =~ "RB ?\\d+") {
                     return Line(id: id, network: network, product: .regionalTrain, label: trainNum)
                 } else if "Abellio-Zug" == trainName {
@@ -523,173 +529,173 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
                 } else if "Chiemseebahn" == trainName {
                     return Line(id: id, network: network, product: .regionalTrain, label: symbol)
                 } else if "R" == trainType || "Regionalzug" == trainName {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "R" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "R\(trainNum)")
                 } else if trainType == "" && trainNum != "" && (trainNum =~ "R ?\\d+") {
                     return Line(id: id, network: network, product: .regionalTrain, label: trainNum)
                 } else if "D" == trainType || "Schnellzug" == trainName {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "D" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "D\(trainNum)")
                 } else if "E" == trainType || "Eilzug" == trainName {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "E" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "E\(trainNum)")
                 } else if "WFB" == trainType || "WestfalenBahn" == trainName {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "WFB" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "WFB\(trainNum)")
                 } else if ("NWB" == trainType || "NordWestBahn" == trainName) && trainNum != "" {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "NWB" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "NWB\(trainNum)")
                 } else if "WES" == trainType || "Westbahn" == trainName {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "WES" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "WES\(trainNum)")
                 } else if "ERB" == trainType || "eurobahn" == trainName {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "ERB" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "ERB\(trainNum)")
                 } else if "CAN" == trainType || "cantus Verkehrsgesellschaft" == trainName {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "CAN" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "CAN\(trainNum)")
                 } else if "HEX" == trainType || "Veolia Verkehr Sachsen-Anhalt" == trainName {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "HEX" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "HEX\(trainNum)")
                 } else if "EB" == trainType || "Erfurter Bahn" == trainName {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "EB" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "EB\(trainNum)")
                 } else if "Erfurter Bahn" == longName {
                     return Line(id: id, network: network, product: .regionalTrain, label: "EB")
                 } else if "EBx" == trainType || "Erfurter Bahn Express" == trainName {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "EBx" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "EBx\(trainNum)")
                 } else if "Erfurter Bahn Express" == longName && symbol == "" {
                     return Line(id: id, network: network, product: .regionalTrain, label: "EBx")
                 } else if "MR" == trainType && "Märkische Regiobahn" == trainName && trainNum != "" {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "MR" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "MR\(trainNum)")
                 } else if "MRB" == trainType || "Mitteldeutsche Regiobahn" == trainName {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "MRB" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "MRB\(trainNum)")
                 } else if "ABR" == trainType || "ABELLIO Rail NRW GmbH" == trainName {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "ABR" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "ABR\(trainNum)")
                 } else if "NEB" == trainType || "NEB Niederbarnimer Eisenbahn" == trainName {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "NEB" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "NEB\(trainNum)")
                 } else if "OE" == trainType || "Ostdeutsche Eisenbahn GmbH" == trainName {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "OE" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "OE\(trainNum)")
                 } else if "Ostdeutsche Eisenbahn GmbH" == longName && symbol == "" {
                     return Line(id: id, network: network, product: .regionalTrain, label: "OE");
                 } else if "ODE" == trainType && symbol != "" {
                     return Line(id: id, network: network, product: .regionalTrain, label: symbol)
                 } else if "OLA" == trainType || "Ostseeland Verkehr GmbH" == trainName {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "OLA" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "OLA\(trainNum)")
                 } else if "UBB" == trainType || "Usedomer Bäderbahn" == trainName {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "UBB" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "UBB\(trainNum)")
                 } else if "EVB" == trainType || "ELBE-WESER GmbH" == trainName {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "EVB" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "EVB\(trainNum)")
                 } else if "RTB" == trainType || "Rurtalbahn GmbH" == trainName {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "RTB" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "RTB\(trainNum)")
                 } else if "STB" == trainType || "Süd-Thüringen-Bahn" == trainName {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "STB" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "STB\(trainNum)")
                 } else if "HTB" == trainType || "Hellertalbahn" == trainName {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "HTB" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "HTB\(trainNum)")
                 } else if "VBG" == trainType || "Vogtlandbahn" == trainName {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "VBG" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "VBG\(trainNum)")
                 } else if "CB" == trainType || "City-Bahn Chemnitz" == trainName {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "CB" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "CB\(trainNum)")
                 } else if trainType == "" && ("C11" == trainNum || "C13" == trainNum || "C14" == trainNum
                     || "C15" == trainNum) {
                     return Line(id: id, network: network, product: .regionalTrain, label: trainNum)
                 } else if "VEC" == trainType || "vectus Verkehrsgesellschaft" == trainName {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "VEC" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "VEC\(trainNum)")
                 } else if "HzL" == trainType || "Hohenzollerische Landesbahn AG" == trainName {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "HzL" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "HzL\(trainNum)")
                 } else if "SBB" == trainType || "SBB GmbH" == trainName {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "SBB" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "SBB\(trainNum)")
                 } else if "MBB" == trainType || "Mecklenburgische Bäderbahn Molli" == trainName {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "MBB" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "MBB\(trainNum)")
                 } else if "OS" == trainType {  // Osobní vlak
-                    return Line(id: id, network: network, product: .regionalTrain, label: "OS" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "OS\(trainNum)")
                 } else if "SP" == trainType || "Sp" == trainType { // Spěšný vlak
-                    return Line(id: id, network: network, product: .regionalTrain, label: "SP" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "SP\(trainNum)")
                 } else if "Dab" == trainType || "Daadetalbahn" == trainName {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "Dab" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "Dab\(trainNum)")
                 } else if "FEG" == trainType || "Freiberger Eisenbahngesellschaft" == trainName {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "FEG" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "FEG\(trainNum)")
                 } else if "ARR" == trainType || "ARRIVA" == trainName {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "ARR" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "ARR\(trainNum)")
                 } else if "HSB" == trainType || "Harzer Schmalspurbahn" == trainName {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "HSB" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "HSB\(trainNum)")
                 } else if "ALX" == trainType || "alex - Länderbahn und Vogtlandbahn GmbH" == trainName {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "ALX" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "ALX\(trainNum)")
                 } else if "EX" == trainType || "Fatra" == trainName {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "EX" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "EX\(trainNum)")
                 } else if "ME" == trainType || "metronom" == trainName {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "ME" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "ME\(trainNum)")
                 } else if "metronom" == longName {
                     return Line(id: id, network: network, product: .regionalTrain, label: "ME");
                 } else if "MEr" == trainType {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "MEr" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "MEr\(trainNum)")
                 } else if "AKN" == trainType || "AKN Eisenbahn AG" == trainName {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "AKN" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "AKN\(trainNum)")
                 } else if "SOE" == trainType || "Sächsisch-Oberlausitzer Eisenbahngesellschaft" == trainName {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "SOE" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "SOE\(trainNum)")
                 } else if "VIA" == trainType || "VIAS GmbH" == trainName {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "VIA" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "VIA\(trainNum)")
                 } else if "BRB" == trainType || "Bayerische Regiobahn" == trainName {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "BRB" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "BRB\(trainNum)")
                 } else if "BLB" == trainType || "Berchtesgadener Land Bahn" == trainName {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "BLB" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "BLB\(trainNum)")
                 } else if "HLB" == trainType || "Hessische Landesbahn" == trainName {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "HLB" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "HLB\(trainNum)")
                 } else if "NOB" == trainType || "NordOstseeBahn" == trainName {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "NOB" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "NOB\(trainNum)")
                 } else if "NBE" == trainType || "Nordbahn Eisenbahngesellschaft" == trainName {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "NBE" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "NBE\(trainNum)")
                 } else if "VEN" == trainType || "Rhenus Veniro" == trainName {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "VEN" + trainType);
+                    return Line(id: id, network: network, product: .regionalTrain, label: "VEN\(trainType)")
                 } else if "DPN" == trainType || "Nahreisezug" == trainName {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "DPN" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "DPN\(trainNum)")
                 } else if "RBG" == trainType || "Regental Bahnbetriebs GmbH" == trainName {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "RBG" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "RBG\(trainNum)")
                 } else if "BOB" == trainType || "Bodensee-Oberschwaben-Bahn" == trainName {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "BOB" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "BOB\(trainNum)")
                 } else if "VE" == trainType || "Vetter" == trainName {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "VE" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "VE\(trainNum)")
                 } else if "SDG" == trainType || "SDG Sächsische Dampfeisenbahngesellschaft mbH" == trainName {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "SDG" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "SDG\(trainNum)")
                 } else if "PRE" == trainType || "Pressnitztalbahn" == trainName {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "PRE" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "PRE\(trainNum)")
                 } else if "VEB" == trainType || "Vulkan-Eifel-Bahn" == trainName {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "VEB" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "VEB\(trainNum)")
                 } else if "neg" == trainType || "Norddeutsche Eisenbahn Gesellschaft" == trainName {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "neg" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "neg\(trainNum)")
                 } else if "AVG" == trainType || "Felsenland-Express" == trainName {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "AVG" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "AVG\(trainNum)")
                 } else if "P" == trainType || "BayernBahn Betriebs-GmbH" == trainName
                     || "Brohltalbahn" == trainName || "Kasbachtalbahn" == trainName {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "P" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "P\(trainNum)")
                 } else if "SBS" == trainType || "Städtebahn Sachsen" == trainName {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "SBS" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "SBS\(trainNum)")
                 } else if "SES" == trainType || "Städteexpress Sachsen" == trainName {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "SES" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "SES\(trainNum)")
                 } else if "SB-" == trainType { // Städtebahn Sachsen
-                    return Line(id: id, network: network, product: .regionalTrain, label: "SB" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "SB\(trainNum)")
                 } else if "ag" == trainType { // agilis
-                    return Line(id: id, network: network, product: .regionalTrain, label: "ag" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "ag\(trainNum)")
                 } else if "agi" == trainType || "agilis" == trainName {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "agi" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "agi\(trainNum)")
                 } else if "as" == trainType || "agilis-Schnellzug" == trainName {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "as" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "as\(trainNum)")
                 } else if "TLX" == trainType || "TRILEX" == trainName { // Trilex (Vogtlandbahn)
-                    return Line(id: id, network: network, product: .regionalTrain, label: "TLX" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "TLX\(trainNum)")
                 } else if "MSB" == trainType || "Mainschleifenbahn" == trainName {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "MSB" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "MSB\(trainNum)")
                 } else if "BE" == trainType || "Bentheimer Eisenbahn" == trainName {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "BE" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "BE\(trainNum)")
                 } else if "erx" == trainType || "erixx - Der Heidesprinter" == trainName {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "erx" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "erx\(trainNum)")
                 } else if ("ERX" == trainType || "Erixx" == trainName) && trainNum != "" {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "ERX" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "ERX\(trainNum)")
                 } else if ("SWE" == trainType || "Südwestdeutsche Verkehrs-AG" == trainName) && trainNum != "" {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "SWE" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "SWE\(trainNum)")
                 } else if "SWEG-Zug" == trainName { // Südwestdeutschen Verkehrs-Aktiengesellschaft
-                    return Line(id: id, network: network, product: .regionalTrain, label: "SWEG" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "SWEG\(trainNum)")
                 } else if let longName = longName, longName.hasPrefix("SWEG-Zug") {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "SWEG" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "SWEG\(trainNum)")
                 } else if "EGP Eisenbahngesellschaft Potsdam" == trainName {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "EGP" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "EGP\(trainNum)")
                 } else if "ÖBB" == trainType || "ÖBB" == trainName {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "ÖBB" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "ÖBB\(trainNum)")
                 } else if "CAT" == trainType { // City Airport Train Wien
-                    return Line(id: id, network: network, product: .regionalTrain, label: "CAT" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "CAT\(trainNum)")
                 } else if "DZ" == trainType || "Dampfzug" == trainName {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "DZ" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "DZ\(trainNum)")
                 } else if "CD" == trainType { // Tschechien
-                    return Line(id: id, network: network, product: .regionalTrain, label: "CD" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "CD\(trainNum)")
                 } else if "VR" == trainType { // Polen
                     return Line(id: id, network: network, product: .regionalTrain, label: symbol)
                 } else if "PR" == trainType { // Polen
@@ -699,90 +705,90 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
                 } else if "Koleje Dolnoslaskie" == trainName && symbol != "" { // Koleje Dolnośląskie
                     return Line(id: id, network: network, product: .regionalTrain, label: symbol)
                 } else if "OO" == trainType || "Ordinary passenger (o.pas.)" == trainName { // GB
-                    return Line(id: id, network: network, product: .regionalTrain, label: "OO" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "OO\(trainNum)")
                 } else if "XX" == trainType || "Express passenger    (ex.pas.)" == trainName { // GB
-                    return Line(id: id, network: network, product: .regionalTrain, label: "XX" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "XX\(trainNum)")
                 } else if "XZ" == trainType || "Express passenger sleeper" == trainName { // GB
-                    return Line(id: id, network: network, product: .regionalTrain, label: "XZ" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "XZ\(trainNum)")
                 } else if "ATB" == trainType { // Autoschleuse Tauernbahn
-                    return Line(id: id, network: network, product: .regionalTrain, label: "ATB" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "ATB\(trainNum)")
                 } else if "ATZ" == trainType { // Autozug
-                    return Line(id: id, network: network, product: .regionalTrain, label: "ATZ" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "ATZ\(trainNum)")
                 } else if "AZ" == trainType || "Auto-Zug" == trainName {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "AZ" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "AZ\(trainNum)")
                 } else if "AZS" == trainType && trainNum != "" {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "AZS" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "AZS\(trainNum)")
                 } else if "DWE" == trainType || "Dessau-Wörlitzer Eisenbahn" == trainName {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "DWE" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "DWE\(trainNum)")
                 } else if "KTB" == trainType || "Kandertalbahn" == trainName {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "KTB" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "KTB\(trainNum)")
                 } else if "CBC" == trainType || "CBC" == trainName { // City-Bahn Chemnitz
-                    return Line(id: id, network: network, product: .regionalTrain, label: "CBC" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "CBC\(trainNum)")
                 } else if "Bernina Express" == trainName {
                     return Line(id: id, network: network, product: .regionalTrain, label: trainNum)
                 } else if "STR" == trainType { // Harzquerbahn, Nordhausen
-                    return Line(id: id, network: network, product: .regionalTrain, label: "STR" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "STR\(trainNum)")
                 } else if "EXT" == trainType || "Extrazug" == trainName {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "EXT" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "EXT\(trainNum)")
                 } else if "Heritage Railway" == trainName { // GB
                     return Line(id: id, network: network, product: .regionalTrain, label: symbol)
                 } else if "WTB" == trainType || "Wutachtalbahn" == trainName {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "WTB" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "WTB\(trainNum)")
                 } else if "DB" == trainType || "DB Regio" == trainName {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "DB" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "DB\(trainNum)")
                 } else if "M" == trainType && "Meridian" == trainName {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "M" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "M\(trainNum)")
                 } else if "M" == trainType && "Messezug" == trainName {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "M" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "M\(trainNum)")
                 } else if "EZ" == trainType { // ÖBB Erlebniszug
-                    return Line(id: id, network: network, product: .regionalTrain, label: "EZ" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "EZ\(trainNum)")
                 } else if "DPF" == trainType {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "DPF" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "DPF\(trainNum)")
                 } else if "WBA" == trainType || "Waldbahn" == trainName {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "WBA" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "WBA\(trainNum)")
                 } else if "ÖB" == trainType && "Öchsle-Bahn-Betriebsgesellschaft mbH" == trainName && trainNum != "" {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "ÖB" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "ÖB\(trainNum)")
                 } else if "ÖBA" == trainType && trainNum != "" { // Eisenbahn-Betriebsgesellschaft Ochsenhausen
-                    return Line(id: id, network: network, product: .regionalTrain, label: "ÖBA" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "ÖBA\(trainNum)")
                 } else if ("UEF" == trainType || "Ulmer Eisenbahnfreunde" == trainName) && trainNum != "" {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "UEF" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "UEF\(trainNum)")
                 } else if ("DBG" == trainType || "Döllnitzbahn" == trainName) && trainNum != "" {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "DBG" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "DBG\(trainNum)")
                 } else if ("TL" == trainType || "Trilex" == trainName) && trainNum != "" {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "TL" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "TL\(trainNum)")
                 } else if ("OPB" == trainType || "oberpfalzbahn" == trainName) && trainNum != "" {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "OPB" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "OPB\(trainNum)")
                 } else if ("OPX" == trainType || "oberpfalz-express" == trainName) && trainNum != "" {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "OPX" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "OPX\(trainNum)")
                 } else if ("LEO" == trainType || "Chiemgauer Lokalbahn" == trainName) && trainNum != "" {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "LEO" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "LEO\(trainNum)")
                 } else if ("VAE" == trainType || "Voralpen-Express" == trainName) && trainNum != "" {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "VAE" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "VAE\(trainNum)")
                 } else if ("V6" == trainType || "vlexx" == trainName) && trainNum != "" {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "vlexx" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "vlexx\(trainNum)")
                 } else if ("ARZ" == trainType || "Autoreisezug" == trainName) && trainNum != "" {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "ARZ" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "ARZ\(trainNum)")
                 } else if "RR" == trainType {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "RR" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "RR\(trainNum)")
                 } else if ("TER" == trainType || "Train Express Regional" == trainName) && trainNum != "" {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "TER" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "TER\(trainNum)")
                 } else if ("ENO" == trainType || "enno" == trainName) && trainNum != "" {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "ENO" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "ENO\(trainNum)")
                 } else if "enno" == longName && symbol == "" {
                     return Line(id: id, network: network, product: .regionalTrain, label: "enno");
                 } else if ("PLB" == trainType || "Pinzgauer Lokalbahn" == trainName) && trainNum != "" {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "PLB" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "PLB\(trainNum)")
                 } else if ("NX" == trainType || "National Express" == trainName) && trainNum != "" {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "NX" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "NX\(trainNum)")
                 } else if ("SE" == trainType || "ABELLIO Rail Mitteldeutschland GmbH" == trainName) && trainNum != "" {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "SE" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "SE\(trainNum)")
                 } else if "DNA" == trainType, trainNum != "" { // Dieselnetz Augsburg
-                    return Line(id: id, network: network, product: .regionalTrain, label: "DNA" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "DNA\(trainNum)")
                 } else if "Dieselnetz" == trainType && "Augsburg" == trainNum {
                     return Line(id: id, network: network, product: .regionalTrain, label: "DNA")
                     
                 } else if ("BSB" == trainType || "Breisgau-S-Bahn Gmbh" == trainName) && trainNum != "" {
-                    return Line(id: id, network: network, product: .regionalTrain, label: "BSB" + trainNum)
+                    return Line(id: id, network: network, product: .regionalTrain, label: "BSB\(trainNum)")
                 } else if "BSB-Zug" == trainName && trainNum != "" { // Breisgau-S-Bahn
                     return Line(id: id, network: network, product: .suburbanTrain, label: trainNum)
                 } else if "BSB-Zug" == trainName && trainNum == "" {
@@ -790,16 +796,16 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
                 } else if let longName = longName, longName.hasPrefix("BSB-Zug") {
                     return Line(id: id, network: network, product: Product.suburbanTrain, label: "BSB")
                 } else if "RSB" == trainType { // Regionalschnellbahn, Wien
-                    return Line(id: id, network: network, product: Product.suburbanTrain, label: "RSB" + trainNum)
+                    return Line(id: id, network: network, product: Product.suburbanTrain, label: "RSB\(trainNum)")
                 } else if "RER" == trainName && symbol != "" && symbol.count == 1 { // Réseau Express Régional
                     return Line(id: id, network: network, product: .suburbanTrain, label: symbol)
                 } else if "S" == trainType {
-                    return Line(id: id, network: network, product: .suburbanTrain, label: "S" + trainNum)
+                    return Line(id: id, network: network, product: .suburbanTrain, label: "S\(trainNum)")
                 } else if "S-Bahn" == trainName {
-                    return Line(id: id, network: network, product: .suburbanTrain, label: "S" + trainNum)
+                    return Line(id: id, network: network, product: .suburbanTrain, label: "S\(trainNum)")
                     
                 } else if "RT" == trainType || "RegioTram" == trainName {
-                    return Line(id: id, network: network, product: .tram, label: "RT" + trainNum)
+                    return Line(id: id, network: network, product: .tram, label: "RT\(trainNum)")
                     
                 } else if "Bus" == trainType && trainNum != "" {
                     return Line(id: id, network: network, product: .bus, label: trainNum)
@@ -808,18 +814,18 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
                 } else if "SEV" == trainType || "SEV" == trainNum || "SEV" == trainName || "SEV" == symbol
                     || "BSV" == trainType || "Ersatzverkehr" == trainName
                     || "Schienenersatzverkehr" == trainName {
-                    return Line(id: id, network: network, product: .bus, label: "SEV" + trainNum);
+                    return Line(id: id, network: network, product: .bus, label: "SEV\(trainNum)");
                 } else if "Bus replacement" == trainName { // GB
                     return Line(id: id, network: network, product: .bus, label: "BR");
                 } else if "BR" == trainType && trainName != "" && trainName.hasPrefix("Bus") { // GB
-                    return Line(id: id, network: network, product: .bus, label: "BR" + trainNum)
+                    return Line(id: id, network: network, product: .bus, label: "BR\(trainNum)")
                 } else if "EXB" == trainType && trainNum != "" {
-                    return Line(id: id, network: network, product: .bus, label: "EXB" + trainNum)
+                    return Line(id: id, network: network, product: .bus, label: "EXB\(trainNum)")
                     
                 } else if "GB" == trainType { // Gondelbahn
-                    return Line(id: id, network: network, product: .cablecar, label: "GB" + trainNum)
+                    return Line(id: id, network: network, product: .cablecar, label: "GB\(trainNum)")
                 } else if "SB" == trainType { // Seilbahn
-                    return Line(id: id, network: network, product: .suburbanTrain, label: "SB" + trainNum)
+                    return Line(id: id, network: network, product: .suburbanTrain, label: "SB\(trainNum)")
                     
                 } else if "Zug" == trainName && symbol != "" {
                     return Line(id: id, network: network, product: nil, label: symbol)
@@ -832,11 +838,11 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
                 } else if symbol != "" && (symbol =~ "\\d+") && trainType == "" && trainName == "" {
                     return Line(id: id, network: network, product: nil, label: symbol)
                 } else if "N" == trainType && trainName == "" && symbol == "" {
-                    return Line(id: id, network: network, product: nil, label: "N" + trainNum)
+                    return Line(id: id, network: network, product: nil, label: "N\(trainNum)")
                 } else if "Train" == trainName {
                     return Line(id: id, network: network, product: nil, label: nil)
                 } else if "PPN" == trainType && "Osobowy" == trainName, trainNum != "" {
-                    return Line(id: id, network: network, product: nil, label: "PPN" + trainNum)
+                    return Line(id: id, network: network, product: nil, label: "PPN\(trainNum)")
                 }
                 
                 // generic
@@ -849,17 +855,24 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
                 } else if let name = name, name =~ "S ?\\d+" {
                     return Line(id: id, network: network, product: .suburbanTrain, label: name)
                 } else if trainName == "S-Bahn" {
-                    return Line(id: id, network: network, product: .suburbanTrain, label: "S" + (trainNum ?? ""))
+                    return Line(id: id, network: network, product: .suburbanTrain, label: "S\(trainNum ?? "")")
                     //                } else if let symbol = symbol, name == symbol, symbol =~ "(S\\d+) \\((?:DB Regio AG)\\)" {
                     //                    return Line(id: id, network: network, product: .SUBURBAN_TRAIN, label: "")
                 } else if "REX" == trainType {
                     return Line(id: id, network: network, product: .regionalTrain, label: "REX\(trainNum ?? "")")
                 }
-                return Line(id: id, network: network, product: .regionalTrain, label: (symbol ?? "") + (name ?? ""))
+                var label: String = ""
+                if let symbol = symbol {
+                    label += symbol
+                }
+                if let name = name {
+                    label += name
+                }
+                return Line(id: id, network: network, product: .regionalTrain, label: label)
             } else if mot == "2" {
-                return Line(id: id, network: network, product: .subway, label: symbol ?? "" != "" ? symbol! : name)
+                return Line(id: id, network: network, product: .subway, label: symbolName)
             } else if mot == "3" || mot == "4" {
-                return Line(id: id, network: network, product: .tram, label: symbol ?? "" != "" ? symbol! : name)
+                return Line(id: id, network: network, product: .tram, label: symbolName)
             } else if mot == "5" || mot == "6" || mot == "7" {
                 if name == "Schienenersatzverkehr" {
                     return Line(id: id, network: network, product: .bus, label: "SEV")
@@ -873,9 +886,9 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
             } else if mot == "9" {
                 return Line(id: id, network: network, product: .ferry, label: name)
             } else if mot == "10" {
-                return Line(id: id, network: network, product: .onDemand, label: symbol ?? "" != "" ? symbol! : name)
+                return Line(id: id, network: network, product: .onDemand, label: symbolName)
             } else if mot == "11" {
-                return Line(id: id, network: network, product: nil, label: symbol ?? "" != "" ? symbol! : name)
+                return Line(id: id, network: network, product: nil, label: symbolName)
             } else if mot == "12" {
                 if trainName == "Schulbus", symbol != nil {
                     return Line(id: id, network: network, product: .bus, label: symbol)
@@ -884,10 +897,17 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
                 if (trainName == "SEV" || trainName == "Ersatzverkehr") && trainType == nil {
                     return Line(id: id, network: network, product: .bus, label: "SEV")
                 }
-                return Line(id: id, network: network, product: .regionalTrain, label: symbol ?? "" != "" ? symbol! : name)
+                return Line(id: id, network: network, product: .regionalTrain, label: symbolName)
             } else if mot == "14" || mot == "15" || mot == "16" {
                 if trainNum != nil || trainType != nil {
-                    return Line(id: id, network: network, product: .highSpeedTrain, label: (trainType ?? "") + (trainNum ?? ""))
+                    var label: String = ""
+                    if let trainType = trainType {
+                        label += trainType
+                    }
+                    if let trainNum = trainNum {
+                        label += trainNum
+                    }
+                    return Line(id: id, network: network, product: .highSpeedTrain, label: label)
                 }
                 return Line(id: id, network: network, product: .highSpeedTrain, label: name)
             } else if mot == "17" {

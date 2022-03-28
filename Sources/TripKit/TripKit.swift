@@ -18,16 +18,40 @@ public class TripKit {
         hhmmFormatter.timeStyle = .short
         hhmmFormatter.locale = locale
         
-        ddmmhhmmFormatter.dateFormat = (DateFormatter.dateFormat(fromTemplate: "ddMM", options: 0, locale: locale) ?? "dd.MM") + "', '" + hhmmFormatter.dateFormat
+        let ddmmhhmmFormatString: String
+        if let format = DateFormatter.dateFormat(fromTemplate: "ddMM", options: 0, locale: locale) {
+            ddmmhhmmFormatString = format
+        } else {
+            ddmmhhmmFormatString = "dd.MM"
+        }
+        ddmmhhmmFormatter.dateFormat = "\(ddmmhhmmFormatString)', '\(hhmmFormatter.dateFormat!)"
         ddmmhhmmFormatter.locale = locale
         
-        ddmmyyyyFormatter.dateFormat = (DateFormatter.dateFormat(fromTemplate: "ddMMyyyy", options: 0, locale: locale) ?? "dd.MM.yyyy")
+        let ddmmyyyyFormatString: String
+        if let format = DateFormatter.dateFormat(fromTemplate: "ddMMyyyy", options: 0, locale: locale) {
+            ddmmyyyyFormatString = format
+        } else {
+            ddmmyyyyFormatString = "dd.MM.yyyy"
+        }
+        ddmmyyyyFormatter.dateFormat = ddmmyyyyFormatString
         ddmmyyyyFormatter.locale = locale
         
-        multilineWeekDayFormatter.dateFormat = (DateFormatter.dateFormat(fromTemplate: "EEEddMM", options: 0, locale: locale) ?? "EEE', 'dd.MM") + "'\n'" + hhmmFormatter.dateFormat
+        let multilineWeekDayFormatString: String
+        if let format = DateFormatter.dateFormat(fromTemplate: "EEEddMM", options: 0, locale: locale) {
+            multilineWeekDayFormatString = format
+        } else {
+            multilineWeekDayFormatString = "EEE', 'dd.MM"
+        }
+        multilineWeekDayFormatter.dateFormat = "\(multilineWeekDayFormatString)'\n'\(hhmmFormatter.dateFormat!)"
         multilineWeekDayFormatter.locale = locale
         
-        weekDayFormatter.dateFormat = (DateFormatter.dateFormat(fromTemplate: "EEEEddMMy", options: 0, locale: locale) ?? "EEEE', 'dd.mm.y") + "', '" + hhmmFormatter.dateFormat
+        let weekDayFormatString: String
+        if let format = DateFormatter.dateFormat(fromTemplate: "EEEEddMMy", options: 0, locale: locale) {
+            weekDayFormatString = format
+        } else {
+            weekDayFormatString = "EEEE', 'dd.mm.y"
+        }
+        weekDayFormatter.dateFormat = "\(weekDayFormatString)', '\(hhmmFormatter.dateFormat!)"
         weekDayFormatter.locale = locale
     }
     

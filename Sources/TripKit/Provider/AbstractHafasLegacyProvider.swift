@@ -1778,7 +1778,8 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider {
         } else if "MET" == ucType {
             return .subway
         } else if "METRO" == ucType {
-            return .subway}
+            return .subway
+        }
         
         // Tram
         if ucType =~ "STR\\w{0,5}" { // Generic Tram
@@ -1992,7 +1993,11 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider {
         }
         
         func readIntReverse() -> Int {
-            return Int(Int32(read()) &+ Int32(read()) &* 0x100 &+ Int32(read()) &* 0x10000 &+ Int32(read()) &* 0x1000000)
+            var result: Int32 = Int32(read())
+            result = result &+ Int32(read()) &* Int32(0x100)
+            result = result &+ Int32(read()) &* Int32(0x10000)
+            result = result &+ Int32(read()) &* Int32(0x1000000)
+            return Int(result)
         }
         
         func reset() {
