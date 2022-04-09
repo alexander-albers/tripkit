@@ -1216,6 +1216,8 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
             }
             result.append(head)
         }
+        // please, please continue to wear a mask, even if the app doesn't nag you about it anymore
+        result = result.filter({!$0.lowercased().contains("ffp") && !$0.lowercased().contains("maskenpflicht") && !$0.lowercased().contains("\"3g-pflicht\"") && !$0.lowercased().contains("corona-präventionsmaßnahme")})
         return result
     }
     
