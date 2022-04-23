@@ -614,6 +614,23 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
             meta = "foot_speed_normal"
         }
         
+        var gisFltrL: [[String: Any]] = []
+        gisFltrL.append([
+            "mode": "FB",
+            "type": "M",
+            "meta": meta
+        ])
+        if let dist = tripOptions.maxFootpathDist {
+            gisFltrL.append([
+                "mode": "FB",
+                "profile": [
+                    "type": "F",
+                    "maxdist": dist
+                ],
+                "type": "P"
+            ])
+        }
+        
         var req: [String: Any] = [
             "depLocL": [
                 jsonLocation(from: from)
@@ -624,18 +641,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
             "outDate": outDate,
             "outTime": outTime,
             outFrwdKey: outFrwd,
-            "gisFltrL": [
-                [
-                    "mode": "FB",
-                    "profile": [
-                        "type": "F",
-                        "linDistRouting": false,
-                        "maxdist": tripOptions.maxFootpathDist ?? 2000
-                    ],
-                    "type": "M",
-                    "meta": meta
-                ]
-            ],
+            "gisFltrL": gisFltrL,
             "getPolyline": true,
             "getPasslist": true,
             "extChgTime": -1
