@@ -505,7 +505,11 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
                 
                 switch sec["type"].stringValue {
                 case "JNY", "TETA":
-                    let leg = try processPublicLeg(jny: sec["jny"], baseDate: baseDate, locations: locations, lines: lines, rems: rems, messages: messages, encodedPolyList: encodedPolyList, loadFactors: loadFactors, departureStop: departureStop, arrivalStop: arrivalStop, tariffClass: tripOptions.tariffProfile?.tariffClass)
+                    let line = lines[safe: sec["jny", "prodX"].int]
+                    parseWagonSequenceUrl(json: sec["dep"], stopEvent: departureStop, line: line)
+                    parseWagonSequenceUrl(json: sec["arr"], stopEvent: arrivalStop, line: line)
+                    
+                    let leg = try processPublicLeg(jny: sec["jny"], baseDate: baseDate, locations: locations, line: line, rems: rems, messages: messages, encodedPolyList: encodedPolyList, loadFactors: loadFactors, departureStop: departureStop, arrivalStop: arrivalStop, tariffClass: tripOptions.tariffProfile?.tariffClass)
                     
                     legs.append(leg)
                 case "WALK", "TRSF", "DEVI":
@@ -590,7 +594,9 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         let baseDate = try parseBaseDate(from: journey["date"].stringValue)
         let duration = try parseJsonTime(baseDate: baseDate, dateString: journey["dur"].string)?.timeIntervalSince(baseDate) ?? 0
         
-        let leg = try processPublicLeg(jny: journey, baseDate: baseDate, locations: locations, lines: lines, rems: rems, messages: messages, encodedPolyList: encodedPolyList, loadFactors: loadFactors, departureStop: nil, arrivalStop: nil, tariffClass: nil)
+        let line = lines[safe: journey["prodX"].int]
+        
+        let leg = try processPublicLeg(jny: journey, baseDate: baseDate, locations: locations, line: line, rems: rems, messages: messages, encodedPolyList: encodedPolyList, loadFactors: loadFactors, departureStop: nil, arrivalStop: nil, tariffClass: nil)
         
         let trip = Trip(id: "", from: leg.departure, to: leg.arrival, legs: [leg], duration: duration, fares: [])
         completion(request, .success(trip: trip, leg: leg))
@@ -740,14 +746,14 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         return svcRes
     }
     
-    private func processPublicLeg(jny: JSON, baseDate: Date, locations: [Location], lines: [Line], rems: [RemAttrib]?, messages: [String]?, encodedPolyList: [String]?, loadFactors: [(cls: String, loadFactor: LoadFactor?)]?, departureStop: StopEvent?, arrivalStop: StopEvent?, tariffClass: Int?) throws -> PublicLeg {
+    private func processPublicLeg(jny: JSON, baseDate: Date, locations: [Location], line: Line?, rems: [RemAttrib]?, messages: [String]?, encodedPolyList: [String]?, loadFactors: [(cls: String, loadFactor: LoadFactor?)]?, departureStop: StopEvent?, arrivalStop: StopEvent?, tariffClass: Int?) throws -> PublicLeg {
         var departureStop = departureStop
         var arrivalStop = arrivalStop
         // Parse remarks and messages
         var (legMessages, attrs, cancelled) = parseLineAttributesAndMessages(jny: jny, rems: rems, messages: messages)
         
         // Parse line
-        guard let l = lines[safe: jny["prodX"].int] else { throw ParseError(reason: "failed to parse leg line") }
+        guard let l = line else { throw ParseError(reason: "failed to parse leg line") }
         // Line direction
         let direction: Line.Direction?
         switch jny["dirFlg"].stringValue {
@@ -767,7 +773,12 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         for stop in jny["stopL"].arrayValue {
             if stop["border"].boolValue { continue } // hide borders from intermediate stops
             guard let intermediateStop = try parseStop(json: stop, locations: locations, rems: rems, messages: messages, baseDate: baseDate) else { continue }
-            parseWagonSequenceUrl(stop: intermediateStop, line: line)
+            if let departure = intermediateStop.departure {
+                parseWagonSequenceUrl(json: stop, stopEvent: departure, line: line)
+            }
+            if let arrival = intermediateStop.arrival {
+                parseWagonSequenceUrl(json: stop, stopEvent: arrival, line: line)
+            }
             intermediateStops.append(intermediateStop)
         }
         if cancelled {
@@ -788,8 +799,6 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         guard let departureStop = departureStop, let arrivalStop = arrivalStop else {
             throw ParseError(reason: "failed to parse leg departure/arrival")
         }
-        parseWagonSequenceUrl(stopEvent: departureStop, line: line)
-        parseWagonSequenceUrl(stopEvent: arrivalStop, line: line)
         
         // Insert messages of departure and arrival stop
         if let departureMessage = departureStop.message {
@@ -882,21 +891,12 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         return Stop(location: location, departure: departure, arrival: arrival, message: message, wagonSequenceContext: nil)
     }
     
-    private func parseWagonSequenceUrl(stop: Stop, line: Line?) {
-        let wagonSequenceContext: URL?
-        if line?.label?.hasPrefix("ICE") ?? false, let number = line?.number, let plannedTime = stop.arrival?.plannedTime ?? stop.departure?.plannedTime {
-            wagonSequenceContext = getWagonSequenceUrl(number: number, plannedTime: plannedTime)
-        } else {
-            wagonSequenceContext = nil
+    private func parseWagonSequenceUrl(json: JSON, stopEvent: StopEvent, line: Line?) {
+        guard json["dTrnCmpSX", "tcM"].int == 1 || json["aTrnCmpSX", "tcM"].int == 1 else {
+            return
         }
-        stop.wagonSequenceContext = wagonSequenceContext
-        stop.departure?.wagonSequenceContext = wagonSequenceContext
-        stop.arrival?.wagonSequenceContext = wagonSequenceContext
-    }
-    
-    private func parseWagonSequenceUrl(stopEvent: StopEvent, line: Line?) {
         let wagonSequenceContext: URL?
-        if line?.label?.hasPrefix("ICE") ?? false, let number = line?.number {
+        if let number = line?.number {
             wagonSequenceContext = getWagonSequenceUrl(number: number, plannedTime: stopEvent.plannedTime)
         } else {
             wagonSequenceContext = nil
