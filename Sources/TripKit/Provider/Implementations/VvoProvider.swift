@@ -3,7 +3,7 @@ import Foundation
 /// Verkehrsverbund Oberelbe (DE)
 public class VvoProvider: AbstractEfaWebProvider {
     
-    static let API_BASE = "http://efa.vvo-online.de:8080/std3/"
+    static let API_BASE = "https://efa.vvo-online.de/std3/"
     static let STOPFINDER_ENDPOINT = "XSLT_STOPFINDER_REQUEST"
     static let COORD_ENDPOINT = "XSLT_COORD_REQUEST"
     
