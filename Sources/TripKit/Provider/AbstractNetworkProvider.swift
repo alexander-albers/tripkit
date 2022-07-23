@@ -173,8 +173,13 @@ public class AbstractNetworkProvider: NetworkProvider {
         if let product = product {
             switch product {
             case .highSpeedTrain:
-                return LineStyle(shape: .rect, backgroundColor: LineStyle.white, backgroundColor2: 0, foregroundColor: LineStyle.red, borderColor: LineStyle.red)
-                
+                if label?.starts(with: "FLX") ?? false {
+                    return LineStyle(shape: .rect, backgroundColor: LineStyle.white, backgroundColor2: 0, foregroundColor: LineStyle.parseColor("#6fd000"), borderColor: LineStyle.parseColor("#6fd000"))
+                } else if label?.starts(with: "TGV") ?? false {
+                    return LineStyle(shape: .rect, backgroundColor: LineStyle.white, backgroundColor2: 0, foregroundColor: LineStyle.parseColor("#034c9c"), borderColor: LineStyle.parseColor("#034c9c"))
+                } else {
+                    return LineStyle(shape: .rect, backgroundColor: LineStyle.white, backgroundColor2: 0, foregroundColor: LineStyle.red, borderColor: LineStyle.red)
+                }
             case .regionalTrain:
                 return LineStyle(shape: .rect, backgroundColor: LineStyle.gray, backgroundColor2: 0, foregroundColor: LineStyle.white, borderColor: 0)
             case .suburbanTrain:
