@@ -834,8 +834,24 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
     
     private func processIndividualLeg(legs: inout [Leg], type: IndividualLeg.`Type`, departureStop: StopEvent, arrivalStop: StopEvent, distance: Int, path: [LocationPoint]) {
         var path = path
-        let departureTime = departureStop.predictedTime ?? departureStop.plannedTime
-        let arrivalTime = arrivalStop.predictedTime ?? arrivalStop.plannedTime
+        var departureTime = departureStop.predictedTime ?? departureStop.plannedTime
+        var arrivalTime = arrivalStop.predictedTime ?? arrivalStop.plannedTime
+        
+        // Workaround for GVH bug:
+        // When querying trips before midnight, for some reason the departure time of footpath legs
+        // is offset by one day. The arrival time is the correct time though.
+        let nearlyOneDay: TimeInterval = 60 * 60 * 23
+        let oneDay: TimeInterval = 60 * 60 * 24
+        // Departure time is offset by nearly one day
+        if let lastArrival = legs.last?.arrivalTime, departureTime.timeIntervalSince(lastArrival) >= nearlyOneDay {
+            departureTime = departureTime.addingTimeInterval(-oneDay)
+        }
+        // Arrival time is offset by nearly one day
+        if arrivalTime.timeIntervalSince(departureTime) >= nearlyOneDay {
+            arrivalTime = arrivalTime.addingTimeInterval(-oneDay)
+        }
+        // Workaround end
+        
         let addTime: TimeInterval = !legs.isEmpty ? max(0, -departureTime.timeIntervalSince(legs.last!.maxTime)) : 0
         if let lastLeg = legs.last as? IndividualLeg, lastLeg.type == type {
             legs.removeLast()
@@ -908,7 +924,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         return nil
     }
     
-    let P_JSON_TIME = try! NSRegularExpression(pattern: "(\\d{2})?(\\d{2})(\\d{2})(\\d{2})")
+    let P_JSON_TIME = try! NSRegularExpression(pattern: "^(?:(\\d{4})(\\d{2}))?(\\d{2})?(\\d{2})(\\d{2})(\\d{2})$")
     
     func parseJsonTime(baseDate: Date, dateString: String?) throws -> Date? {
         guard let dateString = dateString else { return nil }
@@ -916,16 +932,22 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         var date = baseDate
         var calendar = Calendar(identifier: .gregorian)
         calendar.timeZone = timeZone
-        if let day = Int(match[0] ?? "") {
+        if let year = Int(match[0] ?? "") {
+            date = calendar.date(byAdding: .year, value: year, to: date) ?? date
+        }
+        if let month = Int(match[1] ?? "") {
+            date = calendar.date(byAdding: .month, value: month, to: date) ?? date
+        }
+        if let day = Int(match[2] ?? "") {
             date = calendar.date(byAdding: .day, value: day, to: date) ?? date
         }
-        if let hour = Int(match[1] ?? "") {
+        if let hour = Int(match[3] ?? "") {
             date = calendar.date(bySetting: .hour, value: hour, of: date) ?? date
         }
-        if let minute = Int(match[2] ?? "") {
+        if let minute = Int(match[4] ?? "") {
             date = calendar.date(bySetting: .minute, value: minute, of: date) ?? date
         }
-        if let second = Int(match[3] ?? "") {
+        if let second = Int(match[5] ?? "") {
             date = calendar.date(bySetting: .second, value: second, of: date) ?? date
         }
         
