@@ -135,6 +135,7 @@ public class TripOptions: NSObject, NSSecureCoding {
     public init(products: [Product]? = nil, optimize: Optimize? = nil, walkSpeed: WalkSpeed? = nil, accessibility: Accessibility? = nil, options: [Option]? = nil, maxChanges: Int? = nil, minChangeTime: Int? = nil, maxFootpathTime: Int? = nil, maxFootpathDist: Int? = nil, tariffProfile: TariffProfile? = nil) {
         self.products = products
         self.optimize = optimize
+        self.walkSpeed = walkSpeed
         self.accessibility = accessibility
         self.options = options
         self.maxChanges = maxChanges
