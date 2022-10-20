@@ -22,6 +22,7 @@ public class VvsProvider: AbstractEfaWebProvider {
             "SS5": LineStyle(shape: .circle, backgroundColor: LineStyle.rgb(19, 159, 195), foregroundColor: LineStyle.white),
             "SS6": LineStyle(shape: .circle, backgroundColor: LineStyle.rgb(109, 72, 34), foregroundColor: LineStyle.white),
             "SS60": LineStyle(shape: .circle, backgroundColor: LineStyle.rgb(124, 130, 50), foregroundColor: LineStyle.white),
+            "SS62": LineStyle(shape: .circle, backgroundColor: LineStyle.rgb(205, 117, 41), foregroundColor: LineStyle.white),
             
             // Nachtnetz
             "BN1": LineStyle(shape: .rounded, backgroundColor: LineStyle.rgb(73, 60, 125), foregroundColor: LineStyle.white),
