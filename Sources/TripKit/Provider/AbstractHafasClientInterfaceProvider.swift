@@ -380,7 +380,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
             } else if let jnyDirTxt = jny["dirTxt"].string {
                 let nameAndPlace = split(stationName: stripLineFromDestination(line: line, destinationName: jnyDirTxt))
                 destination = Location(type: .any, id: nil, coord: nil, place: nameAndPlace.0, name: nameAndPlace.1)
-            } else {
+            } else {
                 destination = nil
             }
             
