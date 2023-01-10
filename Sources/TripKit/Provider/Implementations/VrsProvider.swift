@@ -204,7 +204,7 @@ public class VrsProvider: AbstractNetworkProvider {
     }
     
     override public func queryNearbyLocations(location: Location, types: [LocationType]?, maxDistance: Int, maxLocations: Int, completion: @escaping (HttpRequest, NearbyLocationsResult) -> Void) -> AsyncRequest {
-        let urlBuilder = UrlBuilder(path: baseCacheEndpoint, encoding: .utf8)
+        let urlBuilder = UrlBuilder(path: baseEndpoint, encoding: .utf8)
         
         urlBuilder.addParameter(key: "eID", value: "tx_ekap_here")
         if let coord = location.coord {
@@ -417,7 +417,7 @@ public class VrsProvider: AbstractNetworkProvider {
     }
     
     override public func suggestLocations(constraint: String, types: [LocationType]?, maxLocations: Int, completion: @escaping (HttpRequest, SuggestLocationsResult) -> Void) -> AsyncRequest {
-        let urlBuilder = UrlBuilder(path: baseCacheEndpoint, encoding: .utf8)
+        let urlBuilder = UrlBuilder(path: baseEndpoint, encoding: .utf8)
 
         urlBuilder.addParameter(key: "eID", value: "tx_vrsinfo_ass2_objects")
         urlBuilder.addParameter(key: "sc", value: maxLocations > 0 ? maxLocations : 10) // station count
