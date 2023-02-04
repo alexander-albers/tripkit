@@ -5,8 +5,7 @@ import SwiftyJSON
 /// Verkehrsverbund Rhein-Sieg (DE)
 public class VrsProvider: AbstractNetworkProvider {
     
-    static let API_BASE = "https://ekapapp.vrs.de/index.php"
-    static let API_BASE_CACHE = "https://ekapappcache.vrs.de/index.php"
+    static let API_BASE = "https://ekap-app.vrs.de/index.php"
     static let API_BASE_INSECURE = "http://android.vrsinfo.de/index.php"
     static let NAME_WITH_POSITION_PATTERNS: [NSRegularExpression] = [
         try! NSRegularExpression(pattern: "(.*) - (.*)"),
@@ -22,25 +21,21 @@ public class VrsProvider: AbstractNetworkProvider {
     public override var supportedLanguages: Set<String> { ["de"] }
     
     var baseEndpoint: String
-    var baseCacheEndpoint: String
     
     public init(certAuthorization: [String: Any]) {
         // Load tls client certificate
         if let certName = certAuthorization["certName"] as? String, let certPassword = certAuthorization["password"] as? String {
             do {
                 let identity = try Bundle.module.identity(named: certName, password: certPassword)
-                HttpClient.cacheIdentity(for: "ekapapp.vrs.de", identity: identity)
+                HttpClient.cacheIdentity(for: "ekap-app.vrs.de", identity: identity)
                 baseEndpoint = VrsProvider.API_BASE
-                baseCacheEndpoint = VrsProvider.API_BASE_CACHE
             } catch let error as NSError {
                 os_log("VRS: failed to load client certificate, falling back to insecure http requests! %{public}@", log: .requestLogger, type: .error, error.description)
                 baseEndpoint = VrsProvider.API_BASE_INSECURE
-                baseCacheEndpoint = VrsProvider.API_BASE_INSECURE
             }
         } else {
             os_log("VRS: failed to load client certificate, falling back to insecure http requests!", log: .requestLogger, type: .error)
             baseEndpoint = VrsProvider.API_BASE_INSECURE
-            baseCacheEndpoint = VrsProvider.API_BASE_INSECURE
         }
         
         super.init(networkId: .VRS)
