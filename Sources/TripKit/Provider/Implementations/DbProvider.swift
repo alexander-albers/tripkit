@@ -48,6 +48,7 @@ public class DbProvider: AbstractHafasClientInterfaceProvider {
         apiClient = ["id": "DB", "type": "IPH", "name": "DB Navigator", "v": "20100000"]
         extVersion = "DB.R21.12.a"
         format.dateFormat = "yyyyMMddHHmm"
+        format.timeZone = timeZone
         configJson = ["rtMode": "HYBRID"]
     }
     
