@@ -174,8 +174,13 @@ public class VrsProvider: AbstractNetworkProvider {
             "B856": LineStyle(backgroundColor: LineStyle.parseColor("#4e6578"), foregroundColor: LineStyle.white),
             "B857": LineStyle(backgroundColor: LineStyle.parseColor("#4e6578"), foregroundColor: LineStyle.white),
             
+            //Busse Leverkusen (wupsi)
+            "BSB20": LineStyle(backgroundColor: LineStyle.parseColor("#e36837"), foregroundColor: LineStyle.white),
+			"BSB24": LineStyle(backgroundColor: LineStyle.parseColor("#007b40"), foregroundColor: LineStyle.white),
+			"BSB25": LineStyle(backgroundColor: LineStyle.parseColor("#009ece"), foregroundColor: LineStyle.white),
+			"B255": LineStyle(backgroundColor: LineStyle.parseColor("#007298"), foregroundColor: LineStyle.white),
+            
             // andere Busse
-            "B250": LineStyle(backgroundColor: LineStyle.parseColor("#8FE84B"), foregroundColor: LineStyle.white),
             "B260": LineStyle(backgroundColor: LineStyle.parseColor("#FF8365"), foregroundColor: LineStyle.white),
             "B423": LineStyle(backgroundColor: LineStyle.parseColor("#D3D2D2"), foregroundColor: LineStyle.white),
             "B434": LineStyle(backgroundColor: LineStyle.parseColor("#14E80B"), foregroundColor: LineStyle.white),
@@ -1040,7 +1045,7 @@ public class VrsProvider: AbstractNetworkProvider {
              "LightRail" where number.hasPrefix("U"):
             return .subway
         case "LightRail":
-            // note that also the Skytrain (Flughafen Düsseldorf Bahnhof - Flughafen Düsseldorf Terminan
+            // note that also the Skytrain (Flughafen Düsseldorf Bahnhof - Flughafen Düsseldorf Terminal
             // and Schwebebahn Wuppertal (line 60) are both returned as product "LightRail".
             return .tram
         case "Bus", "CommunityBus", "RailReplacementServices":
@@ -1070,8 +1075,10 @@ public class VrsProvider: AbstractNetworkProvider {
         
         if let name = name, price != 0, let level = level {
             fares.append(Fare(name: name, type: .adult, currency: "EUR", fare: Float(price), unitsName: level, units: nil))
+			fares.append(Fare(name: name, type: .child, currency: "EUR", fare: Float(price), unitsName: level, units: nil))
         } else if let name = name, name == "NRW-Tarif", let text = text, let match = text.match(pattern: VrsProvider.P_NRW_TARIF), let group = match[0], let price = Float(group) {
             fares.append(Fare(name: name, type: .adult, currency: "EUR", fare: price, unitsName: nil, units: nil))
+			fares.append(Fare(name: name, type: .child, currency: "EUR", fare: price, unitsName: nil, units: nil))
         }
         
         return fares
