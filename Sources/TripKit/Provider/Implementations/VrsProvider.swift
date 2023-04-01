@@ -176,9 +176,9 @@ public class VrsProvider: AbstractNetworkProvider {
             
             //Busse Leverkusen (wupsi)
             "BSB20": LineStyle(backgroundColor: LineStyle.parseColor("#e36837"), foregroundColor: LineStyle.white),
-			"BSB24": LineStyle(backgroundColor: LineStyle.parseColor("#007b40"), foregroundColor: LineStyle.white),
-			"BSB25": LineStyle(backgroundColor: LineStyle.parseColor("#009ece"), foregroundColor: LineStyle.white),
-			"B255": LineStyle(backgroundColor: LineStyle.parseColor("#007298"), foregroundColor: LineStyle.white),
+            "BSB24": LineStyle(backgroundColor: LineStyle.parseColor("#007b40"), foregroundColor: LineStyle.white),
+            "BSB25": LineStyle(backgroundColor: LineStyle.parseColor("#009ece"), foregroundColor: LineStyle.white),
+            "B255": LineStyle(backgroundColor: LineStyle.parseColor("#007298"), foregroundColor: LineStyle.white),
             
             // andere Busse
             "B260": LineStyle(backgroundColor: LineStyle.parseColor("#FF8365"), foregroundColor: LineStyle.white),
