@@ -7,7 +7,7 @@ public class HvvProvider: AbstractNetworkProvider {
     
     /// Documentation: https://gti.geofox.de/html/GTIHandbuch_p.html
     static let API_BASE = "https://gti.geofox.de/gti/public/"
-    static let VERSION = 47
+    static let VERSION = 54
     let authHeaders: [String: Any]
     
     public override var supportedLanguages: Set<String> { ["de", "en"] }
@@ -361,7 +361,7 @@ public class HvvProvider: AbstractNetworkProvider {
             "schedulesBefore": timeIsDeparture ? 0 : 6,
             "schedulesAfter": timeIsDeparture ? 6 : 0,
             "penalties": [
-                ["name": "desiredType", "value": desiredTypes != nil ? "\(desiredTypes!):10000" : "train:0"],
+                ["name": "desiredType", "value": desiredTypes != nil ? "\(desiredTypes!):10000" : "train:0"] as [String : Any],
                 ["name": "changeEvent", "value": tripOptions.optimize == .leastChanges ? 8 : 4],
                 ["name": "walker", "value": tripOptions.optimize == .leastWalking ? 3 : 1],
                 ["name": "anyHandicap", "value": handycap]
@@ -370,7 +370,8 @@ public class HvvProvider: AbstractNetworkProvider {
                 "tariff": "HVV",
                 "tariffRegions": false,
                 "kinds": [1, 2]  // Einzelfahrkarte Erwachsener & Kind
-            ]
+            ] as [String : Any],
+            "withPaths": true
         ]
         if let via = via {
             requestDict["via"] = jsonLocation(location: via)
@@ -597,7 +598,11 @@ public class HvvProvider: AbstractNetworkProvider {
         else {
             throw ParseError(reason: "failed to parse leg from/to")
         }
-        let path = parsePath(json: json["path"])
+        var path: [LocationPoint] = []
+        for jsonPath in json["paths"].arrayValue {
+            var track = parsePath(json: jsonPath)
+            path.append(contentsOf: track)
+        }
         let serviceType = json["line"]["type"]["simpleType"].stringValue
         switch serviceType {
         case "FOOTPATH":

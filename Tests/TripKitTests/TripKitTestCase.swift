@@ -164,7 +164,7 @@ class TripKitProviderTestCase: XCTestCase {
                 
                 if let first = trips.first, delegate.supportsRefreshTrip {
                     let refreshContext = first.refreshContext
-                    XCTAssertNotNil(context, "refresh context == nil")
+                    XCTAssertNotNil(refreshContext, "refresh context == nil")
                     let (request, result) = syncRefreshTrip(context: refreshContext!)
                     switch result {
                     case .success(let context, _, _, _, let trips, let messages):

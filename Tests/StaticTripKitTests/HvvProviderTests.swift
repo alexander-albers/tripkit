@@ -6,6 +6,8 @@ class HvvProviderTests: TripKitProviderTestCase, TripKitProviderTestsDelegate {
     
     override var delegate: TripKitProviderTestsDelegate! { return self }
     
+    var supportsRefreshTrip: Bool { false }
+    
     var networkId: NetworkId { return .HVV }
     
     func initProvider(from authorizationData: AuthorizationData) -> NetworkProvider {
