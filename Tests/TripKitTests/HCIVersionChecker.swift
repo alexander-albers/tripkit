@@ -54,7 +54,7 @@ class HCIVersionChecker: XCTestCase {
                     "req": [
                         "getVersionInfo": true
                     ]
-                ]]
+                ] as [String : Any]]
             ]
             let request = provider.encodeJson(dict: dict, requestUrlEncoding: .utf8)
             provider.requestVerification.appendParameters(to: urlBuilder, requestString: request)

@@ -692,6 +692,13 @@
 		FAE6E70F26E6ACC2007E975A /* LineStyleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8F313C1E85A41C00E6CE9B /* LineStyleTests.swift */; };
 		FAE6E71126E6ACC2007E975A /* UrlEncodingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA1839F0E561F0397EB1F1 /* UrlEncodingTests.swift */; };
 		FAE6E74A26E6B467007E975A /* TestsCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAE6E71D26E6B40E007E975A /* TestsCommon.framework */; };
+		FAF1FC7429E471EC003996AE /* NetworkProvider+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF1FC7329E471EC003996AE /* NetworkProvider+Extensions.swift */; };
+		FAF1FC7529E471EC003996AE /* NetworkProvider+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF1FC7329E471EC003996AE /* NetworkProvider+Extensions.swift */; };
+		FAF1FC7629E471EC003996AE /* NetworkProvider+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF1FC7329E471EC003996AE /* NetworkProvider+Extensions.swift */; };
+		FAF1FC7729E471EC003996AE /* NetworkProvider+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF1FC7329E471EC003996AE /* NetworkProvider+Extensions.swift */; };
+		FAF1FC7929E478CC003996AE /* NetworkProviderExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF1FC7829E478CC003996AE /* NetworkProviderExtensionTests.swift */; };
+		FAF1FC7A29E478CC003996AE /* NetworkProviderExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF1FC7829E478CC003996AE /* NetworkProviderExtensionTests.swift */; };
+		FAF1FC7B29E478CC003996AE /* NetworkProviderExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF1FC7829E478CC003996AE /* NetworkProviderExtensionTests.swift */; };
 		FAF2B36E21BFF80C006439C5 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF2B36D21BFF80C006439C5 /* Security.framework */; };
 		FAF9955B200E3E1D008D8582 /* QueryJourneyDetailResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF9955A200E3E1D008D8582 /* QueryJourneyDetailResult.swift */; };
 		FAF99563200E4532008D8582 /* QueryJourneyDetailResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF9955A200E3E1D008D8582 /* QueryJourneyDetailResult.swift */; };
@@ -1152,6 +1159,8 @@
 		FAE6E71D26E6B40E007E975A /* TestsCommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TestsCommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAE6E72926E6B41C007E975A /* TestsCommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TestsCommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAE6E74126E6B43B007E975A /* TestsCommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TestsCommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAF1FC7329E471EC003996AE /* NetworkProvider+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NetworkProvider+Extensions.swift"; sourceTree = "<group>"; };
+		FAF1FC7829E478CC003996AE /* NetworkProviderExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProviderExtensionTests.swift; sourceTree = "<group>"; };
 		FAF2B36D21BFF80C006439C5 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		FAF9955A200E3E1D008D8582 /* QueryJourneyDetailResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryJourneyDetailResult.swift; sourceTree = "<group>"; };
 		FAFD552A2785847400D6F149 /* VmobilProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VmobilProvider.swift; sourceTree = "<group>"; };
@@ -1427,6 +1436,7 @@
 			children = (
 				FAB7543A1E3FD3F300C343F2 /* NetworkProvider.swift */,
 				FA17ADA427A2E8BF006305B1 /* NetworkProvider+Async.swift */,
+				FAF1FC7329E471EC003996AE /* NetworkProvider+Extensions.swift */,
 				FAB754381E3FD3F300C343F2 /* AbstractNetworkProvider.swift */,
 				FAB754371E3FD3F300C343F2 /* AbstractEfaProvider.swift */,
 				FAA90D0427C250370005E044 /* AbstractEfaWebProvider.swift */,
@@ -1543,6 +1553,7 @@
 			isa = PBXGroup;
 			children = (
 				FA4C4BAA27BCED0A008A6231 /* HCIVersionChecker.swift */,
+				FAF1FC7829E478CC003996AE /* NetworkProviderExtensionTests.swift */,
 				FA1C0A05275D1AC100AA66C3 /* AvvAachenProviderTests.swift */,
 				FA1C0A24275D1AC200AA66C3 /* AvvAugsburgProviderTests.swift */,
 				FA1C0A20275D1AC200AA66C3 /* BayernProviderTests.swift */,
@@ -2327,6 +2338,7 @@
 				FA4B90B1274C191C00C070C2 /* LoadFactor.swift in Sources */,
 				FA5CD23024FBB29000B4990A /* BvgProvider.swift in Sources */,
 				FA5CD2AB24FBB29D00B4990A /* Trip.swift in Sources */,
+				FAF1FC7629E471EC003996AE /* NetworkProvider+Extensions.swift in Sources */,
 				FAFD552D2785847400D6F149 /* VmobilProvider.swift in Sources */,
 				FA5CD2AC24FBB29D00B4990A /* Fare.swift in Sources */,
 				FA5CD25D24FBB29000B4990A /* MockKvvProvider.swift in Sources */,
@@ -2432,6 +2444,7 @@
 				FA4B90B2274C191C00C070C2 /* LoadFactor.swift in Sources */,
 				FA5CD26524FBB29000B4990A /* BvgProvider.swift in Sources */,
 				FA5CD2BB24FBB29D00B4990A /* Trip.swift in Sources */,
+				FAF1FC7729E471EC003996AE /* NetworkProvider+Extensions.swift in Sources */,
 				FAFD552E2785847400D6F149 /* VmobilProvider.swift in Sources */,
 				FA5CD2BC24FBB29D00B4990A /* Fare.swift in Sources */,
 				FA5CD29224FBB29000B4990A /* MockKvvProvider.swift in Sources */,
@@ -2465,6 +2478,7 @@
 				FA1C0A6D275D1AC200AA66C3 /* VosProviderTests.swift in Sources */,
 				FA1C0A6A275D1AC200AA66C3 /* InvgProviderTests.swift in Sources */,
 				FA1C0A3D275D1AC200AA66C3 /* TripKitTestCase.swift in Sources */,
+				FAF1FC7B29E478CC003996AE /* NetworkProviderExtensionTests.swift in Sources */,
 				FA1C0AAF275D1AC200AA66C3 /* DbProviderTests.swift in Sources */,
 				FA1C0A46275D1AC200AA66C3 /* RtProviderTests.swift in Sources */,
 				FA8B587B278A1075006CB35A /* NrwProviderTests.swift in Sources */,
@@ -2525,6 +2539,7 @@
 				FA1C0A6C275D1AC200AA66C3 /* VosProviderTests.swift in Sources */,
 				FA1C0A69275D1AC200AA66C3 /* InvgProviderTests.swift in Sources */,
 				FA1C0A3C275D1AC200AA66C3 /* TripKitTestCase.swift in Sources */,
+				FAF1FC7A29E478CC003996AE /* NetworkProviderExtensionTests.swift in Sources */,
 				FA1C0AAE275D1AC200AA66C3 /* DbProviderTests.swift in Sources */,
 				FA1C0A45275D1AC200AA66C3 /* RtProviderTests.swift in Sources */,
 				FA8B587A278A1075006CB35A /* NrwProviderTests.swift in Sources */,
@@ -2657,6 +2672,7 @@
 				FA4B90AF274C191C00C070C2 /* LoadFactor.swift in Sources */,
 				FA4371241F62AE4D00F53B82 /* ZvvProvider.swift in Sources */,
 				FA1C85781E437D73002BFE6E /* AsyncRequest.swift in Sources */,
+				FAF1FC7429E471EC003996AE /* NetworkProvider+Extensions.swift in Sources */,
 				FAFD552B2785847400D6F149 /* VmobilProvider.swift in Sources */,
 				FAB267DC21839F1D00F8C5F5 /* SvvProvider.swift in Sources */,
 				FACFBBC81F850EE600679CD4 /* AvvAachenProvider.swift in Sources */,
@@ -2690,6 +2706,7 @@
 				FA1C0A6B275D1AC200AA66C3 /* VosProviderTests.swift in Sources */,
 				FA1C0A68275D1AC200AA66C3 /* InvgProviderTests.swift in Sources */,
 				FA1C0A3B275D1AC200AA66C3 /* TripKitTestCase.swift in Sources */,
+				FAF1FC7929E478CC003996AE /* NetworkProviderExtensionTests.swift in Sources */,
 				FA1C0AAD275D1AC200AA66C3 /* DbProviderTests.swift in Sources */,
 				FA1C0A44275D1AC200AA66C3 /* RtProviderTests.swift in Sources */,
 				FA8B5879278A1075006CB35A /* NrwProviderTests.swift in Sources */,
@@ -3032,6 +3049,7 @@
 				FA4B90B0274C191C00C070C2 /* LoadFactor.swift in Sources */,
 				FAFF18BE1FA50B9500A8ED69 /* ZvvProvider.swift in Sources */,
 				FAFF18BF1FA50B9500A8ED69 /* AsyncRequest.swift in Sources */,
+				FAF1FC7529E471EC003996AE /* NetworkProvider+Extensions.swift in Sources */,
 				FAFD552C2785847400D6F149 /* VmobilProvider.swift in Sources */,
 				FAB267DD21839F1D00F8C5F5 /* SvvProvider.swift in Sources */,
 				FAFF18C01FA50B9500A8ED69 /* AvvAachenProvider.swift in Sources */,

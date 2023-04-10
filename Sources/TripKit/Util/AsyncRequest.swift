@@ -2,7 +2,7 @@ import Foundation
 
 public class AsyncRequest {
     
-    let task: URLSessionTask?
+    var task: URLSessionTask?
     
     public init(task: URLSessionTask?) {
         self.task = task
