@@ -49,7 +49,17 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         } else {
             type = "ALL"
         }
-        let request = wrapJsonApiRequest(meth: "LocMatch", req: ["input": ["field": "S", "loc": ["name": constraint + "?", "type": type], "maxLoc": maxLocations > 0 ? maxLocations : 50]], formatted: true)
+        let request = wrapJsonApiRequest(
+            meth: "LocMatch",
+            req: [
+                "input": [
+                    "field": "S",
+                    "loc": ["name": constraint + "?", "type": type],
+                    "maxLoc": maxLocations > 0 ? maxLocations : 50
+                ] as [String : Any]
+            ],
+            formatted: true
+        )
         let urlBuilder = UrlBuilder(path: mgateEndpoint, encoding: requestUrlEncoding)
         requestVerification.appendParameters(to: urlBuilder, requestString: request)
         
@@ -223,7 +233,15 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
             completion(HttpRequest(urlBuilder: UrlBuilder()), .sessionExpired)
             return AsyncRequest(task: nil)
         }
-        var req: [String: Any] = ["trfReq": ["jnyCl": 2, "cType": "PK", "tvlrProf": [["type": "E"]]], "getPolyline": true, "getPasslist": true]
+        var req: [String: Any] = [
+            "trfReq": [
+                "jnyCl": 2,
+                "cType": "PK",
+                "tvlrProf": [["type": "E"]]
+            ] as [String : Any],
+            "getPolyline": true,
+            "getPasslist": true
+        ]
         if let apiVersion = apiVersion, apiVersion.isSmallerVersionThan("1.24") {
             req["ctxRecon"] = context.contextRecon
         } else {
@@ -634,7 +652,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
                 "profile": [
                     "type": "F",
                     "maxdist": dist
-                ],
+                ] as [String : Any],
                 "type": "P"
             ])
         }
@@ -698,7 +716,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
             "jnyCl": tripOptions.tariffProfile?.tariffClass ?? 2,
             "cType": "PK",
             "tvlrProf": [tvlrProf]
-        ]
+        ] as [String : Any]
         return req
     }
     
@@ -717,7 +735,11 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
             "client": apiClient ?? "",
             "ver": apiVersion ?? "",
             "lang": queryLanguage ?? defaultLanguage,
-            "svcReqL": [["cfg": configJson, "meth": meth, "req": req]],
+            "svcReqL": [[
+                "cfg": configJson,
+                "meth": meth,
+                "req": req
+            ] as [String : Any]],
             "formatted": formatted
         ]
         if let extVersion = extVersion {

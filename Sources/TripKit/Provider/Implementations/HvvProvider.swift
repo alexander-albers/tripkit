@@ -600,7 +600,7 @@ public class HvvProvider: AbstractNetworkProvider {
         }
         var path: [LocationPoint] = []
         for jsonPath in json["paths"].arrayValue {
-            var track = parsePath(json: jsonPath)
+            let track = parsePath(json: jsonPath)
             path.append(contentsOf: track)
         }
         let serviceType = json["line"]["type"]["simpleType"].stringValue
