@@ -474,49 +474,54 @@ public class VrsProvider: AbstractNetworkProvider {
     private func queryTrips(from: Location, via: Location?, to: Location, date: Date, departure: Bool, tripOptions: TripOptions, ambiguousFrom: [Location]?, ambiguousVia: [Location]?, ambiguousTo: [Location]?, context: Context?, completion: @escaping (HttpRequest, QueryTripsResult) -> Void) -> AsyncRequest {
         let fromString = generateLocation(location: from)
         if fromString == nil, ambiguousFrom == nil {
-            return suggestLocations(constraint: from.name ?? "", types: [.station], maxLocations: 1) { (request, result) in
+            let asyncTask = AsyncRequest(task: nil)
+            asyncTask.task = suggestLocations(constraint: from.name ?? "", types: [.station], maxLocations: 1) { (request, result) in
                 switch result {
                 case .success(let locations):
                     if let first = locations.first?.location, locations.count == 1 {
-                        // TODO: make request cancelable (AsyncTask.setTask())
-                        let _ = self.queryTrips(from: first, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions, ambiguousFrom: ambiguousFrom, ambiguousVia: ambiguousVia, ambiguousTo: ambiguousTo, context: context, completion: completion)
+                        asyncTask.task = self.queryTrips(from: first, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions, ambiguousFrom: ambiguousFrom, ambiguousVia: ambiguousVia, ambiguousTo: ambiguousTo, context: context, completion: completion).task
                     } else {
-                        let _ = self.queryTrips(from: from, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions, ambiguousFrom: locations.map({$0.location}), ambiguousVia: ambiguousVia, ambiguousTo: ambiguousTo, context: context, completion: completion)
+                        asyncTask.task = self.queryTrips(from: from, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions, ambiguousFrom: locations.map({$0.location}), ambiguousVia: ambiguousVia, ambiguousTo: ambiguousTo, context: context, completion: completion).task
                     }
                 case .failure(_):
                     completion(request, .unknownFrom)
                 }
-            }
+            }.task
+            return asyncTask
         }
         let viaString: String? = generateLocation(location: via)
         if let via = via, viaString == nil, ambiguousVia == nil {
-            return suggestLocations(constraint: via.name ?? "", types: [.station], maxLocations: 1) { (request, result) in
+            let asyncTask = AsyncRequest(task: nil)
+            asyncTask.task = suggestLocations(constraint: via.name ?? "", types: [.station], maxLocations: 1) { (request, result) in
                 switch result {
                 case .success(let locations):
                     if let first = locations.first?.location, locations.count == 1 {
-                        let _ = self.queryTrips(from: from, via: first, to: to, date: date, departure: departure, tripOptions: tripOptions, ambiguousFrom: ambiguousFrom, ambiguousVia: ambiguousVia, ambiguousTo: ambiguousTo, context: context, completion: completion)
+                        asyncTask.task = self.queryTrips(from: from, via: first, to: to, date: date, departure: departure, tripOptions: tripOptions, ambiguousFrom: ambiguousFrom, ambiguousVia: ambiguousVia, ambiguousTo: ambiguousTo, context: context, completion: completion).task
                     } else {
-                        let _ = self.queryTrips(from: from, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions, ambiguousFrom: ambiguousFrom, ambiguousVia: locations.map({$0.location}), ambiguousTo: ambiguousTo, context: context, completion: completion)
+                        asyncTask.task = self.queryTrips(from: from, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions, ambiguousFrom: ambiguousFrom, ambiguousVia: locations.map({$0.location}), ambiguousTo: ambiguousTo, context: context, completion: completion).task
                     }
                 case .failure(_):
                     completion(request, .unknownVia)
                 }
-            }
+            }.task
+            return asyncTask
         }
         let toString = generateLocation(location: to)
         if toString == nil, ambiguousTo == nil {
-            return suggestLocations(constraint: to.name ?? "", types: [.station], maxLocations: 1) { (request, result) in
+            let asyncTask = AsyncRequest(task: nil)
+            asyncTask.task = suggestLocations(constraint: to.name ?? "", types: [.station], maxLocations: 1) { (request, result) in
                 switch result {
                 case .success(let locations):
                     if let first = locations.first?.location, locations.count == 1 {
-                        let _ = self.queryTrips(from: from, via: via, to: first, date: date, departure: departure, tripOptions: tripOptions, ambiguousFrom: ambiguousFrom, ambiguousVia: ambiguousVia, ambiguousTo: ambiguousTo, context: context, completion: completion)
+                        asyncTask.task = self.queryTrips(from: from, via: via, to: first, date: date, departure: departure, tripOptions: tripOptions, ambiguousFrom: ambiguousFrom, ambiguousVia: ambiguousVia, ambiguousTo: ambiguousTo, context: context, completion: completion).task
                     } else {
-                        let _ = self.queryTrips(from: from, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions, ambiguousFrom: ambiguousFrom, ambiguousVia: ambiguousVia, ambiguousTo: locations.map({$0.location}), context: context, completion: completion)
+                        asyncTask.task = self.queryTrips(from: from, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions, ambiguousFrom: ambiguousFrom, ambiguousVia: ambiguousVia, ambiguousTo: locations.map({$0.location}), context: context, completion: completion).task
                     }
                 case .failure(_):
                     completion(request, .unknownTo)
                 }
-            }
+            }.task
+            return asyncTask
         }
         
         // TODO: implement the same for hafasclientinterface
