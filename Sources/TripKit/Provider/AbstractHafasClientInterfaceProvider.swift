@@ -344,9 +344,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
             if let reachable = jny["isRchbl"].bool, !reachable {
                 continue
             }
-            if let cancelled = jny["dCncl"].bool, cancelled {
-                continue
-            }
+            let cancelled = jny["dCncl"].boolValue
             
             // Parse platform
             let position = parsePosition(json: stbStop, platfName: departures ? "dPlatfR" : "aPlatfR", pltfName: departures ? "dPltfR" : "aPltfR")
@@ -405,9 +403,6 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
             // Parse remarks
             let (legMessages, _, departureCancelled) = parseLineAttributesAndMessages(jny: jny, rems: rems, messages: messages)
             let message = legMessages.joined(separator: "\n").emptyToNil
-            if departureCancelled {
-                continue
-            }
             
             // Parse journey and wagon sequence context
             let journeyContext: HafasClientInterfaceJourneyContext?
@@ -423,7 +418,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
                 wagonSequenceContext = nil
             }
             
-            let departure = Departure(plannedTime: plannedTime, predictedTime: predictedTime, line: line, position: position, plannedPosition: plannedPosition, destination: destination, capacity: nil, message: message, journeyContext: journeyContext, wagonSequenceContext: wagonSequenceContext)
+            let departure = Departure(plannedTime: plannedTime, predictedTime: predictedTime, line: line, position: position, plannedPosition: plannedPosition, cancelled: cancelled || departureCancelled, destination: destination, capacity: nil, message: message, journeyContext: journeyContext, wagonSequenceContext: wagonSequenceContext)
             
             var stationDepartures = result.first(where: {$0.stopLocation.id == location.id})
             if stationDepartures == nil {

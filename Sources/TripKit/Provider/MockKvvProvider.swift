@@ -190,7 +190,7 @@ public class MockKvvProvider: AbstractEfaWebProvider {
     }
     
     func createDeparture(_ date: Date, _ line: Line, _ destination: String) -> Departure {
-        return Departure(plannedTime: date, predictedTime: date, line: line, position: nil, plannedPosition: nil, destination: createStation(destination), capacity: nil, message: nil, journeyContext: nil)
+        return Departure(plannedTime: date, predictedTime: date, line: line, position: nil, plannedPosition: nil, cancelled: false, destination: createStation(destination), capacity: nil, message: nil, journeyContext: nil)
     }
 }
 

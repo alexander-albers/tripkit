@@ -549,9 +549,7 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider {
             let delayReason = element.attribute(by: "delayReason")?.text
             let administration = normalize(lineAdministration: element.attribute(by: "administration")?.text)
             
-            if delay == "cancel" || eDelay == "cancel" {
-                continue
-            }
+            let cancelled = delay == "cancel" || eDelay == "cancel"
             
             let plannedTime = try parseTimeAndDate(timeString: fpTime, dateString: fpDate)
             let predictedTime: Date?
@@ -624,7 +622,7 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider {
                 journeyContext = nil
             }
             
-            let departure = Departure(plannedTime: plannedTime, predictedTime: predictedTime, line: line, position: position, plannedPosition: position, destination: destination, capacity: capacity, message: message, journeyContext: journeyContext)
+            let departure = Departure(plannedTime: plannedTime, predictedTime: predictedTime, line: line, position: position, plannedPosition: position, cancelled: cancelled, destination: destination, capacity: capacity, message: message, journeyContext: journeyContext)
             
             let first = stationDepartures.first(where: {$0.stopLocation.isEqual(stopLocation)})
             let departures: StationDepartures

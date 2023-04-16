@@ -340,7 +340,8 @@ public class VrsProvider: AbstractNetworkProvider {
                 } else {
                     journeyContext = nil
                 }
-                let departure = Departure(plannedTime: plannedTime, predictedTime: predictedTime, line: line, position: position, plannedPosition: position, destination: destination, journeyContext: journeyContext)
+                let cancelled = false // VRS does not return departures that are cancelled
+                let departure = Departure(plannedTime: plannedTime, predictedTime: predictedTime, line: line, position: position, plannedPosition: position, cancelled: cancelled, destination: destination, journeyContext: journeyContext)
                 departures.append(departure)
             }
             

@@ -209,9 +209,7 @@ public class HvvProvider: AbstractNetworkProvider {
         let startDate = try parseDate(date: json["time"])
         var stationDepartures: [StationDepartures] = []
         for (_, departure) in json["departures"] {
-            if departure["cancelled"].boolValue {
-                continue
-            }
+            let cancelled = departure["cancelled"].boolValue
             
             let station = departure["station"].exists() ? parseLocation(json: departure["station"]) : nil
             let line = parseLineAndDestination(json: departure["line"], directionType: json["direction"].int)
@@ -235,7 +233,7 @@ public class HvvProvider: AbstractNetworkProvider {
                 journeyContext = nil
             }
             
-            let dep = Departure(plannedTime: plannedTime, predictedTime: predictedTime, line: line.line, position: predictedPlatform, plannedPosition: plannedPlatform, destination: line.destination, capacity: nil, message: message, journeyContext: journeyContext, wagonSequenceContext: nil)
+            let dep = Departure(plannedTime: plannedTime, predictedTime: predictedTime, line: line.line, position: predictedPlatform, plannedPosition: plannedPlatform, cancelled: cancelled, destination: line.destination, capacity: nil, message: message, journeyContext: journeyContext, wagonSequenceContext: nil)
             
             let stationDeparture: StationDepartures
             if let first = stationDepartures.first(where: { station == nil || $0.stopLocation == station }) {

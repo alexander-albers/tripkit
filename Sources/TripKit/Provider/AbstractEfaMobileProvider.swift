@@ -473,8 +473,9 @@ public class AbstractEfaMobileProvider: AbstractEfaProvider {
         var result: [StationDepartures] = []
         for dp in departures {
             guard let assignedId = dp["r"]["id"].element?.text else { throw ParseError(reason: "failed to parse departure id") }
+            let cancelled = dp["rts"].element?.text == "DEPARTURE_CANCELLED"
             
-            guard let plannedTime = parseMobilePlannedTime(xml: dp["st"]) else { continue }
+            guard let plannedTime = parseMobilePlannedTime(xml: dp["st"]) else { throw ParseError(reason: "failed to parse planned time") }
             let predictedTime = parseMobilePredictedTime(xml: dp["st"])
             
             let lineDestination = try parseMobileLineDestination(xml: dp, tyOrCo: true)
@@ -493,7 +494,7 @@ public class AbstractEfaMobileProvider: AbstractEfaProvider {
                 context = nil
             }
             
-            stationDepartures?.departures.append(Departure(plannedTime: plannedTime, predictedTime: predictedTime, line: lineDestination.line, position: position, plannedPosition: position, destination: lineDestination.destination, journeyContext: context))
+            stationDepartures?.departures.append(Departure(plannedTime: plannedTime, predictedTime: predictedTime, line: lineDestination.line, position: position, plannedPosition: position, cancelled: cancelled, destination: lineDestination.destination, journeyContext: context))
         }
         completion(request, .success(departures: result))
     }

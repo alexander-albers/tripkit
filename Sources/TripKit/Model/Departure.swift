@@ -20,6 +20,8 @@ public class Departure: NSObject, NSSecureCoding {
     public var platform: String? {
         return predictedPlatform ?? plannedPlatform
     }
+    /// True if the stop has been planned originally, but is now cancelled.
+    public let cancelled: Bool
     /// The destination location of the line.
     public let destination: Location?
     /// Currently unused.
@@ -32,12 +34,13 @@ public class Departure: NSObject, NSSecureCoding {
     /// See `DbProvider.getWagonSequenceUrl()`
     public let wagonSequenceContext: URL?
     
-    public init(plannedTime: Date, predictedTime: Date?, line: Line, position: String?, plannedPosition: String?, destination: Location?, capacity: [Int]?, message: String?, journeyContext: QueryJourneyDetailContext?, wagonSequenceContext: URL? = nil) {
+    public init(plannedTime: Date, predictedTime: Date?, line: Line, position: String?, plannedPosition: String?, cancelled: Bool, destination: Location?, capacity: [Int]?, message: String?, journeyContext: QueryJourneyDetailContext?, wagonSequenceContext: URL? = nil) {
         self.plannedTime = plannedTime
         self.predictedTime = predictedTime
         self.line = line
         self.predictedPlatform = position
         self.plannedPlatform = plannedPosition
+        self.cancelled = cancelled
         self.destination = destination
         self.capacity = capacity
         self.message = message
@@ -45,8 +48,8 @@ public class Departure: NSObject, NSSecureCoding {
         self.wagonSequenceContext = wagonSequenceContext
     }
     
-    convenience init(plannedTime: Date, predictedTime: Date?, line: Line, position: String?, plannedPosition: String?, destination: Location?, journeyContext: QueryJourneyDetailContext?, wagonSequenceContext: URL? = nil) {
-        self.init(plannedTime: plannedTime, predictedTime: predictedTime, line: line, position: position, plannedPosition: plannedPosition, destination: destination, capacity: nil, message: nil, journeyContext: journeyContext, wagonSequenceContext: wagonSequenceContext)
+    convenience init(plannedTime: Date, predictedTime: Date?, line: Line, position: String?, plannedPosition: String?, cancelled: Bool, destination: Location?, journeyContext: QueryJourneyDetailContext?, wagonSequenceContext: URL? = nil) {
+        self.init(plannedTime: plannedTime, predictedTime: predictedTime, line: line, position: position, plannedPosition: plannedPosition, cancelled: cancelled, destination: destination, capacity: nil, message: nil, journeyContext: journeyContext, wagonSequenceContext: wagonSequenceContext)
     }
     
     public required convenience init?(coder aDecoder: NSCoder) {
@@ -55,13 +58,14 @@ public class Departure: NSObject, NSSecureCoding {
         let predictedTime = aDecoder.decodeObject(of: NSDate.self, forKey: PropertyKey.predictedTimeKey) as Date?
         let position = aDecoder.decodeObject(of: NSString.self, forKey: PropertyKey.positionKey) as String?
         let plannedPosition = aDecoder.decodeObject(of: NSString.self, forKey: PropertyKey.plannedPositionKey) as String?
+        let cancelled = aDecoder.decodeBool(forKey: PropertyKey.cancelledKey)
         let destination = aDecoder.decodeObject(of: Location.self, forKey: PropertyKey.destinationKey) as Location?
         let capacity = aDecoder.decodeObject(of: [NSArray.self, NSNumber.self], forKey: PropertyKey.capacityKey) as? [Int]
         let message = aDecoder.decodeObject(of: NSString.self, forKey: PropertyKey.messageKey) as String?
         let journeyContext = aDecoder.decodeObject(of: QueryJourneyDetailContext.self, forKey: PropertyKey.journeyIdKey)
         let wagonSequenceContextPath = aDecoder.decodeObject(of: NSString.self, forKey: PropertyKey.wagonSequenceContext) as String?
         let wagonSequenceContext = wagonSequenceContextPath != nil ? URL(string: wagonSequenceContextPath!) : nil
-        self.init(plannedTime: plannedTime, predictedTime: predictedTime, line: line, position: position, plannedPosition: plannedPosition, destination: destination, capacity: capacity, message: message, journeyContext: journeyContext, wagonSequenceContext: wagonSequenceContext)
+        self.init(plannedTime: plannedTime, predictedTime: predictedTime, line: line, position: position, plannedPosition: plannedPosition, cancelled: cancelled, destination: destination, capacity: capacity, message: message, journeyContext: journeyContext, wagonSequenceContext: wagonSequenceContext)
     }
     
     public func encode(with aCoder: NSCoder) {
@@ -76,6 +80,7 @@ public class Departure: NSObject, NSSecureCoding {
         if let position = plannedPlatform {
             aCoder.encode(position, forKey: PropertyKey.plannedPositionKey)
         }
+        aCoder.encode(cancelled, forKey: PropertyKey.cancelledKey)
         if let destination = destination {
             aCoder.encode(destination, forKey: PropertyKey.destinationKey)
         }
@@ -125,6 +130,7 @@ public class Departure: NSObject, NSSecureCoding {
         static let lineKey = "line"
         static let positionKey = "position"
         static let plannedPositionKey = "plannedPosition"
+        static let cancelledKey = "cancelled"
         static let destinationKey = "destination"
         static let capacityKey = "capacity"
         static let messageKey = "message"

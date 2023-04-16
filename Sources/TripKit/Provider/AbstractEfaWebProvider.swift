@@ -580,9 +580,6 @@ public class AbstractEfaWebProvider: AbstractEfaProvider {
             guard let (line, destination, cancelled) = self.parseLine(xml: departure["itdServingLine"]) else {
                 throw ParseError(reason: "failed to parse line")
             }
-            if cancelled {
-                continue
-            }
             let predictedPosition = parsePosition(position: departure.element?.attribute(by: "platformName")?.text)
             let plannedPosition = parsePosition(position: departure.element?.attribute(by: "plannedPlatformName")?.text) ?? predictedPosition
             
@@ -594,7 +591,7 @@ public class AbstractEfaWebProvider: AbstractEfaProvider {
                 context = nil
             }
             
-            let departure = Departure(plannedTime: plannedTime, predictedTime: predictedTime, line: line, position: predictedPosition, plannedPosition: plannedPosition, destination: destination, capacity: nil, message: line.message, journeyContext: context)
+            let departure = Departure(plannedTime: plannedTime, predictedTime: predictedTime, line: line, position: predictedPosition, plannedPosition: plannedPosition, cancelled: cancelled, destination: destination, capacity: nil, message: line.message, journeyContext: context)
             result.first(where: {$0.stopLocation.id == assignedStopId})?.departures.append(departure)
         }
         
