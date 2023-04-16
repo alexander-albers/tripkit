@@ -1,5 +1,6 @@
-<Journey fpTime="19:11" fpDate="05.12.21" delay="+ 30" e_delay="30" platform="19" targetLoc="Essen Hbf" dirnr="8000098" prod="ICE  721#ICE" is_reachable="0" />
-<Journey fpTime="19:18" fpDate="05.12.21" delay="cancel" platform="29" targetLoc="Kempten(Allg&#228;u)Hbf" dirnr="8000197" prod="RE 57597#RE" depStation="M&#252;nchen Hbf Gl.27-36" is_reachable="0" />
-<Journey fpTime="19:26" fpDate="05.12.21" delay="cancel" platform="30" targetLoc="Garmisch-Partenkirchen" dirnr="8002187" prod="RB 59412#RB" depStation="M&#252;nchen Hbf Gl.27-36" is_reachable="0" />
-<Journey fpTime="19:27" fpDate="05.12.21" delay="cancel" platform="17" targetLoc="Ulm Hbf" dirnr="8000170" prod="RE 57057#RE" is_reachable="0" />
-<Journey fpTime="19:27" fpDate="05.12.21" delay="-" platform="1" targetLoc="Wolfratshausen" dirnr="8006550" prod="S      7#S" depStation="M&#252;nchen Hbf (tief)" is_reachable="0" />
+<Journey fpTime="16:23" fpDate="16.04.23" delay="-" platform="2" targetLoc="M&#252;nchen Leuchtenbergring" dirnr="8004134" prod="S      1#S" dir="M&#252;nchen Leuchtenbergring" depStation="M&#252;nchen Hbf (tief)" is_reachable="0" />
+<Journey fpTime="16:23" fpDate="16.04.23" delay="-" platform="1" targetLoc="Mammendorf" dirnr="8004204" prod="S      3#S" dir="Mammendorf" depStation="M&#252;nchen Hbf (tief)" is_reachable="0" />
+<Journey fpTime="16:25" fpDate="16.04.23" delay="-" platform="2" targetLoc="M&#252;nchen Flughafen Terminal" dirnr="8004168" prod="S      8#S" dir="M&#252;nchen Flughafen Terminal" depStation="M&#252;nchen Hbf (tief)" is_reachable="0" />
+<Journey fpTime="16:26" fpDate="16.04.23" delay="0" e_delay="1" platform="30" targetLoc="Garmisch-Partenkirchen" dirnr="8002187" prod="RB 59418#RB" dir="Garmisch-Partenkirchen" depStation="M&#252;nchen Hbf Gl.27-36" is_reachable="0" />
+<Journey fpTime="16:27" fpDate="16.04.23" delay="-" platform="1" targetLoc="Wolfratshausen" dirnr="8006550" prod="S      7#S" dir="Wolfratshausen" depStation="M&#252;nchen Hbf (tief)" is_reachable="0" />
+<Journey fpTime="16:27" fpDate="16.04.23" delay="-" platform="11" targetLoc="Verona Porta Nuova" dirnr="8300120" prod="EC    86#EC" dir="Verona Porta Nuova" is_reachable="0" />

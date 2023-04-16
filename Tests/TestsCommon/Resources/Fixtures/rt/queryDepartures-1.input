@@ -1,5 +1,8 @@
-<Journey fpTime="18:39" fpDate="05.12.21" delay="+ 60" e_delay="60" platform="30" targetLoc="Kempten(Allg&#228;u)Hbf" dirnr="8000197" prod="RE 57596#RE" depStation="M&#252;nchen Hbf Gl.27-36" is_reachable="0" />
-<Journey fpTime="18:46" fpDate="05.12.21" delay="+ 40" e_delay="40" newpl="15" platform="13" targetLoc="K&#246;ln Hbf" dirnr="8000207" prod="ICE 1110#ICE" is_reachable="0" />
-<Journey fpTime="18:51" fpDate="05.12.21" delay="+ 40" e_delay="40" platform="19" targetLoc="Dortmund Hbf" dirnr="8000080" prod="ICE  524#ICE" is_reachable="0" />
-<Journey fpTime="18:52" fpDate="05.12.21" delay="+ 40" e_delay="40" platform="16" targetLoc="Hamburg-Altona" dirnr="8002553" prod="ICE  580#ICE" is_reachable="0" />
-<Journey fpTime="18:52" fpDate="05.12.21" delay="+ 40" e_delay="40" platform="28" targetLoc="Z&#252;rich HB" dirnr="8503000" prod="ECE   96#ECE" depStation="M&#252;nchen Hbf Gl.27-36" is_reachable="0" />
+<Journey fpTime="16:20" fpDate="16.04.23" delay="-" platform="11" targetLoc="La Spezia Centrale" dirnr="8300156" prod="NJ 40295#NJ" dir="La Spezia Centrale" is_reachable="0" />
+<Journey fpTime="16:20" fpDate="16.04.23" delay="-" platform="11" targetLoc="Roma Termini" dirnr="8300263" prod="NJ   295#NJ" dir="Roma Termini" is_reachable="0" />
+<Journey fpTime="16:20" fpDate="16.04.23" delay="-" platform="31" targetLoc="Memmingen" dirnr="8000249" prod="RE 78949#RE" dir="Memmingen" is_reachable="0" />
+<Journey fpTime="16:21" fpDate="16.04.23" delay="-" platform="2" targetLoc="Geltendorf" dirnr="8000119" prod="S      4#S" dir="Geltendorf" depStation="M&#252;nchen Hbf (tief)" is_reachable="0" />
+<Journey fpTime="16:23" fpDate="16.04.23" delay="0" e_delay="0" platform="26" targetLoc="Passau Hbf" dirnr="8000298" prod="RE  4078#RE" dir="Passau Hbf" is_reachable="0" />
+<Journey fpTime="16:23" fpDate="16.04.23" delay="-" platform="2" targetLoc="Freising" dirnr="8002078" prod="S      1#S" dir="Freising" depStation="M&#252;nchen Hbf (tief)" is_reachable="0" />
+<Journey fpTime="16:23" fpDate="16.04.23" delay="-" platform="1" targetLoc="Deisenhofen" dirnr="8001404" prod="S      3#S" dir="Deisenhofen" depStation="M&#252;nchen Hbf (tief)" is_reachable="0" />
+<Journey fpTime="16:23" fpDate="16.04.23" delay="-" platform="2" targetLoc="M&#252;nchen Flughafen Terminal" dirnr="8004168" prod="S      1#S" dir="M&#252;nchen Flughafen Terminal" depStation="M&#252;nchen Hbf (tief)" is_reachable="0" />
