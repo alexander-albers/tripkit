@@ -16,21 +16,21 @@ public class HvvProvider: AbstractNetworkProvider {
         let formatter = DateFormatter()
         formatter.timeZone = timeZone
         formatter.dateFormat = "dd.MM.yyyy"
-        formatter.locale = Locale(identifier: "en_US_POSIX")
+        formatter.locale = Locale(identifier: "de_DE")
         return formatter
     }()
     lazy var timeFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.timeZone = timeZone
         formatter.dateFormat = "HH:mm"
-        formatter.locale = Locale(identifier: "en_US_POSIX")
+        formatter.locale = Locale(identifier: "de_DE")
         return formatter
     }()
     lazy var dateTimeFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.timeZone = timeZone
         formatter.dateFormat = "dd.MM.yyyy HH:mm"
-        formatter.locale = Locale(identifier: "en_US_POSIX")
+        formatter.locale = Locale(identifier: "de_DE")
         return formatter
     }()
     lazy var isoDateFormatter: DateFormatter = {
