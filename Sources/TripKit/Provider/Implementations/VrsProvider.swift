@@ -3,7 +3,7 @@ import os.log
 import SwiftyJSON
 
 /// Verkehrsverbund Rhein-Sieg (DE)
-public class VrsProvider: AbstractNetworkProvider {
+public class VrsProvider: AbstractNetworkProvider, QueryJourneyDetailManually, QueryMoreTripsManually {
     
     static let API_BASE = "https://ekap-app.vrs.de/index.php"
     static let API_BASE_INSECURE = "http://android.vrsinfo.de/index.php"
@@ -472,6 +472,10 @@ public class VrsProvider: AbstractNetworkProvider {
         return queryTrips(from: from, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions, ambiguousFrom: nil, ambiguousVia: nil, ambiguousTo: nil, context: nil, completion: completion)
     }
     
+    func queryTrips(from: Location, via: Location?, to: Location, date: Date, departure: Bool, tripOptions: TripOptions, context: QueryTripsContext?, completion: @escaping (HttpRequest, QueryTripsResult) -> Void) -> AsyncRequest {
+        return queryTrips(from: from, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions, ambiguousFrom: nil, ambiguousVia: nil, ambiguousTo: nil, context: context as? Context, completion: completion)
+    }
+    
     private func queryTrips(from: Location, via: Location?, to: Location, date: Date, departure: Bool, tripOptions: TripOptions, ambiguousFrom: [Location]?, ambiguousVia: [Location]?, ambiguousTo: [Location]?, context: Context?, completion: @escaping (HttpRequest, QueryTripsResult) -> Void) -> AsyncRequest {
         let fromString = generateLocation(location: from)
         if fromString == nil, ambiguousFrom == nil {
@@ -764,7 +768,7 @@ public class VrsProvider: AbstractNetworkProvider {
         context.from = from
         context.via = via
         context.to = to
-        context.products = tripOptions.products
+        context.tripOptions = tripOptions
         if trips.count == 1 {
             if departure {
                 context.queryLater = false
@@ -777,11 +781,7 @@ public class VrsProvider: AbstractNetworkProvider {
     }
     
     override public func queryMoreTrips(context: QueryTripsContext, later: Bool, completion: @escaping (HttpRequest, QueryTripsResult) -> Void) -> AsyncRequest {
-        guard let context = context as? Context else {
-            completion(HttpRequest(urlBuilder: UrlBuilder()), .sessionExpired)
-            return AsyncRequest(task: nil)
-        }
-        return queryTrips(from: context.from, via: context.via, to: context.to, date: (later ? context.lastDeparture : context.firstArrival) ?? Date(), departure: later, tripOptions: TripOptions(products: context.products), ambiguousFrom: nil, ambiguousVia: nil, ambiguousTo: nil, context: context, completion: completion)
+        return queryMoreTripsManually(context: context, later: later, completion: completion)
     }
     
     public override func refreshTrip(context: RefreshTripContext, completion: @escaping (HttpRequest, QueryTripsResult) -> Void) -> AsyncRequest {
@@ -813,57 +813,7 @@ public class VrsProvider: AbstractNetworkProvider {
     }
     
     public override func queryJourneyDetail(context: QueryJourneyDetailContext, completion: @escaping (HttpRequest, QueryJourneyDetailResult) -> Void) -> AsyncRequest {
-        guard let context = context as? VrsJourneyContext else {
-            completion(HttpRequest(urlBuilder: UrlBuilder()), .invalidId)
-            return AsyncRequest(task: nil)
-        }
-        return queryTrips(from: context.from, via: nil, to: context.to, date: context.time, departure: true, products: context.product != nil ? [context.product!] : Product.allCases, optimize: nil, walkSpeed: nil, accessibility: nil, options: nil, completion: { (request, result) in
-            switch result {
-            case .success(_, _, _, _, let trips, _):
-                let trip = trips.first(where: { (trip) -> Bool in
-                    guard trip.legs.filter({$0 is PublicLeg}).count == 1 else { return false }
-                    guard let leg = trip.legs.filter({$0 is PublicLeg}).first as? PublicLeg else { return false }
-                    guard leg.departureStop.plannedTime == context.plannedTime || leg.departureStop.predictedTime == context.time else { return false }
-                    guard leg.line == context.line else { return false }
-                    return true
-                })
-                let leg = trip?.legs.first(where: {$0 is PublicLeg})
-                if let trip = trip, let leg = leg as? PublicLeg {
-                    completion(request, .success(trip: trip, leg: leg))
-                } else {
-                    completion(request, .invalidId)
-                }
-            case .ambiguous(_, _, let ambiguousTo):
-                if let destination = ambiguousTo.first {
-                    _ = self.queryTrips(from: context.from, via: nil, to: destination, date: context.time, departure: true, products: context.product != nil ? [context.product!] : Product.allCases, optimize: nil, walkSpeed: nil, accessibility: nil, options: nil, completion: { (request2, result2) in
-                        switch result2 {
-                        case .success(_, _, _, _, let trips, _):
-                            let trip = trips.first(where: { (trip) -> Bool in
-                                guard trip.legs.filter({$0 is PublicLeg}).count == 1 else { return false }
-                                guard let leg = trip.legs.filter({$0 is PublicLeg}).first as? PublicLeg else { return false }
-                                guard leg.departureStop.plannedTime == context.plannedTime || leg.departureStop.predictedTime == context.time else { return false }
-                                guard leg.line == context.line else { return false }
-                                return true
-                            })
-                            let leg = trip?.legs.first(where: {$0 is PublicLeg})
-                            if let trip = trip, let leg = leg as? PublicLeg {
-                                completion(request2, .success(trip: trip, leg: leg))
-                            } else {
-                                completion(request2, .invalidId)
-                            }
-                        default:
-                            completion(request2, .invalidId)
-                        }
-                    })
-                } else {
-                    completion(request, .invalidId)
-                }
-            case .failure(let err):
-                completion(request, .failure(err))
-            default:
-                completion(request, .invalidId)
-            }
-        })
+        return queryJourneyDetailManually(context: context, completion: completion)
     }
     
     override func queryJourneyDetailParsing(request: HttpRequest, context: QueryJourneyDetailContext, completion: @escaping (HttpRequest, QueryJourneyDetailResult) -> Void) throws {
@@ -1120,86 +1070,7 @@ public class VrsProvider: AbstractNetworkProvider {
         return LocationWithPosition(location: location, position: position)
     }
     
-    public class Context: QueryTripsContext {
-        
-        public override class var supportsSecureCoding: Bool { return true }
-        
-        public override var canQueryLater: Bool { return queryLater }
-        public override var canQueryEarlier: Bool { return queryEarlier }
-        
-        var queryLater = true, queryEarlier = true
-        
-        public var lastDeparture: Date?
-        public var firstArrival: Date?
-        public var from: Location!
-        public var via: Location?
-        public var to: Location!
-        public var products: [Product]?
-        
-        public override init() {
-            super.init()
-        }
-        
-        public required init?(coder aDecoder: NSCoder) {
-            guard
-                let from = aDecoder.decodeObject(of: Location.self, forKey: PropertyKey.from),
-                let to = aDecoder.decodeObject(of: Location.self, forKey: PropertyKey.to)
-                else {
-                    return nil
-            }
-            let lastDeparture = aDecoder.decodeObject(of: NSDate.self, forKey: PropertyKey.lastDeparture) as Date?
-            let firstArrival = aDecoder.decodeObject(of: NSDate.self, forKey: PropertyKey.firstArrival) as Date?
-            let via = aDecoder.decodeObject(of: Location.self, forKey: PropertyKey.via)
-            let productsString = aDecoder.decodeObject(of: [NSArray.self, NSString.self], forKey: PropertyKey.products) as? [String]
-            let products = productsString?.compactMap { Product(rawValue: $0) }
-            let queryLater = aDecoder.decodeBool(forKey: PropertyKey.queryLater)
-            let queryEarlier = aDecoder.decodeBool(forKey: PropertyKey.queryEarlier)
-            super.init()
-            self.lastDeparture = lastDeparture
-            self.firstArrival = firstArrival
-            self.from = from
-            self.via = via
-            self.to = to
-            self.products = products
-            self.queryLater = queryLater
-            self.queryEarlier = queryEarlier
-        }
-        
-        public override func encode(with aCoder: NSCoder) {
-            aCoder.encode(lastDeparture, forKey: PropertyKey.lastDeparture)
-            aCoder.encode(firstArrival, forKey: PropertyKey.firstArrival)
-            aCoder.encode(from, forKey: PropertyKey.from)
-            aCoder.encode(via, forKey: PropertyKey.via)
-            aCoder.encode(to, forKey: PropertyKey.to)
-            aCoder.encode(products?.map { $0.rawValue }, forKey: PropertyKey.products)
-        }
-        
-        func departure(date: Date?) {
-            guard let date = date else { return }
-            if lastDeparture == nil || lastDeparture! < date {
-                lastDeparture = date
-            }
-        }
-        
-        func arrival(date: Date?) {
-            guard let date = date else { return }
-            if firstArrival == nil || firstArrival! > date {
-                firstArrival = date
-            }
-        }
-        
-        struct PropertyKey {
-            static let lastDeparture = "lastDeparture"
-            static let firstArrival = "firstArrival"
-            static let from = "from"
-            static let via = "via"
-            static let to = "to"
-            static let products = "products"
-            static let queryLater = "queryLater"
-            static let queryEarlier = "queryEarlier"
-        }
-        
-    }
+    public class Context: QueryMoreTripsManuallyContext {}
     
     struct LocationWithPosition {
         
@@ -1269,64 +1140,4 @@ public class VrsRefreshTripContext: RefreshTripContext {
     }
 }
 
-public class VrsJourneyContext: QueryJourneyDetailContext {
-    
-    public override class var supportsSecureCoding: Bool { return true }
-    
-    let from: Location
-    let to: Location
-    let time: Date
-    let plannedTime: Date
-    let product: Product?
-    let line: Line?
-    
-    init(from: Location, to: Location, time: Date, plannedTime: Date, product: Product?, line: Line?) {
-        self.from = from
-        self.to = to
-        self.time = time
-        self.plannedTime = plannedTime
-        self.product = product
-        self.line = line
-        super.init()
-    }
-    
-    required convenience init?(coder aDecoder: NSCoder) {
-        guard
-            let from = aDecoder.decodeObject(of: Location.self, forKey: PropertyKey.from),
-            let to = aDecoder.decodeObject(of: Location.self, forKey: PropertyKey.to),
-            let time = aDecoder.decodeObject(of: NSDate.self, forKey: PropertyKey.time) as Date?,
-            let plannedTime = aDecoder.decodeObject(of: NSDate.self, forKey: PropertyKey.plannedTime) as Date?
-        else {
-            return nil
-        }
-        let product = Product(rawValue: aDecoder.decodeObject(of: NSString.self, forKey: PropertyKey.product) as String? ?? "")
-        let line = aDecoder.decodeObject(of: Line.self, forKey: PropertyKey.line)
-        
-        self.init(from: from, to: to, time: time, plannedTime: plannedTime, product: product, line: line)
-    }
-    
-    public override func encode(with aCoder: NSCoder) {
-        aCoder.encode(from, forKey: PropertyKey.from)
-        aCoder.encode(to, forKey: PropertyKey.to)
-        aCoder.encode(time, forKey: PropertyKey.time)
-        aCoder.encode(plannedTime, forKey: PropertyKey.plannedTime)
-        if let product = product {
-            aCoder.encode(product.rawValue, forKey: PropertyKey.product)
-        }
-        if let line = line {
-            aCoder.encode(line, forKey: PropertyKey.line)
-        }
-    }
-    
-    struct PropertyKey {
-        
-        static let from = "from"
-        static let to = "to"
-        static let time = "time"
-        static let plannedTime = "plannedTime"
-        static let product = "product"
-        static let line = "line"
-        
-    }
-    
-}
+public class VrsJourneyContext: QueryJourneyDetailManuallyContext {}
