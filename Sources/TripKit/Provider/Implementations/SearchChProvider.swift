@@ -147,7 +147,7 @@ public class SearchChProvider: AbstractNetworkProvider, QueryJourneyDetailManual
             let (plannedPlatform, predictedPlatform) = parsePlatforms(platformString: jsonDep["track"].string)
             
             let journeyContext: QueryJourneyDetailContext?
-            if let destination {
+            if let destination = destination {
                 journeyContext = QueryJourneyDetailManuallyContext(from: location, to: destination, time: predictedTime ?? plannedTime, plannedTime: plannedTime, product: product, line: line)
             } else {
                 journeyContext = nil
