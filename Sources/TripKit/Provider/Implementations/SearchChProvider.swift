@@ -2,7 +2,7 @@ import Foundation
 import SwiftyJSON
 
 /// Search.ch (CH)
-public class SearchChProvider: AbstractNetworkProvider {
+public class SearchChProvider: AbstractNetworkProvider, QueryJourneyDetailManually, QueryMoreTripsManually {
     
     /// Documentation: https://fahrplan.search.ch/api/help
     /// Thanks a lot to @sirtoobii for his work on the public-transport-enabler implementation
@@ -16,21 +16,21 @@ public class SearchChProvider: AbstractNetworkProvider {
         let formatter = DateFormatter()
         formatter.timeZone = timeZone
         formatter.dateFormat = "MM/dd/yyyy"
-        formatter.locale = Locale(identifier: "en_US_POSIX")
+        formatter.locale = Locale(identifier: "de_DE")
         return formatter
     }()
     lazy var timeFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.timeZone = timeZone
         formatter.dateFormat = "HH:mm"
-        formatter.locale = Locale(identifier: "en_US_POSIX")
+        formatter.locale = Locale(identifier: "de_DE")
         return formatter
     }()
     lazy var datetimeFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.timeZone = timeZone
         formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-        formatter.locale = Locale(identifier: "en_US_POSIX")
+        formatter.locale = Locale(identifier: "de_DE")
         return formatter
     }()
     
@@ -71,7 +71,7 @@ public class SearchChProvider: AbstractNetworkProvider {
         }
         
         let urlBuilder = UrlBuilder(path: SearchChProvider.API_BASE + "completion.json", encoding: .utf8)
-        urlBuilder.addParameter(key: "latlon", value: "\(Double(coord.lat) / 1e6)\(Double(coord.lon) / 1e6)")
+        urlBuilder.addParameter(key: "latlon", value: String(format: "%2.6f%2.6f", Double(coord.lat) / 1e6, Double(coord.lon) / 1e6))
         urlBuilder.addParameter(key: "accuracy", value: maxDistance)
         urlBuilder.addParameter(key: "show_ids", value: 1)
         urlBuilder.addParameter(key: "show_coordinates", value: 1)
@@ -140,41 +140,56 @@ public class SearchChProvider: AbstractNetworkProvider {
             let network = jsonDep["operator"].string
             let product = parseProduct(from: jsonDep["*G"].string)
             let label = jsonDep["line"].string
-            let style = try style(from: jsonDep["color"].string)
+            let style = try style(from: jsonDep["color"].string, network: network, product: product, label: label)
             let line = Line(id: id, network: network, product: product, label: label, name: nil, number: nil, vehicleNumber: nil, style: style, attr: nil, message: nil, direction: nil)
             
             let destination = parseLocation(json: jsonDep["terminal"])
             let (plannedPlatform, predictedPlatform) = parsePlatforms(platformString: jsonDep["track"].string)
             
-            if !cancelled {
-                stationDeparture.departures.append(Departure(plannedTime: plannedTime, predictedTime: predictedTime, line: line, position: predictedPlatform, plannedPosition: plannedPlatform, destination: destination, journeyContext: nil, wagonSequenceContext: nil))
+            let journeyContext: QueryJourneyDetailContext?
+            if let destination {
+                journeyContext = QueryJourneyDetailManuallyContext(from: location, to: destination, time: predictedTime ?? plannedTime, plannedTime: plannedTime, product: product, line: line)
+            } else {
+                journeyContext = nil
             }
+            
+            stationDeparture.departures.append(Departure(plannedTime: plannedTime, predictedTime: predictedTime, line: line, position: predictedPlatform, plannedPosition: plannedPlatform, cancelled: cancelled, destination: destination, journeyContext: journeyContext, wagonSequenceContext: nil))
         }
         
         completion(request, .success(departures: [stationDeparture]))
     }
     
+    public override func queryJourneyDetail(context: QueryJourneyDetailContext, completion: @escaping (HttpRequest, QueryJourneyDetailResult) -> Void) -> AsyncRequest {
+        queryJourneyDetailManually(context: context, completion: completion)
+    }
+    
     public override func queryTrips(from: Location, via: Location?, to: Location, date: Date, departure: Bool, tripOptions: TripOptions, completion: @escaping (HttpRequest, QueryTripsResult) -> Void) -> AsyncRequest {
+        return queryTrips(from: from, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions, context: nil, completion: completion)
+    }
+    
+    func queryTrips(from: Location, via: Location?, to: Location, date: Date, departure: Bool, tripOptions: TripOptions, context: QueryTripsContext?, completion: @escaping (HttpRequest, QueryTripsResult) -> Void) -> AsyncRequest {
         let urlBuilder = UrlBuilder(path: SearchChProvider.API_BASE + "route.json", encoding: .utf8)
-        urlBuilder.addParameter(key: "from", value: from.id ?? from.name ?? from.getUniqueLongName())
+        appendLocation(to: urlBuilder, key: "from", location: from)
         if let via = via {
-            urlBuilder.addParameter(key: "via", value: via.id ?? via.name ?? via.getUniqueLongName())
+            appendLocation(to: urlBuilder, key: "via", location: via)
         }
-        urlBuilder.addParameter(key: "to", value: to.id ?? to.name ?? to.getUniqueLongName())
+        appendLocation(to: urlBuilder, key: "to", location: to)
         urlBuilder.addParameter(key: "date", value: dateFormatter.string(from: date))
         urlBuilder.addParameter(key: "time", value: timeFormatter.string(from: date))
         urlBuilder.addParameter(key: "time_type", value: departure ? "depart" : "arrival")
         urlBuilder.addParameter(key: "show_trackchanges", value: 1)
         urlBuilder.addParameter(key: "show_delays", value: 1)
-        urlBuilder.addParameter(key: "num", value: 6)
-        
         
         let httpRequest = HttpRequest(urlBuilder: urlBuilder).setHeaders(languageHeader)
         return makeRequest(httpRequest) {
-            try self.queryTripsParsing(request: httpRequest, from: from, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions, previousContext: nil, later: false, completion: completion)
+            try self.queryTripsParsing(request: httpRequest, from: from, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions, previousContext: context, later: false, completion: completion)
         } errorHandler: { err in
             completion(httpRequest, .failure(err))
         }
+    }
+    
+    override public func queryMoreTrips(context: QueryTripsContext, later: Bool, completion: @escaping (HttpRequest, QueryTripsResult) -> Void) -> AsyncRequest {
+        return queryMoreTripsManually(context: context, later: later, completion: completion)
     }
     
     override func queryTripsParsing(request: HttpRequest, from: Location, via: Location?, to: Location, date: Date, departure: Bool, tripOptions: TripOptions, previousContext: QueryTripsContext?, later: Bool, completion: @escaping (HttpRequest, QueryTripsResult) -> Void) throws {
@@ -186,6 +201,9 @@ public class SearchChProvider: AbstractNetworkProvider {
         }
         
         var trips: [Trip] = []
+        let context = QueryMoreTripsManuallyContext()
+        context.arrival(date: (previousContext as? QueryMoreTripsManuallyContext)?.firstArrival)
+        context.departure(date: (previousContext as? QueryMoreTripsManuallyContext)?.lastDeparture)
         for jsonTrip in json["connections"].arrayValue {
             var legs: [Leg] = []
             let jsonLegs = jsonTrip["legs"].arrayValue
@@ -201,9 +219,16 @@ public class SearchChProvider: AbstractNetworkProvider {
                     throw ParseError(reason: "failed to parse leg from/to")
                 }
                 
+                if index == 0 {
+                    context.departure(date: departure.time)
+                }
+                if index == jsonLegs.count - 2 {
+                    context.arrival(date: arrival.time)
+                }
+                
                 switch jsonLeg["type"].stringValue {
                 case "walk":
-                    legs.append(IndividualLeg(type: .WALK, departureTime: departure.predictedTime ?? departure.plannedTime, departure: departure.location, arrival: arrival.location, arrivalTime: arrival.predictedTime ?? arrival.plannedTime, distance: 0, path: []))
+                    legs.append(IndividualLeg(type: .walk, departureTime: departure.predictedTime ?? departure.plannedTime, departure: departure.location, arrival: arrival.location, arrivalTime: arrival.predictedTime ?? arrival.plannedTime, distance: 0, path: []))
                 default:
                     var intermediateStops: [Stop] = []
                     for jsonStop in jsonLeg["stops"].arrayValue {
@@ -214,9 +239,15 @@ public class SearchChProvider: AbstractNetworkProvider {
                     let network = jsonLeg["operator"].string
                     let product = parseProduct(from: jsonLeg["*G"].string)
                     let label = jsonLeg["line"].string
-                    let bgColor = LineStyle.parseColor(try expandHex(jsonLeg["bgColor"].string ?? "fff"))
-                    let fgColor = LineStyle.parseColor(try expandHex(jsonLeg["fgColor"].string ?? "000"))
-                    let style = LineStyle(shape: .rect, backgroundColor: bgColor, foregroundColor: fgColor)
+                    
+                    let style: LineStyle
+                    if let bgColorString = jsonLeg["bgcolor"].string, let fgColorString = jsonLeg["fgcolor"].string {
+                        let bgColor = LineStyle.parseColor(try expandHex(bgColorString))
+                        let fgColor = LineStyle.parseColor(try expandHex(fgColorString))
+                        style = LineStyle(shape: .rect, backgroundColor: bgColor, foregroundColor: fgColor)
+                    } else {
+                        style = super.lineStyle(network: network, product: product, label: label)
+                    }
                     let line = Line(id: id, network: network, product: product, label: label, name: nil, number: nil, vehicleNumber: nil, style: style, attr: nil, message: nil, direction: nil)
                     
                     let destination: Location?
@@ -227,17 +258,54 @@ public class SearchChProvider: AbstractNetworkProvider {
                         destination = nil
                     }
                     
-                    legs.append(PublicLeg(line: line, destination: destination, departure: departure, arrival: arrival, intermediateStops: intermediateStops, message: nil, path: [], journeyContext: nil, loadFactor: nil))
+                    let journeyContext: QueryJourneyDetailContext?
+                    if let destination {
+                        journeyContext = QueryJourneyDetailManuallyContext(from: departure.location, to: destination, time: departure.time, plannedTime: departure.plannedTime, product: product, line: line)
+                    } else {
+                        journeyContext = nil
+                    }
+                    
+                    var mesages: [String] = []
+                    for infoText in jsonLeg["infotext"].arrayValue {
+                        mesages.append(infoText.stringValue)
+                    }
+                    mesages = mesages.map({ $0.ensurePunctuation })
+                    mesages = mesages.uniqued()
+                    
+                    legs.append(PublicLeg(line: line, destination: destination, departure: departure, arrival: arrival, intermediateStops: intermediateStops, message: mesages.joined(separator: "\n").emptyToNil, path: [], journeyContext: journeyContext, loadFactor: nil))
                 }
             }
             
-            trips.append(Trip(id: "", from: legs.first?.departure ?? from, to: legs.last?.arrival ?? to, legs: legs, fares: [], refreshContext: nil))
+            let duration = TimeInterval(jsonTrip["duration"].intValue)
+            trips.append(Trip(id: "", from: legs.first?.departure ?? from, to: legs.last?.arrival ?? to, legs: legs, duration: duration, fares: [], refreshContext: nil))
         }
         
-        completion(request, .success(context: nil, from: from, via: via, to: to, trips: trips, messages: []))
+        context.from = from
+        context.via = via
+        context.to = to
+        context.tripOptions = tripOptions
+        if trips.count == 1 {
+            if departure {
+                context.queryLater = false
+            } else {
+                context.queryEarlier = false
+            }
+        }
+        
+        completion(request, .success(context: context, from: from, via: via, to: to, trips: trips, messages: []))
     }
     
     // MARK: parse utils
+    
+    private func appendLocation(to urlBuilder: UrlBuilder, key: String, location: Location) {
+        if let id = location.id {
+            urlBuilder.addParameter(key: key, value: id)
+        } else if let coord = location.coord {
+            urlBuilder.addParameter(key: key, value: String(format: "%2.6f,%2.6f", Double(coord.lat) / 1e6, Double(coord.lon) / 1e6))
+        } else {
+            urlBuilder.addParameter(key: key, value: location.getUniqueLongName())
+        }
+    }
     
     private var languageHeader: [String: String] {
         ["Accept-Language": queryLanguage ?? defaultLanguage]
@@ -320,12 +388,19 @@ public class SearchChProvider: AbstractNetworkProvider {
         switch string ?? "" {
         case "IC": return .highSpeedTrain
         case "ICE": return .highSpeedTrain
+        case "ICN": return .highSpeedTrain // Intercity tilting train
         case "IRE": return .regionalTrain
         case "TGV": return .highSpeedTrain
         case "RJX": return .highSpeedTrain // RailJetExpress
+        case "NJ": return .highSpeedTrain // ÖBB NightJet
         case "IR": return .highSpeedTrain
         case "EC": return .highSpeedTrain
         case "RE": return .regionalTrain
+        case "PE": return .regionalTrain // Panorama Express
+        case "BEX": return .regionalTrain // Bernina Express
+        case "GEX": return .regionalTrain // Galcier Express
+        case "CEX": return .regionalTrain // Centovalli Express (operated by SSIF italy)
+        case "CER": return .regionalTrain // Centovalli Regional (operated by SSIF italy)
         case "R": return .regionalTrain
         case "M": return .subway
         case "FUN": return .tram // Funicular railways
@@ -340,12 +415,15 @@ public class SearchChProvider: AbstractNetworkProvider {
         }
     }
     
-    private func style(from color: String?) throws -> LineStyle {
+    private func style(from color: String?, network: String?, product: Product?, label: String?) throws -> LineStyle {
         guard let colors = color?.components(separatedBy: "~"), colors.count >= 2 else {
-            return super.lineStyle(network: nil, product: nil, label: nil)
+            return super.lineStyle(network: network, product: product, label: label)
         }
-        let fgColor = colors[0].isEmpty ? LineStyle.black : LineStyle.parseColor(try expandHex(colors[0]))
-        let bgColor = colors[1].isEmpty ? LineStyle.white : LineStyle.parseColor(try expandHex(colors[1]))
+        if colors[0].isEmpty || colors[1].isEmpty {
+            return super.lineStyle(network: network, product: product, label: label)
+        }
+        let bgColor = LineStyle.parseColor(try expandHex(colors[0]))
+        let fgColor = LineStyle.parseColor(try expandHex(colors[1]))
         return LineStyle(shape: .rect, backgroundColor: bgColor, foregroundColor: fgColor)
     }
             

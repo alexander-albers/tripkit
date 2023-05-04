@@ -451,6 +451,14 @@
 		FA8FE64C22741E11003CE4B4 /* secrets.json in Resources */ = {isa = PBXBuildFile; fileRef = FA7058572271B3D80070D2C9 /* secrets.json */; };
 		FA8FE64D22741E11003CE4B4 /* secrets.json in Resources */ = {isa = PBXBuildFile; fileRef = FA7058572271B3D80070D2C9 /* secrets.json */; };
 		FA9172B0217A767100535768 /* VosProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9172AF217A767100535768 /* VosProvider.swift */; };
+		FA9567A02A04011000D84C69 /* QueryJourneyDetailManually.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA95679F2A04011000D84C69 /* QueryJourneyDetailManually.swift */; };
+		FA9567A12A04011000D84C69 /* QueryJourneyDetailManually.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA95679F2A04011000D84C69 /* QueryJourneyDetailManually.swift */; };
+		FA9567A22A04011000D84C69 /* QueryJourneyDetailManually.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA95679F2A04011000D84C69 /* QueryJourneyDetailManually.swift */; };
+		FA9567A32A04011000D84C69 /* QueryJourneyDetailManually.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA95679F2A04011000D84C69 /* QueryJourneyDetailManually.swift */; };
+		FA9567A52A0405AC00D84C69 /* QueryMoreTripsManually.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9567A42A0405AC00D84C69 /* QueryMoreTripsManually.swift */; };
+		FA9567A62A0405AC00D84C69 /* QueryMoreTripsManually.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9567A42A0405AC00D84C69 /* QueryMoreTripsManually.swift */; };
+		FA9567A72A0405AC00D84C69 /* QueryMoreTripsManually.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9567A42A0405AC00D84C69 /* QueryMoreTripsManually.swift */; };
+		FA9567A82A0405AC00D84C69 /* QueryMoreTripsManually.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9567A42A0405AC00D84C69 /* QueryMoreTripsManually.swift */; };
 		FA9D377B2266476100CED39F /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9D377A2266476000CED39F /* Logging.swift */; };
 		FA9D377C2266476100CED39F /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9D377A2266476000CED39F /* Logging.swift */; };
 		FAA0A297213705030098EFED /* MockKvvProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA0A296213705030098EFED /* MockKvvProvider.swift */; };
@@ -686,6 +694,9 @@
 		FAD1D51D274E1CEB009FFA52 /* StopEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD1D51B274E1CEB009FFA52 /* StopEvent.swift */; };
 		FAD1D51E274E1CEB009FFA52 /* StopEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD1D51B274E1CEB009FFA52 /* StopEvent.swift */; };
 		FAD1D51F274E1CEB009FFA52 /* StopEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD1D51B274E1CEB009FFA52 /* StopEvent.swift */; };
+		FAE2E3B92A041365002280BA /* SearchChProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE2E3B82A041365002280BA /* SearchChProviderTests.swift */; };
+		FAE2E3BA2A041365002280BA /* SearchChProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE2E3B82A041365002280BA /* SearchChProviderTests.swift */; };
+		FAE2E3BB2A041365002280BA /* SearchChProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE2E3B82A041365002280BA /* SearchChProviderTests.swift */; };
 		FAE6E6C426E6AB6A007E975A /* TripKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FACB83C31E3FD0CE00AC5F1F /* TripKit.framework */; };
 		FAE6E6EE26E6AC87007E975A /* TripKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA5CD1FB24FBB1D200B4990A /* TripKit.framework */; };
 		FAE6E6FC26E6AC95007E975A /* TripKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA5CD1D324FBB10C00B4990A /* TripKit.framework */; };
@@ -1056,6 +1067,8 @@
 		FA8B587C278A1099006CB35A /* NrwProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NrwProviderTests.swift; sourceTree = "<group>"; };
 		FA8F313C1E85A41C00E6CE9B /* LineStyleTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineStyleTests.swift; sourceTree = "<group>"; };
 		FA9172AF217A767100535768 /* VosProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VosProvider.swift; sourceTree = "<group>"; };
+		FA95679F2A04011000D84C69 /* QueryJourneyDetailManually.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryJourneyDetailManually.swift; sourceTree = "<group>"; };
+		FA9567A42A0405AC00D84C69 /* QueryMoreTripsManually.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryMoreTripsManually.swift; sourceTree = "<group>"; };
 		FA9D377A2266476000CED39F /* Logging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
 		FAA0A296213705030098EFED /* MockKvvProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockKvvProvider.swift; sourceTree = "<group>"; };
 		FAA5693D1E740A70006EB901 /* InfoText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoText.swift; sourceTree = "<group>"; };
@@ -1162,6 +1175,7 @@
 		FACFBBC71F850EE600679CD4 /* AvvAachenProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvvAachenProvider.swift; sourceTree = "<group>"; };
 		FAD1D51B274E1CEB009FFA52 /* StopEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopEvent.swift; sourceTree = "<group>"; };
 		FAD8E0CC2287197A00C0036C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		FAE2E3B82A041365002280BA /* SearchChProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchChProviderTests.swift; sourceTree = "<group>"; };
 		FAE6E6C026E6AB6A007E975A /* StaticTripKitTests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "StaticTripKitTests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAE6E6EA26E6AC87007E975A /* StaticTripKitTests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "StaticTripKitTests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAE6E6F826E6AC95007E975A /* StaticTripKitTests tvOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "StaticTripKitTests tvOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1333,6 +1347,7 @@
 				FAC5902F26E7508700E8EAF3 /* OoevvProviderTests.swift */,
 				FAC5902A26E7508600E8EAF3 /* RmvProviderTests.swift */,
 				FAC5902B26E7508600E8EAF3 /* RtProviderTests.swift */,
+				FAE2E3B82A041365002280BA /* SearchChProviderTests.swift */,
 				FAC5902D26E7508600E8EAF3 /* ShProviderTests.swift */,
 				FA48B0392787572B00186DBD /* StaProviderTests.swift */,
 				FAC5903326E7508800E8EAF3 /* StvProviderTests.swift */,
@@ -1635,6 +1650,8 @@
 				FA4C7F3226EB44BD00BFD671 /* IdentityUtils.swift */,
 				FAB18AED276DE1F800AF9983 /* HTMLTagParser.swift */,
 				FA24DD6A27C8C82500321599 /* HTMLEntityDecoder.swift */,
+				FA95679F2A04011000D84C69 /* QueryJourneyDetailManually.swift */,
+				FA9567A42A0405AC00D84C69 /* QueryMoreTripsManually.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -2308,6 +2325,8 @@
 				FA5CD25A24FBB29000B4990A /* IvbProvider.swift in Sources */,
 				FA5CD23924FBB29000B4990A /* InvgProvider.swift in Sources */,
 				FA5CD2A124FBB29C00B4990A /* Departure.swift in Sources */,
+				FA9567A22A04011000D84C69 /* QueryJourneyDetailManually.swift in Sources */,
+				FA9567A72A0405AC00D84C69 /* QueryMoreTripsManually.swift in Sources */,
 				FA0B56F427883061003E5A65 /* VvtProvider.swift in Sources */,
 				FA5CD2A924FBB29D00B4990A /* Product.swift in Sources */,
 				FAC2130327C0E36000D44B30 /* SearchChProvider.swift in Sources */,
@@ -2415,6 +2434,8 @@
 				FA5CD28F24FBB29000B4990A /* IvbProvider.swift in Sources */,
 				FA5CD26E24FBB29000B4990A /* InvgProvider.swift in Sources */,
 				FA5CD2B124FBB29D00B4990A /* Departure.swift in Sources */,
+				FA9567A32A04011000D84C69 /* QueryJourneyDetailManually.swift in Sources */,
+				FA9567A82A0405AC00D84C69 /* QueryMoreTripsManually.swift in Sources */,
 				FA0B56F527883061003E5A65 /* VvtProvider.swift in Sources */,
 				FA5CD2B924FBB29D00B4990A /* Product.swift in Sources */,
 				FAC2130427C0E36000D44B30 /* SearchChProvider.swift in Sources */,
@@ -2646,6 +2667,8 @@
 				FAB754321E3FD3E500C343F2 /* Stop.swift in Sources */,
 				FAA569441E7415DC006EB901 /* Fare.swift in Sources */,
 				FA0B56F227883061003E5A65 /* VvtProvider.swift in Sources */,
+				FA9567A02A04011000D84C69 /* QueryJourneyDetailManually.swift in Sources */,
+				FA9567A52A0405AC00D84C69 /* QueryMoreTripsManually.swift in Sources */,
 				FA780E301E90019E004E2281 /* NvbwProvider.swift in Sources */,
 				FA7058512271B01C0070D2C9 /* AuthorizationData.swift in Sources */,
 				FAC2130127C0E36000D44B30 /* SearchChProvider.swift in Sources */,
@@ -2778,6 +2801,7 @@
 				FAC5909126E7509800E8EAF3 /* VrrProviderTests.swift in Sources */,
 				FAE6E70626E6ACBF007E975A /* TripKitTestCase.swift in Sources */,
 				FAC5908826E7509700E8EAF3 /* VvsProviderTests.swift in Sources */,
+				FAE2E3B92A041365002280BA /* SearchChProviderTests.swift in Sources */,
 				FAC5903B26E7508900E8EAF3 /* RmvProviderTests.swift in Sources */,
 				FAC5901026E7507E00E8EAF3 /* AvvAachenProviderTests.swift in Sources */,
 				FAC5901C26E7507E00E8EAF3 /* BayernProviderTests.swift in Sources */,
@@ -2840,6 +2864,7 @@
 				FAC5909326E7509800E8EAF3 /* VrrProviderTests.swift in Sources */,
 				FAE6E70F26E6ACC2007E975A /* LineStyleTests.swift in Sources */,
 				FAC5908A26E7509800E8EAF3 /* VvsProviderTests.swift in Sources */,
+				FAE2E3BB2A041365002280BA /* SearchChProviderTests.swift in Sources */,
 				FAC5903D26E7508900E8EAF3 /* RmvProviderTests.swift in Sources */,
 				FAC5901226E7507E00E8EAF3 /* AvvAachenProviderTests.swift in Sources */,
 				FAC5901E26E7507E00E8EAF3 /* BayernProviderTests.swift in Sources */,
@@ -2902,6 +2927,7 @@
 				FAC5909226E7509800E8EAF3 /* VrrProviderTests.swift in Sources */,
 				FAE6E70B26E6ACC1007E975A /* LineStyleTests.swift in Sources */,
 				FAC5908926E7509700E8EAF3 /* VvsProviderTests.swift in Sources */,
+				FAE2E3BA2A041365002280BA /* SearchChProviderTests.swift in Sources */,
 				FAC5903C26E7508900E8EAF3 /* RmvProviderTests.swift in Sources */,
 				FAC5901126E7507E00E8EAF3 /* AvvAachenProviderTests.swift in Sources */,
 				FAC5901D26E7507E00E8EAF3 /* BayernProviderTests.swift in Sources */,
@@ -3025,6 +3051,8 @@
 				FAFF189D1FA50B9500A8ED69 /* Fare.swift in Sources */,
 				FAFF189E1FA50B9500A8ED69 /* NvbwProvider.swift in Sources */,
 				FA0B56F327883061003E5A65 /* VvtProvider.swift in Sources */,
+				FA9567A12A04011000D84C69 /* QueryJourneyDetailManually.swift in Sources */,
+				FA9567A62A0405AC00D84C69 /* QueryMoreTripsManually.swift in Sources */,
 				FAFF189F1FA50B9500A8ED69 /* IvbProvider.swift in Sources */,
 				FA7058522271B01C0070D2C9 /* AuthorizationData.swift in Sources */,
 				FAC2130227C0E36000D44B30 /* SearchChProvider.swift in Sources */,
