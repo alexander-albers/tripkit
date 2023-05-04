@@ -259,7 +259,7 @@ public class SearchChProvider: AbstractNetworkProvider, QueryJourneyDetailManual
                     }
                     
                     let journeyContext: QueryJourneyDetailContext?
-                    if let destination {
+                    if let destination = destination {
                         journeyContext = QueryJourneyDetailManuallyContext(from: departure.location, to: destination, time: departure.time, plannedTime: departure.plannedTime, product: product, line: line)
                     } else {
                         journeyContext = nil
