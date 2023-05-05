@@ -179,6 +179,7 @@ public class SearchChProvider: AbstractNetworkProvider, QueryJourneyDetailManual
         urlBuilder.addParameter(key: "time_type", value: departure ? "depart" : "arrival")
         urlBuilder.addParameter(key: "show_trackchanges", value: 1)
         urlBuilder.addParameter(key: "show_delays", value: 1)
+        appendTransportationTypes(to: urlBuilder, products: tripOptions.products)
         
         let httpRequest = HttpRequest(urlBuilder: urlBuilder).setHeaders(languageHeader)
         return makeRequest(httpRequest) {
@@ -305,6 +306,26 @@ public class SearchChProvider: AbstractNetworkProvider, QueryJourneyDetailManual
         } else {
             urlBuilder.addParameter(key: key, value: location.getUniqueLongName())
         }
+    }
+    
+    private func appendTransportationTypes(to urlBuilder: UrlBuilder, products: [Product]?) {
+        guard let products = products, !products.isEmpty else { return }
+        var transportationTypes = Set<String>()
+        for product in products {
+            switch product {
+            case .highSpeedTrain, .regionalTrain, .suburbanTrain:
+                transportationTypes.insert("train")
+            case .tram, .subway:
+                transportationTypes.insert("tram")
+            case .bus, .onDemand:
+                transportationTypes.insert("bus")
+            case .ferry:
+                transportationTypes.insert("ship")
+            case .cablecar:
+                transportationTypes.insert("cableway")
+            }
+        }
+        urlBuilder.addParameter(key: "transportation_types", value: transportationTypes.joined(separator: ","))
     }
     
     private var languageHeader: [String: String] {
