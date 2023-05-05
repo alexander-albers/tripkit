@@ -70,7 +70,7 @@ extension NetworkProvider where Self: QueryJourneyDetailManually {
             return AsyncRequest(task: nil)
         }
         let task = AsyncRequest(task: nil)
-        task.task = queryTrips(from: context.from, via: nil, to: context.to, date: context.time, departure: true, tripOptions: TripOptions(products: context.product != nil ? [context.product!] : Product.allCases, optimize: nil, walkSpeed: nil, accessibility: nil, options: nil, maxChanges: nil, minChangeTime: nil, maxFootpathTime: nil, maxFootpathDist: nil, tariffProfile: nil), completion: { (request, result) in
+        task.task = queryTrips(from: context.from, via: nil, to: context.to, date: context.plannedTime, departure: true, tripOptions: TripOptions(products: context.product != nil ? [context.product!] : Product.allCases, optimize: nil, walkSpeed: nil, accessibility: nil, options: nil, maxChanges: nil, minChangeTime: nil, maxFootpathTime: nil, maxFootpathDist: nil, tariffProfile: nil), completion: { (request, result) in
             switch result {
             case .success(_, _, _, _, let trips, _):
                 let trip = trips.first(where: { (trip) -> Bool in
@@ -88,7 +88,7 @@ extension NetworkProvider where Self: QueryJourneyDetailManually {
                 }
             case .ambiguous(_, _, let ambiguousTo):
                 if let destination = ambiguousTo.first {
-                    task.task = self.queryTrips(from: context.from, via: nil, to: destination, date: context.time, departure: true, tripOptions: TripOptions(products: context.product != nil ? [context.product!] : Product.allCases, optimize: nil, walkSpeed: nil, accessibility: nil, options: nil, maxChanges: nil, minChangeTime: nil, maxFootpathTime: nil, maxFootpathDist: nil, tariffProfile: nil), completion: { (request2, result2) in
+                    task.task = self.queryTrips(from: context.from, via: nil, to: destination, date: context.plannedTime, departure: true, tripOptions: TripOptions(products: context.product != nil ? [context.product!] : Product.allCases, optimize: nil, walkSpeed: nil, accessibility: nil, options: nil, maxChanges: nil, minChangeTime: nil, maxFootpathTime: nil, maxFootpathDist: nil, tariffProfile: nil), completion: { (request2, result2) in
                         switch result2 {
                         case .success(_, _, _, _, let trips, _):
                             let trip = trips.first(where: { (trip) -> Bool in
