@@ -369,7 +369,7 @@ public class SearchChProvider: AbstractNetworkProvider, QueryJourneyDetailManual
             return (nil, nil)
         }
         if let m = stationName.match(pattern: P_SPLIT_NAME_FIRST_COMMA) {
-            return (m[0], m[1])
+            return (m[0], m[1]?.capitalized)
         }
         return (nil, stationName)
     }
