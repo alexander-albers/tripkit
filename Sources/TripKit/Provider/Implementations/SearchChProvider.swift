@@ -241,13 +241,11 @@ public class SearchChProvider: AbstractNetworkProvider, QueryJourneyDetailManual
                     let product = parseProduct(from: jsonLeg["*G"].string)
                     let label = jsonLeg["line"].string
                     
-                    let style: LineStyle
+                    var style = super.lineStyle(network: network, product: product, label: label)
                     if let bgColorString = jsonLeg["bgcolor"].string, let fgColorString = jsonLeg["fgcolor"].string {
                         let bgColor = LineStyle.parseColor(try expandHex(bgColorString))
                         let fgColor = LineStyle.parseColor(try expandHex(fgColorString))
-                        style = LineStyle(shape: .rect, backgroundColor: bgColor, foregroundColor: fgColor)
-                    } else {
-                        style = super.lineStyle(network: network, product: product, label: label)
+                        style = LineStyle(shape: style.shape, backgroundColor: bgColor, foregroundColor: fgColor)
                     }
                     let line = Line(id: id, network: network, product: product, label: label, name: nil, number: nil, vehicleNumber: nil, style: style, attr: nil, message: nil, direction: nil)
                     
