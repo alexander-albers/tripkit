@@ -229,7 +229,13 @@ public class SearchChProvider: AbstractNetworkProvider, QueryJourneyDetailManual
                 
                 switch jsonLeg["type"].stringValue {
                 case "walk":
-                    legs.append(IndividualLeg(type: .walk, departureTime: departure.predictedTime ?? departure.plannedTime, departure: departure.location, arrival: arrival.location, arrivalTime: arrival.predictedTime ?? arrival.plannedTime, distance: 0, path: []))
+                    let individualDuration = arrival.time.timeIntervalSince(departure.time)
+                    var departureTime = departure.time
+                    // if the previous leg was a public leg, adjust the departure time to be right after the public leg arrival time
+                    if let leg = legs.last as? PublicLeg {
+                        departureTime = leg.arrivalTime
+                    }
+                    legs.append(IndividualLeg(type: .walk, departureTime: departureTime, departure: departure.location, arrival: arrival.location, arrivalTime: departureTime.addingTimeInterval(individualDuration), distance: 0, path: []))
                 default:
                     var intermediateStops: [Stop] = []
                     for jsonStop in jsonLeg["stops"].arrayValue {
@@ -270,6 +276,13 @@ public class SearchChProvider: AbstractNetworkProvider, QueryJourneyDetailManual
                     }
                     mesages = mesages.map({ $0.ensurePunctuation })
                     mesages = mesages.uniqued()
+                    
+                    // if the previous leg was an individual leg, we adjust it such that it ends when this leg departs
+                    if let leg = legs.last as? IndividualLeg {
+                        legs.removeLast()
+                        let individualDuration = leg.arrivalTime.timeIntervalSince(leg.departureTime)
+                        legs.append(IndividualLeg(type: leg.type, departureTime: departure.time.addingTimeInterval(-individualDuration), departure: leg.departure, arrival: leg.arrival, arrivalTime: departure.time, distance: leg.distance, path: leg.path))
+                    }
                     
                     legs.append(PublicLeg(line: line, destination: destination, departure: departure, arrival: arrival, intermediateStops: intermediateStops, message: mesages.joined(separator: "\n").emptyToNil, path: [], journeyContext: journeyContext, loadFactor: nil))
                 }
