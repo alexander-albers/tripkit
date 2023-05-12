@@ -38,8 +38,10 @@ public class UrlBuilder: CustomStringConvertible {
     }
     
     public func setParameter(key: String, value: Any?) {
-        if var item = queryItems.first(where: {$0.key == key}) {
+        if let index = queryItems.firstIndex(where: {$0.key == key}) {
+            var item = queryItems.remove(at: index)
             item.value = value == nil ? nil : String(describing: value!)
+            queryItems.append(item)
         } else {
             queryItems.append(QueryItem(key: key, value: value == nil ? nil : String(describing: value!)))
         }
