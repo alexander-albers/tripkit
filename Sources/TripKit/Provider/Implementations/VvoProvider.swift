@@ -40,4 +40,19 @@ public class VvoProvider: AbstractEfaWebProvider {
         return super.parseLine(id: id, network: network, mot: mot, symbol: symbol, name: name, longName: longName, trainType: trainType, trainNum: trainNum, trainName: trainName)
     }
     
+    override func _queryTripsParsing(request: HttpRequest, from: Location?, via: Location?, to: Location?, date: Date, departure: Bool, tripOptions: TripOptions, previousContext: QueryTripsContext?, later: Bool, completion: @escaping (HttpRequest, QueryTripsResult) -> Void) throws {
+        // Workaround for invalid xml encoding
+        // Specifically, the following line in the xml response is invalid
+        // <value>Teilnetz voe Tarifzonen�bergangsfehler, von ddb 90D60  voe 7500 nach ddb 90D60  voe 7950 (Fehler 172)</value>
+        
+        guard let data = request.responseData else {
+            try super._queryTripsParsing(request: request, from: from, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions, previousContext: previousContext, later: later, completion: completion)
+            return
+        }
+        
+        let string = String(decoding: data, as: UTF8.self) // lossy conversion, replacing invalid characters with �
+        request.responseData = string.data(using: .utf8) ?? data
+        try super._queryTripsParsing(request: request, from: from, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions, previousContext: previousContext, later: later, completion: completion)
+    }
+    
 }
