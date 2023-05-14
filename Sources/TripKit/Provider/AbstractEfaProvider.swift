@@ -186,33 +186,35 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
             
             for product in products {
                 switch product {
-                case .highSpeedTrain, .regionalTrain:
+                case .highSpeedTrain:
                     builder.addParameter(key: "inclMOT_0", value: "on")
-                    break
+                    builder.addParameter(key: "inclMOT_14", value: "on")
+                    builder.addParameter(key: "inclMOT_15", value: "on")
+                    builder.addParameter(key: "inclMOT_16", value: "on")
+                case .regionalTrain:
+                    builder.addParameter(key: "inclMOT_0", value: "on")
+                    builder.addParameter(key: "inclMOT_11", value: "on")
+                    builder.addParameter(key: "inclMOT_13", value: "on")
+                    builder.addParameter(key: "inclMOT_18", value: "on")
                 case .suburbanTrain:
                     builder.addParameter(key: "inclMOT_1", value: "on")
-                    break
                 case .subway:
                     builder.addParameter(key: "inclMOT_2", value: "on")
-                    break
                 case .tram:
                     builder.addParameter(key: "inclMOT_3", value: "on")
                     builder.addParameter(key: "inclMOT_4", value: "on")
-                    break
                 case .bus:
                     builder.addParameter(key: "inclMOT_5", value: "on")
                     builder.addParameter(key: "inclMOT_6", value: "on")
                     builder.addParameter(key: "inclMOT_7", value: "on")
-                    break
-                case .onDemand:
-                    builder.addParameter(key: "inclMOT_10", value: "on")
-                    break
-                case .ferry:
-                    builder.addParameter(key: "inclMOT_9", value: "on")
-                    break
+                    builder.addParameter(key: "inclMOT_17", value: "on")
+                    builder.addParameter(key: "inclMOT_19", value: "on")
                 case .cablecar:
                     builder.addParameter(key: "inclMOT_8", value: "on")
-                    break
+                case .ferry:
+                    builder.addParameter(key: "inclMOT_9", value: "on")
+                case .onDemand:
+                    builder.addParameter(key: "inclMOT_10", value: "on")
                 }
             }
             if useLineRestriction && products.contains(.regionalTrain) && !products.contains(.highSpeedTrain) {
