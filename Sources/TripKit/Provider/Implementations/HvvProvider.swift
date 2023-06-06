@@ -102,9 +102,7 @@ public class HvvProvider: AbstractNetworkProvider {
             "language": queryLanguage ?? defaultLanguage,
             "theName": ["name": constraint]
         ]
-        if maxLocations > 0 {
-            dict["maxList"] = maxLocations
-        }
+        dict["maxList"] = maxLocations > 0 ? maxLocations : 20
         let request = encodeJson(dict: dict, requestUrlEncoding: .utf8)
         let urlBuilder = UrlBuilder(path: HvvProvider.API_BASE + "checkName", encoding: .utf8)
         
@@ -142,9 +140,7 @@ public class HvvProvider: AbstractNetworkProvider {
             "language": queryLanguage ?? defaultLanguage,
             "theName": name
         ]
-        if maxLocations > 0 {
-            dict["maxList"] = maxLocations
-        }
+        dict["maxList"] = maxLocations > 0 ? maxLocations : 20
         if maxDistance > 0 {
             dict["maxDistance"] = maxDistance
         }
@@ -178,9 +174,7 @@ public class HvvProvider: AbstractNetworkProvider {
             "allStationsInChangingNode": equivs,
             "maxTimeOffset": 720 // maximum 12 hours in advance
         ]
-        if maxDepartures > 0 {
-            dict["maxList"] = maxDepartures
-        }
+        dict["maxList"] = maxDepartures > 0 ? maxDepartures : 20
         if let time = time {
             dict["time"] = jsonDate(date: time)
         }
