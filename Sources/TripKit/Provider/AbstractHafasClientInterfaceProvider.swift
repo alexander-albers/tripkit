@@ -1111,7 +1111,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
             let id = prod["prodCtx", "lineId"].string
 
             var vehicleNumber = prod["prodCtx", "num"].string
-            if number != nil && vehicleNumber == number {
+            if number != nil && vehicleNumber == nameS {
                 vehicleNumber = nil
             }
 
