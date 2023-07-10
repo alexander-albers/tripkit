@@ -718,14 +718,6 @@
 		FAF1FC7A29E478CC003996AE /* NetworkProviderExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF1FC7829E478CC003996AE /* NetworkProviderExtensionTests.swift */; };
 		FAF1FC7B29E478CC003996AE /* NetworkProviderExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF1FC7829E478CC003996AE /* NetworkProviderExtensionTests.swift */; };
 		FAF2B36E21BFF80C006439C5 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAF2B36D21BFF80C006439C5 /* Security.framework */; };
-		FAF7EC7E2A3CB624002AE95B /* QueryVehiclePositionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF7EC7D2A3CB624002AE95B /* QueryVehiclePositionResult.swift */; };
-		FAF7EC7F2A3CB624002AE95B /* QueryVehiclePositionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF7EC7D2A3CB624002AE95B /* QueryVehiclePositionResult.swift */; };
-		FAF7EC802A3CB624002AE95B /* QueryVehiclePositionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF7EC7D2A3CB624002AE95B /* QueryVehiclePositionResult.swift */; };
-		FAF7EC812A3CB624002AE95B /* QueryVehiclePositionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF7EC7D2A3CB624002AE95B /* QueryVehiclePositionResult.swift */; };
-		FAF7EC832A3CB691002AE95B /* VehiclePosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF7EC822A3CB691002AE95B /* VehiclePosition.swift */; };
-		FAF7EC842A3CB691002AE95B /* VehiclePosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF7EC822A3CB691002AE95B /* VehiclePosition.swift */; };
-		FAF7EC852A3CB691002AE95B /* VehiclePosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF7EC822A3CB691002AE95B /* VehiclePosition.swift */; };
-		FAF7EC862A3CB691002AE95B /* VehiclePosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF7EC822A3CB691002AE95B /* VehiclePosition.swift */; };
 		FAF9955B200E3E1D008D8582 /* QueryJourneyDetailResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF9955A200E3E1D008D8582 /* QueryJourneyDetailResult.swift */; };
 		FAF99563200E4532008D8582 /* QueryJourneyDetailResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF9955A200E3E1D008D8582 /* QueryJourneyDetailResult.swift */; };
 		FAFD552B2785847400D6F149 /* VmobilProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFD552A2785847400D6F149 /* VmobilProvider.swift */; };
@@ -1193,8 +1185,6 @@
 		FAF1FC7329E471EC003996AE /* NetworkProvider+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NetworkProvider+Extensions.swift"; sourceTree = "<group>"; };
 		FAF1FC7829E478CC003996AE /* NetworkProviderExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProviderExtensionTests.swift; sourceTree = "<group>"; };
 		FAF2B36D21BFF80C006439C5 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		FAF7EC7D2A3CB624002AE95B /* QueryVehiclePositionResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryVehiclePositionResult.swift; sourceTree = "<group>"; };
-		FAF7EC822A3CB691002AE95B /* VehiclePosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehiclePosition.swift; sourceTree = "<group>"; };
 		FAF9955A200E3E1D008D8582 /* QueryJourneyDetailResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryJourneyDetailResult.swift; sourceTree = "<group>"; };
 		FAFD552A2785847400D6F149 /* VmobilProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VmobilProvider.swift; sourceTree = "<group>"; };
 		FAFD552F2785862900D6F149 /* VmobilProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VmobilProviderTests.swift; sourceTree = "<group>"; };
@@ -1461,7 +1451,6 @@
 				FAB754201E3FD3E500C343F2 /* QueryTripsResult.swift */,
 				FAB7541F1E3FD3E500C343F2 /* QueryDeparturesResult.swift */,
 				FAF9955A200E3E1D008D8582 /* QueryJourneyDetailResult.swift */,
-				FAF7EC7D2A3CB624002AE95B /* QueryVehiclePositionResult.swift */,
 			);
 			path = Result;
 			sourceTree = "<group>";
@@ -1505,7 +1494,6 @@
 				FAB754261E3FD3E500C343F2 /* Trip.swift */,
 				FAA569431E7415DC006EB901 /* Fare.swift */,
 				FA4B90AE274C191C00C070C2 /* LoadFactor.swift */,
-				FAF7EC822A3CB691002AE95B /* VehiclePosition.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -2347,7 +2335,6 @@
 				FA5CD25624FBB29000B4990A /* OebbProvider.swift in Sources */,
 				FA5CD29724FBB29800B4990A /* QueryJourneyDetailResult.swift in Sources */,
 				FA5CD22A24FBB29000B4990A /* AbstractNetworkProvider.swift in Sources */,
-				FAF7EC802A3CB624002AE95B /* QueryVehiclePositionResult.swift in Sources */,
 				FA5CD22F24FBB29000B4990A /* DbProvider.swift in Sources */,
 				FAB15DC12798647C00E6A4CB /* NaldoProvider.swift in Sources */,
 				FA5CD2C324FBB2A900B4990A /* AuthorizationData.swift in Sources */,
@@ -2372,7 +2359,6 @@
 				FA5CD24424FBB29000B4990A /* VsnProvider.swift in Sources */,
 				FA5CD29624FBB29800B4990A /* QueryDeparturesResult.swift in Sources */,
 				FA5CD29D24FBB29C00B4990A /* StationDepartures.swift in Sources */,
-				FAF7EC852A3CB691002AE95B /* VehiclePosition.swift in Sources */,
 				FA5CD2A324FBB29C00B4990A /* Leg.swift in Sources */,
 				FAB18AF0276DE1F800AF9983 /* HTMLTagParser.swift in Sources */,
 				FA5CD2C624FBB2A900B4990A /* TripKit.swift in Sources */,
@@ -2458,7 +2444,6 @@
 				FA5CD28B24FBB29000B4990A /* OebbProvider.swift in Sources */,
 				FA5CD29C24FBB29900B4990A /* QueryJourneyDetailResult.swift in Sources */,
 				FA5CD25F24FBB29000B4990A /* AbstractNetworkProvider.swift in Sources */,
-				FAF7EC812A3CB624002AE95B /* QueryVehiclePositionResult.swift in Sources */,
 				FA5CD26424FBB29000B4990A /* DbProvider.swift in Sources */,
 				FAB15DC22798647C00E6A4CB /* NaldoProvider.swift in Sources */,
 				FA5CD2D024FBB2AA00B4990A /* AuthorizationData.swift in Sources */,
@@ -2483,7 +2468,6 @@
 				FA5CD27924FBB29000B4990A /* VsnProvider.swift in Sources */,
 				FA5CD29B24FBB29900B4990A /* QueryDeparturesResult.swift in Sources */,
 				FA5CD2AD24FBB29D00B4990A /* StationDepartures.swift in Sources */,
-				FAF7EC862A3CB691002AE95B /* VehiclePosition.swift in Sources */,
 				FA5CD2B324FBB29D00B4990A /* Leg.swift in Sources */,
 				FAB18AF1276DE1F800AF9983 /* HTMLTagParser.swift in Sources */,
 				FA5CD2D324FBB2AA00B4990A /* TripKit.swift in Sources */,
@@ -2693,7 +2677,6 @@
 				FA780E321E900720004E2281 /* VvvProvider.swift in Sources */,
 				FA4371341F63052700F53B82 /* StvProvider.swift in Sources */,
 				FA87BA3B20B5B476004F1199 /* OoevvProvider.swift in Sources */,
-				FAF7EC7E2A3CB624002AE95B /* QueryVehiclePositionResult.swift in Sources */,
 				FABFCC181E8FBB0000905D5E /* VrrProvider.swift in Sources */,
 				FAB15DBF2798647C00E6A4CB /* NaldoProvider.swift in Sources */,
 				FAB7542B1E3FD3E500C343F2 /* NearbyLocationsResult.swift in Sources */,
@@ -2718,7 +2701,6 @@
 				FAF9955B200E3E1D008D8582 /* QueryJourneyDetailResult.swift in Sources */,
 				FAB754361E3FD3E500C343F2 /* Trip.swift in Sources */,
 				FA6015D41E8C1C1C0069B224 /* BsvagProvider.swift in Sources */,
-				FAF7EC832A3CB691002AE95B /* VehiclePosition.swift in Sources */,
 				FAB18AEE276DE1F800AF9983 /* HTMLTagParser.swift in Sources */,
 				FA85A9BC1F895D5D005C6691 /* VgsProvider.swift in Sources */,
 				FA6015D61E8C1D270069B224 /* VbnProvider.swift in Sources */,
@@ -3079,7 +3061,6 @@
 				FAFF18A31FA50B9500A8ED69 /* StvProvider.swift in Sources */,
 				FAFF18A41FA50B9500A8ED69 /* VrrProvider.swift in Sources */,
 				FA87BA3C20B5B476004F1199 /* OoevvProvider.swift in Sources */,
-				FAF7EC7F2A3CB624002AE95B /* QueryVehiclePositionResult.swift in Sources */,
 				FA37CD8A1FFC10D500B5D93D /* HvvProvider.swift in Sources */,
 				FAB15DC02798647C00E6A4CB /* NaldoProvider.swift in Sources */,
 				FAFF18A51FA50B9500A8ED69 /* NearbyLocationsResult.swift in Sources */,
@@ -3104,7 +3085,6 @@
 				FAF99563200E4532008D8582 /* QueryJourneyDetailResult.swift in Sources */,
 				FAFF18B51FA50B9500A8ED69 /* Trip.swift in Sources */,
 				FAFF18B61FA50B9500A8ED69 /* BsvagProvider.swift in Sources */,
-				FAF7EC842A3CB691002AE95B /* VehiclePosition.swift in Sources */,
 				FAB18AEF276DE1F800AF9983 /* HTMLTagParser.swift in Sources */,
 				FAFF18B71FA50B9500A8ED69 /* VgsProvider.swift in Sources */,
 				FAFF18B81FA50B9500A8ED69 /* VbnProvider.swift in Sources */,
