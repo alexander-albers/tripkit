@@ -3,14 +3,17 @@ import Foundation
 /// Augsburger Verkehrs- und Tarifverbund (DE)
 public class AvvAugsburgProvider: AbstractEfaWebProvider {
     
-    static let API_BASE = "https://efa.avv-augsburg.de/avv2/"
+    static let API_BASE = "https://fahrtauskunft.avv-augsburg.de/efa/"
+    static let DEPARTURE_MONITOR_ENDPOINT = "XML_DM_REQUEST"
+    static let TRIP_ENDPOINT = "XML_TRIP_REQUEST2"
     
     public override var supportedLanguages: Set<String> { ["de", "en"] }
     
     public init() {
-        super.init(networkId: .AVV, apiBase: AvvAugsburgProvider.API_BASE)
+        super.init(networkId: .AVV, apiBase: AvvAugsburgProvider.API_BASE, departureMonitorEndpoint: AvvAugsburgProvider.DEPARTURE_MONITOR_ENDPOINT, tripEndpoint: AvvAugsburgProvider.TRIP_ENDPOINT)
         
         useRouteIndexAsTripId = false
+        useStatelessTripContexts = true
         styles = [
             "B": LineStyle(shape: .circle, backgroundColor: LineStyle.parseColor("#abb1b1"), foregroundColor: LineStyle.black),
             "BB1": LineStyle(shape: .circle, backgroundColor: LineStyle.parseColor("#93117e"), foregroundColor: LineStyle.white),
@@ -59,6 +62,11 @@ public class AvvAugsburgProvider: AbstractEfaWebProvider {
             "RR8": LineStyle(shape: .rounded, backgroundColor: LineStyle.parseColor("#007d40"), foregroundColor: LineStyle.white),
             "RR11": LineStyle(shape: .rounded, backgroundColor: LineStyle.parseColor("#e6a300"), foregroundColor: LineStyle.white)
         ]
+    }
+    
+    override func stopFinderRequestParameters(builder: UrlBuilder, constraint: String, types: [LocationType]?, maxLocations: Int, outputFormat: String) {
+        super.stopFinderRequestParameters(builder: builder, constraint: constraint, types: types, maxLocations: maxLocations, outputFormat: outputFormat)
+        builder.addParameter(key: "avvStopFinderMacro", value: 1)
     }
     
     override func queryTripsParameters(builder: UrlBuilder, from: Location, via: Location?, to: Location, date: Date, departure: Bool, tripOptions: TripOptions) {

@@ -3,13 +3,13 @@
         {
             "constraint": "Augsburg, Hbf",
             "result": {
-                "id": "2000100"
+                "id": "80000589"
             }
         },
         {
-            "constraint": "Königspl",
+            "constraint": "Gies",
             "result": {
-                "id": "2000101"
+                "id": "2000018"
             }
         },
         {
@@ -39,31 +39,31 @@
             "lat": 48365854,
             "lon": 10884123,
             "result": {
-                "id": "2000100"
+                "id": "80000589"
             }
         }
     ],
     "queryDepartures": [
         {
             "__comment": "Augsburg Königsplatz",
-            "id": "101"
+            "id": "2000101"
         },
         {
             "__comment": "Augsburg Hauptbahnhof",
-            "id": "100"
+            "id": "80000589"
         }
     ],
     "queryDeparturesInvalidId": "999999",
     "queryTrips": [
         {
-            "__comment": "Augsburg Königsplatz to Augsburg Hauptbahnhof",
+            "__comment": "Augsburg Gieseckestraße to Augsburg Hauptbahnhof",
             "from": {
                 "type": "station",
-                "id": "101"
+                "id": "2000018"
             },
             "to": {
                 "type": "station",
-                "id": "100"
+                "id": "80000589"
             }
         },
         {
@@ -85,11 +85,11 @@
             "__comment": "Augsburg Königsplatz",
             "from": {
                 "type": "station",
-                "id": "101"
+                "id": "2000101"
             },
             "to": {
                 "type": "station",
-                "id": "101"
+                "id": "2000101"
             }
         }
     ]
