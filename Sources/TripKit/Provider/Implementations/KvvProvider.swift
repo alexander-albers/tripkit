@@ -12,7 +12,7 @@ public class KvvProvider: AbstractEfaWebProvider {
     public override var supportedLanguages: Set<String> { ["de", "en", "fr"] }
     
     public init() {
-        super.init(networkId: .KVV, apiBase: KvvProvider.API_BASE, departureMonitorEndpoint: KvvProvider.DEPARTURE_MONITOR_ENDPOINT, tripEndpoint: KvvProvider.TRIP_ENDPOINT, stopFinderEndpoint: KvvProvider.STOPFINDER_ENDPOINT, coordEndpoint: KvvProvider.COORD_ENDPOINT, tripStopTimesEndpoint: nil)
+        super.init(networkId: .KVV, apiBase: KvvProvider.API_BASE, departureMonitorEndpoint: KvvProvider.DEPARTURE_MONITOR_ENDPOINT, tripEndpoint: KvvProvider.TRIP_ENDPOINT, stopFinderEndpoint: KvvProvider.STOPFINDER_ENDPOINT, coordEndpoint: KvvProvider.COORD_ENDPOINT)
         
         styles = [
             // S-Bahn

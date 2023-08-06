@@ -11,7 +11,7 @@ public class MockKvvProvider: AbstractEfaWebProvider {
     let calendar = Calendar(identifier: .gregorian)
     
     public init() {
-        super.init(networkId: .KVV, apiBase: MockKvvProvider.API_BASE, departureMonitorEndpoint: MockKvvProvider.DEPARTURE_MONITOR_ENDPOINT, tripEndpoint: MockKvvProvider.TRIP_ENDPOINT, stopFinderEndpoint: MockKvvProvider.STOPFINDER_ENDPOINT, coordEndpoint: MockKvvProvider.COORD_ENDPOINT, tripStopTimesEndpoint: nil)
+        super.init(networkId: .KVV, apiBase: MockKvvProvider.API_BASE, departureMonitorEndpoint: MockKvvProvider.DEPARTURE_MONITOR_ENDPOINT, tripEndpoint: MockKvvProvider.TRIP_ENDPOINT, stopFinderEndpoint: MockKvvProvider.STOPFINDER_ENDPOINT, coordEndpoint: MockKvvProvider.COORD_ENDPOINT)
         
         styles = [
             // S-Bahn

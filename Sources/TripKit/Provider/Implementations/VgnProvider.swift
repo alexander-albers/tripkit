@@ -10,7 +10,7 @@ public class VgnProvider: AbstractEfaWebProvider {
     public override var supportedLanguages: Set<String> { ["de"] }
     
     public init() {
-        super.init(networkId: .VGN, apiBase: VgnProvider.API_BASE, departureMonitorEndpoint: VgnProvider.DEPARTURE_MONITOR_ENDPOINT, tripEndpoint: VgnProvider.TRIP_ENDPOINT, stopFinderEndpoint: nil, coordEndpoint: nil, tripStopTimesEndpoint: nil)
+        super.init(networkId: .VGN, apiBase: VgnProvider.API_BASE, departureMonitorEndpoint: VgnProvider.DEPARTURE_MONITOR_ENDPOINT, tripEndpoint: VgnProvider.TRIP_ENDPOINT)
         styles = [
             "SS1": LineStyle(shape: .rounded, backgroundColor: LineStyle.rgb(119, 53, 53), foregroundColor: LineStyle.white),
             "SS2": LineStyle(shape: .rounded, backgroundColor: LineStyle.rgb(104, 171, 84), foregroundColor: LineStyle.white),

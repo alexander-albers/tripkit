@@ -10,7 +10,7 @@ public class VvoProvider: AbstractEfaWebProvider {
     public override var supportedLanguages: Set<String> { ["de"] }
     
     public init() {
-        super.init(networkId: .VVO, apiBase: VvoProvider.API_BASE, departureMonitorEndpoint: nil, tripEndpoint: nil, stopFinderEndpoint: VvoProvider.STOPFINDER_ENDPOINT, coordEndpoint: VvoProvider.COORD_ENDPOINT, tripStopTimesEndpoint: nil)
+        super.init(networkId: .VVO, apiBase: VvoProvider.API_BASE, stopFinderEndpoint: VvoProvider.STOPFINDER_ENDPOINT, coordEndpoint: VvoProvider.COORD_ENDPOINT)
     }
     
     override func parseLine(id: String?, network: String?, mot: String?, symbol: String?, name: String?, longName: String?, trainType: String?, trainNum: String?, trainName: String?) -> Line {

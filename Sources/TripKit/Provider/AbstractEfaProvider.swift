@@ -52,12 +52,12 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
         super.init(networkId: networkId)
     }
     
-    init(networkId: NetworkId, apiBase: String, departureMonitorEndpoint: String?, tripEndpoint: String?, stopFinderEndpoint: String?, coordEndpoint: String?, tripStopTimesEndpoint: String?) {
-        self.departureMonitorEndpoint = apiBase + (departureMonitorEndpoint ?? AbstractEfaProvider.DEFAULT_DEPARTURE_MONITOR_ENDPOINT)
-        self.tripEndpoint = apiBase + (tripEndpoint ?? AbstractEfaProvider.DEFAULT_TRIP_ENDPOINT)
-        self.stopFinderEndpoint = apiBase + (stopFinderEndpoint ?? AbstractEfaProvider.DEFAULT_STOPFINDER_ENDPOINT)
-        self.coordEndpoint = apiBase + (coordEndpoint ?? AbstractEfaProvider.DEFAULT_COORD_ENDPOINT)
-        self.tripStopTimesEndpoint = apiBase + (tripStopTimesEndpoint ?? AbstractEfaProvider.DEFAULT_TRIPSTOPTIMES_ENDPOINT)
+    init(networkId: NetworkId, apiBase: String, departureMonitorEndpoint: String = AbstractEfaProvider.DEFAULT_DEPARTURE_MONITOR_ENDPOINT, tripEndpoint: String = AbstractEfaProvider.DEFAULT_TRIP_ENDPOINT, stopFinderEndpoint: String = AbstractEfaProvider.DEFAULT_STOPFINDER_ENDPOINT, coordEndpoint: String = AbstractEfaProvider.DEFAULT_COORD_ENDPOINT, tripStopTimesEndpoint: String = AbstractEfaProvider.DEFAULT_TRIPSTOPTIMES_ENDPOINT) {
+        self.departureMonitorEndpoint = apiBase + departureMonitorEndpoint
+        self.tripEndpoint = apiBase + tripEndpoint
+        self.stopFinderEndpoint = apiBase + stopFinderEndpoint
+        self.coordEndpoint = apiBase + coordEndpoint
+        self.tripStopTimesEndpoint = apiBase + tripStopTimesEndpoint
         
         super.init(networkId: networkId)
     }

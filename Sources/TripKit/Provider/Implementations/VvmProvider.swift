@@ -11,7 +11,7 @@ public class VvmProvider: AbstractEfaMobileProvider {
     public override var supportedLanguages: Set<String> { ["de"] }
     
     public init() {
-        super.init(networkId: .VVM, apiBase: VvmProvider.API_BASE, departureMonitorEndpoint: VvmProvider.DEPARTURE_MONITOR_ENDPOINT, tripEndpoint: VvmProvider.TRIP_ENDPOINT, stopFinderEndpoint: VvmProvider.STOP_FINDER_ENDPOINT, coordEndpoint: nil, tripStopTimesEndpoint: nil)
+        super.init(networkId: .VVM, apiBase: VvmProvider.API_BASE, departureMonitorEndpoint: VvmProvider.DEPARTURE_MONITOR_ENDPOINT, tripEndpoint: VvmProvider.TRIP_ENDPOINT, stopFinderEndpoint: VvmProvider.STOP_FINDER_ENDPOINT)
         
         styles = [
             "T1": LineStyle(shape: .rect, backgroundColor: LineStyle.parseColor("#fecc02"), foregroundColor: LineStyle.white),

@@ -11,7 +11,7 @@ public class BayernProvider: AbstractEfaMobileProvider {
     public override var supportedLanguages: Set<String> { ["de", "en"] }
     
     public init() {
-        super.init(networkId: .BAYERN, apiBase: BayernProvider.API_BASE, departureMonitorEndpoint: BayernProvider.DEPARTURE_MONITOR_ENDPOINT, tripEndpoint: BayernProvider.TRIP_ENDPOINT, stopFinderEndpoint: BayernProvider.STOP_FINDER_ENDPOINT, coordEndpoint: nil, tripStopTimesEndpoint: nil)
+        super.init(networkId: .BAYERN, apiBase: BayernProvider.API_BASE, departureMonitorEndpoint: BayernProvider.DEPARTURE_MONITOR_ENDPOINT, tripEndpoint: BayernProvider.TRIP_ENDPOINT, stopFinderEndpoint: BayernProvider.STOP_FINDER_ENDPOINT)
         
         includeRegionId = false
         useProxFootSearch = false
