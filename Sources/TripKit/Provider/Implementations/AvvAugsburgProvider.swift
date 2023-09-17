@@ -72,12 +72,13 @@ public class AvvAugsburgProvider: AbstractEfaWebProvider {
     override func queryTripsParameters(builder: UrlBuilder, from: Location, via: Location?, to: Location, date: Date, departure: Bool, tripOptions: TripOptions) {
         super.queryTripsParameters(builder: builder, from: from, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions)
         
-        builder.addParameter(key: "inclMOT_11", value: "on") // night bus
-        builder.addParameter(key: "inclMOT_13", value: "on")
-        builder.addParameter(key: "inclMOT_14", value: "on")
-        builder.addParameter(key: "inclMOT_15", value: "on")
-        builder.addParameter(key: "inclMOT_16", value: "on")
-        builder.addParameter(key: "inclMOT_17", value: "on")
+        for product in tripOptions.products ?? [] {
+            switch product {
+            case .bus: builder.addParameter(key: "inclMOT_11", value: "on") // night bus
+            case .regionalTrain: builder.addParameter(key: "inclMOT_13", value: "on") // regional train
+            default: break
+            }
+        }
     }
     
     override func parseLine(id: String?, network: String?, mot: String?, symbol: String?, name: String?, longName: String?, trainType: String?, trainNum: String?, trainName: String?) -> Line {
