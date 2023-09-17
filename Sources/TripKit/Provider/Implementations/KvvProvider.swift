@@ -77,8 +77,10 @@ public class KvvProvider: AbstractEfaWebProvider {
     
     override func parseLine(id: String?, network: String?, mot: String?, symbol: String?, name: String?, longName: String?, trainType: String?, trainNum: String?, trainName: String?) -> Line {
         if mot == "0" {
-            if trainNum == "IRE1" && trainName == nil {
-                return Line(id: id, network: network, product: .regionalTrain, label: trainNum)
+            if trainNum == "IRE 1" && trainName == nil {
+                return Line(id: id, network: network, product: .regionalTrain, label: "IRE1")
+            } else if trainNum == "IRE 3" && trainName == nil {
+                return Line(id: id, network: network, product: .regionalTrain, label: "IRE3")
             } else if let trainName = trainName, trainName.hasPrefix("TRILEX") {
                 return Line(id: id, network: network, product: .regionalTrain, label: trainName)
             }
