@@ -50,7 +50,11 @@ public class AvvAugsburgProvider: AbstractEfaWebProvider {
             "B72": LineStyle(shape: .circle, backgroundColor: LineStyle.parseColor("#a99990"), foregroundColor: LineStyle.white),
             "B76": LineStyle(shape: .circle, backgroundColor: LineStyle.parseColor("#c3655a"), foregroundColor: LineStyle.white),
             
+            "T1": LineStyle(shape: .rect, backgroundColor: LineStyle.parseColor("#e30010"), foregroundColor: LineStyle.white),
             "T2": LineStyle(shape: .rect, backgroundColor: LineStyle.parseColor("#006ab3"), foregroundColor: LineStyle.white),
+            "T3": LineStyle(shape: .rect, backgroundColor: LineStyle.parseColor("#ef7c01"), foregroundColor: LineStyle.white),
+            "T4": LineStyle(shape: .rect, backgroundColor: LineStyle.parseColor("#951781"), foregroundColor: LineStyle.white),
+            "T6": LineStyle(shape: .rect, backgroundColor: LineStyle.parseColor("#94c11c"), foregroundColor: LineStyle.white),
             "T13": LineStyle(shape: .rect, backgroundColor: LineStyle.parseColor("#e2001a"), foregroundColor: LineStyle.white),
             "T64": LineStyle(shape: .rect, backgroundColor: LineStyle.parseColor("#97bf0d"), foregroundColor: LineStyle.white),
             
