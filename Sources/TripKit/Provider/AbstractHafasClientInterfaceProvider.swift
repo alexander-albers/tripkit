@@ -341,10 +341,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         var result: [StationDepartures] = []
         for jny in svcRes["res", "jnyL"].arrayValue {
             let stbStop = jny["stbStop"]
-            if let reachable = jny["isRchbl"].bool, !reachable {
-                continue
-            }
-            let cancelled = jny["dCncl"].boolValue
+            let cancelled = jny["dCncl"].boolValue || !(jny["isRchbl"].bool ?? true)
             
             // Parse platform
             let position = parsePosition(json: stbStop, platfName: departures ? "dPlatfR" : "aPlatfR", pltfName: departures ? "dPltfR" : "aPltfR")
