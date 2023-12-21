@@ -367,14 +367,8 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
             line = Line(id: line.id, network: line.network, product: line.product, label: line.label, name: line.name, number: line.number, vehicleNumber: line.vehicleNumber, style: line.style, attr: line.attr, message: line.message, direction: direction)
             
             // Parse location
-            let location: Location
-            if equivs {
-                guard let loc = locations[safe: stbStop["locX"].int], loc.type == .station else {
-                    throw ParseError(reason: "could not parse location")
-                }
-                location = loc
-            } else {
-                location = Location(id: stationId)
+            guard let location = locations[safe: stbStop["locX"].int], location.type == .station else {
+                throw ParseError(reason: "could not parse location")
             }
             
             // Parse destination
