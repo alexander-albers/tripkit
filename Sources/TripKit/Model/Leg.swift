@@ -138,8 +138,8 @@ public class PublicLeg: NSObject, Leg, NSSecureCoding {
         if let destination = destination {
             aCoder.encode(destination, forKey: PropertyKey.destination)
         }
-        aCoder.encode(Stop(location: departureStop.location, departure: departureStop, arrival: nil, message: departureStop.message, wagonSequenceContext: departureStop.wagonSequenceContext), forKey: PropertyKey.departureStop)
-        aCoder.encode(Stop(location: arrivalStop.location, departure: nil, arrival: arrivalStop, message: arrivalStop.message, wagonSequenceContext: arrivalStop.wagonSequenceContext), forKey: PropertyKey.arrivalStop)
+        aCoder.encode(Stop(location: departureStop.location, departure: departureStop, arrival: nil, message: departureStop.message), forKey: PropertyKey.departureStop)
+        aCoder.encode(Stop(location: arrivalStop.location, departure: nil, arrival: arrivalStop, message: arrivalStop.message), forKey: PropertyKey.arrivalStop)
         aCoder.encode(intermediateStops, forKey: PropertyKey.intermediateStops)
         if let message = message {
             aCoder.encode(message, forKey: PropertyKey.message)

@@ -625,7 +625,7 @@ public class AbstractEfaWebProvider: AbstractEfaProvider {
                 arrival = nil
             }
             
-            let stop = Stop(location: stopLocation, departure: departure, arrival: arrival, message: nil, wagonSequenceContext: nil)
+            let stop = Stop(location: stopLocation, departure: departure, arrival: arrival, message: nil)
             
             stops.append(stop)
         }
@@ -896,7 +896,7 @@ public class AbstractEfaWebProvider: AbstractEfaProvider {
                 arrival = nil
             }
             
-            let stop = Stop(location: stopLocation, departure: departure, arrival: arrival, message: nil, wagonSequenceContext: nil)
+            let stop = Stop(location: stopLocation, departure: departure, arrival: arrival, message: nil)
             stops.append(stop)
         }
         
@@ -911,7 +911,6 @@ public class AbstractEfaWebProvider: AbstractEfaProvider {
             // still use the time of the intermediate point because arrival and departure time is *always* sent as predicted, even when its not
             arrival = StopEvent(location: a.location, plannedTime: a.arrival?.plannedTime ?? arrivalTime, predictedTime: a.arrival?.predictedTime, plannedPlatform: plannedArrivalPosition ?? a.arrival?.plannedPlatform, predictedPlatform: a.arrival?.predictedPlatform, cancelled: a.arrival?.cancelled ?? cancelled)
             arrival.message = a.message
-            arrival.wagonSequenceContext = a.wagonSequenceContext
             
             if !stops.first!.location.isEqual(departureLocation) {
                 throw ParseError(reason: "first intermediate stop is not departure location!")
@@ -919,7 +918,6 @@ public class AbstractEfaWebProvider: AbstractEfaProvider {
             let d = stops.removeFirst()
             departure = StopEvent(location: d.location, plannedTime: d.departure?.plannedTime ?? departureTime, predictedTime: d.departure?.predictedTime, plannedPlatform: plannedDeparturePosition ?? d.departure?.plannedPlatform, predictedPlatform: d.departure?.predictedPlatform, cancelled: d.departure?.cancelled ?? cancelled)
             departure.message = d.message
-            departure.wagonSequenceContext = d.wagonSequenceContext
         } else {
             departure = StopEvent(location: departureLocation, plannedTime: departureTargetTime ?? departureTime, predictedTime: departureTargetTime == nil ? nil : departureTime, plannedPlatform: departurePosition, predictedPlatform: nil, cancelled: cancelled)
             arrival = StopEvent(location: arrivalLocation, plannedTime: arrivalTargetTime ?? arrivalTime, predictedTime: arrivalTargetTime == nil ? nil : arrivalTime, plannedPlatform: arrivalPosition, predictedPlatform: nil, cancelled: cancelled)

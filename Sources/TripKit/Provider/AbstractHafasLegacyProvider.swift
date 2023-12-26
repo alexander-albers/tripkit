@@ -981,7 +981,7 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider, QueryJourneyDet
                                 arrival = nil
                             }
                             
-                            let stop = Stop(location: stopLocation, departure: departure, arrival: arrival, message: nil, wagonSequenceContext: nil)
+                            let stop = Stop(location: stopLocation, departure: departure, arrival: arrival, message: nil)
                             intermediateStops.append(stop)
                         }
                     }

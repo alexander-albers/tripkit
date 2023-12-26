@@ -412,7 +412,7 @@ public class SearchChProvider: AbstractNetworkProvider, QueryJourneyDetailManual
             arrival = nil
         }
         
-        return Stop(location: location, departure: departure, arrival: arrival, message: nil, wagonSequenceContext: nil)
+        return Stop(location: location, departure: departure, arrival: arrival, message: nil)
     }
     
     private func addDelay(to time: Date, delay: String) -> Date? {

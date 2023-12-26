@@ -402,14 +402,8 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
             } else {
                 journeyContext = nil
             }
-            let wagonSequenceContext: URL?
-            if line.label?.hasPrefix("ICE") ?? false, let number = line.number, predictedTime != nil {
-                wagonSequenceContext = getWagonSequenceUrl(number: number, plannedTime: plannedTime)
-            } else {
-                wagonSequenceContext = nil
-            }
             
-            let departure = Departure(plannedTime: plannedTime, predictedTime: predictedTime, line: line, position: position, plannedPosition: plannedPosition, cancelled: cancelled || departureCancelled, destination: destination, capacity: nil, message: message, journeyContext: journeyContext, wagonSequenceContext: wagonSequenceContext)
+            let departure = Departure(plannedTime: plannedTime, predictedTime: predictedTime, line: line, position: position, plannedPosition: plannedPosition, cancelled: cancelled || departureCancelled, destination: destination, capacity: nil, message: message, journeyContext: journeyContext)
             
             var stationDepartures = result.first(where: {$0.stopLocation.id == location.id})
             if stationDepartures == nil {
@@ -512,9 +506,6 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
                 switch sec["type"].stringValue {
                 case "JNY", "TETA":
                     let line = lines[safe: sec["jny", "prodX"].int]
-                    parseWagonSequenceUrl(json: sec["dep"], stopEvent: departureStop, line: line)
-                    parseWagonSequenceUrl(json: sec["arr"], stopEvent: arrivalStop, line: line)
-                    
                     let leg = try processPublicLeg(jny: sec["jny"], baseDate: baseDate, locations: locations, line: line, rems: rems, messages: messages, encodedPolyList: encodedPolyList, loadFactors: loadFactors, departureStop: departureStop, arrivalStop: arrivalStop, tariffClass: tripOptions.tariffProfile?.tariffClass)
                     
                     legs.append(leg)
@@ -783,12 +774,6 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         for stop in jny["stopL"].arrayValue {
             if stop["border"].boolValue { continue } // hide borders from intermediate stops
             guard let intermediateStop = try parseStop(json: stop, locations: locations, rems: rems, messages: messages, baseDate: baseDate) else { continue }
-            if let departure = intermediateStop.departure {
-                parseWagonSequenceUrl(json: stop, stopEvent: departure, line: line)
-            }
-            if let arrival = intermediateStop.arrival {
-                parseWagonSequenceUrl(json: stop, stopEvent: arrival, line: line)
-            }
             intermediateStops.append(intermediateStop)
         }
         if cancelled {
@@ -914,24 +899,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
             arrival = nil
         }
         
-        return Stop(location: location, departure: departure, arrival: arrival, message: message, wagonSequenceContext: nil)
-    }
-    
-    private func parseWagonSequenceUrl(json: JSON, stopEvent: StopEvent, line: Line?) {
-        guard json["dTrnCmpSX", "tcM"].int == 1 || json["aTrnCmpSX", "tcM"].int == 1 else {
-            return
-        }
-        let wagonSequenceContext: URL?
-        if let number = line?.number {
-            wagonSequenceContext = getWagonSequenceUrl(number: number, plannedTime: stopEvent.plannedTime)
-        } else {
-            wagonSequenceContext = nil
-        }
-        stopEvent.wagonSequenceContext = wagonSequenceContext
-    }
-    
-    func getWagonSequenceUrl(number: String, plannedTime: Date) -> URL? {
-        return nil
+        return Stop(location: location, departure: departure, arrival: arrival, message: message)
     }
     
     let P_JSON_TIME = try! NSRegularExpression(pattern: "^(?:(\\d{4})(\\d{2}))?(\\d{2})?(\\d{2})(\\d{2})(\\d{2})$")

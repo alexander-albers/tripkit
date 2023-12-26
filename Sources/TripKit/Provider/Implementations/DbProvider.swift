@@ -86,8 +86,5 @@ public class DbProvider: AbstractHafasClientInterfaceProvider {
     
     let P_NORMALIZE_LINE_NAME_TRAM = try! NSRegularExpression(pattern: "str\\s+(.*)", options: .caseInsensitive)
     
-    override func getWagonSequenceUrl(number: String, plannedTime: Date) -> URL? {
-        return URL(string: "https://fahrkarten.bahn.de/mobile/wr/wr.post?zugnummer=\(number)&zeitstempel=\(format.string(from: plannedTime))&lang=de")
-    }
     
 }

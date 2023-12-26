@@ -387,7 +387,7 @@ public class AbstractEfaMobileProvider: AbstractEfaProvider {
                             } else {
                                 stopEvent = nil
                             }
-                            let stop = Stop(location: location, departure: stopEvent, arrival: stopEvent, message: nil, wagonSequenceContext: nil)
+                            let stop = Stop(location: location, departure: stopEvent, arrival: stopEvent, message: nil)
                             intermediateStops.append(stop)
                         } else {
                             throw ParseError(reason: "failed to parse stop location")
@@ -524,7 +524,7 @@ public class AbstractEfaMobileProvider: AbstractEfaProvider {
             } else {
                 stopEvent = nil
             }
-            let stop = Stop(location: location, departure: stopEvent, arrival: stopEvent, message: nil, wagonSequenceContext: nil)
+            let stop = Stop(location: location, departure: stopEvent, arrival: stopEvent, message: nil)
             stops.append(stop)
         }
         guard stops.count >= 2 else {

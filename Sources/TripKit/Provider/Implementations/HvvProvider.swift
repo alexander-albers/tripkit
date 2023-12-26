@@ -285,7 +285,7 @@ public class HvvProvider: AbstractNetworkProvider {
         for index in 0..<courseElements.count-1 {
             let dep = try parseCourseElem(json: courseElements[index], prefix: "to")
             let arr = try parseCourseElem(json: courseElements[index+1], prefix: "from")
-            stops.append(Stop(location: dep.location, departure: dep, arrival: arr, message: nil, wagonSequenceContext: nil))
+            stops.append(Stop(location: dep.location, departure: dep, arrival: arr, message: nil))
         }
         
         var path: [LocationPoint] = []
@@ -663,7 +663,7 @@ public class HvvProvider: AbstractNetworkProvider {
             arrival = nil
         }
         let message = parseAttributes(attributes: json["attributes"])
-        return Stop(location: location, departure: departure, arrival: arrival, message: message, wagonSequenceContext: nil)
+        return Stop(location: location, departure: departure, arrival: arrival, message: message)
     }
     
     private func parsePath(json: JSON) -> [LocationPoint] {

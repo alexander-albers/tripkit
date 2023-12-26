@@ -182,7 +182,7 @@ public class MockKvvProvider: AbstractEfaWebProvider {
     
     func createIntermediates(_ start: Date) -> [Stop] {
         return [createStop("s1", start.addingTimeInterval(60)), createStop("s2", start.addingTimeInterval(120))]
-            .map({Stop(location: $0.location, departure: $0, arrival: $0, message: nil, wagonSequenceContext: nil)})
+            .map({Stop(location: $0.location, departure: $0, arrival: $0, message: nil)})
     }
     
     func createLine(_ product: Product, _ name: String) -> Line {

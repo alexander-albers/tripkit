@@ -25,9 +25,6 @@ public class Stop: NSObject, NSSecureCoding {
     
     /// Message specific to this stop.
     public let message: String?
-    /// URL for querying the wagon sequence of a train.
-    /// See `DbProvider.getWagonSequenceUrl()`
-    public var wagonSequenceContext: URL?
     
     /// Returns the earliest time of the stop, either departure or arrival.
     public var minTime: Date? {
@@ -55,17 +52,14 @@ public class Stop: NSObject, NSSecureCoding {
         }
     }
     
-    public init(location: Location, departure: StopEvent?, arrival: StopEvent?, message: String?, wagonSequenceContext: URL?) {
+    public init(location: Location, departure: StopEvent?, arrival: StopEvent?, message: String?) {
         departure?.message = message
         arrival?.message = message
-        departure?.wagonSequenceContext = wagonSequenceContext
-        arrival?.wagonSequenceContext = wagonSequenceContext
         
         self.location = location
         self.departure = departure
         self.arrival = arrival
         self.message = message
-        self.wagonSequenceContext = wagonSequenceContext
     }
     
     required convenience public init?(coder aDecoder: NSCoder) {
@@ -75,8 +69,6 @@ public class Stop: NSObject, NSSecureCoding {
         }
         
         let message = aDecoder.decodeObject(of: NSString.self, forKey: PropertyKey.message) as String?
-        let wagonSequenceContextPath = aDecoder.decodeObject(of: NSString.self, forKey: PropertyKey.wagonSequenceContext) as String?
-        let wagonSequenceContext = wagonSequenceContextPath != nil ? URL(string: wagonSequenceContextPath!) : nil
         
         let departure: StopEvent?
         if let plannedDepartureTime = aDecoder.decodeObject(of: NSDate.self, forKey: PropertyKey.plannedDepartureTime) as Date? {
@@ -106,7 +98,7 @@ public class Stop: NSObject, NSSecureCoding {
             arrival = nil
         }
         
-        self.init(location: location, departure: departure, arrival: arrival, message: message, wagonSequenceContext: wagonSequenceContext)
+        self.init(location: location, departure: departure, arrival: arrival, message: message)
     }
     
     public func encode(with aCoder: NSCoder) {
@@ -129,7 +121,6 @@ public class Stop: NSObject, NSSecureCoding {
         }
         
         aCoder.encode(message, forKey: PropertyKey.message)
-        aCoder.encode(wagonSequenceContext?.absoluteString, forKey: PropertyKey.wagonSequenceContext)
     }
     
     open override func isEqual(_ other: Any?) -> Bool {
@@ -155,7 +146,6 @@ public class Stop: NSObject, NSSecureCoding {
         static let predictedDeparturePlatform = "predictedDeparturePlatform"
         static let departureCancelled = "departureCancelled"
         static let message = "message"
-        static let wagonSequenceContext = "wagonSequenceContext"
         
     }
     
@@ -190,7 +180,7 @@ extension Stop {
         set { departure?.cancelled = newValue }
     }
     
-    @available(*, deprecated, renamed: "init(location:departure:arrival:message:wagonSequenceContext:)")
+    @available(*, deprecated, renamed: "init(location:departure:arrival:message:)")
     public convenience init(location: Location, plannedArrivalTime: Date?, predictedArrivalTime: Date?, plannedArrivalPlatform: String?, predictedArrivalPlatform: String?, arrivalCancelled: Bool, plannedDepartureTime: Date?, predictedDepartureTime: Date?, plannedDeparturePlatform: String?, predictedDeparturePlatform: String?, departureCancelled: Bool, message: String? = nil, wagonSequenceContext: URL? = nil) {
         let departure: StopEvent?
         if let plannedDepartureTime = plannedDepartureTime {
@@ -204,7 +194,7 @@ extension Stop {
         } else {
             arrival = nil
         }
-        self.init(location: location, departure: departure, arrival: arrival, message: message, wagonSequenceContext: wagonSequenceContext)
+        self.init(location: location, departure: departure, arrival: arrival, message: message)
     }
     
     @available(*, deprecated, renamed: "minTime")

@@ -25,9 +25,6 @@ public class StopEvent: NSObject {
     
     /// Message specific to this stop.
     public var message: String?
-    /// URL for querying the wagon sequence of a train.
-    /// See `DbProvider.getWagonSequenceUrl()`
-    public var wagonSequenceContext: URL?
     
     /// Planned or predicted time of the stop, depending on which value is smaller.
     public var minTime: Date {

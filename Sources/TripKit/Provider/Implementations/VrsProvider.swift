@@ -670,7 +670,7 @@ public class VrsProvider: AbstractNetworkProvider, QueryJourneyDetailManually, Q
                     let arrival = StopEvent(location: viaLocation, plannedTime: plannedArrivalTime, predictedTime: predictedArrivalTime, plannedPlatform: viaPosition, predictedPlatform: nil, cancelled: false)
                     let (plannedDepartureTime, predictedDepartureTime) = try parsePlannedPredictedTime(from: via, type: "departure")
                     let departure = StopEvent(location: viaLocation, plannedTime: plannedDepartureTime, predictedTime: predictedDepartureTime, plannedPlatform: viaPosition, predictedPlatform: nil, cancelled: false)
-                    let stop = Stop(location: viaLocation, departure: departure, arrival: arrival, message: nil, wagonSequenceContext: nil)
+                    let stop = Stop(location: viaLocation, departure: departure, arrival: arrival, message: nil)
                     intermediateStops.append(stop)
                 }
                 let (departurePlanned, departurePredicted) = try parsePlannedPredictedTime(from: segment, type: "departure")
