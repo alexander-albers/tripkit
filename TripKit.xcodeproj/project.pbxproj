@@ -32,6 +32,10 @@
 		FA11F6E620496C7200B66359 /* UrlBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA11F6E420496C7100B66359 /* UrlBuilder.swift */; };
 		FA17EBE91E757FF3001ECA09 /* AbstractHafasLegacyProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA17EBE81E757FF3001ECA09 /* AbstractHafasLegacyProvider.swift */; };
 		FA17EBED1E758087001ECA09 /* DbProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA17EBEC1E758087001ECA09 /* DbProvider.swift */; };
+		FA1BDF362B344537005E53F3 /* NetworkProvider+Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA17ADA427A2E8BF006305B1 /* NetworkProvider+Async.swift */; };
+		FA1BDF372B34453A005E53F3 /* NetworkProvider+Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA17ADA427A2E8BF006305B1 /* NetworkProvider+Async.swift */; };
+		FA1BDF382B34453B005E53F3 /* NetworkProvider+Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA17ADA427A2E8BF006305B1 /* NetworkProvider+Async.swift */; };
+		FA1BDF392B34453D005E53F3 /* NetworkProvider+Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA17ADA427A2E8BF006305B1 /* NetworkProvider+Async.swift */; };
 		FA1C0A29275D1AC200AA66C3 /* KvvProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1C09FB275D1AC000AA66C3 /* KvvProviderTests.swift */; };
 		FA1C0A2A275D1AC200AA66C3 /* KvvProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1C09FB275D1AC000AA66C3 /* KvvProviderTests.swift */; };
 		FA1C0A2B275D1AC200AA66C3 /* KvvProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1C09FB275D1AC000AA66C3 /* KvvProviderTests.swift */; };
@@ -694,6 +698,14 @@
 		FAD1D51D274E1CEB009FFA52 /* StopEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD1D51B274E1CEB009FFA52 /* StopEvent.swift */; };
 		FAD1D51E274E1CEB009FFA52 /* StopEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD1D51B274E1CEB009FFA52 /* StopEvent.swift */; };
 		FAD1D51F274E1CEB009FFA52 /* StopEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD1D51B274E1CEB009FFA52 /* StopEvent.swift */; };
+		FAE0E6432B3AD28A009CC567 /* QueryWagonSequenceResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE0E6422B3AD28A009CC567 /* QueryWagonSequenceResult.swift */; };
+		FAE0E6442B3AD28A009CC567 /* QueryWagonSequenceResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE0E6422B3AD28A009CC567 /* QueryWagonSequenceResult.swift */; };
+		FAE0E6452B3AD28A009CC567 /* QueryWagonSequenceResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE0E6422B3AD28A009CC567 /* QueryWagonSequenceResult.swift */; };
+		FAE0E6462B3AD28A009CC567 /* QueryWagonSequenceResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE0E6422B3AD28A009CC567 /* QueryWagonSequenceResult.swift */; };
+		FAE0E6482B3AD2EC009CC567 /* WagonSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE0E6472B3AD2EC009CC567 /* WagonSequence.swift */; };
+		FAE0E6492B3AD2EC009CC567 /* WagonSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE0E6472B3AD2EC009CC567 /* WagonSequence.swift */; };
+		FAE0E64A2B3AD2EC009CC567 /* WagonSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE0E6472B3AD2EC009CC567 /* WagonSequence.swift */; };
+		FAE0E64B2B3AD2EC009CC567 /* WagonSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE0E6472B3AD2EC009CC567 /* WagonSequence.swift */; };
 		FAE2E3B92A041365002280BA /* SearchChProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE2E3B82A041365002280BA /* SearchChProviderTests.swift */; };
 		FAE2E3BA2A041365002280BA /* SearchChProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE2E3B82A041365002280BA /* SearchChProviderTests.swift */; };
 		FAE2E3BB2A041365002280BA /* SearchChProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE2E3B82A041365002280BA /* SearchChProviderTests.swift */; };
@@ -1175,6 +1187,8 @@
 		FACFBBC71F850EE600679CD4 /* AvvAachenProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvvAachenProvider.swift; sourceTree = "<group>"; };
 		FAD1D51B274E1CEB009FFA52 /* StopEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopEvent.swift; sourceTree = "<group>"; };
 		FAD8E0CC2287197A00C0036C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		FAE0E6422B3AD28A009CC567 /* QueryWagonSequenceResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryWagonSequenceResult.swift; sourceTree = "<group>"; };
+		FAE0E6472B3AD2EC009CC567 /* WagonSequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WagonSequence.swift; sourceTree = "<group>"; };
 		FAE2E3B82A041365002280BA /* SearchChProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchChProviderTests.swift; sourceTree = "<group>"; };
 		FAE6E6C026E6AB6A007E975A /* StaticTripKitTests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "StaticTripKitTests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAE6E6EA26E6AC87007E975A /* StaticTripKitTests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "StaticTripKitTests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1451,6 +1465,7 @@
 				FAB754201E3FD3E500C343F2 /* QueryTripsResult.swift */,
 				FAB7541F1E3FD3E500C343F2 /* QueryDeparturesResult.swift */,
 				FAF9955A200E3E1D008D8582 /* QueryJourneyDetailResult.swift */,
+				FAE0E6422B3AD28A009CC567 /* QueryWagonSequenceResult.swift */,
 			);
 			path = Result;
 			sourceTree = "<group>";
@@ -1494,6 +1509,7 @@
 				FAB754261E3FD3E500C343F2 /* Trip.swift */,
 				FAA569431E7415DC006EB901 /* Fare.swift */,
 				FA4B90AE274C191C00C070C2 /* LoadFactor.swift */,
+				FAE0E6472B3AD2EC009CC567 /* WagonSequence.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -2303,6 +2319,7 @@
 				FA5CD2A424FBB29C00B4990A /* Line.swift in Sources */,
 				FA7CAA412799561800BE5147 /* BvbProvider.swift in Sources */,
 				FA5CD2AA24FBB29D00B4990A /* Stop.swift in Sources */,
+				FAE0E64A2B3AD2EC009CC567 /* WagonSequence.swift in Sources */,
 				FA5CD22924FBB29000B4990A /* NetworkProvider.swift in Sources */,
 				FA5CD23B24FBB29000B4990A /* NvvProvider.swift in Sources */,
 				FA5CD2C424FBB2A900B4990A /* SecretsLoader.swift in Sources */,
@@ -2319,6 +2336,7 @@
 				FA5CD2C124FBB2A900B4990A /* ParserUtils.swift in Sources */,
 				FA5CD23624FBB29000B4990A /* RmvProvider.swift in Sources */,
 				FA5CD2C224FBB2A900B4990A /* CryptoUtils.swift in Sources */,
+				FAE0E6452B3AD28A009CC567 /* QueryWagonSequenceResult.swift in Sources */,
 				FA5CD2BD24FBB2A900B4990A /* AsyncRequest.swift in Sources */,
 				FA5CD29F24FBB29C00B4990A /* ServingLine.swift in Sources */,
 				FA5CD2A624FBB29C00B4990A /* Location.swift in Sources */,
@@ -2365,6 +2383,7 @@
 				FA5CD2C624FBB2A900B4990A /* TripKit.swift in Sources */,
 				FA5CD22E24FBB29000B4990A /* AbstractHafasClientInterfaceProvider.swift in Sources */,
 				FA5CD23524FBB29000B4990A /* MvvProvider.swift in Sources */,
+				FA1BDF382B34453B005E53F3 /* NetworkProvider+Async.swift in Sources */,
 				FA5CD24724FBB29000B4990A /* VrrProvider.swift in Sources */,
 				FA5CD22B24FBB29000B4990A /* AbstractEfaProvider.swift in Sources */,
 				FA4B90B1274C191C00C070C2 /* LoadFactor.swift in Sources */,
@@ -2412,6 +2431,7 @@
 				FA5CD2B424FBB29D00B4990A /* Line.swift in Sources */,
 				FA7CAA422799561800BE5147 /* BvbProvider.swift in Sources */,
 				FA5CD2BA24FBB29D00B4990A /* Stop.swift in Sources */,
+				FAE0E64B2B3AD2EC009CC567 /* WagonSequence.swift in Sources */,
 				FA5CD25E24FBB29000B4990A /* NetworkProvider.swift in Sources */,
 				FA5CD27024FBB29000B4990A /* NvvProvider.swift in Sources */,
 				FA5CD2D124FBB2AA00B4990A /* SecretsLoader.swift in Sources */,
@@ -2428,6 +2448,7 @@
 				FA5CD2CE24FBB2AA00B4990A /* ParserUtils.swift in Sources */,
 				FA5CD26B24FBB29000B4990A /* RmvProvider.swift in Sources */,
 				FA5CD2CF24FBB2AA00B4990A /* CryptoUtils.swift in Sources */,
+				FAE0E6462B3AD28A009CC567 /* QueryWagonSequenceResult.swift in Sources */,
 				FA5CD2CA24FBB2AA00B4990A /* AsyncRequest.swift in Sources */,
 				FA5CD2AF24FBB29D00B4990A /* ServingLine.swift in Sources */,
 				FA5CD2B624FBB29D00B4990A /* Location.swift in Sources */,
@@ -2474,6 +2495,7 @@
 				FA5CD2D324FBB2AA00B4990A /* TripKit.swift in Sources */,
 				FA5CD26324FBB29000B4990A /* AbstractHafasClientInterfaceProvider.swift in Sources */,
 				FA5CD26A24FBB29000B4990A /* MvvProvider.swift in Sources */,
+				FA1BDF392B34453D005E53F3 /* NetworkProvider+Async.swift in Sources */,
 				FA5CD27C24FBB29000B4990A /* VrrProvider.swift in Sources */,
 				FA5CD26024FBB29000B4990A /* AbstractEfaProvider.swift in Sources */,
 				FA4B90B2274C191C00C070C2 /* LoadFactor.swift in Sources */,
@@ -2645,6 +2667,7 @@
 				FAB754351E3FD3E500C343F2 /* SuggestLocationsResult.swift in Sources */,
 				FA7CAA3F2799561800BE5147 /* BvbProvider.swift in Sources */,
 				FACD988E1E881A190019BE80 /* NvvProvider.swift in Sources */,
+				FAE0E6482B3AD2EC009CC567 /* WagonSequence.swift in Sources */,
 				FA17EBE91E757FF3001ECA09 /* AbstractHafasLegacyProvider.swift in Sources */,
 				FA7A3D231F0B6A500041BC51 /* RmvProvider.swift in Sources */,
 				FA17EBED1E758087001ECA09 /* DbProvider.swift in Sources */,
@@ -2661,6 +2684,7 @@
 				FA9172B0217A767100535768 /* VosProvider.swift in Sources */,
 				FA63D93F1E4D11BB00EF0540 /* ServingLine.swift in Sources */,
 				FA9D377B2266476100CED39F /* Logging.swift in Sources */,
+				FAE0E6432B3AD28A009CC567 /* QueryWagonSequenceResult.swift in Sources */,
 				FABFCC241E8FE37D00905D5E /* VrnProvider.swift in Sources */,
 				FABFCC281E8FEBB900905D5E /* VvsProvider.swift in Sources */,
 				FAB754271E3FD3E500C343F2 /* Departure.swift in Sources */,
@@ -2707,6 +2731,7 @@
 				FA6015D61E8C1D270069B224 /* VbnProvider.swift in Sources */,
 				FA4F581A1E8BD30500EA392F /* ShProvider.swift in Sources */,
 				FABFCC161E8FB7F900905D5E /* VmtProvider.swift in Sources */,
+				FA1BDF362B344537005E53F3 /* NetworkProvider+Async.swift in Sources */,
 				FA04C6C61E872F9E004535BA /* AvvAugsburgProvider.swift in Sources */,
 				FAB7543D1E3FD3F300C343F2 /* KvvProvider.swift in Sources */,
 				FA4B90AF274C191C00C070C2 /* LoadFactor.swift in Sources */,
@@ -3029,6 +3054,7 @@
 				FAFF188A1FA50B9500A8ED69 /* SuggestLocationsResult.swift in Sources */,
 				FA7CAA402799561800BE5147 /* BvbProvider.swift in Sources */,
 				FAFF188D1FA50B9500A8ED69 /* NvvProvider.swift in Sources */,
+				FAE0E6492B3AD2EC009CC567 /* WagonSequence.swift in Sources */,
 				FAFF188E1FA50B9500A8ED69 /* AbstractHafasLegacyProvider.swift in Sources */,
 				FAFF188F1FA50B9500A8ED69 /* RmvProvider.swift in Sources */,
 				FAFF18901FA50B9500A8ED69 /* DbProvider.swift in Sources */,
@@ -3045,6 +3071,7 @@
 				FA30BFFA217A7B17008EA42D /* VosProvider.swift in Sources */,
 				FAFF18981FA50B9500A8ED69 /* VrnProvider.swift in Sources */,
 				FA9D377C2266476100CED39F /* Logging.swift in Sources */,
+				FAE0E6442B3AD28A009CC567 /* QueryWagonSequenceResult.swift in Sources */,
 				FAFF18991FA50B9500A8ED69 /* VvsProvider.swift in Sources */,
 				FAFF189A1FA50B9500A8ED69 /* Departure.swift in Sources */,
 				FAFF189B1FA50B9500A8ED69 /* BvgProvider.swift in Sources */,
@@ -3091,6 +3118,7 @@
 				FAFF18B81FA50B9500A8ED69 /* VbnProvider.swift in Sources */,
 				FAFF18B91FA50B9500A8ED69 /* ShProvider.swift in Sources */,
 				FAFF18BB1FA50B9500A8ED69 /* VmtProvider.swift in Sources */,
+				FA1BDF372B34453A005E53F3 /* NetworkProvider+Async.swift in Sources */,
 				FAFF18BC1FA50B9500A8ED69 /* AvvAugsburgProvider.swift in Sources */,
 				FAFF18BD1FA50B9500A8ED69 /* KvvProvider.swift in Sources */,
 				FA4B90B0274C191C00C070C2 /* LoadFactor.swift in Sources */,
