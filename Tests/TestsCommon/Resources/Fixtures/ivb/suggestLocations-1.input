@@ -2,13 +2,11 @@
   "ver":"1.52",
   "ext":"VAO.7",
   "lang":"deu",
-  "id":"4nwcbi4e2k8p968g",
+  "id":"z864ank6mg2mwwwg",
   "err":"OK",
   "cInfo":
   {
-    "code":"OK",
-    "url":"",
-    "msg":""
+    "code":"OK"
   },
   "graph":
   {
@@ -35,27 +33,30 @@
       {
         "common":
         {
+          "remL":
+          [
+            {
+              "type":"W",
+              "code":"WW",
+              "txtN":"WEBVIEW",
+              "url":"https://routenplaner.verkehrsauskunft.at/bin/query.exe/dn?tpl=webview_poi&performLocating=128&look_station=960086943&look_nv=get_infotext|yes|get_attributes|yes&look_stationpool=130&L=vs_ivb"
+            }
+          ],
           "txtInstL":
           [
             {
-              "id":"street",
+              "id":"city",
               "type":"NONE",
               "mode":"ADD"
             },
             {
-              "id":"city",
+              "id":"street",
               "type":"NONE",
               "mode":"ADD"
             }
           ],
           "icoL":
           [
-            {
-              "res":"MH"
-            },
-            {
-              "res":"loc_addr"
-            },
             {
               "res":"prod_regbus",
               "txtS":"502N",
@@ -72,6 +73,41 @@
                 "b":212
               },
               "zIdx":1000
+            },
+            {
+              "res":"prod_bus",
+              "txtS":"210",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255
+              },
+              "bg":
+              {
+                "r":0,
+                "g":163,
+                "b":212
+              },
+              "zIdx":1000
+            },
+            {
+              "res":"PCAT_ESSEN",
+              "fg":
+              {
+                "r":186,
+                "g":128,
+                "b":185
+              },
+              "bg":
+              {
+                "r":186,
+                "g":128,
+                "b":185
+              }
+            },
+            {
+              "res":"loc_addr"
             }
           ]
         },
@@ -82,137 +118,10 @@
           "locL":
           [
             {
-              "lid":"A=1@O=KOCHHOLZ@X=15452035@Y=48269637@U=81@L=900003373@B=1@p=1645315177@i=A×5aae08d1-6162-40f1-94a8-3cac555c0797@",
-              "type":"S",
-              "name":"KOCHHOLZ",
-              "nameFormatted":
-              {
-                "text":"KOCHHOLZ"
-              },
-              "icoX":0,
-              "extId":"900003373",
-              "state":"F",
-              "crd":
-              {
-                "x":15452035,
-                "y":48269637,
-                "floor":0
-              },
-              "meta":true,
-              "pCls":64,
-              "wt":2,
-              "isSelectable":true,
-              "isRoutable":true,
-              "globalIdL":
-              [
-                {
-                  "id":"5aae08d1-6162-40f1-94a8-3cac555c0797",
-                  "type":"A"
-                }
-              ],
-              "TZOffset":60,
-              "chgTime":"000000",
-              "mapDtlCntStyX":-1
-            },
-            {
-              "lid":"A=2@O=Kochs Damm, Zetel@X=7878443@Y=53385057@U=104@b=971658595@B=1@p=1636631415@",
-              "type":"A",
-              "name":"Kochs Damm, Zetel",
-              "nameFormatted":
-              {
-                "text":"Kochs Damm, Zetel",
-                "textInstructionIntervalL":
-                [
-                  {
-                    "startIndex":0,
-                    "endIndex":10,
-                    "textInstructionX":0
-                  },
-                  {
-                    "startIndex":10,
-                    "endIndex":17,
-                    "textInstructionX":1
-                  }
-                ]
-              },
-              "icoX":1,
-              "state":"F",
-              "crd":
-              {
-                "x":7878443,
-                "y":53385057
-              },
-              "mapDtlCntStyX":-1
-            },
-            {
-              "lid":"A=2@O=Kochs, Wiggensbach@X=10236871@Y=47741126@U=104@b=971801681@B=1@p=1636631415@",
-              "type":"A",
-              "name":"Kochs, Wiggensbach",
-              "nameFormatted":
-              {
-                "text":"Kochs, Wiggensbach",
-                "textInstructionIntervalL":
-                [
-                  {
-                    "startIndex":0,
-                    "endIndex":5,
-                    "textInstructionX":0
-                  },
-                  {
-                    "startIndex":5,
-                    "endIndex":18,
-                    "textInstructionX":1
-                  }
-                ]
-              },
-              "icoX":1,
-              "state":"F",
-              "crd":
-              {
-                "x":10236871,
-                "y":47741126
-              },
-              "mapDtlCntStyX":-1
-            },
-            {
-              "lid":"A=2@O=Kochs Büsche, Melle@X=8421077@Y=52177563@U=104@b=971498706@B=1@p=1636631415@",
-              "type":"A",
-              "name":"Kochs Büsche, Melle",
-              "nameFormatted":
-              {
-                "text":"Kochs Büsche, Melle",
-                "textInstructionIntervalL":
-                [
-                  {
-                    "startIndex":0,
-                    "endIndex":12,
-                    "textInstructionX":0
-                  },
-                  {
-                    "startIndex":12,
-                    "endIndex":19,
-                    "textInstructionX":1
-                  }
-                ]
-              },
-              "icoX":1,
-              "state":"F",
-              "crd":
-              {
-                "x":8421077,
-                "y":52177563
-              },
-              "mapDtlCntStyX":-1
-            },
-            {
-              "lid":"A=1@O=Innsbruck Kochstraße@X=11400363@Y=47272851@U=81@L=476640200@B=1@p=1645315177@i=A×at:47:66402@",
+              "lid":"A=1@O=Innsbruck Kochstraße@X=11400363@Y=47272851@U=81@L=476640200@B=1@p=1703976599@i=A×at:47:66402@",
               "type":"S",
               "name":"Innsbruck Kochstraße",
-              "nameFormatted":
-              {
-                "text":"Innsbruck Kochstraße"
-              },
-              "icoX":2,
+              "icoX":0,
               "extId":"476640200",
               "state":"F",
               "crd":
@@ -223,7 +132,7 @@
               },
               "meta":true,
               "pCls":192,
-              "wt":216,
+              "wt":204,
               "isMainMast":true,
               "isSelectable":true,
               "isRoutable":true,
@@ -235,8 +144,142 @@
                 }
               ],
               "TZOffset":60,
-              "chgTime":"000000",
-              "mapDtlCntStyX":-1
+              "chgTime":"000000"
+            },
+            {
+              "lid":"A=1@O=Dornbirn Kochschule Oberdorf@X=9751894@Y=47409397@U=81@L=480065800@B=1@p=1703976599@i=A×at:48:658@",
+              "type":"S",
+              "name":"Dornbirn Kochschule Oberdorf",
+              "icoX":1,
+              "extId":"480065800",
+              "state":"F",
+              "crd":
+              {
+                "x":9751894,
+                "y":47409397,
+                "floor":0
+              },
+              "meta":true,
+              "pCls":128,
+              "wt":45,
+              "isMainMast":true,
+              "isSelectable":true,
+              "isRoutable":true,
+              "globalIdL":
+              [
+                {
+                  "id":"at:48:658",
+                  "type":"A"
+                }
+              ],
+              "TZOffset":60,
+              "chgTime":"000000"
+            },
+            {
+              "lid":"A=4@O=Kochstudio heilsam kochen, 4911 Tumeltsham (Essen und Trinken)@X=13497240@Y=48223667@U=130@L=960086943@B=1@p=1703981843@",
+              "type":"P",
+              "name":"Kochstudio heilsam kochen, 4911 Tumeltsham (Essen und Trinken)",
+              "nameFormatted":
+              {
+                "text":"Kochstudio heilsam kochen, 4911 Tumeltsham (Essen und Trinken)",
+                "textInstructionIntervalL":
+                [
+                  {
+                    "startIndex":25,
+                    "endIndex":62,
+                    "textInstructionX":0
+                  }
+                ]
+              },
+              "icoX":2,
+              "extId":"960086943",
+              "state":"F",
+              "crd":
+              {
+                "x":13497240,
+                "y":48223667,
+                "floor":0
+              },
+              "mcpData":
+              {
+                "type":"P",
+                "occupancy":"N",
+                "mcpid":"0",
+                "externalId":"oeamtc_to-10_430005211"
+              },
+              "isSelectable":true,
+              "isRoutable":true,
+              "msgL":
+              [
+                {
+                  "type":"REM",
+                  "remX":0,
+                  "sty":"I",
+                  "tagL":
+                  [
+                    "RES_LOC_WEB","RES_LOC_FLY_WEB"
+                  ],
+                  "sort":818413568
+                }
+              ]
+            },
+            {
+              "lid":"A=2@O=Kochstraße, 2620 Neunkirchen@X=16088696@Y=47728334@U=103@b=980067509@B=1@p=1697444719@",
+              "type":"A",
+              "name":"Kochstraße, 2620 Neunkirchen",
+              "nameFormatted":
+              {
+                "text":"Kochstraße, 2620 Neunkirchen",
+                "textInstructionIntervalL":
+                [
+                  {
+                    "startIndex":10,
+                    "endIndex":28,
+                    "textInstructionX":0
+                  },
+                  {
+                    "startIndex":0,
+                    "endIndex":10,
+                    "textInstructionX":1
+                  }
+                ]
+              },
+              "icoX":3,
+              "state":"F",
+              "crd":
+              {
+                "x":16088696,
+                "y":47728334
+              }
+            },
+            {
+              "lid":"A=2@O=Kochstraße, 4800 Attnang-Puchheim@X=13721341@Y=48011566@U=103@b=980067510@B=1@p=1697444719@",
+              "type":"A",
+              "name":"Kochstraße, 4800 Attnang-Puchheim",
+              "nameFormatted":
+              {
+                "text":"Kochstraße, 4800 Attnang-Puchheim",
+                "textInstructionIntervalL":
+                [
+                  {
+                    "startIndex":10,
+                    "endIndex":33,
+                    "textInstructionX":0
+                  },
+                  {
+                    "startIndex":0,
+                    "endIndex":10,
+                    "textInstructionX":1
+                  }
+                ]
+              },
+              "icoX":3,
+              "state":"F",
+              "crd":
+              {
+                "x":13721341,
+                "y":48011566
+              }
             }
           ]
         }

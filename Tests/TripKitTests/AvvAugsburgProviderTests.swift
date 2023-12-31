@@ -12,4 +12,5 @@ class AvvAugsburgProviderTests: TripKitProviderTestCase, TripKitProviderTestsDel
         return AvvAugsburgProvider()
     }
     
+    var supportsRefreshTrip: Bool { return false }
 }

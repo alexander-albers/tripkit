@@ -11,9 +11,9 @@ public class StvProvider: AbstractHafasClientInterfaceProvider {
     public init(apiAuthorization: [String: Any]) {
         super.init(networkId: .STV, apiBase: StvProvider.API_BASE, productsMap: StvProvider.PRODUCTS_MAP)
         self.apiAuthorization = apiAuthorization
-        apiVersion = "1.52"
+        apiVersion = "1.59"
         apiClient = ["id": "VAO", "type": "WEB", "name": "webapp", "l": "vs_stv"]
-        extVersion = "VAO.13"
+        extVersion = "VAO.20"
     }
     
     static let PLACES = ["Wien", "Graz", "Linz/Donau", "Salzburg", "Innsbruck"]

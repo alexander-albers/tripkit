@@ -4,7 +4,7 @@ on: [push, pull_request, workflow_dispatch]
 
 jobs:
   FixturesTests:
-    runs-on: macos-11
+    runs-on: macos-14
     name: Fixtures tests
     steps:
       - uses: actions/checkout@v2

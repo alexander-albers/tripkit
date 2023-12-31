@@ -53,23 +53,12 @@ public func parseTestCaseLocation(_ json: JSON) -> Location {
     return location
 }
 
-/// compares station ids and filters out the timestamp inside the location id
-public func compareLocationIds(_ expected: String?, _ response: String?) -> Bool {
-    guard var expected = expected, var response = response else {
-        return false
-    }
-    
-    expected = extractLocationId(id: expected)
-    response = extractLocationId(id: response)
-    
-    return expected == response
-}
-
 
 fileprivate let P_HAFAS_ID = try! NSRegularExpression(pattern: ".*?@(?:L|b)=([^@]+).*@", options: [])
-fileprivate let P_EFA_ID = try! NSRegularExpression(pattern: "streetID:([^:]*:[^:]*:[^:]*:[^:]*):.*", options: [])
+fileprivate let P_EFA_ID = try! NSRegularExpression(pattern: "streetID:[^:]*:[^:]*:[^:]*:[^:]*:([^:]*:[^:]*:[^:]*):.*", options: [])
 
-func extractLocationId(id: String) -> String {
+public func extractLocationId(id: String?) -> String? {
+    guard let id = id else { return nil }
     if let matches = id.match(pattern: P_HAFAS_ID), let res = matches[0] {
         return res
     } else if let matches = id.match(pattern: P_EFA_ID), let res = matches[0] {

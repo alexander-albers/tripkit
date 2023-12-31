@@ -12,6 +12,6 @@ class BayernProviderTests: TripKitProviderTestCase, TripKitProviderTestsDelegate
         return BayernProvider()
     }
     
-    var supportsQueryMoreTrips: Bool { return false }
+    var supportsRefreshTrip: Bool { return false }
     
 }

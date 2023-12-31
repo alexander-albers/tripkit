@@ -2,13 +2,11 @@
   "ver":"1.52",
   "ext":"VAO.7",
   "lang":"deu",
-  "id":"q7ix3ik62k8h9m8g",
+  "id":"gm4kinwckkwvwi8x",
   "err":"OK",
   "cInfo":
   {
-    "code":"OK",
-    "url":"",
-    "msg":""
+    "code":"OK"
   },
   "graph":
   {
@@ -38,12 +36,12 @@
           "txtInstL":
           [
             {
-              "id":"street",
+              "id":"city",
               "type":"NONE",
               "mode":"ADD"
             },
             {
-              "id":"city",
+              "id":"street",
               "type":"NONE",
               "mode":"ADD"
             },
@@ -67,7 +65,7 @@
           "locL":
           [
             {
-              "lid":"A=2@O=Falkstraße 26, 6020 Innsbruck@H=26@X=11403949@Y=47277606@U=103@L=980030312@B=1@p=1644831106@",
+              "lid":"A=2@O=Falkstraße 26, 6020 Innsbruck@H=26@X=11404066@Y=47277561@U=103@L=980030542@B=1@p=1697444719@",
               "type":"A",
               "name":"Falkstraße 26, 6020 Innsbruck",
               "nameFormatted":
@@ -76,13 +74,13 @@
                 "textInstructionIntervalL":
                 [
                   {
-                    "startIndex":0,
-                    "endIndex":10,
+                    "startIndex":13,
+                    "endIndex":29,
                     "textInstructionX":0
                   },
                   {
-                    "startIndex":13,
-                    "endIndex":29,
+                    "startIndex":0,
+                    "endIndex":10,
                     "textInstructionX":1
                   },
                   {
@@ -93,19 +91,18 @@
                 ]
               },
               "icoX":0,
-              "extId":"980030312",
+              "extId":"980030542",
               "state":"F",
               "crd":
               {
-                "x":11403949,
-                "y":47277606
+                "x":11404066,
+                "y":47277561
               },
               "isSelectable":true,
-              "isRoutable":true,
-              "mapDtlCntStyX":-1
+              "isRoutable":true
             },
             {
-              "lid":"A=2@O=Fallmerayerstraße 16, 6020 Innsbruck@H=16@X=11392128@Y=47262864@U=103@L=980030337@B=1@p=1644831106@",
+              "lid":"A=2@O=Fallmerayerstraße 16, 6020 Innsbruck@H=16@X=11392128@Y=47262864@U=103@L=980030568@B=1@p=1697444719@",
               "type":"A",
               "name":"Fallmerayerstraße 16, 6020 Innsbruck",
               "nameFormatted":
@@ -114,13 +111,13 @@
                 "textInstructionIntervalL":
                 [
                   {
-                    "startIndex":0,
-                    "endIndex":17,
+                    "startIndex":20,
+                    "endIndex":36,
                     "textInstructionX":0
                   },
                   {
-                    "startIndex":20,
-                    "endIndex":36,
+                    "startIndex":0,
+                    "endIndex":17,
                     "textInstructionX":1
                   },
                   {
@@ -131,7 +128,7 @@
                 ]
               },
               "icoX":0,
-              "extId":"980030337",
+              "extId":"980030568",
               "state":"F",
               "crd":
               {
@@ -139,49 +136,47 @@
                 "y":47262864
               },
               "isSelectable":true,
-              "isRoutable":true,
-              "mapDtlCntStyX":-1
+              "isRoutable":true
             },
             {
-              "lid":"A=2@O=Santifallerstraße GNR 1575/1, 6020 Innsbruck@H=GNR 1575/1@X=11380739@Y=47263762@U=103@L=980102826@B=1@p=1644831106@",
+              "lid":"A=2@O=Santifallerstraße 8, 6020 Innsbruck@H=8@X=11380838@Y=47264005@U=103@L=980103475@B=1@p=1697444719@",
               "type":"A",
-              "name":"Santifallerstraße GNR 1575/1, 6020 Innsbruck",
+              "name":"Santifallerstraße 8, 6020 Innsbruck",
               "nameFormatted":
               {
-                "text":"Santifallerstraße GNR 1575/1, 6020 Innsbruck",
+                "text":"Santifallerstraße 8, 6020 Innsbruck",
                 "textInstructionIntervalL":
                 [
                   {
-                    "startIndex":0,
-                    "endIndex":17,
+                    "startIndex":19,
+                    "endIndex":35,
                     "textInstructionX":0
                   },
                   {
-                    "startIndex":28,
-                    "endIndex":44,
+                    "startIndex":0,
+                    "endIndex":17,
                     "textInstructionX":1
                   },
                   {
                     "startIndex":17,
-                    "endIndex":28,
+                    "endIndex":19,
                     "textInstructionX":2
                   }
                 ]
               },
               "icoX":0,
-              "extId":"980102826",
+              "extId":"980103475",
               "state":"F",
               "crd":
               {
-                "x":11380739,
-                "y":47263762
+                "x":11380838,
+                "y":47264005
               },
               "isSelectable":true,
-              "isRoutable":true,
-              "mapDtlCntStyX":-1
+              "isRoutable":true
             },
             {
-              "lid":"A=2@O=Felseckstraße 26, 6020 Innsbruck@H=26@X=11372847@Y=47251160@U=103@L=980031986@B=1@p=1644831106@",
+              "lid":"A=2@O=Felseckstraße 26, 6020 Innsbruck@H=26@X=11372847@Y=47251160@U=103@L=980032227@B=1@p=1697444719@",
               "type":"A",
               "name":"Felseckstraße 26, 6020 Innsbruck",
               "nameFormatted":
@@ -190,13 +185,13 @@
                 "textInstructionIntervalL":
                 [
                   {
-                    "startIndex":0,
-                    "endIndex":13,
+                    "startIndex":16,
+                    "endIndex":32,
                     "textInstructionX":0
                   },
                   {
-                    "startIndex":16,
-                    "endIndex":32,
+                    "startIndex":0,
+                    "endIndex":13,
                     "textInstructionX":1
                   },
                   {
@@ -207,7 +202,7 @@
                 ]
               },
               "icoX":0,
-              "extId":"980031986",
+              "extId":"980032227",
               "state":"F",
               "crd":
               {
@@ -215,46 +210,44 @@
                 "y":47251160
               },
               "isSelectable":true,
-              "isRoutable":true,
-              "mapDtlCntStyX":-1
+              "isRoutable":true
             },
             {
-              "lid":"A=2@O=Felseckstraße 26a, 6020 Innsbruck@H=26a@X=11372918@Y=47251187@U=103@L=980031986@B=1@p=1644831106@",
+              "lid":"A=2@O=Gaswerkstraße 21, 6020 Innsbruck@H=21@X=11408363@Y=47266028@U=103@L=980039428@B=1@p=1697444719@",
               "type":"A",
-              "name":"Felseckstraße 26a, 6020 Innsbruck",
+              "name":"Gaswerkstraße 21, 6020 Innsbruck",
               "nameFormatted":
               {
-                "text":"Felseckstraße 26a, 6020 Innsbruck",
+                "text":"Gaswerkstraße 21, 6020 Innsbruck",
                 "textInstructionIntervalL":
                 [
                   {
-                    "startIndex":0,
-                    "endIndex":13,
+                    "startIndex":16,
+                    "endIndex":32,
                     "textInstructionX":0
                   },
                   {
-                    "startIndex":17,
-                    "endIndex":33,
+                    "startIndex":0,
+                    "endIndex":13,
                     "textInstructionX":1
                   },
                   {
                     "startIndex":13,
-                    "endIndex":17,
+                    "endIndex":16,
                     "textInstructionX":2
                   }
                 ]
               },
               "icoX":0,
-              "extId":"980031986",
+              "extId":"980039428",
               "state":"F",
               "crd":
               {
-                "x":11372918,
-                "y":47251187
+                "x":11408363,
+                "y":47266028
               },
               "isSelectable":true,
-              "isRoutable":true,
-              "mapDtlCntStyX":-1
+              "isRoutable":true
             }
           ]
         }

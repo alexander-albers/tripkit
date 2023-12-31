@@ -2,13 +2,11 @@
   "ver":"1.52",
   "ext":"VAO.7",
   "lang":"deu",
-  "id":"aji89i4s2k8pxk8x",
+  "id":"9w6k8n4umkwuw2wg",
   "err":"OK",
   "cInfo":
   {
-    "code":"OK",
-    "url":"",
-    "msg":""
+    "code":"OK"
   },
   "graph":
   {
@@ -78,17 +76,27 @@
             },
             {
               "res":"PCAT_NEXTBIKE",
-              "zIdx":900
-            },
-            {
-              "res":"MH"
+              "fg":
+              {
+                "r":96,
+                "g":190,
+                "b":160
+              },
+              "bg":
+              {
+                "r":96,
+                "g":190,
+                "b":160
+              }
             },
             {
               "res":"loc_addr"
             },
             {
-              "res":"prod_regbus",
-              "txtS":"453",
+              "res":"MH"
+            },
+            {
+              "res":"prod_ic",
               "fg":
               {
                 "r":255,
@@ -97,9 +105,9 @@
               },
               "bg":
               {
-                "r":0,
-                "g":163,
-                "b":212
+                "r":80,
+                "g":80,
+                "b":80
               },
               "zIdx":1000
             }
@@ -112,13 +120,9 @@
           "locL":
           [
             {
-              "lid":"A=1@O=Innsbruck Mühlauer Brücke@X=11403608@Y=47278756@U=81@L=476434000@B=1@p=1645315177@i=A×at:47:64340@",
+              "lid":"A=1@O=Innsbruck Mühlauer Brücke@X=11403608@Y=47278756@U=81@L=476434000@B=1@p=1703976599@i=A×at:47:64340@",
               "type":"S",
               "name":"Innsbruck Mühlauer Brücke",
-              "nameFormatted":
-              {
-                "text":"Innsbruck Mühlauer Brücke"
-              },
               "icoX":0,
               "extId":"476434000",
               "state":"F",
@@ -130,7 +134,7 @@
               },
               "meta":true,
               "pCls":208,
-              "wt":965,
+              "wt":827,
               "isMainMast":true,
               "isSelectable":true,
               "isRoutable":true,
@@ -142,11 +146,10 @@
                 }
               ],
               "TZOffset":60,
-              "chgTime":"000000",
-              "mapDtlCntStyX":-1
+              "chgTime":"000000"
             },
             {
-              "lid":"A=4@O=Mühlauer Brücke, Innsbruck@X=11403913@Y=47278837@U=130@L=960014753@B=1@p=1645318911@",
+              "lid":"A=4@O=Mühlauer Brücke, Innsbruck@X=11403913@Y=47278837@U=130@L=960014753@B=1@p=1703981843@",
               "type":"P",
               "name":"Mühlauer Brücke, Innsbruck",
               "nameFormatted":
@@ -185,26 +188,52 @@
                   "type":"REM",
                   "remX":0,
                   "sty":"I",
-                  "dspl":"U",
                   "tagL":
                   [
                     "RES_LOC_WEB","RES_LOC_FLY_WEB"
                   ],
                   "sort":818413568
                 }
-              ],
-              "mapDtlCntStyX":-1
+              ]
             },
             {
-              "lid":"A=1@O=MÜHLDORF-MÖLLBRÜCKE@X=13366735@Y=46851418@U=81@L=900008630@B=1@p=1645315177@i=A×fe2f51a6-2ac8-4e73-a9dd-b3fafd561325@",
-              "type":"S",
-              "name":"MÜHLDORF-MÖLLBRÜCKE",
+              "lid":"A=2@O=Mühlaubrücke, 68159 Mannheim@X=8453501@Y=49489635@U=104@L=971785922@B=1@p=1682607719@",
+              "type":"A",
+              "name":"Mühlaubrücke, 68159 Mannheim",
               "nameFormatted":
               {
-                "text":"MÜHLDORF-MÖLLBRÜCKE"
+                "text":"Mühlaubrücke, 68159 Mannheim",
+                "textInstructionIntervalL":
+                [
+                  {
+                    "startIndex":12,
+                    "endIndex":28,
+                    "textInstructionX":0
+                  },
+                  {
+                    "startIndex":0,
+                    "endIndex":12,
+                    "textInstructionX":1
+                  }
+                ]
               },
               "icoX":2,
-              "extId":"900008630",
+              "extId":"971785922",
+              "state":"F",
+              "crd":
+              {
+                "x":8453501,
+                "y":49489635
+              },
+              "isSelectable":true,
+              "isRoutable":true
+            },
+            {
+              "lid":"A=1@O=MÜHLDORF-MÖLLBRÜCKE@X=13366735@Y=46851418@U=81@L=900008545@B=1@p=1703976599@i=A×fe2f51a6-2ac8-4e73-a9dd-b3fafd561325@",
+              "type":"S",
+              "name":"MÜHLDORF-MÖLLBRÜCKE",
+              "icoX":3,
+              "extId":"900008545",
               "state":"F",
               "crd":
               {
@@ -214,7 +243,7 @@
               },
               "meta":true,
               "pCls":1,
-              "wt":244,
+              "wt":209,
               "isSelectable":true,
               "isRoutable":true,
               "globalIdL":
@@ -225,75 +254,36 @@
                 }
               ],
               "TZOffset":60,
-              "chgTime":"000000",
-              "mapDtlCntStyX":-1
+              "chgTime":"000000"
             },
             {
-              "lid":"A=2@O=Mühlaubrücke, Mannheim@X=8453501@Y=49489635@U=104@L=971720934@B=1@p=1636631415@",
-              "type":"A",
-              "name":"Mühlaubrücke, Mannheim",
-              "nameFormatted":
-              {
-                "text":"Mühlaubrücke, Mannheim",
-                "textInstructionIntervalL":
-                [
-                  {
-                    "startIndex":0,
-                    "endIndex":12,
-                    "textInstructionX":1
-                  },
-                  {
-                    "startIndex":12,
-                    "endIndex":22,
-                    "textInstructionX":0
-                  }
-                ]
-              },
-              "icoX":3,
-              "extId":"971720934",
-              "state":"F",
-              "crd":
-              {
-                "x":8453501,
-                "y":49489635
-              },
-              "isSelectable":true,
-              "isRoutable":true,
-              "mapDtlCntStyX":-1
-            },
-            {
-              "lid":"A=1@O=Mühlgrub (Bad Hall) Brücke@X=14207029@Y=48023540@U=81@L=444344000@B=1@p=1645315177@i=A×at:44:43440@",
+              "lid":"A=1@O=Mühldorf-Möllbrücke Bahnhst@X=13366735@Y=46851418@U=81@L=420212600@B=1@p=1703976599@i=A×at:42:2126@",
               "type":"S",
-              "name":"Mühlgrub (Bad Hall) Brücke",
-              "nameFormatted":
-              {
-                "text":"Mühlgrub (Bad Hall) Brücke"
-              },
+              "name":"Mühldorf-Möllbrücke Bahnhst",
               "icoX":4,
-              "extId":"444344000",
+              "extId":"420212600",
               "state":"F",
               "crd":
               {
-                "x":14207029,
-                "y":48023540,
+                "x":13366735,
+                "y":46851418,
                 "floor":0
               },
               "meta":true,
-              "pCls":64,
-              "wt":10,
+              "pCls":1,
+              "wt":209,
               "isMainMast":true,
               "isSelectable":true,
               "isRoutable":true,
               "globalIdL":
               [
                 {
-                  "id":"at:44:43440",
+                  "id":"at:42:2126",
                   "type":"A"
                 }
               ],
               "TZOffset":60,
-              "chgTime":"000000",
-              "mapDtlCntStyX":-1
+              "chgTime":"000000"
             }
           ]
         }

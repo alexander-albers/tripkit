@@ -35,8 +35,7 @@ class TripKitProviderTestCase: XCTestCase {
                     switch result {
                     case .success(let locations):
                         os_log("success: %@", log: .testsLogger, type: .default, locations.map({($0.location.id ?? "") + " " + $0.location.getUniqueLongName()}))
-                        XCTAssert(!locations.isEmpty, "received empty result")
-                        XCTAssert(locations.contains(where: {compareLocationIds($0.location.id, testCase["result"]["id"].string) || $0.location.getUniqueLongName() == testCase["result"]["name"].string}), "result does not contain the searched location")
+                        self.compareLocationIds(testCase, locations.map { $0.location })
                         
                         XCTAssert(expected == locations)
                     case .failure(let error):
@@ -57,8 +56,7 @@ class TripKitProviderTestCase: XCTestCase {
                     switch result {
                     case .success(let locations):
                         os_log("success: %@", log: .testsLogger, type: .default, locations.map({($0.id ?? "") + " " + $0.getUniqueLongName()}))
-                        XCTAssert(!locations.isEmpty, "received empty result")
-                        XCTAssert(locations.contains(where: {compareLocationIds($0.id, testCase["result"]["id"].string) || $0.getUniqueLongName() == testCase["result"]["name"].string}), "result does not contain the searched location")
+                        self.compareLocationIds(testCase, locations)
                         
                         XCTAssert(expected == locations)
                     case .invalidId:
@@ -322,6 +320,19 @@ class TripKitProviderTestCase: XCTestCase {
             os_log("Failed to load fixture %@: %@", log: .testsLogger, type: .error, provider.id.rawValue.lowercased() + "/" + name, error.description)
             return nil
         }
+    }
+    
+    /// compares station ids and filters out the timestamp inside the location id
+    public func compareLocationIds(_ expected: JSON, _ response: [Location]) {
+        XCTAssert(!response.isEmpty, "received empty result")
+        
+        let locationIds = response.compactMap { extractLocationId(id: $0.id) }
+        let expectedId = extractLocationId(id: expected["result"]["id"].string) ?? ""
+        
+        let locationNames = response.compactMap { $0.getUniqueLongName() }
+        let expectedName = expected["result"]["name"].string ?? ""
+        
+        XCTAssert(locationIds.contains(expectedId) || locationNames.contains(expectedName), "neither id=\(expectedId) nor name=\(expectedName) found in result: \(locationIds) \(locationNames)")
     }
     
 }

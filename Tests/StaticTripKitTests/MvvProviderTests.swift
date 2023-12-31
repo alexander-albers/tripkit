@@ -12,7 +12,6 @@ class MvvProviderTests: TripKitProviderTestCase, TripKitProviderTestsDelegate {
         return MvvProvider()
     }
     
-    var supportsQueryMoreTrips: Bool { return false }
     var supportsRefreshTrip: Bool { return false }
     var supportsJourneyDetails: Bool { return false }
     
