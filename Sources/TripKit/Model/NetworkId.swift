@@ -10,7 +10,7 @@ public enum NetworkId: String {
     OEBB, VAO, VOR, WIEN, OOEVV, LINZ, SVV, VVT, IVB, STV, VMOBIL,
     
     // Switzerland
-    SEARCHCH, ZVV, BVB,
+    SBB, SEARCHCH, ZVV, BVB,
     
     // Italy
     STA

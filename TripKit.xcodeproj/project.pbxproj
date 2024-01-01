@@ -239,6 +239,24 @@
 		FA52896426876CC700C14626 /* Gzip in Frameworks */ = {isa = PBXBuildFile; productRef = FA5CD21224FBB1E100B4990A /* Gzip */; };
 		FA52896526876CC700C14626 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = FA5CD21424FBB1E100B4990A /* SwiftyJSON */; };
 		FA52896626876CC700C14626 /* SWXMLHash in Frameworks */ = {isa = PBXBuildFile; productRef = FA4EB1C6251F8AD900BCAD4B /* SWXMLHash */; };
+		FA53203D2B42D1E300FF4393 /* _.vnext.app.sbb.ch.cer in Resources */ = {isa = PBXBuildFile; fileRef = FA53203C2B42D1E300FF4393 /* _.vnext.app.sbb.ch.cer */; };
+		FA53203E2B42D1E300FF4393 /* _.vnext.app.sbb.ch.cer in Resources */ = {isa = PBXBuildFile; fileRef = FA53203C2B42D1E300FF4393 /* _.vnext.app.sbb.ch.cer */; };
+		FA53203F2B42D1E300FF4393 /* _.vnext.app.sbb.ch.cer in Resources */ = {isa = PBXBuildFile; fileRef = FA53203C2B42D1E300FF4393 /* _.vnext.app.sbb.ch.cer */; };
+		FA5320402B42D1E300FF4393 /* _.vnext.app.sbb.ch.cer in Resources */ = {isa = PBXBuildFile; fileRef = FA53203C2B42D1E300FF4393 /* _.vnext.app.sbb.ch.cer */; };
+		FA5320422B42D87600FF4393 /* SbbProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5320412B42D87600FF4393 /* SbbProviderTests.swift */; };
+		FA5320432B42D87600FF4393 /* SbbProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5320412B42D87600FF4393 /* SbbProviderTests.swift */; };
+		FA5320442B42D87600FF4393 /* SbbProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5320412B42D87600FF4393 /* SbbProviderTests.swift */; };
+		FA5320462B42E3CC00FF4393 /* SbbProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5320452B42E3CC00FF4393 /* SbbProviderTests.swift */; };
+		FA5320472B42E3CC00FF4393 /* SbbProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5320452B42E3CC00FF4393 /* SbbProviderTests.swift */; };
+		FA5320482B42E3CC00FF4393 /* SbbProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5320452B42E3CC00FF4393 /* SbbProviderTests.swift */; };
+		FA5C1CBF2B41B51000DD90F9 /* SbbProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5C1CBE2B41B51000DD90F9 /* SbbProvider.swift */; };
+		FA5C1CC02B41B51000DD90F9 /* SbbProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5C1CBE2B41B51000DD90F9 /* SbbProvider.swift */; };
+		FA5C1CC12B41B51000DD90F9 /* SbbProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5C1CBE2B41B51000DD90F9 /* SbbProvider.swift */; };
+		FA5C1CC22B41B51000DD90F9 /* SbbProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5C1CBE2B41B51000DD90F9 /* SbbProvider.swift */; };
+		FA5C1CC42B41B52700DD90F9 /* sbb-certificate.crt in Resources */ = {isa = PBXBuildFile; fileRef = FA5C1CC32B41B52700DD90F9 /* sbb-certificate.crt */; };
+		FA5C1CC52B41B52700DD90F9 /* sbb-certificate.crt in Resources */ = {isa = PBXBuildFile; fileRef = FA5C1CC32B41B52700DD90F9 /* sbb-certificate.crt */; };
+		FA5C1CC62B41B52700DD90F9 /* sbb-certificate.crt in Resources */ = {isa = PBXBuildFile; fileRef = FA5C1CC32B41B52700DD90F9 /* sbb-certificate.crt */; };
+		FA5C1CC72B41B52700DD90F9 /* sbb-certificate.crt in Resources */ = {isa = PBXBuildFile; fileRef = FA5C1CC32B41B52700DD90F9 /* sbb-certificate.crt */; };
 		FA5CD20424FBB1D200B4990A /* TripKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA5CD1FB24FBB1D200B4990A /* TripKit.framework */; };
 		FA5CD22324FBB1FC00B4990A /* TripKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA5CD1D324FBB10C00B4990A /* TripKit.framework */; };
 		FA5CD22924FBB29000B4990A /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB7543A1E3FD3F300C343F2 /* NetworkProvider.swift */; };
@@ -1045,6 +1063,11 @@
 		FA4F58131E8BCA6800EA392F /* VmvProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VmvProvider.swift; sourceTree = "<group>"; };
 		FA4F58171E8BD1D800EA392F /* GvhProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GvhProvider.swift; sourceTree = "<group>"; };
 		FA4F58191E8BD30500EA392F /* ShProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShProvider.swift; sourceTree = "<group>"; };
+		FA53203C2B42D1E300FF4393 /* _.vnext.app.sbb.ch.cer */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = _.vnext.app.sbb.ch.cer; path = ../../../../../../Downloads/_.vnext.app.sbb.ch.cer; sourceTree = "<group>"; };
+		FA5320412B42D87600FF4393 /* SbbProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SbbProviderTests.swift; sourceTree = "<group>"; };
+		FA5320452B42E3CC00FF4393 /* SbbProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SbbProviderTests.swift; sourceTree = "<group>"; };
+		FA5C1CBE2B41B51000DD90F9 /* SbbProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SbbProvider.swift; sourceTree = "<group>"; };
+		FA5C1CC32B41B52700DD90F9 /* sbb-certificate.crt */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sbb-certificate.crt"; sourceTree = "<group>"; };
 		FA5CD1CD24FBAFFF00B4990A /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		FA5CD1D324FBB10C00B4990A /* TripKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TripKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA5CD1FB24FBB1D200B4990A /* TripKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TripKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1361,6 +1384,7 @@
 				FAC5902F26E7508700E8EAF3 /* OoevvProviderTests.swift */,
 				FAC5902A26E7508600E8EAF3 /* RmvProviderTests.swift */,
 				FAC5902B26E7508600E8EAF3 /* RtProviderTests.swift */,
+				FA5320452B42E3CC00FF4393 /* SbbProviderTests.swift */,
 				FAE2E3B82A041365002280BA /* SearchChProviderTests.swift */,
 				FAC5902D26E7508600E8EAF3 /* ShProviderTests.swift */,
 				FA48B0392787572B00186DBD /* StaProviderTests.swift */,
@@ -1416,6 +1440,8 @@
 				FA7058572271B3D80070D2C9 /* secrets.json */,
 				FA7D03E8228729A900DB192E /* secrets.json.template */,
 				FA4C7F2D26EB3AA700BFD671 /* vrs-client-certificate.pfx */,
+				FA5C1CC32B41B52700DD90F9 /* sbb-certificate.crt */,
+				FA53203C2B42D1E300FF4393 /* _.vnext.app.sbb.ch.cer */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -1619,6 +1645,7 @@
 				FA1C0A06275D1AC100AA66C3 /* OoevvProviderTests.swift */,
 				FA1C0A21275D1AC200AA66C3 /* RmvProviderTests.swift */,
 				FA1C0A04275D1AC100AA66C3 /* RtProviderTests.swift */,
+				FA5320412B42D87600FF4393 /* SbbProviderTests.swift */,
 				FAC2130527C0E6CB00D44B30 /* SearchChProviderTests.swift */,
 				FA1C0A0F275D1AC100AA66C3 /* ShProviderTests.swift */,
 				FA48B03D2787574800186DBD /* StaProviderTests.swift */,
@@ -1731,6 +1758,7 @@
 		FAEAFDDD27BE95D800EE16EB /* Switzerland */ = {
 			isa = PBXGroup;
 			children = (
+				FA5C1CBE2B41B51000DD90F9 /* SbbProvider.swift */,
 				FAC2130027C0E36000D44B30 /* SearchChProvider.swift */,
 				FA4371231F62AE4D00F53B82 /* ZvvProvider.swift */,
 				FA7CAA3E2799561800BE5147 /* BvbProvider.swift */,
@@ -2192,6 +2220,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA5C1CC62B41B52700DD90F9 /* sbb-certificate.crt in Resources */,
+				FA53203F2B42D1E300FF4393 /* _.vnext.app.sbb.ch.cer in Resources */,
 				FA4C7F3026EB3AA700BFD671 /* vrs-client-certificate.pfx in Resources */,
 				FA5CD2C924FBB2A900B4990A /* secrets.json in Resources */,
 			);
@@ -2201,6 +2231,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA5C1CC72B41B52700DD90F9 /* sbb-certificate.crt in Resources */,
+				FA5320402B42D1E300FF4393 /* _.vnext.app.sbb.ch.cer in Resources */,
 				FA4C7F3126EB3AA700BFD671 /* vrs-client-certificate.pfx in Resources */,
 				FA5CD2D624FBB2AA00B4990A /* secrets.json in Resources */,
 			);
@@ -2224,6 +2256,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA5C1CC42B41B52700DD90F9 /* sbb-certificate.crt in Resources */,
+				FA53203D2B42D1E300FF4393 /* _.vnext.app.sbb.ch.cer in Resources */,
 				FA4C7F2E26EB3AA700BFD671 /* vrs-client-certificate.pfx in Resources */,
 				FA8FE64D22741E11003CE4B4 /* secrets.json in Resources */,
 			);
@@ -2288,6 +2322,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA5C1CC52B41B52700DD90F9 /* sbb-certificate.crt in Resources */,
+				FA53203E2B42D1E300FF4393 /* _.vnext.app.sbb.ch.cer in Resources */,
 				FA4C7F2F26EB3AA700BFD671 /* vrs-client-certificate.pfx in Resources */,
 				FA8FE64C22741E11003CE4B4 /* secrets.json in Resources */,
 			);
@@ -2362,6 +2398,7 @@
 				FA5CD24924FBB29000B4990A /* MvgProvider.swift in Sources */,
 				FA5CD24B24FBB29000B4990A /* VvsProvider.swift in Sources */,
 				FA5CD2BE24FBB2A900B4990A /* UrlBuilder.swift in Sources */,
+				FA5C1CC12B41B51000DD90F9 /* SbbProvider.swift in Sources */,
 				FA5CD23324FBB29000B4990A /* BayernProvider.swift in Sources */,
 				FA5CD2A524FBB29C00B4990A /* Style.swift in Sources */,
 				FA85135626E37CE7004B6DD4 /* RequestParameters.swift in Sources */,
@@ -2474,6 +2511,7 @@
 				FA5CD27E24FBB29000B4990A /* MvgProvider.swift in Sources */,
 				FA5CD28024FBB29000B4990A /* VvsProvider.swift in Sources */,
 				FA5CD2CB24FBB2AA00B4990A /* UrlBuilder.swift in Sources */,
+				FA5C1CC22B41B51000DD90F9 /* SbbProvider.swift in Sources */,
 				FA5CD26824FBB29000B4990A /* BayernProvider.swift in Sources */,
 				FA5CD2B524FBB29D00B4990A /* Style.swift in Sources */,
 				FA85135726E37CE7004B6DD4 /* RequestParameters.swift in Sources */,
@@ -2554,6 +2592,7 @@
 				FA1C0A34275D1AC200AA66C3 /* MvgProviderTests.swift in Sources */,
 				FA1C0AA3275D1AC200AA66C3 /* VbbProviderTests.swift in Sources */,
 				FA1C0A67275D1AC200AA66C3 /* ShProviderTests.swift in Sources */,
+				FA5320442B42D87600FF4393 /* SbbProviderTests.swift in Sources */,
 				FA1C0A85275D1AC200AA66C3 /* VsnProviderTests.swift in Sources */,
 				FAB15DCA2798651D00E6A4CB /* NaldoProviderTests.swift in Sources */,
 				FA1C0A91275D1AC200AA66C3 /* NasaProviderTests.swift in Sources */,
@@ -2616,6 +2655,7 @@
 				FA1C0A33275D1AC200AA66C3 /* MvgProviderTests.swift in Sources */,
 				FA1C0AA2275D1AC200AA66C3 /* VbbProviderTests.swift in Sources */,
 				FA1C0A66275D1AC200AA66C3 /* ShProviderTests.swift in Sources */,
+				FA5320432B42D87600FF4393 /* SbbProviderTests.swift in Sources */,
 				FA1C0A84275D1AC200AA66C3 /* VsnProviderTests.swift in Sources */,
 				FAB15DC92798651D00E6A4CB /* NaldoProviderTests.swift in Sources */,
 				FA1C0A90275D1AC200AA66C3 /* NasaProviderTests.swift in Sources */,
@@ -2710,6 +2750,7 @@
 				FAB7543E1E3FD3F300C343F2 /* NetworkProvider.swift in Sources */,
 				FA4B56F8219735FE003CD7CF /* InvgProvider.swift in Sources */,
 				FABFCC2E1E8FED9000905D5E /* VagfrProvider.swift in Sources */,
+				FA5C1CBF2B41B51000DD90F9 /* SbbProvider.swift in Sources */,
 				FABFCC2A1E8FECD200905D5E /* DingProvider.swift in Sources */,
 				FA85135426E37CE7004B6DD4 /* RequestParameters.swift in Sources */,
 				FAB7542C1E3FD3E500C343F2 /* NetworkId.swift in Sources */,
@@ -2790,6 +2831,7 @@
 				FA1C0A32275D1AC200AA66C3 /* MvgProviderTests.swift in Sources */,
 				FA1C0AA1275D1AC200AA66C3 /* VbbProviderTests.swift in Sources */,
 				FA1C0A65275D1AC200AA66C3 /* ShProviderTests.swift in Sources */,
+				FA5320422B42D87600FF4393 /* SbbProviderTests.swift in Sources */,
 				FA1C0A83275D1AC200AA66C3 /* VsnProviderTests.swift in Sources */,
 				FAB15DC82798651D00E6A4CB /* NaldoProviderTests.swift in Sources */,
 				FA1C0A8F275D1AC200AA66C3 /* NasaProviderTests.swift in Sources */,
@@ -2831,6 +2873,7 @@
 				FAC5903B26E7508900E8EAF3 /* RmvProviderTests.swift in Sources */,
 				FAC5901026E7507E00E8EAF3 /* AvvAachenProviderTests.swift in Sources */,
 				FAC5901C26E7507E00E8EAF3 /* BayernProviderTests.swift in Sources */,
+				FA5320462B42E3CC00FF4393 /* SbbProviderTests.swift in Sources */,
 				FAC5907C26E7509700E8EAF3 /* VosProviderTests.swift in Sources */,
 				FAC5907926E7509700E8EAF3 /* VmsProviderTests.swift in Sources */,
 				FAE6E70726E6ACBF007E975A /* LineStyleTests.swift in Sources */,
@@ -2894,6 +2937,7 @@
 				FAC5903D26E7508900E8EAF3 /* RmvProviderTests.swift in Sources */,
 				FAC5901226E7507E00E8EAF3 /* AvvAachenProviderTests.swift in Sources */,
 				FAC5901E26E7507E00E8EAF3 /* BayernProviderTests.swift in Sources */,
+				FA5320482B42E3CC00FF4393 /* SbbProviderTests.swift in Sources */,
 				FAC5907E26E7509700E8EAF3 /* VosProviderTests.swift in Sources */,
 				FAC5907B26E7509700E8EAF3 /* VmsProviderTests.swift in Sources */,
 				FAE6E71126E6ACC2007E975A /* UrlEncodingTests.swift in Sources */,
@@ -2957,6 +3001,7 @@
 				FAC5903C26E7508900E8EAF3 /* RmvProviderTests.swift in Sources */,
 				FAC5901126E7507E00E8EAF3 /* AvvAachenProviderTests.swift in Sources */,
 				FAC5901D26E7507E00E8EAF3 /* BayernProviderTests.swift in Sources */,
+				FA5320472B42E3CC00FF4393 /* SbbProviderTests.swift in Sources */,
 				FAC5907D26E7509700E8EAF3 /* VosProviderTests.swift in Sources */,
 				FAC5907A26E7509700E8EAF3 /* VmsProviderTests.swift in Sources */,
 				FAE6E70D26E6ACC1007E975A /* UrlEncodingTests.swift in Sources */,
@@ -3097,6 +3142,7 @@
 				FAFF18A81FA50B9500A8ED69 /* NetworkProvider.swift in Sources */,
 				FA4B56F9219735FE003CD7CF /* InvgProvider.swift in Sources */,
 				FAFF18A91FA50B9500A8ED69 /* VagfrProvider.swift in Sources */,
+				FA5C1CC02B41B51000DD90F9 /* SbbProvider.swift in Sources */,
 				FAFF18AA1FA50B9500A8ED69 /* DingProvider.swift in Sources */,
 				FA85135526E37CE7004B6DD4 /* RequestParameters.swift in Sources */,
 				FAFF18AB1FA50B9500A8ED69 /* NetworkId.swift in Sources */,

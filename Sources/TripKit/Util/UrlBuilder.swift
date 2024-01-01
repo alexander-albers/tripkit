@@ -29,21 +29,22 @@ public class UrlBuilder: CustomStringConvertible {
         self.anchorHash = anchorHash
     }
     
-    public func addParameter(key: String, value: Any?) {
-        queryItems.append(QueryItem(key: key, value: value == nil ? nil : String(describing: value!)))
+    public func addParameter(key: String, value: Any?, percentCoded: Bool = false) {
+        queryItems.append(QueryItem(key: key, value: value == nil ? nil : String(describing: value!), isPercentCoded: percentCoded))
     }
     
-    public func insertParameter(key: String, value: Any?, at index: Int) {
-        queryItems.insert(QueryItem(key: key, value: value == nil ? nil : String(describing: value!)), at: index)
+    public func insertParameter(key: String, value: Any?, at index: Int, percentCoded: Bool = false) {
+        queryItems.insert(QueryItem(key: key, value: value == nil ? nil : String(describing: value!), isPercentCoded: percentCoded), at: index)
     }
     
-    public func setParameter(key: String, value: Any?) {
+    public func setParameter(key: String, value: Any?, percentCoded: Bool = false) {
         if let index = queryItems.firstIndex(where: {$0.key == key}) {
             var item = queryItems.remove(at: index)
             item.value = value == nil ? nil : String(describing: value!)
+            item.isPercentCoded = percentCoded
             queryItems.append(item)
         } else {
-            queryItems.append(QueryItem(key: key, value: value == nil ? nil : String(describing: value!)))
+            queryItems.append(QueryItem(key: key, value: value == nil ? nil : String(describing: value!), isPercentCoded: percentCoded))
         }
     }
     
@@ -91,7 +92,9 @@ public class UrlBuilder: CustomStringConvertible {
                 result += "&"
             }
             result += encodedKey + "="
-            if let encodedValue = queryItem.value?.encodeUrl(using: encoding ?? .utf8) {
+            if let value = queryItem.value, queryItem.isPercentCoded {
+                result += value
+            } else if let encodedValue = queryItem.value?.encodeUrl(using: encoding ?? .utf8) {
                 result += encodedValue
             }
         }
@@ -118,5 +121,6 @@ fileprivate struct QueryItem {
     
     let key: String
     var value: String?
+    var isPercentCoded: Bool
     
 }

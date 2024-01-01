@@ -228,7 +228,7 @@ public class HvvProvider: AbstractNetworkProvider {
                 journeyContext = nil
             }
             
-            let dep = Departure(plannedTime: plannedTime, predictedTime: predictedTime, line: line.line, position: predictedPlatform, plannedPosition: plannedPlatform, cancelled: cancelled, destination: line.destination, capacity: nil, message: message, journeyContext: journeyContext, wagonSequenceContext: nil)
+            let dep = Departure(plannedTime: plannedTime, predictedTime: predictedTime, line: line.line, position: predictedPlatform, plannedPosition: plannedPlatform, cancelled: cancelled, destination: line.destination, capacity: nil, message: message, journeyContext: journeyContext)
             
             let stationDeparture: StationDepartures
             if let first = stationDepartures.first(where: { station == nil || $0.stopLocation == station }) {

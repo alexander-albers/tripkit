@@ -32,7 +32,8 @@ public class SecretsLoader {
             default:
                 requestVerification = .none
             }
-            result[id] = AuthorizationData(apiBase: apiBase, hciAuthorization: apiAuthorization, certAuthorization: certAuthorization, hciRequestVerification: requestVerification)
+            let apiKey = entry["apiKey"].stringValue
+            result[id] = AuthorizationData(apiBase: apiBase, hciAuthorization: apiAuthorization, certAuthorization: certAuthorization, hciRequestVerification: requestVerification, apiKey: apiKey)
         }
         return result
     }

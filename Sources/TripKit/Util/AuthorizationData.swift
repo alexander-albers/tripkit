@@ -5,4 +5,5 @@ public struct AuthorizationData {
     public var hciAuthorization: [String: Any] = [:]
     public var certAuthorization: [String: Any] = [:]
     public var hciRequestVerification: AbstractHafasClientInterfaceProvider.RequestVerification = .none
+    public var apiKey: String = ""
 }

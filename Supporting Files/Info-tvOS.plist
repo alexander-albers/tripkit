@@ -22,6 +22,11 @@
 	<dict>
 		<key>NSExceptionDomains</key>
 		<dict>
+			<key>active.vnext.app.sbb.ch</key>
+			<dict>
+				<key>NSExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+			</dict>
 			<key>android.vrsinfo.de</key>
 			<dict>
 				<key>NSExceptionAllowsInsecureHTTPLoads</key>

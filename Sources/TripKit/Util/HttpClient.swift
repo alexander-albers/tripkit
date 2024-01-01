@@ -16,7 +16,7 @@ public class HttpClient: NSObject {
         return URLSession(configuration: config, delegate: self, delegateQueue: nil)
     }()
     private var clientIdentityCache: [String: SecIdentity] = [:]
-    
+    private var clientRootCache: [String: SecCertificate] = [:]
     
     public static func get(httpRequest: HttpRequest, completion: @escaping (Result<(HTTPURLResponse, Data), HttpError>) -> Void) -> AsyncRequest {
         guard let url = httpRequest.urlBuilder.build() else {
@@ -87,16 +87,30 @@ extension HttpClient: URLSessionDelegate {
         shared.clientIdentityCache[host] = identity
     }
     
+    public static func cacheRootCertificate(for host: String, certificate: SecCertificate) {
+        shared.clientRootCache[host] = certificate
+    }
+    
     public func urlSession(_ session: URLSession, didReceive challenge: URLAuthenticationChallenge, completionHandler: @escaping (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
         switch (challenge.protectionSpace.authenticationMethod) {
-            case (NSURLAuthenticationMethodClientCertificate):
+        case NSURLAuthenticationMethodClientCertificate:
             if let identity = clientIdentityCache[challenge.protectionSpace.host] {
                 completionHandler(.useCredential, URLCredential(identity: identity, certificates: nil, persistence: .forSession))
             } else {
                 completionHandler(.performDefaultHandling, nil)
             }
-            default:
+        case NSURLAuthenticationMethodServerTrust:
+            if let rootCert = clientRootCache[challenge.protectionSpace.host], let trust = challenge.protectionSpace.serverTrust {
+                if trust.evaluateAllowing(rootCertificates: [rootCert]) {
+                    completionHandler(.useCredential, URLCredential(trust: trust))
+                } else {
+                    completionHandler(.cancelAuthenticationChallenge, nil)
+                }
+            } else {
                 completionHandler(.performDefaultHandling, nil)
+            }
+        default:
+            completionHandler(.performDefaultHandling, nil)
         }
     }
 }
@@ -104,7 +118,7 @@ extension HttpClient: URLSessionDelegate {
 
 public enum HttpError: Error {
     case invalidUrl(String?)
-    case invalidStatusCode(Int)
+    case invalidStatusCode(Int, Data)
     case networkError(Error)
     case parseError
 }
@@ -124,7 +138,7 @@ extension URLSession {
             }
             guard response.statusCode / 100 == 2 else {
                 os_log("got invalid http status code %d", log: .requestLogger, type: .error, response.statusCode)
-                result(.failure(.invalidStatusCode(response.statusCode)))
+                result(.failure(.invalidStatusCode(response.statusCode, data)))
                 return
             }
             result(.success((response, data)))

@@ -126,6 +126,9 @@ public class AbstractNetworkProvider: NetworkProvider {
                 }
             case .failure(let err):
                 os_log("%{public}@ network error: %{public}@", log: .requestLogger, type: .error, caller, (err as NSError).description)
+                if case .invalidStatusCode(_, let data) = err {
+                    httpRequest.responseData = data
+                }
                 errorHandler(err)
             }
         }
@@ -283,6 +286,20 @@ public class QueryTripsContext: NSObject, NSSecureCoding {
 }
 
 public class QueryJourneyDetailContext: NSObject, NSSecureCoding { // TODO: make all public
+    
+    public class var supportsSecureCoding: Bool { return true }
+    
+    public override init() {
+    }
+    
+    public required init?(coder aDecoder: NSCoder) {
+    }
+    
+    public func encode(with aCoder: NSCoder) {
+    }
+}
+
+public class QueryWagonSequenceContext: NSObject, NSSecureCoding { // TODO: make all public
     
     public class var supportsSecureCoding: Bool { return true }
     

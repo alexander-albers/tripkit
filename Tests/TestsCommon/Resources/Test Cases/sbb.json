@@ -1,0 +1,82 @@
+{
+    "suggestLocations": [
+        {
+            "constraint": "Basel SBB",
+            "result": {
+                "id": "8500010"
+            }
+        },
+        {
+            "constraint": "Bas",
+            "result": {
+                "id": "22"
+            }
+        },
+        {
+            "constraint": "Zürich",
+            "result": {
+                "id": "8503000"
+            }
+        }
+    ],
+    "queryNearbyLocationsByCoordinate": [
+        {
+            "__comment": "Basel SBB",
+            "lat": 47547408,
+            "lon": 7589548,
+            "result": {
+                "id": "8500010"
+            }
+        }
+    ],
+    "queryDepartures": [
+        {
+            "__comment": "Basel SBB",
+            "id": "8500010"
+        },
+        {
+            "__comment": "Zürich",
+            "id": "8503000"
+        }
+    ],
+    "queryDeparturesInvalidId": "999999",
+    "queryTrips": [
+        {
+            "__comment": "Basel SBB to Zürich",
+            "from": {
+                "type": "station",
+                "id": "8500010"
+            },
+            "to": {
+                "type": "station",
+                "id": "8503000"
+            }
+        },
+        {
+            "__comment": "Basel SBB to Bern",
+            "from": {
+                "type": "coord",
+                "lat": 47547408,
+                "lon": 7589548
+            },
+            "to": {
+                "type": "coord",
+                "lat": 46948825,
+                "lon": 7439122
+            }
+        }
+    ],
+    "queryTripsTooClose": [
+        {
+            "__comment": "Basel SBB",
+            "from": {
+                "type": "station",
+                "id": "8500010"
+            },
+            "to": {
+                "type": "station",
+                "id": "8500010"
+            }
+        }
+    ]
+}
