@@ -10,7 +10,7 @@ on:
 
 jobs:
   LiveTests:
-    runs-on: macos-14
+    runs-on: macos-latest
     name: Live tests
     steps:
       - uses: actions/checkout@v2
