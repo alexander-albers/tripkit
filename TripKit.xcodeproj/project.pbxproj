@@ -239,10 +239,6 @@
 		FA52896426876CC700C14626 /* Gzip in Frameworks */ = {isa = PBXBuildFile; productRef = FA5CD21224FBB1E100B4990A /* Gzip */; };
 		FA52896526876CC700C14626 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = FA5CD21424FBB1E100B4990A /* SwiftyJSON */; };
 		FA52896626876CC700C14626 /* SWXMLHash in Frameworks */ = {isa = PBXBuildFile; productRef = FA4EB1C6251F8AD900BCAD4B /* SWXMLHash */; };
-		FA53203D2B42D1E300FF4393 /* _.vnext.app.sbb.ch.cer in Resources */ = {isa = PBXBuildFile; fileRef = FA53203C2B42D1E300FF4393 /* _.vnext.app.sbb.ch.cer */; };
-		FA53203E2B42D1E300FF4393 /* _.vnext.app.sbb.ch.cer in Resources */ = {isa = PBXBuildFile; fileRef = FA53203C2B42D1E300FF4393 /* _.vnext.app.sbb.ch.cer */; };
-		FA53203F2B42D1E300FF4393 /* _.vnext.app.sbb.ch.cer in Resources */ = {isa = PBXBuildFile; fileRef = FA53203C2B42D1E300FF4393 /* _.vnext.app.sbb.ch.cer */; };
-		FA5320402B42D1E300FF4393 /* _.vnext.app.sbb.ch.cer in Resources */ = {isa = PBXBuildFile; fileRef = FA53203C2B42D1E300FF4393 /* _.vnext.app.sbb.ch.cer */; };
 		FA5320422B42D87600FF4393 /* SbbProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5320412B42D87600FF4393 /* SbbProviderTests.swift */; };
 		FA5320432B42D87600FF4393 /* SbbProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5320412B42D87600FF4393 /* SbbProviderTests.swift */; };
 		FA5320442B42D87600FF4393 /* SbbProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5320412B42D87600FF4393 /* SbbProviderTests.swift */; };
@@ -1063,7 +1059,6 @@
 		FA4F58131E8BCA6800EA392F /* VmvProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VmvProvider.swift; sourceTree = "<group>"; };
 		FA4F58171E8BD1D800EA392F /* GvhProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GvhProvider.swift; sourceTree = "<group>"; };
 		FA4F58191E8BD30500EA392F /* ShProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShProvider.swift; sourceTree = "<group>"; };
-		FA53203C2B42D1E300FF4393 /* _.vnext.app.sbb.ch.cer */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = _.vnext.app.sbb.ch.cer; path = ../../../../../../Downloads/_.vnext.app.sbb.ch.cer; sourceTree = "<group>"; };
 		FA5320412B42D87600FF4393 /* SbbProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SbbProviderTests.swift; sourceTree = "<group>"; };
 		FA5320452B42E3CC00FF4393 /* SbbProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SbbProviderTests.swift; sourceTree = "<group>"; };
 		FA5C1CBE2B41B51000DD90F9 /* SbbProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SbbProvider.swift; sourceTree = "<group>"; };
@@ -1441,7 +1436,6 @@
 				FA7D03E8228729A900DB192E /* secrets.json.template */,
 				FA4C7F2D26EB3AA700BFD671 /* vrs-client-certificate.pfx */,
 				FA5C1CC32B41B52700DD90F9 /* sbb-certificate.crt */,
-				FA53203C2B42D1E300FF4393 /* _.vnext.app.sbb.ch.cer */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -2221,7 +2215,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA5C1CC62B41B52700DD90F9 /* sbb-certificate.crt in Resources */,
-				FA53203F2B42D1E300FF4393 /* _.vnext.app.sbb.ch.cer in Resources */,
 				FA4C7F3026EB3AA700BFD671 /* vrs-client-certificate.pfx in Resources */,
 				FA5CD2C924FBB2A900B4990A /* secrets.json in Resources */,
 			);
@@ -2232,7 +2225,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA5C1CC72B41B52700DD90F9 /* sbb-certificate.crt in Resources */,
-				FA5320402B42D1E300FF4393 /* _.vnext.app.sbb.ch.cer in Resources */,
 				FA4C7F3126EB3AA700BFD671 /* vrs-client-certificate.pfx in Resources */,
 				FA5CD2D624FBB2AA00B4990A /* secrets.json in Resources */,
 			);
@@ -2257,7 +2249,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA5C1CC42B41B52700DD90F9 /* sbb-certificate.crt in Resources */,
-				FA53203D2B42D1E300FF4393 /* _.vnext.app.sbb.ch.cer in Resources */,
 				FA4C7F2E26EB3AA700BFD671 /* vrs-client-certificate.pfx in Resources */,
 				FA8FE64D22741E11003CE4B4 /* secrets.json in Resources */,
 			);
@@ -2323,7 +2314,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA5C1CC52B41B52700DD90F9 /* sbb-certificate.crt in Resources */,
-				FA53203E2B42D1E300FF4393 /* _.vnext.app.sbb.ch.cer in Resources */,
 				FA4C7F2F26EB3AA700BFD671 /* vrs-client-certificate.pfx in Resources */,
 				FA8FE64C22741E11003CE4B4 /* secrets.json in Resources */,
 			);
