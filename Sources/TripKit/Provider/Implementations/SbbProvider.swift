@@ -10,6 +10,7 @@ public class SbbProvider: AbstractNetworkProvider {
     /// Thanks a lot to @marudor! https://blog.marudor.de/SBB-Apis/
     /// This implementation however does not build anymore on the blog post, so certificate loading is no longer necessary.
     static let API_BASE = "https://active.vnext.app.sbb.ch/"
+    static let GRAPH_QL = "https://graphql.www.sbb.ch/"
     static let USER_AGENT = "SBBmobile/12.21.2.71.master Android/14 (Google;Pixel 6)"
     
     public override var supportedLanguages: Set<String> { ["de-DE", "en-US", "fr-FR", "it-IT"] }
@@ -105,7 +106,7 @@ public class SbbProvider: AbstractNetworkProvider {
         let urlBuilder = UrlBuilder(path: SbbProvider.API_BASE + "api/timetable/v1/positions/\(Double(coord.lat) / 1e6)/\(Double(coord.lon) / 1e6)/places", encoding: .utf8)
         appendPlaceTypes(types, to: urlBuilder)
         urlBuilder.addParameter(key: "radiusInMeter", value: maxDistance)
-        urlBuilder.addParameter(key: "maxResults", value: maxLocations)
+        urlBuilder.addParameter(key: "maxResults", value: min(50, maxLocations))
         
         let httpRequest = HttpRequest(urlBuilder: urlBuilder).setUserAgent(SbbProvider.USER_AGENT).setHeaders(getHeaders(urlBuilder))
         return makeRequest(httpRequest) {
@@ -299,14 +300,11 @@ public class SbbProvider: AbstractNetworkProvider {
         let json = try getResponse(from: request)
         
         var trips: [Trip] = []
+        let geoDispatchGroup = DispatchGroup()
         for tripJson in json["trips"].arrayValue {
-            let trip = try parseTrip(from: tripJson)
-            trips.append(trip)
-        }
-        
-        if trips.isEmpty {
-            completion(request, .noTrips)
-            return
+            try parseTrip(from: tripJson, dispatchGroup: geoDispatchGroup) { trip in
+                trips.append(trip)
+            }
         }
         
         let previousContext = previousContext as? SbbTripsContext
@@ -314,7 +312,13 @@ public class SbbProvider: AbstractNetworkProvider {
         let earlierContext = !later ? json["earlierPagingCursor"].string : previousContext?.laterContext ?? json["earlierPagingCursor"].string
         let context = SbbTripsContext(from: from, via: via, to: to, date: date, departure: departure, laterContext: laterContext, earlierContext: earlierContext, tripOptions: tripOptions)
         
-        completion(request, .success(context: context, from: nil, via: nil, to: nil, trips: trips, messages: []))
+        geoDispatchGroup.notify(queue: .global()) {
+            if trips.isEmpty {
+                completion(request, .noTrips)
+                return
+            }
+            completion(request, .success(context: context, from: nil, via: nil, to: nil, trips: trips, messages: []))
+        }
     }
     
     public override func queryMoreTrips(context: QueryTripsContext, later: Bool, completion: @escaping (HttpRequest, QueryTripsResult) -> Void) -> AsyncRequest {
@@ -349,8 +353,208 @@ public class SbbProvider: AbstractNetworkProvider {
     
     override func refreshTripParsing(request: HttpRequest, context: RefreshTripContext, completion: @escaping (HttpRequest, QueryTripsResult) -> Void) throws {
         let json = try getResponse(from: request)
-        let trip = try parseTrip(from: json)
-        completion(request, .success(context: nil, from: trip.from, via: nil, to: trip.to, trips: [trip], messages: []))
+        try parseTrip(from: json) { trip in
+            completion(request, .success(context: nil, from: trip.from, via: nil, to: trip.to, trips: [trip], messages: []))
+        }
+    }
+    
+    public override func queryWagonSequence(context: QueryWagonSequenceContext, completion: @escaping (HttpRequest, QueryWagonSequenceResult) -> Void) -> AsyncRequest {
+        guard let context = context as? SbbWagonSequenceContext else {
+            completion(HttpRequest(urlBuilder: UrlBuilder()), .invalidId)
+            return AsyncRequest(task: nil)
+        }
+        let urlBuilder = UrlBuilder(path: SbbProvider.API_BASE + context.urlPath, encoding: .utf8)
+        let httpRequest = HttpRequest(urlBuilder: urlBuilder).setUserAgent(SbbProvider.USER_AGENT).setHeaders(getHeaders(urlBuilder))
+        return makeRequest(httpRequest) {
+            try self.queryWagonSequenceParsing(request: httpRequest, context: context, completion: completion)
+        } errorHandler: { err in
+            completion(httpRequest, .failure(err))
+        }
+    }
+    
+    override func queryWagonSequenceParsing(request: HttpRequest, context: QueryWagonSequenceContext, completion: @escaping (HttpRequest, QueryWagonSequenceResult) -> Void) throws {
+        let json = try getResponse(from: request)
+        
+        let wagonSize = 20.0
+        var sectors: [StationTrackSector] = []
+        
+        var travelDirection: WagonSequence.TravelDirection? = nil
+        switch json["departure", "operationalOrientation"].stringValue {
+        case "LEFT": travelDirection = .left
+        case "RIGHT": travelDirection = .right
+        default: travelDirection = nil
+        }
+        var wagonGroups: [WagonGroup] = []
+        for wagonGroupJson in json["departure", "trains"].arrayValue {
+            var wagons: [Wagon] = []
+            for wagonJson in wagonGroupJson["trainComponents"].arrayValue {
+                let number = Int(wagonJson["label"].stringValue)
+                
+                let sectorName = wagonJson["boardingPosition"].stringValue
+                let start = sectors.last?.end ?? 0
+                let trackPosition = StationTrackSector(sectorName: sectorName, start: start, end: start + wagonSize)
+                if let lastSector = sectors.last, lastSector.sectorName == sectorName {
+                    sectors.removeLast()
+                    sectors.append(StationTrackSector(sectorName: sectorName, start: lastSector.start, end: lastSector.end + wagonSize))
+                } else {
+                    sectors.append(StationTrackSector(sectorName: sectorName, start: start, end: start + wagonSize))
+                }
+                
+                let firstClass = wagonJson["trainElement", "passengerClass"].string == "FIRST"
+                let secondClass = wagonJson["trainElement", "passengerClass"].string == "SECOND"
+                var attributes: [WagonAttributes] = []
+                for attributeStr in wagonJson["trainElement", "attributes"].arrayValue {
+                    let attribute: WagonAttributes.`Type`?
+                    switch attributeStr.stringValue {
+                    case "AbteilKinderwagen": attribute = .cabinInfant
+                    case "NiederflurEinstieg": attribute = .boardingAid
+                    case "AbteilRollstuhl": attribute = .wheelchairSpace
+                    case "AbteilVeloPl": attribute = .bikeSpace
+                    default: attribute = nil
+                    }
+                    if let attribute = attribute {
+                        attributes.append(WagonAttributes(attribute: attribute, state: .undefined))
+                    }
+                }
+                
+                let loadFactor = parseLoadFactor(from: wagonJson["occupancy"])
+                wagons.append(Wagon(number: number, orientation: nil, trackPosition: trackPosition, attributes: attributes, firstClass: firstClass, secondClass: secondClass, loadFactor: loadFactor))
+            }
+            
+            wagonGroups.append(WagonGroup(designation: "", wagons: wagons, destination: wagonGroupJson["direction"].string, lineLabel: nil))
+        }
+        guard !sectors.isEmpty, !wagonGroups.compactMap({$0.wagons}).isEmpty else {
+            throw ParseError(reason: "failed to parse sectors or wagon groups")
+        }
+        
+        let track = StationTrack(trackNumber: nil, start: sectors.first?.start ?? 0, end: sectors.last?.end ?? 0, sectors: sectors)
+        
+        completion(request, .success(wagonSequence: WagonSequence(travelDirection: travelDirection, wagonGroups: wagonGroups, track: track)))
+    }
+    
+    private func queryPath(for tripId: String, legs: [Leg], completion: @escaping ([Leg]) -> Void) {
+        let urlBuilder = UrlBuilder(path: SbbProvider.GRAPH_QL, encoding: .utf8)
+        let payload = encodeJson(dict: [
+            "operationName": "getGeoJsonByTripContext",
+            "query": "query getGeoJsonByTripContext($context: String!, $language: LanguageEnum!) {\n  geoJsonByTripContext(context: $context, language: $language) {\n    features\n    bbox\n    __typename\n  }\n}",
+            "variables": [
+                "context": tripId,
+                "language": "DE"
+            ]
+        ], requestUrlEncoding: .utf8)
+        let httpRequest = HttpRequest(urlBuilder: urlBuilder).setPostPayload(payload)
+        _ = makeRequest(httpRequest) {
+            try self.parseGeoJsonResponse(request: httpRequest, legs: legs, completion: completion)
+        } errorHandler: { err in
+            completion(legs)
+        }
+    }
+    
+    private func parseGeoJsonResponse(request: HttpRequest, legs: [Leg], completion: @escaping ([Leg]) -> Void) throws {
+        let json = try getResponse(from: request)
+        let featuresJson = JSON(parseJSON: json["data", "geoJsonByTripContext", "features"].stringValue).arrayValue
+        
+        var newLegs: [Leg] = []
+        
+        let legIds = findInArray(featuresJson, predicate: ["legStart": JSON(booleanLiteral: true)]).map({$0["properties", "legId"].stringValue})
+        
+        for (idx, leg) in legs.enumerated() {
+            guard let index = legIds[safe: idx] else { continue }
+            var intermediatesJson = findInArray(featuresJson, predicate: [
+                "legId": JSON(stringLiteral: index),
+                "type": JSON(stringLiteral: "endpoint"),
+            ])
+            let departureJson = intermediatesJson.count > 0 ? intermediatesJson.removeFirst() : nil
+            let departure = addCoordToLocation(leg.departure, locationJson: departureJson)
+            let arrivalJson = intermediatesJson.count > 0 ? intermediatesJson.removeLast() : nil
+            let arrival = addCoordToLocation(leg.arrival, locationJson: arrivalJson)
+            
+            switch leg {
+            case let leg as PublicLeg:
+                let pathJson = findInArray(featuresJson, predicate: [
+                    "legId": JSON(stringLiteral: "\(index)"),
+                    "type": JSON(stringLiteral: "path"),
+                    "pathType": JSON(stringLiteral: "transport"),
+                    "generalization": JSON(integerLiteral: 0),
+                ]).last
+                var path: [LocationPoint] = []
+                for coordinatesTuple in pathJson?["geometry", "coordinates"].array ?? [] {
+                    let coordinatesArray = coordinatesTuple.arrayValue
+                    guard coordinatesArray.count == 2, let lat = coordinatesArray[1].double, let lon = coordinatesArray[0].double else { continue }
+                    path.append(LocationPoint(lat: Int(lat * 1e6), lon: Int(lon * 1e6)))
+                }
+                
+                var intermediateStops: [Stop] = []
+                for stopJson in intermediatesJson {
+                    let coord: LocationPoint?
+                    let coordinatesArray = stopJson["geometry", "coordinates"].arrayValue
+                    if coordinatesArray.count == 2, let lat = coordinatesArray[1].double, let lon = coordinatesArray[0].double {
+                        coord = LocationPoint(lat: Int(lat * 1e6), lon: Int(lon * 1e6))
+                    } else {
+                        coord = nil
+                    }
+                    let id: String?
+                    if let idInt = stopJson["properties", "sbb_id"].int {
+                        id = "\(idInt)"
+                    } else {
+                        id = nil
+                    }
+                    if let location = Location(type: id == nil ? .any : .station, id: id, coord: coord, place: nil, name: stopJson["properties", "label"].string) {
+                        intermediateStops.append(Stop(location: location, departure: nil, arrival: nil, message: nil))
+                    }
+                }
+                
+                newLegs.append(PublicLeg(line: leg.line, destination: leg.destination, departure: addLocationToStopEvent(leg.departureStop, location: departure)!, arrival: addLocationToStopEvent(leg.arrivalStop, location: arrival)!, intermediateStops: intermediateStops, message: leg.message, path: path, journeyContext: leg.journeyContext, wagonSequenceContext: leg.wagonSequenceContext, loadFactor: leg.loadFactor))
+            case let leg as IndividualLeg:
+                let pathJson = findInArray(featuresJson, predicate: [
+                    "legId": JSON(stringLiteral: "\(index)"),
+                    "type": JSON(stringLiteral: "path"),
+                    "pathType": JSON(stringLiteral: "walk"),
+                ]).last
+                var path: [LocationPoint] = []
+                for coordinatesTuple in pathJson?["geometry", "coordinates"].array ?? [] {
+                    let coordinatesArray = coordinatesTuple.arrayValue
+                    guard coordinatesArray.count == 2, let lat = coordinatesArray[1].double, let lon = coordinatesArray[0].double else { continue }
+                    path.append(LocationPoint(lat: Int(lat * 1e6), lon: Int(lon * 1e6)))
+                }
+                
+                newLegs.append(IndividualLeg(type: leg.type, departureTime: leg.departureTime, departure: departure, arrival: arrival, arrivalTime: leg.arrivalTime, distance: departureJson?["properties", "distanceInMeter"].int ?? 0, path: path))
+            default:
+                throw ParseError(reason: "unknown leg type")
+            }
+        }
+        
+        completion(newLegs)
+    }
+    
+    private func findInArray(_ jsonArray: [JSON], predicate: [String: JSON]) -> [JSON] {
+        var result: [JSON] = []
+        for elem in jsonArray {
+            var match = true
+            for (key, value) in predicate {
+                if elem["properties", key] != value {
+                    match = false
+                    break
+                }
+            }
+            if match {
+                result.append(elem)
+            }
+        }
+        return result
+    }
+    
+    private func addCoordToLocation(_ location: Location, locationJson: JSON?) -> Location {
+        guard let locationJson = locationJson else { return location }
+        let coordinates = locationJson["geometry", "coordinates"].arrayValue
+        guard coordinates.count == 2, let lat = coordinates[1].double, let lon = coordinates[0].double else { return location }
+        let coord = LocationPoint(lat: Int(lat * 1e6), lon: Int(lon * 1e6))
+        return Location(type: location.type, id: location.id, coord: coord, place: location.place, name: location.name, products: location.products) ?? location
+    }
+    
+    private func addLocationToStopEvent(_ stopEvent: StopEvent?, location: Location) -> StopEvent? {
+        guard let stopEvent = stopEvent else { return nil }
+        return StopEvent(location: location, plannedTime: stopEvent.plannedTime, predictedTime: stopEvent.predictedTime, plannedPlatform: stopEvent.plannedPlatform, predictedPlatform: stopEvent.predictedPlatform, cancelled: stopEvent.cancelled)
     }
     
     // MARK: parsing utils
@@ -481,8 +685,9 @@ public class SbbProvider: AbstractNetworkProvider {
         return Line(id: nil, network: nil, product: product, label: label, name: name, vehicleNumber: number, style: lineStyle(network: nil, product: product, label: label), attr: nil, message: nil)
     }
     
-    private func parseTrip(from tripJson: JSON) throws -> Trip {
+    private func parseTrip(from tripJson: JSON, dispatchGroup: DispatchGroup? = nil, completion: @escaping (Trip) -> Void) throws {
         let id = tripJson["id"].stringValue
+        
         let tripSummary = tripJson["tripSummary"]
         guard let from = parseStation(json: tripSummary["departureAnchor"]), let to = parseStation(json: tripSummary["arrivalAnchor"]) else {
             throw ParseError(reason: "failed to parse trip from/to")
@@ -526,24 +731,30 @@ public class SbbProvider: AbstractNetworkProvider {
                 } else {
                     journeyContext = nil
                 }
+                let wagonSequenceContext: SbbWagonSequenceContext?
+                if let urlPath = legJson["formationUrl"].string {
+                    wagonSequenceContext = SbbWagonSequenceContext(urlPath: urlPath)
+                } else {
+                    wagonSequenceContext = nil
+                }
                 
                 /*if prevChangeLeg, let last = legs.last {
                     legs.append(IndividualLeg(type: .transfer, departureTime: last.arrivalTime, departure: last.arrival, arrival: departure.location, arrivalTime: departure.time, distance: 0, path: []))
                     prevChangeLeg = false
                 }*/
                 
-                legs.append(PublicLeg(line: line, destination: destination, departure: departure, arrival: arrival, intermediateStops: [], message: nil, path: [], journeyContext: journeyContext, loadFactor: loadFactor))
+                legs.append(PublicLeg(line: line, destination: destination, departure: departure, arrival: arrival, intermediateStops: [], message: nil, path: [], journeyContext: journeyContext, wagonSequenceContext: wagonSequenceContext, loadFactor: loadFactor))
             case "ChangeLeg":
                 break
             case "AccessLeg":
                 let from = parseLocation(json: legJson["from"])
                 let to = parseLocation(json: legJson["to"])
-                let duration = TimeInterval(legJson["duration"].intValue * 60)
+                let duration = TimeInterval(legJson["duration", "durationInMinutes"].intValue * 60)
                 let time: Date?
-                if let first = legs.first {
-                    time = first.arrivalTime
+                if let last = legs.last {
+                    time = last.arrivalTime
                 } else {
-                    time = dateFormatter.date(from: tripSummary["departureAnchor", "timeAimed"].stringValue)
+                    time = dateFormatter.date(from: tripSummary["departureAnchor", "timeExpected"].string ?? tripSummary["departureAnchor", "timeAimed"].string ?? "")?.addingTimeInterval(-duration)
                 }
                 guard let from = from, let to = to, let time = time else {
                     throw ParseError(reason: "failed to parse individual leg")
@@ -559,9 +770,14 @@ public class SbbProvider: AbstractNetworkProvider {
         } else {
             refreshContext = nil
         }
-        
         let duration = tripSummary["duration", "durationInMinutes"].intValue
-        return Trip(id: "", from: from, to: to, legs: legs, duration: TimeInterval(duration * 60), fares: [], refreshContext: refreshContext)
+        
+        dispatchGroup?.enter()
+        queryPath(for: id, legs: legs) { newLegs in
+            legs = newLegs
+            dispatchGroup?.leave()
+            completion(Trip(id: "", from: from, to: to, legs: legs, duration: TimeInterval(duration * 60), fares: [], refreshContext: refreshContext))
+        }
     }
     
     /**

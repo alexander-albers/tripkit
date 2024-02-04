@@ -1,8 +1,6 @@
 import Foundation
 
 public class WagonSequence {
-    /// Real-time state of the wagon sequence (sequence can differ from schedule if it is in reversed order)
-    public let state: State
     /// Direction of the train, relative to station track (sectors are left-to-right).
     public let travelDirection: TravelDirection?
     /// This array contains usually only a single element, except when the train is driving as double-traction.
@@ -10,8 +8,7 @@ public class WagonSequence {
     /// Contains information about the track and its sectors.
     public let track: StationTrack
     
-    init(state: State, travelDirection: TravelDirection?, wagonGroups: [WagonGroup], track: StationTrack) {
-        self.state = state
+    init(travelDirection: TravelDirection?, wagonGroups: [WagonGroup], track: StationTrack) {
         self.travelDirection = travelDirection
         self.wagonGroups = wagonGroups
         self.track = track
@@ -21,9 +18,6 @@ public class WagonSequence {
         case left, right
     }
     
-    public enum State {
-        case matchesSchedule, differsFromSchedule, noSchedule
-    }
 }
 
 /// A wagon group is a (usually fixed) set of wagons that can drive either as a single unit or connected to another wagon group as double traction.
@@ -58,14 +52,17 @@ public class Wagon {
     public let firstClass: Bool
     /// This wagon contains an area for second class seating. A wagon can contain both first and second class areas.
     public let secondClass: Bool
+    /// Degree of occupancy of this wagon.
+    public let loadFactor: LoadFactor?
     
-    init(number: Int?, orientation: WagonOrientation?, trackPosition: StationTrackSector, attributes: [WagonAttributes], firstClass: Bool, secondClass: Bool) {
+    init(number: Int?, orientation: WagonOrientation?, trackPosition: StationTrackSector, attributes: [WagonAttributes], firstClass: Bool, secondClass: Bool, loadFactor: LoadFactor?) {
         self.number = number
         self.orientation = orientation
         self.trackPosition = trackPosition
         self.attributes = attributes
         self.firstClass = firstClass
         self.secondClass = secondClass
+        self.loadFactor = loadFactor
     }
 }
 
@@ -109,7 +106,7 @@ public class WagonAttributes {
 
 public class StationTrack {
     /// Designation of the track, usually as number.
-    public let trackNumber: String
+    public let trackNumber: String?
     /// Start position of track, in meters.
     public let start: Double
     /// End position of track, in meters.
@@ -117,7 +114,7 @@ public class StationTrack {
     /// List of sectors at this track
     public let sectors: [StationTrackSector]
     
-    init(trackNumber: String, start: Double, end: Double, sectors: [StationTrackSector]) {
+    init(trackNumber: String?, start: Double, end: Double, sectors: [StationTrackSector]) {
         self.trackNumber = trackNumber
         self.start = start
         self.end = end
