@@ -316,7 +316,7 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
     func checkSessionExpired(httpRequest: HttpRequest, err: Error, completion: (HttpRequest, QueryTripsResult) -> Void) {
         if let err = err as? HttpError {
             switch err {
-            case .invalidStatusCode(let code, let _):
+            case .invalidStatusCode(let code, _):
                 if code == 404 {
                     completion(httpRequest, .sessionExpired)
                     return
