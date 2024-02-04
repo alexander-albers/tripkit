@@ -1049,7 +1049,7 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider, QueryJourneyDet
                             journeyContext = nil
                         }
                         
-                        leg = PublicLeg(line: line, destination: direction, departure: departure, arrival: arrival, intermediateStops: intermediateStops, message: disruptionText, path: [], journeyContext: journeyContext, loadFactor: nil)
+                        leg = PublicLeg(line: line, destination: direction, departure: departure, arrival: arrival, intermediateStops: intermediateStops, message: disruptionText, path: [], journeyContext: journeyContext, wagonSequenceContext: nil, loadFactor: nil)
                     } else {
                         throw ParseError(reason: "unhandled type \(type)")
                     }

@@ -94,9 +94,20 @@ public class DbProvider: AbstractHafasClientInterfaceProvider {
         return super.split(address: name)
     }
     
-    public override func queryWagonSequence(line: Line, stationId: String, departureTime: Date, completion: @escaping (HttpRequest, QueryWagonSequenceResult) -> Void) -> AsyncRequest {
+    override func getWagonSequenceContext(line: Line, departureStop: StopEvent) -> QueryWagonSequenceContext? {
+        guard let lineLabel = line.name?.replacingOccurrences(of: " ", with: "_") ?? line.label, let stationId = departureStop.location.id, line.product == .highSpeedTrain else {
+            return nil
+        }
+        return DbWagonSequenceContext(lineLabel: lineLabel, stationId: stationId, departureTime: departureStop.plannedTime)
+    }
+    
+    public override func queryWagonSequence(context: QueryWagonSequenceContext, completion: @escaping (HttpRequest, QueryWagonSequenceResult) -> Void) -> AsyncRequest {
+        guard let context = context as? DbWagonSequenceContext else {
+            completion(HttpRequest(urlBuilder: UrlBuilder()), .invalidId)
+            return AsyncRequest(task: nil)
+        }
         
-        let path = String(format: DbProvider.WAGON_SEQUENCE_PATH, line.name?.replacingOccurrences(of: " ", with: "_") ?? line.label ?? line.number ?? "", extractStationId(from: stationId), wagonSequenceRequestDateFormatter.string(from: departureTime))
+        let path = String(format: DbProvider.WAGON_SEQUENCE_PATH, context.lineLabel, extractStationId(from: context.stationId), wagonSequenceRequestDateFormatter.string(from: context.departureTime))
         let urlBuilder = UrlBuilder(path: path, encoding: requestUrlEncoding)
         let headers = [
             "Accept": "application/x.db.vendo.mob.wagenreihung.v3+json",
@@ -105,7 +116,7 @@ public class DbProvider: AbstractHafasClientInterfaceProvider {
         
         let httpRequest = HttpRequest(urlBuilder: urlBuilder).setHeaders(headers)
         return makeRequest(httpRequest) {
-            try self.queryWagonSequenceParsing(request: httpRequest, line: line, stationId: stationId, departureTime: departureTime, completion: completion)
+            try self.queryWagonSequenceParsing(request: httpRequest, context: context, completion: completion)
         } errorHandler: { err in
             completion(httpRequest, .failure(err))
         }
@@ -118,20 +129,20 @@ public class DbProvider: AbstractHafasClientInterfaceProvider {
         return stationId
     }
     
-    override func queryWagonSequenceParsing(request: HttpRequest, line: Line, stationId: String, departureTime: Date, completion: @escaping (HttpRequest, QueryWagonSequenceResult) -> Void) throws {
+    override func queryWagonSequenceParsing(request: HttpRequest, context: QueryWagonSequenceContext, completion: @escaping (HttpRequest, QueryWagonSequenceResult) -> Void) throws {
         guard let data = request.responseData else {
             throw ParseError(reason: "failed to parse json from data")
         }
         let json = try JSON(data: data)
         
-        let state: WagonSequence.State
+        /*let state: WagonSequence.State
         switch json["status"].stringValue {
         case "ERROR":                   throw ParseError(reason: json["code"].stringValue)
         case "MATCHES_SCHEDULE":        state = .matchesSchedule
         case "DIFFERS_FROM_SCHEDULE":   state = .differsFromSchedule
         case "NO_SCHEDULE":             state = .noSchedule
         default: throw ParseError(reason: "unknown wagon sequence state")
-        }
+        }*/
         
         let travelDirection: WagonSequence.TravelDirection?
         switch json["fahrtrichtung"].stringValue {
@@ -201,7 +212,7 @@ public class DbProvider: AbstractHafasClientInterfaceProvider {
                     }
                 }
                 
-                wagons.append(Wagon(number: number, orientation: wagonOrientation, trackPosition: trackPosition, attributes: attributes, firstClass: firstClass, secondClass: secondClass))
+                wagons.append(Wagon(number: number, orientation: wagonOrientation, trackPosition: trackPosition, attributes: attributes, firstClass: firstClass, secondClass: secondClass, loadFactor: nil))
             }
             if wagons.count == 0 {
                 throw ParseError(reason: "did not parse any wagons")
@@ -223,7 +234,7 @@ public class DbProvider: AbstractHafasClientInterfaceProvider {
         }
         let stationTrack = StationTrack(trackNumber: stationTrackInfo.sectorName, start: stationTrackInfo.start, end: stationTrackInfo.end, sectors: sectors)
         
-        let wagonSequence = WagonSequence(state: state, travelDirection: travelDirection, wagonGroups: wagonGroups, track: stationTrack)
+        let wagonSequence = WagonSequence(travelDirection: travelDirection, wagonGroups: wagonGroups, track: stationTrack)
         completion(request, .success(wagonSequence: wagonSequence))
     }
     
@@ -297,3 +308,41 @@ public class DbProvider: AbstractHafasClientInterfaceProvider {
     }
     
 }
+
+public class DbWagonSequenceContext: QueryWagonSequenceContext {
+    
+    public override class var supportsSecureCoding: Bool { return true }
+    
+    public let lineLabel: String
+    public let stationId: String
+    public let departureTime: Date
+    
+    public init(lineLabel: String, stationId: String, departureTime: Date) {
+        self.lineLabel = lineLabel
+        self.stationId = stationId
+        self.departureTime = departureTime
+        super.init()
+    }
+    
+    required convenience init?(coder aDecoder: NSCoder) {
+        guard
+            let lineLabel = aDecoder.decodeObject(of: NSString.self, forKey: PropertyKey.lineLabel) as String?,
+            let stationId = aDecoder.decodeObject(of: NSString.self, forKey: PropertyKey.stationId) as String?,
+            let departureTime = aDecoder.decodeObject(of: NSDate.self, forKey: PropertyKey.departureTime) as Date?
+        else { return nil }
+        self.init(lineLabel: lineLabel, stationId: stationId, departureTime: departureTime)
+    }
+    
+    public override func encode(with aCoder: NSCoder) {
+        aCoder.encode(lineLabel, forKey: PropertyKey.lineLabel)
+        aCoder.encode(stationId, forKey: PropertyKey.stationId)
+        aCoder.encode(departureTime, forKey: PropertyKey.departureTime)
+    }
+    
+    struct PropertyKey {
+        static let lineLabel = "lineLabel"
+        static let stationId = "stationId"
+        static let departureTime = "departureTime"
+    }
+}
+

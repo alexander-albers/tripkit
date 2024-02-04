@@ -74,7 +74,7 @@ public class AbstractNetworkProvider: NetworkProvider {
         fatalError("\(#function) not implemented")
     }
     
-    public func queryWagonSequence(line: Line, stationId: String, departureTime: Date, completion: @escaping (HttpRequest, QueryWagonSequenceResult) -> Void) -> AsyncRequest {
+    public func queryWagonSequence(context: QueryWagonSequenceContext, completion: @escaping (HttpRequest, QueryWagonSequenceResult) -> Void) -> AsyncRequest {
         return AsyncRequest(task: nil)
     }
     
@@ -104,7 +104,7 @@ public class AbstractNetworkProvider: NetworkProvider {
         fatalError("\(#function) not implemented")
     }
     
-    func queryWagonSequenceParsing(request: HttpRequest, line: Line, stationId: String, departureTime: Date, completion: @escaping (HttpRequest, QueryWagonSequenceResult) -> Void) throws {
+    func queryWagonSequenceParsing(request: HttpRequest, context: QueryWagonSequenceContext, completion: @escaping (HttpRequest, QueryWagonSequenceResult) -> Void) throws {
         fatalError("\(#function) not implemented")
     }
     

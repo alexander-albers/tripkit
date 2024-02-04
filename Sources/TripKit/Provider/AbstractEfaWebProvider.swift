@@ -454,7 +454,7 @@ public class AbstractEfaWebProvider: AbstractEfaProvider {
                         if let msg = legMessages.joined(separator: "\n").emptyToNil {
                             lastMessage += "\n" + msg
                         }
-                        legs[legs.count - 1] = PublicLeg(line: last.line, destination: last.destination, departure: last.departureStop, arrival: last.arrivalStop, intermediateStops: last.intermediateStops, message: lastMessage, path: last.path, journeyContext: last.journeyContext, loadFactor: last.loadFactor)
+                        legs[legs.count - 1] = PublicLeg(line: last.line, destination: last.destination, departure: last.departureStop, arrival: last.arrivalStop, intermediateStops: last.intermediateStops, message: lastMessage, path: last.path, journeyContext: last.journeyContext, wagonSequenceContext: nil, loadFactor: last.loadFactor)
                     }
                 } else if meansOfTransportType == 98 && meansOfTransportProductName == "gesicherter Anschluss" {
                     // ignore
@@ -639,7 +639,7 @@ public class AbstractEfaWebProvider: AbstractEfaProvider {
             throw ParseError(reason: "could not parse arrival")
         }
         let path = processItdPathCoordinates(xml["itdRequest"]["itdStopSeqCoordRequest"]["itdPathCoordinates"]) ?? []
-        let leg = PublicLeg(line: line, destination: arrivalStop.location, departure: departureStop, arrival: arrivalStop, intermediateStops: stops, message: nil, path: path, journeyContext: nil, loadFactor: nil)
+        let leg = PublicLeg(line: line, destination: arrivalStop.location, departure: departureStop, arrival: arrivalStop, intermediateStops: stops, message: nil, path: path, journeyContext: nil, wagonSequenceContext: nil, loadFactor: nil)
         let trip = Trip(id: "", from: departureStop.location, to: arrivalStop.location, legs: [leg], duration: 0, fares: [])
         completion(request, .success(trip: trip, leg: leg))
     }
@@ -939,7 +939,7 @@ public class AbstractEfaWebProvider: AbstractEfaProvider {
             journeyContext = nil
         }
         
-        legs.append(PublicLeg(line: styledLine, destination: destination, departure: departure, arrival: arrival, intermediateStops: stops, message: messages.joined(separator: "\n").emptyToNil, path: path ?? [], journeyContext: journeyContext, loadFactor: nil))
+        legs.append(PublicLeg(line: styledLine, destination: destination, departure: departure, arrival: arrival, intermediateStops: stops, message: messages.joined(separator: "\n").emptyToNil, path: path ?? [], journeyContext: journeyContext, wagonSequenceContext: nil, loadFactor: nil))
         return cancelled
     }
     

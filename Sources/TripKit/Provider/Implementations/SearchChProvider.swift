@@ -284,7 +284,7 @@ public class SearchChProvider: AbstractNetworkProvider, QueryJourneyDetailManual
                         legs.append(IndividualLeg(type: leg.type, departureTime: departure.time.addingTimeInterval(-individualDuration), departure: leg.departure, arrival: leg.arrival, arrivalTime: departure.time, distance: leg.distance, path: leg.path))
                     }
                     
-                    legs.append(PublicLeg(line: line, destination: destination, departure: departure, arrival: arrival, intermediateStops: intermediateStops, message: mesages.joined(separator: "\n").emptyToNil, path: [], journeyContext: journeyContext, loadFactor: nil))
+                    legs.append(PublicLeg(line: line, destination: destination, departure: departure, arrival: arrival, intermediateStops: intermediateStops, message: mesages.joined(separator: "\n").emptyToNil, path: [], journeyContext: journeyContext, wagonSequenceContext: nil, loadFactor: nil))
                 }
             }
             

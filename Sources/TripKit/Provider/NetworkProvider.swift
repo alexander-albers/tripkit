@@ -132,14 +132,12 @@ public protocol NetworkProvider {
     @discardableResult func queryJourneyDetail(context: QueryJourneyDetailContext, completion: @escaping (HttpRequest, QueryJourneyDetailResult) -> Void) -> AsyncRequest
     
     /**
-    Get the wagon sequence of a train. Currently only implemented in DbProvider.
-     - Parameter line: the line from which to get the the wagon sequence.
-     - Parameter stationId: location id of the station where the train departs.
-     - Parameter departureTime: planned departure time of the train from the supplied station.
+    Get the wagon sequence of a train.
+     - Parameter context: context to get the wagon sequence from.
      - Parameter completion: object containing the wagon sequence.
      
      - Returns: A reference to a cancellable http request.
      */
-    @discardableResult func queryWagonSequence(line: Line, stationId: String, departureTime: Date, completion: @escaping (HttpRequest, QueryWagonSequenceResult) -> Void) -> AsyncRequest
+    @discardableResult func queryWagonSequence(context: QueryWagonSequenceContext, completion: @escaping (HttpRequest, QueryWagonSequenceResult) -> Void) -> AsyncRequest
     
 }

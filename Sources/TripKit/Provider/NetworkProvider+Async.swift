@@ -130,17 +130,15 @@ public extension NetworkProvider {
     }
     
     /**
-    Get the wagon sequence of a train. Currently only implemented in DbProvider.
-     - Parameter line: the line from which to get the the wagon sequence.
-     - Parameter stationId: location id of the station where the train departs.
-     - Parameter departureTime: planned departure time of the train from the supplied station.
+    Get the wagon sequence of a train.
+     - Parameter context: to get the wagon sequence from.
      - Parameter completion: object containing the wagon sequence.
      
      - Returns: A reference to a cancellable http request.
      */
-    @discardableResult func queryWagonSequence(line: Line, stationId: String, departureTime: Date) async -> (HttpRequest, QueryWagonSequenceResult) {
+    @discardableResult func queryWagonSequence(context: QueryWagonSequenceContext) async -> (HttpRequest, QueryWagonSequenceResult) {
         return await withCheckedContinuation { continuation in
-            queryWagonSequence(line: line, stationId: stationId, departureTime: departureTime) { request, result in
+            queryWagonSequence(context: context) { request, result in
                 continuation.resume(with: .success((request, result)))
             }
         }

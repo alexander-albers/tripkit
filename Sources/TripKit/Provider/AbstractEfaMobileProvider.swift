@@ -405,13 +405,13 @@ public class AbstractEfaMobileProvider: AbstractEfaProvider {
                         if let message = last.message?.emptyToNil {
                             lastMessage += "\n" + message
                         }
-                        legs[legs.count - 1] = PublicLeg(line: last.line, destination: last.destination, departure: last.departureStop, arrival: last.arrivalStop, intermediateStops: last.intermediateStops, message: lastMessage, path: last.path, journeyContext: last.journeyContext, loadFactor: last.loadFactor)
+                        legs[legs.count - 1] = PublicLeg(line: last.line, destination: last.destination, departure: last.departureStop, arrival: last.arrivalStop, intermediateStops: last.intermediateStops, message: lastMessage, path: last.path, journeyContext: last.journeyContext, wagonSequenceContext: nil, loadFactor: last.loadFactor)
                     }
                 } else if lineDestination.line === Line.SECURE_CONNECTION {
                     // ignore
                 } else {
                     let journeyContext: EfaJourneyContext? = nil
-                    legs.append(PublicLeg(line: lineDestination.line, destination: lineDestination.destination, departure: departure, arrival: arrival, intermediateStops: intermediateStops, message: nil, path: path, journeyContext: journeyContext, loadFactor: nil))
+                    legs.append(PublicLeg(line: lineDestination.line, destination: lineDestination.destination, departure: departure, arrival: arrival, intermediateStops: intermediateStops, message: nil, path: path, journeyContext: journeyContext, wagonSequenceContext: nil, loadFactor: nil))
                 }
             }
             
@@ -542,7 +542,7 @@ public class AbstractEfaMobileProvider: AbstractEfaProvider {
         } else {
             path = []
         }
-        let leg = PublicLeg(line: line, destination: arrivalStop.location, departure: departureStop, arrival: arrivalStop, intermediateStops: stops, message: nil, path: path, journeyContext: nil, loadFactor: nil)
+        let leg = PublicLeg(line: line, destination: arrivalStop.location, departure: departureStop, arrival: arrivalStop, intermediateStops: stops, message: nil, path: path, journeyContext: nil, wagonSequenceContext: nil, loadFactor: nil)
         let trip = Trip(id: "", from: departureStop.location, to: arrivalStop.location, legs: [leg], duration: 0, fares: [])
         completion(request, .success(trip: trip, leg: leg))
     }

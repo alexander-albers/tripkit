@@ -299,7 +299,7 @@ public class HvvProvider: AbstractNetworkProvider {
             path.append(contentsOf: track)
         }
         
-        let leg = PublicLeg(line: context.line, destination: arrival.location, departure: departure, arrival: arrival, intermediateStops: stops, message: nil, path: path, journeyContext: context, loadFactor: nil)
+        let leg = PublicLeg(line: context.line, destination: arrival.location, departure: departure, arrival: arrival, intermediateStops: stops, message: nil, path: path, journeyContext: context, wagonSequenceContext: nil, loadFactor: nil)
         let trip = Trip(id: "", from: departure.location, to: arrival.location, legs: [leg], duration: 0, fares: [], refreshContext: nil)
         completion(request, .success(trip: trip, leg: leg))
     }
@@ -627,7 +627,7 @@ public class HvvProvider: AbstractNetworkProvider {
             } else {
                 context = nil
             }
-            return PublicLeg(line: servingLine.line, destination: servingLine.destination, departure: departure, arrival: arrival, intermediateStops: stops, message: message, path: path, journeyContext: context, loadFactor: nil)
+            return PublicLeg(line: servingLine.line, destination: servingLine.destination, departure: departure, arrival: arrival, intermediateStops: stops, message: message, path: path, journeyContext: context, wagonSequenceContext: nil, loadFactor: nil)
         default:
             throw ParseError(reason: "unknown service type \(serviceType)")
         }

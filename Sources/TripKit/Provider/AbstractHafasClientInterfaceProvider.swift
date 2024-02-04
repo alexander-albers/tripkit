@@ -520,7 +520,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
                     let mcpData = sec["dep", "mcp", "mcpData"]
                     if let provider = mcpData["provider"].string, let providerName = mcpData["providerName"].string, provider == "berlkoenig" {
                         let line = Line(id: nil, network: nil, product: .onDemand, label: providerName, name: providerName, number: nil, vehicleNumber: nil, style: lineStyle(network: nil, product: .onDemand, label: providerName), attr: nil, message: nil, direction: nil)
-                        legs.append(PublicLeg(line: line, destination: arrivalStop.location, departure: departureStop, arrival: arrivalStop, intermediateStops: [], message: nil, path: path, journeyContext: nil, loadFactor: nil))
+                        legs.append(PublicLeg(line: line, destination: arrivalStop.location, departure: departureStop, arrival: arrivalStop, intermediateStops: [], message: nil, path: path, journeyContext: nil, wagonSequenceContext: nil, loadFactor: nil))
                     } else {
                         processIndividualLeg(legs: &legs, type: .car, departureStop: departureStop, arrivalStop: arrivalStop, distance: distance, path: path)
                     }
@@ -824,7 +824,11 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
             loadFactor = parseLoadFactorFromRems(jny: jny, rems: rems)
         }
         
-        return PublicLeg(line: line, destination: destination, departure: departureStop, arrival: arrivalStop, intermediateStops: intermediateStops, message: message, path: path, journeyContext: journeyContext, loadFactor: loadFactor)
+        return PublicLeg(line: line, destination: destination, departure: departureStop, arrival: arrivalStop, intermediateStops: intermediateStops, message: message, path: path, journeyContext: journeyContext, wagonSequenceContext: getWagonSequenceContext(line: line, departureStop: departureStop), loadFactor: loadFactor)
+    }
+    
+    func getWagonSequenceContext(line: Line, departureStop: StopEvent) -> QueryWagonSequenceContext? {
+        return nil
     }
     
     private func processIndividualLeg(legs: inout [Leg], type: IndividualLeg.`Type`, departureStop: StopEvent, arrivalStop: StopEvent, distance: Int, path: [LocationPoint]) {

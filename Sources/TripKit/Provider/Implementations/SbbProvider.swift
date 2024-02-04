@@ -218,7 +218,7 @@ public class SbbProvider: AbstractNetworkProvider {
             throw ParseError(reason: "failed to parse first/last stop")
         }
         
-        let leg = PublicLeg(line: line, destination: destination, departure: departure, arrival: arrival, intermediateStops: stops, message: nil, path: [], journeyContext: context, loadFactor: maxLoadFactor)
+        let leg = PublicLeg(line: line, destination: destination, departure: departure, arrival: arrival, intermediateStops: stops, message: nil, path: [], journeyContext: context, wagonSequenceContext: nil, loadFactor: maxLoadFactor)
         let trip = Trip(id: "", from: departure.location, to: arrival.location, legs: [leg], duration: arrival.time.timeIntervalSince(departure.time), fares: [])
         completion(request, .success(trip: trip, leg: leg))
     }
