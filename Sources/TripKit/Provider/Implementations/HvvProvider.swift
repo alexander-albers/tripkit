@@ -7,7 +7,7 @@ public class HvvProvider: AbstractNetworkProvider {
     
     /// Documentation: https://gti.geofox.de/html/GTIHandbuch_p.html
     static let API_BASE = "https://gti.geofox.de/gti/public/"
-    static let VERSION = 54
+    static let VERSION = 55
     let authHeaders: [String: Any]
     
     public override var supportedLanguages: Set<String> { ["de", "en"] }
@@ -395,6 +395,15 @@ public class HvvProvider: AbstractNetworkProvider {
         case "ERROR_CN_TOO_MANY":
             completion(request, .ambiguous(ambiguousFrom: [], ambiguousVia: [], ambiguousTo: []))
             return
+        case "START_NOT_FOUND", "FORCED_START_NOT_FOUND":
+            completion(request, .unknownFrom)
+            return
+        case "DEST_NOT_FOUND", "FORCED_DEST_NOT_FOUND":
+            completion(request, .unknownTo)
+            return
+        case "VIA_NOT_FOUND":
+            completion(request, .unknownVia)
+            return
         default:
             if errorDevInfo.lowercased().contains("kein ergebnis gefunden für haltestelle") || errorDevInfo.lowercased().contains("not listed as HVV station") {
                 if let fromName = from.name, errorDevInfo.contains(fromName) {
@@ -620,7 +629,7 @@ public class HvvProvider: AbstractNetworkProvider {
                 arrival.cancelled = true
                 stops.forEach { $0.departure?.cancelled = true; $0.arrival?.cancelled = true }
             }
-            let message = parseAttributes(attributes: json["attributes"])
+            let message = parseAttributes(attributes: json["announcement"])
             let context: HvvJourneyContext?
             if let lineId = servingLine.line.id, let serviceId = json["serviceId"].int {
                 context = HvvJourneyContext(lineKey: lineId, serviceId: serviceId, station: departure.location, stationTime: departure.plannedTime, line: servingLine.line)
@@ -702,9 +711,9 @@ public class HvvProvider: AbstractNetworkProvider {
     private func parseAttributes(attributes: JSON) -> String? {
         var messages: [String] = []
         for (_, attribute) in attributes {
-            if let title = attribute["title"].string {
+            if let title = attribute["summary"].string {
                 messages.append(title)
-            } else if let value = attribute["value"].string {
+            } else if let value = attribute["description"].string {
                 messages.append(value)
             }
         }
