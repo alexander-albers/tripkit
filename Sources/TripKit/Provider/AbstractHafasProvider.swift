@@ -100,7 +100,7 @@ public class AbstractHafasProvider: AbstractNetworkProvider {
         return (nil, poi)
     }
     
-    var P_POSITION_PLATFORM: NSRegularExpression { return try! NSRegularExpression(pattern: "^Gleis\\s*(.*)\\s*$", options: .caseInsensitive) }
+    var P_POSITION_PLATFORM: NSRegularExpression { return try! NSRegularExpression(pattern: "^(?:Gleis|Gl\\.)\\s*(.*)\\s*$", options: .caseInsensitive) }
     
     func normalize(position: String?) -> String? {
         guard let position = position, !position.isEmpty else { return nil }

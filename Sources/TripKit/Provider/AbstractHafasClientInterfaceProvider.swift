@@ -863,7 +863,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
     
     func parsePosition(json: JSON, platfName: String, pltfName: String) -> String? {
         if let pltf = json[pltfName, "txt"].string, !pltf.isEmpty {
-            return pltf
+            return normalize(position: pltf)
         } else if let platf = json[platfName].string, !platf.isEmpty {
             return normalize(position: platf)
         } else {
