@@ -12,6 +12,8 @@ public class AbstractNetworkProvider: NetworkProvider {
         // First, check whether the current locale is supported
         if let currentLocale = Locale.current.languageCode, supportedLanguages.contains(currentLocale) {
             return currentLocale
+        } else if let currentLocale = Locale.current.regionCode, supportedLanguages.contains(currentLocale) {
+            return currentLocale
         } else if supportedLanguages.contains("en") {
             // Fallback to en, if it is supported
             return "en"

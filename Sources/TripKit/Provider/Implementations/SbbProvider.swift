@@ -13,7 +13,7 @@ public class SbbProvider: AbstractNetworkProvider {
     static let GRAPH_QL = "https://graphql.www.sbb.ch/"
     static let USER_AGENT = "SBBmobile/12.21.2.71.master Android/14 (Google;Pixel 6)"
     
-    public override var supportedLanguages: Set<String> { ["de-DE", "en-US", "fr-FR", "it-IT"] }
+    public override var supportedLanguages: Set<String> { ["de", "en", "fr", "it"] }
     
     private var apiKey: String
     // Random UUID serves as app token / correlation id
@@ -36,6 +36,13 @@ public class SbbProvider: AbstractNetworkProvider {
     private lazy var dateFormatterTime: DateFormatter = {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "HH:mm:ss"
+        dateFormatter.timeZone = timeZone
+        dateFormatter.locale = Locale(identifier: "en_US_POSIX")
+        return dateFormatter
+    }()
+    private lazy var dateFormatterTime2: DateFormatter = {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH:mm"
         dateFormatter.timeZone = timeZone
         dateFormatter.locale = Locale(identifier: "en_US_POSIX")
         return dateFormatter
@@ -161,8 +168,8 @@ public class SbbProvider: AbstractNetworkProvider {
                 destination = nil
             }
             let journeyContext: QueryJourneyDetailContext?
-            if let url = departureJson["itineraryUrl"].string {
-                journeyContext = SbbJourneyContext(urlPath: url)
+            if let url = departureJson["itineraryUrl"].string, let contextId = url.replacingOccurrences(of: "api/timetable/v1/itineraries/", with: "").replacingOccurrences(of: "?routeIndexFrom=0", with: "").decodeUrl(using: .utf8) {
+                journeyContext = SbbJourneyContext(contextId: contextId)
             } else {
                 journeyContext = nil
             }
@@ -182,8 +189,16 @@ public class SbbProvider: AbstractNetworkProvider {
             completion(HttpRequest(urlBuilder: UrlBuilder()), .invalidId)
             return AsyncRequest(task: nil)
         }
-        let urlBuilder = UrlBuilder(path: SbbProvider.API_BASE + context.urlPath, encoding: .utf8)
-        let httpRequest = HttpRequest(urlBuilder: urlBuilder).setUserAgent(SbbProvider.USER_AGENT).setHeaders(getHeaders(urlBuilder))
+        let urlBuilder = UrlBuilder(path: SbbProvider.GRAPH_QL, encoding: .utf8)
+        let payload = encodeJson(dict: [
+            "operationName": "getServiceJourneyById",
+            "query": QueryJourneyDetailQuery,
+            "variables": [
+                "id": context.contextId,
+                "language": queryLanguage?.uppercased() ?? defaultLanguage.uppercased()
+            ]
+        ], requestUrlEncoding: .utf8)
+        let httpRequest = HttpRequest(urlBuilder: urlBuilder).setHeaders(["Apollographql-Client-Name": "sbb-webshop-3.15.0"]).setPostPayload(payload)
         return makeRequest(httpRequest) {
             try self.queryJourneyDetailParsing(request: httpRequest, context: context, completion: completion)
         } errorHandler: { err in
@@ -194,41 +209,15 @@ public class SbbProvider: AbstractNetworkProvider {
     override func queryJourneyDetailParsing(request: HttpRequest, context: QueryJourneyDetailContext, completion: @escaping (HttpRequest, QueryJourneyDetailResult) -> Void) throws {
         let json = try getResponse(from: request)
         
-        let line = parseLine(from: json["ptRideLegHeader", "transportDesignation"])
-        let destination: Location?
-        if let destinationName = json["ptRideLegHeader", "direction"].string {
-            destination = Location(anyName: destinationName)
-        } else {
-            destination = nil
-        }
-        
-        var stops: [Stop] = []
-        var maxLoadFactor: LoadFactor? = nil
-        for stopJson in json["stopPoints"].arrayValue {
-            let loadFactor = parseLoadFactor(from: stopJson["occupancySecondClass"])
-            if maxLoadFactor == nil || (loadFactor != nil && loadFactor!.rawValue > maxLoadFactor!.rawValue) {
-                maxLoadFactor = loadFactor
-            }
-            
-            let location = Location(anyName: stopJson["displayName"].string)
-            let stopEvent = parseStopPoint(stopJson: stopJson)
-            let stop = Stop(location: location, departure: stopJson["departureTime"].exists() ? stopEvent : nil, arrival: stopJson["arrivalTime"].exists() ? stopEvent : nil, message: nil)
-            stops.append(stop)
-        }
-        guard let departure = stops.removeFirst().departure, let arrival = stops.removeLast().arrival else {
-            throw ParseError(reason: "failed to parse first/last stop")
-        }
-        
-        let leg = PublicLeg(line: line, destination: destination, departure: departure, arrival: arrival, intermediateStops: stops, message: nil, path: [], journeyContext: context, wagonSequenceContext: nil, loadFactor: maxLoadFactor)
-        let trip = Trip(id: "", from: departure.location, to: arrival.location, legs: [leg], duration: arrival.time.timeIntervalSince(departure.time), fares: [])
+        let leg = try parsePublicLeg(legJson: json["data", "serviceJourneyById"], legId: "0", tripId: nil, occupancyClass: "second")
+        let trip = Trip(id: "", from: leg.departure, to: leg.arrival, legs: [leg], duration: leg.arrivalTime.timeIntervalSince(leg.departureTime), fares: [])
         completion(request, .success(trip: trip, leg: leg))
     }
     
     public override func queryTrips(from: Location, via: Location?, to: Location, date: Date, departure: Bool, tripOptions: TripOptions, completion: @escaping (HttpRequest, QueryTripsResult) -> Void) -> AsyncRequest {
-        let urlBuilder = UrlBuilder(path: SbbProvider.API_BASE + "api/timetable/v1/trips", encoding: .utf8)
-        appendTripsParameters(to: urlBuilder, from: from, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions)
-        
-        let httpRequest = HttpRequest(urlBuilder: urlBuilder).setUserAgent(SbbProvider.USER_AGENT).setHeaders(getHeaders(urlBuilder))
+        let urlBuilder = UrlBuilder(path: SbbProvider.GRAPH_QL, encoding: .utf8)
+        let payload = encodeJson(dict: getGQLQueryTripsParameters(from: from, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions, pagingCursor: nil), requestUrlEncoding: .utf8)
+        let httpRequest = HttpRequest(urlBuilder: urlBuilder).setHeaders(["Apollographql-Client-Name": "sbb-webshop-3.15.0"]).setPostPayload(payload)
         return makeRequest(httpRequest) {
             try self.queryTripsParsing(request: httpRequest, from: from, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions, previousContext: nil, later: false, completion: completion)
         } errorHandler: { err in
@@ -255,6 +244,86 @@ public class SbbProvider: AbstractNetworkProvider {
         }
     }
     
+    private func getGQLQueryTripsParameters(from: Location, via: Location?, to: Location, date: Date, departure: Bool, tripOptions: TripOptions, pagingCursor: String?) -> [String: Any] {
+        return [
+            "operationName": "getTrips",
+            "query": QueryTripsQueryString,
+            "variables": [
+                "input": [
+                    "places": [
+                        encodeLocation(from),
+                        encodeLocation(via),
+                        encodeLocation(to),
+                    ].compactMap({$0}),
+                    "time": encodeDate(date, departure: departure),
+                    "includeEconomic": true,
+                    "directConnection": false,
+                    "includeAccessibility": tripOptions.accessibility == .barrierFree ? "BOARDING_ALIGHTING_SELF" : tripOptions.accessibility == .limited ? "BOARDING_ALIGHTING_BY_NOTIFICATION" : "NONE",
+                    "includeNoticeAttributes": tripOptions.options?.contains(.bike) ?? false ? ["BIKE_TRANSPORT"] : [],
+                    "includeTransportModes": encodeProducts(tripOptions),
+                    "includeUnsharp": false,
+                    "occupancy": "ALL",
+                    "walkSpeed": tripOptions.walkSpeed == .slow ? 200 : tripOptions.walkSpeed == .normal ? 150 : 100
+                ],
+                "language": queryLanguage?.uppercased() ?? defaultLanguage.uppercased(),
+                "pagingCursor": pagingCursor as Any
+            ]
+        ]
+    }
+    
+    private func encodeLocation(_ location: Location?) -> [String: Any]? {
+        guard let location = location else { return nil }
+        if let id = location.id {
+            return [
+                "type": "ID",
+                "value": id
+            ]
+        } else if let coord = location.coord {
+            return [
+                "type": "COORDINATES",
+                "value": "[\(Double(coord.lon) / 1e6),\(Double(coord.lat) / 1e6)]"
+            ]
+        } else {
+            return [:]
+        }
+    }
+    
+    private func encodeDate(_ date: Date, departure: Bool) -> [String: Any] {
+        return [
+            "date": dateFormatterDate.string(from: date),
+            "time": dateFormatterTime2.string(from: date),
+            "type": departure ? "DEPARTURE" : "ARRIVAL"
+        ]
+    }
+    
+    private func encodeProducts(_ tripOptions: TripOptions) -> [String] {
+        var productsString: [String] = []
+        for product in tripOptions.products ?? Product.allCases {
+            switch product {
+            case .highSpeedTrain:
+                productsString.append("HIGH_SPEED_TRAIN")
+                productsString.append("INTERCITY")
+                productsString.append("SPECIAL_TRAIN")
+            case .regionalTrain:
+                productsString.append("INTERREGIO")
+                productsString.append("REGIO")
+            case .suburbanTrain:
+                productsString.append("URBAN_TRAIN")
+            case .bus:
+                productsString.append("BUS")
+            case .ferry:
+                productsString.append("SHIP")
+            case .cablecar:
+                productsString.append("CABLEWAY_GONDOLA_CHAIRLIFT_FUNICULAR")
+            case .tram:
+                productsString.append("TRAMWAY")
+            default:
+                break
+            }
+        }
+        return productsString
+    }
+    
     private func appendTripsParameters(to urlBuilder: UrlBuilder, from: Location, via: Location?, to: Location, date: Date, departure: Bool, tripOptions: TripOptions) {
         appendLocation(from, to: urlBuilder, prefix: "departure")
         appendLocation(to, to: urlBuilder, prefix: "arrival")
@@ -268,48 +337,24 @@ public class SbbProvider: AbstractNetworkProvider {
             urlBuilder.addParameter(key: "noticeAttributes", value: "BIKE_TRANSPORT")
         }
         if let products = tripOptions.products, !products.isEmpty {
-            var productsString: [String] = []
-            for product in products {
-                switch product {
-                case .highSpeedTrain:
-                    productsString.append("HIGH_SPEED_TRAIN")
-                    productsString.append("INTERCITY")
-                    productsString.append("SPECIAL_TRAIN")
-                case .regionalTrain:
-                    productsString.append("INTERREGIO")
-                    productsString.append("REGIO")
-                case .suburbanTrain:
-                    productsString.append("URBAN_TRAIN")
-                case .bus:
-                    productsString.append("BUS")
-                case .ferry:
-                    productsString.append("SHIP")
-                case .cablecar:
-                    productsString.append("CABLEWAY_GONDOLA_CHAIRLIFT_FUNICULAR")
-                case .tram:
-                    productsString.append("TRAMWAY")
-                default:
-                    break
-                }
-            }
-            urlBuilder.addParameter(key: "transportModes", value: productsString.joined(separator: ","))
+            urlBuilder.addParameter(key: "transportModes", value: encodeProducts(tripOptions).joined(separator: ","))
         }
     }
     
     override func queryTripsParsing(request: HttpRequest, from: Location, via: Location?, to: Location, date: Date, departure: Bool, tripOptions: TripOptions, previousContext: QueryTripsContext?, later: Bool, completion: @escaping (HttpRequest, QueryTripsResult) -> Void) throws {
-        let json = try getResponse(from: request)
+        let json = try getResponse(from: request)["data", "trips"]
         
         var trips: [Trip] = []
         let geoDispatchGroup = DispatchGroup()
         for tripJson in json["trips"].arrayValue {
-            try parseTrip(from: tripJson, dispatchGroup: geoDispatchGroup) { trip in
+            try parseTrip(from: tripJson, occupancyClass: tripOptions.tariffProfile?.tariffClass == 1 ? "first" : "second", dispatchGroup: geoDispatchGroup) { trip in
                 trips.append(trip)
             }
         }
         
         let previousContext = previousContext as? SbbTripsContext
-        let laterContext = later ? json["laterPagingCursor"].string : previousContext?.laterContext ?? json["laterPagingCursor"].string
-        let earlierContext = !later ? json["earlierPagingCursor"].string : previousContext?.laterContext ?? json["earlierPagingCursor"].string
+        let laterContext = later ? json["paginationCursor", "next"].string : previousContext?.laterContext ?? json["paginationCursor", "next"].string
+        let earlierContext = !later ? json["paginationCursor", "previous"].string : previousContext?.laterContext ?? json["paginationCursor", "previous"].string
         let context = SbbTripsContext(from: from, via: via, to: to, date: date, departure: departure, laterContext: laterContext, earlierContext: earlierContext, tripOptions: tripOptions)
         
         geoDispatchGroup.notify(queue: .global()) {
@@ -326,10 +371,9 @@ public class SbbProvider: AbstractNetworkProvider {
             completion(HttpRequest(urlBuilder: UrlBuilder()), .noTrips)
             return AsyncRequest(task: nil)
         }
-        let urlBuilder = UrlBuilder(path: SbbProvider.API_BASE + "api/timetable/v1/trips", encoding: .utf8)
-        appendTripsParameters(to: urlBuilder, from: context.from, via: context.via, to: context.to, date: context.date, departure: context.departure, tripOptions: context.tripOptions)
-        urlBuilder.addParameter(key: "pagingCursor", value: later ? context.laterContext : context.earlierContext)
-        let httpRequest = HttpRequest(urlBuilder: urlBuilder).setUserAgent(SbbProvider.USER_AGENT).setHeaders(getHeaders(urlBuilder))
+        let urlBuilder = UrlBuilder(path: SbbProvider.GRAPH_QL, encoding: .utf8)
+        let payload = encodeJson(dict: getGQLQueryTripsParameters(from: context.from, via: context.via, to: context.to, date: context.date, departure: context.departure, tripOptions: context.tripOptions, pagingCursor: later ? context.laterContext : context.earlierContext), requestUrlEncoding: .utf8)
+        let httpRequest = HttpRequest(urlBuilder: urlBuilder).setHeaders(["Apollographql-Client-Name": "sbb-webshop-3.15.0"]).setPostPayload(payload)
         return makeRequest(httpRequest) {
             try self.queryTripsParsing(request: httpRequest, from: context.from, via: context.via, to: context.to, date: context.date, departure: context.departure, tripOptions: context.tripOptions, previousContext: context, later: later, completion: completion)
         } errorHandler: { err in
@@ -342,8 +386,16 @@ public class SbbProvider: AbstractNetworkProvider {
             completion(HttpRequest(urlBuilder: UrlBuilder()), .noTrips)
             return AsyncRequest(task: nil)
         }
-        let urlBuilder = UrlBuilder(path: SbbProvider.API_BASE + "api/timetable/v1/trips/\(context.tripId)", encoding: .utf8)
-        let httpRequest = HttpRequest(urlBuilder: urlBuilder).setUserAgent(SbbProvider.USER_AGENT).setHeaders(getHeaders(urlBuilder))
+        let urlBuilder = UrlBuilder(path: SbbProvider.GRAPH_QL, encoding: .utf8)
+        let payload = encodeJson(dict: [
+            "operationName": "getTripById",
+            "query": RefreshTripQuery,
+            "variables": [
+                "tripId": context.tripId,
+                "language": queryLanguage?.uppercased() ?? defaultLanguage.uppercased()
+            ]
+        ], requestUrlEncoding: .utf8)
+        let httpRequest = HttpRequest(urlBuilder: urlBuilder).setHeaders(["Apollographql-Client-Name": "sbb-webshop-3.15.0"]).setPostPayload(payload)
         return makeRequest(httpRequest) {
             try self.refreshTripParsing(request: httpRequest, context: context, completion: completion)
         } errorHandler: { err in
@@ -353,7 +405,7 @@ public class SbbProvider: AbstractNetworkProvider {
     
     override func refreshTripParsing(request: HttpRequest, context: RefreshTripContext, completion: @escaping (HttpRequest, QueryTripsResult) -> Void) throws {
         let json = try getResponse(from: request)
-        try parseTrip(from: json) { trip in
+        try parseTrip(from: json["data", "tripById"], occupancyClass: (context as! SbbRefreshTripContext).occupancyClass) { trip in
             completion(request, .success(context: nil, from: trip.from, via: nil, to: trip.to, trips: [trip], messages: []))
         }
     }
@@ -439,7 +491,7 @@ public class SbbProvider: AbstractNetworkProvider {
             "query": "query getGeoJsonByTripContext($context: String!, $language: LanguageEnum!) {\n  geoJsonByTripContext(context: $context, language: $language) {\n    features\n    bbox\n    __typename\n  }\n}",
             "variables": [
                 "context": tripId,
-                "language": "DE"
+                "language": queryLanguage?.uppercased() ?? defaultLanguage.uppercased()
             ]
         ], requestUrlEncoding: .utf8)
         let httpRequest = HttpRequest(urlBuilder: urlBuilder).setPostPayload(payload)
@@ -580,6 +632,37 @@ public class SbbProvider: AbstractNetworkProvider {
         return Location(type: type, id: id, coord: coord, place: place, name: name)
     }
     
+    private func gql_parsePlace(json: JSON) -> Location? {
+        let id = json["id"].string
+        let stationName = json["name"].string
+        let coord: LocationPoint?
+        if let lat = json["centroid", "latitude"].double, let lon = json["centroid", "longitude"].double {
+            coord = LocationPoint(lat: Int(lat * 1e6), lon: Int(lon * 1e6))
+        } else {
+            coord = nil
+        }
+        let (place, name) = split(stationName: stationName)
+        return Location(type: .station, id: id, coord: coord, place: place, name: name)
+    }
+    
+    private func gql_parseStop(location: Location, json: JSON) -> StopEvent? {
+        let plannedTime = parseTime(from: json["time"])
+        let delay = json["delay"].intValue
+        let predictedTime = plannedTime?.addingTimeInterval(TimeInterval(delay * 60))
+        let position = json["quayFormatted"].string
+        let positionChanged = json["quayChanged"].boolValue
+        let plannedPosition = positionChanged && position != nil ? "?" : position
+        let predictedPosition = positionChanged ? position : nil
+        
+        let stopEvent: StopEvent?
+        if let plannedTime = plannedTime {
+            stopEvent = StopEvent(location: location, plannedTime: plannedTime, predictedTime: predictedTime, plannedPlatform: plannedPosition, predictedPlatform: predictedPosition, cancelled: false)
+        } else {
+            stopEvent = nil
+        }
+        return stopEvent
+    }
+    
     private func parseStation(json: JSON) -> Location? {
         let id = normalize(stationId: json["placeReference"].string)
         let (place, name) = split(stationName: json["placeName"].string)
@@ -638,6 +721,59 @@ public class SbbProvider: AbstractNetworkProvider {
         }
     }
     
+    private func gql_parseLine(from json: JSON) -> Line {
+        let product: Product?
+        switch json["vehicleMode"].stringValue {
+        case "CABLEWAY", "CHAIRLIFT", "LIFT", "COG_RAILWAY", "CABLECAR":
+            product = .cablecar
+        case "TAXI":
+            product = .onDemand
+        case "METRO":
+            product = .subway
+        case "TRAIN":
+            switch json["vehicleSubModeShortName"].stringValue {
+            case "IC", "EC", "ICE", "TGV":
+                product = .highSpeedTrain
+            case "IR", "RE", "TER":
+                product = .regionalTrain
+            case "S":
+                product = .suburbanTrain
+            default:
+                product = .regionalTrain
+            }
+        case "TRAMWAY":
+            product = .tram
+        case "BUS":
+            product = .bus
+        case "BOAT":
+            product = .ferry
+        default:
+            product = nil
+        }
+        
+        var label = json["vehicleSubModeShortName"].stringValue
+        let number = json["number"].string
+        let line = json["line"].string
+        if let line = line {
+            label += line
+        } else if let number = number {
+            label += number
+        }
+        
+        return Line(id: nil, network: nil, product: product, label: label, name: json["name"].string, vehicleNumber: number, style: lineStyle(network: nil, product: product, label: label), attr: nil, message: nil)
+    }
+    
+    override func lineStyle(network: String?, product: Product?, label: String?) -> LineStyle {
+        if product == .highSpeedTrain {
+            if label?.starts(with: "TGV") ?? false {
+                return LineStyle(shape: .rect, backgroundColor: LineStyle.white, backgroundColor2: 0, foregroundColor: LineStyle.parseColor("#034c9c"), borderColor: LineStyle.parseColor("#034c9c"))
+            } else if label?.starts(with: "ICE") ?? false {
+                return LineStyle(shape: .rect, backgroundColor: LineStyle.white, backgroundColor2: 0, foregroundColor: LineStyle.red, borderColor: LineStyle.red)
+            }
+        }
+        return super.lineStyle(network: network, product: product, label: label)
+    }
+    
     private func parseLine(from json: JSON) -> Line {
         let product: Product?
         var label: String?
@@ -685,76 +821,35 @@ public class SbbProvider: AbstractNetworkProvider {
         return Line(id: nil, network: nil, product: product, label: label, name: name, vehicleNumber: number, style: lineStyle(network: nil, product: product, label: label), attr: nil, message: nil)
     }
     
-    private func parseTrip(from tripJson: JSON, dispatchGroup: DispatchGroup? = nil, completion: @escaping (Trip) -> Void) throws {
+    private func parseTrip(from tripJson: JSON, occupancyClass: String, dispatchGroup: DispatchGroup? = nil, completion: @escaping (Trip) -> Void) throws {
         let id = tripJson["id"].stringValue
         
-        let tripSummary = tripJson["tripSummary"]
-        guard let from = parseStation(json: tripSummary["departureAnchor"]), let to = parseStation(json: tripSummary["arrivalAnchor"]) else {
+        let tripSummary = tripJson["summary"]
+        guard let from = gql_parsePlace(json: tripSummary["firstStopPlace"]), let to = gql_parsePlace(json: tripSummary["lastStopPlace"]) else {
             throw ParseError(reason: "failed to parse trip from/to")
         }
         
         var legs: [Leg] = []
         for legJson in tripJson["legs"].arrayValue {
-            let legType = legJson["type"].stringValue
+            let legId = legJson["id"].stringValue
+            let legType = legJson["__typename"].stringValue
             switch legType {
-            case "PtRideLeg":
-                let line = parseLine(from: legJson["firstTransportDesignation"])
-                let destination: Location?
-                if let destinationName = legJson["direction"].string {
-                    destination = Location(anyName: destinationName)
-                } else {
-                    destination = nil
-                }
-                guard let departure = parseStopPoint(stopJson: legJson["departureStopPoint"]) else {
-                    throw ParseError(reason: "failed to parse leg departure")
-                }
-                guard let arrival = parseStopPoint(stopJson: legJson["arrivalStopPoint"]) else {
-                    throw ParseError(reason: "failed to parse leg arrival")
-                }
-                let classText = "Second"
-                let departureLoadFactor = parseLoadFactor(from: legJson["departureStopPoint", "occupancy\(classText)Class"])
-                let arrivalLoadFactor = parseLoadFactor(from: legJson["arrivalStopPoint", "occupancy\(classText)Class"])
-                let loadFactor: LoadFactor?
-                if let departureLoadFactor = departureLoadFactor, let arrivalLoadFactor = arrivalLoadFactor {
-                    loadFactor = LoadFactor(rawValue: max(departureLoadFactor.rawValue, arrivalLoadFactor.rawValue))
-                } else if let departureLoadFactor = departureLoadFactor {
-                    loadFactor = departureLoadFactor
-                } else if let arrivalLoadFactor = arrivalLoadFactor {
-                    loadFactor = arrivalLoadFactor
-                } else {
-                    loadFactor = nil
-                }
-                
-                let journeyContext: SbbJourneyContext?
-                if let urlPath = legJson["itineraryUrl"].string {
-                    journeyContext = SbbJourneyContext(urlPath: urlPath)
-                } else {
-                    journeyContext = nil
-                }
-                let wagonSequenceContext: SbbWagonSequenceContext?
-                if let urlPath = legJson["formationUrl"].string {
-                    wagonSequenceContext = SbbWagonSequenceContext(urlPath: urlPath)
-                } else {
-                    wagonSequenceContext = nil
-                }
-                
-                /*if prevChangeLeg, let last = legs.last {
-                    legs.append(IndividualLeg(type: .transfer, departureTime: last.arrivalTime, departure: last.arrival, arrival: departure.location, arrivalTime: departure.time, distance: 0, path: []))
-                    prevChangeLeg = false
-                }*/
-                
-                legs.append(PublicLeg(line: line, destination: destination, departure: departure, arrival: arrival, intermediateStops: [], message: nil, path: [], journeyContext: journeyContext, wagonSequenceContext: wagonSequenceContext, loadFactor: loadFactor))
+            case "PTRideLeg":
+                legs.append(try parsePublicLeg(legJson: legJson["serviceJourney"], legId: legId, tripId: id, occupancyClass: occupancyClass))
             case "ChangeLeg":
                 break
             case "AccessLeg":
-                let from = parseLocation(json: legJson["from"])
-                let to = parseLocation(json: legJson["to"])
-                let duration = TimeInterval(legJson["duration", "durationInMinutes"].intValue * 60)
+                let from = gql_parsePlace(json: legJson["start"])
+                let to = gql_parsePlace(json: legJson["end"])
+                let duration = TimeInterval(legJson["duration"].intValue * 60)
                 let time: Date?
                 if let last = legs.last {
                     time = last.arrivalTime
+                } else if let departureTime = dateFormatter.date(from: tripSummary["departure", "time"].stringValue) {
+                    let delay = tripSummary["departure", "delay"].intValue
+                    time = departureTime.addingTimeInterval(TimeInterval(delay * 60)).addingTimeInterval(-duration)
                 } else {
-                    time = dateFormatter.date(from: tripSummary["departureAnchor", "timeExpected"].string ?? tripSummary["departureAnchor", "timeAimed"].string ?? "")?.addingTimeInterval(-duration)
+                    time = nil
                 }
                 guard let from = from, let to = to, let time = time else {
                     throw ParseError(reason: "failed to parse individual leg")
@@ -766,18 +861,88 @@ public class SbbProvider: AbstractNetworkProvider {
         }
         let refreshContext: RefreshTripContext?
         if !id.isEmpty {
-            refreshContext = SbbRefreshTripContext(tripId: id)
+            refreshContext = SbbRefreshTripContext(tripId: id, occupancyClass: occupancyClass)
         } else {
             refreshContext = nil
         }
-        let duration = tripSummary["duration", "durationInMinutes"].intValue
+        let duration = tripSummary["duration"].intValue
         
-        dispatchGroup?.enter()
+        /*dispatchGroup?.enter()
         queryPath(for: id, legs: legs) { newLegs in
             legs = newLegs
             dispatchGroup?.leave()
             completion(Trip(id: "", from: from, to: to, legs: legs, duration: TimeInterval(duration * 60), fares: [], refreshContext: refreshContext))
+        }*/
+        completion(Trip(id: "", from: from, to: to, legs: legs, duration: TimeInterval(duration * 60), fares: [], refreshContext: refreshContext))
+    }
+    
+    private func parsePublicLeg(legJson: JSON, legId: String, tripId: String?, occupancyClass: String) throws -> PublicLeg {
+        let line = gql_parseLine(from: legJson["serviceProducts", 0])
+        let destination: Location?
+        if let destinationName = legJson["direction"].string {
+            destination = Location(anyName: destinationName)
+        } else {
+            destination = nil
         }
+        
+        var stops: [Stop] = []
+        var maxOccupancy: LoadFactor? = nil
+        for stopJson in legJson["stopPoints"].arrayValue {
+            guard let location = gql_parsePlace(json: stopJson["place"]) else { continue }
+            let departure = gql_parseStop(location: location, json: stopJson["departure"])
+            let arrival = gql_parseStop(location: location, json: stopJson["arrival"])
+            
+            let loadFactor = parseLoadFactor(from: stopJson["occupancy", "\(occupancyClass)Class"])
+            if let loadFactor = loadFactor, maxOccupancy == nil || loadFactor.rawValue < maxOccupancy!.rawValue {
+                maxOccupancy = loadFactor
+            }
+            
+            stops.append(Stop(location: location, departure: departure, arrival: arrival, message: nil))
+        }
+        guard stops.count >= 2 else { throw ParseError(reason: "failed to parse stops") }
+        guard let departure = stops.removeFirst().departure else { throw ParseError(reason: "failed to parse leg departure") }
+        guard let arrival = stops.removeLast().arrival else { throw ParseError(reason: "failed to parse leg arrival") }
+        
+        var messages: [String] = []
+        for situationJson in legJson["situations"].arrayValue {
+            for broadcastJson in situationJson["broadcastMessages"].arrayValue {
+                guard let detail = broadcastJson["detail"].string?.stripHTMLTags() else { continue }
+                messages.append(detail)
+            }
+        }
+        
+        var attributes = Set<Line.Attr>()
+        for noticeJson in legJson["notices"].arrayValue {
+            guard noticeJson["type"].stringValue == "ATTRIBUTE" else { continue }
+            guard let name = noticeJson["name"].string else { continue }
+            switch name {
+            case "WR": attributes.insert(.restaurant)
+            case "VR", "VB": attributes.insert(.bicycleCarriage)
+            case "FS": attributes.insert(.wifiAvailable)
+            default: break
+            }
+        }
+        let newLine = Line(id: line.id, network: line.network, product: line.product, label: line.label, name: line.name, number: line.number, vehicleNumber: line.vehicleNumber, style: line.style, attr: attributes.isEmpty ? nil : Array(attributes), message: line.message)
+        
+        let journeyContext: SbbJourneyContext?
+        if let serviceId = legJson["id"].string {
+            journeyContext = SbbJourneyContext(contextId: serviceId)
+        } else {
+            journeyContext = nil
+        }
+        let wagonSequenceContext: SbbWagonSequenceContext?
+        if let tripId = tripId {
+            wagonSequenceContext = SbbWagonSequenceContext(urlPath: "api/timetable/v1/trips/\(tripId)/\(legId)")
+        } else {
+            wagonSequenceContext = nil
+        }
+        
+        /*if prevChangeLeg, let last = legs.last {
+            legs.append(IndividualLeg(type: .transfer, departureTime: last.arrivalTime, departure: last.arrival, arrival: departure.location, arrivalTime: departure.time, distance: 0, path: []))
+            prevChangeLeg = false
+        }*/
+        
+        return PublicLeg(line: newLine, destination: destination, departure: departure, arrival: arrival, intermediateStops: stops, message: messages.joined(separator: "\n").emptyToNil, path: [], journeyContext: journeyContext, wagonSequenceContext: wagonSequenceContext, loadFactor: maxOccupancy)
     }
     
     /**
@@ -806,7 +971,8 @@ public class SbbProvider: AbstractNetworkProvider {
         let input = url.path + timestamp
         headers["X-API-AUTHORIZATION"] = input.hmacSha1(key: apiKey).base64
         
-        headers["Accept-Language"] = queryLanguage
+        let lang = queryLanguage ?? defaultLanguage
+        headers["Accept-Language"] = lang + "_" + lang.uppercased()
         
         return headers
     }
@@ -839,6 +1005,753 @@ public class SbbProvider: AbstractNetworkProvider {
             urlBuilder.addParameter(key: "placeTypes", value: placeTypes.joined(separator: ","))
         }
     }
+    
+    private let QueryTripsQueryString = """
+            query getTrips($input: TripInput!, $pagingCursor: String, $language: LanguageEnum!) {
+              trips(tripInput: $input, pagingCursor: $pagingCursor, language: $language) {
+                trips {
+                  id
+                  legs {
+                    duration
+                    id
+                    ... on AccessLeg {
+                      __typename
+                      duration
+                      distance
+                      start {
+                        __typename
+                        id
+                        name
+                      }
+                      end {
+                        __typename
+                        id
+                        name
+                      }
+                    }
+                    ... on PTConnectionLeg {
+                      __typename
+                      duration
+                      start {
+                        id
+                        name
+                        __typename
+                      }
+                      end {
+                        id
+                        name
+                        __typename
+                      }
+                      notices {
+                        ...NoticesFields
+                        __typename
+                      }
+                    }
+                    ... on AlternativeModeLeg {
+                      __typename
+                      mode
+                      duration
+                    }
+                    ... on PTRideLeg {
+                      __typename
+                      duration
+                      start {
+                        id
+                        name
+                        centroid {
+                          latitude
+                          longitude
+                          __typename
+                        }
+                        __typename
+                      }
+                      end {
+                        id
+                        name
+                        centroid {
+                          latitude
+                          longitude
+                          __typename
+                        }
+                        __typename
+                      }
+                      arrival {
+                        ...ArrivalDepartureFields
+                        __typename
+                      }
+                      departure {
+                        ...ArrivalDepartureFields
+                        __typename
+                      }
+                      serviceJourney {
+                        id
+                        stopPoints {
+                          place {
+                            id
+                            name
+                            centroid {
+                              latitude
+                              longitude
+                              __typename
+                            }
+                            __typename
+                          }
+                          occupancy {
+                            firstClass
+                            secondClass
+                            __typename
+                          }
+                          accessibilityBoardingAlighting {
+                            limitation
+                            name
+                            description
+                            assistanceService {
+                              template
+                              arguments {
+                                type
+                                values
+                                __typename
+                              }
+                              __typename
+                            }
+                            __typename
+                          }
+                          stopStatus
+                          stopStatusFormatted
+                          arrival {
+                            ...ArrivalDepartureFields
+                          }
+                          departure {
+                            ...ArrivalDepartureFields
+                          }
+                          delayUndefined
+                          __typename
+                        }
+                        serviceProducts {
+                          name
+                          line
+                          number
+                          vehicleMode
+                          vehicleSubModeShortName
+                          corporateIdentityIcon
+                          routeIndexFrom
+                          routeIndexTo
+                          __typename
+                        }
+                        direction
+                        serviceAlteration {
+                          cancelled
+                          cancelledText
+                          partiallyCancelled
+                          partiallyCancelledText
+                          redirected
+                          redirectedText
+                          reachable
+                          reachableText
+                          delayText
+                          unplannedStopPointsText
+                          quayChangedText
+                          __typename
+                        }
+                        situations {
+                          cause
+                          broadcastMessages {
+                            id
+                            priority
+                            title
+                            detail
+                            detailShort
+                            distributionPeriod {
+                              startDate
+                              endDate
+                              __typename
+                            }
+                            audiences {
+                              urls {
+                                name
+                                url
+                                __typename
+                              }
+                              __typename
+                            }
+                            __typename
+                          }
+                          affectedStopPointFromIdx
+                          affectedStopPointToIdx
+                          __typename
+                        }
+                        notices {
+                          ...NoticesFields
+                          __typename
+                        }
+                        quayTypeName
+                        quayTypeShortName
+                        __typename
+                      }
+                    }
+                    __typename
+                  }
+                  situations {
+                    cause
+                    broadcastMessages {
+                      id
+                      priority
+                      title
+                      detail
+                      __typename
+                    }
+                    affectedStopPointFromIdx
+                    affectedStopPointToIdx
+                    __typename
+                  }
+                  notices {
+                    ...NoticesFields
+                    __typename
+                  }
+                  valid
+                  isBuyable
+                  summary {
+                    duration
+                    arrival {
+                      ...ArrivalDepartureFields
+                      __typename
+                    }
+                    arrivalWalk
+                    lastStopPlace {
+                      id
+                      name
+                      centroid {
+                        latitude
+                        longitude
+                        __typename
+                      }
+                      __typename
+                    }
+                    tripStatus {
+                      alternative
+                      alternativeText
+                      cancelledText
+                      delayedUnknown
+                      __typename
+                    }
+                    departure {
+                      ...ArrivalDepartureFields
+                      __typename
+                    }
+                    departureWalk
+                    firstStopPlace {
+                      id
+                      name
+                      centroid {
+                        latitude
+                        longitude
+                        __typename
+                      }
+                      __typename
+                    }
+                    product {
+                      name
+                      line
+                      number
+                      vehicleMode
+                      vehicleSubModeShortName
+                      corporateIdentityIcon
+                      __typename
+                    }
+                    direction
+                    occupancy {
+                      firstClass
+                      secondClass
+                      __typename
+                    }
+                    tripStatus {
+                      cancelled
+                      partiallyCancelled
+                      delayed
+                      delayedUnknown
+                      quayChanged
+                      __typename
+                    }
+                    boardingAlightingAccessibility {
+                      name
+                      limitation
+                      description
+                      assistanceService {
+                        template
+                        arguments {
+                          type
+                          values
+                          __typename
+                        }
+                        __typename
+                      }
+                      __typename
+                    }
+                    international
+                    __typename
+                  }
+                  searchHint
+                  __typename
+                }
+                paginationCursor {
+                  previous
+                  next
+                  __typename
+                }
+                __typename
+              }
+            }
+
+            fragment NoticesFields on Notice {
+              name
+              text {
+                template
+                arguments {
+                  type
+                  values
+                  __typename
+                }
+                __typename
+              }
+              type
+              priority
+              __typename
+            }
+
+            fragment ArrivalDepartureFields on ScheduledStopPointDetail {
+              time
+              delay
+              delayText
+              quayFormatted
+              quayChanged
+              quayChangedText
+              __typename
+            }
+            """
+            
+    private let QueryJourneyDetailQuery = """
+            query getServiceJourneyById($id: ID!, $language: LanguageEnum!) {
+              serviceJourneyById(id: $id, language: $language) {
+                id
+                stopPoints {
+                  stopStatus
+                  stopStatusFormatted
+                  requestStop
+                  delayUndefined
+                  arrival {
+                    ...ArrivalDepartureFields
+                    __typename
+                  }
+                  departure {
+                    ...ArrivalDepartureFields
+                    __typename
+                  }
+                  accessibilityBoardingAlighting {
+                    limitation
+                    name
+                    __typename
+                  }
+                  occupancy {
+                    firstClass
+                    secondClass
+                    __typename
+                  }
+                  place {
+                    id
+                    name
+                    centroid {
+                      latitude
+                      longitude
+                      __typename
+                    }
+                    __typename
+                  }
+                  forBoarding
+                  forAlighting
+                  __typename
+                }
+                serviceProducts {
+                  name
+                  line
+                  number
+                  vehicleMode
+                  vehicleSubModeShortName
+                  corporateIdentityIcon
+                  routeIndexFrom
+                  routeIndexTo
+                  __typename
+                }
+                direction
+                serviceAlteration {
+                  cancelled
+                  cancelledText
+                  partiallyCancelled
+                  partiallyCancelledText
+                  redirected
+                  redirectedText
+                  reachable
+                  reachableText
+                  delayText
+                  unplannedStopPointsText
+                  quayChangedText
+                  __typename
+                }
+                situations {
+                  cause
+                  broadcastMessages {
+                    id
+                    priority
+                    title
+                    detail
+                    detailShort
+                    distributionPeriod {
+                      startDate
+                      endDate
+                      __typename
+                    }
+                    audiences {
+                      urls {
+                        name
+                        url
+                        __typename
+                      }
+                      __typename
+                    }
+                    __typename
+                  }
+                  affectedStopPointFromIdx
+                  affectedStopPointToIdx
+                  __typename
+                }
+                notices {
+                  ...NoticesFields
+                  __typename
+                }
+                __typename
+              }
+            }
+
+            fragment NoticesFields on Notice {
+              name
+              text {
+                template
+                arguments {
+                  type
+                  values
+                  __typename
+                }
+                __typename
+              }
+              type
+              priority
+              __typename
+            }
+
+            fragment ArrivalDepartureFields on ScheduledStopPointDetail {
+              time
+              delay
+              delayText
+              quayFormatted
+              quayChanged
+              quayChangedText
+              __typename
+            }
+            """
+    
+    private let RefreshTripQuery = """
+            query getTripById($tripId: ID!, $language: LanguageEnum!) {
+              tripById(tripId: $tripId, language: $language) {
+                id
+                legs {
+                  duration
+                  id
+                  ... on AccessLeg {
+                    __typename
+                    duration
+                    distance
+                    start {
+                      __typename
+                      id
+                      name
+                      centroid {
+                        latitude
+                        longitude
+                        __typename
+                      }
+                    }
+                    end {
+                      __typename
+                      id
+                      name
+                      centroid {
+                        latitude
+                        longitude
+                        __typename
+                      }
+                    }
+                  }
+                  ... on PTConnectionLeg {
+                    __typename
+                    duration
+                    start {
+                      id
+                      name
+                      centroid {
+                        latitude
+                        longitude
+                        __typename
+                      }
+                    }
+                    end {
+                      id
+                      name
+                      centroid {
+                        latitude
+                        longitude
+                        __typename
+                      }
+                    }
+                    notices {
+                      ...NoticesFields
+                    }
+                  }
+                  ... on AlternativeModeLeg {
+                    __typename
+                    mode
+                    duration
+                  }
+                  ... on PTRideLeg {
+                    __typename
+                    duration
+                    start {
+                      id
+                      name
+                      centroid {
+                        latitude
+                        longitude
+                        __typename
+                      }
+                    }
+                    end {
+                      id
+                      name
+                      centroid {
+                        latitude
+                        longitude
+                        __typename
+                      }
+                    }
+                    arrival {
+                      ...ArrivalDepartureFields
+                    }
+                    departure {
+                      ...ArrivalDepartureFields
+                    }
+                    serviceJourney {
+                      id
+                      stopPoints {
+                        place {
+                          __typename
+                          id
+                          name
+                          centroid {
+                            latitude
+                            longitude
+                            __typename
+                          }
+                        }
+                        occupancy {
+                          firstClass
+                          secondClass
+                        }
+                        accessibilityBoardingAlighting {
+                          limitation
+                          name
+                          description
+                          assistanceService {
+                            template
+                            arguments {
+                              type
+                              values
+                            }
+                          }
+                        }
+                        stopStatus
+                        stopStatusFormatted
+                        arrival {
+                          ...ArrivalDepartureFields
+                        }
+                        departure {
+                          ...ArrivalDepartureFields
+                        }
+                      }
+                      serviceProducts {
+                        name
+                        line
+                        number
+                        vehicleMode
+                        vehicleSubModeShortName
+                        corporateIdentityIcon
+                        routeIndexFrom
+                        routeIndexTo
+                      }
+                      direction
+                      serviceAlteration {
+                        cancelled
+                        cancelledText
+                        partiallyCancelled
+                        partiallyCancelledText
+                        redirected
+                        redirectedText
+                        reachable
+                        reachableText
+                        delayText
+                        unplannedStopPointsText
+                        quayChangedText
+                      }
+                      situations {
+                        cause
+                        broadcastMessages {
+                          id
+                          priority
+                          title
+                          detail
+                          detailShort
+                          distributionPeriod {
+                            startDate
+                            endDate
+                          }
+                          audiences {
+                            urls {
+                              name
+                              url
+                            }
+                          }
+                        }
+                        affectedStopPointFromIdx
+                        affectedStopPointToIdx
+                      }
+                      notices {
+                        ...NoticesFields
+                      }
+                      quayTypeName
+                      quayTypeShortName
+                    }
+                  }
+                }
+                situations {
+                  cause
+                  broadcastMessages {
+                    id
+                    priority
+                    title
+                    detail
+                  }
+                  affectedStopPointFromIdx
+                  affectedStopPointToIdx
+                }
+                notices {
+                  ...NoticesFields
+                }
+                valid
+                isBuyable
+                summary {
+                  duration
+                  arrival {
+                    ...ArrivalDepartureFields
+                  }
+                  arrivalWalk
+                  lastStopPlace {
+                    id
+                    name
+                    centroid {
+                      latitude
+                      longitude
+                      __typename
+                    }
+                  }
+                  tripStatus {
+                    alternative
+                    alternativeText
+                    cancelledText
+                    delayedUnknown
+                  }
+                  departure {
+                    ...ArrivalDepartureFields
+                  }
+                  departureWalk
+                  firstStopPlace {
+                    id
+                    name
+                    centroid {
+                      latitude
+                      longitude
+                      __typename
+                    }
+                  }
+                  product {
+                    name
+                    line
+                    number
+                    vehicleMode
+                    vehicleSubModeShortName
+                    corporateIdentityIcon
+                  }
+                  direction
+                  occupancy {
+                    firstClass
+                    secondClass
+                  }
+                  tripStatus {
+                    cancelled
+                    partiallyCancelled
+                    delayed
+                    delayedUnknown
+                    quayChanged
+                  }
+                  boardingAlightingAccessibility {
+                    name
+                    limitation
+                    description
+                    assistanceService {
+                      template
+                      arguments {
+                        type
+                        values
+                      }
+                    }
+                  }
+                  international
+                }
+                searchHint
+              }
+            }
+            fragment NoticesFields on Notice {
+              name
+              text {
+                template
+                arguments {
+                  type
+                  values
+                  __typename
+                }
+                __typename
+              }
+              type
+              priority
+              __typename
+            }
+
+            fragment ArrivalDepartureFields on ScheduledStopPointDetail {
+              time
+              delay
+              delayText
+              quayFormatted
+              quayChanged
+              quayChangedText
+              __typename
+            }
+            """
     
 }
 
@@ -916,23 +1829,28 @@ public class SbbRefreshTripContext: RefreshTripContext {
     public override class var supportsSecureCoding: Bool { return true }
     
     public let tripId: String
+    public let occupancyClass: String
     
-    public init(tripId: String) {
+    public init(tripId: String, occupancyClass: String) {
         self.tripId = tripId
+        self.occupancyClass = occupancyClass
         super.init()
     }
     
     required convenience init?(coder aDecoder: NSCoder) {
         guard let tripId = aDecoder.decodeObject(of: NSString.self, forKey: PropertyKey.tripId) as String? else { return nil }
-        self.init(tripId: tripId)
+        guard let occupancyClass = aDecoder.decodeObject(of: NSString.self, forKey: PropertyKey.occupancyClass) as String? else { return nil }
+        self.init(tripId: tripId, occupancyClass: occupancyClass)
     }
     
     public override func encode(with aCoder: NSCoder) {
         aCoder.encode(tripId, forKey: PropertyKey.tripId)
+        aCoder.encode(occupancyClass, forKey: PropertyKey.occupancyClass)
     }
     
     struct PropertyKey {
         static let tripId = "tripId"
+        static let occupancyClass = "occupancyClass"
     }
 }
 
@@ -940,24 +1858,24 @@ public class SbbJourneyContext: QueryJourneyDetailContext {
     
     public override class var supportsSecureCoding: Bool { return true }
     
-    public let urlPath: String
+    public let contextId: String
     
-    public init(urlPath: String) {
-        self.urlPath = urlPath
+    public init(contextId: String) {
+        self.contextId = contextId
         super.init()
     }
     
     required convenience init?(coder aDecoder: NSCoder) {
-        guard let urlPath = aDecoder.decodeObject(of: NSString.self, forKey: PropertyKey.urlPath) as String? else { return nil }
-        self.init(urlPath: urlPath)
+        guard let contextId = aDecoder.decodeObject(of: NSString.self, forKey: PropertyKey.contextId) as String? else { return nil }
+        self.init(contextId: contextId)
     }
     
     public override func encode(with aCoder: NSCoder) {
-        aCoder.encode(urlPath, forKey: PropertyKey.urlPath)
+        aCoder.encode(contextId, forKey: PropertyKey.contextId)
     }
     
     struct PropertyKey {
-        static let urlPath = "urlPath"
+        static let contextId = "contextId"
     }
 }
 
