@@ -1392,6 +1392,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         case let name where name.contains("4 adults"): return true
         case let name where name.contains("5 adults"): return true
         case let name where name.contains("6 adults"): return true
+        case let name where name.contains("deutschland-ticket"): return true
         default: return false
         }
     }
