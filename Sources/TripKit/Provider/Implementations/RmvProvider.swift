@@ -170,7 +170,17 @@ public class RmvProvider: AbstractHafasClientInterfaceProvider {
     }
     
     override func parse(fareName: String?, ticketName: String?) -> String {
+        if fareName != "0" {
+            return super.parse(fareName: nil, ticketName: ticketName) + " with changes"
+        }
         return super.parse(fareName: nil, ticketName: ticketName)
+    }
+    
+    override func hideFare(_ fare: Fare) -> Bool {
+        if fare.name?.hasSuffix(" with changes") ?? false {
+            return true
+        }
+        return super.hideFare(fare)
     }
     
 }
