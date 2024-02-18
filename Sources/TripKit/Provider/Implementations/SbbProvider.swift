@@ -645,7 +645,7 @@ public class SbbProvider: AbstractNetworkProvider {
         return Location(type: .station, id: id, coord: coord, place: place, name: name)
     }
     
-    private func gql_parseStop(location: Location, json: JSON) -> StopEvent? {
+    private func gql_parseStop(location: Location, json: JSON, cancelled: Bool) -> StopEvent? {
         let plannedTime = parseTime(from: json["time"])
         let delay = json["delay"].intValue
         let predictedTime = plannedTime?.addingTimeInterval(TimeInterval(delay * 60))
@@ -656,7 +656,7 @@ public class SbbProvider: AbstractNetworkProvider {
         
         let stopEvent: StopEvent?
         if let plannedTime = plannedTime {
-            stopEvent = StopEvent(location: location, plannedTime: plannedTime, predictedTime: predictedTime, plannedPlatform: plannedPosition, predictedPlatform: predictedPosition, cancelled: false)
+            stopEvent = StopEvent(location: location, plannedTime: plannedTime, predictedTime: predictedTime, plannedPlatform: plannedPosition, predictedPlatform: predictedPosition, cancelled: cancelled)
         } else {
             stopEvent = nil
         }
@@ -838,7 +838,7 @@ public class SbbProvider: AbstractNetworkProvider {
                 legs.append(try parsePublicLeg(legJson: legJson["serviceJourney"], legId: legId, tripId: id, occupancyClass: occupancyClass))
             case "ChangeLeg":
                 break
-            case "AccessLeg":
+            case "AccessLeg", "PTConnectionLeg":
                 let from = gql_parsePlace(json: legJson["start"])
                 let to = gql_parsePlace(json: legJson["end"])
                 let duration = TimeInterval(legJson["duration"].intValue * 60)
@@ -887,39 +887,81 @@ public class SbbProvider: AbstractNetworkProvider {
         
         var stops: [Stop] = []
         var maxOccupancy: LoadFactor? = nil
-        for stopJson in legJson["stopPoints"].arrayValue {
+        let jsonStopPoints = legJson["stopPoints"].arrayValue
+        for (index, stopJson) in jsonStopPoints.enumerated() {
             guard let location = gql_parsePlace(json: stopJson["place"]) else { continue }
-            let departure = gql_parseStop(location: location, json: stopJson["departure"])
-            let arrival = gql_parseStop(location: location, json: stopJson["arrival"])
+            
+            let status = stopJson["stopStatus"].string
+            let statusMessage = stopJson["stopStatusFormatted"].string
+            let forBoarding = stopJson["forBoarding"].boolValue
+            let forAlighting = stopJson["forAlighting"].boolValue
+            let isFirst = index == 0
+            let isLast = index == jsonStopPoints.count - 1
+            var cancelled = status == "CANCELLED" || status == "NOT_SERVICED"
+            if (status == "END_PARTIAL_CANCELLATION" || !forAlighting) && isLast {
+                cancelled = true
+            } else if (status == "BEGIN_PARTIAL_CANCELLATION" || !forBoarding) && isFirst {
+                cancelled = true
+            } else if !forBoarding && !forAlighting {
+                cancelled = true
+            }
+            
+            let departure = gql_parseStop(location: location, json: stopJson["departure"], cancelled: cancelled)
+            let arrival = gql_parseStop(location: location, json: stopJson["arrival"], cancelled: cancelled)
             
             let loadFactor = parseLoadFactor(from: stopJson["occupancy", "\(occupancyClass)Class"])
             if let loadFactor = loadFactor, maxOccupancy == nil || loadFactor.rawValue < maxOccupancy!.rawValue {
                 maxOccupancy = loadFactor
             }
             
-            stops.append(Stop(location: location, departure: departure, arrival: arrival, message: nil))
+            stops.append(Stop(location: location, departure: departure, arrival: arrival, message: statusMessage))
         }
         guard stops.count >= 2 else { throw ParseError(reason: "failed to parse stops") }
         guard let departure = stops.removeFirst().departure else { throw ParseError(reason: "failed to parse leg departure") }
         guard let arrival = stops.removeLast().arrival else { throw ParseError(reason: "failed to parse leg arrival") }
         
-        var messages: [String] = []
+        var messages = Set<String>()
         for situationJson in legJson["situations"].arrayValue {
             for broadcastJson in situationJson["broadcastMessages"].arrayValue {
                 guard let detail = broadcastJson["detail"].string?.stripHTMLTags() else { continue }
-                messages.append(detail)
+                messages.insert(detail)
             }
+        }
+        if let cancelledText = legJson["serviceAlteration", "cancelledText"].string {
+            messages.insert(cancelledText)
+        }
+        if let partiallyCancelledText = legJson["serviceAlteration", "partiallyCancelledText"].string {
+            messages.insert(partiallyCancelledText)
+        }
+        if let reachableText = legJson["serviceAlteration", "reachableText"].string {
+            messages.insert(reachableText)
+        }
+        if let redirectedText = legJson["serviceAlteration", "redirectedText"].string {
+            messages.insert(redirectedText)
+        }
+        if let unplannedStopPointsText = legJson["serviceAlteration", "unplannedStopPointsText"].string {
+            messages.insert(unplannedStopPointsText)
         }
         
         var attributes = Set<Line.Attr>()
         for noticeJson in legJson["notices"].arrayValue {
-            guard noticeJson["type"].stringValue == "ATTRIBUTE" else { continue }
-            guard let name = noticeJson["name"].string else { continue }
-            switch name {
-            case "WR": attributes.insert(.restaurant)
-            case "VR", "VB": attributes.insert(.bicycleCarriage)
-            case "FS": attributes.insert(.wifiAvailable)
-            default: break
+            let type = noticeJson["type"].stringValue
+            if type == "ATTRIBUTE" {
+                guard let name = noticeJson["name"].string else { continue }
+                switch name {
+                case "WR", "B", "MP": attributes.insert(.restaurant)
+                case "VR", "VB": attributes.insert(.bicycleCarriage)
+                case "WV", "FS": attributes.insert(.wifiAvailable)
+                case "NF": attributes.insert(.wheelChairAccess)
+                default: break
+                }
+            } else if type == "INFO" {
+                guard var text = noticeJson["text", "template"].string else { continue }
+                for arg in noticeJson["text", "arguments"].arrayValue {
+                    guard let argKey = arg["type"].string, let argValue = arg["values", 0].string else { continue }
+                    text = text.replacingOccurrences(of: argKey, with: argValue)
+                }
+                messages.insert(text)
             }
         }
         let newLine = Line(id: line.id, network: line.network, product: line.product, label: line.label, name: line.name, number: line.number, vehicleNumber: line.vehicleNumber, style: line.style, attr: attributes.isEmpty ? nil : Array(attributes), message: line.message)
@@ -931,7 +973,7 @@ public class SbbProvider: AbstractNetworkProvider {
             journeyContext = nil
         }
         let wagonSequenceContext: SbbWagonSequenceContext?
-        if let tripId = tripId {
+        if let tripId = tripId, line.product == .highSpeedTrain || line.product == .regionalTrain || line.product == .suburbanTrain {
             wagonSequenceContext = SbbWagonSequenceContext(urlPath: "api/timetable/v1/trips/\(tripId)/\(legId)")
         } else {
             wagonSequenceContext = nil
@@ -1124,6 +1166,8 @@ public class SbbProvider: AbstractNetworkProvider {
                           departure {
                             ...ArrivalDepartureFields
                           }
+                          forBoarding
+                          forAlighting
                           delayUndefined
                           __typename
                         }
@@ -1584,6 +1628,8 @@ public class SbbProvider: AbstractNetworkProvider {
                         departure {
                           ...ArrivalDepartureFields
                         }
+                        forBoarding
+                        forAlighting
                       }
                       serviceProducts {
                         name
