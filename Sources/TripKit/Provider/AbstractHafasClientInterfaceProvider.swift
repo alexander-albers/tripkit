@@ -772,7 +772,6 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         // Parse intermediate stops
         var intermediateStops: [Stop] = []
         for stop in jny["stopL"].arrayValue {
-            if stop["border"].boolValue { continue } // hide borders from intermediate stops
             guard let intermediateStop = try parseStop(json: stop, locations: locations, rems: rems, messages: messages, baseDate: baseDate) else { continue }
             intermediateStops.append(intermediateStop)
         }
