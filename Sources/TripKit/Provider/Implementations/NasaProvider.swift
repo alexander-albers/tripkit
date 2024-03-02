@@ -12,7 +12,7 @@ public class NasaProvider: AbstractHafasClientInterfaceProvider {
         super.init(networkId: .NASA, apiBase: NasaProvider.API_BASE, productsMap: NasaProvider.PRODUCTS_MAP)
         self.apiAuthorization = apiAuthorization
         apiVersion = "1.48"
-        apiClient = ["id": "NASA", "type": "WEB", "name": "webapp"]
+        apiClient = ["id": "NASA", "type": "WEB", "name": "webapp", "l": "vs_webapp_nasa"]
         
         styles = [
             "RRE1": LineStyle(shape: .rect, backgroundColor: LineStyle.rgb(197, 53, 63), foregroundColor: LineStyle.white),
@@ -72,6 +72,29 @@ public class NasaProvider: AbstractHafasClientInterfaceProvider {
             "SS8": LineStyle(shape: .circle, backgroundColor: LineStyle.rgb(95, 42, 121), foregroundColor: LineStyle.white),
             "SS9": LineStyle(shape: .circle, backgroundColor: LineStyle.rgb(173, 25, 100), foregroundColor: LineStyle.white)
         ]
+    }
+    
+    override func jsonLocation(from location: Location) -> [String: Any] {
+        if location.type == .station, let id = location.id {
+            // Workaround: drop type=S field
+            if id.hasSuffix("@") {
+                return ["lid": id]
+            } else {
+                return ["extId": id]
+            }
+        }
+        return super.jsonLocation(from: location)
+    }
+    
+    override func hideFare(_ fare: Fare) -> Bool {
+        switch fare.name?.lowercased() ?? "" {
+        case let x where x.contains("abo"): return true
+        case let x where x.contains("4-fahrten"): return true
+        case let x where x.contains("24-stunden"): return true
+        case let x where x.contains("wochen"): return true
+        case let x where x.contains("monat"): return true
+        default: return false
+        }
     }
     
     override func split(stationName: String?) -> (String?, String?) {
