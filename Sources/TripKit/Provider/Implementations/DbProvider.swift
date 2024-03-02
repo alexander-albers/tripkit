@@ -229,9 +229,6 @@ public class DbProvider: AbstractHafasClientInterfaceProvider {
         for sectorJson in trackJson["sektoren"].arrayValue {
             sectors.append(try parseTrackSector(from: sectorJson))
         }
-        if sectors.count == 0 {
-            throw ParseError(reason: "did not parse any sectors")
-        }
         let stationTrack = StationTrack(trackNumber: stationTrackInfo.sectorName, start: stationTrackInfo.start, end: stationTrackInfo.end, sectors: sectors)
         
         let wagonSequence = WagonSequence(travelDirection: travelDirection, wagonGroups: wagonGroups, track: stationTrack)
@@ -239,9 +236,10 @@ public class DbProvider: AbstractHafasClientInterfaceProvider {
     }
     
     private func parseTrackSector(from trackJson: JSON, sectorFieldName: String = "bezeichnung") throws -> StationTrackSector {
-        guard let sectorName = trackJson[sectorFieldName].string, let trackStart = trackJson["start"]["position"].double, let trackEnd = trackJson["ende"]["position"].double else {
+        guard let trackStart = trackJson["start"]["position"].double, let trackEnd = trackJson["ende"]["position"].double else {
             throw ParseError(reason: "failed to parse track sector")
         }
+        let sectorName = trackJson[sectorFieldName].stringValue
         return StationTrackSector(sectorName: sectorName, start: trackStart, end: trackEnd)
     }
     
