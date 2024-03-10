@@ -1,6 +1,6 @@
 # TripKit
 TripKit is a Swift-port of https://github.com/schildbach/public-transport-enabler with some additional enhancements. This library allows you to get data from public transport providers. You can get an overview of all supported transit providers here: https://navigatorapp.net/coverage.
-Look into [NetworkProvider.swift](https://github.com/alexander-albers/tripkit/blob/master/Sources/TripKit/NetworkProvider.swift) for an overview of the API.
+Look into [NetworkProvider.swift](Sources/TripKit/Provider/NetworkProvider.swift) for an overview of the API.
 
 TripKit is built using Swift 5.0 and requires iOS 12.0/watchOS 5.0/tvOS 12.0/macOS 10.13.
 
