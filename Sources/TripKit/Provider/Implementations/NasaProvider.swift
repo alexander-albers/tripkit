@@ -75,7 +75,7 @@ public class NasaProvider: AbstractHafasClientInterfaceProvider {
     }
     
     override func jsonLocation(from location: Location) -> [String: Any] {
-        if location.type == .station, let id = location.id {
+        if let id = location.id {
             // Workaround: drop type=S field
             if id.hasSuffix("@") {
                 return ["lid": id]
