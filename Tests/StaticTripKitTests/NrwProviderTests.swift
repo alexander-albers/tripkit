@@ -9,7 +9,7 @@ class NrwProviderTests: TripKitProviderTestCase, TripKitProviderTestsDelegate {
     var networkId: NetworkId { return .NRW }
     
     func initProvider(from authorizationData: AuthorizationData) -> NetworkProvider {
-        return NrwProvider(apiAuthorization: authorizationData.hciAuthorization)
+        return NrwProvider()
     }
     
 }
