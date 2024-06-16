@@ -314,7 +314,7 @@ public class VrrProvider: AbstractEfaWebProvider {
             "wsw|SBSB69": LineStyle(backgroundColor: LineStyle.parseColor("#00919d"), foregroundColor: LineStyle.white),
             "wsw|SBCE61": LineStyle(backgroundColor: LineStyle.parseColor("#e3001d"), foregroundColor: LineStyle.white),
             "wsw|SBCE62": LineStyle(backgroundColor: LineStyle.parseColor("#e3001d"), foregroundColor: LineStyle.white),
-            "wsw|SBCE64: LineStyle(backgroundColor: LineStyle.parseColor("#e3001d"), foregroundColor: LineStyle.white),
+            "wsw|SBCE64": LineStyle(backgroundColor: LineStyle.parseColor("#e3001d"), foregroundColor: LineStyle.white),
             "wsw|SBCE65": LineStyle(backgroundColor: LineStyle.parseColor("#e3001d"), foregroundColor: LineStyle.white),
             "wsw|BNE1": LineStyle(backgroundColor: LineStyle.parseColor("#000000"), foregroundColor: LineStyle.white),
             "wsw|BNE2": LineStyle(backgroundColor: LineStyle.parseColor("#000000"), foregroundColor: LineStyle.white),
