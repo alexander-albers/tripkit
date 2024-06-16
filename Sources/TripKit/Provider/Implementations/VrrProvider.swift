@@ -60,7 +60,6 @@ public class VrrProvider: AbstractEfaWebProvider {
             "dsw|UU47": LineStyle(shape: .rect, backgroundColor: LineStyle.parseColor("#8dc63e"), foregroundColor: LineStyle.white),
             "dsw|UU49": LineStyle(shape: .rect, backgroundColor: LineStyle.parseColor("#f7acbc"), foregroundColor: LineStyle.white),
             "dsw|BNE": LineStyle(shape: .rect, backgroundColor: LineStyle.parseColor("#2e2382"), foregroundColor: LineStyle.white),
-            
             // Dortmund NachtExpress
             "dsw|BNE1": LineStyle(shape: .rect, backgroundColor: LineStyle.parseColor("#fc1214"), foregroundColor: LineStyle.white),
             "dsw|BNE2": LineStyle(shape: .rect, backgroundColor: LineStyle.parseColor("#1399e1"), foregroundColor: LineStyle.white),
@@ -80,12 +79,11 @@ public class VrrProvider: AbstractEfaWebProvider {
             "dsw|BNE25": LineStyle(shape: .rect, backgroundColor: LineStyle.parseColor("#30ab3b"), foregroundColor: LineStyle.white),
             "dsw|BNE40": LineStyle(shape: .rect, backgroundColor: LineStyle.parseColor("#fc1215"), foregroundColor: LineStyle.white),
             
-            // Düsseldorf
+            // Düsseldorf (Rheinbahn)
             "rbg|UU70": LineStyle(shape: .rect, backgroundColor: LineStyle.parseColor("#69b0cd"), foregroundColor: LineStyle.white),
             "rbg|UU71": LineStyle(shape: .rect, backgroundColor: LineStyle.parseColor("#66cef6"), foregroundColor: LineStyle.white),
             "rbg|UU72": LineStyle(shape: .rect, backgroundColor: LineStyle.parseColor("#4cc4c5"), foregroundColor: LineStyle.white),
             "rbg|UU73": LineStyle(shape: .rect, backgroundColor: LineStyle.parseColor("#4763b8"), foregroundColor: LineStyle.white),
-            "rbg|UU74": LineStyle(shape: .rect, backgroundColor: LineStyle.parseColor("#27297c"), foregroundColor: LineStyle.white),
             "rbg|UU75": LineStyle(shape: .rect, backgroundColor: LineStyle.parseColor("#079acb"), foregroundColor: LineStyle.white),
             "rbg|UU76": LineStyle(shape: .rect, backgroundColor: LineStyle.parseColor("#1969bc"), foregroundColor: LineStyle.white),
             "rbg|UU77": LineStyle(shape: .rect, backgroundColor: LineStyle.parseColor("#6d90d2"), foregroundColor: LineStyle.white),
@@ -107,6 +105,9 @@ public class VrrProvider: AbstractEfaWebProvider {
             "rbg|BNE6": LineStyle(shape: .rect, backgroundColor: LineStyle.parseColor("#f47921"), foregroundColor: LineStyle.white),
             "rbg|BNE7": LineStyle(shape: .rect, backgroundColor: LineStyle.parseColor("#009247"), foregroundColor: LineStyle.white),
             "rbg|BNE8": LineStyle(shape: .rect, backgroundColor: LineStyle.parseColor("#bdaa8b"), foregroundColor: LineStyle.black),
+            "rbg|BM1": LineStyle(shape: .rect, backgroundColor: LineStyle.parseColor("#31b759"), foregroundColor: LineStyle.white),
+            "rbg|BM2": LineStyle(shape: .rect, backgroundColor: LineStyle.parseColor("#31b759"), foregroundColor: LineStyle.white),
+            "rbg|BM3": LineStyle(shape: .rect, backgroundColor: LineStyle.parseColor("#31b759"), foregroundColor: LineStyle.white),
             
             // Krefeld
             "swk|T041": LineStyle(backgroundColor: LineStyle.parseColor("#ee4036"), foregroundColor: LineStyle.white),
@@ -285,6 +286,7 @@ public class VrrProvider: AbstractEfaWebProvider {
             "wsw|B617": LineStyle(backgroundColor: LineStyle.parseColor("#95114d"), foregroundColor: LineStyle.white),
             "wsw|B618": LineStyle(backgroundColor: LineStyle.parseColor("#cf8360"), foregroundColor: LineStyle.white),
             "wsw|B619": LineStyle(backgroundColor: LineStyle.parseColor("#304c9d"), foregroundColor: LineStyle.white),
+            "wsw|B620": LineStyle(backgroundColor: LineStyle.parseColor("#00a47b"), foregroundColor: LineStyle.white),
             "wsw|B622": LineStyle(backgroundColor: LineStyle.parseColor("#aabd81"), foregroundColor: LineStyle.white),
             "wsw|B623": LineStyle(backgroundColor: LineStyle.parseColor("#e04a23"), foregroundColor: LineStyle.white),
             "wsw|B624": LineStyle(backgroundColor: LineStyle.parseColor("#0e9580"), foregroundColor: LineStyle.white),
@@ -305,6 +307,15 @@ public class VrrProvider: AbstractEfaWebProvider {
             "wsw|B645": LineStyle(backgroundColor: LineStyle.parseColor("#aeba0e"), foregroundColor: LineStyle.white),
             "wsw|B646": LineStyle(backgroundColor: LineStyle.parseColor("#008db5"), foregroundColor: LineStyle.white),
             "wsw|B650": LineStyle(backgroundColor: LineStyle.parseColor("#f5bd00"), foregroundColor: LineStyle.white),
+            "wsw|BE800": LineStyle(backgroundColor: LineStyle.parseColor("#9c9c9d"), foregroundColor: LineStyle.white), //UniExpress
+            "wsw|SBSB66": LineStyle(backgroundColor: LineStyle.parseColor("#00919d"), foregroundColor: LineStyle.white),
+            "wsw|SBSB67": LineStyle(backgroundColor: LineStyle.parseColor("#00919d"), foregroundColor: LineStyle.white),
+            "wsw|SBSB68": LineStyle(backgroundColor: LineStyle.parseColor("#00919d"), foregroundColor: LineStyle.white),
+            "wsw|SBSB69": LineStyle(backgroundColor: LineStyle.parseColor("#00919d"), foregroundColor: LineStyle.white),
+            "wsw|SBCE61": LineStyle(backgroundColor: LineStyle.parseColor("#e3001d"), foregroundColor: LineStyle.white),
+            "wsw|SBCE62": LineStyle(backgroundColor: LineStyle.parseColor("#e3001d"), foregroundColor: LineStyle.white),
+            "wsw|SBCE64: LineStyle(backgroundColor: LineStyle.parseColor("#e3001d"), foregroundColor: LineStyle.white),
+            "wsw|SBCE65": LineStyle(backgroundColor: LineStyle.parseColor("#e3001d"), foregroundColor: LineStyle.white),
             "wsw|BNE1": LineStyle(backgroundColor: LineStyle.parseColor("#000000"), foregroundColor: LineStyle.white),
             "wsw|BNE2": LineStyle(backgroundColor: LineStyle.parseColor("#000000"), foregroundColor: LineStyle.white),
             "wsw|BNE3": LineStyle(backgroundColor: LineStyle.parseColor("#000000"), foregroundColor: LineStyle.white),
