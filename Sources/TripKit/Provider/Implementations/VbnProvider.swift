@@ -15,15 +15,18 @@ public class VbnProvider: AbstractHafasClientInterfaceProvider {
         apiClient = ["id": "VBN", "type": "WEB", "name": "webapp"]
         
         styles = [
-            // Bremen
+            // Bremen (BSAG)
             "Bremer Straßenbahn AG|T1": LineStyle(shape: .rect, backgroundColor: LineStyle.parseColor("#129640"), foregroundColor: LineStyle.white),
             "Bremer Straßenbahn AG|T1S": LineStyle(shape: .rect, backgroundColor: LineStyle.white, foregroundColor: LineStyle.parseColor("#129640")),
             "Bremer Straßenbahn AG|T2": LineStyle(shape: .rect, backgroundColor: LineStyle.parseColor("#115CA8"), foregroundColor: LineStyle.white),
             "Bremer Straßenbahn AG|T3": LineStyle(shape: .rect, backgroundColor: LineStyle.parseColor("#2A9AD6"), foregroundColor: LineStyle.white),
             "Bremer Straßenbahn AG|T4": LineStyle(shape: .rect, backgroundColor: LineStyle.parseColor("#E30C15"), foregroundColor: LineStyle.white),
             "Bremer Straßenbahn AG|T4S": LineStyle(shape: .rect, backgroundColor: LineStyle.white, foregroundColor: LineStyle.parseColor("#E30C15")),
+            "Bremer Straßenbahn AG|T5": LineStyle(shape: .rect, backgroundColor: LineStyle.parseColor("#00AAB8"), foregroundColor: LineStyle.white),
+            "Bremer Straßenbahn AG|T5S": LineStyle(shape: .rect, backgroundColor: LineStyle.white, foregroundColor: LineStyle.parseColor("#00AAB8")),
             "Bremer Straßenbahn AG|T6": LineStyle(shape: .rect, backgroundColor: LineStyle.parseColor("#FFCC00"), foregroundColor: LineStyle.black),
             "Bremer Straßenbahn AG|T8": LineStyle(shape: .rect, backgroundColor: LineStyle.parseColor("#98C21E"), foregroundColor: LineStyle.white),
+            "Bremer Straßenbahn AG|T10": LineStyle(shape: .rect, backgroundColor: LineStyle.parseColor("#16268F"), foregroundColor: LineStyle.white),
             
             "Bremer Straßenbahn AG|B20": LineStyle(shape: .circle, backgroundColor: LineStyle.parseColor("#95C11F"), foregroundColor: LineStyle.white),
             "Bremer Straßenbahn AG|B21": LineStyle(shape: .circle, backgroundColor: LineStyle.parseColor("#009FE3"), foregroundColor: LineStyle.white),
@@ -54,6 +57,7 @@ public class VbnProvider: AbstractHafasClientInterfaceProvider {
             "Bremer Straßenbahn AG|B61": LineStyle(shape: .circle, backgroundColor: LineStyle.parseColor("#95C11F"), foregroundColor: LineStyle.white),
             "Bremer Straßenbahn AG|B62": LineStyle(shape: .circle, backgroundColor: LineStyle.parseColor("#009640"), foregroundColor: LineStyle.white),
             "Bremer Straßenbahn AG|B63": LineStyle(shape: .circle, backgroundColor: LineStyle.parseColor("#FFCC00"), foregroundColor: LineStyle.black),
+            "Bremer Straßenbahn AG|B63S": LineStyle(shape: .circle, backgroundColor: LineStyle.white, foregroundColor: LineStyle.parseColor("#FFCC00")),
             "Bremer Straßenbahn AG|B65": LineStyle(shape: .circle, backgroundColor: LineStyle.parseColor("#A8D3AF"), foregroundColor: LineStyle.black),
             "Bremer Straßenbahn AG|B66": LineStyle(shape: .circle, backgroundColor: LineStyle.parseColor("#A8D3AF"), foregroundColor: LineStyle.black),
             "Bremer Straßenbahn AG|B77": LineStyle(shape: .circle, backgroundColor: LineStyle.parseColor("#808080"), foregroundColor: LineStyle.white),
@@ -87,7 +91,9 @@ public class VbnProvider: AbstractHafasClientInterfaceProvider {
             "NordWestBahn|SRS1": LineStyle(backgroundColor: LineStyle.parseColor("#214889"), foregroundColor: LineStyle.white),
             "NordWestBahn|SRS2": LineStyle(backgroundColor: LineStyle.parseColor("#DB8F2D"), foregroundColor: LineStyle.white),
             "NordWestBahn|SRS3": LineStyle(backgroundColor: LineStyle.parseColor("#A5C242"), foregroundColor: LineStyle.white),
+            "NordWestBahn|SRS30": LineStyle(backgroundColor: LineStyle.parseColor("#51AF3D"), foregroundColor: LineStyle.white),
             "NordWestBahn|SRS4": LineStyle(backgroundColor: LineStyle.parseColor("#C4031E"), foregroundColor: LineStyle.white),
+            "NordWestBahn|SRS6": LineStyle(backgroundColor: LineStyle.parseColor("#889DB7"), foregroundColor: LineStyle.white),
             
             // Rostock
             "DB Regio AG|SS1": LineStyle(shape: .circle, backgroundColor: LineStyle.parseColor("#009037"), foregroundColor: LineStyle.white),
@@ -241,6 +247,8 @@ public class VbnProvider: AbstractHafasClientInterfaceProvider {
         let line = super.newLine(id: id, network: network, product: product, name: name, shortName: shortName, number: number, vehicleNumber: vehicleNumber)
         
         if line.product == .bus && "57" == line.label {
+            return Line(id: id, network: line.network, product: line.product, label: line.label, name: line.name, style: line.style, attr: [.serviceReplacement, .circleClockwise], message: line.message)
+        } else if line.product == .bus && "82" == line.label {
             return Line(id: id, network: line.network, product: line.product, label: line.label, name: line.name, style: line.style, attr: [.serviceReplacement, .circleClockwise], message: line.message)
         } else if line.product == .bus && "58" == line.label {
             return Line(id: id, network: line.network, product: line.product, label: line.label, name: line.name, style: line.style, attr: [.serviceReplacement, .circleAnticlockwise], message: line.message)
