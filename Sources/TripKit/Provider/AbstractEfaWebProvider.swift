@@ -306,7 +306,8 @@ public class AbstractEfaWebProvider: AbstractEfaProvider {
     
     func _queryTripsParsing(request: HttpRequest, from: Location?, via: Location?, to: Location?, date: Date, departure: Bool, tripOptions: TripOptions, previousContext: QueryTripsContext?, later: Bool, completion: @escaping (HttpRequest, QueryTripsResult) -> Void) throws {
         guard let data = request.responseData else { throw ParseError(reason: "no response") }
-        let xml = XMLHash.parse(data)
+        let xmlString = String(decoding: data, as: UTF8.self)  // automatically repair strings with illegal encoding
+        let xml = XMLHash.parse(xmlString)
         var response = xml["itdRequest"]["itdTripRequest"]
         if response.all.isEmpty {
             response = xml["itdRequest"]
