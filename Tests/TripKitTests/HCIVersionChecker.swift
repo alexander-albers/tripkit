@@ -28,7 +28,6 @@ class HCIVersionChecker: XCTestCase {
             VsnProvider(apiAuthorization: secrets[.VSN]!.hciAuthorization),
             VosProvider(apiAuthorization: secrets[.VOS]!.hciAuthorization),
             VmtProvider(apiAuthorization: secrets[.VMT]!.hciAuthorization),
-            NrwProvider(apiAuthorization: secrets[.NRW]!.hciAuthorization),
             VgsProvider(apiAuthorization: secrets[.VGS]!.hciAuthorization),
             ZvvProvider(apiAuthorization: secrets[.ZVV]!.hciAuthorization),
             OebbProvider(apiAuthorization: secrets[.OEBB]!.hciAuthorization),
