@@ -1127,6 +1127,10 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
                         break
                     case "jw": // NordWestBahn-Servicetelefon
                         break
+                    case "rn": // 00 (ZVV)
+                        break
+                    case "sj": // line id "ch:1:sjyid:100648:plan:a94d61b4-27f9-46e0-83ad-b2abefc94f18"
+                        break
                     case "journeynumber", "pname": // line number
                         break
                     case _ where (rem.code ?? "").lowercased().hasPrefix("text.occup"): // load factor
