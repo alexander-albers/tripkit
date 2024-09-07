@@ -410,7 +410,13 @@ public class AbstractEfaMobileProvider: AbstractEfaProvider {
                 } else if lineDestination.line === Line.SECURE_CONNECTION {
                     // ignore
                 } else {
-                    let journeyContext: EfaJourneyContext? = nil
+                    let journeyContext: EfaJourneyContext?
+                    // currently, I don't think trip code exists in the data. Added this just in case this changes in the future
+                    if let departureId = departure.location.id, let tripCode = l["m"]["dv"]["tk"].element?.text, lineDestination.line.id != nil {
+                        journeyContext = EfaJourneyContext(stopId: departureId, stopDepartureTime: departure.plannedTime, line: lineDestination.line, tripCode: tripCode)
+                    } else {
+                        journeyContext = nil
+                    }
                     legs.append(PublicLeg(line: lineDestination.line, destination: lineDestination.destination, departure: departure, arrival: arrival, intermediateStops: intermediateStops, message: nil, path: path, journeyContext: journeyContext, wagonSequenceContext: nil, loadFactor: nil))
                 }
             }
