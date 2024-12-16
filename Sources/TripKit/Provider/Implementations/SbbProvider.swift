@@ -63,8 +63,40 @@ public class SbbProvider: AbstractNetworkProvider {
         super.init(networkId: .SBB)
         
         styles = [
-            "I": LineStyle(backgroundColor: LineStyle.rgb(236, 0, 0), foregroundColor: LineStyle.white),
-            "R": LineStyle(backgroundColor: LineStyle.rgb(236, 0, 0), foregroundColor: LineStyle.white)
+            "I": LineStyle(backgroundColor: LineStyle.parseColor("#595B61"), foregroundColor: LineStyle.white),
+            "R": LineStyle(backgroundColor: LineStyle.parseColor("#595B61"), foregroundColor: LineStyle.white),
+            
+            "IIC1": LineStyle(backgroundColor: LineStyle.parseColor("#F93F26"), foregroundColor: LineStyle.white),
+            "IIC2": LineStyle(backgroundColor: LineStyle.parseColor("#7B85C5"), foregroundColor: LineStyle.white),
+            "IIC3": LineStyle(backgroundColor: LineStyle.parseColor("#009C48"), foregroundColor: LineStyle.white),
+            "IIC5": LineStyle(backgroundColor: LineStyle.parseColor("#FF9027"), foregroundColor: LineStyle.white),
+            "IIC6": LineStyle(backgroundColor: LineStyle.parseColor("#88C946"), foregroundColor: LineStyle.white),
+            "IIC8": LineStyle(backgroundColor: LineStyle.parseColor("#00A5E2"), foregroundColor: LineStyle.white),
+            "IIC21": LineStyle(backgroundColor: LineStyle.parseColor("#FFC433"), foregroundColor: LineStyle.black),
+            "IIC51": LineStyle(backgroundColor: LineStyle.parseColor("#BE1E11"), foregroundColor: LineStyle.white),
+            "IIC61": LineStyle(backgroundColor: LineStyle.parseColor("#FC5CAC"), foregroundColor: LineStyle.white),
+            "IIC81": LineStyle(backgroundColor: LineStyle.parseColor("#6BAAC1"), foregroundColor: LineStyle.white),
+            
+            "RIR13": LineStyle(backgroundColor: LineStyle.parseColor("#3BBBB8"), foregroundColor: LineStyle.white),
+            "RIR15": LineStyle(backgroundColor: LineStyle.parseColor("#37BF97"), foregroundColor: LineStyle.white),
+            "RIR16": LineStyle(backgroundColor: LineStyle.parseColor("#A36C2B"), foregroundColor: LineStyle.white),
+            "RIR17": LineStyle(backgroundColor: LineStyle.parseColor("#1951A0"), foregroundColor: LineStyle.white),
+            "RIR26": LineStyle(backgroundColor: LineStyle.parseColor("#B88C8E"), foregroundColor: LineStyle.white),
+            "RIR27": LineStyle(backgroundColor: LineStyle.parseColor("#5D6A25"), foregroundColor: LineStyle.white),
+            "RIR35": LineStyle(backgroundColor: LineStyle.parseColor("#0A501E"), foregroundColor: LineStyle.white),
+            "RIR36": LineStyle(backgroundColor: LineStyle.parseColor("#AE2A7F"), foregroundColor: LineStyle.white),
+            "RIR37": LineStyle(backgroundColor: LineStyle.parseColor("#B6DC8C"), foregroundColor: LineStyle.black),
+            "RIR46": LineStyle(backgroundColor: LineStyle.parseColor("#006F8D"), foregroundColor: LineStyle.white),
+            "RIR65": LineStyle(backgroundColor: LineStyle.parseColor("#0084C3"), foregroundColor: LineStyle.white),
+            "RIR66": LineStyle(backgroundColor: LineStyle.parseColor("#3BBBB8"), foregroundColor: LineStyle.white),
+            "RIR70": LineStyle(backgroundColor: LineStyle.parseColor("#FC91C4"), foregroundColor: LineStyle.black),
+            "RIR75": LineStyle(backgroundColor: LineStyle.parseColor("#64489E"), foregroundColor: LineStyle.white),
+            "RIR90": LineStyle(backgroundColor: LineStyle.parseColor("#007FA7"), foregroundColor: LineStyle.white),
+            
+            "RRE6": LineStyle(backgroundColor: LineStyle.parseColor("#4F1A4A"), foregroundColor: LineStyle.white),
+            "RRE33": LineStyle(backgroundColor: LineStyle.parseColor("#076867"), foregroundColor: LineStyle.white),
+            "RRE37": LineStyle(backgroundColor: LineStyle.parseColor("#FFAA90"), foregroundColor: LineStyle.black),
+            "RRE48": LineStyle(backgroundColor: LineStyle.parseColor("#B9A96F"), foregroundColor: LineStyle.white),
         ]
         
         do {
