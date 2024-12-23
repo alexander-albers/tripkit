@@ -1,0 +1,90 @@
+{
+    "suggestLocations": [
+        {
+            "constraint": "Bern Hauptbahnhof",
+            "result": {
+                "id": "A=1@O=Bern, Hauptbahnhof@X=7438529@Y=46948996@U=85@L=8507785@B=1@p=1734758080@"
+            }
+        },
+        {
+            "constraint": "lüterk",
+            "result": {
+                "id": "A=1@O=Lüterkofen, Dorf@X=7514065@Y=47162274@U=85@L=8571481@B=1@p=1734758080@"
+            }
+        },
+        {
+            "constraint": "Amthausgasse 10, Bern",
+            "result": {
+                "id": "A=2@O=Bern, Amthausgasse 10@H=10@X=7446475@Y=46947306@U=103@L=990017039@B=1@p=1488793769@"
+            }
+        }
+    ],
+    "queryNearbyLocationsByCoordinate": [
+        {
+            "__comment": "Bern Hauptbahnhof",
+            "lat": 46948996,
+            "lon": 7438529,
+            "result": {
+                "id": "A=1@O=Bern, Hauptbahnhof@X=7438529@Y=46948996@U=85@L=8507785@B=1@p=1734758080@"
+            }
+        },
+        {
+            "__comment": "Lüterkofen, Dorf",
+            "lat": 47162274,
+            "lon": 7514065,
+            "result": {
+                "id": "A=1@O=Lüterkofen, Dorf@X=7514065@Y=47162274@U=85@L=8571481@B=1@p=1734758080@"
+            }
+        }
+    ],
+    "queryDepartures": [
+        {
+            "__comment": "Bern Hauptbahnhof",
+            "id": "A=1@O=Bern, Hauptbahnhof@X=7438529@Y=46948996@U=85@L=8507785@B=1@p=1734758080@"
+        },
+        {
+            "__comment": "Lüterkofen, Dorf",
+            "id": "A=1@O=Lüterkofen, Dorf@X=7514065@Y=47162274@U=85@L=8571481@B=1@p=1734758080@"
+        }
+    ],
+    "queryDeparturesInvalidId": "999999",
+    "queryTrips": [
+        {
+            "__comment": "Bern Hauptbahnhof to Lüterkofen, Dorf",
+            "from": {
+                "type": "station",
+                "id": "A=1@O=Bern, Hauptbahnhof@X=7438529@Y=46948996@U=85@L=8507785@B=1@p=1734758080@"
+            },
+            "to": {
+                "type": "station",
+                "id": "A=1@O=Lüterkofen, Dorf@X=7514065@Y=47162274@U=85@L=8571481@B=1@p=1734758080@"
+            }
+        },
+        {
+            "__comment": "Bern Hauptbahnhof to Lüterkofen, Dorf",
+            "from": {
+                "type": "coord",
+                "lat": 46948996,
+                "lon": 7438529
+            },
+            "to": {
+                "type": "coord",
+                "lat": 47162274,
+                "lon": 8571481
+            }
+        }
+    ],
+    "queryTripsTooClose": [
+        {
+            "__comment": "Bern Hauptbahnhof",
+            "from": {
+                "type": "station",
+                "id": "8507785"
+            },
+            "to": {
+                "type": "station",
+                "id": "8507785"
+            }
+        }
+    ]
+}
