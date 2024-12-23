@@ -1602,7 +1602,7 @@ public class HafasClientInterfaceRefreshTripContext: RefreshTripContext {
     
     public override class var supportsSecureCoding: Bool { return true }
     
-    let contextRecon: String
+    public let contextRecon: String
     let from: Location
     let to: Location
     

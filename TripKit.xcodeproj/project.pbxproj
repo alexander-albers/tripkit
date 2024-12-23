@@ -482,6 +482,10 @@
 		FAA0A297213705030098EFED /* MockKvvProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA0A296213705030098EFED /* MockKvvProvider.swift */; };
 		FAA5693E1E740A70006EB901 /* InfoText.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA5693D1E740A70006EB901 /* InfoText.swift */; };
 		FAA569441E7415DC006EB901 /* Fare.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA569431E7415DC006EB901 /* Fare.swift */; };
+		FAA892502D16ED6700F25E49 /* BlsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA8924F2D16ED6400F25E49 /* BlsProvider.swift */; };
+		FAA892512D16ED6700F25E49 /* BlsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA8924F2D16ED6400F25E49 /* BlsProvider.swift */; };
+		FAA892522D16ED6700F25E49 /* BlsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA8924F2D16ED6400F25E49 /* BlsProvider.swift */; };
+		FAA892532D16ED6700F25E49 /* BlsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA8924F2D16ED6400F25E49 /* BlsProvider.swift */; };
 		FAA90D0527C250370005E044 /* AbstractEfaWebProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA90D0427C250370005E044 /* AbstractEfaWebProvider.swift */; };
 		FAA90D0627C250370005E044 /* AbstractEfaWebProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA90D0427C250370005E044 /* AbstractEfaWebProvider.swift */; };
 		FAA90D0727C250370005E044 /* AbstractEfaWebProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA90D0427C250370005E044 /* AbstractEfaWebProvider.swift */; };
@@ -1103,6 +1107,7 @@
 		FAA0A296213705030098EFED /* MockKvvProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockKvvProvider.swift; sourceTree = "<group>"; };
 		FAA5693D1E740A70006EB901 /* InfoText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoText.swift; sourceTree = "<group>"; };
 		FAA569431E7415DC006EB901 /* Fare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fare.swift; sourceTree = "<group>"; };
+		FAA8924F2D16ED6400F25E49 /* BlsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlsProvider.swift; sourceTree = "<group>"; };
 		FAA90D0427C250370005E044 /* AbstractEfaWebProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractEfaWebProvider.swift; sourceTree = "<group>"; };
 		FAA90D0927C250450005E044 /* AbstractEfaMobileProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractEfaMobileProvider.swift; sourceTree = "<group>"; };
 		FAAE9E181E81579500BD45DC /* BvgProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BvgProvider.swift; sourceTree = "<group>"; };
@@ -1754,6 +1759,7 @@
 			children = (
 				FA5C1CBE2B41B51000DD90F9 /* SbbProvider.swift */,
 				FAC2130027C0E36000D44B30 /* SearchChProvider.swift */,
+				FAA8924F2D16ED6400F25E49 /* BlsProvider.swift */,
 				FA4371231F62AE4D00F53B82 /* ZvvProvider.swift */,
 				FA7CAA3E2799561800BE5147 /* BvbProvider.swift */,
 			);
@@ -2382,6 +2388,7 @@
 				FA5CD22A24FBB29000B4990A /* AbstractNetworkProvider.swift in Sources */,
 				FA5CD22F24FBB29000B4990A /* DbProvider.swift in Sources */,
 				FAB15DC12798647C00E6A4CB /* NaldoProvider.swift in Sources */,
+				FAA892532D16ED6700F25E49 /* BlsProvider.swift in Sources */,
 				FA5CD2C324FBB2A900B4990A /* AuthorizationData.swift in Sources */,
 				FA5CD23424FBB29000B4990A /* AvvAugsburgProvider.swift in Sources */,
 				FA5CD23724FBB29000B4990A /* AvvAachenProvider.swift in Sources */,
@@ -2495,6 +2502,7 @@
 				FA5CD25F24FBB29000B4990A /* AbstractNetworkProvider.swift in Sources */,
 				FA5CD26424FBB29000B4990A /* DbProvider.swift in Sources */,
 				FAB15DC22798647C00E6A4CB /* NaldoProvider.swift in Sources */,
+				FAA892522D16ED6700F25E49 /* BlsProvider.swift in Sources */,
 				FA5CD2D024FBB2AA00B4990A /* AuthorizationData.swift in Sources */,
 				FA5CD26924FBB29000B4990A /* AvvAugsburgProvider.swift in Sources */,
 				FA5CD26C24FBB29000B4990A /* AvvAachenProvider.swift in Sources */,
@@ -2734,6 +2742,7 @@
 				FA87BA3B20B5B476004F1199 /* OoevvProvider.swift in Sources */,
 				FABFCC181E8FBB0000905D5E /* VrrProvider.swift in Sources */,
 				FAB15DBF2798647C00E6A4CB /* NaldoProvider.swift in Sources */,
+				FAA892502D16ED6700F25E49 /* BlsProvider.swift in Sources */,
 				FAB7542B1E3FD3E500C343F2 /* NearbyLocationsResult.swift in Sources */,
 				FA43712E1F63031F00F53B82 /* WienProvider.swift in Sources */,
 				FA4371301F63045000F53B82 /* LinzProvider.swift in Sources */,
@@ -3126,6 +3135,7 @@
 				FA87BA3C20B5B476004F1199 /* OoevvProvider.swift in Sources */,
 				FA37CD8A1FFC10D500B5D93D /* HvvProvider.swift in Sources */,
 				FAB15DC02798647C00E6A4CB /* NaldoProvider.swift in Sources */,
+				FAA892512D16ED6700F25E49 /* BlsProvider.swift in Sources */,
 				FAFF18A51FA50B9500A8ED69 /* NearbyLocationsResult.swift in Sources */,
 				FAFF18A61FA50B9500A8ED69 /* WienProvider.swift in Sources */,
 				FAFF18A71FA50B9500A8ED69 /* LinzProvider.swift in Sources */,
