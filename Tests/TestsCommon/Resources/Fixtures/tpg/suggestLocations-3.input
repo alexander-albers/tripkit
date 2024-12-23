@@ -1,0 +1,109 @@
+{
+  "ver":"1.68",
+  "lang":"eng",
+  "id":"md28mne26sswy6cs",
+  "err":"OK",
+  "graph":
+  {
+    "id":"standard",
+    "index":0
+  },
+  "subGraph":
+  {
+    "id":"global",
+    "index":0
+  },
+  "view":
+  {
+    "id":"standard",
+    "index":0,
+    "type":"WGS84"
+  },
+  "svcResL":
+  [
+    {
+      "meth":"LocMatch",
+      "err":"OK",
+      "res":
+      {
+        "common":
+        {
+          "icoL":
+          [
+            {
+              "res":"loc_addr"
+            }
+          ]
+        },
+        "match":
+        {
+          "field":"S",
+          "state":"L",
+          "locL":
+          [
+            {
+              "lid":"A=2@O=Rue du Port des Pêcheurs 74140 Excenevex@X=6354915@Y=46354881@U=103@b=990007949@B=1@p=1727179942@",
+              "type":"A",
+              "name":"Rue du Port des Pêcheurs 74140 Excenevex",
+              "icoX":0,
+              "state":"M",
+              "crd":
+              {
+                "x":6354915,
+                "y":46354881
+              }
+            },
+            {
+              "lid":"A=2@O=Rue du Port 01220 Divonne-les-Bains@X=6144873@Y=46353335@U=103@b=990001244@B=1@p=1727179942@",
+              "type":"A",
+              "name":"Rue du Port 01220 Divonne-les-Bains",
+              "icoX":0,
+              "state":"M",
+              "crd":
+              {
+                "x":6144873,
+                "y":46353335
+              }
+            },
+            {
+              "lid":"A=2@O=Rue du Port 1180 Rolle@X=6335400@Y=46454275@U=103@b=990017813@B=1@p=1727179942@",
+              "type":"A",
+              "name":"Rue du Port 1180 Rolle",
+              "icoX":0,
+              "state":"M",
+              "crd":
+              {
+                "x":6335400,
+                "y":46454275
+              }
+            },
+            {
+              "lid":"A=2@O=Rue du Port 1204 Genève@X=6150491@Y=46202649@U=103@b=990023740@B=1@p=1727179942@",
+              "type":"A",
+              "name":"Rue du Port 1204 Genève",
+              "icoX":0,
+              "state":"M",
+              "crd":
+              {
+                "x":6150491,
+                "y":46202649
+              }
+            },
+            {
+              "lid":"A=2@O=Rue du Port 74140 Chens-sur-Léman@X=6265499@Y=46327734@U=103@b=990006546@B=1@p=1727179942@",
+              "type":"A",
+              "name":"Rue du Port 74140 Chens-sur-Léman",
+              "icoX":0,
+              "state":"M",
+              "crd":
+              {
+                "x":6265499,
+                "y":46327734
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

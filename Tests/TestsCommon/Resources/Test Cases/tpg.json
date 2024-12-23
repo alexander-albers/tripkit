@@ -1,0 +1,96 @@
+{
+    "suggestLocations": [
+        {
+            "constraint": "Genf",
+            "result": {
+                "id": "A=1@O=Genf@X=6142455@Y=46210209@U=85@L=8501008@B=1@p=1734338453@"
+            }
+        },
+        {
+            "constraint": "Genève",
+            "result": {
+                "id": "A=1@O=Genève@X=6142455@Y=46210209@U=85@L=8501008@B=1@p=1734338453@"
+            }
+        },
+        {
+            "constraint": "Jardin Botanique",
+            "result": {
+                "id": "A=1@O=Jardin Botanique@X=6148487@Y=46223306@U=85@L=100926@B=1@p=1734338453@"
+            }
+        },
+        {
+            "constraint": "Rue du Port",
+            "result": {
+                "id": "A=2@O=Rue du Port 1204 Genève@X=6150491@Y=46202649@U=103@b=990023740@B=1@p=1727179942@"
+            }
+        }
+    ],
+    "queryNearbyLocationsByCoordinate": [
+        {
+            "__comment": "Genf Hauptbahnhof",
+            "lat": 46210209,
+            "lon": 6142455,
+            "result": {
+                "id": "A=1@O=Genf@X=6142455@Y=46210209@U=85@L=8501008@B=1@p=1734338453@"
+            }
+        },
+        {
+            "__comment": "Jardin Botanique",
+            "lat": 46223306,
+            "lon": 6148487,
+            "result": {
+                "id": "A=1@O=Jardin Botanique@X=6148487@Y=46223306@U=85@L=100926@B=1@p=1734338453@"
+            }
+        }
+    ],
+    "queryDepartures": [
+        {
+            "__comment": "Genf Hauptbahnhof",
+            "id": "A=1@O=Genf@X=6142455@Y=46210209@U=85@L=8501008@B=1@p=1734338453@"
+        },
+        {
+            "__comment": "Jardin Botanique",
+            "id": "A=1@O=Jardin Botanique@X=6148487@Y=46223306@U=85@L=100926@B=1@p=1734338453@"
+        }
+    ],
+    "queryDeparturesInvalidId": "999999",
+    "queryTrips": [
+        {
+            "__comment": "Genf Hauptbahnhof to Jardin Botanique",
+            "from": {
+                "type": "station",
+                "id": "A=1@O=Genf@X=6142455@Y=46210209@U=85@L=8501008@B=1@p=1734338453@"
+            },
+            "to": {
+                "type": "station",
+                "id": "A=1@O=Jardin Botanique@X=6148487@Y=46223306@U=85@L=100926@B=1@p=1734338453@"
+            }
+        },
+        {
+            "__comment": "Genf Hauptbahnhof to Jardin Botanique",
+            "from": {
+                "type": "coord",
+                "lat": 46210209,
+                "lon": 6142455
+            },
+            "to": {
+                "type": "coord",
+                "lat": 46223306,
+                "lon": 6148487
+            }
+        }
+    ],
+    "queryTripsTooClose": [
+        {
+            "__comment": "Genf Hauptbahnhof",
+            "from": {
+                "type": "station",
+                "id": "8501008"
+            },
+            "to": {
+                "type": "station",
+                "id": "8501008"
+            }
+        }
+    ]
+}
