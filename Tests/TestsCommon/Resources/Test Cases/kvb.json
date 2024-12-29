@@ -1,0 +1,96 @@
+{
+    "suggestLocations": [
+        {
+            "constraint": "Breslauer Platz",
+            "result": {
+                "id": "A=1@O=Köln Breslauer Platz/Hbf@X=6959889@Y=50943542@U=1@L=900000009@B=1@p=1734698547@"
+            }
+        },
+        {
+            "constraint": "bresl",
+            "result": {
+                "id": "A=1@O=Köln Breslauer Platz/Hbf@X=6959889@Y=50943542@U=1@L=900000009@B=1@p=1734698547@"
+            }
+        },
+        {
+            "constraint": "Dom / Hbf, Köln-Innenstadt",
+            "result": {
+                "id": "A=1@O=Köln Dom/Hbf@X=6957219@Y=50941789@U=1@L=900000752@B=1@p=1734698547@"
+            }
+        },
+        {
+            "constraint": "Erftstraße 43, Kerpen-Sindorf",
+            "result": {
+                "id": "A=2@O=Erftstraße 43, Kerpen@H=43@X=6676288@Y=50909329@U=103@L=991353904@B=1@p=1727089801@"
+            }
+        }
+    ],
+    "queryNearbyLocationsByCoordinate": [
+        {
+            "__comment": "Pantheon Beuel, Bonn",
+            "lat": 50740530,
+            "lon": 7129200,
+            "result": {
+                "id": "A=1@O=Bonn Beuel Pantheon Beuel@X=7131107@Y=50740943@u=141@U=1@L=900154000@"
+            }
+        },
+        {
+            "__comment": "Roonstr., Köln",
+            "lat": 50933930,
+            "lon": 6932440,
+            "result": {
+                "id": "A=1@O=Köln Roonstr.@X=6934117@Y=50933294@u=131@U=1@L=300002901@"
+            }
+        }
+    ],
+    "queryDepartures": [
+        {
+            "__comment": "Köln Hbf",
+            "id": "A=1@O=Köln Dom/Hbf@X=6957219@Y=50941789@U=1@L=900000752@B=1@p=1734698547@"
+        },
+        {
+            "__comment": "Köln Breslauer",
+            "id": "A=1@O=Köln Breslauer Platz/Hbf@X=6959889@Y=50943542@U=1@L=900000009@B=1@p=1734698547@"
+        }
+    ],
+    "queryDeparturesInvalidId": "999999",
+    "queryTrips": [
+        {
+            "__comment": "Köln Hbf to Roonstr., Köln",
+            "from": {
+                "type": "station",
+                "id": "A=1@O=Köln Dom/Hbf@X=6957219@Y=50941789@U=1@L=900000752@B=1@p=1734698547@"
+            },
+            "to": {
+                "type": "station",
+                "id": "A=1@O=Köln Roonstr.@X=6934117@Y=50933294@u=131@U=1@L=300002901@"
+            }
+        },
+        {
+            "__comment": "",
+            "from": {
+                "type": "coord",
+                "lat": 50740530,
+                "lon": 7129200
+            },
+            "to": {
+                "type": "coord",
+                "lat": 50933930,
+                "lon": 6932440
+            }
+        }
+    ],
+    "queryTripsTooClose": [
+        {
+            "__comment": "Köln Hbf to Köln Hbf",
+            "from": {
+                "type": "station",
+                "id": "A=1@O=Köln Dom/Hbf@X=6957219@Y=50941789@U=1@L=900000752@B=1@p=1734698547@"
+            },
+            "to": {
+                "type": "station",
+                "id": "A=1@O=Köln Dom/Hbf@X=6957219@Y=50941789@U=1@L=900000752@B=1@p=1734698547@"
+            }
+        },
+    ]
+}
