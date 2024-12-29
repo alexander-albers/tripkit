@@ -108,14 +108,14 @@ public class TpgProvider: AbstractHafasClientInterfaceProvider {
     override func split(stationName: String?) -> (String?, String?) {
         guard let stationName = stationName else { return super.split(stationName: nil) }
         
-        if let m = stationName.match(pattern: P_SPLIT_NAME_FIRST_COMMA) {
-            return (m[0], m[1])
-        }
-        
         for place in BlsProvider.PLACES {
             if stationName.hasPrefix(place + " ") || stationName.hasPrefix(place + ",") {
                 return (place, stationName.substring(from: place.count + 1))
             }
+        }
+        
+        if let m = stationName.match(pattern: P_SPLIT_NAME_FIRST_COMMA) {
+            return (m[0], m[1])
         }
         
         return super.split(stationName: stationName)
