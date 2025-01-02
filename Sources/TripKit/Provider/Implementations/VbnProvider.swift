@@ -3,13 +3,14 @@ import Foundation
 /// Verkehrsverbund Bremen/Niedersachsen (DE)
 public class VbnProvider: AbstractHafasClientInterfaceProvider {
     
-    static let API_BASE = "https://fahrplaner.vbn.de/hafas/"
+    static let API_BASE = "https://fahrplaner.vbn.de/gate"
     static let PRODUCTS_MAP: [Product?] = [.highSpeedTrain, .highSpeedTrain, .regionalTrain, .regionalTrain, .suburbanTrain, .bus, .ferry, .subway, .tram, .onDemand]
     
     public override var supportedLanguages: Set<String> { ["de", "en"] }
     
     public init(apiAuthorization: [String: Any]) {
         super.init(networkId: .VBN, apiBase: VbnProvider.API_BASE, productsMap: VbnProvider.PRODUCTS_MAP)
+        self.mgateEndpoint = VbnProvider.API_BASE
         self.apiAuthorization = apiAuthorization
         apiVersion = "1.52"
         apiClient = ["id": "VBN", "type": "WEB", "name": "webapp"]
