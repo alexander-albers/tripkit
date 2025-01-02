@@ -15,10 +15,12 @@ public protocol Leg {
     ///
     /// See ``NetworkProvider/timeZone`` for a discussion about how to correctly handle time zones.
     var departureTime: Date { get }
+    var departureTimeZone: TimeZone? { get }
     
     /// Predicted departure time, if available, otherwise the planned time.
     /// See ``NetworkProvider/timeZone`` for a discussion about how to correctly handle time zones.
     var arrivalTime: Date { get }
+    var arrivalTimeZone: TimeZone? { get }
     
     /// Returns always the planned departure time.
     ///
@@ -67,7 +69,9 @@ public class PublicLeg: NSObject, Leg, NSSecureCoding {
     public var arrival: Location { arrivalStop.location }
     public let path: [LocationPoint]
     public var departureTime: Date { departureStop.predictedTime ?? departureStop.plannedTime }
+    public var departureTimeZone: TimeZone? { departureStop.timeZone }
     public var arrivalTime: Date { arrivalStop.predictedTime ?? arrivalStop.plannedTime }
+    public var arrivalTimeZone: TimeZone? { arrivalStop.timeZone }
     public var plannedDepartureTime: Date { departureStop.plannedTime }
     public var plannedArrivalTime: Date { arrivalStop.plannedTime }
     public var minTime: Date { departureStop.minTime }
@@ -192,7 +196,9 @@ public class IndividualLeg: NSObject, Leg, NSSecureCoding {
     public var arrival: Location
     public let path: [LocationPoint]
     public let departureTime: Date
+    public let departureTimeZone: TimeZone?
     public let arrivalTime: Date
+    public let arrivalTimeZone: TimeZone?
     public var plannedDepartureTime: Date { departureTime }
     public var plannedArrivalTime: Date { arrivalTime }
     public var minTime: Date { departureTime }
@@ -205,12 +211,14 @@ public class IndividualLeg: NSObject, Leg, NSSecureCoding {
     /// Diestance in meters between departure and arrival.
     public let distance: Int
     
-    public init(type: `Type`, departureTime: Date, departure: Location, arrival: Location, arrivalTime: Date, distance: Int, path: [LocationPoint]) {
+    public init(type: `Type`, departure: Location, arrival: Location, departureTime: Date, arrivalTime: Date, departureTimeZone: TimeZone?, arrivalTimeZone: TimeZone?, distance: Int, path: [LocationPoint]) {
         self.type = type
         self.departure = departure
         self.arrival = arrival
         self.departureTime = departureTime
         self.arrivalTime = arrivalTime
+        self.departureTimeZone = departureTimeZone
+        self.arrivalTimeZone = arrivalTimeZone
         self.min = Int(arrivalTime.timeIntervalSince(departureTime) / 60.0)
         self.distance = distance
         self.path = path
@@ -227,12 +235,25 @@ public class IndividualLeg: NSObject, Leg, NSSecureCoding {
             os_log("failed to decode individual leg", log: .default, type: .error)
             return nil
         }
+        
+        let departureTimeZone: TimeZone?
+        if let secondsFromGMT = aDecoder.decodeObject(of: NSNumber.self, forKey: PropertyKey.departureTimeZone) as? Int {
+            departureTimeZone = TimeZone(secondsFromGMT: secondsFromGMT)
+        } else {
+            departureTimeZone = nil
+        }
+        let arrivalTimeZone: TimeZone?
+        if let secondsFromGMT = aDecoder.decodeObject(of: NSNumber.self, forKey: PropertyKey.arrivalTimeZone) as? Int {
+            arrivalTimeZone = TimeZone(secondsFromGMT: secondsFromGMT)
+        } else {
+            arrivalTimeZone = nil
+        }
         let encodedPath = aDecoder.decodeObject(of: [NSArray.self, NSNumber.self], forKey: PropertyKey.path) as? [Int] ?? []
         let path = stride(from: 0, to: encodedPath.count % 2 == 0 ? encodedPath.count : 0, by: 2).map {
             LocationPoint(lat: encodedPath[$0], lon: encodedPath[$0 + 1])
         }
         let distance = aDecoder.decodeInteger(forKey: PropertyKey.distance)
-        self.init(type: type, departureTime: departureTime, departure: departure, arrival: arrival, arrivalTime: arrivalTime, distance: distance, path: path)
+        self.init(type: type, departure: departure, arrival: arrival, departureTime: departureTime, arrivalTime: arrivalTime, departureTimeZone: departureTimeZone, arrivalTimeZone: arrivalTimeZone, distance: distance, path: path)
     }
     
     public func encode(with aCoder: NSCoder) {
@@ -240,7 +261,9 @@ public class IndividualLeg: NSObject, Leg, NSSecureCoding {
         aCoder.encode(departure, forKey: PropertyKey.departure)
         aCoder.encode(arrival, forKey: PropertyKey.arrival)
         aCoder.encode(departureTime, forKey: PropertyKey.departureTime)
+        aCoder.encode(departureTimeZone?.secondsFromGMT(), forKey: PropertyKey.departureTimeZone)
         aCoder.encode(arrivalTime, forKey: PropertyKey.arrivalTime)
+        aCoder.encode(arrivalTimeZone?.secondsFromGMT(), forKey: PropertyKey.arrivalTimeZone)
         aCoder.encode(distance, forKey: PropertyKey.distance)
         aCoder.encode(path.flatMap({[$0.lat, $0.lon]}), forKey: PropertyKey.path)
     }
@@ -255,7 +278,9 @@ public class IndividualLeg: NSObject, Leg, NSSecureCoding {
         static let departure = "departure"
         static let arrival = "arrival"
         static let departureTime = "departureTime"
+        static let departureTimeZone = "departureTimeZone"
         static let arrivalTime = "arrivalTime"
+        static let arrivalTimeZone = "arrivalTimeZone"
         static let distance = "distance"
         static let path = "path"
         

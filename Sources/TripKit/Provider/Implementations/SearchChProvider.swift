@@ -235,7 +235,7 @@ public class SearchChProvider: AbstractNetworkProvider, QueryJourneyDetailManual
                     if let leg = legs.last as? PublicLeg {
                         departureTime = leg.arrivalTime
                     }
-                    legs.append(IndividualLeg(type: .walk, departureTime: departureTime, departure: departure.location, arrival: arrival.location, arrivalTime: departureTime.addingTimeInterval(individualDuration), distance: 0, path: []))
+                    legs.append(IndividualLeg(type: .walk, departure: departure.location, arrival: arrival.location, departureTime: departureTime, arrivalTime: departureTime.addingTimeInterval(individualDuration), departureTimeZone: nil, arrivalTimeZone: nil, distance: 0, path: []))
                 default:
                     var intermediateStops: [Stop] = []
                     for jsonStop in jsonLeg["stops"].arrayValue {
@@ -281,7 +281,7 @@ public class SearchChProvider: AbstractNetworkProvider, QueryJourneyDetailManual
                     if let leg = legs.last as? IndividualLeg {
                         legs.removeLast()
                         let individualDuration = leg.arrivalTime.timeIntervalSince(leg.departureTime)
-                        legs.append(IndividualLeg(type: leg.type, departureTime: departure.time.addingTimeInterval(-individualDuration), departure: leg.departure, arrival: leg.arrival, arrivalTime: departure.time, distance: leg.distance, path: leg.path))
+                        legs.append(IndividualLeg(type: leg.type, departure: leg.departure, arrival: leg.arrival, departureTime: departure.time.addingTimeInterval(-individualDuration), arrivalTime: departure.time, departureTimeZone: nil, arrivalTimeZone: nil, distance: leg.distance, path: leg.path))
                     }
                     
                     legs.append(PublicLeg(line: line, destination: destination, departure: departure, arrival: arrival, intermediateStops: intermediateStops, message: mesages.joined(separator: "\n").emptyToNil, path: [], journeyContext: journeyContext, wagonSequenceContext: nil, loadFactor: nil))
@@ -399,7 +399,7 @@ public class SearchChProvider: AbstractNetworkProvider, QueryJourneyDetailManual
         let departure: StopEvent?
         if let (plannedTime, predictedTime, cancelled) = parseTimes(plannedTimeString: json["departure"].string, delayString: json["dep_delay"].string) {
             let (plannedPlatform, predictedPlatform) = parsePlatforms(platformString: json["track"].string)
-            departure = StopEvent(location: location, plannedTime: plannedTime, predictedTime: predictedTime, plannedPlatform: plannedPlatform, predictedPlatform: predictedPlatform, cancelled: cancelled)
+            departure = StopEvent(location: location, plannedTime: plannedTime, predictedTime: predictedTime, timeZone: nil, plannedPlatform: plannedPlatform, predictedPlatform: predictedPlatform, cancelled: cancelled)
         } else {
             departure = nil
         }
@@ -407,7 +407,7 @@ public class SearchChProvider: AbstractNetworkProvider, QueryJourneyDetailManual
         let arrival: StopEvent?
         if let (plannedTime, predictedTime, cancelled) = parseTimes(plannedTimeString: json["arrival"].string, delayString: json["arr_delay"].string) {
             let (plannedPlatform, predictedPlatform) = parsePlatforms(platformString: json["track"].string)
-            arrival = StopEvent(location: location, plannedTime: plannedTime, predictedTime: predictedTime, plannedPlatform: plannedPlatform, predictedPlatform: predictedPlatform, cancelled: cancelled)
+            arrival = StopEvent(location: location, plannedTime: plannedTime, predictedTime: predictedTime, timeZone: nil, plannedPlatform: plannedPlatform, predictedPlatform: predictedPlatform, cancelled: cancelled)
         } else {
             arrival = nil
         }

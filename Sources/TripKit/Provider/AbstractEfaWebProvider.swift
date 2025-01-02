@@ -615,13 +615,13 @@ public class AbstractEfaWebProvider: AbstractEfaProvider {
             
             let departure: StopEvent?
             if let plannedStopDepartureTime = plannedStopDepartureTime {
-                departure = StopEvent(location: stopLocation, plannedTime: plannedStopDepartureTime, predictedTime: predictedStopDepartureTime, plannedPlatform: stopPosition, predictedPlatform: nil, cancelled: false)
+                departure = StopEvent(location: stopLocation, plannedTime: plannedStopDepartureTime, predictedTime: predictedStopDepartureTime, timeZone: nil, plannedPlatform: stopPosition, predictedPlatform: nil, cancelled: false)
             } else {
                 departure = nil
             }
             let arrival: StopEvent?
             if let plannedStopArrivalTime = plannedStopArrivalTime {
-                arrival = StopEvent(location: stopLocation, plannedTime: plannedStopArrivalTime, predictedTime: predictedStopArrivalTime, plannedPlatform: stopPosition, predictedPlatform: nil, cancelled: false)
+                arrival = StopEvent(location: stopLocation, plannedTime: plannedStopArrivalTime, predictedTime: predictedStopArrivalTime, timeZone: nil, plannedPlatform: stopPosition, predictedPlatform: nil, cancelled: false)
             } else {
                 arrival = nil
             }
@@ -886,13 +886,13 @@ public class AbstractEfaWebProvider: AbstractEfaProvider {
             }
             let departure: StopEvent?
             if let plannedStopDepartureTime = plannedStopDepartureTime {
-                departure = StopEvent(location: stopLocation, plannedTime: plannedStopDepartureTime, predictedTime: predictedStopDepartureTime, plannedPlatform: stopPosition, predictedPlatform: nil, cancelled: departureCancelled)
+                departure = StopEvent(location: stopLocation, plannedTime: plannedStopDepartureTime, predictedTime: predictedStopDepartureTime, timeZone: nil, plannedPlatform: stopPosition, predictedPlatform: nil, cancelled: departureCancelled)
             } else {
                 departure = nil
             }
             let arrival: StopEvent?
             if let plannedStopArrivalTime = plannedStopArrivalTime {
-                arrival = StopEvent(location: stopLocation, plannedTime: plannedStopArrivalTime, predictedTime: predictedStopArrivalTime, plannedPlatform: stopPosition, predictedPlatform: nil, cancelled: arrivalCancelled)
+                arrival = StopEvent(location: stopLocation, plannedTime: plannedStopArrivalTime, predictedTime: predictedStopArrivalTime, timeZone: nil, plannedPlatform: stopPosition, predictedPlatform: nil, cancelled: arrivalCancelled)
             } else {
                 arrival = nil
             }
@@ -910,18 +910,18 @@ public class AbstractEfaWebProvider: AbstractEfaProvider {
             let a = stops.removeLast()
             // workaround for MVV sending wrong position for arrival and departure locations in intermediate stops
             // still use the time of the intermediate point because arrival and departure time is *always* sent as predicted, even when its not
-            arrival = StopEvent(location: a.location, plannedTime: a.arrival?.plannedTime ?? arrivalTime, predictedTime: a.arrival?.predictedTime, plannedPlatform: plannedArrivalPosition ?? a.arrival?.plannedPlatform, predictedPlatform: a.arrival?.predictedPlatform, cancelled: a.arrival?.cancelled ?? cancelled)
+            arrival = StopEvent(location: a.location, plannedTime: a.arrival?.plannedTime ?? arrivalTime, predictedTime: a.arrival?.predictedTime, timeZone: nil, plannedPlatform: plannedArrivalPosition ?? a.arrival?.plannedPlatform, predictedPlatform: a.arrival?.predictedPlatform, cancelled: a.arrival?.cancelled ?? cancelled)
             arrival.message = a.message
             
             if !stops.first!.location.isEqual(departureLocation) {
                 throw ParseError(reason: "first intermediate stop is not departure location!")
             }
             let d = stops.removeFirst()
-            departure = StopEvent(location: d.location, plannedTime: d.departure?.plannedTime ?? departureTime, predictedTime: d.departure?.predictedTime, plannedPlatform: plannedDeparturePosition ?? d.departure?.plannedPlatform, predictedPlatform: d.departure?.predictedPlatform, cancelled: d.departure?.cancelled ?? cancelled)
+            departure = StopEvent(location: d.location, plannedTime: d.departure?.plannedTime ?? departureTime, predictedTime: d.departure?.predictedTime, timeZone: nil, plannedPlatform: plannedDeparturePosition ?? d.departure?.plannedPlatform, predictedPlatform: d.departure?.predictedPlatform, cancelled: d.departure?.cancelled ?? cancelled)
             departure.message = d.message
         } else {
-            departure = StopEvent(location: departureLocation, plannedTime: departureTargetTime ?? departureTime, predictedTime: departureTargetTime == nil ? nil : departureTime, plannedPlatform: departurePosition, predictedPlatform: nil, cancelled: cancelled)
-            arrival = StopEvent(location: arrivalLocation, plannedTime: arrivalTargetTime ?? arrivalTime, predictedTime: arrivalTargetTime == nil ? nil : arrivalTime, plannedPlatform: arrivalPosition, predictedPlatform: nil, cancelled: cancelled)
+            departure = StopEvent(location: departureLocation, plannedTime: departureTargetTime ?? departureTime, predictedTime: departureTargetTime == nil ? nil : departureTime, timeZone: nil, plannedPlatform: departurePosition, predictedPlatform: nil, cancelled: cancelled)
+            arrival = StopEvent(location: arrivalLocation, plannedTime: arrivalTargetTime ?? arrivalTime, predictedTime: arrivalTargetTime == nil ? nil : arrivalTime, timeZone: nil, plannedPlatform: arrivalPosition, predictedPlatform: nil, cancelled: cancelled)
         }
         
         let path = processItdPathCoordinates(xml["itdPathCoordinates"])
@@ -951,9 +951,9 @@ public class AbstractEfaWebProvider: AbstractEfaProvider {
         if let lastLeg = legs.last as? IndividualLeg, lastLeg.type == type {
             legs.removeLast()
             path.insert(contentsOf: lastLeg.path, at: 0)
-            legs.append(IndividualLeg(type: type, departureTime: lastLeg.departureTime, departure: lastLeg.departure, arrival: arrivalLocation, arrivalTime: arrivalTime.addingTimeInterval(addTime), distance: 0, path: path))
+            legs.append(IndividualLeg(type: type, departure: lastLeg.departure, arrival: arrivalLocation, departureTime: lastLeg.departureTime, arrivalTime: arrivalTime.addingTimeInterval(addTime), departureTimeZone: nil, arrivalTimeZone: nil, distance: 0, path: path))
         } else {
-            let leg = IndividualLeg(type: type, departureTime: departureTime.addingTimeInterval(addTime), departure: departureLocation, arrival: arrivalLocation, arrivalTime: arrivalTime.addingTimeInterval(addTime), distance: 0, path: path)
+            let leg = IndividualLeg(type: type, departure: departureLocation, arrival: arrivalLocation, departureTime: departureTime.addingTimeInterval(addTime), arrivalTime: arrivalTime.addingTimeInterval(addTime), departureTimeZone: nil, arrivalTimeZone: nil, distance: 0, path: path)
             legs.append(leg)
         }
     }

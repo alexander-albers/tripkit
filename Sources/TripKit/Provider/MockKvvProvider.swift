@@ -177,7 +177,7 @@ public class MockKvvProvider: AbstractEfaWebProvider {
     }
     
     func createStop(_ name: String, _ time: Date) -> StopEvent {
-        return StopEvent(location: createStation(name), plannedTime: time, predictedTime: time, plannedPlatform: nil, predictedPlatform: nil, cancelled: false)
+        return StopEvent(location: createStation(name), plannedTime: time, predictedTime: time, timeZone: nil, plannedPlatform: nil, predictedPlatform: nil, cancelled: false)
     }
     
     func createIntermediates(_ start: Date) -> [Stop] {

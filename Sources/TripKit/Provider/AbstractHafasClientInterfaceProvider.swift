@@ -349,8 +349,19 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
             
             // Parse departure/arrival times
             let baseDate = try parseBaseDate(from: jny["date"].stringValue)
-            guard let plannedTime = try parseJsonTime(baseDate: baseDate, dateString: (departures ? stbStop["dTimeS"] : stbStop["aTimeS"]).string) else { continue }
-            let predictedTime = try parseJsonTime(baseDate: baseDate, dateString: (departures ? stbStop["dTimeR"] : stbStop["aTimeR"]).string)
+            let departureTimeZone: TimeZone?
+            if let minutesFromGMT = stbStop["dTZOffset"].int ?? stbStop["aTZOffset"].int {
+                let timeZone = TimeZone(secondsFromGMT: minutesFromGMT * 60)
+                if timeZone != self.timeZone {
+                    departureTimeZone = timeZone
+                } else {
+                    departureTimeZone = nil
+                }
+            } else {
+                departureTimeZone = nil
+            }
+            guard let plannedTime = try parseJsonTime(baseDate: baseDate, dateString: (departures ? stbStop["dTimeS"] : stbStop["aTimeS"]).string, timeZone: departureTimeZone) else { continue }
+            let predictedTime = try parseJsonTime(baseDate: baseDate, dateString: (departures ? stbStop["dTimeR"] : stbStop["aTimeR"]).string, timeZone: departureTimeZone)
             
             // Parse line
             guard var line = lines[safe: (departures ? stbStop["dProdX"] : stbStop["aProdX"]).int] else {
@@ -403,6 +414,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
                 journeyContext = nil
             }
             
+            // TODO: init with timezone
             let departure = Departure(plannedTime: plannedTime, predictedTime: predictedTime, line: line, position: position, plannedPosition: plannedPosition, cancelled: cancelled || departureCancelled, destination: destination, capacity: nil, message: message, journeyContext: journeyContext)
             
             var stationDepartures = result.first(where: {$0.stopLocation.id == location.id})
@@ -538,7 +550,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
             } else {
                 context = nil
             }
-            let duration = try parseJsonTime(baseDate: baseDate, dateString: outCon["dur"].string)?.timeIntervalSince(baseDate) ?? 0
+            let duration = try parseJsonTime(baseDate: baseDate, dateString: outCon["dur"].string, timeZone: nil)?.timeIntervalSince(baseDate) ?? 0
             
             let trip = Trip(id: "", from: from, to: to, legs: legs, duration: duration, fares: fares, refreshContext: context)
             trips.append(trip)
@@ -589,7 +601,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         let journey = res["journey"]
         
         let baseDate = try parseBaseDate(from: journey["date"].stringValue)
-        let duration = try parseJsonTime(baseDate: baseDate, dateString: journey["dur"].string)?.timeIntervalSince(baseDate) ?? 0
+        let duration = try parseJsonTime(baseDate: baseDate, dateString: journey["dur"].string, timeZone: nil)?.timeIntervalSince(baseDate) ?? 0
         
         let line = lines[safe: journey["prodX"].int]
         
@@ -854,9 +866,9 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         if let lastLeg = legs.last as? IndividualLeg, lastLeg.type == type {
             legs.removeLast()
             path.insert(contentsOf: lastLeg.path, at: 0)
-            legs.append(IndividualLeg(type: lastLeg.type, departureTime: lastLeg.departureTime, departure: lastLeg.departure, arrival: arrivalStop.location, arrivalTime: arrivalTime.addingTimeInterval(addTime), distance: 0, path: path))
+            legs.append(IndividualLeg(type: lastLeg.type, departure: lastLeg.departure, arrival: arrivalStop.location, departureTime: lastLeg.departureTime, arrivalTime: arrivalTime.addingTimeInterval(addTime), departureTimeZone: departureStop.timeZone, arrivalTimeZone: arrivalStop.timeZone, distance: 0, path: path))
         } else {
-            legs.append(IndividualLeg(type: type, departureTime: departureTime.addingTimeInterval(addTime), departure: departureStop.location, arrival: arrivalStop.location, arrivalTime: arrivalTime.addingTimeInterval(addTime), distance: distance, path: path))
+            legs.append(IndividualLeg(type: type, departure: departureStop.location, arrival: arrivalStop.location, departureTime: departureTime.addingTimeInterval(addTime), arrivalTime: arrivalTime.addingTimeInterval(addTime), departureTimeZone: departureStop.timeZone, arrivalTimeZone: arrivalStop.timeZone, distance: distance, path: path))
         }
     }
     
@@ -874,14 +886,36 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         guard let location = locations[safe: json["locX"].int] else { throw ParseError(reason: "failed to get stop location") }
         
         let arrivalCancelled = json["isCncl"].bool ?? json["aCncl"].bool ?? false
-        let plannedArrivalTime = try parseJsonTime(baseDate: baseDate, dateString: json["aTimeS"].string)
-        let predictedArrivalTime = try parseJsonTime(baseDate: baseDate, dateString: json["aTimeR"].string)
+        let arrivalTimeZone: TimeZone?
+        if let minutesFromGMT = json["aTZOffset"].int {
+            let timeZone = TimeZone(secondsFromGMT: minutesFromGMT * 60)
+            if timeZone != self.timeZone {
+                arrivalTimeZone = timeZone
+            } else {
+                arrivalTimeZone = nil
+            }
+        } else {
+            arrivalTimeZone = nil
+        }
+        let plannedArrivalTime = try parseJsonTime(baseDate: baseDate, dateString: json["aTimeS"].string, timeZone: arrivalTimeZone)
+        let predictedArrivalTime = try parseJsonTime(baseDate: baseDate, dateString: json["aTimeR"].string, timeZone: arrivalTimeZone)
         let plannedArrivalPosition = parsePosition(json: json, platfName: "aPlatfS", pltfName: "aPltfS")
         let predictedArrivalPosition = parsePosition(json: json, platfName: "aPlatfR", pltfName: "aPltfR")
         
         let departureCancelled = json["isCncl"].bool ?? json["dCncl"].bool ?? false
-        let plannedDepartureTime = try parseJsonTime(baseDate: baseDate, dateString: json["dTimeS"].string)
-        let predictedDepartureTime = try parseJsonTime(baseDate: baseDate, dateString: json["dTimeR"].string)
+        let departureTimeZone: TimeZone?
+        if let minutesFromGMT = json["dTZOffset"].int {
+            let timeZone = TimeZone(secondsFromGMT: minutesFromGMT * 60)
+            if timeZone != self.timeZone {
+                departureTimeZone = timeZone
+            } else {
+                departureTimeZone = nil
+            }
+        } else {
+            departureTimeZone = nil
+        }
+        let plannedDepartureTime = try parseJsonTime(baseDate: baseDate, dateString: json["dTimeS"].string, timeZone: departureTimeZone)
+        let predictedDepartureTime = try parseJsonTime(baseDate: baseDate, dateString: json["dTimeR"].string, timeZone: departureTimeZone)
         let plannedDeparturePosition = parsePosition(json: json, platfName: "dPlatfS", pltfName: "dPltfS")
         let predictedDeparturePosition = parsePosition(json: json, platfName: "dPlatfR", pltfName: "dPltfR")
         
@@ -890,14 +924,14 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         
         let departure: StopEvent?
         if let plannedDepartureTime = plannedDepartureTime {
-            departure = StopEvent(location: location, plannedTime: plannedDepartureTime, predictedTime: predictedDepartureTime, plannedPlatform: plannedDeparturePosition, predictedPlatform: predictedDeparturePosition, cancelled: departureCancelled)
+            departure = StopEvent(location: location, plannedTime: plannedDepartureTime, predictedTime: predictedDepartureTime, timeZone: departureTimeZone, plannedPlatform: plannedDeparturePosition, predictedPlatform: predictedDeparturePosition, cancelled: departureCancelled)
         } else {
             departure = nil
         }
         
         let arrival: StopEvent?
         if let plannedArrivalTime = plannedArrivalTime {
-            arrival = StopEvent(location: location, plannedTime: plannedArrivalTime, predictedTime: predictedArrivalTime, plannedPlatform: plannedArrivalPosition, predictedPlatform: predictedArrivalPosition, cancelled: arrivalCancelled)
+            arrival = StopEvent(location: location, plannedTime: plannedArrivalTime, predictedTime: predictedArrivalTime, timeZone: arrivalTimeZone, plannedPlatform: plannedArrivalPosition, predictedPlatform: predictedArrivalPosition, cancelled: arrivalCancelled)
         } else {
             arrival = nil
         }
@@ -907,12 +941,12 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
     
     let P_JSON_TIME = try! NSRegularExpression(pattern: "^(?:(\\d{4})(\\d{2}))?(\\d{2})?(\\d{2})(\\d{2})(\\d{2})$")
     
-    func parseJsonTime(baseDate: Date, dateString: String?) throws -> Date? {
+    func parseJsonTime(baseDate: Date, dateString: String?, timeZone: TimeZone?) throws -> Date? {
         guard let dateString = dateString else { return nil }
         guard let match = dateString.match(pattern: P_JSON_TIME) else { throw ParseError(reason: "failed to parse json time") }
         var date = baseDate
         var calendar = Calendar(identifier: .gregorian)
-        calendar.timeZone = timeZone
+        calendar.timeZone = timeZone ?? self.timeZone
         if let year = Int(match[0] ?? "") {
             date = calendar.date(byAdding: .year, value: year, to: date) ?? date
         }

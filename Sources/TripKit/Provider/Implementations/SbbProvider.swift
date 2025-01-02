@@ -602,7 +602,7 @@ public class SbbProvider: AbstractNetworkProvider {
                     path.append(LocationPoint(lat: Int(lat * 1e6), lon: Int(lon * 1e6)))
                 }
                 
-                newLegs.append(IndividualLeg(type: leg.type, departureTime: leg.departureTime, departure: departure, arrival: arrival, arrivalTime: leg.arrivalTime, distance: departureJson?["properties", "distanceInMeter"].int ?? 0, path: path))
+                newLegs.append(IndividualLeg(type: leg.type, departure: departure, arrival: arrival, departureTime: leg.departureTime, arrivalTime: leg.arrivalTime, departureTimeZone: nil, arrivalTimeZone: nil, distance: departureJson?["properties", "distanceInMeter"].int ?? 0, path: path))
             default:
                 throw ParseError(reason: "unknown leg type")
             }
@@ -638,7 +638,7 @@ public class SbbProvider: AbstractNetworkProvider {
     
     private func addLocationToStopEvent(_ stopEvent: StopEvent?, location: Location) -> StopEvent? {
         guard let stopEvent = stopEvent else { return nil }
-        return StopEvent(location: location, plannedTime: stopEvent.plannedTime, predictedTime: stopEvent.predictedTime, plannedPlatform: stopEvent.plannedPlatform, predictedPlatform: stopEvent.predictedPlatform, cancelled: stopEvent.cancelled)
+        return StopEvent(location: location, plannedTime: stopEvent.plannedTime, predictedTime: stopEvent.predictedTime, timeZone: nil, plannedPlatform: stopEvent.plannedPlatform, predictedPlatform: stopEvent.predictedPlatform, cancelled: stopEvent.cancelled)
     }
     
     // MARK: parsing utils
@@ -688,7 +688,7 @@ public class SbbProvider: AbstractNetworkProvider {
         
         let stopEvent: StopEvent?
         if let plannedTime = plannedTime {
-            stopEvent = StopEvent(location: location, plannedTime: plannedTime, predictedTime: predictedTime, plannedPlatform: plannedPosition, predictedPlatform: predictedPosition, cancelled: cancelled)
+            stopEvent = StopEvent(location: location, plannedTime: plannedTime, predictedTime: predictedTime, timeZone: nil, plannedPlatform: plannedPosition, predictedPlatform: predictedPosition, cancelled: cancelled)
         } else {
             stopEvent = nil
         }
@@ -730,7 +730,7 @@ public class SbbProvider: AbstractNetworkProvider {
         
         let stopEvent: StopEvent?
         if let plannedTime = plannedTime {
-            stopEvent = StopEvent(location: location, plannedTime: plannedTime, predictedTime: predictedTime, plannedPlatform: plannedPosition, predictedPlatform: predictedPosition, cancelled: false)
+            stopEvent = StopEvent(location: location, plannedTime: plannedTime, predictedTime: predictedTime, timeZone: nil, plannedPlatform: plannedPosition, predictedPlatform: predictedPosition, cancelled: false)
         } else {
             stopEvent = nil
         }
@@ -886,7 +886,7 @@ public class SbbProvider: AbstractNetworkProvider {
                 guard let from = from, let to = to, let time = time else {
                     throw ParseError(reason: "failed to parse individual leg")
                 }
-                legs.append(IndividualLeg(type: .walk, departureTime: time, departure: from, arrival: to, arrivalTime: time.addingTimeInterval(duration), distance: 0, path: []))
+                legs.append(IndividualLeg(type: .walk, departure: from, arrival: to, departureTime: time, arrivalTime: time.addingTimeInterval(duration), departureTimeZone: nil, arrivalTimeZone: nil, distance: 0, path: []))
             default:
                 throw ParseError(reason: "unknown leg type \(legType)")
             }

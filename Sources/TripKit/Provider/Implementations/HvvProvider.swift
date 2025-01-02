@@ -609,14 +609,14 @@ public class HvvProvider: AbstractNetworkProvider {
         switch serviceType {
         case "FOOTPATH":
             // Individual leg
-            return IndividualLeg(type: .walk, departureTime: departure.time, departure: departure.location, arrival: arrival.location, arrivalTime: arrival.time, distance: 0, path: path)
+            return IndividualLeg(type: .walk, departure: departure.location, arrival: arrival.location, departureTime: departure.time, arrivalTime: arrival.time, departureTimeZone: nil, arrivalTimeZone: nil, distance: 0, path: path)
         case "BICYCLE":
-            return IndividualLeg(type: .bike, departureTime: departure.time, departure: departure.location, arrival: arrival.location, arrivalTime: arrival.time, distance: 0, path: path)
+            return IndividualLeg(type: .bike, departure: departure.location, arrival: arrival.location, departureTime: departure.time, arrivalTime: arrival.time, departureTimeZone: nil, arrivalTimeZone: nil, distance: 0, path: path)
         case "CHANGE", "CHANGE_SAME_PLATFORM":
             if departure.time == arrival.time {
                 return nil
             }
-            return IndividualLeg(type: .transfer, departureTime: departure.time, departure: departure.location, arrival: arrival.location, arrivalTime: arrival.time, distance: 0, path: path)
+            return IndividualLeg(type: .transfer, departure: departure.location, arrival: arrival.location, departureTime: departure.time, arrivalTime: arrival.time, departureTimeZone: nil, arrivalTimeZone: nil, distance: 0, path: path)
         case "BUS", "TRAIN", "SHIP":
             // Public leg
             let servingLine = parseLineAndDestination(json: json["line"], directionType: nil)
@@ -654,7 +654,7 @@ public class HvvProvider: AbstractNetworkProvider {
             }
             let plannedPlatform = parsePosition(position: json["platform"].string)
             let predictedPlatform = parsePosition(position: json["realtimePlatform"].string)
-            departure = StopEvent(location: location, plannedTime: plannedTime, predictedTime: predictedTime, plannedPlatform: plannedPlatform, predictedPlatform: predictedPlatform, cancelled: json["cancelled"].boolValue)
+            departure = StopEvent(location: location, plannedTime: plannedTime, predictedTime: predictedTime, timeZone: nil, plannedPlatform: plannedPlatform, predictedPlatform: predictedPlatform, cancelled: json["cancelled"].boolValue)
         } else {
             departure = nil
         }
@@ -668,7 +668,7 @@ public class HvvProvider: AbstractNetworkProvider {
             }
             let plannedPlatform = parsePosition(position: json["platform"].string)
             let predictedPlatform = parsePosition(position: json["realtimePlatform"].string)
-            arrival = StopEvent(location: location, plannedTime: plannedTime, predictedTime: predictedTime, plannedPlatform: plannedPlatform, predictedPlatform: predictedPlatform, cancelled: json["cancelled"].boolValue)
+            arrival = StopEvent(location: location, plannedTime: plannedTime, predictedTime: predictedTime, timeZone: nil, plannedPlatform: plannedPlatform, predictedPlatform: predictedPlatform, cancelled: json["cancelled"].boolValue)
         } else {
             arrival = nil
         }
@@ -736,7 +736,7 @@ public class HvvProvider: AbstractNetworkProvider {
         let predictedPlatform = parsePosition(position: json["\(prefix)RealtimePlatform"].string)
         let cancelled = json["\(prefix)Cancelled"].boolValue
         
-        return StopEvent(location: location, plannedTime: plannedTime, predictedTime: predictedTime, plannedPlatform: plannedPlatform, predictedPlatform: predictedPlatform, cancelled: cancelled)
+        return StopEvent(location: location, plannedTime: plannedTime, predictedTime: predictedTime, timeZone: nil, plannedPlatform: plannedPlatform, predictedPlatform: predictedPlatform, cancelled: cancelled)
     }
     
     private func jsonDesiredTypes(products: [Product]?) -> String? {

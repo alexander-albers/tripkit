@@ -72,10 +72,18 @@ public class Stop: NSObject, NSSecureCoding {
         
         let departure: StopEvent?
         if let plannedDepartureTime = aDecoder.decodeObject(of: NSDate.self, forKey: PropertyKey.plannedDepartureTime) as Date? {
+            let secondsFromGMT = aDecoder.decodeObject(of: NSNumber.self, forKey: PropertyKey.departureTimeZone) as? Int
+            let timeZone: TimeZone?
+            if let secondsFromGMT {
+                timeZone = TimeZone(secondsFromGMT: secondsFromGMT)
+            } else {
+                timeZone = nil
+            }
             departure = StopEvent(
                 location: location,
                 plannedTime: plannedDepartureTime,
                 predictedTime: aDecoder.decodeObject(of: NSDate.self, forKey: PropertyKey.predictedDepartureTime) as Date?,
+                timeZone: timeZone,
                 plannedPlatform: aDecoder.decodeObject(of: NSString.self, forKey: PropertyKey.plannedDeparturePlatform) as String?,
                 predictedPlatform: aDecoder.decodeObject(of: NSString.self, forKey: PropertyKey.predictedDeparturePlatform) as String?,
                 cancelled: aDecoder.decodeBool(forKey: PropertyKey.departureCancelled)
@@ -86,10 +94,18 @@ public class Stop: NSObject, NSSecureCoding {
         
         let arrival: StopEvent?
         if let plannedArrivalTime = aDecoder.decodeObject(of: NSDate.self, forKey: PropertyKey.plannedArrivalTime) as Date? {
+            let secondsFromGMT = aDecoder.decodeObject(of: NSNumber.self, forKey: PropertyKey.arrivalTimeZone) as? Int
+            let timeZone: TimeZone?
+            if let secondsFromGMT {
+                timeZone = TimeZone(secondsFromGMT: secondsFromGMT)
+            } else {
+                timeZone = nil
+            }
             arrival = StopEvent(
                 location: location,
                 plannedTime: plannedArrivalTime,
                 predictedTime: aDecoder.decodeObject(of: NSDate.self, forKey: PropertyKey.predictedArrivalTime) as Date?,
+                timeZone: timeZone,
                 plannedPlatform: aDecoder.decodeObject(of: NSString.self, forKey: PropertyKey.plannedArrivalPlatform) as String?,
                 predictedPlatform: aDecoder.decodeObject(of: NSString.self, forKey: PropertyKey.predictedArrivalPlatform) as String?,
                 cancelled: aDecoder.decodeBool(forKey: PropertyKey.arrivalCancelled)
@@ -107,6 +123,7 @@ public class Stop: NSObject, NSSecureCoding {
         if let departure = departure {
             aCoder.encode(departure.plannedTime, forKey: PropertyKey.plannedDepartureTime)
             aCoder.encode(departure.predictedTime, forKey: PropertyKey.predictedDepartureTime)
+            aCoder.encode(departure.timeZone?.secondsFromGMT(), forKey: PropertyKey.departureTimeZone)
             aCoder.encode(departure.plannedPlatform, forKey: PropertyKey.plannedDeparturePlatform)
             aCoder.encode(departure.predictedPlatform, forKey: PropertyKey.predictedDeparturePlatform)
             aCoder.encode(departure.cancelled, forKey: PropertyKey.departureCancelled)
@@ -115,6 +132,7 @@ public class Stop: NSObject, NSSecureCoding {
         if let arrival = arrival {
             aCoder.encode(arrival.plannedTime, forKey: PropertyKey.plannedArrivalTime)
             aCoder.encode(arrival.predictedTime, forKey: PropertyKey.predictedArrivalTime)
+            aCoder.encode(arrival.timeZone?.secondsFromGMT(), forKey: PropertyKey.arrivalTimeZone)
             aCoder.encode(arrival.plannedPlatform, forKey: PropertyKey.plannedArrivalPlatform)
             aCoder.encode(arrival.predictedPlatform, forKey: PropertyKey.predictedArrivalPlatform)
             aCoder.encode(arrival.cancelled, forKey: PropertyKey.arrivalCancelled)
@@ -137,11 +155,13 @@ public class Stop: NSObject, NSSecureCoding {
         static let location = "location"
         static let plannedArrivalTime = "plannedArrivalTime"
         static let predictedArrivalTime = "predictedArrivalTime"
+        static let arrivalTimeZone = "arrivalTimeZone"
         static let plannedArrivalPlatform = "plannedArrivalPlatform"
         static let predictedArrivalPlatform = "predictedArrivalPlatform"
         static let arrivalCancelled = "arrivalCancelled"
         static let plannedDepartureTime = "plannedDepartureTime"
         static let predictedDepartureTime = "predictedDepartureTime"
+        static let departureTimeZone = "departureTimeZone"
         static let plannedDeparturePlatform = "plannedDeparturePlatform"
         static let predictedDeparturePlatform = "predictedDeparturePlatform"
         static let departureCancelled = "departureCancelled"
@@ -184,13 +204,13 @@ extension Stop {
     public convenience init(location: Location, plannedArrivalTime: Date?, predictedArrivalTime: Date?, plannedArrivalPlatform: String?, predictedArrivalPlatform: String?, arrivalCancelled: Bool, plannedDepartureTime: Date?, predictedDepartureTime: Date?, plannedDeparturePlatform: String?, predictedDeparturePlatform: String?, departureCancelled: Bool, message: String? = nil, wagonSequenceContext: URL? = nil) {
         let departure: StopEvent?
         if let plannedDepartureTime = plannedDepartureTime {
-            departure = StopEvent(location: location, plannedTime: plannedDepartureTime, predictedTime: predictedDepartureTime, plannedPlatform: plannedDeparturePlatform, predictedPlatform: predictedDeparturePlatform, cancelled: departureCancelled)
+            departure = StopEvent(location: location, plannedTime: plannedDepartureTime, predictedTime: predictedDepartureTime, timeZone: nil, plannedPlatform: plannedDeparturePlatform, predictedPlatform: predictedDeparturePlatform, cancelled: departureCancelled)
         } else {
             departure = nil
         }
         let arrival: StopEvent?
         if let plannedArrivalTime = plannedArrivalTime {
-            arrival = StopEvent(location: location, plannedTime: plannedArrivalTime, predictedTime: predictedArrivalTime, plannedPlatform: plannedArrivalPlatform, predictedPlatform: predictedArrivalPlatform, cancelled: arrivalCancelled)
+            arrival = StopEvent(location: location, plannedTime: plannedArrivalTime, predictedTime: predictedArrivalTime, timeZone: nil, plannedPlatform: plannedArrivalPlatform, predictedPlatform: predictedArrivalPlatform, cancelled: arrivalCancelled)
         } else {
             arrival = nil
         }

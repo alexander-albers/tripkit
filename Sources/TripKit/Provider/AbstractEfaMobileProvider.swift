@@ -303,7 +303,7 @@ public class AbstractEfaMobileProvider: AbstractEfaProvider {
                     guard let location = location else {
                         throw ParseError(reason: "failed to parse location")
                     }
-                    let stop = StopEvent(location: location, plannedTime: plannedTime, predictedTime: predictedTime, plannedPlatform: position, predictedPlatform: nil, cancelled: false)
+                    let stop = StopEvent(location: location, plannedTime: plannedTime, predictedTime: predictedTime, timeZone: nil, plannedPlatform: position, predictedPlatform: nil, cancelled: false)
                     switch usage {
                     case "departure":
                         departure = stop
@@ -383,7 +383,7 @@ public class AbstractEfaMobileProvider: AbstractEfaProvider {
                         if let location = location {
                             let stopEvent: StopEvent?
                             if let plannedTime = plannedTime {
-                                stopEvent = StopEvent(location: location, plannedTime: plannedTime, predictedTime: predictedTime, plannedPlatform: nil, predictedPlatform: nil, cancelled: false)
+                                stopEvent = StopEvent(location: location, plannedTime: plannedTime, predictedTime: predictedTime, timeZone: nil, plannedPlatform: nil, predictedPlatform: nil, cancelled: false)
                             } else {
                                 stopEvent = nil
                             }
@@ -396,9 +396,9 @@ public class AbstractEfaMobileProvider: AbstractEfaProvider {
                 }
                 let addTime: TimeInterval = !legs.isEmpty ? max(0, -departure.minTime.timeIntervalSince(legs.last!.maxTime)) : 0
                 if lineDestination.line === Line.FOOTWAY {
-                    legs.append(IndividualLeg(type: .walk, departureTime: departure.minTime.addingTimeInterval(addTime), departure: departure.location, arrival: arrival.location, arrivalTime: arrival.maxTime.addingTimeInterval(addTime), distance: 0, path: path))
+                    legs.append(IndividualLeg(type: .walk, departure: departure.location, arrival: arrival.location, departureTime: departure.minTime.addingTimeInterval(addTime), arrivalTime: arrival.maxTime.addingTimeInterval(addTime), departureTimeZone: nil, arrivalTimeZone: nil, distance: 0, path: path))
                 } else if lineDestination.line === Line.TRANSFER {
-                    legs.append(IndividualLeg(type: .transfer, departureTime: departure.minTime.addingTimeInterval(addTime), departure: departure.location, arrival: arrival.location, arrivalTime: arrival.maxTime.addingTimeInterval(addTime), distance: 0, path: path))
+                    legs.append(IndividualLeg(type: .transfer, departure: departure.location, arrival: arrival.location, departureTime: departure.minTime.addingTimeInterval(addTime), arrivalTime: arrival.maxTime.addingTimeInterval(addTime), departureTimeZone: nil, arrivalTimeZone: nil, distance: 0, path: path))
                 } else if lineDestination.line === Line.DO_NOT_CHANGE {
                     if let last = legs.last as? PublicLeg {
                         var lastMessage = "Nicht umsteigen, Weiterfahrt im selben Fahrzeug möglich."
@@ -526,7 +526,7 @@ public class AbstractEfaMobileProvider: AbstractEfaProvider {
             guard let location = Location(type: .station, id: id, coord: coord, place: place, name: name) else { throw ParseError(reason: "failed to parse stop") }
             let stopEvent: StopEvent?
             if let plannedTime = plannedTime {
-                stopEvent = StopEvent(location: location, plannedTime: plannedTime, predictedTime: nil, plannedPlatform: position, predictedPlatform: nil, cancelled: false)
+                stopEvent = StopEvent(location: location, plannedTime: plannedTime, predictedTime: nil, timeZone: nil, plannedPlatform: position, predictedPlatform: nil, cancelled: false)
             } else {
                 stopEvent = nil
             }

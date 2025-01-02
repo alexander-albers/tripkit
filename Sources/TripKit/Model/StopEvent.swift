@@ -11,6 +11,8 @@ public class StopEvent: NSObject {
     ///
     /// See ``NetworkProvider/timeZone`` for a discussion about how to correctly handle time zones.
     public let predictedTime: Date?
+    /// The timezone to be used...
+    public let timeZone: TimeZone?
     /// Scheduled arrival/departure platform of a station.
     public let plannedPlatform: String?
     /// Actual arrival/departure platform of a station.
@@ -42,10 +44,11 @@ public class StopEvent: NSObject {
         return max(plannedTime, predictedTime)
     }
     
-    public init(location: Location, plannedTime: Date, predictedTime: Date?, plannedPlatform: String?, predictedPlatform: String?, cancelled: Bool) {
+    public init(location: Location, plannedTime: Date, predictedTime: Date?, timeZone: TimeZone?, plannedPlatform: String?, predictedPlatform: String?, cancelled: Bool) {
         self.location = location
         self.plannedTime = plannedTime
         self.predictedTime = predictedTime
+        self.timeZone = timeZone
         self.plannedPlatform = plannedPlatform
         self.predictedPlatform = predictedPlatform
         self.cancelled = cancelled

@@ -35,10 +35,12 @@ public class Trip: NSObject, NSSecureCoding {
     ///
     /// See ``NetworkProvider/timeZone`` for a discussion about how to correctly handle time zones.
     public var departureTime: Date { legs[0].departureTime }
+    public var departureTimeZone: TimeZone? { legs[0].departureTimeZone }
     /// Predicted arrival time of the last leg, if available, otherwise the planned time.
     ///
     /// See ``NetworkProvider/timeZone`` for a discussion about how to correctly handle time zones.
     public var arrivalTime: Date { legs[legs.count - 1].arrivalTime }
+    public var arrivalTimeZone: TimeZone? { legs[legs.count - 1].arrivalTimeZone }
     
     /// Returns always the planned departure time of the first leg.
     ///

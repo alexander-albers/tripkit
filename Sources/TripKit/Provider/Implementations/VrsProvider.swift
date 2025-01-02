@@ -667,9 +667,9 @@ public class VrsProvider: AbstractNetworkProvider, QueryJourneyDetailManually, Q
                     let viaPosition = viaLocationWithPosition.position
                     
                     let (plannedArrivalTime, predictedArrivalTime) = try parsePlannedPredictedTime(from: via, type: "arrival")
-                    let arrival = StopEvent(location: viaLocation, plannedTime: plannedArrivalTime, predictedTime: predictedArrivalTime, plannedPlatform: viaPosition, predictedPlatform: nil, cancelled: false)
+                    let arrival = StopEvent(location: viaLocation, plannedTime: plannedArrivalTime, predictedTime: predictedArrivalTime, timeZone: nil, plannedPlatform: viaPosition, predictedPlatform: nil, cancelled: false)
                     let (plannedDepartureTime, predictedDepartureTime) = try parsePlannedPredictedTime(from: via, type: "departure")
-                    let departure = StopEvent(location: viaLocation, plannedTime: plannedDepartureTime, predictedTime: predictedDepartureTime, plannedPlatform: viaPosition, predictedPlatform: nil, cancelled: false)
+                    let departure = StopEvent(location: viaLocation, plannedTime: plannedDepartureTime, predictedTime: predictedDepartureTime, timeZone: nil, plannedPlatform: viaPosition, predictedPlatform: nil, cancelled: false)
                     let stop = Stop(location: viaLocation, departure: departure, arrival: arrival, message: nil)
                     intermediateStops.append(stop)
                 }
@@ -711,7 +711,7 @@ public class VrsProvider: AbstractNetworkProvider, QueryJourneyDetailManually, Q
                 if type == "walk" {
                     let distance = segment["distance"] as? Int ?? 0
                     let addTime: TimeInterval = !legs.isEmpty ? max(0, -departurePlanned.timeIntervalSince(legs.last!.maxTime)) : 0
-                    legs.append(IndividualLeg(type: .walk, departureTime: departurePlanned.addingTimeInterval(addTime), departure: segmentOrigin, arrival: segmentDestination, arrivalTime: arrivalPlanned.addingTimeInterval(addTime), distance: distance, path: points))
+                    legs.append(IndividualLeg(type: .walk, departure: segmentOrigin, arrival: segmentDestination, departureTime: departurePlanned.addingTimeInterval(addTime), arrivalTime: arrivalPlanned.addingTimeInterval(addTime), departureTimeZone: nil, arrivalTimeZone: nil, distance: distance, path: points))
                 } else if type == "publicTransport" {
                     let directionLoc: Location?
                     guard let lineObject = segment["line"] as? [String: Any] else {
@@ -723,8 +723,8 @@ public class VrsProvider: AbstractNetworkProvider, QueryJourneyDetailManually, Q
                     } else {
                         directionLoc = nil
                     }
-                    let departure = StopEvent(location: segmentOrigin, plannedTime: departurePlanned, predictedTime: departurePredicted, plannedPlatform: segmentOriginPosition, predictedPlatform: nil, cancelled: false)
-                    let arrival = StopEvent(location: segmentDestination, plannedTime: arrivalPlanned, predictedTime: arrivalPredicted, plannedPlatform: segmentDestinationPosition, predictedPlatform: nil, cancelled: false)
+                    let departure = StopEvent(location: segmentOrigin, plannedTime: departurePlanned, predictedTime: departurePredicted, timeZone: nil, plannedPlatform: segmentOriginPosition, predictedPlatform: nil, cancelled: false)
+                    let arrival = StopEvent(location: segmentDestination, plannedTime: arrivalPlanned, predictedTime: arrivalPredicted, timeZone: nil, plannedPlatform: segmentDestinationPosition, predictedPlatform: nil, cancelled: false)
                     let journeyContext: VrsJourneyContext?
                     if let destination = directionLoc {
                         journeyContext = VrsJourneyContext(from: segmentOrigin, to: destination, time: departure.predictedTime ?? departure.plannedTime, plannedTime: departure.plannedTime, product: line.product, line: line)

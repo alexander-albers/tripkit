@@ -970,13 +970,13 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider, QueryJourneyDet
                             
                             let departure: StopEvent?
                             if let plannedStopDepartureDate = plannedStopDepartureDate {
-                                departure = StopEvent(location: stopLocation, plannedTime: plannedStopDepartureDate, predictedTime: validPredictedDate ? predictedStopDepartureDate : nil, plannedPlatform: plannedStopDeparturePosition, predictedPlatform: predictedStopDeparturePosition, cancelled: stopDepartureCancelled)
+                                departure = StopEvent(location: stopLocation, plannedTime: plannedStopDepartureDate, predictedTime: validPredictedDate ? predictedStopDepartureDate : nil, timeZone: nil, plannedPlatform: plannedStopDeparturePosition, predictedPlatform: predictedStopDeparturePosition, cancelled: stopDepartureCancelled)
                             } else {
                                 departure = nil
                             }
                             let arrival: StopEvent?
                             if let plannedStopArrivalDate = plannedStopArrivalDate {
-                                arrival = StopEvent(location: stopLocation, plannedTime: plannedStopArrivalDate, predictedTime: validPredictedDate ? predictedStopArrivalDate : nil, plannedPlatform: plannedStopArrivalPosition, predictedPlatform: predictedStopArrivalPosition, cancelled: stopArrivalCancelled)
+                                arrival = StopEvent(location: stopLocation, plannedTime: plannedStopArrivalDate, predictedTime: validPredictedDate ? predictedStopArrivalDate : nil, timeZone: nil, plannedPlatform: plannedStopArrivalPosition, predictedPlatform: predictedStopArrivalPosition, cancelled: stopArrivalCancelled)
                             } else {
                                 arrival = nil
                             }
@@ -1009,10 +1009,10 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider, QueryJourneyDet
                         let lastLeg: Leg? = legs.count > 0 ? legs[legs.count - 1] : nil
                         if let lastLeg = lastLeg as? IndividualLeg, lastLeg.type == individualType {
                             let lastIndividualLeg = legs.remove(at: legs.count - 1)
-                            leg = IndividualLeg(type: individualType, departureTime: lastIndividualLeg.departureTime, departure: lastIndividualLeg.departure, arrival: arrivalLocation, arrivalTime: arrivalTime, distance: 0, path: [])
+                            leg = IndividualLeg(type: individualType, departure: lastIndividualLeg.departure, arrival: arrivalLocation, departureTime: lastIndividualLeg.departureTime, arrivalTime: arrivalTime, departureTimeZone: nil, arrivalTimeZone: nil, distance: 0, path: [])
                         } else {
                             let addTime: TimeInterval = !legs.isEmpty ? max(0, -departureTime.timeIntervalSince(legs.last!.maxTime)) : 0
-                            leg = IndividualLeg(type: individualType, departureTime: departureTime.addingTimeInterval(addTime), departure: departureLocation, arrival: arrivalLocation, arrivalTime: arrivalTime.addingTimeInterval(addTime), distance: 0, path: [])
+                            leg = IndividualLeg(type: individualType, departure: departureLocation, arrival: arrivalLocation, departureTime: departureTime.addingTimeInterval(addTime), arrivalTime: arrivalTime.addingTimeInterval(addTime), departureTimeZone: nil, arrivalTimeZone: nil, distance: 0, path: [])
                         }
                     } else if type == 2 {
                         let lineProduct: Product?
@@ -1039,8 +1039,8 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider, QueryJourneyDet
                         guard plannedDepartureTime != 0 else { throw ParseError(reason: "failed to parse departure time") }
                         guard plannedArrivalTime != 0 else { throw ParseError(reason: "failed to parse arrival time") }
                         
-                        let departure = StopEvent(location: departureLocation, plannedTime: Date(timeIntervalSince1970: plannedDepartureTime), predictedTime: predictedDepartureTime != 0 ? Date(timeIntervalSince1970: predictedDepartureTime) : nil, plannedPlatform: plannedDeparturePosition, predictedPlatform: predictedDeparturePosition, cancelled: departureCancelled)
-                        let arrival = StopEvent(location: arrivalLocation, plannedTime: Date(timeIntervalSince1970: plannedArrivalTime), predictedTime: predictedArrivalTime != 0 ? Date(timeIntervalSince1970: predictedArrivalTime) : nil, plannedPlatform: plannedArrivalPosition, predictedPlatform: predictedArrivalPosition, cancelled: arrivalCancelled)
+                        let departure = StopEvent(location: departureLocation, plannedTime: Date(timeIntervalSince1970: plannedDepartureTime), predictedTime: predictedDepartureTime != 0 ? Date(timeIntervalSince1970: predictedDepartureTime) : nil, timeZone: nil, plannedPlatform: plannedDeparturePosition, predictedPlatform: predictedDeparturePosition, cancelled: departureCancelled)
+                        let arrival = StopEvent(location: arrivalLocation, plannedTime: Date(timeIntervalSince1970: plannedArrivalTime), predictedTime: predictedArrivalTime != 0 ? Date(timeIntervalSince1970: predictedArrivalTime) : nil, timeZone: nil, plannedPlatform: plannedArrivalPosition, predictedPlatform: predictedArrivalPosition, cancelled: arrivalCancelled)
                         
                         let journeyContext: HafasLegacyJourneyContext?
                         if let destination = direction {
