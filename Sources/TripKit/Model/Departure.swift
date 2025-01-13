@@ -32,9 +32,9 @@ public class Departure: NSObject, NSSecureCoding {
     public let journeyContext: QueryJourneyDetailContext?
     /// URL for querying the wagon sequence of a train.
     /// See `DbProvider.getWagonSequenceUrl()`
-    public let wagonSequenceContext: URL?
+    public let wagonSequenceContext: QueryWagonSequenceContext?
     
-    public init(plannedTime: Date, predictedTime: Date?, line: Line, position: String?, plannedPosition: String?, cancelled: Bool, destination: Location?, capacity: [Int]?, message: String?, journeyContext: QueryJourneyDetailContext?, wagonSequenceContext: URL? = nil) {
+    public init(plannedTime: Date, predictedTime: Date?, line: Line, position: String?, plannedPosition: String?, cancelled: Bool, destination: Location?, capacity: [Int]?, message: String?, journeyContext: QueryJourneyDetailContext?, wagonSequenceContext: QueryWagonSequenceContext? = nil) {
         self.plannedTime = plannedTime
         self.predictedTime = predictedTime
         self.line = line
@@ -48,7 +48,7 @@ public class Departure: NSObject, NSSecureCoding {
         self.wagonSequenceContext = wagonSequenceContext
     }
     
-    convenience init(plannedTime: Date, predictedTime: Date?, line: Line, position: String?, plannedPosition: String?, cancelled: Bool, destination: Location?, journeyContext: QueryJourneyDetailContext?, wagonSequenceContext: URL? = nil) {
+    convenience init(plannedTime: Date, predictedTime: Date?, line: Line, position: String?, plannedPosition: String?, cancelled: Bool, destination: Location?, journeyContext: QueryJourneyDetailContext?, wagonSequenceContext: QueryWagonSequenceContext? = nil) {
         self.init(plannedTime: plannedTime, predictedTime: predictedTime, line: line, position: position, plannedPosition: plannedPosition, cancelled: cancelled, destination: destination, capacity: nil, message: nil, journeyContext: journeyContext, wagonSequenceContext: wagonSequenceContext)
     }
     
@@ -63,8 +63,7 @@ public class Departure: NSObject, NSSecureCoding {
         let capacity = aDecoder.decodeObject(of: [NSArray.self, NSNumber.self], forKey: PropertyKey.capacityKey) as? [Int]
         let message = aDecoder.decodeObject(of: NSString.self, forKey: PropertyKey.messageKey) as String?
         let journeyContext = aDecoder.decodeObject(of: QueryJourneyDetailContext.self, forKey: PropertyKey.journeyIdKey)
-        let wagonSequenceContextPath = aDecoder.decodeObject(of: NSString.self, forKey: PropertyKey.wagonSequenceContext) as String?
-        let wagonSequenceContext = wagonSequenceContextPath != nil ? URL(string: wagonSequenceContextPath!) : nil
+        let wagonSequenceContext = aDecoder.decodeObject(of: QueryWagonSequenceContext.self, forKey: PropertyKey.wagonSequenceContext)
         self.init(plannedTime: plannedTime, predictedTime: predictedTime, line: line, position: position, plannedPosition: plannedPosition, cancelled: cancelled, destination: destination, capacity: capacity, message: message, journeyContext: journeyContext, wagonSequenceContext: wagonSequenceContext)
     }
     
@@ -94,7 +93,7 @@ public class Departure: NSObject, NSSecureCoding {
             aCoder.encode(journeyContext, forKey: PropertyKey.journeyIdKey)
         }
         if let wagonSequenceContext = wagonSequenceContext {
-            aCoder.encode(wagonSequenceContext.absoluteString, forKey: PropertyKey.wagonSequenceContext)
+            aCoder.encode(wagonSequenceContext, forKey: PropertyKey.wagonSequenceContext)
         }
     }
 

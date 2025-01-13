@@ -14,7 +14,6 @@ class HCIVersionChecker: XCTestCase {
     func testMaxVersions() async {
         let secrets: [NetworkId: AuthorizationData] = SecretsLoader.loadSecrets()
         let providers: [AbstractHafasClientInterfaceProvider] = [
-            DbProvider(apiAuthorization: secrets[.DB]!.hciAuthorization, requestVerification: secrets[.DB]!.hciRequestVerification),
             BvgProvider(apiAuthorization: secrets[.BVG]!.hciAuthorization),
             VbbProvider(apiAuthorization: secrets[.VBB]!.hciAuthorization),
             RmvProvider(apiAuthorization: secrets[.RMV]!.hciAuthorization),

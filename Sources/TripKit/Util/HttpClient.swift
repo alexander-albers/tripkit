@@ -159,21 +159,25 @@ public class HttpRequest {
         self.urlBuilder = urlBuilder
     }
     
+    @discardableResult
     public func setPostPayload(_ postPayload: String?) -> Self {
         self.postPayload = postPayload
         return self
     }
     
+    @discardableResult
     public func setContentType(_ contentType: String?) -> Self {
         self.contentType = contentType
         return self
     }
     
+    @discardableResult
     public func setUserAgent(_ userAgent: String?) -> Self {
         self.userAgent = userAgent
         return self
     }
     
+    @discardableResult
     public func setHeaders(_ headers: [String: String]?) -> Self {
         self.headers = headers
         return self

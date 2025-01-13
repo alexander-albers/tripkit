@@ -686,7 +686,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         } else {
             tvlrProf["type"] = "E"
         }
-        if supportedQueryTraits.contains(.tariffReductions), let code = tripOptions.tariffProfile?.tariffReduction?.code {
+        if supportedQueryTraits.contains(.tariffReductions), let code = tripOptions.tariffProfile?.tariffReductions.first?.code {
             tvlrProf["redtnCard"] = code
         }
         req["trfReq"] = [
@@ -703,6 +703,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         case .youngAdult: return "Y"
         case .child: return "K"
         case .youngChild: return "B"
+        case .senior: return "E"
         }
     }
     

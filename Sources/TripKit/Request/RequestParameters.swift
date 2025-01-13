@@ -38,19 +38,24 @@ public class TariffProfile: NSObject, NSSecureCoding {
     public var tariffClass: Int
     /// Type of the traveler, depending on his/her age.
     public var travelerType: TravelerType?
-    public var tariffReduction: TariffReduction?
+    public var tariffReductions: [TariffReduction]
     
-    public init(tariffClass: Int, travelerType: TravelerType?, tariffReduction: TariffReduction?) {
+    public init(tariffClass: Int, travelerType: TravelerType?, tariffReductions: [TariffReduction]) {
         self.tariffClass = tariffClass
         self.travelerType = travelerType
-        self.tariffReduction = tariffReduction
+        self.tariffReductions = tariffReductions
     }
     
     public required convenience init?(coder: NSCoder) {
         let tariffClass = coder.decodeInteger(forKey: PropertyKey.tariffClass)
         let travelerType = coder.containsValue(forKey: PropertyKey.travelerType) ? TravelerType(rawValue: coder.decodeInteger(forKey: PropertyKey.travelerType)) : nil
-        let tariffReduction = coder.decodeObject(of: TariffReduction.self, forKey: PropertyKey.tariffReduction)
-        self.init(tariffClass: tariffClass, travelerType: travelerType, tariffReduction: tariffReduction)
+        let tariffReductions: [TariffReduction]
+        if let tariffReduction = coder.decodeObject(of: TariffReduction.self, forKey: PropertyKey.tariffReduction) {
+            tariffReductions = [tariffReduction]
+        } else {
+            tariffReductions = coder.decodeObject(of: [NSArray.self, TariffReduction.self], forKey: PropertyKey.tariffReduction) as? [TariffReduction] ?? []
+        }
+        self.init(tariffClass: tariffClass, travelerType: travelerType, tariffReductions: tariffReductions)
     }
     
     public func encode(with coder: NSCoder) {
@@ -58,7 +63,7 @@ public class TariffProfile: NSObject, NSSecureCoding {
         if let travelerType = travelerType {
             coder.encode(travelerType.rawValue, forKey: PropertyKey.travelerType)
         }
-        coder.encode(tariffReduction, forKey: PropertyKey.tariffReduction)
+        coder.encode(tariffReductions, forKey: PropertyKey.tariffReduction)
     }
     
     struct PropertyKey {
@@ -72,6 +77,8 @@ public class TariffProfile: NSObject, NSSecureCoding {
 public enum TravelerType: Int {
     /// Default
     case adult
+    /// For example, pensioner, 65+ years old (DB).
+    case senior
     /// For example passengers aged 15-26 years old (DB).
     case youngAdult
     /// For example passengers aged 6-14 years old (DB).

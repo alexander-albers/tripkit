@@ -9,7 +9,7 @@ class DbProviderTests: TripKitProviderTestCase, TripKitProviderTestsDelegate {
     var networkId: NetworkId { return .DB }
     
     func initProvider(from authorizationData: AuthorizationData) -> NetworkProvider {
-        return DbProvider(apiAuthorization: authorizationData.hciAuthorization, requestVerification: authorizationData.hciRequestVerification)
+        return DbProvider()
     }
     
 }
