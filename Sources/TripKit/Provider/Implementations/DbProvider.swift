@@ -283,11 +283,33 @@ public class DbProvider: AbstractNetworkProvider {
         }
     }
     
+    private func parse(attributes json: JSON) -> [Line.Attr]? {
+        var result = Set<Line.Attr>()
+        for jsonAttribute in json["attributNotizen"].arrayValue {
+            switch jsonAttribute["key"].stringValue.lowercased() {
+            case "fr", "fb": // Fahrradmitnahme
+                result.insert(.bicycleCarriage)
+            case "br", "bt": // Bordrestaurant
+                result.insert(.restaurant)
+            case "bf", "rg", "eh", "bg", "op", "be", "re":
+                result.insert(.wheelChairAccess)
+            case "wv", "wi":
+                result.insert(.wifiAvailable)
+            case "kl", "rc":
+                result.insert(.airConditioned)
+            case "ls", "ri":
+                result.insert(.powerSockets)
+            default:
+                break
+            }
+        }
+        return result.count == 0 ? nil : Array(result)
+    }
+    
     private func parse(messages json: JSON) -> String? {
         var result: [String] = []
         parse(messages: json["echtzeitNotizen"], result: &result, minPriority: nil)
         parse(messages: json["himNotizen"], result: &result, minPriority: nil)
-        parse(messages: json["attributNotizen"], result: &result, minPriority: 100)
         return result.isEmpty ? nil : result.joined(separator: "\n")
     }
     
@@ -298,7 +320,8 @@ public class DbProvider: AbstractNetworkProvider {
         if let s = shortName, product == .bus || product == .tram {
             shortName = s.replacingOccurrences(of: "^[A-Za-z]+ ", with: "", options: [.regularExpression])
         }
-        return Line(id: json["zuglaufId"].string, network: nil, product: product, label: shortName?.replacingOccurrences(of: " ", with: ""), name: name, style: lineStyle(network: nil, product: product, label: name), attr: nil, message: nil)
+        let attr = parse(attributes: json)
+        return Line(id: json["zuglaufId"].string, network: nil, product: product, label: shortName?.replacingOccurrences(of: " ", with: ""), name: name, style: lineStyle(network: nil, product: product, label: name), attr: attr, message: nil)
     }
     
     private func parseCancelled(stop json: JSON) -> Bool {
@@ -363,6 +386,7 @@ public class DbProvider: AbstractNetworkProvider {
             case 1: loadFactor = .low
             case 2: loadFactor = .medium
             case 3: loadFactor = .high
+            case 4: loadFactor = .exceptional
             default: loadFactor = nil
             }
             if className == "KLASSE_2" {
@@ -374,12 +398,12 @@ public class DbProvider: AbstractNetworkProvider {
         return (first, second)
     }
     
-    private func parse(leg json: JSON, tariffClass: Int) throws -> Leg {
+    private func parse(leg json: JSON, tariffClass: Int) throws -> Leg? {
         var departureStop: Stop?
         var arrivalStop: Stop?
         
-        let legType = json["typ"].string
-        let isPublicTransportLeg = legType != "FUSSWEG"
+        let legType = json["typ"].string ?? "FAHRZEUG"
+        let isPublicTransportLeg = legType == "FAHRZEUG"
         var intermediateStops = parse(stops: json["halte"]) ?? []
         if intermediateStops.count >= 2, isPublicTransportLeg {
             departureStop = intermediateStops.removeFirst()
@@ -404,6 +428,9 @@ public class DbProvider: AbstractNetworkProvider {
         } else {
             let distance = json["distanz"].intValue
             let type: IndividualLeg.`Type` = legType == "TRANSFER" ? .transfer : .walk
+            if type == .walk && json["produktGattung"].stringValue != "SONSTIGE" {
+                return nil  // don't parse wait times between public legs as individual leg
+            }
             return IndividualLeg(type: type, departureTime: departure.time, departure: departure.location, arrival: arrival.location, arrivalTime: arrival.time, distance: distance, path: path)
         }
     }
@@ -425,7 +452,7 @@ public class DbProvider: AbstractNetworkProvider {
         var tripTo: Location?
         
         for (i, jsonLeg) in jsonLegs.enumerated() {
-            let leg = try parse(leg: jsonLeg, tariffClass: tariffClass)
+            guard let leg = try parse(leg: jsonLeg, tariffClass: tariffClass) else { continue }
             legs.append(leg)
             
             if i == 0 {
@@ -685,7 +712,8 @@ public class DbProvider: AbstractNetworkProvider {
                 "reiseDatum": isoDateFormatter.string(from: date),
                 "zeitPunktArt": deparr,
             ],
-            "zielLocationId": formatLid(from: to)
+            "zielLocationId": formatLid(from: to),
+            "economic": true
         ]
         if let via {
             tripRequest["viaLocations"] = [
@@ -694,6 +722,12 @@ public class DbProvider: AbstractNetworkProvider {
                     "verkehrsmittel": formatProducts(products: tripOptions.products)
                 ]
             ]
+        }
+        if let maxChanges = tripOptions.maxChanges {
+            tripRequest["maxUmstiege"] = maxChanges
+        }
+        if let minChangeTime = tripOptions.minChangeTime {
+            tripRequest["minUmstiegsdauer"] = minChangeTime
         }
         if let previousContext {
             guard let contextString = later ? previousContext.laterContext : previousContext.earlierContext else {
