@@ -713,7 +713,7 @@ public class DbProvider: AbstractNetworkProvider {
                 "zeitPunktArt": deparr,
             ],
             "zielLocationId": formatLid(from: to),
-            "economic": true
+            "economic": false
         ]
         if let via {
             tripRequest["viaLocations"] = [
@@ -811,7 +811,12 @@ public class DbProvider: AbstractNetworkProvider {
             return
         }
         
-        let context = Context(from: from, via: via, to: to, date: date, departure: departure, laterContext: json["spaeterContext"].string, earlierContext: json["frueherContext"].string, tripOptions: tripOptions)
+        let context: Context
+        if let previousContext = previousContext as? Context {
+            context = Context(from: from, via: via, to: to, date: date, departure: departure, laterContext: later ? json["spaeterContext"].string : previousContext.laterContext, earlierContext: !later ? json["frueherContext"].string : previousContext.earlierContext, tripOptions: tripOptions)
+        } else {
+            context = Context(from: from, via: via, to: to, date: date, departure: departure, laterContext: json["spaeterContext"].string, earlierContext: json["frueherContext"].string, tripOptions: tripOptions)
+        }
         
         completion(request, .success(context: context, from: from, via: via, to: to, trips: trips, messages: []))
     }
