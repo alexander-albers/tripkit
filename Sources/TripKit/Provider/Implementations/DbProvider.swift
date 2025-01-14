@@ -557,10 +557,12 @@ public class DbProvider: AbstractNetworkProvider {
                 "radius": maxDistance == 0 ? DbProvider.DEFAULT_MAX_DISTANCE : maxDistance,
             ],
             "maxResults": maxLocations == 0 ? DbProvider.DEFAULT_MAX_LOCATIONS : maxLocations,
-            "products": ["ALL"]
+            "products": ["ALL"],
+            "types": (types ?? [.any]).map({DbProvider.LOCATION_TYPE_MAP[$0]}),
+            "operatingSystem": "IOS"
         ]
         
-        let httpRequest = createHttpRequest(for: "location/search", contentType: "application/x.db.vendo.mob.location.v3+json", content: request)
+        let httpRequest = createHttpRequest(for: "location/nearby/bytypes", contentType: "application/x.db.vendo.mob.location.v3+json", content: request)
         return makeRequest(httpRequest) {
             try self.queryNearbyLocationsByCoordinateParsing(request: httpRequest, location: location, types: types, maxDistance: maxDistance, maxLocations: maxLocations, completion: completion)
         } errorHandler: { err in
@@ -572,8 +574,47 @@ public class DbProvider: AbstractNetworkProvider {
         let json = try validateResponse(with: request.responseData)
         var result: [Location] = []
         
-        for jsonLocation in json.arrayValue {
+        for jsonLocation in json["fahrplanAuskunftLocations"].arrayValue {
             if let location = parse(location: jsonLocation), types == nil || types?.contains(location.type) ?? false || types?.contains(.any) ?? false {
+                result.append(location)
+            }
+        }
+        
+        completion(request, .success(locations: result))
+    }
+    
+    private func findAddressByCoord(location: Location, completion: @escaping (HttpRequest, NearbyLocationsResult) -> Void) -> AsyncRequest {
+        guard let coord = location.coord else {
+            completion(HttpRequest(urlBuilder: UrlBuilder()), .invalidId)
+            return AsyncRequest(task: nil)
+        }
+        
+        let request: [String: Any] = [
+            "area": [
+                "coordinates": [
+                    "latitude": Double(coord.lat) / 1e6,
+                    "longitude": Double(coord.lon) / 1e6
+                ],
+                "radius": 1000,
+            ],
+            "maxResults": 1,
+            "products": ["ALL"]
+        ]
+        
+        let httpRequest = createHttpRequest(for: "location/search", contentType: "application/x.db.vendo.mob.location.v3+json", content: request)
+        return makeRequest(httpRequest) {
+            try self.findAddressByCoordParsing(request: httpRequest, location: location, completion: completion)
+        } errorHandler: { err in
+            completion(httpRequest, .failure(err))
+        }
+    }
+    
+    private func findAddressByCoordParsing(request: HttpRequest, location: Location, completion: @escaping (HttpRequest, NearbyLocationsResult) -> Void) throws {
+        let json = try validateResponse(with: request.responseData)
+        var result: [Location] = []
+        
+        for jsonLocation in json.arrayValue {
+            if let location = parse(location: jsonLocation) {
                 result.append(location)
             }
         }
@@ -588,7 +629,7 @@ public class DbProvider: AbstractNetworkProvider {
     private func doQueryTrips(from: Location, via: Location?, to: Location, date: Date, departure: Bool, tripOptions: TripOptions, previousContext: Context?, later: Bool, completion: @escaping (HttpRequest, QueryTripsResult) -> Void) -> AsyncRequest {
         if from.type == .coord {
             let request = AsyncRequest(task: nil)
-            request.task = queryNearbyLocations(location: from, types: nil, maxDistance: 1000, maxLocations: 1) { _, result in
+            request.task = findAddressByCoord(location: from) { _, result in
                 switch result {
                 case .success(let locations):
                     guard let from = locations.first else {
@@ -604,7 +645,7 @@ public class DbProvider: AbstractNetworkProvider {
         }
         if let via = via, via.type == .coord {
             let request = AsyncRequest(task: nil)
-            request.task = queryNearbyLocations(location: via, types: nil, maxDistance: 1000, maxLocations: 1) { _, result in
+            request.task = findAddressByCoord(location: via) { _, result in
                 switch result {
                 case .success(let locations):
                     guard let via = locations.first else {
@@ -620,7 +661,7 @@ public class DbProvider: AbstractNetworkProvider {
         }
         if to.type == .coord {
             let request = AsyncRequest(task: nil)
-            request.task = queryNearbyLocations(location: to, types: nil, maxDistance: 1000, maxLocations: 1) { _, result in
+            request.task = findAddressByCoord(location: to) { _, result in
                 switch result {
                 case .success(let locations):
                     guard let to = locations.first else {
@@ -775,7 +816,7 @@ public class DbProvider: AbstractNetworkProvider {
             "verkehrsmittel": ["ALL"]
         ]
         
-        let httpRequest = createHttpRequest(for: "bahnhofstafel/abfahrt", contentType: "application/x.db.vendo.mob.bahnhofstafeln.v2+json", content: request)
+        let httpRequest = createHttpRequest(for: "bahnhofstafel/\(departures ? "abfahrt" : "ankunft")", contentType: "application/x.db.vendo.mob.bahnhofstafeln.v2+json", content: request)
         return makeRequest(httpRequest) {
             try self.queryDeparturesParsing(request: httpRequest, stationId: stationId, departures: departures, time: time, maxDepartures: maxDepartures, equivs: equivs, completion: completion)
         } errorHandler: { err in
@@ -787,7 +828,7 @@ public class DbProvider: AbstractNetworkProvider {
         let json = try validateResponse(with: request.responseData)
         
         var result: [StationDepartures] = []
-        for jsonDeparture in json["bahnhofstafelAbfahrtPositionen"].arrayValue {
+        for jsonDeparture in json["bahnhofstafel\(departures ? "Abfahrt" : "Ankunft")Positionen"].arrayValue {
             guard let location = parse(location: jsonDeparture["abfrageOrt"]) else { continue }
             if !equivs && extractStationId(from: stationId) != extractStationId(from: location.id) { continue }
             
