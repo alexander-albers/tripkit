@@ -321,7 +321,7 @@ public class DbProvider: AbstractNetworkProvider {
             shortName = s.replacingOccurrences(of: "^[A-Za-z]+ ", with: "", options: [.regularExpression])
         }
         let attr = parse(attributes: json)
-        return Line(id: json["zuglaufId"].string, network: nil, product: product, label: shortName?.replacingOccurrences(of: " ", with: ""), name: name, style: lineStyle(network: nil, product: product, label: name), attr: attr, message: nil)
+        return Line(id: json["zuglaufId"].string, network: nil, product: product, label: shortName?.replacingOccurrences(of: " ", with: ""), name: name, number: nil, vehicleNumber: json["verkehrsmittelNummer"].string, style: lineStyle(network: nil, product: product, label: name), attr: attr, message: nil)
     }
     
     private func parseCancelled(stop json: JSON) -> Bool {
@@ -489,6 +489,7 @@ public class DbProvider: AbstractNetworkProvider {
     
     private func parse(wagonSequenceContext json: JSON) -> DbWagonSequenceContext? {
         let wagonSequenceContext: DbWagonSequenceContext?
+        guard json["wagenreihung"].boolValue else { return nil }
         if let lineLabel = json["risZuglaufId"].string, let departureId = json["risAbfahrtId"].string {
             wagonSequenceContext = DbWagonSequenceContext(lineLabel: lineLabel, departureId: departureId)
         } else {
