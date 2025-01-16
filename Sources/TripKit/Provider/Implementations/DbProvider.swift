@@ -240,7 +240,7 @@ public class DbProvider: AbstractNetworkProvider {
         let lidString = json["locationId"].string
         guard let lid = parseLid(from: lidString) else { return nil }
         // always use long id...
-        // let id = lid.type == .station ? json["evaNr"].string ?? lid.id : lidString
+        let shortId = lid.type == .station ? json["evaNr"].string ?? lid.id : lidString
         let coord: LocationPoint?
         let jsonPos = json["coordinates"].exists() ? json["coordinates"] : json["position"]
         if jsonPos.exists(), let lat = jsonPos["latitude"].double, let lon = jsonPos["longitude"].double {
@@ -249,17 +249,18 @@ public class DbProvider: AbstractNetworkProvider {
             coord = nil
         }
         
-        return parse(locationType: lid.type, id: lidString, coord: coord, name: json["name"].string, products: parseProducts(from: json["products"]))
+        return parse(locationType: lid.type, id: lidString, shortId: shortId, coord: coord, name: json["name"].string, products: parseProducts(from: json["products"]))
     }
     
-    private func parse(locationType: LocationType, id: String?, coord: LocationPoint?, name: String?, products: [Product]?) -> Location? {
-        let placeAndName = locationType == .station ? split(stationName: name) : split(address: name)
+    private func parse(locationType: LocationType, id: String?, shortId: String?, coord: LocationPoint?, name: String?, products: [Product]?) -> Location? {
+        // For addresses and Swiss locations (ids starting wiht 85), the place and name are reversed
+        let placeAndName = locationType == .station && (shortId?.hasPrefix("85") ?? false == false) ? split(stationName: name) : split(address: name)
         return Location(type: locationType, id: id, coord: coord, place: placeAndName?.place, name: placeAndName?.name, products: products)
     }
     
     private func parse(direction json: JSON) -> Location? {
         guard let direction = json["richtung"].string else { return nil }
-        return parse(locationType: .station, id: nil, coord: nil, name: direction, products: nil)
+        return Location(anyName: direction)
     }
     
     private func parse(locationList json: JSON) -> [Location] {
