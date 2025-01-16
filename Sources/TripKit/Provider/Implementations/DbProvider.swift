@@ -897,7 +897,7 @@ public class DbProvider: AbstractNetworkProvider {
             return AsyncRequest(task: nil)
         }
         
-        let path = "zuglaeufe/\(context.lineLabel)/halte/by-abfahrt/\(formatLid(stationId: context.departureId))/wagenreihung"
+        let path = "zuglaeufe/\(context.lineLabel)/halte/by-abfahrt/\(context.departureId)/wagenreihung"
         let httpRequest = createHttpRequest(for: path, contentType: "application/x.db.vendo.mob.wagenreihung.v3+json", content: nil)
         return makeRequest(httpRequest) {
             try self.queryWagonSequenceParsing(request: httpRequest, context: context, completion: completion)
