@@ -1018,7 +1018,7 @@ public class DbProvider: AbstractNetworkProvider {
     }
     
     public enum TrainType {
-        case ICE1, ICE2, ICE3, ICE3BR406, ICE3BR407, ICE3NEOBR408, ICET, ICET_5, ICE4, ICE4_7, ICE4_XXL, IC2BOMBARDIER, IC2STADLER, ICE3EUROPE, ICE3PRIDE, ICE4GERMANY, ICE4HANDBALL, ICE4FOOTBALL
+        case ICE1, ICE2, ICE3, ICE3BR406, ICE3BR407, ICE3NEOBR408, ICET, ICET_5, ICE4, ICE4_7, ICE4_XXL, IC2BOMBARDIER, IC2STADLER, ICE3EUROPE, ICE3NEOEUROPE, ICE3PRIDE, ICE4GERMANY, ICE4HANDBALL, ICE4FOOTBALL
         
         public static func parse(from vehicleNumber: String) -> TrainType? {
             if vehicleNumber.hasPrefix("ICE0304") {
@@ -1026,6 +1026,9 @@ public class DbProvider: AbstractNetworkProvider {
             }
             if vehicleNumber.hasPrefix("ICE4601") {
                 return .ICE3EUROPE
+            }
+            if vehicleNumber.hasPrefix("ICE8029") {
+                return .ICE3NEOEUROPE
             }
             if vehicleNumber.hasPrefix("ICE9457") {
                 return .ICE4GERMANY
