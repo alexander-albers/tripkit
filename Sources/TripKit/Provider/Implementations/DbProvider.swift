@@ -566,7 +566,8 @@ public class DbProvider: AbstractNetworkProvider {
                 result.append(SuggestedLocation(location: location, priority: jsonLocation["weight"].int ?? -i))
             }
         }
-        result.sort(by: {$0.priority > $1.priority})
+        // Don't sort by priority to keep same order as in DB Navigator
+        //result.sort(by: {$0.priority > $1.priority})
         
         completion(request, .success(locations: result))
     }
