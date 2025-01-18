@@ -34,7 +34,7 @@ public class DbProvider: AbstractNetworkProvider {
     let requestUrlEncoding: String.Encoding = .utf8
     
     public override var supportedLanguages: Set<String> { ["de", "en", "fr", "es", "it", "nl", "da", "pl", "cs"] }
-    public override var supportedQueryTraits: Set<QueryTrait> { Set(Array(super.supportedQueryTraits) + [.tariffTravelerType, .tariffReductions]) }
+    public override var supportedQueryTraits: Set<QueryTrait> { [.maxChanges, .minChangeTime, .tariffClass, .tariffTravelerType, .tariffReductions] }
     /// See https://reiseauskunft.bahn.de/addons/fachkonfig-utf8.cfg
     public override var tariffReductionTypes: [TariffReduction] {
         [
