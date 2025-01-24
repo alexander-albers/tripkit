@@ -22,7 +22,7 @@ public class VmtProvider: AbstractHafasClientInterfaceProvider {
         if stationName.hasSuffix(" [Zug]") {
             stationName = stationName.substring(to: stationName.count - 6)
         }
-        for place in ShProvider.PLACES {
+        for place in VmtProvider.PLACES {
             if stationName.hasPrefix(place + ", ") {
                 return (place, stationName.substring(from: place.count + 2))
             } else if stationName.hasPrefix(place + " ") || stationName.hasPrefix(place + "-") {
