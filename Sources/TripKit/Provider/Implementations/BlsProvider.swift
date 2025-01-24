@@ -114,7 +114,9 @@ public class BlsProvider: AbstractHafasClientInterfaceProvider {
         guard let stationName = stationName else { return super.split(stationName: nil) }
         
         for place in BlsProvider.PLACES {
-            if stationName.hasPrefix(place + " ") || stationName.hasPrefix(place + ",") {
+            if stationName.hasPrefix(place + ", ") {
+                return (place, stationName.substring(from: place.count + 2))
+            } else if stationName.hasPrefix(place + " ") || stationName.hasPrefix(place + "-") {
                 return (place, stationName.substring(from: place.count + 1))
             }
         }
