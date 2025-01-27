@@ -1,8 +1,24 @@
 {
-  "ver":"1.18",
+  "ver":"1.54",
   "lang":"deu",
-  "id":"f2mkmmxw62ga9iwx",
+  "id":"wti2bnmm628qpmwg",
   "err":"OK",
+  "graph":
+  {
+    "id":"standard",
+    "index":0
+  },
+  "subGraph":
+  {
+    "id":"global",
+    "index":0
+  },
+  "view":
+  {
+    "id":"standard",
+    "index":0,
+    "type":"WGS84"
+  },
   "svcResL":
   [
     {
@@ -12,59 +28,16 @@
       {
         "common":
         {
-          "locL":
-          [
-
-          ],
-          "prodL":
-          [
-
-          ],
-          "polyL":
-          [
-
-          ],
-          "layerL":
-          [
-            {
-              "id":"standard",
-              "name":"standard",
-              "index":0,
-              "annoCnt":0
-            }
-          ],
-          "crdSysL":
-          [
-            {
-              "id":"standard",
-              "index":0,
-              "type":"WGS84"
-            }
-          ],
-          "opL":
-          [
-
-          ],
-          "remL":
-          [
-            {
-              "type":"A",
-              "code":"IS",
-              "prio":350,
-              "icoX":0,
-              "txtN":"Verantwortlicher DINO-Haltestellenbereich"
-            }
-          ],
           "icoL":
           [
             {
-              "res":"INFO"
+              "res":"loc_stop"
             },
             {
-              "res":"STA"
+              "res":"loc_addr"
             },
             {
-              "res":"ADR"
+              "res":"LOC_NATUR"
             }
           ]
         },
@@ -75,88 +48,107 @@
           "locL":
           [
             {
-              "lid":"A=1@O=Schweina, Altensteiner Höhle@X=10345937@Y=50828174@U=80@L=210098@B=1@p=1638574695@",
+              "lid":"A=1@O=Schweina, Altensteiner Höhle@X=10345937@Y=50828174@U=80@L=210098@B=1@p=1737974811@",
               "type":"S",
               "name":"Schweina, Altensteiner Höhle",
-              "icoX":1,
+              "icoX":0,
               "extId":"210098",
               "state":"F",
               "crd":
               {
                 "x":10345937,
                 "y":50828174,
-                "layerX":0,
-                "crdSysX":0
+                "floor":0
               },
               "pCls":256,
-              "wt":16,
-              "msgL":
+              "wt":59,
+              "globalIdL":
               [
                 {
-                  "type":"REM",
-                  "remX":0,
-                  "tagL":
-                  [
-                    "RES_LOC"
-                  ],
-                  "sort":851181568
+                  "id":"de:16063:210098",
+                  "type":"A"
                 }
-              ]
+              ],
+              "TZOffset":60,
+              "chgTime":"000000"
             },
             {
-              "lid":"A=2@O=Suhl, Alte Höhle@X=10625043@Y=50604963@U=99@b=981221747@B=1@p=1462862076@",
+              "lid":"A=2@O=Höhle, Mittelsömmern@X=10808495@Y=51206323@U=99@b=991056220@B=1@p=1665647737@",
               "type":"A",
-              "name":"Suhl, Alte Höhle",
-              "icoX":2,
+              "name":"Höhle, Mittelsömmern",
+              "icoX":1,
               "state":"M",
               "crd":
               {
-                "x":10625043,
-                "y":50604963,
-                "layerX":0,
-                "crdSysX":0
+                "x":10808495,
+                "y":51206323
               }
             },
             {
-              "lid":"A=2@O=Berka/Werra, Höhle@X=10070858@Y=50938364@U=99@b=980123784@B=1@p=1462862076@",
-              "type":"A",
-              "name":"Berka/Werra, Höhle",
-              "icoX":2,
-              "state":"M",
+              "lid":"A=1@O=Marienglashöhle (TWSB)@X=10541398@Y=50864940@U=80@L=167222@B=1@p=1737974811@",
+              "type":"S",
+              "name":"Marienglashöhle (TWSB)",
+              "icoX":0,
+              "extId":"167222",
+              "state":"F",
               "crd":
               {
-                "x":10070858,
-                "y":50938364,
-                "layerX":0,
-                "crdSysX":0
-              }
+                "x":10541398,
+                "y":50864940,
+                "floor":0
+              },
+              "pCls":32,
+              "wt":2060,
+              "globalIdL":
+              [
+                {
+                  "id":"de:16067:167222",
+                  "type":"A"
+                }
+              ],
+              "TZOffset":60,
+              "chgTime":"000000"
             },
             {
-              "lid":"A=2@O=Mittelsömmern, Höhle@X=10808594@Y=51205460@U=99@b=980839872@B=1@p=1462862076@",
-              "type":"A",
-              "name":"Mittelsömmern, Höhle",
-              "icoX":2,
-              "state":"M",
+              "lid":"A=1@O=Barbarossahöhle@X=11035032@Y=51376372@U=80@L=900436@B=1@p=1737974811@",
+              "type":"S",
+              "name":"Barbarossahöhle",
+              "icoX":0,
+              "extId":"900436",
+              "state":"F",
               "crd":
               {
-                "x":10808594,
-                "y":51205460,
-                "layerX":0,
-                "crdSysX":0
-              }
+                "x":11035032,
+                "y":51376372,
+                "floor":0
+              },
+              "meta":true,
+              "pCls":256,
+              "wt":59,
+              "isMainMast":true,
+              "globalIdL":
+              [
+                {
+                  "id":"de:16065:900436",
+                  "type":"A"
+                }
+              ],
+              "TZOffset":60,
+              "chgTime":"000000"
             },
             {
-              "lid":"A=2@O=Mackenrode, Alte Höhle@X=10069231@Y=51304189@U=99@b=980790355@B=1@p=1462862076@",
-              "type":"A",
-              "name":"Mackenrode, Alte Höhle",
+              "lid":"A=4@O=Altensteiner Höhle@X=10345937@Y=50829010@U=178@L=9500505@B=1@p=1732024633@",
+              "type":"P",
+              "name":"Altensteiner Höhle",
               "icoX":2,
-              "state":"M",
+              "extId":"9500505",
+              "state":"F",
               "crd":
               {
-                "x":10069231,
-                "y":51304189,
-                "layerX":0,
-                "crdSysX":0
+                "x":10345937,
+                "y":50829010,
+                "z":0,
+                "floor":0
               }
             }
           ]

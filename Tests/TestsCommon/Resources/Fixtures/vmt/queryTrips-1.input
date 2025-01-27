@@ -1,8 +1,24 @@
 {
-  "ver":"1.18",
+  "ver":"1.54",
   "lang":"deu",
-  "id":"zeikumx262gfpg8x",
+  "id":"n2k2pn6m428ewm8g",
   "err":"OK",
+  "graph":
+  {
+    "id":"standard",
+    "index":0
+  },
+  "subGraph":
+  {
+    "id":"global",
+    "index":0
+  },
+  "view":
+  {
+    "id":"standard",
+    "index":0,
+    "type":"WGS84"
+  },
   "svcResL":
   [
     {
@@ -23,250 +39,158 @@
               "crd":
               {
                 "x":11586987,
-                "y":50926947,
-                "layerX":0,
-                "crdSysX":0
+                "y":50926947
               }
             },
             {
-              "lid":"A=1@O=Jena, Stadtzentrum Löbdergraben@X=11588057@Y=50926876@U=80@L=15316600@",
+              "lid":"A=1@O=Jena, Stadtzentrum Löbdergraben@X=11588246@Y=50926993@U=80@L=15316602@",
               "type":"S",
               "name":"Jena, Stadtzentrum Löbdergraben",
-              "icoX":2,
-              "extId":"15316600",
+              "icoX":1,
+              "extId":"15316602",
               "state":"F",
               "crd":
               {
-                "x":11587994,
-                "y":50927181,
-                "layerX":0,
-                "crdSysX":0
+                "x":11588246,
+                "y":50926993,
+                "floor":0
               },
               "pCls":288,
               "entry":true,
               "mMastLocX":2,
-              "msgL":
+              "globalIdL":
               [
                 {
-                  "type":"REM",
-                  "remX":0,
-                  "tagL":
-                  [
-                    "RES_LOC"
-                  ],
-                  "sort":844627968
+                  "id":"de:16053:153166::15316602",
+                  "type":"A"
                 }
-              ]
+              ],
+              "chgTime":"000000"
             },
             {
               "lid":"A=1@O=Jena, Stadtzentrum Löbdergraben@X=11588246@Y=50926993@U=80@L=153166@",
               "type":"S",
               "name":"Jena, Stadtzentrum Löbdergraben",
-              "icoX":2,
+              "icoX":1,
               "extId":"153166",
               "state":"F",
               "crd":
               {
                 "x":11588246,
                 "y":50926993,
-                "layerX":0,
-                "crdSysX":0
+                "floor":0
               },
               "meta":true,
               "pCls":288,
               "isMainMast":true,
-              "msgL":
+              "globalIdL":
               [
                 {
-                  "type":"REM",
-                  "remX":1,
-                  "tagL":
-                  [
-                    "RES_LOC"
-                  ],
-                  "sort":851181568
+                  "id":"de:16053:153166",
+                  "type":"A"
                 }
-              ]
+              ],
+              "chgTime":"000000"
             },
             {
-              "lid":"A=1@O=Jena, Steinweg@X=11591959@Y=50928530@U=80@L=15302501@",
+              "lid":"A=1@O=Jena, Spittelplatz@X=11590547@Y=50933150@U=80@L=15301403@",
               "type":"S",
-              "name":"Jena, Steinweg",
-              "icoX":2,
-              "extId":"15302501",
+              "name":"Jena, Spittelplatz",
+              "icoX":1,
+              "extId":"15301403",
               "state":"F",
               "crd":
               {
-                "x":11591959,
-                "y":50928530,
-                "layerX":0,
-                "crdSysX":0
+                "x":11590547,
+                "y":50933150,
+                "floor":0
               },
               "pCls":288,
               "entry":true,
               "mMastLocX":4,
-              "msgL":
+              "globalIdL":
               [
                 {
-                  "type":"REM",
-                  "remX":2,
-                  "tagL":
-                  [
-                    "RES_LOC"
-                  ],
-                  "sort":844627968
+                  "id":"de:16053:153014::15301403",
+                  "type":"A"
                 }
-              ]
+              ],
+              "chgTime":"000000"
             },
             {
-              "lid":"A=1@O=Jena, Steinweg@X=11591527@Y=50928647@U=80@L=153025@",
+              "lid":"A=1@O=Jena, Spittelplatz@X=11590988@Y=50933348@U=80@L=153014@",
               "type":"S",
-              "name":"Jena, Steinweg",
-              "icoX":2,
-              "extId":"153025",
+              "name":"Jena, Spittelplatz",
+              "icoX":1,
+              "extId":"153014",
               "state":"F",
               "crd":
               {
-                "x":11591527,
-                "y":50928647,
-                "layerX":0,
-                "crdSysX":0
+                "x":11590988,
+                "y":50933348,
+                "floor":0
               },
               "meta":true,
               "pCls":288,
               "isMainMast":true,
-              "msgL":
+              "globalIdL":
               [
                 {
-                  "type":"REM",
-                  "remX":1,
-                  "tagL":
-                  [
-                    "RES_LOC"
-                  ],
-                  "sort":851181568
+                  "id":"de:16053:153014",
+                  "type":"A"
                 }
-              ]
+              ],
+              "chgTime":"000000"
             },
             {
-              "lid":"A=1@O=Jena, Langetal@X=11558177@Y=50935478@U=80@L=15308800@",
+              "lid":"A=1@O=Jena, Universität@X=11590754@Y=50929716@U=80@L=15302601@",
               "type":"S",
-              "name":"Jena, Langetal",
-              "icoX":2,
-              "extId":"15308800",
+              "name":"Jena, Universität",
+              "icoX":1,
+              "extId":"15302601",
               "state":"F",
               "crd":
               {
-                "x":11558177,
-                "y":50935478,
-                "layerX":0,
-                "crdSysX":0
+                "x":11590754,
+                "y":50929716,
+                "floor":0
               },
-              "pCls":256,
+              "pCls":288,
               "entry":true,
               "mMastLocX":6,
-              "msgL":
+              "globalIdL":
               [
                 {
-                  "type":"REM",
-                  "remX":4,
-                  "tagL":
-                  [
-                    "RES_LOC"
-                  ],
-                  "sort":844627968
+                  "id":"de:16053:153026::15302601",
+                  "type":"A"
                 }
-              ]
+              ],
+              "chgTime":"000000"
             },
             {
-              "lid":"A=1@O=Jena, Langetal@X=11558177@Y=50935478@U=80@L=153088@",
+              "lid":"A=1@O=Jena, Universität@X=11590709@Y=50929438@U=80@L=153026@",
               "type":"S",
-              "name":"Jena, Langetal",
-              "icoX":2,
-              "extId":"153088",
+              "name":"Jena, Universität",
+              "icoX":1,
+              "extId":"153026",
               "state":"F",
               "crd":
               {
-                "x":11558177,
-                "y":50935478,
-                "layerX":0,
-                "crdSysX":0
+                "x":11590709,
+                "y":50929438,
+                "floor":0
               },
               "meta":true,
-              "pCls":256,
+              "pCls":288,
               "isMainMast":true,
-              "msgL":
+              "globalIdL":
               [
                 {
-                  "type":"REM",
-                  "remX":1,
-                  "tagL":
-                  [
-                    "RES_LOC"
-                  ],
-                  "sort":851181568
+                  "id":"de:16053:153026",
+                  "type":"A"
                 }
-              ]
-            },
-            {
-              "lid":"A=1@O=Jena, Schlegelsberg@X=11617362@Y=50930355@U=80@L=15313900@",
-              "type":"S",
-              "name":"Jena, Schlegelsberg",
-              "icoX":2,
-              "extId":"15313900",
-              "state":"F",
-              "crd":
-              {
-                "x":11617362,
-                "y":50930355,
-                "layerX":0,
-                "crdSysX":0
-              },
-              "pCls":256,
-              "entry":true,
-              "mMastLocX":8,
-              "msgL":
-              [
-                {
-                  "type":"REM",
-                  "remX":5,
-                  "tagL":
-                  [
-                    "RES_LOC"
-                  ],
-                  "sort":844627968
-                }
-              ]
-            },
-            {
-              "lid":"A=1@O=Jena, Schlegelsberg@X=11616859@Y=50930570@U=80@L=153139@",
-              "type":"S",
-              "name":"Jena, Schlegelsberg",
-              "icoX":2,
-              "extId":"153139",
-              "state":"F",
-              "crd":
-              {
-                "x":11616859,
-                "y":50930570,
-                "layerX":0,
-                "crdSysX":0
-              },
-              "meta":true,
-              "pCls":256,
-              "isMainMast":true,
-              "msgL":
-              [
-                {
-                  "type":"REM",
-                  "remX":1,
-                  "tagL":
-                  [
-                    "RES_LOC"
-                  ],
-                  "sort":851181568
-                }
-              ]
+              ],
+              "chgTime":"000000"
             },
             {
               "lid":"A=2@O=50.933887, 11.590592@X=11590592@Y=50933887@",
@@ -277,785 +201,328 @@
               "crd":
               {
                 "x":11590592,
-                "y":50933887,
-                "layerX":0,
-                "crdSysX":0
+                "y":50933887
               }
+            },
+            {
+              "lid":"A=1@O=Jena, Busbahnhof@X=11587410@Y=50925689@U=80@L=15300403@",
+              "type":"S",
+              "name":"Jena, Busbahnhof",
+              "icoX":1,
+              "extId":"15300403",
+              "state":"F",
+              "crd":
+              {
+                "x":11587410,
+                "y":50925689,
+                "floor":0
+              },
+              "pCls":256,
+              "entry":true,
+              "mMastLocX":9,
+              "globalIdL":
+              [
+                {
+                  "id":"de:16053:153004::15300403",
+                  "type":"A"
+                }
+              ],
+              "chgTime":"000000"
+            },
+            {
+              "lid":"A=1@O=Jena, Busbahnhof@X=11587482@Y=50925500@U=80@L=153004@",
+              "type":"S",
+              "name":"Jena, Busbahnhof",
+              "icoX":1,
+              "extId":"153004",
+              "state":"F",
+              "crd":
+              {
+                "x":11587482,
+                "y":50925500,
+                "floor":0
+              },
+              "meta":true,
+              "pCls":256,
+              "isMainMast":true,
+              "globalIdL":
+              [
+                {
+                  "id":"de:16053:153004",
+                  "type":"A"
+                }
+              ],
+              "chgTime":"000000"
             },
             {
               "lid":"A=1@O=Jena, Spittelplatz@X=11590961@Y=50933627@U=80@L=15301400@",
               "type":"S",
               "name":"Jena, Spittelplatz",
-              "icoX":2,
+              "icoX":1,
               "extId":"15301400",
               "state":"F",
               "crd":
               {
                 "x":11590961,
                 "y":50933627,
-                "layerX":0,
-                "crdSysX":0
+                "floor":0
               },
               "pCls":288,
               "entry":true,
-              "mMastLocX":11,
-              "msgL":
+              "mMastLocX":4,
+              "globalIdL":
               [
                 {
-                  "type":"REM",
-                  "remX":6,
-                  "tagL":
-                  [
-                    "RES_LOC"
-                  ],
-                  "sort":844627968
+                  "id":"de:16053:153014::15301400",
+                  "type":"A"
                 }
-              ]
+              ],
+              "chgTime":"000000"
             },
             {
-              "lid":"A=1@O=Jena, Spittelplatz@X=11590988@Y=50933348@U=80@L=153014@",
+              "lid":"A=1@O=Jena, Busbahnhof@X=11588147@Y=50925797@U=80@L=15300406@",
               "type":"S",
-              "name":"Jena, Spittelplatz",
-              "icoX":2,
-              "extId":"153014",
+              "name":"Jena, Busbahnhof",
+              "icoX":1,
+              "extId":"15300406",
               "state":"F",
               "crd":
               {
-                "x":11590988,
-                "y":50933348,
-                "layerX":0,
-                "crdSysX":0
-              },
-              "meta":true,
-              "pCls":288,
-              "isMainMast":true,
-              "msgL":
-              [
-                {
-                  "type":"REM",
-                  "remX":1,
-                  "tagL":
-                  [
-                    "RES_LOC"
-                  ],
-                  "sort":851181568
-                }
-              ]
-            },
-            {
-              "lid":"A=1@O=Jena, Universität@X=11590754@Y=50929716@U=80@L=15302601@",
-              "type":"S",
-              "name":"Jena, Universität",
-              "icoX":2,
-              "extId":"15302601",
-              "state":"F",
-              "crd":
-              {
-                "x":11590754,
-                "y":50929716,
-                "layerX":0,
-                "crdSysX":0
-              },
-              "pCls":288,
-              "entry":true,
-              "mMastLocX":13,
-              "msgL":
-              [
-                {
-                  "type":"REM",
-                  "remX":7,
-                  "tagL":
-                  [
-                    "RES_LOC"
-                  ],
-                  "sort":844627968
-                }
-              ]
-            },
-            {
-              "lid":"A=1@O=Jena, Universität@X=11590709@Y=50929438@U=80@L=153026@",
-              "type":"S",
-              "name":"Jena, Universität",
-              "icoX":2,
-              "extId":"153026",
-              "state":"F",
-              "crd":
-              {
-                "x":11590709,
-                "y":50929438,
-                "layerX":0,
-                "crdSysX":0
-              },
-              "meta":true,
-              "pCls":288,
-              "isMainMast":true,
-              "msgL":
-              [
-                {
-                  "type":"REM",
-                  "remX":1,
-                  "tagL":
-                  [
-                    "RES_LOC"
-                  ],
-                  "sort":851181568
-                }
-              ]
-            },
-            {
-              "lid":"A=1@O=Jena, Westbahnhof@X=11578412@Y=50923559@U=80@L=15301600@",
-              "type":"S",
-              "name":"Jena, Westbahnhof",
-              "icoX":2,
-              "extId":"15301600",
-              "state":"F",
-              "crd":
-              {
-                "x":11578412,
-                "y":50923559,
-                "layerX":0,
-                "crdSysX":0
+                "x":11588147,
+                "y":50925797,
+                "floor":0
               },
               "pCls":256,
               "entry":true,
-              "mMastLocX":15,
-              "msgL":
+              "mMastLocX":9,
+              "globalIdL":
               [
                 {
-                  "type":"REM",
-                  "remX":9,
-                  "tagL":
-                  [
-                    "RES_LOC"
-                  ],
-                  "sort":844627968
+                  "id":"de:16053:153004::15300406",
+                  "type":"A"
                 }
-              ]
+              ],
+              "chgTime":"000000"
             },
             {
-              "lid":"A=1@O=Jena, Westbahnhof@X=11578169@Y=50923945@U=80@L=153016@",
+              "lid":"A=1@O=Jena, Busbahnhof@X=11587940@Y=50925779@U=80@L=15300405@",
               "type":"S",
-              "name":"Jena, Westbahnhof",
-              "icoX":2,
-              "extId":"153016",
+              "name":"Jena, Busbahnhof",
+              "icoX":1,
+              "extId":"15300405",
               "state":"F",
               "crd":
               {
-                "x":11578169,
-                "y":50923945,
-                "layerX":0,
-                "crdSysX":0
-              },
-              "meta":true,
-              "pCls":256,
-              "isMainMast":true,
-              "msgL":
-              [
-                {
-                  "type":"REM",
-                  "remX":1,
-                  "tagL":
-                  [
-                    "RES_LOC"
-                  ],
-                  "sort":851181568
-                }
-              ]
-            },
-            {
-              "lid":"A=1@O=Jena, Rautal@X=11605038@Y=50956154@U=80@L=15309300@",
-              "type":"S",
-              "name":"Jena, Rautal",
-              "icoX":2,
-              "extId":"15309300",
-              "state":"F",
-              "crd":
-              {
-                "x":11605038,
-                "y":50956154,
-                "layerX":0,
-                "crdSysX":0
+                "x":11587940,
+                "y":50925779,
+                "floor":0
               },
               "pCls":256,
               "entry":true,
-              "mMastLocX":17,
-              "msgL":
+              "mMastLocX":9,
+              "globalIdL":
               [
                 {
-                  "type":"REM",
-                  "remX":10,
-                  "tagL":
-                  [
-                    "RES_LOC"
-                  ],
-                  "sort":844627968
+                  "id":"de:16053:153004::15300405",
+                  "type":"A"
                 }
-              ]
-            },
-            {
-              "lid":"A=1@O=Jena, Rautal@X=11605038@Y=50955920@U=80@L=153093@",
-              "type":"S",
-              "name":"Jena, Rautal",
-              "icoX":2,
-              "extId":"153093",
-              "state":"F",
-              "crd":
-              {
-                "x":11605038,
-                "y":50955920,
-                "layerX":0,
-                "crdSysX":0
-              },
-              "meta":true,
-              "pCls":256,
-              "isMainMast":true,
-              "msgL":
-              [
-                {
-                  "type":"REM",
-                  "remX":1,
-                  "tagL":
-                  [
-                    "RES_LOC"
-                  ],
-                  "sort":851181568
-                }
-              ]
-            },
-            {
-              "lid":"A=1@O=Jena, Stadtzentrum Löbdergraben@X=11588246@Y=50926993@U=80@L=15316602@",
-              "type":"S",
-              "name":"Jena, Stadtzentrum Löbdergraben",
-              "icoX":2,
-              "extId":"15316602",
-              "state":"F",
-              "crd":
-              {
-                "x":11588120,
-                "y":50927118,
-                "layerX":0,
-                "crdSysX":0
-              },
-              "pCls":288,
-              "entry":true,
-              "mMastLocX":2,
-              "msgL":
-              [
-                {
-                  "type":"REM",
-                  "remX":11,
-                  "tagL":
-                  [
-                    "RES_LOC"
-                  ],
-                  "sort":844627968
-                }
-              ]
-            },
-            {
-              "lid":"A=1@O=Jena, Spittelplatz@X=11590502@Y=50933330@U=80@L=15301403@",
-              "type":"S",
-              "name":"Jena, Spittelplatz",
-              "icoX":2,
-              "extId":"15301403",
-              "state":"F",
-              "crd":
-              {
-                "x":11590502,
-                "y":50933330,
-                "layerX":0,
-                "crdSysX":0
-              },
-              "pCls":288,
-              "entry":true,
-              "mMastLocX":11,
-              "msgL":
-              [
-                {
-                  "type":"REM",
-                  "remX":12,
-                  "tagL":
-                  [
-                    "RES_LOC"
-                  ],
-                  "sort":844627968
-                }
-              ]
-            },
-            {
-              "lid":"A=1@O=Jena, Zwätzen Schleife@X=11617857@Y=50958931@U=80@L=15307801@",
-              "type":"S",
-              "name":"Jena, Zwätzen Schleife",
-              "icoX":2,
-              "extId":"15307801",
-              "state":"F",
-              "crd":
-              {
-                "x":11617857,
-                "y":50958931,
-                "layerX":0,
-                "crdSysX":0
-              },
-              "pCls":288,
-              "entry":true,
-              "mMastLocX":21,
-              "msgL":
-              [
-                {
-                  "type":"REM",
-                  "remX":14,
-                  "tagL":
-                  [
-                    "RES_LOC"
-                  ],
-                  "sort":844627968
-                }
-              ]
-            },
-            {
-              "lid":"A=1@O=Jena, Zwätzen Schleife@X=11617902@Y=50959210@U=80@L=153078@",
-              "type":"S",
-              "name":"Jena, Zwätzen Schleife",
-              "icoX":2,
-              "extId":"153078",
-              "state":"F",
-              "crd":
-              {
-                "x":11617902,
-                "y":50959210,
-                "layerX":0,
-                "crdSysX":0
-              },
-              "meta":true,
-              "pCls":288,
-              "isMainMast":true,
-              "msgL":
-              [
-                {
-                  "type":"REM",
-                  "remX":1,
-                  "tagL":
-                  [
-                    "RES_LOC"
-                  ],
-                  "sort":851181568
-                }
-              ]
+              ],
+              "chgTime":"000000"
             }
           ],
           "prodL":
           [
             {
               "name":"Fußweg",
-              "icoX":3,
+              "icoX":2,
               "prodCtx":
               {
                 "name":"Fußweg"
               }
             },
             {
-              "pid":"L::8::Bus::B1606891774::de:VMT:16053000|Bus|14|14|JNV_Bus:::*",
-              "name":"Bus 14",
-              "nameS":"14",
-              "number":"14",
-              "icoX":5,
-              "cls":256,
-              "oprX":0,
-              "prodCtx":
-              {
-                "name":"Bus   14",
-                "num":"741",
-                "line":"14",
-                "matchId":"14",
-                "catOut":"Bus     ",
-                "catOutS":"BR",
-                "catOutL":"Bus     ",
-                "catIn":"BR",
-                "catCode":"8",
-                "admin":"JNV_Bu"
-              },
-              "himIdL":
-              [
-"HIM_FREETEXT_2618"
-              ]
-            },
-            {
-              "pid":"L::8::Bus::B1606891774::de:VMT:16053000|Bus|14|14|JNV_Bus:::*",
-              "name":"Bus 14",
-              "nameS":"14",
-              "number":"14",
-              "icoX":5,
-              "cls":256,
-              "oprX":1,
-              "prodCtx":
-              {
-                "name":"Bus   14",
-                "num":"741",
-                "line":"14",
-                "lineId":"de:VMT:16053000|Bus|14|14|JNV_Bus:",
-                "matchId":"14",
-                "catOut":"Bus     ",
-                "catOutS":"BR",
-                "catOutL":"Bus     ",
-                "catIn":"BR",
-                "catCode":"8",
-                "admin":"JNV_Bu"
-              },
-              "himIdL":
-              [
-"HIM_FREETEXT_2618"
-              ]
-            },
-            {
-              "pid":"L::8::Bus::B1606891774::de:VMT:16053000|Bus|14|14|JNV_Bus:::*",
-              "name":"Bus 14",
-              "nameS":"14",
-              "number":"14",
-              "icoX":5,
-              "cls":256,
-              "oprX":1,
-              "prodCtx":
-              {
-                "name":"Bus   14",
-                "num":"740",
-                "line":"14",
-                "lineId":"de:VMT:16053000|Bus|14|14|JNV_Bus:",
-                "matchId":"14",
-                "catOut":"Bus     ",
-                "catOutS":"BR",
-                "catOutL":"Bus     ",
-                "catIn":"BR",
-                "catCode":"8",
-                "admin":"JNV_Bu"
-              },
-              "himIdL":
-              [
-"HIM_FREETEXT_2618"
-              ]
-            },
-            {
-              "pid":"L::8::Bus::B1606891774::de:VMT:16053000|Bus|14|14|JNV_Bus:::*",
-              "name":"Bus 14",
-              "nameS":"14",
-              "number":"14",
-              "icoX":5,
-              "cls":256,
-              "oprX":1,
-              "prodCtx":
-              {
-                "name":"Bus   14",
-                "num":"739",
-                "line":"14",
-                "lineId":"de:VMT:16053000|Bus|14|14|JNV_Bus:",
-                "matchId":"14",
-                "catOut":"Bus     ",
-                "catOutS":"BR",
-                "catOutL":"Bus     ",
-                "catIn":"BR",
-                "catCode":"8",
-                "admin":"JNV_Bu"
-              },
-              "himIdL":
-              [
-"HIM_FREETEXT_2618"
-              ]
-            },
-            {
-              "pid":"L::8::Bus::B1606891774::de:VMT:16053000|Bus|14|14|JNV_Bus:::*",
-              "name":"Bus 14",
-              "nameS":"14",
-              "number":"14",
-              "icoX":5,
-              "cls":256,
-              "oprX":1,
-              "prodCtx":
-              {
-                "name":"Bus   14",
-                "num":"787",
-                "line":"14",
-                "lineId":"de:VMT:16053000|Bus|14|14|JNV_Bus:",
-                "matchId":"14",
-                "catOut":"Bus     ",
-                "catOutS":"BR",
-                "catOutL":"Bus     ",
-                "catIn":"BR",
-                "catCode":"8",
-                "admin":"JNV_Bu"
-              },
-              "himIdL":
-              [
-"HIM_FREETEXT_2618"
-              ]
-            },
-            {
-              "pid":"L::8::Bus::B1606891774::de:VMT:16053000|Bus|14|14|JNV_Bus:::*",
-              "name":"Bus 14",
-              "nameS":"14",
-              "number":"14",
-              "icoX":5,
-              "cls":256,
-              "oprX":1,
-              "prodCtx":
-              {
-                "name":"Bus   14",
-                "num":"786",
-                "line":"14",
-                "lineId":"de:VMT:16053000|Bus|14|14|JNV_Bus:",
-                "matchId":"14",
-                "catOut":"Bus     ",
-                "catOutS":"BR",
-                "catOutL":"Bus     ",
-                "catIn":"BR",
-                "catCode":"8",
-                "admin":"JNV_Bu"
-              },
-              "himIdL":
-              [
-"HIM_FREETEXT_2618"
-              ]
-            },
-            {
-              "pid":"L::8::Bus::B1606891774::de:VMT:16053000|Bus|15|15|JNV_Bus:::*",
-              "name":"Bus 15",
-              "nameS":"15",
-              "number":"15",
-              "icoX":5,
-              "cls":256,
-              "oprX":0,
-              "prodCtx":
-              {
-                "name":"Bus   15",
-                "num":"1717",
-                "line":"15",
-                "matchId":"15",
-                "catOut":"Bus     ",
-                "catOutS":"BR",
-                "catOutL":"Bus     ",
-                "catIn":"BR",
-                "catCode":"8",
-                "admin":"JNV_Bu"
-              },
-              "himIdL":
-              [
-"HIM_FREETEXT_1806",
-"HIM_FREETEXT_2618"
-              ]
-            },
-            {
-              "pid":"L::8::Bus::B1606891774::de:VMT:16053000|Bus|15|15|JNV_Bus:::*",
-              "name":"Bus 15",
-              "nameS":"15",
-              "number":"15",
-              "icoX":5,
-              "cls":256,
-              "oprX":1,
-              "prodCtx":
-              {
-                "name":"Bus   15",
-                "num":"1717",
-                "line":"15",
-                "lineId":"de:VMT:16053000|Bus|15|15|JNV_Bus:",
-                "matchId":"15",
-                "catOut":"Bus     ",
-                "catOutS":"BR",
-                "catOutL":"Bus     ",
-                "catIn":"BR",
-                "catCode":"8",
-                "admin":"JNV_Bu"
-              },
-              "himIdL":
-              [
-"HIM_FREETEXT_1806",
-"HIM_FREETEXT_2618"
-              ]
-            },
-            {
-              "pid":"L::5::Strab::B1606891774::de:VMT:16053000|Tram|1|1|JNV_Tram:::*",
+              "pid":"L::5::Strab::B1435668065::de:VMT:16053000|Tram|1|1|JNV_Tram:::*",
               "name":"Str 1",
               "nameS":"1",
               "number":"1",
-              "icoX":9,
+              "icoX":3,
               "cls":32,
               "oprX":0,
               "prodCtx":
               {
                 "name":"Str    1",
-                "num":"1126",
-                "line":"1",
-                "matchId":"1",
-                "catOut":"Strab   ",
-                "catOutS":"TR",
-                "catOutL":"Straßenbahn",
-                "catIn":"TR",
-                "catCode":"5",
-                "admin":"JNV_Tr"
-              },
-              "himIdL":
-              [
-"HIM_FREETEXT_2618"
-              ]
-            },
-            {
-              "pid":"L::5::Strab::B1606891774::de:VMT:16053000|Tram|1|1|JNV_Tram:::*",
-              "name":"Str 1",
-              "nameS":"1",
-              "number":"1",
-              "icoX":9,
-              "cls":32,
-              "oprX":1,
-              "prodCtx":
-              {
-                "name":"Str    1",
-                "num":"1126",
+                "num":"1430",
                 "line":"1",
                 "lineId":"de:VMT:16053000|Tram|1|1|JNV_Tram:",
                 "matchId":"1",
                 "catOut":"Strab   ",
-                "catOutS":"TR",
+                "catOutS":"Str",
                 "catOutL":"Straßenbahn",
-                "catIn":"TR",
+                "catIn":"Str",
                 "catCode":"5",
                 "admin":"JNV_Tr"
-              },
-              "himIdL":
-              [
-"HIM_FREETEXT_2618"
-              ]
+              }
             },
             {
-              "pid":"L::5::Strab::B1606891774::de:VMT:16053000|Tram|1|1|JNV_Tram:::*",
-              "name":"Str 1",
-              "nameS":"1",
-              "number":"1",
+              "pid":"L::8::Bus::B0212213706::de:VMT:16053000|Bus|431|431|JES_Bus:::*",
+              "name":"Bus 431",
+              "nameS":"431",
+              "number":"431",
               "icoX":9,
-              "cls":32,
+              "cls":256,
               "oprX":1,
               "prodCtx":
               {
-                "name":"Str    1",
-                "num":"131",
-                "line":"1",
-                "lineId":"de:VMT:16053000|Tram|1|1|JNV_Tram:",
-                "matchId":"1",
-                "catOut":"Strab   ",
-                "catOutS":"TR",
-                "catOutL":"Straßenbahn",
-                "catIn":"TR",
-                "catCode":"5",
-                "admin":"JNV_Tr"
-              },
-              "himIdL":
-              [
-"HIM_FREETEXT_2618"
-              ]
+                "name":"Bus  431",
+                "num":"1116",
+                "line":"431",
+                "lineId":"de:VMT:16053000|Bus|431|431|JES_Bus:",
+                "matchId":"431",
+                "catOut":"Bus     ",
+                "catOutS":"Bus",
+                "catOutL":"Bus     ",
+                "catIn":"Bus",
+                "catCode":"8",
+                "admin":"JES_Bu"
+              }
             },
             {
-              "pid":"L::5::Strab::B1606891774::de:VMT:16053000|Tram|1|1|JNV_Tram:::*",
-              "name":"Str 1",
-              "nameS":"1",
-              "number":"1",
+              "pid":"L::8::Bus::B0212213706::de:VMT:16053000|Bus|422|422|JES_Bus:::*",
+              "name":"Bus 422",
+              "nameS":"422",
+              "number":"422",
               "icoX":9,
-              "cls":32,
+              "cls":256,
               "oprX":1,
               "prodCtx":
               {
-                "name":"Str    1",
-                "num":"660",
-                "line":"1",
-                "lineId":"de:VMT:16053000|Tram|1|1|JNV_Tram:",
-                "matchId":"1",
-                "catOut":"Strab   ",
-                "catOutS":"TR",
-                "catOutL":"Straßenbahn",
-                "catIn":"TR",
-                "catCode":"5",
-                "admin":"JNV_Tr"
-              },
-              "himIdL":
-              [
-"HIM_FREETEXT_2618"
-              ]
+                "name":"Bus  422",
+                "num":"1049",
+                "line":"422",
+                "lineId":"de:VMT:16053000|Bus|422|422|JES_Bus:",
+                "matchId":"422",
+                "catOut":"Bus     ",
+                "catOutS":"Bus",
+                "catOutL":"Bus     ",
+                "catIn":"Bus",
+                "catCode":"8",
+                "admin":"JES_Bu"
+              }
             },
             {
-              "pid":"L::5::Strab::B1606891774::de:VMT:16053000|Tram|1|1|JNV_Tram:::*",
-              "name":"Str 1",
-              "nameS":"1",
-              "number":"1",
+              "pid":"L::8::Bus::B1435668065::de:VMT:16053000|Bus|131|431|JNV_Bus:::*",
+              "name":"Bus 43A",
+              "nameS":"43A",
+              "number":"43A",
               "icoX":9,
-              "cls":32,
+              "cls":256,
+              "oprX":0,
+              "prodCtx":
+              {
+                "name":"Bus  43A",
+                "num":"3438",
+                "line":"43A",
+                "lineId":"de:VMT:16053000|Bus|131|431|JNV_Bus:",
+                "matchId":"43A",
+                "catOut":"Bus     ",
+                "catOutS":"Bus",
+                "catOutL":"Bus     ",
+                "catIn":"Bus",
+                "catCode":"8",
+                "admin":"JNV_Bu"
+              }
+            },
+            {
+              "pid":"L::8::Bus::B0212213706::de:VMT:16053000|Bus|431|431|JES_Bus:::*",
+              "name":"Bus 431",
+              "nameS":"431",
+              "number":"431",
+              "icoX":9,
+              "cls":256,
               "oprX":1,
               "prodCtx":
               {
-                "name":"Str    1",
-                "num":"123",
-                "line":"1",
-                "lineId":"de:VMT:16053000|Tram|1|1|JNV_Tram:",
-                "matchId":"1",
-                "catOut":"Strab   ",
-                "catOutS":"TR",
-                "catOutL":"Straßenbahn",
-                "catIn":"TR",
-                "catCode":"5",
-                "admin":"JNV_Tr"
-              },
-              "himIdL":
-              [
-"HIM_FREETEXT_2618"
-              ]
+                "name":"Bus  431",
+                "num":"1109",
+                "line":"431",
+                "lineId":"de:VMT:16053000|Bus|431|431|JES_Bus:",
+                "matchId":"431",
+                "catOut":"Bus     ",
+                "catOutS":"Bus",
+                "catOutL":"Bus     ",
+                "catIn":"Bus",
+                "catCode":"8",
+                "admin":"JES_Bu"
+              }
             },
             {
-              "pid":"L::5::Strab::B1606891774::de:VMT:16053000|Tram|1|1|JNV_Tram:::*",
-              "name":"Str 1",
-              "nameS":"1",
-              "number":"1",
+              "pid":"L::8::Bus::B0212213706::de:VMT:16053000|Bus|420|420|JES_Bus:::*",
+              "name":"Bus 420",
+              "nameS":"420",
+              "number":"420",
               "icoX":9,
-              "cls":32,
+              "cls":256,
               "oprX":1,
               "prodCtx":
               {
-                "name":"Str    1",
-                "num":"1121",
-                "line":"1",
-                "lineId":"de:VMT:16053000|Tram|1|1|JNV_Tram:",
-                "matchId":"1",
-                "catOut":"Strab   ",
-                "catOutS":"TR",
-                "catOutL":"Straßenbahn",
-                "catIn":"TR",
-                "catCode":"5",
-                "admin":"JNV_Tr"
-              },
-              "himIdL":
-              [
-"HIM_FREETEXT_2618"
-              ]
+                "name":"Bus  420",
+                "num":"246",
+                "line":"420",
+                "lineId":"de:VMT:16053000|Bus|420|420|JES_Bus:",
+                "matchId":"420",
+                "catOut":"Bus     ",
+                "catOutS":"Bus",
+                "catOutL":"Bus     ",
+                "catIn":"Bus",
+                "catCode":"8",
+                "admin":"JES_Bu"
+              }
             },
             {
-              "pid":"L::5::Strab::B1606891774::de:VMT:16053000|Tram|1|1|JNV_Tram:::*",
-              "name":"Str 1",
-              "nameS":"1",
-              "number":"1",
+              "pid":"L::8::Bus::B1435668065::de:VMT:16053000|Bus|131|431|JNV_Bus:::*",
+              "name":"Bus 43A",
+              "nameS":"43A",
+              "number":"43A",
               "icoX":9,
-              "cls":32,
-              "oprX":1,
+              "cls":256,
+              "oprX":0,
               "prodCtx":
               {
-                "name":"Str    1",
-                "num":"1002",
-                "line":"1",
-                "lineId":"de:VMT:16053000|Tram|1|1|JNV_Tram:",
-                "matchId":"1",
+                "name":"Bus  43A",
+                "num":"3439",
+                "line":"43A",
+                "lineId":"de:VMT:16053000|Bus|131|431|JNV_Bus:",
+                "matchId":"43A",
+                "catOut":"Bus     ",
+                "catOutS":"Bus",
+                "catOutL":"Bus     ",
+                "catIn":"Bus",
+                "catCode":"8",
+                "admin":"JNV_Bu"
+              }
+            },
+            {
+              "pid":"L::5::Strab::B1435668065::de:VMT:16053000|Tram|4|4|JNV_Tram:::*",
+              "name":"Str 4",
+              "nameS":"4",
+              "number":"4",
+              "icoX":3,
+              "cls":32,
+              "oprX":0,
+              "prodCtx":
+              {
+                "name":"Str    4",
+                "num":"44",
+                "line":"4",
+                "lineId":"de:VMT:16053000|Tram|4|4|JNV_Tram:",
+                "matchId":"4",
                 "catOut":"Strab   ",
-                "catOutS":"TR",
+                "catOutS":"Str",
                 "catOutL":"Straßenbahn",
-                "catIn":"TR",
+                "catIn":"Str",
                 "catCode":"5",
                 "admin":"JNV_Tr"
-              },
-              "himIdL":
-              [
-"HIM_FREETEXT_2618"
-              ]
+              }
             }
           ],
           "polyL":
@@ -1063,9 +530,9 @@
             {
               "delta":true,
               "dim":2,
-              "crdEncYX":"{uyuH}gveAt@GMcM?S?OsIo@LwE@e@LB",
-              "crdEncS":"NNNNNNNNN",
-              "crdEncF":"?????????",
+              "crdEncYX":"wtyuHqiveAG?KkKs@a@eF_@yAMg@EoBM?GuCQ{F`CyD[eB[BK",
+              "crdEncS":"NNNKNNNNNNNNNN",
+              "crdEncF":"??????????????",
               "ppLocRefL":
               [
                 {
@@ -1073,17 +540,45 @@
                   "locX":1
                 },
                 {
-                  "ppIdx":8,
+                  "ppIdx":7,
+                  "locX":5
+                },
+                {
+                  "ppIdx":13,
                   "locX":3
                 }
-              ]
+              ],
+              "lDrawStyleX":2
             },
             {
               "delta":true,
               "dim":2,
-              "crdEncYX":"{uyuH}gveAt@GMcM?SsLy@g@EgAG??q@EcBK{F~ByA@QaFcDGeBxAEI",
-              "crdEncS":"NNNNNNNNNMMNNNNN",
-              "crdEncF":"????????????????",
+              "crdEncYX":"qlyuHidveAD?AIE_@I_ACSCUDi@t@uBwAoHqEb@mGe@e@U_CQoBM??q@EsBGiF|BcBCI}EiAMuBReAfAIE",
+              "crdEncS":"NNNNNNNNNNNNNNNNNMMNNNMNN",
+              "crdEncF":"?????????????????????????",
+              "ppLocRefL":
+              [
+                {
+                  "ppIdx":0,
+                  "locX":8
+                },
+                {
+                  "ppIdx":14,
+                  "locX":5
+                },
+                {
+                  "ppIdx":24,
+                  "locX":10
+                }
+              ],
+              "lDrawStyleX":7
+            },
+            {
+              "delta":true,
+              "dim":2,
+              "crdEncYX":"wtyuHqiveAG?KkKs@a@eF_@yAMg@EoBM?GuCQ{F`CyD[eB[BK",
+              "crdEncS":"NNNKNNNNNNNNNN",
+              "crdEncF":"??????????????",
               "ppLocRefL":
               [
                 {
@@ -1091,302 +586,108 @@
                   "locX":1
                 },
                 {
-                  "ppIdx":6,
-                  "locX":12
+                  "ppIdx":7,
+                  "locX":5
                 },
                 {
-                  "ppIdx":15,
-                  "locX":10
+                  "ppIdx":13,
+                  "locX":3
                 }
-              ]
-            },
-            {
-              "delta":true,
-              "dim":2,
-              "crdEncYX":"ouyuHwhveAPAIeKMk@oGs@QMq@ESAi@GoBK??uCQ{GdC{Ca@aCe@AH",
-              "crdEncS":"NNKNNNNNNNNNNNNN",
-              "crdEncF":"????????????????",
-              "ppLocRefL":
-              [
-                {
-                  "ppIdx":0,
-                  "locX":18
-                },
-                {
-                  "ppIdx":9,
-                  "locX":12
-                },
-                {
-                  "ppIdx":15,
-                  "locX":19
-                }
-              ]
-            }
-          ],
-          "layerL":
-          [
-            {
-              "id":"standard",
-              "name":"standard",
-              "index":0,
-              "annoCnt":0
-            }
-          ],
-          "crdSysL":
-          [
-            {
-              "id":"standard",
-              "index":0,
-              "type":"WGS84"
+              ],
+              "lDrawStyleX":2
             }
           ],
           "opL":
           [
             {
-              "name":"Jenaer Nahverkehr GmbH",
-              "icoX":6
+              "name":"Jenaer Nahverkehr GmbH (JNV)",
+              "icoX":4,
+              "id":"112"
             },
             {
-              "name":"Jenaer Nahverkehr GmbH",
-              "icoX":6,
-              "id":"112"
+              "name":"JES Verkehrsgesellschaft mbH (JES)",
+              "icoX":10,
+              "id":"113"
             }
           ],
           "remL":
           [
             {
               "type":"A",
-              "code":"BN",
-              "prio":300,
-              "icoX":1,
-              "txtN":"Jena, Stadtzentrum Löbdergraben Steig 4"
-            },
-            {
-              "type":"A",
-              "code":"IS",
-              "prio":350,
-              "icoX":1,
-              "txtN":"Verantwortlicher DINO-Haltestellenbereich"
-            },
-            {
-              "type":"A",
-              "code":"BN",
-              "prio":300,
-              "icoX":1,
-              "txtN":"Steinweg"
-            },
-            {
-              "type":"A",
               "code":"NAME",
-              "icoX":7,
-              "txtN":"Bus   14"
-            },
-            {
-              "type":"A",
-              "code":"BN",
-              "prio":300,
-              "icoX":1,
-              "txtN":"Langetal"
-            },
-            {
-              "type":"A",
-              "code":"BN",
-              "prio":300,
-              "icoX":1,
-              "txtN":"Schlegelsberg"
-            },
-            {
-              "type":"A",
-              "code":"BN",
-              "prio":300,
-              "icoX":1,
-              "txtN":"Jena, Spittelplatz"
-            },
-            {
-              "type":"A",
-              "code":"BN",
-              "prio":300,
-              "icoX":1,
-              "txtN":"Jena, Universität"
-            },
-            {
-              "type":"A",
-              "code":"NAME",
-              "icoX":7,
-              "txtN":"Bus   15"
-            },
-            {
-              "type":"A",
-              "code":"BN",
-              "prio":300,
-              "icoX":1,
-              "txtN":"Jena, Westbahnhof Steig 1"
-            },
-            {
-              "type":"A",
-              "code":"BN",
-              "prio":300,
-              "icoX":1,
-              "txtN":"Rautal"
-            },
-            {
-              "type":"A",
-              "code":"BN",
-              "prio":300,
-              "icoX":1,
-              "txtN":"Jena, Stadtzentrum Löbdergraben Steig 2"
-            },
-            {
-              "type":"A",
-              "code":"BN",
-              "prio":300,
-              "icoX":1,
-              "txtN":"Spittelplatz"
-            },
-            {
-              "type":"A",
-              "code":"NAME",
-              "icoX":7,
+              "icoX":5,
               "txtN":"Str    1"
             },
             {
+              "type":"H",
+              "code":"vmt.accessible",
+              "icoX":6,
+              "txtN":"Fahrt ist für Mobilitätseingeschränkte nutzbar"
+            },
+            {
+              "type":"TAR",
+              "txtN":"Tarifart: City Jena<br/>Preisstufe: 1"
+            },
+            {
               "type":"A",
-              "code":"BN",
-              "prio":300,
-              "icoX":1,
-              "txtN":"Jena, Zwätzen, Schleife"
-            }
-          ],
-          "himL":
-          [
-            {
-              "hid":"2618",
-              "act":true,
-              "head":"Mund und Nase bedeckt und 3G-Nachweis dabei? Gute Fahrt!",
-              "text":"In Bussen und Bahnen gilt die 3G-Regel. Während der gesamten Fahrt ist eine Gesichtsmaske zu tragen.",
-              "tckr":"Mund und Nase bedeckt und 3G-Nachweis dabei? Gute Fahrt!",
-              "icoX":8,
-              "prio":50,
-              "fLocX":5,
-              "tLocX":7,
-              "prod":288,
-              "lModDate":"20211123",
-              "lModTime":"170107",
-              "sDate":"20211124",
-              "sTime":"000000",
-              "eDate":"20220319",
-              "eTime":"235900",
-              "comp":"JNV",
-              "cat":2,
-              "pubChL":
-              [
-                {
-                  "name":"TIMETABLE",
-                  "fDate":"20211123",
-                  "fTime":"165300",
-                  "tDate":"20220319",
-                  "tTime":"235900"
-                },
-                {
-                  "name":"TICKER",
-                  "fDate":"20211123",
-                  "fTime":"165300",
-                  "tDate":"20220319",
-                  "tTime":"235900"
-                }
-              ]
+              "code":"NAME",
+              "icoX":5,
+              "txtN":"Bus  431"
             },
             {
-              "hid":"2618",
-              "act":true,
-              "head":"Mund und Nase bedeckt und 3G-Nachweis dabei? Gute Fahrt!",
-              "text":"In Bussen und Bahnen gilt die 3G-Regel. Während der gesamten Fahrt ist eine Gesichtsmaske zu tragen.",
-              "tckr":"Mund und Nase bedeckt und 3G-Nachweis dabei? Gute Fahrt!",
-              "icoX":8,
-              "prio":50,
-              "fLocX":14,
-              "tLocX":16,
-              "prod":288,
-              "lModDate":"20211123",
-              "lModTime":"170107",
-              "sDate":"20211124",
-              "sTime":"000000",
-              "eDate":"20220319",
-              "eTime":"235900",
-              "comp":"JNV",
-              "cat":2,
-              "pubChL":
-              [
-                {
-                  "name":"TIMETABLE",
-                  "fDate":"20211123",
-                  "fTime":"165300",
-                  "tDate":"20220319",
-                  "tTime":"235900"
-                },
-                {
-                  "name":"TICKER",
-                  "fDate":"20211123",
-                  "fTime":"165300",
-                  "tDate":"20220319",
-                  "tTime":"235900"
-                }
-              ]
-            },
-            {
-              "hid":"2618",
-              "act":true,
-              "head":"Mund und Nase bedeckt und 3G-Nachweis dabei? Gute Fahrt!",
-              "text":"In Bussen und Bahnen gilt die 3G-Regel. Während der gesamten Fahrt ist eine Gesichtsmaske zu tragen.",
-              "tckr":"Mund und Nase bedeckt und 3G-Nachweis dabei? Gute Fahrt!",
-              "icoX":8,
-              "prio":50,
-              "fLocX":20,
-              "tLocX":20,
-              "prod":288,
-              "lModDate":"20211123",
-              "lModTime":"170107",
-              "sDate":"20211124",
-              "sTime":"000000",
-              "eDate":"20220319",
-              "eTime":"235900",
-              "comp":"JNV",
-              "cat":2,
-              "pubChL":
-              [
-                {
-                  "name":"TIMETABLE",
-                  "fDate":"20211123",
-                  "fTime":"165300",
-                  "tDate":"20220319",
-                  "tTime":"235900"
-                },
-                {
-                  "name":"TICKER",
-                  "fDate":"20211123",
-                  "fTime":"165300",
-                  "tDate":"20220319",
-                  "tTime":"235900"
-                }
-              ]
+              "type":"A",
+              "code":"NAME",
+              "icoX":5,
+              "txtN":"Str    4"
             }
           ],
           "icoL":
           [
             {
-              "res":"ADR"
+              "res":"loc_addr"
             },
             {
-              "res":"INFO"
+              "res":"loc_stop"
             },
             {
-              "res":"STA"
+              "res":"prod_walk"
             },
             {
-              "res":"WALK"
+              "res":"prod_gen",
+              "fg":
+              {
+                "r":255,
+                "g":255,
+                "b":255
+              },
+              "bg":
+              {
+                "r":227,
+                "g":7,
+                "b":20
+              }
             },
             {
-              "res":"rt_ont"
+              "res":"JNV",
+              "txt":"Jenaer Nahverkehr GmbH (JNV)"
+            },
+            {
+              "res":""
+            },
+            {
+              "res":"attr_wchair"
+            },
+            {
+              "shp":"C"
+            },
+            {
+              "bg":
+              {
+                "r":227,
+                "g":7,
+                "b":20
+              },
+              "shp":"C"
             },
             {
               "res":"prod_gen",
@@ -1404,44 +705,151 @@
               }
             },
             {
-              "res":"JNV",
-              "txt":"Jenaer Nahverkehr GmbH"
+              "res":"JES",
+              "txt":"JES Verkehrsgesellschaft mbH (JES)"
             },
             {
-              "res":""
-            },
-            {
-              "res":"HIM2"
-            },
-            {
-              "res":"prod_gen",
-              "fg":
+              "bg":
               {
-                "r":255,
-                "g":255,
-                "b":255
+                "r":149,
+                "g":27,
+                "b":129
               },
+              "shp":"C"
+            },
+            {
+              "res":"rt_ont",
+              "txtA":"pünktlich"
+            },
+            {
+              "res":"cl_all"
+            }
+          ],
+          "dirL":
+          [
+            {
+              "txt":"Jena, Zwätzen Schleife",
+              "flg":"2"
+            },
+            {
+              "txt":"Graitschen (b. Bürgel)",
+              "flg":"1"
+            },
+            {
+              "txt":"Steudnitz, REWE",
+              "flg":"1"
+            },
+            {
+              "txt":"Jena, Kunitz",
+              "flg":"1"
+            },
+            {
+              "txt":"Beutnitz",
+              "flg":"1"
+            },
+            {
+              "txt":"Camburg, Schießplatz",
+              "flg":"1"
+            }
+          ],
+          "lDrawStyleL":
+          [
+            {
+              "sIcoX":2,
+              "type":"DOT"
+            },
+            {
+              "type":"DOT"
+            },
+            {
+              "sIcoX":3,
+              "type":"SOLID",
               "bg":
               {
                 "r":227,
                 "g":7,
                 "b":20
               }
+            },
+            {
+              "type":"SOLID",
+              "bg":
+              {
+                "r":227,
+                "g":7,
+                "b":20
+              }
+            },
+            {
+              "sIcoX":7,
+              "type":"DOT"
+            },
+            {
+              "sIcoX":8,
+              "eIcoX":8,
+              "type":"SOLID",
+              "bg":
+              {
+                "r":227,
+                "g":7,
+                "b":20
+              }
+            },
+            {
+              "eIcoX":7,
+              "type":"DOT"
+            },
+            {
+              "sIcoX":9,
+              "type":"SOLID",
+              "bg":
+              {
+                "r":149,
+                "g":27,
+                "b":129
+              }
+            },
+            {
+              "type":"SOLID",
+              "bg":
+              {
+                "r":149,
+                "g":27,
+                "b":129
+              }
+            },
+            {
+              "sIcoX":11,
+              "eIcoX":11,
+              "type":"SOLID",
+              "bg":
+              {
+                "r":149,
+                "g":27,
+                "b":129
+              }
             }
           ],
-          "dirL":
+          "timeStyleL":
           [
             {
-              "txt":"Jena, Schlegelsberg",
-              "flg":"2"
+              "mode":"ABS"
             },
             {
-              "txt":"Jena, Rautal",
-              "flg":"1"
+              "mode":"DLT",
+              "fg":
+              {
+                "r":212,
+                "g":12,
+                "b":66
+              }
             },
             {
-              "txt":"Jena, Zwätzen Schleife",
-              "flg":"2"
+              "mode":"HIDE"
+            },
+            {
+              "mode":"ABS",
+              "icoX":12
             }
           ]
         },
@@ -1449,88 +857,147 @@
         [
           {
             "cid":"C-0",
-            "date":"20211205",
-            "dur":"001100",
+            "date":"20250127",
+            "dur":"000500",
+            "durS":"000500",
+            "durR":"000600",
             "chg":0,
             "sDays":
             {
-              "sDaysR":"Sa, So",
-              "sDaysI":"auch 24., 31. Dez",
-              "sDaysB":"060C183060C1870E0C183060C18306"
+              "sDaysR":"Mo - Fr",
+              "sDaysI":"nicht 18., 21. Apr, 1., 29. Mai, 9. Jun",
+              "sDaysB":"7CF9F224CF9F3E7CF9F3E7CF9F3E7CF9F3C3CE9F3E7CE9F1E7CF90"
             },
             "dep":
             {
               "locX":0,
-              "dInR":true,
-              "dTimeS":"192900",
+              "dTimeS":"144800",
+              "dTimeFS":
+              {
+                "styleX":0
+              },
               "type":"N"
             },
             "arr":
             {
-              "locX":9,
-              "aOutR":true,
-              "aTimeS":"194000",
+              "locX":7,
+              "aTimeS":"145300",
+              "aTimeR":"145400",
+              "aTimeFS":
+              {
+                "styleX":0
+              },
+              "aTimeFR":
+              {
+                "styleX":1,
+                "txtA":"1 Minuten später"
+              },
+              "aProgType":"PROGNOSED",
               "type":"N"
             },
             "secL":
             [
               {
                 "type":"WALK",
-                "icoX":3,
                 "dep":
                 {
                   "locX":0,
-                  "dInR":true,
-                  "dTimeS":"192900",
+                  "dTimeS":"144800",
+                  "dTimeFS":
+                  {
+                    "styleX":0
+                  },
                   "type":"N"
                 },
                 "arr":
                 {
                   "locX":1,
-                  "aOutR":true,
-                  "aTimeS":"193000",
+                  "aTimeS":"144900",
+                  "aTimeFS":
+                  {
+                    "styleX":0
+                  },
                   "type":"N"
                 },
                 "gis":
                 {
-                  "dist":77,
+                  "dist":92,
                   "durS":"000100",
-                  "ctx":"G|1|G@F|A=2@O=50.926947, 11.586987@X=11586987@Y=50926947@|A=1@O=Jena, Stadtzentrum Löbdergraben@X=11588057@Y=50926876@U=80@L=15316600@|5122021|192900|193000|bf|ft@0@2000@120@0@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§bt@0@2000@120@0@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§tf@$t@0@25000@120@1@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$§|||",
+                  "ctx":"G|1|G@F|A=2@O=50.926947, 11.586987@X=11586987@Y=50926947@a=128@|A=1@O=Jena, Stadtzentrum Löbdergraben@L=15316602@a=128@|27012025|144800|144900|bf|ft@0@1000@120@0@100@1@0@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§bt@0@1000@120@0@100@1@0@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§tf@$f@$f@$f@$f@$f@$§|||||",
+                  "gisPrvr":"E",
                   "getDescr":true,
-                  "getPoly":true
+                  "getPoly":true,
+                  "sumLDrawStyleX":0,
+                  "resLDrawStyleX":4,
+                  "prodX":0
                 }
               },
               {
                 "type":"JNY",
-                "icoX":5,
                 "dep":
                 {
                   "locX":1,
-                  "idx":7,
+                  "idx":31,
                   "dProdX":1,
-                  "dPlatfS":"4",
-                  "dInR":true,
-                  "dTimeS":"193000",
-                  "dTimeR":"193000",
+                  "dPltfS":
+                  {
+                    "type":"PL",
+                    "txt":"2"
+                  },
+                  "dPltfR":
+                  {
+                    "type":"PL",
+                    "txt":"2"
+                  },
+                  "dTimeS":"144900",
+                  "dTimeR":"145000",
+                  "dTimeFS":
+                  {
+                    "styleX":0
+                  },
+                  "dTimeFR":
+                  {
+                    "styleX":1,
+                    "txtA":"1 Minuten später"
+                  },
                   "dProgType":"PROGNOSED",
                   "type":"N"
                 },
                 "arr":
                 {
                   "locX":3,
-                  "idx":8,
+                  "idx":33,
                   "aProdX":1,
-                  "aOutR":true,
-                  "aTimeS":"193100",
-                  "aTimeR":"193100",
-                  "aProgType":"CALCULATED",
+                  "aPltfS":
+                  {
+                    "type":"PL",
+                    "txt":"2"
+                  },
+                  "aPltfR":
+                  {
+                    "type":"PL",
+                    "txt":"2"
+                  },
+                  "aTimeS":"145200",
+                  "aTimeR":"145300",
+                  "aTimeFS":
+                  {
+                    "styleX":0
+                  },
+                  "aTimeFR":
+                  {
+                    "styleX":1,
+                    "txtA":"1 Minuten später"
+                  },
+                  "aProgType":"PROGNOSED",
                   "type":"N"
                 },
                 "jny":
                 {
-                  "jid":"1|31443|21|80|5122021",
-                  "prodX":2,
-                  "dirTxt":"Jena, Schlegelsberg",
+                  "jid":"1|67739|24|80|27012025",
+                  "date":"20250127",
+                  "prodX":1,
+                  "dirTxt":"Jena, Zwätzen Schleife",
                   "dirFlg":"2",
                   "status":"P",
                   "isRchbl":true,
@@ -1538,24 +1005,71 @@
                   [
                     {
                       "locX":1,
-                      "idx":7,
-                      "dProdX":2,
-                      "dInR":true,
-                      "dTimeS":"193000",
-                      "dTimeR":"193000",
+                      "idx":31,
+                      "dProdX":1,
+                      "dTimeS":"144900",
+                      "dTimeR":"145000",
+                      "dTimeFS":
+                      {
+                        "styleX":0
+                      },
+                      "dTimeFR":
+                      {
+                        "styleX":1,
+                        "txtA":"1 Minuten später"
+                      },
                       "dProgType":"PROGNOSED",
-                      "dDirTxt":"Jena, Schlegelsberg",
+                      "dDirTxt":"Jena, Zwätzen Schleife",
                       "dDirFlg":"2",
                       "type":"N"
                     },
                     {
+                      "locX":5,
+                      "idx":32,
+                      "aProdX":1,
+                      "aTimeS":"145000",
+                      "aTimeR":"145100",
+                      "aTimeFS":
+                      {
+                        "styleX":0
+                      },
+                      "aTimeFR":
+                      {
+                        "styleX":1,
+                        "txtA":"1 Minuten später"
+                      },
+                      "aProgType":"PROGNOSED",
+                      "dProdX":1,
+                      "dTimeS":"145000",
+                      "dTimeR":"145100",
+                      "dTimeFS":
+                      {
+                        "styleX":0
+                      },
+                      "dTimeFR":
+                      {
+                        "styleX":1,
+                        "txtA":"1 Minuten später"
+                      },
+                      "dProgType":"PROGNOSED",
+                      "type":"N"
+                    },
+                    {
                       "locX":3,
-                      "idx":8,
-                      "aProdX":2,
-                      "aOutR":true,
-                      "aTimeS":"193100",
-                      "aTimeR":"193100",
-                      "aProgType":"CALCULATED",
+                      "idx":33,
+                      "aProdX":1,
+                      "aTimeS":"145200",
+                      "aTimeR":"145300",
+                      "aTimeFS":
+                      {
+                        "styleX":0
+                      },
+                      "aTimeFR":
+                      {
+                        "styleX":1,
+                        "txtA":"1 Minuten später"
+                      },
+                      "aProgType":"PROGNOSED",
                       "type":"N"
                     }
                   ],
@@ -1564,220 +1078,26 @@
                     "polyXL":
                     [
                       0
-                    ],
-                    "layerX":0,
-                    "crdSysX":0
+                    ]
                   },
                   "pos":
                   {
-                    "x":11584201,
-                    "y":50927514,
-                    "layerX":0,
-                    "crdSysX":0
+                    "x":11596732,
+                    "y":50896744
                   },
                   "freq":
                   {
-                    "minC":20,
-                    "maxC":60,
-                    "numC":4,
-                    "jnyL":
-                    [
-                      {
-                        "jid":"1|31443|22|80|5122021",
-                        "prodX":3,
-                        "dirTxt":"Jena, Schlegelsberg",
-                        "dirFlg":"2",
-                        "stopL":
-                        [
-                          {
-                            "locX":1,
-                            "idx":7,
-                            "dProdX":3,
-                            "dTimeS":"195000",
-                            "dDirTxt":"Jena, Schlegelsberg",
-                            "dDirFlg":"2",
-                            "type":"N"
-                          },
-                          {
-                            "locX":3,
-                            "idx":8,
-                            "aProdX":3,
-                            "aTimeS":"195100",
-                            "type":"N"
-                          }
-                        ],
-                        "ctxRecon":"T$A=1@O=Jena, Stadtzentrum Löbdergraben@L=15316600@a=128@$A=1@O=Jena, Steinweg@L=15302501@a=128@$202112051950$202112051951$Bus   14$$1$$$$$$",
-                        "subscr":"F",
-                        "prodL":
-                        [
-                          {
-                            "prodX":3,
-                            "fLocX":1,
-                            "tLocX":3,
-                            "fIdx":7,
-                            "tIdx":8
-                          }
-                        ],
-                        "dirL":
-                        [
-                          {
-                            "dirX":0,
-                            "fLocX":1,
-                            "tLocX":3,
-                            "fIdx":7,
-                            "tIdx":8
-                          }
-                        ]
-                      },
-                      {
-                        "jid":"1|31443|23|80|5122021",
-                        "prodX":4,
-                        "dirTxt":"Jena, Schlegelsberg",
-                        "dirFlg":"2",
-                        "stopL":
-                        [
-                          {
-                            "locX":1,
-                            "idx":7,
-                            "dProdX":4,
-                            "dTimeS":"201000",
-                            "dDirTxt":"Jena, Schlegelsberg",
-                            "dDirFlg":"2",
-                            "type":"N"
-                          },
-                          {
-                            "locX":3,
-                            "idx":8,
-                            "aProdX":4,
-                            "aTimeS":"201100",
-                            "type":"N"
-                          }
-                        ],
-                        "ctxRecon":"T$A=1@O=Jena, Stadtzentrum Löbdergraben@L=15316600@a=128@$A=1@O=Jena, Steinweg@L=15302501@a=128@$202112052010$202112052011$Bus   14$$1$$$$$$",
-                        "subscr":"F",
-                        "prodL":
-                        [
-                          {
-                            "prodX":4,
-                            "fLocX":1,
-                            "tLocX":3,
-                            "fIdx":7,
-                            "tIdx":8
-                          }
-                        ],
-                        "dirL":
-                        [
-                          {
-                            "dirX":0,
-                            "fLocX":1,
-                            "tLocX":3,
-                            "fIdx":7,
-                            "tIdx":8
-                          }
-                        ]
-                      },
-                      {
-                        "jid":"1|31439|0|80|5122021",
-                        "prodX":5,
-                        "dirTxt":"Jena, Schlegelsberg",
-                        "dirFlg":"2",
-                        "stopL":
-                        [
-                          {
-                            "locX":1,
-                            "idx":7,
-                            "dProdX":5,
-                            "dTimeS":"205100",
-                            "dDirTxt":"Jena, Schlegelsberg",
-                            "dDirFlg":"2",
-                            "type":"N"
-                          },
-                          {
-                            "locX":3,
-                            "idx":8,
-                            "aProdX":5,
-                            "aTimeS":"205200",
-                            "type":"N"
-                          }
-                        ],
-                        "ctxRecon":"T$A=1@O=Jena, Stadtzentrum Löbdergraben@L=15316600@a=128@$A=1@O=Jena, Steinweg@L=15302501@a=128@$202112052051$202112052052$Bus   14$$1$$$$$$",
-                        "subscr":"F",
-                        "prodL":
-                        [
-                          {
-                            "prodX":5,
-                            "fLocX":1,
-                            "tLocX":3,
-                            "fIdx":7,
-                            "tIdx":8
-                          }
-                        ],
-                        "dirL":
-                        [
-                          {
-                            "dirX":0,
-                            "fLocX":1,
-                            "tLocX":3,
-                            "fIdx":7,
-                            "tIdx":8
-                          }
-                        ]
-                      },
-                      {
-                        "jid":"1|31439|1|80|5122021",
-                        "prodX":6,
-                        "dirTxt":"Jena, Schlegelsberg",
-                        "dirFlg":"2",
-                        "stopL":
-                        [
-                          {
-                            "locX":1,
-                            "idx":7,
-                            "dProdX":6,
-                            "dTimeS":"215100",
-                            "dDirTxt":"Jena, Schlegelsberg",
-                            "dDirFlg":"2",
-                            "type":"N"
-                          },
-                          {
-                            "locX":3,
-                            "idx":8,
-                            "aProdX":6,
-                            "aTimeS":"215200",
-                            "type":"N"
-                          }
-                        ],
-                        "ctxRecon":"T$A=1@O=Jena, Stadtzentrum Löbdergraben@L=15316600@a=128@$A=1@O=Jena, Steinweg@L=15302501@a=128@$202112052151$202112052152$Bus   14$$1$$$$$$",
-                        "subscr":"F",
-                        "prodL":
-                        [
-                          {
-                            "prodX":6,
-                            "fLocX":1,
-                            "tLocX":3,
-                            "fIdx":7,
-                            "tIdx":8
-                          }
-                        ],
-                        "dirL":
-                        [
-                          {
-                            "dirX":0,
-                            "fLocX":1,
-                            "tLocX":3,
-                            "fIdx":7,
-                            "tIdx":8
-                          }
-                        ]
-                      }
-                    ]
+                    "minC":10,
+                    "maxC":10,
+                    "numC":13
                   },
-                  "ctxRecon":"T$A=1@O=Jena, Stadtzentrum Löbdergraben@L=15316600@a=128@$A=1@O=Jena, Steinweg@L=15302501@a=128@$202112051930$202112051931$Bus   14$$1$$$$$$",
+                  "ctxRecon":"T$A=1@O=Jena, Stadtzentrum Löbdergraben@L=15316602@a=128@$A=1@O=Jena, Spittelplatz@L=15301403@a=128@$202501271449$202501271452$Str    1$$1$$$$$$",
                   "msgL":
                   [
                     {
                       "type":"REM",
-                      "remX":3,
+                      "remX":0,
+                      "sty":"I",
                       "fLocX":1,
                       "tLocX":3,
                       "tagL":
@@ -1787,26 +1107,25 @@
                       "sort":818413568
                     },
                     {
-                      "type":"HIM",
-                      "himX":0,
-                      "fLocX":1,
-                      "tLocX":3,
+                      "type":"REM",
+                      "remX":1,
+                      "sty":"I",
                       "tagL":
                       [
-                        "RES_CON_HDR","RES_SEC_HDR_H3","SUM_CON_HDR"
+                        "RES_JNY_DTL_H3"
                       ],
-                      "sort":321002915
+                      "sort":147324928
                     }
                   ],
                   "subscr":"F",
                   "prodL":
                   [
                     {
-                      "prodX":2,
+                      "prodX":1,
                       "fLocX":1,
                       "tLocX":3,
-                      "fIdx":7,
-                      "tIdx":8
+                      "fIdx":31,
+                      "tIdx":33
                     }
                   ],
                   "dirL":
@@ -1815,44 +1134,70 @@
                       "dirX":0,
                       "fLocX":1,
                       "tLocX":3,
-                      "fIdx":7,
-                      "tIdx":8
+                      "fIdx":31,
+                      "tIdx":33
                     }
-                  ]
+                  ],
+                  "sumLDrawStyleX":2,
+                  "resLDrawStyleX":5,
+                  "trainStartDate":"20250127",
+                  "durS":"000300"
                 },
-                "minChg":"000900"
+                "minChg":"000100"
               },
               {
                 "type":"WALK",
-                "icoX":3,
                 "dep":
                 {
                   "locX":3,
-                  "dInR":true,
-                  "dTimeS":"193100",
+                  "dTimeS":"145200",
+                  "dTimeR":"145300",
+                  "dTimeFS":
+                  {
+                    "styleX":0
+                  },
+                  "dTimeFR":
+                  {
+                    "styleX":1,
+                    "txtA":"1 Minuten später"
+                  },
+                  "dProgType":"PROGNOSED",
                   "type":"N"
                 },
                 "arr":
                 {
-                  "locX":9,
-                  "aOutR":true,
-                  "aTimeS":"194000",
+                  "locX":7,
+                  "aTimeS":"145300",
+                  "aTimeR":"145400",
+                  "aTimeFS":
+                  {
+                    "styleX":0
+                  },
+                  "aTimeFR":
+                  {
+                    "styleX":1,
+                    "txtA":"1 Minuten später"
+                  },
+                  "aProgType":"PROGNOSED",
                   "type":"N"
                 },
                 "gis":
                 {
-                  "dist":708,
-                  "durS":"000900",
-                  "ctx":"G|1|G@F|A=1@O=Jena, Steinweg@X=11591959@Y=50928530@U=80@L=15302501@|A=2@O=50.933887, 11.590592@X=11590592@Y=50933887@|5122021|193100|194000|fb|ft@0@2000@120@0@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§bt@0@2000@120@0@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§tf@$t@0@25000@120@1@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$§|||",
+                  "dist":104,
+                  "durS":"000100",
+                  "ctx":"G|1|G@F|A=1@O=Jena, Spittelplatz@L=15301403@a=128@|A=2@O=50.933887, 11.590592@X=11590592@Y=50933887@a=128@|27012025|145200|145300|fb|ft@0@1000@120@0@100@1@0@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§bt@0@1000@120@0@100@1@0@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§tf@$f@$f@$f@$f@$f@$§|||||",
+                  "gisPrvr":"E",
                   "getDescr":true,
-                  "getPoly":true
+                  "getPoly":true,
+                  "sumLDrawStyleX":0,
+                  "resLDrawStyleX":6,
+                  "prodX":0
                 }
               }
             ],
-            "ctxRecon":"¶HKI¶G@F$A=2@O=50.926947, 11.586987@X=11586987@Y=50926947@u=0@a=128@$A=1@O=Jena, Stadtzentrum Löbdergraben@L=15316600@a=128@$202112051929$202112051930$$$1$$$$$$§T$A=1@O=Jena, Stadtzentrum Löbdergraben@L=15316600@a=128@$A=1@O=Jena, Steinweg@L=15302501@a=128@$202112051930$202112051931$Bus   14$$1$$$$$$§G@F$A=1@O=Jena, Steinweg@L=15302501@a=128@$A=2@O=50.933887, 11.590592@X=11590592@Y=50933887@u=0@a=128@$202112051931$202112051940$$$1$$$$$$¶GP¶ft@0@2000@120@0@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§bt@0@2000@120@0@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§tf@$t@0@25000@120@1@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$§¶KRCC¶#VE#1#",
             "freq":
             {
-              "minC":20
+              "minC":10
             },
             "trfRes":
             {
@@ -1860,265 +1205,446 @@
               "fareSetL":
               [
                 {
-                  "name":"unset",
-                  "desc":"von: Jena, Stadtzentrum Löbdergraben [Zone: 30 Jena] nach: Jena, Steinweg [Zone: 30 Jena]",
+                  "name":"Preisübersicht",
+                  "desc":"von: Jena, Stadtzentrum LÃ¶bdergraben [Zone: 30 Jena] nach: Jena, Spittelplatz [Zone: 30 Jena]",
                   "fareL":
                   [
                     {
                       "name":"Einzelfahrt",
-                      "prc":220,
-                      "cur":"EUR",
-                      "shpCtx":"eyJWTVQiOiJQS01UQVJJRkYiLCJwcm9kdWt0IjoiMTQiLCJwcm9kdWt0dGV4dCI6IkVpbnplbGZhaHJ0IiwiZGJ6aWVsaGFsdGVzdGVsbGVfbmFtZSI6IkplbmEsIFN0ZWlud2VnIiwiemllbHpvbmV0ZXh0IjoiSmVuYSIsImRic3RhcnRoYWx0ZXN0ZWxsZV9pZCI6IjE1MzE2NiIsImdlYmlldHNwYXJhbWV0ZXJfbnIiOiIxMyIsImRiendpc2NoZW56b25lbiI6IjMwIiwiYW56ZWlnZXRleHR2aWEiOiItLS0iLCJyZW1hcmsiOiJDaXR5IEplbmEiLCJkYnZpYXRleHQiOiItLS0iLCJlZm1wcm9kdWt0X25yIjoiMTEiLCJ2aWF0ZXh0LjAiOiItLS0iLCJkYnppZWxoYWx0ZXN0ZWxsZV9pZCI6IjE1MzAyNSIsInN0YXJ0em9uZSI6IjMwIiwib3V0cHV0Y2hhbm5lbCI6IkksTSxXLEgsRCIsImRic3RhcnRoYWx0ZXN0ZWxsZV9uYW1lIjoiSmVuYSwgU3RhZHR6ZW50cnVtIEzDtmJkZXJncmFiZW4iLCJzdGFydHpvbmV0ZXh0IjoiSmVuYSIsInZpYS4wIjoiMSIsInRhcmlmZmxldmVsIjoiMSIsInppZWx6b25lIjoiMzAifQ=="
+                      "fSecRefX":1,
+                      "tSecRefX":1,
+                      "price":
+                      {
+                        "amount":270,
+                        "currency":"EUR"
+                      }
                     },
                     {
                       "name":"Kinder-Einzelfahrt",
-                      "prc":170,
-                      "cur":"EUR",
-                      "shpCtx":"eyJWTVQiOiJQS01UQVJJRkYiLCJwcm9kdWt0IjoiMTYiLCJwcm9kdWt0dGV4dCI6IktpbmRlci1FaW56ZWxmYWhydCIsImRiemllbGhhbHRlc3RlbGxlX25hbWUiOiJKZW5hLCBTdGVpbndlZyIsInppZWx6b25ldGV4dCI6IkplbmEiLCJkYnN0YXJ0aGFsdGVzdGVsbGVfaWQiOiIxNTMxNjYiLCJnZWJpZXRzcGFyYW1ldGVyX25yIjoiMTMiLCJkYnp3aXNjaGVuem9uZW4iOiIzMCIsImFuemVpZ2V0ZXh0dmlhIjoiLS0tIiwicmVtYXJrIjoiQ2l0eSBKZW5hIiwiZGJ2aWF0ZXh0IjoiLS0tIiwiZWZtcHJvZHVrdF9uciI6IjEyIiwidmlhdGV4dC4wIjoiLS0tIiwiZGJ6aWVsaGFsdGVzdGVsbGVfaWQiOiIxNTMwMjUiLCJzdGFydHpvbmUiOiIzMCIsIm91dHB1dGNoYW5uZWwiOiJJLE0sVyxILEQiLCJkYnN0YXJ0aGFsdGVzdGVsbGVfbmFtZSI6IkplbmEsIFN0YWR0emVudHJ1bSBMw7ZiZGVyZ3JhYmVuIiwic3RhcnR6b25ldGV4dCI6IkplbmEiLCJ2aWEuMCI6IjEiLCJ0YXJpZmZsZXZlbCI6IjEiLCJ6aWVsem9uZSI6IjMwIn0="
-                    },
-                    {
-                      "name":"4-Fahrtenkarte",
-                      "prc":790,
-                      "cur":"EUR",
-                      "shpCtx":"eyJWTVQiOiJQS01UQVJJRkYiLCJwcm9kdWt0IjoiMTE1MTAiLCJwcm9kdWt0dGV4dCI6IjQtRmFocnRlbmthcnRlIiwiZGJ6aWVsaGFsdGVzdGVsbGVfbmFtZSI6IkplbmEsIFN0ZWlud2VnIiwiemllbHpvbmV0ZXh0IjoiSmVuYSIsImRic3RhcnRoYWx0ZXN0ZWxsZV9pZCI6IjE1MzE2NiIsImdlYmlldHNwYXJhbWV0ZXJfbnIiOiIxMyIsImRiendpc2NoZW56b25lbiI6IjMwIiwiYW56ZWlnZXRleHR2aWEiOiItLS0iLCJyZW1hcmsiOiJDaXR5IEplbmEiLCJkYnZpYXRleHQiOiItLS0iLCJlZm1wcm9kdWt0X25yIjoiMTUiLCJ2aWF0ZXh0LjAiOiItLS0iLCJkYnppZWxoYWx0ZXN0ZWxsZV9pZCI6IjE1MzAyNSIsInN0YXJ0em9uZSI6IjMwIiwib3V0cHV0Y2hhbm5lbCI6IkksTSxILEQiLCJkYnN0YXJ0aGFsdGVzdGVsbGVfbmFtZSI6IkplbmEsIFN0YWR0emVudHJ1bSBMw7ZiZGVyZ3JhYmVuIiwic3RhcnR6b25ldGV4dCI6IkplbmEiLCJ2aWEuMCI6IjEiLCJ0YXJpZmZsZXZlbCI6IjEiLCJ6aWVsem9uZSI6IjMwIn0="
+                      "fSecRefX":1,
+                      "tSecRefX":1,
+                      "price":
+                      {
+                        "amount":180,
+                        "currency":"EUR"
+                      }
                     },
                     {
                       "name":"Kinder-4-Fahrtenkarte",
-                      "prc":610,
-                      "cur":"EUR",
-                      "shpCtx":"eyJWTVQiOiJQS01UQVJJRkYiLCJwcm9kdWt0IjoiMTE2MTAiLCJwcm9kdWt0dGV4dCI6IktpbmRlci00LUZhaHJ0ZW5rYXJ0ZSIsImRiemllbGhhbHRlc3RlbGxlX25hbWUiOiJKZW5hLCBTdGVpbndlZyIsInppZWx6b25ldGV4dCI6IkplbmEiLCJkYnN0YXJ0aGFsdGVzdGVsbGVfaWQiOiIxNTMxNjYiLCJnZWJpZXRzcGFyYW1ldGVyX25yIjoiMTMiLCJkYnp3aXNjaGVuem9uZW4iOiIzMCIsImFuemVpZ2V0ZXh0dmlhIjoiLS0tIiwicmVtYXJrIjoiQ2l0eSBKZW5hIiwiZGJ2aWF0ZXh0IjoiLS0tIiwiZWZtcHJvZHVrdF9uciI6IjE2IiwidmlhdGV4dC4wIjoiLS0tIiwiZGJ6aWVsaGFsdGVzdGVsbGVfaWQiOiIxNTMwMjUiLCJzdGFydHpvbmUiOiIzMCIsIm91dHB1dGNoYW5uZWwiOiJJLE0sSCxEIiwiZGJzdGFydGhhbHRlc3RlbGxlX25hbWUiOiJKZW5hLCBTdGFkdHplbnRydW0gTMO2YmRlcmdyYWJlbiIsInN0YXJ0em9uZXRleHQiOiJKZW5hIiwidmlhLjAiOiIxIiwidGFyaWZmbGV2ZWwiOiIxIiwiemllbHpvbmUiOiIzMCJ9"
+                      "fSecRefX":1,
+                      "tSecRefX":1,
+                      "price":
+                      {
+                        "amount":650,
+                        "currency":"EUR"
+                      }
+                    },
+                    {
+                      "name":"4-Fahrtenkarte",
+                      "fSecRefX":1,
+                      "tSecRefX":1,
+                      "price":
+                      {
+                        "amount":970,
+                        "currency":"EUR"
+                      }
                     },
                     {
                       "name":"VMT-Hopper-Ticket einfache Fahrt",
-                      "prc":610,
-                      "cur":"EUR",
-                      "shpCtx":"eyJWTVQiOiJQS01UQVJJRkYiLCJwcm9kdWt0IjoiODYyIiwicHJvZHVrdHRleHQiOiJWTVQtSG9wcGVyLVRpY2tldCBlaW5mYWNoZSBGYWhydCIsImRiemllbGhhbHRlc3RlbGxlX25hbWUiOiJKZW5hLCBTdGVpbndlZyIsInppZWx6b25ldGV4dCI6IkplbmEiLCJkYnN0YXJ0aGFsdGVzdGVsbGVfaWQiOiIxNTMxNjYiLCJnZWJpZXRzcGFyYW1ldGVyX25yIjoiMTMiLCJkYnp3aXNjaGVuem9uZW4iOiIzMCIsImFuemVpZ2V0ZXh0dmlhIjoiLS0tIiwicmVtYXJrIjoiQ2l0eSBKZW5hIiwiZGJ2aWF0ZXh0IjoiLS0tIiwiZWZtcHJvZHVrdF9uciI6IjczIiwidmlhdGV4dC4wIjoiLS0tIiwiZGJ6aWVsaGFsdGVzdGVsbGVfaWQiOiIxNTMwMjUiLCJzdGFydHpvbmUiOiIzMCIsIm91dHB1dGNoYW5uZWwiOiJJLE0sSCxEIiwiZGJzdGFydGhhbHRlc3RlbGxlX25hbWUiOiJKZW5hLCBTdGFkdHplbnRydW0gTMO2YmRlcmdyYWJlbiIsInN0YXJ0em9uZXRleHQiOiJKZW5hIiwidmlhLjAiOiIxIiwidGFyaWZmbGV2ZWwiOiIxIiwiemllbHpvbmUiOiIzMCJ9"
+                      "fSecRefX":1,
+                      "tSecRefX":1,
+                      "price":
+                      {
+                        "amount":740,
+                        "currency":"EUR"
+                      }
                     },
                     {
                       "name":"VMT-Hopper-Ticket Hin- und Rückfahrt",
-                      "prc":990,
-                      "cur":"EUR",
-                      "shpCtx":"eyJWTVQiOiJQS01UQVJJRkYiLCJwcm9kdWt0IjoiODY2IiwicHJvZHVrdHRleHQiOiJWTVQtSG9wcGVyLVRpY2tldCBIaW4tIHVuZCBSw7xja2ZhaHJ0IiwiZGJ6aWVsaGFsdGVzdGVsbGVfbmFtZSI6IkplbmEsIFN0ZWlud2VnIiwiemllbHpvbmV0ZXh0IjoiSmVuYSIsImRic3RhcnRoYWx0ZXN0ZWxsZV9pZCI6IjE1MzE2NiIsImdlYmlldHNwYXJhbWV0ZXJfbnIiOiIxMyIsImRiendpc2NoZW56b25lbiI6IjMwIiwiYW56ZWlnZXRleHR2aWEiOiItLS0iLCJyZW1hcmsiOiJDaXR5IEplbmEiLCJkYnZpYXRleHQiOiItLS0iLCJlZm1wcm9kdWt0X25yIjoiNzQiLCJ2aWF0ZXh0LjAiOiItLS0iLCJkYnppZWxoYWx0ZXN0ZWxsZV9pZCI6IjE1MzAyNSIsInN0YXJ0em9uZSI6IjMwIiwib3V0cHV0Y2hhbm5lbCI6IkksTSxILEQiLCJkYnN0YXJ0aGFsdGVzdGVsbGVfbmFtZSI6IkplbmEsIFN0YWR0emVudHJ1bSBMw7ZiZGVyZ3JhYmVuIiwic3RhcnR6b25ldGV4dCI6IkplbmEiLCJ2aWEuMCI6IjEiLCJ0YXJpZmZsZXZlbCI6IjEiLCJ6aWVsem9uZSI6IjMwIn0="
+                      "fSecRefX":1,
+                      "tSecRefX":1,
+                      "price":
+                      {
+                        "amount":1210,
+                        "currency":"EUR"
+                      }
                     },
                     {
                       "name":"Tageskarte",
-                      "prc":560,
-                      "cur":"EUR",
-                      "shpCtx":"eyJWTVQiOiJQS01UQVJJRkYiLCJwcm9kdWt0IjoiNjQiLCJwcm9kdWt0dGV4dCI6IlRhZ2Vza2FydGUiLCJkYnppZWxoYWx0ZXN0ZWxsZV9uYW1lIjoiSmVuYSwgU3RlaW53ZWciLCJ6aWVsem9uZXRleHQiOiJKZW5hIiwiZGJzdGFydGhhbHRlc3RlbGxlX2lkIjoiMTUzMTY2IiwiZ2ViaWV0c3BhcmFtZXRlcl9uciI6IjEzIiwiZGJ6d2lzY2hlbnpvbmVuIjoiMzAiLCJhbnplaWdldGV4dHZpYSI6Ii0tLSIsInJlbWFyayI6IkNpdHkgSmVuYSIsImRidmlhdGV4dCI6Ii0tLSIsImVmbXByb2R1a3RfbnIiOiIyMSIsInZpYXRleHQuMCI6Ii0tLSIsImRiemllbGhhbHRlc3RlbGxlX2lkIjoiMTUzMDI1Iiwic3RhcnR6b25lIjoiMzAiLCJvdXRwdXRjaGFubmVsIjoiSSxNLFcsSCxEIiwiZGJzdGFydGhhbHRlc3RlbGxlX25hbWUiOiJKZW5hLCBTdGFkdHplbnRydW0gTMO2YmRlcmdyYWJlbiIsInN0YXJ0em9uZXRleHQiOiJKZW5hIiwidmlhLjAiOiIxIiwidGFyaWZmbGV2ZWwiOiIxIiwiemllbHpvbmUiOiIzMCJ9"
+                      "fSecRefX":1,
+                      "tSecRefX":1,
+                      "price":
+                      {
+                        "amount":690,
+                        "currency":"EUR"
+                      }
                     },
                     {
                       "name":"Gruppentageskarte",
-                      "prc":1100,
-                      "cur":"EUR",
-                      "shpCtx":"eyJWTVQiOiJQS01UQVJJRkYiLCJwcm9kdWt0IjoiODAiLCJwcm9kdWt0dGV4dCI6IkdydXBwZW50YWdlc2thcnRlIiwiZGJ6aWVsaGFsdGVzdGVsbGVfbmFtZSI6IkplbmEsIFN0ZWlud2VnIiwiemllbHpvbmV0ZXh0IjoiSmVuYSIsImRic3RhcnRoYWx0ZXN0ZWxsZV9pZCI6IjE1MzE2NiIsImdlYmlldHNwYXJhbWV0ZXJfbnIiOiIxMyIsImRiendpc2NoZW56b25lbiI6IjMwIiwiYW56ZWlnZXRleHR2aWEiOiItLS0iLCJyZW1hcmsiOiJDaXR5IEplbmEiLCJkYnZpYXRleHQiOiItLS0iLCJlZm1wcm9kdWt0X25yIjoiMjIiLCJ2aWF0ZXh0LjAiOiItLS0iLCJkYnppZWxoYWx0ZXN0ZWxsZV9pZCI6IjE1MzAyNSIsInN0YXJ0em9uZSI6IjMwIiwib3V0cHV0Y2hhbm5lbCI6IkksTSxXLEgsRCIsImRic3RhcnRoYWx0ZXN0ZWxsZV9uYW1lIjoiSmVuYSwgU3RhZHR6ZW50cnVtIEzDtmJkZXJncmFiZW4iLCJzdGFydHpvbmV0ZXh0IjoiSmVuYSIsInZpYS4wIjoiMSIsInRhcmlmZmxldmVsIjoiMSIsInppZWx6b25lIjoiMzAifQ=="
-                    },
-                    {
-                      "name":"Berechtigung CityFlex 25",
-                      "prc":3600,
-                      "cur":"EUR",
-                      "shpCtx":"eyJWTVQiOiJQS01UQVJJRkYiLCJwcm9kdWt0IjoiMjE3IiwicHJvZHVrdHRleHQiOiJCZXJlY2h0aWd1bmcgQ2l0eUZsZXggMjUiLCJkYnppZWxoYWx0ZXN0ZWxsZV9uYW1lIjoiSmVuYSwgU3RlaW53ZWciLCJ6aWVsem9uZXRleHQiOiJKZW5hIiwiZGJzdGFydGhhbHRlc3RlbGxlX2lkIjoiMTUzMTY2IiwiZ2ViaWV0c3BhcmFtZXRlcl9uciI6Ijk5IiwiZGJ6d2lzY2hlbnpvbmVuIjoiMzAiLCJhbnplaWdldGV4dHZpYSI6Ii0tLSIsInJlbWFyayI6IkNpdHkgSmVuYSIsImRidmlhdGV4dCI6Ii0tLSIsImVmbXByb2R1a3RfbnIiOiIzMyIsInZpYXRleHQuMCI6Ii0tLSIsImRiemllbGhhbHRlc3RlbGxlX2lkIjoiMTUzMDI1Iiwic3RhcnR6b25lIjoiMzAiLCJvdXRwdXRjaGFubmVsIjoiTSxILEQiLCJkYnN0YXJ0aGFsdGVzdGVsbGVfbmFtZSI6IkplbmEsIFN0YWR0emVudHJ1bSBMw7ZiZGVyZ3JhYmVuIiwic3RhcnR6b25ldGV4dCI6IkplbmEiLCJ2aWEuMCI6IjEiLCJ0YXJpZmZsZXZlbCI6IjEiLCJ6aWVsem9uZSI6IjMwIn0="
-                    },
-                    {
-                      "name":"Einzelfahrt CityFlex 25",
-                      "prc":165,
-                      "cur":"EUR",
-                      "shpCtx":"eyJWTVQiOiJQS01UQVJJRkYiLCJwcm9kdWt0IjoiMjA5IiwicHJvZHVrdHRleHQiOiJFaW56ZWxmYWhydCBDaXR5RmxleCAyNSIsImRiemllbGhhbHRlc3RlbGxlX25hbWUiOiJKZW5hLCBTdGVpbndlZyIsInppZWx6b25ldGV4dCI6IkplbmEiLCJkYnN0YXJ0aGFsdGVzdGVsbGVfaWQiOiIxNTMxNjYiLCJnZWJpZXRzcGFyYW1ldGVyX25yIjoiMTMiLCJkYnp3aXNjaGVuem9uZW4iOiIzMCIsImFuemVpZ2V0ZXh0dmlhIjoiLS0tIiwicmVtYXJrIjoiQ2l0eSBKZW5hIiwiZGJ2aWF0ZXh0IjoiLS0tIiwiZWZtcHJvZHVrdF9uciI6IjM0IiwidmlhdGV4dC4wIjoiLS0tIiwiZGJ6aWVsaGFsdGVzdGVsbGVfaWQiOiIxNTMwMjUiLCJzdGFydHpvbmUiOiIzMCIsIm91dHB1dGNoYW5uZWwiOiJNLEgsRCIsImRic3RhcnRoYWx0ZXN0ZWxsZV9uYW1lIjoiSmVuYSwgU3RhZHR6ZW50cnVtIEzDtmJkZXJncmFiZW4iLCJzdGFydHpvbmV0ZXh0IjoiSmVuYSIsInZpYS4wIjoiMSIsInRhcmlmZmxldmVsIjoiMSIsInppZWx6b25lIjoiMzAifQ=="
-                    },
-                    {
-                      "name":"Kinder-Einzelfahrt CityFlex 25",
-                      "prc":128,
-                      "cur":"EUR",
-                      "shpCtx":"eyJWTVQiOiJQS01UQVJJRkYiLCJwcm9kdWt0IjoiMjExIiwicHJvZHVrdHRleHQiOiJLaW5kZXItRWluemVsZmFocnQgQ2l0eUZsZXggMjUiLCJkYnppZWxoYWx0ZXN0ZWxsZV9uYW1lIjoiSmVuYSwgU3RlaW53ZWciLCJ6aWVsem9uZXRleHQiOiJKZW5hIiwiZGJzdGFydGhhbHRlc3RlbGxlX2lkIjoiMTUzMTY2IiwiZ2ViaWV0c3BhcmFtZXRlcl9uciI6IjEzIiwiZGJ6d2lzY2hlbnpvbmVuIjoiMzAiLCJhbnplaWdldGV4dHZpYSI6Ii0tLSIsInJlbWFyayI6IkNpdHkgSmVuYSIsImRidmlhdGV4dCI6Ii0tLSIsImVmbXByb2R1a3RfbnIiOiIzNSIsInZpYXRleHQuMCI6Ii0tLSIsImRiemllbGhhbHRlc3RlbGxlX2lkIjoiMTUzMDI1Iiwic3RhcnR6b25lIjoiMzAiLCJvdXRwdXRjaGFubmVsIjoiTSxILEQiLCJkYnN0YXJ0aGFsdGVzdGVsbGVfbmFtZSI6IkplbmEsIFN0YWR0emVudHJ1bSBMw7ZiZGVyZ3JhYmVuIiwic3RhcnR6b25ldGV4dCI6IkplbmEiLCJ2aWEuMCI6IjEiLCJ0YXJpZmZsZXZlbCI6IjEiLCJ6aWVsem9uZSI6IjMwIn0="
+                      "fSecRefX":1,
+                      "tSecRefX":1,
+                      "price":
+                      {
+                        "amount":1350,
+                        "currency":"EUR"
+                      }
                     },
                     {
                       "name":"Wochenkarte",
-                      "prc":2020,
-                      "cur":"EUR"
+                      "fSecRefX":1,
+                      "tSecRefX":1,
+                      "price":
+                      {
+                        "amount":2470,
+                        "currency":"EUR"
+                      }
                     },
                     {
                       "name":"Wochenkarte Schüler/Azubi",
-                      "prc":1520,
-                      "cur":"EUR"
+                      "fSecRefX":1,
+                      "tSecRefX":1,
+                      "price":
+                      {
+                        "amount":1860,
+                        "currency":"EUR"
+                      }
                     },
                     {
                       "name":"Monatskarte",
-                      "prc":6340,
-                      "cur":"EUR"
+                      "fSecRefX":1,
+                      "tSecRefX":1,
+                      "price":
+                      {
+                        "amount":7740,
+                        "currency":"EUR"
+                      }
                     },
                     {
                       "name":"Monatskarte Schüler/Azubi",
-                      "prc":4760,
-                      "cur":"EUR"
+                      "fSecRefX":1,
+                      "tSecRefX":1,
+                      "price":
+                      {
+                        "amount":5810,
+                        "currency":"EUR"
+                      }
                     },
                     {
                       "name":"Abo Plus (persönlich)",
-                      "prc":5710,
-                      "cur":"EUR"
+                      "fSecRefX":1,
+                      "tSecRefX":1,
+                      "price":
+                      {
+                        "amount":6970,
+                        "currency":"EUR"
+                      }
                     },
                     {
                       "name":"Abo Plus (übertragbar)",
-                      "prc":5710,
-                      "cur":"EUR"
+                      "fSecRefX":1,
+                      "tSecRefX":1,
+                      "price":
+                      {
+                        "amount":6970,
+                        "currency":"EUR"
+                      }
                     },
                     {
                       "name":"Abo Solo",
-                      "prc":5180,
-                      "cur":"EUR"
+                      "fSecRefX":1,
+                      "tSecRefX":1,
+                      "price":
+                      {
+                        "amount":6320,
+                        "currency":"EUR"
+                      }
                     },
                     {
                       "name":"Abo Schüler/Azubi",
-                      "prc":4240,
-                      "cur":"EUR"
+                      "fSecRefX":1,
+                      "tSecRefX":1,
+                      "price":
+                      {
+                        "amount":5180,
+                        "currency":"EUR"
+                      }
                     },
                     {
                       "name":"Hunde-/Fahrradkarte",
-                      "prc":170,
-                      "cur":"EUR",
-                      "shpCtx":"eyJWTVQiOiJQS01UQVJJRkYiLCJwcm9kdWt0IjoiOTQiLCJwcm9kdWt0dGV4dCI6Ikh1bmRlLS9GYWhycmFka2FydGUiLCJkYnppZWxoYWx0ZXN0ZWxsZV9uYW1lIjoiSmVuYSwgU3RlaW53ZWciLCJ6aWVsem9uZXRleHQiOiJKZW5hIiwiZGJzdGFydGhhbHRlc3RlbGxlX2lkIjoiMTUzMTY2IiwiZ2ViaWV0c3BhcmFtZXRlcl9uciI6IjEzIiwiZGJ6d2lzY2hlbnpvbmVuIjoiMzAiLCJhbnplaWdldGV4dHZpYSI6Ii0tLSIsInJlbWFyayI6IkNpdHkgSmVuYSIsImRidmlhdGV4dCI6Ii0tLSIsImVmbXByb2R1a3RfbnIiOiI2NyIsInZpYXRleHQuMCI6Ii0tLSIsImRiemllbGhhbHRlc3RlbGxlX2lkIjoiMTUzMDI1Iiwic3RhcnR6b25lIjoiMzAiLCJvdXRwdXRjaGFubmVsIjoiSSxNLFcsSCxEIiwiZGJzdGFydGhhbHRlc3RlbGxlX25hbWUiOiJKZW5hLCBTdGFkdHplbnRydW0gTMO2YmRlcmdyYWJlbiIsInN0YXJ0em9uZXRleHQiOiJKZW5hIiwidmlhLjAiOiIxIiwidGFyaWZmbGV2ZWwiOiIxIiwiemllbHpvbmUiOiIzMCJ9"
+                      "fSecRefX":1,
+                      "tSecRefX":1,
+                      "price":
+                      {
+                        "amount":210,
+                        "currency":"EUR"
+                      }
+                    },
+                    {
+                      "name":"Deutschlandticket",
+                      "fSecRefX":1,
+                      "tSecRefX":1,
+                      "price":
+                      {
+                        "amount":5800,
+                        "currency":"EUR"
+                      }
+                    },
+                    {
+                      "name":"Einzelfahrt mit 10% Rabatt",
+                      "fSecRefX":1,
+                      "tSecRefX":1,
+                      "price":
+                      {
+                        "amount":243,
+                        "currency":"EUR"
+                      }
+                    },
+                    {
+                      "name":"Kinder-Einzelfahrt mit 10% Rabatt",
+                      "fSecRefX":1,
+                      "tSecRefX":1,
+                      "price":
+                      {
+                        "amount":162,
+                        "currency":"EUR"
+                      }
                     }
                   ],
-                  "fSecRefX":0,
-                  "tSecRefX":2
+                  "fSecRefX":1,
+                  "tSecRefX":1,
+                  "msgL":
+                  [
+                    {
+                      "type":"REM",
+                      "remX":2,
+                      "sty":"I",
+                      "dspl":"EXP",
+                      "tagL":
+                      [
+                        "RES_TRF_FSET_HDR_H3"
+                      ],
+                      "sort":818413568
+                    }
+                  ]
                 }
-              ]
+              ],
+              "totalPrice":
+              {
+                "amount":270,
+                "currency":"EUR"
+              },
+              "extContActionBar":
+              {
+                "text":"Preise",
+                "content":
+                {
+                  "type":"APP_CTX",
+                  "content":"VGFyaWZmT3ZlcnZpZXdTY3JlZW4="
+                }
+              },
+              "extContOverview":
+              {
+                "text":"Tarifübersicht anzeigen",
+                "content":
+                {
+                  "type":"APP_CTX",
+                  "content":"VGFyaWZmT3ZlcnZpZXdTY3JlZW4="
+                }
+              }
             },
-            "ovwTrfRefL":
+            "msgL":
             [
               {
-                "type":"F",
-                "fareSetX":0,
-                "fareX":0
+                "type":"REM",
+                "remX":1,
+                "sty":"I",
+                "tagL":
+                [
+                  "SUM_CON_HDR_L","RES_GLB_HDR_L"
+                ],
+                "sort":147324928
               }
             ],
             "conSubscr":"P",
             "recState":"U",
-            "cksum":"eb92e3f4_3",
-            "cksumDti":"adba5274_3"
+            "cksum":"4f444756_3",
+            "cksumDti":"35f82b3a_3",
+            "intvlSubscr":"P",
+            "originType":"INITIAL",
+            "recon":
+            {
+              "ctx":"¶HKI¶G@F$A=2@O=50.926947, 11.586987@X=11586987@Y=50926947@a=128@$A=1@O=Jena, Stadtzentrum Löbdergraben@L=15316602@a=128@$202501271448$202501271449$$$1$$$$$$§T$A=1@O=Jena, Stadtzentrum Löbdergraben@L=15316602@a=128@$A=1@O=Jena, Spittelplatz@L=15301403@a=128@$202501271449$202501271452$Str    1$$1$$$$$$§G@F$A=1@O=Jena, Spittelplatz@L=15301403@a=128@$A=2@O=50.933887, 11.590592@X=11590592@Y=50933887@a=128@$202501271452$202501271453$$$1$$$$$$¶GP¶ft@0@1000@120@0@100@1@0@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§bt@0@1000@120@0@100@1@0@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§tf@$f@$f@$f@$f@$f@$§¶KC¶#VE#2#CF#99#CA#0#CM#0#SICT#0#AM#49#AM2#0#RT#4#¶KRCC¶#VE#1#"
+            }
           },
           {
             "cid":"C-1",
-            "date":"20211205",
-            "dur":"000700",
+            "date":"20250127",
+            "dur":"000900",
+            "durS":"000900",
+            "durR":"000900",
             "chg":0,
             "sDays":
             {
-              "sDaysR":"Sa, So",
-              "sDaysI":"auch 24., 31. Dez",
-              "sDaysB":"060C183060C1870E0C183060C18306"
+              "sDaysR":"Mo - Fr",
+              "sDaysI":"nicht 3. bis 7. Feb 2025, 7. bis 21. Apr 2025, 1., 29., 30. Mai, 9., 30. Jun",
+              "sDaysB":"7CF9F0000F9F3E7C01F3E7CF9F3E7CF80003CE9F3E7CE1F1E7CF80"
             },
             "dep":
             {
               "locX":0,
-              "dInR":true,
-              "dTimeS":"193700",
+              "dTimeS":"145200",
+              "dTimeFS":
+              {
+                "styleX":0
+              },
               "type":"N"
             },
             "arr":
             {
-              "locX":9,
-              "aOutR":true,
-              "aTimeS":"194400",
+              "locX":7,
+              "aTimeS":"150100",
+              "aTimeFS":
+              {
+                "styleX":0
+              },
               "type":"N"
             },
             "secL":
             [
               {
                 "type":"WALK",
-                "icoX":3,
                 "dep":
                 {
                   "locX":0,
-                  "dInR":true,
-                  "dTimeS":"193700",
+                  "dTimeS":"145200",
+                  "dTimeFS":
+                  {
+                    "styleX":0
+                  },
                   "type":"N"
                 },
                 "arr":
                 {
-                  "locX":1,
-                  "aOutR":true,
-                  "aTimeS":"193800",
+                  "locX":8,
+                  "aTimeS":"145500",
+                  "aTimeFS":
+                  {
+                    "styleX":0
+                  },
                   "type":"N"
                 },
                 "gis":
                 {
-                  "dist":77,
-                  "durS":"000100",
-                  "ctx":"G|1|G@F|A=2@O=50.926947, 11.586987@X=11586987@Y=50926947@|A=1@O=Jena, Stadtzentrum Löbdergraben@X=11588057@Y=50926876@U=80@L=15316600@|5122021|193700|193800|bf|ft@0@2000@120@0@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§bt@0@2000@120@0@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§tf@$t@0@25000@120@1@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$§|||",
+                  "dist":220,
+                  "durS":"000300",
+                  "ctx":"G|1|G@F|A=2@O=50.926947, 11.586987@X=11586987@Y=50926947@a=128@|A=1@O=Jena, Busbahnhof@L=15300403@a=128@|27012025|145200|145500|bf|ft@0@1000@120@0@100@1@0@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§bt@0@1000@120@0@100@1@0@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§tf@$f@$f@$f@$f@$f@$§|||||",
+                  "gisPrvr":"E",
                   "getDescr":true,
-                  "getPoly":true
+                  "getPoly":true,
+                  "sumLDrawStyleX":0,
+                  "resLDrawStyleX":4,
+                  "prodX":0
                 }
               },
               {
                 "type":"JNY",
-                "icoX":5,
                 "dep":
                 {
-                  "locX":1,
-                  "idx":3,
-                  "dProdX":7,
-                  "dPlatfS":"4",
-                  "dInR":true,
-                  "dTimeS":"193800",
-                  "dTimeR":"193800",
+                  "locX":8,
+                  "idx":0,
+                  "dProdX":2,
+                  "dPltfS":
+                  {
+                    "type":"ST",
+                    "txt":"4"
+                  },
+                  "dPltfR":
+                  {
+                    "type":"ST",
+                    "txt":"4"
+                  },
+                  "dTimeS":"145500",
+                  "dTimeFS":
+                  {
+                    "styleX":0
+                  },
                   "dProgType":"PROGNOSED",
                   "type":"N"
                 },
                 "arr":
                 {
                   "locX":10,
-                  "idx":5,
-                  "aProdX":7,
-                  "aOutR":true,
-                  "aTimeS":"194300",
-                  "aTimeR":"194300",
+                  "idx":2,
+                  "aProdX":2,
+                  "aPltfS":
+                  {
+                    "type":"ST",
+                    "txt":"4"
+                  },
+                  "aPltfR":
+                  {
+                    "type":"ST",
+                    "txt":"4"
+                  },
+                  "aTimeS":"150000",
+                  "aTimeFS":
+                  {
+                    "styleX":0
+                  },
                   "aProgType":"PROGNOSED",
                   "type":"N"
                 },
                 "jny":
                 {
-                  "jid":"1|31518|2|80|5122021",
-                  "prodX":8,
-                  "dirTxt":"Jena, Rautal",
+                  "jid":"1|24470|0|80|27012025",
+                  "date":"20250127",
+                  "prodX":2,
+                  "dirTxt":"Graitschen (b. Bürgel)",
                   "dirFlg":"1",
                   "status":"P",
                   "isRchbl":true,
                   "stopL":
                   [
                     {
-                      "locX":1,
-                      "idx":3,
-                      "dProdX":8,
-                      "dInR":true,
-                      "dTimeS":"193800",
-                      "dTimeR":"193800",
+                      "locX":8,
+                      "idx":0,
+                      "dProdX":2,
+                      "dTimeS":"145500",
+                      "dTimeFS":
+                      {
+                        "styleX":0
+                      },
                       "dProgType":"PROGNOSED",
-                      "dDirTxt":"Jena, Rautal",
+                      "dDirTxt":"Graitschen (b. Bürgel)",
                       "dDirFlg":"1",
                       "type":"N"
                     },
                     {
-                      "locX":12,
-                      "idx":4,
-                      "aProdX":8,
-                      "aOutR":true,
-                      "aTimeS":"194000",
-                      "aTimeR":"194000",
-                      "aProgType":"PROGNOSED",
-                      "dProdX":8,
-                      "dInR":true,
-                      "dTimeS":"194000",
-                      "dTimeR":"194000",
-                      "dProgType":"PROGNOSED",
+                      "locX":5,
+                      "idx":1,
+                      "aProdX":2,
+                      "aTimeS":"145800",
+                      "aTimeFS":
+                      {
+                        "styleX":0
+                      },
+                      "dProdX":2,
+                      "dTimeS":"145800",
+                      "dTimeFS":
+                      {
+                        "styleX":0
+                      },
                       "type":"N"
                     },
                     {
                       "locX":10,
-                      "idx":5,
-                      "aProdX":8,
-                      "aOutR":true,
-                      "aTimeS":"194300",
-                      "aTimeR":"194300",
-                      "aProgType":"PROGNOSED",
+                      "idx":2,
+                      "aProdX":2,
+                      "aTimeS":"150000",
+                      "aTimeFS":
+                      {
+                        "styleX":0
+                      },
                       "type":"N"
                     }
                   ],
@@ -2127,17 +1653,285 @@
                     "polyXL":
                     [
                       1
-                    ],
-                    "layerX":0,
-                    "crdSysX":0
+                    ]
                   },
-                  "ctxRecon":"T$A=1@O=Jena, Stadtzentrum Löbdergraben@L=15316600@a=128@$A=1@O=Jena, Spittelplatz@L=15301400@a=128@$202112051938$202112051943$Bus   15$$1$$$$$$",
+                  "freq":
+                  {
+                    "minC":10,
+                    "maxC":73,
+                    "numC":5,
+                    "jnyL":
+                    [
+                      {
+                        "jid":"1|24856|0|80|27012025",
+                        "date":"20250127",
+                        "prodX":3,
+                        "dirTxt":"Steudnitz, REWE",
+                        "dirFlg":"1",
+                        "stopL":
+                        [
+                          {
+                            "locX":11,
+                            "idx":0,
+                            "dProdX":3,
+                            "dTimeS":"150500",
+                            "dDirTxt":"Steudnitz, REWE",
+                            "dDirFlg":"1",
+                            "type":"N"
+                          },
+                          {
+                            "locX":10,
+                            "idx":1,
+                            "aProdX":3,
+                            "aTimeS":"151000",
+                            "type":"N"
+                          }
+                        ],
+                        "ctxRecon":"T$A=1@O=Jena, Busbahnhof@L=15300406@a=128@$A=1@O=Jena, Spittelplatz@L=15301400@a=128@$202501271505$202501271510$Bus  422$$1$$$$$$",
+                        "subscr":"F",
+                        "prodL":
+                        [
+                          {
+                            "prodX":3,
+                            "fLocX":11,
+                            "tLocX":10,
+                            "fIdx":0,
+                            "tIdx":1
+                          }
+                        ],
+                        "dirL":
+                        [
+                          {
+                            "dirX":2,
+                            "fLocX":11,
+                            "tLocX":10,
+                            "fIdx":0,
+                            "tIdx":1
+                          }
+                        ],
+                        "sumLDrawStyleX":7,
+                        "resLDrawStyleX":8,
+                        "trainStartDate":"20250127",
+                        "durS":"000500"
+                      },
+                      {
+                        "jid":"1|24347|0|80|27012025",
+                        "date":"20250127",
+                        "prodX":4,
+                        "dirTxt":"Jena, Kunitz",
+                        "dirFlg":"1",
+                        "stopL":
+                        [
+                          {
+                            "locX":12,
+                            "idx":0,
+                            "dProdX":4,
+                            "dTimeS":"152500",
+                            "dDirTxt":"Jena, Kunitz",
+                            "dDirFlg":"1",
+                            "type":"N"
+                          },
+                          {
+                            "locX":10,
+                            "idx":1,
+                            "aProdX":4,
+                            "aTimeS":"153000",
+                            "type":"N"
+                          }
+                        ],
+                        "ctxRecon":"T$A=1@O=Jena, Busbahnhof@L=15300405@a=128@$A=1@O=Jena, Spittelplatz@L=15301400@a=128@$202501271525$202501271530$Bus  43A$$1$$$$$$",
+                        "subscr":"F",
+                        "prodL":
+                        [
+                          {
+                            "prodX":4,
+                            "fLocX":12,
+                            "tLocX":10,
+                            "fIdx":0,
+                            "tIdx":1
+                          }
+                        ],
+                        "dirL":
+                        [
+                          {
+                            "dirX":3,
+                            "fLocX":12,
+                            "tLocX":10,
+                            "fIdx":0,
+                            "tIdx":1
+                          }
+                        ],
+                        "sumLDrawStyleX":7,
+                        "resLDrawStyleX":8,
+                        "trainStartDate":"20250127",
+                        "durS":"000500"
+                      },
+                      {
+                        "jid":"1|24466|0|80|27012025",
+                        "date":"20250127",
+                        "prodX":5,
+                        "dirTxt":"Beutnitz",
+                        "dirFlg":"1",
+                        "stopL":
+                        [
+                          {
+                            "locX":8,
+                            "idx":0,
+                            "dProdX":5,
+                            "dTimeS":"155500",
+                            "dDirTxt":"Beutnitz",
+                            "dDirFlg":"1",
+                            "type":"N"
+                          },
+                          {
+                            "locX":10,
+                            "idx":1,
+                            "aProdX":5,
+                            "aTimeS":"160000",
+                            "type":"N"
+                          }
+                        ],
+                        "ctxRecon":"T$A=1@O=Jena, Busbahnhof@L=15300403@a=128@$A=1@O=Jena, Spittelplatz@L=15301400@a=128@$202501271555$202501271600$Bus  431$$1$$$$$$",
+                        "subscr":"F",
+                        "prodL":
+                        [
+                          {
+                            "prodX":5,
+                            "fLocX":8,
+                            "tLocX":10,
+                            "fIdx":0,
+                            "tIdx":1
+                          }
+                        ],
+                        "dirL":
+                        [
+                          {
+                            "dirX":4,
+                            "fLocX":8,
+                            "tLocX":10,
+                            "fIdx":0,
+                            "tIdx":1
+                          }
+                        ],
+                        "sumLDrawStyleX":7,
+                        "resLDrawStyleX":8,
+                        "trainStartDate":"20250127",
+                        "durS":"000500"
+                      },
+                      {
+                        "jid":"1|83486|0|80|27012025",
+                        "date":"20250127",
+                        "prodX":6,
+                        "dirTxt":"Camburg, Schießplatz",
+                        "dirFlg":"1",
+                        "stopL":
+                        [
+                          {
+                            "locX":11,
+                            "idx":0,
+                            "dProdX":6,
+                            "dTimeS":"164200",
+                            "dDirTxt":"Camburg, Schießplatz",
+                            "dDirFlg":"1",
+                            "type":"N"
+                          },
+                          {
+                            "locX":10,
+                            "idx":1,
+                            "aProdX":6,
+                            "aTimeS":"164700",
+                            "type":"N"
+                          }
+                        ],
+                        "ctxRecon":"T$A=1@O=Jena, Busbahnhof@L=15300406@a=128@$A=1@O=Jena, Spittelplatz@L=15301400@a=128@$202501271642$202501271647$Bus  420$$3$$$$$$",
+                        "subscr":"F",
+                        "prodL":
+                        [
+                          {
+                            "prodX":6,
+                            "fLocX":11,
+                            "tLocX":10,
+                            "fIdx":0,
+                            "tIdx":1
+                          }
+                        ],
+                        "dirL":
+                        [
+                          {
+                            "dirX":5,
+                            "fLocX":11,
+                            "tLocX":10,
+                            "fIdx":0,
+                            "tIdx":1
+                          }
+                        ],
+                        "sumLDrawStyleX":7,
+                        "resLDrawStyleX":8,
+                        "trainStartDate":"20250127",
+                        "durS":"000500"
+                      },
+                      {
+                        "jid":"1|24346|0|80|27012025",
+                        "date":"20250127",
+                        "prodX":7,
+                        "dirTxt":"Jena, Kunitz",
+                        "dirFlg":"1",
+                        "stopL":
+                        [
+                          {
+                            "locX":12,
+                            "idx":0,
+                            "dProdX":7,
+                            "dTimeS":"175500",
+                            "dDirTxt":"Jena, Kunitz",
+                            "dDirFlg":"1",
+                            "type":"N"
+                          },
+                          {
+                            "locX":10,
+                            "idx":1,
+                            "aProdX":7,
+                            "aTimeS":"180000",
+                            "type":"N"
+                          }
+                        ],
+                        "ctxRecon":"T$A=1@O=Jena, Busbahnhof@L=15300405@a=128@$A=1@O=Jena, Spittelplatz@L=15301400@a=128@$202501271755$202501271800$Bus  43A$$1$$$$$$",
+                        "subscr":"F",
+                        "prodL":
+                        [
+                          {
+                            "prodX":7,
+                            "fLocX":12,
+                            "tLocX":10,
+                            "fIdx":0,
+                            "tIdx":1
+                          }
+                        ],
+                        "dirL":
+                        [
+                          {
+                            "dirX":3,
+                            "fLocX":12,
+                            "tLocX":10,
+                            "fIdx":0,
+                            "tIdx":1
+                          }
+                        ],
+                        "sumLDrawStyleX":7,
+                        "resLDrawStyleX":8,
+                        "trainStartDate":"20250127",
+                        "durS":"000500"
+                      }
+                    ]
+                  },
+                  "ctxRecon":"T$A=1@O=Jena, Busbahnhof@L=15300403@a=128@$A=1@O=Jena, Spittelplatz@L=15301400@a=128@$202501271455$202501271500$Bus  431$$1$$$$$$",
                   "msgL":
                   [
                     {
                       "type":"REM",
-                      "remX":8,
-                      "fLocX":1,
+                      "remX":3,
+                      "sty":"I",
+                      "fLocX":8,
                       "tLocX":10,
                       "tagL":
                       [
@@ -2146,295 +1940,496 @@
                       "sort":818413568
                     },
                     {
-                      "type":"HIM",
-                      "himX":1,
-                      "fLocX":1,
-                      "tLocX":10,
+                      "type":"REM",
+                      "remX":1,
+                      "sty":"I",
                       "tagL":
                       [
-                        "RES_CON_HDR","RES_SEC_HDR_H3","SUM_CON_HDR"
+                        "RES_JNY_DTL_H3"
                       ],
-                      "sort":321002915
+                      "sort":147324928
                     }
                   ],
                   "subscr":"F",
                   "prodL":
                   [
                     {
-                      "prodX":8,
-                      "fLocX":1,
+                      "prodX":2,
+                      "fLocX":8,
                       "tLocX":10,
-                      "fIdx":3,
-                      "tIdx":5
+                      "fIdx":0,
+                      "tIdx":2
                     }
                   ],
                   "dirL":
                   [
                     {
                       "dirX":1,
-                      "fLocX":1,
+                      "fLocX":8,
                       "tLocX":10,
-                      "fIdx":3,
-                      "tIdx":5
+                      "fIdx":0,
+                      "tIdx":2
                     }
-                  ]
+                  ],
+                  "sumLDrawStyleX":7,
+                  "resLDrawStyleX":9,
+                  "trainStartDate":"20250127",
+                  "durS":"000500"
                 },
                 "minChg":"000100"
               },
               {
                 "type":"WALK",
-                "icoX":3,
                 "dep":
                 {
                   "locX":10,
-                  "dInR":true,
-                  "dTimeS":"194300",
+                  "dTimeS":"150000",
+                  "dTimeFS":
+                  {
+                    "styleX":0
+                  },
                   "type":"N"
                 },
                 "arr":
                 {
-                  "locX":9,
-                  "aOutR":true,
-                  "aTimeS":"194400",
+                  "locX":7,
+                  "aTimeS":"150100",
+                  "aTimeFS":
+                  {
+                    "styleX":0
+                  },
                   "type":"N"
                 },
                 "gis":
                 {
-                  "dist":39,
+                  "dist":48,
                   "durS":"000100",
-                  "ctx":"G|1|G@F|A=1@O=Jena, Spittelplatz@X=11590961@Y=50933627@U=80@L=15301400@|A=2@O=50.933887, 11.590592@X=11590592@Y=50933887@|5122021|194300|194400|fb|ft@0@2000@120@0@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§bt@0@2000@120@0@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§tf@$t@0@25000@120@1@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$§|||",
+                  "ctx":"G|1|G@F|A=1@O=Jena, Spittelplatz@L=15301400@a=128@|A=2@O=50.933887, 11.590592@X=11590592@Y=50933887@a=128@|27012025|150000|150100|fb|ft@0@1000@120@0@100@1@0@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§bt@0@1000@120@0@100@1@0@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§tf@$f@$f@$f@$f@$f@$§|||||",
+                  "gisPrvr":"E",
                   "getDescr":true,
-                  "getPoly":true
+                  "getPoly":true,
+                  "sumLDrawStyleX":0,
+                  "resLDrawStyleX":6,
+                  "prodX":0
                 }
               }
             ],
-            "ctxRecon":"¶HKI¶G@F$A=2@O=50.926947, 11.586987@X=11586987@Y=50926947@u=0@a=128@$A=1@O=Jena, Stadtzentrum Löbdergraben@L=15316600@a=128@$202112051937$202112051938$$$1$$$$$$§T$A=1@O=Jena, Stadtzentrum Löbdergraben@L=15316600@a=128@$A=1@O=Jena, Spittelplatz@L=15301400@a=128@$202112051938$202112051943$Bus   15$$1$$$$$$§G@F$A=1@O=Jena, Spittelplatz@L=15301400@a=128@$A=2@O=50.933887, 11.590592@X=11590592@Y=50933887@u=0@a=128@$202112051943$202112051944$$$1$$$$$$¶GP¶ft@0@2000@120@0@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§bt@0@2000@120@0@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§tf@$t@0@25000@120@1@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$§¶KRCC¶#VE#1#",
+            "freq":
+            {
+              "minC":10
+            },
             "trfRes":
             {
               "statusCode":"OK",
               "fareSetL":
               [
                 {
-                  "name":"unset",
-                  "desc":"von: Jena, Stadtzentrum Löbdergraben [Zone: 30 Jena] nach: Jena, Spittelplatz [Zone: 30 Jena]",
+                  "name":"Preisübersicht",
+                  "desc":"von: Jena, Busbahnhof [Zone: 30 Jena] nach: Jena, Spittelplatz [Zone: 30 Jena]",
                   "fareL":
                   [
                     {
                       "name":"Einzelfahrt",
-                      "prc":220,
-                      "cur":"EUR",
-                      "shpCtx":"eyJWTVQiOiJQS01UQVJJRkYiLCJwcm9kdWt0IjoiMTQiLCJwcm9kdWt0dGV4dCI6IkVpbnplbGZhaHJ0IiwiZGJ6aWVsaGFsdGVzdGVsbGVfbmFtZSI6IkplbmEsIFNwaXR0ZWxwbGF0eiIsInppZWx6b25ldGV4dCI6IkplbmEiLCJkYnN0YXJ0aGFsdGVzdGVsbGVfaWQiOiIxNTMxNjYiLCJnZWJpZXRzcGFyYW1ldGVyX25yIjoiMTMiLCJkYnp3aXNjaGVuem9uZW4iOiIzMCIsImFuemVpZ2V0ZXh0dmlhIjoiLS0tIiwicmVtYXJrIjoiQ2l0eSBKZW5hIiwiZGJ2aWF0ZXh0IjoiLS0tIiwiZWZtcHJvZHVrdF9uciI6IjExIiwidmlhdGV4dC4wIjoiLS0tIiwiZGJ6aWVsaGFsdGVzdGVsbGVfaWQiOiIxNTMwMTQiLCJzdGFydHpvbmUiOiIzMCIsIm91dHB1dGNoYW5uZWwiOiJJLE0sVyxILEQiLCJkYnN0YXJ0aGFsdGVzdGVsbGVfbmFtZSI6IkplbmEsIFN0YWR0emVudHJ1bSBMw7ZiZGVyZ3JhYmVuIiwic3RhcnR6b25ldGV4dCI6IkplbmEiLCJ2aWEuMCI6IjEiLCJ0YXJpZmZsZXZlbCI6IjEiLCJ6aWVsem9uZSI6IjMwIn0="
+                      "fSecRefX":1,
+                      "tSecRefX":1,
+                      "price":
+                      {
+                        "amount":270,
+                        "currency":"EUR"
+                      }
                     },
                     {
                       "name":"Kinder-Einzelfahrt",
-                      "prc":170,
-                      "cur":"EUR",
-                      "shpCtx":"eyJWTVQiOiJQS01UQVJJRkYiLCJwcm9kdWt0IjoiMTYiLCJwcm9kdWt0dGV4dCI6IktpbmRlci1FaW56ZWxmYWhydCIsImRiemllbGhhbHRlc3RlbGxlX25hbWUiOiJKZW5hLCBTcGl0dGVscGxhdHoiLCJ6aWVsem9uZXRleHQiOiJKZW5hIiwiZGJzdGFydGhhbHRlc3RlbGxlX2lkIjoiMTUzMTY2IiwiZ2ViaWV0c3BhcmFtZXRlcl9uciI6IjEzIiwiZGJ6d2lzY2hlbnpvbmVuIjoiMzAiLCJhbnplaWdldGV4dHZpYSI6Ii0tLSIsInJlbWFyayI6IkNpdHkgSmVuYSIsImRidmlhdGV4dCI6Ii0tLSIsImVmbXByb2R1a3RfbnIiOiIxMiIsInZpYXRleHQuMCI6Ii0tLSIsImRiemllbGhhbHRlc3RlbGxlX2lkIjoiMTUzMDE0Iiwic3RhcnR6b25lIjoiMzAiLCJvdXRwdXRjaGFubmVsIjoiSSxNLFcsSCxEIiwiZGJzdGFydGhhbHRlc3RlbGxlX25hbWUiOiJKZW5hLCBTdGFkdHplbnRydW0gTMO2YmRlcmdyYWJlbiIsInN0YXJ0em9uZXRleHQiOiJKZW5hIiwidmlhLjAiOiIxIiwidGFyaWZmbGV2ZWwiOiIxIiwiemllbHpvbmUiOiIzMCJ9"
-                    },
-                    {
-                      "name":"4-Fahrtenkarte",
-                      "prc":790,
-                      "cur":"EUR",
-                      "shpCtx":"eyJWTVQiOiJQS01UQVJJRkYiLCJwcm9kdWt0IjoiMTE1MTAiLCJwcm9kdWt0dGV4dCI6IjQtRmFocnRlbmthcnRlIiwiZGJ6aWVsaGFsdGVzdGVsbGVfbmFtZSI6IkplbmEsIFNwaXR0ZWxwbGF0eiIsInppZWx6b25ldGV4dCI6IkplbmEiLCJkYnN0YXJ0aGFsdGVzdGVsbGVfaWQiOiIxNTMxNjYiLCJnZWJpZXRzcGFyYW1ldGVyX25yIjoiMTMiLCJkYnp3aXNjaGVuem9uZW4iOiIzMCIsImFuemVpZ2V0ZXh0dmlhIjoiLS0tIiwicmVtYXJrIjoiQ2l0eSBKZW5hIiwiZGJ2aWF0ZXh0IjoiLS0tIiwiZWZtcHJvZHVrdF9uciI6IjE1IiwidmlhdGV4dC4wIjoiLS0tIiwiZGJ6aWVsaGFsdGVzdGVsbGVfaWQiOiIxNTMwMTQiLCJzdGFydHpvbmUiOiIzMCIsIm91dHB1dGNoYW5uZWwiOiJJLE0sSCxEIiwiZGJzdGFydGhhbHRlc3RlbGxlX25hbWUiOiJKZW5hLCBTdGFkdHplbnRydW0gTMO2YmRlcmdyYWJlbiIsInN0YXJ0em9uZXRleHQiOiJKZW5hIiwidmlhLjAiOiIxIiwidGFyaWZmbGV2ZWwiOiIxIiwiemllbHpvbmUiOiIzMCJ9"
+                      "fSecRefX":1,
+                      "tSecRefX":1,
+                      "price":
+                      {
+                        "amount":180,
+                        "currency":"EUR"
+                      }
                     },
                     {
                       "name":"Kinder-4-Fahrtenkarte",
-                      "prc":610,
-                      "cur":"EUR",
-                      "shpCtx":"eyJWTVQiOiJQS01UQVJJRkYiLCJwcm9kdWt0IjoiMTE2MTAiLCJwcm9kdWt0dGV4dCI6IktpbmRlci00LUZhaHJ0ZW5rYXJ0ZSIsImRiemllbGhhbHRlc3RlbGxlX25hbWUiOiJKZW5hLCBTcGl0dGVscGxhdHoiLCJ6aWVsem9uZXRleHQiOiJKZW5hIiwiZGJzdGFydGhhbHRlc3RlbGxlX2lkIjoiMTUzMTY2IiwiZ2ViaWV0c3BhcmFtZXRlcl9uciI6IjEzIiwiZGJ6d2lzY2hlbnpvbmVuIjoiMzAiLCJhbnplaWdldGV4dHZpYSI6Ii0tLSIsInJlbWFyayI6IkNpdHkgSmVuYSIsImRidmlhdGV4dCI6Ii0tLSIsImVmbXByb2R1a3RfbnIiOiIxNiIsInZpYXRleHQuMCI6Ii0tLSIsImRiemllbGhhbHRlc3RlbGxlX2lkIjoiMTUzMDE0Iiwic3RhcnR6b25lIjoiMzAiLCJvdXRwdXRjaGFubmVsIjoiSSxNLEgsRCIsImRic3RhcnRoYWx0ZXN0ZWxsZV9uYW1lIjoiSmVuYSwgU3RhZHR6ZW50cnVtIEzDtmJkZXJncmFiZW4iLCJzdGFydHpvbmV0ZXh0IjoiSmVuYSIsInZpYS4wIjoiMSIsInRhcmlmZmxldmVsIjoiMSIsInppZWx6b25lIjoiMzAifQ=="
+                      "fSecRefX":1,
+                      "tSecRefX":1,
+                      "price":
+                      {
+                        "amount":650,
+                        "currency":"EUR"
+                      }
+                    },
+                    {
+                      "name":"4-Fahrtenkarte",
+                      "fSecRefX":1,
+                      "tSecRefX":1,
+                      "price":
+                      {
+                        "amount":970,
+                        "currency":"EUR"
+                      }
                     },
                     {
                       "name":"VMT-Hopper-Ticket einfache Fahrt",
-                      "prc":610,
-                      "cur":"EUR",
-                      "shpCtx":"eyJWTVQiOiJQS01UQVJJRkYiLCJwcm9kdWt0IjoiODYyIiwicHJvZHVrdHRleHQiOiJWTVQtSG9wcGVyLVRpY2tldCBlaW5mYWNoZSBGYWhydCIsImRiemllbGhhbHRlc3RlbGxlX25hbWUiOiJKZW5hLCBTcGl0dGVscGxhdHoiLCJ6aWVsem9uZXRleHQiOiJKZW5hIiwiZGJzdGFydGhhbHRlc3RlbGxlX2lkIjoiMTUzMTY2IiwiZ2ViaWV0c3BhcmFtZXRlcl9uciI6IjEzIiwiZGJ6d2lzY2hlbnpvbmVuIjoiMzAiLCJhbnplaWdldGV4dHZpYSI6Ii0tLSIsInJlbWFyayI6IkNpdHkgSmVuYSIsImRidmlhdGV4dCI6Ii0tLSIsImVmbXByb2R1a3RfbnIiOiI3MyIsInZpYXRleHQuMCI6Ii0tLSIsImRiemllbGhhbHRlc3RlbGxlX2lkIjoiMTUzMDE0Iiwic3RhcnR6b25lIjoiMzAiLCJvdXRwdXRjaGFubmVsIjoiSSxNLEgsRCIsImRic3RhcnRoYWx0ZXN0ZWxsZV9uYW1lIjoiSmVuYSwgU3RhZHR6ZW50cnVtIEzDtmJkZXJncmFiZW4iLCJzdGFydHpvbmV0ZXh0IjoiSmVuYSIsInZpYS4wIjoiMSIsInRhcmlmZmxldmVsIjoiMSIsInppZWx6b25lIjoiMzAifQ=="
+                      "fSecRefX":1,
+                      "tSecRefX":1,
+                      "price":
+                      {
+                        "amount":740,
+                        "currency":"EUR"
+                      }
                     },
                     {
                       "name":"VMT-Hopper-Ticket Hin- und Rückfahrt",
-                      "prc":990,
-                      "cur":"EUR",
-                      "shpCtx":"eyJWTVQiOiJQS01UQVJJRkYiLCJwcm9kdWt0IjoiODY2IiwicHJvZHVrdHRleHQiOiJWTVQtSG9wcGVyLVRpY2tldCBIaW4tIHVuZCBSw7xja2ZhaHJ0IiwiZGJ6aWVsaGFsdGVzdGVsbGVfbmFtZSI6IkplbmEsIFNwaXR0ZWxwbGF0eiIsInppZWx6b25ldGV4dCI6IkplbmEiLCJkYnN0YXJ0aGFsdGVzdGVsbGVfaWQiOiIxNTMxNjYiLCJnZWJpZXRzcGFyYW1ldGVyX25yIjoiMTMiLCJkYnp3aXNjaGVuem9uZW4iOiIzMCIsImFuemVpZ2V0ZXh0dmlhIjoiLS0tIiwicmVtYXJrIjoiQ2l0eSBKZW5hIiwiZGJ2aWF0ZXh0IjoiLS0tIiwiZWZtcHJvZHVrdF9uciI6Ijc0IiwidmlhdGV4dC4wIjoiLS0tIiwiZGJ6aWVsaGFsdGVzdGVsbGVfaWQiOiIxNTMwMTQiLCJzdGFydHpvbmUiOiIzMCIsIm91dHB1dGNoYW5uZWwiOiJJLE0sSCxEIiwiZGJzdGFydGhhbHRlc3RlbGxlX25hbWUiOiJKZW5hLCBTdGFkdHplbnRydW0gTMO2YmRlcmdyYWJlbiIsInN0YXJ0em9uZXRleHQiOiJKZW5hIiwidmlhLjAiOiIxIiwidGFyaWZmbGV2ZWwiOiIxIiwiemllbHpvbmUiOiIzMCJ9"
+                      "fSecRefX":1,
+                      "tSecRefX":1,
+                      "price":
+                      {
+                        "amount":1210,
+                        "currency":"EUR"
+                      }
                     },
                     {
                       "name":"Tageskarte",
-                      "prc":560,
-                      "cur":"EUR",
-                      "shpCtx":"eyJWTVQiOiJQS01UQVJJRkYiLCJwcm9kdWt0IjoiNjQiLCJwcm9kdWt0dGV4dCI6IlRhZ2Vza2FydGUiLCJkYnppZWxoYWx0ZXN0ZWxsZV9uYW1lIjoiSmVuYSwgU3BpdHRlbHBsYXR6IiwiemllbHpvbmV0ZXh0IjoiSmVuYSIsImRic3RhcnRoYWx0ZXN0ZWxsZV9pZCI6IjE1MzE2NiIsImdlYmlldHNwYXJhbWV0ZXJfbnIiOiIxMyIsImRiendpc2NoZW56b25lbiI6IjMwIiwiYW56ZWlnZXRleHR2aWEiOiItLS0iLCJyZW1hcmsiOiJDaXR5IEplbmEiLCJkYnZpYXRleHQiOiItLS0iLCJlZm1wcm9kdWt0X25yIjoiMjEiLCJ2aWF0ZXh0LjAiOiItLS0iLCJkYnppZWxoYWx0ZXN0ZWxsZV9pZCI6IjE1MzAxNCIsInN0YXJ0em9uZSI6IjMwIiwib3V0cHV0Y2hhbm5lbCI6IkksTSxXLEgsRCIsImRic3RhcnRoYWx0ZXN0ZWxsZV9uYW1lIjoiSmVuYSwgU3RhZHR6ZW50cnVtIEzDtmJkZXJncmFiZW4iLCJzdGFydHpvbmV0ZXh0IjoiSmVuYSIsInZpYS4wIjoiMSIsInRhcmlmZmxldmVsIjoiMSIsInppZWx6b25lIjoiMzAifQ=="
+                      "fSecRefX":1,
+                      "tSecRefX":1,
+                      "price":
+                      {
+                        "amount":690,
+                        "currency":"EUR"
+                      }
                     },
                     {
                       "name":"Gruppentageskarte",
-                      "prc":1100,
-                      "cur":"EUR",
-                      "shpCtx":"eyJWTVQiOiJQS01UQVJJRkYiLCJwcm9kdWt0IjoiODAiLCJwcm9kdWt0dGV4dCI6IkdydXBwZW50YWdlc2thcnRlIiwiZGJ6aWVsaGFsdGVzdGVsbGVfbmFtZSI6IkplbmEsIFNwaXR0ZWxwbGF0eiIsInppZWx6b25ldGV4dCI6IkplbmEiLCJkYnN0YXJ0aGFsdGVzdGVsbGVfaWQiOiIxNTMxNjYiLCJnZWJpZXRzcGFyYW1ldGVyX25yIjoiMTMiLCJkYnp3aXNjaGVuem9uZW4iOiIzMCIsImFuemVpZ2V0ZXh0dmlhIjoiLS0tIiwicmVtYXJrIjoiQ2l0eSBKZW5hIiwiZGJ2aWF0ZXh0IjoiLS0tIiwiZWZtcHJvZHVrdF9uciI6IjIyIiwidmlhdGV4dC4wIjoiLS0tIiwiZGJ6aWVsaGFsdGVzdGVsbGVfaWQiOiIxNTMwMTQiLCJzdGFydHpvbmUiOiIzMCIsIm91dHB1dGNoYW5uZWwiOiJJLE0sVyxILEQiLCJkYnN0YXJ0aGFsdGVzdGVsbGVfbmFtZSI6IkplbmEsIFN0YWR0emVudHJ1bSBMw7ZiZGVyZ3JhYmVuIiwic3RhcnR6b25ldGV4dCI6IkplbmEiLCJ2aWEuMCI6IjEiLCJ0YXJpZmZsZXZlbCI6IjEiLCJ6aWVsem9uZSI6IjMwIn0="
-                    },
-                    {
-                      "name":"Berechtigung CityFlex 25",
-                      "prc":3600,
-                      "cur":"EUR",
-                      "shpCtx":"eyJWTVQiOiJQS01UQVJJRkYiLCJwcm9kdWt0IjoiMjE3IiwicHJvZHVrdHRleHQiOiJCZXJlY2h0aWd1bmcgQ2l0eUZsZXggMjUiLCJkYnppZWxoYWx0ZXN0ZWxsZV9uYW1lIjoiSmVuYSwgU3BpdHRlbHBsYXR6IiwiemllbHpvbmV0ZXh0IjoiSmVuYSIsImRic3RhcnRoYWx0ZXN0ZWxsZV9pZCI6IjE1MzE2NiIsImdlYmlldHNwYXJhbWV0ZXJfbnIiOiI5OSIsImRiendpc2NoZW56b25lbiI6IjMwIiwiYW56ZWlnZXRleHR2aWEiOiItLS0iLCJyZW1hcmsiOiJDaXR5IEplbmEiLCJkYnZpYXRleHQiOiItLS0iLCJlZm1wcm9kdWt0X25yIjoiMzMiLCJ2aWF0ZXh0LjAiOiItLS0iLCJkYnppZWxoYWx0ZXN0ZWxsZV9pZCI6IjE1MzAxNCIsInN0YXJ0em9uZSI6IjMwIiwib3V0cHV0Y2hhbm5lbCI6Ik0sSCxEIiwiZGJzdGFydGhhbHRlc3RlbGxlX25hbWUiOiJKZW5hLCBTdGFkdHplbnRydW0gTMO2YmRlcmdyYWJlbiIsInN0YXJ0em9uZXRleHQiOiJKZW5hIiwidmlhLjAiOiIxIiwidGFyaWZmbGV2ZWwiOiIxIiwiemllbHpvbmUiOiIzMCJ9"
-                    },
-                    {
-                      "name":"Einzelfahrt CityFlex 25",
-                      "prc":165,
-                      "cur":"EUR",
-                      "shpCtx":"eyJWTVQiOiJQS01UQVJJRkYiLCJwcm9kdWt0IjoiMjA5IiwicHJvZHVrdHRleHQiOiJFaW56ZWxmYWhydCBDaXR5RmxleCAyNSIsImRiemllbGhhbHRlc3RlbGxlX25hbWUiOiJKZW5hLCBTcGl0dGVscGxhdHoiLCJ6aWVsem9uZXRleHQiOiJKZW5hIiwiZGJzdGFydGhhbHRlc3RlbGxlX2lkIjoiMTUzMTY2IiwiZ2ViaWV0c3BhcmFtZXRlcl9uciI6IjEzIiwiZGJ6d2lzY2hlbnpvbmVuIjoiMzAiLCJhbnplaWdldGV4dHZpYSI6Ii0tLSIsInJlbWFyayI6IkNpdHkgSmVuYSIsImRidmlhdGV4dCI6Ii0tLSIsImVmbXByb2R1a3RfbnIiOiIzNCIsInZpYXRleHQuMCI6Ii0tLSIsImRiemllbGhhbHRlc3RlbGxlX2lkIjoiMTUzMDE0Iiwic3RhcnR6b25lIjoiMzAiLCJvdXRwdXRjaGFubmVsIjoiTSxILEQiLCJkYnN0YXJ0aGFsdGVzdGVsbGVfbmFtZSI6IkplbmEsIFN0YWR0emVudHJ1bSBMw7ZiZGVyZ3JhYmVuIiwic3RhcnR6b25ldGV4dCI6IkplbmEiLCJ2aWEuMCI6IjEiLCJ0YXJpZmZsZXZlbCI6IjEiLCJ6aWVsem9uZSI6IjMwIn0="
-                    },
-                    {
-                      "name":"Kinder-Einzelfahrt CityFlex 25",
-                      "prc":128,
-                      "cur":"EUR",
-                      "shpCtx":"eyJWTVQiOiJQS01UQVJJRkYiLCJwcm9kdWt0IjoiMjExIiwicHJvZHVrdHRleHQiOiJLaW5kZXItRWluemVsZmFocnQgQ2l0eUZsZXggMjUiLCJkYnppZWxoYWx0ZXN0ZWxsZV9uYW1lIjoiSmVuYSwgU3BpdHRlbHBsYXR6IiwiemllbHpvbmV0ZXh0IjoiSmVuYSIsImRic3RhcnRoYWx0ZXN0ZWxsZV9pZCI6IjE1MzE2NiIsImdlYmlldHNwYXJhbWV0ZXJfbnIiOiIxMyIsImRiendpc2NoZW56b25lbiI6IjMwIiwiYW56ZWlnZXRleHR2aWEiOiItLS0iLCJyZW1hcmsiOiJDaXR5IEplbmEiLCJkYnZpYXRleHQiOiItLS0iLCJlZm1wcm9kdWt0X25yIjoiMzUiLCJ2aWF0ZXh0LjAiOiItLS0iLCJkYnppZWxoYWx0ZXN0ZWxsZV9pZCI6IjE1MzAxNCIsInN0YXJ0em9uZSI6IjMwIiwib3V0cHV0Y2hhbm5lbCI6Ik0sSCxEIiwiZGJzdGFydGhhbHRlc3RlbGxlX25hbWUiOiJKZW5hLCBTdGFkdHplbnRydW0gTMO2YmRlcmdyYWJlbiIsInN0YXJ0em9uZXRleHQiOiJKZW5hIiwidmlhLjAiOiIxIiwidGFyaWZmbGV2ZWwiOiIxIiwiemllbHpvbmUiOiIzMCJ9"
+                      "fSecRefX":1,
+                      "tSecRefX":1,
+                      "price":
+                      {
+                        "amount":1350,
+                        "currency":"EUR"
+                      }
                     },
                     {
                       "name":"Wochenkarte",
-                      "prc":2020,
-                      "cur":"EUR"
+                      "fSecRefX":1,
+                      "tSecRefX":1,
+                      "price":
+                      {
+                        "amount":2470,
+                        "currency":"EUR"
+                      }
                     },
                     {
                       "name":"Wochenkarte Schüler/Azubi",
-                      "prc":1520,
-                      "cur":"EUR"
+                      "fSecRefX":1,
+                      "tSecRefX":1,
+                      "price":
+                      {
+                        "amount":1860,
+                        "currency":"EUR"
+                      }
                     },
                     {
                       "name":"Monatskarte",
-                      "prc":6340,
-                      "cur":"EUR"
+                      "fSecRefX":1,
+                      "tSecRefX":1,
+                      "price":
+                      {
+                        "amount":7740,
+                        "currency":"EUR"
+                      }
                     },
                     {
                       "name":"Monatskarte Schüler/Azubi",
-                      "prc":4760,
-                      "cur":"EUR"
+                      "fSecRefX":1,
+                      "tSecRefX":1,
+                      "price":
+                      {
+                        "amount":5810,
+                        "currency":"EUR"
+                      }
                     },
                     {
                       "name":"Abo Plus (persönlich)",
-                      "prc":5710,
-                      "cur":"EUR"
+                      "fSecRefX":1,
+                      "tSecRefX":1,
+                      "price":
+                      {
+                        "amount":6970,
+                        "currency":"EUR"
+                      }
                     },
                     {
                       "name":"Abo Plus (übertragbar)",
-                      "prc":5710,
-                      "cur":"EUR"
+                      "fSecRefX":1,
+                      "tSecRefX":1,
+                      "price":
+                      {
+                        "amount":6970,
+                        "currency":"EUR"
+                      }
                     },
                     {
                       "name":"Abo Solo",
-                      "prc":5180,
-                      "cur":"EUR"
+                      "fSecRefX":1,
+                      "tSecRefX":1,
+                      "price":
+                      {
+                        "amount":6320,
+                        "currency":"EUR"
+                      }
                     },
                     {
                       "name":"Abo Schüler/Azubi",
-                      "prc":4240,
-                      "cur":"EUR"
+                      "fSecRefX":1,
+                      "tSecRefX":1,
+                      "price":
+                      {
+                        "amount":5180,
+                        "currency":"EUR"
+                      }
                     },
                     {
                       "name":"Hunde-/Fahrradkarte",
-                      "prc":170,
-                      "cur":"EUR",
-                      "shpCtx":"eyJWTVQiOiJQS01UQVJJRkYiLCJwcm9kdWt0IjoiOTQiLCJwcm9kdWt0dGV4dCI6Ikh1bmRlLS9GYWhycmFka2FydGUiLCJkYnppZWxoYWx0ZXN0ZWxsZV9uYW1lIjoiSmVuYSwgU3BpdHRlbHBsYXR6IiwiemllbHpvbmV0ZXh0IjoiSmVuYSIsImRic3RhcnRoYWx0ZXN0ZWxsZV9pZCI6IjE1MzE2NiIsImdlYmlldHNwYXJhbWV0ZXJfbnIiOiIxMyIsImRiendpc2NoZW56b25lbiI6IjMwIiwiYW56ZWlnZXRleHR2aWEiOiItLS0iLCJyZW1hcmsiOiJDaXR5IEplbmEiLCJkYnZpYXRleHQiOiItLS0iLCJlZm1wcm9kdWt0X25yIjoiNjciLCJ2aWF0ZXh0LjAiOiItLS0iLCJkYnppZWxoYWx0ZXN0ZWxsZV9pZCI6IjE1MzAxNCIsInN0YXJ0em9uZSI6IjMwIiwib3V0cHV0Y2hhbm5lbCI6IkksTSxXLEgsRCIsImRic3RhcnRoYWx0ZXN0ZWxsZV9uYW1lIjoiSmVuYSwgU3RhZHR6ZW50cnVtIEzDtmJkZXJncmFiZW4iLCJzdGFydHpvbmV0ZXh0IjoiSmVuYSIsInZpYS4wIjoiMSIsInRhcmlmZmxldmVsIjoiMSIsInppZWx6b25lIjoiMzAifQ=="
+                      "fSecRefX":1,
+                      "tSecRefX":1,
+                      "price":
+                      {
+                        "amount":210,
+                        "currency":"EUR"
+                      }
+                    },
+                    {
+                      "name":"Deutschlandticket",
+                      "fSecRefX":1,
+                      "tSecRefX":1,
+                      "price":
+                      {
+                        "amount":5800,
+                        "currency":"EUR"
+                      }
+                    },
+                    {
+                      "name":"Einzelfahrt mit 10% Rabatt",
+                      "fSecRefX":1,
+                      "tSecRefX":1,
+                      "price":
+                      {
+                        "amount":243,
+                        "currency":"EUR"
+                      }
+                    },
+                    {
+                      "name":"Kinder-Einzelfahrt mit 10% Rabatt",
+                      "fSecRefX":1,
+                      "tSecRefX":1,
+                      "price":
+                      {
+                        "amount":162,
+                        "currency":"EUR"
+                      }
                     }
                   ],
-                  "fSecRefX":0,
-                  "tSecRefX":2
+                  "fSecRefX":1,
+                  "tSecRefX":1,
+                  "msgL":
+                  [
+                    {
+                      "type":"REM",
+                      "remX":2,
+                      "sty":"I",
+                      "dspl":"EXP",
+                      "tagL":
+                      [
+                        "RES_TRF_FSET_HDR_H3"
+                      ],
+                      "sort":818413568
+                    }
+                  ]
                 }
-              ]
+              ],
+              "totalPrice":
+              {
+                "amount":270,
+                "currency":"EUR"
+              },
+              "extContActionBar":
+              {
+                "text":"Preise",
+                "content":
+                {
+                  "type":"APP_CTX",
+                  "content":"VGFyaWZmT3ZlcnZpZXdTY3JlZW4="
+                }
+              },
+              "extContOverview":
+              {
+                "text":"Tarifübersicht anzeigen",
+                "content":
+                {
+                  "type":"APP_CTX",
+                  "content":"VGFyaWZmT3ZlcnZpZXdTY3JlZW4="
+                }
+              }
             },
-            "ovwTrfRefL":
+            "msgL":
             [
               {
-                "type":"F",
-                "fareSetX":0,
-                "fareX":0
+                "type":"REM",
+                "remX":1,
+                "sty":"I",
+                "tagL":
+                [
+                  "SUM_CON_HDR_L","RES_GLB_HDR_L"
+                ],
+                "sort":147324928
               }
             ],
             "conSubscr":"P",
             "recState":"U",
-            "cksum":"bd0b9107_3",
-            "cksumDti":"74251d8c_3"
+            "cksum":"23d467ad_3",
+            "cksumDti":"2428bd79_3",
+            "intvlSubscr":"P",
+            "originType":"INITIAL",
+            "recon":
+            {
+              "ctx":"¶HKI¶G@F$A=2@O=50.926947, 11.586987@X=11586987@Y=50926947@a=128@$A=1@O=Jena, Busbahnhof@L=15300403@a=128@$202501271452$202501271455$$$1$$$$$$§T$A=1@O=Jena, Busbahnhof@L=15300403@a=128@$A=1@O=Jena, Spittelplatz@L=15301400@a=128@$202501271455$202501271500$Bus  431$$1$$$$$$§G@F$A=1@O=Jena, Spittelplatz@L=15301400@a=128@$A=2@O=50.933887, 11.590592@X=11590592@Y=50933887@a=128@$202501271500$202501271501$$$1$$$$$$¶GP¶ft@0@1000@120@0@100@1@0@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§bt@0@1000@120@0@100@1@0@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§tf@$f@$f@$f@$f@$f@$§¶KC¶#VE#2#CF#99#CA#0#CM#0#SICT#0#AM#49#AM2#0#RT#4#¶KRCC¶#VE#1#"
+            }
           },
           {
             "cid":"C-2",
-            "date":"20211205",
+            "date":"20250127",
             "dur":"000500",
+            "durS":"000500",
+            "durR":"000500",
             "chg":0,
             "sDays":
             {
-              "sDaysR":"nicht täglich",
-              "sDaysI":"5. bis 19. Dez 2021 Sa, So",
-              "sDaysB":"0000000060C1800000000000000000"
+              "sDaysR":"Mo - Fr",
+              "sDaysI":"nicht 18., 21. Apr, 1., 29. Mai, 9. Jun",
+              "sDaysB":"7CF9F224CF9F3E7CF9F3E7CF9F3E7CF9F3C3CE9F3E7CE9F1E7CF90"
             },
             "dep":
             {
               "locX":0,
-              "dInR":true,
-              "dTimeS":"194000",
+              "dTimeS":"145800",
+              "dTimeFS":
+              {
+                "styleX":0
+              },
               "type":"N"
             },
             "arr":
             {
-              "locX":9,
-              "aOutR":true,
-              "aTimeS":"194500",
-              "aTimeR":"194600",
-              "aProgType":"CALCULATED",
+              "locX":7,
+              "aTimeS":"150300",
+              "aTimeFS":
+              {
+                "styleX":0
+              },
               "type":"N"
             },
             "secL":
             [
               {
                 "type":"WALK",
-                "icoX":3,
                 "dep":
                 {
                   "locX":0,
-                  "dInR":true,
-                  "dTimeS":"194000",
+                  "dTimeS":"145800",
+                  "dTimeFS":
+                  {
+                    "styleX":0
+                  },
                   "type":"N"
                 },
                 "arr":
                 {
-                  "locX":18,
-                  "aOutR":true,
-                  "aTimeS":"194100",
+                  "locX":1,
+                  "aTimeS":"145900",
+                  "aTimeFS":
+                  {
+                    "styleX":0
+                  },
                   "type":"N"
                 },
                 "gis":
                 {
                   "dist":92,
                   "durS":"000100",
-                  "ctx":"G|1|G@F|A=2@O=50.926947, 11.586987@X=11586987@Y=50926947@|A=1@O=Jena, Stadtzentrum Löbdergraben@X=11588246@Y=50926993@U=80@L=15316602@|5122021|194000|194100|bf|ft@0@2000@120@0@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§bt@0@2000@120@0@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§tf@$t@0@25000@120@1@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$§|||",
+                  "ctx":"G|1|G@F|A=2@O=50.926947, 11.586987@X=11586987@Y=50926947@a=128@|A=1@O=Jena, Stadtzentrum Löbdergraben@L=15316602@a=128@|27012025|145800|145900|bf|ft@0@1000@120@0@100@1@0@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§bt@0@1000@120@0@100@1@0@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§tf@$f@$f@$f@$f@$f@$§|||||",
+                  "gisPrvr":"E",
                   "getDescr":true,
-                  "getPoly":true
+                  "getPoly":true,
+                  "sumLDrawStyleX":0,
+                  "resLDrawStyleX":4,
+                  "prodX":0
                 }
               },
               {
                 "type":"JNY",
-                "icoX":9,
                 "dep":
                 {
-                  "locX":18,
+                  "locX":1,
                   "idx":31,
-                  "dProdX":9,
-                  "dPlatfS":"2",
-                  "dInR":true,
-                  "dTimeS":"194100",
-                  "dTimeR":"194200",
-                  "dProgType":"CALCULATED",
+                  "dProdX":8,
+                  "dPltfS":
+                  {
+                    "type":"PL",
+                    "txt":"2"
+                  },
+                  "dPltfR":
+                  {
+                    "type":"PL",
+                    "txt":"2"
+                  },
+                  "dTimeS":"145900",
+                  "dTimeR":"145900",
+                  "dTimeFS":
+                  {
+                    "styleX":2
+                  },
+                  "dTimeFR":
+                  {
+                    "styleX":3,
+                    "txtA":"14:59 Uhr pünktlich"
+                  },
+                  "dProgType":"PROGNOSED",
                   "type":"N"
                 },
                 "arr":
                 {
-                  "locX":19,
+                  "locX":3,
                   "idx":33,
-                  "aProdX":9,
-                  "aOutR":true,
-                  "aTimeS":"194400",
-                  "aTimeR":"194500",
-                  "aProgType":"CALCULATED",
+                  "aProdX":8,
+                  "aPltfS":
+                  {
+                    "type":"PL",
+                    "txt":"2"
+                  },
+                  "aPltfR":
+                  {
+                    "type":"PL",
+                    "txt":"2"
+                  },
+                  "aTimeS":"150200",
+                  "aTimeR":"150200",
+                  "aTimeFS":
+                  {
+                    "styleX":2
+                  },
+                  "aTimeFR":
+                  {
+                    "styleX":3,
+                    "txtA":"15:02 Uhr pünktlich"
+                  },
+                  "aProgType":"PROGNOSED",
                   "type":"N"
                 },
                 "jny":
                 {
-                  "jid":"1|71955|21|80|5122021",
-                  "prodX":10,
+                  "jid":"1|64351|25|80|27012025",
+                  "date":"20250127",
+                  "prodX":8,
                   "dirTxt":"Jena, Zwätzen Schleife",
                   "dirFlg":"2",
                   "status":"P",
@@ -2442,40 +2437,72 @@
                   "stopL":
                   [
                     {
-                      "locX":18,
+                      "locX":1,
                       "idx":31,
-                      "dProdX":10,
-                      "dInR":true,
-                      "dTimeS":"194100",
-                      "dTimeR":"194200",
-                      "dProgType":"CALCULATED",
+                      "dProdX":8,
+                      "dTimeS":"145900",
+                      "dTimeR":"145900",
+                      "dTimeFS":
+                      {
+                        "styleX":2
+                      },
+                      "dTimeFR":
+                      {
+                        "styleX":3,
+                        "txtA":"14:59 Uhr pünktlich"
+                      },
+                      "dProgType":"PROGNOSED",
                       "dDirTxt":"Jena, Zwätzen Schleife",
                       "dDirFlg":"2",
                       "type":"N"
                     },
                     {
-                      "locX":12,
+                      "locX":5,
                       "idx":32,
-                      "aProdX":10,
-                      "aOutR":true,
-                      "aTimeS":"194200",
-                      "aTimeR":"194300",
-                      "aProgType":"CALCULATED",
-                      "dProdX":10,
-                      "dInR":true,
-                      "dTimeS":"194200",
-                      "dTimeR":"194300",
-                      "dProgType":"CALCULATED",
+                      "aProdX":8,
+                      "aTimeS":"150000",
+                      "aTimeR":"150000",
+                      "aTimeFS":
+                      {
+                        "styleX":2
+                      },
+                      "aTimeFR":
+                      {
+                        "styleX":3,
+                        "txtA":"15:00 Uhr pünktlich"
+                      },
+                      "aProgType":"PROGNOSED",
+                      "dProdX":8,
+                      "dTimeS":"150000",
+                      "dTimeR":"150000",
+                      "dTimeFS":
+                      {
+                        "styleX":2
+                      },
+                      "dTimeFR":
+                      {
+                        "styleX":3,
+                        "txtA":"15:00 Uhr pünktlich"
+                      },
+                      "dProgType":"PROGNOSED",
                       "type":"N"
                     },
                     {
-                      "locX":19,
+                      "locX":3,
                       "idx":33,
-                      "aProdX":10,
-                      "aOutR":true,
-                      "aTimeS":"194400",
-                      "aTimeR":"194500",
-                      "aProgType":"CALCULATED",
+                      "aProdX":8,
+                      "aTimeS":"150200",
+                      "aTimeR":"150200",
+                      "aTimeFS":
+                      {
+                        "styleX":2
+                      },
+                      "aTimeFR":
+                      {
+                        "styleX":3,
+                        "txtA":"15:02 Uhr pünktlich"
+                      },
+                      "aProgType":"PROGNOSED",
                       "type":"N"
                     }
                   ],
@@ -2484,276 +2511,28 @@
                     "polyXL":
                     [
                       2
-                    ],
-                    "layerX":0,
-                    "crdSysX":0
+                    ]
                   },
                   "pos":
                   {
-                    "x":11594844,
-                    "y":50883701,
-                    "layerX":0,
-                    "crdSysX":0
+                    "x":11596588,
+                    "y":50881903
                   },
                   "freq":
                   {
-                    "minC":20,
-                    "maxC":30,
-                    "numC":6,
-                    "jnyL":
-                    [
-                      {
-                        "jid":"1|71955|22|80|5122021",
-                        "prodX":11,
-                        "dirTxt":"Jena, Zwätzen Schleife",
-                        "dirFlg":"2",
-                        "stopL":
-                        [
-                          {
-                            "locX":18,
-                            "idx":31,
-                            "dProdX":11,
-                            "dTimeS":"200100",
-                            "dDirTxt":"Jena, Zwätzen Schleife",
-                            "dDirFlg":"2",
-                            "type":"N"
-                          },
-                          {
-                            "locX":19,
-                            "idx":33,
-                            "aProdX":11,
-                            "aTimeS":"200400",
-                            "type":"N"
-                          }
-                        ],
-                        "pos":
-                        {
-                          "x":11590655,
-                          "y":50929159,
-                          "layerX":0,
-                          "crdSysX":0
-                        },
-                        "ctxRecon":"T$A=1@O=Jena, Stadtzentrum Löbdergraben@L=15316602@a=128@$A=1@O=Jena, Spittelplatz@L=15301403@a=128@$202112052001$202112052004$Str    1$$1$$$$$$",
-                        "subscr":"F",
-                        "prodL":
-                        [
-                          {
-                            "prodX":11,
-                            "fLocX":18,
-                            "tLocX":19,
-                            "fIdx":31,
-                            "tIdx":33
-                          }
-                        ],
-                        "dirL":
-                        [
-                          {
-                            "dirX":2,
-                            "fLocX":18,
-                            "tLocX":19,
-                            "fIdx":31,
-                            "tIdx":33
-                          }
-                        ]
-                      },
-                      {
-                        "jid":"1|71955|23|80|5122021",
-                        "prodX":12,
-                        "dirTxt":"Jena, Zwätzen Schleife",
-                        "dirFlg":"2",
-                        "stopL":
-                        [
-                          {
-                            "locX":18,
-                            "idx":31,
-                            "dProdX":12,
-                            "dTimeS":"202100",
-                            "dDirTxt":"Jena, Zwätzen Schleife",
-                            "dDirFlg":"2",
-                            "type":"N"
-                          },
-                          {
-                            "locX":19,
-                            "idx":33,
-                            "aProdX":12,
-                            "aTimeS":"202400",
-                            "type":"N"
-                          }
-                        ],
-                        "ctxRecon":"T$A=1@O=Jena, Stadtzentrum Löbdergraben@L=15316602@a=128@$A=1@O=Jena, Spittelplatz@L=15301403@a=128@$202112052021$202112052024$Str    1$$1$$$$$$",
-                        "subscr":"F",
-                        "prodL":
-                        [
-                          {
-                            "prodX":12,
-                            "fLocX":18,
-                            "tLocX":19,
-                            "fIdx":31,
-                            "tIdx":33
-                          }
-                        ],
-                        "dirL":
-                        [
-                          {
-                            "dirX":2,
-                            "fLocX":18,
-                            "tLocX":19,
-                            "fIdx":31,
-                            "tIdx":33
-                          }
-                        ]
-                      },
-                      {
-                        "jid":"1|71955|24|80|5122021",
-                        "prodX":13,
-                        "dirTxt":"Jena, Zwätzen Schleife",
-                        "dirFlg":"2",
-                        "stopL":
-                        [
-                          {
-                            "locX":18,
-                            "idx":31,
-                            "dProdX":13,
-                            "dTimeS":"204100",
-                            "dDirTxt":"Jena, Zwätzen Schleife",
-                            "dDirFlg":"2",
-                            "type":"N"
-                          },
-                          {
-                            "locX":19,
-                            "idx":33,
-                            "aProdX":13,
-                            "aTimeS":"204400",
-                            "type":"N"
-                          }
-                        ],
-                        "ctxRecon":"T$A=1@O=Jena, Stadtzentrum Löbdergraben@L=15316602@a=128@$A=1@O=Jena, Spittelplatz@L=15301403@a=128@$202112052041$202112052044$Str    1$$1$$$$$$",
-                        "subscr":"F",
-                        "prodL":
-                        [
-                          {
-                            "prodX":13,
-                            "fLocX":18,
-                            "tLocX":19,
-                            "fIdx":31,
-                            "tIdx":33
-                          }
-                        ],
-                        "dirL":
-                        [
-                          {
-                            "dirX":2,
-                            "fLocX":18,
-                            "tLocX":19,
-                            "fIdx":31,
-                            "tIdx":33
-                          }
-                        ]
-                      },
-                      {
-                        "jid":"1|71955|25|80|5122021",
-                        "prodX":14,
-                        "dirTxt":"Jena, Zwätzen Schleife",
-                        "dirFlg":"2",
-                        "stopL":
-                        [
-                          {
-                            "locX":18,
-                            "idx":31,
-                            "dProdX":14,
-                            "dTimeS":"210100",
-                            "dDirTxt":"Jena, Zwätzen Schleife",
-                            "dDirFlg":"2",
-                            "type":"N"
-                          },
-                          {
-                            "locX":19,
-                            "idx":33,
-                            "aProdX":14,
-                            "aTimeS":"210400",
-                            "type":"N"
-                          }
-                        ],
-                        "ctxRecon":"T$A=1@O=Jena, Stadtzentrum Löbdergraben@L=15316602@a=128@$A=1@O=Jena, Spittelplatz@L=15301403@a=128@$202112052101$202112052104$Str    1$$1$$$$$$",
-                        "subscr":"F",
-                        "prodL":
-                        [
-                          {
-                            "prodX":14,
-                            "fLocX":18,
-                            "tLocX":19,
-                            "fIdx":31,
-                            "tIdx":33
-                          }
-                        ],
-                        "dirL":
-                        [
-                          {
-                            "dirX":2,
-                            "fLocX":18,
-                            "tLocX":19,
-                            "fIdx":31,
-                            "tIdx":33
-                          }
-                        ]
-                      },
-                      {
-                        "jid":"1|30813|0|80|5122021",
-                        "prodX":15,
-                        "dirTxt":"Jena, Zwätzen Schleife",
-                        "dirFlg":"2",
-                        "stopL":
-                        [
-                          {
-                            "locX":18,
-                            "idx":11,
-                            "dProdX":15,
-                            "dTimeS":"212200",
-                            "dDirTxt":"Jena, Zwätzen Schleife",
-                            "dDirFlg":"2",
-                            "type":"N"
-                          },
-                          {
-                            "locX":19,
-                            "idx":13,
-                            "aProdX":15,
-                            "aTimeS":"212500",
-                            "type":"N"
-                          }
-                        ],
-                        "ctxRecon":"T$A=1@O=Jena, Stadtzentrum Löbdergraben@L=15316602@a=128@$A=1@O=Jena, Spittelplatz@L=15301403@a=128@$202112052122$202112052125$Str    1$$1$$$$$$",
-                        "subscr":"F",
-                        "prodL":
-                        [
-                          {
-                            "prodX":15,
-                            "fLocX":18,
-                            "tLocX":19,
-                            "fIdx":11,
-                            "tIdx":13
-                          }
-                        ],
-                        "dirL":
-                        [
-                          {
-                            "dirX":2,
-                            "fLocX":18,
-                            "tLocX":19,
-                            "fIdx":11,
-                            "tIdx":13
-                          }
-                        ]
-                      }
-                    ]
+                    "minC":10,
+                    "maxC":10,
+                    "numC":13
                   },
-                  "ctxRecon":"T$A=1@O=Jena, Stadtzentrum Löbdergraben@L=15316602@a=128@$A=1@O=Jena, Spittelplatz@L=15301403@a=128@$202112051941$202112051944$Str    1$$1$$$$$$",
+                  "ctxRecon":"T$A=1@O=Jena, Stadtzentrum Löbdergraben@L=15316602@a=128@$A=1@O=Jena, Spittelplatz@L=15301403@a=128@$202501271459$202501271502$Str    4$$1$$$$$$",
                   "msgL":
                   [
                     {
                       "type":"REM",
-                      "remX":13,
-                      "fLocX":18,
-                      "tLocX":19,
+                      "remX":4,
+                      "sty":"I",
+                      "fLocX":1,
+                      "tLocX":3,
                       "tagL":
                       [
                         "RES_JNY_DTL"
@@ -2761,24 +2540,23 @@
                       "sort":818413568
                     },
                     {
-                      "type":"HIM",
-                      "himX":2,
-                      "fLocX":18,
-                      "tLocX":19,
+                      "type":"REM",
+                      "remX":1,
+                      "sty":"I",
                       "tagL":
                       [
-                        "RES_CON_HDR","RES_SEC_HDR_H3","SUM_CON_HDR"
+                        "RES_JNY_DTL_H3"
                       ],
-                      "sort":321002915
+                      "sort":147324928
                     }
                   ],
                   "subscr":"F",
                   "prodL":
                   [
                     {
-                      "prodX":10,
-                      "fLocX":18,
-                      "tLocX":19,
+                      "prodX":8,
+                      "fLocX":1,
+                      "tLocX":3,
                       "fIdx":31,
                       "tIdx":33
                     }
@@ -2786,51 +2564,59 @@
                   "dirL":
                   [
                     {
-                      "dirX":2,
-                      "fLocX":18,
-                      "tLocX":19,
+                      "dirX":0,
+                      "fLocX":1,
+                      "tLocX":3,
                       "fIdx":31,
                       "tIdx":33
                     }
-                  ]
+                  ],
+                  "sumLDrawStyleX":2,
+                  "resLDrawStyleX":5,
+                  "trainStartDate":"20250127",
+                  "durS":"000300"
                 },
                 "minChg":"000100"
               },
               {
                 "type":"WALK",
-                "icoX":3,
                 "dep":
                 {
-                  "locX":19,
-                  "dInR":true,
-                  "dTimeS":"194400",
-                  "dTimeR":"194500",
-                  "dProgType":"CALCULATED",
+                  "locX":3,
+                  "dTimeS":"150200",
+                  "dTimeFS":
+                  {
+                    "styleX":0
+                  },
                   "type":"N"
                 },
                 "arr":
                 {
-                  "locX":9,
-                  "aOutR":true,
-                  "aTimeS":"194500",
-                  "aTimeR":"194600",
-                  "aProgType":"CALCULATED",
+                  "locX":7,
+                  "aTimeS":"150300",
+                  "aTimeFS":
+                  {
+                    "styleX":0
+                  },
                   "type":"N"
                 },
                 "gis":
                 {
-                  "dist":85,
+                  "dist":104,
                   "durS":"000100",
-                  "ctx":"G|1|G@F|A=1@O=Jena, Spittelplatz@X=11590502@Y=50933330@U=80@L=15301403@|A=2@O=50.933887, 11.590592@X=11590592@Y=50933887@|5122021|194400|194500|fb|ft@0@2000@120@0@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§bt@0@2000@120@0@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§tf@$t@0@25000@120@1@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$§|||",
+                  "ctx":"G|1|G@F|A=1@O=Jena, Spittelplatz@L=15301403@a=128@|A=2@O=50.933887, 11.590592@X=11590592@Y=50933887@a=128@|27012025|150200|150300|fb|ft@0@1000@120@0@100@1@0@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§bt@0@1000@120@0@100@1@0@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§tf@$f@$f@$f@$f@$f@$§|||||",
+                  "gisPrvr":"E",
                   "getDescr":true,
-                  "getPoly":true
+                  "getPoly":true,
+                  "sumLDrawStyleX":0,
+                  "resLDrawStyleX":6,
+                  "prodX":0
                 }
               }
             ],
-            "ctxRecon":"¶HKI¶G@F$A=2@O=50.926947, 11.586987@X=11586987@Y=50926947@u=0@a=128@$A=1@O=Jena, Stadtzentrum Löbdergraben@L=15316602@a=128@$202112051940$202112051941$$$1$$$$$$§T$A=1@O=Jena, Stadtzentrum Löbdergraben@L=15316602@a=128@$A=1@O=Jena, Spittelplatz@L=15301403@a=128@$202112051941$202112051944$Str    1$$1$$$$$$§G@F$A=1@O=Jena, Spittelplatz@L=15301403@a=128@$A=2@O=50.933887, 11.590592@X=11590592@Y=50933887@u=0@a=128@$202112051944$202112051945$$$1$$$$$$¶GP¶ft@0@2000@120@0@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§bt@0@2000@120@0@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§tf@$t@0@25000@120@1@100@1@@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$§¶KRCC¶#VE#1#",
             "freq":
             {
-              "minC":20
+              "minC":10
             },
             "trfRes":
             {
@@ -2838,147 +2624,409 @@
               "fareSetL":
               [
                 {
-                  "name":"unset",
-                  "desc":"von: Jena, Stadtzentrum Löbdergraben [Zone: 30 Jena] nach: Jena, Spittelplatz [Zone: 30 Jena]",
+                  "name":"Preisübersicht",
+                  "desc":"von: Jena, Stadtzentrum LÃ¶bdergraben [Zone: 30 Jena] nach: Jena, Spittelplatz [Zone: 30 Jena]",
                   "fareL":
                   [
                     {
                       "name":"Einzelfahrt",
-                      "prc":220,
-                      "cur":"EUR",
-                      "shpCtx":"eyJWTVQiOiJQS01UQVJJRkYiLCJwcm9kdWt0IjoiMTQiLCJwcm9kdWt0dGV4dCI6IkVpbnplbGZhaHJ0IiwiZGJ6aWVsaGFsdGVzdGVsbGVfbmFtZSI6IkplbmEsIFNwaXR0ZWxwbGF0eiIsInppZWx6b25ldGV4dCI6IkplbmEiLCJkYnN0YXJ0aGFsdGVzdGVsbGVfaWQiOiIxNTMxNjYiLCJnZWJpZXRzcGFyYW1ldGVyX25yIjoiMTMiLCJkYnp3aXNjaGVuem9uZW4iOiIzMCIsImFuemVpZ2V0ZXh0dmlhIjoiLS0tIiwicmVtYXJrIjoiQ2l0eSBKZW5hIiwiZGJ2aWF0ZXh0IjoiLS0tIiwiZWZtcHJvZHVrdF9uciI6IjExIiwidmlhdGV4dC4wIjoiLS0tIiwiZGJ6aWVsaGFsdGVzdGVsbGVfaWQiOiIxNTMwMTQiLCJzdGFydHpvbmUiOiIzMCIsIm91dHB1dGNoYW5uZWwiOiJJLE0sVyxILEQiLCJkYnN0YXJ0aGFsdGVzdGVsbGVfbmFtZSI6IkplbmEsIFN0YWR0emVudHJ1bSBMw7ZiZGVyZ3JhYmVuIiwic3RhcnR6b25ldGV4dCI6IkplbmEiLCJ2aWEuMCI6IjEiLCJ0YXJpZmZsZXZlbCI6IjEiLCJ6aWVsem9uZSI6IjMwIn0="
+                      "fSecRefX":1,
+                      "tSecRefX":1,
+                      "price":
+                      {
+                        "amount":270,
+                        "currency":"EUR"
+                      }
                     },
                     {
                       "name":"Kinder-Einzelfahrt",
-                      "prc":170,
-                      "cur":"EUR",
-                      "shpCtx":"eyJWTVQiOiJQS01UQVJJRkYiLCJwcm9kdWt0IjoiMTYiLCJwcm9kdWt0dGV4dCI6IktpbmRlci1FaW56ZWxmYWhydCIsImRiemllbGhhbHRlc3RlbGxlX25hbWUiOiJKZW5hLCBTcGl0dGVscGxhdHoiLCJ6aWVsem9uZXRleHQiOiJKZW5hIiwiZGJzdGFydGhhbHRlc3RlbGxlX2lkIjoiMTUzMTY2IiwiZ2ViaWV0c3BhcmFtZXRlcl9uciI6IjEzIiwiZGJ6d2lzY2hlbnpvbmVuIjoiMzAiLCJhbnplaWdldGV4dHZpYSI6Ii0tLSIsInJlbWFyayI6IkNpdHkgSmVuYSIsImRidmlhdGV4dCI6Ii0tLSIsImVmbXByb2R1a3RfbnIiOiIxMiIsInZpYXRleHQuMCI6Ii0tLSIsImRiemllbGhhbHRlc3RlbGxlX2lkIjoiMTUzMDE0Iiwic3RhcnR6b25lIjoiMzAiLCJvdXRwdXRjaGFubmVsIjoiSSxNLFcsSCxEIiwiZGJzdGFydGhhbHRlc3RlbGxlX25hbWUiOiJKZW5hLCBTdGFkdHplbnRydW0gTMO2YmRlcmdyYWJlbiIsInN0YXJ0em9uZXRleHQiOiJKZW5hIiwidmlhLjAiOiIxIiwidGFyaWZmbGV2ZWwiOiIxIiwiemllbHpvbmUiOiIzMCJ9"
-                    },
-                    {
-                      "name":"4-Fahrtenkarte",
-                      "prc":790,
-                      "cur":"EUR",
-                      "shpCtx":"eyJWTVQiOiJQS01UQVJJRkYiLCJwcm9kdWt0IjoiMTE1MTAiLCJwcm9kdWt0dGV4dCI6IjQtRmFocnRlbmthcnRlIiwiZGJ6aWVsaGFsdGVzdGVsbGVfbmFtZSI6IkplbmEsIFNwaXR0ZWxwbGF0eiIsInppZWx6b25ldGV4dCI6IkplbmEiLCJkYnN0YXJ0aGFsdGVzdGVsbGVfaWQiOiIxNTMxNjYiLCJnZWJpZXRzcGFyYW1ldGVyX25yIjoiMTMiLCJkYnp3aXNjaGVuem9uZW4iOiIzMCIsImFuemVpZ2V0ZXh0dmlhIjoiLS0tIiwicmVtYXJrIjoiQ2l0eSBKZW5hIiwiZGJ2aWF0ZXh0IjoiLS0tIiwiZWZtcHJvZHVrdF9uciI6IjE1IiwidmlhdGV4dC4wIjoiLS0tIiwiZGJ6aWVsaGFsdGVzdGVsbGVfaWQiOiIxNTMwMTQiLCJzdGFydHpvbmUiOiIzMCIsIm91dHB1dGNoYW5uZWwiOiJJLE0sSCxEIiwiZGJzdGFydGhhbHRlc3RlbGxlX25hbWUiOiJKZW5hLCBTdGFkdHplbnRydW0gTMO2YmRlcmdyYWJlbiIsInN0YXJ0em9uZXRleHQiOiJKZW5hIiwidmlhLjAiOiIxIiwidGFyaWZmbGV2ZWwiOiIxIiwiemllbHpvbmUiOiIzMCJ9"
+                      "fSecRefX":1,
+                      "tSecRefX":1,
+                      "price":
+                      {
+                        "amount":180,
+                        "currency":"EUR"
+                      }
                     },
                     {
                       "name":"Kinder-4-Fahrtenkarte",
-                      "prc":610,
-                      "cur":"EUR",
-                      "shpCtx":"eyJWTVQiOiJQS01UQVJJRkYiLCJwcm9kdWt0IjoiMTE2MTAiLCJwcm9kdWt0dGV4dCI6IktpbmRlci00LUZhaHJ0ZW5rYXJ0ZSIsImRiemllbGhhbHRlc3RlbGxlX25hbWUiOiJKZW5hLCBTcGl0dGVscGxhdHoiLCJ6aWVsem9uZXRleHQiOiJKZW5hIiwiZGJzdGFydGhhbHRlc3RlbGxlX2lkIjoiMTUzMTY2IiwiZ2ViaWV0c3BhcmFtZXRlcl9uciI6IjEzIiwiZGJ6d2lzY2hlbnpvbmVuIjoiMzAiLCJhbnplaWdldGV4dHZpYSI6Ii0tLSIsInJlbWFyayI6IkNpdHkgSmVuYSIsImRidmlhdGV4dCI6Ii0tLSIsImVmbXByb2R1a3RfbnIiOiIxNiIsInZpYXRleHQuMCI6Ii0tLSIsImRiemllbGhhbHRlc3RlbGxlX2lkIjoiMTUzMDE0Iiwic3RhcnR6b25lIjoiMzAiLCJvdXRwdXRjaGFubmVsIjoiSSxNLEgsRCIsImRic3RhcnRoYWx0ZXN0ZWxsZV9uYW1lIjoiSmVuYSwgU3RhZHR6ZW50cnVtIEzDtmJkZXJncmFiZW4iLCJzdGFydHpvbmV0ZXh0IjoiSmVuYSIsInZpYS4wIjoiMSIsInRhcmlmZmxldmVsIjoiMSIsInppZWx6b25lIjoiMzAifQ=="
+                      "fSecRefX":1,
+                      "tSecRefX":1,
+                      "price":
+                      {
+                        "amount":650,
+                        "currency":"EUR"
+                      }
+                    },
+                    {
+                      "name":"4-Fahrtenkarte",
+                      "fSecRefX":1,
+                      "tSecRefX":1,
+                      "price":
+                      {
+                        "amount":970,
+                        "currency":"EUR"
+                      }
                     },
                     {
                       "name":"VMT-Hopper-Ticket einfache Fahrt",
-                      "prc":610,
-                      "cur":"EUR",
-                      "shpCtx":"eyJWTVQiOiJQS01UQVJJRkYiLCJwcm9kdWt0IjoiODYyIiwicHJvZHVrdHRleHQiOiJWTVQtSG9wcGVyLVRpY2tldCBlaW5mYWNoZSBGYWhydCIsImRiemllbGhhbHRlc3RlbGxlX25hbWUiOiJKZW5hLCBTcGl0dGVscGxhdHoiLCJ6aWVsem9uZXRleHQiOiJKZW5hIiwiZGJzdGFydGhhbHRlc3RlbGxlX2lkIjoiMTUzMTY2IiwiZ2ViaWV0c3BhcmFtZXRlcl9uciI6IjEzIiwiZGJ6d2lzY2hlbnpvbmVuIjoiMzAiLCJhbnplaWdldGV4dHZpYSI6Ii0tLSIsInJlbWFyayI6IkNpdHkgSmVuYSIsImRidmlhdGV4dCI6Ii0tLSIsImVmbXByb2R1a3RfbnIiOiI3MyIsInZpYXRleHQuMCI6Ii0tLSIsImRiemllbGhhbHRlc3RlbGxlX2lkIjoiMTUzMDE0Iiwic3RhcnR6b25lIjoiMzAiLCJvdXRwdXRjaGFubmVsIjoiSSxNLEgsRCIsImRic3RhcnRoYWx0ZXN0ZWxsZV9uYW1lIjoiSmVuYSwgU3RhZHR6ZW50cnVtIEzDtmJkZXJncmFiZW4iLCJzdGFydHpvbmV0ZXh0IjoiSmVuYSIsInZpYS4wIjoiMSIsInRhcmlmZmxldmVsIjoiMSIsInppZWx6b25lIjoiMzAifQ=="
+                      "fSecRefX":1,
+                      "tSecRefX":1,
+                      "price":
+                      {
+                        "amount":740,
+                        "currency":"EUR"
+                      }
                     },
                     {
                       "name":"VMT-Hopper-Ticket Hin- und Rückfahrt",
-                      "prc":990,
-                      "cur":"EUR",
-                      "shpCtx":"eyJWTVQiOiJQS01UQVJJRkYiLCJwcm9kdWt0IjoiODY2IiwicHJvZHVrdHRleHQiOiJWTVQtSG9wcGVyLVRpY2tldCBIaW4tIHVuZCBSw7xja2ZhaHJ0IiwiZGJ6aWVsaGFsdGVzdGVsbGVfbmFtZSI6IkplbmEsIFNwaXR0ZWxwbGF0eiIsInppZWx6b25ldGV4dCI6IkplbmEiLCJkYnN0YXJ0aGFsdGVzdGVsbGVfaWQiOiIxNTMxNjYiLCJnZWJpZXRzcGFyYW1ldGVyX25yIjoiMTMiLCJkYnp3aXNjaGVuem9uZW4iOiIzMCIsImFuemVpZ2V0ZXh0dmlhIjoiLS0tIiwicmVtYXJrIjoiQ2l0eSBKZW5hIiwiZGJ2aWF0ZXh0IjoiLS0tIiwiZWZtcHJvZHVrdF9uciI6Ijc0IiwidmlhdGV4dC4wIjoiLS0tIiwiZGJ6aWVsaGFsdGVzdGVsbGVfaWQiOiIxNTMwMTQiLCJzdGFydHpvbmUiOiIzMCIsIm91dHB1dGNoYW5uZWwiOiJJLE0sSCxEIiwiZGJzdGFydGhhbHRlc3RlbGxlX25hbWUiOiJKZW5hLCBTdGFkdHplbnRydW0gTMO2YmRlcmdyYWJlbiIsInN0YXJ0em9uZXRleHQiOiJKZW5hIiwidmlhLjAiOiIxIiwidGFyaWZmbGV2ZWwiOiIxIiwiemllbHpvbmUiOiIzMCJ9"
+                      "fSecRefX":1,
+                      "tSecRefX":1,
+                      "price":
+                      {
+                        "amount":1210,
+                        "currency":"EUR"
+                      }
                     },
                     {
                       "name":"Tageskarte",
-                      "prc":560,
-                      "cur":"EUR",
-                      "shpCtx":"eyJWTVQiOiJQS01UQVJJRkYiLCJwcm9kdWt0IjoiNjQiLCJwcm9kdWt0dGV4dCI6IlRhZ2Vza2FydGUiLCJkYnppZWxoYWx0ZXN0ZWxsZV9uYW1lIjoiSmVuYSwgU3BpdHRlbHBsYXR6IiwiemllbHpvbmV0ZXh0IjoiSmVuYSIsImRic3RhcnRoYWx0ZXN0ZWxsZV9pZCI6IjE1MzE2NiIsImdlYmlldHNwYXJhbWV0ZXJfbnIiOiIxMyIsImRiendpc2NoZW56b25lbiI6IjMwIiwiYW56ZWlnZXRleHR2aWEiOiItLS0iLCJyZW1hcmsiOiJDaXR5IEplbmEiLCJkYnZpYXRleHQiOiItLS0iLCJlZm1wcm9kdWt0X25yIjoiMjEiLCJ2aWF0ZXh0LjAiOiItLS0iLCJkYnppZWxoYWx0ZXN0ZWxsZV9pZCI6IjE1MzAxNCIsInN0YXJ0em9uZSI6IjMwIiwib3V0cHV0Y2hhbm5lbCI6IkksTSxXLEgsRCIsImRic3RhcnRoYWx0ZXN0ZWxsZV9uYW1lIjoiSmVuYSwgU3RhZHR6ZW50cnVtIEzDtmJkZXJncmFiZW4iLCJzdGFydHpvbmV0ZXh0IjoiSmVuYSIsInZpYS4wIjoiMSIsInRhcmlmZmxldmVsIjoiMSIsInppZWx6b25lIjoiMzAifQ=="
+                      "fSecRefX":1,
+                      "tSecRefX":1,
+                      "price":
+                      {
+                        "amount":690,
+                        "currency":"EUR"
+                      }
                     },
                     {
                       "name":"Gruppentageskarte",
-                      "prc":1100,
-                      "cur":"EUR",
-                      "shpCtx":"eyJWTVQiOiJQS01UQVJJRkYiLCJwcm9kdWt0IjoiODAiLCJwcm9kdWt0dGV4dCI6IkdydXBwZW50YWdlc2thcnRlIiwiZGJ6aWVsaGFsdGVzdGVsbGVfbmFtZSI6IkplbmEsIFNwaXR0ZWxwbGF0eiIsInppZWx6b25ldGV4dCI6IkplbmEiLCJkYnN0YXJ0aGFsdGVzdGVsbGVfaWQiOiIxNTMxNjYiLCJnZWJpZXRzcGFyYW1ldGVyX25yIjoiMTMiLCJkYnp3aXNjaGVuem9uZW4iOiIzMCIsImFuemVpZ2V0ZXh0dmlhIjoiLS0tIiwicmVtYXJrIjoiQ2l0eSBKZW5hIiwiZGJ2aWF0ZXh0IjoiLS0tIiwiZWZtcHJvZHVrdF9uciI6IjIyIiwidmlhdGV4dC4wIjoiLS0tIiwiZGJ6aWVsaGFsdGVzdGVsbGVfaWQiOiIxNTMwMTQiLCJzdGFydHpvbmUiOiIzMCIsIm91dHB1dGNoYW5uZWwiOiJJLE0sVyxILEQiLCJkYnN0YXJ0aGFsdGVzdGVsbGVfbmFtZSI6IkplbmEsIFN0YWR0emVudHJ1bSBMw7ZiZGVyZ3JhYmVuIiwic3RhcnR6b25ldGV4dCI6IkplbmEiLCJ2aWEuMCI6IjEiLCJ0YXJpZmZsZXZlbCI6IjEiLCJ6aWVsem9uZSI6IjMwIn0="
-                    },
-                    {
-                      "name":"Berechtigung CityFlex 25",
-                      "prc":3600,
-                      "cur":"EUR",
-                      "shpCtx":"eyJWTVQiOiJQS01UQVJJRkYiLCJwcm9kdWt0IjoiMjE3IiwicHJvZHVrdHRleHQiOiJCZXJlY2h0aWd1bmcgQ2l0eUZsZXggMjUiLCJkYnppZWxoYWx0ZXN0ZWxsZV9uYW1lIjoiSmVuYSwgU3BpdHRlbHBsYXR6IiwiemllbHpvbmV0ZXh0IjoiSmVuYSIsImRic3RhcnRoYWx0ZXN0ZWxsZV9pZCI6IjE1MzE2NiIsImdlYmlldHNwYXJhbWV0ZXJfbnIiOiI5OSIsImRiendpc2NoZW56b25lbiI6IjMwIiwiYW56ZWlnZXRleHR2aWEiOiItLS0iLCJyZW1hcmsiOiJDaXR5IEplbmEiLCJkYnZpYXRleHQiOiItLS0iLCJlZm1wcm9kdWt0X25yIjoiMzMiLCJ2aWF0ZXh0LjAiOiItLS0iLCJkYnppZWxoYWx0ZXN0ZWxsZV9pZCI6IjE1MzAxNCIsInN0YXJ0em9uZSI6IjMwIiwib3V0cHV0Y2hhbm5lbCI6Ik0sSCxEIiwiZGJzdGFydGhhbHRlc3RlbGxlX25hbWUiOiJKZW5hLCBTdGFkdHplbnRydW0gTMO2YmRlcmdyYWJlbiIsInN0YXJ0em9uZXRleHQiOiJKZW5hIiwidmlhLjAiOiIxIiwidGFyaWZmbGV2ZWwiOiIxIiwiemllbHpvbmUiOiIzMCJ9"
-                    },
-                    {
-                      "name":"Einzelfahrt CityFlex 25",
-                      "prc":165,
-                      "cur":"EUR",
-                      "shpCtx":"eyJWTVQiOiJQS01UQVJJRkYiLCJwcm9kdWt0IjoiMjA5IiwicHJvZHVrdHRleHQiOiJFaW56ZWxmYWhydCBDaXR5RmxleCAyNSIsImRiemllbGhhbHRlc3RlbGxlX25hbWUiOiJKZW5hLCBTcGl0dGVscGxhdHoiLCJ6aWVsem9uZXRleHQiOiJKZW5hIiwiZGJzdGFydGhhbHRlc3RlbGxlX2lkIjoiMTUzMTY2IiwiZ2ViaWV0c3BhcmFtZXRlcl9uciI6IjEzIiwiZGJ6d2lzY2hlbnpvbmVuIjoiMzAiLCJhbnplaWdldGV4dHZpYSI6Ii0tLSIsInJlbWFyayI6IkNpdHkgSmVuYSIsImRidmlhdGV4dCI6Ii0tLSIsImVmbXByb2R1a3RfbnIiOiIzNCIsInZpYXRleHQuMCI6Ii0tLSIsImRiemllbGhhbHRlc3RlbGxlX2lkIjoiMTUzMDE0Iiwic3RhcnR6b25lIjoiMzAiLCJvdXRwdXRjaGFubmVsIjoiTSxILEQiLCJkYnN0YXJ0aGFsdGVzdGVsbGVfbmFtZSI6IkplbmEsIFN0YWR0emVudHJ1bSBMw7ZiZGVyZ3JhYmVuIiwic3RhcnR6b25ldGV4dCI6IkplbmEiLCJ2aWEuMCI6IjEiLCJ0YXJpZmZsZXZlbCI6IjEiLCJ6aWVsem9uZSI6IjMwIn0="
-                    },
-                    {
-                      "name":"Kinder-Einzelfahrt CityFlex 25",
-                      "prc":128,
-                      "cur":"EUR",
-                      "shpCtx":"eyJWTVQiOiJQS01UQVJJRkYiLCJwcm9kdWt0IjoiMjExIiwicHJvZHVrdHRleHQiOiJLaW5kZXItRWluemVsZmFocnQgQ2l0eUZsZXggMjUiLCJkYnppZWxoYWx0ZXN0ZWxsZV9uYW1lIjoiSmVuYSwgU3BpdHRlbHBsYXR6IiwiemllbHpvbmV0ZXh0IjoiSmVuYSIsImRic3RhcnRoYWx0ZXN0ZWxsZV9pZCI6IjE1MzE2NiIsImdlYmlldHNwYXJhbWV0ZXJfbnIiOiIxMyIsImRiendpc2NoZW56b25lbiI6IjMwIiwiYW56ZWlnZXRleHR2aWEiOiItLS0iLCJyZW1hcmsiOiJDaXR5IEplbmEiLCJkYnZpYXRleHQiOiItLS0iLCJlZm1wcm9kdWt0X25yIjoiMzUiLCJ2aWF0ZXh0LjAiOiItLS0iLCJkYnppZWxoYWx0ZXN0ZWxsZV9pZCI6IjE1MzAxNCIsInN0YXJ0em9uZSI6IjMwIiwib3V0cHV0Y2hhbm5lbCI6Ik0sSCxEIiwiZGJzdGFydGhhbHRlc3RlbGxlX25hbWUiOiJKZW5hLCBTdGFkdHplbnRydW0gTMO2YmRlcmdyYWJlbiIsInN0YXJ0em9uZXRleHQiOiJKZW5hIiwidmlhLjAiOiIxIiwidGFyaWZmbGV2ZWwiOiIxIiwiemllbHpvbmUiOiIzMCJ9"
+                      "fSecRefX":1,
+                      "tSecRefX":1,
+                      "price":
+                      {
+                        "amount":1350,
+                        "currency":"EUR"
+                      }
                     },
                     {
                       "name":"Wochenkarte",
-                      "prc":2020,
-                      "cur":"EUR"
+                      "fSecRefX":1,
+                      "tSecRefX":1,
+                      "price":
+                      {
+                        "amount":2470,
+                        "currency":"EUR"
+                      }
                     },
                     {
                       "name":"Wochenkarte Schüler/Azubi",
-                      "prc":1520,
-                      "cur":"EUR"
+                      "fSecRefX":1,
+                      "tSecRefX":1,
+                      "price":
+                      {
+                        "amount":1860,
+                        "currency":"EUR"
+                      }
                     },
                     {
                       "name":"Monatskarte",
-                      "prc":6340,
-                      "cur":"EUR"
+                      "fSecRefX":1,
+                      "tSecRefX":1,
+                      "price":
+                      {
+                        "amount":7740,
+                        "currency":"EUR"
+                      }
                     },
                     {
                       "name":"Monatskarte Schüler/Azubi",
-                      "prc":4760,
-                      "cur":"EUR"
+                      "fSecRefX":1,
+                      "tSecRefX":1,
+                      "price":
+                      {
+                        "amount":5810,
+                        "currency":"EUR"
+                      }
                     },
                     {
                       "name":"Abo Plus (persönlich)",
-                      "prc":5710,
-                      "cur":"EUR"
+                      "fSecRefX":1,
+                      "tSecRefX":1,
+                      "price":
+                      {
+                        "amount":6970,
+                        "currency":"EUR"
+                      }
                     },
                     {
                       "name":"Abo Plus (übertragbar)",
-                      "prc":5710,
-                      "cur":"EUR"
+                      "fSecRefX":1,
+                      "tSecRefX":1,
+                      "price":
+                      {
+                        "amount":6970,
+                        "currency":"EUR"
+                      }
                     },
                     {
                       "name":"Abo Solo",
-                      "prc":5180,
-                      "cur":"EUR"
+                      "fSecRefX":1,
+                      "tSecRefX":1,
+                      "price":
+                      {
+                        "amount":6320,
+                        "currency":"EUR"
+                      }
                     },
                     {
                       "name":"Abo Schüler/Azubi",
-                      "prc":4240,
-                      "cur":"EUR"
+                      "fSecRefX":1,
+                      "tSecRefX":1,
+                      "price":
+                      {
+                        "amount":5180,
+                        "currency":"EUR"
+                      }
                     },
                     {
                       "name":"Hunde-/Fahrradkarte",
-                      "prc":170,
-                      "cur":"EUR",
-                      "shpCtx":"eyJWTVQiOiJQS01UQVJJRkYiLCJwcm9kdWt0IjoiOTQiLCJwcm9kdWt0dGV4dCI6Ikh1bmRlLS9GYWhycmFka2FydGUiLCJkYnppZWxoYWx0ZXN0ZWxsZV9uYW1lIjoiSmVuYSwgU3BpdHRlbHBsYXR6IiwiemllbHpvbmV0ZXh0IjoiSmVuYSIsImRic3RhcnRoYWx0ZXN0ZWxsZV9pZCI6IjE1MzE2NiIsImdlYmlldHNwYXJhbWV0ZXJfbnIiOiIxMyIsImRiendpc2NoZW56b25lbiI6IjMwIiwiYW56ZWlnZXRleHR2aWEiOiItLS0iLCJyZW1hcmsiOiJDaXR5IEplbmEiLCJkYnZpYXRleHQiOiItLS0iLCJlZm1wcm9kdWt0X25yIjoiNjciLCJ2aWF0ZXh0LjAiOiItLS0iLCJkYnppZWxoYWx0ZXN0ZWxsZV9pZCI6IjE1MzAxNCIsInN0YXJ0em9uZSI6IjMwIiwib3V0cHV0Y2hhbm5lbCI6IkksTSxXLEgsRCIsImRic3RhcnRoYWx0ZXN0ZWxsZV9uYW1lIjoiSmVuYSwgU3RhZHR6ZW50cnVtIEzDtmJkZXJncmFiZW4iLCJzdGFydHpvbmV0ZXh0IjoiSmVuYSIsInZpYS4wIjoiMSIsInRhcmlmZmxldmVsIjoiMSIsInppZWx6b25lIjoiMzAifQ=="
+                      "fSecRefX":1,
+                      "tSecRefX":1,
+                      "price":
+                      {
+                        "amount":210,
+                        "currency":"EUR"
+                      }
+                    },
+                    {
+                      "name":"Deutschlandticket",
+                      "fSecRefX":1,
+                      "tSecRefX":1,
+                      "price":
+                      {
+                        "amount":5800,
+                        "currency":"EUR"
+                      }
+                    },
+                    {
+                      "name":"Einzelfahrt mit 10% Rabatt",
+                      "fSecRefX":1,
+                      "tSecRefX":1,
+                      "price":
+                      {
+                        "amount":243,
+                        "currency":"EUR"
+                      }
+                    },
+                    {
+                      "name":"Kinder-Einzelfahrt mit 10% Rabatt",
+                      "fSecRefX":1,
+                      "tSecRefX":1,
+                      "price":
+                      {
+                        "amount":162,
+                        "currency":"EUR"
+                      }
                     }
                   ],
-                  "fSecRefX":0,
-                  "tSecRefX":2
+                  "fSecRefX":1,
+                  "tSecRefX":1,
+                  "msgL":
+                  [
+                    {
+                      "type":"REM",
+                      "remX":2,
+                      "sty":"I",
+                      "dspl":"EXP",
+                      "tagL":
+                      [
+                        "RES_TRF_FSET_HDR_H3"
+                      ],
+                      "sort":818413568
+                    }
+                  ]
                 }
-              ]
+              ],
+              "totalPrice":
+              {
+                "amount":270,
+                "currency":"EUR"
+              },
+              "extContActionBar":
+              {
+                "text":"Preise",
+                "content":
+                {
+                  "type":"APP_CTX",
+                  "content":"VGFyaWZmT3ZlcnZpZXdTY3JlZW4="
+                }
+              },
+              "extContOverview":
+              {
+                "text":"Tarifübersicht anzeigen",
+                "content":
+                {
+                  "type":"APP_CTX",
+                  "content":"VGFyaWZmT3ZlcnZpZXdTY3JlZW4="
+                }
+              }
             },
-            "ovwTrfRefL":
+            "msgL":
             [
               {
-                "type":"F",
-                "fareSetX":0,
-                "fareX":0
+                "type":"REM",
+                "remX":1,
+                "sty":"I",
+                "tagL":
+                [
+                  "SUM_CON_HDR_L","RES_GLB_HDR_L"
+                ],
+                "sort":147324928
               }
             ],
             "conSubscr":"P",
             "recState":"U",
-            "cksum":"d114a4a2_3",
-            "cksumDti":"8433fa0b_3"
+            "cksum":"50b4cdf5_3",
+            "cksumDti":"f20bcd88_3",
+            "intvlSubscr":"P",
+            "originType":"INITIAL",
+            "recon":
+            {
+              "ctx":"¶HKI¶G@F$A=2@O=50.926947, 11.586987@X=11586987@Y=50926947@a=128@$A=1@O=Jena, Stadtzentrum Löbdergraben@L=15316602@a=128@$202501271458$202501271459$$$1$$$$$$§T$A=1@O=Jena, Stadtzentrum Löbdergraben@L=15316602@a=128@$A=1@O=Jena, Spittelplatz@L=15301403@a=128@$202501271459$202501271502$Str    4$$1$$$$$$§G@F$A=1@O=Jena, Spittelplatz@L=15301403@a=128@$A=2@O=50.933887, 11.590592@X=11590592@Y=50933887@a=128@$202501271502$202501271503$$$1$$$$$$¶GP¶ft@0@1000@120@0@100@1@0@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§bt@0@1000@120@0@100@1@0@0@@@@@false@0@-1@0@-1@-1@$f@$f@$f@$f@$f@$§tf@$f@$f@$f@$f@$f@$§¶KC¶#VE#2#CF#99#CA#0#CM#0#SICT#0#AM#49#AM2#0#RT#4#¶KRCC¶#VE#1#"
+            }
           }
         ],
-        "outCtxScrB":"2|OB|MT#11#53009#53009#53020#53020#0#0#85#53005#1#-2147483646#0#1#2|PDH#aa8e1711c4b85f47e2912711291b0b4d|RD#5122021|RT#192500|US#0",
-        "outCtxScrF":"2|OF|MT#11#53020#53020#53025#53025#0#0#5#53018#3#-2147483646#0#1#2|PDH#aa8e1711c4b85f47e2912711291b0b4d|RD#5122021|RT#192500|US#0",
-        "fpB":"20211101",
-        "fpE":"20220228",
-        "planrtTS":"1638728742"
+        "outCtxScrB":"3|OB|MT#14#85848#85848#85853#85853#0#0#5#85841#1#0#2#0#0#-2147483648#1#2|PDH#212bbf1b1390db16a6e09b9fcbf1dc4c|RD#27012025|RT#144100|US#0|RS#INIT",
+        "outCtxScrF":"3|OF|MT#14#85858#85858#85863#85863#0#0#5#85853#3#0#2#0#0#-2147483648#1#2|PDH#212bbf1b1390db16a6e09b9fcbf1dc4c|RD#27012025|RT#144100|US#0|RS#INIT",
+        "fpB":"20241201",
+        "fpE":"20250630",
+        "planrtTS":"1737985268",
+        "outConGrpSettings":
+        {
+          "conGrpL":
+          [
+            {
+              "name":"Alle Verbindungen",
+              "icoX":13,
+              "grpid":"cl_all",
+              "conScoringL":
+              [
+                {
+                  "type":"DT",
+                  "conScoreL":
+                  [
+                    {
+                      "score":8858471615383994367,
+                      "scoreS":"08858471615383994367",
+                      "conRefL":
+                      [
+                        0
+                      ]
+                    },
+                    {
+                      "score":8858454023195852799,
+                      "scoreS":"08858454023195852799",
+                      "conRefL":
+                      [
+                        1
+                      ]
+                    },
+                    {
+                      "score":8858427634918883327,
+                      "scoreS":"08858427634918883327",
+                      "conRefL":
+                      [
+                        2
+                      ]
+                    }
+                  ],
+                  "name":"Abfahrt"
+                },
+                {
+                  "type":"AT",
+                  "conScoreL":
+                  [
+                    {
+                      "score":8858445227104927743,
+                      "scoreS":"08858445227104927743",
+                      "conRefL":
+                      [
+                        0
+                      ]
+                    },
+                    {
+                      "score":8858414440777252863,
+                      "scoreS":"08858414440777252863",
+                      "conRefL":
+                      [
+                        1
+                      ]
+                    },
+                    {
+                      "score":8858405644686327807,
+                      "scoreS":"08858405644686327807",
+                      "conRefL":
+                      [
+                        2
+                      ]
+                    }
+                  ],
+                  "name":"Ankunft"
+                },
+                {
+                  "type":"TI",
+                  "conScoreL":
+                  [
+                    {
+                      "score":9223346704588210175,
+                      "scoreS":"09223346704588210175",
+                      "conRefL":
+                      [
+                        0
+                      ]
+                    },
+                    {
+                      "score":9223329112400068607,
+                      "scoreS":"09223329112400068607",
+                      "conRefL":
+                      [
+                        1
+                      ]
+                    },
+                    {
+                      "score":9223346704582967295,
+                      "scoreS":"09223346704582967295",
+                      "conRefL":
+                      [
+                        2
+                      ]
+                    }
+                  ],
+                  "name":"Dauer"
+                }
+              ],
+              "initScoringType":"DT",
+              "requests":
+              [
+                {
+                  "id":"RQ_CLIENT",
+                  "autosend":true
+                }
+              ],
+              "scrollable":true,
+              "bitmask":1
+            }
+          ],
+          "selectL":
+          [
+            {
+              "icoX":13,
+              "name":"Alle Verbindungen",
+              "bitIdx":0
+            }
+          ],
+          "variant":"RADIO"
+        }
       }
     }
   ]

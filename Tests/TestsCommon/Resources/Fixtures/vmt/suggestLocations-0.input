@@ -1,8 +1,24 @@
 {
-  "ver":"1.18",
+  "ver":"1.54",
   "lang":"deu",
-  "id":"3ekkcmxx66gaxi8x",
+  "id":"fcg23nm6628qx6wg",
   "err":"OK",
+  "graph":
+  {
+    "id":"standard",
+    "index":0
+  },
+  "subGraph":
+  {
+    "id":"global",
+    "index":0
+  },
+  "view":
+  {
+    "id":"standard",
+    "index":0,
+    "type":"WGS84"
+  },
   "svcResL":
   [
     {
@@ -12,76 +28,13 @@
       {
         "common":
         {
-          "locL":
-          [
-
-          ],
-          "prodL":
-          [
-
-          ],
-          "polyL":
-          [
-
-          ],
-          "layerL":
-          [
-            {
-              "id":"standard",
-              "name":"standard",
-              "index":0,
-              "annoCnt":0
-            }
-          ],
-          "crdSysL":
-          [
-            {
-              "id":"standard",
-              "index":0,
-              "type":"WGS84"
-            }
-          ],
-          "opL":
-          [
-
-          ],
-          "remL":
-          [
-            {
-              "type":"A",
-              "code":"IS",
-              "prio":350,
-              "icoX":0,
-              "txtN":"Verantwortlicher DINO-Haltestellenbereich"
-            },
-            {
-              "type":"A",
-              "code":"PD",
-              "prio":0,
-              "icoX":0,
-              "txtN":"Baudenkmäler"
-            },
-            {
-              "type":"A",
-              "code":"P_",
-              "prio":0,
-              "icoX":0,
-              "txtN":"POI"
-            }
-          ],
           "icoL":
           [
             {
-              "res":"INFO"
+              "res":"loc_addr"
             },
             {
-              "res":"STA"
-            },
-            {
-              "res":"ADR"
-            },
-            {
-              "res":"LOC_DENKMAL"
+              "res":"loc_stop"
             }
           ]
         },
@@ -92,7 +45,19 @@
           "locL":
           [
             {
-              "lid":"A=1@O=Jena, Ernst-Abbe-Platz@X=11581549@Y=50928179@U=80@L=153168@B=1@p=1638574695@",
+              "lid":"A=2@O=Ernst-Abbe-Platz, Jena@X=11581495@Y=50928035@U=99@b=991078421@B=1@p=1665647737@",
+              "type":"A",
+              "name":"Ernst-Abbe-Platz, Jena",
+              "icoX":0,
+              "state":"M",
+              "crd":
+              {
+                "x":11581495,
+                "y":50928035
+              }
+            },
+            {
+              "lid":"A=1@O=Jena, Ernst-Abbe-Platz@X=11581549@Y=50928179@U=80@L=153168@B=1@p=1737974811@",
               "type":"S",
               "name":"Jena, Ernst-Abbe-Platz",
               "icoX":1,
@@ -102,79 +67,24 @@
               {
                 "x":11581549,
                 "y":50928179,
-                "layerX":0,
-                "crdSysX":0
+                "floor":0
               },
               "meta":true,
               "pCls":32,
-              "wt":3667,
+              "wt":2060,
               "isMainMast":true,
-              "msgL":
+              "globalIdL":
               [
                 {
-                  "type":"REM",
-                  "remX":0,
-                  "tagL":
-                  [
-                    "RES_LOC"
-                  ],
-                  "sort":851181568
+                  "id":"de:16053:153168",
+                  "type":"A"
                 }
-              ]
+              ],
+              "TZOffset":60,
+              "chgTime":"000000"
             },
             {
-              "lid":"A=2@O=Jena, Ernst-Abbe-Platz@X=11582124@Y=50928179@U=99@b=980626084@B=1@p=1462862076@",
-              "type":"A",
-              "name":"Jena, Ernst-Abbe-Platz",
-              "icoX":2,
-              "state":"M",
-              "crd":
-              {
-                "x":11582124,
-                "y":50928179,
-                "layerX":0,
-                "crdSysX":0
-              }
-            },
-            {
-              "lid":"A=4@O=Ernst-Abbe-Denkmal (Jena)@X=11579967@Y=50927936@U=178@L=9500092@B=1@p=1566901600@",
-              "type":"P",
-              "name":"Ernst-Abbe-Denkmal (Jena)",
-              "icoX":3,
-              "extId":"9500092",
-              "state":"F",
-              "crd":
-              {
-                "x":11579967,
-                "y":50927936,
-                "z":0,
-                "layerX":0,
-                "crdSysX":0
-              },
-              "msgL":
-              [
-                {
-                  "type":"REM",
-                  "remX":1,
-                  "tagL":
-                  [
-                    "RES_LOC"
-                  ],
-                  "sort":536870912
-                },
-                {
-                  "type":"REM",
-                  "remX":2,
-                  "tagL":
-                  [
-                    "RES_LOC"
-                  ],
-                  "sort":536870912
-                }
-              ]
-            },
-            {
-              "lid":"A=1@O=Hildburghausen, Ernst-Thälmann-Platz@X=10738855@Y=50429673@U=80@L=2510007@B=1@p=1638574695@",
+              "lid":"A=1@O=Hildburghausen, Ernst-Thälmann-Platz@X=10738855@Y=50429673@U=80@L=2510007@B=1@p=1737974811@",
               "type":"S",
               "name":"Hildburghausen, Ernst-Thälmann-Platz",
               "icoX":1,
@@ -184,54 +94,45 @@
               {
                 "x":10738855,
                 "y":50429673,
-                "layerX":0,
-                "crdSysX":0
+                "floor":0
               },
               "meta":true,
               "pCls":256,
-              "wt":16,
+              "wt":15,
               "isMainMast":true,
-              "msgL":
+              "globalIdL":
               [
                 {
-                  "type":"REM",
-                  "remX":0,
-                  "tagL":
-                  [
-                    "RES_LOC"
-                  ],
-                  "sort":851181568
+                  "id":"de:16069:2510007",
+                  "type":"A"
                 }
-              ]
+              ],
+              "TZOffset":60,
+              "chgTime":"000000"
             },
             {
-              "lid":"A=1@O=Eisenach, Ernst-Abbe-Gymnasium@X=10325181@Y=50972595@U=80@L=1700865@B=1@p=1638574695@",
-              "type":"S",
-              "name":"Eisenach, Ernst-Abbe-Gymnasium",
-              "icoX":1,
-              "extId":"1700865",
-              "state":"F",
+              "lid":"A=2@O=Ernst-Haeckel-Platz, Ingersleben@X=10936654@Y=50920421@U=99@b=991053691@B=1@p=1665647737@",
+              "type":"A",
+              "name":"Ernst-Haeckel-Platz, Ingersleben",
+              "icoX":0,
+              "state":"M",
               "crd":
               {
-                "x":10325181,
-                "y":50972595,
-                "layerX":0,
-                "crdSysX":0
-              },
-              "pCls":256,
-              "wt":57,
-              "msgL":
-              [
-                {
-                  "type":"REM",
-                  "remX":0,
-                  "tagL":
-                  [
-                    "RES_LOC"
-                  ],
-                  "sort":851181568
-                }
-              ]
+                "x":10936654,
+                "y":50920421
+              }
+            },
+            {
+              "lid":"A=2@O=Ernst-Haeckel-Platz, Jena@X=11582178@Y=50926255@U=99@b=991078404@B=1@p=1665647737@",
+              "type":"A",
+              "name":"Ernst-Haeckel-Platz, Jena",
+              "icoX":0,
+              "state":"M",
+              "crd":
+              {
+                "x":11582178,
+                "y":50926255
+              }
             }
           ]
         }
