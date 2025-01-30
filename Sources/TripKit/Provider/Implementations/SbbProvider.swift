@@ -682,7 +682,7 @@ public class SbbProvider: AbstractNetworkProvider {
         return Location(type: .station, id: id, coord: coord, place: place, name: name)
     }
     
-    private func gql_parseStop(location: Location, json: JSON, cancelled: Bool) -> StopEvent? {
+    private func gql_parseStop(location: Location, json: JSON, cancelled: Bool, delayUndefined: Bool) -> StopEvent? {
         let plannedTime = parseTime(from: json["time"])
         let delay = json["delay"].intValue
         let predictedTime = plannedTime?.addingTimeInterval(TimeInterval(delay * 60))
@@ -693,7 +693,7 @@ public class SbbProvider: AbstractNetworkProvider {
         
         let stopEvent: StopEvent?
         if let plannedTime = plannedTime {
-            stopEvent = StopEvent(location: location, plannedTime: plannedTime, predictedTime: predictedTime, plannedPlatform: plannedPosition, predictedPlatform: predictedPosition, cancelled: cancelled)
+            stopEvent = StopEvent(location: location, plannedTime: plannedTime, predictedTime: predictedTime, plannedPlatform: plannedPosition, predictedPlatform: predictedPosition, cancelled: cancelled, undefinedDelay: delayUndefined)
         } else {
             stopEvent = nil
         }
@@ -929,11 +929,12 @@ public class SbbProvider: AbstractNetworkProvider {
             guard let location = gql_parsePlace(json: stopJson["place"]) else { continue }
             
             let status = stopJson["stopStatus"].string
-            let statusMessage = stopJson["stopStatusFormatted"].string
+            let statusMessage = Set([stopJson["stopStatusFormatted"].string, stopJson["departure", "delayText"].string, stopJson["arrival", "delayText"].string].compactMap({$0})).joined(separator: ". ")
             let forBoarding = stopJson["forBoarding"].boolValue
             let forAlighting = stopJson["forAlighting"].boolValue
             let isFirst = index == 0
             let isLast = index == jsonStopPoints.count - 1
+            let delayUndefined = stopJson["delayUndefined"].boolValue
             var cancelled = status == "CANCELLED" || status == "NOT_SERVICED"
             if (status == "END_PARTIAL_CANCELLATION" || !forAlighting) && isLast {
                 cancelled = true
@@ -943,8 +944,8 @@ public class SbbProvider: AbstractNetworkProvider {
                 cancelled = true
             }
             
-            let departure = gql_parseStop(location: location, json: stopJson["departure"], cancelled: cancelled)
-            let arrival = gql_parseStop(location: location, json: stopJson["arrival"], cancelled: cancelled)
+            let departure = gql_parseStop(location: location, json: stopJson["departure"], cancelled: cancelled, delayUndefined: delayUndefined)
+            let arrival = gql_parseStop(location: location, json: stopJson["arrival"], cancelled: cancelled, delayUndefined: delayUndefined)
             
             let loadFactor = parseLoadFactor(from: stopJson["occupancy", "\(occupancyClass)Class"])
             if let loadFactor = loadFactor, maxOccupancy == nil || loadFactor.rawValue < maxOccupancy!.rawValue {

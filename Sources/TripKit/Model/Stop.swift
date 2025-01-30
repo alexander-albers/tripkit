@@ -78,7 +78,8 @@ public class Stop: NSObject, NSSecureCoding {
                 predictedTime: aDecoder.decodeObject(of: NSDate.self, forKey: PropertyKey.predictedDepartureTime) as Date?,
                 plannedPlatform: aDecoder.decodeObject(of: NSString.self, forKey: PropertyKey.plannedDeparturePlatform) as String?,
                 predictedPlatform: aDecoder.decodeObject(of: NSString.self, forKey: PropertyKey.predictedDeparturePlatform) as String?,
-                cancelled: aDecoder.decodeBool(forKey: PropertyKey.departureCancelled)
+                cancelled: aDecoder.decodeBool(forKey: PropertyKey.departureCancelled),
+                undefinedDelay: aDecoder.decodeBool(forKey: PropertyKey.departureUndefinedDelay)
             )
         } else {
             departure = nil
@@ -92,7 +93,8 @@ public class Stop: NSObject, NSSecureCoding {
                 predictedTime: aDecoder.decodeObject(of: NSDate.self, forKey: PropertyKey.predictedArrivalTime) as Date?,
                 plannedPlatform: aDecoder.decodeObject(of: NSString.self, forKey: PropertyKey.plannedArrivalPlatform) as String?,
                 predictedPlatform: aDecoder.decodeObject(of: NSString.self, forKey: PropertyKey.predictedArrivalPlatform) as String?,
-                cancelled: aDecoder.decodeBool(forKey: PropertyKey.arrivalCancelled)
+                cancelled: aDecoder.decodeBool(forKey: PropertyKey.arrivalCancelled),
+                undefinedDelay: aDecoder.decodeBool(forKey: PropertyKey.arrivalUndefinedDelay)
             )
         } else {
             arrival = nil
@@ -110,6 +112,7 @@ public class Stop: NSObject, NSSecureCoding {
             aCoder.encode(departure.plannedPlatform, forKey: PropertyKey.plannedDeparturePlatform)
             aCoder.encode(departure.predictedPlatform, forKey: PropertyKey.predictedDeparturePlatform)
             aCoder.encode(departure.cancelled, forKey: PropertyKey.departureCancelled)
+            aCoder.encode(departure.undefinedDelay, forKey: PropertyKey.departureUndefinedDelay)
         }
         
         if let arrival = arrival {
@@ -118,6 +121,7 @@ public class Stop: NSObject, NSSecureCoding {
             aCoder.encode(arrival.plannedPlatform, forKey: PropertyKey.plannedArrivalPlatform)
             aCoder.encode(arrival.predictedPlatform, forKey: PropertyKey.predictedArrivalPlatform)
             aCoder.encode(arrival.cancelled, forKey: PropertyKey.arrivalCancelled)
+            aCoder.encode(arriva.undefinedDelay, forKey: PropertyKey.arrivalUndefinedDelay)
         }
         
         aCoder.encode(message, forKey: PropertyKey.message)
@@ -140,11 +144,13 @@ public class Stop: NSObject, NSSecureCoding {
         static let plannedArrivalPlatform = "plannedArrivalPlatform"
         static let predictedArrivalPlatform = "predictedArrivalPlatform"
         static let arrivalCancelled = "arrivalCancelled"
+        static let arrivalUndefinedDelay = "arrivalUndefinedDelay"
         static let plannedDepartureTime = "plannedDepartureTime"
         static let predictedDepartureTime = "predictedDepartureTime"
         static let plannedDeparturePlatform = "plannedDeparturePlatform"
         static let predictedDeparturePlatform = "predictedDeparturePlatform"
         static let departureCancelled = "departureCancelled"
+        static let departureUndefinedDelay = "departureUndefinedDelay"
         static let message = "message"
         
     }

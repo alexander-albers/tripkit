@@ -71,6 +71,11 @@ public class Trip: NSObject, NSSecureCoding {
         return Int(predictedArrival.timeIntervalSince(leg.arrivalStop.plannedTime) / 60) != 0
     }
     
+    /// Returns true if any of the legs have an unknown delay.
+    public var hasUndefinedDelay: Bool {
+        return legs.compactMap({$0 as? PublicLeg}).contains(where: {$0.departureStop.undefinedDelay || $0.arrivalStop.undefinedDelay})
+    }
+    
     /// Returns the earliest departure time.
     ///
     /// This may be either the predicted or the planned time, depending on what is smaller.

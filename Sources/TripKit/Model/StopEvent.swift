@@ -17,6 +17,8 @@ public class StopEvent: NSObject {
     public let predictedPlatform: String?
     /// True if the stop has been planned originally, but is now skipped.
     public var cancelled: Bool
+    /// True if the actual delay is unknown.
+    public var undefinedDelay: Bool
     
     /// Predicted time if available, otherwise the planned time.
     public var time: Date { predictedTime ?? plannedTime }
@@ -42,13 +44,14 @@ public class StopEvent: NSObject {
         return max(plannedTime, predictedTime)
     }
     
-    public init(location: Location, plannedTime: Date, predictedTime: Date?, plannedPlatform: String?, predictedPlatform: String?, cancelled: Bool) {
+    public init(location: Location, plannedTime: Date, predictedTime: Date?, plannedPlatform: String?, predictedPlatform: String?, cancelled: Bool, undefinedDelay: Bool = false) {
         self.location = location
         self.plannedTime = plannedTime
         self.predictedTime = predictedTime
         self.plannedPlatform = plannedPlatform
         self.predictedPlatform = predictedPlatform
         self.cancelled = cancelled
+        self.undefinedDelay = undefinedDelay
     }
     
     public override func isEqual(_ other: Any?) -> Bool {
