@@ -121,7 +121,7 @@ public class Stop: NSObject, NSSecureCoding {
             aCoder.encode(arrival.plannedPlatform, forKey: PropertyKey.plannedArrivalPlatform)
             aCoder.encode(arrival.predictedPlatform, forKey: PropertyKey.predictedArrivalPlatform)
             aCoder.encode(arrival.cancelled, forKey: PropertyKey.arrivalCancelled)
-            aCoder.encode(arriva.undefinedDelay, forKey: PropertyKey.arrivalUndefinedDelay)
+            aCoder.encode(arrival.undefinedDelay, forKey: PropertyKey.arrivalUndefinedDelay)
         }
         
         aCoder.encode(message, forKey: PropertyKey.message)
