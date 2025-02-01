@@ -21,8 +21,3 @@ jobs:
       - name: Test
         run: |
           xcodebuild -scheme "TripKitTests macOS" -resultBundlePath LiveTestResults -test-iterations 3 -retry-tests-on-failure test
-      - uses: kishikawakatsumi/xcresulttool@v1.7.1
-        with:
-          path: LiveTestResults.xcresult
-          title: Live test results
-        if: success() || failure()
