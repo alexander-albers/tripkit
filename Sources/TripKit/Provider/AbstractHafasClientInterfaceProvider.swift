@@ -1104,9 +1104,9 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
             for jsonRem in remL {
                 if jsonRem["type"].string == "REM", let remX = jsonRem["remX"].int, let rem = rems?[safe: remX] {
                     switch (rem.code ?? "").lowercased() {
-                    case "bf", "rg", "eh", "bg", "op", "be", "re":
+                    case "bf", "rg", "eh", "bg", "op", "be", "re", "cb":
                         result.insert(.wheelChairAccess)
-                    case "fb", "fk", "g ":
+                    case "fb", "fk", "g ", "by", "a4":
                         result.insert(.bicycleCarriage)
                     case "bt", "br":
                         result.insert(.restaurant)
@@ -1116,6 +1116,8 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
                         result.insert(.airConditioned)
                     case "ls", "ri":
                         result.insert(.powerSockets)
+                    case "ch": // KVB: rollstuhltaugliches WC
+                        break
                     case "ck": // Komfort Check-in
                         break
                     case "pf", "pb": // Maskenpflicht
@@ -1171,7 +1173,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
                     }
                 } else if jsonRem["type"].string == "HIM", let himX = jsonRem["himX"].int {
                     guard let text = messages?[safe: himX] else { continue }
-                    legMessages.append(text)
+                    legMessages.append(text.stripHTMLTags())
                 }
             }
             attrs = result.isEmpty ? nil : Array(result)
@@ -1181,7 +1183,7 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
         for him in jny["himL"].arrayValue {
             guard let himX = him["himX"].int else { continue }
             guard let text = messages?[safe: himX] else { continue }
-            legMessages.append(text)
+            legMessages.append(text.stripHTMLTags())
         }
         // please, please continue to wear a mask, even if the app doesn't nag you about it anymore
         legMessages = legMessages.filter({!$0.lowercased().contains("ffp") && !$0.lowercased().contains("maskenpflicht") && !$0.lowercased().contains("\"3g-pflicht\"") && !$0.lowercased().contains("corona-präventionsmaßnahme")})
