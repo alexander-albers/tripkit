@@ -50,10 +50,12 @@ public class TariffProfile: NSObject, NSSecureCoding {
         let tariffClass = coder.decodeInteger(forKey: PropertyKey.tariffClass)
         let travelerType = coder.containsValue(forKey: PropertyKey.travelerType) ? TravelerType(rawValue: coder.decodeInteger(forKey: PropertyKey.travelerType)) : nil
         let tariffReductions: [TariffReduction]
-        if let tariffReduction = coder.decodeObject(of: TariffReduction.self, forKey: PropertyKey.tariffReduction) {
+        if let reductions = coder.decodeObject(of: [NSArray.self, TariffReduction.self], forKey: PropertyKey.tariffReduction) as? [TariffReduction] {
+            tariffReductions = reductions
+        } else if let tariffReduction = coder.decodeObject(of: TariffReduction.self, forKey: PropertyKey.tariffReduction) {
             tariffReductions = [tariffReduction]
         } else {
-            tariffReductions = coder.decodeObject(of: [NSArray.self, TariffReduction.self], forKey: PropertyKey.tariffReduction) as? [TariffReduction] ?? []
+            tariffReductions = []
         }
         self.init(tariffClass: tariffClass, travelerType: travelerType, tariffReductions: tariffReductions)
     }
