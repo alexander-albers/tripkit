@@ -867,12 +867,11 @@ public class SbbProvider: AbstractNetworkProvider {
         }
         
         var legs: [Leg] = []
-        for legJson in tripJson["legs"].arrayValue {
-            let legId = legJson["id"].stringValue
+        for (legId, legJson) in tripJson["legs"].arrayValue.enumerated() {
             let legType = legJson["__typename"].stringValue
             switch legType {
             case "PTRideLeg":
-                legs.append(try parsePublicLeg(legJson: legJson["serviceJourney"], legId: legId, tripId: id, occupancyClass: occupancyClass))
+                legs.append(try parsePublicLeg(legJson: legJson["serviceJourney"], legId: "\(legId)", tripId: id, occupancyClass: occupancyClass))
             case "ChangeLeg":
                 break
             case "AccessLeg", "PTConnectionLeg":
