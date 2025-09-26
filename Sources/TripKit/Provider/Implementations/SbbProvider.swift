@@ -1411,7 +1411,7 @@ public class SbbProvider: AbstractNetworkProvider {
             """
             
     private let QueryJourneyDetailQuery = """
-            query getServiceJourneyById($id: ID!, $language: LanguageEnum!) {
+            query getServiceJourneyById($id: NonEmptyString!, $language: LanguageEnum!) {
               serviceJourneyById(id: $id, language: $language) {
                 id
                 stopPoints {
