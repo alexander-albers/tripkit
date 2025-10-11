@@ -510,7 +510,9 @@ public class SbbProvider: AbstractNetworkProvider {
                 }
             }
             
-            wagonGroups.append(WagonGroup(designation: "", wagons: wagons, destination: wagonGroupJson["direction"].string, lineLabel: nil))
+            if wagons.count > 0 {
+                wagonGroups.append(WagonGroup(designation: "", wagons: wagons, destination: wagonGroupJson["direction"].string, lineLabel: nil))
+            }
         }
         guard !sectors.isEmpty, !wagonGroups.compactMap({$0.wagons}).isEmpty else {
             throw ParseError(reason: "failed to parse sectors or wagon groups")
