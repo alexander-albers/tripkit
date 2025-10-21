@@ -758,7 +758,7 @@ public class DbProvider: AbstractNetworkProvider {
         ]
         
         
-        let httpRequest = createHttpRequest(for: "angebote/fahrplan", contentType: "application/x.db.vendo.mob.verbindungssuche.v8+json", content: request)
+        let httpRequest = createHttpRequest(for: "angebote/fahrplan", contentType: "application/x.db.vendo.mob.verbindungssuche.v9+json", content: request)
         return makeRequest(httpRequest) {
             try self.queryTripsParsing(request: httpRequest, from: from, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions, previousContext: previousContext, later: later, completion: completion)
         } errorHandler: { err in
