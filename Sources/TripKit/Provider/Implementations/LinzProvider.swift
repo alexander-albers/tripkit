@@ -3,7 +3,7 @@ import Foundation
 /// Linz AG (AT)
 public class LinzProvider: AbstractEfaWebProvider {
     
-    static let API_BASE = "https://www.linzag.at/linz2/"
+    static let API_BASE = "https://www.linzag.at/linz-efa/"
     
     public override var supportedLanguages: Set<String> { ["de", "en"] }
     
