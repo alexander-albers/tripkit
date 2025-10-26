@@ -3,7 +3,7 @@ import Foundation
 /// Braunschweiger Verkehrs-GmbH (DE)
 public class BsvagProvider: AbstractEfaWebProvider {
     
-    static let API_BASE = "https://bsvg.efa.de/bsvagstd/"
+    static let API_BASE = "https://fahrplanauskunft.bsvg.net/efa/"
     
     public override var supportedLanguages: Set<String> { ["de", "en", "tr"] }
     
