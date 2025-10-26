@@ -446,7 +446,7 @@ public class VrrProvider: AbstractEfaWebProvider {
         } else if mot == "11" {
             // Wuppertaler Schwebebahn & SkyTrain D'dorf
             if trainName == "Schwebebahn" || (longName ?? "").hasPrefix("Schwebebahn") {
-                return Line(id: id, network: network, product: .cablecar, label: name)
+                return Line(id: id, network: network, product: .cablecar, label: "60")
             // H-Bahn TU Dortmund
             } else if trainName == "H-Bahn" || (longName ?? "").hasPrefix("H-Bahn") {
                 return Line(id: id, network: network, product: .cablecar, label: name)
