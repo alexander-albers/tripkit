@@ -3,7 +3,7 @@ import Foundation
 /// Verkehrs- und Tarifverbund Stuttgart (DE)
 public class VvsProvider: AbstractEfaWebProvider {
     
-    static let API_BASE = "https://www2.vvs.de/vvs/"
+    static let API_BASE = "https://www3.vvs.de/vvsweb/"
     
     public override var supportedLanguages: Set<String> { ["de", "en"] }
     
