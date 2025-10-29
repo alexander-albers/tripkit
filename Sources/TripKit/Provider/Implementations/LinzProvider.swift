@@ -10,7 +10,6 @@ public class LinzProvider: AbstractEfaWebProvider {
     public init() {
         super.init(networkId: .LINZ, apiBase: LinzProvider.API_BASE)
         useRouteIndexAsTripId = false
-        requestUrlEncoding = .isoLatin1
         
         styles = [
             "B11": LineStyle(shape: .rect, backgroundColor: LineStyle.parseColor("#f27b02"), foregroundColor: LineStyle.white),
