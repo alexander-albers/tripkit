@@ -4,7 +4,7 @@ import Foundation
 public class GvhProvider: AbstractHafasClientInterfaceProvider {
     
     static let API_BASE = "https://gvh.hafas.de/hamm"
-    static let PRODUCTS_MAP: [Product?] = [.highSpeedTrain, .highSpeedTrain, .highSpeedTrain, .regionalTrain, .suburbanTrain, .bus, nil, nil, .subway, .onDemand]
+    static let PRODUCTS_MAP: [Product?] = [.highSpeedTrain, .highSpeedTrain, .highSpeedTrain, .regionalTrain, .suburbanTrain, .bus, nil, nil, .subway, .onDemand, nil, nil]
     
     public override var supportedLanguages: Set<String> { ["de"] }
 
