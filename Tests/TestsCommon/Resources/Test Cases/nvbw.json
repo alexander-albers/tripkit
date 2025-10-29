@@ -3,13 +3,7 @@
         {
             "constraint": "Hauptbahnhof, Freiburg im Breisgau",
             "result": {
-                "id": "6906508:$Z0"
-            }
-        },
-        {
-            "constraint": "bismarck",
-            "result": {
-                "id": "10013512"
+                "id": "6906508"
             }
         },
         {
@@ -45,8 +39,8 @@
     ],
     "queryDepartures": [
         {
-            "__comment": "Reutlingen ZOB",
-            "id": "8029333"
+            "__comment": "Freiburg Hbf",
+            "id": "6906508"
         }
     ],
     "queryDeparturesInvalidId": "999999",
