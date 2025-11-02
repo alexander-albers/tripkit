@@ -466,7 +466,7 @@ public class HvvProvider: AbstractNetworkProvider {
         default:            type = .any
         }
         let id = json["id"].string
-        let name = json["name"].string
+        let name = json["name"].string ?? json["combinedName"].string
         let place = json["city"].string
         let coord: LocationPoint?
         if let x = json["coordinate"]["x"].double, let y = json["coordinate"]["y"].double {
@@ -474,7 +474,7 @@ public class HvvProvider: AbstractNetworkProvider {
         } else {
             coord = nil
         }
-        return Location(type: type, id: id, coord: coord, place: place, name: name)
+        return Location(type: id == nil ? type : .station, id: id, coord: coord, place: place, name: name)
     }
     
     private func jsonLocation(location: Location) -> [String: Any] {
