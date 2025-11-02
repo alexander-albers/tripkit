@@ -1102,10 +1102,10 @@ public class AbstractEfaWebProvider: AbstractEfaProvider {
     func processCoordAttr(odv: XMLIndexer) -> LocationPoint? {
         guard let mapName = odv.element?.attribute(by: "mapName")?.text, mapName == "WGS84" else { return nil }
         
-        let x = Int(round(Double(odv.element?.attribute(by: "x")?.text ?? "0") ?? 0))
-        let y = Int(round(Double(odv.element?.attribute(by: "y")?.text ?? "0") ?? 0))
+        guard let latText = odv.element?.attribute(by: "y")?.text, let lonText = odv.element?.attribute(by: "x")?.text else { return nil }
+        guard let lat = Double(latText), let lon = Double(lonText) else { return nil }
         
-        return LocationPoint(lat: y, lon: x)
+        return LocationPoint(lat: Int(round(lat)), lon: Int(round(lon)))
     }
     
 }
