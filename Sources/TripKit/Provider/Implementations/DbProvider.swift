@@ -783,7 +783,7 @@ public class DbProvider: AbstractNetworkProvider {
         let request: [String: Any] = [
             "reconCtx": context.contextRecon
         ]
-        let httpRequest = createHttpRequest(for: "trip/recon", contentType: "application/x.db.vendo.mob.verbindungssuche.v8+json", content: request)
+        let httpRequest = createHttpRequest(for: "trip/recon", contentType: "application/x.db.vendo.mob.verbindungssuche.v9+json", content: request)
         return makeRequest(httpRequest) {
             try self.refreshTripParsing(request: httpRequest, context: context, completion: completion)
         } errorHandler: { err in
