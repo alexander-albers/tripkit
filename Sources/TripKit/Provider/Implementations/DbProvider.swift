@@ -4,7 +4,7 @@ import SwiftyJSON
 /// Deutsche Bahn (DE)
 public class DbProvider: AbstractNetworkProvider {
     
-    static let API_BASE = "https://app.vendo.noncd.db.de/mob/"
+    static let API_BASE = "https://app.services-bahn.de/mob/"
     
     lazy var dateFormatter: DateFormatter = {
         let result = DateFormatter()
