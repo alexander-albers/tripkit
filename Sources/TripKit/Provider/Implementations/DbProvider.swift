@@ -350,18 +350,33 @@ public class DbProvider: AbstractNetworkProvider {
         let departure: StopEvent?
         let arrival: StopEvent?
         
-        if let plannedTime = isoDateFormatter.date(from: json["abgangsDatum"].stringValue) {
-            departure = StopEvent(location: location, plannedTime: plannedTime, predictedTime: isoDateFormatter.date(from: json["ezAbgangsDatum"].stringValue), plannedPlatform: gleis, predictedPlatform: ezGleis, cancelled: cancelled)
+        if let plannedTimeString = json["abgangsDatum"].string, let plannedTime = isoDateFormatter.date(from: plannedTimeString) {
+            departure = StopEvent(location: location, plannedTime: plannedTime, predictedTime: isoDateFormatter.date(from: correctRealtimeTimezone(plannedTime: plannedTimeString, predictedTime: json["ezAbgangsDatum"].stringValue)), plannedPlatform: gleis, predictedPlatform: ezGleis, cancelled: cancelled)
         } else {
             departure = nil
         }
         
-        if let plannedTime = isoDateFormatter.date(from: json["ankunftsDatum"].stringValue) {
-            arrival = StopEvent(location: location, plannedTime: plannedTime, predictedTime: isoDateFormatter.date(from: json["ezAnkunftsDatum"].stringValue), plannedPlatform: gleis, predictedPlatform: ezGleis, cancelled: cancelled)
+        if let plannedTimeString = json["ankunftsDatum"].string, let plannedTime = isoDateFormatter.date(from: plannedTimeString) {
+            arrival = StopEvent(location: location, plannedTime: plannedTime, predictedTime: isoDateFormatter.date(from: correctRealtimeTimezone(plannedTime: plannedTimeString, predictedTime: json["ezAnkunftsDatum"].stringValue)), plannedPlatform: gleis, predictedPlatform: ezGleis, cancelled: cancelled)
         } else {
             arrival = nil
         }
         return Stop(location: location, departure: departure, arrival: arrival, message: nil)
+    }
+    
+    private static let P_timeZoneOffsetPattern = try! NSRegularExpression(pattern: "([+-]\\d\\d:\\d\\d|Z)")
+    // see: https://github.com/public-transport/db-vendo-client/issues/24
+    private func correctRealtimeTimezone(plannedTime: String, predictedTime: String) -> String {
+        if predictedTime.isEmpty {
+            return predictedTime
+        }
+        
+        guard let match = plannedTime.match(pattern: DbProvider.P_timeZoneOffsetPattern), let timezoneOffsetPlanned = match[0] else {
+            return predictedTime
+        }
+        
+        // use same timezone for predicted time as for planned time
+        return DbProvider.P_timeZoneOffsetPattern.stringByReplacingMatches(in: predictedTime, range: NSRange(predictedTime.startIndex..., in: predictedTime), withTemplate: timezoneOffsetPlanned)
     }
     
     private func parse(stops json: JSON) -> [Stop]? {
