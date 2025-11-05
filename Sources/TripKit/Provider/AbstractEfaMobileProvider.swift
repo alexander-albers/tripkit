@@ -505,6 +505,24 @@ public class AbstractEfaMobileProvider: AbstractEfaProvider {
         completion(request, .success(departures: result))
     }
     
+    private func parseStopEvent(from p: XMLIndexer, format: DateFormatter, prefix: String) throws -> StopEvent? {
+        guard let timeString = p["r"]["\(prefix)DateTime"].element?.text else { return nil }
+        let name = p["n"].element?.text
+        let id = p["r"]["id"].element?.text
+        
+        let plannedTime = format.date(from: timeString)
+        
+        let position = parsePosition(position: p["r"]["pl"].element?.text)
+        let place = normalizeLocationName(name: p["r"]["pc"].element?.text)
+        let coord = parseCoordinates(string: p["r"]["c"].element?.text)
+        
+        guard let location = Location(type: .station, id: id, coord: coord, place: place, name: name) else { throw ParseError(reason: "failed to parse stop") }
+        if let plannedTime = plannedTime {
+            return StopEvent(location: location, plannedTime: plannedTime, predictedTime: nil, plannedPlatform: position, predictedPlatform: nil, cancelled: false)
+        }
+        return nil
+    }
+    
     override func queryJourneyDetailParsing(request: HttpRequest, context: QueryJourneyDetailContext, completion: @escaping (HttpRequest, QueryJourneyDetailResult) -> Void) throws {
         guard let data = request.responseData, let line = (context as? EfaJourneyContext)?.line else { throw ParseError(reason: "no response") }
         let xml = XMLHash.parse(data)
@@ -513,25 +531,12 @@ public class AbstractEfaMobileProvider: AbstractEfaProvider {
         let format = DateFormatter()
         format.dateFormat = "yyyyMMdd HH:mm"
         for p in response["params"]["stopSeq"]["p"].all {
-            guard let timeString = p["r"]["depDateTime"].element?.text ?? p["r"]["arrDateTime"].element?.text else { throw ParseError(reason: "failed to parse time") }
-            let name = p["n"].element?.text
-            let id = p["r"]["id"].element?.text
-            
-            let plannedTime = format.date(from: timeString)
-            
-            let position = parsePosition(position: p["r"]["pl"].element?.text)
-            let place = normalizeLocationName(name: p["r"]["pc"].element?.text)
-            let coord = parseCoordinates(string: p["r"]["c"].element?.text)
-            
-            guard let location = Location(type: .station, id: id, coord: coord, place: place, name: name) else { throw ParseError(reason: "failed to parse stop") }
-            let stopEvent: StopEvent?
-            if let plannedTime = plannedTime {
-                stopEvent = StopEvent(location: location, plannedTime: plannedTime, predictedTime: nil, plannedPlatform: position, predictedPlatform: nil, cancelled: false)
-            } else {
-                stopEvent = nil
+            let departure = try parseStopEvent(from: p, format: format, prefix: "dep")
+            let arrival = try parseStopEvent(from: p, format: format, prefix: "arr")
+            if let location = departure?.location ?? arrival?.location {
+                let stop = Stop(location: location, departure: departure, arrival: arrival, message: nil)
+                stops.append(stop)
             }
-            let stop = Stop(location: location, departure: stopEvent, arrival: stopEvent, message: nil)
-            stops.append(stop)
         }
         guard stops.count >= 2 else {
             throw ParseError(reason: "could not parse departure and arrival")
