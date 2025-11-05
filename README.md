@@ -121,7 +121,7 @@ Feel free to add further transit providers to the project, as long as they don't
 
 ## Related Projects
 
-- [`public-transport-enabler`](https://github.com/schildbach/public-transport-enabler) – Java equivalent; Used by [Öffi](https://play.google.com/store/apps/details?id=de.schildbach.oeffi) & [Transportr](https://transportr.app).
+- [`public-transport-enabler`](https://github.com/schildbach/public-transport-enabler) – Java equivalent; Used by [Öffi](https://oeffi.schildbach.de) & [Transportr](https://transportr.app).
 - [`hafas-client`](https://github.com/public-transport/hafas-client) – JavaScript equivalent for HAFAS public transport APIs.
 - [`kpublictransport`](https://github.com/KDE/kpublictransport) – C++ equivalent; Used by [KDE Itinerary](https://apps.kde.org/itinerary/).
 - [`pyhafas`](https://github.com/n0emis/pyhafas) – Python equivalent.
