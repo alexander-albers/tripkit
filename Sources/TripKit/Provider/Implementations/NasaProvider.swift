@@ -91,8 +91,13 @@ public class NasaProvider: AbstractHafasClientInterfaceProvider {
         case let x where x.contains("abo"): return true
         case let x where x.contains("4-fahrten"): return true
         case let x where x.contains("24-stunden"): return true
+        case let x where x.contains("24-std"): return true
         case let x where x.contains("wochen"): return true
         case let x where x.contains("monat"): return true
+        case let x where x.contains("abo flex"): return true
+        case let x where x.contains("flexpreis"): return true
+        case let x where x.contains("extrakarte"): return true
+        case let x where x.contains("hopperticket"): return true
         default: return false
         }
     }
