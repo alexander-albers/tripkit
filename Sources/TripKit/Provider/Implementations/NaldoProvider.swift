@@ -3,7 +3,7 @@ import Foundation
 /// Verkehrsverbund Neckar-Alb-Donau (DE)
 public class NaldoProvider: AbstractEfaWebProvider {
     
-    static let API_BASE = "https://efa2.naldo.de/naldo/"
+    static let API_BASE = "https://www.naldo.de/_assets/012ccdbd1331184d82aa9387f0ed2f73/efa/"
     
     public override var supportedLanguages: Set<String> { ["de", "en"] }
     
