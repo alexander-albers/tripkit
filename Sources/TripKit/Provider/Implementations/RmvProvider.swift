@@ -14,6 +14,7 @@ public class RmvProvider: AbstractHafasClientInterfaceProvider {
         self.apiAuthorization = apiAuthorization
         apiVersion = "1.66"
         apiClient = ["id": "RMV", "type": "WEB", "name": "webapp", "l": "vs_webapp"]
+        jnyFilterIncludes = [["type": "GROUP", "mode": "INC", "value": "GROUP_PT"]] // added back because some trips did not contain additional footpath suggestions; requires specific auth, otherwise it fails with "The requested GROUP filter is invalid and/or the GROUP was not found."
         
         styles = [
             "UU1": LineStyle(shape: .rect, backgroundColor: LineStyle.rgb(184, 41, 47), foregroundColor: LineStyle.white),
