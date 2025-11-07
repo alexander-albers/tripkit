@@ -1144,6 +1144,8 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
                         break
                     case "ao": // no alcoholic drinks allowed
                         break
+                    case "weather":
+                        break
                     default:
                         guard let txt = rem.txtN?.stripHTMLTags() else { continue }
                         switch rem.type ?? "" {
