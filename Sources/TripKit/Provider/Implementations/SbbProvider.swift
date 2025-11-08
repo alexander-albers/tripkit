@@ -502,7 +502,8 @@ public class SbbProvider: AbstractNetworkProvider {
                 }
                 
                 let loadFactor = parseLoadFactor(from: wagonJson["occupancy"])
-                wagons.append(Wagon(number: number, orientation: nil, trackPosition: trackPosition, attributes: attributes, firstClass: firstClass, secondClass: secondClass, loadFactor: loadFactor))
+                let closed = wagonJson["closed"].boolValue
+                wagons.append(Wagon(number: number, orientation: nil, trackPosition: trackPosition, attributes: attributes, firstClass: firstClass, secondClass: secondClass, loadFactor: loadFactor, isOpen: !closed))
                 
                 if wagonJson["displayNoPassageIcon"].boolValue {
                     wagonGroups.append(WagonGroup(designation: "", wagons: wagons, destination: wagonGroupJson["direction"].string, lineLabel: nil))

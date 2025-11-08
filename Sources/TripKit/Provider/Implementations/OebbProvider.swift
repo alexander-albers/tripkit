@@ -145,9 +145,7 @@ public class OebbProvider: AbstractHafasClientInterfaceProvider {
             if (features & 256) == 256 {
                 // Low platform entry
             }
-            if (features & 512) == 512 {
-                // Wagon closed
-            }
+            let isClosed = (features & 512) == 512
             if jsonWagon["capacityCouchette"].intValue > 0 {
                 // Liegewagen
             }
@@ -155,7 +153,7 @@ public class OebbProvider: AbstractHafasClientInterfaceProvider {
                 // Schlafwagen
             }
             
-            let wagon = Wagon(number: number == 0 ? nil : number, orientation: nil, trackPosition: trackPosition, attributes: attributes, firstClass: jsonWagon["capacityBusinessClass"].intValue + jsonWagon["capacityFirstClass"].intValue > 0, secondClass: jsonWagon["capacitySecondClass"].intValue > 0, loadFactor: loadFactor)
+            let wagon = Wagon(number: number == 0 ? nil : number, orientation: nil, trackPosition: trackPosition, attributes: attributes, firstClass: jsonWagon["capacityBusinessClass"].intValue + jsonWagon["capacityFirstClass"].intValue > 0, secondClass: jsonWagon["capacitySecondClass"].intValue > 0, loadFactor: loadFactor, isOpen: !isClosed)
             
             if currentDestination != destination {
                 currentDestination = destination

@@ -54,8 +54,10 @@ public class Wagon {
     public let secondClass: Bool
     /// Degree of occupancy of this wagon.
     public let loadFactor: LoadFactor?
+    /// False if the wagon is closed.
+    public let isOpen: Bool
     
-    init(number: Int?, orientation: WagonOrientation?, trackPosition: StationTrackSector, attributes: [WagonAttributes], firstClass: Bool, secondClass: Bool, loadFactor: LoadFactor?) {
+    init(number: Int?, orientation: WagonOrientation?, trackPosition: StationTrackSector, attributes: [WagonAttributes], firstClass: Bool, secondClass: Bool, loadFactor: LoadFactor?, isOpen: Bool) {
         self.number = number
         self.orientation = orientation
         self.trackPosition = trackPosition
@@ -63,6 +65,7 @@ public class Wagon {
         self.firstClass = firstClass
         self.secondClass = secondClass
         self.loadFactor = loadFactor
+        self.isOpen = isOpen
     }
 }
 

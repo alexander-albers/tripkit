@@ -1018,8 +1018,9 @@ public class DbProvider: AbstractNetworkProvider {
                         attributes.append(WagonAttributes(attribute: .bistro, state: .undefined))
                     }
                 }
+                let isOpen = wagonJson["status"].string != "CLOSED"
                 
-                wagons.append(Wagon(number: number, orientation: wagonOrientation, trackPosition: trackPosition, attributes: attributes, firstClass: firstClass, secondClass: secondClass, loadFactor: nil))
+                wagons.append(Wagon(number: number, orientation: wagonOrientation, trackPosition: trackPosition, attributes: attributes, firstClass: firstClass, secondClass: secondClass, loadFactor: nil, isOpen: isOpen))
             }
             if wagons.count == 0 {
                 throw ParseError(reason: "did not parse any wagons")
