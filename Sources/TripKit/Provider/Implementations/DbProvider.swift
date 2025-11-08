@@ -440,7 +440,7 @@ public class DbProvider: AbstractNetworkProvider {
             let destination = parse(direction: json)
             let message = parse(messages: json)
             let loadFactor = parse(loadFactors: json)
-            return PublicLeg(line: line, destination: destination, departure: departure, arrival: arrival, intermediateStops: intermediateStops, message: message, path: path, journeyContext: parse(journeyContext: json), wagonSequenceContext: parse(wagonSequenceContext: json), loadFactor: tariffClass == 1 ? loadFactor.first : loadFactor.second)
+            return PublicLeg(line: line, destination: destination, departure: departure, arrival: arrival, intermediateStops: intermediateStops, message: message, path: path, journeyContext: parse(journeyContext: json), wagonSequenceContext: parse(wagonSequenceContext: json, time: departure.plannedTime, locationId: departure.location.id), loadFactor: tariffClass == 1 ? loadFactor.first : loadFactor.second)
         } else {
             let distance = json["distanz"].intValue
             let type: IndividualLeg.`Type` = legType == "TRANSFER" ? .transfer : .walk
@@ -503,11 +503,21 @@ public class DbProvider: AbstractNetworkProvider {
         return journeyContext
     }
     
-    private func parse(wagonSequenceContext json: JSON) -> DbWagonSequenceContext? {
+    private func parse(wagonSequenceContext json: JSON, time: Date, locationId: String?) -> DbWagonSequenceContext? {
         let wagonSequenceContext: DbWagonSequenceContext?
         guard json["wagenreihung"].boolValue else { return nil }
-        if let lineLabel = json["risZuglaufId"].string, let departureId = json["risAbfahrtId"].string {
-            wagonSequenceContext = DbWagonSequenceContext(lineLabel: lineLabel, departureId: departureId)
+        if let lineType = json["produktGattung"].string, let lineNumber = json["verkehrsmittelNummer"].string, let locationId = json["halte"].array?.first?["ort", "evaNr"].string {
+            wagonSequenceContext = DbWagonSequenceContext(time: time, lineType: lineType, lineNumber: lineNumber, locationId: locationId)
+        } else {
+            wagonSequenceContext = nil
+        }
+        return wagonSequenceContext
+    }
+    
+    private func parse(departuresWagonSequenceContext json: JSON, time: Date) -> DbWagonSequenceContext? {
+        let wagonSequenceContext: DbWagonSequenceContext?
+        if let lineType = json["produktGattung"].string, let lineLabel = json["mitteltext"].string, lineLabel.contains(" "), let locationId = json["abfrageOrt", "evaNr"].string {
+            wagonSequenceContext = DbWagonSequenceContext(time: time, lineType: lineType, lineNumber: lineLabel.components(separatedBy: " ")[1], locationId: locationId)
         } else {
             wagonSequenceContext = nil
         }
@@ -893,7 +903,7 @@ public class DbProvider: AbstractNetworkProvider {
             guard let stopEvent = stop?.departure ?? stop?.arrival else { continue }
             let line = parse(line: jsonDeparture)
             let cancelled = parseCancelled(stop: jsonDeparture)
-            let departure = Departure(plannedTime: stopEvent.plannedTime, predictedTime: stopEvent.predictedTime, line: line, position: stopEvent.predictedPlatform, plannedPosition: stopEvent.plannedPlatform, cancelled: cancelled, destination: parse(direction: jsonDeparture), capacity: nil, message: parse(messages: jsonDeparture), journeyContext: parse(journeyContext: jsonDeparture), wagonSequenceContext: parse(wagonSequenceContext: jsonDeparture))
+            let departure = Departure(plannedTime: stopEvent.plannedTime, predictedTime: stopEvent.predictedTime, line: line, position: stopEvent.predictedPlatform, plannedPosition: stopEvent.plannedPlatform, cancelled: cancelled, destination: parse(direction: jsonDeparture), capacity: nil, message: parse(messages: jsonDeparture), journeyContext: parse(journeyContext: jsonDeparture), wagonSequenceContext: parse(departuresWagonSequenceContext: jsonDeparture, time: stopEvent.plannedTime))
             
             var stationDepartures = result.first(where: {$0.stopLocation.id == location.id})
             if stationDepartures == nil {
@@ -914,8 +924,14 @@ public class DbProvider: AbstractNetworkProvider {
             return AsyncRequest(task: nil)
         }
         
-        let path = "zuglaeufe/\(context.lineLabel)/halte/by-abfahrt/\(context.departureId)/wagenreihung"
-        let httpRequest = createHttpRequest(for: path, contentType: "application/x.db.vendo.mob.wagenreihung.v3+json", content: nil)
+        let request: [String: Any] = [
+            "risZuglaufProduktGattung": context.lineType,
+            "risAbfahrtZeitpunkt": isoDateFormatter.string(from: context.time),
+            "risZuglaufVerkehrsmittelNummer": context.lineNumber,
+            "risAbfahrtEvaNummer": context.locationId
+        ]
+        let path = "zuglaeufe/halte/by-abfahrt/wagenreihung"
+        let httpRequest = createHttpRequest(for: path, contentType: "application/x.db.vendo.mob.wagenreihung.v4+json", content: request)
         return makeRequest(httpRequest) {
             try self.queryWagonSequenceParsing(request: httpRequest, context: context, completion: completion)
         } errorHandler: { err in
@@ -1174,31 +1190,41 @@ public class DbWagonSequenceContext: QueryWagonSequenceContext {
     
     public override class var supportsSecureCoding: Bool { return true }
     
-    public let lineLabel: String
-    public let departureId: String
+    let time: Date
+    let lineType: String
+    let lineNumber: String
+    let locationId: String
     
-    public init(lineLabel: String, departureId: String) {
-        self.lineLabel = lineLabel
-        self.departureId = departureId
+    public init(time: Date, lineType: String, lineNumber: String, locationId: String) {
+        self.time = time
+        self.lineType = lineType
+        self.lineNumber = lineNumber
+        self.locationId = locationId
         super.init()
     }
     
     required convenience init?(coder aDecoder: NSCoder) {
         guard
-            let lineLabel = aDecoder.decodeObject(of: NSString.self, forKey: PropertyKey.lineLabel) as String?,
-            let departureId = aDecoder.decodeObject(of: NSString.self, forKey: PropertyKey.departureId) as String?
+            let time = aDecoder.decodeObject(of: NSDate.self, forKey: PropertyKey.time) as Date?,
+            let lineType = aDecoder.decodeObject(of: NSString.self, forKey: PropertyKey.lineType) as String?,
+            let lineNumber = aDecoder.decodeObject(of: NSString.self, forKey: PropertyKey.lineNumber) as String?,
+            let locationId = aDecoder.decodeObject(of: NSString.self, forKey: PropertyKey.locationId) as String?
         else { return nil }
-        self.init(lineLabel: lineLabel, departureId: departureId)
+        self.init(time: time, lineType: lineType, lineNumber: lineNumber, locationId: locationId)
     }
     
     public override func encode(with aCoder: NSCoder) {
-        aCoder.encode(lineLabel, forKey: PropertyKey.lineLabel)
-        aCoder.encode(departureId, forKey: PropertyKey.departureId)
+        aCoder.encode(time, forKey: PropertyKey.time)
+        aCoder.encode(lineType, forKey: PropertyKey.lineType)
+        aCoder.encode(lineNumber, forKey: PropertyKey.lineNumber)
+        aCoder.encode(locationId, forKey: PropertyKey.locationId)
     }
     
     struct PropertyKey {
-        static let lineLabel = "lineLabel"
-        static let departureId = "departureId"
+        static let time = "time"
+        static let lineType = "lineType"
+        static let lineNumber = "lineNumber"
+        static let locationId = "locationId"
     }
 }
 
