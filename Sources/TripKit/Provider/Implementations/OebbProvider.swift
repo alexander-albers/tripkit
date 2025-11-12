@@ -58,6 +58,15 @@ public class OebbProvider: AbstractHafasClientInterfaceProvider {
         return super.split(address: address)
     }
     
+    override func lineStyle(network: String?, product: Product?, label: String?) -> LineStyle {
+        // Westbahn
+        if product == .highSpeedTrain && label?.starts(with: "WB") ?? false {
+            return LineStyle(shape: .rect, backgroundColor: LineStyle.white, backgroundColor2: 0, foregroundColor: LineStyle.parseColor("#0077b5"), borderColor: LineStyle.parseColor("#0077b5"))
+        }
+        
+        return super.lineStyle(network: network, product: product, label: label)
+    }
+    
     override func getWagonSequenceContext(line: Line, departureStop: StopEvent) -> QueryWagonSequenceContext? {
         guard let number = line.number, let stationId = extractLocationId(id: departureStop.location.id) else { return nil }
         return OebbWagonSequenceContext(trainNumber: number, date: departureStop.plannedTime, stationId: stationId)
