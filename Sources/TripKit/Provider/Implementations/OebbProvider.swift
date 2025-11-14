@@ -28,6 +28,9 @@ public class OebbProvider: AbstractHafasClientInterfaceProvider {
         self.apiAuthorization = apiAuthorization
         apiVersion = "1.54"
         apiClient = ["id": "OEBB", "type": "IPH", "name": "oebbADHOC", "v": "6020300"]
+        styles = [
+            "WESTbahn Management GmbH|I": LineStyle(shape: .rect, backgroundColor: LineStyle.white, foregroundColor: LineStyle.parseColor("#0077b5"), borderColor: LineStyle.parseColor("#0077b5")),
+        ]
     }
     
     static let PLACES = ["Wien", "Graz", "Linz/Donau", "Salzburg", "Innsbruck"]
