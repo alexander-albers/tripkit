@@ -13,21 +13,15 @@ public class WienProvider: AbstractEfaWebProvider {
         
         styles = [
             // Wien
-            "SS1": LineStyle(shape: .rounded, backgroundColor: LineStyle.parseColor("#1e5cb3"), foregroundColor: LineStyle.white),
-            "SS2": LineStyle(shape: .rounded, backgroundColor: LineStyle.parseColor("#59c594"), foregroundColor: LineStyle.white),
-            "SS3": LineStyle(shape: .rounded, backgroundColor: LineStyle.parseColor("#c8154c"), foregroundColor: LineStyle.white),
-            "SS7": LineStyle(shape: .rounded, backgroundColor: LineStyle.parseColor("#dc35a3"), foregroundColor: LineStyle.white),
-            "SS40": LineStyle(shape: .rounded, backgroundColor: LineStyle.parseColor("#f24d3e"), foregroundColor: LineStyle.white),
-            "SS45": LineStyle(shape: .rounded, backgroundColor: LineStyle.parseColor("#0f8572"), foregroundColor: LineStyle.white),
-            "SS50": LineStyle(shape: .rounded, backgroundColor: LineStyle.parseColor("#34b6e5"), foregroundColor: LineStyle.white),
-            "SS60": LineStyle(shape: .rounded, backgroundColor: LineStyle.parseColor("#82b429"), foregroundColor: LineStyle.white),
-            "SS80": LineStyle(shape: .rounded, backgroundColor: LineStyle.parseColor("#e96619"), foregroundColor: LineStyle.white),
-            
-            "UU1": LineStyle(shape: .rect, backgroundColor: LineStyle.parseColor("#c6292a"), foregroundColor: LineStyle.white),
-            "UU2": LineStyle(shape: .rect, backgroundColor: LineStyle.parseColor("#a82783"), foregroundColor: LineStyle.white),
-            "UU3": LineStyle(shape: .rect, backgroundColor: LineStyle.parseColor("#f39315"), foregroundColor: LineStyle.white),
-            "UU4": LineStyle(shape: .rect, backgroundColor: LineStyle.parseColor("#23a740"), foregroundColor: LineStyle.white),
-            "UU6": LineStyle(shape: .rect, backgroundColor: LineStyle.parseColor("#be762c"), foregroundColor: LineStyle.white)
+            "S": LineStyle(shape: .circle, backgroundColor: LineStyle.parseColor("#009fe3"), foregroundColor: LineStyle.white),
+            "B": LineStyle(shape: .rounded, backgroundColor: LineStyle.parseColor("#0a2a5d"), foregroundColor: LineStyle.white),
+            "BN": LineStyle(shape: .rounded, backgroundColor: LineStyle.parseColor("#0a2a5d"), foregroundColor: LineStyle.yellow),
+
+            "UU1": LineStyle(shape: .rect, backgroundColor: LineStyle.parseColor("#d8222a"), foregroundColor: LineStyle.white),
+            "UU2": LineStyle(shape: .rect, backgroundColor: LineStyle.parseColor("#935e98"), foregroundColor: LineStyle.white),
+            "UU3": LineStyle(shape: .rect, backgroundColor: LineStyle.parseColor("#e67a2b"), foregroundColor: LineStyle.white),
+            "UU4": LineStyle(shape: .rect, backgroundColor: LineStyle.parseColor("#009460"), foregroundColor: LineStyle.white),
+            "UU6": LineStyle(shape: .rect, backgroundColor: LineStyle.parseColor("#8c633c"), foregroundColor: LineStyle.white),
         ]
     }
     
