@@ -474,7 +474,7 @@ public class HvvProvider: AbstractNetworkProvider {
         } else {
             coord = nil
         }
-        return Location(type: id == nil ? type : .station, id: id, coord: coord, place: place, name: name)
+        return Location(type: type == .any && id != nil ? .station : type, id: id, coord: coord, place: place, name: name)
     }
     
     private func jsonLocation(location: Location) -> [String: Any] {
