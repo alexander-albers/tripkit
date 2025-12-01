@@ -7,7 +7,7 @@ public class HvvProvider: AbstractNetworkProvider {
     
     /// Documentation: https://gti.geofox.de/html/GTIHandbuch_p.html
     static let API_BASE = "https://gti.geofox.de/gti/public/"
-    static let VERSION = 55
+    static let VERSION = 63
     let authHeaders: [String: Any]
     
     public override var supportedLanguages: Set<String> { ["de", "en"] }
@@ -364,7 +364,8 @@ public class HvvProvider: AbstractNetworkProvider {
                 "tariffRegions": false,
                 "kinds": [1, 2]  // Einzelfahrkarte Erwachsener & Kind
             ] as [String : Any],
-            "withPaths": true
+            "withPaths": true,
+            "useBikeAndRide": false
         ]
         if let via = via {
             requestDict["via"] = jsonLocation(location: via)
@@ -610,7 +611,7 @@ public class HvvProvider: AbstractNetworkProvider {
         case "FOOTPATH":
             // Individual leg
             return IndividualLeg(type: .walk, departureTime: departure.time, departure: departure.location, arrival: arrival.location, arrivalTime: arrival.time, distance: 0, path: path)
-        case "BICYCLE":
+        case "BICYCLE", "ACTIVITY_BIKE_AND_RIDE":
             return IndividualLeg(type: .bike, departureTime: departure.time, departure: departure.location, arrival: arrival.location, arrivalTime: arrival.time, distance: 0, path: path)
         case "CHANGE", "CHANGE_SAME_PLATFORM":
             if departure.time == arrival.time {
