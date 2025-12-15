@@ -4,7 +4,7 @@ import Foundation
 public class NasaProvider: AbstractHafasClientInterfaceProvider {
     
     static let API_BASE = "https://reiseauskunft.insa.de/bin/"
-    static let PRODUCTS_MAP: [Product?] = [.highSpeedTrain, .highSpeedTrain, .regionalTrain, .regionalTrain, .suburbanTrain, .tram, .bus, .onDemand]
+    static let PRODUCTS_MAP: [Product?] = [.highSpeedTrain, .highSpeedTrain, .highSpeedTrain, .regionalTrain, .suburbanTrain, .tram, .bus, .bus, .onDemand, .ferry]
     
     public override var supportedLanguages: Set<String> { ["de", "en"] }
     
@@ -70,7 +70,17 @@ public class NasaProvider: AbstractHafasClientInterfaceProvider {
             "SS6": LineStyle(shape: .circle, backgroundColor: LineStyle.rgb(65, 19, 45), foregroundColor: LineStyle.white),
             "SS7": LineStyle(shape: .circle, backgroundColor: LineStyle.rgb(0, 84, 142), foregroundColor: LineStyle.white),
             "SS8": LineStyle(shape: .circle, backgroundColor: LineStyle.rgb(95, 42, 121), foregroundColor: LineStyle.white),
-            "SS9": LineStyle(shape: .circle, backgroundColor: LineStyle.rgb(173, 25, 100), foregroundColor: LineStyle.white)
+            "SS9": LineStyle(shape: .circle, backgroundColor: LineStyle.rgb(173, 25, 100), foregroundColor: LineStyle.white),
+            "RS1": LineStyle(shape: .circle, backgroundColor: LineStyle.rgb(0, 100, 56), foregroundColor: LineStyle.white),
+            "RS2": LineStyle(shape: .circle, backgroundColor: LineStyle.rgb(54, 160, 205), foregroundColor: LineStyle.white),
+            "RS3": LineStyle(shape: .circle, backgroundColor: LineStyle.rgb(196, 35, 42), foregroundColor: LineStyle.white),
+            "RS4": LineStyle(shape: .circle, backgroundColor: LineStyle.rgb(0, 136, 88), foregroundColor: LineStyle.white),
+            "RS5": LineStyle(shape: .circle, backgroundColor: LineStyle.rgb(216, 102, 43), foregroundColor: LineStyle.white),
+            "RS5X": LineStyle(shape: .circle, backgroundColor: LineStyle.rgb(243, 179, 63), foregroundColor: LineStyle.white),
+            "RS6": LineStyle(shape: .circle, backgroundColor: LineStyle.rgb(65, 19, 45), foregroundColor: LineStyle.white),
+            "RS7": LineStyle(shape: .circle, backgroundColor: LineStyle.rgb(0, 84, 142), foregroundColor: LineStyle.white),
+            "RS8": LineStyle(shape: .circle, backgroundColor: LineStyle.rgb(95, 42, 121), foregroundColor: LineStyle.white),
+            "RS9": LineStyle(shape: .circle, backgroundColor: LineStyle.rgb(173, 25, 100), foregroundColor: LineStyle.white)
         ]
     }
     
