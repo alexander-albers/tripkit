@@ -16,28 +16,41 @@ public class SvvProvider: AbstractHafasClientInterfaceProvider {
         extVersion = "VAO.6"
         
         styles = [
-            "SS1": LineStyle(shape: .rounded, backgroundColor: LineStyle.rgb(149, 53, 64), foregroundColor: LineStyle.white),
-            "SS11": LineStyle(shape: .rounded, backgroundColor: LineStyle.rgb(149, 53, 64), foregroundColor: LineStyle.white),
-            "SS2": LineStyle(shape: .rounded, backgroundColor: LineStyle.rgb(15, 101, 160), foregroundColor: LineStyle.white),
-            "SS3": LineStyle(shape: .rounded, backgroundColor: LineStyle.rgb(77, 164, 84), foregroundColor: LineStyle.white),
-            "SS4": LineStyle(shape: .rounded, backgroundColor: LineStyle.rgb(140, 97, 148), foregroundColor: LineStyle.white),
+            "SS1": LineStyle(shape: .circle, backgroundColor: LineStyle.parseColor("#a01e39"), foregroundColor: LineStyle.white),
+            "SS11": LineStyle(shape: .circle, backgroundColor: LineStyle.parseColor("#a01e39"), foregroundColor: LineStyle.white),
+            "SS2": LineStyle(shape: .circle, backgroundColor: LineStyle.parseColor("#006aa0"), foregroundColor: LineStyle.white),
+            "SS3": LineStyle(shape: .circle, backgroundColor: LineStyle.parseColor("#2ba246"), foregroundColor: LineStyle.white),
+            "SS4": LineStyle(shape: .circle, backgroundColor: LineStyle.parseColor("#915e93"), foregroundColor: LineStyle.white),
             
-            "T1": LineStyle(shape: .rect, backgroundColor: LineStyle.rgb(199, 55, 52), foregroundColor: LineStyle.white),
-            "T2": LineStyle(shape: .rect, backgroundColor: LineStyle.rgb(15, 101, 160), foregroundColor: LineStyle.white),
-            "T3": LineStyle(shape: .rect, backgroundColor: LineStyle.rgb(129, 106, 64), foregroundColor: LineStyle.white),
-            "T4": LineStyle(shape: .rect, backgroundColor: LineStyle.rgb(241, 200, 76), foregroundColor: LineStyle.black),
-            "T5": LineStyle(shape: .rect, backgroundColor: LineStyle.rgb(82, 181, 220), foregroundColor: LineStyle.white),
-            "T6": LineStyle(shape: .rect, backgroundColor: LineStyle.rgb(136, 184, 84), foregroundColor: LineStyle.white),
-            "T7": LineStyle(shape: .rect, backgroundColor: LineStyle.rgb(11, 156, 148), foregroundColor: LineStyle.white),
-            "T8": LineStyle(shape: .rect, backgroundColor: LineStyle.rgb(222, 144, 68), foregroundColor: LineStyle.white),
-            "T9": LineStyle(shape: .rect, backgroundColor: LineStyle.rgb(97, 55, 115), foregroundColor: LineStyle.white),
-            "T10": LineStyle(shape: .rect, backgroundColor: LineStyle.rgb(231, 178, 153), foregroundColor: LineStyle.black),
-            "T12": LineStyle(shape: .rect, backgroundColor: LineStyle.rgb(179, 214, 206), foregroundColor: LineStyle.black),
-            "T14": LineStyle(shape: .rect, backgroundColor: LineStyle.rgb(198, 217, 156), foregroundColor: LineStyle.black)
+            "B1": LineStyle(shape: .rounded, backgroundColor: LineStyle.parseColor("#d82231"), foregroundColor: LineStyle.white),
+            "B2": LineStyle(shape: .rounded, backgroundColor: LineStyle.parseColor("#006aa0"), foregroundColor: LineStyle.white),
+            "B3": LineStyle(shape: .rounded, backgroundColor: LineStyle.parseColor("#7e5d2c"), foregroundColor: LineStyle.white),
+            "B4": LineStyle(shape: .rounded, backgroundColor: LineStyle.parseColor("#fac923"), foregroundColor: LineStyle.black),
+            "B5": LineStyle(shape: .rounded, backgroundColor: LineStyle.parseColor("#1bb8d9"), foregroundColor: LineStyle.white),
+            "B6": LineStyle(shape: .rounded, backgroundColor: LineStyle.parseColor("#7db93f"), foregroundColor: LineStyle.white),
+            "B7": LineStyle(shape: .rounded, backgroundColor: LineStyle.parseColor("#009a92"), foregroundColor: LineStyle.white),
+            "B8": LineStyle(shape: .rounded, backgroundColor: LineStyle.parseColor("#eb902d"), foregroundColor: LineStyle.white),
+            "B9": LineStyle(shape: .rounded, backgroundColor: LineStyle.parseColor("#69297a"), foregroundColor: LineStyle.white),
+            "B10": LineStyle(shape: .rounded, backgroundColor: LineStyle.parseColor("#f1b193"), foregroundColor: LineStyle.black),
+            "B11": LineStyle(shape: .rounded, backgroundColor: LineStyle.parseColor("#d5842b"), foregroundColor: LineStyle.white),
+            "B12": LineStyle(shape: .rounded, backgroundColor: LineStyle.parseColor("#aed8cd"), foregroundColor: LineStyle.black),
+            "B14": LineStyle(shape: .rounded, backgroundColor: LineStyle.parseColor("#c3db94"), foregroundColor: LineStyle.black),
+            "B17": LineStyle(shape: .rounded, backgroundColor: LineStyle.parseColor("#593713"), foregroundColor: LineStyle.white),
+            "B21": LineStyle(shape: .rounded, backgroundColor: LineStyle.parseColor("#378134"), foregroundColor: LineStyle.white),
+            "B22": LineStyle(shape: .rounded, backgroundColor: LineStyle.parseColor("#e680a9"), foregroundColor: LineStyle.white),
+            "B23": LineStyle(shape: .rounded, backgroundColor: LineStyle.parseColor("#e05329"), foregroundColor: LineStyle.white),
+            "B24": LineStyle(shape: .rounded, backgroundColor: LineStyle.parseColor("#00a8ab"), foregroundColor: LineStyle.white),
+            "B25": LineStyle(shape: .rounded, backgroundColor: LineStyle.parseColor("#67609b"), foregroundColor: LineStyle.white),
+            "B27": LineStyle(shape: .rounded, backgroundColor: LineStyle.parseColor("#005d79"), foregroundColor: LineStyle.white),
+            "B28": LineStyle(shape: .rounded, backgroundColor: LineStyle.parseColor("#2e5a23"), foregroundColor: LineStyle.white),
+            "B31": LineStyle(shape: .rounded, backgroundColor: LineStyle.parseColor("#db3e50"), foregroundColor: LineStyle.white),
+            "B32": LineStyle(shape: .rounded, backgroundColor: LineStyle.parseColor("#db3e50"), foregroundColor: LineStyle.white),
+            "B34": LineStyle(shape: .rounded, backgroundColor: LineStyle.parseColor("#599396"), foregroundColor: LineStyle.white),
+            "B36": LineStyle(shape: .rounded, backgroundColor: LineStyle.parseColor("#db3e50"), foregroundColor: LineStyle.white),
         ]
     }
     
-    static let PLACES = ["Salzburg", "Wien"]
+    static let PLACES = ["Salzburg", "Wien", "Linz/Donau", "Innsbruck", "Graz", "Klagenfurt"]
     
     override func split(stationName: String?) -> (String?, String?) {
         guard let stationName = stationName else { return super.split(stationName: nil) }
