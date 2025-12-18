@@ -1166,6 +1166,8 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
                                 result.insert(.wheelChairAccess)
                             case "wlan verfügbar":
                                 result.insert(.wifiAvailable)
+                            case _ where txt.lowercased().hasPrefix("zugnummer: "):
+                                break
                             default:
                                 legMessages.append(txt)
                             }
