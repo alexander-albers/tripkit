@@ -63,11 +63,21 @@ public class ZvvProvider: AbstractHafasClientInterfaceProvider {
             "T14": LineStyle(shape: .rect, backgroundColor: LineStyle.parseColor("#2cbbf2"), foregroundColor: LineStyle.white),
             "T15": LineStyle(shape: .rect, backgroundColor: LineStyle.parseColor("#ed1c24"), foregroundColor: LineStyle.white),
             "T17": LineStyle(shape: .rect, backgroundColor: LineStyle.parseColor("#9e1a6e"), foregroundColor: LineStyle.white),
+            "T20": LineStyle(shape: .rect, backgroundColor: LineStyle.parseColor("#9e1762"), foregroundColor: LineStyle.white),
+            "T50": LineStyle(shape: .rect, backgroundColor: LineStyle.parseColor("#231f20"), foregroundColor: LineStyle.white),
+            "T51": LineStyle(shape: .rect, backgroundColor: LineStyle.parseColor("#231f20"), foregroundColor: LineStyle.white),
             
             // Bus/Trolley
-            "B31": LineStyle(shape: .rect, backgroundColor: LineStyle.parseColor("#999bd3"), foregroundColor: LineStyle.white),
-            "B32": LineStyle(shape: .rect, backgroundColor: LineStyle.parseColor("#d8a1d6"), foregroundColor: LineStyle.black),
-            "B33": LineStyle(shape: .rect, backgroundColor: LineStyle.parseColor("#e4e793"), foregroundColor: LineStyle.black),
+            "B": LineStyle(shape: .rounded, backgroundColor: LineStyle.white, foregroundColor: LineStyle.black, borderColor: LineStyle.parseColor("#82bfe7")),
+            "B31": LineStyle(shape: .rounded, backgroundColor: LineStyle.parseColor("#999bd3"), foregroundColor: LineStyle.white),
+            "B32": LineStyle(shape: .rounded, backgroundColor: LineStyle.parseColor("#d8a1d6"), foregroundColor: LineStyle.black),
+            "B33": LineStyle(shape: .rounded, backgroundColor: LineStyle.parseColor("#e4e793"), foregroundColor: LineStyle.black),
+            "B46": LineStyle(shape: .rounded, backgroundColor: LineStyle.parseColor("#c5dfa5"), foregroundColor: LineStyle.black),
+            "B61": LineStyle(shape: .rounded, backgroundColor: LineStyle.parseColor("#a29a91"), foregroundColor: LineStyle.white),
+            "B62": LineStyle(shape: .rounded, backgroundColor: LineStyle.parseColor("#d7ccbc"), foregroundColor: LineStyle.black),
+            "B72": LineStyle(shape: .rounded, backgroundColor: LineStyle.parseColor("#d8aa99"), foregroundColor: LineStyle.black),
+            "B80": LineStyle(shape: .rounded, backgroundColor: LineStyle.parseColor("#d5ddbe"), foregroundColor: LineStyle.black),
+            "B89": LineStyle(shape: .rounded, backgroundColor: LineStyle.parseColor("#d7ccbc"), foregroundColor: LineStyle.black),
         ]
     }
     
