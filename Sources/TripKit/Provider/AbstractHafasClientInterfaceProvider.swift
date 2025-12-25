@@ -1146,6 +1146,8 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
                         break
                     case "weather":
                         break
+                    case "zn": // ÖBB: AIRail flugnummer und strecke
+                        break
                     default:
                         guard let txt = rem.txtN?.stripHTMLTags() else { continue }
                         switch rem.type ?? "" {
