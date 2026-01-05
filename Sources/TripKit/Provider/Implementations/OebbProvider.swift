@@ -30,6 +30,7 @@ public class OebbProvider: AbstractHafasClientInterfaceProvider {
         apiClient = ["id": "OEBB", "type": "IPH", "name": "oebbADHOC", "v": "6020300"]
         styles = [
             "WESTbahn Management GmbH|I": LineStyle(shape: .rect, backgroundColor: LineStyle.white, foregroundColor: LineStyle.parseColor("#0077b5"), borderColor: LineStyle.parseColor("#0077b5")),
+            "CAT - CityAirportTrain|R": LineStyle(shape: .rect, backgroundColor: LineStyle.parseColor("#7bbc36"), foregroundColor: LineStyle.white, borderColor: 0),
         ]
     }
     
