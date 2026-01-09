@@ -1,6 +1,6 @@
 import Foundation
 
-/// ÖBB Personalverkehr AG (AT)
+/// ÖBB Personenverkehr AG (AT)
 public class OebbProvider: AbstractHafasClientInterfaceProvider {
     
     static let API_BASE = "https://fahrplan.oebb.at/bin/"
