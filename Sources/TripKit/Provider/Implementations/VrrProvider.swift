@@ -3,7 +3,7 @@ import Foundation
 /// Verkehrsverbund Rhein-Ruhr (DE)
 public class VrrProvider: AbstractEfaWebProvider {
     
-    static let API_BASE = "https://efa.vrr.de/standard/"
+    static let API_BASE = "https://app.vrr.de/cibo-ios/"
     
     public override var supportedLanguages: Set<String> { ["de", "en"] }
     
