@@ -1543,7 +1543,7 @@ public class SbbProvider: AbstractNetworkProvider {
             """
     
     private let RefreshTripQuery = """
-            query getTripById($tripId: ID!, $language: LanguageEnum!) {
+            query getTripById($tripId: NonEmptyString!, $language: LanguageEnum!) {
               tripById(tripId: $tripId, language: $language) {
                 id
                 legs {
