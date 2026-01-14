@@ -816,7 +816,7 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
                 } else if "SEV" == trainType || "SEV" == trainNum || "SEV" == trainName || "SEV" == symbol
                     || "BSV" == trainType || "Ersatzverkehr" == trainName
                     || "Schienenersatzverkehr" == trainName {
-                    return Line(id: id, network: network, product: .bus, label: "SEV\(trainNum)");
+                    return Line(id: id, network: network, product: .bus, label: "SEV\(trainNum == "SEV" ? "" : trainNum)");
                 } else if "Bus replacement" == trainName { // GB
                     return Line(id: id, network: network, product: .bus, label: "BR");
                 } else if "BR" == trainType && trainName != "" && trainName.hasPrefix("Bus") { // GB
