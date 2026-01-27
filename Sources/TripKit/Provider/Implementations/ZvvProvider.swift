@@ -78,6 +78,18 @@ public class ZvvProvider: AbstractHafasClientInterfaceProvider {
             "B72": LineStyle(shape: .rounded, backgroundColor: LineStyle.parseColor("#d8aa99"), foregroundColor: LineStyle.black),
             "B80": LineStyle(shape: .rounded, backgroundColor: LineStyle.parseColor("#d5ddbe"), foregroundColor: LineStyle.black),
             "B89": LineStyle(shape: .rounded, backgroundColor: LineStyle.parseColor("#d7ccbc"), foregroundColor: LineStyle.black),
+            
+            // Winterthur
+            "B1": LineStyle(shape: .rounded, backgroundColor: LineStyle.parseColor("#a6c700"), foregroundColor: LineStyle.black),
+            "B2": LineStyle(shape: .rounded, backgroundColor: LineStyle.parseColor("#e7000e"), foregroundColor: LineStyle.white),
+            "B22": LineStyle(shape: .rounded, backgroundColor: LineStyle.parseColor("#e7000e"), foregroundColor: LineStyle.white),
+            "B3": LineStyle(shape: .rounded, backgroundColor: LineStyle.parseColor("#00a231"), foregroundColor: LineStyle.white),
+            "B4": LineStyle(shape: .rounded, backgroundColor: LineStyle.parseColor("#fbb600"), foregroundColor: LineStyle.black),
+            "B5": LineStyle(shape: .rounded, backgroundColor: LineStyle.parseColor("#0068b3"), foregroundColor: LineStyle.white),
+            "B7": LineStyle(shape: .rounded, backgroundColor: LineStyle.parseColor("#e82788"), foregroundColor: LineStyle.white),
+            "B9": LineStyle(shape: .rounded, backgroundColor: LineStyle.parseColor("#e77800"), foregroundColor: LineStyle.black),
+            "B10": LineStyle(shape: .rounded, backgroundColor: LineStyle.parseColor("#113d8e"), foregroundColor: LineStyle.white),
+            "B12": LineStyle(shape: .rounded, backgroundColor: LineStyle.parseColor("#835d30"), foregroundColor: LineStyle.white),
         ]
     }
     
