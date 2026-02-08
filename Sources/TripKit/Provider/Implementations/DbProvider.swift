@@ -453,9 +453,11 @@ public class DbProvider: AbstractNetworkProvider {
     
     private func parse(polyline json: JSON) -> [LocationPoint] {
         var result: [LocationPoint] = []
-        for jsonCoordinate in json["polylineGroup", "polylineDesc", 0, "coordinates"].arrayValue {
-            guard let latitude = jsonCoordinate["latitude"].double, let longitude = jsonCoordinate["longitude"].double else { continue }
-            result.append(LocationPoint(lat: Int(latitude * 1e6), lon: Int(longitude * 1e6)))
+        for jsonCoordinateGroup in json["polylineGroup", "polylineDesc"].arrayValue {
+            for jsonCoordinate in jsonCoordinateGroup["coordinates"].arrayValue {
+                guard let latitude = jsonCoordinate["latitude"].double, let longitude = jsonCoordinate["longitude"].double else { continue }
+                result.append(LocationPoint(lat: Int(latitude * 1e6), lon: Int(longitude * 1e6)))
+            }
         }
         return result
     }
