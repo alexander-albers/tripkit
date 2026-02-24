@@ -19,34 +19,34 @@ public class SbbProvider: AbstractNetworkProvider {
     // Random UUID serves as app token / correlation id
     private let appToken: String = UUID().uuidString
     
-    private lazy var dateFormatter: DateFormatter = {
+    private var dateFormatter: DateFormatter {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssxxx"
         dateFormatter.timeZone = timeZone
         dateFormatter.locale = Locale(identifier: "en_US_POSIX")
         return dateFormatter
-    }()
-    private lazy var dateFormatterDate: DateFormatter = {
+    }
+    private var dateFormatterDate: DateFormatter {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
         dateFormatter.timeZone = timeZone
         dateFormatter.locale = Locale(identifier: "en_US_POSIX")
         return dateFormatter
-    }()
-    private lazy var dateFormatterTime: DateFormatter = {
+    }
+    private var dateFormatterTime: DateFormatter {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "HH:mm:ss"
         dateFormatter.timeZone = timeZone
         dateFormatter.locale = Locale(identifier: "en_US_POSIX")
         return dateFormatter
-    }()
-    private lazy var dateFormatterTime2: DateFormatter = {
+    }
+    private var dateFormatterTime2: DateFormatter {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "HH:mm"
         dateFormatter.timeZone = timeZone
         dateFormatter.locale = Locale(identifier: "en_US_POSIX")
         return dateFormatter
-    }()
+    }
     
     var P_SPLIT_NAME_FIRST_COMMA: NSRegularExpression { return try! NSRegularExpression(pattern: "^(?:([^,]*), (?!$))?([^,]*)(?:, )?$") }
     

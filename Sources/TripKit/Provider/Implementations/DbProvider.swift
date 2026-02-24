@@ -6,27 +6,27 @@ public class DbProvider: AbstractNetworkProvider {
     
     static let API_BASE = "https://app.services-bahn.de/mob/"
     
-    lazy var dateFormatter: DateFormatter = {
+    private var dateFormatter: DateFormatter {
         let result = DateFormatter()
         result.locale = Locale(identifier: "en_US_POSIX")
         result.timeZone = timeZone
         result.dateFormat = "yyyy-MM-dd"
         return result
-    }()
-    lazy var timeFormatter: DateFormatter = {
+    }
+    private var timeFormatter: DateFormatter {
         let result = DateFormatter()
         result.locale = Locale(identifier: "en_US_POSIX")
         result.timeZone = timeZone
         result.dateFormat = "HH:mm"
         return result
-    }()
-    lazy var isoDateFormatter: DateFormatter = {
+    }
+    private var isoDateFormatter: DateFormatter {
         let result = DateFormatter()
         result.locale = Locale(identifier: "en_US_POSIX")
         result.timeZone = timeZone
         result.dateFormat = "yyyy-MM-dd'T'HH:mm:ssxxx"
         return result
-    }()
+    }
     lazy var correlationID: String = {
         return "\(UUID().uuidString)_\(UUID().uuidString)"
     }()

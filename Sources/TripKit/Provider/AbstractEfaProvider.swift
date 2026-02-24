@@ -19,20 +19,20 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
     static let DEFAULT_COORD_ENDPOINT = "XML_COORD_REQUEST"
     static let DEFAULT_TRIPSTOPTIMES_ENDPOINT = "XML_STOPSEQCOORD_REQUEST"
     
-    lazy var dateFormatter: DateFormatter = {
+    private var dateFormatter: DateFormatter {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyyMMdd"
         dateFormatter.timeZone = timeZone
         dateFormatter.locale = Locale(identifier: "en_US_POSIX")
         return dateFormatter
-    }()
-    lazy var timeFormatter: DateFormatter = {
+    }
+    private var timeFormatter: DateFormatter {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "HHmm"
         dateFormatter.timeZone = timeZone
         dateFormatter.locale = Locale(identifier: "en_US_POSIX")
         return dateFormatter
-    }()
+    }
     
     var includeRegionId: Bool = true
     var useRouteIndexAsTripId: Bool = true

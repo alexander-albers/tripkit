@@ -12,34 +12,34 @@ public class HvvProvider: AbstractNetworkProvider {
     
     public override var supportedLanguages: Set<String> { ["de", "en"] }
     
-    lazy var dateFormatter: DateFormatter = {
+    private var dateFormatter: DateFormatter {
         let formatter = DateFormatter()
         formatter.timeZone = timeZone
         formatter.dateFormat = "dd.MM.yyyy"
         formatter.locale = Locale(identifier: "de_DE")
         return formatter
-    }()
-    lazy var timeFormatter: DateFormatter = {
+    }
+    private var timeFormatter: DateFormatter {
         let formatter = DateFormatter()
         formatter.timeZone = timeZone
         formatter.dateFormat = "HH:mm"
         formatter.locale = Locale(identifier: "de_DE")
         return formatter
-    }()
-    lazy var dateTimeFormatter: DateFormatter = {
+    }
+    private var dateTimeFormatter: DateFormatter {
         let formatter = DateFormatter()
         formatter.timeZone = timeZone
         formatter.dateFormat = "dd.MM.yyyy HH:mm"
         formatter.locale = Locale(identifier: "de_DE")
         return formatter
-    }()
-    lazy var isoDateFormatter: DateFormatter = {
+    }
+    private var isoDateFormatter: DateFormatter {
         let formatter = DateFormatter()
         formatter.timeZone = timeZone
         formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
         formatter.locale = Locale(identifier: "en_US_POSIX")
         return formatter
-    }()
+    }
     
     public init(apiAuthorization: [String: Any]) {
         self.authHeaders = apiAuthorization

@@ -12,27 +12,27 @@ public class SearchChProvider: AbstractNetworkProvider, QueryJourneyDetailManual
     
     var P_SPLIT_NAME_FIRST_COMMA: NSRegularExpression { return try! NSRegularExpression(pattern: "^(?:([^,]*), (?!$))?([^,]*)(?:, )?$") }
     
-    lazy var dateFormatter: DateFormatter = {
+    private var dateFormatter: DateFormatter {
         let formatter = DateFormatter()
         formatter.timeZone = timeZone
         formatter.dateFormat = "MM/dd/yyyy"
         formatter.locale = Locale(identifier: "de_DE")
         return formatter
-    }()
-    lazy var timeFormatter: DateFormatter = {
+    }
+    private var timeFormatter: DateFormatter {
         let formatter = DateFormatter()
         formatter.timeZone = timeZone
         formatter.dateFormat = "HH:mm"
         formatter.locale = Locale(identifier: "de_DE")
         return formatter
-    }()
-    lazy var datetimeFormatter: DateFormatter = {
+    }
+    private var datetimeFormatter: DateFormatter {
         let formatter = DateFormatter()
         formatter.timeZone = timeZone
         formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         formatter.locale = Locale(identifier: "de_DE")
         return formatter
-    }()
+    }
     
     public init() {
         super.init(networkId: .SEARCHCH)
