@@ -20,11 +20,9 @@ public class DbProvider: AbstractNetworkProvider {
         result.dateFormat = "HH:mm"
         return result
     }
-    private var isoDateFormatter: DateFormatter {
-        let result = DateFormatter()
-        result.locale = Locale(identifier: "en_US_POSIX")
+    private var isoDateFormatter: ISO8601DateFormatter {
+        let result = ISO8601DateFormatter()
         result.timeZone = timeZone
-        result.dateFormat = "yyyy-MM-dd'T'HH:mm:ssxxx"
         return result
     }
     lazy var correlationID: String = {

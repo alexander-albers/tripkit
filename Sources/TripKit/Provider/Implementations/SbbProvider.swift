@@ -19,11 +19,9 @@ public class SbbProvider: AbstractNetworkProvider {
     // Random UUID serves as app token / correlation id
     private let appToken: String = UUID().uuidString
     
-    private var dateFormatter: DateFormatter {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssxxx"
+    private var dateFormatter: ISO8601DateFormatter {
+        let dateFormatter = ISO8601DateFormatter()
         dateFormatter.timeZone = timeZone
-        dateFormatter.locale = Locale(identifier: "en_US_POSIX")
         return dateFormatter
     }
     private var dateFormatterDate: DateFormatter {
