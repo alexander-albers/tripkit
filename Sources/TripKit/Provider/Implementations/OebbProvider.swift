@@ -4,7 +4,7 @@ import Foundation
 public class OebbProvider: AbstractHafasClientInterfaceProvider {
     
     static let API_BASE = "https://fahrplan.oebb.at/bin/"
-    static let PRODUCTS_MAP: [Product?] = [.highSpeedTrain, .highSpeedTrain, .highSpeedTrain, .regionalTrain, .regionalTrain, .suburbanTrain, .bus, .ferry, .subway, .tram, .highSpeedTrain, .onDemand, .highSpeedTrain]
+    static let PRODUCTS_MAP: [Product?] = [.highSpeedTrain, .highSpeedTrain, .highSpeedTrain, .highSpeedTrain, .regionalTrain, .suburbanTrain, .bus, .ferry, .subway, .tram, .highSpeedTrain, .onDemand, .highSpeedTrain]
     
     public override var supportedLanguages: Set<String> { ["de"] }
     
