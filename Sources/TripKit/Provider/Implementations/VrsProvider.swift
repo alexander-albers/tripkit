@@ -1060,10 +1060,14 @@ public class VrsProvider: AbstractNetworkProvider, QueryJourneyDetailManually, Q
             place = nil
         }
         
-        let lat = Int(round((location["x"] as? Double ?? 0) * 1e6))
-        let lon = Int(round((location["y"] as? Double ?? 0) * 1e6))
+        let coord: LocationPoint?
+        if let x = location["x"] as? Double, let y = location["y"] as? Double {
+            coord = LocationPoint(lat: Int(round(x * 1e6)), lon: Int(round(y * 1e6)))
+        } else {
+            coord = nil
+        }
         
-        guard let location = Location(type: locationType, id: id, coord: LocationPoint(lat: lat, lon: lon), place: place, name: name) else {
+        guard let location = Location(type: locationType, id: id, coord: coord, place: place, name: name) else {
             throw ParseError(reason: "failed to parse location")
         }
         
