@@ -4,6 +4,7 @@ import Foundation
 public class LinzProvider: AbstractEfaWebProvider {
     
     static let API_BASE = "https://www.linzag.at/linz-efa/"
+    static let DEFAULT_MESSAGE_URL = "https://www.linzag.at/portal/de/privatkunden/unterwegs/fahrplanauskunft/aktuelle_meldungen"
     
     public override var supportedLanguages: Set<String> { ["de", "en"] }
     
@@ -62,6 +63,27 @@ public class LinzProvider: AbstractEfaWebProvider {
             
             "T50": LineStyle(shape: .rect, backgroundColor: LineStyle.parseColor("#008f4d"), foregroundColor: LineStyle.white) // Pöstlingbergbahn
         ]
+    }
+    
+    override func _queryTripsParsing(request: HttpRequest, from: Location?, via: Location?, to: Location?, date: Date, departure: Bool, tripOptions: TripOptions, previousContext: QueryTripsContext?, later: Bool, completion: @escaping (HttpRequest, QueryTripsResult) -> Void) throws {
+        try super._queryTripsParsing(request: request, from: from, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions, previousContext: previousContext, later: later) { request, result in
+            switch result {
+            case .success(let context, let from, let via, let to, let trips, let messagesParsed):
+                var messages: [InfoText] = []
+                for message in messagesParsed {
+                    let url: String
+                    if message.url.hasPrefix("http://localhost") {
+                        url = LinzProvider.DEFAULT_MESSAGE_URL
+                    } else {
+                        url = message.url
+                    }
+                    messages.append(InfoText(text: message.text, url: url))
+                }
+                completion(request, .success(context: context, from: from, via: via, to: to, trips: trips, messages: messages))
+            default:
+                completion(request, result)
+            }
+        }
     }
     
 }
