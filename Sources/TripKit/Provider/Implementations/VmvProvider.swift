@@ -4,11 +4,12 @@ import Foundation
 public class VmvProvider: AbstractEfaWebProvider {
     
     static let API_BASE = "https://www.fahrplanauskunft-mv.de/vmv-efa/"
+    static let TRIP_ENDPOINT = "XML_TRIP_REQUEST2"
     
     public override var supportedLanguages: Set<String> { ["de", "en"] }
     
     public init() {
-        super.init(networkId: .VMV, apiBase: VmvProvider.API_BASE)
+        super.init(networkId: .VMV, apiBase: VmvProvider.API_BASE, tripEndpoint: VmvProvider.TRIP_ENDPOINT)
         useRouteIndexAsTripId = false
         includeRegionId = false
         styles = [
