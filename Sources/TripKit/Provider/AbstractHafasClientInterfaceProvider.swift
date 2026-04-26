@@ -435,6 +435,12 @@ public class AbstractHafasClientInterfaceProvider: AbstractHafasProvider {
                 completion(request, .tooClose)
             case "H9220": // Nearby to the given address stations could not be found.
                 completion(request, .noTrips)
+            case "H9260": // Die Starthaltestelle konnte nicht gefunden werden, wählen Sie bitte eine aus der Vorschlagsliste aus.
+                completion(request, .unknownFrom)
+            case "H9280": // Die Umsteigehaltestelle konnte nicht gefunden werden, wählen Sie bitte eine aus der Vorschlagsliste aus.
+                completion(request, .unknownVia)
+            case "H9300": // Die Zielhaltestelle konnte nicht gefunden werden, wählen Sie bitte eine aus der Vorschlagsliste aus.
+                completion(request, .unknownTo)
             case "H886": // HAFAS Kernel: No connections found within the requested time interval.
                 throw ParseError(reason: "No connections found within the requested time interval.")
             case "H887": // HAFAS Kernel: Kernel computation time limit reached.
