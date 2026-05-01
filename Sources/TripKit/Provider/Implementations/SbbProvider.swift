@@ -439,7 +439,7 @@ public class SbbProvider: AbstractNetworkProvider {
             completion(request, .sessionExpired)
             return
         }
-        try parseTrip(from: json["data", "tripById"], fromLocation: context.from, toLocation: context.to, occupancyClass: (context as! SbbRefreshTripContext).occupancyClass) { trip in
+        try parseTrip(from: json["data", "tripById"], fromLocation: context.from, toLocation: context.to, occupancyClass: context.occupancyClass) { trip in
             completion(request, .success(context: nil, from: trip.from, via: nil, to: trip.to, trips: [trip], messages: []))
         }
     }
