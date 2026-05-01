@@ -377,7 +377,7 @@ public class SbbProvider: AbstractNetworkProvider {
         var trips: [Trip] = []
         let geoDispatchGroup = DispatchGroup()
         for tripJson in json["trips"].arrayValue {
-            try parseTrip(from: tripJson, occupancyClass: tripOptions.tariffProfile?.tariffClass == 1 ? "first" : "second", dispatchGroup: geoDispatchGroup) { trip in
+            try parseTrip(from: tripJson, fromLocation: from, toLocation: to, occupancyClass: tripOptions.tariffProfile?.tariffClass == 1 ? "first" : "second", dispatchGroup: geoDispatchGroup) { trip in
                 trips.append(trip)
             }
         }
@@ -435,7 +435,11 @@ public class SbbProvider: AbstractNetworkProvider {
     
     override func refreshTripParsing(request: HttpRequest, context: RefreshTripContext, completion: @escaping (HttpRequest, QueryTripsResult) -> Void) throws {
         let json = try getResponse(from: request)
-        try parseTrip(from: json["data", "tripById"], occupancyClass: (context as! SbbRefreshTripContext).occupancyClass) { trip in
+        guard let context = context as? SbbRefreshTripContext else {
+            completion(request, .sessionExpired)
+            return
+        }
+        try parseTrip(from: json["data", "tripById"], fromLocation: context.from, toLocation: context.to, occupancyClass: (context as! SbbRefreshTripContext).occupancyClass) { trip in
             completion(request, .success(context: nil, from: trip.from, via: nil, to: trip.to, trips: [trip], messages: []))
         }
     }
@@ -673,13 +677,14 @@ public class SbbProvider: AbstractNetworkProvider {
     private func gql_parsePlace(json: JSON) -> Location? {
         let id = json["id"].string
         let stationName = json["name"].string
+        let type = json["__typename"].string
         let coord: LocationPoint?
         if let lat = json["centroid", "latitude"].double, let lon = json["centroid", "longitude"].double {
             coord = LocationPoint(lat: Int(lat * 1e6), lon: Int(lon * 1e6))
         } else {
             coord = nil
         }
-        let (place, name) = split(stationName: stationName)
+        let (place, name) = split(stationName: type == "Address" ? nil : stationName)
         return Location(type: .station, id: id, coord: coord, place: place, name: name)
     }
     
@@ -859,7 +864,7 @@ public class SbbProvider: AbstractNetworkProvider {
         return Line(id: nil, network: nil, product: product, label: label, name: name, vehicleNumber: number, style: lineStyle(network: nil, product: product, label: label), attr: nil, message: nil)
     }
     
-    private func parseTrip(from tripJson: JSON, occupancyClass: String, dispatchGroup: DispatchGroup? = nil, completion: @escaping (Trip) -> Void) throws {
+    private func parseTrip(from tripJson: JSON, fromLocation: Location, toLocation: Location, occupancyClass: String, dispatchGroup: DispatchGroup? = nil, completion: @escaping (Trip) -> Void) throws {
         let id = tripJson["id"].stringValue
         
         let tripSummary = tripJson["summary"]
@@ -868,7 +873,8 @@ public class SbbProvider: AbstractNetworkProvider {
         }
         
         var legs: [Leg] = []
-        for (legId, legJson) in tripJson["legs"].arrayValue.enumerated() {
+        let jsonLegs = tripJson["legs"].arrayValue
+        for (legId, legJson) in jsonLegs.enumerated() {
             let legType = legJson["__typename"].stringValue
             switch legType {
             case "PTRideLeg":
@@ -876,8 +882,17 @@ public class SbbProvider: AbstractNetworkProvider {
             case "ChangeLeg":
                 break
             case "AccessLeg", "PTConnectionLeg":
-                let from = gql_parsePlace(json: legJson["start"])
-                let to = gql_parsePlace(json: legJson["end"])
+                var from = gql_parsePlace(json: legJson["start"])
+                var to = gql_parsePlace(json: legJson["end"])
+                
+                if legType == "AccessLeg" {
+                    if legId == 0 {
+                        from = fromLocation
+                    } else if legId == jsonLegs.count - 1 {
+                        to = toLocation
+                    }
+                }
+                
                 let duration = TimeInterval(legJson["duration"].intValue * 60)
                 let time: Date?
                 if let last = legs.last {
@@ -898,7 +913,7 @@ public class SbbProvider: AbstractNetworkProvider {
         }
         let refreshContext: RefreshTripContext?
         if !id.isEmpty {
-            refreshContext = SbbRefreshTripContext(tripId: id, occupancyClass: occupancyClass)
+            refreshContext = SbbRefreshTripContext(tripId: id, from: fromLocation, to: toLocation, occupancyClass: occupancyClass)
         } else {
             refreshContext = nil
         }
@@ -1913,10 +1928,14 @@ public class SbbRefreshTripContext: RefreshTripContext {
     public override class var supportsSecureCoding: Bool { return true }
     
     public let tripId: String
+    public let from: Location
+    public let to: Location
     public let occupancyClass: String
     
-    public init(tripId: String, occupancyClass: String) {
+    public init(tripId: String, from: Location, to: Location, occupancyClass: String) {
         self.tripId = tripId
+        self.from = from
+        self.to = to
         self.occupancyClass = occupancyClass
         super.init()
     }
@@ -1924,16 +1943,22 @@ public class SbbRefreshTripContext: RefreshTripContext {
     required convenience init?(coder aDecoder: NSCoder) {
         guard let tripId = aDecoder.decodeObject(of: NSString.self, forKey: PropertyKey.tripId) as String? else { return nil }
         guard let occupancyClass = aDecoder.decodeObject(of: NSString.self, forKey: PropertyKey.occupancyClass) as String? else { return nil }
-        self.init(tripId: tripId, occupancyClass: occupancyClass)
+        guard let from = aDecoder.decodeObject(of: Location.self, forKey: PropertyKey.from) else { return nil }
+        guard let to = aDecoder.decodeObject(of: Location.self, forKey: PropertyKey.from) else { return nil }
+        self.init(tripId: tripId, from: from, to: to, occupancyClass: occupancyClass)
     }
     
     public override func encode(with aCoder: NSCoder) {
         aCoder.encode(tripId, forKey: PropertyKey.tripId)
+        aCoder.encode(from, forKey: PropertyKey.from)
+        aCoder.encode(to, forKey: PropertyKey.to)
         aCoder.encode(occupancyClass, forKey: PropertyKey.occupancyClass)
     }
     
     struct PropertyKey {
         static let tripId = "tripId"
+        static let from = "from"
+        static let to = "to"
         static let occupancyClass = "occupancyClass"
     }
 }
