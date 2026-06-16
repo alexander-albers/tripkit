@@ -3,7 +3,7 @@ import Foundation
 /// Zürcher Verkehrsverbund (CH)
 public class ZvvProvider: AbstractHafasClientInterfaceProvider {
     
-    static let API_BASE = "https://online.fahrplan.zvv.ch/gate"
+    static let API_BASE = "https://zvv.hafas.cloud/gate"
     static let PRODUCTS_MAP: [Product?] = [.highSpeedTrain, .highSpeedTrain, .regionalTrain, .regionalTrain, .ferry, .suburbanTrain, .bus, .cablecar, .subway, .tram]
     
     public override var supportedLanguages: Set<String> { ["de", "en", "fr", "it"] }
