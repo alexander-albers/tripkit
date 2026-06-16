@@ -385,7 +385,8 @@ public class AbstractOjpProvider: AbstractNetworkProvider {
         }
         let params = OjpXmlElement("Params")
             .addLeaf("NumberOfResults", String(numTripsRequested))
-            .addLeaf("IncludeLegProjection", "false")
+            .addLeaf("IncludeLegProjection", "true")
+            .addLeaf("IncludeTrackSections", "true")
             .addLeaf("IncludeIntermediateStops", "true")
             .addLeaf("IncludeAllRestrictedLines", "true")
             .addLeaf("UseRealtimeData", "explanatory")
@@ -435,8 +436,8 @@ public class AbstractOjpProvider: AbstractNetworkProvider {
                 .addLeaf("UseRealTimeData", "explanatory")
                 .addLeaf("IncludeCalls", "true")
                 .addLeaf("IncludeService", "true")
-                .addLeaf("IncludeTrackSections", "false")
-                .addLeaf("IncludeTrackProjection", "false")
+                .addLeaf("IncludeTrackSections", "true")
+                .addLeaf("IncludeLegProjection", "true")
                 .addLeaf("IncludePlacesContext", "false")
                 .addLeaf("IncludeSituationsContext", "true"))
         return performOjpRequest(serviceRequest: request) { httpRequest in
