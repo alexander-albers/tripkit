@@ -1,31 +1,31 @@
 {
     "suggestLocations": [
         {
-            "constraint": "Bern Hauptbahnhof",
+            "constraint": "Bern",
             "result": {
-                "id": "A=1@O=Bern, Hauptbahnhof@X=7438529@Y=46948996@U=85@L=8507785@B=1@p=1734758080@"
+                "id": "ch:1:sloid:7000"
             }
         },
         {
             "constraint": "lüterk",
             "result": {
-                "id": "A=1@O=Lüterkofen, Dorf@X=7514065@Y=47162274@U=85@L=8571481@B=1@p=1734758080@"
+                "id": "ch:1:sloid:71481"
             }
         },
         {
             "constraint": "Amthausgasse 10, Bern",
             "result": {
-                "id": "A=2@O=Bern, Amthausgasse 10@H=10@X=7446475@Y=46947306@U=103@L=990017039@B=1@p=1488793769@"
+                "id": "streetID:1500000036:10:23006351:-1:Amthausgasse:Bern:Amthausgasse::Amthausgasse:3011:ANY:DIVA_SINGLEHOUSE:828943:6066512:MRCV"
             }
         }
     ],
     "queryNearbyLocationsByCoordinate": [
         {
-            "__comment": "Bern Hauptbahnhof",
+            "__comment": "Bern",
             "lat": 46948996,
             "lon": 7438529,
             "result": {
-                "id": "A=1@O=Bern, Hauptbahnhof@X=7438529@Y=46948996@U=85@L=8507785@B=1@p=1734758080@"
+                "id": "ch:1:sloid:7000"
             }
         },
         {
@@ -33,35 +33,35 @@
             "lat": 47162274,
             "lon": 7514065,
             "result": {
-                "id": "A=1@O=Lüterkofen, Dorf@X=7514065@Y=47162274@U=85@L=8571481@B=1@p=1734758080@"
+                "id": "ch:1:sloid:71481"
             }
         }
     ],
     "queryDepartures": [
         {
-            "__comment": "Bern Hauptbahnhof",
-            "id": "A=1@O=Bern, Hauptbahnhof@X=7438529@Y=46948996@U=85@L=8507785@B=1@p=1734758080@"
+            "__comment": "Bern",
+            "id": "ch:1:sloid:7000"
         },
         {
             "__comment": "Lüterkofen, Dorf",
-            "id": "A=1@O=Lüterkofen, Dorf@X=7514065@Y=47162274@U=85@L=8571481@B=1@p=1734758080@"
+            "id": "ch:1:sloid:71481"
         }
     ],
     "queryDeparturesInvalidId": "999999",
     "queryTrips": [
         {
-            "__comment": "Bern Hauptbahnhof to Lüterkofen, Dorf",
+            "__comment": "Bern to Lüterkofen, Dorf",
             "from": {
                 "type": "station",
-                "id": "A=1@O=Bern, Hauptbahnhof@X=7438529@Y=46948996@U=85@L=8507785@B=1@p=1734758080@"
+                "id": "ch:1:sloid:7000"
             },
             "to": {
                 "type": "station",
-                "id": "A=1@O=Lüterkofen, Dorf@X=7514065@Y=47162274@U=85@L=8571481@B=1@p=1734758080@"
+                "id": "ch:1:sloid:71481"
             }
         },
         {
-            "__comment": "Bern Hauptbahnhof to Lüterkofen, Dorf",
+            "__comment": "Bern to Tierpark",
             "from": {
                 "type": "coord",
                 "lat": 46948996,
@@ -69,21 +69,21 @@
             },
             "to": {
                 "type": "coord",
-                "lat": 47162274,
-                "lon": 8571481
+                "lat": 46937121,
+                "lon": 7446786
             }
         }
     ],
     "queryTripsTooClose": [
         {
-            "__comment": "Bern Hauptbahnhof",
+            "__comment": "Bern",
             "from": {
                 "type": "station",
-                "id": "8507785"
+                "id": "ch:1:sloid:7000"
             },
             "to": {
                 "type": "station",
-                "id": "8507785"
+                "id": "ch:1:sloid:7000"
             }
         }
     ]

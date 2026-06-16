@@ -1,20 +1,40 @@
 import Foundation
+import os.log
+import SwiftyJSON
 
 /// Bern-Lötschberg-Simplon (CH)
-public class BlsProvider: AbstractHafasClientInterfaceProvider {
-    
-    static let API_BASE = "https://bls.hafas.de/gate"
-    static let PRODUCTS_MAP: [Product?] = [.highSpeedTrain, .highSpeedTrain, .regionalTrain, .regionalTrain, .ferry, .suburbanTrain, .bus, .cablecar, nil, .tram]
-    
+///
+/// BLS migrated away from the HAFAS mgate interface and now uses the standardized
+/// Open Journey Planner (OJP) 2.0 API. See ``AbstractOjpProvider``.
+///
+/// The BLS OJP endpoint is secured with an OAuth2 bearer token. This is a BLS-specific quirk (OJP
+/// itself mandates no authentication), so the token handling lives here rather than in the generic
+/// base class: ``authorizeRequest(_:completion:)`` fetches a token via the client-credentials grant
+/// on first use and caches it in memory until shortly before it expires.
+public class BlsProvider: AbstractOjpProvider {
+
+    static let API_ENDPOINT = "https://api.bls.ch/mmzd/rest/ojp/v2.0/servicerequest"
+    static let TOKEN_ENDPOINT = "https://fahrplan.bls.ch/token"
+    private let tokenGrantType = "client_credentials"
+
     public override var supportedLanguages: Set<String> { ["de", "en", "fr", "it"] }
-    
-    public init(apiAuthorization: [String: Any]) {
-        super.init(networkId: .BLS, apiBase: BlsProvider.API_BASE, productsMap: BlsProvider.PRODUCTS_MAP)
-        self.mgateEndpoint = BlsProvider.API_BASE
-        self.apiAuthorization = apiAuthorization
-        apiVersion = "1.68"
-        apiClient = ["id": "HAFAS", "type": "WEB", "name": "webapp", "l": "vs_webapp"]
-        
+
+    // MARK: Token cache (guarded by `tokenQueue`)
+    private let tokenQueue = DispatchQueue(label: "TripKit.BlsProvider.token")
+    private var cachedToken: String?
+    private var cachedTokenExpiry: Date?
+    /// Completions waiting for an in-flight token fetch, so concurrent requests share one fetch.
+    private var pendingTokenCompletions: [(Result<String, Error>) -> Void] = []
+    private var isFetchingToken = false
+    /// Refresh the token this many seconds before it actually expires, to avoid races near expiry.
+    private let tokenExpiryLeeway: TimeInterval = 30
+
+    public init() {
+        // Accept a ready-made bearer token for backwards compatibility / tests.
+        super.init(networkId: .BLS, apiEndpoint: BlsProvider.API_ENDPOINT)
+        requestorRef = "BLS_IOS_SDK_1.5.0"
+        requestHeaders["Accept"] = "application/xml"
+
         styles = [
             // Tram
             "T3": LineStyle(shape: .rect, backgroundColor: LineStyle.parseColor("#98bbc5"), foregroundColor: LineStyle.white),
@@ -22,7 +42,7 @@ public class BlsProvider: AbstractHafasClientInterfaceProvider {
             "T7": LineStyle(shape: .rect, backgroundColor: LineStyle.parseColor("#ff2e18"), foregroundColor: LineStyle.white),
             "T8": LineStyle(shape: .rect, backgroundColor: LineStyle.parseColor("#fc72b6"), foregroundColor: LineStyle.white),
             "T9": LineStyle(shape: .rect, backgroundColor: LineStyle.parseColor("#ffbe33"), foregroundColor: LineStyle.white),
-            
+
             // Bus
             "B10": LineStyle(shape: .rounded, backgroundColor: LineStyle.parseColor("#02ab4f"), foregroundColor: LineStyle.white),
             "B11": LineStyle(shape: .rounded, backgroundColor: LineStyle.parseColor("#34ccf7"), foregroundColor: LineStyle.white),
@@ -95,17 +115,86 @@ public class BlsProvider: AbstractHafasClientInterfaceProvider {
             "RRE7": LineStyle(shape: .rect, backgroundColor: LineStyle.parseColor("#821041"), foregroundColor: LineStyle.white),
         ]
     }
-    
-    override func newLine(id: String?, network: String?, product: Product?, name: String?, shortName: String?, number: String?, vehicleNumber: String?) -> Line {
+
+    // MARK: Authorization (OAuth2 client-credentials)
+
+    override func authorizeRequest(_ httpRequest: HttpRequest, completion: @escaping (Result<HttpRequest, Error>) -> Void) {
+        bearerToken { result in
+            switch result {
+            case .success(let token):
+                var headers = httpRequest.headers ?? [:]
+                headers["Authorization"] = "Bearer \(token)"
+                httpRequest.setHeaders(headers)
+                completion(.success(httpRequest))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+    }
+
+    /// Returns a valid bearer token, using the in-memory cache if still valid, otherwise fetching a
+    /// new one. Concurrent callers during an in-flight fetch are coalesced onto the same request.
+    private func bearerToken(completion: @escaping (Result<String, Error>) -> Void) {
+        tokenQueue.async {
+            if let token = self.cachedToken, let expiry = self.cachedTokenExpiry, expiry > Date() {
+                completion(.success(token))
+                return
+            }
+            // A fetch is already running: just wait for its result.
+            self.pendingTokenCompletions.append(completion)
+            if self.isFetchingToken { return }
+            self.isFetchingToken = true
+            self.fetchToken()
+        }
+    }
+
+    /// Performs the actual token request and resolves all pending completions. Must be called on `tokenQueue`.
+    private func fetchToken() {
+        let urlBuilder = UrlBuilder(path: BlsProvider.TOKEN_ENDPOINT, encoding: .utf8)
+        let httpRequest = HttpRequest(urlBuilder: urlBuilder)
+            .setPostPayload("grant_type=\(tokenGrantType)")
+            .setContentType("application/x-www-form-urlencoded")
+            .setHeaders(["Accept": "application/json"])
+
+        _ = HttpClient.getJson(httpRequest: httpRequest) { [weak self] result in
+            guard let self = self else { return }
+            self.tokenQueue.async {
+                let outcome: Result<String, Error>
+                switch result {
+                case .success(let json):
+                    if let token = json["access_token"].string {
+                        let expiresIn = json["expires_in"].double ?? 900
+                        self.cachedToken = token
+                        self.cachedTokenExpiry = Date().addingTimeInterval(max(0, expiresIn - self.tokenExpiryLeeway))
+                        outcome = .success(token)
+                    } else {
+                        os_log("BLS token response missing access_token", log: .requestLogger, type: .error)
+                        outcome = .failure(ParseError(reason: "missing access_token in token response"))
+                    }
+                case .failure(let error):
+                    outcome = .failure(error)
+                }
+
+                let completions = self.pendingTokenCompletions
+                self.pendingTokenCompletions.removeAll()
+                self.isFetchingToken = false
+                for completion in completions {
+                    completion(outcome)
+                }
+            }
+        }
+    }
+
+    override func newLine(id: String?, network: String?, product: Product?, name: String?, shortName: String?, number: String?, vehicleNumber: String?, direction: Line.Direction?, style: LineStyle) -> Line {
         let newName: String?
         if product == .suburbanTrain, let number = number {
-            newName = "S\(number)"
+            newName = number.hasPrefix("S") ? number : "S\(number)"
         } else if product == .regionalTrain, let number = number, let name = name, name.hasPrefix("RE") {
-            newName = "RE\(number)"
+            newName = number.hasPrefix("RE") ? number : "RE\(number)"
         } else {
             newName = name
         }
-        return super.newLine(id: id, network: network, product: product, name: newName, shortName: number, number: number, vehicleNumber: vehicleNumber)
+        return super.newLine(id: id, network: network, product: product, name: newName, shortName: number, number: number, vehicleNumber: vehicleNumber, direction: direction, style: style)
     }
     
     static let PLACES = ["Bern"]

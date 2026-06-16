@@ -10,7 +10,7 @@ class BlsProviderTests: TripKitProviderTestCase, TripKitProviderTestsDelegate {
     var networkId: NetworkId { return .BLS }
     
     func initProvider(from authorizationData: AuthorizationData) -> NetworkProvider {
-        return BlsProvider(apiAuthorization: authorizationData.hciAuthorization)
+        return BlsProvider()
     }
     
 }
