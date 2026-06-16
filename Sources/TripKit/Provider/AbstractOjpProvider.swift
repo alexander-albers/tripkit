@@ -531,6 +531,7 @@ public class AbstractOjpProvider: AbstractNetworkProvider {
         guard let data = request.responseData else { throw ParseError(reason: "no response") }
         let xml = XMLHash.parse(data)
         let delivery = xml["OJP"]["OJPResponse"]["siri:ServiceDelivery"]["OJPStopEventDelivery"]
+        let placesById = indexPlaces(delivery["StopEventResponseContext"]["Places"])
 
         var resultDepartures: [Departure] = []
         var stopLocation: Location?
@@ -539,7 +540,7 @@ public class AbstractOjpProvider: AbstractNetworkProvider {
             let stopEvent = result["StopEvent"]
             let call = stopEvent["ThisCall"]["CallAtStop"]
 
-            guard let location = parseCallLocation(call) else { continue }
+            guard let location = parseCallLocation(call, placesById: placesById) else { continue }
             if stopLocation == nil {
                 stopLocation = location
             }
@@ -621,7 +622,9 @@ public class AbstractOjpProvider: AbstractNetworkProvider {
     override func queryJourneyDetailParsing(request: HttpRequest, context: QueryJourneyDetailContext, completion: @escaping (HttpRequest, QueryJourneyDetailResult) -> Void) throws {
         guard let data = request.responseData else { throw ParseError(reason: "no response") }
         let xml = XMLHash.parse(data)
-        let result = xml["OJP"]["OJPResponse"]["siri:ServiceDelivery"]["OJPTripInfoDelivery"]["TripInfoResult"]
+        let delivery = xml["OJP"]["OJPResponse"]["siri:ServiceDelivery"]["OJPTripInfoDelivery"]
+        let result = delivery["TripInfoResult"]
+        let placesById = indexPlaces(delivery["TripInfoResponseContext"]["Places"])
 
         let service = result["Service"]
         let line = parseLine(from: service)
@@ -630,7 +633,7 @@ public class AbstractOjpProvider: AbstractNetworkProvider {
         // PreviousCall + current + OnwardCall represent the full sequence of stops of the journey.
         var stops: [Stop] = []
         for call in result["PreviousCall"].all + result["CurrentCall"].all + result["OnwardCall"].all {
-            guard let stop = parseCallAsStop(call) else { continue }
+            guard let stop = parseCallAsStop(call, placesById: placesById) else { continue }
             stops.append(stop)
         }
         guard let firstStop = stops.first, let lastStop = stops.last,
@@ -760,7 +763,7 @@ extension AbstractOjpProvider {
     // MARK: Stop / call parsing
 
     private func parseStopEvent(_ node: XMLIndexer, placesById: [String: Location], isDeparture: Bool) -> StopEvent? {
-        guard let location = parseCallLocation(node) else { return nil }
+        guard let location = parseCallLocation(node, placesById: placesById) else { return nil }
         let timeNode = isDeparture ? node["ServiceDeparture"] : node["ServiceArrival"]
         guard let plannedTime = parseDate(timeNode["TimetabledTime"].element?.text) else { return nil }
         let predictedTime = parseDate(timeNode["EstimatedTime"].element?.text)
@@ -770,7 +773,7 @@ extension AbstractOjpProvider {
     }
 
     private func parseIntermediateStop(_ node: XMLIndexer, placesById: [String: Location]) -> Stop? {
-        guard let location = parseCallLocation(node) else { return nil }
+        guard let location = parseCallLocation(node, placesById: placesById) else { return nil }
 
         let arrivalNode = node["ServiceArrival"]
         let departureNode = node["ServiceDeparture"]
@@ -790,8 +793,8 @@ extension AbstractOjpProvider {
     }
 
     /// Parses a stop call (`LegBoard`/`LegAlight`/`LegIntermediate`/`*Call`) into a single stop with both events.
-    private func parseCallAsStop(_ node: XMLIndexer) -> Stop? {
-        guard let location = parseCallLocation(node) else { return nil }
+    private func parseCallAsStop(_ node: XMLIndexer, placesById: [String: Location]) -> Stop? {
+        guard let location = parseCallLocation(node, placesById: placesById) else { return nil }
         let arrivalNode = node["ServiceArrival"]
         let departureNode = node["ServiceDeparture"]
         let plannedPlatform = text(node["PlannedQuay"])
@@ -810,10 +813,20 @@ extension AbstractOjpProvider {
     }
 
     /// Resolves the ``Location`` of a stop call by its `StopPointRef` and name.
-    private func parseCallLocation(_ node: XMLIndexer) -> Location? {
+    ///
+    /// A stop call (`LegBoard`/`LegAlight`/`LegIntermediate`) only carries the stop point ref and a
+    /// display name — never a coordinate. The coordinate (and the cleanly split place/name) live in
+    /// the `TripResponseContext/Places` block, which we index by ref beforehand and pass in here.
+    private func parseCallLocation(_ node: XMLIndexer, placesById: [String: Location]) -> Location? {
         let id = node["siri:StopPointRef"].element?.text.emptyToNil ?? node["StopPointRef"].element?.text.emptyToNil
         let rawName = text(node["StopPointName"]) ?? text(node["Name"])
         let (place, name) = split(stationName: rawName)
+
+        // Prefer the richer location from the response context (it has the coordinate). Fall back to
+        // the inline name when the ref is not listed in the context.
+        if let id = id, let contextLocation = placesById[id] {
+            return Location(type: .station, id: id, coord: contextLocation.coord, place: contextLocation.place ?? place, name: contextLocation.name ?? name)
+        }
         return Location(type: .station, id: id, coord: nil, place: place, name: name)
     }
 
@@ -902,22 +915,19 @@ extension AbstractOjpProvider {
         return nil
     }
 
-    /// Indexes the places of a `TripResponseContext` by their stop point/place ref.
+    /// Indexes the places of a `TripResponseContext`/`TripInfoResponseContext` by every ref under
+    /// which a stop call may reference them (both the `StopPlace` and the `StopPoint` ref). The
+    /// parsed ``Location`` already carries the coordinate from the place's `<GeoPosition>`.
     private func indexPlaces(_ placesNode: XMLIndexer) -> [String: Location] {
         var result: [String: Location] = [:]
         for placeNode in placesNode["Place"].all {
-            let coord = parseCoord(placeNode["GeoPosition"])
+            guard let location = parsePlace(placeNode) else { continue }
             let ids = [
                 placeNode["StopPlace"]["StopPlaceRef"].element?.text,
                 placeNode["StopPoint"]["siri:StopPointRef"].element?.text
             ].compactMap { $0?.emptyToNil }
-            guard let location = parsePlace(placeNode) else { continue }
             for id in ids {
                 result[id] = location
-            }
-            if let coord = coord, let id = ids.first, result[id]?.coord == nil {
-                // ensure coordinate present
-                result[id] = Location(type: location.type, id: location.id, coord: coord, place: location.place, name: location.name)
             }
         }
         return result
