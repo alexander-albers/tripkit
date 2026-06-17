@@ -219,8 +219,8 @@ public class AbstractOjpProvider: AbstractNetworkProvider {
     }
 
     /// Hook for subclasses to customize line naming (mirrors the Hafas providers' `newLine`).
-    func newLine(id: String?, network: String?, product: Product?, name: String?, shortName: String?, number: String?, vehicleNumber: String?, direction: Line.Direction?, style: LineStyle) -> Line {
-        return Line(id: id, network: network, product: product, label: name, name: name, number: number, vehicleNumber: vehicleNumber, style: style, attr: nil, message: nil, direction: direction)
+    func newLine(id: String?, network: String?, product: Product?, name: String?, shortName: String?, number: String?, vehicleNumber: String?, direction: Line.Direction?, attr: [Line.Attr]?, style: LineStyle) -> Line {
+        return Line(id: id, network: network, product: product, label: name, name: name, number: number, vehicleNumber: vehicleNumber, style: style, attr: attr, message: nil, direction: direction)
     }
 
     func parseDirection(_ string: String?) -> Line.Direction? {
@@ -856,9 +856,70 @@ extension AbstractOjpProvider {
         let lineRef = service["siri:LineRef"].element?.text
         let number = label
         let direction = parseDirection(service["siri:DirectionRef"].element?.text)
+        let attr = parseLineAttributes(from: service)
         let style = lineStyle(network: AbstractOjpProvider.SERVER_PRODUCT, product: product, label: label)
 
-        return newLine(id: lineRef, network: AbstractOjpProvider.SERVER_PRODUCT, product: product, name: label, shortName: label, number: number, vehicleNumber: service["TrainNumber"].element?.text, direction: direction, style: style)
+        return newLine(id: lineRef, network: AbstractOjpProvider.SERVER_PRODUCT, product: product, name: label, shortName: label, number: number, vehicleNumber: service["TrainNumber"].element?.text, direction: direction, attr: attr, style: style)
+    }
+
+    /// Parses the `<Attribute>` elements of a `<Service>` into ``Line/Attr`` values (e.g. wheelchair
+    /// access, bicycle carriage).
+    ///
+    /// OJP attributes carry a machine-readable `<Code>` (e.g. `A__NF`) and a localized `<UserText>`.
+    /// We match on the code first and fall back to the text, so the mapping is robust even when the
+    /// provider's code scheme changes. Unknown attributes are ignored.
+    func parseLineAttributes(from service: XMLIndexer) -> [Line.Attr]? {
+        var result = Set<Line.Attr>()
+        for attribute in service["Attribute"].all {
+            let code = (attribute["Code"].element?.text ?? "").uppercased()
+            let userText = (text(attribute["UserText"]) ?? "").lowercased()
+            if let attr = mapLineAttribute(code: code, userText: userText) {
+                result.insert(attr)
+            }
+        }
+        return result.isEmpty ? nil : Array(result)
+    }
+
+    /// Maps a single OJP attribute (code and/or localized text) to a ``Line/Attr``, or `nil` if it
+    /// carries no relevant accessibility/facility information.
+    func mapLineAttribute(code: String, userText: String) -> Line.Attr? {
+        // Match on the well-known MENTZ/OJP attribute codes first.
+        switch code {
+        case "A__NF", "A__RS", "A__RO", "A__BR", "A__EH", "NF", "RS":
+            return .wheelChairAccess
+        case "A__VB", "A__FB", "A__FA", "VB", "FB":
+            return .bicycleCarriage
+        case "A__WL", "A__WI":
+            return .wifiAvailable
+        case "A__BT", "A__WR", "A__SR":
+            return .restaurant
+        case "A__KL", "A__CL":
+            return .airConditioned
+        case "A__ST":
+            return .powerSockets
+        default:
+            break
+        }
+        // Fall back to the localized user text.
+        if userText.contains("rollstuhl") || userText.contains("niederflur") || userText.contains("einstiegshilfe") || userText.contains("behindertengerecht") {
+            return .wheelChairAccess
+        }
+        if userText.contains("fahrrad") || userText.contains("velo") {
+            return .bicycleCarriage
+        }
+        if userText.contains("wlan") || userText.contains("wifi") {
+            return .wifiAvailable
+        }
+        if userText.contains("restaurant") || userText.contains("speisewagen") {
+            return .restaurant
+        }
+        if userText.contains("klimatisiert") || userText.contains("klimaanlage") {
+            return .airConditioned
+        }
+        if userText.contains("steckdose") || userText.contains("strom") {
+            return .powerSockets
+        }
+        return nil
     }
 
     func parseServiceDestination(from service: XMLIndexer) -> Location? {

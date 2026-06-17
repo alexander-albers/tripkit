@@ -185,7 +185,7 @@ public class BlsProvider: AbstractOjpProvider {
         }
     }
 
-    override func newLine(id: String?, network: String?, product: Product?, name: String?, shortName: String?, number: String?, vehicleNumber: String?, direction: Line.Direction?, style: LineStyle) -> Line {
+    override func newLine(id: String?, network: String?, product: Product?, name: String?, shortName: String?, number: String?, vehicleNumber: String?, direction: Line.Direction?, attr: [Line.Attr]?, style: LineStyle) -> Line {
         let newName: String?
         if product == .suburbanTrain, let number = number {
             newName = number.hasPrefix("S") ? number : "S\(number)"
@@ -194,7 +194,7 @@ public class BlsProvider: AbstractOjpProvider {
         } else {
             newName = name
         }
-        return super.newLine(id: id, network: network, product: product, name: newName, shortName: number, number: number, vehicleNumber: vehicleNumber, direction: direction, style: style)
+        return super.newLine(id: id, network: network, product: product, name: newName, shortName: number, number: number, vehicleNumber: vehicleNumber, direction: direction, attr: attr, style: style)
     }
     
     static let PLACES = ["Bern"]
