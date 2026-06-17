@@ -437,7 +437,7 @@ public class AbstractOjpProvider: AbstractNetworkProvider {
                 .addLeaf("IncludeCalls", "true")
                 .addLeaf("IncludeService", "true")
                 .addLeaf("IncludeTrackSections", "true")
-                .addLeaf("IncludeLegProjection", "true")
+                .addLeaf("IncludeTrackProjection", "true")
                 .addLeaf("IncludePlacesContext", "false")
                 .addLeaf("IncludeSituationsContext", "true"))
         return performOjpRequest(serviceRequest: request) { httpRequest in
@@ -644,8 +644,10 @@ public class AbstractOjpProvider: AbstractNetworkProvider {
             return
         }
         let intermediateStops = stops.count > 2 ? Array(stops[1..<stops.count - 1]) : []
+        
+        let path = parseJourneyProjection(result)
 
-        let leg = PublicLeg(line: line, destination: destination, departure: departureEvent, arrival: arrivalEvent, intermediateStops: intermediateStops, message: nil, path: [], journeyContext: context, wagonSequenceContext: nil, loadFactor: nil)
+        let leg = PublicLeg(line: line, destination: destination, departure: departureEvent, arrival: arrivalEvent, intermediateStops: intermediateStops, message: nil, path: path, journeyContext: context, wagonSequenceContext: nil, loadFactor: nil)
         let trip = Trip(id: "", from: departureEvent.location, to: arrivalEvent.location, legs: [leg], duration: 0, fares: [])
         completion(request, .success(trip: trip, leg: leg))
     }
@@ -889,6 +891,19 @@ extension AbstractOjpProvider {
         // Some responses expose the projection directly under the leg.
         if path.isEmpty {
             for position in legNode["LegProjection"]["Position"].all {
+                if let coord = parseCoord(position) {
+                    path.append(coord)
+                }
+            }
+        }
+        return path
+    }
+    
+    /// Parses the coordinate sequence of a leg from its `JourneyTrack`.
+    func parseJourneyProjection(_ journeyNode: XMLIndexer) -> [LocationPoint] {
+        var path: [LocationPoint] = []
+        for section in journeyNode["JourneyTrack"]["TrackSection"].all {
+            for position in section["LinkProjection"]["Position"].all {
                 if let coord = parseCoord(position) {
                     path.append(coord)
                 }
