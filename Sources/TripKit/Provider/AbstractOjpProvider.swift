@@ -699,14 +699,18 @@ extension AbstractOjpProvider {
 
     private func parseTrip(_ tripResultNode: XMLIndexer, placesById: [String: Location], responseString: String, tripOptions: TripOptions) throws -> Trip? {
         let tripNode = tripResultNode["Trip"]
+        guard let tripDeparture = parseDate(tripNode["StartTime"].element?.text) else {
+            throw ParseError(reason: "failed to parse trip start time")
+        }
         var legs: [Leg] = []
         for legNode in tripNode["Leg"].all {
+            let departureTime = legs.last?.arrivalTime ?? tripDeparture
             if legNode["TimedLeg"].element != nil {
                 legs.append(try parseTimedLeg(legNode["TimedLeg"], placesById: placesById, tripOptions: tripOptions))
             } else if legNode["TransferLeg"].element != nil {
-                legs.append(try parseTransferLeg(legNode["TransferLeg"], placesById: placesById, previousLeg: legs.last))
+                legs.append(try parseTransferLeg(legNode["TransferLeg"], placesById: placesById, departureTime: departureTime))
             } else if legNode["ContinuousLeg"].element != nil {
-                legs.append(try parseTransferLeg(legNode["ContinuousLeg"], placesById: placesById, previousLeg: legs.last))
+                legs.append(try parseTransferLeg(legNode["ContinuousLeg"], placesById: placesById, departureTime: departureTime))
             }
         }
         guard let departure = legs.first?.departure, let arrival = legs.last?.arrival else {
@@ -784,7 +788,7 @@ extension AbstractOjpProvider {
         }
     }
 
-    private func parseTransferLeg(_ transferLeg: XMLIndexer, placesById: [String: Location], previousLeg: Leg?) throws -> IndividualLeg {
+    private func parseTransferLeg(_ transferLeg: XMLIndexer, placesById: [String: Location], departureTime: Date) throws -> IndividualLeg {
         guard
             let start = parseLegEndpoint(transferLeg["LegStart"], placesById: placesById),
             let end = parseLegEndpoint(transferLeg["LegEnd"], placesById: placesById)
@@ -794,9 +798,8 @@ extension AbstractOjpProvider {
 
         let duration = parseDuration(transferLeg["Duration"].element?.text)
         // A transfer leg carries no times of its own; anchor it to the previous leg's arrival.
-        let departureTime = previousLeg?.arrivalTime ?? Date()
         let arrivalTime = departureTime.addingTimeInterval(duration)
-        let path = parseLegProjection(transferLeg)
+        let path = parsePathGuidance(transferLeg)
         return IndividualLeg(type: .walk, departureTime: departureTime, departure: start, arrival: end, arrivalTime: arrivalTime, distance: 0, path: path)
     }
 
@@ -989,6 +992,19 @@ extension AbstractOjpProvider {
         // Some responses expose the projection directly under the leg.
         if path.isEmpty {
             for position in legNode["LegProjection"]["Position"].all {
+                if let coord = parseCoord(position) {
+                    path.append(coord)
+                }
+            }
+        }
+        return path
+    }
+    
+    /// Parses the coordinate sequence of a leg from its `PathGuidanceSection`
+    func parsePathGuidance(_ legNode: XMLIndexer) -> [LocationPoint] {
+        var path: [LocationPoint] = []
+        for section in legNode["PathGuidance"]["PathGuidanceSection"].all {
+            for position in section["TrackSection"]["LinkProjection"]["Position"].all {
                 if let coord = parseCoord(position) {
                     path.append(coord)
                 }
