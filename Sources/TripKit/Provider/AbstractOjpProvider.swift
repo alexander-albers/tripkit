@@ -223,6 +223,13 @@ public class AbstractOjpProvider: AbstractNetworkProvider {
         return Line(id: id, network: network, product: product, label: name, name: name, number: number, vehicleNumber: vehicleNumber, style: style, attr: attr, message: nil, direction: direction)
     }
 
+    /// Hook for subclasses to build a wagon-sequence context from an OJP `<Service>` and the leg's
+    /// boarding stop. Wagon formations are not part of the OJP standard, so the default implementation
+    /// returns `nil`; providers that expose a formation API (e.g. BLS) override this.
+    func makeWagonSequenceContext(from service: XMLIndexer, boardingStop: Location) -> QueryWagonSequenceContext? {
+        return nil
+    }
+
     func parseDirection(_ string: String?) -> Line.Direction? {
         switch string {
         case "H":
@@ -753,10 +760,11 @@ extension AbstractOjpProvider {
         let line = parseLine(from: service)
         let destination = parseServiceDestination(from: service)
         let journeyContext = makeJourneyContext(from: service)
+        let wagonSequenceContext = makeWagonSequenceContext(from: service, boardingStop: departureStop.location)
         let path = parseLegProjection(timedLeg)
         let loadFactor = parseLoadFactor(board, tripOptions: tripOptions)
 
-        return PublicLeg(line: line, destination: destination, departure: departureStop, arrival: arrivalStop, intermediateStops: intermediateStops, message: nil, path: path, journeyContext: journeyContext, wagonSequenceContext: nil, loadFactor: loadFactor)
+        return PublicLeg(line: line, destination: destination, departure: departureStop, arrival: arrivalStop, intermediateStops: intermediateStops, message: nil, path: path, journeyContext: journeyContext, wagonSequenceContext: wagonSequenceContext, loadFactor: loadFactor)
     }
 
     /// Parses the expected occupancy of a `LegBoard`/`LegAlight` into a ``LoadFactor``.
