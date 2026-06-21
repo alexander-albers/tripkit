@@ -358,7 +358,8 @@ public class AbstractOjpProvider: AbstractNetworkProvider {
     }
 
     public override func queryTrips(from: Location, via: Location?, to: Location, date: Date, departure: Bool, tripOptions: TripOptions, completion: @escaping (HttpRequest, QueryTripsResult) -> Void) -> AsyncRequest {
-        return doQueryTrips(from: from, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions, previousContext: nil, later: false, completion: completion)
+        // Initial query: anchor on the requested time and ask for the default number of results.
+        return doQueryTrips(from: from, via: via, to: to, anchorTime: date, anchorOnDeparture: departure, tripOptions: tripOptions, page: .initial, previousContext: nil, later: false, completion: completion)
     }
 
     public override func queryMoreTrips(context: QueryTripsContext, later: Bool, completion: @escaping (HttpRequest, QueryTripsResult) -> Void) -> AsyncRequest {
@@ -366,15 +367,36 @@ public class AbstractOjpProvider: AbstractNetworkProvider {
             completion(HttpRequest(urlBuilder: UrlBuilder()), .sessionExpired)
             return AsyncRequest(task: nil)
         }
-        let date = later ? context.lastDepartureTime : context.firstArrivalTime
-        return doQueryTrips(from: context.from, via: context.via, to: context.to, date: date, departure: later, tripOptions: context.tripOptions, previousContext: context, later: later, completion: completion)
+        // Page through results the way the OJP cookbook prescribes:
+        // - later: NumberOfResultsAfter, anchored on the latest StartTime + 1 minute (on Origin);
+        // - earlier: NumberOfResultsBefore, anchored on the earliest EndTime − 1 minute (on Destination).
+        let anchorTime: Date
+        let anchorOnDeparture: Bool
+        let page: TripQueryPage
+        if later {
+            anchorTime = context.latestStartTime.addingTimeInterval(60)
+            anchorOnDeparture = true
+            page = .after(numTripsRequested)
+        } else {
+            anchorTime = context.earliestEndTime.addingTimeInterval(-60)
+            anchorOnDeparture = false
+            page = .before(numTripsRequested)
+        }
+        return doQueryTrips(from: context.from, via: context.via, to: context.to, anchorTime: anchorTime, anchorOnDeparture: anchorOnDeparture, tripOptions: context.tripOptions, page: page, previousContext: context, later: later, completion: completion)
     }
 
-    private func doQueryTrips(from: Location, via: Location?, to: Location, date: Date, departure: Bool, tripOptions: TripOptions, previousContext: Context?, later: Bool, completion: @escaping (HttpRequest, QueryTripsResult) -> Void) -> AsyncRequest {
+    /// How many trips to request relative to the anchor time.
+    private enum TripQueryPage {
+        case initial
+        case after(Int)
+        case before(Int)
+    }
+
+    private func doQueryTrips(from: Location, via: Location?, to: Location, anchorTime: Date, anchorOnDeparture: Bool, tripOptions: TripOptions, page: TripQueryPage, previousContext: Context?, later: Bool, completion: @escaping (HttpRequest, QueryTripsResult) -> Void) -> AsyncRequest {
         let origin = OjpXmlElement("Origin").add(encodePlaceRef(from))
-        if departure { origin.addLeaf("DepArrTime", formatDate(date)) }
+        if anchorOnDeparture { origin.addLeaf("DepArrTime", formatDate(anchorTime)) }
         let destination = OjpXmlElement("Destination").add(encodePlaceRef(to))
-        if !departure { destination.addLeaf("DepArrTime", formatDate(date)) }
+        if !anchorOnDeparture { destination.addLeaf("DepArrTime", formatDate(anchorTime)) }
 
         let request = OjpXmlElement("OJPTripRequest")
             .addLeaf("siri:RequestTimestamp", formatDate(Date()))
@@ -384,7 +406,15 @@ public class AbstractOjpProvider: AbstractNetworkProvider {
             request.add(OjpXmlElement("Via").add(OjpXmlElement("ViaPoint").add(encodePlaceRef(via))))
         }
         let params = OjpXmlElement("Params")
-            .addLeaf("NumberOfResults", String(numTripsRequested))
+        switch page {
+        case .initial:
+            params.addLeaf("NumberOfResults", String(numTripsRequested))
+        case .after(let n):
+            params.addLeaf("NumberOfResultsAfter", String(n))
+        case .before(let n):
+            params.addLeaf("NumberOfResultsBefore", String(n))
+        }
+        params
             .addLeaf("IncludeLegProjection", "true")
             .addLeaf("IncludeTrackSections", "true")
             .addLeaf("IncludeIntermediateStops", "true")
@@ -395,7 +425,7 @@ public class AbstractOjpProvider: AbstractNetworkProvider {
         }
         request.add(params)
         return performOjpRequest(serviceRequest: request) { httpRequest in
-            try self.queryTripsParsing(request: httpRequest, from: from, via: via, to: to, date: date, departure: departure, tripOptions: tripOptions, previousContext: previousContext, later: later, completion: completion)
+            try self.queryTripsParsing(request: httpRequest, from: from, via: via, to: to, date: anchorTime, departure: anchorOnDeparture, tripOptions: tripOptions, previousContext: previousContext, later: later, completion: completion)
         } errorHandler: { httpRequest, err in
             completion(httpRequest, .failure(err))
         }
@@ -580,6 +610,7 @@ public class AbstractOjpProvider: AbstractNetworkProvider {
 
         // Index all places of the response context by their ref, so legs can resolve coordinates.
         let placesById = indexPlaces(delivery["TripResponseContext"]["Places"])
+        let messages = parseInfoTexts(delivery["TripResponseContext"]["Situations"])
 
         var trips: [Trip] = []
         for result in delivery["TripResult"].all {
@@ -592,14 +623,20 @@ public class AbstractOjpProvider: AbstractNetworkProvider {
             return
         }
 
-        let previous = previousContext as? Context
+        // Track the window boundaries used for pagination: the latest start (for later trips) and the
+        // earliest end (for earlier trips). When paging, extend the relevant boundary outwards.
+        let resultLatestStart = trips.map { $0.departureTime }.max()!
+        let resultEarliestEnd = trips.map { $0.arrivalTime }.min()!
+
         let context: Context
-        if let previous = previous {
-            context = Context(from: previous.from, via: previous.via, to: previous.to, tripOptions: previous.tripOptions, firstArrivalTime: later ? previous.firstArrivalTime : trips[0].minTime, lastDepartureTime: later ? trips[trips.count - 1].maxTime : previous.lastDepartureTime)
+        if let previous = previousContext as? Context {
+            context = Context(from: previous.from, via: previous.via, to: previous.to, tripOptions: previous.tripOptions,
+                              latestStartTime: later ? max(previous.latestStartTime, resultLatestStart) : previous.latestStartTime,
+                              earliestEndTime: later ? previous.earliestEndTime : min(previous.earliestEndTime, resultEarliestEnd))
         } else {
-            context = Context(from: from, via: via, to: to, tripOptions: tripOptions, firstArrivalTime: trips[0].minTime, lastDepartureTime: trips[trips.count - 1].maxTime)
+            context = Context(from: from, via: via, to: to, tripOptions: tripOptions, latestStartTime: resultLatestStart, earliestEndTime: resultEarliestEnd)
         }
-        completion(request, .success(context: context, from: from, via: via, to: to, trips: trips, messages: []))
+        completion(request, .success(context: context, from: from, via: via, to: to, trips: trips, messages: messages))
     }
 
     override func refreshTripParsing(request: HttpRequest, context: RefreshTripContext, completion: @escaping (HttpRequest, QueryTripsResult) -> Void) throws {
@@ -1009,6 +1046,19 @@ extension AbstractOjpProvider {
         }
         return result
     }
+    
+    private func parseInfoTexts(_ situationsNode: XMLIndexer) -> [InfoText] {
+        var result: [InfoText] = []
+        for situation in situationsNode["PtSituation"].all {
+            for publishingAction in situation["siri:PublishingActions"]["siri:PublishingAction"].all {
+                guard let summaryText = publishingAction["siri:PassengerInformationAction"]["siri:TextualContent"]["siri:SummaryContent"]["siri:SummaryText"].element?.text else {
+                    continue
+                }
+                result.append(InfoText(text: summaryText, url: ""))
+            }
+        }
+        return result
+    }
 
 }
 
@@ -1030,16 +1080,18 @@ extension AbstractOjpProvider {
         let via: Location?
         let to: Location
         let tripOptions: TripOptions
-        let firstArrivalTime: Date
-        let lastDepartureTime: Date
+        /// Latest trip start time seen so far; anchors the request for later trips.
+        let latestStartTime: Date
+        /// Earliest trip end time seen so far; anchors the request for earlier trips.
+        let earliestEndTime: Date
 
-        init(from: Location, via: Location?, to: Location, tripOptions: TripOptions, firstArrivalTime: Date, lastDepartureTime: Date) {
+        init(from: Location, via: Location?, to: Location, tripOptions: TripOptions, latestStartTime: Date, earliestEndTime: Date) {
             self.from = from
             self.via = via
             self.to = to
             self.tripOptions = tripOptions
-            self.firstArrivalTime = firstArrivalTime
-            self.lastDepartureTime = lastDepartureTime
+            self.latestStartTime = latestStartTime
+            self.earliestEndTime = earliestEndTime
             super.init()
         }
 
@@ -1048,8 +1100,8 @@ extension AbstractOjpProvider {
                 let from = aDecoder.decodeObject(of: Location.self, forKey: PropertyKey.from),
                 let to = aDecoder.decodeObject(of: Location.self, forKey: PropertyKey.to),
                 let tripOptions = aDecoder.decodeObject(of: TripOptions.self, forKey: PropertyKey.tripOptions),
-                let firstArrivalTime = aDecoder.decodeObject(of: NSDate.self, forKey: PropertyKey.firstArrivalTime) as Date?,
-                let lastDepartureTime = aDecoder.decodeObject(of: NSDate.self, forKey: PropertyKey.lastDepartureTime) as Date?
+                let latestStartTime = aDecoder.decodeObject(of: NSDate.self, forKey: PropertyKey.latestStartTime) as Date?,
+                let earliestEndTime = aDecoder.decodeObject(of: NSDate.self, forKey: PropertyKey.earliestEndTime) as Date?
             else {
                 return nil
             }
@@ -1057,8 +1109,8 @@ extension AbstractOjpProvider {
             self.via = aDecoder.decodeObject(of: Location.self, forKey: PropertyKey.via)
             self.to = to
             self.tripOptions = tripOptions
-            self.firstArrivalTime = firstArrivalTime
-            self.lastDepartureTime = lastDepartureTime
+            self.latestStartTime = latestStartTime
+            self.earliestEndTime = earliestEndTime
             super.init(coder: aDecoder)
         }
 
@@ -1070,8 +1122,8 @@ extension AbstractOjpProvider {
             }
             aCoder.encode(to, forKey: PropertyKey.to)
             aCoder.encode(tripOptions, forKey: PropertyKey.tripOptions)
-            aCoder.encode(firstArrivalTime, forKey: PropertyKey.firstArrivalTime)
-            aCoder.encode(lastDepartureTime, forKey: PropertyKey.lastDepartureTime)
+            aCoder.encode(latestStartTime, forKey: PropertyKey.latestStartTime)
+            aCoder.encode(earliestEndTime, forKey: PropertyKey.earliestEndTime)
         }
 
         struct PropertyKey {
@@ -1079,8 +1131,8 @@ extension AbstractOjpProvider {
             static let via = "via"
             static let to = "to"
             static let tripOptions = "tripOptions"
-            static let firstArrivalTime = "firstArrivalTime"
-            static let lastDepartureTime = "lastDepartureTime"
+            static let latestStartTime = "latestStartTime"
+            static let earliestEndTime = "earliestEndTime"
         }
     }
 
