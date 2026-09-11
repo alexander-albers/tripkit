@@ -4,7 +4,7 @@ import PackageDescription
 let package = Package(
     name: "TripKit",
     platforms: [
-        .macOS(.v10_13), .iOS(.v12), .tvOS(.v12), .watchOS(.v5)
+        .macOS(.v11), .iOS(.v15), .tvOS(.v15), .watchOS(.v8)
     ],
     products: [
         .library(name: "TripKit", targets: ["TripKit"])
