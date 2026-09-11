@@ -78,7 +78,7 @@ public class BvgProvider: AbstractHafasClientInterfaceProvider {
             "T68": LineStyle(shape: .rect, backgroundColor: LineStyle.parseColor("#108449"), foregroundColor: LineStyle.white),
             
             "B": LineStyle(shape: .rect, backgroundColor: LineStyle.parseColor("#993399"), foregroundColor: LineStyle.white),
-            "BN": LineStyle(shape: .rect, backgroundColor: LineStyle.black, foregroundColor: LineStyle.white),
+            "BN": LineStyle(shape: .rect, backgroundColor: LineStyle.black, foregroundColor: LineStyle.white, borderColor: LineStyle.parseColor("#fff500")),
             
             "FF1": LineStyle(backgroundColor: LineStyle.blue, foregroundColor: LineStyle.white), // Potsdam
             "FF10": LineStyle(backgroundColor: LineStyle.blue, foregroundColor: LineStyle.white),

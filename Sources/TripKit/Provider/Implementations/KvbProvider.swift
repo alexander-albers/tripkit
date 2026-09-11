@@ -166,7 +166,7 @@ public class KvbProvider: AbstractHafasClientInterfaceProvider {
             "B970": LineStyle(backgroundColor: LineStyle.parseColor("#f68712"), foregroundColor: LineStyle.white),
             "B980": LineStyle(backgroundColor: LineStyle.parseColor("#c38bcc"), foregroundColor: LineStyle.white),
             
-            "BN": LineStyle(backgroundColor: LineStyle.parseColor("#000000"), foregroundColor: LineStyle.white),
+            "BN": LineStyle(backgroundColor: LineStyle.black, foregroundColor: LineStyle.white, borderColor: LineStyle.parseColor("#fff500")),
             "BNE1": LineStyle(backgroundColor: LineStyle.parseColor("#993399"), foregroundColor: LineStyle.white), // default
             
             "S": LineStyle(backgroundColor: LineStyle.parseColor("#f18e00"), foregroundColor: LineStyle.white),
