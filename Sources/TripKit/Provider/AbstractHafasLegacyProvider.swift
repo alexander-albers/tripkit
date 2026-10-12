@@ -52,9 +52,7 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider, QueryJourneyDet
                 throw ParseError(reason: "failed to parse data")
             }
             
-            if let match = self.P_AJAX_GET_STOPS_JSON.firstMatch(in: string, options: [], range: NSMakeRange(0, string.count)) {
-                let substring = (string as NSString).substring(with: match.range(at: 1))
-                
+            if let match = string.match(pattern: self.P_AJAX_GET_STOPS_JSON), let substring = match[0] {
                 let encodedData = substring.data(using: .utf8, allowLossyConversion: true)
                 httpRequest.responseData = encodedData
                 try self.suggestLocationsParsing(request: httpRequest, constraint: constraint, types: types, maxLocations: maxLocations, completion: completion)
@@ -302,8 +300,8 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider, QueryJourneyDet
             
             let weight = jsonGetStopsUseWeight ? Int(suggestion["weight"].stringValue) ?? -index : -index
             let localId: String?
-            if let id = id, let match = self.P_AJAX_GET_STOPS_ID.firstMatch(in: id, options: [], range: NSMakeRange(0, id.count)) {
-                localId = (id as NSString).substring(with: match.range(at: 1))
+            if let id = id, let match = P_AJAX_GET_STOPS_ID.firstMatch(in: id, range: NSRange(id.startIndex..., in: id)), match.numberOfRanges > 1, let range = Range(match.range(at: 1), in: id) {
+                localId = String(id[range])
             } else {
                 localId = nil
             }
@@ -501,11 +499,11 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider, QueryJourneyDet
             
             let plannedTime = try parseTimeAndDate(timeString: fpTime, dateString: fpDate)
             let predictedTime: Date?
-            if let eDelay = eDelay, let delay = Int(eDelay) {
-                predictedTime = plannedTime.addingTimeInterval(Double(delay) * 60.0)
+            if let eDelay = eDelay, let delayTime = Int(eDelay) {
+                predictedTime = plannedTime.addingTimeInterval(Double(delayTime) * 60.0)
             } else {
-                if let matcher = P_ISO_DATE.firstMatch(in: delay, options: [], range: NSMakeRange(0, delay.count)), let delay = Int((delay as NSString).substring(with: matcher.range(at: 1))) {
-                    predictedTime = plannedTime.addingTimeInterval(Double(delay) * 60.0)
+                if let matcher = P_ISO_DATE.firstMatch(in: delay, options: [], range: NSRange(delay.startIndex..., in: delay)), matcher.numberOfRanges > 1, let range = Range(matcher.range(at: 1), in: delay), let delayTime = Int(String(delay[range])) {
+                    predictedTime = plannedTime.addingTimeInterval(Double(delayTime) * 60.0)
                 } else {
                     predictedTime = nil
                 }
@@ -1189,8 +1187,7 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider, QueryJourneyDet
     let P_CATEGORY_FROM_NAME = try! NSRegularExpression(pattern: "([A-Za-zßÄÅäáàâåéèêíìîÖöóòôÜüúùûØ]+).*", options: .caseInsensitive)
     
     private func category(from name: String) -> String {
-        if let match = P_CATEGORY_FROM_NAME.firstMatch(in: name, options: [], range: NSMakeRange(0, name.count)) {
-            let substring = (name as NSString).substring(with: match.range(at: 1))
+        if let match = name.match(pattern: P_CATEGORY_FROM_NAME), let substring = match[0] {
             return substring
         }
         return name
@@ -1315,18 +1312,16 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider, QueryJourneyDet
     let P_NORMALIZE_LINE_TRAM = try! NSRegularExpression(pattern: "(?:Tram|Tra|Str|STR)\\s*(.*)", options: .caseInsensitive)
     
     func parse(lineAndType: String) throws -> Line {
-        guard let lineAndTypeMatch = P_NORMALIZE_LINE_AND_TYPE.firstMatch(in: lineAndType, options: [], range: NSMakeRange(0, lineAndType.count)) else {
+        guard let lineAndTypeMatch = lineAndType.match(pattern: P_NORMALIZE_LINE_AND_TYPE), let number = lineAndTypeMatch[0], let type = lineAndTypeMatch[1] else {
             throw ParseError(reason: "cannot normalize \(lineAndType)")
         }
-        let number = (lineAndType as NSString).substring(with: lineAndTypeMatch.range(at: 1))
-        let type = (lineAndType as NSString).substring(with: lineAndTypeMatch.range(at: 2))
         
         if type.isEmpty {
             if number.count == 0 {
                 return newLine(network: nil, product: nil, normalizedName: nil, comment: nil, attrs: [])
-            } else if let _ = P_NORMALIZE_LINE_NUMBER.firstMatch(in: number, options: [], range: NSMakeRange(0, number.count)) {
+            } else if let _ = P_NORMALIZE_LINE_NUMBER.firstMatch(in: number, options: [], range: NSRange(number.startIndex..., in: number)) {
                 return newLine(network: nil, product: nil, normalizedName: number, comment: nil, attrs: [])
-            } else if let _ = P_LINE_RUSSIA.firstMatch(in: number, options: [], range: NSMakeRange(0, number.count)) {
+            } else if let _ = P_LINE_RUSSIA.firstMatch(in: number, options: [], range: NSRange(number.startIndex..., in: number)) {
                 return newLine(network: nil, product: .regionalTrain, normalizedName: number, comment: nil, attrs: [])
             } else {
                 throw ParseError(reason: "cannot normalize \(lineAndType)")
@@ -1334,10 +1329,10 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider, QueryJourneyDet
         } else {
             let normalizedType = normalize(type: type)
             if let normalizedType = normalizedType {
-                if normalizedType == .bus, let matcher = P_NORMALIZE_LINE_BUS.firstMatch(in: number, options: [], range: NSMakeRange(0, number.count)) {
-                    return newLine(network: nil, product: .bus, normalizedName: (number as NSString).substring(with: matcher.range(at: 1)), comment: nil, attrs: [])
-                } else if normalizedType == .tram, let matcher = P_NORMALIZE_LINE_TRAM.firstMatch(in: number, options: [], range: NSMakeRange(0, number.count)) {
-                    return newLine(network: nil, product: .tram, normalizedName: (number as NSString).substring(with: matcher.range(at: 1)), comment: nil, attrs: [])
+                if normalizedType == .bus, let matcher = number.match(pattern: P_NORMALIZE_LINE_BUS) {
+                    return newLine(network: nil, product: .bus, normalizedName: matcher[0], comment: nil, attrs: [])
+                } else if normalizedType == .tram, let matcher = number.match(pattern: P_NORMALIZE_LINE_TRAM) {
+                    return newLine(network: nil, product: .tram, normalizedName: matcher[0], comment: nil, attrs: [])
                 }
             }
             return newLine(network: nil, product: normalizedType, normalizedName: number.replacingOccurrences(of: " ", with: ""), comment: nil, attrs: [])
@@ -1844,8 +1839,7 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider, QueryJourneyDet
     
     private func normalize(lineAdministration: String?) -> String? {
         guard let lineAdministration = lineAdministration else { return nil }
-        if let match = P_NORMALIZE_LINE_ADMINISTRATION.firstMatch(in: lineAdministration, options: [], range: NSMakeRange(0, lineAdministration.count)) {
-            let substring = (lineAdministration as NSString).substring(with: match.range(at: 1))
+        if let match = lineAdministration.match(pattern: P_NORMALIZE_LINE_ADMINISTRATION), let substring = match[0] {
             return substring
         }
         return lineAdministration
@@ -1855,13 +1849,10 @@ public class AbstractHafasLegacyProvider: AbstractHafasProvider, QueryJourneyDet
     let P_NORMALIZE_LINE = try! NSRegularExpression(pattern: "([A-Za-zßÄÅäáàâåéèêíìîÖöóòôÜüúùûØ/]+)[\\s-]*([^#]*).*", options: .caseInsensitive)
     
     func normalize(lineName: String) -> String {
-        if let match = P_NORMALIZE_LINE_NAME_BUS.firstMatch(in: lineName, options: [], range: NSMakeRange(0, lineName.count)) {
-            let substring = (lineName as NSString).substring(with: match.range(at: 1))
+        if let match = lineName.match(pattern: P_NORMALIZE_LINE_NAME_BUS), let substring = match[0] {
             return substring
         }
-        if let match = P_NORMALIZE_LINE.firstMatch(in: lineName, options: [], range: NSMakeRange(0, lineName.count)) {
-            let substring1 = (lineName as NSString).substring(with: match.range(at: 1))
-            let substring2 = (lineName as NSString).substring(with: match.range(at: 2))
+        if let match = lineName.match(pattern: P_NORMALIZE_LINE), let substring1 = match[0], let substring2 = match[1] {
             return substring1 + substring2
         }
         return lineName

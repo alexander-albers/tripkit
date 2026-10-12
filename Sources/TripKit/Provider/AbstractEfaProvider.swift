@@ -331,7 +331,7 @@ public class AbstractEfaProvider: AbstractNetworkProvider {
     
     func normalizeLocationName(name: String?) -> String? {
         guard let name = name else { return nil }
-        let result = P_STATION_NAME_WHITESPACE.stringByReplacingMatches(in: name, options: [], range: NSMakeRange(0, name.count), withTemplate: " ")
+        let result = P_STATION_NAME_WHITESPACE.stringByReplacingMatches(in: name, options: [], range: NSRange(name.startIndex..., in: name), withTemplate: " ")
         if result == "" {
             return nil
         }

@@ -105,9 +105,8 @@ public class AbstractHafasProvider: AbstractNetworkProvider {
     func normalize(position: String?) -> String? {
         guard let position = position, !position.isEmpty else { return nil }
         if position == "null" { return nil }
-        if let match = P_POSITION_PLATFORM.firstMatch(in: position, options: [], range: NSMakeRange(0, position.count)) {
-            let substring = (position as NSString).substring(with: match.range(at: 1))
-            return substring.emptyToNil
+        if let match = position.match(pattern: P_POSITION_PLATFORM) {
+            return match[0]?.emptyToNil
         }
         return super.parsePosition(position: position)
     }

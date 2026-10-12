@@ -36,13 +36,11 @@ public class VorProvider: AbstractHafasClientInterfaceProvider {
     let P_SPLIT_NAME_ONE_COMMA = try! NSRegularExpression(pattern: "([^,]*), ([^,]*)")
     
     override func split(stationName: String?) -> (String?, String?) {
-        guard let name = stationName else { return (nil, nil) }
-        if let match = P_SPLIT_NAME_ONE_COMMA.firstMatch(in: name, options: [], range: NSMakeRange(0, name.count)) {
-            let substring1 = (name as NSString).substring(with: match.range(at: 1))
-            let substring2 = (name as NSString).substring(with: match.range(at: 2))
-            return (substring2, substring1)
+        guard let stationName = stationName else { return super.split(poi: nil) }
+        if let m = stationName.match(pattern: P_SPLIT_NAME_ONE_COMMA) {
+            return (m[1], m[0])
         }
-        return super.split(stationName: name)
+        return super.split(stationName: stationName)
     }
     
     override func split(poi: String?) -> (String?, String?) {

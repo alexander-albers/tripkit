@@ -98,18 +98,17 @@ extension String {
     }
     
     func match(pattern: NSRegularExpression) -> MatchResult? {
-        let ns = self as NSString
-        guard let match = pattern.firstMatch(in: self, options: [], range: NSMakeRange(0, self.count)) else { return nil }
+        guard let match = pattern.firstMatch(in: self, options: [], range: NSRange(self.startIndex..., in: self)) else { return nil }
         var matches: [String?] = []
         if match.numberOfRanges <= 1 {
             return MatchResult(matches: matches)
         }
         for i in 1..<match.numberOfRanges {
-            let range = match.range(at: i)
-            if range.length == 0 {
-                matches.append(nil)
+            let range = Range(match.range(at: i), in: self)
+            if let range, !range.isEmpty {
+                matches.append(String(self[range]))
             } else {
-                matches.append(ns.substring(with: range))
+                matches.append(nil)
             }
         }
         return MatchResult(matches: matches)
@@ -117,19 +116,18 @@ extension String {
     
     func matches(pattern: NSRegularExpression) -> [MatchResult] {
         var result: [MatchResult] = []
-        let ns = self as NSString
-        for match in pattern.matches(in: self, options: [], range: NSMakeRange(0, self.count)) {
+        for match in pattern.matches(in: self, options: [], range: NSRange(self.startIndex..., in: self)) {
             var matches: [String?] = []
             if match.numberOfRanges <= 1 {
                 result.append(MatchResult(matches: matches))
                 continue
             }
             for i in 1..<match.numberOfRanges {
-                let range = match.range(at: i)
-                if range.length == 0 {
-                    matches.append(nil)
+                let range = Range(match.range(at: i), in: self)
+                if let range, !range.isEmpty{
+                    matches.append(String(self[range]))
                 } else {
-                    matches.append(ns.substring(with: range))
+                    matches.append(nil)
                 }
             }
             result.append(MatchResult(matches: matches))
