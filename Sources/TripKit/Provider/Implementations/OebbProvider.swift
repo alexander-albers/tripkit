@@ -63,7 +63,8 @@ public class OebbProvider: AbstractHafasClientInterfaceProvider {
     }
     
     override func getWagonSequenceContext(line: Line, departureStop: StopEvent) -> QueryWagonSequenceContext? {
-        guard let number = line.number, let stationId = extractLocationId(id: departureStop.location.id) else { return nil }
+        guard let product = line.product, [.highSpeedTrain, .regionalTrain, .suburbanTrain].contains(product) else { return nil }
+        guard let number = line.vehicleNumber ?? line.number, let stationId = extractLocationId(id: departureStop.location.id) else { return nil }
         return OebbWagonSequenceContext(trainNumber: number, date: departureStop.plannedTime, stationId: stationId)
     }
     
