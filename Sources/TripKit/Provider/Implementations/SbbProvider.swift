@@ -426,12 +426,53 @@ public class SbbProvider: AbstractNetworkProvider {
                 "language": queryLanguage?.uppercased() ?? defaultLanguage.uppercased()
             ]
         ], requestUrlEncoding: .utf8)
+        
+        // parallel geojson request
+        let requestGroup = DispatchGroup()
+        var success = false
+        var pathRequest: HttpRequest?
+        requestGroup.enter()
+        
+        queryPath(for: context.tripId) { request in
+            pathRequest = request
+            requestGroup.leave()
+        }
+        
+        requestGroup.enter()
         let httpRequest = HttpRequest(urlBuilder: urlBuilder).setHeaders(SbbProvider.GRAPH_QL_HEADERS).setPostPayload(payload)
-        return makeRequest(httpRequest) {
-            try self.refreshTripParsing(request: httpRequest, context: context, completion: completion)
+        let task = makeRequest(httpRequest) {
+            success = true
+            requestGroup.leave()
         } errorHandler: { err in
             completion(httpRequest, .failure(err))
+            requestGroup.leave()
         }
+        
+        requestGroup.notify(queue: .global()) {
+            guard success else { return }
+            do {
+                try self.refreshTripParsing(request: httpRequest, context: context) { (request, response) in
+                    switch response {
+                    case let .success(context, from, via, to, trips, messages):
+                        guard let trip = trips.first, let pathRequest else {
+                            completion(httpRequest, .failure(ParseError(reason: "empty trip response")))
+                            return
+                        }
+                        do {
+                            let newLegs = try self.addGeoJsonToLegs(request: pathRequest, legs: trip.legs)
+                            completion(httpRequest, .success(context: context, from: from, via: via, to: to, trips: [Trip(id: trip.id, from: trip.from, to: trip.to, legs: newLegs, duration: trip.duration, fares: trip.fares, refreshContext: trip.refreshContext)], messages: messages))
+                        } catch {
+                            completion(httpRequest, .failure(error))
+                        }
+                    default:
+                        completion(httpRequest, response)
+                    }
+                }
+            } catch {
+                completion(httpRequest, .failure(error))
+            }
+        }
+        return task
     }
     
     override func refreshTripParsing(request: HttpRequest, context: RefreshTripContext, completion: @escaping (HttpRequest, QueryTripsResult) -> Void) throws {
@@ -527,25 +568,24 @@ public class SbbProvider: AbstractNetworkProvider {
         completion(request, .success(wagonSequence: WagonSequence(travelDirection: travelDirection, wagonGroups: wagonGroups, track: track)))
     }
     
-    private func queryPath(for tripId: String, legs: [Leg], completion: @escaping ([Leg]) -> Void) {
+    private func queryPath(for tripId: String, completion: @escaping (HttpRequest) -> Void) {
         let urlBuilder = UrlBuilder(path: SbbProvider.GRAPH_QL, encoding: .utf8)
         let payload = encodeJson(dict: [
-            "operationName": "getGeoJsonByTripContext",
-            "query": "query getGeoJsonByTripContext($context: String!, $language: LanguageEnum!) {\n  geoJsonByTripContext(context: $context, language: $language) {\n    features\n    bbox\n    __typename\n  }\n}",
+            "query": GeoJsonQuery,
             "variables": [
                 "context": tripId,
                 "language": queryLanguage?.uppercased() ?? defaultLanguage.uppercased()
             ]
         ], requestUrlEncoding: .utf8)
-        let httpRequest = HttpRequest(urlBuilder: urlBuilder).setPostPayload(payload)
+        let httpRequest = HttpRequest(urlBuilder: urlBuilder).setHeaders(SbbProvider.GRAPH_QL_HEADERS).setPostPayload(payload)
         _ = makeRequest(httpRequest) {
-            try self.parseGeoJsonResponse(request: httpRequest, legs: legs, completion: completion)
+            completion(httpRequest)
         } errorHandler: { err in
-            completion(legs)
+            completion(httpRequest)
         }
     }
     
-    private func parseGeoJsonResponse(request: HttpRequest, legs: [Leg], completion: @escaping ([Leg]) -> Void) throws {
+    private func addGeoJsonToLegs(request: HttpRequest, legs: [Leg]) throws -> [Leg] {
         let json = try getResponse(from: request)
         let featuresJson = JSON(parseJSON: json["data", "geoJsonByTripContext", "features"].stringValue).arrayValue
         
@@ -554,11 +594,13 @@ public class SbbProvider: AbstractNetworkProvider {
         let legIds = findInArray(featuresJson, predicate: ["legStart": JSON(booleanLiteral: true)]).map({$0["properties", "legId"].stringValue})
         
         for (idx, leg) in legs.enumerated() {
-            guard let index = legIds[safe: idx] else { continue }
-            var intermediatesJson = findInArray(featuresJson, predicate: [
-                "legId": JSON(stringLiteral: index),
-                "type": JSON(stringLiteral: "endpoint"),
-            ])
+            var intermediatesJson: [JSON] = []
+            if let index = legIds[safe: idx] {
+                intermediatesJson = findInArray(featuresJson, predicate: [
+                    "legId": JSON(stringLiteral: index),
+                    "type": JSON(stringLiteral: "place"),
+                ])
+            }
             let departureJson = intermediatesJson.count > 0 ? intermediatesJson.removeFirst() : nil
             let departure = addCoordToLocation(leg.departure, locationJson: departureJson)
             let arrivalJson = intermediatesJson.count > 0 ? intermediatesJson.removeLast() : nil
@@ -567,10 +609,9 @@ public class SbbProvider: AbstractNetworkProvider {
             switch leg {
             case let leg as PublicLeg:
                 let pathJson = findInArray(featuresJson, predicate: [
-                    "legId": JSON(stringLiteral: "\(index)"),
+                    "legId": JSON(stringLiteral: "\(idx)"),
                     "type": JSON(stringLiteral: "path"),
                     "pathType": JSON(stringLiteral: "transport"),
-                    "generalization": JSON(integerLiteral: 0),
                 ]).last
                 var path: [LocationPoint] = []
                 for coordinatesTuple in pathJson?["geometry", "coordinates"].array ?? [] {
@@ -579,32 +620,11 @@ public class SbbProvider: AbstractNetworkProvider {
                     path.append(LocationPoint(lat: Int(lat * 1e6), lon: Int(lon * 1e6)))
                 }
                 
-                var intermediateStops: [Stop] = []
-                for stopJson in intermediatesJson {
-                    let coord: LocationPoint?
-                    let coordinatesArray = stopJson["geometry", "coordinates"].arrayValue
-                    if coordinatesArray.count == 2, let lat = coordinatesArray[1].double, let lon = coordinatesArray[0].double {
-                        coord = LocationPoint(lat: Int(lat * 1e6), lon: Int(lon * 1e6))
-                    } else {
-                        coord = nil
-                    }
-                    let id: String?
-                    if let idInt = stopJson["properties", "sbb_id"].int {
-                        id = "\(idInt)"
-                    } else {
-                        id = nil
-                    }
-                    if let location = Location(type: id == nil ? .any : .station, id: id, coord: coord, place: nil, name: stopJson["properties", "label"].string) {
-                        intermediateStops.append(Stop(location: location, departure: nil, arrival: nil, message: nil))
-                    }
-                }
-                
-                newLegs.append(PublicLeg(line: leg.line, destination: leg.destination, departure: addLocationToStopEvent(leg.departureStop, location: departure)!, arrival: addLocationToStopEvent(leg.arrivalStop, location: arrival)!, intermediateStops: intermediateStops, message: leg.message, path: path, journeyContext: leg.journeyContext, wagonSequenceContext: leg.wagonSequenceContext, loadFactor: leg.loadFactor))
+                newLegs.append(PublicLeg(line: leg.line, destination: leg.destination, departure: addLocationToStopEvent(leg.departureStop, location: departure)!, arrival: addLocationToStopEvent(leg.arrivalStop, location: arrival)!, intermediateStops: leg.intermediateStops, message: leg.message, path: path, journeyContext: leg.journeyContext, wagonSequenceContext: leg.wagonSequenceContext, loadFactor: leg.loadFactor))
             case let leg as IndividualLeg:
                 let pathJson = findInArray(featuresJson, predicate: [
-                    "legId": JSON(stringLiteral: "\(index)"),
+                    "legId": JSON(stringLiteral: "\(idx)"),
                     "type": JSON(stringLiteral: "path"),
-                    "pathType": JSON(stringLiteral: "walk"),
                 ]).last
                 var path: [LocationPoint] = []
                 for coordinatesTuple in pathJson?["geometry", "coordinates"].array ?? [] {
@@ -619,7 +639,7 @@ public class SbbProvider: AbstractNetworkProvider {
             }
         }
         
-        completion(newLegs)
+        return newLegs
     }
     
     private func findInArray(_ jsonArray: [JSON], predicate: [String: JSON]) -> [JSON] {
@@ -1863,6 +1883,14 @@ public class SbbProvider: AbstractNetworkProvider {
               __typename
             }
             """
+    private let GeoJsonQuery = """
+        query getGeoJsonByTripContext($context: String!, $language: LanguageEnum!) {
+            geoJsonByTripContext(context: $context, language: $language) {
+                features
+                bbox
+            }
+        }    
+        """
     
 }
 
