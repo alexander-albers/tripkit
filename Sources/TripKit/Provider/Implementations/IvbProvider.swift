@@ -3,7 +3,7 @@ import Foundation
 /// Innsbrucker Verkehrsbetriebe (AT)
 public class IvbProvider: AbstractHafasClientInterfaceProvider {
     
-    static let API_BASE = "https://fahrplan.ivb.at/bin/"
+    static let API_BASE = "https://ivb.verkehrsauskunft.at/hamm/gate/"
     static let PRODUCTS_MAP: [Product?] = [.highSpeedTrain, .suburbanTrain, .subway, nil, .tram, .regionalTrain, .bus, .bus, .tram, .ferry, .onDemand, .bus, .regionalTrain, nil, nil, nil]
     
     public override var supportedLanguages: Set<String> { ["de"] }
@@ -11,9 +11,9 @@ public class IvbProvider: AbstractHafasClientInterfaceProvider {
     public init(apiAuthorization: [String: Any]) {
         super.init(networkId: .IVB, apiBase: IvbProvider.API_BASE, productsMap: IvbProvider.PRODUCTS_MAP)
         self.apiAuthorization = apiAuthorization
+        self.mgateEndpoint = IvbProvider.API_BASE
         apiVersion = "1.52"
-        apiClient = ["id": "VAO", "l": "vs_ivb", "type": "WEB", "name": "webapp"]
-        extVersion = "VAO.7"
+        apiClient = ["id": "HAFAS", "l": "vs_ivb", "type": "WEB", "name": "Routenplaner und Fahrplanauskunft | IVB"]
         styles = [
             "T1": LineStyle(shape: .rounded, backgroundColor: LineStyle.rgb(210, 161, 163), foregroundColor: LineStyle.white),
             "T2": LineStyle(shape: .rounded, backgroundColor: LineStyle.rgb(185, 72, 93), foregroundColor: LineStyle.white),
