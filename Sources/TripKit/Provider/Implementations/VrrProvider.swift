@@ -3,7 +3,7 @@ import Foundation
 /// Verkehrsverbund Rhein-Ruhr (DE)
 public class VrrProvider: AbstractEfaWebProvider {
     
-    static let API_BASE = "https://app.vrr.de/cibo-ios/"
+    static let API_BASE = "https://www.vrr.de/vrr-efa/"
     
     public override var supportedLanguages: Set<String> { ["de", "en"] }
     
@@ -13,6 +13,7 @@ public class VrrProvider: AbstractEfaWebProvider {
         needsSpEncId = true
         useProxFootSearch = false
         useRouteIndexAsTripId = false
+        useStatelessTripContexts = true
         styles = [
             
             // RRX (copied from NrwProvider.swift)
