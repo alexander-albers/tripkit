@@ -3,7 +3,7 @@ import Foundation
 /// Rhein-Main-Verkehrsverbund (DE)
 public class RmvProvider: AbstractHafasClientInterfaceProvider {
     
-    static let API_BASE = "https://www.rmv.de/auskunft/bin/jp/"
+    static let API_BASE = "https://www.rmv.de/auskunft/gate"
     
     static let PRODUCTS_MAP: [Product?] = [.highSpeedTrain, .highSpeedTrain, .regionalTrain, .suburbanTrain, .subway, .tram, .bus, .bus, .ferry, .onDemand, .tram, nil, nil]
     
@@ -11,6 +11,7 @@ public class RmvProvider: AbstractHafasClientInterfaceProvider {
     
     public init(apiAuthorization: [String: Any]) {
         super.init(networkId: .RMV, apiBase: RmvProvider.API_BASE, productsMap: RmvProvider.PRODUCTS_MAP)
+        self.mgateEndpoint = RmvProvider.API_BASE
         self.apiAuthorization = apiAuthorization
         apiVersion = "1.66"
         apiClient = ["id": "RMV", "type": "WEB", "name": "webapp", "l": "vs_webapp"]
