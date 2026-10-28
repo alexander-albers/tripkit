@@ -3,17 +3,17 @@ import Foundation
 /// Verkehrsverbund Tirol (AT)
 public class VvtProvider: AbstractHafasClientInterfaceProvider {
     
-    static let API_BASE = "https://smartride.vvt.at/bin/"
+    static let API_BASE = "https://smartride.vvt.at/hamm/gate/"
     static let PRODUCTS_MAP: [Product?] = [.highSpeedTrain, .suburbanTrain, .subway, nil, .tram, .regionalTrain, .bus, .bus, .tram, .ferry, .onDemand, .bus, .regionalTrain, nil, nil, nil]
     
     public override var supportedLanguages: Set<String> { ["de", "en"] }
     
     public init(apiAuthorization: [String: Any]) {
         super.init(networkId: .VVT, apiBase: VvtProvider.API_BASE, productsMap: VvtProvider.PRODUCTS_MAP)
+        self.mgateEndpoint = VvtProvider.API_BASE
         self.apiAuthorization = apiAuthorization
         apiVersion = "1.52"
-        apiClient = ["id": "VAO", "type": "WEB", "name": "webapp", "l": "vs_vvt"]
-        extVersion = "VAO.6"
+        apiClient = ["id": "HAFAS", "type": "WEB", "name": "VVT Routenplaner", "l": "vs_vvt"]
         
         styles = [
             "Innsbrucker Verkehrsbetriebe und Stubaitalbahn GmbH|T1": LineStyle(shape: .rect, backgroundColor: LineStyle.parseColor("#d99796"), foregroundColor: LineStyle.white),
