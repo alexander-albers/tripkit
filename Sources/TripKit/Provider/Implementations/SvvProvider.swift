@@ -3,7 +3,7 @@ import Foundation
 /// Salzburger Verkehrsverbund (AT)
 public class SvvProvider: AbstractHafasClientInterfaceProvider {
     
-    static let API_BASE = "https://fahrplan.salzburg-verkehr.at/bin/"
+    static let API_BASE = "https://fahrplan.salzburg-verkehr.at/hamm/gate/"
     static let PRODUCTS_MAP: [Product?] = [.highSpeedTrain, .suburbanTrain, .subway, nil, .tram, .regionalTrain, .bus, .bus, .tram, .ferry, .onDemand, .bus, .regionalTrain, nil, nil, nil]
     
     public override var supportedLanguages: Set<String> { ["de", "en", "it"] }
@@ -11,8 +11,9 @@ public class SvvProvider: AbstractHafasClientInterfaceProvider {
     public init(apiAuthorization: [String: Any]) {
         super.init(networkId: .SVV, apiBase: SvvProvider.API_BASE, productsMap: SvvProvider.PRODUCTS_MAP)
         self.apiAuthorization = apiAuthorization
+        self.mgateEndpoint = SvvProvider.API_BASE
         apiVersion = "1.52"
-        apiClient = ["id": "VAO", "type": "WEB", "name": "webapp", "l": "vs_svv"]
+        apiClient = ["id": "HAFAS", "type": "WEB", "name": "Salzburg Verkehr Routenplaner", "l": "vs_svv"]
         extVersion = "VAO.6"
         
         styles = [
