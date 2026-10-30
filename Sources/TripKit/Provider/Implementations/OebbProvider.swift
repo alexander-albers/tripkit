@@ -3,7 +3,7 @@ import Foundation
 /// ÖBB Personenverkehr AG (AT)
 public class OebbProvider: AbstractHafasClientInterfaceProvider {
     
-    static let API_BASE = "https://fahrplan.oebb.at/bin/"
+    static let API_BASE = "https://fahrplan.oebb.at/gate"
     static let PRODUCTS_MAP: [Product?] = [.highSpeedTrain, .highSpeedTrain, .highSpeedTrain, .highSpeedTrain, .regionalTrain, .suburbanTrain, .bus, .ferry, .subway, .tram, .highSpeedTrain, .onDemand, .highSpeedTrain]
     
     public override var supportedLanguages: Set<String> { ["de"] }
@@ -25,9 +25,10 @@ public class OebbProvider: AbstractHafasClientInterfaceProvider {
     
     public init(apiAuthorization: [String: Any]) {
         super.init(networkId: .OEBB, apiBase: OebbProvider.API_BASE, productsMap: OebbProvider.PRODUCTS_MAP)
+        self.mgateEndpoint = OoevvProvider.API_BASE
         self.apiAuthorization = apiAuthorization
         apiVersion = "1.54"
-        apiClient = ["id": "OEBB", "type": "IPH", "name": "oebbADHOC", "v": "6020300"]
+        apiClient = ["id": "OEBB", "type": "WEB", "name": "webapp", "l": "vs_webapp", "v": 22001]
         styles = [
             "WESTbahn Management GmbH|I": LineStyle(shape: .rect, backgroundColor: LineStyle.white, foregroundColor: LineStyle.parseColor("#0077b5"), borderColor: LineStyle.parseColor("#0077b5")),
             "CAT - CityAirportTrain|R": LineStyle(shape: .rect, backgroundColor: LineStyle.parseColor("#7bbc36"), foregroundColor: LineStyle.white, borderColor: 0),
