@@ -98,6 +98,12 @@ public class OebbProvider: AbstractHafasClientInterfaceProvider {
         }
     }
     
+    /// Wagon kinds of locomotives, driving trailers and end cars of multiple units (same bitmask as used by live.oebb.at).
+    private static let WAGON_KIND_END_CAR_MASK = 0x7F | 0x7F9100
+    private static let WAGON_KIND_LOCOMOTIVE_MASK = 0x100
+    /// End cars longer than this (e.g. CityJet) are a complete multiple unit on their own.
+    private static let SINGLE_UNIT_MIN_LENGTH = 34.0
+    
     override func queryWagonSequenceParsing(request: HttpRequest, context: QueryWagonSequenceContext, completion: @escaping (HttpRequest, QueryWagonSequenceResult) -> Void) throws {
         let json = try getResponse(from: request)
         let lineLabel = json["timeTableInfo", "renderedTrainName"].string
@@ -105,6 +111,7 @@ public class OebbProvider: AbstractHafasClientInterfaceProvider {
         var wagonGroups: [WagonGroup] = []
         var wagons: [Wagon] = []
         var currentDestination: String? = nil
+        var isPreviousLocomotive = false
         
         func createNewWagonGroup() {
             if wagons.count > 0 {
@@ -160,17 +167,24 @@ public class OebbProvider: AbstractHafasClientInterfaceProvider {
             
             let wagon = Wagon(number: number == 0 ? nil : number, orientation: nil, trackPosition: trackPosition, attributes: attributes, firstClass: jsonWagon["capacityBusinessClass"].intValue + jsonWagon["capacityFirstClass"].intValue > 0, secondClass: jsonWagon["capacitySecondClass"].intValue > 0, loadFactor: loadFactor, isOpen: !isClosed)
             
-            if currentDestination != destination {
+            let isEndCar = (kind & OebbProvider.WAGON_KIND_END_CAR_MASK) != 0
+            let isLocomotive = (kind & OebbProvider.WAGON_KIND_LOCOMOTIVE_MASK) != 0
+            let isSingleUnit = isEndCar && !isLocomotive && jsonWagon["lengthOverBuffers"].doubleValue > OebbProvider.SINGLE_UNIT_MIN_LENGTH
+            
+            if currentDestination != destination || isSingleUnit {
                 currentDestination = destination
                 createNewWagonGroup()
                 wagons.append(wagon)
-            } else if kind != 0 && wagons.count > 0 {
-                currentDestination = destination
+                if isSingleUnit {
+                    createNewWagonGroup()
+                }
+            } else if isEndCar && wagons.count > 0 && !isPreviousLocomotive {
                 wagons.append(wagon)
                 createNewWagonGroup()
             } else {
                 wagons.append(wagon)
             }
+            isPreviousLocomotive = isLocomotive
         }
         createNewWagonGroup()
         
