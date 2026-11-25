@@ -25,7 +25,7 @@ public class OebbProvider: AbstractHafasClientInterfaceProvider {
     
     public init(apiAuthorization: [String: Any]) {
         super.init(networkId: .OEBB, apiBase: OebbProvider.API_BASE, productsMap: OebbProvider.PRODUCTS_MAP)
-        self.mgateEndpoint = OoevvProvider.API_BASE
+        self.mgateEndpoint = OebbProvider.API_BASE
         self.apiAuthorization = apiAuthorization
         apiVersion = "1.54"
         apiClient = ["id": "OEBB", "type": "WEB", "name": "webapp", "l": "vs_webapp", "v": 22001]
