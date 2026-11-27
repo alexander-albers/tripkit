@@ -6,7 +6,15 @@ import SWXMLHash
 public class HttpClient: NSObject {
     
     private static var shared = HttpClient()
-    private static let DefaultUserAgent = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebKit/602.4.8 (KHTML, like Gecko) Version/10.0.3 Safari/602.4.8"
+    private static let userAgentLock = NSLock()
+    private static var _defaultUserAgent = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebKit/602.4.8 (KHTML, like Gecko) Version/10.0.3 Safari/602.4.8"
+    
+    /// User agent sent with every request that does not set its own (see `HttpRequest.setUserAgent`).
+    /// Apps can set this to identify themselves to the transit operators, e.g. `"MyApp/1.0 (+https://example.org)"`.
+    public static var defaultUserAgent: String {
+        get { userAgentLock.lock(); defer { userAgentLock.unlock() }; return _defaultUserAgent }
+        set { userAgentLock.lock(); defer { userAgentLock.unlock() }; _defaultUserAgent = newValue }
+    }
     
     private lazy var urlSession: URLSession = {
         let config = URLSessionConfiguration.default
@@ -26,7 +34,7 @@ public class HttpClient: NSObject {
         }
         
         var urlRequest = URLRequest(url: url)
-        urlRequest.setValue(httpRequest.userAgent ?? DefaultUserAgent, forHTTPHeaderField: "User-Agent")
+        urlRequest.setValue(httpRequest.userAgent ?? defaultUserAgent, forHTTPHeaderField: "User-Agent")
         
         if let payload = httpRequest.postPayload {
             urlRequest.httpMethod = "POST"
